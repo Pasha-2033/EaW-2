@@ -1,0 +1,507 @@
+﻿capital = 377
+oob = "JER_1007"
+
+set_research_slots = 3
+
+set_technology = {
+	griffon_race = 1
+	tech_griffon_army = 1
+	tech_knights = 1
+	melee_weapons = 1
+	melee_weapons1 = 1
+	pre_gw_artillery = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_recon = 1
+	tech_mountaineers = 1
+	gw_artillery = 1
+	early_fighter = 1
+	early_bomber = 1
+	fuel_silos = 1
+	motorised_infantry = 1
+	interwar_antiair = 1
+	basic_train = 1
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+		armor_tech_1 = 1
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		basic_light_cruiser = 1
+		early_heavy_cruiser = 1
+		basic_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		basic_battlecruiser = 1
+		early_carrier = 1
+		early_light_carrier = 1
+		transport = 1
+	}
+	set_naval_oob = "JER_1007_naval_legacy"
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		basic_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		basic_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_torpedo = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		basic_heavy_armor_scheme = 1
+		mtg_transport = 1
+	}
+	set_naval_oob = "JER_1007_naval"
+}
+add_manpower = 30000
+
+set_convoys = 70
+set_popularities = {
+	democratic = 20
+	fascism = 14
+	communism = 19
+	neutrality = 47
+}
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1000.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+set_country_flag = JER_is_monarchist
+add_ideas = { 
+    outdated_industry 
+	lack_of_scientists 
+	JER_memories 
+	JER_legacy_of_coltbert
+}
+
+set_stability = 0.55
+set_war_support = 0.45
+
+### Leaders & Generals ###
+recruit_character = JER_king_moriset_discret
+recruit_character = JER_vivienne_discret
+recruit_character = JER_leonard_rodier
+recruit_character = JER_theodore_verany
+recruit_character = JER_grand_cru
+recruit_character = JER_cecile_gaudreau
+recruit_character = JER_sugar_crepe
+recruit_character = JER_thibault_devereux
+recruit_character = JER_victor_allard
+recruit_character = JER_the_peoples_assemblee
+recruit_character = JER_albert_berthelot
+recruit_character = JER_charlesguillaumeferdinand_de_greifenwaldstrawberry
+recruit_character = JER_simon_guilbert
+recruit_character = JER_genevieve_artigue
+recruit_character = JER_foulque_cathelineau
+recruit_character = JER_gabriel_duval
+recruit_character = JER_cecilia_dutertre
+recruit_character = JER_sophie_altiert
+recruit_character = JER_lionella_brochard
+recruit_character = JER_seva_shako
+recruit_character = JER_eagleheart
+recruit_character = JER_josette_fierte
+recruit_character = JER_cyril_durand
+recruit_character = JER_remi_rousselot
+recruit_character = JER_morning_star
+recruit_character = JER_felix_murat
+recruit_character = JER_victor_moreau
+recruit_character = JER_jean_lafitte 
+recruit_character = JER_voss_corsair
+recruit_character = JER_claire_lacolombe
+recruit_character = JER_krayt_de_belanger
+recruit_character = JER_jean_chevalier_bargette
+recruit_character = JER_gilbert_la_fauvette
+recruit_character = JER_fier_chouquette
+recruit_character = JER_soleil_moonshadow
+recruit_character = JER_louis_debois
+recruit_character = JER_himir_oncrena
+
+### Advisors ###
+recruit_character = JER_advisor_1
+recruit_character = JER_advisor_2
+recruit_character = JER_advisor_3
+recruit_character = JER_advisor_4
+recruit_character = JER_advisor_5
+recruit_character = JER_advisor_6
+recruit_character = JER_advisor_7
+recruit_character = JER_advisor_8
+recruit_character = JER_advisor_9
+recruit_character = JER_advisor_10
+recruit_character = JER_advisor_11
+recruit_character = JER_advisor_12
+recruit_character = JER_advisor_13
+recruit_character = JER_advisor_14
+recruit_character = JER_advisor_15
+recruit_character = JER_advisor_16
+recruit_character = JER_advisor_17
+recruit_character = JER_advisor_18
+recruit_character = JER_advisor_19
+recruit_character = JER_advisor_20
+recruit_character = JER_advisor_21
+recruit_character = JER_advisor_22
+recruit_character = JER_advisor_23
+recruit_character = JER_advisor_24
+recruit_character = JER_advisor_25
+recruit_character = JER_advisor_26
+recruit_character = JER_advisor_27
+recruit_character = JER_advisor_28
+recruit_character = JER_advisor_29
+recruit_character = JER_advisor_30
+recruit_character = JER_advisor_31
+recruit_character = JER_advisor_32
+recruit_character = JER_advisor_33
+
+### Generic Advisors ###
+recruit_character = JER_jeanne
+recruit_character = JER_jeanne_lar
+recruit_character = JER_advisor_34
+recruit_character = JER_advisor_35
+
+### Air Chiefs ###
+recruit_character = JER_renaud
+recruit_character = JER_severine
+recruit_character = JER_elric
+
+### Navy Chiefs ###
+recruit_character = JER_albert_navy
+recruit_character = JER_gunther
+recruit_character = JER_edmond
+recruit_character = JER_xavier
+
+### Theorists ###
+recruit_character = JER_adrian
+recruit_character = JER_axel
+recruit_character = JER_herwing
+recruit_character = JER_nuke_boi
+recruit_character = JER_rocket_boi
+
+### Archons ###
+recruit_character = JER_archon_boreas
+recruit_character = JER_archon_arcturius
+
+### Trubach ###
+recruit_character = JER_count_trubach
+
+create_faction = Aquileia
+add_to_faction = JER
+add_to_faction = JFT
+add_to_faction = VIN
+add_to_faction = JRR
+add_to_faction = JEB
+if = {
+	limit = {
+		has_dlc = "Together for Victory"
+	}
+	set_autonomy = {
+		target = JFT
+		autonomy_state = autonomy_autonomous_vassal
+	}
+	set_autonomy = {
+		target = JRR
+		autonomy_state = autonomy_autonomous_vassal
+	}
+	set_autonomy = {
+		target = JEB
+		autonomy_state = autonomy_autonomous_vassal
+	}
+	set_autonomy = {
+		target = VIN
+		autonomy_state = autonomy_nominal_vassal
+	}
+	else = {
+		puppet = JFT
+		puppet = JRR
+		puppet = JEB
+		puppet = VIN
+	}
+}
+
+random_character = {
+    limit = { is_character = JER_leonard_rodier }
+    save_global_event_target_as = JER_Maxon
+}
+random_character = {
+    limit = { is_character = JER_theodore_verany }
+    save_global_event_target_as = JER_theodore_verany_target
+}
+random_character = {
+    limit = { is_character = JER_vivienne_discret }
+    save_global_event_target_as = JER_vivienne_discret_target
+}
+
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	create_equipment_variant = {
+		name = "Dassault Prot."
+		type = light_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_heavy_machine_gun
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 1
+			tank_nsb_armor_upgrade = 2
+		}
+		obsolete = yes
+		icon = "gfx/interface/technologies/JER_gw_tank.dds"
+	}
+	create_equipment_variant = {
+		name = "Dassault Prot. Cannon"
+		type = light_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_small_cannon
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 1
+			tank_nsb_armor_upgrade = 2
+		}
+		icon = "gfx/interface/technologies/JER_gw_tank.dds"
+	}
+	create_equipment_variant = {
+		name = "Dassault M.1"
+		type = light_tank_chassis_1
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_small_cannon
+			turret_type_slot = tank_light_one_man_tank_turret
+			suspension_type_slot = tank_bogie_suspension
+			armor_type_slot = tank_cast_armor
+			engine_type_slot = tank_gasoline_engine
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 4
+			tank_nsb_armor_upgrade = 9
+		}
+		icon = "gfx/interface/technologies/JER_basic_light_tank.dds"
+	}
+	create_equipment_variant = {
+		name = "Dassault Gros" 
+		type = heavy_tank_chassis_0
+		parent_version = 0
+		modules = {
+			main_armament_slot = tank_close_support_gun
+			turret_type_slot = tank_heavy_three_man_tank_turret
+			suspension_type_slot = tank_interleaved_suspension
+			armor_type_slot = tank_riveted_armor
+			engine_type_slot = tank_gasoline_engine
+			special_type_slot_1 = tank_radio_1
+			special_type_slot_2 = secondary_turret_hmg
+			special_type_slot_3 = additional_machine_guns
+		}
+		upgrades = {
+			tank_nsb_engine_upgrade = 10
+			tank_nsb_armor_upgrade = 5
+		}
+		icon = "gfx/interface/technologies/JER_basic_heavy_tank.dds"
+	}
+}
+
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	# Submarines #
+	create_equipment_variant = {
+		name = "Fuschia Class"
+		type = ship_hull_submarine_1
+		name_group = JER_SS_MONARCHY
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+		obsolete = yes
+	}
+	# Destroyers #
+	create_equipment_variant = {
+		name = "Morin Class"
+		type = ship_hull_light_1
+		name_group = JER_DD_MONARCHY
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = empty
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Beauvais Class"				
+		type = ship_hull_light_2
+		name_group = JER_DD_MONARCHY
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_2
+			mid_1_custom_slot = ship_light_battery_2
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+	# Light Cruisers #
+	create_equipment_variant = {
+		name = "Primauguet Class"			
+		type = ship_hull_cruiser_1
+		name_group = JER_CL_MONARCHY
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = ship_anti_air_1
+			mid_2_custom_slot = ship_light_medium_battery_2
+			rear_1_custom_slot = ship_airplane_launcher_1
+		}
+		obsolete = yes
+	}
+	create_equipment_variant = {
+		name = "Glorieuse Class"
+		type = ship_hull_cruiser_2
+		name_group = JER_CL_MONARCHY
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_2
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_2
+			front_1_custom_slot = ship_anti_air_2
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = ship_light_medium_battery_2
+			rear_1_custom_slot = ship_mine_layer_1
+		}
+	}
+	# Heavy Cruisers #
+	create_equipment_variant = {
+		name = "D'Entrecasteaux Class"
+		type = ship_hull_cruiser_1
+		name_group = JER_CL_MONARCHY
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = ship_medium_battery_1
+			mid_2_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_airplane_launcher_1
+		}
+		obsolete = yes
+	}
+	# Battleships #
+	create_equipment_variant = {
+		name = "Impératrice Giselda Class"				
+		type = ship_hull_heavy_1
+		name_group = JER_BB_BC_MONARCHY
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_bb_1
+			front_1_custom_slot = ship_heavy_battery_1
+			mid_1_custom_slot = ship_secondaries_1
+			mid_2_custom_slot = ship_anti_air_1
+			rear_1_custom_slot = empty
+		}
+	}
+	# Battlecruisers #
+	create_equipment_variant = {
+		name = "Borda Class"		
+		type = ship_hull_heavy_2
+		name_group = JER_BB_BC_MONARCHY
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_heavy_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = heavy_ship_engine_2
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			fixed_ship_armor_slot = ship_armor_bc_2
+			front_1_custom_slot = ship_heavy_battery_1
+			mid_1_custom_slot = ship_secondaries_1
+			mid_2_custom_slot = ship_anti_air_1
+			rear_1_custom_slot = ship_airplane_launcher_1
+		}
+	}
+}
+
+set_variable = { JER_monarchist_units = 0 }
+country_event = { 
+    id = aquileia.127 
+	days = 60 
+}
+country_event = { 
+    id = aquileia.134 
+	days = 120 
+}
+country_event = { 
+    id = aquileia.254
+	days = 1530 
+}

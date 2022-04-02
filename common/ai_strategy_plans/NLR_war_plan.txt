@@ -1,0 +1,41 @@
+NLR_optimal_plan = {
+	name = "Nightmare Moon Plan to challenge Equestria"
+	desc = "Tss"
+
+	allowed = {
+		original_tag = NLR
+
+	}
+
+	enable = {
+
+	}
+	abort = {
+		has_war = no
+	}
+	ai_national_focuses = {
+		NLR_civil_war_economy
+	}
+	focus_factors = {
+
+	}
+
+	research = {
+
+	}
+
+	ideas = {
+		NLR_midnight_storm = 20.0
+		NLR_speck = 15.0
+		NLR_lumi = 10.0
+	}
+
+	# Keep small, as it is used as a factor for some things (such as research needs)
+	# Recommended around 1.0. Useful for relation between plans
+	weight = {
+		factor = 1
+		modifier = {
+			factor = 1.0
+		}
+	}
+}

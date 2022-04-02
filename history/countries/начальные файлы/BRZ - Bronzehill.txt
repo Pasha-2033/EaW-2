@@ -1,0 +1,135 @@
+﻿capital = 492
+oob = "BRZ_1007"
+set_research_slots = 3
+
+set_technology = {
+	diamond_dog_race = 1
+	tech_ironpaws = 1
+	melee_weapons = 1
+	melee_weapons1 = 1
+	infantry_weapons = 1
+	pre_gw_artillery = 1
+	gw_artillery = 1
+	tech_engineers = 1
+	tech_support = 1
+	tech_mountaineers = 1
+	early_fighter = 1
+	early_bomber = 1
+	basic_train = 1
+	motorised_infantry = 1
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+}
+
+generic_DD_template = yes
+generic_CL_template = yes
+
+set_convoys = 70
+set_popularities = {
+	democratic = 20
+	fascism = 10
+	communism = 10
+	neutrality = 60
+}
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1006.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+add_ideas = {
+	outdated_industry
+	BRZ_imperial_industry
+	BRZ_pacifism1
+	poverty5
+	lack_of_scientists2
+}
+
+add_manpower = 25000
+set_stability = 0.5
+set_war_support = 0.2
+set_cosmetic_tag = GRI_SUBJECT
+set_country_flag = herzland_diplomacy_blocked
+
+recruit_character = BRZ_winston_copperhill
+recruit_character = BRZ_count_ignatius_bronzetail
+recruit_character = BRZ_rufus_loudbark
+recruit_character = BRZ_rosey_luxembark
+recruit_character = BRZ_shep_ironhall
+recruit_character = BRZ_lucca_amberheart
+recruit_character = BRZ_ace_redstone
+recruit_character = BRZ_max_goldtooth
+recruit_character = BRZ_gunter_blackwing
+recruit_character = BRZ_sweep
+recruit_character = BRZ_gotthilf_von_griffenstone
+recruit_character = BRZ_fido_stonewall
+recruit_character = BRZ_george_barkly
+recruit_character = BRZ_gunter_grouse
+recruit_character = BRZ_lassy_goldcoat
+recruit_character = BRZ_karl_liebarknecht
+recruit_character = BRZ_clement_attaboy
+recruit_character = BRZ_spot_bonehund
+recruit_character = BRZ_terrence_hounder
+recruit_character = BRZ_jimmy_pawhowl
+recruit_character = BRZ_butch
+recruit_character = BRZ_max_bronzeshield
+recruit_character = BRZ_luke_barkley_squirrel
+recruit_character = BRZ_arthur_terrier
+recruit_character = BRZ_richard_barker
+recruit_character = BRZ_bo_de_agua
+recruit_character = BRZ_rip_panter
+recruit_character = BRZ_thorn_alsas
+recruit_character = BRZ_tich_cloudhill
+recruit_character = BRZ_jet_hunter
+recruit_character = BRZ_bradley_bronze
+recruit_character = BRZ_griff_wingburg
+recruit_character = BRZ_old_donnald
+recruit_character = BRZ_laika_barker
+recruit_character = BRZ_hochmeister_lucky
+recruit_character = BRZ_prelate_gunhild
+recruit_character = BRZ_barnaby_bronzetail
+recruit_character = BRZ_friedhelm_stormcrest
+recruit_character = BRZ_kimball_barking_sun
+recruit_character = BRZ_clara_woofkin
+recruit_character = BRZ_ernst_thalpoodles
+recruit_character = BRZ_wilhelm_spots
+recruit_character = BRZ_count_trubach
+recruit_character = BRZ_karl_spaniel
+recruit_character = BRZ_conrad_headwig
+recruit_character = BRZ_wuffles_saltspire
+
+random_character = {
+    limit = { is_character = BRZ_winston_copperhill }
+    save_global_event_target_as = BRZ_winston_copperhill_target
+}
+random_character = {
+    limit = { is_character = BRZ_count_ignatius_bronzetail }
+    save_global_event_target_as = BRZ_count_ignatius_bronzetail_target
+}
+set_rule = {
+	can_generate_female_aces = yes
+}

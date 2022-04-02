@@ -1,0 +1,137 @@
+﻿capital = 429
+oob = "VED_1007"
+set_research_slots = 2
+
+set_technology = {
+	griffon_race = 1
+	tech_griffon_army = 1
+	melee_weapons = 1
+	melee_weapons1 = 1
+	pre_gw_artillery = 1
+	infantry_weapons = 1
+	tech_recon = 1
+	tech_engineers = 1
+	gw_artillery = 1
+	tech_support = 1
+	tech_mountaineers = 1
+	early_fighter = 1
+	tech_knights = 1
+	tech_knights2 = 1
+	
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {	
+		early_destroyer = 1
+		early_light_cruiser = 1 
+		early_heavy_cruiser = 1 
+		transport = 1
+	}
+	set_naval_oob = "VED_1007_naval_legacy"
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+        basic_torpedo = 1
+        basic_depth_charges = 1
+		basic_battery = 1
+		basic_secondary_battery = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		mtg_transport = 1
+	}
+	# Destroyers #
+	create_equipment_variant = {
+		name = "Valiant Class"
+		name_group = VED_DD_HISTORICAL
+		type = ship_hull_light_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+	# Heavy Cruisers #
+	create_equipment_variant = {
+		name = "Luckport Class"
+		name_group = VED_CL_HISTORICAL
+		type = ship_hull_cruiser_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_medium_battery_1
+		}
+	}
+	set_naval_oob = "VED_1007_naval"
+}
+
+set_convoys = 70
+set_popularities = {
+	democratic = 54
+	fascism = 15
+	communism = 4
+	neutrality = 27
+}
+set_politics = {
+
+	ruling_party = democratic
+	last_election = "1000.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+add_ideas = { 
+	VED_Chivalry_Knights_idea
+	pre_industrial_society 
+	lack_of_scientists1
+	poverty3 
+}
+
+set_stability = 0.45
+set_war_support = 0.4
+
+recruit_character = VED_king_ondska_i
+recruit_character = VED_prince_stridande
+recruit_character = VED_council_of_nobles
+recruit_character = VED_duke_krigforande
+recruit_character = VED_princess_skoldsvard
+recruit_character = VED_gustav_iv_wingstrom
+recruit_character = VED_lycklig
+recruit_character = VED_count_aluvia
+recruit_character = VED_sir_ventrue_hansson
+recruit_character = VED_camarilla_allvar
+recruit_character = VED_daltanye_backstrom
+recruit_character = VED_gustav_garrensson
+recruit_character = VED_johan_jonnson
+recruit_character = VED_kent_jonathanson
+recruit_character = VED_krigs_forare
+recruit_character = VED_stark_slag
+recruit_character = VED_skalman_beskyddaren
+recruit_character = VED_sko_bo
+recruit_character = VED_sja_bo
+recruit_character = VED_nar_luft
+recruit_character = VED_vader_gillare
+recruit_character = VED_vapen_makare
+recruit_character = VED_mat_lagare
+recruit_character = VED_sko_lagare
+recruit_character = VED_skyn_larare
+recruit_character = VED_teori_skrivare
+recruit_character = VED_king_trubach
+
+set_rule = {
+	can_generate_female_aces = yes
+}

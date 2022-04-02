@@ -1,0 +1,217 @@
+﻿capital = 619
+
+oob = "RCT_1007"
+
+set_research_slots = 3
+
+set_technology = {
+	pony_race = 1
+	melee_weapons = 1
+	melee_weapons1 = 1
+	infantry_weapons = 1
+	pre_gw_artillery = 1
+	early_fighter = 1
+	early_bomber = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_support = 1
+	tech_mountaineers = 1
+	tech_pegasi = 1
+	motorised_infantry = 1
+	basic_train = 1
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+}
+
+generic_DD_template = yes
+generic_CL_template = yes
+
+set_stability = 0.57
+set_war_support = 0.08
+
+if = {
+	limit = { has_dlc = "La Resistance" }
+	create_intelligence_agency = yes
+}
+
+add_ideas = {
+	outdated_industry
+	better_science_base
+	RCT_city_of_three_rivers
+	RCT_unstable_government
+	RIV_member_state
+	lack_of_scientists3
+	poverty4
+}
+set_country_flag = have_regular_puppets
+set_country_flag = better_science_base_unlocked
+set_cosmetic_tag = RIV_federation_mem
+
+set_popularities = {
+	democratic = 59
+	fascism = 0
+	communism = 36
+	neutrality = 5
+}
+set_politics = {
+	ruling_party = democratic
+	last_election = "1003.2.01"
+	election_frequency = 100
+	elections_allowed = no
+}
+
+recruit_character = RCT_river_swirl
+recruit_character = RCT_nova_whirl
+recruit_character = RCT_arclight
+recruit_character = RCT_hector_lipizzan
+recruit_character = RCT_sovietych
+recruit_character = RCT_gear_tail
+recruit_character = RCT_twotail_tail
+recruit_character = RCT_katerina_kaffenhoof
+recruit_character = RCT_artemis_rosamund
+recruit_character = RCT_auriga
+recruit_character = RCT_arcane_tesla
+recruit_character = RCT_spring_rain
+recruit_character = RCT_caramel_haze
+recruit_character = RCT_ermilia_czrnozemiszna
+recruit_character = RCT_arcane_gear
+recruit_character = RCT_ema_rosic
+recruit_character = RCT_jakov_coltsevic
+recruit_character = RCT_brilliant_specter
+recruit_character = RCT_brilliant_shade
+recruit_character = RCT_hawkeye_falconer
+recruit_character = RCT_pumpkin_swirl
+recruit_character = RCT_dep_assistant
+recruit_character = RCT_cap_of_ind
+recruit_character = RCT_Behind_Trusther
+recruit_character = RCT_Flowing_Tear
+recruit_character = RCT_Logical_Thinking
+recruit_character = RCT_Surreal_Grass
+recruit_character = RCT_Wet_Water
+recruit_character = RCT_Jolly_River
+recruit_character = RCT_Hoover_Balls
+recruit_character = RCT_Nuclear_Water
+recruit_character = RCT_taloniser
+recruit_character = RCT_beakoliser
+recruit_character = RCT_river_swimmer
+recruit_character = RCT_hollow_water
+recruit_character = RCT_Flying_Waterfall
+recruit_character = RCT_Stabby_Stabby
+recruit_character = RCT_Leteci_sef
+recruit_character = RCT_Sea_Colt
+recruit_character = RCT_Pollar_River
+recruit_character = RCT_quick
+recruit_character = RCT_Helping_Hoof
+recruit_character = RCT_Up_Oven
+recruit_character = RCT_Under_Water
+recruit_character = RCT_ironside_vandergallop
+
+RCT_arclight = { set_character_flag = RIV_advisor_from_RCT }
+RCT_hector_lipizzan = { set_character_flag = RIV_advisor_from_RCT }
+RCT_katerina_kaffenhoof = { set_character_flag = RIV_advisor_from_RCT }
+RCT_artemis_rosamund = { set_character_flag = RIV_advisor_from_RCT }
+RCT_arcane_tesla = { set_character_flag = RIV_advisor_from_RCT }
+RCT_Behind_Trusther = { set_character_flag = RIV_advisor_from_RCT }
+RCT_Flowing_Tear = { set_character_flag = RIV_advisor_from_RCT }
+RCT_Logical_Thinking = { set_character_flag = RIV_advisor_from_RCT }
+RCT_Surreal_Grass = { set_character_flag = RIV_advisor_from_RCT }
+RCT_Nuclear_Water = { set_character_flag = RIV_advisor_from_RCT }
+RCT_Hoover_Balls = { set_character_flag = RIV_advisor_from_RCT }
+RCT_Jolly_River = { set_character_flag = RIV_advisor_from_RCT }
+RCT_Wet_Water = { set_character_flag = RIV_advisor_from_RCT }
+RCT_river_swimmer = { set_character_flag = RIV_advisor_from_RCT }
+RCT_hollow_water = { set_character_flag = RIV_advisor_from_RCT }
+RCT_Flying_Waterfall = { set_character_flag = RIV_advisor_from_RCT }
+RCT_Stabby_Stabby = { set_character_flag = RIV_advisor_from_RCT }
+RCT_Leteci_sef = { set_character_flag = RIV_advisor_from_RCT }
+RCT_Sea_Colt = { set_character_flag = RIV_advisor_from_RCT }
+RCT_Pollar_River = { set_character_flag = RIV_advisor_from_RCT }
+RCT_quick = { set_character_flag = RIV_advisor_from_RCT }
+RCT_Helping_Hoof = { set_character_flag = RIV_advisor_from_RCT }
+RCT_Up_Oven = { set_character_flag = RIV_advisor_from_RCT }
+RCT_Under_Water = { set_character_flag = RIV_advisor_from_RCT }
+
+random_character = {
+	limit = { is_character = RCT_hector_lipizzan }
+	save_global_event_target_as = RCT_Hector
+}
+
+random_character = {
+	limit = { is_character = RCT_katerina_kaffenhoof }
+	save_global_event_target_as = RCT_Katarina
+}
+
+random_character = {
+	limit = { is_character = RCT_caramel_haze }
+	save_global_event_target_as = RCT_Caramel_Haze
+}
+
+random_character = {
+	limit = { is_character = RCT_brilliant_specter }
+	save_global_event_target_as = RCT_Brilliant_Specter
+}
+
+random_character = {
+	limit = { is_character = RCT_brilliant_shade }
+	save_global_event_target_as = RCT_Brilliant_Shade
+}
+
+random_character = {
+	limit = { is_character = RCT_gear_tail }
+	save_global_event_target_as = RCT_Gear_Tail
+}
+
+random_character = {
+	limit = { is_character = RCT_twotail_tail }
+	save_global_event_target_as = RCT_Two_Tail
+}
+
+random_character = {
+	limit = { is_character = RCT_river_swirl }
+	save_global_event_target_as = RCT_River_Swirl
+}
+
+random_character = {
+	limit = { is_character = RCT_nova_whirl }
+	save_global_event_target_as = RCT_nova_whirl_target
+}
+
+create_faction = "river_coalition_faction"
+add_to_faction = LCT
+add_to_faction = NIM
+add_to_faction = WIT
+add_to_faction = BAK
+add_to_faction = DEP
+add_to_faction = FRE
+add_to_faction = DMT
+
+give_guarantee = FBK
+give_guarantee = WAT
+give_guarantee = FIR
+
+set_rule = {
+	can_generate_female_aces = yes
+}

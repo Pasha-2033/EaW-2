@@ -1,0 +1,110 @@
+﻿capital = 495
+oob = "AET_1007"
+set_research_slots = 3
+
+set_technology = {
+	griffon_race = 1
+	tech_griffon_army = 1
+	tech_knights = 1
+	melee_weapons = 1
+	melee_weapons1 = 1
+	infantry_weapons = 1
+	tech_recon = 1
+	tech_support = 1
+	pre_gw_artillery = 1
+	gw_artillery = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	basic_train = 1
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+}
+
+generic_DD_template = yes
+generic_CL_template = yes
+
+set_convoys = 70
+set_popularities = {
+	democratic = 10
+	fascism = 20
+	communism = 20
+	neutrality = 50
+}
+set_politics = {
+
+	ruling_party = neutrality
+	last_election = "1000.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+add_ideas = {
+	poverty
+	pre_industrial_society 
+	lack_of_scientists2
+	better_science_base
+	AET_revanchism
+}
+set_country_flag = better_science_base_unlocked
+
+set_stability = 0.70
+set_war_support = 0.4
+add_manpower = 50000
+
+recruit_character = AET_count_cloudet
+recruit_character = AET_prelate_ludwig_ebonwing
+recruit_character = AET_nestor_bernier
+recruit_character = AET_jannik_petalbeak
+recruit_character = AET_henry_brazier
+recruit_character = AET_harald_mistfeather
+recruit_character = AET_aekold_helbrass
+recruit_character = AET_azazel
+recruit_character = AET_saskia_skarmoy
+recruit_character = AET_reinhold_grinfeather
+recruit_character = AET_albert_greenclaw
+recruit_character = AET_thibault_rosewing
+recruit_character = AET_elva_smalltail
+recruit_character = AET_quentin_taranbeako
+recruit_character = AET_hademar_stormbreath
+recruit_character = AET_gunther_sunfeather
+recruit_character = AET_landrich_goldplume
+recruit_character = AET_alwina_foresttalon
+recruit_character = AET_annie_boulle
+recruit_character = AET_heinrich_moonfeather
+recruit_character = AET_fernand_auguste
+recruit_character = AET_lydia_bluecrest
+recruit_character = AET_sylvaine_lagarde
+recruit_character = AET_jasmin_bonnet
+recruit_character = AET_wingberta_moonwing
+recruit_character = AET_hans_highclaw
+recruit_character = AET_kaspar_hellwing
+recruit_character = AET_walfried_lightail
+recruit_character = AET_edouard_lussier
+recruit_character = AET_uwe_weser
+
+set_rule = {
+	can_generate_female_aces = yes
+}

@@ -1,0 +1,38 @@
+state = {
+	id = 30
+	name = "STATE_30"
+	provinces = {
+		521
+		569
+		732
+		3956
+		5283
+		7123
+		7451
+		11106
+		11516
+	}
+	state_category = rural
+	buildings_max_level_factor = 1.0
+	manpower = 400200
+	history = {
+		#owner = EQS
+		#add_core_of = EQS
+		victory_points = {569 15}
+		962.1.1 = {			
+			owner = ICE
+			add_core_of = ICE
+			add_core_of = EEQ
+			add_resource = {
+				type = chromium
+				amount = 6
+				state = THIS
+			}
+			buildings = {
+				infrastructure = 1
+			}
+		}
+		1007.1.1 = {}
+		1050.1.1 = {}
+	}
+}

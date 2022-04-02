@@ -1,0 +1,140 @@
+﻿capital = 13
+
+set_research_slots = 3
+
+set_technology = {
+	pony_race = 1
+	melee_weapons = 1
+	melee_weapons1 = 1
+	pre_gw_artillery = 1
+	early_fighter = 1
+	early_bomber = 1
+	infantry_weapons = 1
+	interwar_antitank = 1
+	gw_artillery = 1
+	tech_support = 1
+	basic_train = 1
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+	}
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		basic_submarine = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		basic_depth_charges = 1
+		basic_torpedo = 1
+		early_ship_hull_submarine = 1
+		basic_battery = 1
+		basic_secondary_battery = 1
+		basic_naval_mines = 1
+		mtg_transport = 1
+	}
+}
+
+
+set_convoys = 20
+set_popularities = {
+	democratic = 28
+	fascism = 6
+	communism = 53
+	neutrality = 13
+}
+set_politics = {
+	ruling_party = communism
+	last_election = "1000.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+add_ideas = {
+	pony_race
+	modern_society
+	proper_science_base
+	no_lack_of_scientists
+	no_poverty
+	eqs_civil_war
+	disrupted_communications
+	BAL_economic_chaos
+	BAL_military_disarray
+}
+
+set_stability = 0.4
+set_war_support = 0.7
+navy_experience = 50
+
+recruit_character = BAL_mayor_ash_moustache
+recruit_character = BAL_sharp_fang
+recruit_character = BAL_golden_delicious
+recruit_character = BAL_cricket_chafer
+recruit_character = BAL_silver_mane
+recruit_character = BAL_lime_pearl
+recruit_character = BAL_stylus_pen
+recruit_character = BAL_boreal_bloom
+recruit_character = BAL_starry_night
+recruit_character = BAL_cobalt
+recruit_character = BAL_lavender_berry
+recruit_character = BAL_anarchist_advisor1
+recruit_character = BAL_anarchist_advisor2
+recruit_character = BAL_meadowbrook
+recruit_character = BAL_ministry_defence
+recruit_character = BAL_ministry_information
+recruit_character = BAL_ministry_labour
+recruit_character = BAL_blitz
+recruit_character = BAL_diamond_blossom
+recruit_character = BAL_obsidia
+recruit_character = BAL_ocean_breeze
+recruit_character = BAL_river_pearl
+recruit_character = BAL_blueberry
+recruit_character = BAL_lavender
+recruit_character = BAL_sky_chaser
+recruit_character = BAL_silver_storm
+recruit_character = BAL_lucky_star
+recruit_character = BAL_ponies_parliament
+recruit_character = BAL_commune_confed
+
+random_character = {
+    limit = { is_character = BAL_golden_delicious }
+    save_global_event_target_as = BAL_golden_delicious_target
+}
+
+random_character = {
+    limit = { is_character = BAL_mayor_ash_moustache }
+    save_global_event_target_as = BAL_mayor_crashtache_target
+}
+
+random_character = {
+    limit = { is_character = BAL_cricket_chafer }
+    save_global_event_target_as = BAL_cricket_chafer_target
+}
+
+set_rule = {
+	can_generate_female_aces = yes
+}

@@ -1,0 +1,128 @@
+﻿capital = 398
+oob = "YAL_1007"
+set_research_slots = 3
+
+set_technology = {
+	griffon_race = 1
+	tech_knights = 1
+	tech_griffon_army = 1
+	melee_weapons = 1
+	melee_weapons1 = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	pre_gw_artillery = 1
+	gw_artillery = 1
+	tech_recon = 1
+	tech_support = 1
+	tech_mountaineers = 1
+	tech_engineers = 1
+	motorised_infantry = 1
+	basic_train = 1
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+
+add_manpower = 15000
+set_convoys = 70
+set_popularities = {
+	democratic = 10
+	fascism = 20
+	communism = 10
+	neutrality = 60
+}
+set_politics = {
+
+	ruling_party = neutrality
+	last_election = "1000.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+add_ideas = { 
+	outdated_industry
+	lack_of_scientists2
+	poverty3
+	YAL_societal_divide1
+}
+set_country_flag = have_regular_puppets
+set_country_flag = herzland_diplomacy_blocked
+set_stability = 0.60
+set_cosmetic_tag = GRI_SUBJECT
+
+recruit_character = YAL_gerhard_silverbeak
+recruit_character = YAL_rector_magnificus_mikusian
+recruit_character = YAL_prelate_michael
+recruit_character = YAL_georgina_fredrika_schuler
+recruit_character = YAL_erich_muhschnabel
+recruit_character = YAL_peter_zuckergreif
+recruit_character = YAL_heinz_featherhoff
+recruit_character = YAL_sabine_bucher
+recruit_character = YAL_apfel_von_kuchen
+recruit_character = YAL_Irene_Muehschnabel
+recruit_character = YAL_Armin_Schindler
+recruit_character = YAL_Mikasa_Schreiner
+recruit_character = YAL_Siegfried_Ackerman
+recruit_character = YAL_Markus_Loewenhertz
+recruit_character = YAL_Lucas_Geldsack
+recruit_character = YAL_Bishop
+recruit_character = YAL_Henri_Streit
+recruit_character = YAL_Sven_reich
+recruit_character = YAL_Garfield_Morgenthaler
+recruit_character = YAL_Hubert_Frankenkeim
+recruit_character = YAL_Gunther_Schultz
+recruit_character = YAL_Dot_Pixis
+recruit_character = YAL_Kitz_Weilman
+recruit_character = YAL_Keith_Shadis
+recruit_character = YAL_Marius_Streicher
+recruit_character = YAL_Ferdinand_Edelgarde
+recruit_character = YAL_Franz_Fisch
+recruit_character = YAL_Kaept_Blaubaer
+recruit_character = YAL_Hein_bloed
+recruit_character = YAL_Bernd_Brot
+recruit_character = YAL_Elias_Koetz
+recruit_character = YAL_Erika_Scharfauge
+recruit_character = YAL_Dominic_Brunsmeier
+recruit_character = YAL_Monika_Weiss
+recruit_character = YAL_Herio_Merio
+recruit_character = YAL_Schnee_Seegreif
+recruit_character = YAL_Wurst_Cervelat
+recruit_character = YAL_melinda_rotkreuz
+recruit_character = YAL_emperor_grover_ii
+recruit_character = YAL_karl_legreif
+recruit_character = YAL_trade_union_congress
+recruit_character = YAL_herald_of_boreas
+
+random_character = {
+    limit = { is_character = YAL_emperor_grover_ii }
+    save_global_event_target_as = YAL_emperor_grover_ii_target
+}
+
+set_rule = {
+	can_generate_female_aces = yes
+}
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+}
+
+generic_DD_template = yes
+generic_CL_template = yes

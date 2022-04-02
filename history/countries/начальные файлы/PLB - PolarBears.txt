@@ -1,0 +1,69 @@
+﻿capital = 290
+
+oob = "PLB_1007"
+
+set_research_slots = 1
+
+set_technology = {
+	melee_weapons = 1
+	melee_weapons1 = 1
+	pre_gw_artillery = 1
+	polar_race = 1
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		transport = 1
+		early_destroyer = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		mtg_transport = 1
+		early_ship_hull_light = 1
+		basic_battery = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+	}
+}
+
+generic_DD_template = yes
+
+set_convoys = 169
+set_popularities = {
+	democratic = 10
+	fascism = 2
+	communism = 0
+	neutrality = 88
+}
+set_politics = {
+
+	ruling_party = neutrality
+	last_election = "1000.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+
+add_ideas = {
+	PLB_bears
+	pre_industrial_society
+}
+
+set_stability = 0.7
+
+recruit_character = PLB_paw_wellington
+recruit_character = PLB_arthurjamespinguinton
+recruit_character = PLB_president_polar
+recruit_character = PLB_chairman_icebear
+recruit_character = PLB_stronk_boi
+recruit_character = PLB_happy_drunkard
+recruit_character = PLB_riding_bear
+
+set_rule = {
+	can_generate_female_aces = yes
+}

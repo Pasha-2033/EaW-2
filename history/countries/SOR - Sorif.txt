@@ -1,0 +1,37 @@
+capital = 262
+
+set_country_flag = queens_tower_flag
+
+set_research_slots = 2
+starting_train_buffer = 2
+
+set_technology = {
+	changeling_race = 1
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+
+
+set_politics = {
+	ruling_party = fascism
+	last_election = "953.11.9"
+	election_frequency = 36
+	elections_allowed = no
+}
+set_popularities = {
+	democratic = 6
+	fascism = 86
+	communism = 3
+	neutrality = 5
+}
+
+add_ideas = {
+	limited_exports
+}
+add_timed_idea = { idea = CHN_synthetic_armament days = 365 }
+set_stability = 0.6
+
+recruit_character = SOR_queen_yaria
+
+set_rule = {
+	can_generate_female_aces = yes
+}

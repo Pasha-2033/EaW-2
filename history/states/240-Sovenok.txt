@@ -1,0 +1,45 @@
+state = {
+	id = 240
+	name = "STATE_240"
+	provinces = {
+		6330
+		6355
+		6386
+		9384
+	}
+	history = {
+		#owner = STG
+		#add_core_of = STG
+		#add_claim_by = EQS
+		victory_points = {6355 3}
+		962.1.1 = {
+			state_category = rural
+			buildings_max_level_factor = 1.0
+			add_manpower = 130550
+			owner = EQW
+			add_core_of = EQW
+			add_claim_by = WOP
+			add_claim_by = ANP
+			add_resource = {
+				type = aluminium
+				amount = 4
+				state = THIS
+			}
+			add_resource = {
+				type = steel
+				amount = 5
+				state = THIS
+			}
+			add_resource = {
+				type = tungsten
+				amount = 3
+				state = THIS
+			}
+			buildings = {
+				infrastructure = 1
+			}
+		}	
+		1007.1.1 = {}
+		1050.1.1 = {}
+	}
+}

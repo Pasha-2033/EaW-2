@@ -1,0 +1,45 @@
+state = {
+	id = 35
+	name = "STATE_35"
+	provinces = {
+		636
+		678
+		704
+		3641
+		3646
+		3650
+		3700
+		4155
+		6531
+		9377
+		9587
+		9620
+		11601
+		11604
+		11642
+	}
+	state_category = pastoral
+	buildings_max_level_factor = 1.0
+	manpower = 36500
+	history = {
+		#owner = EQS
+		#add_core_of = EQS
+		962.1.1 = {			
+			owner = ICE
+			add_core_of = ICE
+			add_core_of = EEQ
+			add_resource = {
+				type = steel
+				amount = 12
+				state = THIS
+			}
+			add_resource = {
+				type = tungsten
+				amount = 2
+				state = THIS
+			}
+		}
+		1007.1.1 = {}
+		1050.1.1 = {}
+	}
+}

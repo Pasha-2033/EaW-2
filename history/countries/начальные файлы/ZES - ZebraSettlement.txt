@@ -1,0 +1,180 @@
+﻿capital = 413
+oob = "ZES_1007"
+set_research_slots = 3
+
+set_technology = {
+	pony_race = 1
+	melee_weapons = 1
+	melee_weapons1 = 1
+	infantry_weapons = 1
+	pre_gw_artillery = 1
+	early_fighter = 1
+	tech_support = 1
+	tech_recon = 1
+	basic_train = 1
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {	
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_destroyer = 1
+		coastal_defense_ships_nomtg = 1
+		transport = 1
+	}
+	set_naval_oob = "ZES_1007_naval_legacy"
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_battery = 1
+		basic_secondary_battery = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		coastal_defense_ships = 1
+		mtg_transport = 1
+	}
+	set_naval_oob = "ZES_1007_naval"
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	create_equipment_variant = {
+		name = "Basia Classe"
+		type = ship_hull_cruiser_1
+		name_group = ZES_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = ship_light_battery_1
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Nuven Classe"
+		type = ship_hull_light_1
+		name_group = ZES_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+}
+
+add_manpower = 35000
+set_convoys = 70
+set_popularities = {
+	democratic = 76
+	fascism = 2
+	communism = 8
+	neutrality = 14
+}
+
+set_politics = {
+	ruling_party = democratic
+	last_election = "1000.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+set_country_flag = kasa_skapatoria_value_add
+set_country_flag = have_regular_puppets
+set_country_flag = always_exodus_target
+
+set_variable = {
+	var = ZES_oppressive_countries
+	value = 0
+}
+
+clamp_variable = {
+	var = ZES_oppressive_countries
+	min = 0
+	max = 100
+}
+
+add_dynamic_modifier = {
+	modifier = ZES_dynamic_skapatoria_refugee_modifier
+}
+
+if = {
+	limit = { has_dlc = "La Resistance" }
+	create_intelligence_agency = yes
+}
+
+add_ideas = {
+	ZES_ideals_of_freedom_idea
+	ZES_pact_of_907_idea
+	ZES_scars_of_oppression
+	ZES_xatisa
+	ZES_military_blocked
+	pre_industrial_society
+	lack_of_scientists1
+	better_science_base
+}
+
+set_stability = 0.70
+set_war_support = 0.20
+
+add_opinion_modifier = { target = BAR modifier = sworn_enemies }
+reverse_add_opinion_modifier = { target = BAR modifier = sworn_enemies }
+
+recruit_character = ZES_verde_pasto
+recruit_character = ZES_rocha_salgada
+recruit_character = ZES_nascente_brava
+recruit_character = ZES_mansu_erba
+recruit_character = ZES_the_kasa_advisory_council
+recruit_character = ZES_lua_ramedi
+recruit_character = ZES_pasarinha
+recruit_character = ZES_yrmthu
+recruit_character = ZES_altu_kexa
+recruit_character = ZES_solano_lobu
+recruit_character = ZES_amaltia_vispo
+recruit_character = ZES_wojtek
+recruit_character = ZES_katia
+recruit_character = ZES_alfred
+recruit_character = ZES_hasek
+recruit_character = ZES_jan_brazowy
+recruit_character = ZES_chane_haoniyao
+recruit_character = ZES_bicoafi_bolsa
+recruit_character = ZES_eala
+recruit_character = ZES_chosen_heart
+recruit_character = ZES_busaro_sabida
+recruit_character = ZES_salijah_bolsa
+recruit_character = ZES_karl_steinar
+recruit_character = ZES_entono_pnevma
+recruit_character = ZES_obsidian_shine
+recruit_character = ZES_alicja_szaminska
+recruit_character = ZES_diridji_spluzon
+recruit_character = ZES_firm_bulwark
+recruit_character = ZES_farol_sforsu
+recruit_character = ZES_pasu_vagao
+recruit_character = ZES_floro_salomao
+recruit_character = ZES_kros_djogu
+recruit_character = ZES_alampra
+recruit_character = ZES_cyclone_alarm
+recruit_character = ZES_barbatana_pexi
+recruit_character = ZES_remo_madeira
+recruit_character = ZES_xapa_feramenta
+recruit_character = ZES_akrivis_sfaira
+recruit_character = ZES_jaketa
+recruit_character = ZES_faldur_steinn
+recruit_character = ZES_tough_wall
+
+set_rule = {
+	can_generate_female_aces = yes
+}

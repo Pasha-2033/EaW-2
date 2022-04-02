@@ -1,0 +1,119 @@
+﻿capital = 532
+oob = "BAN_1007"
+set_research_slots = 3
+
+set_technology = {
+	griffon_race = 1
+	tech_griffon_army = 1
+	melee_weapons = 1
+	melee_weapons1 = 1
+	infantry_weapons = 1
+	pre_gw_artillery = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_support = 1
+	tech_mountaineers = 1
+	basic_train = 1
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		transport = 1
+	}
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		early_ship_hull_light = 1
+		mtg_transport = 1
+	}
+}
+
+set_convoys = 70
+set_popularities = {
+	democratic = 10
+	fascism = 70
+	communism = 10
+	neutrality = 10
+}
+set_politics = {
+
+	ruling_party = fascism
+	last_election = "1000.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+add_ideas = {
+	pre_industrial_society
+	BAN_lawless_land
+	BAN_blackrocks_army
+	BAN_economic_wasteland
+	limited_exports
+	outlaw_economy
+}
+
+set_stability = 0.5
+set_war_support = 0.5
+set_country_flag = have_regular_puppets
+
+add_equipment_to_stockpile = {
+	type = melee_equipment_1
+	amount = 250
+	producer = LUS
+}
+
+add_equipment_to_stockpile = {
+	type = melee_equipment_1
+	amount = 250
+	producer = BRF
+}
+
+add_equipment_to_stockpile = {
+	type = melee_equipment_1
+	amount = 250
+	producer = CYA
+}
+add_equipment_to_stockpile = {
+	type = infantry_equipment_0
+	amount = 125
+	producer = SIC
+}
+
+add_equipment_to_stockpile = {
+	type = infantry_equipment_1
+	amount = 125
+	producer = FAL
+}
+
+add_equipment_to_stockpile = {
+	type = melee_equipment_1
+	amount = 250
+	producer = BOI
+}
+
+recruit_character = BAN_cyrille_bluecrest
+recruit_character = BAN_blackrock
+recruit_character = BAN_don_espadarte
+recruit_character = BAN_reeve_blyeddin
+recruit_character = BAN_kajetan_bronsfeather
+recruit_character = BAN_dominik_pinfeather
+recruit_character = BAN_ulrich_hiperion
+recruit_character = BAN_aouranos
+recruit_character = BAN_huen_bendel
+recruit_character = BAN_jochen
+recruit_character = BAN_bluein
+recruit_character = BAN_elmar
+recruit_character = BAN_coeus_schutz
+recruit_character = BAN_adlar_behrendt
+recruit_character = BAN_chronus_roth
+recruit_character = BAN_ruqualash_bund
+recruit_character = BAN_vellare_hoenbrig
+recruit_character = BAN_zikoba_gruber
+recruit_character = BAN_phantomcrest_friesinger
+recruit_character = BAN_flatfeathers_suber
+
+set_rule = {
+	can_generate_female_aces = yes
+}

@@ -1,0 +1,175 @@
+﻿capital = 486
+oob = "STW_1007"
+set_research_slots = 3
+
+set_technology = {
+	griffon_race = 1
+	tech_griffon_army = 1
+	tech_knights = 1
+	melee_weapons = 1
+	pre_gw_artillery = 1
+	melee_weapons1 = 1
+	infantry_weapons = 1
+	tech_recon = 1
+	tech_engineers = 1
+	gw_artillery = 1
+	tech_support = 1
+	tech_mountaineers = 1
+	early_fighter = 1
+	early_bomber = 1
+	basic_train = 1
+	motorised_infantry = 1
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+	}
+}
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+	}
+}
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+}
+
+generic_DD_template = yes
+generic_CL_template = yes
+
+set_convoys = 70
+set_popularities = {
+	democratic = 30
+	fascism = 10
+	communism = 10
+	neutrality = 50
+}
+set_politics = {
+
+	ruling_party = neutrality
+	last_election = "1000.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+add_ideas = { 
+	outdated_industry
+	lack_of_scientists1
+	STW_absent_ruler
+	STW_modernisation_restistance
+}
+
+set_cosmetic_tag = GRI_SUBJECT
+
+set_stability = 0.65
+add_manpower = 20000
+
+### Leaders ###
+recruit_character = STW_gabriela_eagleclaw
+recruit_character = STW_julius_eagleclaw
+recruit_character = STW_regina_eagleclaw
+recruit_character = STW_vitalius_moonbill
+recruit_character = STW_regency_council
+
+### Starting Generals ###
+recruit_character = STW_karl_mistfeather
+recruit_character = STW_fritz_helltalon
+recruit_character = STW_felix_hardbeak
+recruit_character = STW_fritz_bronzetail
+recruit_character = STW_august_goldplume
+
+### Advisors ###
+recruit_character = STW_captain_of_industry
+recruit_character = STW_war_industrialist
+recruit_character = STW_prince_of_terror
+recruit_character = STW_backroom_backstabber
+recruit_character = STW_quartermaster_general
+recruit_character = STW_compassionate_gentleman
+
+### Army Chief ###
+recruit_character = STW_army_chief_off
+recruit_character = STW_army_chief_def
+recruit_character = STW_army_chief_man
+
+### Navy Chief ###
+recruit_character = STW_navy_chief_decisive_bat
+recruit_character = STW_navy_submarine
+
+### Air Chief ###
+recruit_character = STW_air_chief_all_weather
+recruit_character = STW_fighter_griff
+recruit_character = STW_bomber_griff
+
+### High Command ###
+recruit_character = STW_army_art
+recruit_character = STW_army_inf
+recruit_character = STW_army_arm
+recruit_character = STW_navy_fleet_log
+recruit_character = STW_safety_griff
+recruit_character = STW_ground_support_griff
+
+### Theorists ###
+recruit_character = STW_military_theorist
+recruit_character = STW_military_theorist_2
+recruit_character = STW_military_theorist_3
+recruit_character = STW_air_warfare_theorist
+recruit_character = STW_rocket_scientist
+
+### Trubach ###
+recruit_character = STW_duke_trubach
+
+random_character = {
+	limit = { is_character = STW_gabriela_eagleclaw }
+	save_global_event_target_as = STW_gabriela_eagleclaw_target
+}
+random_character = {
+	limit = { is_character = STW_julius_eagleclaw }
+	save_global_event_target_as = STW_julius_eagleclaw_target
+}
+
+set_rule = {
+	can_generate_female_aces = yes
+}

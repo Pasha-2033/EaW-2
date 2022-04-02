@@ -1,0 +1,54 @@
+state = {
+	id = 18
+	name = "STATE_18"
+	provinces = {
+		856
+		1752
+		1870
+		3719
+		3914
+		4759
+		4772
+		6188
+		6722
+		7877
+		9054
+		9362
+		9916
+		10709
+		11040
+		11327
+		11390
+		12566
+		12685
+	}
+	state_category = pastoral
+	buildings_max_level_factor = 1.0
+	manpower = 34900
+	history = {
+		#owner = EQS
+		#add_core_of = EQS
+		962.1.1 = {			
+			owner = ICE
+			add_core_of = ICE
+			add_core_of = EEQ
+			add_resource = {
+				type = steel
+				amount = 3
+				state = THIS
+			}
+			add_resource = {
+				type = tungsten
+				amount = 10
+				state = THIS
+			}
+			add_resource = {
+				type = chromium
+				amount = 3
+				state = THIS
+			}
+		}
+		1007.1.1 = {}
+		1050.1.1 = {}
+	}
+}

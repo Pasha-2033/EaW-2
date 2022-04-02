@@ -1,0 +1,22 @@
+ROU_expansion_category = {
+	icon = generic_border_conflicts
+
+	allowed = {
+		original_tag = ROU
+	}
+}
+
+ROU_land_requisition = {
+	icon = generic_border_conflicts
+
+	allowed = {
+		original_tag = ROU
+	}
+
+	visible = {
+		OR = {
+			is_subject_of = GRD
+			is_in_faction_with = GRD
+		}
+	}
+}

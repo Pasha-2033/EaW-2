@@ -1,0 +1,29 @@
+state={
+	id=89
+	name="STATE_89"
+
+	provinces={
+		122 318 347 649 3207 3256 6415 9520 9635 11247 11301 11528 11636
+	}
+
+	manpower=230100
+	state_category=rural
+	buildings_max_level_factor=1.00
+
+	history={
+		#owner = BUF
+		#add_core_of = BUF
+		#add_core_of = EQS
+		962.1.1 = {
+			owner = ICE
+			add_core_of = ICE
+			add_core_of = EEQ
+		}
+		1007.1.1 = {}
+		1050.1.1 = {}
+		victory_points = { 6415 3 }
+		buildings = {
+			industrial_complex = 1
+		}
+	}
+}

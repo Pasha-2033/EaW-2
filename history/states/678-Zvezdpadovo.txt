@@ -1,0 +1,41 @@
+state = {
+	id = 678
+	name = "STATE_678"
+	provinces = {
+		131
+		3069
+		3178
+		3226
+		6046
+		6305
+		9042
+		11063
+		11064 
+	}
+	history = {
+		#owner = STG
+		#add_core_of = STG
+		#add_claim_by = EQS
+		victory_points = {3069 3}
+		962.1.1 = {
+			state_category = rural
+			buildings_max_level_factor = 1.0
+			add_manpower=375506
+			owner = WOP
+			add_core_of = WOP
+			add_claim_by = EQW
+			add_claim_by = ANP
+			add_resource = {
+				type = steel
+				amount = 3
+				state = THIS
+			}
+			buildings = {
+				infrastructure = 1
+				dockyard = 1
+			}
+		}
+		1007.1.1 = {}
+		1050.1.1 = {}
+	}
+}

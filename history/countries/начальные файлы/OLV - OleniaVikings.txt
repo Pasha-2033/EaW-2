@@ -1,0 +1,199 @@
+﻿capital = 412
+oob = "OLV_1007"
+set_research_slots = 2
+
+set_technology = {
+	deer_race = 1
+	melee_weapons = 1
+	melee_weapons1 = 1
+	infantry_weapons = 1
+	pre_gw_artillery = 1
+	tech_support = 1
+	tech_mountaineers = 1
+	tech_recon = 1
+	tech_engineers = 1
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {	
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_destroyer = 1
+		coastal_defense_ships_nomtg = 1
+		transport = 1
+	}
+	set_naval_oob = "OLV_1007_naval_legacy"
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_battery = 1
+		basic_secondary_battery = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		coastal_defense_ships = 1
+		mtg_transport = 1
+	}
+	set_naval_oob = "OLV_1007_naval"
+}
+
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	create_equipment_variant = {
+		name = "Floki Class"
+		type = ship_hull_cruiser_1
+		#name_group = BRA_CL_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = ship_light_battery_1
+			rear_1_custom_slot = empty
+		}
+	}
+	create_equipment_variant = {
+		name = "Leif Class"
+		type = ship_hull_light_1
+		#name_group = BRA_DD_HISTORICAL
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_1
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+	}
+}
+
+set_convoys = 70
+set_popularities = {
+	democratic = 26
+	fascism = 21
+	communism = 0
+	neutrality = 53
+}
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1000.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+add_ideas = { 
+    agrarian_society 
+	lack_of_scientists2 
+	primitive_economy
+	limited_conscription
+	free_trade
+}
+
+add_manpower = 25000
+set_stability = 0.45
+set_war_support = 0.40
+
+add_opinion_modifier = { target = BAR modifier = distrustful_relations }
+reverse_add_opinion_modifier = { target = BAR modifier = distrustful_relations }
+
+set_variable = {
+    var = OLV_warriors
+    value = 1
+}
+set_variable = {
+    var = OLV_commoners
+    value = 1
+}
+set_variable = {
+    var = OLV_noble_opinion
+    value = 1
+}
+set_variable = {
+    var = OLV_ukko
+    value = 1
+}
+set_variable = {
+    var = OLV_pellervo
+    value = 1
+}
+clamp_variable = {
+    var = OLV_warriors
+    min = 1
+    max = 5
+}
+clamp_variable = {
+    var = OLV_commoners
+    min = 1
+    max = 5
+}
+clamp_variable = {
+    var = OLV_noble_opinion
+    min = 1
+    max = 5
+}
+clamp_variable = {
+    var = OLV_ukko 
+    min = 1
+    max = 5
+}
+clamp_variable = {
+    var = OLV_pellervo 
+    min = 1
+    max = 5
+}
+
+recruit_character = OLV_jarl_ygritte_bylgjasdottir
+recruit_character = OLV_ulfdis_aresdottir
+recruit_character = OLV_jorundur_reinhartsson
+recruit_character = OLV_einvardur_blaivarsson
+recruit_character = OLV_gulrain_lisvaldr
+recruit_character = OLV_thane_einir_solmarsson
+recruit_character = OLV_thane_herlaugur
+recruit_character = OLV_thane_heikirsson
+recruit_character = OLV_hjarnar_ernstsson
+recruit_character = OLV_svali_reinhartsson
+recruit_character = OLV_hansa_kristbergursdottir
+recruit_character = OLV_freyvidur_jureksson
+recruit_character = OLV_valto_luoma
+recruit_character = OLV_ritva_rasanen
+recruit_character = OLV_sigri_kormaksson
+recruit_character = OLV_gytta_jakopsdottir
+recruit_character = OLV_allsherjargothi_skjoeldur
+recruit_character = OLV_asbjoern_hallgilsson
+recruit_character = OLV_jurek_valgardursson
+recruit_character = OLV_riikka_erkkila
+recruit_character = OLV_stekkjarstaur_the_sheep_cote
+recruit_character = OLV_giljagaur_the_gawker
+recruit_character = OLV_stufur_the_stubby
+recruit_character = OLV_hurthaskellir_the_door_slammer
+recruit_character = OLV_pottaskefill_the_pot_scraper
+recruit_character = OLV_askasleikir_the_bowl_licker
+recruit_character = OLV_thvorusleikir_the_spoon_licker
+recruit_character = OLV_skyrgamur_the_skyr_gobbler
+recruit_character = OLV_bjugnakraekir_the_sausage_swiper
+recruit_character = OLV_fargrim_hafsson
+recruit_character = OLV_gluggagaegir_the_window_peeper
+recruit_character = OLV_gattathefur_the_doorway_sniffer
+recruit_character = OLV_ketkrokur_the_meat_hook
+recruit_character = OLV_kertasnikir_the_candle_stealer
+recruit_character = OLV_gudroedur_hunisson
+recruit_character = OLV_baldur_hinriksson
+recruit_character = OLV_astgerdur_thorgautursdottir
+recruit_character = OLV_nora_frithlaugsdottir
+recruit_character = OLV_isbjorn_benonysson
+recruit_character = OLV_sigurdor_ellertsson
+recruit_character = OLV_arvok_rikkadottir
+recruit_character = OLV_baering_hethinsson
+
+set_rule = {
+	can_generate_female_aces = yes
+}

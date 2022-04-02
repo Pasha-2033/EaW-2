@@ -1,0 +1,53 @@
+state = {
+	id = 47
+	name = "STATE_47"
+	provinces = {
+		730
+		935
+		949
+		965
+		3908
+		3937
+		3952
+		3971
+		6658
+		6953
+		6982
+		9537
+		9821
+		9890
+		9906
+		11754
+		11832
+		11857
+		11868		
+	}
+	buildings_max_level_factor = 1.0
+	state_category = large_town
+	manpower = 1304064
+	history = {
+		#owner = EQS
+		#add_core_of = EQS
+		victory_points = {3937 5}
+		victory_points = {11754 3}
+		962.1.1 = {			
+			owner = ICE
+			add_core_of = ICE
+			add_core_of = EEQ
+			add_resource = {
+				type = chromium
+				amount = 14
+				state = THIS
+			}
+			buildings = {
+				industrial_complex = 1
+				infrastructure = 3
+				11754 = {
+					naval_base = 1
+				}
+			}
+		}
+		1007.1.1 = {}
+		1050.1.1 = {}	
+	}
+}

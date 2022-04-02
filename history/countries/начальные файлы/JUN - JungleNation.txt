@@ -1,0 +1,106 @@
+﻿capital = 16
+
+set_research_slots = 2
+
+set_technology = {
+	pony_race = 1
+	melee_weapons = 1
+	melee_weapons1 = 1
+	pre_gw_artillery = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	gw_artillery = 1
+	basic_train = 1
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+}
+
+generic_DD_template = yes
+generic_CL_template = yes
+
+set_convoys = 20
+set_popularities = {
+	democratic = 2
+	fascism = 5
+	communism = 13
+	neutrality = 80
+}
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1000.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+add_ideas = {
+	pony_race
+	modern_society
+	proper_science_base
+	eqs_civil_war
+	disrupted_communications
+	no_lack_of_scientists
+	no_poverty
+}
+
+set_stability = 0.55
+
+recruit_character = JUN_doctor_caballeron
+recruit_character = JUN_fuhrer_seaterror
+recruit_character = JUN_mayor_goldwin
+recruit_character = JUN_addie_hoover
+recruit_character = JUN_nimbus
+recruit_character = JUN_serene_storm
+recruit_character = JUN_zambezi
+recruit_character = JUN_sweet_water
+recruit_character = JUN_jungle_trek
+recruit_character = JUN_tailcoatl
+recruit_character = JUN_erenpil
+recruit_character = JUN_huitzilli
+recruit_character = JUN_tenoch
+recruit_character = JUN_mazel_tov
+recruit_character = JUN_velvet_glow
+recruit_character = JUN_lily_valley
+recruit_character = JUN_teuicolt
+recruit_character = JUN_ixtilal
+recruit_character = JUN_midnight_dasher
+recruit_character = JUN_star_dash
+recruit_character = JUN_wild_star
+recruit_character = JUN_silver_song
+recruit_character = JUN_pearl_swirl
+recruit_character = JUN_ivory_tail
+recruit_character = JUN_blue_heart
+recruit_character = JUN_ruby_bolt
+recruit_character = JUN_fancy_hooves
+
+random_character = {
+    limit = { is_character = JUN_doctor_caballeron }
+    save_global_event_target_as = JUN_doctor_caballeron_target
+}
+
+set_rule = {
+	can_generate_female_aces = yes
+}

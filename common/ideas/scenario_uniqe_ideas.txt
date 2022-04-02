@@ -1,0 +1,50 @@
+ideas = {
+	#все эффекты здесь применимы ко всем
+	country = {
+		#evil mind
+		evil_mind_economy_projects = {}
+		evil_mind_military_projects = {}
+		evil_mind_science_projects = {}
+		laboratory_of_evil_mind = {}
+		great_hive = {}
+		love_machine_build = {}
+		magitron_build = {}
+		consciousness_hypercube = {}
+		evil_experiments = {}
+		evil_atom = {}
+		evil_mind_went_nuts = {}
+		kind_evil_mind = {}
+		evil_mind_returned = {}
+		relaunch_magitron = {}
+
+		#alicorns
+		celestia_exiled_lunar_pony = {}	#ссылка лунной пони на луну
+		luna_exiled_daybraker = {}		#ссылка Дейбрекер на солнце
+		lunar_pony_returned = {}		#лунная пони вернулась
+		daybraker_returned = {}			#Дейбрейкер вернулась
+		day_night_conflict = {}			#день и ночь одновременно
+		day_in_night = {}				#Дейбрейкер и Лунная пони решили не уничтожать друг друга
+	}
+	hidden_ideas = {
+		magitron_stabilised = {			#при стабилизации магитрон невзорвется
+			available = {
+				has_idea = magitron_build
+			}
+			cancel_if_invalid = yes
+		}
+		crystal_truth = {				#дебаф на стабильность Кристальной империи после того как она узнала, как появилась обратно
+			available = {
+				OR = {
+					VES = {
+						has_idea = magitron_build
+					}
+				}
+			}
+			targeted_modifier = {
+				tag = ECR
+				stability_factor = -0.15
+			}
+			cancel_if_invalid = yes
+		}
+	}
+}

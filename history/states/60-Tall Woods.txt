@@ -1,0 +1,33 @@
+state={
+	id=60
+	name="STATE_60"
+
+	provinces={
+		511 2049 6578 6945 7065 8077 9209 9308 9680 9976 10041 11215 11397 11917 12001
+	}
+
+	manpower=389447
+	state_category = rural
+	buildings_max_level_factor=1.00
+
+	history={
+		#owner = EQS
+		#add_core_of = EQS
+		962.1.1 = {
+			owner = ICE
+			add_core_of = ICE
+			add_core_of = EEQ
+		}
+		1007.1.1 = {}
+		1050.1.1 = {}
+		victory_points = { 511 5 }
+
+		buildings = {
+			infrastructure = 1
+		}
+	}
+
+	resources = {
+		chromium = 7
+	}
+}

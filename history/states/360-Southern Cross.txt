@@ -1,0 +1,32 @@
+state={
+	id=360
+	name="STATE_360"
+
+	provinces={
+		60 140 2057 3057 5027 5058 11103 11168 11178
+	}
+
+	manpower=95679
+	state_category = rural
+	buildings_max_level_factor=1.00
+
+	history = {
+		#owner = EQC
+		#add_core_of = EQC
+		962.1.1 = {
+			owner = ICE
+			add_core_of = ICE
+			add_core_of = EEQ
+		}
+
+		victory_points = { 11103 5 }
+
+		buildings = {
+			infrastructure = 1
+
+			11103 = {
+				naval_base = 1
+			}
+		}
+	}
+}

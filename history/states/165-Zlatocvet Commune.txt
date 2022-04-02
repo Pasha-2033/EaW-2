@@ -1,0 +1,40 @@
+state={
+	id=165
+	name="STATE_165"
+
+	provinces = {
+		4787
+		6062
+		6205
+		6252
+		6304
+		6605
+		9075 9090 9161 9413 11161 11266 11504 
+	}
+	history = {
+		#owner = STG
+		#add_core_of = STG
+		#add_claim_by = EQS
+		victory_points = {11161 3}
+		962.1.1 = {
+			state_category = rural
+			buildings_max_level_factor = 1.0
+			add_manpower = 426725
+			owner = EQW
+			add_core_of = EQW
+			add_claim_by = WOP
+			add_claim_by = ANP
+			add_resource = {
+				type = oil
+				amount = 12
+				state = THIS
+			}
+			buildings = {
+				infrastructure = 2
+				industrial_complex = 1
+			}
+		}
+		1007.1.1 = {}
+		1050.1.1 = {}		
+	}
+}

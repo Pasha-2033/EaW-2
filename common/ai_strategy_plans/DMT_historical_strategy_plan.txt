@@ -1,0 +1,55 @@
+DMT_historical = {
+	name = "Rover stays king"
+	desc = ""
+
+	allowed = {
+		original_tag = DMT
+
+	}
+
+	enable = {
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = DMT_ai_behavior
+					option = DEFAULT
+				}
+			}
+			has_country_flag = DMT_AI_FASCIST_HISTORICAL
+			has_game_rule = {
+				rule = DMT_ai_behavior
+				option = FASCIST
+			}
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+	}
+
+	research = {
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}
+

@@ -1,0 +1,37 @@
+state = {
+	id = 7
+	name = "STATE_7"
+	provinces = {
+		4199
+		10013
+		13071
+	}
+	state_category = rural
+	buildings_max_level_factor = 1.0
+	manpower = 132500
+	history = {
+		#owner = DRG
+		#add_core_of = DRG
+		victory_points = {13071 15}
+		962.1.1 = {
+			
+			owner = DRG
+			add_core_of = DRG
+			add_resource = {
+				type = steel
+				amount = 5
+				state = THIS
+			}
+			add_resource = {
+				type = crystals
+				amount = 12
+				state = THIS
+			}
+			buildings = {
+				industrial_complex = 1
+			}
+		}
+		1007.1.1 = {}
+		1050.1.1 = {}
+	}
+}

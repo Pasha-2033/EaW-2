@@ -1,0 +1,48 @@
+focus_tree = {
+	id = vra_focus_tree
+	country = {
+		factor = 0
+		modifier = {
+			add = 10
+			tag = VRA
+		}
+	}
+	default = no
+	continuous_focus_position = { x = 2700 y = 1350 }
+	#первая линия
+	focus = {
+		id = vra_focus_monarhy_guestion
+		icon = GFX_goal_chn_death_or_dishonour
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		x = 7
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = { #переделать
+		id = vra_focus_monarhy_guestion_d
+		icon = GFX_goal_chn_death_or_dishonour
+		cost = 1
+		prerequisite = {
+			focus = vra_focus_monarhy_guestion
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 7
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion_d"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+}

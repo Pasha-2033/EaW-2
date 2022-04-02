@@ -1,0 +1,2083 @@
+ideas = {
+	mobilization_laws = {
+		law = yes
+		use_list_view = yes
+		disarmed_nation = {
+			cost = 50
+			removal_cost = -1
+			level = 1
+			modifier = {
+				conscription = 0.01
+			}
+			cancel_if_invalid = no
+		}
+		volunteer_only = {
+			cost = 100
+			removal_cost = -1
+			level = 2
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 60
+					has_idea = disarmed_nation
+				}
+			}
+			modifier = {
+				conscription = 0.015
+				exodus_national_appeal = -0.015
+			}
+			default = yes
+			cancel_if_invalid = no
+		}
+		limited_conscription = {
+			cost = 150
+			removal_cost = -1
+			level = 3
+			available = {
+				NOT = {
+					has_country_flag = demilitarized
+					has_country_flag = manpower_laws_blocked 
+				}
+			}
+			modifier = {
+				conscription = 0.025
+				exodus_national_appeal = -0.025
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 200
+					NOT = {
+						has_idea = extensive_conscription
+						has_idea = service_by_requirement
+						has_idea = all_adults_serve
+						has_idea = scraping_the_barrel
+					}
+					has_manpower < 5000
+				}
+				modifier = {
+					factor = 20
+					manpower_per_military_factory < 1000
+				}
+				modifier = {
+					add = 100
+					NOT = {
+						has_idea = extensive_conscription
+						has_idea = service_by_requirement
+						has_idea = all_adults_serve
+						has_idea = scraping_the_barrel
+					}
+					has_manpower < 2500
+				}
+			}
+			cancel_if_invalid = no
+		}
+		extensive_conscription = {
+			available = {
+				NOT = {
+					has_idea = undisturbed_isolation
+					has_idea = isolation
+					has_country_flag = manpower_laws_blocked
+					has_country_flag = demilitarized
+				}
+				OR = {
+					has_government = fascism
+					has_government = communism
+					has_war_support > 0.3
+					AND = {
+						has_war = yes
+						OR = {
+							enemies_strength_ratio > 0.5
+							has_manpower < 1000
+							surrender_progress > 0.15
+						}
+					}
+				}
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 200
+					NOT = {
+						has_idea = service_by_requirement
+						has_idea = all_adults_serve
+						has_idea = scraping_the_barrel
+					}
+					has_manpower < 5000
+				}
+				modifier = {
+					factor = 20
+					manpower_per_military_factory <  800
+				}
+				modifier = {
+					add = 200
+					has_war = yes
+					NOT = {
+						has_idea = service_by_requirement
+						has_idea = all_adults_serve
+						has_idea = scraping_the_barrel
+					}
+					has_manpower < 2500
+				}
+			}
+			cost = 150
+			removal_cost = -1
+			level = 4
+			modifier = {
+				conscription = 0.05
+				training_time_factor = 0.1
+				exodus_national_appeal = -0.05
+			}
+			cancel_if_invalid = no
+		}
+		service_by_requirement = {
+			available = {
+				NOT = {
+					has_idea = undisturbed_isolation
+					has_idea = isolation
+					has_country_flag = demilitarized
+					has_country_flag = manpower_laws_blocked
+				}
+				OR = {
+					has_government = fascism
+					has_government = communism
+					AND = {
+						has_war = yes
+						OR = {
+							has_war_support > 0.6
+							enemies_strength_ratio > 0.6
+							surrender_progress > 0
+						}
+					}
+				}
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 200
+					NOT = {
+						has_idea = all_adults_serve
+						has_idea = scraping_the_barrel
+					}
+					has_manpower < 5000
+				}
+				modifier = {
+					factor = 20
+					manpower_per_military_factory <  700
+				}
+				modifier = {
+					factor = 0.5
+					manpower_per_military_factory >  1000
+				}
+				modifier = {
+					factor = 0.2
+					manpower_per_military_factory >  3000
+				}
+				modifier = {
+					factor = 0.2
+					enemies_strength_ratio < 1.2
+				}
+				modifier = {
+					add = 200
+					NOT = {
+						has_idea = all_adults_serve
+						has_idea = scraping_the_barrel
+					}
+					has_war = yes
+					has_manpower < 2500
+				}
+			}
+			cost = 150
+			removal_cost = -1
+			level = 5
+			modifier = {
+				conscription = 0.1
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				production_speed_buildings_factor = -0.1
+				training_time_factor = 0.2
+				exodus_national_appeal = -0.1
+			}
+			cancel_if_invalid = no
+		}
+		all_adults_serve = {
+			available = {
+				NOT = {
+					has_idea = undisturbed_isolation
+					has_idea = isolation
+					has_country_flag = manpower_laws_blocked
+					has_country_flag = demilitarized
+				}
+				has_war = yes
+				OR = {
+					has_war_support > 0.7
+					enemies_strength_ratio > 0.75
+					surrender_progress > 0.15
+				}
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 200
+					NOT = {
+						has_idea = scraping_the_barrel
+					}
+					has_manpower < 5000
+				}
+				modifier = {
+					factor = 20
+					manpower_per_military_factory <  600
+				}
+				modifier = {
+					factor = 0.5
+					manpower_per_military_factory >  1000
+				}
+				modifier = {
+					factor = 0
+					manpower_per_military_factory >  5000
+				}
+				modifier = {
+					factor = 0
+					enemies_strength_ratio < 0.5
+				}
+				modifier = {
+					add = 200
+					NOT = {
+						has_idea = scraping_the_barrel
+					}
+					has_war = yes
+					has_manpower < 2500
+				}
+			}
+			cost = 150
+			removal_cost = -1
+			level = 6
+			modifier = {
+				conscription = 0.2
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
+				production_speed_buildings_factor = -0.3
+				training_time_factor = 0.3
+				exodus_national_appeal = -0.2
+			}
+			cancel_if_invalid = no
+		}
+		scraping_the_barrel = {
+			available = {
+				NOT = {
+					has_idea = undisturbed_isolation
+					has_idea = isolation
+					has_country_flag = manpower_laws_blocked
+					has_country_flag = demilitarized
+				}
+				has_war = yes
+				OR = {
+					has_war_support > 0.85
+					surrender_progress > 0.25
+				}
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 200
+					has_manpower < 5000
+				}
+				modifier = {
+					factor = 20
+					manpower_per_military_factory <  500
+				}
+				modifier = {
+					factor = 0.5
+					manpower_per_military_factory >  1000
+				}
+				modifier = {
+					factor = 0
+					manpower_per_military_factory >  5000
+				}
+				modifier = {
+					factor = 0
+					enemies_strength_ratio < 0.5
+				}
+				modifier = {
+					add = 200
+					has_war = yes
+					has_manpower < 2500
+				}
+			}
+			cost = 150
+			removal_cost = -1
+			level = 7
+			modifier = {
+				conscription = 0.25
+				industrial_capacity_factory = -0.4
+				industrial_capacity_dockyard = -0.4
+				production_speed_buildings_factor = -0.4
+				training_time_factor = 0.5
+				exodus_national_appeal = -0.25
+			}
+			cancel_if_invalid = no
+		}
+	}
+
+	trade_laws = {
+		law = yes
+		use_list_view = yes
+		free_trade = {			
+			available = {
+				NOT = {
+					has_country_flag = trade_laws_blocked
+					has_government = communism
+					has_idea = deep_isolation
+					has_idea = isolation
+					has_idea = primitive_economy
+					has_idea = outlaw_economy
+					has_idea = tot_militarisation
+					has_idea = collectivized_society
+				}
+			}
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				min_export = 0.8
+				industrial_capacity_factory = 0.15
+				industrial_capacity_dockyard = 0.15
+				production_speed_buildings_factor = 0.15
+				research_speed_factor = 0.10
+				trade_opinion_factor = 0.3
+				civilian_intel_to_others = 40.0
+				navy_intel_to_others = 20.0
+			}
+			cancel_if_invalid = no
+		}
+		uncontrolled_exports = {
+			available = {
+				NOT = {
+					has_country_flag = trade_laws_blocked
+					has_idea = deep_isolation
+					has_idea = primitive_economy
+					has_idea = outlaw_economy
+					has_idea = tot_militarisation
+				}
+			}
+			removal_cost = -1
+			picture = isolation
+			modifier = {
+				min_export = 0.25
+				consumer_goods_factor = 0.05
+				civilian_intel_to_others = 40.0
+				navy_intel_to_others = 40.0
+				agency_upgrade_time = 0.15
+			}
+			cancel_if_invalid = no
+		}
+		export_focus = {
+			available = { 
+				NOT = {
+					has_country_flag = trade_laws_blocked
+					has_idea = deep_isolation
+					has_idea = primitive_economy
+					has_idea = outlaw_economy
+				}
+			}
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				min_export = 0.5
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.1
+				research_speed_factor = 0.05
+				civilian_intel_to_others = 20.0
+				navy_intel_to_others = 10.0
+			}
+			cancel_if_invalid = no
+		}
+		limited_exports = {
+			available = {
+				###################################
+			}
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				min_export = 0.25
+				industrial_capacity_factory = 0.05
+				industrial_capacity_dockyard = 0.05
+				production_speed_buildings_factor = 0.05
+				research_speed_factor = 0.01
+				trade_opinion_factor = -0.30
+				civilian_intel_to_others = 10.0
+				navy_intel_to_others = 5
+			}
+			default = yes
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 3
+				modifier = {
+				    add = -1
+				    is_major = no
+				    is_in_faction = yes
+				    has_war = yes
+			    }
+				modifier = {
+				    add = -1
+					is_major = no
+				 	has_war = no
+			 	}
+			 	modifier = {
+				 	add = 1500
+				 	has_idea = closed_economy
+				 	has_large_ally_not_pick_closed_economy = yes
+			 	}
+			}
+	 	}
+		closed_economy = {
+			available = {
+				has_war = yes
+				OR = {
+					has_government = fascism
+					has_government = communism
+				}
+				OR = {
+					has_idea = war_economy
+					has_idea = tot_economic_mobilisation
+					has_idea = tot_militarisation
+				}
+			}
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				min_export = 0
+				trade_opinion_factor = -0.75
+			}
+			on_add = {
+				###################################???
+				custom_effect_tooltip = closed_economy_TT
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 1
+
+				modifier = {
+					factor = 0
+
+					is_major = no
+					is_in_faction = yes
+					has_war = yes
+				}
+				modifier = {
+					factor = 0
+					# don't take if we have a reasonable sized ally
+					# since they will require our trades
+					has_large_ally_not_pick_closed_economy = yes
+				}
+			}
+		}
+		limited_imports = {
+		}
+		import_focus = {
+		}
+		uncontrolled_imports = {
+			available = {
+				NOT = {
+					has_country_flag = trade_laws_blocked
+				}
+			}
+		}
+	}
+
+	economy = {
+		law = yes
+		use_list_view = yes
+		deep_isolation = {
+			level = 1
+			available = {
+				OR = {
+					has_war = yes
+					has_government = fascism
+					has_government = communism
+				}
+			}
+			visible = {
+				has_idea = island_country
+			}
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.50
+				production_speed_industrial_complex_factor = -0.5
+				production_speed_arms_factory_factor = -0.5
+				production_speed_dockyard_factor = -0.5
+				conversion_cost_civ_to_mil_factor = 0.5
+				conversion_cost_mil_to_civ_factor = 0.5
+				generate_wargoal_tension = 1.00
+				join_faction_tension = 0.20
+				lend_lease_tension = 0.50
+				send_volunteers_tension = 0.20
+				guarantee_tension = 0.75
+				max_fuel_factor = -0.45
+				fuel_gain_factor = -0.6
+				agency_upgrade_time = 1.0
+			}
+			cancel_if_invalid = no
+		}
+		isolation = {	
+			level = 2
+			available = {
+				OR = {
+					has_war = yes
+					has_government = fascism
+					has_government = communism
+				}
+			}	
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.4
+				production_speed_industrial_complex_factor = -0.4
+				production_speed_arms_factory_factor = -0.4
+				production_speed_dockyard_factor = -0.4
+				conversion_cost_civ_to_mil_factor= 0.4
+				conversion_cost_mil_to_civ_factor = 0.4
+				generate_wargoal_tension = 1.00
+				join_faction_tension = 0.20
+				send_volunteers_tension = 0.20
+				guarantee_tension = 0.5
+				max_fuel_factor = -0.35
+				fuel_gain_factor = -0.5
+				agency_upgrade_time = 0.8
+			}
+			allowed_to_remove = {
+				has_war = no
+			}
+			cancel_if_invalid = no
+		}
+		primitive_economy = {
+			level = 3
+            picture = tribal_economy
+			allowed = {
+				always = no
+			}
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.40
+				production_speed_industrial_complex_factor = -0.50
+				production_speed_arms_factory_factor = -0.50
+				conversion_cost_civ_to_mil_factor= 0.40
+				conversion_cost_mil_to_civ_factor = 0.40
+				production_speed_infrastructure_factor = -0.25
+				production_speed_synthetic_refinery_factor = -0.25
+				max_fuel_factor = -0.50
+				fuel_gain_factor = -0.50
+				local_resources_factor = 0.15
+			}
+			default = no
+            allowed_to_remove = {
+                OR = {
+					has_idea = modern_society
+					has_idea = outdated_industry
+					has_idea = pre_industrial_society
+					has_idea = agrarian_society
+				}
+            }
+			cancel_if_invalid = no
+		}
+		outlaw_economy = {
+			level = 4
+            picture = outlaw_economy
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.20
+                fuel_gain_factor = 0.20
+                industrial_capacity_factory = 0.20
+                production_speed_industrial_complex_factor = -0.20
+                production_speed_arms_factory_factor = -0.20
+                conversion_cost_civ_to_mil_factor= -0.20
+                conversion_cost_mil_to_civ_factor = 0.20
+                political_power_gain = -0.20
+                stability_factor = -0.20
+			}
+			default = no
+            allowed_to_remove = {
+                OR = {
+					has_government = communism
+					has_government = fascism
+				}
+            }
+			cancel_if_invalid = no
+		}
+		civilian_economy = {
+			level = 5
+			available = {
+				NOT = {
+					has_country_flag = war_economy_only_flag
+				}
+			}
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.35
+				production_speed_industrial_complex_factor = -0.3
+				production_speed_arms_factory_factor = -0.3
+				conversion_cost_civ_to_mil_factor= 0.3
+				conversion_cost_mil_to_civ_factor = 0.3
+				production_speed_infrastructure_factor = 0.1
+				production_speed_synthetic_refinery_factor = 0.05
+				max_fuel_factor = -0.25
+				fuel_gain_factor = -0.4
+			}
+			research_bonus = {
+				industry = 0.03
+				electronics = 0.025
+			}
+			default = yes
+			cancel_if_invalid = no
+		}
+		low_economic_mobilisation = {
+			level = 6
+			available = {
+				NOT = {
+					has_country_flag = war_economy_only_flag
+					has_country_flag = demilitarized
+					has_country_flag = economic_laws_blocked
+				}
+				has_war_support > 0.15
+			}
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.3
+				production_speed_industrial_complex_factor = -0.1
+				production_speed_arms_factory_factor = -0.1
+				production_speed_infrastructure_factor = 0.05
+				fuel_gain_factor = -0.25
+			}
+			research_bonus = {
+				industry = 0.025
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 2
+				modifier = {
+					factor = 20
+					is_major = yes
+				}
+			}
+		}
+		partial_economic_mobilisation = {
+			level = 7
+			available = {
+				has_war_support > 0.25
+				NOT = {
+					has_country_flag = war_economy_only_flag
+					has_country_flag = demilitarized
+					has_country_flag = economic_laws_blocked
+				}
+
+			}
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.25
+				production_speed_arms_factory_factor = 0.1
+				conversion_cost_civ_to_mil_factor= -0.1
+				conversion_cost_mil_to_civ_factor = -0.1
+				fuel_gain_factor = -0.1
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 3
+				modifier = {
+					factor = 20
+					is_major = yes
+				}
+			}
+		}
+		war_economy = {
+			level = 8
+			available = {
+				if = {
+					limit = {
+						OR = {
+							has_government = fascism
+							has_government = communism
+						}
+						has_war_support = 0.1
+					}
+					
+				}
+				else = {
+					OR = {
+						has_war = yes
+						has_war_support > 0.5
+					}
+				}
+				NOT = {
+					has_country_flag = demilitarized
+					has_country_flag = economic_laws_blocked
+				}
+			}
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.2
+				production_speed_arms_factory_factor = 0.2
+				conversion_cost_civ_to_mil_factor= -0.2
+				conversion_cost_mil_to_civ_factor = -0.2
+				political_power_gain = -0.20
+			}
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 5
+				modifier = {
+					factor = 20
+					manpower_per_military_factory >  1000
+				}
+				modifier = {
+					add = 1800
+					# revert from closed_economy if we have large allies
+					has_idea = closed_economy
+					has_large_ally_not_pick_closed_economy = yes
+				}
+			}
+		}
+		tot_economic_mobilisation = {
+			level = 9
+			available = {
+				if = {
+					limit = {
+						OR = {
+							has_government = fascism
+							has_government = communism
+						}
+						has_war_support = 0.25
+					}
+					
+				}
+				else = {
+					OR = {
+						has_war = yes
+						has_war_support > 0.75
+					}
+				}
+				NOT = {
+					has_country_flag = demilitarized
+					has_country_flag = economic_laws_blocked
+				}
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 25
+					manpower_per_military_factory > 15000
+				}
+				modifier = {
+					factor = 0
+					manpower_per_military_factory < 5000
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_idea = volunteer_only
+						has_idea = limited_conscription
+					}
+				}
+			}
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = 0.1
+				conscription = -0.03
+				production_speed_arms_factory_factor = 0.3
+				conversion_cost_civ_to_mil_factor= -0.3
+				conversion_cost_mil_to_civ_factor = -0.3
+				political_power_gain = -0.25
+			}
+			cancel_if_invalid = no
+		}
+		tot_militarisation = {
+			level = 10
+			picture = syndicate_of_defence
+			available = {
+				if = {
+					limit = {
+						OR = {
+							has_government = fascism
+							has_government = communism
+						}
+						has_war_support = 0.5
+					}
+					
+				}
+				else = {
+					OR = {
+						has_war = yes
+						has_war_support > 0.9
+					}
+				}
+				NOT = {
+					has_country_flag = demilitarized
+					has_country_flag = economic_laws_blocked
+				}
+			}
+			ai_will_do = {
+				factor = 1
+				modifier = {
+					factor = 25
+					manpower_per_military_factory > 25000
+				}
+				modifier = {
+					factor = 0
+					manpower_per_military_factory < 5000
+				}
+				modifier = {
+					factor = 0
+					OR = {
+						has_idea = volunteer_only
+						has_idea = limited_conscription
+					}
+				}
+			}
+			cost = 150
+			removal_cost = -1
+			modifier = {
+				consumer_goods_factor = -0.1
+				stability_weekly_factor = -0.02
+				war_support_weekly_factor = -0.02
+				conscription = -0.03
+				production_speed_arms_factory_factor = 0.3
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_speed_buildings_factor = 0.2
+				conversion_cost_civ_to_mil_factor= -0.3
+				conversion_cost_mil_to_civ_factor = -0.3
+				political_power_gain = -0.5
+			}
+			cancel_if_invalid = no
+		}
+		collectivized_society = {
+			picture = SPR_collectivized_society		
+			available = {
+				has_government = communism
+			}
+			removal_cost = -1
+			modifier = {
+				resistance_target = -0.2
+				consumer_goods_factor = 0.15
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_arms_factory_factor = 0.3
+				conversion_cost_civ_to_mil_factor= -0.3
+				conversion_cost_mil_to_civ_factor = -0.3
+				global_building_slots_factor = 0.1
+				industry_free_repair_factor = 0.5
+				industrial_capacity_factory = 0.7
+				industrial_capacity_dockyard = 0.7
+				research_speed_factor = -0.1
+				production_factory_efficiency_gain_factor = -0.2
+				production_factory_max_efficiency_factor = -0.2
+				line_change_production_efficiency_factor = 0.1
+			}
+			allowed_to_remove = {
+				if = {
+					limit = {
+						has_government = communism
+					}
+					has_idea = sour_economic_idea
+				}
+				else = {
+					always = yes
+				}
+			}
+			cancel_if_invalid = no
+		}
+	}
+
+	###political_advisor in their country###
+	###political_advisor in their country###
+	###political_advisor in their country###
+
+	#sorted and formated ^
+
+	society_development_idea = {
+		law = yes
+		use_list_view = yes
+		clockwerk_industry = {
+			cost = -1
+			traits = {
+				society_idea
+			}
+			picture = clockwerk_economy			
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = 0.15
+				industrial_capacity_factory = 0.1
+				industrial_capacity_dockyard = 0.1
+				production_speed_buildings_factor = 0.05
+				industry_repair_factor = 0.05
+				local_resources_factor = 0.1
+				industry_air_damage_factor = 0.1
+			}
+		}
+		modern_society = {
+			cost = -1
+			traits = {
+				society_idea
+			}
+			removal_cost = -1
+			modifier = {
+				exodus_assimilation_proportion = 0.1
+			}
+		}
+		outdated_industry1 = {
+			traits = { society_idea }
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = outdated_industry
+			removal_cost = -1
+			
+			modifier = {
+				industrial_capacity_factory = -0.05
+				industrial_capacity_dockyard = -0.05
+				production_speed_buildings_factor = -0.05
+				industry_repair_factor = -0.05
+				research_speed_factor = -0.05
+				local_resources_factor = -0.05
+				exodus_assimilation_proportion = 0.05
+				supply_consumption_factor = -0.05
+			}
+		}
+		outdated_industry = {
+			cost = -1
+			traits = {
+				society_idea
+			}
+			removal_cost = -1
+			modifier = {
+				industrial_capacity_factory = -0.1
+				industrial_capacity_dockyard = -0.1
+				production_speed_buildings_factor = -0.1
+				industry_repair_factor = -0.1
+				research_speed_factor = -0.10
+				local_resources_factor = -0.1
+				exodus_assimilation_proportion = 0.05
+				supply_consumption_factor = -0.1
+			}
+		}
+		pre_industrial_society3 = {
+			traits = { society_idea }
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = pre_industrial_society
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = -0.025
+				industrial_capacity_factory = -0.125
+				industrial_capacity_dockyard = -0.125
+				production_speed_buildings_factor = -0.125
+				industry_repair_factor = -0.125
+				research_speed_factor = -0.125
+				MONTHLY_POPULATION = -0.025
+				exodus_national_appeal = -0.025
+				local_resources_factor = -0.125
+				industry_air_damage_factor = -0.05
+				exodus_assimilation_proportion = 0.025
+				supply_consumption_factor = -0.15
+			}
+		}
+		pre_industrial_society2 = {
+			traits = { society_idea }
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = pre_industrial_society
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = -0.05
+				industrial_capacity_factory = -0.15
+				industrial_capacity_dockyard = -0.15
+				production_speed_buildings_factor = -0.15
+				industry_repair_factor = -0.15
+				research_speed_factor = -0.15
+				MONTHLY_POPULATION = -0.05
+				exodus_national_appeal = -0.05
+				local_resources_factor = -0.15
+				industry_air_damage_factor = -0.1
+				exodus_assimilation_proportion = 0.025
+				supply_consumption_factor = -0.2
+			}
+		}
+		pre_industrial_society1 = {
+			traits = { society_idea }
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = pre_industrial_society
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = -0.075
+				industrial_capacity_factory = -0.175
+				industrial_capacity_dockyard = -0.175
+				production_speed_buildings_factor = -0.175
+				industry_repair_factor = -0.175
+				research_speed_factor = -0.175
+				MONTHLY_POPULATION = -0.075
+				exodus_national_appeal = -0.075
+				local_resources_factor = -0.175
+				industry_air_damage_factor = -0.15
+				exodus_assimilation_proportion = 0.025
+				supply_consumption_factor = -0.25
+			}
+		}
+		pre_industrial_society = {
+			cost = -1
+			traits = {
+				society_idea
+			}
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = -0.1
+				industrial_capacity_factory = -0.2
+				industrial_capacity_dockyard = -0.2
+				production_speed_buildings_factor = -0.2
+				industry_repair_factor = -0.2
+				research_speed_factor = -0.2
+				MONTHLY_POPULATION = -0.1
+				exodus_national_appeal = -0.1
+				local_resources_factor = -0.2
+				industry_air_damage_factor = -0.2
+				exodus_assimilation_proportion = 0.025
+				supply_consumption_factor = -0.3
+			}
+		}
+		agrarian_society5 = {
+			traits = { society_idea }
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			picture = agrarian_society
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = -0.12
+				industrial_capacity_factory = -0.25
+				industrial_capacity_dockyard = -0.25
+				production_speed_buildings_factor = -0.25
+				industry_repair_factor = -0.25
+				research_speed_factor = -0.25
+				MONTHLY_POPULATION = -0.125
+				exodus_national_appeal = -0.125
+				local_resources_factor = -0.25
+				industry_air_damage_factor = -0.25
+				max_fuel_factor = -0.02
+				exodus_assimilation_proportion = 0.01
+				supply_consumption_factor = -0.35
+			}
+		}
+		agrarian_society4 = {
+			
+			traits = { society_idea }
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = agrarian_society
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = -0.14
+				industrial_capacity_factory = -0.3
+				industrial_capacity_dockyard = -0.3
+				production_speed_buildings_factor = -0.3
+				industry_repair_factor = -0.3
+				research_speed_factor = -0.3
+				MONTHLY_POPULATION = -0.15
+				exodus_national_appeal = -0.15
+				local_resources_factor = -0.3
+				industry_air_damage_factor = -0.3
+				max_fuel_factor = -0.03
+				exodus_assimilation_proportion = 0.01
+				supply_consumption_factor = -0.4
+			}
+		}
+		agrarian_society3 = {
+			
+			traits = { society_idea }
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = agrarian_society
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = -0.15
+				industrial_capacity_factory = -0.35
+				industrial_capacity_dockyard = -0.35
+				production_speed_buildings_factor = -0.35
+				industry_repair_factor = -0.35
+				research_speed_factor = -0.35
+				MONTHLY_POPULATION = -0.175
+				exodus_national_appeal = -0.175
+				local_resources_factor = -0.35
+				industry_air_damage_factor = -0.35
+				max_fuel_factor = -0.05
+				exodus_assimilation_proportion = 0.01
+				supply_consumption_factor = -0.45
+			}
+		}
+		agrarian_society2 = {
+			
+			traits = { society_idea }
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = agrarian_society
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = -0.16
+				industrial_capacity_factory = -0.40
+				industrial_capacity_dockyard = -0.40
+				production_speed_buildings_factor = -0.40
+				industry_repair_factor = -0.40
+				research_speed_factor = -0.40
+				MONTHLY_POPULATION = -0.2
+				exodus_national_appeal = -0.2
+				local_resources_factor = -0.4
+				industry_air_damage_factor = -0.4
+				max_fuel_factor = -0.1
+				exodus_assimilation_proportion = 0.01
+				supply_consumption_factor = -0.5
+			}
+		}
+		agrarian_society1 = {
+			
+			traits = { society_idea }
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			picture = agrarian_society
+			removal_cost = -1
+			
+			modifier = {
+				production_factory_max_efficiency_factor = -0.18
+				industrial_capacity_factory = -0.45
+				industrial_capacity_dockyard = -0.45
+				production_speed_buildings_factor = -0.45
+				industry_repair_factor = -0.45
+				research_speed_factor = -0.45
+				MONTHLY_POPULATION = -0.225
+				exodus_national_appeal = -0.225
+				local_resources_factor = -0.45
+				industry_air_damage_factor = -0.45
+				max_fuel_factor = -0.15
+				exodus_assimilation_proportion = 0.01
+				supply_consumption_factor = -0.55
+			}
+		}
+		agrarian_society = {
+			cost = -1
+			traits = {
+				society_idea
+			}
+			removal_cost = -1
+			modifier = {
+				production_factory_max_efficiency_factor = -0.2
+				industrial_capacity_factory = -0.50
+				industrial_capacity_dockyard = -0.50
+				production_speed_buildings_factor = -0.50
+				industry_repair_factor = -0.5
+				research_speed_factor = -0.5
+				MONTHLY_POPULATION = -0.25
+				exodus_national_appeal = -0.25
+				local_resources_factor = -0.5
+				industry_air_damage_factor = -0.5
+				max_fuel_factor = -0.2
+				exodus_assimilation_proportion = 0.01
+				supply_consumption_factor = -0.6
+			}
+		}
+		tribal_society3 = {
+			traits = { society_idea }
+			picture = tribal_society
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			rule = {
+				can_send_volunteers = no
+				can_join_factions = no
+				can_create_factions = no
+			}
+			modifier = {
+				stability_factor = -0.025
+				production_factory_max_efficiency_factor = -0.225
+				industrial_capacity_factory = -0.55
+				industrial_capacity_dockyard = -0.55
+				production_speed_buildings_factor = -0.55
+				industry_repair_factor = -0.55
+				research_speed_factor = -0.55
+				MONTHLY_POPULATION = -0.3
+				exodus_national_appeal = -0.3
+				local_resources_factor = -0.55
+				industry_air_damage_factor = -0.55
+				max_fuel_factor = -0.25
+				exodus_assimilation_proportion = 0.005
+				supply_consumption_factor = -0.65
+			}
+		}
+		tribal_society2 = {
+			traits = { society_idea }
+			picture = tribal_society
+			allowed_civil_war = {
+				always = yes
+			}
+			
+			removal_cost = -1
+			rule = {
+				can_send_volunteers = no
+				can_join_factions = no
+				can_create_factions = no
+			}
+			modifier = {
+				stability_factor = -0.05
+				production_factory_max_efficiency_factor = -0.25
+				industrial_capacity_factory = -0.60
+				industrial_capacity_dockyard = -0.60
+				production_speed_buildings_factor = -0.60
+				industry_repair_factor = -0.6
+				research_speed_factor = -0.6
+				MONTHLY_POPULATION = -0.35
+				exodus_national_appeal = -0.35
+				local_resources_factor = -0.6
+				industry_air_damage_factor = -0.6
+				max_fuel_factor = -0.3
+				exodus_assimilation_proportion = 0.005
+				supply_consumption_factor = -0.7
+			}
+		}
+		tribal_society1 = {
+			traits = { society_idea }
+			picture = tribal_society
+			allowed_civil_war = {
+				always = yes
+			}
+			rule = {
+				can_send_volunteers = no
+				can_join_factions = no
+				can_create_factions = no
+			}
+			removal_cost = -1
+			
+			modifier = {
+				stability_factor = -0.075
+				production_factory_max_efficiency_factor = -0.275
+				industrial_capacity_factory = -0.65
+				industrial_capacity_dockyard = -0.65
+				production_speed_buildings_factor = -0.65
+				industry_repair_factor = -0.65
+				research_speed_factor = -0.65
+				MONTHLY_POPULATION = -0.4
+				exodus_national_appeal = -0.4
+				local_resources_factor = -0.65
+				industry_air_damage_factor = -0.65
+				max_fuel_factor = -0.35
+				exodus_assimilation_proportion = 0.005
+				supply_consumption_factor = -0.75
+			}
+		}
+		tribal_society = {		
+			cost = -1
+			traits = {
+				society_idea
+			}
+			removal_cost = -1
+			rule = {
+				can_send_volunteers = no
+				can_join_factions = no
+				can_create_factions = no
+			}
+			modifier = {
+				stability_factor = -0.1
+				production_factory_max_efficiency_factor = -0.3
+				industrial_capacity_factory = -0.70
+				industrial_capacity_dockyard = -0.70
+				production_speed_buildings_factor = -0.70
+				industry_repair_factor = -0.7
+				research_speed_factor = -0.7
+				MONTHLY_POPULATION = -0.45
+				exodus_national_appeal = -0.45
+				local_resources_factor = -0.7
+				industry_air_damage_factor = -0.7
+				max_fuel_factor = -0.4
+				exodus_assimilation_proportion = 0.005
+				supply_consumption_factor = -0.8
+			}
+		}
+		communal_society = {
+			traits = {
+				society_idea
+			}
+			cost = -1
+			removal_cost = -1
+			modifier = {
+				army_core_defence_factor = 0.15
+				army_core_attack_factor = 0.15
+				stability_factor = 0.10
+				political_power_gain = 0.2
+				production_factory_max_efficiency_factor = -0.3
+				industrial_capacity_factory = -0.50
+				industrial_capacity_dockyard = -0.50
+				production_speed_buildings_factor = -0.50
+				industry_repair_factor = -0.5
+				research_speed_factor = -0.7
+				MONTHLY_POPULATION = -0.3
+				exodus_national_appeal = -0.3
+				local_resources_factor = -0.5
+				industry_air_damage_factor = -0.7
+				max_fuel_factor = -0.4
+				ai_focus_peaceful_factor = 0.25
+				exodus_assimilation_proportion = 0.01
+				supply_consumption_factor = -0.8
+			}
+		}
+		religious_country = {
+			picture = holy_order
+			#
+			#
+			#
+			#
+			#
+			#
+			#
+			#
+			#
+			#
+		}
+		### FOR SKELETONS
+		detached_country = {
+			removal_cost = -1
+			cost = -1
+			traits = {
+				society_idea
+			}
+			rule = {
+				can_send_volunteers = no
+				can_not_declare_war = yes
+				can_join_factions = no
+				can_create_factions = no
+				can_puppet = no
+			}
+			modifier = {
+				production_factory_max_efficiency_factor = -0.10
+				production_speed_buildings_factor = -0.65
+				industry_repair_factor = -0.65
+				research_speed_factor = -8
+				political_power_cost = 0.2
+				drift_defence_factor = 1
+				MONTHLY_POPULATION = -0.3
+				exodus_national_appeal = -0.3
+				industry_air_damage_factor = -0.7
+				max_fuel_factor = -0.4
+				civilian_intel_to_others = -80.0
+				navy_intel_to_others = -80.0
+				army_intel_to_others = -80.0
+				airforce_intel_to_others = -80.0
+			}
+		}		
+	}
+	power_concentration = {
+		law = yes
+		use_list_view = yes
+		anarhy = {}
+		low_power_concentration = {}
+		medium_power_concentration = {}
+		high_power_concentration = {}
+		authoritarism = {}
+		commune = {}
+		harmony = {}
+	}
+	illiteracy_level_idea = {
+		law = yes
+		use_list_view = yes
+		no_lack_of_scientists = {
+			cost = 1
+			traits = {
+				illiteracy_idea
+			}
+			allowed = {
+				always = yes
+			}
+			available = {
+				has_idea = no_lack_of_scientists
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			modifier = {
+			}
+		}
+
+		lack_of_scientists3 = {
+			cost = -1
+			traits = { illiteracy_idea }
+			allowed = {
+				always = yes
+			}
+			available = {
+				has_idea = lack_of_scientists3
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.05
+				industry_repair_factor = -0.05
+				research_speed_factor = -0.15
+			}
+		}
+		
+
+
+		lack_of_scientists2 = {
+			cost = -1
+			traits = { illiteracy_idea }
+			allowed = {
+				always = yes
+			}
+			available = {
+				has_idea = lack_of_scientists2
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.10
+				industry_repair_factor = -0.1
+				research_speed_factor = -0.30
+			}
+		}
+
+		lack_of_scientists1 = {
+			cost = -1
+			traits = { illiteracy_idea }
+			allowed = {
+				always = yes
+			}
+			available = {
+				has_idea = lack_of_scientists1
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.15
+				industry_repair_factor = -0.15
+				research_speed_factor = -0.45
+			}
+		}
+		
+		lack_of_scientists = {
+			cost = -1
+			traits = { illiteracy_idea }
+			allowed = {
+				always = yes
+			}
+			available = {
+				has_idea = lack_of_scientists
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			modifier = {
+				production_speed_buildings_factor = -0.2
+				industry_repair_factor = -0.2
+				research_speed_factor = -0.6
+			}
+		}
+		education_socialist = {
+			cost = -1
+			traits = { illiteracy_idea }
+			picture = old_lack_of_scientists
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.3
+			}
+		}
+	}
+	country = { #poverty
+		feudalism = {
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			available = {
+				NOT = { has_country_flag = have_regular_puppets }
+			}
+			removal_cost = -1
+	
+			modifier = {
+				local_resources_factor = -0.10				
+				political_power_cost = -0.2
+				research_speed_factor = -0.1
+			}
+		}
+	}
+	poverty_level_idea = {
+		law = yes
+		use_list_view = yes
+		
+		no_poverty = {
+			cost = -1
+			traits = { poverty_idea }
+			allowed = {
+				always = yes
+			}
+			available = {
+				has_idea = no_poverty
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+			modifier = {
+			}
+		}
+		poverty5 = {
+			cost = -1
+			traits = { poverty_idea }
+
+			allowed = {
+				always = yes
+			}
+			available = {
+				has_idea = poverty5
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				MONTHLY_POPULATION = -0.04
+				production_speed_buildings_factor = -0.05
+				industry_repair_factor = -0.05
+				consumer_goods_factor = 0.04
+			}
+		}
+
+		poverty4 = {
+			cost = -1
+			traits = { poverty_idea }
+			allowed = {
+				always = yes
+			}
+			available = {
+				has_idea = poverty4
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				MONTHLY_POPULATION = -0.07
+				production_speed_buildings_factor = -0.10
+				industry_repair_factor = -0.1
+				consumer_goods_factor = 0.07
+				research_speed_factor = -0.025
+				exodus_nomadicity = 0.02
+			}
+		}
+
+		poverty3 = {
+			cost = -1
+			traits = { poverty_idea }
+			allowed = {
+				always = yes
+			}
+			available = {
+				has_idea = poverty3
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				MONTHLY_POPULATION = -0.12
+				production_speed_buildings_factor = -0.15
+				industry_repair_factor = -0.15
+				consumer_goods_factor = 0.10
+				research_speed_factor = -0.05
+				exodus_nomadicity = 0.04
+			}
+		}
+		poverty2 = {
+			cost = -1
+			traits = { poverty_idea }
+			picture = poverty_generic
+			allowed = {
+				always = yes
+			}
+			available = {
+				has_idea = poverty2
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				MONTHLY_POPULATION = -0.13
+				production_speed_buildings_factor = -0.16
+				industry_repair_factor = -0.16
+				consumer_goods_factor = 0.11
+				research_speed_factor = -0.075
+				exodus_nomadicity = 0.06
+			}
+		}
+		poverty1 = {
+			cost = -1
+			traits = { poverty_idea }
+			allowed = {
+				always = yes
+			}
+			available = {
+				has_idea = poverty1
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				MONTHLY_POPULATION = -0.14
+				production_speed_buildings_factor = -0.18
+				industry_repair_factor = -0.18
+				consumer_goods_factor = 0.13
+				research_speed_factor = -0.1
+				exodus_nomadicity = 0.08
+			}
+		}
+
+		poverty = {
+			cost = -1
+			traits = { poverty_idea }
+			allowed = {
+				always = yes
+			}
+			available = {
+				has_idea = poverty
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			modifier = {
+				MONTHLY_POPULATION = -0.15
+				production_speed_buildings_factor = -0.20
+				industry_repair_factor = -0.2
+				consumer_goods_factor = 0.15
+				conscription = -0.009
+				research_speed_factor = -0.15
+				exodus_nomadicity = 0.1
+			}
+		}
+	}
+	race_pointer = {
+		law = yes
+		use_list_view = yes
+		generic_race_idea = {
+			allowed = {
+				has_tech = generic_race
+			}
+			visible = {
+				has_idea = generic_race_idea
+			}
+
+			removal_cost = -1
+			default = yes
+
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		pony_race = {
+			default = yes
+			allowed = {
+				is_pony_race = yes
+			}
+			visible = {
+				has_idea = pony_race
+			}
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		changeling_race = {
+			default = yes
+			allowed = {
+				is_changeling_race = yes
+			}
+			visible = {
+				has_idea = changeling_race
+			}
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		deer_race = {
+			default = yes
+			allowed = {
+				is_deer_race = yes
+			}
+			visible = {
+				has_idea = deer_race
+			}
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		griffon_race = {
+			default = yes
+			allowed = {
+				is_griffon_race = yes
+			}
+			visible = {
+				has_idea = griffon_race
+			}
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+			}
+		}
+
+		diamond_dog_race = {
+			default = yes
+			allowed = {
+				is_diamond_dog_race = yes
+			}
+			visible = {
+				has_idea = diamond_dog_race
+			}
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		minotaur_race = {
+			default = yes
+			allowed = {
+				is_minotaur_race = yes
+			}
+			visible = {
+				has_idea = minotaur_race
+			}
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		penguin_race = {
+			default = yes
+			allowed = {
+				is_penguin_race = yes
+			}
+			visible = {
+				has_idea = penguin_race
+			}
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		dragon_race = {
+			default = yes
+			allowed = {
+				is_dragon_race = yes
+			}
+			visible = {
+				has_idea = dragon_race
+			}
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		undead_race = {
+			default = yes
+			allowed = {
+				is_undead_race = yes
+			}
+			visible = {
+				has_idea = undead_race
+			}
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		buffalo_race = {
+			default = yes
+			allowed = {
+				is_buffalo_race = yes
+			}
+			visible = {
+				has_idea = buffalo_race
+			}
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		yak_race = {
+			default = yes
+			allowed = {
+				is_yak_race = yes
+			}
+			visible = {
+				has_idea = yak_race
+			}
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		polar_race = {
+			default = yes
+			allowed = {
+				is_polar_race = yes
+			}
+			visible = {
+				has_idea = polar_race
+			}
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+
+	science_base = {
+		law = yes
+		use_list_view = yes
+		outstanding_science_base = {
+			level = 1
+			ai_will_do = {
+				factor = 10000
+			}
+			#########################################################################
+		}
+		proper_science_base = {
+			level = 2
+			traits = {
+				science_idea
+			}
+			cost = 40
+			removal_cost = -1
+			ai_will_do = {
+				factor = 100
+				modifier = {
+					factor = 0
+					has_idea = outstanding_science_base
+				}
+				modifier = {
+					factor = 10000
+					OR = {
+						has_idea = better_science_base
+						has_idea = poor_science_base
+					}
+				}
+			}
+			cancel_if_invalid = no
+		}
+		big_science_base = {
+			level = 3
+			traits = {
+				science_idea
+			}
+			cost = 40
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.3
+				land_doctrine_cost_factor = 0.3
+				air_doctrine_cost_factor = 0.3
+				naval_doctrine_cost_factor = 0.3
+				political_power_gain = 0.1
+			}
+			ai_will_do = {
+				factor = 100
+				modifier = {
+					factor = 0
+					has_idea = outstanding_science_base
+					has_idea = proper_science_base
+				}
+				modifier = {
+					factor = 10000
+					OR = {
+						has_idea = better_science_base
+						has_idea = poor_science_base
+					}
+				}
+			}
+			cancel_if_invalid = no
+		}
+		better_science_base = {
+			level = 4
+			traits = {
+				science_idea
+			}
+			cost = 40
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.55
+				land_doctrine_cost_factor = 0.55
+				air_doctrine_cost_factor = 0.55
+				naval_doctrine_cost_factor = 0.55
+				political_power_gain = 0.2
+			}
+			ai_will_do = {
+				factor = 20
+				modifier = {
+					factor = 0
+					OR = {
+						has_idea = outstanding_science_base
+						has_idea = proper_science_base
+						has_idea = big_science_base
+					}
+				}
+				modifier = {
+					factor = 10000
+					has_idea = poor_science_base
+				}
+			}
+			cancel_if_invalid = no
+		}
+		poor_science_base = {
+			level = 5
+			traits = {
+				science_idea
+			}
+			cost = 40
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = -0.8
+				land_doctrine_cost_factor = 0.8
+				air_doctrine_cost_factor = 0.8
+				naval_doctrine_cost_factor = 0.8
+				political_power_gain = 0.3
+			}
+			ai_will_do = {
+				factor = 2
+				modifier = {
+					factor = 0
+					OR = {
+						has_idea = outstanding_science_base
+						has_idea = proper_science_base
+						has_idea = big_science_base
+						has_idea = better_science_base
+					}
+				}
+			}
+			cancel_if_invalid = no
+		}
+	}
+	monatisation = {
+		law = yes
+		use_list_view = yes
+		only_goods = {
+			picture = LEC_vlow_reserves
+		}
+		low_barter_focus = {
+			picture = LEC_low_reserves
+		}
+		medium_barter_focus = {
+			picture = LEC_medium_reserves
+		}
+		high_barter_focus = {
+			picture = LEC_high_reserves
+		}
+		only_money = {
+			picture = LEC_staggering_reserves
+		}
+	}
+	inflation = {
+		law = yes
+		use_list_view = yes
+		uninflation = {}
+		no_inflation = {}
+		low_inflation = {}
+		medium_inflation = {}
+		high_inflation = {}
+		hyperinflation = {}
+	}
+	valuta = {
+		law = yes
+		use_list_view = yes
+		no_valuta = {
+			available = {
+				has_idea = only_goods
+			}
+		}
+		bitsy = {}
+		metalony = {}
+		international_valuta = {}
+		stone_coins = {}
+		copper_coins = {}
+		silver_coins = {}
+		gold_coins = {}
+		race_based_valuta = {}
+	}
+}

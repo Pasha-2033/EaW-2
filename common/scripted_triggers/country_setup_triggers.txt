@@ -1,0 +1,158 @@
+date_is_962 = {
+	OR ={
+		date = 962.1.1
+		AND = {
+			date > 961.12.31
+			date < 962.1.2
+		}
+	}
+}
+date_is_1007 = {
+	OR = {
+		date = 1007.1.1
+		AND = {
+			date > 1006.12.31
+			date < 1007.1.2
+		}
+	}
+}
+has_mobilization_laws = {
+	OR = {
+		has_idea = disarmed_nation
+		has_idea = volunteer_only
+		has_idea = limited_conscription
+		has_idea = extensive_conscription
+		has_idea = service_by_requirement
+		has_idea = all_adults_serve
+		has_idea = scraping_the_barrel
+	}
+}
+has_trade_laws = {
+	OR = {
+		has_idea = free_trade
+		has_idea = uncontrolled_exports
+		has_idea = export_focus
+		has_idea = limited_exports
+		has_idea = closed_economy
+		has_idea = limited_imports
+		has_idea = import_focus
+		has_idea = uncontrolled_imports
+	}
+}
+has_economy_idea = {
+	OR = {
+		has_idea = deep_isolation
+		has_idea = isolation
+		has_idea = primitive_economy
+		has_idea = outlaw_economy
+		has_idea = civilian_economy
+		has_idea = low_economic_mobilisation
+		has_idea = partial_economic_mobilisation
+		has_idea = war_economy
+		has_idea = tot_economic_mobilisation
+		has_idea = tot_militarisation
+		has_idea = collectivized_society
+	}
+}
+has_society_development = {
+	OR = {
+		has_clockwerk_industry = yes
+		has_modern_society = yes
+		has_outdated_industry = yes
+		has_pre_industrial_society = yes
+		has_agrarian_society = yes
+		has_tribal_society = yes
+		has_communal_society = yes
+		has_religious_country = yes
+		has_detached_country = yes
+	}
+}
+has_power_concentration = {
+	OR = {
+		has_idea = anarhy
+		has_idea = low_power_concentration
+		has_idea = medium_power_concentration
+		has_idea = high_power_concentration
+		has_idea = authoritarism
+		has_idea = commune
+		has_idea = harmony
+	}
+}
+has_illiteracy_idea = {
+	OR = {
+		has_idea = no_lack_of_scientists
+		has_idea = lack_of_scientists3
+		has_idea = lack_of_scientists2
+		has_idea = lack_of_scientists1
+		has_idea = lack_of_scientists
+		has_idea = education_socialist
+	}
+}
+has_poverty = {
+	OR = {
+		has_idea = poverty
+		has_idea = poverty1
+		has_idea = poverty2
+		has_idea = poverty3
+		has_idea = poverty4
+		has_idea = poverty5
+	}
+}
+has_race = {
+	OR = {
+		has_idea = pony_race
+		has_idea = changeling_race
+		has_idea = deer_race
+		has_idea = griffon_race
+		has_idea = diamond_dog_race
+		has_idea = minotaur_race
+		has_idea = penguin_race
+		has_idea = dragon_race
+		has_idea = undead_race
+		has_idea = buffalo_race
+		has_idea = yak_race
+		has_idea = polar_race
+	}	
+}
+
+has_science_base = {
+	OR = {
+		has_idea = outstanding_science_base
+		has_idea = proper_science_base
+		has_idea = big_science_base
+		has_idea = better_science_base
+		has_idea = poor_science_base
+	}
+}
+has_monatisation = {
+	OR = {
+		has_idea = only_goods
+		has_idea = low_barter_focus
+		has_idea = medium_barter_focus
+		has_idea = high_barter_focus
+		has_idea = only_money
+	}
+}
+has_inflation = {
+	OR = {
+		has_idea = uninflation
+		has_idea = no_inflation
+		has_idea = low_inflation
+		has_idea = medium_inflation
+		has_idea = high_inflation
+		has_idea = hyperinflation
+	}
+}
+has_valuta = {
+	OR = {
+		has_idea = no_valuta
+		has_idea = bitsy
+		has_idea = metalony
+		has_idea = international_valuta
+		has_idea = stone_coins
+		has_idea = copper_coins
+		has_idea = silver_coins
+		has_idea = gold_coins
+		has_idea = race_based_valuta
+	}
+}

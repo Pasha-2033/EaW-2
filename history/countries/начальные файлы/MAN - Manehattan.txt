@@ -1,0 +1,222 @@
+﻿capital = 75
+
+set_research_slots = 3
+
+set_technology = {
+	changeling_race = 1
+	melee_weapons = 1
+	melee_weapons1 = 1
+	pre_gw_artillery = 1
+	early_fighter = 1
+	early_bomber = 1
+	infantry_weapons = 1
+	infantry_weapons1 = 1
+	interwar_antitank = 1
+	gw_artillery = 1
+	tech_support = 1
+	motorised_infantry = 1
+	fighter1 = 1
+	tech_jager = 1
+	tech_recon = 1
+	tech_engineers = 1
+	synth_oil_experiments = 1
+	fuel_silos = 1
+	fuel_refining = 1
+	basic_train = 1
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+		basic_light_tank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+		basic_light_tank_chassis = 1
+	}
+}
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_submarine = 1
+		early_destroyer = 1
+		basic_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_battleship = 1
+		early_battlecruiser = 1
+		early_carrier = 1
+		early_light_carrier = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		basic_naval_mines = 1
+		submarine_mine_laying = 1
+		early_ship_hull_light = 1
+		basic_ship_hull_light = 1
+		early_ship_hull_submarine = 1
+		early_ship_hull_cruiser = 1
+		basic_ship_hull_cruiser = 1
+		early_ship_hull_heavy = 1
+		early_ship_hull_carrier = 1
+		basic_battery = 1
+		basic_light_battery = 1
+		basic_medium_battery = 1
+		basic_heavy_battery = 1
+		basic_torpedo = 1
+		sonar = 1
+		smoke_generator = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		basic_cruiser_armor_scheme = 1
+		basic_heavy_armor_scheme = 1
+		mtg_transport = 1
+		improved_secondary_battery = 1
+		basic_fire_control_system = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+
+set_convoys = 80
+set_popularities = {
+	democratic = 75
+	fascism = 0
+	communism = 21
+	neutrality = 4
+}
+set_politics = {
+	ruling_party = democratic
+	last_election = "1000.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+
+set_variable = {
+	var = MAN_changeling_power
+	value = 0
+}
+clamp_variable = {
+	var = MAN_changeling_power
+	min = 0
+	max = 3
+}
+set_variable = {
+	var = MAN_resistance_power
+	value = 0
+}
+clamp_variable = {
+	var = MAN_resistance_power
+	min = 0
+	max = 3
+}
+set_variable = {
+	var = MAN_collaborators_power
+	value = 0
+}
+clamp_variable = {
+	var = MAN_collaborators_power
+	min = 0
+	max = 5
+}
+
+set_variable = {
+	var = MAN_credit_for_decision_add_one_changeling_power_point
+	value = 0
+}
+set_variable = {
+	var = MAN_credit_for_decision_add_one_resistance_power_point
+	value = 0
+}
+set_variable = {
+	var = MAN_increase_state_uprisings_event_time_factor
+	value = 0
+}
+set_variable = {
+	var = MAN_scripted_loc_for_uprising_texts_variable
+	value = 0
+}
+set_variable = {
+	var = MAN_variable_for_post_independence_love_tax_failure_consequences
+	value = 0
+}
+
+set_stability = 0.5
+set_war_support = 0.5
+
+add_ideas = {
+	changeling_race
+	modern_society
+	proper_science_base
+	changeling_garrison 
+	MAN_the_love_tax_MAN_debuffs
+	MAN_collaborator_power
+	MAN_resistances_power
+	MAN_changeling_power
+	no_lack_of_scientists
+	no_poverty
+}
+
+recruit_character = MAN_purple_radish
+recruit_character = MAN_starry_sky
+recruit_character = MAN_water_lily
+recruit_character = MAN_protectress_lilac
+recruit_character = MAN_ernst_burx
+recruit_character = MAN_schaelli
+recruit_character = MAN_jaspy
+recruit_character = MAN_ocellus
+recruit_character = MAN_vesper
+recruit_character = MAN_wind_rider
+recruit_character = MAN_soryn_inkognito
+recruit_character = MAN_dairyn
+recruit_character = MAN_tarsic
+recruit_character = MAN_pedicel
+recruit_character = MAN_kevin
+recruit_character = MAN_alyx
+recruit_character = MAN_forctis
+recruit_character = MAN_scile
+recruit_character = MAN_east_coast_chamber_of_commerce
+recruit_character = MAN_tantalus
+recruit_character = MAN_tyrian
+recruit_character = MAN_venture_capital
+recruit_character = MAN_michael_zubenko
+recruit_character = MAN_hartman_bridlemark
+recruit_character = MAN_suri_polomare
+recruit_character = MAN_svengallop
+recruit_character = MAN_noble_finesse
+recruit_character = MAN_highfalutin_de_prance
+recruit_character = MAN_cumulonimbus_storm
+recruit_character = MAN_carpais
+recruit_character = MAN_cloud_strafer
+recruit_character = MAN_coracoid
+recruit_character = MAN_sea_salt
+recruit_character = MAN_clavicus
+recruit_character = MAN_tiber
+recruit_character = MAN_cercus
+recruit_character = MAN_thysbe
+recruit_character = MAN_coccyx
+
+set_rule = {
+	can_generate_female_aces = yes
+}

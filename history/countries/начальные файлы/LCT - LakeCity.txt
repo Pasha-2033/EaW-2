@@ -1,0 +1,167 @@
+﻿capital = 387
+
+oob = "LCT_1007"
+
+set_research_slots = 3
+
+set_technology = {
+	pony_race = 1
+	melee_weapons = 1
+	melee_weapons1 = 1
+	pre_gw_artillery = 1
+	infantry_weapons = 1
+	early_fighter = 1
+	early_bomber = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_support = 1
+	tech_pegasi = 1
+	basic_train = 1
+	motorised_infantry = 1
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+}
+
+generic_DD_template = yes
+generic_CL_template = yes
+
+add_ideas = {
+	LCT_defenders_of_the_east
+	LCT_guilds
+	LCT_rising_militarism
+	RIV_member_state
+
+	outdated_industry
+	better_science_base
+	lack_of_scientists3
+	poverty4
+}
+set_country_flag = have_regular_puppets
+set_country_flag = better_science_base_unlocked
+
+set_variable = {
+	var = LCT_risk_of_assassination
+	value = 0
+}
+
+set_stability = 0.48
+set_war_support = 0.45
+
+country_event = { id = lakecity.2 days = 11 }
+country_event = { id = lakecityflavor.1 days = 137 }
+country_event = { id = lakecityflavor.12 days = 254 }
+
+set_cosmetic_tag = RIV_federation_mem
+set_popularities = {
+	democratic = 20
+	fascism = 18
+	communism = 1
+	neutrality = 61
+}
+set_politics = {
+
+	ruling_party = neutrality
+	last_election = "1003.2.21"
+	election_frequency = 48
+	elections_allowed = yes
+}
+
+#Starting Leaders
+recruit_character = LCT_springtime_frost
+recruit_character = LCT_deirdra_skye
+recruit_character = LCT_westerly_leeward
+recruit_character = LCT_tito_titovich
+
+# Generals and Field Marshals
+recruit_character = LCT_riversword
+recruit_character = LCT_lake_shield
+recruit_character = LCT_cold_dew
+recruit_character = LCT_wild_tree
+recruit_character = LCT_thunder_wing
+recruit_character = LCT_bright_star
+recruit_character = LCT_iron_water
+recruit_character = LCT_azure
+recruit_character = LCT_starwort
+recruit_character = LCT_willow_moss
+recruit_character = LCT_sunrise_sky
+recruit_character = LCT_pon_sanyc
+recruit_character = LCT_janko_pasnjakovic
+
+#Military High Command
+recruit_character = LCT_full_light
+recruit_character = LCT_greasette_cogwheel
+recruit_character = LCT_haster_razor
+recruit_character = LCT_mist_flower
+recruit_character = LCT_windsock
+recruit_character = LCT_cool_mist
+recruit_character = LCT_study_cloud
+recruit_character = LCT_water_wings
+recruit_character = LCT_shadow_shower
+recruit_character = LCT_cannonade
+
+# Theorist
+recruit_character = LCT_fire_flash
+recruit_character = LCT_tied_turner
+recruit_character = LCT_prism_sortie
+
+#Political Advisors
+recruit_character = LCT_beaver_run
+recruit_character = LCT_river_smog
+recruit_character = LCT_tinker_tock
+recruit_character = LCT_waterdew
+recruit_character = LCT_small_grin
+recruit_character = LCT_down_river
+recruit_character = LCT_sweetie_spring
+
+#Additional Leaders
+recruit_character = LCT_wavebreaker
+recruit_character = LCT_heavenly_snow
+
+LCT_tito_titovich = { set_character_flag = RIV_advisor_from_LCT }
+LCT_riversword = { set_character_flag = RIV_advisor_from_LCT }
+LCT_iron_water = { set_character_flag = RIV_advisor_from_LCT }
+LCT_willow_moss = { set_character_flag = RIV_advisor_from_LCT }
+LCT_full_light = { set_character_flag = RIV_advisor_from_LCT }
+LCT_greasette_cogwheel = { set_character_flag = RIV_advisor_from_LCT }
+LCT_mist_flower = { set_character_flag = RIV_advisor_from_LCT }
+LCT_windsock = { set_character_flag = RIV_advisor_from_LCT }
+LCT_cool_mist = { set_character_flag = RIV_advisor_from_LCT }
+LCT_study_cloud = { set_character_flag = RIV_advisor_from_LCT }
+LCT_water_wings = { set_character_flag = RIV_advisor_from_LCT }
+LCT_shadow_shower = { set_character_flag = RIV_advisor_from_LCT }
+LCT_cannonade = { set_character_flag = RIV_advisor_from_LCT }
+LCT_fire_flash = { set_character_flag = RIV_advisor_from_LCT }
+LCT_tied_turner = { set_character_flag = RIV_advisor_from_LCT }
+LCT_prism_sortie = { set_character_flag = RIV_advisor_from_LCT }
+LCT_river_smog = { set_character_flag = RIV_advisor_from_LCT }
+LCT_tinker_tock = { set_character_flag = RIV_advisor_from_LCT }
+LCT_waterdew = { set_character_flag = RIV_advisor_from_LCT }
+LCT_down_river = { set_character_flag = RIV_advisor_from_LCT }
+LCT_sweetie_spring = { set_character_flag = RIV_advisor_from_LCT }
+
+set_rule = {
+	can_generate_female_aces = yes
+}

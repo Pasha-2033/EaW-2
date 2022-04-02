@@ -1,0 +1,50 @@
+state = {
+	id = 153
+	name = "STATE_153"
+	provinces = {
+		488
+		6423
+		6507
+		9419
+		9433
+	}
+	history = {
+		#owner = STG
+		#add_core_of = STG
+		#add_claim_by = EQS
+		victory_points = {488 40}
+		962.1.1 = {
+			state_category = metropolis
+			buildings_max_level_factor = 2.0
+			add_manpower = 3125100
+			owner = EQW
+			add_core_of = EQW
+			add_claim_by = WOP
+			add_claim_by = ANP
+			add_resource = {
+				type = aluminium
+				amount = 5
+				state = THIS
+			}
+			add_resource = {
+				type = steel
+				amount = 15
+				state = THIS
+			}
+			add_resource = {
+				type = tungsten
+				amount = 3
+				state = THIS
+			}
+			buildings = {
+				infrastructure = 5
+				industrial_complex = 4
+				arms_factory  = 3
+				air_base = 8
+				anti_air_building = 3
+			}
+		}		
+		1007.1.1 = {}
+		1050.1.1 = {}
+	}
+}

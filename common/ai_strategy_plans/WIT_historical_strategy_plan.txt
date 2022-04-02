@@ -1,0 +1,59 @@
+WIT_historical = {
+	name = "Wittenland historical plan"
+	desc = ""
+
+	allowed = {
+		original_tag = WIT
+
+	}
+
+	enable = {
+
+		OR = {
+			AND = {
+				is_historical_focus_on = yes
+				has_game_rule = {
+					rule = WIT_ai_behavior
+					option = DEFAULT
+				}
+			}
+            has_country_flag = WIT_AI_WHITEY_HISTORICAL
+            has_game_rule = {
+                rule = WIT_ai_behavior
+                option = WHITEY_HISTORICAL
+            }
+		}
+	}
+	abort = {
+		
+	}
+
+	ai_national_focuses = {
+		
+		
+	}
+
+	research = {
+		
+	}
+
+	ideas = {
+		
+	}
+
+	traits = {
+		
+	}
+
+	weight = {
+		factor = 1.0
+		modifier = {
+			factor = 1.0
+		}
+	}
+
+	focus_factors = {
+		
+	}
+
+}

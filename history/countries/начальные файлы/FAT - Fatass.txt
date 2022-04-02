@@ -1,0 +1,237 @@
+﻿capital = 485 #### The Griffon Republic
+oob = "FAT_1007"
+
+set_research_slots = 3
+
+set_technology = {
+	griffon_race = 1
+	tech_griffon_army = 1
+	tech_knights = 1
+	melee_weapons = 1
+	melee_weapons1 = 1
+	pre_gw_artillery = 1
+	infantry_weapons = 1
+	gw_artillery = 1
+	motorised_infantry = 1
+	tech_recon = 1
+	tech_support = 1
+	tech_mountaineers = 1
+	early_fighter = 1
+	guerrila_warfare_enable = 1
+	basic_train = 1
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+if = {
+	limit = {
+		NOT = { has_dlc = "No Step Back" }
+	}
+	set_technology = {
+		gwtank = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "No Step Back"
+	}
+	set_technology = {
+		gwtank_chassis = 1
+	}
+}
+if = {
+	limit = { not = { has_dlc = "Man the Guns" } }
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		early_heavy_cruiser = 1
+		early_submarine = 1
+		coastal_defense_ships_nomtg = 1
+		transport = 1
+	}
+	set_naval_oob = "FAT_1007_naval_legacy"
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	set_technology = {
+		basic_naval_mines = 1
+		basic_depth_charges = 1
+		basic_torpedo = 1
+		basic_battery = 1
+		basic_secondary_battery = 1
+		early_ship_hull_submarine = 1
+		coastal_defense_ships = 1
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		mtg_transport = 1
+	}
+	set_naval_oob = "FAT_1007_naval"
+}
+if = {
+	limit = {
+		has_dlc = "La Resistance"
+	}
+	set_technology = {
+		armored_car1 = 1
+	}
+}
+
+set_convoys = 70
+set_popularities = {
+	democratic = 36
+	fascism = 7
+	communism = 17
+	neutrality = 40
+}
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1000.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+add_ideas = {
+	FAT_republican_struggle
+	outdated_industry
+	FAT_The_Cloudburian_Minority_idea
+	FAT_Chaos_idea
+	FAT_unruly_army_idea
+	GRW_risk_of_famine
+	limited_conscription
+	lack_of_scientists1
+	poverty3
+}
+set_stability = 0.30
+set_war_support = 0.10
+add_manpower = 100000
+set_country_flag = have_regular_puppets
+
+recruit_character = FAT_alexander_kemerskai
+recruit_character = FAT_reinhard_suntail
+recruit_character = FAT_rikard_astler
+recruit_character = FAT_moe_sparrowsbane
+recruit_character = FAT_cloudbury_general_congress
+recruit_character = FAT_tobias_sivenhof
+recruit_character = FAT_stefano_arivelli
+recruit_character = FAT_alexander_kemerskai_jr
+recruit_character = FAT_schnabel_sunglider
+recruit_character = FAT_heinrich_kingfeather
+recruit_character = FAT_claus_rosewing
+recruit_character = FAT_chiron_stormfeather
+recruit_character = FAT_max_whitefeather
+recruit_character = FAT_otto_gremmersen
+recruit_character = FAT_jonas_hafslund
+recruit_character = FAT_walter_emerich
+recruit_character = FAT_simon_rigstag
+recruit_character = FAT_reinhard_monchel
+recruit_character = FAT_barth_sievert
+recruit_character = FAT_erik_schroener
+recruit_character = FAT_otto_saxhagenplumenjar
+recruit_character = FAT_hermann_hassentelf
+recruit_character = FAT_erich_kreiger
+recruit_character = FAT_cornelius_vinke
+recruit_character = FAT_olaf_restjen
+recruit_character = FAT_master_iris_silverclaw
+recruit_character = FAT_schwartsen_eckleburg
+recruit_character = FAT_victor_kingfeather
+recruit_character = FAT_waldemar_deshrecht
+recruit_character = FAT_theodor_kemmerich
+recruit_character = FAT_gustav_rivstal
+recruit_character = FAT_karl_vettericht
+recruit_character = FAT_jansen_fryshatter
+recruit_character = FAT_duke_featherus_i
+
+set_rule = {
+	can_generate_female_aces = yes
+}
+random_character = {
+	limit = { is_character = FAT_schnabel_sunglider }
+	save_global_event_target_as = FAT_Sunglider
+}
+random_character = {
+	limit = { is_character = FAT_walter_emerich }
+	save_global_event_target_as = FAT_Emerich
+}
+random_character = {
+	limit = { is_character = FAT_otto_saxhagenplumenjar }
+	save_global_event_target_as = FAT_otto_saxhagenplumenjar_target
+}
+random_character = {
+	limit = { is_character = FAT_heinrich_kingfeather }
+	save_global_event_target_as = FAT_heinrich_kingfeather_target
+}
+random_character = {
+	limit = { is_character = FAT_alexander_kemerskai }
+	save_global_event_target_as = FAT_alexander_kemerskai_target
+}
+random_character = {
+	limit = { is_character = FAT_alexander_kemerskai_jr }
+	save_global_event_target_as = FAT_alexander_kemerskai_jr_target
+}
+if = {
+	limit = { has_dlc = "Man the Guns" }
+	### Variants ###
+	# Submarines #
+	create_equipment_variant = {
+		name = "S Class"
+		name_group = FAT_SS_HISTORICAL
+		type = ship_hull_submarine_1
+		parent_version = 0
+		modules = {
+			fixed_ship_torpedo_slot = ship_torpedo_sub_1
+			fixed_ship_engine_slot = sub_ship_engine_1
+			rear_1_custom_slot = empty
+		}
+	}
+	# Destroyers #
+	create_equipment_variant = {
+		name = "Liberty Class"
+		name_group = FAT_DD_HISTORICAL
+		type = ship_hull_light_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_battery_2
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_torpedo_slot = ship_torpedo_1
+			mid_1_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_depth_charge_1
+		}
+	}
+	# Light Cruisers #
+	create_equipment_variant = {
+		name = "Republic Class"
+		name_group = FAT_CL_HISTORICAL
+		type = ship_hull_cruiser_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_2
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			mid_1_custom_slot = ship_torpedo_1
+			mid_2_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_light_medium_battery_1
+		}
+	}
+	# Heavy Cruisers #
+	create_equipment_variant = {
+		name = "Unity Class"
+		name_group = FAT_CL_HISTORICAL
+		type = ship_hull_cruiser_1
+		parent_version = 0
+		modules = {
+			fixed_ship_battery_slot = ship_medium_battery_2
+			fixed_ship_anti_air_slot = ship_anti_air_1
+			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = cruiser_ship_engine_1
+			fixed_ship_armor_slot = ship_armor_cruiser_1
+			fixed_ship_secondaries_slot = ship_secondaries_1
+			mid_1_custom_slot = empty
+			mid_2_custom_slot = ship_torpedo_1
+			rear_1_custom_slot = ship_medium_battery_2
+		}
+	}
+}

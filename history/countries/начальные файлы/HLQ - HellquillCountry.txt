@@ -1,0 +1,173 @@
+﻿capital = 537
+oob = "HLQ_1007"
+set_research_slots = 3
+
+set_technology = {
+	griffon_race = 1
+	tech_griffon_army = 1
+	tech_knights = 1
+	tech_knights2 = 1
+	melee_weapons = 1
+	melee_weapons1 = 1
+	infantry_weapons = 1
+	pre_gw_artillery = 1
+	gw_artillery = 1
+	tech_recon = 1
+	tech_engineers = 1
+	tech_support = 1
+	early_fighter = 1
+	tech_mountaineers = 1
+	motorised_infantry = 1
+	basic_train = 1
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+}
+
+generic_DD_template = yes
+generic_CL_template = yes
+
+set_convoys = 70
+add_manpower = 70000
+set_popularities = {
+	democratic = 9
+	fascism = 34
+	communism = 3
+	neutrality = 54
+}
+set_politics = {
+	ruling_party = neutrality
+	last_election = "1000.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+add_ideas = {
+	lack_of_scientists2
+	pre_industrial_society
+	HLQ_knights_1
+	HLQ_reformists
+	HLQ_pony_minorities
+}
+
+country_event = {
+	id = hellquill.1
+	days = 7
+}
+
+country_event = {
+	id = hellquill.2
+	days = 40
+}
+
+country_event = {
+	id = hellquill.200
+	days = 21
+}
+
+country_event = {
+	id = hellquill.201
+	days = 50
+}
+
+country_event = {
+	id = hellquill.202
+	days = 55
+}
+
+country_event = {
+	id = hellquill.203
+	days = 15
+}
+
+country_event = {
+	id = hellquill.204
+	days = 30
+}
+
+set_stability = 0.45
+set_war_support = 0.50
+add_opinion_modifier = {
+	target = LNS modifier = besties
+}
+
+recruit_character = HLQ_siegfried_trappenfeld
+recruit_character = HLQ_inner_circle_council
+recruit_character = HLQ_wingfried_von_katerinburg
+recruit_character = HLQ_edler_von_wingenberg
+recruit_character = HLQ_august_von_ortelsberg
+recruit_character = HLQ_river_breeze
+recruit_character = HLQ_reiner_guttenfried
+recruit_character = HLQ_volkskomitee_der_nationalen_befreiung
+recruit_character = HLQ_ernst_fischer
+recruit_character = HLQ_urlach_ap_cyrod
+recruit_character = HLQ_demetrius_kamphaus
+recruit_character = HLQ_carl_von_soldau
+recruit_character = HLQ_wilhelm_stackelberg
+recruit_character = HLQ_steeltalon_the_butcher
+recruit_character = HLQ_trudy_oettinger
+recruit_character = HLQ_helen_eisenfaust
+recruit_character = HLQ_erika_stahlflugel
+recruit_character = HLQ_eisen_silberkrone
+recruit_character = HLQ_alfred_aschenkampff
+recruit_character = HLQ_alina_hochmeister
+recruit_character = HLQ_hyperion_waldstein
+recruit_character = HLQ_wolfhard_fischart
+recruit_character = HLQ_raoul_kranefuss
+recruit_character = HLQ_julian_feininger
+recruit_character = HLQ_kaleb_bitterlich
+recruit_character = HLQ_antonin_schoff
+recruit_character = HLQ_eckhardt_essen
+recruit_character = HLQ_iron_reed
+recruit_character = HLQ_comet_haze
+recruit_character = HLQ_rocky_road
+recruit_character = HLQ_herman_sauerland
+recruit_character = HLQ_friedrich_grimbill
+recruit_character = HLQ_ellie_glockner
+recruit_character = HLQ_wolfhard_seyfried
+recruit_character = HLQ_alfred_rosenbeak
+recruit_character = HLQ_heinrich_hilltalon
+recruit_character = HLQ_marie_mizzy_de_artois
+recruit_character = HLQ_otto_stahlglaube
+recruit_character = HLQ_viktor_von_soldau
+recruit_character = HLQ_ernst_imclaw
+recruit_character = HLQ_ophion_bahr
+recruit_character = HLQ_walfried_whitebeak
+recruit_character = HLQ_alwin_mittermeier
+recruit_character = HLQ_erebos_hopf
+recruit_character = HLQ_fledermaus
+recruit_character = HLQ_zephyrus_frosch
+recruit_character = HLQ_fistfall_hauke
+recruit_character = HLQ_isaak_heilprin
+recruit_character = HLQ_emil_simmel
+recruit_character = HLQ_augusta_stauffer
+recruit_character = HLQ_heine_roehr
+recruit_character = HLQ_frank_schopfer
+recruit_character = HLQ_cecilia_schmid
+recruit_character = HLQ_grand_master_trubach
+
+set_rule = {
+	can_generate_female_aces = yes
+}

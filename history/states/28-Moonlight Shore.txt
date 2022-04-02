@@ -1,0 +1,45 @@
+state = {
+	id = 28
+	name = "STATE_28"
+	provinces = {
+		923
+		955
+		963
+		3923
+		3958
+		3966
+		6831
+		6979
+		9600
+		9750
+		9856
+		11803
+		11837
+		11838
+		11998
+	}
+	state_category = town
+	buildings_max_level_factor = 1.0
+	manpower = 619900
+	history = {
+		#owner = EQS
+		#add_core_of = EQS
+		victory_points = {963 10}
+		962.1.1 = {			
+			owner = ICE
+			add_core_of = ICE
+			add_core_of = EEQ
+			add_resource = {
+				type = steel
+				amount = 5
+				state = THIS
+			}
+			buildings = {
+				infrastructure = 2
+				industrial_complex = 1
+			}
+		}
+		1007.1.1 = {}
+		1050.1.1 = {}
+	}
+}

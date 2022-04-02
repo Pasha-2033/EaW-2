@@ -1,0 +1,31 @@
+state={
+	id=535
+	name="STATE_535"
+
+	manpower=56740
+	state_category = small_island
+	buildings_max_level_factor=1.00
+
+	provinces={
+		9045 9055 12182
+	}
+
+	history = {
+		owner = SIC
+		add_core_of = SIC
+		add_core_of = FAL
+
+		buildings = {
+			infrastructure = 1
+
+			9055 = {
+				naval_base = 1
+			}
+		}
+	}
+
+	resources={
+		oil=8
+		crystals=12
+	}
+}

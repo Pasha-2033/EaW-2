@@ -1,0 +1,44 @@
+state = {
+	id = 1
+	name = "STATE_1"
+	provinces = {
+		512
+		553
+		3579
+		3604
+		3626
+		3655
+		6449
+		6533
+		6599
+		6780
+		9434
+		9550
+		9578
+		9582
+		9598
+		9629
+		11535
+		11570
+		11584
+	}
+	state_category = wasteland
+	buildings_max_level_factor = 1.0
+	manpower = 1
+	history = {
+		#owner = EQS
+		#add_core_of = EQS
+		962.1.1 = {
+			owner = EEQ
+			add_core_of = EEQ
+			add_claim_by = ICE
+			add_resource = {
+				type = rubber
+				amount = 1
+				state = THIS
+			}
+		}
+		1007.1.1 = {}
+		1050.1.1 = {}
+	}
+}

@@ -1,0 +1,32 @@
+state={
+	id=351
+	name="STATE_351"
+
+	provinces={
+		668 671 3299 11529 11544
+	}
+
+	manpower=257400
+	state_category = town
+	buildings_max_level_factor=1.00
+
+	history={
+		#owner = EQS
+		#add_core_of = EQS
+		962.1.1 = {
+			owner = ICE
+			add_core_of = ICE
+			add_core_of = EEQ
+		}
+
+		victory_points = { 668 5 }
+
+		buildings = {
+			infrastructure = 1
+
+			668 = {
+				naval_base = 1
+			}
+		}
+	}
+}

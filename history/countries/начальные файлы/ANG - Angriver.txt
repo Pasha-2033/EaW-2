@@ -1,0 +1,145 @@
+﻿capital = 411
+oob = "ANG_1007"
+set_research_slots = 3
+
+set_technology = {
+	griffon_race = 1
+	tech_griffon_army = 1
+	tech_knights = 1
+	melee_weapons = 1
+	pre_gw_artillery = 1
+	melee_weapons1 = 1
+	infantry_weapons = 1
+	tech_recon = 1
+	tech_engineers = 1
+	gw_artillery = 1
+	tech_support = 1
+	tech_mountaineers = 1
+	early_submarine = 1
+	early_destroyer = 1
+	basic_train = 1
+}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+
+if = {
+	limit = {
+		not = { has_dlc = "Man the Guns" }
+	}
+	set_technology = {
+		early_destroyer = 1
+		early_light_cruiser = 1
+		transport = 1
+	}
+}
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		early_ship_hull_light = 1
+		early_ship_hull_cruiser = 1
+		basic_battery = 1
+		basic_depth_charges = 1
+		basic_secondary_battery = 1
+		basic_torpedo = 1
+		mtg_transport = 1
+	}
+}
+
+generic_DD_template = yes
+generic_CL_template = yes
+
+country_event = { days = 50 id = angriver.17 }
+country_event = { days = 80 id = angriver.18 }
+country_event = { days = 110 id = angriver.19 }
+country_event = { days = 140 id = angriver.20 }
+
+add_manpower = 45000
+set_convoys = 70
+set_popularities = {
+	democratic = 16
+	fascism = 24
+	communism = 17
+	neutrality = 43
+}
+set_politics = {
+	ruling_party = fascism
+	last_election = "1000.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+add_ideas = { 
+    pre_industrial_society
+	ANG_anarchists
+	ANG_cults
+	ANG_underdeveloped_economy
+	lack_of_scientists2
+	}
+
+set_stability = 0.50
+set_cosmetic_tag = GRI_SUBJECT
+set_country_flag = herzland_diplomacy_blocked
+
+recruit_character = ANG_baron_leer_the_vicious
+recruit_character = ANG_grossmarschall_othmar_stoiber
+recruit_character = ANG_willie_scherler
+recruit_character = ANG_sieger_bauer
+recruit_character = ANG_reimar_cloudfeather
+recruit_character = ANG_frederick_wach
+recruit_character = ANG_arwin_henninger
+recruit_character = ANG_marc_kippenberger
+recruit_character = ANG_steelwing_hollowtooth
+recruit_character = ANG_hera_eichberg
+recruit_character = ANG_Otto_Weschler
+recruit_character = ANG_Saskia_Meckler
+recruit_character = ANG_Fiona_Schmitz
+recruit_character = ANG_Reinhard_Olbeaking
+recruit_character = ANG_unknown
+recruit_character = ANG_Gerhard_Bluhm
+recruit_character = ANG_new_priest
+recruit_character = ANG_village_education_idea
+recruit_character = ANG_secret_police
+recruit_character = ANG_workhorse
+recruit_character = ANG_industrialist
+recruit_character = ANG_quartermaster
+recruit_character = ANG_windbag
+recruit_character = ANG_red_arcturius
+recruit_character = ANG_red_eyr
+recruit_character = ANG_red_boreas
+recruit_character = ANG_army_theorist
+recruit_character = ANG_navy_theorist
+recruit_character = ANG_air_theorist
+recruit_character = ANG_nuclear_co
+recruit_character = ANG_air_dude1
+recruit_character = ANG_air_dude2
+recruit_character = ANG_army_dude1
+recruit_character = ANG_army_dude2
+recruit_character = ANG_army_dude3
+recruit_character = ANG_naval_dude1
+recruit_character = ANG_naval_dude2
+recruit_character = ANG_milAdv1
+recruit_character = ANG_milAdv2
+recruit_character = ANG_milAdv3
+recruit_character = ANG_milAdv4
+recruit_character = ANG_baron_cyrus_i
+
+random_character = {
+    limit = { is_character = ANG_Gerhard_Bluhm }
+    save_global_event_target_as = ANG_Gerhard_Bluhm_target
+}
+random_character = {
+    limit = { is_character = ANG_Fiona_Schmitz }
+    save_global_event_target_as = ANG_Fiona_Schmitz_target
+}
+random_character = {
+    limit = { is_character = ANG_Saskia_Meckler }
+    save_global_event_target_as = ANG_Saskia_Meckler_target
+}
+random_character = {
+    limit = { is_character = ANG_willie_scherler }
+    save_global_event_target_as = ANG_willie_scherler_target
+}
+
+set_rule = {
+	can_generate_female_aces = yes
+}

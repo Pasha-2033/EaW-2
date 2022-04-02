@@ -1,0 +1,56 @@
+state = {
+	id = 3
+	name = "STATE_3"
+	provinces = {
+		156
+		179
+		911
+		1173
+		3764
+		3773
+		3928
+		6788
+		6975
+		9138
+		9182
+		9218
+		9738
+		11114
+		13058
+	}
+	state_category = large_city
+	buildings_max_level_factor = 2.0
+	manpower = 1235000
+	history = {
+		#owner = EQS
+		#add_core_of = EQS
+		victory_points = {179 40}
+		962.1.1 = {
+			owner = EEQ
+			add_core_of = EEQ
+			add_claim_by = ICE
+			add_resource = {
+				type = steel
+				amount = 28
+				state = THIS
+			}
+			add_resource = {
+				type = crystals
+				amount = 12
+				state = THIS
+			}
+			buildings = {
+				infrastructure = 5
+				air_base = 1
+				arms_factory = 2
+				industrial_complex = 3
+				anti_air_building = 1
+				179 = {
+					bunker = 1
+				}
+			}
+		}
+		1007.1.1 = {}
+		1050.1.1 = {}
+	}
+}

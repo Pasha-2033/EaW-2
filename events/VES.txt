@@ -1,0 +1,62 @@
+add_namespace = ves_ves_changelings
+country_event = {   ######### monarhy_question  ######
+	id = ves_changelings.1
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ves_changelings.1"}
+	title = ves_changelings.1.t
+	desc = ves_changelings.1.d
+	picture = GFX_event_swarm
+	is_triggered_only = yes
+	option = {
+		name = ves_changelings.1.a
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = ves_changelings.1.b
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = ves_changelings.1.c
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		name = ves_changelings.1.e
+		ai_chance = {
+			factor = 80
+		}
+		add_political_power = 50
+		add_popularity = {
+			ideology = fascism
+			popularity = 0.1
+		}
+	}
+}
+country_event = {   ######### technocrates or evil mind  ######
+	id = ves_changelings.2
+	immediate = {log = "[GetDateText]: [Root.GetName]: event ves_changelings.1"}
+	title = ves_changelings.2.t
+	desc = ves_changelings.2.d
+	picture = GFX_event_swarm
+	is_triggered_only = yes
+	option = {
+		name = ves_changelings.2.a
+		ai_chance = {
+			factor = 95
+		}
+		country_event = {
+			id = enews.1
+			days = 0
+		}
+	}
+	option = {
+		name = ves_changelings.2.b
+		ai_chance = {
+			factor = 5
+		}
+	}
+}

@@ -1,0 +1,29 @@
+state={
+	id=100
+	name="STATE_100"
+
+	provinces={
+		693 696 1373 3192 3295 3351 3709 3846 6711 10225 10294 11176 11350 11595 12184 12212 12415 13012
+	}
+
+	manpower=361400
+	state_category=rural
+	buildings_max_level_factor=1.00
+
+	history={
+		#owner = EQS
+		#add_core_of = EQS
+		962.1.1 = {
+			owner = ICE
+			add_core_of = ICE
+			add_core_of = EEQ
+		}
+		1007.1.1 = {}
+		1050.1.1 = {}
+		victory_points = { 1373 3 }
+
+		buildings = {
+			infrastructure = 1
+		}
+	}
+}
