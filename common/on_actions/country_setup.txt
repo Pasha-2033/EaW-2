@@ -69,16 +69,73 @@ on_actions = {
 						add_ideas = no_poverty
 					}
 				}
-				#race idea, tech #tech required########################################################################
+				#race idea, tech
 				if = {
 					limit = {
 						has_race = no
 					}
-					add_ideas = generic_race_idea
-					set_technology = {
-						generic_race = 1
-						popup = no
+					add_ideas = generic_race_idea					
+				}
+				else = {
+					if = {
+						limit = {
+							has_idea = mylti_race_idea
+						}
+						set_technology = {
+							pony_race = 1
+							changeling_race = 1
+							deer_race = 1
+							griffon_race = 1
+							diamond_dog_race = 1
+							popup = no
+						}
 					}
+					else_if = {
+						limit = {
+							has_idea = pony_race
+						}
+						set_technology = {
+							pony_race = 1
+							popup = no
+						}
+					}
+					else_if = {
+						limit = {
+							has_idea = changeling_race
+						}
+						set_technology = {
+							changeling_race = 1
+							popup = no
+						}
+					}
+					else_if = {
+						limit = {
+							has_idea = deer_race
+						}
+						set_technology = {
+							deer_race = 1
+							popup = no
+						}
+					}
+					else_if = {
+						limit = {
+							has_idea = griffon_race
+						}
+						set_technology = {
+							griffon_race = 1
+							popup = no
+						}
+					}
+					else_if = {
+						limit = {
+							has_idea = diamond_dog_race
+						}
+						set_technology = {
+							diamond_dog_race = 1
+							popup = no
+						}
+					}
+					########################продолжить (при пополнении технологий)###################
 				}
 				#science base idea
 				if = {

@@ -65,8 +65,10 @@ is_generic_race = {
 }
 
 has_generic_race_tech = {
-	is_generic_race = yes
-	has_special_race_tech = no	
+	#is_generic_race = yes
+	#has_special_race_tech = no
+	has_tech = generic_race
+	has_idea = generic_race_idea
 }
 
 has_pony_race_tech = {

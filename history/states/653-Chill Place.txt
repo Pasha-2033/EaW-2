@@ -6,11 +6,11 @@ state={
 		1593 1922 2026 5067 7296 8009 8074 10308 12324 12756 13024 
 	}
 
-	manpower=76000
-	state_category=pastoral
-	buildings_max_level_factor=1.00
-
-	history={
+	
+	state_category = pastoral
+	buildings_max_level_factor = 1.00
+	manpower = 76000
+	history = {
 		#owner = EQS
 		#add_core_of = EQS
 		#add_core_of = STG
@@ -20,12 +20,10 @@ state={
 			add_core_of = EEQ
 			buildings = {
 				infrastructure = 2
-				industrial_complex = 2
+				industrial_complex = 1
 			}
 		}
-
-		buildings = {
-			infrastructure = 1
-		}
+		1007.1.1 = {}
+		1050.1.1 = {}
 	}
 }

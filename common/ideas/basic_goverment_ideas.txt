@@ -1721,89 +1721,130 @@ ideas = {
 		use_list_view = yes
 		generic_race_idea = {
 			allowed = {
-				has_tech = generic_race
+				always = no
 			}
 			visible = {
 				has_idea = generic_race_idea
 			}
-
 			removal_cost = -1
 			default = yes
-
 			cancel_if_invalid = no
 			ai_will_do = {
 				factor = 0
 			}
 		}
-
+		mylti_race_idea = {
+			#has no picture!!!!
+			available = {
+				can_have_mylti_race = yes
+			}
+			visible = {
+				can_have_mylti_race = yes
+			}
+			cost = 250
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+			}
+		}
 		pony_race = {
-			default = yes
-			allowed = {
-				is_pony_race = yes
+			available = {
+				is_pony_mylti = yes
 			}
 			visible = {
-				has_idea = pony_race
+				is_pony_mylti = yes
 			}
+			cost = 250
 			removal_cost = -1
 			cancel_if_invalid = no
 			ai_will_do = {
 				factor = 0
 			}
 		}
-
 		changeling_race = {
-			default = yes
-			allowed = {
-				is_changeling_race = yes
+			available = {
+				is_changeling_mylti = yes
 			}
 			visible = {
-				has_idea = changeling_race
+				is_changeling_mylti = yes
 			}
+			cost = 250
 			removal_cost = -1
 			cancel_if_invalid = no
 			ai_will_do = {
 				factor = 0
 			}
 		}
-
 		deer_race = {
-			default = yes
-			allowed = {
-				is_deer_race = yes
+			available = {
+				is_deer_mylti = yes
 			}
 			visible = {
-				has_idea = deer_race
+				is_deer_mylti = yes
 			}
+			cost = 250
 			removal_cost = -1
 			cancel_if_invalid = no
 			ai_will_do = {
 				factor = 0
 			}
 		}
-
 		griffon_race = {
-			default = yes
-			allowed = {
-				is_griffon_race = yes
+			available = {
+				OR = {
+					has_idea = mylti_race_idea
+					has_idea = griffon_race
+				}
 			}
 			visible = {
-				has_idea = griffon_race
+				OR = {
+					has_idea = mylti_race_idea
+					has_idea = griffon_race
+				}
 			}
+			cost = 250
 			removal_cost = -1
 			cancel_if_invalid = no
 			ai_will_do = {
 				factor = 0
 			}
 		}
-
-		diamond_dog_race = {
-			default = yes
-			allowed = {
-				is_diamond_dog_race = yes
+		hippogriff_race = {
+			###has no tech, picture yet#################################################################
+			available = {
+				OR = {
+					has_idea = mylti_race_idea
+					has_idea = hippogriff_race
+				}
 			}
 			visible = {
-				has_idea = diamond_dog_race
+				OR = {
+					has_idea = mylti_race_idea
+					has_idea = hippogriff_race
+				}
 			}
+			cost = 250
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		diamond_dog_race = {
+			available = {
+				OR = {
+					has_idea = mylti_race_idea
+					has_idea = diamond_dog_race
+				}
+			}
+			visible = {
+				OR = {
+					has_idea = mylti_race_idea
+					has_idea = diamond_dog_race
+				}
+			}
+			cost = 250
 			removal_cost = -1
 			cancel_if_invalid = no
 			ai_will_do = {
@@ -1811,13 +1852,20 @@ ideas = {
 			}
 		}
 		minotaur_race = {
-			default = yes
-			allowed = {
-				is_minotaur_race = yes
+			###has no tech###
+			available = {
+				OR = {
+					has_idea = mylti_race_idea
+					has_idea = minotaur_race
+				}
 			}
 			visible = {
-				has_idea = minotaur_race
+				OR = {
+					has_idea = mylti_race_idea
+					has_idea = minotaur_race
+				}
 			}
+			cost = 250
 			removal_cost = -1
 			cancel_if_invalid = no
 			ai_will_do = {
@@ -1825,13 +1873,20 @@ ideas = {
 			}
 		}
 		penguin_race = {
-			default = yes
-			allowed = {
-				is_penguin_race = yes
+			###has no tech###
+			available = {
+				OR = {
+					has_idea = mylti_race_idea
+					has_idea = penguin_race
+				}
 			}
 			visible = {
-				has_idea = penguin_race
+				OR = {
+					has_idea = mylti_race_idea
+					has_idea = penguin_race
+				}
 			}
+			cost = 250
 			removal_cost = -1
 			cancel_if_invalid = no
 			ai_will_do = {
@@ -1839,13 +1894,20 @@ ideas = {
 			}
 		}
 		dragon_race = {
-			default = yes
-			allowed = {
-				is_dragon_race = yes
+			###has no tech###
+			available = {
+				OR = {
+					has_idea = mylti_race_idea
+					has_idea = dragon_race
+				}
 			}
 			visible = {
-				has_idea = dragon_race
+				OR = {
+					has_idea = mylti_race_idea
+					has_idea = dragon_race
+				}
 			}
+			cost = 250
 			removal_cost = -1
 			cancel_if_invalid = no
 			ai_will_do = {
@@ -1853,9 +1915,9 @@ ideas = {
 			}
 		}
 		undead_race = {
-			default = yes
+			###has no tech###
 			allowed = {
-				is_undead_race = yes
+				always = no
 			}
 			visible = {
 				has_idea = undead_race
@@ -1867,13 +1929,20 @@ ideas = {
 			}
 		}
 		buffalo_race = {
-			default = yes
-			allowed = {
-				is_buffalo_race = yes
+			###has no tech###
+			available = {
+				OR = {
+					has_idea = mylti_race_idea
+					has_idea = buffalo_race
+				}
 			}
 			visible = {
-				has_idea = buffalo_race
+				OR = {
+					has_idea = mylti_race_idea
+					has_idea = buffalo_race
+				}
 			}
+			cost = 250
 			removal_cost = -1
 			cancel_if_invalid = no
 			ai_will_do = {
@@ -1881,13 +1950,20 @@ ideas = {
 			}
 		}
 		yak_race = {
-			default = yes
-			allowed = {
-				is_yak_race = yes
+			###has no tech###
+			available = {
+				OR = {
+					has_idea = mylti_race_idea
+					has_idea = yak_race
+				}
 			}
 			visible = {
-				has_idea = yak_race
+				OR = {
+					has_idea = mylti_race_idea
+					has_idea = yak_race
+				}
 			}
+			cost = 250
 			removal_cost = -1
 			cancel_if_invalid = no
 			ai_will_do = {
@@ -1895,12 +1971,33 @@ ideas = {
 			}
 		}
 		polar_race = {
-			default = yes
-			allowed = {
-				is_polar_race = yes
+			###has no tech###
+			available = {
+				OR = {
+					has_idea = mylti_race_idea
+					has_idea = polar_race
+				}
 			}
 			visible = {
-				has_idea = polar_race
+				OR = {
+					has_idea = mylti_race_idea
+					has_idea = polar_race
+				}
+			}
+			cost = 250
+			removal_cost = -1
+			cancel_if_invalid = no
+			ai_will_do = {
+				factor = 0
+			}
+		}
+		ice_spirits = {
+			###has no tech, picture###
+			allowed = {
+				always = no
+			}
+			visible = {
+				has_idea = ice_spirits
 			}
 			removal_cost = -1
 			cancel_if_invalid = no
