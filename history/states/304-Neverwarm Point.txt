@@ -11,8 +11,20 @@ state={
 	buildings_max_level_factor=1.00
 
 	history={
-		owner = LIK
-		add_core_of = LIK
+		962.1.1 = {
+			owner = LIK
+			add_core_of = LIK
+			add_resource = {
+				type = steel
+				amount = 10
+				state = THIS
+			}
+			add_resource = {
+				type = crystals
+				amount = 2
+				state = THIS
+			}
+		}
 
 		victory_points = { 1547 10 }
 
@@ -29,10 +41,5 @@ state={
 			add_core_of = CHN
 			controller = CHN
 		}
-	}
-
-	resources = {
-		steel = 10
-		crystals = 12
 	}
 }

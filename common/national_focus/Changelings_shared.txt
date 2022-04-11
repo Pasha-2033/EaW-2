@@ -1,0 +1,112 @@
+shared_focus = {
+	id = shared_focus_changelings_start_canterlot_race
+	icon = GFX_goal_generic_changeling
+	cost = 5.00
+	x = 15
+	y = 12
+	ai_will_do = {
+		factor = 200
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = canterlot_race_is_not_finished
+			canterlot_race_is_finished = no
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_start_canterlot_race"
+	}
+	search_filters = {}	#change
+}
+shared_focus = {
+	id = shared_focus_changelings_prepare_invation
+	icon = GFX_goal_generic_changeling
+	cost = 5.00
+	prerequisite = {
+		focus = shared_focus_changelings_start_canterlot_race
+	}
+	x = 14
+	y = 13
+	ai_will_do = {
+		factor = 200
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = canterlot_race_is_not_finished
+			canterlot_race_is_finished = no
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_prepare_invation"
+	}
+	search_filters = {}	#change
+}
+shared_focus = {
+	id = shared_focus_changelings_prepare_attack_phase
+	icon = GFX_goal_generic_changeling
+	cost = 5.00
+	prerequisite = {
+		focus = shared_focus_changelings_start_canterlot_race
+	}
+	x = 16
+	y = 13
+	ai_will_do = {
+		factor = 200
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = canterlot_race_is_not_finished
+			canterlot_race_is_finished = no
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_prepare_attack_phase"
+	}
+	search_filters = {}	#change
+}
+shared_focus = {
+	id = shared_focus_changelings_attack_canterlot
+	icon = GFX_goal_generic_changeling
+	cost = 5.00
+	prerequisite = {
+		focus = shared_focus_changelings_prepare_invation
+	}
+	prerequisite = {
+		focus = shared_focus_changelings_prepare_attack_phase
+	}
+	x = 15
+	y = 14
+	ai_will_do = {
+		factor = 200
+	}
+	available = {
+		custom_trigger_tooltip = {
+			tooltip = canterlot_race_is_not_finished
+			canterlot_race_is_finished = no
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_attack_canterlot"
+	}
+	search_filters = {}	#change
+}
+shared_focus = {
+	id = shared_focus_changelings_unite_nation_around_victory
+	icon = GFX_goal_generic_changeling
+	cost = 5.00
+	prerequisite = {
+		focus = shared_focus_changelings_attack_canterlot
+	}
+	x = 15
+	y = 15
+	ai_will_do = {
+		factor = 200
+	}
+	available = {
+		has_idea = canterlot_victory
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_attack_canterlot"
+	}
+	search_filters = {}	#change
+}

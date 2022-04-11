@@ -1719,12 +1719,12 @@ ideas = {
 	race_pointer = {
 		law = yes
 		use_list_view = yes
-		generic_race_idea = {
+		generic_race = {
 			allowed = {
 				always = no
 			}
 			visible = {
-				has_idea = generic_race_idea
+				has_idea = generic_race
 			}
 			removal_cost = -1
 			default = yes
@@ -1733,7 +1733,7 @@ ideas = {
 				factor = 0
 			}
 		}
-		mylti_race_idea = {
+		mylti_race = {
 			#has no picture!!!!
 			available = {
 				can_have_mylti_race = yes
@@ -1793,13 +1793,13 @@ ideas = {
 		griffon_race = {
 			available = {
 				OR = {
-					has_idea = mylti_race_idea
+					has_idea = mylti_race
 					has_idea = griffon_race
 				}
 			}
 			visible = {
 				OR = {
-					has_idea = mylti_race_idea
+					has_idea = mylti_race
 					has_idea = griffon_race
 				}
 			}
@@ -1814,13 +1814,13 @@ ideas = {
 			###has no tech, picture yet#################################################################
 			available = {
 				OR = {
-					has_idea = mylti_race_idea
+					has_idea = mylti_race
 					has_idea = hippogriff_race
 				}
 			}
 			visible = {
 				OR = {
-					has_idea = mylti_race_idea
+					has_idea = mylti_race
 					has_idea = hippogriff_race
 				}
 			}
@@ -1834,13 +1834,13 @@ ideas = {
 		diamond_dog_race = {
 			available = {
 				OR = {
-					has_idea = mylti_race_idea
+					has_idea = mylti_race
 					has_idea = diamond_dog_race
 				}
 			}
 			visible = {
 				OR = {
-					has_idea = mylti_race_idea
+					has_idea = mylti_race
 					has_idea = diamond_dog_race
 				}
 			}
@@ -1855,13 +1855,13 @@ ideas = {
 			###has no tech###
 			available = {
 				OR = {
-					has_idea = mylti_race_idea
+					has_idea = mylti_race
 					has_idea = minotaur_race
 				}
 			}
 			visible = {
 				OR = {
-					has_idea = mylti_race_idea
+					has_idea = mylti_race
 					has_idea = minotaur_race
 				}
 			}
@@ -1876,13 +1876,13 @@ ideas = {
 			###has no tech###
 			available = {
 				OR = {
-					has_idea = mylti_race_idea
+					has_idea = mylti_race
 					has_idea = penguin_race
 				}
 			}
 			visible = {
 				OR = {
-					has_idea = mylti_race_idea
+					has_idea = mylti_race
 					has_idea = penguin_race
 				}
 			}
@@ -1897,13 +1897,13 @@ ideas = {
 			###has no tech###
 			available = {
 				OR = {
-					has_idea = mylti_race_idea
+					has_idea = mylti_race
 					has_idea = dragon_race
 				}
 			}
 			visible = {
 				OR = {
-					has_idea = mylti_race_idea
+					has_idea = mylti_race
 					has_idea = dragon_race
 				}
 			}
@@ -1932,13 +1932,13 @@ ideas = {
 			###has no tech###
 			available = {
 				OR = {
-					has_idea = mylti_race_idea
+					has_idea = mylti_race
 					has_idea = buffalo_race
 				}
 			}
 			visible = {
 				OR = {
-					has_idea = mylti_race_idea
+					has_idea = mylti_race
 					has_idea = buffalo_race
 				}
 			}
@@ -1953,13 +1953,13 @@ ideas = {
 			###has no tech###
 			available = {
 				OR = {
-					has_idea = mylti_race_idea
+					has_idea = mylti_race
 					has_idea = yak_race
 				}
 			}
 			visible = {
 				OR = {
-					has_idea = mylti_race_idea
+					has_idea = mylti_race
 					has_idea = yak_race
 				}
 			}
@@ -1974,13 +1974,13 @@ ideas = {
 			###has no tech###
 			available = {
 				OR = {
-					has_idea = mylti_race_idea
+					has_idea = mylti_race
 					has_idea = polar_race
 				}
 			}
 			visible = {
 				OR = {
-					has_idea = mylti_race_idea
+					has_idea = mylti_race
 					has_idea = polar_race
 				}
 			}
@@ -1991,13 +1991,13 @@ ideas = {
 				factor = 0
 			}
 		}
-		ice_spirits = {
+		ice_spirits_race = {
 			###has no tech, picture###
 			allowed = {
 				always = no
 			}
 			visible = {
-				has_idea = ice_spirits
+				has_idea = ice_spirits_race
 			}
 			removal_cost = -1
 			cancel_if_invalid = no

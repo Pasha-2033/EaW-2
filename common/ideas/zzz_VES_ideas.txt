@@ -5,8 +5,10 @@ ideas = {
 		vestank1 = {
 			picture = generic_tank_manufacturer_1
 			available = {
+				has_completed_focus = ves_focus_evil_mind_found
+			}
+			allowed = {
 				original_tag = VES
-				has_completed_focus = evil_mind_found
 			}
 			research_bonus = {
 				armor = 0.10
@@ -16,8 +18,10 @@ ideas = {
 		vestank2 = {
 			picture = generic_tank_manufacturer_2
 			available = {
+				has_completed_focus = ves_focus_evil_mind_found
+			}
+			allowed = {
 				original_tag = VES
-				has_completed_focus = evil_mind_found
 			}
 			research_bonus = {
 				armor = 0.10
@@ -31,8 +35,10 @@ ideas = {
 		vestank3 = {
 			picture = generic_tank_manufacturer_3
 			available = {
+				has_completed_focus = ves_focus_evil_mind_found
+			}
+			allowed = {
 				original_tag = VES
-				has_completed_focus = evil_mind_found
 			}
 			research_bonus = {
 				armor = 0.10
@@ -45,8 +51,10 @@ ideas = {
 		VES_tank_sirius_mustang = {
 			picture = sirius
 			available = {
+				has_completed_focus = ves_focus_evil_mind_found
+			}
+			allowed = {
 				original_tag = VES
-				has_completed_focus = evil_mind_found
 			}
 			research_bonus = {
 				armor = 0.1
@@ -60,8 +68,10 @@ ideas = {
 		vesequip1 = {
 			picture = generic_artillery_manufacturer_3
 			available = {
+				has_completed_focus = ves_focus_evil_mind_found
+			}
+			allowed = {
 				original_tag = VES
-				has_completed_focus = evil_mind_found
 			}
 			research_bonus = {
 				artillery = 0.10
@@ -74,8 +84,10 @@ ideas = {
 		vesequip2 = {
 			picture = generic_infantry_equipment_manufacturer_2
 			available = {
+				has_completed_focus = ves_focus_evil_mind_found
+			}
+			allowed = {
 				original_tag = VES
-				has_completed_focus = evil_mind_found
 			}
 			research_bonus = {
 				infantry_weapons = 0.10
@@ -83,11 +95,10 @@ ideas = {
 			traits = {infantry_equipment_manufacturer}
 		}
 		#
-		chnequip3 = {
+		vesequip3 = {
 			picture = generic_motorized_equipment_manufacturer_3
-
-			available = {
-				original_tag = CHN
+			allowed = {
+				original_tag = VES
 			}
 
 
@@ -105,10 +116,9 @@ ideas = {
 	}
 	industrial_concern = {
 
-		chnind1 = {
-
-			available = {
-				original_tag = CHN
+		vesind1 = {
+			allowed = {
+				original_tag = VES
 			}
 
 
@@ -123,11 +133,9 @@ ideas = {
 			}
 		}
 
-		chnind2 = {
-
-
-			available = {
-				original_tag = CHN
+		vesind2 = {
+			allowed = {
+				original_tag = VES
 			}
 
 
@@ -142,11 +150,11 @@ ideas = {
 			}
 		}
 		
-		chn_oil_concern = {
+		ves_oil_concern = {
 			picture = generic_refining_concern_1
 
 			allowed = {
-				original_tag = CHN
+				original_tag = VES
 			}
 
 			visible = {
@@ -168,10 +176,10 @@ ideas = {
 
 		designer = yes
 
-		chnairm5= {
+		vesairm5= {
 
 			allowed = {
-				original_tag = CHN
+				original_tag = VES
 			}
 
 			research_bonus = {
@@ -189,10 +197,10 @@ ideas = {
 			}
 		}
 
-		chnairm4 = {
+		vesairm4 = {
 			picture = generic_air_manufacturer_2
 			allowed = {
-				original_tag = CHN
+				original_tag = VES
 			}
 
 			research_bonus = {
@@ -211,12 +219,12 @@ ideas = {
 		}
 
 
-		chnairm3 = {
+		vesairm3 = {
 			picture = generic_air_manufacturer_3
 
 
 			allowed = {
-				original_tag = CHN
+				original_tag = VES
 			}
 
 
@@ -231,12 +239,12 @@ ideas = {
 			}
 		}
 
-		chnairm2= {
+		vesairm2= {
 			picture = generic_air_manufacturer_2
 
 
 			allowed = {
-				original_tag = CHN
+				original_tag = VES
 			}
 
 
@@ -251,11 +259,11 @@ ideas = {
 			}
 		}
 
-		chnairm1= {
+		vesairm1= {
 			picture = generic_air_manufacturer_1
 
 			allowed = {
-				original_tag = CHN
+				original_tag = VES
 			}
 
 
@@ -276,12 +284,12 @@ ideas = {
 
 		designer = yes
 
-		chnnavy2 = {
+		vesnavy2 = {
 			picture = generic_naval_manufacturer_2
 
 
 			allowed = {
-				original_tag = CHN
+				original_tag = VES
 			}
 
 			research_bonus = {
@@ -295,12 +303,12 @@ ideas = {
 			traits = { atlantic_fleet_naval_manufacturer }
 
 		}
-		chnnavy1 = {
+		vesnavy1 = {
 			picture = chnnavy1
 
 
 			allowed = {
-				original_tag = CHN
+				original_tag = VES
 			}
 
 			research_bonus = {
@@ -730,7 +738,7 @@ ideas = {
 		chn_vesalipolis_construction = {
 			picture = CHN_construction_effort
 			allowed = {
-				original_tag = CHN }
+				original_tag = VES }
 
 			removal_cost = -1
 
@@ -742,7 +750,7 @@ ideas = {
 		chn_ditrysium_construction_1 = {
 			picture = CHN_naval_effort
 			allowed = {
-				original_tag = CHN
+				original_tag = VES
 			}
 
 			removal_cost = -1
@@ -754,7 +762,7 @@ ideas = {
 		chn_ditrysium_construction_2 = {
 			picture = CHN_naval_effort
 			allowed = {
-				original_tag = CHN
+				original_tag = VES
 			}
 
 			removal_cost = -1
@@ -766,7 +774,7 @@ ideas = {
 		chn_vraks_military_effort = {
 
 			allowed = {
-				original_tag = CHN }
+				original_tag = VES }
 
 			removal_cost = -1
 
@@ -777,7 +785,7 @@ ideas = {
 		chn_vraks_military_effort_2 = {
 			picture = chn_vraks_military_effort
 			allowed = {
-				original_tag = CHN }
+				original_tag = VES }
 
 			removal_cost = -1
 
@@ -789,7 +797,7 @@ ideas = {
 		CHN_crystal_city_research = {
 			picture = chn_vraks_military_effort
 			allowed = {
-				original_tag = CHN
+				original_tag = VES
 			}
 			available = {
 				344 = { owner = { controls_state = PREV OR = { tag = ROOT is_subject_of = ROOT } } }
@@ -804,7 +812,7 @@ ideas = {
 
 
 			allowed = {
-				original_tag = CHN
+				original_tag = VES
 			}
 
 			picture = generic_production_bonus
@@ -829,7 +837,7 @@ ideas = {
 
 
 			allowed = {
-				original_tag = CHN
+				original_tag = VES
 			}
 
 			picture = generic_production_bonus
@@ -979,7 +987,7 @@ ideas = {
 		CHN_vops_audit = {
 			picture = changeling_race
 			allowed = {
-				original_tag = CHN
+				original_tag = VES
 				NOT = {
 					has_dlc = "La Resistance"
 				}
@@ -992,7 +1000,7 @@ ideas = {
 		CHN_vops_audit_lar = {
 			picture = changeling_race
 			allowed = {
-				original_tag = CHN
+				original_tag = VES
 				has_dlc = "La Resistance"
 			}
 			removal_cost = -1

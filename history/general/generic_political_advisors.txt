@@ -1,0 +1,394 @@
+# For minor countries where advisors are not defined
+# Generate them from a generic template
+
+# Political advisors, not all races defined (army = { small = ...})
+# Unable to use random_list for random race portrait, so, mylti_race will have one portrait, like others
+
+#прописать ai_will_do
+
+#democratic
+every_possible_country = {
+	limit = {
+		NOT = {
+			OR = {
+				has_country_flag = no_generic_gemocratic_political_advisor
+				has_custom_advisors = yes
+				has_allowed_idea_with_traits = {
+					idea = democratic_reformer
+					characters = yes
+				}
+			}
+		}
+	}
+	generate_character = {
+		token_base = generic_democratic_reformer
+		name = generic_democratic_reformer
+		advisor = {
+			slot = political_advisor
+			traits = {
+				democratic_reformer
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	if = {
+		limit = {
+			is_polar_race = yes
+		}
+		set_portraits = {
+			character = generic_democratic_reformer
+			army = {
+				small = GFX_idea_unknown_advisor_bear
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_buffalo_race = yes
+		}
+		set_portraits = {
+			character = generic_democratic_reformer
+			army = {
+				small = GFX_idea_unknown_advisor_buffalo
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_changeling_race = yes
+		}
+		set_portraits = {
+			character = generic_democratic_reformer
+			army = {
+				small = GFX_idea_unknown_advisor_bug
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_diamond_dog_race = yes
+		}
+		set_portraits = {
+			character = generic_democratic_reformer
+			army = {
+				small = GFX_idea_unknown_advisor_dog
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_dragon_race = yes
+		}
+		set_portraits = {
+			character = generic_democratic_reformer
+			army = {
+				small = GFX_idea_unknown_advisor_dragon
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_griffon_race = yes
+		}
+		set_portraits = {
+			character = generic_democratic_reformer
+			army = {
+				small = GFX_idea_unknown_advisor_griffon
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_minotaur_race = yes
+		}
+		set_portraits = {
+			character = generic_democratic_reformer
+			army = {
+				small = GFX_idea_unknown_advisor_minotaur
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_penguin_race = yes
+		}
+		set_portraits = {
+			character = generic_democratic_reformer
+			army = {
+				small = GFX_idea_unknown_advisor_pingu
+			}
+		}
+	}
+	else = {
+		set_portraits = {
+			character = generic_democratic_reformer
+			army = {
+				small = GFX_idea_unknown_advisor
+			}
+		}
+	}
+}
+#communism
+every_possible_country = {
+	limit = {
+		NOT = {
+			OR = {
+				has_country_flag = no_generic_communist_political_advisor
+				has_custom_advisors = yes
+				has_allowed_idea_with_traits = {
+					idea = communist_revolutionary
+					characters = yes
+				}
+			}
+		}
+	}
+	generate_character = {
+		token_base = generic_communist_revolutionary
+		name = generic_communist_revolutionary
+		advisor = {
+			slot = political_advisor
+			traits = {
+				communist_revolutionary
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	if = {
+		limit = {
+			is_polar_race = yes
+		}
+		set_portraits = {
+			character = generic_communist_revolutionary
+			army = {
+				small = GFX_idea_unknown_advisor_bear
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_buffalo_race = yes
+		}
+		set_portraits = {
+			character = generic_communist_revolutionary
+			army = {
+				small = GFX_idea_unknown_advisor_buffalo
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_changeling_race = yes
+		}
+		set_portraits = {
+			character = generic_communist_revolutionary
+			army = {
+				small = GFX_idea_unknown_advisor_bug
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_diamond_dog_race = yes
+		}
+		set_portraits = {
+			character = generic_communist_revolutionary
+			army = {
+				small = GFX_idea_unknown_advisor_dog
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_dragon_race = yes
+		}
+		set_portraits = {
+			character = generic_communist_revolutionary
+			army = {
+				small = GFX_idea_unknown_advisor_dragon
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_griffon_race = yes
+		}
+		set_portraits = {
+			character = generic_communist_revolutionary
+			army = {
+				small = GFX_idea_unknown_advisor_griffon
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_minotaur_race = yes
+		}
+		set_portraits = {
+			character = generic_communist_revolutionary
+			army = {
+				small = GFX_idea_unknown_advisor_minotaur
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_penguin_race = yes
+		}
+		set_portraits = {
+			character = generic_communist_revolutionary
+			army = {
+				small = GFX_idea_unknown_advisor_pingu
+			}
+		}
+	}
+	else = {
+		set_portraits = {
+			character = generic_communist_revolutionary
+			army = {
+				small = GFX_idea_unknown_advisor
+			}
+		}
+	}
+}
+#fascism
+every_possible_country = {
+	limit = {
+		NOT = {
+			OR = {
+				has_country_flag = no_generic_fascist_political_advisor
+				has_custom_advisors = yes
+				has_allowed_idea_with_traits = {
+					idea = fascist_demagogue
+					characters = yes
+				}
+			}
+		}
+	}
+	generate_character = {
+		token_base = generic_fascist_demagogue
+		name = generic_fascist_demagogue
+		advisor = {
+			slot = political_advisor
+			traits = {
+				fascist_demagogue
+			}
+			ai_will_do = {
+				factor = 0
+			}
+		}
+	}
+	if = {
+		limit = {
+			is_polar_race = yes
+		}
+		set_portraits = {
+			character = generic_fascist_demagogue
+			army = {
+				small = GFX_idea_unknown_advisor_bear
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_buffalo_race = yes
+		}
+		set_portraits = {
+			character = generic_fascist_demagogue
+			army = {
+				small = GFX_idea_unknown_advisor_buffalo
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_changeling_race = yes
+		}
+		set_portraits = {
+			character = generic_fascist_demagogue
+			army = {
+				small = GFX_idea_unknown_advisor_bug
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_diamond_dog_race = yes
+		}
+		set_portraits = {
+			character = generic_fascist_demagogue
+			army = {
+				small = GFX_idea_unknown_advisor_dog
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_dragon_race = yes
+		}
+		set_portraits = {
+			character = generic_fascist_demagogue
+			army = {
+				small = GFX_idea_unknown_advisor_dragon
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_griffon_race = yes
+		}
+		set_portraits = {
+			character = generic_fascist_demagogue
+			army = {
+				small = GFX_idea_unknown_advisor_griffon
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_minotaur_race = yes
+		}
+		set_portraits = {
+			character = generic_fascist_demagogue
+			army = {
+				small = GFX_idea_unknown_advisor_minotaur
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_penguin_race = yes
+		}
+		set_portraits = {
+			character = generic_fascist_demagogue
+			army = {
+				small = GFX_idea_unknown_advisor_pingu
+			}
+		}
+	}
+	else = {
+		set_portraits = {
+			character = generic_fascist_demagogue
+			army = {
+				small = GFX_idea_unknown_advisor
+			}
+		}
+	}
+}
+
+#neutrality
+#harmony
+#socialism
+#radicalism
+#unholy
+#holy
+#technocracy
+#anarchism
+#militarism
+
+
+#traits to add:
+#	fascist_demagogue

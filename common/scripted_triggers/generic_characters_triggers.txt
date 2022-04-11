@@ -1,0 +1,90 @@
+has_custom_advisors = {
+	OR = {
+		has_country_flag = no_generic_advisors
+		has_country_flag = custom_advisors
+		country_with_custom_characters = yes
+	}
+	NOT = {
+		has_country_flag = no_custom_advisors
+	}
+}
+has_custom_designers = {
+	OR = {
+		has_country_flag = no_generic_advisors
+		has_country_flag = custom_designers
+		country_with_custom_characters = yes
+	}
+	NOT = {
+		has_country_flag = no_custom_designers
+	}
+}
+has_custom_spymaster = {
+	OR = {
+		has_country_flag = no_generic_advisors
+		has_country_flag = custom_spymaster
+		country_with_custom_characters = yes
+	}
+	NOT = {
+		has_country_flag = no_custom_spymaster
+	}
+}
+has_custom_theorist = {
+	OR = {
+		has_country_flag = no_generic_advisors
+		has_country_flag = custom_theorist
+		country_with_custom_characters = yes
+	}
+	NOT = {
+		has_country_flag = no_custom_theorist
+	}
+}
+has_custom_navy_chieves = {
+	OR = {
+		has_country_flag = no_generic_advisors
+		has_country_flag = custom_navy_chieves
+		country_with_custom_characters = yes
+	}
+	NOT = {
+		has_country_flag = no_custom_navy_chieves
+	}
+}
+has_custom_high_command = {
+	OR = {
+		has_country_flag = no_generic_advisors
+		has_country_flag = custom_high_command
+		country_with_custom_characters = yes
+	}
+	NOT = {
+		has_country_flag = no_custom_high_command
+	}
+}
+has_custom_economic_advisors = {
+	OR = {
+		has_country_flag = no_generic_advisors
+		has_country_flag = custom_generic_economic_advisors
+		country_with_custom_characters = yes
+	}
+	NOT = {
+		has_country_flag = no_custom_generic_economic_advisors
+	}
+}
+has_custom_army_chieves = {
+	OR = {
+		has_country_flag = no_generic_advisors
+		has_country_flag = custom_generic_army_chieves
+		country_with_custom_characters = yes
+	}
+	NOT = {
+		has_country_flag = no_custom_generic_army_chieves
+	}
+}
+has_custom_air_chieves = {
+	OR = {
+		has_country_flag = no_generic_advisors
+		has_country_flag = custom_generic_air_chieves
+		country_with_custom_characters = yes
+	}
+	NOT = {
+		has_country_flag = no_custom_generic_air_chieves
+	}
+}

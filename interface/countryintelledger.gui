@@ -64,7 +64,7 @@ guiTypes = {
 	}
 	
 	containerWindowType = {
-		name = "ledger_tech_entry"
+		name = "ledger_tech_entry" 
 		size = { width = 100 height = 53 }
 
 		buttonType = {
@@ -1024,8 +1024,7 @@ guiTypes = {
 					name = "civilian_production_container"
 					position = { x=20 y=330}
 					show_position = { x=539 y =78 }
-					size = { width = 500 height = 240 }
-					
+					size = { width = 500 height = 200 }
 					background = {
 						name = "Background"
 						spriteType ="GFX_mini_bg"
@@ -1263,13 +1262,13 @@ guiTypes = {
 				
 				containerWindowType = {
 					name = "footer"
-					position = { x = 0 y = 450 }
+					position = { x = 0 y = 410 }
 					size = { width = 520 height = 80 }
 					
 					containerWindowType = {
 						name = "ideas"
-						position = { x = 20 y = -10 }
-						size = { width = 500 height = 74 }
+						position = { x = 20 y = -40 }
+						size = { width = 500 height = 78 }
 						horizontalScrollbar = "bottom_horizontal_slider"
 						background_margin = { bottom = 15 }
 						
@@ -1300,20 +1299,44 @@ guiTypes = {
 							}
 						}
 					}
+					
+					#iconType = {
+					#	name = "tech_icon_deco"
+					#	position = { x = 26 y = 50 }
+					#	spriteType = "GFX_intel_ledger_tech"
+					#}
 				
-					iconType = {
-						name = "tech_icon_deco"
-						position = { x = 26 y = 50 }
-						spriteType = "GFX_intel_ledger_tech"
-					}
-				
-					gridBoxType = {
-						name = "technology_entries"
-						position = { x = 70 y = 55 }
-						size = { width = 300 height = 60 }
-						format = "UPPER_LEFT"
-						slotsize = { width = 80 height = 60 }
-						max_slots_horizontal = 6
+					#gridBoxType = {
+					#	name = "technology_entries"
+					#	position = { x = 70 y = 55 }
+					#	size = { width = 300 height = 60 }
+					#	format = "UPPER_LEFT"
+					#	slotsize = { width = 80 height = 60 }
+					#	max_slots_horizontal = 6
+					#}
+
+					containerWindowType = {
+						name = "technology"
+						position = { x = 20 y = 35 }
+						size = { width = 500 height = 90 }
+						horizontalScrollbar = "bottom_horizontal_slider"
+						clipping = yes
+						margin = {
+							left = 45
+							right = 15
+						}
+
+						background = {
+							name = "tech_bg"
+							spriteType = "GFX_intel_ledger_tech"
+						}
+						gridBoxType = {							
+							name = "technology_entries"
+							position = { x = 0 y = 5 }
+							size = { width = 570 height = 60 }
+							format = "UPPER_LEFT"
+							slotsize = { width = 80 height = 60 }
+						}
 					}
 				}
 			} #end economy_panel

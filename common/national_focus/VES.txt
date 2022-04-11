@@ -12,6 +12,10 @@ focus_tree = {
 		x = 2700
 		y = 1350
 	}
+	shared_focus = shared_focus_changelings_start_canterlot_race
+	shared_focus = shared_focus_changelings_prepare_invation
+	shared_focus = shared_focus_changelings_prepare_attack_phase
+	shared_focus = shared_focus_changelings_unite_nation_around_victory
 	focus = {
 		id = ves_focus_monarhy_guestion
 		icon = GFX_goal_chn_swords
@@ -349,7 +353,8 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_technogical_union"
 			add_stability = 0.3
 			country_event = {
-				id = ves_changelings.10 days = 3
+				id = ves_changelings.10
+				days = 3
 			}
 		}
 		search_filters = {

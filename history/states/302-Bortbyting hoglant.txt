@@ -17,6 +17,16 @@ state={
 			#будет фокус остановить рейды оленей через отдачу этого региона (обьединенный улей против Королевства Оления)
 			owner = LIK
 			add_core_of = LIK
+			add_resource = {
+				type = steel
+				amount = 4
+				state = THIS
+			}
+			add_resource = {
+				type = chromium
+				amount = 6
+				state = THIS
+			}
 		}
 
 		victory_points = { 492 1 }
@@ -28,10 +38,5 @@ state={
 				naval_base = 1
 			}
 		}
-	}
-
-	resources={
-		steel=32
-		chromium=29
 	}
 }

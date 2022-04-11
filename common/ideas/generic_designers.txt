@@ -1,0 +1,274 @@
+ideas = {
+	tank_manufacturer = {
+		designer = yes
+		generic_heavy_tank_manufacturer = {
+			picture = generic_tank_manufacturer_1
+			allowed = {
+				NOT = {
+					has_country_flag = no_generic_tank_designers
+				}
+				has_custom_designers = no
+			}
+			research_bonus = {
+				armor = 0.10
+			}
+			traits = {
+				heavy_tank_manufacturer
+			}
+		}
+		generic_fast_tank_manufacturer = {
+			picture = generic_tank_manufacturer_2
+			allowed = {
+				NOT = {
+					has_country_flag = no_generic_tank_designers
+				}
+				has_custom_designers = no
+			}
+			research_bonus = {
+				armor = 0.10
+			}
+			traits = {
+				fast_tank_manufacturer
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		generic_medium_tank_manufacturer = {
+			picture = generic_tank_manufacturer_3
+			allowed = {
+				NOT = {
+					has_country_flag = no_generic_tank_designers
+				}
+				has_custom_designers = no
+			}
+			research_bonus = {
+				armor = 0.10
+			}
+			traits = {
+				medium_tank_manufacturer
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	industrial_concern = {
+		generic_industrial_concern = {
+			picture = FRE_industrial_concern
+			allowed = {
+				NOT = {
+					has_country_flag = no_generic_industrial_concern
+				}
+				has_custom_designers = no
+			}
+			research_bonus = {
+				industry = 0.10
+			}
+			traits = {
+				industrial_concern
+			}
+			modifier = {} #change
+		}
+		generic_electronics_concern = {
+			picture = WIT_generic_electronics_concern
+			allowed = {
+				NOT = {
+					has_country_flag = no_generic_industrial_concern
+				}
+				has_custom_designers = no
+			}
+			research_bonus = {
+				electronics = 0.10
+			}
+			traits = {
+				electronics_concern
+			}
+			modifier = {} #change
+		}
+	}
+	aircraft_manufacturer = {
+		designer = yes
+		generic_light_aircraft_manufacturer = {
+			picture = generic_air_manufacturer_3
+			allowed = {
+				NOT = {
+					has_country_flag = no_generic_aircraft_manufacturer
+				}
+				has_custom_designers = no
+			}
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			traits = {
+				light_aircraft_manufacturer
+			}
+			equipment_bonus = {} #change
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		generic_CAS_manufacturer = {
+			picture = generic_air_manufacturer_2
+			allowed = {
+				NOT = {
+					has_country_flag = no_generic_aircraft_manufacturer
+				}
+				has_custom_designers = no
+			}
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			traits = {
+				CAS_manufacturer
+			}
+			equipment_bonus = {} #change
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		generic_medium_aircraft_manufacturer = {
+			picture = STW_medium_aircraft_manufacturer
+			allowed = {
+				NOT = {
+					has_country_flag = no_generic_aircraft_manufacturer
+				}
+				has_custom_designers = no
+			}
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			traits = {
+				medium_aircraft_manufacturer
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		generic_heavy_aircraft_manufacturer = {
+			picture = VED_heavy_aircraft_manufacturer
+			allowed = {
+				NOT = {
+					has_country_flag = no_generic_aircraft_manufacturer
+				}
+				has_custom_designers = no
+			}
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			traits = {
+				heavy_aircraft_manufacturer
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		generic_naval_aircraft_manufacturer = {
+			picture = generic_air_manufacturer_1
+			allowed = {
+				NOT = {
+					has_country_flag = no_generic_aircraft_manufacturer
+				}
+				has_custom_designers = no
+			}
+			research_bonus = {
+				air_equipment = 0.10
+			}
+			traits = {
+				naval_aircraft_manufacturer
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+	naval_manufacturer = {
+		designer = yes
+		generic_batleship_manufacturer = {
+			picture = generic_naval_manufacturer_2
+			allowed = {
+				NOT = {
+					has_country_flag = no_generic_naval_manufacturer
+				}
+				has_custom_designers = no
+			}
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			equipment_bonus = {} #change
+			traits = {
+				atlantic_fleet_naval_manufacturer
+			}
+
+		}
+		generic_submarine_manufacturer = {
+			picture = generic_naval_manufacturer_1
+			allowed = {
+				NOT = {
+					has_country_flag = no_generic_naval_manufacturer
+				}
+				has_custom_designers = no
+			}
+			research_bonus = {
+				naval_equipment = 0.10
+			}
+			traits = {
+				raiding_fleet_naval_manufacturer
+			}
+			equipment_bonus = {} #change
+		}
+	}
+	materiel_manufacturer = {
+		designer = yes
+		generic_artillery_manufacturer = {
+			picture = generic_artillery_manufacturer_3
+			allowed = {
+				NOT = {
+					has_country_flag = no_generic_materiel_manufacturer
+				}
+				has_custom_designers = no
+			}
+			research_bonus = {
+				artillery = 0.10
+			}
+			traits = {
+				artillery_manufacturer
+			}
+			ai_will_do = {
+				factor = 1
+			}
+		}
+		generic_infantry_equipment_manufacturer = {
+			picture = generic_infantry_equipment_manufacturer_2
+			allowed = {
+				NOT = {
+					has_country_flag = no_generic_materiel_manufacturer
+				}
+				has_custom_designers = no
+			}
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+			traits = {
+				infantry_equipment_manufacturer
+			}
+		}
+		generic_motorized_equipment_manufacturer = {
+			picture = generic_motorized_equipment_manufacturer_3
+			allowed = {
+				NOT = {
+					has_country_flag = no_generic_materiel_manufacturer
+				}
+				has_custom_designers = no
+			}
+			research_bonus = {
+				motorized_equipment = 0.10
+				mot_rockets = 0.50
+			}
+			traits = {
+				motorized_equipment_manufacturer
+			}
+			modifier = {} #change
+		}
+	}
+}

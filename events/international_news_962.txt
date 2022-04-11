@@ -1,9 +1,9 @@
-add_namespace = news
+add_namespace = enews
 country_event = {   ######### evil mind is getting powerful ######
 	id = enews.1
 	immediate = {log = "[GetDateText]: [Root.GetName]: event news.1"}
-	title = news.1.t
-	desc = news.1.d
+	title = enews.1.t
+	desc = enews.1.d
 	picture = GFX_event_swarm
 	is_triggered_only = yes
 	major = yes
@@ -13,7 +13,7 @@ country_event = {   ######### evil mind is getting powerful ######
 		}
 	}
 	option = {
-		name = news.1.a
+		name = enews.1.a
 		ai_chance = {
 			factor = 100
 		}

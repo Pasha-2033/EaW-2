@@ -1,0 +1,494 @@
+# For minor countries where advisors are not defined
+# Generate them from a generic template
+
+# High command
+# Unable to use random_list for random race portrait, so, mylti_race will have one portrait, like others
+
+every_possible_country = {
+	limit = {
+		NOT = {
+			OR = {
+				has_country_flag = no_generic_army_art
+				has_custom_high_command = yes
+				has_allowed_idea_with_traits = {
+					idea = army_artillery_1
+					characters = yes
+				}
+			}
+		}
+	}
+	generate_character = {
+		token_base = generic_army_art
+		name = generic_army_art
+		advisor = {
+			slot = high_command
+			traits = {
+				army_artillery_1
+			}
+			ledger = army
+			cost = 50
+		}
+	}
+	if = {
+		limit = {
+			is_polar_race = yes
+		}
+		set_portraits = {
+			character = generic_army_art
+			army = {
+				small = GFX_idea_unknown_advisor_bear
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_buffalo_race = yes
+		}
+		set_portraits = {
+			character = generic_army_art
+			army = {
+				small = GFX_idea_unknown_advisor_buffalo
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_changeling_race = yes
+		}
+		set_portraits = {
+			character = generic_army_art
+			army = {
+				small = GFX_idea_unknown_advisor_bug
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_diamond_dog_race = yes
+		}
+		set_portraits = {
+			character = generic_army_art
+			army = {
+				small = GFX_idea_unknown_advisor_dog
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_dragon_race = yes
+		}
+		set_portraits = {
+			character = generic_army_art
+			army = {
+				small = GFX_idea_unknown_advisor_dragon
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_griffon_race = yes
+		}
+		set_portraits = {
+			character = generic_army_art
+			army = {
+				small = GFX_idea_unknown_advisor_griffon
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_minotaur_race = yes
+		}
+		set_portraits = {
+			character = generic_army_art
+			army = {
+				small = GFX_idea_unknown_advisor_minotaur
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_penguin_race = yes
+		}
+		set_portraits = {
+			character = generic_army_art
+			army = {
+				small = GFX_idea_unknown_advisor_pingu
+			}
+		}
+	}
+	else = {
+		set_portraits = {
+			character = generic_army_art
+			army = {
+				small = GFX_idea_unknown_advisor
+			}
+		}
+	}
+}
+every_possible_country = {
+	limit = {
+		NOT = {
+			OR = {
+				has_country_flag = no_generic_army_log
+				has_custom_high_command = yes
+				has_allowed_idea_with_traits = {
+					idea = army_logistics_1
+					characters = yes
+				}
+			}
+		}
+	}
+	generate_character = {
+		token_base = generic_army_log
+		name = generic_army_log
+		advisor = {
+			slot = high_command
+			traits = {
+				army_logistics_1
+			}
+			ledger = army
+			cost = 100
+		}
+	}
+	if = {
+		limit = {
+			is_polar_race = yes
+		}
+		set_portraits = {
+			character = generic_army_log
+			army = {
+				small = GFX_idea_unknown_advisor_bear
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_buffalo_race = yes
+		}
+		set_portraits = {
+			character = generic_army_log
+			army = {
+				small = GFX_idea_unknown_advisor_buffalo
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_changeling_race = yes
+		}
+		set_portraits = {
+			character = generic_army_log
+			army = {
+				small = GFX_idea_unknown_advisor_bug
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_diamond_dog_race = yes
+		}
+		set_portraits = {
+			character = generic_army_log
+			army = {
+				small = GFX_idea_unknown_advisor_dog
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_dragon_race = yes
+		}
+		set_portraits = {
+			character = generic_army_log
+			army = {
+				small = GFX_idea_unknown_advisor_dragon
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_griffon_race = yes
+		}
+		set_portraits = {
+			character = generic_army_log
+			army = {
+				small = GFX_idea_unknown_advisor_griffon
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_minotaur_race = yes
+		}
+		set_portraits = {
+			character = generic_army_log
+			army = {
+				small = GFX_idea_unknown_advisor_minotaur
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_penguin_race = yes
+		}
+		set_portraits = {
+			character = generic_army_log
+			army = {
+				small = GFX_idea_unknown_advisor_pingu
+			}
+		}
+	}
+	else = {
+		set_portraits = {
+			character = generic_army_log
+			army = {
+				small = GFX_idea_unknown_advisor
+			}
+		}
+	}
+}
+every_possible_country = {
+	limit = {
+		NOT = {
+			OR = {
+				has_country_flag = no_generic_navy_fleet_log
+				has_custom_high_command = yes
+				has_allowed_idea_with_traits = {
+					idea = navy_fleet_logistics_1
+					characters = yes
+				}
+			}
+		}
+	}
+	generate_character = {
+		token_base = generic_navy_fleet_log
+		name = generic_navy_fleet_log
+		advisor = {
+			slot = high_command
+			traits = {
+				navy_fleet_logistics_1
+			}
+			ledger = navy
+			cost = 50
+		}
+	}
+	if = {
+		limit = {
+			is_polar_race = yes
+		}
+		set_portraits = {
+			character = generic_navy_fleet_log
+			army = {
+				small = GFX_idea_unknown_advisor_bear
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_buffalo_race = yes
+		}
+		set_portraits = {
+			character = generic_navy_fleet_log
+			army = {
+				small = GFX_idea_unknown_advisor_buffalo
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_changeling_race = yes
+		}
+		set_portraits = {
+			character = generic_navy_fleet_log
+			army = {
+				small = GFX_idea_unknown_advisor_bug
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_diamond_dog_race = yes
+		}
+		set_portraits = {
+			character = generic_navy_fleet_log
+			army = {
+				small = GFX_idea_unknown_advisor_dog
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_dragon_race = yes
+		}
+		set_portraits = {
+			character = generic_navy_fleet_log
+			army = {
+				small = GFX_idea_unknown_advisor_dragon
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_griffon_race = yes
+		}
+		set_portraits = {
+			character = generic_navy_fleet_log
+			army = {
+				small = GFX_idea_unknown_advisor_griffon
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_minotaur_race = yes
+		}
+		set_portraits = {
+			character = generic_navy_fleet_log
+			army = {
+				small = GFX_idea_unknown_advisor_minotaur
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_penguin_race = yes
+		}
+		set_portraits = {
+			character = generic_navy_fleet_log
+			army = {
+				small = GFX_idea_unknown_advisor_pingu
+			}
+		}
+	}
+	else = {
+		set_portraits = {
+			character = generic_navy_fleet_log
+			army = {
+				small = GFX_idea_unknown_advisor
+			}
+		}
+	}
+}
+every_possible_country = {
+	limit = {
+		NOT = {
+			OR = {
+				has_country_flag = no_generic_air_air_combat_trainer
+				has_custom_high_command = yes
+				has_allowed_idea_with_traits = {
+					idea = air_air_combat_training_1
+					characters = yes
+				}
+			}
+		}
+	}
+	generate_character = {
+		token_base = generic_air_air_combat_trainer
+		name = generic_air_air_combat_trainer
+		advisor = {
+			slot = high_command
+			traits = {
+				air_air_combat_training_1
+			}
+			ledger = air
+			cost = 100
+		}
+	}
+	if = {
+		limit = {
+			is_polar_race = yes
+		}
+		set_portraits = {
+			character = generic_air_air_combat_trainer
+			army = {
+				small = GFX_idea_unknown_advisor_bear
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_buffalo_race = yes
+		}
+		set_portraits = {
+			character = generic_air_air_combat_trainer
+			army = {
+				small = GFX_idea_unknown_advisor_buffalo
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_changeling_race = yes
+		}
+		set_portraits = {
+			character = generic_air_air_combat_trainer
+			army = {
+				small = GFX_idea_unknown_advisor_bug
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_diamond_dog_race = yes
+		}
+		set_portraits = {
+			character = generic_air_air_combat_trainer
+			army = {
+				small = GFX_idea_unknown_advisor_dog
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_dragon_race = yes
+		}
+		set_portraits = {
+			character = generic_air_air_combat_trainer
+			army = {
+				small = GFX_idea_unknown_advisor_dragon
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_griffon_race = yes
+		}
+		set_portraits = {
+			character = generic_air_air_combat_trainer
+			army = {
+				small = GFX_idea_unknown_advisor_griffon
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_minotaur_race = yes
+		}
+		set_portraits = {
+			character = generic_air_air_combat_trainer
+			army = {
+				small = GFX_idea_unknown_advisor_minotaur
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			is_penguin_race = yes
+		}
+		set_portraits = {
+			character = generic_air_air_combat_trainer
+			army = {
+				small = GFX_idea_unknown_advisor_pingu
+			}
+		}
+	}
+	else = {
+		set_portraits = {
+			character = generic_air_air_combat_trainer
+			army = {
+				small = GFX_idea_unknown_advisor
+			}
+		}
+	}
+}

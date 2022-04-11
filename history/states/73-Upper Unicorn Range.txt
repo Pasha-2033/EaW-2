@@ -17,16 +17,13 @@ state={
 			owner = EEQ
 			add_core_of = ICE
 			add_core_of = EEQ
+			add_resource = {
+				type = steel
+				amount = 3
+				state = THIS
+			}
 		}
 		1007.1.1 = {}
 		1050.1.1 = {}
-
-		buildings = {
-			infrastructure = 1
-		}
-	}
-
-	resources={
-		steel=16
 	}
 }

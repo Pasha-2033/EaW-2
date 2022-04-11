@@ -17,26 +17,26 @@ state={
 			owner = EEQ
 			add_core_of = ICE
 			add_core_of = EEQ
+			add_resource = {
+				type = steel
+				amount = 7
+				state = THIS
+			}
+			buildings = {
+				infrastructure = 1
+				industrial_complex = 1
+				arms_factory = 1
+				dockyard = 1
+				fuel_silo = 1
+				69 = {
+					naval_base = 7
+				}
+			}
 		}
 		1007.1.1 = {}
 		1050.1.1 = {}
 		victory_points = { 69 30 }
 
-		buildings = {
-			infrastructure = 4
-			industrial_complex = 2
-			arms_factory = 1
-			air_base = 2
-			dockyard = 5
-			fuel_silo = 1
-
-			69 = {
-				naval_base = 7
-			}
-		}
-	}
-
-	resources = {
-		steel = 30
+		
 	}
 }

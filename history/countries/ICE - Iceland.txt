@@ -1,6 +1,23 @@
 capital = 38
 set_research_slots = 1
 starting_train_buffer = 1
-add_ideas = {
-	mylti_race_idea
+set_technology = {}
+actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
+
+
+set_popularities = {
+	fascism = 80
+	communism = 5
+	anarchism = 15
 }
+set_politics = {
+	ruling_party = fascism
+	last_election = "953.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+add_ideas = {
+	mylti_race
+}
+set_stability = 0.05
+set_war_support = 0.05
