@@ -1,0 +1,79 @@
+division_template = {
+	name = "Jager Division"			#Jager
+	division_names_group = JAGER
+	regiments = {
+		jager = { x = 0 y = 0 }
+		jager = { x = 0 y = 1 }
+		jager = { x = 1 y = 0 }
+		jager = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Queen's Guard"			#RoyalGuards
+	division_names_group = QG
+	template_counter = 33
+	regiments = {
+		#need icon in gfx for division desinger (https://hoi4.paradoxwikis.com/Unit_modding#Icons)
+		royal_guard = { x = 0 y = 0 }
+		royal_guard = { x = 0 y = 1 }
+		royal_guard = { x = 1 y = 0 }
+		royal_guard = { x = 1 y = 1 }
+	}
+	priority = 2
+}
+
+units = {
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 11045
+		division_template = "Queen's Guard"
+		start_experience_factor = 1
+		start_equipment_factor = 0.75
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 1
+		}
+		location = 6134
+		division_template = "Jager Division"
+		start_experience_factor = 1
+		start_equipment_factor = 0.75
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 2
+		}
+		location = 6128
+		division_template = "Jager Division"
+		start_experience_factor = 0
+		start_equipment_factor = 0.5
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+			name_order = 3
+		}
+		location = 11045
+		division_template = "Jager Division"
+		start_experience_factor = 1
+		start_equipment_factor = 1
+	}
+	#order names 4-8 wil be added by focus
+}
+
+instant_effect = {
+	#add_equipment_production = {
+	#	equipment = {
+	#		type = infantry_equipment_1
+	#		creator = "VES"
+	#	}
+	#	requested_factories = 4
+	#	progress = 0.50
+	#	efficiency = 85
+	#}
+}

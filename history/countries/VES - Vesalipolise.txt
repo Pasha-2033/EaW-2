@@ -1,9 +1,13 @@
 capital = 251
 set_research_slots = 1
 starting_train_buffer = 1
-set_technology = {}
+set_technology = {
+	tech_jager = 1
+	melee_weapons = 1 #temp
+}
 actually_fix_weapon_techs = yes #THIS HAS TO BE CALLED IN EVERY HISTORY FILE RIGHT AFTER MAIN set_technology!
-set_oob = "CHN_1007_nsb"
+set_intel_lvl_962 = yes
+set_oob = "VES_962"
 set_convoys = 9
 set_popularities = {
 	technocracy = 5
@@ -29,6 +33,7 @@ add_ideas = {
 	lack_of_scientists
 	poverty
 	primitive_economy
+	race_based_valuta
 }
 #set_country_flag = queens_tower_flag
 #add_timed_idea = { idea = CHN_synthetic_armament days = 365 }

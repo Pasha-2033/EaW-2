@@ -1,0 +1,20 @@
+is_great_projects_of_evil_mind_possible = {
+	is_changeling_race = yes
+	OR = {
+		AND = {
+			original_tag = VES
+			has_completed_focus = ves_focus_evil_mind_found
+		}
+		AND = {
+			OR = {
+				original_tag = SOR
+				original_tag = DIS
+				original_tag = VRA
+				original_tag = LIK
+			}
+			is_in_array = {
+				conquered_countries = VES
+			}
+		}
+	}
+}

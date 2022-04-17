@@ -8,8 +8,13 @@ focus_tree = {
 		}
 	}
 	default = no
-	continuous_focus_position = { x = 2700 y = 1350 }
-	#первая линия
+	continuous_focus_position = {
+		x = 2700
+		y = 1350
+	}
+	shared_focus = shared_focus_changelings_start_canterlot_race
+	shared_focus = shared_focus_initiate_great_projects
+	#uniqe SOR focuses
 	focus = {
 		id = sor_focus_monarhy_guestion
 		icon = GFX_goal_chn_death_or_dishonour
@@ -21,6 +26,7 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
+			
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL

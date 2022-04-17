@@ -1,0 +1,85 @@
+scripted_map_modes = {
+	literacy_map_mode = {
+		top = { type = none }
+		bottom = {
+            type = country
+            color = {
+				if = {
+					limit = {
+						FROM = {
+							has_idea = no_lack_of_scientists
+						}
+					}
+					set_temp_variable = { red = 0.9 }
+					set_temp_variable = { green = 0.9 }
+					set_temp_variable = { blue = 0.6 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							has_idea = lack_of_scientists3
+						}
+					}
+					set_temp_variable = { red = 0.9 }
+					set_temp_variable = { green = 0.3 }
+					set_temp_variable = { blue = 0.4 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							OR = {
+								has_idea = JER_education_socialist
+								has_idea = lack_of_scientists2
+							}
+						}
+					}
+					set_temp_variable = { red = 0.6 }
+					set_temp_variable = { green = 0.4 }
+					set_temp_variable = { blue = 0.2 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							has_idea = lack_of_scientists1
+						}
+					}
+					set_temp_variable = { red = 0.5 }
+					set_temp_variable = { green = 0.2 }
+					set_temp_variable = { blue = 0.1 }
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							has_idea = lack_of_scientists
+						}
+					}
+					set_temp_variable = { red = 0.4 }
+					set_temp_variable = { green = 0.1 }
+					set_temp_variable = { blue = 0.1 }
+				}
+
+				#Unique Literacy
+
+				else_if = {
+					limit = {
+						FROM = {
+							has_idea = FLO_illiteracy_virtue
+						}
+					}
+					set_temp_variable = { red = 0.4 }
+					set_temp_variable = { green = 0.1 }
+					set_temp_variable = { blue = 0.4 }
+				}
+
+				else = {
+					set_temp_variable = { red = 1 }
+					set_temp_variable = { green = 1 }
+					set_temp_variable = { blue = 1 }
+				}
+				set_temp_variable = { alpha = 0.9 }
+            }
+        }
+        far_text = country
+        near_text = none
+    }
+}

@@ -8,12 +8,37 @@ focus_tree = {
 		}
 	}
 	default = no
-	continuous_focus_position = { x = 2700 y = 1350 }
-	#первая линия
+	continuous_focus_position = {
+		x = 2700
+		y = 1350
+	}
+	shared_focus = shared_focus_changelings_start_canterlot_race
+	shared_focus = shared_focus_initiate_great_projects
+	#uniqe SOR focuses
+	#нужно чинить
 	focus = {
 		id = dis_focus_monarhy_guestion
-		icon = GFX_goal_chn_death_or_dishonour
+		icon = GFX_goal_generic_changeling
 		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		x = 7
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = dis_focus_support_queen_helvia
+		icon = GFX_goal_chn_man_crown
+		cost = 1
+		prerequisite = {
+			focus = dis_focus_monarhy_guestion
+		}
 		ai_will_do = {
 			factor = 200
 		}
@@ -21,6 +46,656 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = dis_focus_consolidate_influence
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		prerequisite = {
+			focus = dis_focus_support_queen_helvia
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 7
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = dis_focus_hive_of_port
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		prerequisite = {
+			focus = dis_focus_consolidate_influence
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 7
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = dis_focus_building_fleet
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		prerequisite = {
+			focus = dis_focus_hive_of_port
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 7
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = dis_focus_trade_fleet
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		prerequisite = {
+			focus = dis_focus_building_fleet
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 5
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = dis_focus_submarines
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		prerequisite = {
+			focus = dis_focus_building_fleet
+		}
+		mutually_exclusive = {
+			focus = dis_focus_batleships
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 7
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = dis_focus_batleships
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		prerequisite = {
+			focus = dis_focus_building_fleet
+		}
+		mutually_exclusive = {
+			focus = dis_focus_submarines
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 9
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = dis_focus_maritime_doctrine
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		prerequisite = {
+			focus = dis_focus_batleships
+			focus = dis_focus_submarines
+		}
+		prerequisite = {
+			focus = dis_focus_trade_fleet
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 7
+		y = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = dis_focus_treat_from_south
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		prerequisite = {
+			focus = dis_focus_support_queen_helvia
+		}
+		bypass = {
+			VES = {
+				exists = no
+			}
+			VRA = {
+				exists = no
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 3
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = dis_focus_treat_from_east_and_west
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		prerequisite = {
+			focus = dis_focus_support_queen_helvia
+		}
+		bypass = {
+			SOR = {
+				exists = no
+			}
+			LIK = {
+				exists = no
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 11
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = dis_focus_first_strike_sor
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		prerequisite = {
+			focus = dis_focus_treat_from_east_and_west
+		}
+		bypass = {
+			SOR = {
+				exists = no
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 10
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = dis_focus_first_strike_lik
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		prerequisite = {
+			focus = dis_focus_treat_from_east_and_west
+		}
+		bypass = {
+			LIK = {
+				exists = no
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 12
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = dis_focus_crystal_monopoly
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		prerequisite = {
+			focus = dis_focus_first_strike_sor
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = is_dis_crystal_monopoly_able_tt
+				OR = {
+					AND = {
+						SOR = {
+							exists = no
+						}
+						262 = {
+							is_owned_by = DIS
+						}
+						264 = {
+							is_owned_by = DIS
+						}
+						314 = {
+							is_owned_by = DIS
+						}
+						315 = {
+							is_owned_by = DIS
+						}
+						323 = {
+							is_owned_by = DIS
+						}
+					}
+					AND = {
+						SOR = {
+							OR = {
+								is_puppet_of = DIS
+								is_subject_of = DIS
+							}
+						}
+						262 = {
+							OR = {
+								is_owned_by = DIS
+								is_owned_by = SOR
+							}
+						}
+						264 = {
+							OR = {
+								is_owned_by = DIS
+								is_owned_by = SOR
+							}
+						}
+						314 = {
+							OR = {
+								is_owned_by = DIS
+								is_owned_by = SOR
+							}
+						}
+						315 = {
+							OR = {
+								is_owned_by = DIS
+								is_owned_by = SOR
+							}
+						}
+						323 = {
+							OR = {
+								is_owned_by = DIS
+								is_owned_by = SOR
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 10
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = dis_focus_steel_monopoly
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		prerequisite = {
+			focus = dis_focus_first_strike_lik
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = is_dis_steel_monopoly_able_tt
+				OR = {
+					AND = {
+						LIK = {
+							exists = no
+						}
+						260 = {
+							is_owned_by = DIS
+						}
+						303 = {
+							is_owned_by = DIS
+						}
+						304 = {
+							is_owned_by = DIS
+						}
+						308 = {
+							is_owned_by = DIS
+						}
+						309 = {
+							is_owned_by = DIS
+						}
+					}
+					AND = {
+						LIK = {
+							OR = {
+								is_puppet_of = DIS
+								is_subject_of = DIS
+							}
+						}
+						260 = {
+							OR = {
+								is_owned_by = DIS
+								is_owned_by = LIK
+							}
+						}
+						303 = {
+							OR = {
+								is_owned_by = DIS
+								is_owned_by = LIK
+							}
+						}
+						304 = {
+							OR = {
+								is_owned_by = DIS
+								is_owned_by = LIK
+							}
+						}
+						308 = {
+							OR = {
+								is_owned_by = DIS
+								is_owned_by = LIK
+							}
+						}
+						309 = {
+							OR = {
+								is_owned_by = DIS
+								is_owned_by = LIK
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 12
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = dis_focus_first_strike_ves
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		prerequisite = {
+			focus = dis_focus_treat_from_south
+		}
+		bypass = {
+			VES = {
+				exists = no
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 2
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = dis_focus_first_strike_ves
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		prerequisite = {
+			focus = dis_focus_treat_from_south
+		}
+		bypass = {
+			VES = {
+				exists = no
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 2
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = dis_focus_first_strike_vra
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		prerequisite = {
+			focus = dis_focus_treat_from_south
+		}
+		available = {
+			is_neighbor_of = VRA
+		}
+		bypass = {
+			VRA = {
+				exists = no
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 4
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = dis_focus_capture_evil_mind
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		prerequisite = {
+			focus = dis_focus_first_strike_ves
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = is_dis_able_to_capture_evil_mind_tt
+				is_in_array = {
+					conquered_countries = VES
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 2
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
+			hidden_effect = {
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = dis_focus_militarisation
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		prerequisite = {
+			focus = dis_focus_first_strike_vra
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = is_dis_militarisation_able_tt
+				OR = {
+					AND = {
+						VRA = {
+							exists = no
+						}
+						246 = {
+							is_owned_by = DIS
+						}
+						247 = {
+							is_owned_by = DIS
+						}
+						248 = {
+							is_owned_by = DIS
+						}
+						250 = {
+							is_owned_by = DIS
+						}
+						258 = {
+							is_owned_by = DIS
+						}
+						259 = {
+							is_owned_by = DIS
+						}
+						291 = {
+							is_owned_by = DIS
+						}
+						307 = {
+							is_owned_by = DIS
+						}
+						316 = {
+							is_owned_by = DIS
+						}
+						319 = {
+							is_owned_by = DIS
+						}
+					}
+					AND = {
+						VRA = {
+							OR = {
+								is_puppet_of = DIS
+								is_subject_of = DIS
+							}
+						}
+						246 = {
+							OR = {
+								is_owned_by = DIS
+								is_owned_by = VRA
+							}
+						}
+						247 = {
+							OR = {
+								is_owned_by = DIS
+								is_owned_by = VRA
+							}
+						}
+						248 = {
+							OR = {
+								is_owned_by = DIS
+								is_owned_by = VRA
+							}
+						}
+						250 = {
+							OR = {
+								is_owned_by = DIS
+								is_owned_by = VRA
+							}
+						}
+						258 = {
+							OR = {
+								is_owned_by = DIS
+								is_owned_by = VRA
+							}
+						}
+						259 = {
+							OR = {
+								is_owned_by = DIS
+								is_owned_by = VRA
+							}
+						}
+						291 = {
+							OR = {
+								is_owned_by = DIS
+								is_owned_by = VRA
+							}
+						}
+						307 = {
+							OR = {
+								is_owned_by = DIS
+								is_owned_by = VRA
+							}
+						}
+						316 = {
+							OR = {
+								is_owned_by = DIS
+								is_owned_by = VRA
+							}
+						}
+						319 = {
+							OR = {
+								is_owned_by = DIS
+								is_owned_by = VRA
+							}
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 4
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
+			hidden_effect = {
+				mark_focus_tree_layout_dirty = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL

@@ -1,0 +1,14 @@
+calculate_max_population = {
+	every_state = {
+		if = {
+			limit = {
+				check_variable = {
+					state_population_k > global.max_population
+				}
+			}
+			set_variable = {
+				global.max_population = state_population_k
+			}
+		}
+	}
+}

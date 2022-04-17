@@ -1,19 +1,41 @@
 add_namespace = enews
-country_event = {   ######### evil mind is getting powerful ######
+country_event = {
+	#evil mind is getting powerful
 	id = enews.1
-	immediate = {log = "[GetDateText]: [Root.GetName]: event news.1"}
+	immediate = { log = "[GetDateText]: [Root.GetName]: event news.1" }
 	title = enews.1.t
 	desc = enews.1.d
 	picture = GFX_event_swarm
 	is_triggered_only = yes
 	major = yes
-	show_major = {
+	trigger = {
 		NOT = {
-			tag = VES
+			original_tag = VES
 		}
 	}
 	option = {
 		name = enews.1.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {
+	#evil mind is executed
+	id = enews.2
+	immediate = { log = "[GetDateText]: [Root.GetName]: event news.1" }
+	title = enews.2.t
+	desc = enews.2.d
+	picture = GFX_event_swarm
+	is_triggered_only = yes
+	major = yes
+	trigger = {
+		NOT = {
+			original_tag = VES
+		}
+	}
+	option = {
+		name = enews.2.a
 		ai_chance = {
 			factor = 100
 		}

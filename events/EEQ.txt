@@ -1,0 +1,27 @@
+add_namespace = eequestria
+#change picture everywhere
+country_event = {
+	#create research group with VES
+	id = eequestria.1
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event eequestria.1"
+	}
+	title = eequestria.1.t
+	desc = eequestria.1.d
+	picture = GFX_event_swarm
+	is_triggered_only = yes
+	option = {
+		#yes
+		name = eequestria.1.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		#no
+		name = eequestria.1.b
+		ai_chance = {
+			factor = 100
+		}
+	}
+}

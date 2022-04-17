@@ -1,55 +1,59 @@
-@989 = 0
-@1007 = 0
-@1009 = 2
-@1010 = 4
-@1011 = 6
-@1012 = 8
-@1013 = 10
-@1014 = 12
-@1015 = 14
-@1016 = 16
-@1017 = 18
-@1018 = 20
-@1019 = 22
-@1020 = 24
-@1021 = 26
-@1022 = 28
-@1023 = 30
-@1024 = 32
-@1025 = 34
-@1026 = 36
-
+@953 = 0
+@962 = 2
+@964 = 4
+@966 = 6
+@967 = 8
+@968 = 10
+@969 = 12
+@971 = 14
+@973 = 16
+@975 = 18
+@976 = 20
+@977 = 22
+@980 = 24
+@982 = 26
+@983 = 28
+@984 = 30
+@987 = 32
+@989 = 34
+@1007 = 36
+@1008 = 38
+@1009 = 40
+@1010 = 42
+@1011 = 44
+@1012 = 46
+@1013 = 48
+@1014 = 50
+@1015 = 52
+@1017 = 54
+@1018 = 56
+@1019 = 58
+@1020 = 60
+@1021 = 62
+@1022 = 64
+@1023 = 66
+@1024 = 68
+@1025 = 70
+@1026 = 72
 technologies = {
-
+	#init folder dependencies
 	changeling_race = {
-
 		research_cost = 0.01
-
 		allow = {
 			always = no
 		}
-
 		recon = {
 			maximum_speed = 0.3
 		}
-
-		ai_will_do = {
-			factor = 20000000
-		}
-
 	}
-
+	#jager tree
 	tech_jager = {
-
 		dependencies = {
 			changeling_race = 1
-			tech_support = 1
 		}
-
 		enable_subunits = {
 			jager
 		}
-
 		on_research_complete = {
 			if = {
 				limit = {
@@ -67,33 +71,29 @@ technologies = {
 				fix_weapon_techs = yes
 			}
 		}
-
 		path = {
 			leads_to_tech = tech_jager2
 			research_cost_coeff = 1
 		}
-
-		research_cost = 1.5
-		start_year = 1007
+		research_cost = 1
+		start_year = 953
 		folder = {
 			name = changeling_folder
-			position = { x = 0 y = @1007 }
+			position = {
+				x = 2
+				y = @953
+			}
 		}
-
 		categories = {
-
 			jager_tech
 			race_tech
 			special_forces_tech
 		}
-
 		ai_will_do = {
 			factor = 10
 		}
 	}
-
 	tech_jager2 = {
-
 		jager = {
 			max_organisation = 5
 			soft_attack = 0.05
@@ -102,140 +102,126 @@ technologies = {
 			leads_to_tech = tech_jager3
 			research_cost_coeff = 1
 		}
-
 		on_research_complete = {
 			hidden_effect = {
 				fix_weapon_techs = yes
 			}
 		}
-
-
 		research_cost = 1
-		start_year = 1007
+		start_year = 962
 		folder = {
 			name = changeling_folder
-			position = { x = 0 y = @1010 }
+			position = {
+				x = 2
+				y = @962
+			}
 		}
-
 		categories = {
-
 			jager_tech
 			race_tech
 			special_forces_tech
 		}
-
 		ai_will_do = {
 			factor = 2
-
 			modifier = {
 				factor = 1.5
-				date > "1007.1.1"
+				date > "962.1.1"
 			}
-
 			modifier = {
 				factor = 2
-				date > "1008.1.1"
+				date > "963.1.1"
 			}
 		}
 	}
-
 	tech_jager3 = {
-
 		jager = {
 			max_organisation = 5
 			hard_attack = 0.05
 		}
-
 		path = {
 			leads_to_tech = tech_jager_a
 			research_cost_coeff = 1
 		}
-
+		path = {
+			leads_to_tech = tech_jager_b
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = tech_jager_c
+			research_cost_coeff = 1
+		}
 		on_research_complete = {
 			hidden_effect = {
 				fix_weapon_techs = yes
 			}
 		}
-
 		research_cost = 1.5
-		start_year = 1007
+		start_year = 964
 		folder = {
 			name = changeling_folder
-			position = { x = 0 y = @1013 }
+			position = {
+				x = 2
+				y = @964
+			}
 		}
-
 		categories = {
-
 			jager_tech
 			race_tech
 			special_forces_tech
 		}
-
 		ai_will_do = {
 			factor = 2
-
 			modifier = {
 				factor = 1.5
-				date > "1013.1.1"
+				date > "964.1.1"
 			}
-
 			modifier = {
 				factor = 2
-				date > "1014.1.1"
+				date > "965.1.1"
 			}
 		}
 	}
-
 	tech_jager_a = {
-
 		jager = {
 			max_organisation = 5
 			breakthrough = 0.05
 		}
-
 		path = {
-
-			leads_to_tech = tech_jager_b
+			#leads_to_tech = tech_jager_a_2
 			research_cost_coeff = 1
 		}
-
 		on_research_complete = {
 			hidden_effect = {
 				fix_weapon_techs = yes
 			}
 		}
-
 		research_cost = 1.5
-		start_year = 1007
+		start_year = 966
 		folder = {
 			name = changeling_folder
-			position = { x = 0 y = @1016 }
+			position = {
+				x = 0
+				y = @966
+			}
 		}
-
 		categories = {
-
 			jager_tech
 			race_tech
 			special_forces_tech
 		}
-
 		ai_will_do = {
 			factor = 2
-
 			modifier = {
 				factor = 1.5
-				date > "1016.1.1"
+				date > "966.1.1"
 			}
-
 			modifier = {
 				factor = 2
-				date > "1017.1.1"
+				date > "967.1.1"
 			}
 		}
 	}
-
 	tech_jager_b = {
-
 		jager = {
 			max_organisation = 5
 			marsh = {
@@ -243,49 +229,42 @@ technologies = {
 				movement = 0.05
 			}
 		}
-
 		path = {
-			leads_to_tech = tech_jager_c
+			#leads_to_tech = tech_jager_b_2
 			research_cost_coeff = 1
 		}
-
 		on_research_complete = {
 			hidden_effect = {
 				fix_weapon_techs = yes
 			}
 		}
-
 		research_cost = 1.5
-		start_year = 1007
+		start_year = 966
 		folder = {
 			name = changeling_folder
-			position = { x = 0 y = @1020 }
+			position = {
+				x = 2
+				y = @966
+			}
 		}
-
 		categories = {
-
 			jager_tech
 			race_tech
 			special_forces_tech
 		}
-
 		ai_will_do = {
 			factor = 2
-
 			modifier = {
 				factor = 1.5
-				date > "1020.1.1"
+				date > "966.1.1"
 			}
-
 			modifier = {
 				factor = 2
-				date > "1021.1.1"
+				date > "967.1.1"
 			}
 		}
 	}
-
 	tech_jager_c = {
-
 		jager = {
 			max_organisation = 5
 			forest = {
@@ -293,41 +272,93 @@ technologies = {
 				defence = 0.05
 			}
 		}
-
 		research_cost = 1.5
-		start_year = 1007
+		start_year = 966
 		folder = {
 			name = changeling_folder
-			position = { x = 0 y = @1024 }
+			position = {
+				x = 4
+				y = @966
+			}
 		}
-
+		dependencies = {
+            tech_jager3 = 1
+			tech_rg2 = 1
+        }
 		on_research_complete = {
 			hidden_effect = {
 				fix_weapon_techs = yes
 			}
 		}
-
 		categories = {
-
 			jager_tech
 			race_tech
 			special_forces_tech
 		}
-
 		ai_will_do = {
 			factor = 2
-
 			modifier = {
 				factor = 1.5
-				date > "1024.1.1"
+				date > "966.1.1"
 			}
-
 			modifier = {
 				factor = 2
-				date > "1025.1.1"
+				date > "967.1.1"
 			}
 		}
 	}
+	#royal guard tree
+	tech_rg = {
+		research_cost = 1.5
+		start_year = 953
+		folder = {
+			name = changeling_folder
+			position = {
+				x = 6
+				y = @953
+			}
+		}
+		dependencies = {
+			changeling_race = 1
+		}
+		path = {
+			leads_to_tech = tech_rg1
+			research_cost_coeff = 1
+		}
+	}
+	tech_rg1 = {
+		research_cost = 1.5
+		start_year = 962
+		folder = {
+			name = changeling_folder
+			position = {
+				x = 6
+				y = @962
+			}
+		}
+		path = {
+			leads_to_tech = tech_rg2
+			research_cost_coeff = 1
+		}
+	}
+	tech_rg2 = {
+		research_cost = 1.5
+		start_year = 962
+		folder = {
+			name = changeling_folder
+			position = {
+				x = 6
+				y = @964
+			}
+		}
+		path = {
+			leads_to_tech = tech_jager_c
+			research_cost_coeff = 1
+		}
+	}
+
+
+
 
 	tech_changeling_a = {
 

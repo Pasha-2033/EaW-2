@@ -1,0 +1,79 @@
+JAGER = { 
+	name = "Jager Divisions"
+	for_countries = {
+		VES
+		SOR
+		VRA
+		DIS
+		LIK
+		CHN
+	}
+	can_use = {
+		OR = {
+			has_government = fascism
+			has_government = technocracy
+			has_government = militarism
+		}
+	}
+	division_types = {"jager"}
+	fallback_name = "%d. Jäger-Division"
+	link_numbering_with = {
+		JAGER
+	}
+	ordered = { 
+		1 = {"%d. Jäger-Division 'Scharfschützen'"}
+		2 = {"%d. Jäger-Division 'Unsichtbar'"}
+		3 = {"%d. Jäger-Division 'Hive Defenders'"}		
+		4 = {"%d. Jäger-Division 'Ein Schuss, Ein Treffer'"}
+		5 = {"%d. Jäger-Division 'Schneller Tod'"}
+		6 = {"%d. Jäger-Division 'Mut und Ehre'"}
+		7 = {"%d. Jäger-Division 'Demomen'"}
+		8 = {"%d. Jäger-Division 'Schlagzeug'"}
+		9 = {"%d. Jäger-Division 'Schwarzer Tod'"}
+	}
+}
+QG = {
+	name = "Queen's Guard Divisions"
+	for_countries = {
+		VES
+		SOR
+		VRA
+		DIS
+		LIK
+		CHN
+	}
+	can_use = {
+		OR = {
+			has_government = fascism
+			has_government = technocracy
+			has_government = militarism
+		}
+	}
+	division_types = { "infantry" }
+	fallback_name = "%d. Garde-Grenadier-Division"
+	link_numbering_with = {
+		QG
+	}
+	ordered = {
+		1 = {"1. Leib-Division 'Chrysalis'" }
+		#1 = {"1. Leib-Division 'Chrysalis'" }
+		#1 = {"1. Leib-Division 'Chrysalis'" }
+		#1 = {"1. Leib-Division 'Chrysalis'" }
+		#1 = {"1. Leib-Division 'Chrysalis'" }
+		6 = {"%d. Leib-Grenadier-Division 'Vesalipolis'"}
+		7 = {"%d. Leib-Grenadier-Division 'Ditrysium'"}
+		8 = {"%d. Leib-Grenadier-Division 'Lyctida'"}
+		9 = {"%d. Leib-Grenadier-Division 'Soryth'"}
+		10 = {"%d. Leib-Grenadier-Division 'Vraks'"}
+		11 = {"%d. Garde-Grenadier-Division 'Rotfang'"}
+		12 = {"%d. Garde-Division 'Hiveskönigin'"}
+		13 = {"%d. Garde-Division 'Monarchin'"}
+		14 = {"%d. Garde-Division 'Blutzahn'"}
+		15 = {"%d. Garde-Division 'Für die Königin'"}
+		16 = {"%d. Garde-Division 'Stahlschwarm'"}
+		17 = {"%d. Garde-Division 'Große Kurfürstin'"}
+		18 = {"%d. Garde-Division 'Ihre Majestät'"}
+		19 = {"%d. Garde-Division 'Fanatiker'"}
+		20 = {"%d. Garde-Division 'Zu Ehren der Königin'"}
+	}
+}

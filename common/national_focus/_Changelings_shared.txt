@@ -1,0 +1,570 @@
+#focuses for Canterlot race, only for VES/VRA/LIK/DIS/SOR
+shared_focus = {
+	id = shared_focus_changelings_start_canterlot_race
+	icon = GFX_goal_generic_changeling
+	cost = 5.00
+	x = 17
+	y = 1
+	ai_will_do = {
+		factor = 200
+	}
+	available = {
+		OR = {
+			has_government = fascism
+			has_government = technocracy
+			has_government = militarism
+		}
+		custom_trigger_tooltip = {
+			tooltip = canterlot_race_is_not_finished_tt
+			canterlot_race_is_finished = no
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_start_canterlot_race"
+	}
+	search_filters = {}	#change
+}
+shared_focus = {
+	id = shared_focus_changelings_prepare_invation
+	icon = GFX_goal_generic_changeling
+	cost = 5.00
+	prerequisite = {
+		focus = shared_focus_changelings_start_canterlot_race
+	}
+	x = 16
+	y = 2
+	ai_will_do = {
+		factor = 200
+	}
+	available = {
+		OR = {
+			has_government = fascism
+			has_government = technocracy
+			has_government = militarism
+		}
+		custom_trigger_tooltip = {
+			tooltip = canterlot_race_is_not_finished
+			canterlot_race_is_finished = no
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_prepare_invation"
+	}
+	search_filters = {}	#change
+}
+shared_focus = {
+	id = shared_focus_changelings_prepare_attack_phase
+	icon = GFX_goal_generic_changeling
+	cost = 5.00
+	prerequisite = {
+		focus = shared_focus_changelings_start_canterlot_race
+	}
+	x = 18
+	y = 2
+	ai_will_do = {
+		factor = 200
+	}
+	available = {
+		OR = {
+			has_government = fascism
+			has_government = technocracy
+			has_government = militarism
+		}
+		custom_trigger_tooltip = {
+			tooltip = canterlot_race_is_not_finished
+			canterlot_race_is_finished = no
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_prepare_attack_phase"
+	}
+	search_filters = {}	#change
+}
+shared_focus = {
+	id = shared_focus_changelings_attack_canterlot
+	icon = GFX_goal_generic_changeling
+	cost = 5.00
+	prerequisite = {
+		focus = shared_focus_changelings_prepare_invation
+	}
+	prerequisite = {
+		focus = shared_focus_changelings_prepare_attack_phase
+	}
+	x = 17
+	y = 3
+	ai_will_do = {
+		factor = 200
+	}
+	available = {
+		OR = {
+			has_government = fascism
+			has_government = technocracy
+			has_government = militarism
+		}
+		custom_trigger_tooltip = {
+			tooltip = canterlot_race_is_not_finished
+			canterlot_race_is_finished = no
+		}
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_attack_canterlot"
+	}
+	search_filters = {}	#change
+}
+shared_focus = {
+	id = shared_focus_changelings_unite_nation_around_victory
+	icon = GFX_goal_generic_changeling
+	cost = 5.00
+	prerequisite = {
+		focus = shared_focus_changelings_attack_canterlot
+	}
+	x = 17
+	y = 4
+	ai_will_do = {
+		factor = 200
+	}
+	available = {
+		OR = {
+			has_government = fascism
+			has_government = technocracy
+			has_government = militarism
+		}
+		has_idea = canterlot_victory
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_attack_canterlot"
+	}
+	search_filters = {}	#change
+}
+
+#focuses for great projects of evil mind, only for VES/VRA/LIK/DIS/SOR
+shared_focus = {
+	id = shared_focus_initiate_great_projects
+	icon = GFX_goal_chn_economic_plan
+	cost = 5
+	allow_branch = {
+		is_great_projects_of_evil_mind_possible = yes
+	}
+	available = {
+		NOT = {
+			has_country_flag = no_evil_mind
+		}
+		OR = {
+			has_country_leader = {
+				ruling_only = yes
+				character = VES_queen_chrysalis
+			}
+			has_country_leader = {
+				ruling_only = yes
+				character = VES_changeling_king
+			}
+			has_government = technocracy
+		}
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 25
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_initiate_great_projects"
+		add_war_support = 0.05
+	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+}
+shared_focus = {
+	id = shared_focus_rebuild_magitron
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	prerequisite = {
+		focus = shared_focus_initiate_great_projects
+	}
+	available = {
+		NOT = {
+			has_country_flag = no_evil_mind
+		}
+		OR = {
+			has_country_leader = {
+				ruling_only = yes
+				character = VES_queen_chrysalis
+			}
+			has_country_leader = {
+				ruling_only = yes
+				character = VES_changeling_king
+			}
+			has_government = technocracy
+		}
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 21
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_rebuild_magitron"
+		add_war_support = 0.05
+	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+}
+shared_focus = {
+	id = shared_focus_launch_magitron
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	prerequisite = {
+		focus = shared_focus_rebuild_magitron
+	}
+	available = {
+		NOT = {
+			has_country_flag = no_evil_mind
+		}
+		OR = {
+			has_country_leader = {
+				ruling_only = yes
+				character = VES_queen_chrysalis
+			}
+			has_country_leader = {
+				ruling_only = yes
+				character = VES_changeling_king
+			}
+			has_government = technocracy
+		}
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 21
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_launch_magitron"
+		add_war_support = 0.05
+	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+}
+shared_focus = {
+	id = shared_focus_experiments_on_the_soul
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	prerequisite = {
+		focus = shared_focus_initiate_great_projects
+	}
+	available = {
+		NOT = {
+			has_country_flag = no_evil_mind
+		}
+		OR = {
+			has_country_leader = {
+				ruling_only = yes
+				character = VES_queen_chrysalis
+			}
+			has_country_leader = {
+				ruling_only = yes
+				character = VES_changeling_king
+			}
+			has_government = technocracy
+		}
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 24
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_experiments_on_the_soul"
+		add_war_support = 0.05
+	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+}
+shared_focus = {
+	id = shared_focus_capture_pony
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	prerequisite = {
+		focus = shared_focus_experiments_on_the_soul
+	}
+	available = {
+		NOT = {
+			has_country_flag = no_evil_mind
+		}
+		OR = {
+			has_country_leader = {
+				ruling_only = yes
+				character = VES_queen_chrysalis
+			}
+			has_country_leader = {
+				ruling_only = yes
+				character = VES_changeling_king
+			}
+			has_government = technocracy
+		}
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 23
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_capture_pony"
+		add_war_support = 0.05
+	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+}
+shared_focus = {
+	id = shared_focus_build_love_machine
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	prerequisite = {
+		focus = shared_focus_capture_pony
+	}
+	available = {
+		NOT = {
+			has_country_flag = no_evil_mind
+		}
+		OR = {
+			has_country_leader = {
+				ruling_only = yes
+				character = VES_queen_chrysalis
+			}
+			has_country_leader = {
+				ruling_only = yes
+				character = VES_changeling_king
+			}
+			has_government = technocracy
+		}
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 23
+	y = 4
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_build_love_machine"
+		add_war_support = 0.05
+	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+}
+shared_focus = {
+	id = shared_focus_soul_cell_theory
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	prerequisite = {
+		focus = shared_focus_experiments_on_the_soul
+	}
+	available = {
+		NOT = {
+			has_country_flag = no_evil_mind
+		}
+		OR = {
+			has_country_leader = {
+				ruling_only = yes
+				character = VES_queen_chrysalis
+			}
+			has_country_leader = {
+				ruling_only = yes
+				character = VES_changeling_king
+			}
+			has_government = technocracy
+		}
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 25
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_soul_cell_theory"
+		add_war_support = 0.05
+	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+}
+shared_focus = {
+	id = shared_focus_consciousness_cell_theory
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	prerequisite = {
+		focus = shared_focus_soul_cell_theory
+	}
+	available = {
+		NOT = {
+			has_country_flag = no_evil_mind
+		}
+		OR = {
+			has_country_leader = {
+				ruling_only = yes
+				character = VES_queen_chrysalis
+			}
+			has_country_leader = {
+				ruling_only = yes
+				character = VES_changeling_king
+			}
+			has_government = technocracy
+		}
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 25
+	y = 4
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_consciousness_cell_theory"
+		add_war_support = 0.05
+	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+}
+shared_focus = {
+	id = shared_focus_evil_mind_fixes_economy
+	icon = GFX_goal_chn_economic_plan
+	cost = 5
+	prerequisite = {
+		focus = shared_focus_initiate_great_projects
+	}
+	available = {
+		NOT = {
+			has_country_flag = no_evil_mind
+		}
+		OR = {
+			has_country_leader = {
+				ruling_only = yes
+				character = VES_queen_chrysalis
+			}
+			has_country_leader = {
+				ruling_only = yes
+				character = VES_changeling_king
+			}
+			has_government = technocracy
+		}
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 33
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_evil_mind_fixes_economy"
+		add_war_support = 0.05
+	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+}
+shared_focus = {
+	id = shared_focus_evil_mind_creates_army
+	icon = GFX_goal_chn_changeling_army
+	cost = 5
+	prerequisite = {
+		focus = shared_focus_initiate_great_projects
+	}
+	available = {
+		NOT = {
+			has_country_flag = no_evil_mind
+		}
+		OR = {
+			has_country_leader = {
+				ruling_only = yes
+				character = VES_queen_chrysalis
+			}
+			has_country_leader = {
+				ruling_only = yes
+				character = VES_changeling_king
+			}
+			has_government = technocracy
+		}
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 27
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_evil_mind_creates_army"
+		add_war_support = 0.05
+	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+}
+shared_focus = {
+	id = shared_focus_evil_mind_fixes_science_base
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	prerequisite = {
+		focus = shared_focus_initiate_great_projects
+	}
+	available = {
+		NOT = {
+			has_country_flag = no_evil_mind
+		}
+		OR = {
+			has_country_leader = {
+				ruling_only = yes
+				character = VES_queen_chrysalis
+			}
+			has_country_leader = {
+				ruling_only = yes
+				character = VES_changeling_king
+			}
+			has_government = technocracy
+		}
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 29
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_evil_mind_fixes_science_base"
+		add_war_support = 0.05
+	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+}
+shared_focus = {
+	id = shared_focus_evil_mind_change_society
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	prerequisite = {
+		focus = shared_focus_initiate_great_projects
+	}
+	available = {
+		NOT = {
+			has_country_flag = no_evil_mind
+		}
+		OR = {
+			has_country_leader = {
+				ruling_only = yes
+				character = VES_queen_chrysalis
+			}
+			has_country_leader = {
+				ruling_only = yes
+				character = VES_changeling_king
+			}
+			has_government = technocracy
+		}
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 31
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_evil_mind_change_society"
+		add_war_support = 0.05
+	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+}
+
+#focuses for improving political system (common, if main political branch is finished!), for is_changeling_race = yes
+#queen tree
+shared_focus = {
+	id = shared_focus_polit_system_temp
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	allow_branch = {
+		is_female = yes
+		is_changeling_race = yes
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 0
+	y = 0
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_evil_mind_change_society"
+		add_war_support = 0.05
+	}
+	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+}

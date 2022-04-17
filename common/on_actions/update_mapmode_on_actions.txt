@@ -1,0 +1,15 @@
+on_actions = {
+	# Updates map modes for performance
+	on_monthly = {
+		effect = {
+			force_update_map_mode = { mapmode = science_map_mode }
+			force_update_map_mode = { mapmode = society_map_mode }
+			force_update_map_mode = { mapmode = literacy_map_mode }
+			force_update_map_mode = { mapmode = poverty_map_mode }
+			force_update_map_mode = { mapmode = species_map_mode }
+			force_update_map_mode = { mapmode = economic_index_map_mode }
+			calculate_max_population = yes
+			force_update_map_mode = { mapmode = population_map_mode }
+		}
+	}
+}

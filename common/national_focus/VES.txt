@@ -13,9 +13,9 @@ focus_tree = {
 		y = 1350
 	}
 	shared_focus = shared_focus_changelings_start_canterlot_race
-	shared_focus = shared_focus_changelings_prepare_invation
-	shared_focus = shared_focus_changelings_prepare_attack_phase
-	shared_focus = shared_focus_changelings_unite_nation_around_victory
+	shared_focus = shared_focus_initiate_great_projects
+	shared_focus = shared_focus_polit_system_temp #temp
+	#uniqe VES focuses
 	focus = {
 		id = ves_focus_monarhy_guestion
 		icon = GFX_goal_chn_swords
@@ -30,7 +30,7 @@ focus_tree = {
 			add_stability = 0.1
 			country_event = {
 				id = ves_changelings.1
-				days = 2
+				days = 1
 			}
 			if = {
 				limit = {
@@ -38,12 +38,13 @@ focus_tree = {
 				}
 				country_event = {
 					id = ves_changelings.2
-					days = 3
+					days = 2
 				}
 			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_STABILITY
 		}
 	}
 	focus = {
@@ -66,9 +67,15 @@ focus_tree = {
 				ideology = fascism
 				popularity = 0.15
 			}
+			country_event = {
+				id = ves_changelings.3
+				days = 1
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_STABILITY
+			FOCUS_FILTER_WAR_SUPPORT
 		}
 	}
 	focus = {
@@ -106,10 +113,16 @@ focus_tree = {
 				uses = 3
 				category = industry
 			}
+			country_event = {
+				id = ves_changelings.4
+				days = 1
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 			FOCUS_FILTER_RESEARCH
+			FOCUS_FILTER_STABILITY
+			FOCUS_FILTER_WAR_SUPPORT
 		}
 	}
 	focus = {
@@ -139,12 +152,13 @@ focus_tree = {
 				popularity = 0.2
 			}
 			country_event = {
-				id = ves_changelings.3
-				days = 3
+				id = ves_changelings.5
+				days = 1
 			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_WAR_SUPPORT
 			FOCUS_FILTER_WAR_SUPPORT
 		}
 	}
@@ -176,8 +190,8 @@ focus_tree = {
 				}
 			}
 			country_event = {
-				id = ves_changelings.4 
-				days = 3
+				id = ves_changelings.6
+				days = 1
 			}
 		}
 		search_filters = {
@@ -205,10 +219,10 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_way_of_love"
-			add_war_support = 0.05
+			add_stability = 0.15
 			country_event = {
-				id = ves_changelings.5
-				days = 3
+				id = ves_changelings.7
+				days = 1
 			}
 		}
 		search_filters = {
@@ -240,17 +254,8 @@ focus_tree = {
 				popularity = 0.2
 			}
 			country_event = {
-				id = ves_changelings.6
-				days = 3
-			}
-			if = {
-				limit = {
-					has_completed_focus = ves_focus_evil_mind_found
-				}
-				country_event = {
-					id = ves_changelings.7
-					days = 3
-				}
+				id = ves_changelings.8
+				days = 1
 			}
 		}
 		search_filters = {
@@ -289,21 +294,28 @@ focus_tree = {
 				351 = {
 					add_manpower = 5000
 				}
-			} #etc
+				#etc доделать
+			} 
 			country_event = {
-				id = ves_changelings.8
-				days = 3
+				id = ves_changelings.10
+				days = 1
 			}
 		}
 		search_filters = {
 			FOCUS_FILTER_STABILITY
 			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_WAR_SUPPORT
 		}
 	}
 	focus = {
 		id = ves_focus_evil_mind_incharge
 		icon = GFX_goal_chn_changeling
 		cost = 5
+		available = {
+			NOT = {
+				has_country_flag = no_evil_mind
+			}
+		}
 		prerequisite = {
 			focus = ves_focus_sour_uprise
 		}
@@ -324,8 +336,8 @@ focus_tree = {
 				popularity = 0.1
 			}
 			country_event = {
-				id = ves_changelings.9
-				days = 3
+				id = ves_changelings.11
+				days = 1
 			}
 		}
 		search_filters = {
@@ -352,13 +364,16 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_technogical_union"
 			add_stability = 0.3
-			country_event = {
-				id = ves_changelings.10
-				days = 3
+			EEQ = {
+				country_event = {
+					id = eequestria.1
+					days = 1
+				}
 			}
 		}
 		search_filters = {
 			FOCUS_FILTER_STABILITY
+			FOCUS_FILTER_RESEARCH
 		}
 	}
 	focus = {
@@ -376,13 +391,17 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_equus_technounion"
 			add_stability = 0.1
-			country_event = {
-				id = ves_changelings.11
-				days = 2
+			add_research_slot = 1
+			EEQ = {
+				set_stability = 0.05
+			}
+			ESG = {
+				set_stability = 0.05
 			}
 		}
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_STABILITY
+			FOCUS_FILTER_RESEARCH
 		}
 	}
 	focus = {
@@ -399,9 +418,17 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_secure_science"
-			add_war_support = 0.05
+			add_research_slot = 1
+			add_tech_bonus = {
+				name = race_technologies
+				bonus = 0.5
+				uses = 1
+				category = race_tech
+			}
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
 	}
 	focus = {
 		id = ves_focus_royal_evil_mind
@@ -411,6 +438,11 @@ focus_tree = {
 			focus = ves_focus_chrysalis_coronation
 			focus = ves_focus_king_coronation
 		}
+		available = {
+			NOT = {
+				has_country_flag = no_evil_mind
+			}
+		}
 		ai_will_do = {
 			factor = 200
 		}
@@ -419,8 +451,26 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_royal_evil_mind"
 			add_war_support = 0.05
+			add_tech_bonus = {
+				name = race_technologies
+				bonus = 0.75
+				uses = 3
+				category = race_tech
+			}
+			if = {
+				limit = {
+					has_completed_focus = ves_focus_evil_mind_found
+				}
+				country_event = {
+					id = ves_changelings.9
+					days = 1
+				}
+			}
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+			FOCUS_FILTER_RESEARCH
+		}
 	}
 	focus = {
 		id = ves_focus_militarisation
@@ -436,9 +486,12 @@ focus_tree = {
 		y = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_militarisation"
-			add_war_support = 0.05
+			add_war_support = 0.15
+			add_manpower = 41592
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+		}
 	}
 	focus = {
 		id = ves_focus_unite_nation_around_monarhy
@@ -455,8 +508,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_unite_nation_around_monarhy"
 			add_war_support = 0.05
+			add_popularity = {
+				ideology = fascism
+				popularity = 0.1
+			}
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_WAR_SUPPORT
+		}
 	}
 	focus = {
 		id = ves_focus_unite_nation_around_science
@@ -470,9 +530,13 @@ focus_tree = {
 		y = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_unite_nation_around_science"
-			add_war_support = 0.05
+			custom_effect_tooltip = upgrade_science_base_2x_tt
+			increase_science_base = yes
+			increase_science_base = yes
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_RESEARCH
+		}
 	}
 	focus = {
 		id = ves_focus_great_love_project
@@ -779,7 +843,6 @@ focus_tree = {
 			DIS = {
 				OR = {
 					exists = no
-					is_puppet_of = UNH
 					is_puppet_of = VES
 					is_puppet_of = SOR
 					is_puppet_of = DIS
@@ -809,7 +872,6 @@ focus_tree = {
 			DIS = {
 				OR = {
 					exists = no
-					is_puppet_of = UNH
 					is_puppet_of = VES
 					is_puppet_of = DIS
 					is_puppet_of = LIK
@@ -839,7 +901,6 @@ focus_tree = {
 			DIS = {
 				OR = {
 					exists = no
-					is_puppet_of = UNH
 					is_puppet_of = VES
 					is_puppet_of = SOR
 					is_puppet_of = LIK
@@ -869,7 +930,6 @@ focus_tree = {
 			DIS = {
 				OR = {
 					exists = no
-					is_puppet_of = UNH
 					is_puppet_of = VES
 					is_puppet_of = SOR
 					is_puppet_of = LIK
@@ -909,8 +969,8 @@ focus_tree = {
 		id = ves_focus_hive_unification
 		icon = GFX_goal_chn_man_city
 		cost = 1
-		prerequisite = {
-			focus = ves_focus_evil_mind_found
+		allow_branch = {
+			has_completed_focus = ves_focus_evil_mind_found
 		}
 		available = {
 			NOT = {
@@ -920,7 +980,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		x = 15
+		x = 13
 		y = 9
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_vra_war"
@@ -946,7 +1006,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		x = 11
+		x = 10
 		y = 10
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_vra_war"
@@ -970,7 +1030,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		x = 11
+		x = 10
 		y = 11
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_vra_war"
@@ -985,7 +1045,7 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		x = 15
+		x = 12
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_botle_of_erot"
@@ -1006,195 +1066,14 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		x = 15
+		x = 12
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_evil_mind_found"
 			add_war_support = 0.05
-		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-	}
-	focus = {
-		id = ves_focus_evil_mind_fixes_economy
-		icon = GFX_goal_chn_economic_plan
-		cost = 5
-		prerequisite = {
-			focus = ves_focus_evil_mind_found
-		}
-		available = {
-			NOT = {
-				has_country_flag = no_evil_mind
+			hidden_effect = {
+				mark_focus_tree_layout_dirty = yes
 			}
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		x = 20
-		y = 2
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_evil_mind_found"
-			add_war_support = 0.05
-		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-	}
-	focus = {
-		id = ves_focus_evil_mind_creates_army
-		icon = GFX_goal_chn_changeling_army
-		cost = 5
-		prerequisite = {
-			focus = ves_focus_evil_mind_found
-		}
-		available = {
-			NOT = {
-				has_country_flag = no_evil_mind
-			}
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		x = 22
-		y = 2
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_evil_mind_found"
-			add_war_support = 0.05
-		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-	}
-	focus = {
-		id = ves_focus_evil_mind_fixes_science_base
-		icon = GFX_goal_chn_changeling_army
-		cost = 5
-		prerequisite = {
-			focus = ves_focus_evil_mind_found
-		}
-		available = {
-			NOT = {
-				has_country_flag = no_evil_mind
-			}
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		x = 24
-		y = 2
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_evil_mind_found"
-			add_war_support = 0.05
-		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-	}
-	focus = {
-		id = ves_focus_evil_mind_change_society
-		icon = GFX_goal_chn_changeling_army
-		cost = 5
-		prerequisite = {
-			focus = ves_focus_evil_mind_found
-		}
-		available = {
-			NOT = {
-				has_country_flag = no_evil_mind
-			}
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		x = 26
-		y = 2
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_evil_mind_found"
-			add_war_support = 0.05
-		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-	}
-	focus = {
-		id = ves_focus_civil_production
-		icon = GFX_goal_chn_factory
-		cost = 5
-		prerequisite = {
-			focus = ves_focus_evil_mind_fixes_economy
-		}
-		available = {
-			NOT = {
-				has_country_flag = no_evil_mind
-			}
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		x = 17
-		y = 3
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_evil_mind_found"
-			add_war_support = 0.05
-		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-	}
-	focus = {
-		id = ves_focus_army_production
-		icon = GFX_goal_chn_factory
-		cost = 5
-		prerequisite = {
-			focus = ves_focus_evil_mind_fixes_economy
-		}
-		available = {
-			NOT = {
-				has_country_flag = no_evil_mind
-			}
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		x = 19
-		y = 3
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_evil_mind_found"
-			add_war_support = 0.05
-		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-	}
-	focus = {
-		id = ves_focus_monatisation
-		icon = GFX_goal_chn_factory
-		cost = 5
-		prerequisite = {
-			focus = ves_focus_evil_mind_fixes_economy
-		}
-		available = {
-			NOT = {
-				has_country_flag = no_evil_mind
-			}
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		x = 21
-		y = 3
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_evil_mind_found"
-			add_war_support = 0.05
-		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
-	}
-	focus = {
-		id = ves_focus_inflation
-		icon = GFX_goal_chn_factory
-		cost = 5
-		prerequisite = {
-			focus = ves_focus_evil_mind_fixes_economy
-		}
-		available = {
-			NOT = {
-				has_country_flag = no_evil_mind
-			}
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		x = 23
-		y = 3
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_evil_mind_found"
-			add_war_support = 0.05
 		}
 		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 	}

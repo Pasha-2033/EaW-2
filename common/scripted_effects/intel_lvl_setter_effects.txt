@@ -1,0 +1,29 @@
+set_intel_lvl_962 = {
+	if = {
+		limit = {
+			original_tag = VES
+		}
+		set_intel_lvl_962_VES = yes
+	}
+	else_if = {
+		limit = {
+			original_tag = SOR
+		}
+		set_intel_lvl_962_SOR = yes
+	}
+	#продолжить
+}
+set_intel_lvl_962_VES = {
+	add_intel = {
+		target = DIS
+		civilian_intel = 30
+		army_intel = 20
+		navy_intel = 10
+		airforce_intel = 20	
+	}
+	#продолжить
+}
+set_intel_lvl_962_SOR = {}
+set_intel_lvl_962_VRA = {}
+set_intel_lvl_962_DIS = {}
+set_intel_lvl_962_LIK = {}

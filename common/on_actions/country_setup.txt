@@ -2,227 +2,247 @@
 on_actions = {
 	on_startup = {
 		effect = {
+			1 = {
+				init_max_population_var = yes
+				calculate_max_population = yes
+			}
 			every_country = {
-				#society idea
 				if = {
 					limit = {
-						has_society_development = no
+						NOT = {
+							has_country_flag = ignore_setup
+						}
 					}
+					#society idea
 					if = {
 						limit = {
-							date_is_962 = yes
+							has_society_development = no
 						}
 						if = {
 							limit = {
-								num_of_factories > 10
+								date_is_962 = yes
 							}
-							add_ideas = agrarian_society
+							if = {
+								limit = {
+									num_of_factories > 10
+								}
+								add_ideas = agrarian_society
+							}
+							else = {
+								add_ideas = tribal_society
+							}						
+						}
+						else_if = {
+							limit = {
+								date_is_1007 = yes
+							}
+							add_ideas = outdated_industry
 						}
 						else = {
-							add_ideas = tribal_society
-						}						
-					}
-					else_if = {
-						limit = {
-							date_is_1007 = yes
+							add_ideas = modern_society
 						}
-						add_ideas = outdated_industry
 					}
-					else = {
-						add_ideas = modern_society
-					}
-				}
-				#power concentration idea
-				if = {
-					limit = {
-						has_power_concentration = no
-					}
-					add_ideas = medium_power_concentration
-				}
-				#illiteracy idea
-				if = {
-					limit = {
-						has_illiteracy_idea = no
-					}
+					#power concentration idea
 					if = {
 						limit = {
-							date_is_962 = yes
+							has_power_concentration = no
 						}
-						add_ideas = lack_of_scientists
+						add_ideas = medium_power_concentration
 					}
-					else = {
-						add_ideas = no_lack_of_scientists
-					}
-				}
-				#poverty idea
-				if = {
-					limit = {
-						has_poverty = no
-					}
+					#illiteracy idea
 					if = {
 						limit = {
-							date_is_962 = yes
-						}
-						add_ideas = poverty
-					}
-					else = {
-						add_ideas = no_poverty
-					}
-				}
-				#race idea, tech
-				if = {
-					limit = {
-						has_race = no
-					}
-					add_ideas = generic_race					
-				}
-				else = {
-					if = {
-						limit = {
-							is_mylti_race = yes
-						}
-						set_technology = {
-							pony_race = 1
-							changeling_race = 1
-							deer_race = 1
-							griffon_race = 1
-							diamond_dog_race = 1
-							popup = no
-						}
-					}
-					else_if = {
-						limit = {
-							is_pony_race = yes
-						}
-						set_technology = {
-							pony_race = 1
-							popup = no
-						}
-					}
-					else_if = {
-						limit = {
-							is_changeling_race = yes
-						}
-						set_technology = {
-							changeling_race = 1
-							popup = no
-						}
-					}
-					else_if = {
-						limit = {
-							is_deer_race = yes
-						}
-						set_technology = {
-							deer_race = 1
-							popup = no
-						}
-					}
-					else_if = {
-						limit = {
-							is_griffon_race = yes
-						}
-						set_technology = {
-							griffon_race = 1
-							popup = no
-						}
-					}
-					else_if = {
-						limit = {
-							is_diamond_dog_race = yes
-						}
-						set_technology = {
-							diamond_dog_race = 1
-							popup = no
-						}
-					}
-					########################продолжить (при пополнении технологий)###################
-				}
-				#science base idea
-				if = {
-					limit = {
-						has_science_base = no
-					}
-					if = {
-						limit = {
-							date_is_962 = yes
+							has_illiteracy_idea = no
 						}
 						if = {
 							limit = {
-								num_of_factories > 10
+								date_is_962 = yes
 							}
-							add_ideas = better_science_base
+							add_ideas = lack_of_scientists
 						}
 						else = {
-							add_ideas = poor_science_base
-						}						
-					}
-					else_if = {
-						limit = {
-							date_is_1007 = yes
+							add_ideas = no_lack_of_scientists
 						}
-						add_ideas = big_science_base
 					}
-					else = {
-						add_ideas = proper_science_base
-					}
-				}
-				#monatisation idea
-				if = {
-					limit = {
-						has_monatisation = no
-					}
+					#poverty idea
 					if = {
 						limit = {
-							date_is_962 = yes
-						}
-						add_ideas = only_goods
-					}
-					else = {
-						add_ideas = medium_barter_focus
-					}
-				}
-				#inflation idea
-				if = {
-					limit = {
-						has_inflation = no
-					}
-					if = {
-						limit = {
-							date_is_962 = yes
-						}
-						add_ideas = no_inflation
-					}
-					else = {
-						add_ideas = medium_inflation
-					}					
-				}
-				#valuta
-				if = {
-					limit = {
-						has_valuta = no
-					}
-					if = {
-						limit = {
-							date_is_962 = yes
+							has_poverty = no
 						}
 						if = {
 							limit = {
-								num_of_factories > 5
+								date_is_962 = yes
 							}
-							add_ideas = stone_coins
+							add_ideas = poverty
 						}
 						else = {
-							add_ideas = no_valuta
+							add_ideas = no_poverty
 						}
 					}
-					else_if = {
+					#race idea, tech
+					if = {
 						limit = {
-							date_is_1007 = yes
+							has_race = no
 						}
-						add_ideas = gold_coins
+						add_ideas = generic_race					
 					}
 					else = {
-						add_ideas = international_valuta
+						if = {
+							limit = {
+								is_mylti_race = yes
+							}
+							set_technology = {
+								pony_race = 1
+								changeling_race = 1
+								deer_race = 1
+								griffon_race = 1
+								diamond_dog_race = 1
+								popup = no
+							}
+						}
+						else_if = {
+							limit = {
+								is_pony_race = yes
+							}
+							set_technology = {
+								pony_race = 1
+								popup = no
+							}
+						}
+						else_if = {
+							limit = {
+								is_changeling_race = yes
+							}
+							set_technology = {
+								changeling_race = 1
+								popup = no
+							}
+						}
+						else_if = {
+							limit = {
+								is_deer_race = yes
+							}
+							set_technology = {
+								deer_race = 1
+								popup = no
+							}
+						}
+						else_if = {
+							limit = {
+								is_griffon_race = yes
+							}
+							set_technology = {
+								griffon_race = 1
+								popup = no
+							}
+						}
+						else_if = {
+							limit = {
+								is_diamond_dog_race = yes
+							}
+							set_technology = {
+								diamond_dog_race = 1
+								popup = no
+							}
+						}
+						########################продолжить (при пополнении технологий)###################
+					}
+					#science base idea
+					if = {
+						limit = {
+							has_science_base = no
+						}
+						if = {
+							limit = {
+								date_is_962 = yes
+							}
+							if = {
+								limit = {
+									num_of_factories > 10
+								}
+								add_ideas = better_science_base
+							}
+							else = {
+								add_ideas = poor_science_base
+							}						
+						}
+						else_if = {
+							limit = {
+								date_is_1007 = yes
+							}
+							add_ideas = big_science_base
+						}
+						else = {
+							add_ideas = proper_science_base
+						}
+					}
+					#monatisation idea
+					if = {
+						limit = {
+							has_monatisation = no
+						}
+						if = {
+							limit = {
+								date_is_962 = yes
+							}
+							add_ideas = only_goods
+						}
+						else = {
+							add_ideas = medium_barter_focus
+						}
+					}
+					#inflation idea
+					if = {
+						limit = {
+							has_inflation = no
+						}
+						if = {
+							limit = {
+								date_is_962 = yes
+							}
+							add_ideas = no_inflation
+						}
+						else = {
+							add_ideas = medium_inflation
+						}					
+					}
+					#valuta
+					if = {
+						limit = {
+							has_valuta = no
+						}
+						if = {
+							limit = {
+								date_is_962 = yes
+							}
+							if = {
+								limit = {
+									num_of_factories > 5
+								}
+								add_ideas = stone_coins
+							}
+							else = {
+								add_ideas = no_valuta
+							}
+						}
+						else_if = {
+							limit = {
+								date_is_1007 = yes
+							}
+							add_ideas = gold_coins
+						}
+						else = {
+							add_ideas = international_valuta
+						}
+					}
+				}
+				add_to_array = {
+					#initiate list, but country realy has power upon itself :)
+					conquered_countries = THIS
+				}
+				every_owned_state = {
+					add_to_array = {
+						state_original_cores = PREV
 					}
 				}
 			}

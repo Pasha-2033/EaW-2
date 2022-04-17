@@ -1,7 +1,11 @@
 add_namespace = ves_changelings
-country_event = {   ######### monarhy_question  ######
+#change picture everywhere
+country_event = {
+	#monarhy_question
 	id = ves_changelings.1
-	immediate = {log = "[GetDateText]: [Root.GetName]: event ves_changelings.1"}
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event ves_changelings.1"
+	}
 	title = ves_changelings.1.t
 	desc = ves_changelings.1.d
 	picture = GFX_event_swarm
@@ -36,14 +40,18 @@ country_event = {   ######### monarhy_question  ######
 		}
 	}
 }
-country_event = {   ######### technocrates or evil mind  ######
+country_event = {
+	#fate of evil mind
 	id = ves_changelings.2
-	immediate = {log = "[GetDateText]: [Root.GetName]: event ves_changelings.1"}
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event ves_changelings.2"
+	}
 	title = ves_changelings.2.t
 	desc = ves_changelings.2.d
 	picture = GFX_event_swarm
 	is_triggered_only = yes
 	option = {
+		#support him
 		name = ves_changelings.2.a
 		ai_chance = {
 			factor = 95
@@ -54,9 +62,203 @@ country_event = {   ######### technocrates or evil mind  ######
 		}
 	}
 	option = {
+		#expel evil mind
 		name = ves_changelings.2.b
+		set_country_flag = no_evil_mind
 		ai_chance = {
 			factor = 5
+		}
+	}
+	option = {
+		#execute evil mind
+		name = ves_changelings.2.c
+		set_country_flag = no_evil_mind
+		add_stability = -0.1
+		add_war_support = 0.01
+		ai_chance = {
+			factor = 95
+		}
+		country_event = {
+			id = enews.2
+			days = 0
+		}
+	}
+}
+country_event = {
+	#monarhy uprise
+	id = ves_changelings.3
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event ves_changelings.3"
+	}
+	title = ves_changelings.3.t
+	desc = ves_changelings.3.d
+	picture = GFX_event_swarm
+	is_triggered_only = yes
+	option = {
+		name = ves_changelings.3.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {
+	#sour uprise
+	id = ves_changelings.4
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event ves_changelings.4"
+	}
+	title = ves_changelings.4.t
+	desc = ves_changelings.4.d
+	picture = GFX_event_swarm
+	is_triggered_only = yes
+	option = {
+		name = ves_changelings.4.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {
+	#military hunta uprise
+	id = ves_changelings.5
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event ves_changelings.5"
+	}
+	title = ves_changelings.5.t
+	desc = ves_changelings.5.d
+	picture = GFX_event_swarm
+	is_triggered_only = yes
+	option = {
+		name = ves_changelings.5.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {
+	#workers front uprise
+	id = ves_changelings.6
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event ves_changelings.6"
+	}
+	title = ves_changelings.6.t
+	desc = ves_changelings.6.d
+	picture = GFX_event_swarm
+	is_triggered_only = yes
+	option = {
+		name = ves_changelings.6.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {
+	#way of love uprise
+	id = ves_changelings.7
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event ves_changelings.7"
+	}
+	title = ves_changelings.7.t
+	desc = ves_changelings.7.d
+	picture = GFX_event_swarm
+	is_triggered_only = yes
+	option = {
+		name = ves_changelings.7.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {
+	#chrysalis coronation
+	id = ves_changelings.8
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event ves_changelings.8"
+	}
+	title = ves_changelings.8.t
+	desc = ves_changelings.8.d
+	picture = GFX_event_swarm
+	is_triggered_only = yes
+	option = {
+		name = ves_changelings.8.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {
+	#evil mind wants to help
+	id = ves_changelings.9
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event ves_changelings.9"
+	}
+	title = ves_changelings.9.t
+	desc = ves_changelings.9.d
+	picture = GFX_event_swarm
+	is_triggered_only = yes
+	option = {
+		#accept his offer
+		name = ves_changelings.10.a
+		ai_chance = {
+			factor = 100 #change
+		}
+	}
+	option = {
+		#refuse
+		name = ves_changelings.10.a
+		set_country_flag = no_evil_mind
+		ai_chance = {
+			factor = 100 #change
+		}
+	}
+}
+country_event = {
+	#king coronation
+	id = ves_changelings.10
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event ves_changelings.10"
+	}
+	title = ves_changelings.10.t
+	desc = ves_changelings.10.d
+	picture = GFX_event_swarm
+	is_triggered_only = yes
+	option = {
+		name = ves_changelings.10.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {
+	#evil mind incharge
+	id = ves_changelings.11
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event ves_changelings.11"
+	}
+	title = ves_changelings.11.t
+	desc = ves_changelings.11.d
+	picture = GFX_event_swarm
+	is_triggered_only = yes
+	option = {
+		#he stay with queen
+		name = ves_changelings.11.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		#he rules alone, play for him
+		name = ves_changelings.11.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		#he rules alone, play for Chrysalis resistance
+		#start civil war - доделать
+		name = ves_changelings.11.a
+		ai_chance = {
+			factor = 100
 		}
 	}
 }

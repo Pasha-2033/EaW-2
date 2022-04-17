@@ -382,6 +382,59 @@ is_compatible_races = {
 	}
 }
 
+is_state_main_culture_changeling = {
+	OR = {
+		is_in_array = {
+			state_original_cores = VES
+		}
+		is_in_array = {
+			state_original_cores = SOR
+		}
+		is_in_array = {
+			state_original_cores = VRA
+		}
+		is_in_array = {
+			state_original_cores = DIS
+		}
+		is_in_array = {
+			state_original_cores = LIK
+		}
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -719,15 +772,6 @@ is_country_main_culture_yak = {
 is_country_main_culture_zebra = {
 	OR = {
 		original_tag = ZES
-	}
-}
-
-is_state_main_culture_changeling = {
-	OR = {
-		is_in_array = { state_original_cores = CHN }
-		is_in_array = { state_original_cores = CCN }
-		is_in_array = { state_original_cores = MAN }
-		is_in_array = { state_original_cores = NCH }
 	}
 }
 
