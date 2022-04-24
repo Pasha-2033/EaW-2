@@ -133,7 +133,12 @@ ideologies = {
 		can_collaborate = yes
 		war_impact_on_world_tension = 1.0		#change
 		faction_impact_on_world_tension = 1.0	#change
-		modifiers = {}
+		modifiers = {
+			civilian_intel_to_others = 15
+			army_intel_to_others = 15
+			navy_intel_to_others = 15
+			airforce_intel_to_others = 10
+		}
 		can_host_government_in_exile = no
 		faction_modifiers = {}
 		can_be_boosted = yes
@@ -198,7 +203,12 @@ ideologies = {
 		can_collaborate = yes
 		war_impact_on_world_tension = 1.0		#change
 		faction_impact_on_world_tension = 1.0	#change
-		modifiers = {}
+		modifiers = {
+			civilian_intel_to_others = 25
+			army_intel_to_others = 15
+			navy_intel_to_others = 15
+			airforce_intel_to_others = 20
+		}
 		can_host_government_in_exile = yes
 		faction_modifiers = {}
 		can_be_boosted = yes

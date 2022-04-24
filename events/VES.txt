@@ -69,20 +69,6 @@ country_event = {
 			factor = 5
 		}
 	}
-	option = {
-		#execute evil mind
-		name = ves_changelings.2.c
-		set_country_flag = no_evil_mind
-		add_stability = -0.1
-		add_war_support = 0.01
-		ai_chance = {
-			factor = 95
-		}
-		country_event = {
-			id = enews.2
-			days = 0
-		}
-	}
 }
 country_event = {
 	#monarhy uprise

@@ -1,0 +1,431 @@
+increase_science_base_flag = {
+
+}
+decrease_science_base_flag = {
+
+}
+increase_science_base_idea = {
+	if = {
+		limit = {
+			has_idea = proper_science_base
+		}
+		swap_ideas = {
+			remove_idea = proper_science_base
+			add_idea = outstanding_science_base
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = big_science_base
+		}
+		swap_ideas = {
+			remove_idea = big_science_base
+			add_idea = proper_science_base
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = better_science_base
+		}
+		swap_ideas = {
+			remove_idea = better_science_base
+			add_idea = big_science_base
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = poor_science_base
+		}
+		swap_ideas = {
+			remove_idea = poor_science_base
+			add_idea = better_science_base
+		}
+	}
+	fix_science_base_flag_by_idea = yes
+}
+decrease_science_base_idea = {
+	if = {
+		limit = {
+			has_idea = outstanding_science_base
+		}
+		swap_ideas = {
+			remove_idea = outstanding_science_base
+			add_idea = proper_science_base
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = proper_science_base
+		}
+		swap_ideas = {
+			remove_idea = proper_science_base
+			add_idea = big_science_base
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = big_science_base
+		}
+		swap_ideas = {
+			remove_idea = big_science_base
+			add_idea = better_science_base
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = better_science_base
+		}
+		swap_ideas = {
+			remove_idea = better_science_base
+			add_idea = poor_science_base
+		}
+	}
+	fix_science_base_flag_by_idea = yes
+}
+fix_science_base_flag_by_flag = {
+
+}
+fix_science_base_flag_by_idea = {
+
+}
+increase_poverty_level_flag = {
+	if = {
+		limit = {
+			has_country_flag = available_poverty5
+			NOT = {
+				has_country_flag = available_no_poverty
+			}
+		}
+		set_country_flag = available_no_poverty
+	}
+	else_if = {
+		limit = {
+			has_country_flag = available_poverty4
+			NOT = {
+				has_country_flag = available_poverty5
+			}
+		}
+		set_country_flag = available_poverty5
+	}
+	else_if = {
+		limit = {
+			has_country_flag = available_poverty3
+			NOT = {
+				has_country_flag = available_poverty4
+			}
+		}
+		set_country_flag = available_poverty4
+	}
+	else_if = {
+		limit = {
+			has_country_flag = available_poverty2
+			NOT = {
+				has_country_flag = available_poverty3
+			}
+		}
+		set_country_flag = available_poverty3
+	}
+	else_if = {
+		limit = {
+			has_country_flag = available_poverty1
+			NOT = {
+				has_country_flag = available_poverty2
+			}
+		}
+		set_country_flag = available_poverty2
+	}
+	else = {
+		set_country_flag = available_poverty1
+	}
+	fix_poverty_level_flag_by_flag = yes
+}
+decrease_poverty_level_flag = {
+	if = {
+		limit = {
+			has_country_flag = available_no_poverty
+		}
+		clr_country_flag = available_no_poverty
+	}
+	else_if = {
+		limit = {
+			has_country_flag = available_poverty5
+		}
+		clr_country_flag = available_poverty5
+	}
+	else_if = {
+		limit = {
+			has_country_flag = available_poverty4
+		}
+		clr_country_flag = available_poverty4
+	}
+	else_if = {
+		limit = {
+			has_country_flag = available_poverty3
+		}
+		clr_country_flag = available_poverty3
+	}
+	else_if = {
+		limit = {
+			has_country_flag = available_poverty2
+		}
+		clr_country_flag = available_poverty2
+	}
+	else = {
+		clr_country_flag = available_poverty1
+	}
+	fix_poverty_level_flag_by_flag = yes
+}
+increase_poverty_level_idea = {
+	if = {
+		limit = {
+			has_idea = poverty5
+		}
+		swap_ideas = {
+			remove_idea = poverty5
+			add_idea = no_poverty
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = poverty4
+		}
+		swap_ideas = {
+			remove_idea = poverty4
+			add_idea = poverty5
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = poverty3
+		}
+		swap_ideas = {
+			remove_idea = poverty3
+			add_idea = poverty4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = poverty2
+		}
+		swap_ideas = {
+			remove_idea = poverty2
+			add_idea = poverty3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = poverty1
+		}
+		swap_ideas = {
+			remove_idea = poverty1
+			add_idea = poverty2
+		}
+	}
+	else = {
+		swap_ideas = {
+			remove_idea = poverty
+			add_idea = poverty1
+		}
+	}
+	fix_poverty_level_flag_by_idea = yes
+}
+decrease_poverty_level_idea = {
+	if = {
+		limit = {
+			has_idea = no_poverty
+		}
+		swap_ideas = {
+			remove_idea = no_poverty
+			add_idea = poverty5
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = poverty5
+		}
+		swap_ideas = {
+			remove_idea = poverty5
+			add_idea = poverty4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = poverty4
+		}
+		swap_ideas = {
+			remove_idea = poverty4
+			add_idea = poverty3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = poverty3
+		}
+		swap_ideas = {
+			remove_idea = poverty3
+			add_idea = poverty2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = poverty2
+		}
+		swap_ideas = {
+			remove_idea = poverty2
+			add_idea = poverty1
+		}
+	}
+	else = {
+		swap_ideas = {
+			remove_idea = poverty1
+			add_idea = poverty
+		}
+	}
+	fix_poverty_level_flag_by_idea = yes
+}
+fix_poverty_level_flag_by_flag = {
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = available_no_poverty
+				has_country_flag = available_poverty5
+				has_country_flag = available_poverty4
+				has_country_flag = available_poverty3
+				has_country_flag = available_poverty2
+			}
+			NOT = {
+				has_country_flag = available_poverty1
+			}
+		}
+		set_country_flag = available_poverty1
+	}
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = available_no_poverty
+				has_country_flag = available_poverty5
+				has_country_flag = available_poverty4
+				has_country_flag = available_poverty3
+			}
+			NOT = {
+				has_country_flag = available_poverty2
+			}
+		}
+		set_country_flag = available_poverty2
+	}
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = available_no_poverty
+				has_country_flag = available_poverty5
+				has_country_flag = available_poverty4
+			}
+			NOT = {
+				has_country_flag = available_poverty3
+			}
+		}
+		set_country_flag = available_poverty3
+	}
+	if = {
+		limit = {
+			OR = {
+				has_country_flag = available_no_poverty
+				has_country_flag = available_poverty5
+			}
+			NOT = {
+				has_country_flag = available_poverty4
+			}
+		}
+		set_country_flag = available_poverty4
+	}
+	if = {
+		limit = {
+			has_country_flag = available_no_poverty
+			NOT = {
+				has_country_flag = available_poverty5
+			}
+		}
+		set_country_flag = available_poverty5
+	}
+}
+fix_poverty_level_flag_by_idea = {
+	if = {
+		limit = {
+			OR = {
+				has_idea = no_poverty
+				has_idea = poverty5
+				has_idea = poverty4
+				has_idea = poverty3
+				has_idea = poverty2
+				has_idea = poverty1
+			}
+			NOT = {
+				has_country_flag = available_poverty1
+			}
+		}
+		set_country_flag = available_poverty1
+	}
+	if = {
+		limit = {
+			OR = {
+				has_idea = no_poverty
+				has_idea = poverty5
+				has_idea = poverty4
+				has_idea = poverty3
+				has_idea = poverty2
+			}
+			NOT = {
+				has_country_flag = available_poverty2
+			}
+		}
+		set_country_flag = available_poverty2
+	}
+	if = {
+		limit = {
+			OR = {
+				has_idea = no_poverty
+				has_idea = poverty5
+				has_idea = poverty4
+				has_idea = poverty3
+			}
+			NOT = {
+				has_country_flag = available_poverty3
+			}
+		}
+		set_country_flag = available_poverty3
+	}
+	if = {
+		limit = {
+			OR = {
+				has_idea = no_poverty
+				has_idea = poverty5
+				has_idea = poverty4
+			}
+			NOT = {
+				has_country_flag = available_poverty4
+			}
+		}
+		set_country_flag = available_poverty4
+	}
+	if = {
+		limit = {
+			OR = {
+				has_idea = no_poverty
+				has_idea = poverty5
+			}
+			NOT = {
+				has_country_flag = available_poverty5
+			}
+		}
+		set_country_flag = available_poverty5
+	}
+	if = {
+		limit = {
+			has_idea = no_poverty
+			NOT = {
+				has_country_flag = available_no_poverty
+			}
+		}
+		set_country_flag = available_no_poverty
+	}
+}
