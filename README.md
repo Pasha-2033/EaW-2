@@ -1,14 +1,14 @@
-#Equestria at War 2
+# Equestria at War 2
 This is mod repository
 
-#Mod documentation
+# Mod documentation
 [English](docs/English.md)
 [Russian](docs/Russian.md)
 
-#Code documentation
+# Code documentation
 Isn`t done yet
 
-#Vanila mod:
+# Vanila mod:
 This item is not authorized for posting on Steam, except under the Steam account named "Equestria At War Team" (https://steamcommunity.com/id/Equestria_At_War).
 
 <a href="https://github.com/Pasha-2033/EaW-2/issues"><img alt="Issues" src="https://img.shields.io/github/issues/Pasha-2033/EaW-2?color=0088ff"/></a>
