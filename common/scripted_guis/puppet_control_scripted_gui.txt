@@ -1,0 +1,260 @@
+scripted_gui = {
+	puppet_control = {
+		context_type = selected_country_context
+		window_name = "puppet_control_menu"
+		parent_window_token = selected_country_view_diplomacy
+		dirty = ROOT.puppet_control_visibility
+		visible = {
+			is_subject_of = ROOT
+			check_variable = {
+				ROOT.puppet_control_visibility = 1
+			}
+		}
+		dynamic_lists = {
+			mobilization_law_button_grid = {
+				array = global.mobilization_idea_tags
+				change_scope = no
+				entry_container = "puppet_control_mobilization_law_button_entry"
+				index = i_0
+				value = v_0
+			}
+			trade_button_grid = {
+				array = global.trade_idea_tags
+				change_scope = no
+				entry_container = "puppet_control_trade_button_entry"
+				index = i_1
+			}
+			economy_button_grid = {
+				array = global.economy_idea_tags
+				change_scope = no
+				entry_container = "puppet_control_economy_button_entry"
+				index = i_2
+			}
+			society_button_grid = {
+				array = global.society_idea_tags
+				change_scope = no
+				entry_container = "puppet_control_society_button_entry"
+				index = i_3
+			}
+			power_concentration_button_grid = {
+				array = global.power_concentration_idea_tags
+				change_scope = no
+				entry_container = "puppet_control_power_concentration_button_entry"
+				index = i_4
+			}
+			illiteracy_button_grid = {
+				array = global.illiteracy_idea_tags
+				change_scope = no
+				entry_container = "puppet_control_illiteracy_button_entry"
+				index = i_5
+			}
+			poverty_button_grid = {
+				array = global.poverty_idea_tags
+				change_scope = no
+				entry_container = "puppet_control_poverty_button_entry"
+				index = i_6
+			}
+		}
+		effects = {
+			close_button_click = {
+				set_variable = {
+					ROOT.puppet_control_visibility = 0
+				}
+			}
+			puppet_control_mobilization_law_button_click = {
+				log = "[?i_0]"
+				meta_effect = {
+					text = {
+						change_puppet_mobilization_law_[I] = yes
+					}
+					I = i_0
+				}
+			}
+			puppet_control_trade_button_click = {
+				log = "[?i_1]"
+				meta_effect = {
+					text = {
+						change_puppet_trade_[I] = yes
+					}
+					I = i_1
+				}
+			}
+			puppet_control_economy_button_click = {
+				log = "[?i_2]"
+				meta_effect = {
+					text = {
+						change_puppet_economy_[I] = yes
+					}
+					I = i_2
+				}
+			}
+			puppet_control_society_button_click = {
+				log = "[?i_3]"
+			}
+			puppet_control_power_concentration_button_click = {
+				log = "[?i_4]"
+			}
+			puppet_control_illiteracy_button_click = {
+				log = "[?i_5]"
+			}
+			puppet_control_poverty_button_click = {
+				log = "[?i_6]"
+			}
+		}
+		triggers = {
+			puppet_control_mobilization_law_button_click_enabled = {
+				set_temp_variable = {
+					frame_0 = i_0
+				}
+				multiply_temp_variable = {
+					frame_0 = 2
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_idea = disarmed_nation
+						}
+						check_variable = {
+							frame_0 = 0
+						}
+					}
+					add_to_temp_variable = {
+						frame_0 = 1
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							has_idea = volunteer_only
+						}
+						check_variable = {
+							frame_0 = 2
+						}
+					}
+					add_to_temp_variable = {
+						frame_0 = 1
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							has_idea = limited_conscription
+						}
+						check_variable = {
+							frame_0 = 4
+						}
+					}
+					add_to_temp_variable = {
+						frame_0 = 1
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							has_idea = limited_conscription
+						}
+						check_variable = {
+							frame_0 = 6
+						}
+					}
+					add_to_temp_variable = {
+						frame_0 = 1
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							has_idea = extensive_conscription
+						}
+						check_variable = {
+							frame_0 = 8
+						}
+					}
+					add_to_temp_variable = {
+						frame_0 = 1
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							has_idea = all_adults_serve
+						}
+						check_variable = {
+							frame_0 = 10
+						}
+					}
+					add_to_temp_variable = {
+						frame_0 = 1
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							has_idea = scraping_the_barrel
+						}
+						check_variable = {
+							frame_0 = 12
+						}
+					}
+					add_to_temp_variable = {
+						frame_0 = 1
+					}
+				}
+				add_to_temp_variable = {
+					frame_0 = 1
+				}
+			}
+			puppet_control_trade_button_click_enabled = {
+
+			}
+		}
+		properties = {
+			puppet_control_mobilization_law_button = {
+				frame = frame_0
+			}
+			puppet_control_trade_button = {
+			#	frame = i_1
+			}
+			puppet_control_poverty_button = {
+				frame = 0
+			}
+		}
+	}
+	puppet_control_main_button = {
+		context_type = selected_country_context
+		window_name = "puppet_control_menu_main_button"
+		parent_window_token = selected_country_view_diplomacy
+		visible = {
+			is_subject_of = ROOT
+		}
+		effects = {
+			main_button_click = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = ROOT.puppet_control_visibility
+						}
+					}
+					set_variable = {
+						ROOT.puppet_control_visibility = 1
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							ROOT.puppet_control_visibility = 0
+						}
+					}
+					set_variable = {
+						ROOT.puppet_control_visibility = 1
+					}
+				}
+				else = {
+					set_variable = {
+						ROOT.puppet_control_visibility = 0
+					}
+				}
+			}
+		}
+	}
+}

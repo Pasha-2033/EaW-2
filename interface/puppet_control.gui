@@ -1,0 +1,876 @@
+guiTypes = {
+	containerWindowType = {
+		name = "puppet_control_menu"
+		position = {
+			x = 543
+			y = -48
+		}
+		fade_time = 3000
+		fade_type = linear
+		show_sound = open_sub_window
+		size = {
+			width = 550
+			height = 620
+		}
+		background = {
+			name = "background"
+			quadTextureSprite ="GFX_tiled_plain_bg"
+		}
+		iconType = {
+			name ="production_header_bg"
+			quadTextureSprite = "GFX_header_bg"
+			position = {
+				x = 5
+				y = 5
+			}
+			Orientation = "UPPER_LEFT"
+		}
+		instantTextBoxType = {
+			name = "title"
+			position = {
+				x = 20
+				y = 10
+			}
+			text = "puppet_control_title"
+			font = "hoi_36header"
+			maxWidth = 470
+			maxHeight = 36
+			fixedsize = yes
+			pdx_tooltip_delayed = "puppet_control_title_tt"
+		}
+		buttonType = {
+			name = "close_button"
+			position = {
+				x = -43
+				y = 7
+			}
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "hoi_16mbs"
+			shortcut = "ESCAPE"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+		containerWindowType = {
+			name = "puppet_items_window"
+			position = {
+				x = 0
+				y = 40
+			}
+			size = {
+				width = 550
+				height = 100%%
+			}
+			margin = {
+				top = 15
+				bottom = 15
+			}
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_tiled_window_1b_border"
+			}
+			verticalScrollbar = "right_vertical_slider"
+			#containers with control of some aspectk of subject
+			containerWindowType = {
+				name = "puppet_control_mobilization_laws"
+				position = {
+					x = 10
+					y = 0
+				}
+				size = {
+					width = 518
+					height = 140
+				}
+				background = {
+					name = "background"
+					quadTextureSprite ="GFX_tiled_plain_bg" #change
+				}
+				instantTextBoxType = {
+					name = "title"
+					position = {
+						x = 10
+						y = 10
+					}
+					text = "puppet_control_mobilization_laws_title"
+					font = "hoi_30header"
+					format = CENTER
+					maxWidth = 497
+					maxHeight = 30
+					fixedsize = yes
+					pdx_tooltip_delayed = "puppet_control_mobilization_laws_title_tt"
+				}
+				containerWindowType = {
+					name = "button_container"
+					horizontalScrollbar = "bottom_horizontal_slider" 
+					position = {
+						x = 10
+						y = 30
+					}
+					margin = {
+						left = 10
+						right = 10
+					}
+					background = {
+						name = "background"
+						quadTextureSprite ="GFX_tiled_plain_bg" #change
+					}
+					size = {
+						width = 380
+						height = 100
+					}
+					gridBoxType = {
+						name = "mobilization_law_button_grid"
+						position = {
+							x = 0
+							y = 10
+						}
+						size = {
+							width = 560
+							height = 64
+						}
+						slotsize = {
+							width = 80
+							height = 64
+						}
+						format = "UPPER_LEFT"
+					}
+				}
+				containerWindowType = {
+					name = "cost_container"
+					position = {
+						x = 390
+						y = 30
+					}
+					#add background
+					instantTextBoxType = {
+						name = "cost_display_index"
+						text = "mobilization_law_cost_display_index_value"
+						vertical_alignment = CENTER
+						font = "hoi_18b"
+						maxWidth = 120
+						maxHeight = 54
+						format = CENTER
+					}
+				}
+			}
+			containerWindowType = {
+				name = "puppet_control_trade"
+				position = {
+					x = 10
+					y = 140
+				}
+				size = {
+					width = 518
+					height = 140
+				}
+				background = {
+					name = "background"
+					quadTextureSprite ="GFX_tiled_plain_bg" #change
+				}
+				instantTextBoxType = {
+					name = "title"
+					position = {
+						x = 10
+						y = 10
+					}
+					text = "puppet_control_trade_title"
+					font = "hoi_30header"
+					format = CENTER
+					maxWidth = 497
+					maxHeight = 30
+					fixedsize = yes
+					pdx_tooltip_delayed = "puppet_control_trade_title_tt"
+				}
+				containerWindowType = {
+					name = "button_container"
+					horizontalScrollbar = "bottom_horizontal_slider"
+					position = {
+						x = 10
+						y = 30
+					}
+					margin = {
+						left = 10
+						right = 10
+					}
+					background = {
+						name = "background"
+						quadTextureSprite ="GFX_tiled_plain_bg" #change
+					}
+					size = {
+						width = 380
+						height = 100
+					}
+					gridBoxType = {
+						name = "trade_button_grid"
+						position = {
+							x = 0
+							y = 10
+						}
+						size = {
+							width = 640
+							height = 64
+						}
+						slotsize = {
+							width = 80
+							height = 64
+						}
+						format = "UPPER_LEFT"
+					}
+				}
+				containerWindowType = {
+					name = "cost_container"
+					position = {
+						x = 390
+						y = 30
+					}
+					#add background
+					instantTextBoxType = {
+						name = "cost_display_index"
+						text = "trade_cost_display_index_value"
+						vertical_alignment = CENTER
+						font = "hoi_18b"
+						maxWidth = 120
+						maxHeight = 54
+						format = CENTER
+					}
+				}
+			}
+			containerWindowType = {
+				name = "puppet_control_economy"
+				position = {
+					x = 10
+					y = 280
+				}
+				size = {
+					width = 518
+					height = 140
+				}
+				background = {
+					name = "background"
+					quadTextureSprite ="GFX_tiled_plain_bg" #change
+				}
+				instantTextBoxType = {
+					name = "title"
+					position = {
+						x = 10
+						y = 10
+					}
+					text = "puppet_control_economy_title"
+					font = "hoi_30header"
+					format = CENTER
+					maxWidth = 497
+					maxHeight = 30
+					fixedsize = yes
+					pdx_tooltip_delayed = "puppet_control_economy_title_tt"
+				}
+				containerWindowType = {
+					name = "button_container"
+					horizontalScrollbar = "bottom_horizontal_slider"
+					position = {
+						x = 10
+						y = 30
+					}
+					margin = {
+						left = 10
+						right = 10
+					}
+					background = {
+						name = "background"
+						quadTextureSprite ="GFX_tiled_plain_bg" #change
+					}
+					size = {
+						width = 380
+						height = 100
+					}
+					gridBoxType = {
+						name = "economy_button_grid"
+						position = {
+							x = 0
+							y = 10
+						}
+						size = {
+							width = 800
+							height = 64
+						}
+						slotsize = {
+							width = 80
+							height = 64
+						}
+						format = "UPPER_LEFT"
+					}
+				}
+				containerWindowType = {
+					name = "cost_container"
+					position = {
+						x = 390
+						y = 30
+					}
+					#add background
+					instantTextBoxType = {
+						name = "cost_display_index"
+						text = "economy_cost_display_index_value"
+						vertical_alignment = CENTER
+						font = "hoi_18b"
+						maxWidth = 120
+						maxHeight = 54
+						format = CENTER
+					}
+				}
+			}
+			containerWindowType = {
+				name = "puppet_control_society"
+				position = {
+					x = 10
+					y = 420
+				}
+				size = {
+					width = 518
+					height = 140
+				}
+				background = {
+					name = "background"
+					quadTextureSprite ="GFX_tiled_plain_bg" #change
+				}
+				instantTextBoxType = {
+					name = "title"
+					position = {
+						x = 10
+						y = 10
+					}
+					text = "puppet_control_society_title"
+					font = "hoi_30header"
+					format = CENTER
+					maxWidth = 497
+					maxHeight = 30
+					fixedsize = yes
+					pdx_tooltip_delayed = "puppet_control_society_title_tt"
+				}
+				containerWindowType = {
+					name = "button_container"
+					horizontalScrollbar = "bottom_horizontal_slider"
+					position = {
+						x = 10
+						y = 30
+					}
+					margin = {
+						left = 10
+						right = 10
+					}
+					background = {
+						name = "background"
+						quadTextureSprite ="GFX_tiled_plain_bg" #change
+					}
+					size = {
+						width = 380
+						height = 100
+					}
+					gridBoxType = {
+						name = "society_button_grid"
+						position = {
+							x = 0
+							y = 10
+						}
+						size = {
+							width = 1600
+							height = 64
+						}
+						slotsize = {
+							width = 80
+							height = 64
+						}
+						format = "UPPER_LEFT"
+					}
+				}
+				containerWindowType = {
+					name = "cost_container"
+					position = {
+						x = 390
+						y = 30
+					}
+					#add background
+					instantTextBoxType = {
+						name = "cost_display_index"
+						text = "society_cost_display_index_value"
+						vertical_alignment = CENTER
+						font = "hoi_18b"
+						maxWidth = 120
+						maxHeight = 54
+						format = CENTER
+					}
+				}
+			}
+			containerWindowType = {
+				name = "puppet_control_power_concentration"
+				position = {
+					x = 10
+					y = 560
+				}
+				size = {
+					width = 518
+					height = 140
+				}
+				background = {
+					name = "background"
+					quadTextureSprite ="GFX_tiled_plain_bg" #change
+				}
+				instantTextBoxType = {
+					name = "title"
+					position = {
+						x = 10
+						y = 10
+					}
+					text = "puppet_control_power_concentration_title"
+					font = "hoi_30header"
+					format = CENTER
+					maxWidth = 497
+					maxHeight = 30
+					fixedsize = yes
+					pdx_tooltip_delayed = "puppet_control_power_concentration_title_tt"
+				}
+				containerWindowType = {
+					name = "button_container"
+					horizontalScrollbar = "bottom_horizontal_slider"
+					position = {
+						x = 10
+						y = 30
+					}
+					margin = {
+						left = 10
+						right = 10
+					}
+					background = {
+						name = "background"
+						quadTextureSprite ="GFX_tiled_plain_bg" #change
+					}
+					size = {
+						width = 380
+						height = 100
+					}
+					gridBoxType = {
+						name = "power_concentration_button_grid"
+						position = {
+							x = 0
+							y = 10
+						}
+						size = {
+							width = 560
+							height = 64
+						}
+						slotsize = {
+							width = 80
+							height = 64
+						}
+						format = "UPPER_LEFT"
+					}
+				}
+				containerWindowType = {
+					name = "cost_container"
+					position = {
+						x = 390
+						y = 30
+					}
+					#add background
+					instantTextBoxType = {
+						name = "cost_display_index"
+						text = "power_concentration_cost_display_index_value"
+						vertical_alignment = CENTER
+						font = "hoi_18b"
+						maxWidth = 120
+						maxHeight = 54
+						format = CENTER
+					}
+				}
+			}
+			containerWindowType = {
+				name = "puppet_control_illiteracy"
+				position = {
+					x = 10
+					y = 700
+				}
+				size = {
+					width = 518
+					height = 140
+				}
+				background = {
+					name = "background"
+					quadTextureSprite ="GFX_tiled_plain_bg" #change
+				}
+				instantTextBoxType = {
+					name = "title"
+					position = {
+						x = 10
+						y = 10
+					}
+					text = "puppet_control_illiteracy_title"
+					font = "hoi_30header"
+					format = CENTER
+					maxWidth = 497
+					maxHeight = 30
+					fixedsize = yes
+					pdx_tooltip_delayed = "puppet_control_illiteracy_title_tt"
+				}
+				containerWindowType = {
+					name = "button_container"
+					horizontalScrollbar = "bottom_horizontal_slider"
+					position = {
+						x = 10
+						y = 30
+					}
+					margin = {
+						left = 10
+						right = 10
+					}
+					background = {
+						name = "background"
+						quadTextureSprite ="GFX_tiled_plain_bg" #change
+					}
+					size = {
+						width = 380
+						height = 100
+					}
+					gridBoxType = {
+						name = "illiteracy_button_grid"
+						position = {
+							x = 0
+							y = 10
+						}
+						size = {
+							width = 480
+							height = 64
+						}
+						slotsize = {
+							width = 80
+							height = 64
+						}
+						format = "UPPER_LEFT"
+					}
+				}
+				containerWindowType = {
+					name = "cost_container"
+					position = {
+						x = 390
+						y = 30
+					}
+					#add background
+					instantTextBoxType = {
+						name = "cost_display_index"
+						text = "illiteracy_cost_display_index_value"
+						vertical_alignment = CENTER
+						font = "hoi_18b"
+						maxWidth = 120
+						maxHeight = 54
+						format = CENTER
+					}
+				}
+			}
+			containerWindowType = {
+				name = "puppet_control_poverty"
+				position = {
+					x = 10
+					y = 840
+				}
+				size = {
+					width = 518
+					height = 140
+				}
+				background = {
+					name = "background"
+					quadTextureSprite ="GFX_tiled_plain_bg" #change
+				}
+				instantTextBoxType = {
+					name = "title"
+					position = {
+						x = 10
+						y = 10
+					}
+					text = "puppet_control_poverty_title"
+					font = "hoi_30header"
+					format = CENTER
+					maxWidth = 497
+					maxHeight = 30
+					fixedsize = yes
+					pdx_tooltip_delayed = "puppet_control_poverty_title_tt"
+				}
+				containerWindowType = {
+					name = "button_container"
+					horizontalScrollbar = "bottom_horizontal_slider"
+					position = {
+						x = 10
+						y = 30
+					}
+					margin = {
+						left = 10
+						right = 10
+					}
+					background = {
+						name = "background"
+						quadTextureSprite ="GFX_tiled_plain_bg" #change
+					}
+					size = {
+						width = 380
+						height = 100
+					}
+					gridBoxType = {
+						name = "poverty_button_grid"
+						position = {
+							x = 0
+							y = 10
+						}
+						size = {
+							width = 560
+							height = 64
+						}
+						slotsize = {
+							width = 80
+							height = 64
+						}
+						format = "UPPER_LEFT"
+					}
+				}
+				containerWindowType = {
+					name = "cost_container"
+					position = {
+						x = 390
+						y = 30
+					}
+					#add background
+					instantTextBoxType = {
+						name = "cost_display_index"
+						text = "poverty_cost_display_index_value"
+						vertical_alignment = CENTER
+						font = "hoi_18b"
+						maxWidth = 120
+						maxHeight = 54
+						format = CENTER
+					}
+				}
+			}
+			containerWindowType = {
+				name = "puppet_control_race_intergration"
+				position = {
+					x = 10
+					y = 980
+				}
+				size = {
+					width = 518
+					height = 200
+				}
+				background = {
+					name = "background"
+					quadTextureSprite ="GFX_tiled_plain_bg" #change
+				}
+				instantTextBoxType = {
+					name = "title"
+					position = {
+						x = 10
+						y = 10
+					}
+					text = "puppet_control_race_intergration"
+					font = "hoi_30header"
+					format = CENTER
+					maxWidth = 497
+					maxHeight = 30
+					fixedsize = yes
+					pdx_tooltip_delayed = "puppet_control_race_intergration_title_tt"
+				}
+				containerWindowType = {
+					name = "current_race"
+					position = {
+						x = 6
+						y = 30
+					}
+					size = {
+						width = 250
+						height = 112
+					}
+					background = {
+						name = "background"
+						quadTextureSprite ="GFX_tiled_plain_bg" #change
+					}
+					iconType = {
+						name = "current_race_icon"
+						position = {
+							x = 10
+							y = 32
+						}
+						spriteType = "GFX_idea_changeling_race"
+					}
+					instantTextBoxType = {
+						name = "current_race_tittle"
+						position = {
+							x = 10
+							y = 10
+						}
+						text = "current_race_title_text"
+						font = "hoi_30header"
+						format = CENTER
+						maxWidth = 230
+						maxHeight = 30
+						fixedsize = yes
+						pdx_tooltip_delayed = "current_race_title_tt"
+					}
+					instantTextBoxType = {
+						name = "current_race_index_title"
+						position = {
+							x = 80
+							y = 40
+						}
+						text = "current_race_index_title_text"
+						font = "hoi_30header"
+						format = CENTER
+						maxWidth = 150
+						maxHeight = 30
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "current_race_index_value"
+						position = {
+							x = 80
+							y = 70
+						}
+						text = "current_race_index_value_text"
+						font = "hoi_30header"
+						format = CENTER
+						maxWidth = 150
+						maxHeight = 30
+						fixedsize = yes
+					}
+				}
+				containerWindowType = {
+					name = "new_race"
+					position = {
+						x = 262
+						y = 30
+					}
+					size = {
+						width = 250
+						height = 112
+					}
+					background = {
+						name = "background"
+						quadTextureSprite ="GFX_tiled_plain_bg" #change
+					}
+					iconType = {
+						name = "new_race_icon"
+						position = {
+							x = 10
+							y = 32
+						}
+						spriteType = "GFX_idea_changeling_race"
+					}
+					instantTextBoxType = {
+						name = "new_race_tittle"
+						position = {
+							x = 10
+							y = 10
+						}
+						text = "new_race_title_text"
+						font = "hoi_30header"
+						format = CENTER
+						maxWidth = 230
+						maxHeight = 30
+						fixedsize = yes
+						pdx_tooltip_delayed = "new_race_title_tt"
+					}
+					instantTextBoxType = {
+						name = "new_race_index_title"
+						position = {
+							x = 80
+							y = 40
+						}
+						text = "new_race_index_title_text"
+						font = "hoi_30header"
+						format = CENTER
+						maxWidth = 150
+						maxHeight = 30
+						fixedsize = yes
+					}
+					instantTextBoxType = {
+						name = "new_race_index_value"
+						position = {
+							x = 80
+							y = 70
+						}
+						text = "new_race_index_value_text"
+						font = "hoi_30header"
+						format = CENTER
+						maxWidth = 150
+						maxHeight = 30
+						fixedsize = yes
+					}
+				}
+			}
+		}
+	}
+	#gridboxtype buttons
+	containerWindowType = {
+		name = "puppet_control_mobilization_law_button_entry"
+		buttonType = {
+			name = "puppet_control_mobilization_law_button"
+			quadTextureSprite  = "GFX_puppet_control_mobilization_laws" #change
+		}
+	}
+	containerWindowType = {
+		name = "puppet_control_trade_button_entry"
+		buttonType = {
+			name = "puppet_control_trade_button"
+			quadTextureSprite = "GFX_closebutton" #change
+		}
+	}
+	containerWindowType = {
+		name = "puppet_control_economy_button_entry"
+		buttonType = {
+			name = "puppet_control_economy_button"
+			quadTextureSprite = "GFX_closebutton" #change
+		}
+	}
+	containerWindowType = {
+		name = "puppet_control_society_button_entry"
+		buttonType = {
+			name = "puppet_control_society_button"
+			quadTextureSprite = "GFX_closebutton" #change
+		}
+	}
+	containerWindowType = {
+		name = "puppet_control_power_concentration_button_entry"
+		buttonType = {
+			name = "puppet_control_power_concentration_button"
+			quadTextureSprite = "GFX_closebutton" #change
+		}
+	}
+	containerWindowType = {
+		name = "puppet_control_illiteracy_button_entry"
+		buttonType = {
+			name = "puppet_control_illiteracy_button"
+			quadTextureSprite = "GFX_closebutton" #change
+		}
+	}
+	containerWindowType = {
+		name = "puppet_control_poverty_button_entry"
+		buttonType = {
+			name = "puppet_control_poverty_button"
+			quadTextureSprite = "GFX_puppet_control_poverty" #change
+		}
+	}
+	#main button to open/close menu
+	containerWindowType = {
+		name = "puppet_control_menu_main_button"
+		position = {
+			x = 470
+			y = 125
+		}
+		size = {
+			width = 60
+			height = 60
+		}
+		buttonType = {
+			name = "main_button"
+			quadTextureSprite ="GFX_closebutton" #change
+			orientation = CENTER
+			centerposition = yes
+			buttonFont = "hoi_16mbs"
+			clicksound = click_close #change
+			pdx_tooltip = "CLOSE" #change
+		}
+	}
+}

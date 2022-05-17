@@ -21,7 +21,7 @@ focus_tree = {
 		icon = GFX_goal_chn_swords
 		cost = 1
 		ai_will_do = {
-			factor = 200
+			factor = 320
 		}
 		x = 7
 		y = 1
@@ -67,6 +67,10 @@ focus_tree = {
 				ideology = fascism
 				popularity = 0.15
 			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.15
+			}
 			country_event = {
 				id = ves_changelings.3
 				days = 1
@@ -94,6 +98,11 @@ focus_tree = {
 			focus = ves_focus_workers_front
 			focus = ves_focus_way_of_love
 		}
+		available = {
+			NOT = {
+				has_country_flag = no_evil_mind
+			}
+		}
 		ai_will_do = {
 			factor = 200
 		}
@@ -104,7 +113,7 @@ focus_tree = {
 			add_war_support = 0.05
 			add_stability = 0.1
 			add_popularity = {
-				ideology = fascism
+				ideology = technocracy
 				popularity = 0.05
 			}
 			add_tech_bonus = {
@@ -148,7 +157,7 @@ focus_tree = {
 			add_war_support = 0.15
 			add_stability = 0.05
 			add_popularity = {
-				ideology = neutrality
+				ideology = militarism
 				popularity = 0.2
 			}
 			country_event = {
@@ -189,6 +198,18 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			add_popularity = {
+				ideology = socialism
+				popularity = 0.15
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.1
+			}
+			add_popularity = {
+				ideology = radicalism
+				popularity = 0.05
+			}
 			country_event = {
 				id = ves_changelings.6
 				days = 1
@@ -220,6 +241,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_way_of_love"
 			add_stability = 0.15
+			add_popularity = {
+				ideology = harmony
+				popularity = 0.1
+			}
 			country_event = {
 				id = ves_changelings.7
 				days = 1
@@ -283,19 +308,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_chrysalis_coronation"
 			add_stability = 0.15
 			add_popularity = {
-				ideology = fascism
-				popularity = 0.1
+				ideology = neutrality
+				popularity = 0.4
 			}
 			add_manpower = 15000
-			if = {
-				limit = {
-					has_full_control_of_state = 351
-				}
-				351 = {
-					add_manpower = 5000
-				}
-				#etc доделать
-			} 
 			country_event = {
 				id = ves_changelings.10
 				days = 1
@@ -332,8 +348,8 @@ focus_tree = {
 			add_war_support = 0.15
 			add_research_slot = 1
 			add_popularity = {
-				ideology = fascism
-				popularity = 0.1
+				ideology = technocracy
+				popularity = 0.3
 			}
 			country_event = {
 				id = ves_changelings.11
@@ -393,10 +409,10 @@ focus_tree = {
 			add_stability = 0.1
 			add_research_slot = 1
 			EEQ = {
-				set_stability = 0.05
+				add_stability = 0.05
 			}
 			ESG = {
-				set_stability = 0.05
+				add_stability = 0.05
 			}
 		}
 		search_filters = {
@@ -508,13 +524,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_unite_nation_around_monarhy"
 			add_war_support = 0.05
-			add_popularity = {
-				ideology = fascism
-				popularity = 0.1
-			}
+			add_stability = 0.05
 		}
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_STABILITY
 			FOCUS_FILTER_WAR_SUPPORT
 		}
 	}
@@ -531,8 +544,10 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_unite_nation_around_science"
 			custom_effect_tooltip = upgrade_science_base_2x_tt
-			increase_science_base = yes
-			increase_science_base = yes
+			hidden_effect = {
+				increase_science_base_idea = yes
+				increase_science_base_idea = yes
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_RESEARCH
@@ -545,6 +560,11 @@ focus_tree = {
 		prerequisite = {
 			focus = ves_focus_equus_technounion
 		}
+		available = {
+			NOT = {
+				has_completed_focus = shared_focus_changelings_attack_canterlot
+			}
+		}
 		ai_will_do = {
 			factor = 200
 		}
@@ -552,9 +572,10 @@ focus_tree = {
 		y = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_great_love_project"
-			add_war_support = 0.05
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_NOT_DONE
+		}
 	}
 	focus = {
 		id = ves_focus_great_hive
@@ -570,9 +591,10 @@ focus_tree = {
 		y = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_great_hive"
-			add_war_support = 0.05
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_NOT_DONE
+		}
 	}
 	focus = {
 		id = ves_focus_thorax_birthday
@@ -588,9 +610,10 @@ focus_tree = {
 		y = 3
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_thorax_birthday"
-			add_war_support = 0.05
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_NOT_DONE
+		}
 	}
 	focus = {
 		id = ves_focus_thorax_in_cry
@@ -611,9 +634,10 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_thorax_in_cry"
-			add_war_support = 0.05
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_NOT_DONE
+		}
 	}
 	focus = {
 		id = ves_focus_equestrial_friends
@@ -634,9 +658,10 @@ focus_tree = {
 		y = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_equestrial_friends"
-			add_war_support = 0.05
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_NOT_DONE
+		}
 	}
 	focus = {
 		id = ves_focus_reorganise_manpower
@@ -652,9 +677,10 @@ focus_tree = {
 		y = 3
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_reorganise_manpower"
-			add_war_support = 0.05
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_NOT_DONE
+		}
 	}
 	focus = {
 		id = ves_focus_first_hive_factory
@@ -670,9 +696,10 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_first_hive_factory"
-			add_war_support = 0.05
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_NOT_DONE
+		}
 	}
 	focus = {
 		id = ves_focus_spread_hive_factory
@@ -688,9 +715,10 @@ focus_tree = {
 		y = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_spread_hive_factory"
-			add_war_support = 0.05
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_NOT_DONE
+		}
 	}
 	focus = {
 		id = ves_focus_royal_high_command
@@ -706,9 +734,10 @@ focus_tree = {
 		y = 3
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_royal_high_command"
-			add_war_support = 0.05
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_NOT_DONE
+		}
 	}
 	focus = {
 		id = ves_focus_royal_guards
@@ -724,9 +753,10 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_royal_guards"
-			add_war_support = 0.05
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_NOT_DONE
+		}
 	}
 	focus = {
 		id = ves_focus_engineer_school
@@ -742,9 +772,10 @@ focus_tree = {
 		y = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_engineer_school"
-			add_war_support = 0.05
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_NOT_DONE
+		}
 	}
 	focus = {
 		id = ves_focus_unite_nation_around_personality
@@ -760,9 +791,10 @@ focus_tree = {
 		y = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_unite_nation_around_personality"
-			add_war_support = 0.05
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_NOT_DONE
+		}
 	}
 	focus = {
 		id = ves_focus_unite_nation_around_factories
@@ -778,9 +810,10 @@ focus_tree = {
 		y = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_unite_nation_around_factories"
-			add_war_support = 0.05
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_NOT_DONE
+		}
 	}
 	focus = {
 		id = ves_focus_unite_nation_around_yagers
@@ -796,9 +829,10 @@ focus_tree = {
 		y = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_unite_nation_around_yagers"
-			add_war_support = 0.05
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_NOT_DONE
+		}
 	}
 	focus = {
 		id = ves_focus_start_unation
@@ -820,7 +854,11 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_start_unation"
 			add_war_support = 0.05
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_WAR_SUPPORT
+			FOCUS_FILTER_EXPANTION
+			FOCUS_FILTER_NOT_DONE
+		}
 	}
 	focus = {
 		id = ves_focus_lik_war
@@ -837,12 +875,20 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_lik_war"
 			add_war_support = 0.05
+			create_wargoal = {
+				target = LIK
+				type = annex_everything
+			}
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_EXPANTION
+		}
+		will_lead_to_war_with = LIK
 		bypass = {
 			DIS = {
 				OR = {
 					exists = no
+					is_in_faction_with = VES
 					is_puppet_of = VES
 					is_puppet_of = SOR
 					is_puppet_of = DIS
@@ -866,12 +912,20 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_sor_war"
 			add_war_support = 0.05
+			create_wargoal = {
+				target = SOR
+				type = annex_everything
+			}
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		will_lead_to_war_with = SOR
+		search_filters = {
+			FOCUS_FILTER_EXPANTION
+		}
 		bypass = {
 			DIS = {
 				OR = {
 					exists = no
+					is_in_faction_with = VES
 					is_puppet_of = VES
 					is_puppet_of = DIS
 					is_puppet_of = LIK
@@ -895,12 +949,20 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_dis_war"
 			add_war_support = 0.05
+			create_wargoal = {
+				target = DIS
+				type = annex_everything
+			}
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		will_lead_to_war_with = DIS
+		search_filters = {
+			FOCUS_FILTER_EXPANTION
+		}
 		bypass = {
 			DIS = {
 				OR = {
 					exists = no
+					is_in_faction_with = VES
 					is_puppet_of = VES
 					is_puppet_of = SOR
 					is_puppet_of = LIK
@@ -924,12 +986,20 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_vra_war"
 			add_war_support = 0.05
+			create_wargoal = {
+				target = VRA
+				type = annex_everything
+			}
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		will_lead_to_war_with = VRA
+		search_filters = {
+			FOCUS_FILTER_EXPANTION
+		}
 		bypass = {
 			DIS = {
 				OR = {
 					exists = no
+					is_in_faction_with = VES
 					is_puppet_of = VES
 					is_puppet_of = SOR
 					is_puppet_of = LIK
@@ -961,9 +1031,10 @@ focus_tree = {
 		y = 9
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_vra_war"
-			add_war_support = 0.05
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_NOT_DONE
+		}
 	}
 	focus = {
 		id = ves_focus_hive_unification
@@ -984,9 +1055,10 @@ focus_tree = {
 		y = 9
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_vra_war"
-			add_war_support = 0.05
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_NOT_DONE
+		}
 	}
 	focus = {
 		id = ves_focus_hive_infrastructure
@@ -1010,9 +1082,10 @@ focus_tree = {
 		y = 10
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_vra_war"
-			add_war_support = 0.05
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_NOT_DONE
+		}
 	}
 	focus = {
 		id = ves_focus_hive_rail_road
@@ -1034,24 +1107,26 @@ focus_tree = {
 		y = 11
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_vra_war"
-			add_war_support = 0.05
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_NOT_DONE
+		}
 	}
 	focus = {
 		id = ves_focus_botle_of_erot
 		icon = GFX_goal_chn_man_bougie
 		cost = 5
 		ai_will_do = {
-			factor = 200
+			factor = 4000
 		}
 		x = 12
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_botle_of_erot"
-			add_war_support = 0.05
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_NOT_DONE
+		}
 	}
 	focus = {
 		id = ves_focus_evil_mind_found
@@ -1064,17 +1139,18 @@ focus_tree = {
 			has_government = fascism
 		}
 		ai_will_do = {
-			factor = 200
+			factor = 4000
 		}
 		x = 12
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_evil_mind_found"
-			add_war_support = 0.05
 			hidden_effect = {
 				mark_focus_tree_layout_dirty = yes
 			}
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = {
+			FOCUS_FILTER_NOT_DONE
+		}
 	}
 }

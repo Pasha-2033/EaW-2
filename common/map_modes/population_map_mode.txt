@@ -1,6 +1,8 @@
 scripted_map_modes = {
 	population_map_mode = {
-		top = { type = none }
+		top = {
+			type = none
+		}
 		bottom = {
 			type = state
 			color = {
@@ -17,7 +19,7 @@ scripted_map_modes = {
 								population_percent > 0
 							}
 						}
-						#now, attemp to make sqrt from x/y, where x < y
+						#sqrt from x/y, where x < y
 						set_temp_variable = { temp = population_percent }
 						divide_temp_variable = { temp = 2 }
 						set_temp_variable = { r = temp }

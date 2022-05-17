@@ -8,10 +8,10 @@ characters = {
 		}
 		country_leader = {
 			desc = "POLITICS_CHRYSALIS_DESC"
-			ideology = neofeudalism
+			ideology = despotism
 			traits = {warmonger}
 			expire = "1965.1.1.1"
-			id = -1
+			id = 2
 		}
 	}
 	VES_evil_mind = {
@@ -27,7 +27,7 @@ characters = {
 				experimental_genius
 			}
 			expire = "1965.1.1.1"
-			id = -1
+			id = 1
 		}
 		field_marshal = {
 			traits = {}
@@ -56,39 +56,39 @@ characters = {
 		}
 	}
 	VES_hivesmarschall_synovial={
-		name=VES_hivesmarschall_synovial
+		name = VES_hivesmarschall_synovial
 		portraits={
 			civilian={
 				large="gfx/leaders/CHN/Synovial_CHN.tga"
 			}
 		}
 		country_leader={
-			ideology=despotism
+			ideology = militarism
 			expire="1965.1.1.1"
-			id=-1
+			id = 3
 		}
 	}
 	VES_queen_chrysalis={
-		name=VES_queen_chrysalis
+		name = VES_queen_chrysalis
 		portraits={
 			civilian={
-				large="GFX_ChrysalisPortrait"
+				large="gfx/leaders/CHN/Chrysalis.tga"
 			}
 		}
 		allowed_civil_war = {
-			has_government = gen_nazism #fascism
+			has_government = ultranationalism #fascism
 		}
 		country_leader={
 			desc="POLITICS_CHRYSALIS_DESC"
-			ideology = gen_nazism
+			ideology = ultranationalism
 			traits={ warmonger }
 			expire="1965.1.1.1"
-			id=-1
+			id = 4
 		}
 		gender = female
 	}
-	VES_thorax={
-		name=VES_thorax_name
+	VES_thorax = {
+		name = VES_thorax
 		portraits={
 			civilian={
 				large="gfx/leaders/CHN/Thorax.tga"
@@ -96,14 +96,14 @@ characters = {
 		}
 		country_leader={
 			desc="politics_thorax_puppet_desc"
-			ideology=conservatism
-			expire="1965.1.1.1"
-			id=-1
+			ideology = tribal_federatio
+			expire = "1965.1.1.1"
+			id = 5
 		}
 	}
 	VES_gold_muffin={
-		name=VES_gold_muffin
-		portraits={
+		name = VES_gold_muffin
+		portraits = {
 			civilian={
 				large="gfx/leaders/CHN/GoldMuffin.tga"
 				#small = "GFX_idea_gold_muffin"
@@ -113,13 +113,13 @@ characters = {
 		country_leader={
 			ideology=leninism
 			expire="1965.1.1.1"
-			id=-1
+			id= 6
 		}
 	}
-	VES_vect={
-		name=VES_vect
-		portraits={
-			army={
+	VES_vect = {
+		name = VES_vect
+		portraits = {
+			army = {
 				large="gfx/leaders/CHN/Vect.tga"
 				small="gfx/interface/ideas/Advisors/CHN/idea_Vect.tga"
 			}

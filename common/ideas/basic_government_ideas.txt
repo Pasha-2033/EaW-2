@@ -2041,84 +2041,152 @@ ideas = {
 			}
 		}
 	}
-
+	#полностью проработаны
 	science_base = {
 		law = yes
 		use_list_view = yes
 		outstanding_science_base = {
-			level = 1
-			ai_will_do = {
-				factor = 10000
+			available = {
+				has_country_flag = available_outstanding_science_base
 			}
-			#########################################################################
+			level = 1
+			traits = {
+				science_idea
+			}
+			cost = 200
+			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.25
+				land_doctrine_cost_factor = -0.25
+				air_doctrine_cost_factor = -0.25
+				naval_doctrine_cost_factor = -0.25
+				political_power_gain = 0.5
+			}
+			ai_will_do = {
+				factor = 160
+				modifier = {
+					factor = 25
+					has_government = technocracy
+				}
+				modifier = {
+					factor = 0.01
+					has_idea = poor_science_base
+				}
+				modifier = {
+					factor = 0.2
+					has_idea = better_science_base
+				}
+				modifier = {
+					factor = 0.7
+					has_idea = big_science_base
+				}
+			}
+			cancel_if_invalid = no
 		}
 		proper_science_base = {
+			available = {
+				has_country_flag = available_proper_science_base
+				NOT = {
+					has_idea = outstanding_science_base
+				}
+			}
 			level = 2
 			traits = {
 				science_idea
 			}
-			cost = 40
+			cost = 200
 			removal_cost = -1
+			modifier = {
+				research_speed_factor = 0.1
+				political_power_gain = 0.1
+			}
 			ai_will_do = {
-				factor = 100
+				factor = 80
 				modifier = {
 					factor = 0
 					has_idea = outstanding_science_base
 				}
 				modifier = {
-					factor = 10000
-					OR = {
-						has_idea = better_science_base
-						has_idea = poor_science_base
-					}
+					factor = 25
+					has_government = technocracy
+				}
+				modifier = {
+					factor = 0.2
+					has_idea = poor_science_base
+				}
+				modifier = {
+					factor = 0.7
+					has_idea = better_science_base
 				}
 			}
 			cancel_if_invalid = no
 		}
 		big_science_base = {
+			available = {
+				has_country_flag = available_big_science_base
+				NOT = {
+					OR = {
+						has_idea = proper_science_base
+						has_idea = outstanding_science_base
+					}
+				}
+			}
 			level = 3
 			traits = {
 				science_idea
 			}
-			cost = 40
+			cost = 200
 			removal_cost = -1
 			modifier = {
-				research_speed_factor = -0.3
-				land_doctrine_cost_factor = 0.3
-				air_doctrine_cost_factor = 0.3
-				naval_doctrine_cost_factor = 0.3
-				political_power_gain = 0.1
+				research_speed_factor = -0.2
+				land_doctrine_cost_factor = 0.2
+				air_doctrine_cost_factor = 0.2
+				naval_doctrine_cost_factor = 0.2
+				political_power_gain = 0.2
 			}
 			ai_will_do = {
-				factor = 100
+				factor = 40
 				modifier = {
 					factor = 0
-					has_idea = outstanding_science_base
-					has_idea = proper_science_base
+					OR = {
+						has_idea = outstanding_science_base
+						has_idea = proper_science_base
+					}
 				}
 				modifier = {
-					factor = 10000
-					OR = {
-						has_idea = better_science_base
-						has_idea = poor_science_base
-					}
+					factor = 25
+					has_government = technocracy
+				}
+				modifier = {
+					factor = 0.7
+					has_idea = poor_science_base
 				}
 			}
 			cancel_if_invalid = no
 		}
 		better_science_base = {
+			available = {
+				has_country_flag = available_better_science_base
+				NOT = {
+					OR = {
+						has_idea = big_science_base
+						has_idea = proper_science_base
+						has_idea = outstanding_science_base
+					}
+				}
+			}
 			level = 4
 			traits = {
 				science_idea
 			}
-			cost = 40
+			cost = 200
 			removal_cost = -1
 			modifier = {
-				research_speed_factor = -0.55
-				land_doctrine_cost_factor = 0.55
-				air_doctrine_cost_factor = 0.55
-				naval_doctrine_cost_factor = 0.55
-				political_power_gain = 0.2
+				research_speed_factor = -0.5
+				land_doctrine_cost_factor = 0.5
+				air_doctrine_cost_factor = 0.5
+				naval_doctrine_cost_factor = 0.5
+				political_power_gain = 0.75
 			}
 			ai_will_do = {
 				factor = 20
@@ -2131,28 +2199,38 @@ ideas = {
 					}
 				}
 				modifier = {
-					factor = 10000
-					has_idea = poor_science_base
+					factor = 25
+					has_government = technocracy
 				}
 			}
 			cancel_if_invalid = no
 		}
 		poor_science_base = {
+			available = {
+				NOT = {
+					OR = {
+						has_idea = better_science_base
+						has_idea = big_science_base
+						has_idea = proper_science_base
+						has_idea = outstanding_science_base
+					}
+				}
+			}
 			level = 5
 			traits = {
 				science_idea
 			}
-			cost = 40
+			cost = 200
 			removal_cost = -1
 			modifier = {
 				research_speed_factor = -0.8
 				land_doctrine_cost_factor = 0.8
 				air_doctrine_cost_factor = 0.8
 				naval_doctrine_cost_factor = 0.8
-				political_power_gain = 0.3
+				political_power_gain = 1.5
 			}
 			ai_will_do = {
-				factor = 2
+				factor = 10
 				modifier = {
 					factor = 0
 					OR = {

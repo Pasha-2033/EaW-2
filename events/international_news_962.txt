@@ -1,18 +1,15 @@
 add_namespace = enews
+#change picture everywhere
 country_event = {
 	#evil mind is getting powerful
 	id = enews.1
-	immediate = { log = "[GetDateText]: [Root.GetName]: event news.1" }
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event news.1"
+	}
 	title = enews.1.t
 	desc = enews.1.d
 	picture = GFX_event_swarm
 	is_triggered_only = yes
-	major = yes
-	trigger = {
-		NOT = {
-			original_tag = VES
-		}
-	}
 	option = {
 		name = enews.1.a
 		ai_chance = {
@@ -23,19 +20,49 @@ country_event = {
 country_event = {
 	#evil mind is executed
 	id = enews.2
-	immediate = { log = "[GetDateText]: [Root.GetName]: event news.1" }
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event news.2"
+	}
 	title = enews.2.t
 	desc = enews.2.d
 	picture = GFX_event_swarm
 	is_triggered_only = yes
-	major = yes
-	trigger = {
-		NOT = {
-			original_tag = VES
-		}
-	}
 	option = {
 		name = enews.2.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {
+	#Canterlot attacked, changelings win
+	id = enews.3
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event news.3"
+	}
+	title = enews.3.t
+	desc = enews.3.d
+	picture = GFX_event_swarm
+	is_triggered_only = yes
+	option = {
+		name = enews.3.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {
+	#Canterlot attacked, changelings lose
+	id = enews.4
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event news.4"
+	}
+	title = enews.4.t
+	desc = enews.4.d
+	picture = GFX_event_swarm
+	is_triggered_only = yes
+	option = {
+		name = enews.4.a
 		ai_chance = {
 			factor = 100
 		}

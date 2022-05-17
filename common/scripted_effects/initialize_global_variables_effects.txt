@@ -8,3 +8,44 @@ init_last_evil_mind_date_var = {
 		global.last_evil_mind_date = 962
 	}
 }
+init_division_limiter_counter = {
+	#change for code durability
+	set_variable = {
+		global.max_division_counter = 100 #change value
+	}
+}
+init_ideas_tag_list = {
+	resize_array = {
+		global.mobilization_idea_tags = 7
+	}
+	resize_array = {
+		global.trade_idea_tags = 8
+	}
+	resize_array = {
+		global.economy_idea_tags = 10
+	}
+	resize_array = {
+		global.society_idea_tags = 20
+	}
+	resize_array = {
+		global.power_concentration_idea_tags = 7
+	}
+	resize_array = {
+		global.illiteracy_idea_tags = 6
+	}
+	resize_array = {
+		global.poverty_idea_tags = 7
+	}
+	resize_array = {
+		global.science_base_idea_tags = 6
+	}
+	resize_array = {
+		global.monatisation_idea_tags = 5
+	}
+	resize_array = {
+		global.inflation_idea_tags = 6
+	}
+	resize_array = {
+		global.valuta_idea_tags = 9
+	}
+}

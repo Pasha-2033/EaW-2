@@ -1,8 +1,81 @@
 increase_science_base_flag = {
-
+	if = {
+		limit = {
+			has_country_flag = available_proper_science_base
+			NOT = {
+				has_country_flag = available_outstanding_science_base
+			}
+		}
+		set_country_flag = available_outstanding_science_base
+	}
+	else_if = {
+		limit = {
+			has_country_flag = available_big_science_base
+			NOT = {
+				has_country_flag = available_proper_science_base
+			}
+		}
+		set_country_flag = available_proper_science_base
+	}
+	else_if = {
+		limit = {
+			has_country_flag = available_better_science_base
+			NOT = {
+				has_country_flag = available_big_science_base
+			}
+		}
+		set_country_flag = available_big_science_base
+	}
+	else_if = {
+		limit = {
+			NOT = {
+				has_country_flag = available_better_science_base
+			}
+		}
+		set_country_flag = available_better_science_base
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = disallow_science_base_flag_fix
+			}
+		}
+		fix_science_base_flag_by_flag = yes
+	}
 }
 decrease_science_base_flag = {
-
+	if = {
+		limit = {
+			has_country_flag = available_outstanding_science_base
+		}
+		clr_country_flag = available_outstanding_science_base
+	}
+	else_if = {
+		limit = {
+			has_country_flag = available_proper_science_base
+		}
+		clr_country_flag = available_proper_science_base
+	}
+	else_if = {
+		limit = {
+			has_country_flag = available_big_science_base
+		}
+		clr_country_flag = available_big_science_base
+	}
+	else_if = {
+		limit = {
+			has_country_flag = available_better_science_base
+		}
+		clr_country_flag = available_proper_science_base
+	}
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = disallow_science_base_flag_fix
+			}
+		}
+		fix_science_base_flag_by_flag = yes
+	}
 }
 increase_science_base_idea = {
 	if = {
@@ -41,7 +114,14 @@ increase_science_base_idea = {
 			add_idea = better_science_base
 		}
 	}
-	fix_science_base_flag_by_idea = yes
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = disallow_science_base_flag_fix
+			}
+		}
+		fix_science_base_flag_by_idea = yes
+	}
 }
 decrease_science_base_idea = {
 	if = {
@@ -80,13 +160,20 @@ decrease_science_base_idea = {
 			add_idea = poor_science_base
 		}
 	}
-	fix_science_base_flag_by_idea = yes
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = disallow_science_base_flag_fix
+			}
+		}
+		fix_science_base_flag_by_idea = yes
+	}
 }
 fix_science_base_flag_by_flag = {
-
+	#######################################
 }
 fix_science_base_flag_by_idea = {
-
+	#########################################
 }
 increase_poverty_level_flag = {
 	if = {
@@ -134,10 +221,22 @@ increase_poverty_level_flag = {
 		}
 		set_country_flag = available_poverty2
 	}
-	else = {
+	else_if = {
+		limit = {
+			NOT = {
+				has_country_flag = available_poverty1
+			}
+		}
 		set_country_flag = available_poverty1
 	}
-	fix_poverty_level_flag_by_flag = yes
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = disallow_poverty_flag_fix
+			}
+		}
+		fix_poverty_level_flag_by_flag = yes
+	}
 }
 decrease_poverty_level_flag = {
 	if = {
@@ -173,7 +272,14 @@ decrease_poverty_level_flag = {
 	else = {
 		clr_country_flag = available_poverty1
 	}
-	fix_poverty_level_flag_by_flag = yes
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = disallow_poverty_flag_fix
+			}
+		}
+		fix_poverty_level_flag_by_flag = yes
+	}
 }
 increase_poverty_level_idea = {
 	if = {
@@ -227,7 +333,14 @@ increase_poverty_level_idea = {
 			add_idea = poverty1
 		}
 	}
-	fix_poverty_level_flag_by_idea = yes
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = disallow_poverty_flag_fix
+			}
+		}
+		fix_poverty_level_flag_by_idea = yes
+	}
 }
 decrease_poverty_level_idea = {
 	if = {
@@ -281,7 +394,14 @@ decrease_poverty_level_idea = {
 			add_idea = poverty
 		}
 	}
-	fix_poverty_level_flag_by_idea = yes
+	if = {
+		limit = {
+			NOT = {
+				has_country_flag = disallow_poverty_flag_fix
+			}
+		}
+		fix_poverty_level_flag_by_idea = yes
+	}
 }
 fix_poverty_level_flag_by_flag = {
 	if = {
@@ -429,3 +549,38 @@ fix_poverty_level_flag_by_idea = {
 		set_country_flag = available_no_poverty
 	}
 }
+#political ideas removal
+remove_harmony_spirits_effect = {}
+remove_socialism_spirits_effect = {}
+remove_radicalism_spirits_effect = {}
+remove_unholy_spirits_effect = {}
+remove_holy_spirits_effect = {}
+remove_technocracy_spirits_effect = {}
+remove_anarchism_spirits_effect = {}
+remove_militarism_spirits_effect = {}
+#puppet control actions
+change_puppet_mobilization_law_0 = {}
+change_puppet_mobilization_law_1 = {}
+change_puppet_mobilization_law_2 = {}
+change_puppet_mobilization_law_3 = {}
+change_puppet_mobilization_law_4 = {}
+change_puppet_mobilization_law_5 = {}
+change_puppet_mobilization_law_6 = {}
+change_puppet_trade_0 = {}
+change_puppet_trade_1 = {}
+change_puppet_trade_2 = {}
+change_puppet_trade_3 = {}
+change_puppet_trade_4 = {}
+change_puppet_trade_5 = {}
+change_puppet_trade_6 = {}
+change_puppet_trade_7 = {}
+change_puppet_economy_0 = {}
+change_puppet_economy_1 = {}
+change_puppet_economy_2 = {}
+change_puppet_economy_3 = {}
+change_puppet_economy_4 = {}
+change_puppet_economy_5 = {}
+change_puppet_economy_6 = {}
+change_puppet_economy_7 = {}
+change_puppet_economy_8 = {}
+change_puppet_economy_9 = {}

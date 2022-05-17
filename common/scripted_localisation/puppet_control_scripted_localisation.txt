@@ -1,0 +1,40 @@
+#cost localisation
+defined_text = {
+	name = mobilisation_law_cost
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = {
+					mobilization_law_pp_cost_factor > 0
+				}
+				check_variable = {
+					mobilization_law_cp_cost_factor > 0
+				}
+			}
+		}
+		localization_key = mobilization_law_both
+	}
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = {
+					mobilization_law_pp_cost_factor > 0
+				}
+			}
+		}
+		localization_key = mobilization_law_political_cost
+	}
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = {
+					mobilization_law_cp_cost_factor > 0
+				}
+			}
+		}
+		localization_key = mobilization_law_command_power_cost
+	}
+	text = {
+		localization_key = no_cost_index
+	}
+}

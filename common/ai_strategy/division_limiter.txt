@@ -1,23 +1,53 @@
-# Written by Henrik "Groogy" Hansson
-# Modified by Daniel "Da9L" Sjöberg
-# IF YOU TOUCH THE AI CODE I WILL STAB YOU REPEATLY -PSODY
+#Dision limiters
+max_ammount_division_limiter = {
+	allowed = {
+		has_game_rule = {
+			rule = ai_div_limiter
+			option = yes
+		}
+	}
+	enable = {
+		set_temp_variable = {
+			max_divisions = global.max_division_counter
+		}
+		multiply_temp_variable = {
+			max_divisions = max_division_index
+		}
+		check_variable = {
+			num_divisions > max_divisions
+		}
+	}
+	ai_strategy = {}
+}
+population_division_limiter = {
+	allowed = {
+		has_game_rule = {
+			rule = ai_div_limiter
+			option = yes
+		}
+	}
+	enable = {
+		#write trigger
+	}
+	ai_strategy = {}
+}
+manpower_division_limiter = {
+	allowed = {
+		has_game_rule = {
+			rule = ai_div_limiter
+			option = yes
+		}
+	}
+	enable = {
+		#write trigger
+	}
+	ai_strategy = {}
+}
+paratrooper_limit = {}
+marine_limit = {}
+mountaineer_limit = {}
 
-# befriend
-# conquer
-# antagonize
-# build_ship
-# build_army
-# unit_ratio
-# build_building
-# research_tech
-# garrison
-# protect
-# influence
-# contain
-# area_priority
 
-
-###UNIT LIMITER###
 division_limiter = {
 	allowed = {
 		NOT = {

@@ -2,11 +2,24 @@
 shared_focus = {
 	id = shared_focus_changelings_start_canterlot_race
 	icon = GFX_goal_generic_changeling
-	cost = 5.00
+	cost = 5
 	x = 17
 	y = 1
 	ai_will_do = {
 		factor = 200
+		modifier = {
+			factor = 1.6
+			has_changeling_gueen = yes
+		}
+		modifier = {
+			factor = 2
+			has_changeling_gueen = yes
+			late_in_canterlot_race = yes
+		}
+		modifier = {
+			factor = 0.2
+			no_need_to_overrun_canterlot_race = yes
+		}
 	}
 	available = {
 		OR = {
@@ -21,13 +34,16 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_start_canterlot_race"
+		add_political_power = 70
 	}
-	search_filters = {}	#change
+	search_filters = {
+		FOCUS_FILTER_CANTERLOT_RACE
+	}
 }
 shared_focus = {
 	id = shared_focus_changelings_prepare_invation
 	icon = GFX_goal_generic_changeling
-	cost = 5.00
+	cost = 5
 	prerequisite = {
 		focus = shared_focus_changelings_start_canterlot_race
 	}
@@ -35,6 +51,19 @@ shared_focus = {
 	y = 2
 	ai_will_do = {
 		factor = 200
+		modifier = {
+			factor = 1.6
+			has_changeling_gueen = yes
+		}
+		modifier = {
+			factor = 2
+			has_changeling_gueen = yes
+			late_in_canterlot_race = yes
+		}
+		modifier = {
+			factor = 0.2
+			no_need_to_overrun_canterlot_race = yes
+		}
 	}
 	available = {
 		OR = {
@@ -49,13 +78,16 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_prepare_invation"
+		add_war_support = 0.1
 	}
-	search_filters = {}	#change
+	search_filters = {
+		FOCUS_FILTER_CANTERLOT_RACE
+	}
 }
 shared_focus = {
 	id = shared_focus_changelings_prepare_attack_phase
 	icon = GFX_goal_generic_changeling
-	cost = 5.00
+	cost = 5
 	prerequisite = {
 		focus = shared_focus_changelings_start_canterlot_race
 	}
@@ -63,6 +95,19 @@ shared_focus = {
 	y = 2
 	ai_will_do = {
 		factor = 200
+		modifier = {
+			factor = 1.6
+			has_changeling_gueen = yes
+		}
+		modifier = {
+			factor = 2
+			has_changeling_gueen = yes
+			late_in_canterlot_race = yes
+		}
+		modifier = {
+			factor = 0.2
+			no_need_to_overrun_canterlot_race = yes
+		}
 	}
 	available = {
 		OR = {
@@ -77,13 +122,16 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_prepare_attack_phase"
+		add_stability = 0.1
 	}
-	search_filters = {}	#change
+	search_filters = {
+		FOCUS_FILTER_CANTERLOT_RACE
+	}
 }
 shared_focus = {
 	id = shared_focus_changelings_attack_canterlot
 	icon = GFX_goal_generic_changeling
-	cost = 5.00
+	cost = 5
 	prerequisite = {
 		focus = shared_focus_changelings_prepare_invation
 	}
@@ -93,7 +141,7 @@ shared_focus = {
 	x = 17
 	y = 3
 	ai_will_do = {
-		factor = 200
+		factor = 4000
 	}
 	available = {
 		OR = {
@@ -106,22 +154,77 @@ shared_focus = {
 			canterlot_race_is_finished = no
 		}
 	}
+	cancel = {
+		custom_trigger_tooltip = {
+			tooltip = canterlot_race_is_not_finished
+			canterlot_race_is_finished = yes
+		}
+	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_attack_canterlot"
+		random_list = {
+			5 = {
+				country_event = {
+					id = changelings.1
+				}
+				every_country = {
+					limit = {
+						NOT = {
+							original_tag = ROOT
+						}
+					}
+					country_event = {
+						id = enews.3
+					}
+				}
+			}
+			45 = {
+				country_event = {
+					id = changelings.2
+				}
+				every_country = {
+					limit = {
+						NOT = {
+							original_tag = ROOT
+						}
+					}
+					country_event = {
+						id = enews.4
+					}
+				}
+			}
+			50 = {
+				country_event = {
+					id = changelings.3
+				}
+				every_country = {
+					limit = {
+						NOT = {
+							original_tag = ROOT
+						}
+					}
+					country_event = {
+						id = enews.4
+					}
+				}
+			}
+		}
 	}
-	search_filters = {}	#change
+	search_filters = {
+		FOCUS_FILTER_CANTERLOT_RACE
+	}
 }
 shared_focus = {
 	id = shared_focus_changelings_unite_nation_around_victory
 	icon = GFX_goal_generic_changeling
-	cost = 5.00
+	cost = 5
 	prerequisite = {
 		focus = shared_focus_changelings_attack_canterlot
 	}
 	x = 17
 	y = 4
 	ai_will_do = {
-		factor = 200
+		factor = 4000
 	}
 	available = {
 		OR = {
@@ -133,8 +236,132 @@ shared_focus = {
 	}
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_attack_canterlot"
+		if = {
+			limit = {
+				original_tag = VES
+			}
+			SOR = {
+				country_event = {
+					id = sor_changelings.1
+				}
+			}
+			DIS = {
+				country_event = {
+					id = dis_changelings.1
+				}
+			}
+			LIK = {
+				country_event = {
+					id = lik_changelings.1
+				}
+			}
+			VRA = {
+				country_event = {
+					id = vra_changelings.1
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				original_tag = SOR
+			}
+			VES = {
+				country_event = {
+					id = ves_changelings.12
+				}
+			}
+			DIS = {
+				country_event = {
+					id = dis_changelings.2
+				}
+			}
+			LIK = {
+				country_event = {
+					id = lik_changelings.2
+				}
+			}
+			VRA = {
+				country_event = {
+					id = vra_changelings.2
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				original_tag = DIS
+			}
+			VES = {
+				country_event = {
+					id = ves_changelings.13
+				}
+			}
+			SOR = {
+				country_event = {
+					id = sor_changelings.3
+				}
+			}
+			LIK = {
+				country_event = {
+					id = lik_changelings.3
+				}
+			}
+			VRA = {
+				country_event = {
+					id = vra_changelings.3
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				original_tag = LIK
+			}
+			SOR = {
+				country_event = {
+					id = sor_changelings.4
+				}
+			}
+			DIS = {
+				country_event = {
+					id = dis_changelings.4
+				}
+			}
+			VES = {
+				country_event = {
+					id = ves_changelings.14
+				}
+			}
+			VRA = {
+				country_event = {
+					id = vra_changelings.4
+				}
+			}
+		}
+		else = {
+			SOR = {
+				country_event = {
+					id = sor_changelings.5
+				}
+			}
+			DIS = {
+				country_event = {
+					id = dis_changelings.5
+				}
+			}
+			VES = {
+				country_event = {
+					id = ves_changelings.15
+				}
+			}
+			LIK = {
+				country_event = {
+					id = lik_changelings.5
+				}
+			}
+		}
 	}
-	search_filters = {}	#change
+	search_filters = {
+		FOCUS_FILTER_EXPANTION
+	}
 }
 
 #focuses for great projects of evil mind, only for VES/VRA/LIK/DIS/SOR
@@ -170,7 +397,9 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_initiate_great_projects"
 		add_war_support = 0.05
 	}
-	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	search_filters = {
+		FOCUS_FILTER_RESEARCH
+	}
 }
 shared_focus = {
 	id = shared_focus_rebuild_magitron
@@ -204,7 +433,9 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_rebuild_magitron"
 		add_war_support = 0.05
 	}
-	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	search_filters = {
+		FOCUS_FILTER_RESEARCH
+	}
 }
 shared_focus = {
 	id = shared_focus_launch_magitron
@@ -238,7 +469,9 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_launch_magitron"
 		add_war_support = 0.05
 	}
-	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	search_filters = {
+		FOCUS_FILTER_RESEARCH
+	}
 }
 shared_focus = {
 	id = shared_focus_experiments_on_the_soul
@@ -272,7 +505,9 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_experiments_on_the_soul"
 		add_war_support = 0.05
 	}
-	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	search_filters = {
+		FOCUS_FILTER_RESEARCH
+	}
 }
 shared_focus = {
 	id = shared_focus_capture_pony
@@ -306,7 +541,9 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_capture_pony"
 		add_war_support = 0.05
 	}
-	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	search_filters = {
+		#add
+	}
 }
 shared_focus = {
 	id = shared_focus_build_love_machine
@@ -340,7 +577,10 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_build_love_machine"
 		add_war_support = 0.05
 	}
-	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	search_filters = {
+		FOCUS_FILTER_RESEARCH
+		FOCUS_FILTER_STABILITY
+	}
 }
 shared_focus = {
 	id = shared_focus_soul_cell_theory
@@ -374,7 +614,9 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_soul_cell_theory"
 		add_war_support = 0.05
 	}
-	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	search_filters = {
+		FOCUS_FILTER_RESEARCH
+	}
 }
 shared_focus = {
 	id = shared_focus_consciousness_cell_theory
@@ -408,7 +650,9 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_consciousness_cell_theory"
 		add_war_support = 0.05
 	}
-	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	search_filters = {
+		FOCUS_FILTER_RESEARCH
+	}
 }
 shared_focus = {
 	id = shared_focus_evil_mind_fixes_economy
@@ -442,7 +686,9 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_evil_mind_fixes_economy"
 		add_war_support = 0.05
 	}
-	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	search_filters = {
+		#add
+	}
 }
 shared_focus = {
 	id = shared_focus_evil_mind_creates_army
@@ -476,7 +722,9 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_evil_mind_creates_army"
 		add_war_support = 0.05
 	}
-	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	search_filters = {
+		#add
+	}
 }
 shared_focus = {
 	id = shared_focus_evil_mind_fixes_science_base
@@ -510,7 +758,9 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_evil_mind_fixes_science_base"
 		add_war_support = 0.05
 	}
-	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	search_filters = {
+		FOCUS_FILTER_RESEARCH
+	}
 }
 shared_focus = {
 	id = shared_focus_evil_mind_change_society
@@ -544,7 +794,9 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_evil_mind_change_society"
 		add_war_support = 0.05
 	}
-	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	search_filters = {
+		#add
+	}
 }
 
 #focuses for improving political system (common, if main political branch is finished!), for is_changeling_race = yes
@@ -566,5 +818,7 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_evil_mind_change_society"
 		add_war_support = 0.05
 	}
-	search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+	search_filters = {
+		#add
+	}
 }

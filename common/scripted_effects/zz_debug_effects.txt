@@ -116,34 +116,82 @@ d_get_state = {
 d_increase_science_base_flag = {
 	increase_science_base_flag = yes
 	log = "increased science base flag for [ROOT.GetTag]"
+	if = {
+		limit = {
+			has_country_flag = disallow_science_base_flag_fix
+		}
+		log = "no fixes for science base flag applied for [ROOT.GetTag]"
+	}
 }
 d_decrease_science_base_flag = {
 	decrease_science_base_flag = yes
 	log = "decreased science base flag for [ROOT.GetTag]"
+	if = {
+		limit = {
+			has_country_flag = disallow_science_base_flag_fix
+		}
+		log = "no fixes for science base flag applied for [ROOT.GetTag]"
+	}
 }
 d_increase_science_base_idea = {
 	increase_science_base_idea = yes
 	log = "increased science base idea for [ROOT.GetTag]"
+	if = {
+		limit = {
+			has_country_flag = disallow_science_base_flag_fix
+		}
+		log = "no fixes for science base flag applied for [ROOT.GetTag]"
+	}
 }
 d_decrease_science_base_idea = {
 	decrease_science_base_idea = yes
 	log = "decreased science base idea for [ROOT.GetTag]"
+	if = {
+		limit = {
+			has_country_flag = disallow_science_base_flag_fix
+		}
+		log = "no fixes for science base flag applied for [ROOT.GetTag]"
+	}
 }
 d_increase_poverty_level_flag = {
 	increase_poverty_level_flag = yes
 	log = "increased poverty level flag for [ROOT.GetTag]"
+	if = {
+		limit = {
+			has_country_flag = disallow_poverty_flag_fix
+		}
+		log = "no fixes for poverty level flag applied for [ROOT.GetTag]"
+	}
 }
 d_decrease_poverty_level_flag = {
 	decrease_poverty_level_flag = yes
 	log = "decreased poverty level flag for [ROOT.GetTag]"
+	if = {
+		limit = {
+			has_country_flag = disallow_poverty_flag_fix
+		}
+		log = "no fixes for poverty level flag applied for [ROOT.GetTag]"
+	}
 }
 d_increase_poverty_level_idea = {
 	increase_poverty_level_flag = yes
 	log = "increased poverty level idea for [ROOT.GetTag]"
+	if = {
+		limit = {
+			has_country_flag = disallow_poverty_flag_fix
+		}
+		log = "no fixes for poverty level flag applied for [ROOT.GetTag]"
+	}
 }
 d_decrease_poverty_level_idea = {
 	decrease_poverty_level_flag = yes
 	log = "decreased poverty level idea for [ROOT.GetTag]"
+	if = {
+		limit = {
+			has_country_flag = disallow_poverty_flag_fix
+		}
+		log = "no fixes for poverty level flag applied for [ROOT.GetTag]"
+	}
 }
 #idea control degub
 d_fix_science_base_flag_by_flag = {

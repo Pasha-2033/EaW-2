@@ -2,13 +2,10 @@
 ######====================== IMPORTANT MESSAGE =============================######
 ######======================================================================######
 #    When adding a new subideology, please add an entry of the subideology in    #
-# common/scripted_localisation/EAW_subideology_display_scripted_localisation.txt #
+#	   common/scripted_localisation/ideology_info_scripted_localisation.txt  	 #
 ######======================================================================######
-
 #basic ideologies
-
-#локализация не проделана, обновить rules и modifiers для каждой идеологии, переопределить gfx
-
+#обновить rules и modifiers для каждой идеологии, переопределить gfx
 ideologies = {
 	democratic = {
 		types = {
@@ -98,16 +95,16 @@ ideologies = {
 			nazism = {
 				can_be_randomly_selected = no
 			}
-			gen_nazism = {
-				can_be_randomly_selected = no
-			}
-			fascism_ideology = {
+			ultranationalism = {
 				can_be_randomly_selected = no
 			}
 			falangism = {
 				can_be_randomly_selected = no
 			}
 			rexism = {
+				can_be_randomly_selected = no
+			}
+			holy_order_f = {
 				can_be_randomly_selected = no
 			}
 		}
@@ -119,10 +116,10 @@ ideologies = {
 			"FACTION_NAME_FASCISM_5"
 			"FACTION_NAME_CLASSIC_FASCISM"
 			"FACTION_NAME_NAZISM"
-			"FACTION_NAME_GEN_NAZISM"
-			"FACTION_NAME_FASCISM_IDEOLOGY"
+			"FACTION_NAME_ULTRANATIONALISM"
 			"FACTION_NAME_FALANGISM"
 			"FACTION_NAME_REXISM"
+			"FACTION_NAME_HOLY_ORDER_F"
 		}
 		color = {150 75 0}
 		rules = {
@@ -167,7 +164,7 @@ ideologies = {
 			holy_order_n = {
 			    can_be_randomly_selected = no
 			}
-			theocracy_subideology = {
+			theocracy = {
 			    can_be_randomly_selected = no
 			}
 			conservative_liberalism = {
@@ -193,6 +190,8 @@ ideologies = {
 			"FACTION_NAME_POPULISM"
 			"FACTION_NAME_HOLY_ORDER_N"
 			"FACTION_NAME_THEOCRACY"
+			"FACTION_NAME_CONSERVATIVE_LIBERALISM"
+			"FACTION_NAME_KHAKISTOCRACY"
 		}		
 		color = {124 124 124}		
 		rules = {

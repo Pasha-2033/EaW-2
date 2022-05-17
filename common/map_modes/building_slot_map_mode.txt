@@ -1,0 +1,127 @@
+scripted_map_modes = {
+	building_slot_map_mode = {
+		top = {
+            type = state
+            color = {
+				FROM = {
+					set_temp_variable = {
+						slots = common_builded_slots
+					}
+					add_to_temp_variable = {
+						slots = common_empty_slots
+					}
+					if = {
+						limit = {
+							check_variable = {
+								slots > 0
+							}
+						}
+						divide_temp_variable = {
+							slots = 25
+						}
+						#sqrt from x/y, where x < y
+						set_temp_variable = { temp = slots }
+						divide_temp_variable = { temp = 2 }
+						set_temp_variable = { r = temp }
+						#cycle 1
+						if = {
+							limit = {
+								check_variable = {
+									r > 0
+								}
+							}
+							set_temp_variable = { temp = slots }
+							divide_temp_variable = { temp = r }
+							add_to_temp_variable = { r = temp }
+							divide_temp_variable = { r = 2 }
+						}
+						#cycle 2
+						if = {
+							limit = {
+								check_variable = {
+									r > 0
+								}
+							}
+							set_temp_variable = { temp = slots }
+							divide_temp_variable = { temp = r }
+							add_to_temp_variable = { r = temp }
+							divide_temp_variable = { r = 2 }
+						}
+						#cycle 3
+						if = {
+							limit = {
+								check_variable = {
+									r > 0
+								}
+							}
+							set_temp_variable = { temp = slots }
+							divide_temp_variable = { temp = r }
+							add_to_temp_variable = { r = temp }
+							divide_temp_variable = { r = 2 }
+						}
+						#cycle 4
+						if = {
+							limit = {
+								check_variable = {
+									r > 0
+								}
+							}
+							set_temp_variable = { temp = slots }
+							divide_temp_variable = { temp = r }
+							add_to_temp_variable = { r = temp }
+							divide_temp_variable = { r = 2 }
+						}
+						set_temp_variable = { slots = r }
+						#calculate color
+						set_temp_variable = {
+							temp_red = 0.655
+						}
+						multiply_temp_variable = {
+							temp_red = slots
+						}
+						set_temp_variable = {
+							temp_green = 0.96
+						}
+						multiply_temp_variable = {
+							temp_green = slots
+						}
+						set_temp_variable = {
+							temp_blue = 0.6
+						}
+						multiply_temp_variable = {
+							temp_blue = slots
+						}
+						add_to_temp_variable = {
+							temp_blue = 0.4
+						}
+						set_temp_variable = {
+							temp_alpha = 0.3
+						}
+						multiply_temp_variable = {
+							temp_alpha = slots
+						}
+						add_to_temp_variable = {
+							temp_alpha = 0.7
+						}
+						#set color
+						set_temp_variable = { red = temp_red }
+						set_temp_variable = { green = temp_green }
+						set_temp_variable = { blue = temp_blue }
+						set_temp_variable = { alpha = temp_alpha }
+					}
+					else = {
+						set_temp_variable = { red = 0 }
+						set_temp_variable = { green = 0.02 }
+						set_temp_variable = { blue = 0.4 }
+						set_temp_variable = { alpha = 0.7 }
+					}
+				}
+            }
+        }
+		bottom = {
+			type = none
+		}
+        far_text = none
+        near_text = state
+    }
+}

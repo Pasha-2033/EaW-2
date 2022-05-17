@@ -1,0 +1,3751 @@
+#popularity control
+political_actions = {
+	anti_fascist_raids = {
+		icon = anti_fascist
+		visible = {
+			NOT = {
+				has_government = fascism
+			}
+			fascism > 0
+		}
+		available = {
+			fascism > 0.1
+		}
+		modifier = {
+			fascism_drift = -0.05
+			stability_weekly = -0.007
+		}
+		days_remove = 120
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision anti_fascist_raids"
+			add_stability = -0.1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove anti_fascist_raids"
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_reduse_fascism
+			}
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_reduse_party
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_reduse_fascism
+				has_country_flag = focus_on_reduse_party
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_ban_fascism
+				NOT = {
+					OR = {
+						has_country_flag = urgently_ban_fascism
+						fascism < 0.2
+					}
+				}
+			}
+			modifier = {
+				add = 750
+				has_country_flag = urgently_ban_fascism
+				NOT = {
+					fascism < 0.2
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_political_power < 100
+			}
+			modifier = {
+				factor = 0.1
+				has_stability < 0.1
+			}
+		}
+	}
+	anti_democratic_raids = {
+		icon = anti_democratic
+		visible = {
+			NOT = {
+				has_government = democratic
+			}
+			democratic > 0
+		}
+		available = {
+			democratic > 0.1
+		}
+		modifier = {
+			democratic_drift = -0.05
+			stability_weekly = -0.007
+		}
+		days_remove = 120
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision anti_democratic_raids"
+			add_stability = -0.1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove anti_democratic_raids"
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_reduse_democratic
+			}
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_reduse_party
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_reduse_democratic
+				has_country_flag = focus_on_reduse_party
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_ban_democratic
+				NOT = {
+					OR = {
+						has_country_flag = urgently_ban_democratic
+						democratic < 0.2
+					}
+				}
+			}
+			modifier = {
+				add = 750
+				has_country_flag = urgently_ban_democratic
+				NOT = {
+					democratic < 0.2
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_political_power < 100
+			}
+			modifier = {
+				factor = 0.1
+				has_stability < 0.1
+			}
+		}
+	}
+	anti_communist_raids = {
+		icon = anti_communist
+		visible = {
+			NOT = {
+				has_government = communism
+			}
+			communism > 0
+		}
+		available = {
+			communism > 0.1
+		}
+		modifier = {
+			communism_drift = -0.05
+			stability_weekly = -0.007
+		}
+		days_remove = 120
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision anti_communist_raids"
+			add_stability = -0.1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove anti_communist_raids"
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_reduse_communist
+			}
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_reduse_party
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_reduse_communist
+				has_country_flag = focus_on_reduse_party
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_ban_communist
+				NOT = {
+					OR = {
+						has_country_flag = urgently_ban_communist
+						communism < 0.2
+					}
+				}
+			}
+			modifier = {
+				add = 750
+				has_country_flag = urgently_ban_communist
+				NOT = {
+					communism < 0.2
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_political_power < 100
+			}
+			modifier = {
+				factor = 0.1
+				has_stability < 0.1
+			}
+		}
+	}
+	anti_neutral_raids = {
+		icon = anti_neutral
+		visible = {
+			NOT = {
+				has_government = neutrality
+			}
+			neutrality > 0
+		}
+		available = {
+			neutrality > 0.1
+		}
+		modifier = {
+			neutrality_drift = -0.05
+			stability_weekly = -0.007
+		}
+		days_remove = 120
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision anti_neutral_raids"
+			add_stability = -0.1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove anti_neutral_raids"
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_reduse_neutrality
+			}
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_reduse_party
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_reduse_neutrality
+				has_country_flag = focus_on_reduse_party
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_ban_neutrality
+				NOT = {
+					OR = {
+						has_country_flag = urgently_ban_neutrality
+						neutrality < 0.2
+					}
+				}
+			}
+			modifier = {
+				add = 750
+				has_country_flag = urgently_ban_neutrality
+				NOT = {
+					neutrality < 0.2
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_political_power < 100
+			}
+			modifier = {
+				factor = 0.1
+				has_stability < 0.1
+			}
+		}
+	}
+	anti_harmony_raids = {
+		icon = anti_harmony
+		visible = {
+			NOT = {
+				has_government = harmony
+			}
+			harmony > 0
+		}
+		available = {
+			harmony > 0.1
+		}
+		modifier = {
+			harmony_drift = -0.05
+			stability_weekly = -0.01
+		}
+		days_remove = 120
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision anti_harmony_raids"
+			add_stability = -0.1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove anti_harmony_raids"
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_reduse_harmony
+			}
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_reduse_party
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_reduse_harmony
+				has_country_flag = focus_on_reduse_party
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_ban_harmony
+				NOT = {
+					OR = {
+						has_country_flag = urgently_ban_harmony
+						harmony < 0.2
+					}
+				}
+			}
+			modifier = {
+				add = 750
+				has_country_flag = urgently_ban_harmony
+				NOT = {
+					harmony < 0.2
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_political_power < 100
+			}
+			modifier = {
+				factor = 0.1
+				has_stability < 0.1
+			}
+		}
+	}
+	anti_socialism_raids = {
+		icon = anti_socialism
+		visible = {
+			NOT = {
+				has_government = socialism
+			}
+			socialism > 0
+		}
+		available = {
+			socialism > 0.1
+		}
+		modifier = {
+			socialism_drift = -0.05
+			stability_weekly = -0.007
+		}
+		days_remove = 120
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision anti_socialism_raids"
+			add_stability = -0.1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove anti_socialism_raids"
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_reduse_socialism
+			}
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_reduse_party
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_reduse_socialism
+				has_country_flag = focus_on_reduse_party
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_ban_socialism
+				NOT = {
+					OR = {
+						has_country_flag = urgently_ban_socialism
+						socialism < 0.2
+					}
+				}
+			}
+			modifier = {
+				add = 750
+				has_country_flag = urgently_ban_socialism
+				NOT = {
+					socialism < 0.2
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_political_power < 100
+			}
+			modifier = {
+				factor = 0.1
+				has_stability < 0.1
+			}
+		}
+	}
+	anti_radicalism_raids = {
+		icon = anti_radicalism
+		visible = {
+			NOT = {
+				has_government = radicalism
+			}
+			radicalism > 0
+		}
+		available = {
+			radicalism > 0.1
+		}
+		modifier = {
+			radicalism_drift = -0.05
+			stability_weekly = -0.007
+		}
+		days_remove = 120
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision anti_radicalism_raids"
+			add_stability = -0.1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove anti_radicalism_raids"
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_reduse_radicalism
+			}
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_reduse_party
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_reduse_radicalism
+				has_country_flag = focus_on_reduse_party
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_ban_radicalism
+				NOT = {
+					OR = {
+						has_country_flag = urgently_ban_radicalism
+						radicalism < 0.2
+					}
+				}
+			}
+			modifier = {
+				add = 750
+				has_country_flag = urgently_ban_radicalism
+				NOT = {
+					radicalism < 0.2
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_political_power < 100
+			}
+			modifier = {
+				factor = 0.1
+				has_stability < 0.1
+			}
+		}
+	}
+	anti_unholy_raids = {
+		icon = anti_unholy
+		visible = {
+			NOT = {
+				has_government = unholy
+			}
+			unholy > 0
+		}
+		available = {
+			unholy > 0.1
+		}
+		modifier = {
+			unholy_drift = -0.05
+			stability_weekly = -0.007
+		}
+		days_remove = 120
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision anti_unholy_raids"
+			add_stability = -0.1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove anti_unholy_raids"
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_reduse_unholy
+			}
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_reduse_party
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_reduse_unholy
+				has_country_flag = focus_on_reduse_party
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_ban_unholy
+				NOT = {
+					OR = {
+						has_country_flag = urgently_ban_unholy
+						unholy < 0.2
+					}
+				}
+			}
+			modifier = {
+				add = 750
+				has_country_flag = urgently_ban_unholy
+				NOT = {
+					unholy < 0.2
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_political_power < 100
+			}
+			modifier = {
+				factor = 0.1
+				has_stability < 0.1
+			}
+		}
+	}
+	anti_holy_raids = {
+		icon = anti_holy
+		visible = {
+			NOT = {
+				has_government = holy
+			}
+			holy > 0
+		}
+		available = {
+			holy > 0.1
+		}
+		modifier = {
+			holy_drift = -0.05
+			stability_weekly = -0.01
+		}
+		days_remove = 120
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision anti_holy_raids"
+			add_stability = -0.1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove anti_holy_raids"
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_reduse_holy
+			}
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_reduse_party
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_reduse_holy
+				has_country_flag = focus_on_reduse_party
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_ban_holy
+				NOT = {
+					OR = {
+						has_country_flag = urgently_ban_holy
+						holy < 0.2
+					}
+				}
+			}
+			modifier = {
+				add = 750
+				has_country_flag = urgently_ban_holy
+				NOT = {
+					holy < 0.2
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_political_power < 100
+			}
+			modifier = {
+				factor = 0.1
+				has_stability < 0.1
+			}
+		}
+	}
+	anti_technocracy_raids = {
+		icon = anti_technocracy
+		visible = {
+			NOT = {
+				has_government = technocracy
+			}
+			technocracy > 0
+		}
+		available = {
+			technocracy > 0.1
+		}
+		modifier = {
+			technocracy_drift = -0.05
+			stability_weekly = -0.007
+		}
+		days_remove = 120
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision anti_technocracy_raids"
+			add_stability = -0.1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove anti_technocracy_raids"
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_reduse_technocracy
+			}
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_reduse_party
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_reduse_technocracy
+				has_country_flag = focus_on_reduse_party
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_ban_technocracy
+				NOT = {
+					OR = {
+						has_country_flag = urgently_ban_technocracy
+						technocracy < 0.2
+					}
+				}
+			}
+			modifier = {
+				add = 750
+				has_country_flag = urgently_ban_technocracy
+				NOT = {
+					technocracy < 0.2
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_political_power < 100
+			}
+			modifier = {
+				factor = 0.1
+				has_stability < 0.1
+			}
+		}
+	}
+	anti_anarchism_raids = {
+		icon = anti_anarchism
+		visible = {
+			NOT = {
+				has_government = anarchism
+			}
+			anarchism > 0
+		}
+		available = {
+			anarchism > 0.1
+		}
+		modifier = {
+			anarchism_drift = -0.05
+			stability_weekly = -0.007
+		}
+		days_remove = 120
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision anti_anarchism_raids"
+			add_stability = -0.1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove anti_anarchism_raids"
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_reduse_anarchism
+			}
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_reduse_party
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_reduse_anarchism
+				has_country_flag = focus_on_reduse_party
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_ban_anarchism
+				NOT = {
+					OR = {
+						has_country_flag = urgently_ban_anarchism
+						anarchism < 0.2
+					}
+				}
+			}
+			modifier = {
+				add = 750
+				has_country_flag = urgently_ban_anarchism
+				NOT = {
+					anarchism < 0.2
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_political_power < 100
+			}
+			modifier = {
+				factor = 0.1
+				has_stability < 0.1
+			}
+		}
+	}
+	anti_militarism_raids = {
+		icon = anti_militarism
+		visible = {
+			NOT = {
+				has_government = militarism
+			}
+			militarism > 0
+		}
+		available = {
+			militarism > 0.1
+		}
+		modifier = {
+			militarism_drift = -0.05
+			stability_weekly = -0.01
+		}
+		days_remove = 120
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision anti_militarism_raids"
+			add_stability = -0.1
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove anti_militarism_raids"
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_reduse_militarism
+			}
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_reduse_party
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_reduse_militarism
+				has_country_flag = focus_on_reduse_party
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_ban_militarism
+				NOT = {
+					OR = {
+						has_country_flag = urgently_ban_militarism
+						militarism < 0.2
+					}
+				}
+			}
+			modifier = {
+				add = 750
+				has_country_flag = urgently_ban_militarism
+				NOT = {
+					militarism < 0.2
+				}
+			}
+			modifier = {
+				factor = 0.5
+				has_political_power < 100
+			}
+			modifier = {
+				factor = 0.1
+				has_stability < 0.1
+			}
+		}
+	}
+	ban_fascist_party = {
+		icon = anti_fascist
+		available = {
+			fascism < 0.2
+		}
+		visible = {
+			NOT = {
+				has_government = fascism
+			}
+			fascism > 0
+		}
+		remove_trigger = {
+			hidden_trigger = {
+				has_government = fascism
+			}
+		}
+		modifier = {
+			fascism_drift = -0.05
+		}
+		days_remove = -1
+		cost = 100
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ban_fascist_party"
+			hidden_effect = {
+				set_temp_variable = {
+					var = ban_ideology_var
+					value = party_popularity@fascism
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -1
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = 0.66
+				}
+			}
+			remove_fascist_spirits_effect = yes
+			custom_effect_tooltip = ban_fascist_party_tt
+			add_stability = ban_ideology_var
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_ban_fascism
+				if = {
+					limit = {
+						NOT = {
+							has_country_leader_with_trait = country_leader_trait_aggressive_leader
+						}
+					}
+					has_political_power > 150
+				}
+			}
+			modifier = {
+				add = 75
+				has_country_flag = urgently_ban_fascism
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_ban_party
+			}
+			modifier = {
+				add = 800
+				has_country_flag = focus_on_ban_party
+				OR = {
+					has_country_flag = focus_on_ban_fascism
+					has_country_flag = urgently_ban_fascism
+				}
+			}
+		}
+	}
+	ban_democratic_party = {
+		icon = anti_democratic
+		available = {
+			democratic < 0.2
+		}
+		visible = {
+			NOT = {
+				has_government = democratic
+			}
+			democratic > 0
+		}
+		remove_trigger = {
+			hidden_trigger = {
+				has_government = democratic
+			}
+		}
+		modifier = {
+			democratic_drift = -0.05
+		}
+		days_remove = -1
+		cost = 100
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ban_democratic_party"
+			hidden_effect = {
+				set_temp_variable = {
+					var = ban_ideology_var
+					value = party_popularity@democratic
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -1
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = 0.66
+				}
+			}
+			remove_democratic_spirits_effect = yes
+			custom_effect_tooltip = ban_democratic_party_tt
+			add_stability = ban_ideology_var
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_ban_democratic
+				if = {
+					limit = {
+						NOT = {
+							has_country_leader_with_trait = country_leader_trait_aggressive_leader
+						}
+					}
+					has_political_power > 150
+				}
+			}
+			modifier = {
+				add = 75
+				has_country_flag = urgently_ban_democratic
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_ban_party
+			}
+			modifier = {
+				add = 800
+				has_country_flag = focus_on_ban_party
+				OR = {
+					has_country_flag = focus_on_ban_democratic
+					has_country_flag = urgently_ban_democratic
+				}
+			}
+		}
+	}
+	ban_communist_party = {
+		icon = anti_communist
+		available = {
+			communism < 0.2
+		}
+		visible = {
+			NOT = {
+				has_government = communism
+			}
+			communism > 0
+		}
+		remove_trigger = {
+			hidden_trigger = {
+				has_government = communism
+			}
+		}
+		modifier = {
+			communism_drift = -0.05
+		}
+		days_remove = -1
+		cost = 100
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ban_communist_party"
+			hidden_effect = {
+				set_temp_variable = {
+					var = ban_ideology_var
+					value = party_popularity@communism
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -1
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = 0.66
+				}
+				set_country_flag = banned_communism_flag
+			}
+			remove_communist_spirits_effect = yes
+			custom_effect_tooltip = ban_communist_party_tt
+			add_stability = ban_ideology_var
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_ban_communist
+				if = {
+					limit = {
+						NOT = {
+							has_country_leader_with_trait = country_leader_trait_aggressive_leader
+						}
+					}
+					has_political_power > 150
+				}
+			}
+			modifier = {
+				add = 75
+				has_country_flag = urgently_ban_communist
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_ban_party
+			}
+			modifier = {
+				add = 800
+				has_country_flag = focus_on_ban_party
+				OR = {
+					has_country_flag = focus_on_ban_communist
+					has_country_flag = urgently_ban_communist
+				}
+			}
+		}
+	}
+	ban_neutral_party = {
+		icon = anti_neutral
+		available = {
+			neutrality < 0.2
+		}
+		visible = {
+			NOT = {
+				has_government = neutrality
+			}
+			neutrality > 0
+		}
+		remove_trigger = {
+			hidden_trigger = {
+				has_government = neutrality
+			}
+		}
+		modifier = {
+			neutrality_drift = -0.05
+		}
+		days_remove = -1
+		cost = 100
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ban_neutral_party"
+			hidden_effect = {
+				set_temp_variable = {
+					var = ban_ideology_var
+					value = party_popularity@neutrality
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -1
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = 0.66
+				}
+			}
+			remove_neutrality_spirits_effect = yes
+			custom_effect_tooltip = ban_neutrality_party_tt
+			add_stability = ban_ideology_var
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_ban_neutrality
+				if = {
+					limit = {
+						NOT = {
+							has_country_leader_with_trait = country_leader_trait_aggressive_leader
+						}
+					}
+					has_political_power > 150
+				}
+			}
+			modifier = {
+				add = 75
+				has_country_flag = urgently_ban_neutrality
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_ban_party
+			}
+			modifier = {
+				add = 800
+				has_country_flag = focus_on_ban_party
+				OR = {
+					has_country_flag = focus_on_ban_neutrality
+					has_country_flag = urgently_ban_neutrality
+				}
+			}
+		}
+	}
+	ban_harmony_party = {
+		icon = anti_harmony
+		available = {
+			harmony < 0.2
+		}
+		visible = {
+			NOT = {
+				has_government = harmony
+			}
+			harmony > 0
+		}
+		remove_trigger = {
+			hidden_trigger = {
+				has_government = harmony
+			}
+		}
+		modifier = {
+			harmony_drift = -0.05
+		}
+		days_remove = -1
+		cost = 100
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ban_harmony_party"
+			hidden_effect = {
+				set_temp_variable = {
+					var = ban_ideology_var
+					value = party_popularity@harmony
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -1
+				}
+				add_popularity = {
+					ideology = harmony
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = 0.66
+				}
+			}
+			remove_harmony_spirits_effect = yes
+			custom_effect_tooltip = ban_harmony_party_tt
+			add_stability = ban_ideology_var
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_ban_harmony
+				if = {
+					limit = {
+						NOT = {
+							has_country_leader_with_trait = country_leader_trait_aggressive_leader
+						}
+					}
+					has_political_power > 150
+				}
+			}
+			modifier = {
+				add = 75
+				has_country_flag = urgently_ban_harmony
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_ban_party
+			}
+			modifier = {
+				add = 800
+				has_country_flag = focus_on_ban_party
+				OR = {
+					has_country_flag = focus_on_ban_harmony
+					has_country_flag = urgently_ban_harmony
+				}
+			}
+		}
+	}
+	ban_socialism_party = {
+		icon = anti_socialism
+		available = {
+			socialism < 0.2
+		}
+		visible = {
+			NOT = {
+				has_government = socialism
+			}
+			socialism > 0
+		}
+		remove_trigger = {
+			hidden_trigger = {
+				has_government = socialism
+			}
+		}
+		modifier = {
+			socialism_drift = -0.05
+		}
+		days_remove = -1
+		cost = 100
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ban_socialism_party"
+			hidden_effect = {
+				set_temp_variable = {
+					var = ban_ideology_var
+					value = party_popularity@socialism
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -1
+				}
+				add_popularity = {
+					ideology = socialism
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = 0.66
+				}
+			}
+			remove_socialism_spirits_effect = yes
+			custom_effect_tooltip = ban_socialism_party_tt
+			add_stability = ban_ideology_var
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_ban_socialism
+				if = {
+					limit = {
+						NOT = {
+							has_country_leader_with_trait = country_leader_trait_aggressive_leader
+						}
+					}
+					has_political_power > 150
+				}
+			}
+			modifier = {
+				add = 75
+				has_country_flag = urgently_ban_socialism
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_ban_party
+			}
+			modifier = {
+				add = 800
+				has_country_flag = focus_on_ban_party
+				OR = {
+					has_country_flag = focus_on_ban_socialism
+					has_country_flag = urgently_ban_socialism
+				}
+			}
+		}
+	}
+	ban_radicalism_party = {
+		icon = anti_radicalism
+		available = {
+			radicalism < 0.2
+		}
+		visible = {
+			NOT = {
+				has_government = radicalism
+			}
+			radicalism > 0
+		}
+		remove_trigger = {
+			hidden_trigger = {
+				has_government = radicalism
+			}
+		}
+		modifier = {
+			radicalism_drift = -0.05
+		}
+		days_remove = -1
+		cost = 100
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ban_radicalism_party"
+			hidden_effect = {
+				set_temp_variable = {
+					var = ban_ideology_var
+					value = party_popularity@radicalism
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -1
+				}
+				add_popularity = {
+					ideology = radicalism
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = 0.66
+				}
+			}
+			remove_radicalism_spirits_effect = yes
+			custom_effect_tooltip = ban_radicalism_party_tt
+			add_stability = ban_ideology_var
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_ban_radicalism
+				if = {
+					limit = {
+						NOT = {
+							has_country_leader_with_trait = country_leader_trait_aggressive_leader
+						}
+					}
+					has_political_power > 150
+				}
+			}
+			modifier = {
+				add = 75
+				has_country_flag = urgently_ban_radicalism
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_ban_party
+			}
+			modifier = {
+				add = 800
+				has_country_flag = focus_on_ban_party
+				OR = {
+					has_country_flag = focus_on_ban_radicalism
+					has_country_flag = urgently_ban_radicalism
+				}
+			}
+		}
+	}
+	ban_unholy_party = {
+		icon = anti_unholy
+		available = {
+			unholy < 0.2
+		}
+		visible = {
+			NOT = {
+				has_government = unholy
+			}
+			unholy > 0
+		}
+		remove_trigger = {
+			hidden_trigger = {
+				has_government = unholy
+			}
+		}
+		modifier = {
+			unholy_drift = -0.05
+		}
+		days_remove = -1
+		cost = 100
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ban_unholy_party"
+			hidden_effect = {
+				set_temp_variable = {
+					var = ban_ideology_var
+					value = party_popularity@unholy
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -1
+				}
+				add_popularity = {
+					ideology = unholy
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = 0.66
+				}
+			}
+			remove_unholy_spirits_effect = yes
+			custom_effect_tooltip = ban_unholy_party_tt
+			add_stability = ban_ideology_var
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_ban_unholy
+				if = {
+					limit = {
+						NOT = {
+							has_country_leader_with_trait = country_leader_trait_aggressive_leader
+						}
+					}
+					has_political_power > 150
+				}
+			}
+			modifier = {
+				add = 75
+				has_country_flag = urgently_ban_unholy
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_ban_party
+			}
+			modifier = {
+				add = 800
+				has_country_flag = focus_on_ban_party
+				OR = {
+					has_country_flag = focus_on_ban_unholy
+					has_country_flag = urgently_ban_unholy
+				}
+			}
+		}
+	}
+	ban_holy_party = {
+		icon = anti_holy
+		available = {
+			holy < 0.2
+		}
+		visible = {
+			NOT = {
+				has_government = holy
+			}
+			holy > 0
+		}
+		remove_trigger = {
+			hidden_trigger = {
+				has_government = holy
+			}
+		}
+		modifier = {
+			holy_drift = -0.05
+		}
+		days_remove = -1
+		cost = 100
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ban_holy_party"
+			hidden_effect = {
+				set_temp_variable = {
+					var = ban_ideology_var
+					value = party_popularity@holy
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -1
+				}
+				add_popularity = {
+					ideology = holy
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = 0.66
+				}
+			}
+			remove_holy_spirits_effect = yes
+			custom_effect_tooltip = ban_holy_party_tt
+			add_stability = ban_ideology_var
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_ban_holy
+				if = {
+					limit = {
+						NOT = {
+							has_country_leader_with_trait = country_leader_trait_aggressive_leader
+						}
+					}
+					has_political_power > 150
+				}
+			}
+			modifier = {
+				add = 75
+				has_country_flag = urgently_ban_holy
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_ban_party
+			}
+			modifier = {
+				add = 800
+				has_country_flag = focus_on_ban_party
+				OR = {
+					has_country_flag = focus_on_ban_holy
+					has_country_flag = urgently_ban_holy
+				}
+			}
+		}
+	}
+	ban_technocracy_party = {
+		icon = anti_technocracy
+		available = {
+			technocracy < 0.2
+		}
+		visible = {
+			NOT = {
+				has_government = technocracy
+			}
+			technocracy > 0
+		}
+		remove_trigger = {
+			hidden_trigger = {
+				has_government = technocracy
+			}
+		}
+		modifier = {
+			technocracy_drift = -0.05
+		}
+		days_remove = -1
+		cost = 100
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ban_technocracy_party"
+			hidden_effect = {
+				set_temp_variable = {
+					var = ban_ideology_var
+					value = party_popularity@technocracy
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -1
+				}
+				add_popularity = {
+					ideology = technocracy
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = 0.66
+				}
+			}
+			remove_technocracy_spirits_effect = yes
+			custom_effect_tooltip = ban_technocracy_party_tt
+			add_stability = ban_ideology_var
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_ban_technocracy
+				if = {
+					limit = {
+						NOT = {
+							has_country_leader_with_trait = country_leader_trait_aggressive_leader
+						}
+					}
+					has_political_power > 150
+				}
+			}
+			modifier = {
+				add = 75
+				has_country_flag = urgently_ban_technocracy
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_ban_party
+			}
+			modifier = {
+				add = 800
+				has_country_flag = focus_on_ban_party
+				OR = {
+					has_country_flag = focus_on_ban_technocracy
+					has_country_flag = urgently_ban_technocracy
+				}
+			}
+		}
+	}
+	ban_anarchism_party = {
+		icon = anti_anarchism
+		available = {
+			anarchism < 0.2
+		}
+		visible = {
+			NOT = {
+				has_government = anarchism
+			}
+			anarchism > 0
+		}
+		remove_trigger = {
+			hidden_trigger = {
+				has_government = anarchism
+			}
+		}
+		modifier = {
+			anarchism_drift = -0.05
+		}
+		days_remove = -1
+		cost = 100
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ban_anarchism_party"
+			hidden_effect = {
+				set_temp_variable = {
+					var = ban_ideology_var
+					value = party_popularity@anarchism
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -1
+				}
+				add_popularity = {
+					ideology = anarchism
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = 0.66
+				}
+			}
+			remove_anarchism_spirits_effect = yes
+			custom_effect_tooltip = ban_anarchism_party_tt
+			add_stability = ban_ideology_var
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_ban_anarchism
+				if = {
+					limit = {
+						NOT = {
+							has_country_leader_with_trait = country_leader_trait_aggressive_leader
+						}
+					}
+					has_political_power > 150
+				}
+			}
+			modifier = {
+				add = 75
+				has_country_flag = urgently_ban_anarchism
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_ban_party
+			}
+			modifier = {
+				add = 800
+				has_country_flag = focus_on_ban_party
+				OR = {
+					has_country_flag = focus_on_ban_anarchism
+					has_country_flag = urgently_ban_anarchism
+				}
+			}
+		}
+	}
+	ban_militarism_party = {
+		icon = anti_militarism
+		available = {
+			militarism < 0.2
+		}
+		visible = {
+			NOT = {
+				has_government = militarism
+			}
+			militarism > 0
+		}
+		remove_trigger = {
+			hidden_trigger = {
+				has_government = militarism
+			}
+		}
+		modifier = {
+			militarism_drift = -0.05
+		}
+		days_remove = -1
+		cost = 100
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ban_militarism_party"
+			hidden_effect = {
+				set_temp_variable = {
+					var = ban_ideology_var
+					value = party_popularity@militarism
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = -1
+				}
+				add_popularity = {
+					ideology = militarism
+					popularity = ban_ideology_var
+				}
+				multiply_temp_variable = {
+					var = ban_ideology_var
+					value = 0.66
+				}
+			}
+			remove_militarism_spirits_effect = yes
+			custom_effect_tooltip = ban_militarism_party_tt
+			add_stability = ban_ideology_var
+		}
+		ai_will_do = {
+			base = 0
+			modifier = {
+				add = 25
+				has_country_flag = focus_on_ban_militarism
+				if = {
+					limit = {
+						NOT = {
+							has_country_leader_with_trait = country_leader_trait_aggressive_leader
+						}
+					}
+					has_political_power > 150
+				}
+			}
+			modifier = {
+				add = 75
+				has_country_flag = urgently_ban_militarism
+			}
+			modifier = {
+				add = 100
+				has_country_flag = focus_on_ban_party
+			}
+			modifier = {
+				add = 800
+				has_country_flag = focus_on_ban_party
+				OR = {
+					has_country_flag = focus_on_ban_militarism
+					has_country_flag = urgently_ban_militarism
+				}
+			}
+		}
+	}
+	############################################################################
+	institute_press_censorship_fascist_state = {
+		icon = press_censorship
+		visible = {
+			has_government = fascism
+		}
+		available = {
+			fascism > 0.05
+		}
+		modifier = {
+			democratic_drift = -0.003
+			communism_drift = -0.003
+			fascism_drift = 0.033
+			neutrality_drift = -0.003
+			harmony_drift = -0.003
+			socialism_drift = -0.003
+			radicalism_drift = -0.003
+			unholy_drift = -0.003
+			holy_drift = -0.003
+			technocracy_drift = -0.003
+			anarchism_drift = -0.003
+			militarism_drift = -0.003
+		}
+		days_remove = 360
+		cost = 150
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				fascism < 0.33
+				add = 75
+			}
+			modifier = {
+				has_country_leader_with_trait = country_leader_trait_aggressive_leader
+				add = 50
+			}
+			modifier = {
+				has_political_power < 200
+				factor = 0
+			}
+		}
+	}
+	institute_press_censorship_democratic_state = {
+		icon = press_censorship
+		visible = {
+			has_government = democratic
+		}
+		available = {
+			democratic > 0.5
+		}
+		modifier = {
+			democratic_drift = 0.033
+			communism_drift = -0.003
+			fascism_drift = -0.003
+			neutrality_drift = -0.003
+			harmony_drift = -0.003
+			socialism_drift = -0.003
+			radicalism_drift = -0.003
+			unholy_drift = -0.003
+			holy_drift = -0.003
+			technocracy_drift = -0.003
+			anarchism_drift = -0.003
+			militarism_drift = -0.003
+		}
+		days_remove = 360
+		cost = 150
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	institute_press_censorship_communist_state = {
+		icon = press_censorship
+		visible = {
+			has_government = communism
+		}
+		available = {
+			communism > 0.05
+		}
+		modifier = {
+			democratic_drift = -0.003
+			communism_drift = 0.033
+			fascism_drift = -0.003
+			neutrality_drift = -0.003
+			harmony_drift = -0.003
+			socialism_drift = -0.003
+			radicalism_drift = -0.003
+			unholy_drift = -0.003
+			holy_drift = -0.003
+			technocracy_drift = -0.003
+			anarchism_drift = -0.003
+			militarism_drift = -0.003
+		}
+		days_remove = 360
+		cost = 150
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				communism < 0.33
+				add = 75
+			}
+			modifier = {
+				has_country_leader_with_trait = country_leader_trait_aggressive_leader
+				add = 50
+			}
+			modifier = {
+				has_political_power < 200
+				factor = 0
+			}
+		}
+	}
+	institute_press_censorship_neutrality_state = {
+		icon = press_censorship
+		visible = {
+			has_government = neutrality
+		}
+		available = {
+			neutrality > 0.05
+		}
+		modifier = {
+			democratic_drift = -0.003
+			communism_drift = -0.003
+			fascism_drift = -0.003
+			neutrality_drift = 0.033
+			harmony_drift = -0.003
+			socialism_drift = -0.003
+			radicalism_drift = -0.003
+			unholy_drift = -0.003
+			holy_drift = -0.003
+			technocracy_drift = -0.003
+			anarchism_drift = -0.003
+			militarism_drift = -0.003
+		}
+		days_remove = 360
+		cost = 150
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				neutrality < 0.33
+				add = 100
+			}
+			modifier = {
+				has_country_leader_with_trait = country_leader_trait_aggressive_leader
+				add = 25
+			}
+			modifier = {
+				has_political_power < 200
+				factor = 0
+			}
+		}
+	}
+	institute_press_censorship_harmony_state = {
+		icon = press_censorship
+		visible = {
+			has_government = harmony
+		}
+		available = {
+			harmony > 0.5
+		}
+		modifier = {
+			democratic_drift = -0.003
+			communism_drift = -0.003
+			fascism_drift = -0.003
+			neutrality_drift = -0.003
+			harmony_drift = 0.033
+			socialism_drift = -0.003
+			radicalism_drift = -0.003
+			unholy_drift = -0.003
+			holy_drift = -0.003
+			technocracy_drift = -0.003
+			anarchism_drift = -0.003
+			militarism_drift = -0.003
+		}
+		days_remove = 360
+		cost = 150
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	institute_press_censorship_socialism_state = {
+		icon = press_censorship
+		visible = {
+			has_government = socialism
+		}
+		available = {
+			socialism > 0.1
+		}
+		modifier = {
+			democratic_drift = -0.003
+			communism_drift = -0.003
+			fascism_drift = -0.003
+			neutrality_drift = -0.003
+			harmony_drift = -0.003
+			socialism_drift = 0.033
+			radicalism_drift = -0.003
+			unholy_drift = -0.003
+			holy_drift = -0.003
+			technocracy_drift = -0.003
+			anarchism_drift = -0.003
+			militarism_drift = -0.003
+		}
+		days_remove = 360
+		cost = 150
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				socialism < 0.33
+				add = 75
+			}
+			modifier = {
+				has_country_leader_with_trait = country_leader_trait_aggressive_leader
+				add = 50
+			}
+			modifier = {
+				has_political_power < 200
+				factor = 0
+			}
+		}
+	}
+	institute_press_censorship_radicalism_state = {
+		icon = press_censorship
+		visible = {
+			has_government = radicalism
+		}
+		available = {
+			radicalism > 0.05
+		}
+		modifier = {
+			democratic_drift = -0.003
+			communism_drift = -0.003
+			fascism_drift = -0.003
+			neutrality_drift = -0.003
+			harmony_drift = -0.003
+			socialism_drift = -0.003
+			radicalism_drift = 0.033
+			unholy_drift = -0.003
+			holy_drift = -0.003
+			technocracy_drift = -0.003
+			anarchism_drift = -0.003
+			militarism_drift = -0.003
+		}
+		days_remove = 360
+		cost = 150
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				radicalism < 0.5
+				add = 100
+			}
+			modifier = {
+				has_country_leader_with_trait = country_leader_trait_aggressive_leader
+				add = 50
+			}
+			modifier = {
+				has_political_power < 200
+				factor = 0
+			}
+		}
+	}
+	institute_press_censorship_unholy_state = {
+		icon = press_censorship
+		visible = {
+			has_government = unholy
+		}
+		available = {
+			unholy > 0.05
+		}
+		modifier = {
+			democratic_drift = -0.003
+			communism_drift = -0.003
+			fascism_drift = -0.003
+			neutrality_drift = -0.003
+			harmony_drift = -0.003
+			socialism_drift = -0.003
+			radicalism_drift = -0.003
+			unholy_drift = 0.033
+			holy_drift = -0.003
+			technocracy_drift = -0.003
+			anarchism_drift = -0.003
+			militarism_drift = -0.003
+		}
+		days_remove = 360
+		cost = 150
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				unholy < 0.75
+				add = 150
+			}
+			modifier = {
+				has_political_power < 200
+				factor = 0
+			}
+		}
+	}
+	institute_press_censorship_holy_state = {
+		icon = press_censorship
+		visible = {
+			has_government = holy
+		}
+		available = {
+			holy > 0.05
+		}
+		modifier = {
+			democratic_drift = -0.003
+			communism_drift = -0.003
+			fascism_drift = -0.003
+			neutrality_drift = -0.003
+			harmony_drift = -0.003
+			socialism_drift = -0.003
+			radicalism_drift = -0.003
+			unholy_drift = -0.003
+			holy_drift = 0.033
+			technocracy_drift = -0.003
+			anarchism_drift = -0.003
+			militarism_drift = -0.003
+		}
+		days_remove = 360
+		cost = 150
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				holy < 0.5
+				add = 75
+			}
+			modifier = {
+				holy < 0.75
+				add = 25
+			}
+			modifier = {
+				has_country_leader_with_trait = country_leader_trait_aggressive_leader
+				add = 50
+			}
+			modifier = {
+				has_political_power < 200
+				factor = 0
+			}
+		}
+	}
+	institute_press_censorship_technocracy_state = {
+		icon = press_censorship
+		visible = {
+			has_government = technocracy
+		}
+		available = {
+			technocracy > 0.05
+		}
+		modifier = {
+			democratic_drift = -0.003
+			communism_drift = -0.003
+			fascism_drift = -0.003
+			neutrality_drift = -0.003
+			harmony_drift = -0.003
+			socialism_drift = -0.003
+			radicalism_drift = -0.003
+			unholy_drift = -0.003
+			holy_drift = -0.003
+			technocracy_drift = 0.033
+			anarchism_drift = -0.003
+			militarism_drift = -0.003
+		}
+		days_remove = 360
+		cost = 150
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				technocracy < 0.5
+				add = 75
+			}
+			modifier = {
+				technocracy < 0.75
+				add = 25
+			}
+			modifier = {
+				has_country_leader_with_trait = country_leader_trait_aggressive_leader
+				add = 25
+			}
+			modifier = {
+				has_political_power < 200
+				factor = 0
+			}
+		}
+	}
+	institute_press_censorship_anarchism_state = {
+		icon = press_censorship
+		visible = {
+			has_government = anarchism
+		}
+		available = {
+			anarchism < 1
+		}
+		modifier = {
+			democratic_drift = -0.003
+			communism_drift = -0.003
+			fascism_drift = -0.003
+			neutrality_drift = -0.003
+			harmony_drift = -0.003
+			socialism_drift = -0.003
+			radicalism_drift = -0.003
+			unholy_drift = -0.003
+			holy_drift = -0.003
+			technocracy_drift = -0.003
+			anarchism_drift = 0.033
+			militarism_drift = -0.003
+		}
+		days_remove = 360
+		cost = 150
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				anarchism < 0.75
+				add = 100
+			}
+			modifier = {
+				has_political_power < 200
+				factor = 0
+			}
+		}
+	}
+	institute_press_censorship_militarism_state = {
+		icon = press_censorship
+		visible = {
+			has_government = militarism
+		}
+		available = {
+			militarism < 1
+		}
+		modifier = {
+			democratic_drift = -0.003
+			communism_drift = -0.003
+			fascism_drift = -0.003
+			neutrality_drift = -0.003
+			harmony_drift = -0.003
+			socialism_drift = -0.003
+			radicalism_drift = -0.003
+			unholy_drift = -0.003
+			holy_drift = -0.003
+			technocracy_drift = -0.003
+			anarchism_drift = -0.003
+			militarism_drift = 0.033
+		}
+		days_remove = 360
+		cost = 150
+		ai_will_do = {
+			factor = 0
+			modifier = {
+				militarism < 0.5
+				add = 75
+			}
+			modifier = {
+				militarism < 0.75
+				add = 25
+			}
+			modifier = {
+				has_country_leader_with_trait = country_leader_trait_aggressive_leader
+				add = 50
+			}
+			modifier = {
+				has_political_power < 200
+				factor = 0
+			}
+		}
+	}
+}
+
+
+
+
+
+
+fascism_on_the_rise = {
+	prepare_for_fascist_civil_war = {
+		icon = generic_prepare_civil_war
+		available = {
+			fascism > 0.1
+			num_of_controlled_states > 1
+		}
+		visible = {
+			NOT = {
+				OR = {
+					has_government = fascism
+					has_country_flag = preparation_for_fascist_civil_war
+				}
+			}
+			is_ai = no
+			has_idea_with_trait = fascist_demagogue
+			check_has_focus_tree_to_switch_to_fascism = yes
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision prepare_for_fascist_civil_war"
+			set_country_flag = preparation_for_fascist_civil_war
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	expand_civil_fascism_support = {
+		icon = generic_civil_support
+		visible = {
+			OR = {
+				has_country_flag = preparation_for_fascist_civil_war
+				has_country_flag = open_up_political_discourse_fascism
+			}
+			has_idea_with_trait = fascist_demagogue
+			check_has_focus_tree_to_switch_to_fascism = yes
+			NOT = {
+				has_government = fascism
+			}
+		}
+		cancel_trigger = {
+			hidden_trigger = {
+				has_civil_war = yes
+			}
+		}
+		fire_only_once = no
+		cost = 25
+		days_remove = 30
+		modifier = {
+			fascism_drift = 0.02
+			stability_weekly = -0.03
+			political_power_gain = -0.2
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	army_support_for_fascist_civil_war = {
+		icon = generic_army_support
+		visible = {
+			has_country_flag = preparation_for_fascist_civil_war
+			has_idea_with_trait = fascist_demagogue
+			check_has_focus_tree_to_switch_to_fascism = yes
+			NOT = {
+				has_government = fascism
+			}
+		}
+		cancel_trigger = {
+			hidden_trigger = {
+				has_civil_war = yes
+			}
+		}
+		fire_only_once = no
+		cost = 50
+		days_remove = 30
+		modifier = {
+			command_power_gain = -0.02
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove army_support_for_fascist_civil_war"
+			if = {
+				limit = {
+					check_variable = {
+						var = army_support_var
+						value = 0.1
+						compare = less_than
+					}
+				}
+				set_variable = {
+					var = army_support_var
+					value = 0.1
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = army_support_var
+						value = 0.1
+						compare = greater_than_or_equals
+					}
+				}
+				add_to_variable = {
+					var = army_support_var
+					value = 0.1
+				}
+			}
+			set_country_flag = military_support_for_fascist_civil_war
+			custom_effect_tooltip = army_support_TT
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision army_support_for_fascist_civil_war"
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	ensure_general_loyalty_for_fascist_civil_war = {
+		icon = generic_army_support
+		available = {
+			has_country_flag = military_support_for_fascist_civil_war
+		}
+		visible = {
+			has_country_flag = preparation_for_fascist_civil_war
+			has_idea_with_trait = fascist_demagogue
+			NOT = {
+				has_government = fascism
+			}
+			any_army_leader = {
+				is_field_marshal = no
+				NOT = {
+					has_trait = hidden_sympathies
+				}
+			}
+			check_has_focus_tree_to_switch_to_fascism = yes
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ensure_general_loyalty_for_fascist_civil_war"
+			country_event = {
+				id = decisions.1
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	ensure_marshal_loyalty_for_fascist_civil_war = {
+		icon = generic_army_support
+		available = {
+			has_country_flag = military_support_for_fascist_civil_war
+		}
+		visible = {
+			has_country_flag = preparation_for_fascist_civil_war
+			has_idea_with_trait = fascist_demagogue
+			NOT = {
+				has_government = fascism
+			}
+			any_army_leader = {
+				NOT = {
+					has_trait = hidden_sympathies
+				}
+			}
+			check_has_focus_tree_to_switch_to_fascism = yes
+			any_army_leader = {
+				is_field_marshal = yes
+				NOT = {
+					has_unit_leader_flag = hidden_sympathies_marshal
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ensure_marshal_loyalty_for_fascist_civil_war"
+			country_event = {
+				id = decisions.2
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	siphon_equipment_stockpiles_for_fascist_civil_war = {
+		icon = generic_prepare_civil_war
+		available = {
+			has_country_flag = military_support_for_fascist_civil_war
+			has_equipment = {
+				infantry_equipment > 1000
+			}
+			command_power > 2
+		}
+		visible = {
+			has_country_flag = preparation_for_fascist_civil_war
+			has_country_flag = military_support_for_fascist_civil_war
+			has_idea_with_trait = fascist_demagogue
+			check_has_focus_tree_to_switch_to_fascism = yes
+			NOT = {
+				has_government = fascism
+			}
+		}
+		fire_only_once = no
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision siphon_equipment_stockpiles_for_fascist_civil_war"
+			add_command_power = -2
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+			set_country_flag = siphoned_equipment_stockpiles_for_civil_war
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	formulate_surprise_attack_plan_for_fascist_civil_war = {
+		icon = generic_army_support
+		available = {
+			has_country_flag = military_support_for_fascist_civil_war
+			command_power > 2
+		}
+		visible = {
+			has_country_flag = preparation_for_fascist_civil_war
+			has_idea_with_trait = fascist_demagogue
+			check_has_focus_tree_to_switch_to_fascism = yes
+			NOT = {
+				has_government = fascism
+			}
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision formulate_surprise_attack_plan_for_fascist_civil_war"
+			add_command_power = -2
+			custom_effect_tooltip = formulate_surprise_attack_plan_for_civil_war_tt
+			set_country_flag = formulated_surprise_attack_plan_for_civil_war
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ignite_the_fascist_civil_war_single_state = {
+		icon = generic_ignite_civil_war
+		name = ignite_the_fascist_civil_war
+
+		available = {
+			has_stability < 0.5
+			fascism > 0.50
+		}
+
+		visible = {
+			has_country_flag = preparation_for_fascist_civil_war
+			has_idea_with_trait = fascist_demagogue
+			NOT = { has_government = fascism }
+			check_has_focus_tree_to_switch_to_fascism = yes
+			check_variable = { num_owned_states = 1 }
+		}
+	
+		fire_only_once = yes
+	
+		cost = 50
+		
+		complete_effect = {
+			set_politics = { ruling_party = fascism elections_allowed = no }
+			clr_country_flag = preparation_for_fascism_civil_war
+			clr_country_flag = military_support_for_fascism_civil_war
+			clr_country_flag = civil_support_for_fascism_civil_war
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ignite_the_fascist_civil_war = {
+		icon = generic_ignite_civil_war
+		available = {
+			has_stability < 0.5
+		}
+		visible = {
+			has_country_flag = preparation_for_fascist_civil_war
+			has_idea_with_trait = fascist_demagogue
+			check_has_focus_tree_to_switch_to_fascism = yes
+			NOT = {
+				has_government = fascism
+			}
+			check_variable = { num_owned_states > 1 }
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ignite_the_fascist_civil_war"
+			if = {
+				limit = {
+					has_government = democratic
+				}
+				set_variable = {
+					var = civil_war_size_var
+					value = party_popularity@democratic
+				}
+			}
+			if = {
+				limit = {
+					has_government = communism
+				}
+				set_variable = {
+					var = civil_war_size_var
+					value = party_popularity@communism
+				}
+			}
+			if = {
+				limit = {
+					has_government = neutrality
+				}
+				set_variable = {
+					var = civil_war_size_var
+					value = party_popularity@neutrality
+				}
+			}
+			subtract_from_variable = {
+				var = civil_war_size_var
+				value = army_support_var
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = civil_war_size_var
+						value = 0.3
+						compare = less_than
+					}
+				}
+				set_variable = {
+					var = civil_war_size_var
+					value = 0.3
+				}
+			}
+			start_civil_war = {
+				ruling_party = fascism
+				ideology = ROOT
+				size = civil_war_size_var
+				keep_unit_leaders_trigger = {
+					has_trait = hidden_sympathies
+				}
+			}
+			clr_country_flag = preparation_for_fascism_civil_war
+			clr_country_flag = military_support_for_fascism_civil_war
+			clr_country_flag = civil_support_for_fascism_civil_war
+			set_country_flag = ideology_civil_war
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	rebuild_the_nation_fascism = {
+		icon = generic_construction
+		visible = {
+			has_government = fascism
+			has_country_flag = won_ideology_civil_war
+		}
+		fire_only_once = yes
+		cost = 25
+		days_remove = 365
+		modifier = {
+			political_power_gain = -1
+			industry_repair_factor = 0.2
+			production_speed_industrial_complex_factor = 0.1
+			production_speed_infrastructure_factor = 0.1
+			industrial_capacity_factory = 0.1
+			industrial_capacity_dockyard = 0.1
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	open_up_political_discourse_fascism = {
+		icon = press_censorship
+		available = {
+			fascism < 0.9
+			democratic < 0.9
+			communism < 0.9
+			neutrality < 0.9
+		}
+		visible = {
+			has_idea_with_trait = fascist_demagogue
+			NOT = {
+				has_country_flag = open_up_political_discourse_fascism
+			}
+			check_has_focus_tree_to_switch_to_fascism = yes
+			NOT = {
+				has_government = fascism
+			}
+		}
+		#remove_trigger = {
+		#	has_government = fascism
+		#}
+		fire_only_once = yes
+		cost = 75
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision open_up_political_discourse_fascism"
+			set_country_flag = open_up_political_discourse_fascism
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	discredit_government_fascism = {
+		icon = press_censorship
+		available = {
+			fascism < 0.8
+			democratic < 0.8
+			communism < 0.8
+			neutrality < 0.8
+			has_idea_with_trait = fascist_demagogue
+		}
+		visible = {
+			has_country_flag = open_up_political_discourse_fascism
+			check_has_focus_tree_to_switch_to_fascism = yes
+			NOT = {
+				has_government = fascism
+			}
+		}
+		#remove_trigger = {
+		#	has_government = fascism
+		#}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision discredit_government_fascism"
+			add_stability = -0.01
+			if = {
+				limit = {
+					has_government = democratic
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = -0.1
+				}
+			}
+			if = {
+				limit = {
+					has_government = communism
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = -0.1
+				}
+			}
+			if = {
+				limit = {
+					has_government = neutrality
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	hold_the_fascist_national_referendum = {
+		icon = press_censorship
+		available = {
+			fascism > 0.55
+		}
+		visible = {
+			NOT = {
+				has_government = fascism
+			}
+			check_has_focus_tree_to_switch_to_fascism = yes
+			OR = {
+				fascism > 0.45
+				has_country_flag = open_up_political_discourse_fascism
+			}
+		}
+		#remove_trigger = {
+		#	has_government = fascism
+		#}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision hold_the_fascist_national_referendum"
+			country_event = {
+				id = political.18
+			}
+		}
+		ai_will_do = {
+			factor = 210
+			modifier = {
+				fascism > 0.6
+				factor = 10
+			}
+			modifier = {
+				factor = 0
+				is_subject = yes
+			}
+		}
+	}
+}
+democratic_on_the_rise = {
+	prepare_for_democratic_civil_war = {
+		icon = generic_prepare_civil_war
+		available = {
+			democratic > 0.1
+			num_of_controlled_states > 1
+		}
+		visible = {
+			NOT = {
+				has_country_flag = preparation_for_democratic_civil_war
+			}
+			has_idea_with_trait = democratic_reformer
+			check_has_focus_tree_to_switch_to_democratic = yes
+			NOT = {
+				has_government = democratic
+			}
+			is_ai = no
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision prepare_for_democratic_civil_war"
+			set_country_flag = preparation_for_democratic_civil_war
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	expand_civil_democratic_support = {
+		icon = generic_civil_support
+		visible = {
+			OR = {
+				has_country_flag = preparation_for_democratic_civil_war
+				has_country_flag = open_up_political_discourse_democratic
+			}
+			has_idea_with_trait = democratic_reformer
+			check_has_focus_tree_to_switch_to_democratic = yes
+			NOT = {
+				has_government = democratic
+			}
+		}
+		cancel_trigger = {
+			hidden_trigger = {
+				has_civil_war = yes
+			}
+		}
+		fire_only_once = no
+		cost = 25
+		days_remove = 30
+		modifier = {
+			democratic_drift = 0.02
+			stability_weekly = -0.03
+			political_power_gain = -0.2
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	army_support_for_democratic_civil_war = {
+		icon = generic_army_support
+		visible = {
+			has_country_flag = preparation_for_democratic_civil_war
+			has_idea_with_trait = democratic_reformer
+			check_has_focus_tree_to_switch_to_democratic = yes
+			NOT = {
+				has_government = democratic
+			}
+		}
+		cancel_trigger = {
+			hidden_trigger = {
+				has_civil_war = yes
+			}
+		}
+		fire_only_once = no
+		cost = 50
+		days_remove = 30
+		modifier = {
+			command_power_gain = -0.02
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove army_support_for_democratic_civil_war"
+			if = {
+				limit = {
+					check_variable = {
+						var = army_support_var
+						value = 0.1
+						compare = less_than
+					}
+				}
+				set_variable = {
+					var = army_support_var
+					value = 0.1
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = army_support_var
+						value = 0.1
+						compare = greater_than_or_equals
+					}
+				}
+				add_to_variable = {
+					var = army_support_var
+					value = 0.1
+				}
+			}
+			set_country_flag = military_support_for_democratic_civil_war
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision army_support_for_democratic_civil_war"
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	ensure_general_loyalty_for_democratic_civil_war = {
+		icon = generic_army_support
+		available = {
+			has_country_flag = military_support_for_democratic_civil_war
+			command_power > 2
+		}
+		visible = {
+			has_country_flag = preparation_for_democratic_civil_war
+			has_idea_with_trait = democratic_reformer
+			NOT = {
+				has_government = democratic
+			}
+			any_army_leader = {
+				is_field_marshal = no
+				NOT = {
+					has_trait = hidden_sympathies
+				}
+			}
+			check_has_focus_tree_to_switch_to_democratic = yes
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ensure_general_loyalty_for_democratic_civil_war"
+			country_event = {
+				id = decisions.1
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	ensure_marshal_loyalty_for_democratic_civil_war = {
+		icon = generic_army_support
+		available = {
+			has_country_flag = military_support_for_democratic_civil_war
+			command_power > 2
+		}
+		visible = {
+			has_country_flag = preparation_for_democratic_civil_war
+			has_idea_with_trait = democratic_reformer
+			NOT = {
+				has_government = democratic
+			}
+			any_army_leader = {
+				NOT = {
+					has_trait = hidden_sympathies
+				}
+			}
+			check_has_focus_tree_to_switch_to_democratic = yes
+			any_army_leader = {
+				is_field_marshal = yes
+				NOT = {
+					has_unit_leader_flag = hidden_sympathies_marshal
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ensure_marshal_loyalty_for_democratic_civil_war"
+			country_event = {
+				id = decisions.2
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	siphon_equipment_stockpiles_for_democratic_civil_war = {
+		icon = generic_prepare_civil_war
+		available = {
+			has_country_flag = military_support_for_democratic_civil_war
+			has_equipment = {
+				infantry_equipment > 1000
+			}
+			command_power > 2
+		}
+		visible = {
+			has_country_flag = preparation_for_democratic_civil_war
+			has_country_flag = military_support_for_democratic_civil_war
+			has_idea_with_trait = democratic_reformer
+			check_has_focus_tree_to_switch_to_democratic = yes
+			NOT = {
+				has_government = democratic
+			}
+		}
+		fire_only_once = no
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision siphon_equipment_stockpiles_for_democratic_civil_war"
+			add_command_power = -2
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+			set_country_flag = siphoned_equipment_stockpiles_for_civil_war
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	formulate_surprise_attack_plan_for_democratic_civil_war = {
+		icon = generic_army_support
+		available = {
+			has_country_flag = military_support_for_democratic_civil_war
+			command_power > 2
+		}
+		visible = {
+			has_country_flag = preparation_for_democratic_civil_war
+			has_idea_with_trait = democratic_reformer
+			check_has_focus_tree_to_switch_to_democratic = yes
+			NOT = {
+				has_government = democratic
+			}
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision formulate_surprise_attack_plan_for_democratic_civil_war"
+			add_command_power = -2
+			custom_effect_tooltip = formulate_surprise_attack_plan_for_civil_war_tt
+			set_country_flag = formulated_surprise_attack_plan_for_civil_war
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ignite_the_democratic_civil_war_single_state = {
+		icon = generic_ignite_civil_war
+		name = ignite_the_democratic_civil_war
+		
+		available = {
+			has_stability < 0.5
+			democratic > 0.50
+		}
+
+		visible = {
+			has_country_flag = preparation_for_democratic_civil_war
+			OR = {
+				has_idea_with_trait = democratic_reformer
+				has_idea_with_trait = social_reformer
+			}
+			NOT = { has_government = democratic }
+			check_has_focus_tree_to_switch_to_democratic = yes
+			check_variable = { num_owned_states = 1 }
+		}
+	
+		fire_only_once = yes
+	
+		cost = 50
+		
+		complete_effect = {
+			set_politics = { ruling_party = democratic elections_allowed = yes }
+			clr_country_flag = preparation_for_democratic_civil_war
+			clr_country_flag = military_support_for_democratic_civil_war
+			clr_country_flag = civil_support_for_democratic_civil_war
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ignite_the_democratic_civil_war = {
+		icon = generic_ignite_civil_war
+		available = {
+			has_stability < 0.5
+		}
+		visible = {
+			has_country_flag = preparation_for_democratic_civil_war
+			has_idea_with_trait = democratic_reformer
+			check_has_focus_tree_to_switch_to_democratic = yes
+			NOT = {
+				has_government = democratic
+			}
+			check_variable = { num_owned_states > 1 }
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ignite_the_democratic_civil_war"
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				set_variable = {
+					var = civil_war_size_var
+					value = party_popularity@fascism
+				}
+			}
+			if = {
+				limit = {
+					has_government = communism
+				}
+				set_variable = {
+					var = civil_war_size_var
+					value = party_popularity@communism
+				}
+			}
+			if = {
+				limit = {
+					has_government = neutrality
+				}
+				set_variable = {
+					var = civil_war_size_var
+					value = party_popularity@neutrality
+				}
+			}
+			subtract_from_variable = {
+				var = civil_war_size_var
+				value = army_support_var
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = civil_war_size_var
+						value = 0.3
+						compare = less_than
+					}
+				}
+				set_variable = {
+					var = civil_war_size_var
+					value = 0.3
+				}
+			}
+			start_civil_war = {
+				ruling_party = democratic
+				ideology = ROOT
+				size = civil_war_size_var
+				keep_unit_leaders_trigger = {
+					has_trait = hidden_sympathies
+				}
+			}
+			clr_country_flag = preparation_for_democratic_civil_war
+			clr_country_flag = military_support_for_democratic_civil_war
+			clr_country_flag = civil_support_for_democratic_civil_war
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	rebuild_the_nation_democratic = {
+		icon = generic_construction
+		visible = {
+			has_government = democratic
+			has_country_flag = won_ideology_civil_war
+		}
+		fire_only_once = yes
+		cost = 25
+		days_remove = 365
+		modifier = {
+			political_power_gain = -1
+			industry_repair_factor = 0.2
+			production_speed_industrial_complex_factor = 0.1
+			production_speed_infrastructure_factor = 0.1
+			industrial_capacity_factory = 0.1
+			industrial_capacity_dockyard = 0.1
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	open_up_political_discourse_democratic = {
+		icon = press_censorship
+		available = {
+			fascism < 0.9
+			democratic < 0.9
+			communism < 0.9
+			neutrality < 0.9
+		}
+		visible = {
+			has_idea_with_trait = democratic_reformer
+			check_has_focus_tree_to_switch_to_democratic = yes
+			NOT = {
+				has_government = democratic
+			}
+		}
+		#remove_trigger = {
+		#	has_government = democratic
+		#}
+		fire_only_once = yes
+		cost = 75
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision open_up_political_discourse_democratic"
+			set_country_flag = open_up_political_discourse_democratic
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	discredit_government_democratic = {
+		icon = press_censorship
+		available = {
+			fascism < 0.8
+			democratic < 0.8
+			communism < 0.8
+			neutrality < 0.8
+			has_idea_with_trait = democratic_reformer
+		}
+		visible = {
+			has_country_flag = open_up_political_discourse_democratic
+			check_has_focus_tree_to_switch_to_democratic = yes
+			NOT = {
+				has_government = democratic
+			}
+		}
+		#remove_trigger = {
+		#	has_government = democratic
+		#}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision discredit_government_democratic"
+			add_stability = -0.01
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = -0.1
+				}
+			}
+			if = {
+				limit = {
+					has_government = communism
+				}
+				add_popularity = {
+					ideology = communism
+					popularity = -0.1
+				}
+			}
+			if = {
+				limit = {
+					has_government = neutrality
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	hold_the_democratic_national_referendum = {
+		icon = press_censorship
+		available = {
+			democratic > 0.55
+		}
+		visible = {
+			NOT = {
+				has_government = democratic
+			}
+			check_has_focus_tree_to_switch_to_democratic = yes
+			OR = {
+				democratic > 0.45
+				has_country_flag = open_up_political_discourse_democratic
+			}
+		}
+		#remove_trigger = {
+		#	has_government = democratic
+		#}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision hold_the_democratic_national_referendum"
+			country_event = {
+				id = political.20
+			}
+		}
+		ai_will_do = {
+			factor = 210
+			modifier = {
+				democratic > 0.6
+				factor = 10
+			}
+			modifier = {
+				factor = 0
+				is_subject = yes
+			}
+		}
+	}
+}
+
+communism_on_the_rise = {
+	prepare_for_communist_civil_war = {
+		icon = generic_prepare_civil_war
+		available = {
+			communism > 0.1
+			num_of_controlled_states > 1
+		}
+		visible = {
+			NOT = {
+				has_country_flag = preparation_for_communism_civil_war
+			}
+			has_idea_with_trait = communist_revolutionary
+			check_has_focus_tree_to_switch_to_communism = yes
+			NOT = {
+				has_government = communism
+			}
+			NOT = {
+				has_country_flag = has_supported_maresoc
+			}
+			is_ai = no
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision prepare_for_communist_civil_war"
+			set_country_flag = preparation_for_communist_civil_war
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	expand_civil_communist_support = {
+		icon = generic_civil_support
+		visible = {
+			OR = {
+				has_country_flag = preparation_for_communist_civil_war
+				has_country_flag = open_up_political_discourse_communism
+			}
+			has_idea_with_trait = communist_revolutionary
+			check_has_focus_tree_to_switch_to_communism = yes
+			NOT = {
+				has_government = communism
+			}
+			NOT = {
+				has_country_flag = has_supported_maresoc
+			}
+		}
+		cancel_trigger = {
+			hidden_trigger = {
+				has_civil_war = yes
+			}
+		}
+		fire_only_once = no
+		cost = 25
+		days_remove = 30
+		modifier = {
+			communism_drift = 0.02
+			stability_weekly = -0.03
+			political_power_gain = -0.2
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	army_support_for_communist_civil_war = {
+		icon = generic_army_support
+		visible = {
+			has_country_flag = preparation_for_communist_civil_war
+			has_idea_with_trait = communist_revolutionary
+			check_has_focus_tree_to_switch_to_communism = yes
+			NOT = {
+				has_government = communism
+			}
+			NOT = {
+				has_country_flag = has_supported_maresoc
+			}
+		}
+		cancel_trigger = {
+			hidden_trigger = {
+				has_civil_war = yes
+			}
+		}
+		fire_only_once = no
+		cost = 50
+		days_remove = 30
+		modifier = {
+			command_power_gain = -0.02
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision remove army_support_for_communist_civil_war"
+			if = {
+				limit = {
+					check_variable = {
+						var = army_support_var
+						value = 0.1
+						compare = less_than
+					}
+				}
+				set_variable = {
+					var = army_support_var
+					value = 0.1
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = army_support_var
+						value = 0.1
+						compare = greater_than_or_equals
+					}
+				}
+				add_to_variable = {
+					var = army_support_var
+					value = 0.1
+				}
+			}
+			set_country_flag = military_support_for_communist_civil_war
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision army_support_for_communist_civil_war"
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	ensure_general_loyalty_for_communist_civil_war = {
+		icon = generic_army_support
+		available = {
+			has_country_flag = military_support_for_communist_civil_war
+			command_power > 2
+		}
+		visible = {
+			has_country_flag = preparation_for_communist_civil_war
+			has_idea_with_trait = communist_revolutionary
+			NOT = {
+				has_government = communism
+			}
+			NOT = {
+				has_country_flag = has_supported_maresoc
+			}
+			any_army_leader = {
+				is_field_marshal = no
+				NOT = {
+					has_trait = hidden_sympathies
+				}
+			}
+			check_has_focus_tree_to_switch_to_communism = yes
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ensure_general_loyalty_for_communist_civil_war"
+			country_event = {
+				id = decisions.1
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	ensure_marshal_loyalty_for_communist_civil_war = {
+		icon = generic_army_support
+		available = {
+			has_country_flag = military_support_for_communist_civil_war
+			command_power > 2
+		}
+		visible = {
+			has_country_flag = preparation_for_communist_civil_war
+			has_idea_with_trait = communist_revolutionary
+			NOT = {
+				has_government = communism
+			}
+			NOT = {
+				has_country_flag = has_supported_maresoc
+			}
+			any_army_leader = {
+				NOT = {
+					has_trait = hidden_sympathies
+				}
+			}
+			check_has_focus_tree_to_switch_to_communism = yes
+			any_army_leader = {
+				is_field_marshal = yes
+				NOT = {
+					has_unit_leader_flag = hidden_sympathies_marshal
+				}
+			}
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ensure_marshal_loyalty_for_communist_civil_war"
+			country_event = {
+				id = decisions.2
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	siphon_equipment_stockpiles_for_communist_civil_war = {
+		icon = generic_prepare_civil_war
+		available = {
+			has_country_flag = military_support_for_communist_civil_war
+			has_equipment = {
+				infantry_equipment > 1000
+			}
+			command_power > 2
+		}
+		visible = {
+			has_country_flag = preparation_for_communist_civil_war
+			has_country_flag = military_support_for_communist_civil_war
+			has_idea_with_trait = communist_revolutionary
+			check_has_focus_tree_to_switch_to_communism = yes
+			NOT = {
+				has_government = communism
+			}
+			NOT = {
+				has_country_flag = has_supported_maresoc
+			}
+		}
+		fire_only_once = no
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision siphon_equipment_stockpiles_for_communist_civil_war"
+			add_command_power = -2
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = -1000
+			}
+			set_country_flag = siphoned_equipment_stockpiles_for_civil_war
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	formulate_surprise_attack_plan_for_communist_civil_war = {
+		icon = generic_army_support
+		available = {
+			has_country_flag = military_support_for_communist_civil_war
+			command_power > 2
+		}
+		visible = {
+			has_country_flag = preparation_for_communist_civil_war
+			has_idea_with_trait = communist_revolutionary
+			check_has_focus_tree_to_switch_to_communism = yes
+			NOT = {
+				has_government = communism
+			}
+			NOT = {
+				has_country_flag = has_supported_maresoc
+			}
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision formulate_surprise_attack_plan_for_communist_civil_war"
+			add_command_power = -2
+			custom_effect_tooltip = formulate_surprise_attack_plan_for_civil_war_tt
+			set_country_flag = formulated_surprise_attack_plan_for_civil_war
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ignite_the_communist_civil_war_single_state = {
+		icon = generic_ignite_civil_war
+		name = ignite_the_communist_civil_war
+
+		available = {
+			has_stability < 0.5
+			communism > 0.50
+		}
+
+		visible = {
+			has_country_flag = preparation_for_communist_civil_war
+			OR = {
+				has_idea_with_trait = communist_revolutionary
+				has_idea_with_trait = ambitious_union_boss
+			}
+			NOT = { has_government = communism }
+			check_has_focus_tree_to_switch_to_communism = yes
+			check_variable = { num_owned_states = 1 }
+		}
+	
+		fire_only_once = yes
+	
+		cost = 50
+		
+		complete_effect = {
+			set_politics = { ruling_party = communism elections_allowed = no }
+			clr_country_flag = preparation_for_communist_civil_war
+			clr_country_flag = military_support_for_communist_civil_war
+			clr_country_flag = civil_support_for_communist_civil_war
+		}
+		
+		ai_will_do = {
+			factor = 0
+		}
+	}
+
+	ignite_the_communist_civil_war = {
+		icon = generic_ignite_civil_war
+		available = {
+			has_stability < 0.5
+		}
+		visible = {
+			has_country_flag = preparation_for_communist_civil_war
+			has_idea_with_trait = communist_revolutionary
+			check_has_focus_tree_to_switch_to_communism = yes
+			NOT = {
+				has_government = communism
+			}
+			NOT = {
+				has_country_flag = has_supported_maresoc
+			}
+			check_variable = { num_owned_states > 1 }
+		}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ignite_the_communist_civil_war"
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				set_variable = {
+					var = civil_war_size_var
+					value = party_popularity@fascism
+				}
+			}
+			if = {
+				limit = {
+					has_government = democratic
+				}
+				set_variable = {
+					var = civil_war_size_var
+					value = party_popularity@democratic
+				}
+			}
+			if = {
+				limit = {
+					has_government = neutrality
+				}
+				set_variable = {
+					var = civil_war_size_var
+					value = party_popularity@neutrality
+				}
+			}
+			subtract_from_variable = {
+				var = civil_war_size_var
+				value = army_support_var
+			}
+			if = {
+				limit = {
+					check_variable = {
+						var = civil_war_size_var
+						value = 0.3
+						compare = less_than
+					}
+				}
+				set_variable = {
+					var = civil_war_size_var
+					value = 0.3
+				}
+			}
+			start_civil_war = {
+				ruling_party = communism
+				ideology = ROOT
+				size = civil_war_size_var
+				keep_unit_leaders_trigger = {
+					has_trait = hidden_sympathies
+				}
+			}
+			clr_country_flag = preparation_for_communist_civil_war
+			clr_country_flag = military_support_for_communist_civil_war
+			clr_country_flag = civil_support_for_communist_civil_war
+			hidden_effect = {
+				if = {
+					limit = {
+						original_tag = EQC
+					}
+					random_other_country = {
+						limit = {
+							original_tag = EQC
+						}
+						save_event_target_as = not_commie_EQC
+					}
+					if = {
+						limit = {
+							has_character = EQC_candy_garden
+						}
+						EQC_candy_garden = {
+							set_nationality = event_target:not_commie_EQC
+						}
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 0
+		}
+	}
+	rebuild_the_nation_communism = {
+		icon = generic_construction
+		visible = {
+			has_government = communism
+			has_country_flag = won_ideology_civil_war
+		}
+		fire_only_once = yes
+		cost = 25
+		days_remove = 365
+		modifier = {
+			political_power_gain = -1
+			industry_repair_factor = 0.2
+			production_speed_industrial_complex_factor = 0.1
+			production_speed_infrastructure_factor = 0.1
+			industrial_capacity_factory = 0.1
+			industrial_capacity_dockyard = 0.1
+		}
+		ai_will_do = {
+			factor = 200
+		}
+	}
+	open_up_political_discourse_communist = {
+		icon = press_censorship
+		available = {
+			fascism < 0.9
+			democratic < 0.9
+			communism < 0.9
+			neutrality < 0.9
+		}
+		visible = {
+			has_idea_with_trait = communist_revolutionary
+			check_has_focus_tree_to_switch_to_communism = yes
+			NOT = {
+				has_government = communism
+			}
+			NOT = {
+				has_country_flag = has_supported_maresoc
+			}
+		}
+		#remove_trigger = {
+		#	has_government = communism
+		#}
+		fire_only_once = yes
+		cost = 75
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision open_up_political_discourse_communist"
+			set_country_flag = open_up_political_discourse_communist
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	discredit_government_communism = {
+		icon = press_censorship
+		available = {
+			fascism < 0.8
+			democratic < 0.8
+			communism < 0.8
+			neutrality < 0.8
+			has_idea_with_trait = communist_revolutionary
+		}
+		visible = {
+			has_country_flag = open_up_political_discourse_communist
+			check_has_focus_tree_to_switch_to_communism = yes
+			NOT = {
+				has_government = communism
+			}
+			NOT = {
+				has_country_flag = has_supported_maresoc
+			}
+		}
+		#remove_trigger = {
+		#	has_government = communism
+		#}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision discredit_government_communism"
+			add_stability = -0.01
+			if = {
+				limit = {
+					has_government = fascism
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = -0.1
+				}
+			}
+			if = {
+				limit = {
+					has_government = democratic
+				}
+				add_popularity = {
+					ideology = democratic
+					popularity = -0.1
+				}
+			}
+			if = {
+				limit = {
+					has_government = neutrality
+				}
+				add_popularity = {
+					ideology = neutrality
+					popularity = -0.1
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	hold_the_communist_national_referendum = {
+		icon = press_censorship
+		available = {
+			communism > 0.55
+		}
+		visible = {
+			NOT = {
+				has_government = communism
+			}
+			NOT = {
+				has_country_flag = has_supported_maresoc
+			}
+			check_has_focus_tree_to_switch_to_communism = yes
+			OR = {
+				communism > 0.45
+				has_country_flag = open_up_political_discourse_communist
+			}
+		}
+		#remove_trigger = {
+		#	has_government = communism
+		#}
+		fire_only_once = yes
+		cost = 50
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision hold_the_communist_national_referendum"
+			country_event = {
+				id = political.19
+			}
+		}
+		ai_will_do = {
+			factor = 210
+			modifier = {
+				communism > 0.6
+				factor = 10
+			}
+			modifier = {
+				factor = 0
+				is_subject = yes
+			}
+		}
+	}
+}

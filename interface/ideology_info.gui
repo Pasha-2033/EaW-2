@@ -1,0 +1,43 @@
+guiTypes = {
+	containerWindowType = {
+		name = "countrypoliticsview_ideology_info"
+		position = { x = 93 y = 305 }
+		instantTextboxType = {
+			name = "ideology"
+			position = { x = 4 y = 8 }
+			font = "hoi_18mbs"
+			text = "[ROOT.GetRulingIdeology]"
+			format = CENTER
+			maxWidth = 147
+			maxHeight = 18
+			fixedsize = yes
+		}
+		instantTextboxType = {
+			name = "subideology"
+			position = { x = 4 y = 28 }
+			font = "hoi_18mbs"
+			text = "[get_subideology_loc]"
+			format = CENTER
+			vertical_alignment = CENTER
+			maxWidth = 147
+			maxHeight = 36
+			fixedsize = yes
+		}
+	}
+	containerWindowType = {
+		name = "countrydiplomacyview_ideology_info"
+		position = { x = 258 y = 135 }
+		size = { width = 255 height = 60 }
+		clipping = no
+		instantTextboxType = {
+			name = "ideology_gui"
+			position = { x = 5 y = 10 }
+			font = "hoi_16mbs"
+			text = "[get_subideology_loc]"
+			maxWidth = 245
+			maxHeight = 20
+			alwaystransparent=yes
+			fixedsize = yes
+		}
+	}
+}

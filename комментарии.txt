@@ -13,3 +13,12 @@ actually_fix_weapon_techs - необходимо изменить/добавит
 в modifiers идолгогий создать civilian_intel_to_others = 20.0, army_intel_to_others = 10.0, navy_intel_to_others = 20.0, чтобы установить нормальную разведку (еще airforce_intel_to_others = 2!!!)
 установить флаг no_evil_mind через effects, чтобы проверять, может ли злой гений обновлять свою энциклопедию, если нет, то установить global.last_evil_mind_date в global.year
 добавить иконку в texticons для royal_guard
+difficulty_settings вместо рас в иконки установить флаги
+написать _desc для субидеологий
+has_changeling_gueen = #add fo CHN too
+
+написать триггер check_has_focus_tree_to_switch_to_<ideology> = yes для определения смен идеологии
+
+idea_effects - написать триггеры
+
+для gui по puppet_control написать grid, список для идей и т.д., чтобы каждая кнопка была - в grid, а ее событие ставило переменную в определенное значение (свой индекс) и по нему уже считались бы эффекты (если все забыл - поиск по top_folder_button)
