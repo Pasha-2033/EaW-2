@@ -1,0 +1,85 @@
+shared_focus = {
+	id = shared_focus_gpa_goverment_is_forced
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	#allow_branch = {
+	#	is_great_projects_adaptation_possible = yes
+	#}
+	ai_will_do = {
+		base = 200
+	}
+	x = 25
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_polit_system_temp"
+	}
+	search_filters = {
+		#add
+	}
+}
+shared_focus = {
+	id = shared_focus_gpa_remilitarise_all_possible_states
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	prerequisite = {
+		focus = shared_focus_gpa_goverment_is_forced
+	}
+	available = {
+		always = yes #change
+	}
+	ai_will_do = {
+		base = 200
+	}
+	x = 25
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_polit_system_temp"
+	}
+	search_filters = {
+		#add
+	}
+}
+shared_focus = {
+	id = shared_focus_gpa_serious_war_production
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	prerequisite = {
+		focus = shared_focus_gpa_remilitarise_all_possible_states
+	}
+	available = {
+		always = yes #change
+	}
+	ai_will_do = {
+		base = 200
+	}
+	x = 25
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_gpa_serious_war_production"
+	}
+	search_filters = {
+		#add
+	}
+}
+shared_focus = {
+	id = shared_focus_gpa_rails_for_warmachine
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	prerequisite = {
+		focus = shared_focus_gpa_serious_war_production
+	}
+	available = {
+		has_war = yes
+	}
+	ai_will_do = {
+		base = 200
+	}
+	x = 25
+	y = 4
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_gpa_rails_for_warmachine"
+	}
+	search_filters = {
+		#add
+	}
+}

@@ -58,27 +58,17 @@ scripted_gui = {
 			state_lore_container_switch_button_click = {
 				if = {
 					limit = {
-						NOT = {
-							has_variable = ROOT.state_lore_mode
-						}
-					}
-					set_variable = {
-						ROOT.state_lore_mode = 1
-					}
-				}
-				else_if = {
-					limit = {
 						check_variable = {
-							ROOT.state_lore_mode = 0
+							ROOT.state_lore_mode = 1
 						}
 					}
 					set_variable = {
-						ROOT.state_lore_mode = 1
+						ROOT.state_lore_mode = 0
 					}
 				}
 				else = {
 					set_variable = {
-						ROOT.state_lore_mode = 0
+						ROOT.state_lore_mode = 1
 					}
 				}
 			}

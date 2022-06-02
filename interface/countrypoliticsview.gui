@@ -159,23 +159,19 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "ruling_party_info"
-			#position = { x = 88 y = 305 }
-			#position = { x = 0 y = 305 }
 			position = { x = 0 y = 262 }
 			size = { width = 261 height = 124 }
 			clipping = no
 			instantTextboxType = {
 				name = "elections"
-				#position = {
-				#	x = 207
-				#	y = 0
-				#}
+				position = {
+					x = 207
+					y = 0
+				}
 				font = "hoi_16mbs"
 				text = "elections"
 				format = CENTER
-				orientation = CENTER
-				origo = CENTER
-				maxWidth = 293
+				maxWidth = 294
 				maxHeight = 16
 			}
 			
@@ -190,6 +186,11 @@ guiTypes = {
 				maxHeight = 18
 				multiline = no
 				format = CENTER
+			}
+			instantTextboxType = {
+				name = "ideology"
+				font = "invisiblefont"
+				text = "ideology"
 			}
 			buttonType = {
 				name = "dismantle_faction"

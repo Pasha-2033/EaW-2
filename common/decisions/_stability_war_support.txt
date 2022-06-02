@@ -413,7 +413,7 @@ demobilization = {
 		available = {
 			has_war = no
 			threat < 0.71
-			has_unsupported_economic_law = yes
+			#has_unsupported_economic_law = yes
 			NOT = {
 				any_other_country = {
 					OR = {
@@ -433,7 +433,7 @@ demobilization = {
 		visible = {
 			has_war = no
 			threat < 0.71
-			has_unsupported_economic_law = yes
+			#has_unsupported_economic_law = yes
 			NOT = {
 				any_other_country = {
 					OR = {
@@ -503,7 +503,7 @@ demobilization = {
 			OR = {
 				has_war = yes
 				threat > 0.7
-				has_unsupported_economic_law = no
+				#has_unsupported_economic_law = no
 				any_other_country = {
 					OR = {
 						is_justifying_wargoal_against = ROOT
@@ -521,7 +521,7 @@ demobilization = {
 		activation = {
 			has_war = no
 			threat < 0.71
-			has_unsupported_economic_law = yes
+			#has_unsupported_economic_law = yes
 			NOT = {
 				any_other_country = {
 					OR = {

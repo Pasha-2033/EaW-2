@@ -366,7 +366,7 @@ shared_focus = {
 
 #focuses for great projects of evil mind, only for VES/VRA/LIK/DIS/SOR
 shared_focus = {
-	id = shared_focus_initiate_great_projects
+	id = shared_focus_changelings_initiate_great_projects
 	icon = GFX_goal_chn_economic_plan
 	cost = 5
 	allow_branch = {
@@ -394,19 +394,24 @@ shared_focus = {
 	x = 25
 	y = 1
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_initiate_great_projects"
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_initiate_great_projects"
 		add_war_support = 0.05
+		hidden_effect = {
+			every_country = {
+				mark_focus_tree_layout_dirty = yes
+			}
+		}
 	}
 	search_filters = {
 		FOCUS_FILTER_RESEARCH
 	}
 }
 shared_focus = {
-	id = shared_focus_rebuild_magitron
+	id = shared_focus_changelings_rebuild_magitron
 	icon = GFX_goal_generic_changeling
 	cost = 5
 	prerequisite = {
-		focus = shared_focus_initiate_great_projects
+		focus = shared_focus_changelings_initiate_great_projects
 	}
 	available = {
 		NOT = {
@@ -438,11 +443,11 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = shared_focus_launch_magitron
+	id = shared_focus_changelings_launch_magitron
 	icon = GFX_goal_generic_changeling
 	cost = 5
 	prerequisite = {
-		focus = shared_focus_rebuild_magitron
+		focus = shared_focus_changelings_rebuild_magitron
 	}
 	available = {
 		NOT = {
@@ -466,7 +471,7 @@ shared_focus = {
 	x = 21
 	y = 3
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_launch_magitron"
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_launch_magitron"
 		add_war_support = 0.05
 	}
 	search_filters = {
@@ -474,11 +479,11 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = shared_focus_experiments_on_the_soul
+	id = shared_focus_changelings_experiments_on_the_soul
 	icon = GFX_goal_generic_changeling
 	cost = 5
 	prerequisite = {
-		focus = shared_focus_initiate_great_projects
+		focus = shared_focus_changelings_initiate_great_projects
 	}
 	available = {
 		NOT = {
@@ -510,11 +515,11 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = shared_focus_capture_pony
+	id = shared_focus_changelings_capture_pony
 	icon = GFX_goal_generic_changeling
 	cost = 5
 	prerequisite = {
-		focus = shared_focus_experiments_on_the_soul
+		focus = shared_focus_changelings_experiments_on_the_soul
 	}
 	available = {
 		NOT = {
@@ -538,7 +543,7 @@ shared_focus = {
 	x = 23
 	y = 3
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_capture_pony"
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_capture_pony"
 		add_war_support = 0.05
 	}
 	search_filters = {
@@ -546,11 +551,11 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = shared_focus_build_love_machine
+	id = shared_focus_changelings_build_love_machine
 	icon = GFX_goal_generic_changeling
 	cost = 5
 	prerequisite = {
-		focus = shared_focus_capture_pony
+		focus = shared_focus_changelings_capture_pony
 	}
 	available = {
 		NOT = {
@@ -574,7 +579,7 @@ shared_focus = {
 	x = 23
 	y = 4
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_build_love_machine"
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_build_love_machine"
 		add_war_support = 0.05
 	}
 	search_filters = {
@@ -583,11 +588,11 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = shared_focus_soul_cell_theory
+	id = shared_focus_changelings_soul_cell_theory
 	icon = GFX_goal_generic_changeling
 	cost = 5
 	prerequisite = {
-		focus = shared_focus_experiments_on_the_soul
+		focus = shared_focus_changelings_experiments_on_the_soul
 	}
 	available = {
 		NOT = {
@@ -611,7 +616,7 @@ shared_focus = {
 	x = 25
 	y = 3
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_soul_cell_theory"
+		log = "[GetDateText]: [Root.GetName]: Focus sshared_focus_changelings_soul_cell_theory"
 		add_war_support = 0.05
 	}
 	search_filters = {
@@ -619,11 +624,11 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = shared_focus_consciousness_cell_theory
+	id = shared_focus_changelings_consciousness_cell_theory
 	icon = GFX_goal_generic_changeling
 	cost = 5
 	prerequisite = {
-		focus = shared_focus_soul_cell_theory
+		focus = shared_focus_changelings_soul_cell_theory
 	}
 	available = {
 		NOT = {
@@ -647,7 +652,7 @@ shared_focus = {
 	x = 25
 	y = 4
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_consciousness_cell_theory"
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_consciousness_cell_theory"
 		add_war_support = 0.05
 	}
 	search_filters = {
@@ -655,11 +660,11 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = shared_focus_evil_mind_fixes_economy
+	id = shared_focus_changelings_evil_mind_fixes_economy
 	icon = GFX_goal_chn_economic_plan
 	cost = 5
 	prerequisite = {
-		focus = shared_focus_initiate_great_projects
+		focus = shared_focus_changelings_initiate_great_projects
 	}
 	available = {
 		NOT = {
@@ -683,7 +688,7 @@ shared_focus = {
 	x = 33
 	y = 2
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_evil_mind_fixes_economy"
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_evil_mind_fixes_economy"
 		add_war_support = 0.05
 	}
 	search_filters = {
@@ -691,11 +696,11 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = shared_focus_evil_mind_creates_army
+	id = shared_focus_changelings_evil_mind_creates_army
 	icon = GFX_goal_chn_changeling_army
 	cost = 5
 	prerequisite = {
-		focus = shared_focus_initiate_great_projects
+		focus = shared_focus_changelings_initiate_great_projects
 	}
 	available = {
 		NOT = {
@@ -719,7 +724,7 @@ shared_focus = {
 	x = 27
 	y = 2
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_evil_mind_creates_army"
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_evil_mind_creates_army"
 		add_war_support = 0.05
 	}
 	search_filters = {
@@ -727,11 +732,11 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = shared_focus_evil_mind_fixes_science_base
+	id = shared_focus_changelings_evil_mind_fixes_science_base
 	icon = GFX_goal_generic_changeling
 	cost = 5
 	prerequisite = {
-		focus = shared_focus_initiate_great_projects
+		focus = shared_focus_changelings_initiate_great_projects
 	}
 	available = {
 		NOT = {
@@ -755,7 +760,7 @@ shared_focus = {
 	x = 29
 	y = 2
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_evil_mind_fixes_science_base"
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_evil_mind_fixes_science_base"
 		add_war_support = 0.05
 	}
 	search_filters = {
@@ -763,11 +768,11 @@ shared_focus = {
 	}
 }
 shared_focus = {
-	id = shared_focus_evil_mind_change_society
+	id = shared_focus_changelings_evil_mind_change_society
 	icon = GFX_goal_generic_changeling
 	cost = 5
 	prerequisite = {
-		focus = shared_focus_initiate_great_projects
+		focus = shared_focus_changelings_initiate_great_projects
 	}
 	available = {
 		NOT = {
@@ -791,18 +796,17 @@ shared_focus = {
 	x = 31
 	y = 2
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_evil_mind_change_society"
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_evil_mind_change_society"
 		add_war_support = 0.05
 	}
 	search_filters = {
 		#add
 	}
 }
-
 #focuses for improving political system (common, if main political branch is finished!), for is_changeling_race = yes
 #queen tree
 shared_focus = {
-	id = shared_focus_polit_system_temp
+	id = shared_focus_changelings_polit_system_temp
 	icon = GFX_goal_generic_changeling
 	cost = 5
 	allow_branch = {
@@ -815,7 +819,7 @@ shared_focus = {
 	x = 0
 	y = 0
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_evil_mind_change_society"
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_polit_system_temp"
 		add_war_support = 0.05
 	}
 	search_filters = {

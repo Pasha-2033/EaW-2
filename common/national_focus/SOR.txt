@@ -13,7 +13,8 @@ focus_tree = {
 		y = 1350
 	}
 	shared_focus = shared_focus_changelings_start_canterlot_race
-	shared_focus = shared_focus_initiate_great_projects
+	shared_focus = shared_focus_changelings_initiate_great_projects
+	shared_focus = shared_focus_gpa_goverment_is_forced
 	#uniqe SOR focuses
 	focus = {
 		id = sor_focus_monarhy_guestion
@@ -26,7 +27,6 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
-			
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL

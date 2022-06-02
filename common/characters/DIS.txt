@@ -1,20 +1,20 @@
 characters = {
 	DIS_queen_helvia = {
-		name=DIS_queen_helvia
-		portraits={
-			civilian={
-				large="GFX_ChrysalisPortrait"
+		name = DIS_queen_helvia
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_queen_Helvia"
 			}
 		}
 		allowed_civil_war = {
-			has_government = fascism
+			has_government = ultranationalism
 		}		
-		country_leader={
-			desc="POLITICS_CHRYSALIS_DESC"
-			ideology=nazism
-			traits={ warmonger }
-			expire="1965.1.1.1"
-			id=-1
+		country_leader = {
+			desc = "POLITICS_CHRYSALIS_DESC"
+			ideology = ultranationalism
+			traits = { warmonger }
+			expire = "1965.1.1.1"
+			id = -1
 		}
 		gender = female
 	}

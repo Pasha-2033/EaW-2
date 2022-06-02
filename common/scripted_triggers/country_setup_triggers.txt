@@ -60,6 +60,15 @@ has_power_concentration = {
 		has_idea = harmony
 	}
 }
+has_urbanization = {
+	OR = {
+		has_idea = no_urbanization_control
+		has_idea = low_urbanization_focus
+		has_idea = medium_urbanization_focus
+		has_idea = high_urbanization_focus
+		has_idea = very_high_urbanization_focus
+	}
+}
 has_illiteracy_idea = {
 	OR = {
 		has_idea = no_lack_of_scientists

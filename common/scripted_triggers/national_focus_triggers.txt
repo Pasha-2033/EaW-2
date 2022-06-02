@@ -1,116 +1,68 @@
 is_great_projects_of_evil_mind_possible = {
+	#apply ONLY for VES/SOR/DIS/VRA/LIK
+	#add for CHN too
 	NOT = {
 		has_country_flag = no_evil_mind
 	}
-	OR = {
-		AND = {
+	if = {
+		limit = {
 			original_tag = VES
-			has_completed_focus = ves_focus_evil_mind_found
+		}
+		OR = {
 			has_completed_focus = ves_focus_royal_evil_mind
+			has_completed_focus = ves_focus_evil_mind_incharge
 		}
-		AND = {
-			OR = {
-				original_tag = SOR
-				original_tag = DIS
-				original_tag = VRA
-				original_tag = LIK
-			}
-			is_in_array = {
-				conquered_countries = VES
-			}
+	}
+	else = {
+		is_in_array = {
+			conquered_countries = VES
 		}
-		has_country_leader = {
-			ruling_only = yes
-			character = VES_evil_mind
+		OR = {
+			original_tag = SOR
+			original_tag = DIS
+			original_tag = VRA
+			original_tag = DIS
+		}
+	}
+}
+is_great_projects_adaptation_possible = {
+	#apply for everybody, EXCEPT for country with active great projects of evil mind
+	#add for CHN too
+	is_great_projects_of_evil_mind_possible = no
+	OR = {
+		VES = {
+			is_great_projects_of_evil_mind_possible = yes
+		}
+		SOR = {
+			is_great_projects_of_evil_mind_possible = yes
+		}
+		DIS = {
+			is_great_projects_of_evil_mind_possible = yes
+		}
+		VRA = {
+			is_great_projects_of_evil_mind_possible = yes
+		}
+		LIK = {
+			is_great_projects_of_evil_mind_possible = yes
 		}
 	}
 }
 canterlot_race_is_finished = {
 	OR = {
-		AND = {
-			original_tag = VES
-			OR = {
-				DIS = {
-					has_completed_focus = shared_focus_changelings_attack_canterlot
-				}
-				SOR = {
-					has_completed_focus = shared_focus_changelings_attack_canterlot
-				}
-				VRA = {
-					has_completed_focus = shared_focus_changelings_attack_canterlot
-				}
-				LIK = {
-					has_completed_focus = shared_focus_changelings_attack_canterlot
-				}
-			}
+		VES = {
+			has_completed_focus = shared_focus_changelings_attack_canterlot
 		}
-		AND = {
-			original_tag = DIS
-			OR = {
-				VES = {
-					has_completed_focus = shared_focus_changelings_attack_canterlot
-				}
-				SOR = {
-					has_completed_focus = shared_focus_changelings_attack_canterlot
-				}
-				VRA = {
-					has_completed_focus = shared_focus_changelings_attack_canterlot
-				}
-				LIK = {
-					has_completed_focus = shared_focus_changelings_attack_canterlot
-				}
-			}
+		DIS = {
+			has_completed_focus = shared_focus_changelings_attack_canterlot
 		}
-		AND = {
-			original_tag = SOR
-			OR = {
-				DIS = {
-					has_completed_focus = shared_focus_changelings_attack_canterlot
-				}
-				VES = {
-					has_completed_focus = shared_focus_changelings_attack_canterlot
-				}
-				VRA = {
-					has_completed_focus = shared_focus_changelings_attack_canterlot
-				}
-				LIK = {
-					has_completed_focus = shared_focus_changelings_attack_canterlot
-				}
-			}
+		SOR = {
+			has_completed_focus = shared_focus_changelings_attack_canterlot
 		}
-		AND = {
-			original_tag = VRA
-			OR = {
-				DIS = {
-					has_completed_focus = shared_focus_changelings_attack_canterlot
-				}
-				SOR = {
-					has_completed_focus = shared_focus_changelings_attack_canterlot
-				}
-				VES = {
-					has_completed_focus = shared_focus_changelings_attack_canterlot
-				}
-				LIK = {
-					has_completed_focus = shared_focus_changelings_attack_canterlot
-				}
-			}
+		VRA = {
+			has_completed_focus = shared_focus_changelings_attack_canterlot
 		}
-		AND = {
-			original_tag = LIK
-			OR = {
-				DIS = {
-					has_completed_focus = shared_focus_changelings_attack_canterlot
-				}
-				SOR = {
-					has_completed_focus = shared_focus_changelings_attack_canterlot
-				}
-				VRA = {
-					has_completed_focus = shared_focus_changelings_attack_canterlot
-				}
-				VES = {
-					has_completed_focus = shared_focus_changelings_attack_canterlot
-				}
-			}
+		LIK = {
+			has_completed_focus = shared_focus_changelings_attack_canterlot
 		}
 	}
 }
@@ -140,720 +92,942 @@ has_changeling_gueen = {
 	}
 }
 no_need_to_overrun_canterlot_race = {
-	OR = {
-		AND = {
+	#apply ONLY for VES/SOR/DIS/VRA/LIK
+	if = {
+		limit = {
 			original_tag = VES
-			OR = {
-				AND = {
-					has_completed_focus = shared_focus_changelings_start_canterlot_race
-					NOT = {
-						OR = {
-							DIS = {
-								has_completed_focus = shared_focus_changelings_attack_canterlot
-							}
-							SOR = {
-								has_completed_focus = shared_focus_changelings_attack_canterlot
-							}
-							VRA = {
-								has_completed_focus = shared_focus_changelings_attack_canterlot
-							}
-							LIK = {
-								has_completed_focus = shared_focus_changelings_attack_canterlot
-							}
-						}
+		}
+		if = {
+			limit = {
+				has_completed_focus = shared_focus_changelings_prepare_attack_phase
+				has_completed_focus = shared_focus_changelings_prepare_invation
+			}
+			NOT = {
+				OR = {
+					DIS = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+					SOR = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+					VRA = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+					LIK = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
 					}
 				}
-				AND = {
-					OR = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-					NOT = {
-						OR = {
-							DIS = {
-								OR = {
-									has_completed_focus = shared_focus_changelings_prepare_invation
-									has_completed_focus = shared_focus_changelings_prepare_attack_phase
-								}
-							}
-							SOR = {
-								OR = {
-									has_completed_focus = shared_focus_changelings_prepare_invation
-									has_completed_focus = shared_focus_changelings_prepare_attack_phase
-								}
-							}
-							VRA = {
-								OR = {
-									has_completed_focus = shared_focus_changelings_prepare_invation
-									has_completed_focus = shared_focus_changelings_prepare_attack_phase
-								}
-							}
-							LIK = {
-								OR = {
-									has_completed_focus = shared_focus_changelings_prepare_invation
-									has_completed_focus = shared_focus_changelings_prepare_attack_phase
-								}
-							}
-						}
-					}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
 				}
 			}
 			NOT = {
 				OR = {
 					DIS = {
-						focus_progress = {
-							focus = shared_focus_changelings_attack_canterlot
-							progress > 0
+						OR = {
+							has_completed_focus = shared_focus_changelings_prepare_attack_phase
+							has_completed_focus = shared_focus_changelings_prepare_invation
 						}
 					}
 					SOR = {
-						focus_progress = {
-							focus = shared_focus_changelings_attack_canterlot
-							progress > 0
+						OR = {
+							has_completed_focus = shared_focus_changelings_prepare_attack_phase
+							has_completed_focus = shared_focus_changelings_prepare_invation
 						}
 					}
 					VRA = {
-						focus_progress = {
-							focus = shared_focus_changelings_attack_canterlot
-							progress > 0
+						OR = {
+							has_completed_focus = shared_focus_changelings_prepare_attack_phase
+							has_completed_focus = shared_focus_changelings_prepare_invation
 						}
 					}
 					LIK = {
-						focus_progress = {
-							focus = shared_focus_changelings_attack_canterlot
-							progress > 0
+						OR = {
+							has_completed_focus = shared_focus_changelings_prepare_attack_phase
+							has_completed_focus = shared_focus_changelings_prepare_invation
 						}
 					}
 				}
 			}
 		}
-		AND = {
+		else_if = {
+			limit = {
+				has_completed_focus = shared_focus_changelings_start_canterlot_race
+			}
+			NOT = {
+				OR = {
+					DIS = {
+						has_completed_focus = shared_focus_changelings_start_canterlot_race
+					}
+					SOR = {
+						has_completed_focus = shared_focus_changelings_start_canterlot_race
+					}
+					VRA = {
+						has_completed_focus = shared_focus_changelings_start_canterlot_race
+					}
+					LIK = {
+						has_completed_focus = shared_focus_changelings_start_canterlot_race
+					}
+				}
+			}
+		}
+		else = {
+			always = no
+		}
+	}
+	else_if = {
+		limit = {
 			original_tag = DIS
-			OR = {
-				AND = {
-					has_completed_focus = shared_focus_changelings_start_canterlot_race
-					NOT = {
-						OR = {
-							VES = {
-								has_completed_focus = shared_focus_changelings_attack_canterlot
-							}
-							SOR = {
-								has_completed_focus = shared_focus_changelings_attack_canterlot
-							}
-							VRA = {
-								has_completed_focus = shared_focus_changelings_attack_canterlot
-							}
-							LIK = {
-								has_completed_focus = shared_focus_changelings_attack_canterlot
-							}
-						}
+		}
+		if = {
+			limit = {
+				has_completed_focus = shared_focus_changelings_prepare_attack_phase
+				has_completed_focus = shared_focus_changelings_prepare_invation
+			}
+			NOT = {
+				OR = {
+					VES = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+					SOR = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+					VRA = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+					LIK = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
 					}
 				}
-				AND = {
-					OR = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-					NOT = {
-						OR = {
-							VES = {
-								OR = {
-									has_completed_focus = shared_focus_changelings_prepare_invation
-									has_completed_focus = shared_focus_changelings_prepare_attack_phase
-								}
-							}
-							SOR = {
-								OR = {
-									has_completed_focus = shared_focus_changelings_prepare_invation
-									has_completed_focus = shared_focus_changelings_prepare_attack_phase
-								}
-							}
-							VRA = {
-								OR = {
-									has_completed_focus = shared_focus_changelings_prepare_invation
-									has_completed_focus = shared_focus_changelings_prepare_attack_phase
-								}
-							}
-							LIK = {
-								OR = {
-									has_completed_focus = shared_focus_changelings_prepare_invation
-									has_completed_focus = shared_focus_changelings_prepare_attack_phase
-								}
-							}
-						}
-					}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
 				}
 			}
 			NOT = {
 				OR = {
 					VES = {
-						focus_progress = {
-							focus = shared_focus_changelings_attack_canterlot
-							progress > 0
+						OR = {
+							has_completed_focus = shared_focus_changelings_prepare_attack_phase
+							has_completed_focus = shared_focus_changelings_prepare_invation
 						}
 					}
 					SOR = {
-						focus_progress = {
-							focus = shared_focus_changelings_attack_canterlot
-							progress > 0
+						OR = {
+							has_completed_focus = shared_focus_changelings_prepare_attack_phase
+							has_completed_focus = shared_focus_changelings_prepare_invation
 						}
 					}
 					VRA = {
-						focus_progress = {
-							focus = shared_focus_changelings_attack_canterlot
-							progress > 0
+						OR = {
+							has_completed_focus = shared_focus_changelings_prepare_attack_phase
+							has_completed_focus = shared_focus_changelings_prepare_invation
 						}
 					}
 					LIK = {
-						focus_progress = {
-							focus = shared_focus_changelings_attack_canterlot
-							progress > 0
+						OR = {
+							has_completed_focus = shared_focus_changelings_prepare_attack_phase
+							has_completed_focus = shared_focus_changelings_prepare_invation
 						}
 					}
 				}
 			}
 		}
-		AND = {
+		else_if = {
+			limit = {
+				has_completed_focus = shared_focus_changelings_start_canterlot_race
+			}
+			NOT = {
+				OR = {
+					VES = {
+						has_completed_focus = shared_focus_changelings_start_canterlot_race
+					}
+					SOR = {
+						has_completed_focus = shared_focus_changelings_start_canterlot_race
+					}
+					VRA = {
+						has_completed_focus = shared_focus_changelings_start_canterlot_race
+					}
+					LIK = {
+						has_completed_focus = shared_focus_changelings_start_canterlot_race
+					}
+				}
+			}
+		}
+		else = {
+			always = no
+		}
+	}
+	else_if = {
+		limit = {
 			original_tag = SOR
-			OR = {
-				AND = {
-					has_completed_focus = shared_focus_changelings_start_canterlot_race
-					NOT = {
-						OR = {
-							DIS = {
-								has_completed_focus = shared_focus_changelings_attack_canterlot
-							}
-							VES = {
-								has_completed_focus = shared_focus_changelings_attack_canterlot
-							}
-							VRA = {
-								has_completed_focus = shared_focus_changelings_attack_canterlot
-							}
-							LIK = {
-								has_completed_focus = shared_focus_changelings_attack_canterlot
-							}
-						}
+		}
+		if = {
+			limit = {
+				has_completed_focus = shared_focus_changelings_prepare_attack_phase
+				has_completed_focus = shared_focus_changelings_prepare_invation
+			}
+			NOT = {
+				OR = {
+					DIS = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+					VES = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+					VRA = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+					LIK = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
 					}
 				}
-				AND = {
-					OR = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-					NOT = {
-						OR = {
-							DIS = {
-								OR = {
-									has_completed_focus = shared_focus_changelings_prepare_invation
-									has_completed_focus = shared_focus_changelings_prepare_attack_phase
-								}
-							}
-							VES = {
-								OR = {
-									has_completed_focus = shared_focus_changelings_prepare_invation
-									has_completed_focus = shared_focus_changelings_prepare_attack_phase
-								}
-							}
-							VRA = {
-								OR = {
-									has_completed_focus = shared_focus_changelings_prepare_invation
-									has_completed_focus = shared_focus_changelings_prepare_attack_phase
-								}
-							}
-							LIK = {
-								OR = {
-									has_completed_focus = shared_focus_changelings_prepare_invation
-									has_completed_focus = shared_focus_changelings_prepare_attack_phase
-								}
-							}
-						}
-					}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
 				}
 			}
 			NOT = {
 				OR = {
 					DIS = {
-						focus_progress = {
-							focus = shared_focus_changelings_attack_canterlot
-							progress > 0
+						OR = {
+							has_completed_focus = shared_focus_changelings_prepare_attack_phase
+							has_completed_focus = shared_focus_changelings_prepare_invation
 						}
 					}
 					VES = {
-						focus_progress = {
-							focus = shared_focus_changelings_attack_canterlot
-							progress > 0
+						OR = {
+							has_completed_focus = shared_focus_changelings_prepare_attack_phase
+							has_completed_focus = shared_focus_changelings_prepare_invation
 						}
 					}
 					VRA = {
-						focus_progress = {
-							focus = shared_focus_changelings_attack_canterlot
-							progress > 0
+						OR = {
+							has_completed_focus = shared_focus_changelings_prepare_attack_phase
+							has_completed_focus = shared_focus_changelings_prepare_invation
 						}
 					}
 					LIK = {
-						focus_progress = {
-							focus = shared_focus_changelings_attack_canterlot
-							progress > 0
+						OR = {
+							has_completed_focus = shared_focus_changelings_prepare_attack_phase
+							has_completed_focus = shared_focus_changelings_prepare_invation
 						}
 					}
 				}
 			}
 		}
-		AND = {
+		else_if = {
+			limit = {
+				has_completed_focus = shared_focus_changelings_start_canterlot_race
+			}
+			NOT = {
+				OR = {
+					DIS = {
+						has_completed_focus = shared_focus_changelings_start_canterlot_race
+					}
+					VES = {
+						has_completed_focus = shared_focus_changelings_start_canterlot_race
+					}
+					VRA = {
+						has_completed_focus = shared_focus_changelings_start_canterlot_race
+					}
+					LIK = {
+						has_completed_focus = shared_focus_changelings_start_canterlot_race
+					}
+				}
+			}
+		}
+		else = {
+			always = no
+		}
+	}
+	else_if = {
+		limit = {
 			original_tag = VRA
-			OR = {
-				AND = {
-					has_completed_focus = shared_focus_changelings_start_canterlot_race
-					NOT = {
-						OR = {
-							DIS = {
-								has_completed_focus = shared_focus_changelings_attack_canterlot
-							}
-							SOR = {
-								has_completed_focus = shared_focus_changelings_attack_canterlot
-							}
-							VES = {
-								has_completed_focus = shared_focus_changelings_attack_canterlot
-							}
-							LIK = {
-								has_completed_focus = shared_focus_changelings_attack_canterlot
-							}
-						}
+		}
+		if = {
+			limit = {
+				has_completed_focus = shared_focus_changelings_prepare_attack_phase
+				has_completed_focus = shared_focus_changelings_prepare_invation
+			}
+			NOT = {
+				OR = {
+					DIS = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+					SOR = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+					VES = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+					LIK = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
 					}
 				}
-				AND = {
-					OR = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-					NOT = {
-						OR = {
-							DIS = {
-								OR = {
-									has_completed_focus = shared_focus_changelings_prepare_invation
-									has_completed_focus = shared_focus_changelings_prepare_attack_phase
-								}
-							}
-							SOR = {
-								OR = {
-									has_completed_focus = shared_focus_changelings_prepare_invation
-									has_completed_focus = shared_focus_changelings_prepare_attack_phase
-								}
-							}
-							VES = {
-								OR = {
-									has_completed_focus = shared_focus_changelings_prepare_invation
-									has_completed_focus = shared_focus_changelings_prepare_attack_phase
-								}
-							}
-							LIK = {
-								OR = {
-									has_completed_focus = shared_focus_changelings_prepare_invation
-									has_completed_focus = shared_focus_changelings_prepare_attack_phase
-								}
-							}
-						}
-					}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
 				}
 			}
 			NOT = {
 				OR = {
 					DIS = {
-						focus_progress = {
-							focus = shared_focus_changelings_attack_canterlot
-							progress > 0
+						OR = {
+							has_completed_focus = shared_focus_changelings_prepare_attack_phase
+							has_completed_focus = shared_focus_changelings_prepare_invation
 						}
 					}
 					SOR = {
-						focus_progress = {
-							focus = shared_focus_changelings_attack_canterlot
-							progress > 0
+						OR = {
+							has_completed_focus = shared_focus_changelings_prepare_attack_phase
+							has_completed_focus = shared_focus_changelings_prepare_invation
 						}
 					}
 					VES = {
-						focus_progress = {
-							focus = shared_focus_changelings_attack_canterlot
-							progress > 0
+						OR = {
+							has_completed_focus = shared_focus_changelings_prepare_attack_phase
+							has_completed_focus = shared_focus_changelings_prepare_invation
 						}
 					}
 					LIK = {
-						focus_progress = {
-							focus = shared_focus_changelings_attack_canterlot
-							progress > 0
+						OR = {
+							has_completed_focus = shared_focus_changelings_prepare_attack_phase
+							has_completed_focus = shared_focus_changelings_prepare_invation
 						}
 					}
 				}
 			}
 		}
-		AND = {
-			original_tag = LIK
-			OR = {
-				AND = {
-					has_completed_focus = shared_focus_changelings_start_canterlot_race
-					NOT = {
-						OR = {
-							DIS = {
-								has_completed_focus = shared_focus_changelings_attack_canterlot
-							}
-							SOR = {
-								has_completed_focus = shared_focus_changelings_attack_canterlot
-							}
-							VRA = {
-								has_completed_focus = shared_focus_changelings_attack_canterlot
-							}
-							VES = {
-								has_completed_focus = shared_focus_changelings_attack_canterlot
-							}
-						}
+		else_if = {
+			limit = {
+				has_completed_focus = shared_focus_changelings_start_canterlot_race
+			}
+			NOT = {
+				OR = {
+					DIS = {
+						has_completed_focus = shared_focus_changelings_start_canterlot_race
+					}
+					SOR = {
+						has_completed_focus = shared_focus_changelings_start_canterlot_race
+					}
+					VES = {
+						has_completed_focus = shared_focus_changelings_start_canterlot_race
+					}
+					LIK = {
+						has_completed_focus = shared_focus_changelings_start_canterlot_race
 					}
 				}
-				AND = {
-					OR = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
+			}
+		}
+		else = {
+			always = no
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				has_completed_focus = shared_focus_changelings_prepare_attack_phase
+				has_completed_focus = shared_focus_changelings_prepare_invation
+			}
+			NOT = {
+				OR = {
+					DIS = {
 						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
 					}
-					NOT = {
-						OR = {
-							DIS = {
-								OR = {
-									has_completed_focus = shared_focus_changelings_prepare_invation
-									has_completed_focus = shared_focus_changelings_prepare_attack_phase
-								}
-							}
-							SOR = {
-								OR = {
-									has_completed_focus = shared_focus_changelings_prepare_invation
-									has_completed_focus = shared_focus_changelings_prepare_attack_phase
-								}
-							}
-							VRA = {
-								OR = {
-									has_completed_focus = shared_focus_changelings_prepare_invation
-									has_completed_focus = shared_focus_changelings_prepare_attack_phase
-								}
-							}
-							VES = {
-								OR = {
-									has_completed_focus = shared_focus_changelings_prepare_invation
-									has_completed_focus = shared_focus_changelings_prepare_attack_phase
-								}
-							}
-						}
+					SOR = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
 					}
+					VRA = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+					VES = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
 				}
 			}
 			NOT = {
 				OR = {
 					DIS = {
-						focus_progress = {
-							focus = shared_focus_changelings_attack_canterlot
-							progress > 0
+						OR = {
+							has_completed_focus = shared_focus_changelings_prepare_attack_phase
+							has_completed_focus = shared_focus_changelings_prepare_invation
 						}
 					}
 					SOR = {
-						focus_progress = {
-							focus = shared_focus_changelings_attack_canterlot
-							progress > 0
+						OR = {
+							has_completed_focus = shared_focus_changelings_prepare_attack_phase
+							has_completed_focus = shared_focus_changelings_prepare_invation
 						}
 					}
 					VRA = {
-						focus_progress = {
-							focus = shared_focus_changelings_attack_canterlot
-							progress > 0
+						OR = {
+							has_completed_focus = shared_focus_changelings_prepare_attack_phase
+							has_completed_focus = shared_focus_changelings_prepare_invation
 						}
 					}
 					VES = {
-						focus_progress = {
-							focus = shared_focus_changelings_attack_canterlot
-							progress > 0
+						OR = {
+							has_completed_focus = shared_focus_changelings_prepare_attack_phase
+							has_completed_focus = shared_focus_changelings_prepare_invation
 						}
 					}
 				}
 			}
+		}
+		else_if = {
+			limit = {
+				has_completed_focus = shared_focus_changelings_start_canterlot_race
+			}
+			NOT = {
+				OR = {
+					DIS = {
+						has_completed_focus = shared_focus_changelings_start_canterlot_race
+					}
+					SOR = {
+						has_completed_focus = shared_focus_changelings_start_canterlot_race
+					}
+					VRA = {
+						has_completed_focus = shared_focus_changelings_start_canterlot_race
+					}
+					VES = {
+						has_completed_focus = shared_focus_changelings_start_canterlot_race
+					}
+				}
+			}
+		}
+		else = {
+			always = no
 		}
 	}
 }
 late_in_canterlot_race = {
-	OR = {
-		AND = {
+	#apply ONLY for VES/SOR/DIS/VRA/LIK
+	if = {
+		limit = {
 			original_tag = VES
-			OR = {
-				AND = {
-					NOT = {
-						has_completed_focus = shared_focus_changelings_start_canterlot_race
-					}
-					SOR = {
-						has_completed_focus = shared_focus_changelings_start_canterlot_race
-					}
-					DIS = {
-						has_completed_focus = shared_focus_changelings_start_canterlot_race
-					}
-					VRA = {
-						has_completed_focus = shared_focus_changelings_start_canterlot_race
-					}
-					LIK = {
-						has_completed_focus = shared_focus_changelings_start_canterlot_race
-					}
-				}
-				AND = {
-					NOT = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-					}
-					SOR = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-					}
-					DIS = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-					}
-					VRA = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-					}
-					LIK = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-					}
-				}
-				AND = {
-					NOT = {
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-					SOR = {
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-					DIS = {
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-					VRA = {
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-					LIK = {
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-				}
-			} 
 		}
-		AND = {
+		if = {
+			limit = {
+				NOT = {
+					has_completed_focus = shared_focus_changelings_start_canterlot_race
+				}
+			}
+			OR = {
+				SOR = {
+					has_completed_focus = shared_focus_changelings_start_canterlot_race
+				}
+				DIS = {
+					has_completed_focus = shared_focus_changelings_start_canterlot_race
+				}
+				VRA = {
+					has_completed_focus = shared_focus_changelings_start_canterlot_race
+				}
+				LIK = {
+					has_completed_focus = shared_focus_changelings_start_canterlot_race
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+			}
+			OR = {
+				SOR = {
+					OR = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+				}
+				DIS = {
+					OR = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+				}
+				VRA = {
+					OR = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+				}
+				LIK = {
+					OR = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_completed_focus = shared_focus_changelings_prepare_attack_phase
+				has_completed_focus = shared_focus_changelings_prepare_invation
+			}
+			#pass - it can`t be late to continue Canterlot race, because next step is final (made to secure OR in next if)
+			always = no
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+			}
+			OR = {
+				SOR = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+				DIS = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+				VRA = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+				LIK = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+			}
+		}
+		else = {
+			always = no
+		}
+	}
+	else_if = {
+		limit = {
 			original_tag = SOR
-			OR = {
-				AND = {
-					NOT = {
-						has_completed_focus = shared_focus_changelings_start_canterlot_race
-					}
-					VES = {
-						has_completed_focus = shared_focus_changelings_start_canterlot_race
-					}
-					DIS = {
-						has_completed_focus = shared_focus_changelings_start_canterlot_race
-					}
-					VRA = {
-						has_completed_focus = shared_focus_changelings_start_canterlot_race
-					}
-					LIK = {
-						has_completed_focus = shared_focus_changelings_start_canterlot_race
-					}
-				}
-				AND = {
-					NOT = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-					}
-					VES = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-					}
-					DIS = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-					}
-					VRA = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-					}
-					LIK = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-					}
-				}
-				AND = {
-					NOT = {
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-					VES = {
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-					DIS = {
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-					VRA = {
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-					LIK = {
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-				}
-			} 
 		}
-		AND = {
+		if = {
+			limit = {
+				NOT = {
+					has_completed_focus = shared_focus_changelings_start_canterlot_race
+				}
+			}
+			OR = {
+				VES = {
+					has_completed_focus = shared_focus_changelings_start_canterlot_race
+				}
+				DIS = {
+					has_completed_focus = shared_focus_changelings_start_canterlot_race
+				}
+				VRA = {
+					has_completed_focus = shared_focus_changelings_start_canterlot_race
+				}
+				LIK = {
+					has_completed_focus = shared_focus_changelings_start_canterlot_race
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+			}
+			OR = {
+				VES = {
+					OR = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+				}
+				DIS = {
+					OR = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+				}
+				VRA = {
+					OR = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+				}
+				LIK = {
+					OR = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_completed_focus = shared_focus_changelings_prepare_attack_phase
+				has_completed_focus = shared_focus_changelings_prepare_invation
+			}
+			#pass - it can`t be late to continue Canterlot race, because next step is final (made to secure OR in next if)
+			always = no
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+			}
+			OR = {
+				VES = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+				DIS = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+				VRA = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+				LIK = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+			}
+		}
+		else = {
+			always = no
+		}
+	}
+	else_if = {
+		limit = {
 			original_tag = DIS
-			OR = {
-				AND = {
-					NOT = {
-						has_completed_focus = shared_focus_changelings_start_canterlot_race
-					}
-					SOR = {
-						has_completed_focus = shared_focus_changelings_start_canterlot_race
-					}
-					VES = {
-						has_completed_focus = shared_focus_changelings_start_canterlot_race
-					}
-					VRA = {
-						has_completed_focus = shared_focus_changelings_start_canterlot_race
-					}
-					LIK = {
-						has_completed_focus = shared_focus_changelings_start_canterlot_race
-					}
-				}
-				AND = {
-					NOT = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-					}
-					SOR = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-					}
-					VES = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-					}
-					VRA = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-					}
-					LIK = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-					}
-				}
-				AND = {
-					NOT = {
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-					SOR = {
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-					VES = {
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-					VRA = {
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-					LIK = {
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-				}
-			} 
 		}
-		AND = {
+		if = {
+			limit = {
+				NOT = {
+					has_completed_focus = shared_focus_changelings_start_canterlot_race
+				}
+			}
+			OR = {
+				SOR = {
+					has_completed_focus = shared_focus_changelings_start_canterlot_race
+				}
+				VES = {
+					has_completed_focus = shared_focus_changelings_start_canterlot_race
+				}
+				VRA = {
+					has_completed_focus = shared_focus_changelings_start_canterlot_race
+				}
+				LIK = {
+					has_completed_focus = shared_focus_changelings_start_canterlot_race
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+			}
+			OR = {
+				SOR = {
+					OR = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+				}
+				VES = {
+					OR = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+				}
+				VRA = {
+					OR = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+				}
+				LIK = {
+					OR = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_completed_focus = shared_focus_changelings_prepare_attack_phase
+				has_completed_focus = shared_focus_changelings_prepare_invation
+			}
+			#pass - it can`t be late to continue Canterlot race, because next step is final (made to secure OR in next if)
+			always = no
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+			}
+			OR = {
+				SOR = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+				VES = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+				VRA = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+				LIK = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+			}
+		}
+		else = {
+			always = no
+		}
+	}
+	else_if = {
+		limit = {
 			original_tag = VRA
-			OR = {
-				AND = {
-					NOT = {
-						has_completed_focus = shared_focus_changelings_start_canterlot_race
-					}
-					SOR = {
-						has_completed_focus = shared_focus_changelings_start_canterlot_race
-					}
-					DIS = {
-						has_completed_focus = shared_focus_changelings_start_canterlot_race
-					}
-					VES = {
-						has_completed_focus = shared_focus_changelings_start_canterlot_race
-					}
-					LIK = {
-						has_completed_focus = shared_focus_changelings_start_canterlot_race
-					}
-				}
-				AND = {
-					NOT = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-					}
-					SOR = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-					}
-					DIS = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-					}
-					VES = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-					}
-					LIK = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-					}
-				}
-				AND = {
-					NOT = {
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-					SOR = {
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-					DIS = {
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-					VES = {
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-					LIK = {
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-				}
-			} 
 		}
-		AND = {
-			original_tag = LIK
+		if = {
+			limit = {
+				NOT = {
+					has_completed_focus = shared_focus_changelings_start_canterlot_race
+				}
+			}
 			OR = {
-				AND = {
-					NOT = {
-						has_completed_focus = shared_focus_changelings_start_canterlot_race
-					}
-					SOR = {
-						has_completed_focus = shared_focus_changelings_start_canterlot_race
-					}
-					DIS = {
-						has_completed_focus = shared_focus_changelings_start_canterlot_race
-					}
-					VRA = {
-						has_completed_focus = shared_focus_changelings_start_canterlot_race
-					}
-					VES = {
-						has_completed_focus = shared_focus_changelings_start_canterlot_race
-					}
+				SOR = {
+					has_completed_focus = shared_focus_changelings_start_canterlot_race
 				}
-				AND = {
-					NOT = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-					}
-					SOR = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-					}
-					DIS = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-					}
-					VRA = {
-						has_completed_focus = shared_focus_changelings_prepare_invation
-					}
-					VES = {
+				DIS = {
+					has_completed_focus = shared_focus_changelings_start_canterlot_race
+				}
+				VES = {
+					has_completed_focus = shared_focus_changelings_start_canterlot_race
+				}
+				LIK = {
+					has_completed_focus = shared_focus_changelings_start_canterlot_race
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+			}
+			OR = {
+				SOR = {
+					OR = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
 						has_completed_focus = shared_focus_changelings_prepare_invation
 					}
 				}
-				AND = {
-					NOT = {
+				DIS = {
+					OR = {
 						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-					SOR = {
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-					DIS = {
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-					VRA = {
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
-					}
-					VES = {
-						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
 					}
 				}
-			} 
+				VES = {
+					OR = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+				}
+				LIK = {
+					OR = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_completed_focus = shared_focus_changelings_prepare_attack_phase
+				has_completed_focus = shared_focus_changelings_prepare_invation
+			}
+			#pass - it can`t be late to continue Canterlot race, because next step is final (made to secure OR in next if)
+			always = no
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+			}
+			OR = {
+				SOR = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+				DIS = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+				VES = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+				LIK = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+			}
+		}
+		else = {
+			always = no
+		}
+	}
+	else = {
+		if = {
+			limit = {
+				NOT = {
+					has_completed_focus = shared_focus_changelings_start_canterlot_race
+				}
+			}
+			OR = {
+				SOR = {
+					has_completed_focus = shared_focus_changelings_start_canterlot_race
+				}
+				DIS = {
+					has_completed_focus = shared_focus_changelings_start_canterlot_race
+				}
+				VRA = {
+					has_completed_focus = shared_focus_changelings_start_canterlot_race
+				}
+				VES = {
+					has_completed_focus = shared_focus_changelings_start_canterlot_race
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				NOT = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+			}
+			OR = {
+				SOR = {
+					OR = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+				}
+				DIS = {
+					OR = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+				}
+				VRA = {
+					OR = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+				}
+				VES = {
+					OR = {
+						has_completed_focus = shared_focus_changelings_prepare_attack_phase
+						has_completed_focus = shared_focus_changelings_prepare_invation
+					}
+				}
+			}
+		}
+		else_if = {
+			limit = {
+				has_completed_focus = shared_focus_changelings_prepare_attack_phase
+				has_completed_focus = shared_focus_changelings_prepare_invation
+			}
+			#pass - it can`t be late to continue Canterlot race, because next step is final (made to secure OR in next if)
+			always = no
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+			}
+			OR = {
+				SOR = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+				DIS = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+				VRA = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+				VES = {
+					has_completed_focus = shared_focus_changelings_prepare_attack_phase
+					has_completed_focus = shared_focus_changelings_prepare_invation
+				}
+			}
+		}
+		else = {
+			always = no
 		}
 	}
 }

@@ -31,6 +31,9 @@ init_ideas_tag_list = {
 		global.power_concentration_idea_tags = 7
 	}
 	resize_array = {
+		global.urbanization_idea_tags = 5
+	}
+	resize_array = {
 		global.illiteracy_idea_tags = 6
 	}
 	resize_array = {
@@ -48,4 +51,56 @@ init_ideas_tag_list = {
 	resize_array = {
 		global.valuta_idea_tags = 9
 	}
+}
+init_mod_lore_screen_vars = {
+	init_tag_var = yes
+	init_mod_lore_screen_show_var = yes
+}
+init_tag_var = {
+	resize_array = {
+		array = global.countries_with_lore
+		size = 0
+	}
+	add_to_array = {
+		global.countries_with_lore = VES.id
+	}
+	add_to_array = {
+		global.countries_with_lore = EEQ.id
+	}
+	#continue
+}
+init_mod_lore_screen_show_var = {
+	every_country = {
+		if = {
+			limit = {
+				is_ai = no
+			}
+			set_variable = {
+				mod_lore_screen = 1
+			}
+			for_each_loop = {
+				array = global.countries_with_lore
+				if = {
+					limit = {
+						check_variable = {
+							v = THIS.id
+						}
+					}
+					set_variable = {
+						country_lore = i
+					}
+					set_temp_variable = {
+						break = 1
+					}
+				}
+			}
+		}
+		
+	}
+}
+init_math_memory = {
+	resize_array = {
+		global.math_args = 2 #x and y register
+	}
+	#init bit array
 }

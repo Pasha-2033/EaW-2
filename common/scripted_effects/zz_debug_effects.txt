@@ -210,3 +210,181 @@ d_fix_poverty_level_flag_by_idea = {
 	fix_poverty_level_flag_by_idea = yes
 	log = "fixed poverty level flag by idea for [ROOT.GetTag]"
 }
+#code for math mtth vars, delete from here
+d_erf = {
+	set_temp_variable = {
+		2_d_sqrt_pi = 1.128 #~2/sqrt(pi)
+	}
+	set_temp_variable = {
+		x = args^0
+	}
+	set_temp_variable = {
+		n2x = x
+	}
+	multiply_temp_variable = {
+		n2x = n2x
+	}
+	multiply_temp_variable = {
+		n2x = -1
+	}
+	set_temp_variable = {
+		sum = x
+	}
+	set_temp_variable = {
+		counter_0 = 1
+	}
+	while_loop_effect = {
+		limit = {
+			check_variable = {
+				counter_0 < 10
+			}
+		}
+		multiply_temp_variable = {
+			x = n2x
+		}
+		set_temp_variable = {
+			fact = 1
+		}
+		set_temp_variable = {
+			fact_counter = counter_0
+		}
+		while_loop_effect = {
+			limit = {
+				check_variable = {
+					fact_counter > 1
+				}
+			}
+			multiply_temp_variable = {
+				fact = fact_counter
+			}
+			subtract_from_temp_variable = {
+				fact_counter = 1
+			}
+		}
+		set_temp_variable = {
+			2n_1 = counter_0
+		}
+		multiply_temp_variable = {
+			2n_1 = 2
+		}
+		add_to_temp_variable = {
+			2n_1 = 1
+		}
+		set_temp_variable = {
+			temp_x = x
+		}
+		divide_temp_variable = {
+			temp_x = fact
+		}
+		divide_temp_variable = {
+			temp_x = 2n_1
+		}
+		add_to_temp_variable = {
+			sum = temp_x
+		}
+		log = "[?temp_x]"
+		add_to_temp_variable = {
+			counter_0 = 1
+		}
+	}
+	multiply_temp_variable = {
+		sum = 2_d_sqrt_pi
+	}
+	log = "erf of [?args^0]: [?sum]"
+}
+d_erfi = {
+	set_temp_variable = {
+		2_d_sqrt_pi = 1.128 #~2/sqrt(pi)
+	}
+	set_temp_variable = {
+		x = args^0
+	}
+	set_temp_variable = {
+		2x = x
+	}
+	multiply_temp_variable = {
+		2x = 2x
+	}
+	set_temp_variable = {
+		sum = x
+	}
+	set_temp_variable = {
+		counter_0 = 1
+	}
+	while_loop_effect = {
+		limit = {
+			check_variable = {
+				counter_0 < 10
+			}
+		}
+		multiply_temp_variable = {
+			x = 2x
+		}
+		set_temp_variable = {
+			fact = 1
+		}
+		set_temp_variable = {
+			fact_counter = counter_0
+		}
+		while_loop_effect = {
+			limit = {
+				check_variable = {
+					fact_counter > 1
+				}
+			}
+			multiply_temp_variable = {
+				fact = fact_counter
+			}
+			subtract_from_temp_variable = {
+				fact_counter = 1
+			}
+		}
+		set_temp_variable = {
+			2n_1 = counter_0
+		}
+		multiply_temp_variable = {
+			2n_1 = 2
+		}
+		add_to_temp_variable = {
+			2n_1 = 1
+		}
+		set_temp_variable = {
+			temp_x = x
+		}
+		divide_temp_variable = {
+			temp_x = fact
+		}
+		divide_temp_variable = {
+			temp_x = 2n_1
+		}
+		add_to_temp_variable = {
+			sum = temp_x
+		}
+		log = "[?temp_x]"
+		add_to_temp_variable = {
+			counter_0 = 1
+		}
+	}
+	multiply_temp_variable = {
+		sum = 2_d_sqrt_pi
+	}
+	log = "erf of [?args^0]: [?sum]"
+}
+d_mtth_sin = {
+	set_variable = {
+		global.math_args^0 = 1
+	}
+	set_temp_variable = {
+		temp = mtth:sin
+	}
+	log = "sin: [?temp]"
+}
+d_mtth_cos = {
+	set_variable = {
+		global.math_args^0 = 1
+	}
+	set_temp_variable = {
+		temp = mtth:cos
+	}
+	log = "cos: [?temp]"
+}

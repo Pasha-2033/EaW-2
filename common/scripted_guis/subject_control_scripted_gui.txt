@@ -1,0 +1,796 @@
+scripted_gui = {
+	subject_control = {
+		context_type = selected_country_context
+		window_name = "subject_control_menu"
+		parent_window_token = selected_country_view_diplomacy
+		visible = {
+			is_subject_of = ROOT
+			check_variable = {
+				ROOT.subject_control_visibility = 1
+			}
+		}
+		dynamic_lists = {
+			mobilization_law_button_grid = {
+				array = global.mobilization_idea_tags
+				change_scope = no
+				entry_container = "subject_control_mobilization_law_button_entry"
+				index = i_0
+			}
+			trade_button_grid = {
+				array = global.trade_idea_tags
+				change_scope = no
+				entry_container = "subject_control_trade_button_entry"
+				index = i_1
+			}
+			economy_button_grid = {
+				array = global.economy_idea_tags
+				change_scope = no
+				entry_container = "subject_control_economy_button_entry"
+				index = i_2
+			}
+			society_button_grid = {
+				array = global.society_idea_tags
+				change_scope = no
+				entry_container = "subject_control_society_button_entry"
+				index = i_3
+			}
+			power_concentration_button_grid = {
+				array = global.power_concentration_idea_tags
+				change_scope = no
+				entry_container = "subject_control_power_concentration_button_entry"
+				index = i_4
+			}
+			urbanization_button_grid = {
+				array = global.urbanization_idea_tags
+				change_scope = no
+				entry_container = "subject_control_urbanization_button_entry"
+				index = i_5
+			}
+			illiteracy_button_grid = {
+				array = global.illiteracy_idea_tags
+				change_scope = no
+				entry_container = "subject_control_illiteracy_button_entry"
+				index = i_6
+			}
+			poverty_button_grid = {
+				array = global.poverty_idea_tags
+				change_scope = no
+				entry_container = "subject_control_poverty_button_entry"
+				index = i_7
+			}
+			#add new ideas grid
+		}
+		effects = {
+			close_button_click = {
+				set_variable = {
+					ROOT.subject_control_visibility = 0
+				}
+			}
+			subject_control_mobilization_law_button_click = {
+				log = "[?i_0]"
+				meta_effect = {
+					text = {
+						change_subject_mobilization_law_[I] = yes
+					}
+					I = i_0
+				}
+			}
+			subject_control_trade_button_click = {
+				log = "[?i_1]"
+				meta_effect = {
+					text = {
+						change_subject_trade_[I] = yes
+					}
+					I = i_1
+				}
+			}
+			subject_control_economy_button_click = {
+				log = "[?i_2]"
+				meta_effect = {
+					text = {
+						change_subject_economy_[I] = yes
+					}
+					I = i_2
+				}
+			}
+			subject_control_society_button_click = {
+				log = "[?i_3]"
+			}
+			subject_control_power_concentration_button_click = {
+				log = "[?i_4]"
+			}
+			subject_control_urbanization_button_click = {
+				log = "[?i_5]"
+			}
+			subject_control_illiteracy_button_click = {
+				log = "[?i_6]"
+			}
+			subject_control_poverty_button_click = {
+				log = "[?i_7]"
+			}
+			use_overlord_settings_button_click = {
+				if = {
+					limit = {
+						check_variable = {
+							FROM.use_overlord_settings = 1
+						}
+					}
+					set_variable = {
+						FROM.use_overlord_settings = 0
+					}
+				}
+				else = {
+					set_variable = {
+						FROM.use_overlord_settings = 1
+					}
+				}
+			}
+			force_settings_button_click = {
+				if = {
+					limit = {
+						check_variable = {
+							FROM.forced_subject_settings = 1
+						}
+					}
+					set_variable = {
+						FROM.forced_subject_settings = 0
+					}
+				}
+				else = {
+					set_variable = {
+						FROM.forced_subject_settings = 1
+					}
+				}
+			}
+		}
+		triggers = {
+			subject_control_mobilization_law_button_click_enabled = {
+				set_temp_variable = {
+					frame_0 = i_0
+				}
+				multiply_temp_variable = {
+					frame_0 = 3
+				}
+				if = {
+					limit = {
+						check_variable = {
+							frame_0 = 0
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = disarmed_nation
+							}
+						}
+						add_to_temp_variable = {
+							frame_0 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = {
+								subject_mobilization_law_0_available = no
+							}
+						}
+						add_to_temp_variable = {
+							frame_0 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							frame_0 = 3
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = volunteer_only
+							}
+						}
+						add_to_temp_variable = {
+							frame_0 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = {
+								subject_mobilization_law_1_available = no
+							}
+						}
+						add_to_temp_variable = {
+							frame_0 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							frame_0 = 6
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = limited_conscription
+							}
+							add_to_temp_variable = {
+								frame_0 = 1
+							}
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = {
+								subject_mobilization_law_2_available = no
+							}
+						}
+						add_to_temp_variable = {
+							frame_0 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							frame_0 = 9
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = extensive_conscription
+							}
+						}
+						add_to_temp_variable = {
+							frame_0 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = {
+								subject_mobilization_law_3_available = no
+							}
+						}
+						add_to_temp_variable = {
+							frame_0 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							frame_0 = 12
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = service_by_requirement
+							}
+						}
+						add_to_temp_variable = {
+							frame_0 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = {
+								subject_mobilization_law_4_available = no
+							}
+						}
+						add_to_temp_variable = {
+							frame_0 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							frame_0 = 15
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = all_adults_serve
+							}
+						}
+						add_to_temp_variable = {
+							frame_0 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = {
+								subject_mobilization_law_5_available = no
+							}
+						}
+						add_to_temp_variable = {
+							frame_0 = 2
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							FROM = {
+								has_idea = scraping_the_barrel
+							}
+						}
+						add_to_temp_variable = {
+							frame_0 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = {
+								subject_mobilization_law_6_available = no
+							}
+						}
+						add_to_temp_variable = {
+							frame_0 = 2
+						}
+					}
+				}
+				add_to_temp_variable = {
+					frame_0 = 1
+				}
+			}
+			subject_control_trade_button_click_enabled = {}
+			subject_control_economy_button_click_enabled = {
+				set_temp_variable = {
+					frame_2 = i_2
+				}
+				multiply_temp_variable = {
+					frame_2 = 3
+				}
+				if = {
+					limit = {
+						check_variable = {
+							frame_2 = 0
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = isolation
+							}
+						}
+						add_to_temp_variable = {
+							frame_2 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = {
+								subject_economy_0_available = no
+							}
+						}
+						add_to_temp_variable = {
+							frame_2 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							frame_2 = 3
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = primitive_economy
+							}
+						}
+						add_to_temp_variable = {
+							frame_2 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = {
+								subject_economy_1_available = no
+							}
+						}
+						add_to_temp_variable = {
+							frame_2 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							frame_2 = 6
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = outlaw_economy
+							}
+						}
+						add_to_temp_variable = {
+							frame_2 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = {
+								subject_economy_2_available = no
+							}
+						}
+						add_to_temp_variable = {
+							frame_2 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							frame_2 = 9
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = civilian_economy
+							}
+						}
+						add_to_temp_variable = {
+							frame_2 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = {
+								subject_economy_3_available = no
+							}
+						}
+						add_to_temp_variable = {
+							frame_2 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							frame_2 = 12
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = low_economic_mobilisation
+							}
+						}
+						add_to_temp_variable = {
+							frame_2 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = {
+								subject_economy_4_available = no
+							}
+						}
+						add_to_temp_variable = {
+							frame_2 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							frame_2 = 15
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = partial_economic_mobilisation
+							}
+						}
+						add_to_temp_variable = {
+							frame_2 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = {
+								subject_economy_5_available = no
+							}
+						}
+						add_to_temp_variable = {
+							frame_2 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							frame_2 = 18
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = war_economy
+							}
+						}
+						add_to_temp_variable = {
+							frame_2 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = {
+								subject_economy_6_available = no
+							}
+						}
+						add_to_temp_variable = {
+							frame_2 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							frame_2 = 21
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = tot_economic_mobilisation
+							}
+						}
+						add_to_temp_variable = {
+							frame_2 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = {
+								subject_economy_7_available = no
+							}
+						}
+						add_to_temp_variable = {
+							frame_2 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							frame_2 = 24
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = tot_militarisation
+							}
+						}
+						add_to_temp_variable = {
+							frame_2 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = {
+								subject_economy_8_available = no
+							}
+						}
+						add_to_temp_variable = {
+							frame_2 = 2
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							FROM = {
+								has_idea = collectivized_society
+							}
+						}
+						add_to_temp_variable = {
+							frame_2 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							FROM = {
+								subject_economy_9_available = no
+							}
+						}
+						add_to_temp_variable = {
+							frame_2 = 2
+						}
+					}
+				}
+				add_to_temp_variable = {
+					frame_2 = 1
+				}
+			}
+			subject_control_poverty_button_click_enabled = {
+				set_temp_variable = {
+					frame_7 = i_7
+				}
+				multiply_temp_variable = {
+					frame_7 = 2
+				}
+				if = {
+					limit = {
+						FROM = {
+							has_idea = no_poverty
+						}
+						check_variable = {
+							frame_7 = 0
+						}
+					}
+					add_to_temp_variable = {
+						frame_7 = 1
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							has_idea = poverty5
+						}
+						check_variable = {
+							frame_7 = 2
+						}
+					}
+					add_to_temp_variable = {
+						frame_7 = 1
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							has_idea = poverty4
+						}
+						check_variable = {
+							frame_7 = 4
+						}
+					}
+					add_to_temp_variable = {
+						frame_7 = 1
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							has_idea = poverty3
+						}
+						check_variable = {
+							frame_7 = 6
+						}
+					}
+					add_to_temp_variable = {
+						frame_7 = 1
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							has_idea = poverty2
+						}
+						check_variable = {
+							frame_7 = 8
+						}
+					}
+					add_to_temp_variable = {
+						frame_7 = 1
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							has_idea = poverty1
+						}
+						check_variable = {
+							frame_7 = 10
+						}
+					}
+					add_to_temp_variable = {
+						frame_7 = 1
+					}
+				}
+				else_if = {
+					limit = {
+						FROM = {
+							has_idea = poverty
+						}
+						check_variable = {
+							frame_7 = 12
+						}
+					}
+					add_to_temp_variable = {
+						frame_7 = 1
+					}
+				}
+				add_to_temp_variable = {
+					frame_7 = 1
+				}
+			}
+			use_overlord_settings_button_click_enabled = {
+				set_temp_variable = {
+					overlord_frame = FROM.use_overlord_settings
+				}
+				add_to_temp_variable = {
+					overlord_frame = 1
+				}
+			}
+			force_settings_button_click_enabled = {
+				set_temp_variable = {
+					forced_frame = FROM.forced_subject_settings
+				}
+				add_to_temp_variable = {
+					forced_frame = 1
+				}
+			}
+		}
+		properties = {
+			subject_control_mobilization_law_button = {
+				frame = frame_0
+			}
+			subject_control_trade_button = {
+			#	frame = i_1
+			}
+			subject_control_economy_button = {
+				frame = frame_2
+			}
+			subject_control_poverty_button = {
+				frame = frame_7
+			}
+			use_overlord_settings_button = {
+				frame = overlord_frame
+			}
+			force_settings_button = {
+				frame = forced_frame
+			}
+		}
+	}
+	subject_control_main_button = {
+		context_type = selected_country_context
+		window_name = "subject_control_menu_main_button"
+		parent_window_token = selected_country_view_diplomacy
+		visible = {
+			is_subject_of = ROOT
+		}
+		effects = {
+			main_button_click = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = ROOT.subject_control_visibility
+						}
+					}
+					set_variable = {
+						ROOT.subject_control_visibility = 1
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							ROOT.subject_control_visibility = 0
+						}
+					}
+					set_variable = {
+						ROOT.subject_control_visibility = 1
+					}
+				}
+				else = {
+					set_variable = {
+						ROOT.subject_control_visibility = 0
+					}
+				}
+			}
+		}
+	}
+}

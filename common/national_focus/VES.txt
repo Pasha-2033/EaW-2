@@ -13,8 +13,8 @@ focus_tree = {
 		y = 1350
 	}
 	shared_focus = shared_focus_changelings_start_canterlot_race
-	shared_focus = shared_focus_initiate_great_projects
-	shared_focus = shared_focus_polit_system_temp #temp
+	shared_focus = shared_focus_changelings_initiate_great_projects
+	shared_focus = shared_focus_changelings_polit_system_temp #temp
 	#uniqe VES focuses
 	focus = {
 		id = ves_focus_monarhy_guestion
@@ -53,6 +53,12 @@ focus_tree = {
 		cost = 5
 		prerequisite = {
 			focus = ves_focus_monarhy_guestion
+		}
+		mutually_exclusive = {
+			focus = ves_focus_military_hunta_uprise
+			focus = ves_focus_sour_uprise
+			focus = ves_focus_workers_front
+			focus = ves_focus_way_of_love
 		}
 		ai_will_do = {
 			factor = 200
@@ -143,7 +149,7 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = ves_focus_monarhy_uprise
-			focus = ves_focus_SoUR_uprise
+			focus = ves_focus_sour_uprise
 			focus = ves_focus_workers_front
 			focus = ves_focus_way_of_love
 		}
@@ -180,7 +186,7 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = ves_focus_military_hunta_uprise
-			focus = ves_focus_SoUR_uprise
+			focus = ves_focus_sour_uprise
 			focus = ves_focus_monarhy_uprise
 			focus = ves_focus_way_of_love
 		}
@@ -229,7 +235,7 @@ focus_tree = {
 		}
 		mutually_exclusive = {
 			focus = ves_focus_military_hunta_uprise
-			focus = ves_focus_SoUR_uprise
+			focus = ves_focus_sour_uprise
 			focus = ves_focus_workers_front
 			focus = ves_focus_monarhy_uprise
 		}
@@ -458,6 +464,7 @@ focus_tree = {
 			NOT = {
 				has_country_flag = no_evil_mind
 			}
+			has_completed_focus = ves_focus_evil_mind_found
 		}
 		ai_will_do = {
 			factor = 200
