@@ -1,0 +1,457 @@
+focus_tree = {
+	id = esg_focus_tree
+	country = {
+		base = 0
+		modifier = {
+			add = 10
+			tag = ESG
+		}
+	}
+	default = no
+	continuous_focus_position = {
+		x = 2700
+		y = 1350
+	}
+	#uniqe ESG focuses
+	focus = {
+		id = esg_focus_ignition_of_revolution_flame
+		icon = GFX_goal_generic_workers_democracy
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		x = 7
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus esg_focus_ignition_of_revolution_flame"
+		}
+		search_filters = {
+		}
+	}
+	focus = {
+		id = esg_focus_power_consolidation
+		icon = GFX_goal_generic_workers_democracy
+		cost = 1
+		prerequisite = {
+			focus = esg_focus_ignition_of_revolution_flame
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 7
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus esg_focus_power_consolidation"
+		}
+		search_filters = {
+		}
+	}
+	focus = {
+		id = esg_focus_anarchy_mother
+		icon = GFX_goal_generic_workers_democracy
+		cost = 1
+		prerequisite = {
+			focus = esg_focus_power_consolidation
+		}
+		mutually_exclusive = {
+			focus = esg_focus_government_of_workers
+			focus = esg_focus_stalion_in_charge
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 3
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus esg_focus_anarchy_mother"
+		}
+		search_filters = {
+		}
+	}
+	focus = {
+		id = esg_focus_government_of_workers
+		icon = GFX_goal_generic_workers_democracy
+		cost = 1
+		prerequisite = {
+			focus = esg_focus_power_consolidation
+		}
+		mutually_exclusive = {
+			focus = esg_focus_anarchy_mother
+			focus = esg_focus_stalion_in_charge
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 7
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus esg_focus_government_of_workers"
+		}
+		search_filters = {
+		}
+	}
+	focus = {
+		id = esg_focus_stalion_in_charge
+		icon = GFX_goal_generic_workers_democracy
+		cost = 1
+		prerequisite = {
+			focus = esg_focus_power_consolidation
+		}
+		mutually_exclusive = {
+			focus = esg_focus_government_of_workers
+			focus = esg_focus_anarchy_mother
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 11
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus esg_focus_stalion_in_charge"
+		}
+		search_filters = {
+		}
+	}
+	focus = {
+		id = esg_focus_central_high_command
+		icon = GFX_goal_generic_workers_democracy
+		cost = 1
+		prerequisite = {
+			focus = esg_focus_stalion_in_charge
+			focus = esg_focus_government_of_workers
+		}
+		mutually_exclusive = {
+			focus = esg_focus_army_independence
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 8
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus esg_focus_central_high_command"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = esg_focus_prepare_army_for_civilwar
+		icon = GFX_goal_generic_workers_democracy
+		cost = 1
+		prerequisite = {
+			focus = esg_focus_stalion_in_charge
+			focus = esg_focus_government_of_workers
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 10
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus esg_focus_prepare_army_for_civilwar"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = esg_focus_army_independence
+		icon = GFX_goal_generic_workers_democracy
+		cost = 1
+		prerequisite = {
+			focus = esg_focus_anarchy_mother
+			focus = esg_focus_government_of_workers
+		}
+		mutually_exclusive = {
+			focus = esg_focus_central_high_command
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 6
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus esg_focus_army_independence"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = esg_focus_recruiting_company
+		icon = GFX_goal_generic_workers_democracy
+		cost = 1
+		prerequisite = {
+			focus = esg_focus_anarchy_mother
+			focus = esg_focus_government_of_workers
+		}
+		mutually_exclusive = {
+			focus = esg_focus_start_red_terror
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 4
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus esg_focus_recruiting_company"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = esg_focus_start_red_terror
+		icon = GFX_goal_generic_workers_democracy
+		cost = 1
+		prerequisite = {
+			focus = esg_focus_anarchy_mother
+		}
+		mutually_exclusive = {
+			focus = esg_focus_recruiting_company
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 2
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus esg_focus_start_red_terror"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = esg_focus_silver_for_food
+		icon = GFX_goal_generic_workers_democracy
+		cost = 1
+		prerequisite = {
+			focus = esg_focus_stalion_in_charge
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 12
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus esg_focus_silver_for_food"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = esg_focus_gold_for_arms
+		icon = GFX_goal_generic_workers_democracy
+		cost = 1
+		prerequisite = {
+			focus = esg_focus_silver_for_food
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 12
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus esg_focus_gold_for_arms"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = esg_focus_last_stand
+		icon = GFX_goal_generic_workers_democracy
+		cost = 1
+		prerequisite = {
+			focus = esg_focus_gold_for_arms
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 12
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus esg_focus_last_stand"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = esg_focus_revolution_in_our_hearts
+		icon = GFX_goal_generic_workers_democracy
+		cost = 1
+		prerequisite = {
+			focus = esg_focus_last_stand
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 12
+		y = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus esg_focus_revolution_in_our_hearts"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = esg_focus_prepare_counterattack
+		icon = GFX_goal_generic_workers_democracy
+		cost = 1
+		prerequisite = {
+			focus = esg_focus_central_high_command
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 8
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus esg_focus_prepare_counterattack"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = esg_focus_fortify_borders
+		icon = GFX_goal_generic_workers_democracy
+		cost = 1
+		prerequisite = {
+			focus = esg_focus_prepare_counterattack
+		}
+		available = {
+			has_civil_war = no
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 8
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus esg_focus_fortify_borders"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = esg_focus_prepare_for_starvation
+		icon = GFX_goal_generic_workers_democracy
+		cost = 1
+		prerequisite = {
+			focus = esg_focus_start_red_terror
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 2
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus esg_focus_prepare_for_starvation"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = esg_focus_improve_workers_condition
+		icon = GFX_goal_generic_workers_democracy
+		cost = 1
+		prerequisite = {
+			focus = esg_focus_prepare_for_starvation
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 2
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus esg_focus_improve_workers_condition"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = esg_focus_rebel_batalions
+		icon = GFX_goal_generic_workers_democracy
+		cost = 1
+		prerequisite = {
+			focus = esg_focus_improve_workers_condition
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 2
+		y = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus esg_focus_rebel_batalions"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = esg_focus_say_no_to_capitulation
+		icon = GFX_goal_generic_workers_democracy
+		cost = 1
+		prerequisite = {
+			focus = esg_focus_rebel_batalions
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 2
+		y = 7
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus esg_focus_say_no_to_capitulation"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = esg_focus_searching_for_new_weapon
+		icon = GFX_goal_generic_workers_democracy
+		cost = 1
+		prerequisite = {
+			focus = esg_focus_prepare_army_for_civilwar
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 10
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus esg_focus_searching_for_new_weapon"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = esg_focus_mass_atack_strategy
+		icon = GFX_goal_generic_workers_democracy
+		cost = 1
+		prerequisite = {
+			focus = esg_focus_army_independence
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 6
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus esg_focus_mass_atack_strategy"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+}

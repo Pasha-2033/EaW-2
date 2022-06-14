@@ -34,3 +34,160 @@ defined_text = {
 		localization_key = no_cost_index
 	}
 }
+defined_text = {
+	name = trade_law_cost
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = {
+					trade_pp_cost_factor > 0
+				}
+			}
+		}
+		localization_key = trade_law_pp_cost
+	}
+	text = {
+		localization_key = no_cost_index
+	}
+}
+defined_text = {
+	name = economy_law_cost
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = {
+					economy_pp_cost_factor > 0
+				}
+			}
+		}
+		localization_key = economy_law_pp_cost
+	}
+	text = {
+		localization_key = no_cost_index
+	}
+}
+#tooltips
+defined_text = {
+	name = subject_control_ml_idea_name_tt
+	text = {
+		trigger = {
+			check_variable = {
+				i_0 = 0
+			}
+		}
+		localization_key = disarmed_nation
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				i_0 = 1
+			}
+		}
+		localization_key = volunteer_only
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				i_0 = 2
+			}
+		}
+		localization_key = limited_conscription
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				i_0 = 3
+			}
+		}
+		localization_key = extensive_conscription
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				i_0 = 4
+			}
+		}
+		localization_key = service_by_requirement
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				i_0 = 5
+			}
+		}
+		localization_key = all_adults_serve
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				i_0 = 6
+			}
+		}
+		localization_key = scraping_the_barrel	
+	}
+	text = {
+		localization_key = no_idea_name
+	}
+}
+defined_text = {
+	name = subject_control_ml_idea_cost_tt
+	text = {
+		trigger = {
+			check_variable = {
+				i_0 = 0
+			}
+		}
+		localization_key = disarmed_nation_sc_cost_tt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				i_0 = 1
+			}
+		}
+		localization_key = volunteer_only_sc_cost_tt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				i_0 = 2
+			}
+		}
+		localization_key = limited_conscription_sc_cost_tt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				i_0 = 3
+			}
+		}
+		localization_key = extensive_conscription_sc_cost_tt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				i_0 = 4
+			}
+		}
+		localization_key = service_by_requirement_sc_cost_tt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				i_0 = 5
+			}
+		}
+		localization_key = all_adults_serve_sc_cost_tt
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				i_0 = 6
+			}
+		}
+		localization_key = scraping_the_barrel_sc_cost_tt
+	}
+	text = {
+		localization_key = no_idea_cost
+	}
+}

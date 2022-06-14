@@ -149,19 +149,17 @@ scripted_gui = {
 					frame_0 = i_0
 				}
 				multiply_temp_variable = {
-					frame_0 = 3
+					frame_0 = 4
 				}
 				if = {
 					limit = {
 						check_variable = {
-							frame_0 = 0
+							i_0 = 0
 						}
 					}
 					if = {
 						limit = {
-							FROM = {
-								has_idea = disarmed_nation
-							}
+							has_idea = disarmed_nation
 						}
 						add_to_temp_variable = {
 							frame_0 = 1
@@ -169,26 +167,31 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
-							FROM = {
-								subject_mobilization_law_0_available = no
-							}
+							always = no
 						}
+						#change trigger (if ideas are possible for subject and overlord
 						add_to_temp_variable = {
 							frame_0 = 2
 						}
 					}
-				}
-				else_if = {
-					limit = {
-						check_variable = {
+					else_if = {
+						limit = {
+							subject_mobilization_law_0_available = no
+						}
+						add_to_temp_variable = {
 							frame_0 = 3
 						}
 					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_0 = 1
+						}
+					}
 					if = {
 						limit = {
-							FROM = {
-								has_idea = volunteer_only
-							}
+							has_idea = volunteer_only
 						}
 						add_to_temp_variable = {
 							frame_0 = 1
@@ -196,53 +199,31 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
-							FROM = {
-								subject_mobilization_law_1_available = no
-							}
+							always = no
 						}
+						#change trigger (if ideas are possible for subject and overlord
 						add_to_temp_variable = {
 							frame_0 = 2
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							frame_0 = 6
-						}
-					}
-					if = {
-						limit = {
-							FROM = {
-								has_idea = limited_conscription
-							}
-							add_to_temp_variable = {
-								frame_0 = 1
-							}
 						}
 					}
 					else_if = {
 						limit = {
-							FROM = {
-								subject_mobilization_law_2_available = no
-							}
+							subject_mobilization_law_1_available = no
 						}
 						add_to_temp_variable = {
-							frame_0 = 2
+							frame_0 = 3
 						}
 					}
 				}
 				else_if = {
 					limit = {
 						check_variable = {
-							frame_0 = 9
+							i_0 = 2
 						}
 					}
 					if = {
 						limit = {
-							FROM = {
-								has_idea = extensive_conscription
-							}
+							has_idea = limited_conscription
 						}
 						add_to_temp_variable = {
 							frame_0 = 1
@@ -250,26 +231,31 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
-							FROM = {
-								subject_mobilization_law_3_available = no
-							}
+							always = no
 						}
+						#change trigger (if ideas are possible for subject and overlord
 						add_to_temp_variable = {
 							frame_0 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_mobilization_law_2_available = no
+						}
+						add_to_temp_variable = {
+							frame_0 = 3
 						}
 					}
 				}
 				else_if = {
 					limit = {
 						check_variable = {
-							frame_0 = 12
+							i_0 = 3
 						}
 					}
 					if = {
 						limit = {
-							FROM = {
-								has_idea = service_by_requirement
-							}
+							has_idea = extensive_conscription
 						}
 						add_to_temp_variable = {
 							frame_0 = 1
@@ -277,26 +263,31 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
-							FROM = {
-								subject_mobilization_law_4_available = no
-							}
+							always = no
 						}
+						#change trigger (if ideas are possible for subject and overlord
 						add_to_temp_variable = {
 							frame_0 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_mobilization_law_3_available = no
+						}
+						add_to_temp_variable = {
+							frame_0 = 3
 						}
 					}
 				}
 				else_if = {
 					limit = {
 						check_variable = {
-							frame_0 = 15
+							i_0 = 4
 						}
 					}
 					if = {
 						limit = {
-							FROM = {
-								has_idea = all_adults_serve
-							}
+							has_idea = service_by_requirement
 						}
 						add_to_temp_variable = {
 							frame_0 = 1
@@ -304,21 +295,58 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
-							FROM = {
-								subject_mobilization_law_5_available = no
-							}
+							always = no
 						}
+						#change trigger (if ideas are possible for subject and overlord
 						add_to_temp_variable = {
 							frame_0 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_mobilization_law_4_available = no
+						}
+						add_to_temp_variable = {
+							frame_0 = 3
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_0 = 5
+						}
+					}
+					if = {
+						limit = {
+							has_idea = all_adults_serve
+						}
+						add_to_temp_variable = {
+							frame_0 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord
+						add_to_temp_variable = {
+							frame_0 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_mobilization_law_5_available = no
+						}
+						add_to_temp_variable = {
+							frame_0 = 3
 						}
 					}
 				}
 				else = {
 					if = {
 						limit = {
-							FROM = {
-								has_idea = scraping_the_barrel
-							}
+							has_idea = scraping_the_barrel
 						}
 						add_to_temp_variable = {
 							frame_0 = 1
@@ -326,12 +354,19 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
-							FROM = {
-								subject_mobilization_law_6_available = no
-							}
+							always = no
 						}
+						#change trigger (if ideas are possible for subject and overlord
 						add_to_temp_variable = {
 							frame_0 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_mobilization_law_6_available = no
+						}
+						add_to_temp_variable = {
+							frame_0 = 3
 						}
 					}
 				}
@@ -339,7 +374,279 @@ scripted_gui = {
 					frame_0 = 1
 				}
 			}
-			subject_control_trade_button_click_enabled = {}
+			subject_control_trade_button_click_enabled = {
+				#temp solution, change
+				set_temp_variable = {
+					frame_1 = 1
+				}
+				if = {
+					limit = {
+						check_variable = {
+							i_1 = 0
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = free_trade
+							}
+						}
+						add_to_temp_variable = {
+							frame_1 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord
+						add_to_temp_variable = {
+							frame_1 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_trade_0_available = no
+						}
+						add_to_temp_variable = {
+							frame_1 = 3
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_1 = 1
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = uncontrolled_exports
+							}
+						}
+						add_to_temp_variable = {
+							frame_1 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord
+						add_to_temp_variable = {
+							frame_1 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_trade_1_available = no
+						}
+						add_to_temp_variable = {
+							frame_1 = 3
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_1 = 2
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = export_focus
+							}
+						}
+						add_to_temp_variable = {
+							frame_1 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord
+						add_to_temp_variable = {
+							frame_1 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_trade_2_available = no
+						}
+						add_to_temp_variable = {
+							frame_1 = 3
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_1 = 3
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = limited_exports
+							}
+						}
+						add_to_temp_variable = {
+							frame_1 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord
+						add_to_temp_variable = {
+							frame_1 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_trade_3_available = no
+						}
+						add_to_temp_variable = {
+							frame_1 = 3
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_1 = 4
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = closed_economy
+							}
+						}
+						add_to_temp_variable = {
+							frame_1 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord
+						add_to_temp_variable = {
+							frame_1 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_trade_4_available = no
+						}
+						add_to_temp_variable = {
+							frame_1 = 3
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_1 = 5
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = limited_imports
+							}
+						}
+						add_to_temp_variable = {
+							frame_1 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord
+						add_to_temp_variable = {
+							frame_1 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_trade_5_available = no
+						}
+						add_to_temp_variable = {
+							frame_1 = 3
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_1 = 6
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = import_focus
+							}
+						}
+						add_to_temp_variable = {
+							frame_1 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord
+						add_to_temp_variable = {
+							frame_1 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_trade_6_available = no
+						}
+						add_to_temp_variable = {
+							frame_1 = 3
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							FROM = {
+								has_idea = uncontrolled_imports
+							}
+						}
+						add_to_temp_variable = {
+							frame_1 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord
+						add_to_temp_variable = {
+							frame_1 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_trade_7_available = no
+						}
+						add_to_temp_variable = {
+							frame_1 = 3
+						}
+					}
+				}
+			}
 			subject_control_economy_button_click_enabled = {
 				set_temp_variable = {
 					frame_2 = i_2
@@ -616,6 +923,685 @@ scripted_gui = {
 					frame_2 = 1
 				}
 			}
+			subject_control_society_button_click_enabled = {
+				#temp solution, change
+				set_temp_variable = {
+					frame_3 = 1
+				}
+				if = {
+					limit = {
+						check_variable = {
+							i_3 = 0
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = clockwerk_industry
+							}
+						}
+						add_to_temp_variable = {
+							frame_3 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_0_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_3 = 1
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = modern_society
+							}
+						}
+						add_to_temp_variable = {
+							frame_3 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_1_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_3 = 2
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = outdated_industry1
+							}
+						}
+						add_to_temp_variable = {
+							frame_3 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_2_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_3 = 3
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = outdated_industry
+							}
+						}
+						add_to_temp_variable = {
+							frame_3 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_3_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_3 = 4
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = pre_industrial_society3
+							}
+						}
+						add_to_temp_variable = {
+							frame_3 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_4_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_3 = 5
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = pre_industrial_society2
+							}
+						}
+						add_to_temp_variable = {
+							frame_3 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_5_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_3 = 6
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = pre_industrial_society1
+							}
+						}
+						add_to_temp_variable = {
+							frame_3 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_6_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_3 = 7
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = pre_industrial_society
+							}
+						}
+						add_to_temp_variable = {
+							frame_3 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_7_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_3 = 8
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = agrarian_society5
+							}
+						}
+						add_to_temp_variable = {
+							frame_3 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_8_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_3 = 9
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = agrarian_society4
+							}
+						}
+						add_to_temp_variable = {
+							frame_3 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_9_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_3 = 10
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = agrarian_society3
+							}
+						}
+						add_to_temp_variable = {
+							frame_3 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_10_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_3 = 11
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = agrarian_society2
+							}
+						}
+						add_to_temp_variable = {
+							frame_3 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_11_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_3 = 12
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = agrarian_society1
+							}
+						}
+						add_to_temp_variable = {
+							frame_3 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_12_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_3 = 13
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = agrarian_society
+							}
+						}
+						add_to_temp_variable = {
+							frame_3 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_13_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_3 = 14
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = tribal_society3
+							}
+						}
+						add_to_temp_variable = {
+							frame_3 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_14_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_3 = 15
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = tribal_society2
+							}
+						}
+						add_to_temp_variable = {
+							frame_3 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_15_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_3 = 16
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = tribal_society1
+							}
+						}
+						add_to_temp_variable = {
+							frame_3 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_16_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_3 = 17
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = tribal_society
+							}
+						}
+						add_to_temp_variable = {
+							frame_3 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_17_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_3 = 18
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = communal_society
+							}
+						}
+						add_to_temp_variable = {
+							frame_3 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_18_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							FROM = {
+								has_idea = religious_country
+							}
+						}
+						add_to_temp_variable = {
+							frame_3 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_19_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+				}			
+			}
+			subject_control_power_concentration_button_click_enabled = {
+				#temp solution, change
+				set_temp_variable = {
+					frame_4 = 1
+				}
+				if = {
+					limit = {
+						check_variable = {
+							i_4 = 0
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = anarchy
+							}
+						}
+						add_to_temp_variable = {
+							frame_4 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_power_concentration_0_available = no
+						}
+						add_to_temp_variable = {
+							frame_4 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_4 = 1
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = low_power_concentration
+							}
+						}
+						add_to_temp_variable = {
+							frame_4 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_power_concentration_1_available = no
+						}
+						add_to_temp_variable = {
+							frame_4 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_4 = 2
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = medium_power_concentration
+							}
+						}
+						add_to_temp_variable = {
+							frame_4 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_power_concentration_2_available = no
+						}
+						add_to_temp_variable = {
+							frame_4 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_4 = 3
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = high_power_concentration
+							}
+						}
+						add_to_temp_variable = {
+							frame_4 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_power_concentration_3_available = no
+						}
+						add_to_temp_variable = {
+							frame_4 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_4 = 4
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = authoritarism
+							}
+						}
+						add_to_temp_variable = {
+							frame_4 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_power_concentration_4_available = no
+						}
+						add_to_temp_variable = {
+							frame_4 = 2
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_4 = 5
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = commune
+							}
+						}
+						add_to_temp_variable = {
+							frame_4 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_power_concentration_5_available = no
+						}
+						add_to_temp_variable = {
+							frame_4 = 2
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							FROM = {
+								has_idea = harmonic_power_concentration
+							}
+						}
+						add_to_temp_variable = {
+							frame_4 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							subject_power_concentration_6_available = no
+						}
+						add_to_temp_variable = {
+							frame_4 = 2
+						}
+					}
+				}
+			}
+			subject_control_urbanization_button_click_enabled = {}
+			subject_control_illiteracy_button_click_enabled = {}
 			subject_control_poverty_button_click_enabled = {
 				set_temp_variable = {
 					frame_7 = i_7
@@ -623,6 +1609,7 @@ scripted_gui = {
 				multiply_temp_variable = {
 					frame_7 = 2
 				}
+				#change due grey icon append
 				if = {
 					limit = {
 						FROM = {
@@ -740,10 +1727,22 @@ scripted_gui = {
 				frame = frame_0
 			}
 			subject_control_trade_button = {
-			#	frame = i_1
+				frame = frame_1
 			}
 			subject_control_economy_button = {
 				frame = frame_2
+			}
+			subject_control_society_button = {
+				frame = frame_3
+			}
+			subject_control_power_concentration_button = {
+				frame = frame_4
+			}
+			subject_control_urbanization_button = {
+				frame = frame_5
+			}
+			subject_control_illiteracy_button = {
+				frame = frame_6
 			}
 			subject_control_poverty_button = {
 				frame = frame_7

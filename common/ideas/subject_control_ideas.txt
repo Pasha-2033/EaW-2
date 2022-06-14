@@ -1,0 +1,54 @@
+ideas = {
+	country = {
+		collectivized_society_subject_and_overlord = {
+			picture = generic_local_self_management
+			allowed = {
+				if = {
+					limit = {
+						is_subject = yes
+					}
+					has_idea = collectivized_society
+					overlord = {
+						has_idea = collectivized_society
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = collectivized_society
+					}
+					any_of_scopes = {
+						array = subjects
+						has_idea = collectivized_society
+					}
+				}
+				else = {
+					always = no
+				}
+			}
+			cancel = {
+				OR = {
+					NOT = {
+						has_idea = collectivized_society
+					}
+					AND = {
+						num_subjects > 0
+						all_of_scopes = {
+							array = subjects
+							NOT = {
+								has_idea = collectivized_society
+							}
+						}
+					}
+					overlord = {
+						NOT = {
+							has_idea = collectivized_society
+						}
+					}
+				}
+			}
+			modifier = {
+				political_power_gain = 0.2
+			}
+		}
+	}
+}

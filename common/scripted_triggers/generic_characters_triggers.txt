@@ -8,16 +8,6 @@ has_custom_advisors = {
 		has_country_flag = no_custom_advisors
 	}
 }
-has_custom_designers = {
-	OR = {
-		has_country_flag = no_generic_advisors
-		has_country_flag = custom_designers
-		country_with_custom_characters = yes
-	}
-	NOT = {
-		has_country_flag = no_custom_designers
-	}
-}
 has_custom_spymaster = {
 	OR = {
 		has_country_flag = no_generic_advisors

@@ -1,1 +1,58 @@
-debug_decisions = {}
+debug_society_idea_decisions = {
+	set_clockwerk_industry = {
+		icon = generic_research
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Debug-decision set_clockwerk_industry"
+			add_ideas = clockwerk_industry
+		}
+	}
+	set_modern_society = {
+		icon = generic_research
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Debug-decision set_modern_society"
+			add_ideas = modern_society
+		}
+	}
+	set_outdated_industry1 = {
+		icon = generic_research
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Debug-decision set_outdated_industry1"
+			add_ideas = outdated_industry1
+		}
+	}
+	set_outdated_industry = {
+		icon = generic_research
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Debug-decision set_outdated_industry"
+			add_ideas = outdated_industry
+		}
+	}
+	set_pre_industrial3 = {
+		icon = generic_research
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Debug-decision set_pre_industrial3"
+			add_ideas = pre_industrial_society3
+		}
+	}
+	set_pre_industrial2 = {
+		icon = generic_research
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Debug-decision set_pre_industrial2"
+			add_ideas = pre_industrial_society3
+		}
+	}
+	set_pre_industrial1 = {
+		icon = generic_research
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Debug-decision set_pre_industrial1"
+			add_ideas = pre_industrial_society3
+		}
+	}
+	set_pre_industrial = {
+		icon = generic_research
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Debug-decision set_pre_industrial"
+			add_ideas = pre_industrial_society
+		}
+	}
+}

@@ -251,7 +251,7 @@ guiTypes = {
 						vertical_alignment = CENTER
 						font = "hoi_18b"
 						maxWidth = 100
-						maxHeight = 54
+						maxHeight = 72
 						format = CENTER
 					}
 				}
@@ -344,7 +344,7 @@ guiTypes = {
 						vertical_alignment = CENTER
 						font = "hoi_18b"
 						maxWidth = 100
-						maxHeight = 54
+						maxHeight = 72
 						format = CENTER
 					}
 				}
@@ -1023,7 +1023,7 @@ guiTypes = {
 						maxWidth = 370
 						maxHeight = 30
 						fixedsize = yes
-						pdx_tooltip_delayed = "subject_control_of_subjects_title_tt"
+						pdx_tooltip_delayed = "subject_control_of_subjects_forced_tt"
 					}
 					buttonType = {
 						name = "use_overlord_settings_button"
@@ -1098,6 +1098,8 @@ guiTypes = {
 			quadTextureSprite  = "GFX_subject_control_mobilization_laws"
 			orientation = CENTER
 			centerposition = yes
+			pdx_tooltip = "subject_control_ml_idea_tt"
+			pdx_tooltip_delayed = "subject_control_ml_cost_tt"
 		}
 	}
 	containerWindowType = {
@@ -1108,7 +1110,7 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "subject_control_trade_button"
-			quadTextureSprite = "GFX_closebutton" #change
+			quadTextureSprite = "GFX_subject_control_temp" #change
 			orientation = CENTER
 			centerposition = yes
 		}
@@ -1134,7 +1136,7 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "subject_control_society_button"
-			quadTextureSprite = "GFX_closebutton" #change
+			quadTextureSprite = "GFX_subject_control_temp" #change
 			orientation = CENTER
 			centerposition = yes
 		}
@@ -1147,7 +1149,7 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "subject_control_power_concentration_button"
-			quadTextureSprite = "GFX_closebutton" #change
+			quadTextureSprite = "GFX_subject_control_temp" #change
 			orientation = CENTER
 			centerposition = yes
 		}
@@ -1160,7 +1162,7 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "subject_control_urbanization_button"
-			quadTextureSprite = "GFX_closebutton" #change
+			quadTextureSprite = "GFX_subject_control_temp" #change
 			orientation = CENTER
 			centerposition = yes
 		}
@@ -1173,7 +1175,7 @@ guiTypes = {
 		}
 		buttonType = {
 			name = "subject_control_illiteracy_button"
-			quadTextureSprite = "GFX_closebutton" #change
+			quadTextureSprite = "GFX_subject_control_temp" #change
 			orientation = CENTER
 			centerposition = yes
 		}

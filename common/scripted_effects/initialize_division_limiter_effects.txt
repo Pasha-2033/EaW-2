@@ -1,3 +1,15 @@
+init_division_limiter_counter = {
+	#change for code durability
+	if = {
+		limit = {
+			has_start_date < 963.1.1
+		}
+		set_variable = {
+			global.max_division_counter = 100 #change value
+		}
+	}
+	#continue
+}
 init_division_limiter_index = {
 	if = {
 		limit = {

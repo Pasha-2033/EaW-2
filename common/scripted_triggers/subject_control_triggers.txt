@@ -1,103 +1,2030 @@
-#use in subject scope!
+#use in subject scope! made for cost factors!
 #mobilization law
 subject_mobilization_law_0_available = {
-	always = yes
+	if = {
+		limit = {
+			has_idea = volunteer_only
+		}
+		NOT = {
+			OR = {
+				check_variable = {
+					overlord:political_power < mobilization_law_pp_cost_factor
+				}
+				check_variable = {
+					overlord:command_power < mobilization_law_cp_cost_factor
+				}
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = mobilization_law_pp_cost_factor
+		}
+		set_temp_variable = {
+			cp_cost = mobilization_law_cp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = limited_conscription
+			}
+			multiply_temp_variable = {
+				pp_cost = 2
+			}
+			multiply_temp_variable = {
+				cp_cost = 2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = extensive_conscription
+			}
+			multiply_temp_variable = {
+				pp_cost = 3
+			}
+			multiply_temp_variable = {
+				cp_cost = 3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = service_by_requirement
+			}
+			multiply_temp_variable = {
+				pp_cost = 4
+			}
+			multiply_temp_variable = {
+				cp_cost = 4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = all_adults_serve
+			}
+			multiply_temp_variable = {
+				pp_cost = 5
+			}
+			multiply_temp_variable = {
+				cp_cost = 5
+			}
+		}
+		else = {
+			multiply_temp_variable = {
+				pp_cost = 6
+			}
+			multiply_temp_variable = {
+				cp_cost = 6
+			}
+		}
+		NOT = {
+			OR = {
+				check_variable = {
+					overlord:political_power < pp_cost
+				}
+				check_variable = {
+					overlord:command_power < cp_cost
+				}
+			}
+		}
+	}
 }
 subject_mobilization_law_1_available = {
-	always = yes
+	if = {
+		limit = {
+			OR = {
+				has_idea = disarmed_nation
+				has_idea = limited_conscription
+			}
+		}
+		NOT = {
+			OR = {
+				check_variable = {
+					overlord:political_power < mobilization_law_pp_cost_factor
+				}
+				check_variable = {
+					overlord:command_power < mobilization_law_cp_cost_factor
+				}
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = mobilization_law_pp_cost_factor
+		}
+		set_temp_variable = {
+			cp_cost = mobilization_law_cp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = extensive_conscription
+			}
+			multiply_temp_variable = {
+				pp_cost = 2
+			}
+			multiply_temp_variable = {
+				cp_cost = 2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = service_by_requirement
+			}
+			multiply_temp_variable = {
+				pp_cost = 3
+			}
+			multiply_temp_variable = {
+				cp_cost = 3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = all_adults_serve
+			}
+			multiply_temp_variable = {
+				pp_cost = 4
+			}
+			multiply_temp_variable = {
+				cp_cost = 4
+			}
+		}
+		else = {
+			multiply_temp_variable = {
+				pp_cost = 5
+			}
+			multiply_temp_variable = {
+				cp_cost = 5
+			}
+		}
+		NOT = {
+			OR = {
+				check_variable = {
+					overlord:political_power < pp_cost
+				}
+				check_variable = {
+					overlord:command_power < cp_cost
+				}
+			}
+		}
+	}
 }
 subject_mobilization_law_2_available = {
-	always = yes
+	if = {
+		limit = {
+			OR = {
+				has_idea = volunteer_only
+				has_idea = extensive_conscription
+			}
+		}
+		NOT = {
+			OR = {
+				check_variable = {
+					overlord:political_power < mobilization_law_pp_cost_factor
+				}
+				check_variable = {
+					overlord:command_power < mobilization_law_cp_cost_factor
+				}
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = mobilization_law_pp_cost_factor
+		}
+		set_temp_variable = {
+			cp_cost = mobilization_law_cp_cost_factor
+		}
+		if = {
+			limit = {
+				OR = {
+					has_idea = disarmed_nation
+					has_idea = service_by_requirement
+				}
+			}
+			multiply_temp_variable = {
+				pp_cost = 2
+			}
+			multiply_temp_variable = {
+				cp_cost = 2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = all_adults_serve
+			}
+			multiply_temp_variable = {
+				pp_cost = 3
+			}
+			multiply_temp_variable = {
+				cp_cost = 3
+			}
+		}
+		else = {
+			multiply_temp_variable = {
+				pp_cost = 4
+			}
+			multiply_temp_variable = {
+				cp_cost = 4
+			}
+		}
+		NOT = {
+			OR = {
+				check_variable = {
+					overlord:political_power < pp_cost
+				}
+				check_variable = {
+					overlord:command_power < cp_cost
+				}
+			}
+		}
+	}
 }
 subject_mobilization_law_3_available = {
-	always = yes
+	if = {
+		limit = {
+			OR = {
+				has_idea = limited_conscription
+				has_idea = service_by_requirement
+			}
+		}
+		NOT = {
+			OR = {
+				check_variable = {
+					overlord:political_power < mobilization_law_pp_cost_factor
+				}
+				check_variable = {
+					overlord:command_power < PREV.mobilization_law_cp_cost_factor
+				}
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = mobilization_law_pp_cost_factor
+		}
+		set_temp_variable = {
+			cp_cost = mobilization_law_cp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = volunteer_only
+				has_idea = all_adults_serve
+			}
+			multiply_temp_variable = {
+				pp_cost = 2
+			}
+			multiply_temp_variable = {
+				cp_cost = 2
+			}
+		}
+		else = {
+			multiply_temp_variable = {
+				pp_cost = 3
+			}
+			multiply_temp_variable = {
+				cp_cost = 3
+			}
+		}
+		NOT = {
+			OR = {
+				check_variable = {
+					overlord:political_power < pp_cost
+				}
+				check_variable = {
+					overlord:command_power < cp_cost
+				}
+			}
+		}
+	}
 }
 subject_mobilization_law_4_available = {
-	always = yes
+	if = {
+		limit = {
+			OR = {
+				has_idea = extensive_conscription
+				has_idea = all_adults_serve
+			}
+		}
+		NOT = {
+			OR = {
+				check_variable = {
+					overlord:political_power < mobilization_law_pp_cost_factor 
+				}
+				check_variable = {
+					overlord:command_power < mobilization_law_cp_cost_factor
+				}
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = mobilization_law_pp_cost_factor
+		}
+		set_temp_variable = {
+			cp_cost = mobilization_law_cp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = disarmed_nation
+			}
+			multiply_temp_variable = {
+				pp_cost = 4
+			}
+			multiply_temp_variable = {
+				cp_cost = 4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = volunteer_only
+			}
+			multiply_temp_variable = {
+				pp_cost = 3
+			}
+			multiply_temp_variable = {
+				cp_cost = 3
+			}
+		}
+		else = {
+			multiply_temp_variable = {
+				pp_cost = 2
+			}
+			multiply_temp_variable = {
+				cp_cost = 2
+			}		
+		}
+		NOT = {
+			OR = {
+				check_variable = {
+					overlord:political_power < pp_cost
+				}
+				check_variable = {
+					overlord:command_power < cp_cost
+				}
+			}
+		}
+	}
 }
 subject_mobilization_law_5_available = {
-	always = yes
+	if = {
+		limit = {
+			OR = {
+				has_idea = service_by_requirement
+				has_idea = scraping_the_barrel
+			}
+		}
+		NOT = {
+			OR = {
+				check_variable = {
+					overlord:political_power < mobilization_law_pp_cost_factor
+				}
+				check_variable = {
+					overlord:command_power < mobilization_law_cp_cost_factor
+				}
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = mobilization_law_pp_cost_factor
+		}
+		set_temp_variable = {
+			cp_cost = mobilization_law_cp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = disarmed_nation
+			}
+			multiply_temp_variable = {
+				pp_cost = 5
+			}
+			multiply_temp_variable = {
+				cp_cost = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = volunteer_only
+			}
+			multiply_temp_variable = {
+				pp_cost = 4
+			}
+			multiply_temp_variable = {
+				cp_cost = 4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = limited_conscription
+			}
+			multiply_temp_variable = {
+				pp_cost = 3
+			}
+			multiply_temp_variable = {
+				cp_cost = 3
+			}
+		}
+		else = {
+			multiply_temp_variable = {
+				pp_cost = 2
+			}
+			multiply_temp_variable = {
+				cp_cost = 2
+			}
+		}
+		NOT = {
+			OR = {
+				check_variable = {
+					overlord:political_power < pp_cost
+				}
+				check_variable = {
+					overlord:command_power < cp_cost
+				}
+			}
+		}
+	}
 }
 subject_mobilization_law_6_available = {
-	always = yes
+	if = {
+		limit = {
+			has_idea = all_adults_serve
+		}
+		NOT = {
+			OR = {
+				check_variable = {
+					overlord:political_power < mobilization_law_pp_cost_factor
+				}
+				check_variable = {
+					overlord:command_power < mobilization_law_cp_cost_factor
+				}
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = mobilization_law_pp_cost_factor
+		}
+		set_temp_variable = {
+			cp_cost = mobilization_law_cp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = disarmed_nation
+			}
+			multiply_temp_variable = {
+				pp_cost = 6
+			}
+			multiply_temp_variable = {
+				cp_cost = 6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = volunteer_only
+			}
+			multiply_temp_variable = {
+				pp_cost = 5
+			}
+			multiply_temp_variable = {
+				cp_cost = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = limited_conscription
+			}
+			multiply_temp_variable = {
+				pp_cost = 4
+			}
+			multiply_temp_variable = {
+				cp_cost = 4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = extensive_conscription
+			}
+			multiply_temp_variable = {
+				pp_cost = 3
+			}
+			multiply_temp_variable = {
+				cp_cost = 3
+			}
+		}
+		else = {
+			multiply_temp_variable = {
+				pp_cost = 2
+			}
+			multiply_temp_variable = {
+				cp_cost = 2
+			}
+		}
+		NOT = {
+			OR = {
+				check_variable = {
+					overlord:political_power < pp_cost
+				}
+				check_variable = {
+					overlord:command_power < cp_cost
+				}
+			}
+		}
+	}
 }
 #trade
 subject_trade_0_available = {
-	always = yes
+	NOT = {
+		check_variable = {
+			overlord:num_of_available_civilian_factories < trade_acf_cost_factor
+		}
+	}
+	if = {
+		limit = {
+			has_idea = uncontrolled_exports
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < trade_pp_cost_factor
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = trade_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = export_focus
+			}
+			multiply_temp_variable = {
+				pp_cost = 2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = limited_exports
+			}
+			multiply_temp_variable = {
+				pp_cost = 3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = closed_economy
+			}
+			multiply_temp_variable = {
+				pp_cost = 4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = limited_imports
+			}
+			multiply_temp_variable = {
+				pp_cost = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = import_focus
+			}
+			multiply_temp_variable = {
+				pp_cost = 6
+			}
+		}
+		else = {
+			multiply_temp_variable = {
+				pp_cost = 7
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < pp_cost
+			}
+		}
+	}
 }
 subject_trade_1_available = {
-	always = yes
+	NOT = {
+		check_variable = {
+			overlord:num_of_available_civilian_factories < trade_acf_cost_factor
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_idea = free_trade
+				has_idea = export_focus
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < trade_pp_cost_factor
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = trade_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = limited_exports
+			}
+			multiply_temp_variable = {
+				pp_cost = 2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = closed_economy
+			}
+			multiply_temp_variable = {
+				pp_cost = 3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = limited_imports
+			}
+			multiply_temp_variable = {
+				pp_cost = 4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = import_focus
+			}
+			multiply_temp_variable = {
+				pp_cost = 5
+			}
+		}
+		else = {
+			multiply_temp_variable = {
+				pp_cost = 6
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < pp_cost
+			}
+		}
+	}
 }
 subject_trade_2_available = {
-	always = yes
+	NOT = {
+		check_variable = {
+			overlord:num_of_available_civilian_factories < trade_acf_cost_factor
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_idea = uncontrolled_exports
+				has_idea = limited_exports
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < trade_pp_cost_factor
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = trade_pp_cost_factor
+		}
+		if = {
+			limit = {
+				OR = {
+					has_idea = free_trade
+					has_idea = closed_economy
+				}
+			}
+			multiply_temp_variable = {
+				pp_cost = 2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = limited_imports
+			}
+			multiply_temp_variable = {
+				pp_cost = 3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = import_focus
+			}
+			multiply_temp_variable = {
+				pp_cost = 4
+			}
+		}
+		else = {
+			multiply_temp_variable = {
+				pp_cost = 5
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < pp_cost
+			}
+		}
+	}
 }
 subject_trade_3_available = {
-	always = yes
+	NOT = {
+		check_variable = {
+			overlord:num_of_available_civilian_factories < trade_acf_cost_factor
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_idea = export_focus
+				has_idea = closed_economy
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < trade_pp_cost_factor
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = trade_pp_cost_factor
+		}
+		if = {
+			limit = {
+				OR = {
+					has_idea = uncontrolled_exports
+					has_idea = limited_imports
+				}
+			}
+			multiply_temp_variable = {
+				pp_cost = 2
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_idea = free_trade
+					has_idea = import_focus
+				}
+			}
+			multiply_temp_variable = {
+				pp_cost = 3
+			}
+		}
+		else = {
+			multiply_temp_variable = {
+				pp_cost = 4
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < pp_cost
+			}
+		}
+	}
 }
 subject_trade_4_available = {
-	always = yes
+	NOT = {
+		check_variable = {
+			overlord:num_of_available_civilian_factories < trade_acf_cost_factor
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_idea = export_focus
+				has_idea = import_focus
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < trade_pp_cost_factor
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = trade_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = free_trade
+			}
+			multiply_temp_variable = {
+				pp_cost = 4
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_idea = uncontrolled_exports
+					has_idea = uncontrolled_imports
+				}
+			}
+			multiply_temp_variable = {
+				pp_cost = 3
+			}
+		}
+		else = {
+			multiply_temp_variable = {
+				pp_cost = 2
+			}		
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < pp_cost
+			}
+		}
+	}
 }
 subject_trade_5_available = {
-	always = yes
+	NOT = {
+		check_variable = {
+			overlord:num_of_available_civilian_factories < trade_acf_cost_factor
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_idea = closed_economy
+				has_idea = import_focus
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < trade_pp_cost_factor
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = trade_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = free_trade
+			}
+			multiply_temp_variable = {
+				pp_cost = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = uncontrolled_exports
+			}
+			multiply_temp_variable = {
+				pp_cost = 4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = export_focus
+			}
+			multiply_temp_variable = {
+				pp_cost = 3
+			}
+		}
+		else = {
+			multiply_temp_variable = {
+				pp_cost = 2
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < pp_cost
+			}
+		}
+	}
 }
 subject_trade_6_available = {
-	always = yes
+	NOT = {
+		check_variable = {
+			overlord:num_of_available_civilian_factories < trade_acf_cost_factor
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_idea = limited_imports
+				has_idea = uncontrolled_imports
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < trade_pp_cost_factor
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = trade_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = free_trade
+			}
+			multiply_temp_variable = {
+				pp_cost = 6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = uncontrolled_exports
+			}
+			multiply_temp_variable = {
+				pp_cost = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = export_focus
+			}
+			multiply_temp_variable = {
+				pp_cost = 4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = limited_exports
+			}
+			multiply_temp_variable = {
+				pp_cost = 3
+			}
+		}
+		else = {
+			multiply_temp_variable = {
+				pp_cost = 2
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < pp_cost
+			}
+		}
+	}
 }
 subject_trade_7_available = {
-	always = yes
+	NOT = {
+		check_variable = {
+			overlord:num_of_available_civilian_factories < trade_acf_cost_factor
+		}
+	}
+	if = {
+		limit = {
+			has_idea = import_focus
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < trade_pp_cost_factor
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = trade_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = free_trade
+			}
+			multiply_temp_variable = {
+				pp_cost = 7
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = uncontrolled_exports
+			}
+			multiply_temp_variable = {
+				pp_cost = 6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = export_focus
+			}
+			multiply_temp_variable = {
+				pp_cost = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = limited_exports
+			}
+			multiply_temp_variable = {
+				pp_cost = 4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = closed_economy
+			}
+			multiply_temp_variable = {
+				pp_cost = 3
+			}
+		}
+		else = {
+			multiply_temp_variable = {
+				pp_cost = 2
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < pp_cost
+			}
+		}
+	}
 }
 #economy
 subject_economy_0_available = {
-	always = yes
+	NOT = {
+		check_variable = {
+			overlord:num_of_available_civilian_factories < economy_acf_cost_factor
+		}
+	}
+	if = {
+		limit = {
+			has_idea = primitive_economy
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < economy_pp_cost_factor
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = economy_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = outlaw_economy
+			}
+			multiply_temp_variable = {
+				pp_cost = 2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = civilian_economy
+			}
+			multiply_temp_variable = {
+				pp_cost = 3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = low_economic_mobilisation
+			}
+			multiply_temp_variable = {
+				pp_cost = 4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = partial_economic_mobilisation
+			}
+			multiply_temp_variable = {
+				pp_cost = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = war_economy
+			}
+			multiply_temp_variable = {
+				pp_cost = 6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tot_economic_mobilisation
+			}
+			multiply_temp_variable = {
+				pp_cost = 7
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tot_militarisation
+			}
+			multiply_temp_variable = {
+				pp_cost = 8
+			}
+		}
+		else = {
+			multiply_temp_variable = {
+				pp_cost = 9
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < pp_cost
+			}
+		}
+	}
 }
 subject_economy_1_available = {
-	always = yes
+	NOT = {
+		check_variable = {
+			overlord:num_of_available_civilian_factories < economy_acf_cost_factor
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_idea = isolation
+				has_idea = outlaw_economy
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < economy_pp_cost_factor
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = economy_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = civilian_economy
+			}
+			multiply_temp_variable = {
+				pp_cost = 2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = low_economic_mobilisation
+			}
+			multiply_temp_variable = {
+				pp_cost = 3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = partial_economic_mobilisation
+			}
+			multiply_temp_variable = {
+				pp_cost = 4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = war_economy
+			}
+			multiply_temp_variable = {
+				pp_cost = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tot_economic_mobilisation
+			}
+			multiply_temp_variable = {
+				pp_cost = 6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tot_militarisation
+			}
+			multiply_temp_variable = {
+				pp_cost = 7
+			}
+		}
+		else = {
+			multiply_temp_variable = {
+				pp_cost = 8
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < pp_cost
+			}
+		}
+	}
 }
 subject_economy_2_available = {
-	always = yes
+	NOT = {
+		check_variable = {
+			overlord:num_of_available_civilian_factories < economy_acf_cost_factor
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_idea = primitive_economy
+				has_idea = civilian_economy
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < economy_pp_cost_factor
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = economy_pp_cost_factor
+		}
+		if = {
+			limit = {
+				OR = {
+					has_idea = isolation
+					has_idea = low_economic_mobilisation
+				}
+			}
+			multiply_temp_variable = {
+				pp_cost = 2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = partial_economic_mobilisation
+			}
+			multiply_temp_variable = {
+				pp_cost = 3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = war_economy
+			}
+			multiply_temp_variable = {
+				pp_cost = 4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tot_economic_mobilisation
+			}
+			multiply_temp_variable = {
+				pp_cost = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tot_militarisation
+			}
+			multiply_temp_variable = {
+				pp_cost = 6
+			}
+		}
+		else = {
+			multiply_temp_variable = {
+				pp_cost = 7
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < pp_cost
+			}
+		}
+	}
 }
 subject_economy_3_available = {
-	always = yes
+	NOT = {
+		check_variable = {
+			overlord:num_of_available_civilian_factories < economy_acf_cost_factor
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_idea = outlaw_economy
+				has_idea = low_economic_mobilisation
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < economy_pp_cost_factor
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = economy_pp_cost_factor
+		}
+		if = {
+			limit = {
+				OR = {
+					has_idea = isolation
+					has_idea = war_economy
+				}
+			}
+			multiply_temp_variable = {
+				pp_cost = 3
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_idea = primitive_economy
+					has_idea = partial_economic_mobilisation
+				}
+			}
+			multiply_temp_variable = {
+				pp_cost = 2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tot_economic_mobilisation
+			}
+			multiply_temp_variable = {
+				pp_cost = 4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tot_militarisation
+			}
+			multiply_temp_variable = {
+				pp_cost = 5
+			}
+		}
+		else = {
+			multiply_temp_variable = {
+				pp_cost = 6
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < pp_cost
+			}
+		}
+	}
 }
 subject_economy_4_available = {
-	always = yes
+	NOT = {
+		check_variable = {
+			overlord:num_of_available_civilian_factories < economy_acf_cost_factor
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_idea = civilian_economy
+				has_idea = partial_economic_mobilisation
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < economy_pp_cost_factor
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = economy_pp_cost_factor
+		}
+		if = {
+			limit = {
+				OR = {
+					has_idea = isolation
+					has_idea = tot_militarisation
+				}
+			}
+			multiply_temp_variable = {
+				pp_cost = 4
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_idea = primitive_economy
+					has_idea = tot_economic_mobilisation
+				}
+			}
+			multiply_temp_variable = {
+				pp_cost = 3
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_idea = outlaw_economy
+					has_idea = war_economy
+				}
+			}
+			multiply_temp_variable = {
+				pp_cost = 2
+			}
+		}
+		else = {
+			multiply_temp_variable = {
+				pp_cost = 5
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < pp_cost
+			}
+		}
+	}
 }
 subject_economy_5_available = {
-	always = yes
+	NOT = {
+		check_variable = {
+			overlord:num_of_available_civilian_factories < economy_acf_cost_factor
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_idea = war_economy
+				has_idea = low_economic_mobilisation
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < economy_pp_cost_factor
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = economy_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = isolation
+			}
+			multiply_temp_variable = {
+				pp_cost = 5
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_idea = outlaw_economy
+					has_idea = tot_militarisation
+				}
+			}
+			multiply_temp_variable = {
+				pp_cost = 3
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_idea = civilian_economy
+					has_idea = tot_economic_mobilisation
+				}
+			}
+			multiply_temp_variable = {
+				pp_cost = 2
+			}
+		}
+		else = {
+			multiply_temp_variable = {
+				pp_cost = 4
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < pp_cost
+			}
+		}
+	}
 }
 subject_economy_6_available = {
-	always = yes
+	NOT = {
+		check_variable = {
+			overlord:num_of_available_civilian_factories < economy_acf_cost_factor
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_idea = partial_economic_mobilisation
+				has_idea = tot_economic_mobilisation
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < economy_pp_cost_factor
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = economy_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = isolation
+			}
+			multiply_temp_variable = {
+				pp_cost = 6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = primitive_economy
+			}
+			multiply_temp_variable = {
+				pp_cost = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outlaw_economy
+			}
+			multiply_temp_variable = {
+				pp_cost = 4
+			}
+		}
+		else_if = {
+			limit = {
+				OR = {
+					has_idea = low_economic_mobilisation
+					has_idea = tot_militarisation
+				}
+			}
+			multiply_temp_variable = {
+				pp_cost = 2
+			}
+		}
+		else = {
+			multiply_temp_variable = {
+				pp_cost = 3
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < pp_cost
+			}
+		}
+	}
 }
 subject_economy_7_available = {
-	always = yes
+	NOT = {
+		check_variable = {
+			overlord:num_of_available_civilian_factories < economy_acf_cost_factor
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_idea = war_economy
+				has_idea = tot_militarisation
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < economy_pp_cost_factor
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = economy_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = isolation
+			}
+			multiply_temp_variable = {
+				pp_cost = 7
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = primitive_economy
+			}
+			multiply_temp_variable = {
+				pp_cost = 6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outlaw_economy
+			}
+			multiply_temp_variable = {
+				pp_cost = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = civilian_economy
+			}
+			multiply_temp_variable = {
+				pp_cost = 4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = low_economic_mobilisation
+			}
+			multiply_temp_variable = {
+				pp_cost = 3
+			}
+		}
+		else = {
+			multiply_temp_variable = {
+				pp_cost = 2
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < pp_cost
+			}
+		}
+	}
 }
 subject_economy_8_available = {
-	always = yes
+	NOT = {
+		check_variable = {
+			overlord:num_of_available_civilian_factories < economy_acf_cost_factor
+		}
+	}
+	if = {
+		limit = {
+			OR = {
+				has_idea = partial_economic_mobilisation
+				has_idea = collectivized_society
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < economy_pp_cost_factor
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = economy_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = isolation
+			}
+			multiply_temp_variable = {
+				pp_cost = 8
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = primitive_economy
+			}
+			multiply_temp_variable = {
+				pp_cost = 7
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outlaw_economy
+			}
+			multiply_temp_variable = {
+				pp_cost = 6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = civilian_economy
+			}
+			multiply_temp_variable = {
+				pp_cost = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = low_economic_mobilisation
+			}
+			multiply_temp_variable = {
+				pp_cost = 4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = partial_economic_mobilisation
+			}
+			multiply_temp_variable = {
+				pp_cost = 3
+			}
+		}
+		else = {
+			multiply_temp_variable = {
+				pp_cost = 2
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < pp_cost
+			}
+		}
+	}
 }
 subject_economy_9_available = {
-	always = yes
+	NOT = {
+		check_variable = {
+			overlord:num_of_available_civilian_factories < economy_acf_cost_factor
+		}
+	}
+	if = {
+		limit = {
+			has_idea = tot_militarisation
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < economy_pp_cost_factor
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = economy_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = isolation
+			}
+			multiply_temp_variable = {
+				pp_cost = 9
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = primitive_economy
+			}
+			multiply_temp_variable = {
+				pp_cost = 8
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outlaw_economy
+			}
+			multiply_temp_variable = {
+				pp_cost = 7
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = civilian_economy
+			}
+			multiply_temp_variable = {
+				pp_cost = 6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = low_economic_mobilisation
+			}
+			multiply_temp_variable = {
+				pp_cost = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = partial_economic_mobilisation
+			}
+			multiply_temp_variable = {
+				pp_cost = 4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = war_economy
+			}
+			multiply_temp_variable = {
+				pp_cost = 3
+			}
+		}
+		else = {
+			multiply_temp_variable = {
+				pp_cost = 2
+			}
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < pp_cost
+			}
+		}
+	}
 }
 #society
-subject_society_0_available = {}
-subject_society_1_available = {}
-subject_society_2_available = {}
-subject_society_3_available = {}
-subject_society_4_available = {}
-subject_society_5_available = {}
-subject_society_6_available = {}
-subject_society_7_available = {}
-subject_society_8_available = {}
-subject_society_9_available = {}
-subject_society_10_available = {}
-subject_society_11_available = {}
-subject_society_12_available = {}
-subject_society_13_available = {}
-subject_society_14_available = {}
-subject_society_15_available = {}
-subject_society_16_available = {}
-subject_society_17_available = {}
-subject_society_18_available = {}
-subject_society_19_available = {}
+subject_society_0_available = {
+	overlord = {
+		NOT = {
+			has_idea = detached_country
+		}
+	}
+	if = {
+		limit = {
+			has_idea = modern_society
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < society_pp_cost_factor
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = society_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = outdated_industry1
+			}
+			multiply_temp_variable = {
+				pp_cost = 2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = 3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = 4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = 5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = 6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society
+			}
+			multiply_temp_variable = {
+				pp_cost = 7
+			}
+		}
+		
+		else = {
+			#*n
+		}
+		NOT = {
+			check_variable = {
+				overlord:political_power < pp_cost
+			}
+		}
+	}
+}
+subject_society_1_available = {
+	overlord = {
+		NOT = {
+			has_idea = detached_country
+		}
+	}
+}
+subject_society_2_available = {
+	overlord = {
+		NOT = {
+			has_idea = detached_country
+		}
+	}
+}
+subject_society_3_available = {
+	overlord = {
+		NOT = {
+			has_idea = detached_country
+		}
+	}
+}
+subject_society_4_available = {
+	overlord = {
+		NOT = {
+			has_idea = detached_country
+		}
+	}
+}
+subject_society_5_available = {
+	overlord = {
+		NOT = {
+			has_idea = detached_country
+		}
+	}
+}
+subject_society_6_available = {
+	overlord = {
+		NOT = {
+			has_idea = detached_country
+		}
+	}
+}
+subject_society_7_available = {
+	overlord = {
+		NOT = {
+			has_idea = detached_country
+		}
+	}
+}
+subject_society_8_available = {
+	overlord = {
+		NOT = {
+			has_idea = detached_country
+		}
+	}
+}
+subject_society_9_available = {
+	overlord = {
+		NOT = {
+			has_idea = detached_country
+		}
+	}
+}
+subject_society_10_available = {
+	overlord = {
+		NOT = {
+			has_idea = detached_country
+		}
+	}
+}
+subject_society_11_available = {
+	overlord = {
+		NOT = {
+			has_idea = detached_country
+		}
+	}
+}
+subject_society_12_available = {
+	overlord = {
+		NOT = {
+			has_idea = detached_country
+		}
+	}
+}
+subject_society_13_available = {
+	overlord = {
+		NOT = {
+			has_idea = detached_country
+		}
+	}
+}
+subject_society_14_available = {
+	overlord = {
+		NOT = {
+			has_idea = detached_country
+		}
+	}
+}
+subject_society_15_available = {
+	overlord = {
+		NOT = {
+			has_idea = detached_country
+		}
+	}
+}
+subject_society_16_available = {
+	overlord = {
+		NOT = {
+			has_idea = detached_country
+		}
+	}
+}
+subject_society_17_available = {
+	overlord = {
+		NOT = {
+			has_idea = detached_country
+		}
+	}
+}
+subject_society_18_available = {
+	overlord = {
+		NOT = {
+			has_idea = detached_country
+		}
+	}
+}
+subject_society_19_available = {
+	overlord = {
+		NOT = {
+			has_idea = detached_country
+		}
+	}
+}
 #power concentration
 subject_power_concentration_0_available = {}
 subject_power_concentration_1_available = {}

@@ -84,7 +84,7 @@ d_add_fake_armies = {
 	# create actual units
 	capital_scope = {
 		create_unit = {
-			division = "division_template = \"Fake Intel Division\" start_experience_factor = 0.5" 
+			division = "Division_template = \"Fake Intel Division\" start_experience_factor = 0.5" 
 			owner = PREV
 			count = num_to_create
 			id = id_to_set
@@ -109,106 +109,106 @@ d_get_state = {
 		FROM = {
 			transfer_state = PREV
 		}
-		log = "state with [PREV.GetID] id is assigned to [FROM.GetTag], [ROOT.owner.GetTag]"
+		log = "State with [PREV.GetID] id is assigned to [FROM.GetTag], [ROOT.owner.GetTag]"
 	}
 }
 #government idea modding
 d_increase_science_base_flag = {
 	increase_science_base_flag = yes
-	log = "increased science base flag for [ROOT.GetTag]"
+	log = "Increased science base flag for [ROOT.GetTag]"
 	if = {
 		limit = {
 			has_country_flag = disallow_science_base_flag_fix
 		}
-		log = "no fixes for science base flag applied for [ROOT.GetTag]"
+		log = "No fixes for science base flag applied for [ROOT.GetTag]"
 	}
 }
 d_decrease_science_base_flag = {
 	decrease_science_base_flag = yes
-	log = "decreased science base flag for [ROOT.GetTag]"
+	log = "Decreased science base flag for [ROOT.GetTag]"
 	if = {
 		limit = {
 			has_country_flag = disallow_science_base_flag_fix
 		}
-		log = "no fixes for science base flag applied for [ROOT.GetTag]"
+		log = "No fixes for science base flag applied for [ROOT.GetTag]"
 	}
 }
 d_increase_science_base_idea = {
 	increase_science_base_idea = yes
-	log = "increased science base idea for [ROOT.GetTag]"
+	log = "Increased science base idea for [ROOT.GetTag]"
 	if = {
 		limit = {
 			has_country_flag = disallow_science_base_flag_fix
 		}
-		log = "no fixes for science base flag applied for [ROOT.GetTag]"
+		log = "No fixes for science base flag applied for [ROOT.GetTag]"
 	}
 }
 d_decrease_science_base_idea = {
 	decrease_science_base_idea = yes
-	log = "decreased science base idea for [ROOT.GetTag]"
+	log = "Decreased science base idea for [ROOT.GetTag]"
 	if = {
 		limit = {
 			has_country_flag = disallow_science_base_flag_fix
 		}
-		log = "no fixes for science base flag applied for [ROOT.GetTag]"
+		log = "No fixes for science base flag applied for [ROOT.GetTag]"
 	}
 }
 d_increase_poverty_level_flag = {
 	increase_poverty_level_flag = yes
-	log = "increased poverty level flag for [ROOT.GetTag]"
+	log = "Increased poverty level flag for [ROOT.GetTag]"
 	if = {
 		limit = {
 			has_country_flag = disallow_poverty_flag_fix
 		}
-		log = "no fixes for poverty level flag applied for [ROOT.GetTag]"
+		log = "No fixes for poverty level flag applied for [ROOT.GetTag]"
 	}
 }
 d_decrease_poverty_level_flag = {
 	decrease_poverty_level_flag = yes
-	log = "decreased poverty level flag for [ROOT.GetTag]"
+	log = "Decreased poverty level flag for [ROOT.GetTag]"
 	if = {
 		limit = {
 			has_country_flag = disallow_poverty_flag_fix
 		}
-		log = "no fixes for poverty level flag applied for [ROOT.GetTag]"
+		log = "No fixes for poverty level flag applied for [ROOT.GetTag]"
 	}
 }
 d_increase_poverty_level_idea = {
 	increase_poverty_level_flag = yes
-	log = "increased poverty level idea for [ROOT.GetTag]"
+	log = "Increased poverty level idea for [ROOT.GetTag]"
 	if = {
 		limit = {
 			has_country_flag = disallow_poverty_flag_fix
 		}
-		log = "no fixes for poverty level flag applied for [ROOT.GetTag]"
+		log = "No fixes for poverty level flag applied for [ROOT.GetTag]"
 	}
 }
 d_decrease_poverty_level_idea = {
 	decrease_poverty_level_flag = yes
-	log = "decreased poverty level idea for [ROOT.GetTag]"
+	log = "Decreased poverty level idea for [ROOT.GetTag]"
 	if = {
 		limit = {
 			has_country_flag = disallow_poverty_flag_fix
 		}
-		log = "no fixes for poverty level flag applied for [ROOT.GetTag]"
+		log = "No fixes for poverty level flag applied for [ROOT.GetTag]"
 	}
 }
 #idea control degub
 d_fix_science_base_flag_by_flag = {
 	fix_science_base_flag_by_flag = yes
-	log = "fixed science base flag by flag for [ROOT.GetTag]"
+	log = "Fixed science base flag by flag for [ROOT.GetTag]"
 }
 d_fix_science_base_flag_by_idea = {
 	fix_science_base_flag_by_idea = yes
-	log = "fixed science base flag by idea for [ROOT.GetTag]"
+	log = "Fixed science base flag by idea for [ROOT.GetTag]"
 }
 d_fix_poverty_level_flag_by_flag = {
 	fix_poverty_level_flag_by_flag = yes
-	log = "fixed poverty level flag by flag for [ROOT.GetTag]"
+	log = "Fixed poverty level flag by flag for [ROOT.GetTag]"
 }
 d_fix_poverty_level_flag_by_idea = {
 	fix_poverty_level_flag_by_idea = yes
-	log = "fixed poverty level flag by idea for [ROOT.GetTag]"
+	log = "Fixed poverty level flag by idea for [ROOT.GetTag]"
 }
 #code for math mtth vars, delete from here
 d_erf = {
@@ -370,21 +370,11 @@ d_erfi = {
 	}
 	log = "erf of [?args^0]: [?sum]"
 }
-d_mtth_sin = {
-	set_variable = {
-		global.math_args^0 = 1
+#get mod data
+d_get_tags = {
+	log = "All existing tags:"
+	for_each_scope_loop = {
+		array = global.countries
+		log = "Tag: [?THIS.GetTag], exists: [country_exists_text], dynamic tag: [country_tag_dynamic_text], name: [?THIS.GetName]"
 	}
-	set_temp_variable = {
-		temp = mtth:sin
-	}
-	log = "sin: [?temp]"
-}
-d_mtth_cos = {
-	set_variable = {
-		global.math_args^0 = 1
-	}
-	set_temp_variable = {
-		temp = mtth:cos
-	}
-	log = "cos: [?temp]"
 }

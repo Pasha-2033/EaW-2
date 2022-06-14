@@ -75,7 +75,6 @@ ideas = {
 		extensive_conscription = {
 			available = {
 				NOT = {
-					has_idea = undisturbed_isolation
 					has_idea = isolation
 					has_country_flag = manpower_laws_blocked
 					has_country_flag = demilitarized
@@ -133,7 +132,6 @@ ideas = {
 		service_by_requirement = {
 			available = {
 				NOT = {
-					has_idea = undisturbed_isolation
 					has_idea = isolation
 					has_country_flag = demilitarized
 					has_country_flag = manpower_laws_blocked
@@ -203,7 +201,6 @@ ideas = {
 		all_adults_serve = {
 			available = {
 				NOT = {
-					has_idea = undisturbed_isolation
 					has_idea = isolation
 					has_country_flag = manpower_laws_blocked
 					has_country_flag = demilitarized
@@ -265,7 +262,6 @@ ideas = {
 		scraping_the_barrel = {
 			available = {
 				NOT = {
-					has_idea = undisturbed_isolation
 					has_idea = isolation
 					has_country_flag = manpower_laws_blocked
 					has_country_flag = demilitarized
@@ -359,7 +355,6 @@ ideas = {
 				}
 			}
 			removal_cost = -1
-			picture = isolation
 			modifier = {
 				min_export = 0.25
 				consumer_goods_factor = 0.05
@@ -483,7 +478,6 @@ ideas = {
 			}
 		}
 	}
-
 	economy = {
 		law = yes
 		use_list_view = yes
@@ -854,9 +848,10 @@ ideas = {
 			cancel_if_invalid = no
 		}
 		collectivized_society = {
-			picture = SPR_collectivized_society		
+			picture = new_economic_policy		
 			available = {
-				has_government = communism
+				#has_government = communism
+				always = yes
 			}
 			removal_cost = -1
 			modifier = {
@@ -884,6 +879,47 @@ ideas = {
 				}
 				else = {
 					always = yes
+				}
+			}
+			on_add = {
+				if = {
+					limit = {
+						is_subject = yes
+					}
+					if = {
+						limit = {
+							overlord = {
+								has_idea = collectivized_society
+							}
+						}
+						add_ideas = collectivized_society_subject_and_overlord
+						overlord = {
+							add_ideas = collectivized_society_subject_and_overlord
+						}
+					}
+				}
+				if = {
+					limit = {
+						num_subjects > 0
+					}
+					for_each_scope_loop = {
+						array = subjects
+						if = {
+							limit = {
+								has_idea = collectivized_society
+							}
+							add_ideas = collectivized_society_subject_and_overlord
+						}
+					}
+					if = {
+						limit = {
+							any_of_scopes = {
+								array = subjects
+								has_idea = collectivized_society
+							}
+						}
+						add_ideas = collectivized_society_subject_and_overlord
+					}
 				}
 			}
 			cancel_if_invalid = no
@@ -1353,14 +1389,9 @@ ideas = {
 		}
 		religious_country = {
 			picture = holy_order
-			#
-			#
-			#
-			#
-			#
-			#
-			#
-			#
+			traits = {
+				society_idea
+			}
 			#
 			#
 		}
@@ -1399,13 +1430,13 @@ ideas = {
 	power_concentration = {
 		law = yes
 		use_list_view = yes
-		anarhy = {}
+		anarchy = {}
 		low_power_concentration = {}
 		medium_power_concentration = {}
 		high_power_concentration = {}
 		authoritarism = {}
 		commune = {}
-		harmony = {}
+		harmonic_power_concentration = {}
 	}
 	urbanization = {
 		law = yes
