@@ -1,5 +1,5 @@
 #Created by lead programmer of EaW 2 (vk: @uber_medic, @communistic_sistema)
-#vesrion 1.0
+#vesrion 1.1
 #use MTTH implementation instead of scriped effects, less code, write code with pleasure :)
 
 #usage:
@@ -15,7 +15,9 @@
 #	arccsc = arcsin(1/x)
 #	sinh = (e^x - e^-x) / 2
 #	cosh = (e^x + e^-x) / 2
-#	sinh/cosh = (e^x - e^-x) / (e^x + e^-x) = (e^2x - 1) / (e^2x + 1)
+#	tgh = (e^x - e^-x) / (e^x + e^-x) = (e^2x - 1) / (e^2x + 1)
+#	ctgh = 1 / tgh
+#	erfc = 1 - erf
 
 ceil = {
 	#argument for ceil(x): x -> global.math_args^0
@@ -128,8 +130,8 @@ remainder_of_division = {
 		add = temp_1
 	}
 }
-#ln - wait in version 1.1
-#exp - wait in version 1.1
+#ln - wait in version 1.2
+#exp - wait in version 1.2
 abs = {
 	#argument for abs(x): x -> global.math_args^0
 	base = 0
@@ -150,8 +152,80 @@ abs = {
 		add = temp
 	}
 }
-#sqrt - wait in version 1.1
-#sqrt(x, n) - wait in version 1.1
+sqrt_2 = {
+	#argument for sqrt_2(x): x -> global.math_args^0
+	base = 0
+	modifier = {
+		if = {
+			limit = {
+				NOT = {
+					check_variable = {
+						global.math_args^0 < 0
+					}
+				}
+			}
+			set_temp_variable = { temp = global.math_args^0 }
+			divide_temp_variable = { temp = 2 }
+			set_temp_variable = { r = temp }
+			#cycle 1
+			if = {
+				limit = {
+					check_variable = {
+						r > 0
+					}
+				}
+				set_temp_variable = { temp = global.math_args^0 }
+				divide_temp_variable = { temp = r }
+				add_to_temp_variable = { r = temp }
+				divide_temp_variable = { r = 2 }
+			}
+			#cycle 2
+			if = {
+				limit = {
+					check_variable = {
+						r > 0
+					}
+				}
+				set_temp_variable = { temp = global.math_args^0 }
+				divide_temp_variable = { temp = r }
+				add_to_temp_variable = { r = temp }
+				divide_temp_variable = { r = 2 }
+			}
+			#cycle 3
+			if = {
+				limit = {
+					check_variable = {
+						r > 0
+					}
+				}
+				set_temp_variable = { temp = global.math_args^0 }
+				divide_temp_variable = { temp = r }
+				add_to_temp_variable = { r = temp }
+				divide_temp_variable = { r = 2 }
+			}
+			#cycle 4
+			if = {
+				limit = {
+					check_variable = {
+						r > 0
+					}
+				}
+				set_temp_variable = { temp = global.math_args^0 }
+				divide_temp_variable = { temp = r }
+				add_to_temp_variable = { r = temp }
+				divide_temp_variable = { r = 2 }
+			}
+		}
+		else = {
+			set_temp_variable = { r = -1 }
+		}
+		add = r
+	}
+}
+#sqrt(x, n) - wait in version 1.2
+#sqrt_n = {
+#	base = 0
+#}
 sin = {
 	#argument for sin(x): x -> global.math_args^0 in radians
 	base = 0
@@ -456,3 +530,201 @@ arctg = {
 		add = sum
 	}
 }
+erf = {
+	#argument for erf(x): x -> global.math_args^0
+	base = 0
+	modifier = {
+		set_temp_variable = {
+			2_d_sqrt_pi = 1.128 #~2/sqrt(pi)
+		}
+		set_temp_variable = {
+			x = global.math_args^0
+		}
+		set_temp_variable = {
+			n2x = x
+		}
+		multiply_temp_variable = {
+			n2x = n2x
+		}
+		multiply_temp_variable = {
+			n2x = -1
+		}
+		set_temp_variable = {
+			sum = x
+		}
+		#cycle 1
+		multiply_temp_variable = {
+			x = n2x
+		}
+		set_temp_variable = {
+			temp_x = x
+		}
+		divide_temp_variable = {
+			temp_x = 3
+		}
+		add_to_temp_variable = {
+			sum = temp_x
+		}
+		#cycle 2
+		multiply_temp_variable = {
+			x = n2x
+		}
+		set_temp_variable = {
+			temp_x = x
+		}
+		divide_temp_variable = {
+			temp_x = 10
+		}
+		add_to_temp_variable = {
+			sum = temp_x
+		}
+		#cycle 3
+		multiply_temp_variable = {
+			x = n2x
+		}
+		set_temp_variable = {
+			temp_x = x
+		}
+		divide_temp_variable = {
+			temp_x = 42
+		}
+		add_to_temp_variable = {
+			sum = temp_x
+		}
+		#cycle 4
+		multiply_temp_variable = {
+			x = n2x
+		}
+		set_temp_variable = {
+			temp_x = x
+		}
+		divide_temp_variable = {
+			temp_x = 216
+		}
+		add_to_temp_variable = {
+			sum = temp_x
+		}
+		#cycle 5
+		multiply_temp_variable = {
+			x = n2x
+		}
+		set_temp_variable = {
+			temp_x = x
+		}
+		divide_temp_variable = {
+			temp_x = 1320
+		}
+		add_to_temp_variable = {
+			sum = temp_x
+		}
+		multiply_temp_variable = {
+			sum = 2_d_sqrt_pi
+		}
+		add = sum
+	}
+}
+erfi = {
+	#argument for erfi(x): x -> global.math_args^0
+	base = 0
+	modifier = {
+		set_temp_variable = {
+			2_d_sqrt_pi = 1.128 #~2/sqrt(pi)
+		}
+		set_temp_variable = {
+			x = global.math_args^0
+		}
+		set_temp_variable = {
+			2x = x
+		}
+		multiply_temp_variable = {
+			2x = 2x
+		}
+		multiply_temp_variable = {
+			2x = -1
+		}
+		set_temp_variable = {
+			sum = x
+		}
+		#cycle 1
+		multiply_temp_variable = {
+			x = 2x
+		}
+		set_temp_variable = {
+			temp_x = x
+		}
+		divide_temp_variable = {
+			temp_x = 3
+		}
+		add_to_temp_variable = {
+			sum = temp_x
+		}
+		#cycle 2
+		multiply_temp_variable = {
+			x = 2x
+		}
+		set_temp_variable = {
+			temp_x = x
+		}
+		divide_temp_variable = {
+			temp_x = 10
+		}
+		add_to_temp_variable = {
+			sum = temp_x
+		}
+		#cycle 3
+		multiply_temp_variable = {
+			x = 2x
+		}
+		set_temp_variable = {
+			temp_x = x
+		}
+		divide_temp_variable = {
+			temp_x = 42
+		}
+		add_to_temp_variable = {
+			sum = temp_x
+		}
+		#cycle 4
+		multiply_temp_variable = {
+			x = 2x
+		}
+		set_temp_variable = {
+			temp_x = x
+		}
+		divide_temp_variable = {
+			temp_x = 216
+		}
+		add_to_temp_variable = {
+			sum = temp_x
+		}
+		#cycle 5
+		multiply_temp_variable = {
+			x = 2x
+		}
+		set_temp_variable = {
+			temp_x = x
+		}
+		divide_temp_variable = {
+			temp_x = 1320
+		}
+		add_to_temp_variable = {
+			sum = temp_x
+		}
+		multiply_temp_variable = {
+			sum = 2_d_sqrt_pi
+		}
+		add = sum
+	}
+}
+#lg adaptation - wait in version 1.3
+#arcsec - wait in version 1.3
+#sech - wait in version 1.3
+#csch - wait in version 1.3
+#arcsinh - wait in version 1.4
+#arccosh - wait in version 1.4
+#arctgh - wait in version 1.4
+#arcctgh - wait in version 1.4
+#arcsech - wait in version 1.5
+#arccsch - wait in version 1.5
+#P (possibility) - wait in version 1.6
+#G (gamma-function) - wait in version 1.7
