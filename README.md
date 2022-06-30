@@ -1,18 +1,18 @@
 # Equestria at War 2
 <h2>This is mod repository.</h2>
 It also contains some modules that can be used in your mode.
-<dl>
-    <dd><a href="https://github.com/Pasha-2033/EaW-2/blob/master/common/mtth/math_operators.txt">Math module</a></dd>
-    <dd><a href="https://github.com/Pasha-2033/EaW-2/blob/master/common/scripted_effects/array_operators.txt">Array module</a></dd>
-</dl>
+<a href="https://github.com/Pasha-2033/EaW-2/blob/master/common/mtth/math_operators.txt">Math module</a>
+</br>
+<a href="https://github.com/Pasha-2033/EaW-2/blob/master/common/scripted_effects/array_operators.txt">Array module</a>
 
 # Mod documentation
 [English](docs/English.md)
+</br>
 [Russian](docs/Russian.md)
 
 # Math module documentation
 Was applyed python syntax of <a href = "https://docs.python.org/3/library/math.html">math module</a>.
-<p>Examples of code usage in module file.
+Examples of code usage in module file.
 Supports functions:
 <dl>
     <dd>ceil: ceil()</dd>
