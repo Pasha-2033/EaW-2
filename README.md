@@ -1,13 +1,36 @@
 # Equestria at War 2
-<h1>This is mod repository.</h1>
-<p>It also contains some modules that can be used in your mode.</p>
-<p style="text-indent: 25px;"><a href="https://github.com/Pasha-2033/EaW-2/blob/master/common/mtth/math_operators.txt">Math module</a>
-<p style="text-indent: 25px;"><a href="https://github.com/Pasha-2033/EaW-2/blob/master/common/scripted_effects/array_operators.txt">Array module</a>
+<h2>This is mod repository.</h2>
+It also contains some modules that can be used in your mode.
+<a href="https://github.com/Pasha-2033/EaW-2/blob/master/common/mtth/math_operators.txt">Math module</a>
+<a href="https://github.com/Pasha-2033/EaW-2/blob/master/common/scripted_effects/array_operators.txt">Array module</a>
 
 # Mod documentation
 [English](docs/English.md)
-<br>
 [Russian](docs/Russian.md)
+
+# Math module documentation
+Was applyed python syntax of <a href = "https://docs.python.org/3/library/math.html">math module</a>.
+<p>Examples of code usage in module file.
+Supports functions:
+<dl>
+    <dd>ceil: ceil()</dd>
+    <dd>floor: floor()</dd>
+    <dd>division_without_remainder: //</dd>
+    <dd>remainder_of_division: %</dd>
+    <dd>abs: abs()</dd>
+    <dd>sqrt_2: sqrt()</dd>
+    <dd>sin: sin()</dd>
+    <dd>cos: cos()</dd>
+    <dd>arcsin: asin()</dd>
+    <dd>arctg: atan()</dd>
+    <dd>erf: erf()</dd>
+    <dd>erfi</dd>
+</dl>
+Also there is a table for other functions (will be added after main functions) in module file.
+
+# Array module documentation
+coming soon!
+small teaser: negative indes is supported!
 
 # Code documentation
 Isn`t done yet
