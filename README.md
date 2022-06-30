@@ -1,6 +1,7 @@
 # Equestria at War 2
 <h2>This is mod repository.</h2>
 It also contains some modules that can be used in your mode.
+</br>
 <a href="https://github.com/Pasha-2033/EaW-2/blob/master/common/mtth/math_operators.txt">Math module</a>
 </br>
 <a href="https://github.com/Pasha-2033/EaW-2/blob/master/common/scripted_effects/array_operators.txt">Array module</a>
@@ -32,7 +33,7 @@ Also there is a table for other functions (will be added after main functions) i
 
 # Array module documentation
 coming soon!
-small teaser: negative indes is supported!
+small teaser: negative index is supported!
 
 # Code documentation
 Isn`t done yet
