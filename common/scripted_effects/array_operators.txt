@@ -3,7 +3,7 @@
 #use scriped effects, less code, write code with pleasure :)
 #this functions are able to hold arrays with indexes from -n to +n (except for reverse_array, sort_array)
 
-#usage:
+#Usage:
 #set_variable = { global.math_args^0 = 2 }
 #set_variable = { global.math_args^0 = -1 }
 #clear_array = global.math_array_arg
@@ -65,6 +65,8 @@
 #		counter_0 = 1
 #	}
 #}
+
+#Note static values, that module uses as args, can be rewrited by module effect! So update them just before module usage!
 
 get_min_index = {
 	#array to analyze = global.math_array_arg

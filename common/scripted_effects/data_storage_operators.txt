@@ -1,0 +1,354 @@
+#Created by lead programmer of EaW 2 (vk: @uber_medic, @communistic_sistema)
+#vesrion 1.0
+#use scriped effects, less code, write code with pleasure :)
+#you can also use this functions for binary operations
+
+#Usage:
+#set_variable = { global.math_args^0 = 2 }
+#create_BigInteger = yes
+#clear_array = your_array
+#for_each_loop = {
+#	array = global.BigInteger0
+#	add_to_array = { your_array = v }
+#}
+
+#Note:
+#static values, that module uses as args, can be rewrited by module effect! So update them just before module usage!
+#math module requered!
+#data storage triggers requered!
+#max/min values are 2^62 and -2^62
+#BigInteger store data in binary format (speed optimisation, but memory can suffer, not critical)
+
+#data transofration
+create_BigInteger = {
+	#creates BigInteger from global.math_args^0 (int! otherwise will cause wrong value)
+	clear_array = global.BigInteger0
+	set_variable = {
+		global.math_args^1 = 2
+	}
+	if = {
+		limit = {
+			check_variable = {
+				global.math_args^0 < 0
+			}
+		}
+		add_to_array = {
+			global.BigInteger0 = 1
+		}
+	}
+	else = {
+		add_to_array = {
+			global.BigInteger0 = 0
+		}
+	}
+	while_loop_effect = {
+		limit = {
+			check_variable = {
+				global.math_args^0 > 0
+			}
+		}
+		add_to_array = {
+			global.BigInteger0 = mtth:remainder_of_division
+		}
+		set_variable = {
+			global.math_args^0 = mtth:division_without_remainder
+		}
+	}
+}
+BigInteger_to_Integer = {
+	#creates Integer from BigInteger; args: global.BigInteger0 (data source), global.math_args^1 (mode of transformation, if 0 will ignore overflow)
+	set_variable = {
+		global.math_args^0 = 0
+	}
+	if = {
+		limit = {
+			check_variable = {
+				global.math_args^1 = 0
+			}
+		}
+		for_loop_effect = {
+			start = 1
+			end = global.BigInteger0^num
+			set_temp_variable = {
+				t = v
+			}
+			subtract_from_temp_variable = {
+				t = 1
+			}
+			set_temp_variable = {
+				s = global.BigInteger0^v
+			}
+			for_loop_effect = {
+				start = 0
+				end = t
+				multiply_temp_variable = {
+					s = 2
+				}
+			}
+			add_to_variable = {
+				global.math_args^0 = s
+			}
+		}
+	}
+	else = {
+		set_temp_variable = {
+			tgma = global.math_args^0
+		}
+		for_loop_effect = {
+			start = 1
+			end = global.BigInteger0^num
+			set_temp_variable = {
+				t = v
+			}
+			subtract_from_temp_variable = {
+				t = 1
+			}
+			set_temp_variable = {
+				s = global.BigInteger0^v
+			}
+			for_loop_effect = {
+				start = 0
+				end = t
+				multiply_temp_variable = {
+					s = 2
+				}
+			}
+			add_to_temp_variable = {
+				tgma = s
+			}
+			if = {
+				limit = {
+					check_variable = {
+						tgma < global.math_args^0
+					}
+				}
+				set_temp_variable = {
+					break = 1
+				}
+			}
+			else = {
+				set_variable = {
+					global.math_args^0 = tgma
+				}
+			}
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				global.BigInteger0^0 = 1
+			}
+		}
+		multiply_variable = {
+			global.math_args^0 = -1
+		}
+	}
+}
+inline_BigIntegers = {
+	#make length of BigIntegers equal; args: global.BigInteger0, global.BigInteger1 (data sources), will have effect on both BigIntegers
+	if = {
+		limit = {
+			check_variable = {
+				global.BigInteger0^num > global.BigInteger1^num
+			}
+		}
+		set_temp_variable = {
+			e = global.BigInteger0^num
+		}
+		subtract_from_temp_variable = {
+			e = global.BigInteger1^num
+		}
+		for_loop_effect = {
+			start = 0
+			end = e
+			add_to_array = {
+				global.BigInteger1 = 0
+			}
+		}
+	}
+	else_if = {
+		limit = {
+			check_variable = {
+				global.BigInteger0^num < global.BigInteger1^num
+			}
+		}
+		set_temp_variable = {
+			e = global.BigInteger1^num
+		}
+		subtract_from_temp_variable = {
+			e = global.BigInteger0^num
+		}
+		for_loop_effect = {
+			start = 0
+			end = e
+			add_to_array = {
+				global.BigInteger0 = 0
+			}
+		}
+	}
+}
+cut_nonvalue_bits = {
+	#will cut off high bits, that has no effect on value (memorey optimisation); arg: global.BigInteger0 (data source)
+	set_temp_variable = {
+		e = global.BigInteger0^num
+	}
+	set_temp_variable = {
+		index = global.BigInteger0^num
+	}
+	subtract_from_temp_variable = {
+		e = 2
+	}
+	for_loop_effect = {
+		start = 0
+		end = e
+		set_temp_variable = {
+			cur_index = index
+		}
+		subtract_from_temp_variable = {
+			cur_index = v
+		}
+		if = {
+			limit = {
+				check_variable = {
+					global.BigInteger0^cur_index = 0
+				}
+			}
+			remove_from_array = {
+				array = global.BigInteger0
+			}
+		}
+		else = {
+			set_temp_variable = {
+				break = 1
+			}
+		}
+	}
+}
+#triggers (have cycles, not possible in scripted triggers)
+is_bigger = {
+	#global.math_args^0 = 1 if global.BigInteger0 > global.BigInteger1
+	set_variable = {
+		global.math_args^0 = 0
+	}
+	inline_BigIntegers = yes
+	set_temp_variable = {
+		index = global.BigInteger0^num
+	}
+	subtract_from_temp_variable = {
+		index = 1
+	}
+	for_loop_effect = {
+		start = 0
+		end = index
+		set_temp_variable = {
+			cur_index = index
+		}
+		subtract_from_temp_variable = {
+			cur_index = v
+		}
+		if = {
+			limit = {
+				check_variable = {
+					global.BigInteger0^cur_index > global.BigInteger1^cur_index
+				}
+			}
+			set_variable = {
+				global.math_args^0 = 1
+			}
+			set_temp_variable = {
+				break = 1
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					global.BigInteger0^cur_index < global.BigInteger1^cur_index
+				}
+			}
+			set_temp_variable = {
+				break = 1
+			}
+		}
+	}
+}
+is_less = {
+	#global.math_args^0 = 1 if global.BigInteger0 < global.BigInteger1
+	set_variable = {
+		global.math_args^0 = 0
+	}
+	inline_BigIntegers = yes
+	set_temp_variable = {
+		index = global.BigInteger0^num
+	}
+	subtract_from_temp_variable = {
+		index = 1
+	}
+	for_loop_effect = {
+		start = 0
+		end = index
+		set_temp_variable = {
+			cur_index = index
+		}
+		subtract_from_temp_variable = {
+			cur_index = v
+		}
+		if = {
+			limit = {
+				check_variable = {
+					global.BigInteger0^cur_index < global.BigInteger1^cur_index
+				}
+			}
+			set_variable = {
+				global.math_args^0 = 1
+			}
+			set_temp_variable = {
+				break = 1
+			}
+		}
+		else_if = {
+			limit = {
+				check_variable = {
+					global.BigInteger0^cur_index > global.BigInteger1^cur_index
+				}
+			}
+			set_temp_variable = {
+				break = 1
+			}
+		}
+	}
+}
+is_equal = {
+	is_bigger = yes
+	set_temp_variable = {
+		b = global.math_args^0
+	}
+	is_less = yes
+	set_temp_variable = {
+		l = global.math_args^0
+	}
+	set_variable = {
+		global.math_args^0 = 0
+	}
+	if = {
+		limit = {
+			check_variable = {
+				b = 0
+			}
+			check_variable = {
+				l = 0
+			}
+		}
+		set_variable = {
+			global.math_args^0 = 1
+		}
+	}
+}
+#raw data operations - wait in version 1.1
+raw_add_BigInteger = {}
+raw_sub_BigInteger = {}
+#standart data operations
+add_to_BigInteger = {}		# - wait in version 1.2
+sub_from_BigInteger = {}	# - wait in version 1.3
+mult_BigInteger = {}		# - wait in version 1.2
+div_BigInteger = {}			# - wait in version 1.3
+#IEEE754 float standart - wait in version 1.4
