@@ -5,13 +5,16 @@ It also contains some modules that can be used in your mode.
 <a href="https://github.com/Pasha-2033/EaW-2/blob/master/common/mtth/math_operators.txt">Math module</a>
 </br>
 <a href="https://github.com/Pasha-2033/EaW-2/blob/master/common/scripted_effects/array_operators.txt">Array module</a>
+</br>
+<a href="https://github.com/Pasha-2033/EaW-2/blob/master/common/scripted_effects/data_storage_operators.txt">Data extention module</a>
 
-# Mod documentation
+# Mod documentation (scenario and mechanics, tech and events)
 [English](docs/English.md)
 </br>
 [Russian](docs/Russian.md)
 
 # Math module documentation
+Allow to do calculations, that not provided by PDX.
 Was applyed python syntax of <a href = "https://docs.python.org/3/library/math.html">math module</a>.
 Examples of code usage in module file.
 Supports functions:
@@ -32,10 +35,23 @@ Supports functions:
 Also there is a table for other functions (will be added after main functions) in module file.
 
 # Array module documentation
+Allow to do actions with array like with a line of var^&#8249;n&#8250;, where n &#8712; Z and one of n is 0.
 coming soon!
-small teaser: negative index is supported!
 
-# Code documentation
+# Data extention module documentation
+Allow to store big data, more than allow PDX variable (&#177;2^31/1000).
+Allow to convert one type of data to another:
+<dl>
+    <dd>Integer to BigInteger</dd>
+    <dd>BigInteger to Integer</dd>
+</dl>
+Allow to apply mass boolean operations (OR/AND/XOR/NOT).
+Values for BigInteger is &#177;2^(2^31/1000 - 1).
+BigInteger stores data in binary type.
+Double coming soon (IEEE754 standart)!
+coming soon!
+
+# Mod code documentation
 Isn`t done yet
 
 # Vanila mod:

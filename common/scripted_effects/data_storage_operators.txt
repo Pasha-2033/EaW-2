@@ -318,6 +318,7 @@ is_less = {
 	}
 }
 is_equal = {
+	#global.math_args^0 = 1 if global.BigInteger0 = global.BigInteger1
 	is_bigger = yes
 	set_temp_variable = {
 		b = global.math_args^0
@@ -343,9 +344,187 @@ is_equal = {
 		}
 	}
 }
+#boolean operations (for array of boolean, remember technical bits, before applying)
+bool_or = {
+	#args: global.BigInteger0, global.BigInteger1 (data sources), will return value in global.BigInteger0, must have same length (otherwise will cause wrong walue)
+	for_loop_effect = {
+		start = 0
+		end = global.BigInteger0^num
+		if = {
+			limit = {
+				OR = {
+					check_variable = {
+						global.BigInteger0^v = 1
+					}
+					check_variable = {
+						global.BigInteger1^v = 1
+					}
+				}
+			}
+			set_variable = {
+				global.BigInteger0^v = 1
+			}
+		}
+		else = {
+			set_variable = {
+				global.BigInteger0^v = 0
+			}
+		}
+	}
+}
+bool_and = {
+	#args: global.BigInteger0, global.BigInteger1 (data sources), will return value in global.BigInteger0, must have same length (otherwise will cause wrong walue)
+	for_loop_effect = {
+		start = 0
+		end = global.BigInteger0^num
+		if = {
+			limit = {
+				check_variable = {
+					global.BigInteger0^v = 1
+				}
+				check_variable = {
+					global.BigInteger1^v = 1
+				}
+			}
+			set_variable = {
+				global.BigInteger0^v = 1
+			}
+		}
+		else = {
+			set_variable = {
+				global.BigInteger0^v = 0
+			}
+		}
+	}
+}
+bool_not = {
+	#args: global.BigInteger0 (data sources), will return value in global.BigInteger0
+	for_loop_effect = {
+		start = 0
+		end = global.BigInteger0^num
+		if = {
+			limit = {
+				check_variable = {
+					global.BigInteger0^v = 1
+				}
+			}
+			set_variable = {
+				global.BigInteger0^v = 0
+			}
+		}
+		else = {
+			set_variable = {
+				global.BigInteger0^v = 1
+			}
+		}
+	}
+}
+bool_xor = {
+	#args: global.BigInteger0, global.BigInteger1 (data sources), will return value in global.BigInteger0, must have same length (otherwise will cause wrong walue)
+	for_loop_effect = {
+		start = 0
+		end = global.BigInteger0^num
+		if = {
+			limit = {
+				OR = {
+					check_variable = {
+						global.BigInteger0^v = 1
+					}
+					check_variable = {
+						global.BigInteger1^v = 1
+					}
+				}
+				NOT = {
+					check_variable = {
+						global.BigInteger0^v = 1
+					}
+					check_variable = {
+						global.BigInteger1^v = 1
+					}
+				}
+			}
+			set_variable = {
+				global.BigInteger0^v = 1
+			}
+		}
+		else = {
+			set_variable = {
+				global.BigInteger0^v = 0
+			}
+		}
+	}
+}
 #raw data operations - wait in version 1.1
-raw_add_BigInteger = {}
-raw_sub_BigInteger = {}
+raw_add_BigInteger = {
+	#args: global.BigInteger0, global.BigInteger1 (data sources), will return value in global.BigInteger0, must have same length (otherwise will cause wrong walue)
+	set_temp_variable = {
+		of = 0
+	}
+	set_variable = {
+		global.math_args^1 = 2
+	}
+	for_loop_effect = {
+		start = 1
+		end = global.BigInteger0^num
+		set_variable = {
+			global.math_args^0 = global.BigInteger0^v
+		}
+		add_to_variable = {
+			global.math_args^0 = global.BigInteger1^v
+		}
+		add_to_variable = {
+			global.math_args^0 = of
+		}
+		set_variable = {
+			global.BigInteger0^v = mtth:remainder_of_division
+		}
+		set_temp_variable = {
+			of = mtth:division_without_remainder
+		}
+	}
+}
+raw_sub_BigInteger = {
+	#args: global.BigInteger0, global.BigInteger1 (data sources), will return value in global.BigInteger0, must have same length (otherwise will cause wrong walue)
+	for_loop_effect = {
+		start = 1
+		end = global.BigInteger0^num
+		if = {
+			limit = {
+				check_variable = {
+					global.BigInteger0^v = 1
+				}
+			}
+			set_variable = {
+				global.BigInteger0^v = 0
+			}
+		}
+		else = {
+			set_variable = {
+				global.BigInteger0^v = 1
+			}
+		}
+	}
+	raw_add_BigInteger = yes
+	for_loop_effect = {
+		start = 1
+		end = global.BigInteger0^num
+		if = {
+			limit = {
+				check_variable = {
+					global.BigInteger0^v = 1
+				}
+			}
+			set_variable = {
+				global.BigInteger0^v = 0
+			}
+		}
+		else = {
+			set_variable = {
+				global.BigInteger0^v = 1
+			}
+		}
+	}
+}
 #standart data operations
 add_to_BigInteger = {}		# - wait in version 1.2
 sub_from_BigInteger = {}	# - wait in version 1.3
