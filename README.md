@@ -39,14 +39,14 @@ Allow to do actions with array like with a line of var^&#8249;n&#8250;, where n 
 coming soon!
 
 # Data extention module documentation
-Allow to store big data, more than allow PDX variable (&#177;2^31/1000).
+Allow to store big data, more than allow PDX variable (&#177;2^31//1000).
 Allow to convert one type of data to another:
 <dl>
     <dd>Integer to BigInteger</dd>
     <dd>BigInteger to Integer</dd>
 </dl>
 Allow to apply mass boolean operations (OR/AND/XOR/NOT).
-Values for BigInteger is &#177;2^(2^31/1000 - 1).
+Values for BigInteger is &#177;2^(2^31//1000 - 1).
 BigInteger stores data in binary type.
 Double coming soon (IEEE754 standart)!
 coming soon!
