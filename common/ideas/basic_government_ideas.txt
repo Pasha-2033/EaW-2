@@ -1192,18 +1192,12 @@ ideas = {
 				supply_consumption_factor = -0.5
 			}
 		}
-		agrarian_society1 = {
-			
-			traits = { society_idea }
-			allowed = {
-				always = no
+		agrarian_society = {
+			cost = -1
+			traits = {
+				society_idea
 			}
-			allowed_civil_war = {
-				always = yes
-			}
-			picture = agrarian_society
 			removal_cost = -1
-			
 			modifier = {
 				production_factory_max_efficiency_factor = -0.18
 				industrial_capacity_factory = -0.45
@@ -1218,28 +1212,6 @@ ideas = {
 				max_fuel_factor = -0.15
 				exodus_assimilation_proportion = 0.01
 				supply_consumption_factor = -0.55
-			}
-		}
-		agrarian_society = {
-			cost = -1
-			traits = {
-				society_idea
-			}
-			removal_cost = -1
-			modifier = {
-				production_factory_max_efficiency_factor = -0.2
-				industrial_capacity_factory = -0.50
-				industrial_capacity_dockyard = -0.50
-				production_speed_buildings_factor = -0.50
-				industry_repair_factor = -0.5
-				research_speed_factor = -0.5
-				MONTHLY_POPULATION = -0.25
-				exodus_national_appeal = -0.25
-				local_resources_factor = -0.5
-				industry_air_damage_factor = -0.5
-				max_fuel_factor = -0.2
-				exodus_assimilation_proportion = 0.01
-				supply_consumption_factor = -0.6
 			}
 		}
 		tribal_society3 = {
@@ -1590,18 +1562,7 @@ ideas = {
 				poverty_idea
 			}
 			available = {
-				OR = {
-					NOT = {
-						OR = {
-							has_idea = poverty4
-							has_idea = poverty3
-							has_idea = poverty2
-							has_idea = poverty1
-							has_idea = poverty
-						}
-					}
-					has_country_flag = available_no_poverty
-				}
+				#to do
 			}
 			allowed_civil_war = {
 				always = yes
@@ -1617,18 +1578,7 @@ ideas = {
 				poverty_idea
 			}
 			available = {
-				OR = {
-					NOT = {
-						OR = {
-							has_idea = poverty4
-							has_idea = poverty3
-							has_idea = poverty2
-							has_idea = poverty1
-							has_idea = poverty
-						}
-					}
-					has_country_flag = available_poverty5
-				}
+				#to do
 			}
 			allowed_civil_war = {
 				always = yes
@@ -1649,17 +1599,7 @@ ideas = {
 				poverty_idea
 			}
 			available = {
-				OR = {
-					NOT = {
-						OR = {
-							has_idea = poverty3
-							has_idea = poverty2
-							has_idea = poverty1
-							has_idea = poverty
-						}
-					}
-					has_country_flag = available_poverty4
-				}
+				#to do
 			}
 			allowed_civil_war = {
 				always = yes
@@ -1682,16 +1622,7 @@ ideas = {
 				poverty_idea
 			}
 			available = {
-				OR = {
-					NOT = {
-						OR = {
-							has_idea = poverty2
-							has_idea = poverty1
-							has_idea = poverty
-						}
-					}
-					has_country_flag = available_poverty3
-				}
+				#to do
 			}
 			allowed_civil_war = {
 				always = yes
@@ -1746,12 +1677,7 @@ ideas = {
 				poverty_idea
 			}
 			available = {
-				OR = {
-					NOT = {
-						has_idea = poverty
-					}
-					has_country_flag = available_poverty1
-				}	
+				#to do	
 			}
 			allowed_civil_war = {
 				always = yes

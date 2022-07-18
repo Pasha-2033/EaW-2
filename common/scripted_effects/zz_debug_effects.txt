@@ -112,27 +112,7 @@ d_get_state = {
 		log = "State with [PREV.GetID] id is assigned to [FROM.GetTag], [ROOT.owner.GetTag]"
 	}
 }
-#government idea modding
-d_increase_science_base_flag = {
-	increase_science_base_flag = yes
-	log = "Increased science base flag for [ROOT.GetTag]"
-	if = {
-		limit = {
-			has_country_flag = disallow_science_base_flag_fix
-		}
-		log = "No fixes for science base flag applied for [ROOT.GetTag]"
-	}
-}
-d_decrease_science_base_flag = {
-	decrease_science_base_flag = yes
-	log = "Decreased science base flag for [ROOT.GetTag]"
-	if = {
-		limit = {
-			has_country_flag = disallow_science_base_flag_fix
-		}
-		log = "No fixes for science base flag applied for [ROOT.GetTag]"
-	}
-}
+#government idea modding (move to debug decisions)
 d_increase_science_base_idea = {
 	increase_science_base_idea = yes
 	log = "Increased science base idea for [ROOT.GetTag]"
@@ -153,228 +133,113 @@ d_decrease_science_base_idea = {
 		log = "No fixes for science base flag applied for [ROOT.GetTag]"
 	}
 }
-d_increase_poverty_level_flag = {
-	increase_poverty_level_flag = yes
-	log = "Increased poverty level flag for [ROOT.GetTag]"
-	if = {
-		limit = {
-			has_country_flag = disallow_poverty_flag_fix
-		}
-		log = "No fixes for poverty level flag applied for [ROOT.GetTag]"
-	}
-}
-d_decrease_poverty_level_flag = {
-	decrease_poverty_level_flag = yes
-	log = "Decreased poverty level flag for [ROOT.GetTag]"
-	if = {
-		limit = {
-			has_country_flag = disallow_poverty_flag_fix
-		}
-		log = "No fixes for poverty level flag applied for [ROOT.GetTag]"
-	}
-}
-d_increase_poverty_level_idea = {
-	increase_poverty_level_flag = yes
-	log = "Increased poverty level idea for [ROOT.GetTag]"
-	if = {
-		limit = {
-			has_country_flag = disallow_poverty_flag_fix
-		}
-		log = "No fixes for poverty level flag applied for [ROOT.GetTag]"
-	}
-}
-d_decrease_poverty_level_idea = {
-	decrease_poverty_level_flag = yes
-	log = "Decreased poverty level idea for [ROOT.GetTag]"
-	if = {
-		limit = {
-			has_country_flag = disallow_poverty_flag_fix
-		}
-		log = "No fixes for poverty level flag applied for [ROOT.GetTag]"
-	}
-}
-#idea control degub
-d_fix_science_base_flag_by_flag = {
-	fix_science_base_flag_by_flag = yes
-	log = "Fixed science base flag by flag for [ROOT.GetTag]"
-}
-d_fix_science_base_flag_by_idea = {
-	fix_science_base_flag_by_idea = yes
-	log = "Fixed science base flag by idea for [ROOT.GetTag]"
-}
-d_fix_poverty_level_flag_by_flag = {
-	fix_poverty_level_flag_by_flag = yes
-	log = "Fixed poverty level flag by flag for [ROOT.GetTag]"
-}
-d_fix_poverty_level_flag_by_idea = {
-	fix_poverty_level_flag_by_idea = yes
-	log = "Fixed poverty level flag by idea for [ROOT.GetTag]"
-}
-#code for math mtth vars, delete from here
-d_erf = {
-	set_temp_variable = {
-		2_d_sqrt_pi = 1.128 #~2/sqrt(pi)
-	}
-	set_temp_variable = {
-		x = args^0
-	}
-	set_temp_variable = {
-		n2x = x
-	}
-	multiply_temp_variable = {
-		n2x = n2x
-	}
-	multiply_temp_variable = {
-		n2x = -1
-	}
-	set_temp_variable = {
-		sum = x
-	}
-	set_temp_variable = {
-		counter_0 = 1
-	}
-	while_loop_effect = {
-		limit = {
-			check_variable = {
-				counter_0 < 10
-			}
-		}
-		multiply_temp_variable = {
-			x = n2x
-		}
-		set_temp_variable = {
-			fact = 1
-		}
-		set_temp_variable = {
-			fact_counter = counter_0
-		}
-		while_loop_effect = {
-			limit = {
-				check_variable = {
-					fact_counter > 1
-				}
-			}
-			multiply_temp_variable = {
-				fact = fact_counter
-			}
-			subtract_from_temp_variable = {
-				fact_counter = 1
-			}
-		}
-		set_temp_variable = {
-			2n_1 = counter_0
-		}
-		multiply_temp_variable = {
-			2n_1 = 2
-		}
-		add_to_temp_variable = {
-			2n_1 = 1
-		}
-		set_temp_variable = {
-			temp_x = x
-		}
-		divide_temp_variable = {
-			temp_x = fact
-		}
-		divide_temp_variable = {
-			temp_x = 2n_1
-		}
-		add_to_temp_variable = {
-			sum = temp_x
-		}
-		log = "[?temp_x]"
-		add_to_temp_variable = {
-			counter_0 = 1
-		}
-	}
-	multiply_temp_variable = {
-		sum = 2_d_sqrt_pi
-	}
-	log = "erf of [?args^0]: [?sum]"
-}
-d_erfi = {
-	set_temp_variable = {
-		2_d_sqrt_pi = 1.128 #~2/sqrt(pi)
-	}
-	set_temp_variable = {
-		x = args^0
-	}
-	set_temp_variable = {
-		2x = x
-	}
-	multiply_temp_variable = {
-		2x = 2x
-	}
-	set_temp_variable = {
-		sum = x
-	}
-	set_temp_variable = {
-		counter_0 = 1
-	}
-	while_loop_effect = {
-		limit = {
-			check_variable = {
-				counter_0 < 10
-			}
-		}
-		multiply_temp_variable = {
-			x = 2x
-		}
-		set_temp_variable = {
-			fact = 1
-		}
-		set_temp_variable = {
-			fact_counter = counter_0
-		}
-		while_loop_effect = {
-			limit = {
-				check_variable = {
-					fact_counter > 1
-				}
-			}
-			multiply_temp_variable = {
-				fact = fact_counter
-			}
-			subtract_from_temp_variable = {
-				fact_counter = 1
-			}
-		}
-		set_temp_variable = {
-			2n_1 = counter_0
-		}
-		multiply_temp_variable = {
-			2n_1 = 2
-		}
-		add_to_temp_variable = {
-			2n_1 = 1
-		}
-		set_temp_variable = {
-			temp_x = x
-		}
-		divide_temp_variable = {
-			temp_x = fact
-		}
-		divide_temp_variable = {
-			temp_x = 2n_1
-		}
-		add_to_temp_variable = {
-			sum = temp_x
-		}
-		log = "[?temp_x]"
-		add_to_temp_variable = {
-			counter_0 = 1
-		}
-	}
-	multiply_temp_variable = {
-		sum = 2_d_sqrt_pi
-	}
-	log = "erf of [?args^0]: [?sum]"
-}
 #get mod data
 d_get_tags = {
 	log = "All existing tags:"
 	for_each_scope_loop = {
 		array = global.countries
 		log = "Tag: [?THIS.GetTag], exists: [country_exists_text], dynamic tag: [country_tag_dynamic_text], name: [?THIS.GetName]"
+	}
+}
+d_ver = {
+	set_variable = {
+		global.t = -100
+	}
+	set_variable = {
+		global.tt = -100
+	}
+	set_variable = {
+		global.ttt = -100
+	}
+	country_event = {
+		id = recursive.1
+	}
+}
+rec_counter = {
+	meta_effect = {
+		text = {
+			set_temp_variable = {
+				v = [TTT].[TT].[T]
+			}
+		}
+		TTT = global.ttt
+		TT = global.tt
+		T = global.t
+	}
+	log = "[?global.ttt].[?global.tt].[?global.t]:[?v]"
+	add_to_variable = {
+		global.t = 1
+	}
+	if = {
+		limit = {
+			check_variable = {
+				global.t > 99
+			}
+		}
+		set_variable = {
+			global.t = 000
+		}
+		add_to_variable = {
+			global.tt = 1
+		}
+	}
+	if = {
+		limit = {
+			check_variable = {
+				global.tt > 99
+			}
+		}
+		set_variable = {
+			global.tt = 000
+		}
+		add_to_variable = {
+			global.ttt = 1
+		}
+	}
+}
+d_d = {
+	# # - cause next command name, if not in same {} - none
+	# /,\,:,*,@,&,%,?,$,^,№,_,+,|,`,~, more than one "." or their combination - cause text
+	# [...] - cause loc var
+	# [?...] - cause float var
+	# >,<,' - cause only start symbol (if it`s starts with it (if not string notation))
+	# ;,(,),{,},"," - cause text, cut of all everithing after it and itself
+	# "-" - cause negative float
+	#using log in line without = and arg will print "{"
+	set_variable = {
+		tp0v = 1
+	}
+	set_variable = {
+		tp1v = 2
+	}
+	set_variable = {
+		tp2v = 3
+	}
+	set_variable = {
+		tp3v = 4
+	}
+	log = "tp0"
+}
+d_s = {
+	log = "start"
+	country_event = {
+		id = recursive.3
+	}
+}
+d_update = {
+	set_temp_variable = {
+		v = tp0v
+	}
+	set_variable = {
+		tp0v = tp1v
+	}
+	set_variable = {
+		tp1v = tp2v
+	}
+	set_variable = {
+		tp2v = tp3v
+	}
+	set_variable = {
+		tp3v = v
 	}
 }

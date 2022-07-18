@@ -1237,31 +1237,6 @@ scripted_gui = {
 					if = {
 						limit = {
 							FROM = {
-								has_idea = agrarian_society1
-							}
-						}
-						add_to_temp_variable = {
-							frame_3 = 1
-						}
-					}
-					else_if = {
-						limit = {
-							subject_society_12_available = no
-						}
-						add_to_temp_variable = {
-							frame_3 = 2
-						}
-					}
-				}
-				else_if = {
-					limit = {
-						check_variable = {
-							i_3 = 13
-						}
-					}
-					if = {
-						limit = {
-							FROM = {
 								has_idea = agrarian_society
 							}
 						}
@@ -1281,7 +1256,7 @@ scripted_gui = {
 				else_if = {
 					limit = {
 						check_variable = {
-							i_3 = 14
+							i_3 = 13
 						}
 					}
 					if = {
@@ -1306,7 +1281,7 @@ scripted_gui = {
 				else_if = {
 					limit = {
 						check_variable = {
-							i_3 = 15
+							i_3 = 14
 						}
 					}
 					if = {
@@ -1331,7 +1306,7 @@ scripted_gui = {
 				else_if = {
 					limit = {
 						check_variable = {
-							i_3 = 16
+							i_3 = 15
 						}
 					}
 					if = {
@@ -1356,7 +1331,7 @@ scripted_gui = {
 				else_if = {
 					limit = {
 						check_variable = {
-							i_3 = 17
+							i_3 = 16
 						}
 					}
 					if = {
@@ -1381,7 +1356,7 @@ scripted_gui = {
 				else_if = {
 					limit = {
 						check_variable = {
-							i_3 = 18
+							i_3 = 17
 						}
 					}
 					if = {

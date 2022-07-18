@@ -1092,25 +1092,23 @@ change_subject_trade_2 = {
 		}
 		else_if = {
 			limit = {
-				OR = {
-					has_idea = uncontrolled_exports
-					has_idea = limited_exports
-				}
+				has_idea = uncontrolled_exports
 			}
-			if = {
-				limit = {
-					has_idea = uncontrolled_exports
-				}
-				swap_ideas = {
-					remove_idea = uncontrolled_exports
-					add_idea = export_focus
-				}
+			swap_ideas = {
+				remove_idea = uncontrolled_exports
+				add_idea = export_focus
 			}
-			else = {
-				swap_ideas = {
-					remove_idea = limited_exports
-					add_idea = export_focus
-				}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = limited_exports
+			}
+			swap_ideas = {
+				remove_idea = limited_exports
+				add_idea = export_focus
 			}
 			multiply_temp_variable = {
 				pp_cost = -1
@@ -1179,25 +1177,23 @@ change_subject_trade_3 = {
 		}
 		if = {
 			limit = {
-				OR = {
-					has_idea = free_trade
-					has_idea = import_focus
-				}
+				has_idea = free_trade
 			}
-			if = {
-				limit = {
-					has_idea = free_trade
-				}
-				swap_ideas = {
-					remove_idea = free_trade
-					add_idea = limited_exports
-				}
+			swap_ideas = {
+				remove_idea = free_trade
+				add_idea = limited_exports
 			}
-			else = {
-				swap_ideas = {
-					remove_idea = import_focus
-					add_idea = limited_exports
-				}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = import_focus
+			}
+			swap_ideas = {
+				remove_idea = import_focus
+				add_idea = limited_exports
 			}
 			multiply_temp_variable = {
 				pp_cost = -3
@@ -1306,25 +1302,11 @@ change_subject_trade_4 = {
 		}
 		else_if = {
 			limit = {
-				OR = {
-					has_idea = uncontrolled_exports
-					has_idea = uncontrolled_imports
-				}
+				has_idea = uncontrolled_exports
 			}
-			if = {
-				limit = {
-					has_idea = uncontrolled_exports
-				}
-				swap_ideas = {
-					remove_idea = uncontrolled_exports
-					add_idea = closed_economy
-				}
-			}
-			else = {
-				swap_ideas = {
-					remove_idea = uncontrolled_imports
-					add_idea = closed_economy
-				}
+			swap_ideas = {
+				remove_idea = uncontrolled_exports
+				add_idea = closed_economy
 			}
 			multiply_temp_variable = {
 				pp_cost = -3
@@ -1332,25 +1314,35 @@ change_subject_trade_4 = {
 		}
 		else_if = {
 			limit = {
-				OR = {
-					has_idea = export_focus
-					has_idea = import_focus
-				}
+				has_idea = uncontrolled_imports
 			}
-			if = {
-				limit = {
-					has_idea = export_focus
-				}
-				swap_ideas = {
-					remove_idea = export_focus
-					add_idea = closed_economy
-				}
+			swap_ideas = {
+				remove_idea = uncontrolled_imports
+				add_idea = closed_economy
 			}
-			else = {
-				swap_ideas = {
-					remove_idea = import_focus
-					add_idea = closed_economy
-				}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = export_focus
+			}
+			swap_ideas = {
+				remove_idea = export_focus
+				add_idea = closed_economy
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = import_focus
+			}
+			swap_ideas = {
+				remove_idea = import_focus
+				add_idea = closed_economy
 			}
 			multiply_temp_variable = {
 				pp_cost = -2
@@ -1442,25 +1434,23 @@ change_subject_trade_5 = {
 		}
 		else_if = {
 			limit = {
-				OR = {
-					has_idea = limited_exports
-					has_idea = uncontrolled_imports
-				}
+				has_idea = limited_exports
 			}
-			if = {
-				limit = {
-					has_idea = limited_exports
-				}
-				swap_ideas = {
-					remove_idea = limited_exports
-					add_idea = limited_imports
-				}
+			swap_ideas = {
+				remove_idea = limited_exports
+				add_idea = limited_imports
 			}
-			else = {
-				swap_ideas = {
-					remove_idea = uncontrolled_imports
-					add_idea = limited_imports
-				}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = uncontrolled_imports
+			}
+			swap_ideas = {
+				remove_idea = uncontrolled_imports
+				add_idea = limited_imports
 			}
 			multiply_temp_variable = {
 				pp_cost = -2
@@ -1999,10 +1989,7 @@ change_subject_economy_2 = {
 		}
 		if = {
 			limit = {
-				OR = {
-					has_idea = isolation
-					has_idea = low_economic_mobilisation
-				}
+				has_idea = isolation
 			}
 			swap_ideas = {
 				remove_idea = isolation
@@ -2436,10 +2423,7 @@ change_subject_economy_5 = {
 		}
 		else_if = {
 			limit = {
-				OR = {
-					has_idea = civilian_economy
-					has_idea = tot_economic_mobilisation
-				}
+				has_idea = civilian_economy
 			}
 			swap_ideas = {
 				remove_idea = civilian_economy
@@ -2486,9 +2470,6 @@ change_subject_economy_5 = {
 			}
 		}
 		else = {
-			multiply_temp_variable = {
-				pp_cost = -4
-			}
 			if = {
 				limit = {
 					has_idea = primitive_economy
@@ -2503,6 +2484,9 @@ change_subject_economy_5 = {
 					remove_idea = collectivized_society
 					add_idea = partial_economic_mobilisation
 				}
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
 			}
 		}
 		overlord = {
@@ -3040,700 +3024,2901 @@ change_subject_economy_9 = {
 	}
 }
 change_subject_society_0 = {
-	FROM = {
+	if = {
+		limit = {
+			has_idea = clockwerk_industry
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			subject_society_0_available = no
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			always = no
+		}
+		#to do trigger that check if idea is applyable for subject and overlord
+	}
+	else_if = {
+		limit = {
+			has_idea = detached_country
+		}
+		swap_ideas = {
+			remove_idea = detached_country
+			add_idea = clockwerk_industry
+		}
+		overlord = {
+			add_political_power = -150
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = society_pp_cost_factor
+		}
 		if = {
-			limit = {
-				has_idea = clockwerk_industry
-			}
-			#pass (for preventing other if checks, optimisation)
-		}
-		else_if = {
-			limit = {
-				subject_society_0_available = no
-			}
-			#pass (for preventing other if checks, optimisation)
-		}
-		else_if = {
-			limit = {
-				always = no
-			}
-			#to do trigger that check if idea is applyable for subject and overlord
-		}
-		else_if = {
 			limit = {
 				has_idea = modern_society
 			}
-			if = {
-				limit = {
-					NOT = {
-						check_variable = {
-							ROOT.political_power < society_pp_cost_factor
-						}
-					}
-				}
-				swap_ideas = {
-					remove_idea = modern_society
-					add_idea = clockwerk_industry
-				}
-				set_temp_variable = {
-					pp_cost = society_pp_cost_factor
-				}
-				multiply_temp_variable = {
-					pp_cost = -1
-				}
-				ROOT = {
-					add_political_power = pp_cost
-				}
+			swap_ideas = {
+				remove_idea = modern_society
+				add_idea = clockwerk_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
 			}
 		}
 		else_if = {
 			limit = {
 				has_idea = outdated_industry1
 			}
-			#to do
+			swap_ideas = {
+				remove_idea = outdated_industry1
+				add_idea = clockwerk_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
 		}
 		else_if = {
 			limit = {
 				has_idea = outdated_industry
 			}
-			#to do
+			swap_ideas = {
+				remove_idea = outdated_industry
+				add_idea = clockwerk_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
 		}
 		else_if = {
 			limit = {
 				has_idea = pre_industrial_society3
 			}
-			#to do
+			swap_ideas = {
+				remove_idea = pre_industrial_society3
+				add_idea = clockwerk_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
 		}
 		else_if = {
 			limit = {
 				has_idea = pre_industrial_society2
 			}
-			#to do
-		}
+			swap_ideas = {
+				remove_idea = pre_industrial_society2
+				add_idea = clockwerk_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+			}
 		else_if = {
 			limit = {
 				has_idea = pre_industrial_society1
 			}
-			#to do
+			swap_ideas = {
+				remove_idea = pre_industrial_society1
+				add_idea = clockwerk_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
 		}
 		else_if = {
 			limit = {
 				has_idea = pre_industrial_society
 			}
-			#to do
+			swap_ideas = {
+				remove_idea = pre_industrial_society
+				add_idea = clockwerk_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -7
+			}
 		}
 		else_if = {
 			limit = {
 				has_idea = agrarian_society5
 			}
-			#to do
+			swap_ideas = {
+				remove_idea = agrarian_society5
+				add_idea = clockwerk_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -8
+			}
 		}
 		else_if = {
 			limit = {
 				has_idea = agrarian_society4
 			}
-			#to do
+			swap_ideas = {
+				remove_idea = agrarian_society4
+				add_idea = clockwerk_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -9
+			}
 		}
 		else_if = {
 			limit = {
 				has_idea = agrarian_society3
 			}
-			#to do
+			swap_ideas = {
+				remove_idea = agrarian_society3
+				add_idea = clockwerk_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -10
+			}
 		}
 		else_if = {
 			limit = {
 				has_idea = agrarian_society2
 			}
-			#to do
-		}
-		else_if = {
-			limit = {
-				has_idea = agrarian_society1
+			swap_ideas = {
+				remove_idea = agrarian_society2
+				add_idea = clockwerk_industry
 			}
-			#to do
+			multiply_temp_variable = {
+				pp_cost = -11
+			}
 		}
 		else_if = {
 			limit = {
 				has_idea = agrarian_society
 			}
-			#to do
+			swap_ideas = {
+				remove_idea = agrarian_society
+				add_idea = clockwerk_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -12
+			}
 		}
 		else_if = {
 			limit = {
 				has_idea = tribal_society3
 			}
-			#to do
+			swap_ideas = {
+				remove_idea = tribal_society3
+				add_idea = clockwerk_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -13
+			}
 		}
 		else_if = {
 			limit = {
 				has_idea = tribal_society2
 			}
-			#to do
+			swap_ideas = {
+				remove_idea = tribal_society2
+				add_idea = clockwerk_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -14
+			}
 		}
 		else_if = {
 			limit = {
 				has_idea = tribal_society1
 			}
-			#to do
+			swap_ideas = {
+				remove_idea = tribal_society1
+				add_idea = clockwerk_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -15
+			}
 		}
 		else_if = {
 			limit = {
 				has_idea = tribal_society
+			}
+			swap_ideas = {
+				remove_idea = tribal_society
+				add_idea = clockwerk_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -16
 			}
 		}
 		else_if = {
 			limit = {
 				has_idea = communal_society
 			}
-			#to do
+			swap_ideas = {
+				remove_idea = communal_society
+				add_idea = clockwerk_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -17
+			}
 		}
 		else = {
-			#to do
-			#religious
+			swap_ideas = {
+				remove_idea = religious_country
+				add_idea = clockwerk_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -18
+			}
+		}
+		overlord = {
+			add_political_power = pp_cost
 		}
 	}
 }
 change_subject_society_1 = {
-	FROM = {
+	if = {
+		limit = {
+			has_idea = modern_society
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			subject_society_1_available = no
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			always = no
+		}
+		#to do trigger that check if idea is applyable for subject and overlord
+	}
+	else_if = {
+		limit = {
+			has_idea = detached_country
+		}
+		swap_ideas = {
+			remove_idea = detached_country
+			add_idea = modern_society
+		}
+		overlord = {
+			add_political_power = -150
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = society_pp_cost_factor
+		}
 		if = {
 			limit = {
-				has_idea = modern_society
+				has_idea = clockwerk_industry
 			}
-			#pass (for preventing other if checks, optimisation)
+			swap_ideas = {
+				remove_idea = clockwerk_industry
+				add_idea = modern_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
 		}
 		else_if = {
 			limit = {
-				subject_society_1_available = no
+				has_idea = outdated_industry1
 			}
-			#pass (for preventing other if checks, optimisation)
-		}
-		else_if = {
-			limit = {
-				always = no
+			swap_ideas = {
+				remove_idea = outdated_industry1
+				add_idea = modern_society
 			}
-			#to do trigger that check if idea is applyable for subject and overlord
-		}
-		else_if = {
-			limit = {
-				OR = {
-					has_idea = clockwerk_industry
-					has_idea = outdated_industry1
-				}
+			multiply_temp_variable = {
+				pp_cost = -1
 			}
-			#to do
 		}
 		else_if = {
 			limit = {
 				has_idea = outdated_industry
 			}
-			#to do
+			swap_ideas = {
+				remove_idea = outdated_industry
+				add_idea = modern_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
 		}
 		else_if = {
 			limit = {
 				has_idea = pre_industrial_society3
 			}
-			#to do
+			swap_ideas = {
+				remove_idea = pre_industrial_society3
+				add_idea = modern_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
 		}
 		else_if = {
 			limit = {
 				has_idea = pre_industrial_society2
 			}
-			#to do
+			swap_ideas = {
+				remove_idea = pre_industrial_society2
+				add_idea = modern_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
 		}
 		else_if = {
 			limit = {
 				has_idea = pre_industrial_society1
 			}
-			#to do
+			swap_ideas = {
+				remove_idea = pre_industrial_society1
+				add_idea = modern_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
 		}
 		else_if = {
 			limit = {
 				has_idea = pre_industrial_society
 			}
-			#to do
+			swap_ideas = {
+				remove_idea = pre_industrial_society
+				add_idea = modern_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
 		}
 		else_if = {
 			limit = {
 				has_idea = agrarian_society5
 			}
-			#to do
+			swap_ideas = {
+				remove_idea = agrarian_society5
+				add_idea = modern_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -7
+			}
 		}
 		else_if = {
 			limit = {
 				has_idea = agrarian_society4
 			}
-			#to do
+			swap_ideas = {
+				remove_idea = agrarian_society4
+				add_idea = modern_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -8
+			}
 		}
 		else_if = {
 			limit = {
 				has_idea = agrarian_society3
 			}
-			#to do
+			swap_ideas = {
+				remove_idea = agrarian_society3
+				add_idea = modern_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -9
+			}
 		}
 		else_if = {
 			limit = {
 				has_idea = agrarian_society2
 			}
-			#to do
-		}
-		else_if = {
-			limit = {
-				has_idea = agrarian_society1
+			swap_ideas = {
+				remove_idea = agrarian_society2
+				add_idea = modern_society
 			}
-			#to do
+			multiply_temp_variable = {
+				pp_cost = -10
+			}
 		}
 		else_if = {
 			limit = {
 				has_idea = agrarian_society
 			}
-			#to do
+			swap_ideas = {
+				remove_idea = agrarian_society
+				add_idea = modern_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -11
+			}
 		}
 		else_if = {
 			limit = {
 				has_idea = tribal_society3
 			}
-			#to do
+			swap_ideas = {
+				remove_idea = tribal_society3
+				add_idea = modern_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -12
+			}
 		}
 		else_if = {
 			limit = {
 				has_idea = tribal_society2
 			}
-			#to do
+			swap_ideas = {
+				remove_idea = tribal_society2
+				add_idea = modern_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -13
+			}
 		}
 		else_if = {
 			limit = {
 				has_idea = tribal_society1
 			}
-			#to do
+			swap_ideas = {
+				remove_idea = tribal_society1
+				add_idea = modern_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -14
+			}
 		}
 		else_if = {
 			limit = {
 				has_idea = tribal_society
+			}
+			swap_ideas = {
+				remove_idea = tribal_society
+				add_idea = modern_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -15
 			}
 		}
 		else_if = {
 			limit = {
 				has_idea = communal_society
 			}
-			#to do
+			swap_ideas = {
+				remove_idea = communal_society
+				add_idea = modern_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -16
+			}
 		}
 		else = {
-			#to do
-			#religious
+			swap_ideas = {
+				remove_idea = religious_country
+				add_idea = modern_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -17
+			}
+		}
+		overlord = {
+			add_political_power = pp_cost
 		}
 	}
 }
 change_subject_society_2 = {
-	FROM = {
+	if = {
+		limit = {
+			has_idea = outdated_industry1
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			subject_society_2_available = no
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			always = no
+		}
+		#to do trigger that check if idea is applyable for subject and overlord
+	}
+	else_if = {
+		limit = {
+			has_idea = detached_country
+		}
+		swap_ideas = {
+			remove_idea = detached_country
+			add_idea = outdated_industry1
+		}
+		overlord = {
+			add_political_power = -150
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = society_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = modern_society
+			}
+			swap_ideas = {
+				remove_idea = modern_society
+				add_idea = outdated_industry1
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry
+				add_idea = outdated_industry1
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = clockwerk_industry
+			}
+			swap_ideas = {
+				remove_idea = clockwerk_industry
+				add_idea = outdated_industry1
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society3
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society3
+				add_idea = outdated_industry1
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society2
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society2
+				add_idea = outdated_industry1
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society1
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society1
+				add_idea = outdated_industry1
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society
+				add_idea = outdated_industry1
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society5
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society5
+				add_idea = outdated_industry1
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society4
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society4
+				add_idea = outdated_industry1
+			}
+			multiply_temp_variable = {
+				pp_cost = -7
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society3
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society3
+				add_idea = outdated_industry1
+			}
+			multiply_temp_variable = {
+				pp_cost = -8
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society2
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society2
+				add_idea = outdated_industry1
+			}
+			multiply_temp_variable = {
+				pp_cost = -9
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society
+				add_idea = outdated_industry1
+			}
+			multiply_temp_variable = {
+				pp_cost = -10
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society3
+			}
+			swap_ideas = {
+				remove_idea = tribal_society3
+				add_idea = outdated_industry1
+			}
+			multiply_temp_variable = {
+				pp_cost = -11
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society2
+			}
+			swap_ideas = {
+				remove_idea = tribal_society2
+				add_idea = outdated_industry1
+			}
+			multiply_temp_variable = {
+				pp_cost = -12
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society1
+			}
+			swap_ideas = {
+				remove_idea = tribal_society1
+				add_idea = outdated_industry1
+			}
+			multiply_temp_variable = {
+				pp_cost = -13
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society
+			}
+			swap_ideas = {
+				remove_idea = tribal_society
+				add_idea = outdated_industry1
+			}
+			multiply_temp_variable = {
+				pp_cost = -14
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = communal_society
+			}
+			swap_ideas = {
+				remove_idea = communal_society
+				add_idea = outdated_industry1
+			}
+			multiply_temp_variable = {
+				pp_cost = -15
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = religious_country
+				add_idea = outdated_industry1
+			}
+			multiply_temp_variable = {
+				pp_cost = -16
+			}
+		}
+		overlord = {
+			add_political_power = pp_cost
+		}
+	}
+}
+change_subject_society_3 = {
+	if = {
+		limit = {
+			has_idea = outdated_industry
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			subject_society_3_available = no
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			always = no
+		}
+		#to do trigger that check if idea is applyable for subject and overlord
+	}
+	else_if = {
+		limit = {
+			has_idea = detached_country
+		}
+		swap_ideas = {
+			remove_idea = detached_country
+			add_idea = outdated_industry
+		}
+		overlord = {
+			add_political_power = -150
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = society_pp_cost_factor
+		}
 		if = {
 			limit = {
 				has_idea = outdated_industry1
 			}
-			#pass (for preventing other if checks, optimisation)
+			swap_ideas = {
+				remove_idea = outdated_industry1
+				add_idea = outdated_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
 		}
 		else_if = {
-			limit = {
-				subject_society_2_available = no
-			}
-			#pass (for preventing other if checks, optimisation)
-		}
-		else_if = {
-			limit = {
-				always = no
-			}
-			#to do trigger that check if idea is applyable for subject and overlord
-		}
-		#to do
-	}
-}
-change_subject_society_3 = {
-	FROM = {
-		if = {
-			limit = {
-				has_idea = outdated_industry
-			}
-			#pass (for preventing other if checks, optimisation)
-		}
-		else_if = {
-			limit = {
-				subject_society_3_available = no
-			}
-			#pass (for preventing other if checks, optimisation)
-		}
-		else_if = {
-			limit = {
-				always = no
-			}
-			#to do trigger that check if idea is applyable for subject and overlord
-		}
-		#to do
-	}
-}
-change_subject_society_4 = {
-	FROM = {
-		if = {
 			limit = {
 				has_idea = pre_industrial_society3
 			}
-			#pass (for preventing other if checks, optimisation)
+			swap_ideas = {
+				remove_idea = pre_industrial_society3
+				add_idea = outdated_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
 		}
 		else_if = {
 			limit = {
-				subject_society_4_available = no
+				has_idea = modern_society
 			}
-			#pass (for preventing other if checks, optimisation)
+			swap_ideas = {
+				remove_idea = modern_society
+				add_idea = outdated_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
 		}
 		else_if = {
 			limit = {
-				always = no
+				has_idea = pre_industrial_society2
 			}
-			#to do trigger that check if idea is applyable for subject and overlord
+			swap_ideas = {
+				remove_idea = pre_industrial_society2
+				add_idea = outdated_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
 		}
-		#to do
+		else_if = {
+			limit = {
+				has_idea = clockwerk_industry
+			}
+			swap_ideas = {
+				remove_idea = clockwerk_industry
+				add_idea = outdated_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society1
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society1
+				add_idea = outdated_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society
+				add_idea = outdated_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society5
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society5
+				add_idea = outdated_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society4
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society4
+				add_idea = outdated_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society3
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society3
+				add_idea = outdated_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -7
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society2
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society2
+				add_idea = outdated_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -8
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society
+				add_idea = outdated_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -9
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society3
+			}
+			swap_ideas = {
+				remove_idea = tribal_society3
+				add_idea = outdated_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -10
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society2
+			}
+			swap_ideas = {
+				remove_idea = tribal_society2
+				add_idea = outdated_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -11
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society1
+			}
+			swap_ideas = {
+				remove_idea = tribal_society1
+				add_idea = outdated_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -12
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society
+			}
+			swap_ideas = {
+				remove_idea = tribal_society
+				add_idea = outdated_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -13
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = communal_society
+			}
+			swap_ideas = {
+				remove_idea = communal_society
+				add_idea = outdated_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -14
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = religious_country
+				add_idea = outdated_industry
+			}
+			multiply_temp_variable = {
+				pp_cost = -15
+			}
+		}
+		overlord = {
+			add_political_power = pp_cost
+		}
 	}
 }
-change_subject_society_5 = {
-	FROM = {
+change_subject_society_4 = {
+	if = {
+		limit = {
+			has_idea = pre_industrial_society3
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			subject_society_4_available = no
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			always = no
+		}
+		#to do trigger that check if idea is applyable for subject and overlord
+	}
+	else_if = {
+		limit = {
+			has_idea = detached_country
+		}
+		swap_ideas = {
+			remove_idea = detached_country
+			add_idea = pre_industrial_society3
+		}
+		overlord = {
+			add_political_power = -150
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = society_pp_cost_factor
+		}
 		if = {
 			limit = {
 				has_idea = pre_industrial_society2
 			}
-			#pass (for preventing other if checks, optimisation)
+			swap_ideas = {
+				remove_idea = pre_industrial_society2
+				add_idea = pre_industrial_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
 		}
 		else_if = {
 			limit = {
-				subject_society_5_available = no
+				has_idea = outdated_industry
 			}
-			#pass (for preventing other if checks, optimisation)
+			swap_ideas = {
+				remove_idea = outdated_industry
+				add_idea = pre_industrial_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
 		}
 		else_if = {
 			limit = {
-				always = no
+				has_idea = outdated_industry1
 			}
-			#to do trigger that check if idea is applyable for subject and overlord
+			swap_ideas = {
+				remove_idea = outdated_industry1
+				add_idea = pre_industrial_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
 		}
-		#to do
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society1
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society1
+				add_idea = pre_industrial_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society
+				add_idea = pre_industrial_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = modern_society
+			}
+			swap_ideas = {
+				remove_idea = modern_society
+				add_idea = pre_industrial_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society5
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society5
+				add_idea = pre_industrial_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = clockwerk_industry
+			}
+			swap_ideas = {
+				remove_idea = clockwerk_industry
+				add_idea = pre_industrial_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society4
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society4
+				add_idea = pre_industrial_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society3
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society3
+				add_idea = pre_industrial_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society2
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society2
+				add_idea = pre_industrial_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -7
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society
+				add_idea = pre_industrial_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -8
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society3
+			}
+			swap_ideas = {
+				remove_idea = tribal_society3
+				add_idea = pre_industrial_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -9
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society2
+			}
+			swap_ideas = {
+				remove_idea = tribal_society2
+				add_idea = pre_industrial_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -10
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society1
+			}
+			swap_ideas = {
+				remove_idea = tribal_society1
+				add_idea = pre_industrial_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -11
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society
+			}
+			swap_ideas = {
+				remove_idea = tribal_society
+				add_idea = pre_industrial_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -12
+			}
+		}	
+		else_if = {
+			limit = {
+				has_idea = communal_society
+			}
+			swap_ideas = {
+				remove_idea = communal_society
+				add_idea = pre_industrial_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -13
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = religious_country
+				add_idea = pre_industrial_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -14
+			}
+		}
+		overlord = {
+			add_political_power = pp_cost
+		}
+	}
+}
+change_subject_society_5 = {
+	if = {
+		limit = {
+			has_idea = pre_industrial_society2
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			subject_society_5_available = no
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			always = no
+		}
+		#to do trigger that check if idea is applyable for subject and overlord
+	}
+	else_if = {
+		limit = {
+			has_idea = detached_country
+		}
+		swap_ideas = {
+			remove_idea = detached_country
+			add_idea = pre_industrial_society2
+		}
+		overlord = {
+			add_political_power = -150
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = society_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = pre_industrial_society3
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society3
+				add_idea = pre_industrial_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society1
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society1
+				add_idea = pre_industrial_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry
+				add_idea = pre_industrial_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society
+				add_idea = pre_industrial_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry1
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry1
+				add_idea = pre_industrial_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society5
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society5
+				add_idea = pre_industrial_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = modern_society
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry1
+				add_idea = pre_industrial_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society4
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society4
+				add_idea = pre_industrial_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = clockwerk_industry
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry1
+				add_idea = pre_industrial_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society3
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society3
+				add_idea = pre_industrial_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society2
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society2
+				add_idea = pre_industrial_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society
+				add_idea = pre_industrial_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -7
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society3
+			}
+			swap_ideas = {
+				remove_idea = tribal_society3
+				add_idea = pre_industrial_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -8
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society2
+			}
+			swap_ideas = {
+				remove_idea = tribal_society2
+				add_idea = pre_industrial_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -9
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society1
+			}
+			swap_ideas = {
+				remove_idea = tribal_society1
+				add_idea = pre_industrial_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -10
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society
+			}
+			swap_ideas = {
+				remove_idea = tribal_society
+				add_idea = pre_industrial_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -11
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = communal_society
+			}
+			swap_ideas = {
+				remove_idea = communal_society
+				add_idea = pre_industrial_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -12
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = religious_country
+				add_idea = pre_industrial_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -13
+			}
+		}
+		overlord = {
+			add_political_power = pp_cost
+		}
 	}
 }
 change_subject_society_6 = {
-	FROM = {
+	if = {
+		limit = {
+			has_idea = pre_industrial_society1
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			subject_society_6_available = no
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			always = no
+		}
+		#to do trigger that check if idea is applyable for subject and overlord
+	}
+	else_if = {
+		limit = {
+			has_idea = detached_country
+		}
+		swap_ideas = {
+			remove_idea = detached_country
+			add_idea = pre_industrial_society1
+		}
+		overlord = {
+			add_political_power = -150
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = society_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = pre_industrial_society2
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society2
+				add_idea = pre_industrial_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society
+				add_idea = pre_industrial_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society3
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society3
+				add_idea = pre_industrial_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society5
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society5
+				add_idea = pre_industrial_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry
+				add_idea = pre_industrial_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society4
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society4
+				add_idea = pre_industrial_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry1
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry1
+				add_idea = pre_industrial_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society3
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society3
+				add_idea = pre_industrial_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = modern_society
+			}
+			swap_ideas = {
+				remove_idea = modern_society
+				add_idea = pre_industrial_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society2
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society2
+				add_idea = pre_industrial_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = clockwerk_industry
+			}
+			swap_ideas = {
+				remove_idea = clockwerk_industry
+				add_idea = pre_industrial_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society
+				add_idea = pre_industrial_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society3
+			}
+			swap_ideas = {
+				remove_idea = tribal_society3
+				add_idea = pre_industrial_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -7
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society2
+			}
+			swap_ideas = {
+				remove_idea = tribal_society2
+				add_idea = pre_industrial_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -8
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society1
+			}
+			swap_ideas = {
+				remove_idea = tribal_society1
+				add_idea = pre_industrial_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -9
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society
+			}
+			swap_ideas = {
+				remove_idea = tribal_society
+				add_idea = pre_industrial_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -10
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = communal_society
+			}
+			swap_ideas = {
+				remove_idea = communal_society
+				add_idea = pre_industrial_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -11
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = religious_country
+				add_idea = pre_industrial_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -12
+			}
+		}
+		overlord = {
+			add_political_power = pp_cost
+		}
+	}
+}
+change_subject_society_7 = {
+	if = {
+		limit = {
+			has_idea = pre_industrial_society
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			subject_society_7_available = no
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			always = no
+		}
+		#to do trigger that check if idea is applyable for subject and overlord
+	}
+	else_if = {
+		limit = {
+			has_idea = detached_country
+		}
+		swap_ideas = {
+			remove_idea = detached_country
+			add_idea = pre_industrial_society
+		}
+		overlord = {
+			add_political_power = -150
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = society_pp_cost_factor
+		}
 		if = {
 			limit = {
 				has_idea = pre_industrial_society1
 			}
-			#pass (for preventing other if checks, optimisation)
+			swap_ideas = {
+				remove_idea = pre_industrial_society1
+				add_idea = pre_industrial_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
 		}
 		else_if = {
 			limit = {
-				subject_society_6_available = no
+				has_idea = agrarian_society5
 			}
-			#pass (for preventing other if checks, optimisation)
+			swap_ideas = {
+				remove_idea = agrarian_society5
+				add_idea = pre_industrial_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
 		}
 		else_if = {
 			limit = {
-				always = no
+				has_idea = pre_industrial_society2
 			}
-			#to do trigger that check if idea is applyable for subject and overlord
+			swap_ideas = {
+				remove_idea = pre_industrial_society2
+				add_idea = pre_industrial_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
 		}
-		#to do
+		else_if = {
+			limit = {
+				has_idea = agrarian_society4
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society4
+				add_idea = pre_industrial_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society3
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society3
+				add_idea = pre_industrial_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society3
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society3
+				add_idea = pre_industrial_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry
+				add_idea = pre_industrial_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society2
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society2
+				add_idea = pre_industrial_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry1
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry1
+				add_idea = pre_industrial_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society
+				add_idea = pre_industrial_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = modern_society
+			}
+			swap_ideas = {
+				remove_idea = modern_society
+				add_idea = pre_industrial_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society3
+			}
+			swap_ideas = {
+				remove_idea = tribal_society3
+				add_idea = pre_industrial_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = clockwerk_industry
+			}
+			swap_ideas = {
+				remove_idea = clockwerk_industry
+				add_idea = pre_industrial_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -7
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society2
+			}
+			swap_ideas = {
+				remove_idea = tribal_society2
+				add_idea = pre_industrial_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -7
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society1
+			}
+			swap_ideas = {
+				remove_idea = tribal_society1
+				add_idea = pre_industrial_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -8
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society
+			}
+			swap_ideas = {
+				remove_idea = tribal_society
+				add_idea = pre_industrial_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -9
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = communal_society
+			}
+			swap_ideas = {
+				remove_idea = communal_society
+				add_idea = pre_industrial_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -10
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = religious_country
+				add_idea = pre_industrial_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -11
+			}
+		}
+		overlord = {
+			add_political_power = pp_cost
+		}
 	}
 }
-change_subject_society_7 = {
-	FROM = {
+change_subject_society_8 = {
+	if = {
+		limit = {
+			has_idea = agrarian_society5
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			subject_society_8_available = no
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			always = no
+		}
+		#to do trigger that check if idea is applyable for subject and overlord
+	}
+	else_if = {
+		limit = {
+			has_idea = detached_country
+		}
+		swap_ideas = {
+			remove_idea = detached_country
+			add_idea = agrarian_society5
+		}
+		overlord = {
+			add_political_power = -150
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = society_pp_cost_factor
+		}
 		if = {
 			limit = {
 				has_idea = pre_industrial_society
 			}
-			#pass (for preventing other if checks, optimisation)
+			swap_ideas = {
+				remove_idea = pre_industrial_society
+				add_idea = agrarian_society5
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
 		}
 		else_if = {
 			limit = {
-				subject_society_7_available = no
+				has_idea = agrarian_society4
 			}
-			#pass (for preventing other if checks, optimisation)
+			swap_ideas = {
+				remove_idea = agrarian_society4
+				add_idea = agrarian_society5
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
 		}
 		else_if = {
 			limit = {
-				always = no
+				has_idea = pre_industrial_society1
 			}
-			#to do trigger that check if idea is applyable for subject and overlord
+			swap_ideas = {
+				remove_idea = pre_industrial_society1
+				add_idea = agrarian_society5
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
 		}
-		#to do
+		else_if = {
+			limit = {
+				has_idea = agrarian_society3
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society3
+				add_idea = agrarian_society5
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society2
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society2
+				add_idea = agrarian_society5
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society2
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society2
+				add_idea = agrarian_society5
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society3
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society3
+				add_idea = agrarian_society5
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society
+				add_idea = agrarian_society5
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry
+				add_idea = agrarian_society5
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society3
+			}
+			swap_ideas = {
+				remove_idea = tribal_society3
+				add_idea = agrarian_society5
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry1
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry1
+				add_idea = agrarian_society5
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society2
+			}
+			swap_ideas = {
+				remove_idea = tribal_society2
+				add_idea = agrarian_society5
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = modern_society
+			}
+			swap_ideas = {
+				remove_idea = modern_society
+				add_idea = agrarian_society5
+			}
+			multiply_temp_variable = {
+				pp_cost = -7
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society1
+			}
+			swap_ideas = {
+				remove_idea = tribal_society1
+				add_idea = agrarian_society5
+			}
+			multiply_temp_variable = {
+				pp_cost = -7
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = clockwerk_industry
+			}
+			swap_ideas = {
+				remove_idea = clockwerk_industry
+				add_idea = agrarian_society5
+			}
+			multiply_temp_variable = {
+				pp_cost = -8
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society
+			}
+			swap_ideas = {
+				remove_idea = tribal_society
+				add_idea = agrarian_society5
+			}
+			multiply_temp_variable = {
+				pp_cost = -8
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = communal_society
+			}
+			swap_ideas = {
+				remove_idea = communal_society
+				add_idea = agrarian_society5
+			}
+			multiply_temp_variable = {
+				pp_cost = -9
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = religious_country
+				add_idea = agrarian_society5
+			}
+			multiply_temp_variable = {
+				pp_cost = -10
+			}
+		}
+		overlord = {
+			add_political_power = pp_cost
+		}
 	}
 }
-change_subject_society_8 = {
-	FROM = {
+change_subject_society_9 = {
+	if = {
+		limit = {
+			has_idea = agrarian_society4
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			subject_society_9_available = no
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			always = no
+		}
+		#to do trigger that check if idea is applyable for subject and overlord
+	}
+	else_if = {
+		limit = {
+			has_idea = detached_country
+		}
+		swap_ideas = {
+			remove_idea = detached_country
+			add_idea = agrarian_society4
+		}
+		overlord = {
+			add_political_power = -150
+		}
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = society_pp_cost_factor
+		}
 		if = {
 			limit = {
 				has_idea = agrarian_society5
 			}
-			#pass (for preventing other if checks, optimisation)
+			swap_ideas = {
+				remove_idea = agrarian_society5
+				add_idea = agrarian_society4
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
 		}
 		else_if = {
-			limit = {
-				subject_society_8_available = no
-			}
-			#pass (for preventing other if checks, optimisation)
-		}
-		else_if = {
-			limit = {
-				always = no
-			}
-			#to do trigger that check if idea is applyable for subject and overlord
-		}
-		#to do
-	}
-}
-change_subject_society_9 = {
-	FROM = {
-		if = {
-			limit = {
-				has_idea = agrarian_society4
-			}
-			#pass (for preventing other if checks, optimisation)
-		}
-		else_if = {
-			limit = {
-				subject_society_9_available = no
-			}
-			#pass (for preventing other if checks, optimisation)
-		}
-		else_if = {
-			limit = {
-				always = no
-			}
-			#to do trigger that check if idea is applyable for subject and overlord
-		}
-		#to do
-	}
-}
-change_subject_society_10 = {
-	FROM = {
-		if = {
 			limit = {
 				has_idea = agrarian_society3
 			}
-			#pass (for preventing other if checks, optimisation)
+			swap_ideas = {
+				remove_idea = agrarian_society3
+				add_idea = agrarian_society4
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
 		}
 		else_if = {
 			limit = {
-				subject_society_10_available = no
+				has_idea = pre_industrial_society
 			}
-			#pass (for preventing other if checks, optimisation)
+			swap_ideas = {
+				remove_idea = pre_industrial_society
+				add_idea = agrarian_society4
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
 		}
 		else_if = {
-			limit = {
-				always = no
-			}
-			#to do trigger that check if idea is applyable for subject and overlord
-		}
-		#to do
-	}
-}
-change_subject_society_11 = {
-	FROM = {
-		if = {
 			limit = {
 				has_idea = agrarian_society2
 			}
-			#pass (for preventing other if checks, optimisation)
+			swap_ideas = {
+				remove_idea = agrarian_society2
+				add_idea = agrarian_society4
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
 		}
 		else_if = {
 			limit = {
-				subject_society_11_available = no
+				has_idea = pre_industrial_society1
 			}
-			#pass (for preventing other if checks, optimisation)
+			swap_ideas = {
+				remove_idea = pre_industrial_society1
+				add_idea = agrarian_society4
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
 		}
 		else_if = {
-			limit = {
-				always = no
-			}
-			#to do trigger that check if idea is applyable for subject and overlord
-		}
-		#to do
-	}
-}
-change_subject_society_12 = {
-	FROM = {
-		if = {
-			limit = {
-				has_idea = agrarian_society1
-			}
-			#pass (for preventing other if checks, optimisation)
-		}
-		else_if = {
-			limit = {
-				subject_society_12_available = no
-			}
-			#pass (for preventing other if checks, optimisation)
-		}
-		else_if = {
-			limit = {
-				always = no
-			}
-			#to do trigger that check if idea is applyable for subject and overlord
-		}
-		#to do
-	}
-}
-change_subject_society_13 = {
-	FROM = {
-		if = {
 			limit = {
 				has_idea = agrarian_society
 			}
-			#pass (for preventing other if checks, optimisation)
+			swap_ideas = {
+				remove_idea = agrarian_society
+				add_idea = agrarian_society4
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
 		}
 		else_if = {
 			limit = {
-				subject_society_13_available = no
+				has_idea = pre_industrial_society2
 			}
-			#pass (for preventing other if checks, optimisation)
+			swap_ideas = {
+				remove_idea = pre_industrial_society2
+				add_idea = agrarian_society4
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
 		}
 		else_if = {
-			limit = {
-				always = no
-			}
-			#to do trigger that check if idea is applyable for subject and overlord
-		}
-		#to do
-	}
-}
-change_subject_society_14 = {
-	FROM = {
-		if = {
 			limit = {
 				has_idea = tribal_society3
 			}
-			#pass (for preventing other if checks, optimisation)
+			swap_ideas = {
+				remove_idea = tribal_society3
+				add_idea = agrarian_society4
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
 		}
 		else_if = {
 			limit = {
-				subject_society_14_available = no
+				has_idea = pre_industrial_society3
 			}
-			#pass (for preventing other if checks, optimisation)
+			swap_ideas = {
+				remove_idea = pre_industrial_society3
+				add_idea = agrarian_society4
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
 		}
 		else_if = {
-			limit = {
-				always = no
-			}
-			#to do trigger that check if idea is applyable for subject and overlord
-		}
-		#to do
-	}
-}
-change_subject_society_15 = {
-	FROM = {
-		if = {
 			limit = {
 				has_idea = tribal_society2
 			}
-			#pass (for preventing other if checks, optimisation)
+			swap_ideas = {
+				remove_idea = tribal_society2
+				add_idea = agrarian_society4
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
 		}
 		else_if = {
 			limit = {
-				subject_society_15_available = no
+				has_idea = outdated_industry
 			}
-			#pass (for preventing other if checks, optimisation)
+			swap_ideas = {
+				remove_idea = outdated_industry
+				add_idea = agrarian_society4
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
 		}
 		else_if = {
-			limit = {
-				always = no
-			}
-			#to do trigger that check if idea is applyable for subject and overlord
-		}
-		#to do
-	}
-}
-change_subject_society_16 = {
-	FROM = {
-		if = {
 			limit = {
 				has_idea = tribal_society1
 			}
-			#pass (for preventing other if checks, optimisation)
-		}
-		else_if = {
-			limit = {
-				subject_society_16_available = no
+			swap_ideas = {
+				remove_idea = tribal_society1
+				add_idea = agrarian_society4
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
 			}
 		}
 		else_if = {
 			limit = {
-				always = no
+				has_idea = outdated_industry1
 			}
-			#to do trigger that check if idea is applyable for subject and overlord
+			swap_ideas = {
+				remove_idea = outdated_industry1
+				add_idea = agrarian_society4
+			}
+			multiply_temp_variable = {
+				pp_cost = -7
+			}
 		}
-		#to do
-	}
-}
-change_subject_society_17 = {
-	FROM = {
-		if = {
+		else_if = {
 			limit = {
 				has_idea = tribal_society
 			}
-			#pass (for preventing other if checks, optimisation)
+			swap_ideas = {
+				remove_idea = tribal_society
+				add_idea = agrarian_society4
+			}
+			multiply_temp_variable = {
+				pp_cost = -7
+			}
 		}
 		else_if = {
 			limit = {
-				subject_society_17_available = no
+				has_idea = modern_society
 			}
-			#pass (for preventing other if checks, optimisation)
+			swap_ideas = {
+				remove_idea = modern_society
+				add_idea = agrarian_society4
+			}
+			multiply_temp_variable = {
+				pp_cost = -8
+			}
 		}
 		else_if = {
-			limit = {
-				always = no
-			}
-			#to do trigger that check if idea is applyable for subject and overlord
-		}
-		#to do
-	}
-}
-change_subject_society_18 = {
-	FROM = {
-		if = {
 			limit = {
 				has_idea = communal_society
 			}
-			#pass (for preventing other if checks, optimisation)
+			swap_ideas = {
+				remove_idea = communal_society
+				add_idea = agrarian_society4
+			}
+			multiply_temp_variable = {
+				pp_cost = -8
+			}
 		}
 		else_if = {
 			limit = {
-				subject_society_18_available = no
+				has_idea = clockwerk_industry
 			}
-			#pass (for preventing other if checks, optimisation)
-		}
-		else_if = {
-			limit = {
-				always = no
+			swap_ideas = {
+				remove_idea = clockwerk_industry
+				add_idea = agrarian_society4
 			}
-			#to do trigger that check if idea is applyable for subject and overlord
+			multiply_temp_variable = {
+				pp_cost = -9
+			}
 		}
-		#to do
+		else = {
+			swap_ideas = {
+				remove_idea = religious_country
+				add_idea = agrarian_society4
+			}
+			multiply_temp_variable = {
+				pp_cost = -9
+			}
+		}
+		overlord = {
+			add_political_power = pp_cost
+		}
 	}
 }
-change_subject_society_19 = {
-	FROM = {
-		if = {
-			limit = {
-				has_idea = religious_country
-			}
-			#pass (for preventing other if checks, optimisation)
+change_subject_society_10 = {
+	if = {
+		limit = {
+			has_idea = agrarian_society3
 		}
-		else_if = {
-			limit = {
-				subject_society_19_available = no
-			}
-			#pass (for preventing other if checks, optimisation)
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			subject_society_10_available = no
 		}
-		else_if = {
-			limit = {
-				always = no
-			}
-			#to do trigger that check if idea is applyable for subject and overlord
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			always = no
 		}
+		#to do trigger that check if idea is applyable for subject and overlord
+	}
+	else_if = {
+		limit = {
+			has_idea = detached_country
+		}
+		swap_ideas = {
+			remove_idea = detached_country
+			add_idea = agrarian_society3
+		}
+		overlord = {
+			add_political_power = -150
+		}
+	}
+	else = {
 		#to do
+		set_temp_variable = {
+			pp_cost = society_pp_cost_factor
+		}
+		overlord = {
+			add_political_power = pp_cost
+		}
+	}
+}
+change_subject_society_11 = {
+	if = {
+		limit = {
+			has_idea = agrarian_society2
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			subject_society_11_available = no
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			always = no
+		}
+		#to do trigger that check if idea is applyable for subject and overlord
+	}
+	else_if = {
+		limit = {
+			has_idea = detached_country
+		}
+		swap_ideas = {
+			remove_idea = detached_country
+			add_idea = agrarian_society2
+		}
+		overlord = {
+			add_political_power = -150
+		}
+	}
+	else = {
+		#to do
+		set_temp_variable = {
+			pp_cost = society_pp_cost_factor
+		}
+		overlord = {
+			add_political_power = pp_cost
+		}
+	}
+}
+change_subject_society_12 = {
+	if = {
+		limit = {
+			has_idea = agrarian_society
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			subject_society_12_available = no
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			always = no
+		}
+		#to do trigger that check if idea is applyable for subject and overlord
+	}
+	else_if = {
+		limit = {
+			has_idea = detached_country
+		}
+		swap_ideas = {
+			remove_idea = detached_country
+			add_idea = agrarian_society
+		}
+		overlord = {
+			add_political_power = -150
+		}
+	}
+	else = {
+		#to do
+		set_temp_variable = {
+			pp_cost = society_pp_cost_factor
+		}
+		overlord = {
+			add_political_power = pp_cost
+		}
+	}
+}
+change_subject_society_13 = {
+	if = {
+		limit = {
+			has_idea = tribal_society3
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			subject_society_13_available = no
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			always = no
+		}
+		#to do trigger that check if idea is applyable for subject and overlord
+	}
+	else_if = {
+		limit = {
+			has_idea = detached_country
+		}
+		swap_ideas = {
+			remove_idea = detached_country
+			add_idea = tribal_society3
+		}
+		overlord = {
+			add_political_power = -150
+		}
+	}
+	else = {
+		#to do
+		set_temp_variable = {
+			pp_cost = society_pp_cost_factor
+		}
+		overlord = {
+			add_political_power = pp_cost
+		}
+	}
+}
+change_subject_society_14 = {
+	if = {
+		limit = {
+			has_idea = tribal_society2
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			subject_society_14_available = no
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			always = no
+		}
+		#to do trigger that check if idea is applyable for subject and overlord
+	}
+	else_if = {
+		limit = {
+			has_idea = detached_country
+		}
+		swap_ideas = {
+			remove_idea = detached_country
+			add_idea = tribal_society2
+		}
+		overlord = {
+			add_political_power = -150
+		}
+	}
+	else = {
+		#to do
+		set_temp_variable = {
+			pp_cost = society_pp_cost_factor
+		}
+		overlord = {
+			add_political_power = pp_cost
+		}
+	}
+}
+change_subject_society_15 = {
+	if = {
+		limit = {
+			has_idea = tribal_society1
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			subject_society_15_available = no
+		}
+	}
+	else_if = {
+		limit = {
+			always = no
+		}
+		#to do trigger that check if idea is applyable for subject and overlord
+	}
+	else_if = {
+		limit = {
+			has_idea = detached_country
+		}
+		swap_ideas = {
+			remove_idea = detached_country
+			add_idea = tribal_society1
+		}
+		overlord = {
+			add_political_power = -150
+		}
+	}
+	else = {
+		#to do
+		set_temp_variable = {
+			pp_cost = society_pp_cost_factor
+		}
+		overlord = {
+			add_political_power = pp_cost
+		}
+	}
+}
+change_subject_society_16 = {
+	if = {
+		limit = {
+			has_idea = tribal_society
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			subject_society_16_available = no
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			always = no
+		}
+		#to do trigger that check if idea is applyable for subject and overlord
+	}
+	else_if = {
+		limit = {
+			has_idea = detached_country
+		}
+		swap_ideas = {
+			remove_idea = detached_country
+			add_idea = tribal_society
+		}
+		overlord = {
+			add_political_power = -150
+		}
+	}
+	else = {
+		#to do
+		set_temp_variable = {
+			pp_cost = society_pp_cost_factor
+		}
+		overlord = {
+			add_political_power = pp_cost
+		}
+	}
+}
+change_subject_society_17 = {
+	if = {
+		limit = {
+			has_idea = communal_society
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			subject_society_17_available = no
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			always = no
+		}
+		#to do trigger that check if idea is applyable for subject and overlord
+	}
+	else_if = {
+		limit = {
+			has_idea = detached_country
+		}
+		swap_ideas = {
+			remove_idea = detached_country
+			add_idea = communal_society
+		}
+		overlord = {
+			add_political_power = -150
+		}
+	}
+	else = {
+		#to do
+		set_temp_variable = {
+			pp_cost = society_pp_cost_factor
+		}
+		overlord = {
+			add_political_power = pp_cost
+		}
+	}
+}
+change_subject_society_18 = {
+	if = {
+		limit = {
+			has_idea = religious_country
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			subject_society_18_available = no
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			always = no
+		}
+		#to do trigger that check if idea is applyable for subject and overlord
+	}
+	else_if = {
+		limit = {
+			has_idea = detached_country
+		}
+		swap_ideas = {
+			remove_idea = detached_country
+			add_idea = religious_country
+		}
+		overlord = {
+			add_political_power = -150
+		}
+	}
+	else = {
+		#to do
+		set_temp_variable = {
+			pp_cost = society_pp_cost_factor
+		}
+		overlord = {
+			add_political_power = pp_cost
+		}
 	}
 }
 change_subject_power_concentration_0 = {}

@@ -1,0 +1,55 @@
+add_namespace = recursive
+country_event = {
+	id = recursive.1
+	is_triggered_only = yes
+	option = {
+		rec_counter = yes
+		if = {
+			limit = {
+				check_variable = {
+					global.ttt < 101
+				}
+			}
+			country_event = {
+				id = recursive.2
+			}
+		}
+	}
+}
+country_event = {
+	id = recursive.2
+	is_triggered_only = yes
+	option = {
+		rec_counter = yes
+		if = {
+			limit = {
+				check_variable = {
+					global.ttt < 101
+				}
+			}
+			country_event = {
+				id = recursive.1
+			}
+		}
+	}
+}
+country_event = {
+	id = recursive.3
+	is_triggered_only = yes
+	option = {
+		d_update = yes
+		country_event = {
+			id = recursive.4
+		}
+	}
+}
+country_event = {
+	id = recursive.4
+	is_triggered_only = yes
+	option = {
+		d_update = yes
+		country_event = {
+			id = recursive.3
+		}
+	}
+}

@@ -252,6 +252,75 @@ on_actions = {
 							add_ideas = international_valuta
 						}
 					}
+					#flag setup
+					if = {
+						limit = {
+							NOT = {
+								has_country_flag = poverty_level_flag
+							}
+						}
+						if = {
+							limit = {
+								#962 year
+								has_start_date < 963.1.1
+							}
+							set_country_flag = {
+								flag = poverty_level_flag
+								value = 0
+							}
+						}
+						else = {
+							set_country_flag = {
+								flag = poverty_level_flag
+								value = 6
+							}
+						}
+					}
+					if = {
+						limit = {
+							NOT = {
+								has_country_flag = science_base_flag
+							}
+						}
+						if = {
+							limit = {
+								#962 year
+								has_start_date < 963.1.1
+							}
+							if = {
+								limit = {
+									num_of_factories > 10
+								}
+								set_country_flag = {
+									flag = science_base_flag
+									value = 1
+								}
+							}
+							else = {
+								set_country_flag = {
+									flag = science_base_flag
+									value = 0
+								}
+							}
+						}
+						else_if = {
+							limit = {
+								#1007 year
+								has_start_date > 1006.1.1
+								has_start_date < 1008.1.1
+							}
+							set_country_flag = {
+								flag = science_base_flag
+								value = 2
+							}
+						}
+						else = {
+							set_country_flag = {
+								flag = science_base_flag
+								value = 3
+							}
+						}
+					}
 				}
 				add_to_array = {
 					#initiate list, but country realy has power upon itself :)
