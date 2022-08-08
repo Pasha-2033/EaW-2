@@ -5585,9 +5585,221 @@ change_subject_society_10 = {
 		}
 	}
 	else = {
-		#to do
 		set_temp_variable = {
 			pp_cost = society_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = agrarian_society4
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society4
+				add_idea = agrarian_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society2
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society2
+				add_idea = agrarian_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society5
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society5
+				add_idea = agrarian_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society
+				add_idea = agrarian_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society
+				add_idea = agrarian_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society3
+			}
+			swap_ideas = {
+				remove_idea = tribal_society3
+				add_idea = agrarian_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society1
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society1
+				add_idea = agrarian_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society2
+			}
+			swap_ideas = {
+				remove_idea = tribal_society2
+				add_idea = agrarian_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society2
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society2
+				add_idea = agrarian_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society1
+			}
+			swap_ideas = {
+				remove_idea = tribal_society1
+				add_idea = agrarian_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society3
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society3
+				add_idea = agrarian_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society
+			}
+			swap_ideas = {
+				remove_idea = tribal_society
+				add_idea = agrarian_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry
+				add_idea = agrarian_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -7
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = communal_society
+			}
+			swap_ideas = {
+				remove_idea = communal_society
+				add_idea = agrarian_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -7
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry1
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry1
+				add_idea = agrarian_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -8
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = religious_country
+			}
+			swap_ideas = {
+				remove_idea = religious_country
+				add_idea = agrarian_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -8
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = modern_society
+			}
+			swap_ideas = {
+				remove_idea = modern_society
+				add_idea = agrarian_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -9
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = clockwerk_industry
+				add_idea = agrarian_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -10
+			}
 		}
 		overlord = {
 			add_political_power = pp_cost
@@ -5626,9 +5838,221 @@ change_subject_society_11 = {
 		}
 	}
 	else = {
-		#to do
 		set_temp_variable = {
 			pp_cost = society_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = agrarian_society3
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society3
+				add_idea = agrarian_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society
+				add_idea = agrarian_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society4
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society4
+				add_idea = agrarian_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society3
+			}
+			swap_ideas = {
+				remove_idea = tribal_society3
+				add_idea = agrarian_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society5
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society5
+				add_idea = agrarian_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society2
+			}
+			swap_ideas = {
+				remove_idea = tribal_society2
+				add_idea = agrarian_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society
+				add_idea = agrarian_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society1
+			}
+			swap_ideas = {
+				remove_idea = tribal_society1
+				add_idea = agrarian_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society1
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society1
+				add_idea = agrarian_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society
+			}
+			swap_ideas = {
+				remove_idea = tribal_society
+				add_idea = agrarian_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society2
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society2
+				add_idea = agrarian_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = communal_society
+			}
+			swap_ideas = {
+				remove_idea = communal_society
+				add_idea = agrarian_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society3
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society3
+				add_idea = agrarian_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -7
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = religious_country
+			}
+			swap_ideas = {
+				remove_idea = religious_country
+				add_idea = agrarian_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -7
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry
+				add_idea = agrarian_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -8
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry1
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry1
+				add_idea = agrarian_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -9
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = modern_society
+			}
+			swap_ideas = {
+				remove_idea = modern_society
+				add_idea = agrarian_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -10
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = clockwerk_industry
+				add_idea = agrarian_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -11
+			}
 		}
 		overlord = {
 			add_political_power = pp_cost
@@ -5667,9 +6091,221 @@ change_subject_society_12 = {
 		}
 	}
 	else = {
-		#to do
 		set_temp_variable = {
 			pp_cost = society_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = agrarian_society2
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society2
+				add_idea = agrarian_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society3
+			}
+			swap_ideas = {
+				remove_idea = tribal_society3
+				add_idea = agrarian_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society3
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society3
+				add_idea = agrarian_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society2
+			}
+			swap_ideas = {
+				remove_idea = tribal_society2
+				add_idea = agrarian_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society4
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society4
+				add_idea = agrarian_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society1
+			}
+			swap_ideas = {
+				remove_idea = tribal_society1
+				add_idea = agrarian_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society5
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society5
+				add_idea = agrarian_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society
+			}
+			swap_ideas = {
+				remove_idea = tribal_society
+				add_idea = agrarian_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society
+				add_idea = agrarian_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = communal_society
+			}
+			swap_ideas = {
+				remove_idea = communal_society
+				add_idea = agrarian_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society1
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society1
+				add_idea = agrarian_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = religious_country
+			}
+			swap_ideas = {
+				remove_idea = religious_country
+				add_idea = agrarian_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society2
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society2
+				add_idea = agrarian_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -7
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society3
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society3
+				add_idea = agrarian_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -8
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry
+				add_idea = agrarian_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -9
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry1
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry1
+				add_idea = agrarian_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -10
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = modern_society
+			}
+			swap_ideas = {
+				remove_idea = modern_society
+				add_idea = agrarian_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -11
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = clockwerk_industry
+				add_idea = agrarian_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -12
+			}
 		}
 		overlord = {
 			add_political_power = pp_cost
@@ -5708,9 +6344,221 @@ change_subject_society_13 = {
 		}
 	}
 	else = {
-		#to do
 		set_temp_variable = {
 			pp_cost = society_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = agrarian_society
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society
+				add_idea = tribal_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society2
+			}
+			swap_ideas = {
+				remove_idea = tribal_society2
+				add_idea = tribal_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society2
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society2
+				add_idea = tribal_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society1
+			}
+			swap_ideas = {
+				remove_idea = tribal_society1
+				add_idea = tribal_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society3
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society3
+				add_idea = tribal_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society
+			}
+			swap_ideas = {
+				remove_idea = tribal_society
+				add_idea = tribal_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society4
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society4
+				add_idea = tribal_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = communal_society
+			}
+			swap_ideas = {
+				remove_idea = communal_society
+				add_idea = tribal_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society5
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society5
+				add_idea = tribal_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = religious_country
+			}
+			swap_ideas = {
+				remove_idea = religious_country
+				add_idea = tribal_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society
+				add_idea = tribal_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society1
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society1
+				add_idea = tribal_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -7
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society2
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society2
+				add_idea = tribal_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -8
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society3
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society3
+				add_idea = tribal_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -9
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry
+				add_idea = tribal_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -10
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry1
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry1
+				add_idea = tribal_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -11
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = modern_society
+			}
+			swap_ideas = {
+				remove_idea = modern_society
+				add_idea = tribal_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -12
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = clockwerk_industry
+				add_idea = tribal_society3
+			}
+			multiply_temp_variable = {
+				pp_cost = -13
+			}
 		}
 		overlord = {
 			add_political_power = pp_cost
@@ -5749,9 +6597,221 @@ change_subject_society_14 = {
 		}
 	}
 	else = {
-		#to do
 		set_temp_variable = {
 			pp_cost = society_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = tribal_society3
+			}
+			swap_ideas = {
+				remove_idea = tribal_society3
+				add_idea = tribal_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society1
+			}
+			swap_ideas = {
+				remove_idea = tribal_society1
+				add_idea = tribal_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society
+				add_idea = tribal_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society
+			}
+			swap_ideas = {
+				remove_idea = tribal_society
+				add_idea = tribal_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society2
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society2
+				add_idea = tribal_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = communal_society
+			}
+			swap_ideas = {
+				remove_idea = communal_society
+				add_idea = tribal_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society3
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society3
+				add_idea = tribal_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = religious_country
+			}
+			swap_ideas = {
+				remove_idea = religious_country
+				add_idea = tribal_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society4
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society4
+				add_idea = tribal_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society5
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society5
+				add_idea = tribal_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society
+				add_idea = tribal_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -7
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society1
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society1
+				add_idea = tribal_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -8
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society2
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society2
+				add_idea = tribal_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -9
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society3
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society3
+				add_idea = tribal_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -10
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry
+				add_idea = tribal_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -11
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry1
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry1
+				add_idea = tribal_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -12
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = modern_society
+			}
+			swap_ideas = {
+				remove_idea = modern_society
+				add_idea = tribal_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -13
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = clockwerk_industry
+				add_idea = tribal_society2
+			}
+			multiply_temp_variable = {
+				pp_cost = -14
+			}
 		}
 		overlord = {
 			add_political_power = pp_cost
@@ -5789,9 +6849,221 @@ change_subject_society_15 = {
 		}
 	}
 	else = {
-		#to do
 		set_temp_variable = {
 			pp_cost = society_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = tribal_society2
+			}
+			swap_ideas = {
+				remove_idea = tribal_society2
+				add_idea = tribal_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society
+			}
+			swap_ideas = {
+				remove_idea = tribal_society
+				add_idea = tribal_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society3
+			}
+			swap_ideas = {
+				remove_idea = tribal_society3
+				add_idea = tribal_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = communal_society
+			}
+			swap_ideas = {
+				remove_idea = communal_society
+				add_idea = tribal_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society
+				add_idea = tribal_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = religious_country
+			}
+			swap_ideas = {
+				remove_idea = religious_country
+				add_idea = tribal_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society2
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society2
+				add_idea = tribal_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society3
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society3
+				add_idea = tribal_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society4
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society4
+				add_idea = tribal_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society5
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society5
+				add_idea = tribal_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -7
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society
+				add_idea = tribal_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -8
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society1
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society1
+				add_idea = tribal_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -9
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society2
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society2
+				add_idea = tribal_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -10
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society3
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society3
+				add_idea = tribal_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -11
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry
+				add_idea = tribal_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -12
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry1
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry1
+				add_idea = tribal_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -13
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = modern_society
+			}
+			swap_ideas = {
+				remove_idea = modern_society
+				add_idea = tribal_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -14
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = clockwerk_industry
+				add_idea = tribal_society1
+			}
+			multiply_temp_variable = {
+				pp_cost = -15
+			}
 		}
 		overlord = {
 			add_political_power = pp_cost
@@ -5830,9 +7102,221 @@ change_subject_society_16 = {
 		}
 	}
 	else = {
-		#to do
 		set_temp_variable = {
 			pp_cost = society_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = tribal_society1
+			}
+			swap_ideas = {
+				remove_idea = tribal_society1
+				add_idea = tribal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = communal_society
+			}
+			swap_ideas = {
+				remove_idea = communal_society
+				add_idea = tribal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society2
+			}
+			swap_ideas = {
+				remove_idea = tribal_society2
+				add_idea = tribal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = religious_country
+			}
+			swap_ideas = {
+				remove_idea = religious_country
+				add_idea = tribal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society3
+			}
+			swap_ideas = {
+				remove_idea = tribal_society3
+				add_idea = tribal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society
+				add_idea = tribal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society2
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society2
+				add_idea = tribal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society3
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society3
+				add_idea = tribal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society4
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society4
+				add_idea = tribal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -7
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society5
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society5
+				add_idea = tribal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -8
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society
+				add_idea = tribal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -9
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society1
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society1
+				add_idea = tribal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -10
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society2
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society2
+				add_idea = tribal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -11
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society3
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society3
+				add_idea = tribal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -12
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry
+				add_idea = tribal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -13
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry1
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry1
+				add_idea = tribal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -14
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = modern_society
+			}
+			swap_ideas = {
+				remove_idea = modern_society
+				add_idea = tribal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -15
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = clockwerk_industry
+				add_idea = tribal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -16
+			}
 		}
 		overlord = {
 			add_political_power = pp_cost
@@ -5871,9 +7355,221 @@ change_subject_society_17 = {
 		}
 	}
 	else = {
-		#to do
 		set_temp_variable = {
 			pp_cost = society_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = tribal_society
+			}
+			swap_ideas = {
+				remove_idea = tribal_society
+				add_idea = communal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = religious_country
+			}
+			swap_ideas = {
+				remove_idea = religious_country
+				add_idea = communal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society1
+			}
+			swap_ideas = {
+				remove_idea = tribal_society1
+				add_idea = communal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society2
+			}
+			swap_ideas = {
+				remove_idea = tribal_society2
+				add_idea = communal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society3
+			}
+			swap_ideas = {
+				remove_idea = tribal_society3
+				add_idea = communal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society
+				add_idea = communal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society2
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society2
+				add_idea = communal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society3
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society3
+				add_idea = communal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -7
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society4
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society4
+				add_idea = communal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -8
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society5
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society5
+				add_idea = communal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -9
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society
+				add_idea = communal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -10
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society1
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society1
+				add_idea = communal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -11
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society2
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society2
+				add_idea = communal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -12
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society3
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society3
+				add_idea = communal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -13
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry
+				add_idea = communal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -14
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry1
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry1
+				add_idea = communal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -15
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = modern_society
+			}
+			swap_ideas = {
+				remove_idea = modern_society
+				add_idea = communal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -16
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = clockwerk_industry
+				add_idea = communal_society
+			}
+			multiply_temp_variable = {
+				pp_cost = -17
+			}
 		}
 		overlord = {
 			add_political_power = pp_cost
@@ -5912,9 +7608,221 @@ change_subject_society_18 = {
 		}
 	}
 	else = {
-		#to do
 		set_temp_variable = {
 			pp_cost = society_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = communal_society
+			}
+			swap_ideas = {
+				remove_idea = communal_society
+				add_idea = religious_country
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society
+			}
+			swap_ideas = {
+				remove_idea = tribal_society
+				add_idea = religious_country
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society1
+			}
+			swap_ideas = {
+				remove_idea = tribal_society1
+				add_idea = religious_country
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society2
+			}
+			swap_ideas = {
+				remove_idea = tribal_society2
+				add_idea = religious_country
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = tribal_society3
+			}
+			swap_ideas = {
+				remove_idea = tribal_society3
+				add_idea = religious_country
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society
+				add_idea = religious_country
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society2
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society2
+				add_idea = religious_country
+			}
+			multiply_temp_variable = {
+				pp_cost = -7
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society3
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society3
+				add_idea = religious_country
+			}
+			multiply_temp_variable = {
+				pp_cost = -8
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society4
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society4
+				add_idea = religious_country
+			}
+			multiply_temp_variable = {
+				pp_cost = -9
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = agrarian_society5
+			}
+			swap_ideas = {
+				remove_idea = agrarian_society5
+				add_idea = religious_country
+			}
+			multiply_temp_variable = {
+				pp_cost = -10
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society
+				add_idea = religious_country
+			}
+			multiply_temp_variable = {
+				pp_cost = -11
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society1
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society1
+				add_idea = religious_country
+			}
+			multiply_temp_variable = {
+				pp_cost = -12
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society2
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society2
+				add_idea = religious_country
+			}
+			multiply_temp_variable = {
+				pp_cost = -13
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = pre_industrial_society3
+			}
+			swap_ideas = {
+				remove_idea = pre_industrial_society3
+				add_idea = religious_country
+			}
+			multiply_temp_variable = {
+				pp_cost = -14
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry
+				add_idea = religious_country
+			}
+			multiply_temp_variable = {
+				pp_cost = -15
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = outdated_industry1
+			}
+			swap_ideas = {
+				remove_idea = outdated_industry1
+				add_idea = religious_country
+			}
+			multiply_temp_variable = {
+				pp_cost = -16
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = modern_society
+			}
+			swap_ideas = {
+				remove_idea = modern_society
+				add_idea = religious_country
+			}
+			multiply_temp_variable = {
+				pp_cost = -17
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = clockwerk_industry
+				add_idea = religious_country
+			}
+			multiply_temp_variable = {
+				pp_cost = -18
+			}
 		}
 		overlord = {
 			add_political_power = pp_cost

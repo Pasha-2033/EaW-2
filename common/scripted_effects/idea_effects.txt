@@ -7,17 +7,9 @@ increase_science_base_idea = {
 			remove_idea = proper_science_base
 			add_idea = outstanding_science_base
 		}
-		if = {
-			limit = {
-				has_country_flag = {
-					flag = science_base_flag
-					value < 4
-				}
-			}
-			set_country_flag = {
-				flag = science_base_flag
-				value = 4
-			}
+		set_country_flag = {
+			flag = science_base_flag
+			value = 4
 		}
 	}
 	else_if = {
@@ -128,17 +120,9 @@ increase_poverty_level_idea = {
 			remove_idea = poverty5
 			add_idea = no_poverty
 		}
-		if = {
-			limit = {
-				has_country_flag = {
-					flag = poverty_level_flag
-					value < 6
-				}
-			}
-			set_country_flag = {
-				flag = poverty_level_flag
-				value = 6
-			}
+		set_country_flag = {
+			flag = poverty_level_flag
+			value = 6
 		}
 	}
 	else_if = {
