@@ -7829,13 +7829,685 @@ change_subject_society_18 = {
 		}
 	}
 }
-change_subject_power_concentration_0 = {}
-change_subject_power_concentration_1 = {}
-change_subject_power_concentration_2 = {}
-change_subject_power_concentration_3 = {}
-change_subject_power_concentration_4 = {}
-change_subject_power_concentration_5 = {}
-change_subject_power_concentration_6 = {}
+change_subject_power_concentration_0 = {
+	if = {
+		limit = {
+			has_idea = anarchy
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			subject_power_concentration_0_available = no
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			always = no
+		}
+		#to do trigger that check if idea is applyable for subject and overlord
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = power_concentration_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = low_power_concentration
+			}
+			swap_ideas = {
+				remove_idea = low_power_concentration
+				add_idea = anarchy
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = medium_power_concentration
+			}
+			swap_ideas = {
+				remove_idea = medium_power_concentration
+				add_idea = anarchy
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = high_power_concentration
+			}
+			swap_ideas = {
+				remove_idea = high_power_concentration
+				add_idea = anarchy
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = authoritarism
+			}
+			swap_ideas = {
+				remove_idea = authoritarism
+				add_idea = anarchy
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = commune
+			}
+			swap_ideas = {
+				remove_idea = commune
+				add_idea = anarchy
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = harmonic_power_concentration
+				add_idea = anarchy
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
+		}
+		overlord = {
+			add_political_power = pp_cost
+		}
+	}
+}
+change_subject_power_concentration_1 = {
+	if = {
+		limit = {
+			has_idea = low_power_concentration
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			subject_power_concentration_1_available = no
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			always = no
+		}
+		#to do trigger that check if idea is applyable for subject and overlord
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = power_concentration_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = anarchy
+			}
+			swap_ideas = {
+				remove_idea = anarchy
+				add_idea = low_power_concentration
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = medium_power_concentration
+			}
+			swap_ideas = {
+				remove_idea = medium_power_concentration
+				add_idea = low_power_concentration
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = high_power_concentration
+			}
+			swap_ideas = {
+				remove_idea = high_power_concentration
+				add_idea = low_power_concentration
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = authoritarism
+			}
+			swap_ideas = {
+				remove_idea = authoritarism
+				add_idea = low_power_concentration
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = commune
+			}
+			swap_ideas = {
+				remove_idea = commune
+				add_idea = low_power_concentration
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = harmonic_power_concentration
+				add_idea = low_power_concentration
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		overlord = {
+			add_political_power = pp_cost
+		}
+	}
+}
+change_subject_power_concentration_2 = {
+	if = {
+		limit = {
+			has_idea = medium_power_concentration
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			subject_power_concentration_2_available = no
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			always = no
+		}
+		#to do trigger that check if idea is applyable for subject and overlord
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = power_concentration_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = anarchy
+			}
+			swap_ideas = {
+				remove_idea = anarchy
+				add_idea = medium_power_concentration
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = low_power_concentration
+			}
+			swap_ideas = {
+				remove_idea = low_power_concentration
+				add_idea = medium_power_concentration
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = high_power_concentration
+			}
+			swap_ideas = {
+				remove_idea = high_power_concentration
+				add_idea = medium_power_concentration
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = authoritarism
+			}
+			swap_ideas = {
+				remove_idea = authoritarism
+				add_idea = medium_power_concentration
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = commune
+			}
+			swap_ideas = {
+				remove_idea = commune
+				add_idea = medium_power_concentration
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = harmonic_power_concentration
+				add_idea = medium_power_concentration
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		overlord = {
+			add_political_power = pp_cost
+		}
+	}
+}
+change_subject_power_concentration_3 = {
+	if = {
+		limit = {
+			has_idea = high_power_concentration
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			subject_power_concentration_3_available = no
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			always = no
+		}
+		#to do trigger that check if idea is applyable for subject and overlord
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = power_concentration_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = anarchy
+			}
+			swap_ideas = {
+				remove_idea = anarchy
+				add_idea = high_power_concentration
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = low_power_concentration
+			}
+			swap_ideas = {
+				remove_idea = low_power_concentration
+				add_idea = high_power_concentration
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = medium_power_concentration
+			}
+			swap_ideas = {
+				remove_idea = medium_power_concentration
+				add_idea = high_power_concentration
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = authoritarism
+			}
+			swap_ideas = {
+				remove_idea = authoritarism
+				add_idea = high_power_concentration
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = commune
+			}
+			swap_ideas = {
+				remove_idea = commune
+				add_idea = high_power_concentration
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = harmonic_power_concentration
+				add_idea = high_power_concentration
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		overlord = {
+			add_political_power = pp_cost
+		}
+	}
+}
+change_subject_power_concentration_4 = {
+	if = {
+		limit = {
+			has_idea = autorism
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			subject_power_concentration_4_available = no
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			always = no
+		}
+		#to do trigger that check if idea is applyable for subject and overlord
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = power_concentration_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = anarchy
+			}
+			swap_ideas = {
+				remove_idea = anarchy
+				add_idea = authoritarism
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = low_power_concentration
+			}
+			swap_ideas = {
+				remove_idea = low_power_concentration
+				add_idea = authoritarism
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = medium_power_concentration
+			}
+			swap_ideas = {
+				remove_idea = medium_power_concentration
+				add_idea = authorism
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = high_power_concentration
+			}
+			swap_ideas = {
+				remove_idea = high_power_concentration
+				add_idea = authoritarism
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = commune
+			}
+			swap_ideas = {
+				remove_idea = commune
+				add_idea = authoritarism
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = harmonic_power_concentration
+				add_idea = autorism
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		overlord = {
+			add_political_power = pp_cost
+		}
+	}
+}
+change_subject_power_concentration_5 = {
+	if = {
+		limit = {
+			has_idea = commune
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			subject_power_concentration_5_available = no
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			always = no
+		}
+		#to do trigger that check if idea is applyable for subject and overlord
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = power_concentration_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = anarchy
+			}
+			swap_ideas = {
+				remove_idea = anarchy
+				add_idea = commune
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = low_power_concentration
+			}
+			swap_ideas = {
+				remove_idea = low_power_concentration
+				add_idea = commune
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = medium_power_concentration
+			}
+			swap_ideas = {
+				remove_idea = medium_power_concentration
+				add_idea = commune
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = high_power_concentration
+			}
+			swap_ideas = {
+				remove_idea = high_power_concentration
+				add_idea = commune
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = authoritarism
+			}
+			swap_ideas = {
+				remove_idea = authoritarism
+				add_idea = commune
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = harmonic_power_concentration
+				add_idea = commune
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		overlord = {
+			add_political_power = pp_cost
+		}
+	}
+}
+change_subject_power_concentration_6 = {
+	if = {
+		limit = {
+			has_idea = harmonic_power_concentration
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			subject_power_concentration_6_available = no
+		}
+		#pass (for preventing other if checks, optimisation)
+	}
+	else_if = {
+		limit = {
+			always = no
+		}
+		#to do trigger that check if idea is applyable for subject and overlord
+	}
+	else = {
+		set_temp_variable = {
+			pp_cost = power_concentration_pp_cost_factor
+		}
+		if = {
+			limit = {
+				has_idea = anarchy
+			}
+			swap_ideas = {
+				remove_idea = anarchy
+				add_idea = harmonic_power_concentration
+			}
+			multiply_temp_variable = {
+				pp_cost = -6
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = low_power_concentration
+			}
+			swap_ideas = {
+				remove_idea = low_power_concentration
+				add_idea = harmonic_power_concentration
+			}
+			multiply_temp_variable = {
+				pp_cost = -5
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = medium_power_concentration
+			}
+			swap_ideas = {
+				remove_idea = medium_power_concentration
+				add_idea = harmonic_power_concentration
+			}
+			multiply_temp_variable = {
+				pp_cost = -4
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = high_power_concentration
+			}
+			swap_ideas = {
+				remove_idea = high_power_concentration
+				add_idea = harmonic_power_concentration
+			}
+			multiply_temp_variable = {
+				pp_cost = -3
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = authoritarism
+			}
+			swap_ideas = {
+				remove_idea = authoritarism
+				add_idea = harmonic_power_concentration
+			}
+			multiply_temp_variable = {
+				pp_cost = -2
+			}
+		}
+		else = {
+			swap_ideas = {
+				remove_idea = commune
+				add_idea = harmonic_power_concentration
+			}
+			multiply_temp_variable = {
+				pp_cost = -1
+			}
+		}
+		overlord = {
+			add_political_power = pp_cost
+		}
+	}
+}
 change_subject_urbanization_0 = {}
 change_subject_urbanization_1 = {}
 change_subject_urbanization_2 = {}
