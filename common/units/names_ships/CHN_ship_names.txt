@@ -165,7 +165,7 @@ CHN_CV_HISTORICAL = {
 CHN_SS_HISTORICAL = {
 	name = NAME_THEME_HISTORICAL_SUBMARINES
 
-	for_countries = { CHN CCN }
+	for_countries = { CHN }
 
 	type = ship
 	ship_types = { ship_hull_submarine submarine }
@@ -181,7 +181,7 @@ CHN_SS_HISTORICAL = {
 CHN_STATES = {
 	name = NAME_THEME_PLACES
 	fallback_name = "Ship No.%d"
-	for_countries = { CHN CCN }
+	for_countries = { CHN }
 
 	type = ship
 
@@ -207,84 +207,3 @@ CHN_STATES = {
 		"Whitehooves"
 	}
 }
-
-##### CCN NAME LISTS #####
-### REGULAR DESTROYER NAMES###
-CCN_DD_HISTORICAL = {
-	name = NAME_THEME_HISTORICAL_DESTROYERS
-
-	for_countries = { CCN }
-
-	type = ship
-	ship_types = { ship_hull_light destroyer }			
-
-	prefix = "CNS "
-	fallback_name = "Destroyer No.%d"					
-
-	unique = {											
-	}
-}
-
-### LIGHT CRUISER / HEAVY CRUISER NAMES###
-CCN_CL_HISTORICAL = {
-	name = NAME_THEME_HISTORICAL_CL_CA
-
-	for_countries = { CCN }
-
-	type = ship
-	ship_types = { ship_hull_cruiser light_cruiser heavy_cruiser }
-	
-	prefix = "CNS "
-	fallback_name = "Cruiser No.%d"
-
-	unique = {
-	}
-}
-
-### BATTLESHIP / BATTLECRUISER NAMES ###
-CCN_BB_BC_HISTORICAL = {
-	name = NAME_THEME_HISTORICAL_BB_BC
-
-	for_countries = { CCN }
-
-	type = ship
-	ship_types = { ship_hull_heavy battleship battle_cruiser}
-	
-	prefix = "CNS "
-	fallback_name = "Battleship No.%d"		
-
-	unique = {
-	}
-}
-
-### AIRCRAFT CARRIER NAMES ###
-CCN_CV_HISTORICAL = {
-	name = NAME_THEME_HISTORICAL_CARRIERS
-
-	for_countries = { CCN }
-
-	type = ship
-	ship_types = { ship_hull_carrier carrier }
-	
-	prefix = "CNS "
-	fallback_name = "Carrier No.%d"	
-
-	unique = {
-	}
-}
-
-# ### SUBMARINES ###
-# CCN_SS_HISTORICAL = {
-	# name = NAME_THEME_HISTORICAL_SUBMARINES
-
-	# for_countries = { CCN }
-
-	# type = ship
-	# ship_types = { ship_hull_submarine submarine }
-	
-	# prefix = "CNS "
-	# fallback_name = "Submarine No.%d"
-	
-	# unique = {
-	# }
-# }
