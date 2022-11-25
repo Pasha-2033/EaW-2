@@ -188,6 +188,7 @@ resize_array_by_si_ei = {
 		clear_array = global.math_array_arg
 		for_each_loop = {
 			array = temp_array
+			value = v
 			add_to_array = {
 				global.math_array_arg = v
 			}
@@ -232,6 +233,7 @@ normalise_array = {
 		clear_array = global.math_array_arg
 		for_each_loop = {
 			array = temp_array
+			value = v
 			add_to_array = {
 				global.math_array_arg = v
 			}
@@ -325,6 +327,7 @@ denormalise_array = {
 			set_temp_variable = {
 				counter_0 = -1
 			}
+			clear_array = global.math_array_arg
 			while_loop_effect = {
 				limit = {
 					has_variable = temp_array^counter_0
@@ -341,19 +344,15 @@ denormalise_array = {
 }
 reverse_array = {
 	#array to sort = global.math_array_arg, use normal array!
-	get_array_size = yes
 	if = {
 		limit = {
 			check_variable = {
-				global.math_args^3 < 2
+				global.math_array_arg^num < 2
 			}
 		}
 		#pass, no need to work with empty/short list (optimisation)
 	}
 	else = {
-		set_variable = {
-			global.math_args^3 = 0
-		}
 		set_temp_variable = {
 			counter_0 = global.math_array_arg^num
 		}
@@ -376,15 +375,55 @@ reverse_array = {
 		clear_array = global.math_array_arg
 		for_each_loop = {
 			array = temp_array
+			value = v
 			add_to_array = {
 				global.math_array_arg = v
 			}
 		}
 	}
 }
-sort_array = {
+sort_array_high = {
 	#array to sort = global.math_array_arg, use normal array!
 	#sorting: highest in array first
+	if = {
+		limit = {
+			check_variable = {
+				global.math_array_arg^num < 2
+			}
+		}
+		#pass, no need to work with empty/short list (optimisation)
+	}
+	else = {
+		while_loop_effect = {
+			limit = {
+				check_variable = {
+					global.math_array_arg^num > 0
+				}
+			}
+			find_highest_in_array = {
+				array = global.math_array_arg
+				value = v
+				index = i
+			}
+			add_to_temp_array = {
+				temp_array = v
+			}
+			remove_from_array = {
+				array = global.math_array_arg
+				index = i
+			}
+		}
+		for_each_loop = {
+			array = temp_array
+			add_to_array = {
+				global.math_array_arg = v
+			}
+		}
+	}
+}
+sort_array_low = {
+	#array to sort = global.math_array_arg, use normal array!
+	#sorting: lowest in array first
 	get_array_size = yes
 	if = {
 		limit = {
@@ -401,7 +440,7 @@ sort_array = {
 					global.math_array_arg^num > 0
 				}
 			}
-			find_highest_in_array = {
+			find_lowest_in_array = {
 				array = global.math_array_arg
 				value = v
 				index = i
