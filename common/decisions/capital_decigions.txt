@@ -1,0 +1,19 @@
+capital_location = {
+	move_capital = {
+		state_target = yes
+		target_array = core_states
+		target_trigger = {
+			FROM = {
+				is_owned_by = ROOT
+			}
+		}
+		on_map_mode = map_and_decisions_view
+		icon = my_icon
+		cost = 20
+		complete_effect = {
+			set_capital = {
+				state = FROM
+			}
+		}
+	}
+}
