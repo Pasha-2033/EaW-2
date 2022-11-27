@@ -12,33 +12,13 @@ focus_tree = {
 		x = 2700
 		y = 1350
 	}
-	#uniqe VES focuses
-	focus = {
-		id = eeq_focus_forgive_each_other
-		icon = GFX_goal_generic_harmony
-		cost = 1
-		ai_will_do = {
-			factor = 200
-		}
-		x = 7
-		y = 0
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus eeq_focus_forgive_each_other"
-			#call event (for startin winning fron windigo)
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-	}
+	#uniqe EEQ focuses
 	focus = {
 		id = eeq_focus_unfreeze
 		icon = GFX_goal_generic_harmony
 		cost = 1
 		ai_will_do = {
 			factor = 200
-		}
-		prerequisite = {
-			focus = eeq_focus_forgive_each_other
 		}
 		x = 7
 		y = 1
@@ -51,89 +31,267 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = eeq_focus_unicorn_tribal_integrated
-		icon = GFX_goal_generic_harmony
+		id = eeq_focus_unfreeze
+		icon = GFX_goal_twilight_makes_friends
 		cost = 1
 		ai_will_do = {
 			factor = 200
 		}
+		relative_position_id = eeq_focus_unfreeze
 		prerequisite = {
 			focus = eeq_focus_unfreeze
 		}
-		x = 7
-		y = 2
+		x = 10
+		y = 1
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: eeq_focus_unicorn_tribal_integrated"
-			#call event (for startin winning fron windigo)
+			log = "[GetDateText]: [Root.GetName]: Focus eeq_focus_unfreeze"
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 	}
 	focus = {
-		id = eeq_focus_pony_tribal_integrated
-		icon = GFX_goal_generic_harmony
+		id = eeq_twilight_makes_friends
+		icon = GFX_goal_twilight_makes_friends
 		cost = 1
 		ai_will_do = {
 			factor = 200
 		}
+		relative_position_id = eeq_focus_unfreeze
 		prerequisite = {
 			focus = eeq_focus_unfreeze
 		}
-		x = 5
-		y = 2
+		x = 0
+		y = 1
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: eeq_focus_pony_tribal_integrated"
-			#call event (for startin winning fron windigo)
+			log = "[GetDateText]: [Root.GetName]: Focus eeq_focus_unfreeze"
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 	}
 	focus = {
-		id = eeq_focus_pegas_tribal_integrated
-		icon = GFX_goal_generic_harmony
+		id = eeq_meet_pinky_pie
+		icon = GFX_goal_twilight_makes_friends
 		cost = 1
 		ai_will_do = {
 			factor = 200
 		}
+		relative_position_id = eeq_twilight_makes_friends
 		prerequisite = {
-			focus = eeq_focus_unfreeze
+			focus = eeq_twilight_makes_friends
 		}
-		x = 9
-		y = 2
+		x = 0
+		y = 1
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: eeq_focus_pegas_tribal_integrated"
-			#call event (for startin winning fron windigo)
+			log = "[GetDateText]: [Root.GetName]: Focus eeq_focus_unfreeze"
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 	}
 	focus = {
-		id = eeq_focus_dawn_of_true_harmony
-		icon = GFX_goal_generic_harmony
+		id = eeq_meet_apple_jack
+		icon = GFX_goal_twilight_makes_friends
 		cost = 1
 		ai_will_do = {
 			factor = 200
 		}
+		relative_position_id = eeq_twilight_makes_friends
 		prerequisite = {
-			focus = eeq_focus_pegas_tribal_integrated
+			focus = eeq_twilight_makes_friends
 		}
-		prerequisite = {
-			focus = eeq_focus_pony_tribal_integrated
-		}
-		prerequisite = {
-			focus = eeq_focus_unicorn_tribal_integrated
-		}
-		x = 7
-		y = 3
+		x = 2
+		y = 1
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: eeq_focus_pegas_tribal_integrated"
-			#call event (for startin winning fron windigo)
+			log = "[GetDateText]: [Root.GetName]: Focus eeq_focus_unfreeze"
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 	}
+	focus = {
+		id = eeq_meet_rainbow_dash
+		icon = GFX_goal_twilight_makes_friends
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = eeq_twilight_makes_friends
+		prerequisite = {
+			focus = eeq_twilight_makes_friends
+		}
+		x = -2
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eeq_focus_unfreeze"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = eeq_meet_rarity
+		icon = GFX_goal_twilight_makes_friends
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = eeq_twilight_makes_friends
+		prerequisite = {
+			focus = eeq_twilight_makes_friends
+		}
+		x = -4
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eeq_focus_unfreeze"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = eeq_meet_fluttershy
+		icon = GFX_goal_twilight_makes_friends
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = eeq_twilight_makes_friends
+		prerequisite = {
+			focus = eeq_twilight_makes_friends
+		}
+		x = 4
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eeq_focus_unfreeze"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = eeq_reveal_the_sixth_element_of_harmony
+		icon = GFX_goal_twilight_makes_friends
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = eeq_twilight_makes_friends
+		prerequisite = {
+			focus = eeq_meet_pinky_pie
+		}
+		prerequisite = {
+			focus = eeq_meet_apple_jack
+		}
+		prerequisite = {
+			focus = eeq_meet_rainbow_dash
+		}
+		prerequisite = {
+			focus = eeq_meet_rarity
+		}
+		prerequisite = {
+			focus = eeq_meet_fluttershy
+		}
+		x = 0
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eeq_focus_unfreeze"
+
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+
+
+
+
+
+	#focus = {
+	#	id = eeq_focus_unicorn_tribal_integrated
+	#	icon = GFX_goal_generic_harmony
+	#	cost = 1
+	#	ai_will_do = {
+	#		factor = 200
+	#	}
+	#	prerequisite = {
+	#		focus = eeq_focus_unfreeze
+	#	}
+	#	x = 7
+	#	y = 2
+	#	completion_reward = {
+	#		log = "[GetDateText]: [Root.GetName]: eeq_focus_unicorn_tribal_integrated"
+	#		#call event (for startin winning fron windigo)
+	#	}
+	#	search_filters = {
+	#		FOCUS_FILTER_POLITICAL
+	#	}
+	#}
+	#focus = {
+	#	id = eeq_focus_pony_tribal_integrated
+	#	icon = GFX_goal_generic_harmony
+	#	cost = 1
+	#	ai_will_do = {
+	#		factor = 200
+	#	}
+	#	prerequisite = {
+	#		focus = eeq_focus_unfreeze
+	#	}
+	#	x = 5
+	#	y = 2
+	#	completion_reward = {
+	#		log = "[GetDateText]: [Root.GetName]: eeq_focus_pony_tribal_integrated"
+	#		#call event (for startin winning fron windigo)
+	#	}
+	#	search_filters = {
+	#		FOCUS_FILTER_POLITICAL
+	#	}
+	#}
+	#focus = {
+	#	id = eeq_focus_pegas_tribal_integrated
+	#	icon = GFX_goal_generic_harmony
+	#	cost = 1
+	#	ai_will_do = {
+	#		factor = 200
+	#	}
+	#	prerequisite = {
+	#		focus = eeq_focus_unfreeze
+	#	}
+	#	x = 9
+	#	y = 2
+	#	completion_reward = {
+	#		log = "[GetDateText]: [Root.GetName]: eeq_focus_pegas_tribal_integrated"
+	#		#call event (for startin winning fron windigo)
+	#	}
+	#	search_filters = {
+	#		FOCUS_FILTER_POLITICAL
+	#	}
+	#}
+	#focus = {
+	#	id = eeq_focus_dawn_of_true_harmony
+	#	icon = GFX_goal_generic_harmony
+	#	cost = 1
+	#	ai_will_do = {
+	#		factor = 200
+	#	}
+	#	prerequisite = {
+	#		focus = eeq_focus_pegas_tribal_integrated
+	#	}
+	#	prerequisite = {
+	#		focus = eeq_focus_pony_tribal_integrated
+	#	}
+	#	prerequisite = {
+	#		focus = eeq_focus_unicorn_tribal_integrated
+	#	}
+	#	x = 7
+	#	y = 3
+	#	completion_reward = {
+	#		log = "[GetDateText]: [Root.GetName]: eeq_focus_pegas_tribal_integrated"
+	#		#call event (for startin winning fron windigo)
+	#	}
+	#	search_filters = {
+	#		FOCUS_FILTER_POLITICAL
+	#	}
+	#}
 }
