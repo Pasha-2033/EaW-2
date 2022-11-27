@@ -90,3 +90,103 @@ is_polar_mylti = {
 		has_idea = polar_race
 	}
 }
+#society
+has_society_lvl_0_or_higer = {
+	has_idea = clockwerk_industry
+}
+has_society_lvl_1_or_higer = {
+	OR = {
+		has_idea = modern_society
+		has_society_lvl_0_or_higer = yes
+	}
+}
+has_society_lvl_2_or_higer = {
+	OR = {
+		has_idea = outdated_industry1
+		has_society_lvl_1_or_higer = yes
+	}
+}
+has_society_lvl_3_or_higer = {
+	OR = {
+		has_idea = outdated_industry
+		has_society_lvl_2_or_higer = yes
+	}
+}
+has_society_lvl_4_or_higer = {
+	OR = {
+		has_idea = pre_industrial_society3
+		has_society_lvl_3_or_higer = yes
+	}
+}
+has_society_lvl_5_or_higer = {
+	OR = {
+		has_idea = pre_industrial_society2
+		has_society_lvl_4_or_higer = yes
+	}
+}
+has_society_lvl_6_or_higer = {
+	OR = {
+		has_idea = pre_industrial_society1
+		has_society_lvl_5_or_higer = yes
+	}
+}
+has_society_lvl_7_or_higer = {
+	OR = {
+		has_idea = pre_industrial_society
+		has_society_lvl_6_or_higer = yes
+	}
+}
+has_society_lvl_8_or_higer = {
+	OR = {
+		has_idea = agrarian_society5
+		has_society_lvl_7_or_higer = yes
+	}
+}
+has_society_lvl_9_or_higer = {
+	OR = {
+		has_idea = agrarian_society4
+		has_society_lvl_8_or_higer = yes
+	}
+}
+has_society_lvl_10_or_higer = {
+	OR = {
+		has_idea = agrarian_society3
+		has_society_lvl_9_or_higer = yes
+	}
+}
+has_society_lvl_11_or_higer = {
+	OR = {
+		has_idea = agrarian_society2
+		has_society_lvl_10_or_higer = yes
+	}
+}
+has_society_lvl_12_or_higer = {
+	OR = {
+		has_idea = agrarian_society
+		has_society_lvl_11_or_higer = yes
+	}
+}
+has_society_lvl_13_or_higer = {
+	OR = {
+		has_idea = tribal_society3
+		has_society_lvl_12_or_higer = yes
+	}
+}
+has_society_lvl_14_or_higer = {
+	OR = {
+		has_idea = tribal_society2
+		has_society_lvl_13_or_higer = yes
+	}
+}
+has_society_lvl_15_or_higer = {
+	OR = {
+		has_idea = tribal_society1
+		has_society_lvl_14_or_higer = yes
+	}
+}
+has_society_lvl_16_or_higer = {
+	OR = {
+		has_idea = tribal_society
+		has_society_lvl_15_or_higer = yes
+	}
+}

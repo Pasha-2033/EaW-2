@@ -483,6 +483,7 @@ ideas = {
 		use_list_view = yes
 		deep_isolation = {
 			level = 1
+			cost = 150
 			available = {
 				OR = {
 					has_war = yes
@@ -514,6 +515,7 @@ ideas = {
 		}
 		isolation = {	
 			level = 2
+			cost = 150
 			available = {
 				OR = {
 					has_war = yes
@@ -537,9 +539,9 @@ ideas = {
 				fuel_gain_factor = -0.5
 				agency_upgrade_time = 0.8
 			}
-			allowed_to_remove = {
-				has_war = no
-			}
+			#allowed_to_remove = {
+			#	has_war = no
+			#}
 			cancel_if_invalid = no
 		}
 		primitive_economy = {
@@ -563,14 +565,14 @@ ideas = {
 				local_resources_factor = 0.15
 			}
 			default = no
-            allowed_to_remove = {
-                OR = {
-					has_idea = modern_society
-					has_idea = outdated_industry
-					has_idea = pre_industrial_society
-					has_idea = agrarian_society
-				}
-            }
+            #allowed_to_remove = {
+            #    OR = {
+			#		has_idea = modern_society
+			#		has_idea = outdated_industry
+			#		has_idea = pre_industrial_society
+			#		has_idea = agrarian_society
+			#	}
+            #}
 			cancel_if_invalid = no
 		}
 		outlaw_economy = {
@@ -590,12 +592,12 @@ ideas = {
                 stability_factor = -0.20
 			}
 			default = no
-            allowed_to_remove = {
-                OR = {
-					has_government = communism
-					has_government = fascism
-				}
-            }
+            #allowed_to_remove = {
+            #    OR = {
+			#		has_government = communism
+			#		has_government = fascism
+			#	}
+            #}
 			cancel_if_invalid = no
 		}
 		civilian_economy = {
@@ -848,6 +850,7 @@ ideas = {
 			cancel_if_invalid = no
 		}
 		collectivized_society = {
+			level = 11
 			picture = new_economic_policy		
 			available = {
 				#has_government = communism
@@ -1427,32 +1430,18 @@ ideas = {
 			traits = {
 				illiteracy_idea
 			}
-			allowed = {
-				always = yes
-			}
-			available = {
-				has_idea = no_lack_of_scientists
-			}
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
 			modifier = {}
 		}
 		lack_of_scientists3 = {
-			cost = -1
+			cost = 0
 			traits = { illiteracy_idea }
-			allowed = {
-				always = yes
-			}
-			available = {
-				has_idea = lack_of_scientists3
-			}
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
 			modifier = {
 				production_speed_buildings_factor = -0.05
@@ -1461,18 +1450,11 @@ ideas = {
 			}
 		}
 		lack_of_scientists2 = {
-			cost = -1
+			cost = 0
 			traits = { illiteracy_idea }
-			allowed = {
-				always = yes
-			}
-			available = {
-				has_idea = lack_of_scientists2
-			}
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
 			modifier = {
 				production_speed_buildings_factor = -0.10
@@ -1480,20 +1462,12 @@ ideas = {
 				research_speed_factor = -0.30
 			}
 		}
-
 		lack_of_scientists1 = {
-			cost = -1
+			cost = 0
 			traits = { illiteracy_idea }
-			allowed = {
-				always = yes
-			}
-			available = {
-				has_idea = lack_of_scientists1
-			}
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
 			modifier = {
 				production_speed_buildings_factor = -0.15
@@ -1501,20 +1475,12 @@ ideas = {
 				research_speed_factor = -0.45
 			}
 		}
-		
 		lack_of_scientists = {
-			cost = -1
+			cost = 0
 			traits = { illiteracy_idea }
-			allowed = {
-				always = yes
-			}
-			available = {
-				has_idea = lack_of_scientists
-			}
 			allowed_civil_war = {
 				always = yes
 			}
-
 			removal_cost = -1
 			modifier = {
 				production_speed_buildings_factor = -0.2
@@ -1523,7 +1489,7 @@ ideas = {
 			}
 		}
 		education_socialist = {
-			cost = -1
+			cost = 0
 			traits = { illiteracy_idea }
 			picture = old_lack_of_scientists
 			removal_cost = -1
@@ -1540,11 +1506,7 @@ ideas = {
 			allowed_civil_war = {
 				always = yes
 			}
-			available = {
-				NOT = { has_country_flag = have_regular_puppets }
-			}
 			removal_cost = -1
-	
 			modifier = {
 				local_resources_factor = -0.10				
 				political_power_cost = -0.2

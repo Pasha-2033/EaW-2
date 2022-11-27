@@ -1871,7 +1871,10 @@ subject_society_0_available = {
 	if = {
 		limit = {
 			overlord = {
-				has_idea = detached_country
+				OR = {
+					has_society_lvl_0_or_higer = no
+					has_idea = detached_country
+				}
 			}
 		}
 		always = no
@@ -2044,7 +2047,10 @@ subject_society_1_available = {
 	if = {
 		limit = {
 			overlord = {
-				has_idea = detached_country
+				OR = {
+					has_society_lvl_1_or_higer = no
+					has_idea = detached_country
+				}
 			}
 		}
 		always = no
@@ -2212,7 +2218,10 @@ subject_society_2_available = {
 	if = {
 		limit = {
 			overlord = {
-				has_idea = detached_country
+				OR = {
+					has_society_lvl_2_or_higer = no
+					has_idea = detached_country
+				}
 			}
 		}
 		always = no
@@ -2375,7 +2384,10 @@ subject_society_3_available = {
 	if = {
 		limit = {
 			overlord = {
-				has_idea = detached_country
+				OR = {
+					has_society_lvl_3_or_higer = no
+					has_idea = detached_country
+				}
 			}
 		}
 		always = no
@@ -2533,7 +2545,10 @@ subject_society_4_available = {
 	if = {
 		limit = {
 			overlord = {
-				has_idea = detached_country
+				OR = {
+					has_society_lvl_4_or_higer = no
+					has_idea = detached_country
+				}
 			}
 		}
 		always = no
@@ -2686,7 +2701,10 @@ subject_society_5_available = {
 	if = {
 		limit = {
 			overlord = {
-				has_idea = detached_country
+				OR = {
+					has_society_lvl_5_or_higer = no
+					has_idea = detached_country
+				}
 			}
 		}
 		always = no
@@ -2834,7 +2852,10 @@ subject_society_6_available = {
 	if = {
 		limit = {
 			overlord = {
-				has_idea = detached_country
+				OR = {
+					has_society_lvl_6_or_higer = no
+					has_idea = detached_country
+				}
 			}
 		}
 		always = no
@@ -2977,7 +2998,10 @@ subject_society_7_available = {
 	if = {
 		limit = {
 			overlord = {
-				has_idea = detached_country
+				OR = {
+					has_society_lvl_7_or_higer = no
+					has_idea = detached_country
+				}
 			}
 		}
 		always = no
@@ -3115,7 +3139,10 @@ subject_society_8_available = {
 	if = {
 		limit = {
 			overlord = {
-				has_idea = detached_country
+				OR = {
+					has_society_lvl_8_or_higer = no
+					has_idea = detached_country
+				}
 			}
 		}
 		always = no
@@ -3248,7 +3275,10 @@ subject_society_9_available = {
 	if = {
 		limit = {
 			overlord = {
-				has_idea = detached_country
+				OR = {
+					has_society_lvl_9_or_higer = no
+					has_idea = detached_country
+				}
 			}
 		}
 		always = no
@@ -3373,7 +3403,10 @@ subject_society_10_available = {
 	if = {
 		limit = {
 			overlord = {
-				has_idea = detached_country
+				OR = {
+					has_society_lvl_10_or_higer = no
+					has_idea = detached_country
+				}
 			}
 		}
 		always = no
@@ -3506,7 +3539,10 @@ subject_society_11_available = {
 	if = {
 		limit = {
 			overlord = {
-				has_idea = detached_country
+				OR = {
+					has_society_lvl_11_or_higer = no
+					has_idea = detached_country
+				}
 			}
 		}
 		always = no
@@ -3644,7 +3680,10 @@ subject_society_12_available = {
 	if = {
 		limit = {
 			overlord = {
-				has_idea = detached_country
+				OR = {
+					has_society_lvl_12_or_higer = no
+					has_idea = detached_country
+				}
 			}
 		}
 		always = no
@@ -3787,7 +3826,10 @@ subject_society_13_available = {
 	if = {
 		limit = {
 			overlord = {
-				has_idea = detached_country
+				OR = {
+					has_society_lvl_13_or_higer = no
+					has_idea = detached_country
+				}
 			}
 		}
 		always = no
@@ -3935,7 +3977,10 @@ subject_society_14_available = {
 	if = {
 		limit = {
 			overlord = {
-				has_idea = detached_country
+				OR = {
+					has_society_lvl_14_or_higer = no
+					has_idea = detached_country
+				}
 			}
 		}
 		always = no
@@ -4088,7 +4133,10 @@ subject_society_15_available = {
 	if = {
 		limit = {
 			overlord = {
-				has_idea = detached_country
+				OR = {
+					has_society_lvl_15_or_higer = no
+					has_idea = detached_country
+				}
 			}
 		}
 		always = no
@@ -4246,7 +4294,10 @@ subject_society_16_available = {
 	if = {
 		limit = {
 			overlord = {
-				has_idea = detached_country
+				OR = {
+					has_society_lvl_16_or_higer = no
+					has_idea = detached_country
+				}
 			}
 		}
 		always = no
@@ -4409,7 +4460,16 @@ subject_society_17_available = {
 	if = {
 		limit = {
 			overlord = {
-				has_idea = detached_country
+				OR = {
+					has_idea = detached_country
+					NOT = {
+						OR = {
+							has_government = communism
+							has_government = socialism
+							has_government = radicalism
+						}
+					}
+				}
 			}
 		}
 		always = no
@@ -5161,11 +5221,182 @@ subject_power_concentration_6_available = {
 	}
 }
 #urbanization
-subject_urbanization_0_available = {}
-subject_urbanization_1_available = {}
-subject_urbanization_2_available = {}
-subject_urbanization_3_available = {}
-subject_urbanization_4_available = {}
+subject_urbanization_0_available = {
+	always = yes
+	#add forbiden ideas for this option
+	#NOT = {
+	#	OR = {
+	#
+	#	}
+	#}
+	set_temp_variable = {
+		pp_cost = urbanization_pp_cost_factor
+	}
+	if = {
+		limit = {
+			has_idea = very_high_urbanization_focus
+		}
+		multiply_temp_variable = {
+			pp_cost = 4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = high_urbanization_focus
+		}
+		multiply_temp_variable = {
+			pp_cost = 3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = medium_urbanization_focus
+		}
+		multiply_temp_variable = {
+			pp_cost = 2
+		}
+	}
+	NOT = {
+		check_variable = {
+			overlord:political_power < pp_cost
+		}
+	}
+}
+subject_urbanization_1_available = {
+	always = yes
+	#add forbiden ideas for this option
+	#NOR = {
+	#	OR = {
+	#
+	#	}
+	#}
+	set_temp_variable = {
+		pp_cost = urbanization_pp_cost_factor
+	}
+	if = {
+		limit = {
+			has_idea = very_high_urbanization_focus
+		}
+		multiply_temp_variable = {
+			pp_cost = 3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = high_urbanization_focus
+		}
+		multiply_temp_variable = {
+			pp_cost = 2
+		}
+	}
+	NOT = {
+		check_variable = {
+			overlord:political_power < pp_cost
+		}
+	}
+}
+subject_urbanization_2_available = {
+	always = yes
+	#add forbiden ideas for this option
+	#NOR = {
+	#	OR = {
+	#
+	#	}
+	#}
+	set_temp_variable = {
+		pp_cost = urbanization_pp_cost_factor
+	}
+	if = {
+		limit = {
+			OR = {
+				has_idea = no_urbanization_focus
+				has_idea = very_high_urbanization_focus
+			}
+		}
+		multiply_temp_variable = {
+			pp_cost = 2
+		}
+	}
+	NOT = {
+		check_variable = {
+			overlord:political_power < pp_cost
+		}
+	}
+}
+subject_urbanization_3_available = {
+	always = yes
+	#add forbiden ideas for this option
+	#NOR = {
+	#	OR = {
+	#
+	#	}
+	#}
+	set_temp_variable = {
+		pp_cost = urbanization_pp_cost_factor
+	}
+	if = {
+		limit = {
+			has_idea = no_urbanization_control
+		}
+		multiply_temp_variable = {
+			pp_cost = 3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = low_urbanization_control
+		}
+		multiply_temp_variable = {
+			pp_cost = 2
+		}
+	}
+	NOT = {
+		check_variable = {
+			overlord:political_power < pp_cost
+		}
+	}
+}
+subject_urbanization_4_available = {
+	always = yes
+	#add forbiden ideas for this option
+	#NOR = {
+	#	OR = {
+	#
+	#	}
+	#}
+	set_temp_variable = {
+		pp_cost = urbanization_pp_cost_factor
+	}
+	if = {
+		limit = {
+			has_idea = no_urbanization_focus
+		}
+		multiply_temp_variable = {
+			pp_cost = 4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = low_urbanization_focus
+		}
+		multiply_temp_variable = {
+			pp_cost = 3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = medium_urbanization_focus
+		}
+		multiply_temp_variable = {
+			pp_cost = 2
+		}
+	}
+	NOT = {
+		check_variable = {
+			overlord:political_power < pp_cost
+		}
+	}
+}
 #illiteracy
 subject_illiteracy_0_available = {}
 subject_illiteracy_1_available = {}

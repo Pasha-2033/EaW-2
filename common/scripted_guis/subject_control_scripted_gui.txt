@@ -94,18 +94,48 @@ scripted_gui = {
 				}
 			}
 			subject_control_society_button_click = {
+				meta_effect = {
+					text = {
+						change_subject_society_[I] = yes
+					}
+					I = i_3
+				}
 				log = "[?i_3]"
 			}
 			subject_control_power_concentration_button_click = {
+				meta_effect = {
+					text = {
+						change_subject_power_concentration_[I] = yes
+					}
+					I = i_4
+				}
 				log = "[?i_4]"
 			}
 			subject_control_urbanization_button_click = {
+				meta_effect = {
+					text = {
+						change_subject_urbanization_[I] = yes
+					}
+					I = i_5
+				}
 				log = "[?i_5]"
 			}
 			subject_control_illiteracy_button_click = {
+				meta_effect = {
+					text = {
+						change_subject_illiteracy_[I] = yes
+					}
+					I = i_6
+				}
 				log = "[?i_6]"
 			}
 			subject_control_poverty_button_click = {
+				meta_effect = {
+					text = {
+						change_subject_poverty_[I] = yes
+					}
+					I = i_7
+				}
 				log = "[?i_7]"
 			}
 			use_overlord_settings_button_click = {
@@ -169,7 +199,7 @@ scripted_gui = {
 						limit = {
 							always = no
 						}
-						#change trigger (if ideas are possible for subject and overlord
+						#change trigger (if ideas are possible for subject and overlord)
 						add_to_temp_variable = {
 							frame_0 = 2
 						}
@@ -201,7 +231,7 @@ scripted_gui = {
 						limit = {
 							always = no
 						}
-						#change trigger (if ideas are possible for subject and overlord
+						#change trigger (if ideas are possible for subject and overlord)
 						add_to_temp_variable = {
 							frame_0 = 2
 						}
@@ -233,7 +263,7 @@ scripted_gui = {
 						limit = {
 							always = no
 						}
-						#change trigger (if ideas are possible for subject and overlord
+						#change trigger (if ideas are possible for subject and overlord)
 						add_to_temp_variable = {
 							frame_0 = 2
 						}
@@ -265,7 +295,7 @@ scripted_gui = {
 						limit = {
 							always = no
 						}
-						#change trigger (if ideas are possible for subject and overlord
+						#change trigger (if ideas are possible for subject and overlord)
 						add_to_temp_variable = {
 							frame_0 = 2
 						}
@@ -297,7 +327,7 @@ scripted_gui = {
 						limit = {
 							always = no
 						}
-						#change trigger (if ideas are possible for subject and overlord
+						#change trigger (if ideas are possible for subject and overlord)
 						add_to_temp_variable = {
 							frame_0 = 2
 						}
@@ -329,7 +359,7 @@ scripted_gui = {
 						limit = {
 							always = no
 						}
-						#change trigger (if ideas are possible for subject and overlord
+						#change trigger (if ideas are possible for subject and overlord)
 						add_to_temp_variable = {
 							frame_0 = 2
 						}
@@ -356,7 +386,7 @@ scripted_gui = {
 						limit = {
 							always = no
 						}
-						#change trigger (if ideas are possible for subject and overlord
+						#change trigger (if ideas are possible for subject and overlord)
 						add_to_temp_variable = {
 							frame_0 = 2
 						}
@@ -399,7 +429,7 @@ scripted_gui = {
 						limit = {
 							always = no
 						}
-						#change trigger (if ideas are possible for subject and overlord
+						#change trigger (if ideas are possible for subject and overlord)
 						add_to_temp_variable = {
 							frame_1 = 2
 						}
@@ -433,7 +463,7 @@ scripted_gui = {
 						limit = {
 							always = no
 						}
-						#change trigger (if ideas are possible for subject and overlord
+						#change trigger (if ideas are possible for subject and overlord)
 						add_to_temp_variable = {
 							frame_1 = 2
 						}
@@ -467,7 +497,7 @@ scripted_gui = {
 						limit = {
 							always = no
 						}
-						#change trigger (if ideas are possible for subject and overlord
+						#change trigger (if ideas are possible for subject and overlord)
 						add_to_temp_variable = {
 							frame_1 = 2
 						}
@@ -501,7 +531,7 @@ scripted_gui = {
 						limit = {
 							always = no
 						}
-						#change trigger (if ideas are possible for subject and overlord
+						#change trigger (if ideas are possible for subject and overlord)
 						add_to_temp_variable = {
 							frame_1 = 2
 						}
@@ -535,7 +565,7 @@ scripted_gui = {
 						limit = {
 							always = no
 						}
-						#change trigger (if ideas are possible for subject and overlord
+						#change trigger (if ideas are possible for subject and overlord)
 						add_to_temp_variable = {
 							frame_1 = 2
 						}
@@ -569,7 +599,7 @@ scripted_gui = {
 						limit = {
 							always = no
 						}
-						#change trigger (if ideas are possible for subject and overlord
+						#change trigger (if ideas are possible for subject and overlord)
 						add_to_temp_variable = {
 							frame_1 = 2
 						}
@@ -603,7 +633,7 @@ scripted_gui = {
 						limit = {
 							always = no
 						}
-						#change trigger (if ideas are possible for subject and overlord
+						#change trigger (if ideas are possible for subject and overlord)
 						add_to_temp_variable = {
 							frame_1 = 2
 						}
@@ -632,7 +662,7 @@ scripted_gui = {
 						limit = {
 							always = no
 						}
-						#change trigger (if ideas are possible for subject and overlord
+						#change trigger (if ideas are possible for subject and overlord)
 						add_to_temp_variable = {
 							frame_1 = 2
 						}
@@ -672,12 +702,21 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_2 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							FROM = {
 								subject_economy_0_available = no
 							}
 						}
 						add_to_temp_variable = {
-							frame_2 = 2
+							frame_2 = 3
 						}
 					}
 				}
@@ -699,12 +738,21 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_2 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							FROM = {
 								subject_economy_1_available = no
 							}
 						}
 						add_to_temp_variable = {
-							frame_2 = 2
+							frame_2 = 3
 						}
 					}
 				}
@@ -726,12 +774,21 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_2 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							FROM = {
 								subject_economy_2_available = no
 							}
 						}
 						add_to_temp_variable = {
-							frame_2 = 2
+							frame_2 = 3
 						}
 					}
 				}
@@ -753,12 +810,21 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_2 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							FROM = {
 								subject_economy_3_available = no
 							}
 						}
 						add_to_temp_variable = {
-							frame_2 = 2
+							frame_2 = 3
 						}
 					}
 				}
@@ -780,12 +846,21 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_2 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							FROM = {
 								subject_economy_4_available = no
 							}
 						}
 						add_to_temp_variable = {
-							frame_2 = 2
+							frame_2 = 3
 						}
 					}
 				}
@@ -807,12 +882,21 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_2 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							FROM = {
 								subject_economy_5_available = no
 							}
 						}
 						add_to_temp_variable = {
-							frame_2 = 2
+							frame_2 = 3
 						}
 					}
 				}
@@ -834,12 +918,21 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_2 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							FROM = {
 								subject_economy_6_available = no
 							}
 						}
 						add_to_temp_variable = {
-							frame_2 = 2
+							frame_2 = 3
 						}
 					}
 				}
@@ -861,12 +954,21 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_2 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							FROM = {
 								subject_economy_7_available = no
 							}
 						}
 						add_to_temp_variable = {
-							frame_2 = 2
+							frame_2 = 3
 						}
 					}
 				}
@@ -888,12 +990,21 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_2 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							FROM = {
 								subject_economy_8_available = no
 							}
 						}
 						add_to_temp_variable = {
-							frame_2 = 2
+							frame_2 = 3
 						}
 					}
 				}
@@ -910,12 +1021,21 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_2 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							FROM = {
 								subject_economy_9_available = no
 							}
 						}
 						add_to_temp_variable = {
-							frame_2 = 2
+							frame_2 = 3
 						}
 					}
 				}
@@ -946,10 +1066,19 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							subject_society_0_available = no
 						}
 						add_to_temp_variable = {
-							frame_3 = 2
+							frame_3 = 3
 						}
 					}
 				}
@@ -971,10 +1100,19 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							subject_society_1_available = no
 						}
 						add_to_temp_variable = {
-							frame_3 = 2
+							frame_3 = 3
 						}
 					}
 				}
@@ -996,10 +1134,19 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							subject_society_2_available = no
 						}
 						add_to_temp_variable = {
-							frame_3 = 2
+							frame_3 = 3
 						}
 					}
 				}
@@ -1021,10 +1168,19 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							subject_society_3_available = no
 						}
 						add_to_temp_variable = {
-							frame_3 = 2
+							frame_3 = 3
 						}
 					}
 				}
@@ -1046,10 +1202,19 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							subject_society_4_available = no
 						}
 						add_to_temp_variable = {
-							frame_3 = 2
+							frame_3 = 3
 						}
 					}
 				}
@@ -1071,10 +1236,19 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							subject_society_5_available = no
 						}
 						add_to_temp_variable = {
-							frame_3 = 2
+							frame_3 = 3
 						}
 					}
 				}
@@ -1096,10 +1270,19 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							subject_society_6_available = no
 						}
 						add_to_temp_variable = {
-							frame_3 = 2
+							frame_3 = 3
 						}
 					}
 				}
@@ -1121,10 +1304,19 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							subject_society_7_available = no
 						}
 						add_to_temp_variable = {
-							frame_3 = 2
+							frame_3 = 3
 						}
 					}
 				}
@@ -1146,10 +1338,19 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							subject_society_8_available = no
 						}
 						add_to_temp_variable = {
-							frame_3 = 2
+							frame_3 = 3
 						}
 					}
 				}
@@ -1171,10 +1372,19 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							subject_society_9_available = no
 						}
 						add_to_temp_variable = {
-							frame_3 = 2
+							frame_3 = 3
 						}
 					}
 				}
@@ -1196,10 +1406,19 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							subject_society_10_available = no
 						}
 						add_to_temp_variable = {
-							frame_3 = 2
+							frame_3 = 3
 						}
 					}
 				}
@@ -1221,10 +1440,19 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_3 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							subject_society_11_available = no
 						}
 						add_to_temp_variable = {
-							frame_3 = 2
+							frame_3 = 3
 						}
 					}
 				}
@@ -1246,10 +1474,19 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
-							subject_society_13_available = no
+							always = no
 						}
+						#change trigger (if ideas are possible for subject and overlord)
 						add_to_temp_variable = {
 							frame_3 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_12_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 3
 						}
 					}
 				}
@@ -1271,10 +1508,19 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
-							subject_society_14_available = no
+							always = no
 						}
+						#change trigger (if ideas are possible for subject and overlord)
 						add_to_temp_variable = {
 							frame_3 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_13_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 3
 						}
 					}
 				}
@@ -1296,10 +1542,19 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
-							subject_society_15_available = no
+							always = no
 						}
+						#change trigger (if ideas are possible for subject and overlord)
 						add_to_temp_variable = {
 							frame_3 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_14_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 3
 						}
 					}
 				}
@@ -1321,10 +1576,19 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
-							subject_society_16_available = no
+							always = no
 						}
+						#change trigger (if ideas are possible for subject and overlord)
 						add_to_temp_variable = {
 							frame_3 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_15_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 3
 						}
 					}
 				}
@@ -1346,10 +1610,19 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
-							subject_society_17_available = no
+							always = no
 						}
+						#change trigger (if ideas are possible for subject and overlord)
 						add_to_temp_variable = {
 							frame_3 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_16_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 3
 						}
 					}
 				}
@@ -1371,10 +1644,19 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
-							subject_society_18_available = no
+							always = no
 						}
+						#change trigger (if ideas are possible for subject and overlord)
 						add_to_temp_variable = {
 							frame_3 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_17_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 3
 						}
 					}
 				}
@@ -1391,10 +1673,19 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
-							subject_society_19_available = no
+							always = no
 						}
+						#change trigger (if ideas are possible for subject and overlord)
 						add_to_temp_variable = {
 							frame_3 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_society_18_available = no
+						}
+						add_to_temp_variable = {
+							frame_3 = 3
 						}
 					}
 				}			
@@ -1422,10 +1713,19 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_4 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							subject_power_concentration_0_available = no
 						}
 						add_to_temp_variable = {
-							frame_4 = 2
+							frame_4 = 3
 						}
 					}
 				}
@@ -1447,10 +1747,19 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_4 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							subject_power_concentration_1_available = no
 						}
 						add_to_temp_variable = {
-							frame_4 = 2
+							frame_4 = 3
 						}
 					}
 				}
@@ -1472,10 +1781,19 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_4 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							subject_power_concentration_2_available = no
 						}
 						add_to_temp_variable = {
-							frame_4 = 2
+							frame_4 = 3
 						}
 					}
 				}
@@ -1497,10 +1815,19 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_4 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							subject_power_concentration_3_available = no
 						}
 						add_to_temp_variable = {
-							frame_4 = 2
+							frame_4 = 3
 						}
 					}
 				}
@@ -1522,10 +1849,19 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_4 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							subject_power_concentration_4_available = no
 						}
 						add_to_temp_variable = {
-							frame_4 = 2
+							frame_4 = 3
 						}
 					}
 				}
@@ -1547,10 +1883,19 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_4 = 2
+						}
+					}
+					else_if = {
+						limit = {
 							subject_power_concentration_5_available = no
 						}
 						add_to_temp_variable = {
-							frame_4 = 2
+							frame_4 = 3
 						}
 					}
 				}
@@ -1567,16 +1912,398 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
-							subject_power_concentration_6_available = no
+							always = no
 						}
+						#change trigger (if ideas are possible for subject and overlord)
 						add_to_temp_variable = {
 							frame_4 = 2
 						}
 					}
+					else_if = {
+						limit = {
+							subject_power_concentration_6_available = no
+						}
+						add_to_temp_variable = {
+							frame_4 = 3
+						}
+					}
 				}
 			}
-			subject_control_urbanization_button_click_enabled = {}
-			subject_control_illiteracy_button_click_enabled = {}
+			subject_control_urbanization_button_click_enabled = {
+				#temp solution, change
+				set_temp_variable = {
+					frame_5 = 1
+				}
+				if = {
+					limit = {
+						check_variable = {
+							i_5 = 0
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = no_urbanization_control
+							}
+						}
+						add_to_temp_variable = {
+							frame_5 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_5 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_power_concentration_0_available = no
+						}
+						add_to_temp_variable = {
+							frame_5 = 3
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_5 = 1
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = low_urbanization_focus
+							}
+						}
+						add_to_temp_variable = {
+							frame_5 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_5 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_power_concentration_1_available = no
+						}
+						add_to_temp_variable = {
+							frame_5 = 3
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_5 = 2
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = medium_urbanization_focus
+							}
+						}
+						add_to_temp_variable = {
+							frame_5 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_5 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_power_concentration_2_available = no
+						}
+						add_to_temp_variable = {
+							frame_5 = 3
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_5 = 3
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = high_urbanization_focus
+							}
+						}
+						add_to_temp_variable = {
+							frame_5 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_5 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_power_concentration_3_available = no
+						}
+						add_to_temp_variable = {
+							frame_5 = 3
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							FROM = {
+								has_idea = very_high_urbanization_focus
+							}
+						}
+						add_to_temp_variable = {
+							frame_5 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_5 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_power_concentration_4_available = no
+						}
+						add_to_temp_variable = {
+							frame_5 = 3
+						}
+					}
+				}
+			}
+			subject_control_illiteracy_button_click_enabled = {
+				set_temp_variable = {
+					frame_6 = 1
+				}
+				if = {
+					limit = {
+						check_variable = {
+							i_6 = 0
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = no_lack_of_scientists
+							}
+						}
+						add_to_temp_variable = {
+							frame_6 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_6 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_illiteracy_0_available = no
+						}
+						add_to_temp_variable = {
+							frame_6 = 3
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_6 = 1
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = lack_of_scientists3
+							}
+						}
+						add_to_temp_variable = {
+							frame_6 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_6 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_illiteracy_1_available = no
+						}
+						add_to_temp_variable = {
+							frame_6 = 3
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_6 = 2
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = lack_of_scientists2
+							}
+						}
+						add_to_temp_variable = {
+							frame_6 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_6 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_illiteracy_2_available = no
+						}
+						add_to_temp_variable = {
+							frame_6 = 3
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_6 = 3
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = lack_of_scientists1
+							}
+						}
+						add_to_temp_variable = {
+							frame_6 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_6 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_illiteracy_3_available = no
+						}
+						add_to_temp_variable = {
+							frame_6 = 3
+						}
+					}
+				}
+				else_if = {
+					limit = {
+						check_variable = {
+							i_6 = 4
+						}
+					}
+					if = {
+						limit = {
+							FROM = {
+								has_idea = lack_of_scientists
+							}
+						}
+						add_to_temp_variable = {
+							frame_6 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_6 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_illiteracy_4_available = no
+						}
+						add_to_temp_variable = {
+							frame_6 = 3
+						}
+					}
+				}
+				else = {
+					if = {
+						limit = {
+							FROM = {
+								has_idea = education_socialist
+							}
+						}
+						add_to_temp_variable = {
+							frame_6 = 1
+						}
+					}
+					else_if = {
+						limit = {
+							always = no
+						}
+						#change trigger (if ideas are possible for subject and overlord)
+						add_to_temp_variable = {
+							frame_6 = 2
+						}
+					}
+					else_if = {
+						limit = {
+							subject_illiteracy_5_available = no
+						}
+						add_to_temp_variable = {
+							frame_6 = 3
+						}
+					}
+				}
+			}
 			subject_control_poverty_button_click_enabled = {
 				set_temp_variable = {
 					frame_7 = i_7
@@ -1584,7 +2311,7 @@ scripted_gui = {
 				multiply_temp_variable = {
 					frame_7 = 2
 				}
-				#change due grey icon append
+				#change due grey icon append and red
 				if = {
 					limit = {
 						FROM = {

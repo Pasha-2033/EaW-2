@@ -34,3 +34,24 @@ idea_effects - написать триггеры
 установить science_base_flag, poverty_level_flag как триггер для идеи
 
 в subject_control_triggers ввести ограничения на detached_country - потому что в изолированной стране не возможно менять что либо, кроме ее изолированности
+
+>>>оптимизация и читабельность:
+можно повысить читабельность (может даже оптимизацию, но это под вопросом) в subject_control_effects.txt, если 
+else_if = { 
+	limit = { 
+		<idea_available> = no 
+	} 
+	#pass 
+}
+else = {
+	<effects>
+}
+заменить на
+else_if = { 
+	limit = { 
+		<idea_available> = yes 
+	} 
+	<effects>
+}
+
+в subject_control_mobilization_law_button_click_enabled содежится код, к которому следует привести остальные элементы определения frame для интерфейса (subject_control_scripted_gui.txt)
