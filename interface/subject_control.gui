@@ -21,7 +21,7 @@ guiTypes = {
 				x = 5
 				y = 5
 			}
-			Orientation = "UPPER_LEFT"
+			orientation = "UPPER_LEFT"
 		}
 		instantTextBoxType = {
 			name = "title"
@@ -532,6 +532,15 @@ guiTypes = {
 						maxWidth = 100
 						maxHeight = 54
 						format = CENTER
+					}
+					iconType = {
+						name = "power_concentration_limit_warnings"
+						position = {
+							x = 42
+							y = 65
+						}
+						spriteType = "GFX_power_concentration_limit_warnings"
+						pdx_tooltip = "power_concentration_limit"
 					}
 				}
 			}

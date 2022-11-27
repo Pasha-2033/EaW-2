@@ -66,6 +66,24 @@ defined_text = {
 		localization_key = no_cost_index
 	}
 }
+
+defined_text = {
+	name = power_concentration_law_cost
+	text = {
+		trigger = {
+			FROM = {
+				check_variable = {
+					power_concentration_pp_cost_factor > 0
+				}
+			}
+		}
+		localization_key = power_concentration_law_pp_cost
+	}
+	text = {
+		localization_key = no_cost_index
+	}
+}
+
 #tooltips
 defined_text = {
 	name = subject_control_ml_idea_name_tt

@@ -4877,10 +4877,7 @@ subject_power_concentration_1_available = {
 	}
 	else_if = {
 		limit = {
-			OR = {
-				has_idea = anarchy
-				has_idea = medium_power_concentration
-			}
+			has_idea = medium_power_concentration
 		}
 		NOT = {
 			check_variable = {

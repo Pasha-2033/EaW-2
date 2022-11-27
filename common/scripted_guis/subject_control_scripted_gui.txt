@@ -174,6 +174,11 @@ scripted_gui = {
 			}
 		}
 		triggers = {
+			power_concentration_limit_warnings_visible = {
+				overlord = {
+					has_idea = anarchy
+				}
+			}
 			subject_control_mobilization_law_button_click_enabled = {
 				set_temp_variable = {
 					frame_0 = i_0
@@ -1961,7 +1966,7 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
-							subject_power_concentration_0_available = no
+							subject_urbanization_0_available = no
 						}
 						add_to_temp_variable = {
 							frame_5 = 3
@@ -1995,7 +2000,7 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
-							subject_power_concentration_1_available = no
+							subject_urbanization_1_available = no
 						}
 						add_to_temp_variable = {
 							frame_5 = 3
@@ -2029,7 +2034,7 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
-							subject_power_concentration_2_available = no
+							subject_urbanization_2_available = no
 						}
 						add_to_temp_variable = {
 							frame_5 = 3
@@ -2063,7 +2068,7 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
-							subject_power_concentration_3_available = no
+							subject_urbanization_3_available = no
 						}
 						add_to_temp_variable = {
 							frame_5 = 3
@@ -2092,7 +2097,7 @@ scripted_gui = {
 					}
 					else_if = {
 						limit = {
-							subject_power_concentration_4_available = no
+							subject_urbanization_4_available = no
 						}
 						add_to_temp_variable = {
 							frame_5 = 3

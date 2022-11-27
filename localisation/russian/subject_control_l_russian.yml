@@ -5,11 +5,16 @@ subject_control_title: "Управление субьектом §Y[FROM.GetName
 mobilization_law_cost_display_index_value: "Цена уровня:\n[mobilisation_law_cost]"
 trade_cost_display_index_value: "Цена уровня:\n[trade_law_cost]Нужно иметь:\n£non_available_factory_icon [?FROM.trade_acf_cost_factor]"
 economy_cost_display_index_value: "Цена уровня:\n[economy_law_cost]Нужно иметь:\n£non_available_factory_icon [?FROM.economy_acf_cost_factor]"
+
+power_concentration_cost_display_index_value: "Цена уровня:\n[power_concentration_law_cost]"
+
 mobilization_law_both: "$mobilization_law_political_cost$\n$mobilization_law_command_power_cost$"
 mobilization_law_political_cost: "£pol_power_icon §Y[?FROM.mobilization_law_pp_cost_factor]§!"
 mobilization_law_command_power_cost: "£command_power §Y[?FROM.mobilization_law_cp_cost_factor]§!"
 trade_law_pp_cost: "£pol_power_icon §Y[?FROM.trade_pp_cost_factor]§!"
 economy_law_pp_cost: "£pol_power_icon §Y[?FROM.trade_pp_cost_factor]§!"
+
+power_concentration_law_pp_cost: "£pol_power_icon [?FROM.power_concentration_pp_cost_factor]"
 
 #trade_pp_cost_factor - var for trade
 #trade_acf_cost_factor - var for trade
@@ -62,3 +67,5 @@ subject_control_race_intergration_title: "Расовая интеграция"
 current_race_tittle: "Текущая раса"
 new_race_tittle: "Новая раса"
 subject_control_of_subjects_title: "Контроль субъекта над своими субъектами"
+#limits
+power_concentration_limit: "При нашей §Yцентрализации власти§! §R$anarchy$§! нельзя устанавливать большинство законов о §Yцентрализации власти§! субъекту!"
