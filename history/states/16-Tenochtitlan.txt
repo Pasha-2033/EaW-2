@@ -24,14 +24,17 @@ state = {
 		victory_points = {8622 15}
 		962.1.1 = {
 			
-			owner = ICE
+			owner = EEQ
 			add_core_of = EEQ
 			add_claim_by = ICE
 			buildings = {
 				infrastructure = 1
 			}
 		}		
-		1007.1.1 = {}
+		1007.1.1 = {
+			owner = NEQ
+			add_core_of = NEQ
+		}
 		1050.1.1 = {}
 	}
 }

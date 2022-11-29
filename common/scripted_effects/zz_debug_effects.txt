@@ -141,6 +141,10 @@ d_get_tags = {
 		log = "Tag: [?THIS.GetTag], exists: [country_exists_text], dynamic tag: [country_tag_dynamic_text], name: [?THIS.GetName]"
 	}
 }
+
+
+#experimental debug code
+#dangerous, can crash, can break game timecontinium
 d_ver = {
 	set_variable = {
 		global.t = -100
@@ -198,6 +202,7 @@ rec_counter = {
 	}
 }
 d_d = {
+	#DON`T DELETE THIS COMMENT!!!
 	# # - cause next command name, if not in same {} - none
 	# /,\,:,*,@,&,%,?,$,^,№,_,+,|,`,~, more than one "." or their combination - cause text
 	# [...] - cause loc var
@@ -220,12 +225,6 @@ d_d = {
 	}
 	log = "tp0"
 }
-d_s = {
-	log = "start"
-	country_event = {
-		id = recursive.3
-	}
-}
 d_update = {
 	set_temp_variable = {
 		v = tp0v
@@ -241,5 +240,56 @@ d_update = {
 	}
 	set_variable = {
 		tp3v = v
+	}
+}
+d_fix_popularities = {
+	for_each_scope_loop = {
+		array = global.countries
+		if = {
+			limit = {
+				check_variable = {
+					party_popularity@democratic = 0
+				}
+				check_variable = {
+					party_popularity@fascism = 0
+				}
+				check_variable = {
+					party_popularity@neutrality = 0
+				}
+				check_variable = {
+					party_popularity@communism = 0
+				}
+				check_variable = {
+					party_popularity@harmony = 0
+				}
+				check_variable = {
+					party_popularity@socialism = 0
+				}
+				check_variable = {
+					party_popularity@radicalism = 0
+				}
+				check_variable = {
+					party_popularity@unholy = 0
+				}
+				check_variable = {
+					party_popularity@holy = 0
+				}
+				check_variable = {
+					party_popularity@technocracy = 0
+				}
+				check_variable = {
+					party_popularity@anarchism = 0
+				}
+				check_variable = {
+					party_popularity@militarism = 0
+				}
+			}
+			set_popularities = {
+				communism = 100
+			}
+			set_politics = {
+				ruling_party = communism
+			}
+		}
 	}
 }
