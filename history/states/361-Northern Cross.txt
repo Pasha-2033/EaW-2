@@ -1,33 +1,38 @@
-state={
-	id=361
-	name="STATE_361"
-
-	provinces={
-		26 89 166 3031 3160 4974 6017 10744 10901 11036 11137
+state = {
+	id = 361
+	name = "STATE_361"
+	provinces = {
+		26 
+		89 
+		166 
+		3031 
+		3160 
+		4974 
+		10744 
+		10901 
+		11036 
+		11137
 	}
-
-	manpower=45689
+	manpower = 45689
 	state_category = rural
-	buildings_max_level_factor=1.00
-
+	buildings_max_level_factor = 1.00
 	history = {
-		#owner = EQC
-		#add_core_of = EQC
+		victory_points = { 11137 1 }
 		962.1.1 = {
 			owner = ICE
 			add_core_of = ICE
 			add_core_of = EEQ
 		}
-
-		victory_points = { 11137 1 }
-
+		1007.1.1 = {
+			owner = NNM
+			add_core_of = NNM
+		}
 		buildings = {
 			infrastructure = 1
 		}
 	}
-
-	resources={
-		tungsten=15
-		crystals=32
+	resources = {
+		tungsten = 15
+		crystals = 32
 	}
 }

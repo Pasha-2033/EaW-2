@@ -1,32 +1,34 @@
-state={
-	id=365
-	name="STATE_365"
-
-	provinces={
-		3916 5005 5098 6826 7953 10774 12773
+state = {
+	id = 365
+	name = "STATE_365"
+	provinces = {
+		3916 
+		5005 
+		5098 
+		6826 
+		7953 
+		10774 
+		12773
 	}
-
-	manpower=134560
+	manpower = 134560
 	state_category = rural
-	buildings_max_level_factor=1.00
-
+	buildings_max_level_factor = 1.00
 	history = {
-		#owner = EQC
-		#add_core_of = EQC
+		victory_points = { 5005 1 }
 		962.1.1 = {
 			owner = ENM
 			add_claim_by = ICE
 			add_core_of = ENM
 		}
-
-		victory_points = { 5005 1 }
-
+		1007.1.1 = {
+			owner = NNM
+			add_core_of = NNM
+		}
 		buildings = {
 			infrastructure = 2
 		}
 	}
-
-	resources={
+	resources = {
 		steel = 6
 		tungsten = 10
 	}

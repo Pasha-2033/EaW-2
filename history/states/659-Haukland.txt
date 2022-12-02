@@ -1,32 +1,35 @@
-state={
-	id=659
-	name="STATE_659"
-
-	provinces={
-		7463 7327 12181 12280 9059 9165 10138
+state = {
+	id = 659
+	name = "STATE_659"
+	provinces = {
+		7463 
+		7327 
+		12181 
+		12280 
+		9059 
+		9165 
+		10138
 	}
-
-	manpower=395600
+	manpower = 395600
 	state_category = large_town
-	buildings_max_level_factor=1.00
-
+	buildings_max_level_factor = 1.00
 	history = {
-		#owner = HAU
-		#add_core_of = HAU
 		962.1.1 = {
-			owner = ELN
-			add_core_of = ELN
+			owner = ENM
+			add_claim_by = ICE
+			add_core_of = ENM
 		}
-
+		1007.1.1 = {
+			owner = NNM
+			add_core_of = NNM
+		}
 		victory_points = { 7463 15 }
-
 		buildings = {
 			infrastructure = 2
 			industrial_complex = 2
 			arms_factory = 1
 			dockyard = 1
 			air_base = 2
-
 			7463 = {
 				naval_base = 3
 			}
@@ -35,7 +38,6 @@ state={
 			}
 		}
 	}
-
 	resources = {
 		oil = 4
 		steel = 3
