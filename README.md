@@ -1,9 +1,13 @@
 # Equestria at War 2
 <h2>This is mod repository.</h2>
-It also contains some modules that can be used in your mode.  
-<a href="https://github.com/Pasha-2033/EaW-2/blob/master/common/mtth/math_operators.txt">Math module</a>  
-<a href="https://github.com/Pasha-2033/EaW-2/blob/master/common/scripted_effects/array_operators.txt">Array module</a>  
-<a href="https://github.com/Pasha-2033/EaW-2/blob/master/common/scripted_effects/data_storage_operators.txt">Data extention module</a>  
+It also contains some modules that can be used in your mode.
+</br>
+<a href="https://github.com/Pasha-2033/EaW-2/blob/master/common/mtth/math_operators.txt">Math module</a>
+</br>
+<a href="https://github.com/Pasha-2033/EaW-2/blob/master/common/scripted_effects/array_operators.txt">Array module</a>
+</br>
+<a href="https://github.com/Pasha-2033/EaW-2/blob/master/common/scripted_effects/data_storage_operators.txt">Data extention module</a>
+</br>
 <a href="https://github.com/Pasha-2033/EaW-2/blob/master/events/recursive.txt">Thread module</a>  
 
 # Mod documentation (scenario and mechanics, tech and events)
