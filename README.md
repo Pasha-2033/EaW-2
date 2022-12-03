@@ -56,7 +56,8 @@ coming soon!
 Allows to create async threads, that can be synchronised through static values.
 
 # Mod code documentation
-Isn`t done yet
+Very important notes added to .doc files and files that starts from "00_".
+Isn`t done yet.
 
 # Vanila mod:
 This item is not authorized for posting on Steam, except under the Steam account named "Equestria At War Team" (https://steamcommunity.com/id/Equestria_At_War).
