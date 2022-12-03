@@ -14,274 +14,126 @@
 #    e) depending on tag, add an entry in operative_add_secondary_nationalities and operative_handle_secondary_cultures_races
 
 #Race triggers, not all gefined
-is_mylti_race = {
-	has_idea = mylti_race
-}
-is_pony_race = {
-	has_idea = pony_race
-}
-is_changeling_race = {
-	has_idea = changeling_race
-}
-is_deer_race = {
-	has_idea = deer_race
-}
-is_griffon_race = {
-	has_idea = griffon_race
-}
-is_hippogriff_race = {
-	has_idea = hippogriff_race
-}
-is_diamond_dog_race = {
-	has_idea = diamond_dog_race
-}
-is_minotaur_race = {
-	has_idea = minotaur_race
-}
-is_penguin_race = {
-	has_idea = penguin_race
-}
-is_dragon_race = {
-	has_idea = dragon_race
-}
-is_undead_race = {
-	has_idea = undead_race
-}
-is_buffalo_race = {
-	has_idea = buffalo_race
-}
-is_yak_race = {
-	has_idea = yak_race
-}
-is_polar_race = {
-	has_idea = polar_race
-}
-is_ice_spirits_race = {
-	has_idea = ice_spirits_race
-}
-is_generic_race = {
-	has_idea = generic_race
-}
-
-has_generic_race_tech = {
-	has_tech = generic_race
-	is_generic_race = yes
-}
-has_pony_race_tech = {
-	has_tech = pony_race
-	OR = {
-		is_pony_race = yes
-		is_mylti_race = yes
-	}
-}
-has_changeling_race_tech = {
-	has_tech = changeling_race
-	OR = {
-		is_changeling_race = yes
-		is_mylti_race = yes
-	}
-}
-has_deer_race_tech = {
-	has_tech = deer_race
-	OR = {
-		is_deer_race = yes
-		is_mylti_race = yes
-	}
-}
-has_griffon_race_tech = {
-	has_tech = griffon_race
-	OR = {
-		is_griffon_race = yes
-		is_mylti_race = yes
-	}
-}
-#has_hippogriff_race_tech = {
-#	has_tech = hippogriff_race
-#	OR = {
-#		is_hippogriff_race = yes
-#		is_mylti_race = yes
-#	}
-#}
-has_diamond_dog_race_tech = {
-	has_tech = diamond_dog_race
-	OR = {
-		is_diamond_dog_race = yes
-		is_mylti_race = yes
-	}
-}
-#has_minotaur_race_tech = {
-#	has_tech = minotaur_race
-#	OR = {
-#		is_minotaur_race = yes
-#		is_mylti_race = yes
-#	}
-#}
-#has_penguin_race_tech = {
-#	has_tech = penguin_race
-#	OR = {
-#		is_penguin_race = yes
-#		is_mylti_race = yes
-#	}
-#}
-#has_dragon_race_tech = {
-#	has_tech = dragon_race
-#	OR = {
-#		is_dragon_race = yes
-#		is_mylti_race = yes
-#	}
-#}
-#has_undead_race_tech = {
-#	has_tech = undead_race
-#	is_undead_race = yes
-#}
-#has_buffalo_race_tech = {
-#	has_tech = buffalo_race
-#	OR = {
-#		is_buffalo_race = yes
-#		is_mylti_race = yes
-#	}
-#}
-#has_yak_race_tech = {
-#	has_tech = yak_race
-#	OR = {
-#		is_yak_race = yes
-#		is_mylti_race = yes
-#	}
-#}
-#has_polar_tech_race = {
-#	has_tech = polar_race
-#	OR = {
-#		is_polar_race = yes
-#		is_mylti_race = yes
-#	}
-#}
-#has_ice_spirits_race_tech = {
-#	has_tech = ice_spirits_race
-#	is_ice_spirits_race = yes
-#}
-
-#has_barrad_race_tech need to be fixed
-has_barrad_race_tech = {
-	always = no
-}
-
 is_same_race_as_PREV = {
 	OR = {
 		AND = {
-			is_pony_race = yes
+			has_idea = pony_race
 			PREV = {
-				is_pony_race = yes
+				has_idea = pony_race
 			}
 		}
 		AND = {
-			is_changeling_race = yes
+			has_idea = changeling_race
 			PREV = {
-				is_changeling_race = yes
+				has_idea = changeling_race
 			}
 		}
 		AND = {
-			is_deer_race = yes
+			has_idea = deer_race
 			PREV = {
-				is_deer_race = yes
+				has_idea = deer_race
 			}
 		}
 		AND = {
-			is_griffon_race = yes
+			has_idea = griffon_race
 			PREV = {
-				is_griffon_race = yes
+				has_idea = griffon_race
 			}
 		}
 		AND = {
-			is_diamond_dog_race = yes
+			has_idea = diamond_dog_race
 			PREV = {
-				is_diamond_dog_race = yes
+				has_idea = diamond_dog_race
 			}
 		}
 		AND = {
-			is_buffalo_race = yes
+			has_idea = buffalo_race
 			PREV = {
-				is_buffalo_race = yes
+				has_idea = buffalo_race
 			}
 		}
 		AND = {
-			is_deer_race = yes
+			has_idea = deer_race
 			PREV = {
-				is_deer_race = yes
+				has_idea = deer_race
 			}
 		}
 		AND = {
-			is_dragon_race = yes
+			has_idea = dragon_race
 			PREV = {
-				is_dragon_race = yes
+				has_idea = dragon_race
 			}
 		}
 		AND = {
-			is_hippogriff_race = yes
+			has_idea = hippogriff_race
 			PREV = {
-				is_hippogriff_race = yes
+				has_idea = hippogriff_race
 			}
 		}
 		AND = {
-			is_minotaur_race = yes
+			has_idea = minotaur_race
 			PREV = {
-				is_minotaur_race = yes
+				has_idea = minotaur_race
 			}
 		}
 		AND = {
-			is_polar_race = yes
+			has_idea = polar_race
 			PREV = {
-				is_polar_race = yes
+				has_idea = polar_race
 			}
 		}
 		AND = {
-			is_yak_race = yes
+			has_idea = yak_race
 			PREV = {
-				is_yak_race = yes
+				has_idea = yak_race
 			}
 		}
 		AND = {
-			is_undead_race = yes
+			has_idea = undead_race
 			PREV = {
-				is_undead_race = yes
+				has_idea = undead_race
 			}
 		}
 		AND = {
-			is_ice_spirits_race = yes
+			has_idea = ice_spirits_race
 			PREV = {
-				is_ice_spirits_race = yes
+				has_idea = ice_spirits_race
 			}
 		}
 		AND = {
-			is_generic_race = yes
+			has_idea = generic_race
 			PREV = {
-				is_generic_race = yes
+				has_idea = generic_race
 			}
 		}
 		AND = {
-			is_mylti_race = yes
+			has_idea = mylti_race
 			PREV = {
-				is_mylti_race = yes
+				has_idea = mylti_race
 			}
 		}
 	}
 }
-
 is_incompatible_races = {
 	OR = {
 		AND = {
-			is_undead_race = yes
+			has_idea = undead_race
 			PREV = {
-				is_undead_race = no
+				NOT = {
+					has_idea = undead_race
+				}
 			}
 		}
 		AND = {
-			is_ice_spirits_race = yes
+			has_idea = ice_spirits_race
 			PREV = {
-				is_ice_spirits_race = no
+				NOT = {
+					has_idea = ice_spirits_race
+				}
 			}
 		}
 		AND = {
-			is_dragon_race = yes
+			has_idea = dragon_race
 			NOT = {
 				OR = {
 					has_government = harmony
@@ -290,11 +142,11 @@ is_incompatible_races = {
 				}
 			}
 			PREV = {
-				is_hippogriff_race = yes
+				has_idea = hippogriff_race
 			}
 		}
 		AND = {
-			is_hippogriff_race = yes
+			has_idea = hippogriff_race
 			NOT = {
 				OR = {
 					has_government = harmony
@@ -303,24 +155,23 @@ is_incompatible_races = {
 				}
 			}
 			PREV = {
-				is_dragon_race = yes
+				has_idea = dragon_race
 			}
 		}
 	}
 }
-
 is_compatible_races = {
 	OR = {
 		AND = {
-			is_buffalo_race = yes
+			has_idea = buffalo_race
 			PREV = {
-				is_yak_race = yes
+				has_idea = yak_race
 			}
 		}
 		AND = {
-			is_yak_race = yes
+			has_idea = yak_race
 			PREV = {
-				is_buffalo_race = yes
+				has_idea = buffalo_race
 			}
 		}
 		AND = {
@@ -330,13 +181,17 @@ is_compatible_races = {
 				has_government = communism
 			}
 			AND = {
-				is_mylti_race = no
-				is_generic_race = no
-				is_ice_spirits_race = no
-				is_undead_race = no
+				NOT = {
+					OR = {
+						has_idea = mylti_race
+						has_idea = generic_race
+						has_idea = ice_spirits_race
+						has_idea = undead_race
+					}
+				}
 			}
 			PREV = {
-				is_changeling_race = yes
+				has_idea = changeling_race
 				OR = {
 					has_government = harmony
 					has_government = socialism
@@ -352,7 +207,7 @@ is_compatible_races = {
 			}
 		}
 		AND = {
-			is_changeling_race = yes
+			has_idea = changeling_race
 			OR = {
 				has_government = harmony
 				has_government = socialism
@@ -372,16 +227,19 @@ is_compatible_races = {
 					has_government = communism
 				}
 				AND = {
-					is_mylti_race = no
-					is_generic_race = no
-					is_ice_spirits_race = no
-					is_undead_race = no
+					NOT = {
+						OR = {
+							has_idea = mylti_race
+							has_idea = generic_race
+							has_idea = ice_spirits_race
+							has_idea = undead_race
+						}
+					}
 				}
 			}
 		}
 	}
 }
-
 is_state_main_culture_changeling = {
 	OR = {
 		is_in_array = {
@@ -434,7 +292,7 @@ is_state_main_culture_changeling = {
 
 
 
-
+#fix shit below!!!
 
 
 
@@ -494,10 +352,12 @@ uses_griffon_WNG_portraits = {
 
 uses_changeling_portraits = {
 	OR = {
-		original_tag = CHN
-		original_tag = CCN
-		original_tag = NCH
-		original_tag = MAN
+		original_tag = VES
+		original_tag = VRA
+		original_tag = LIK
+		original_tag = SOR
+		original_tag = DIS
+		original_tag = UCH
 	}
 }
 

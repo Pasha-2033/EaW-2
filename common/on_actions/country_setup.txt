@@ -98,7 +98,7 @@ on_actions = {
 					else = {
 						if = {
 							limit = {
-								is_mylti_race = yes
+								has_idea = mylti_race
 							}
 							set_technology = {
 								pony_race = 1
@@ -111,7 +111,7 @@ on_actions = {
 						}
 						else_if = {
 							limit = {
-								is_pony_race = yes
+								has_idea = pony_race
 							}
 							set_technology = {
 								pony_race = 1
@@ -120,7 +120,7 @@ on_actions = {
 						}
 						else_if = {
 							limit = {
-								is_changeling_race = yes
+								has_idea = changeling_race
 							}
 							set_technology = {
 								changeling_race = 1
@@ -129,7 +129,7 @@ on_actions = {
 						}
 						else_if = {
 							limit = {
-								is_deer_race = yes
+								has_idea = deer_race
 							}
 							set_technology = {
 								deer_race = 1
@@ -138,7 +138,7 @@ on_actions = {
 						}
 						else_if = {
 							limit = {
-								is_griffon_race = yes
+								has_idea = griffon_race
 							}
 							set_technology = {
 								griffon_race = 1
@@ -147,7 +147,7 @@ on_actions = {
 						}
 						else_if = {
 							limit = {
-								is_diamond_dog_race = yes
+								has_idea = diamond_dog_race
 							}
 							set_technology = {
 								diamond_dog_race = 1

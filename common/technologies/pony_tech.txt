@@ -379,7 +379,7 @@ technologies = {
 		on_research_complete = {
 			if = {
 				limit = {
-					has_pony_race_tech = yes
+					is_pony_mylti = yes
 					NOT = {
 						has_template_containing_unit = pegasi
 					}

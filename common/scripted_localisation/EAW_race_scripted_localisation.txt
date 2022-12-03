@@ -11,43 +11,43 @@ defined_text = { # Country
 	name = GetRaceName
 	text = {
 		trigger = {
-			is_griffon_race = yes
+			has_idea = griffon_race
 		}
 		localization_key = griffon_race_type
 	}
 	text = {
 		trigger = {
-			is_pony_race = yes
+			has_idea = pony_race
 		}
 		localization_key = pony_race_type
 	}
 	text = {
 		trigger = {
-			is_buffalo_race = yes
+			has_idea = buffalo_race
 		}
 		localization_key = buffalo_race_type
 	}
 	text = {
 		trigger = {
-			is_changeling_race = yes
+			has_idea = changeling_race
 		}
 		localization_key = changeling_race_type
 	}
 	text = {
 		trigger = {
-			is_deer_race = yes
+			has_idea = deer_race
 		}
 		localization_key = deer_race_type
 	}
 	text = {
 		trigger = {
-			is_diamond_dog_race = yes
+			has_idea = diamond_dog_race
 		}
 		localization_key = diamond_dog_race_type
 	}
 	text = {
 		trigger = {
-			is_yak_race = yes
+			has_idea = yak_race
 		}
 		localization_key = yak_race_type
 	}
@@ -56,18 +56,18 @@ defined_text = { # Country
 	name = GetHand
 	text = {
 		trigger = {
-			is_griffon_race = yes
+			has_idea = griffon_race
 		}
 		localization_key = hand_talon
 	}
 	text = {
 		trigger = {
 			OR = {
-				is_pony_race = yes
-				is_deer_race = yes
-				is_changeling_race = yes
-				is_yak_race = yes
-				is_buffalo_race = yes
+				has_idea = pony_race
+				has_idea = deer_race
+				has_idea = changeling_race
+				has_idea = yak_race
+				has_idea = buffalo_race
 			}
 		}
 		localization_key = hand_hoof
@@ -75,15 +75,15 @@ defined_text = { # Country
 	text = {
 		trigger = {
 			OR = {
-				is_diamond_dog_race = yes
-				is_polar_race = yes
+				has_idea = diamond_dog_race
+				has_idea = polar_race
 			}
 		}
 		localization_key = hand_paw
 	}
 	text = {
 		trigger = {
-			is_generic_race = yes
+			has_idea = generic_race
 		}
 		localization_key = hand_appendage
 	}
@@ -92,18 +92,18 @@ defined_text = { # Country
 	name = GetHands
 	text = {
 		trigger = {
-			is_griffon_race = yes
+			has_idea = griffon_race
 		}
 		localization_key = hand_talons
 	}
 	text = {
 		trigger = {
 			OR = {
-				is_pony_race = yes
-				is_deer_race = yes
-				is_changeling_race = yes
-				is_yak_race = yes
-				is_buffalo_race = yes
+				has_idea = pony_race
+				has_idea = deer_race
+				has_idea = changeling_race
+				has_idea = yak_race
+				has_idea = buffalo_race
 			}
 		}
 		localization_key = hand_hooves
@@ -111,15 +111,15 @@ defined_text = { # Country
 	text = {
 		trigger = {
 			OR = {
-				is_diamond_dog_race = yes
-				is_polar_race = yes
+				has_idea = diamond_dog_race
+				has_idea = polar_race
 			}
 		}
 		localization_key = hand_paws
 	}
 	text = {
 		trigger = {
-			is_generic_race = yes
+			has_idea = generic_race
 		}
 		localization_key = hand_appendages
 	}
@@ -128,37 +128,37 @@ defined_text = { # Country
 	name = GetRaceMember
 	text = {
 		trigger = {
-			is_griffon_race = yes
+			has_idea = griffon_race
 		}
 		localization_key = member_griffon
 	}
 	text = {
 		trigger = {
-			is_pony_race = yes
+			has_idea = pony_race
 		}
 		localization_key = member_pony
 	}
 	text = {
 		trigger = {
-			is_deer_race = yes
+			has_idea = deer_race
 		}
 		localization_key = member_deer
 	}
 	text = {
 		trigger = {
-			is_changeling_race = yes
+			has_idea = changeling_race
 		}
 		localization_key = member_changeling
 	}
 	text = {
 		trigger = {
-			is_diamond_dog_race = yes
+			has_idea = diamond_dog_race
 		}
 		localization_key = member_diamond_dog
 	}
 	text = {
 		trigger = {
-			is_generic_race = yes
+			has_idea = generic_race
 		}
 		localization_key = member_being
 	}
@@ -167,37 +167,37 @@ defined_text = { # Country
 	name = GetRaceMembers
 	text = {
 		trigger = {
-			is_griffon_race = yes
+			has_idea = griffon_race
 		}
 		localization_key = member_griffons
 	}
 	text = {
 		trigger = {
-			is_pony_race = yes
+			has_idea = pony_race
 		}
 		localization_key = member_ponies
 	}
 	text = {
 		trigger = {
-			is_deer_race = yes
+			has_idea = deer_race
 		}
 		localization_key = member_deer
 	}
 	text = {
 		trigger = {
-			is_changeling_race = yes
+			has_idea = changeling_race
 		}
 		localization_key = member_changelings
 	}
 	text = {
 		trigger = {
-			is_diamond_dog_race = yes
+			has_idea = diamond_dog_race
 		}
 		localization_key = member_diamond_dogs
 	}
 	text = {
 		trigger = {
-			is_generic_race = yes
+			has_idea = generic_race
 		}
 		localization_key = member_beings
 	}

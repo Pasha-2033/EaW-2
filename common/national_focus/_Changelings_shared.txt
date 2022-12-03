@@ -803,7 +803,7 @@ shared_focus = {
 		#add
 	}
 }
-#focuses for improving political system (common, if main political branch is finished!), for is_changeling_race = yes
+#focuses for improving political system (common, if main political branch is finished!), for has_idea = changeling_race
 #queen tree
 shared_focus = {
 	id = shared_focus_changelings_polit_system_temp
@@ -811,7 +811,7 @@ shared_focus = {
 	cost = 5
 	allow_branch = {
 		is_female = yes
-		is_changeling_race = yes
+		has_idea = changeling_race
 	}
 	ai_will_do = {
 		factor = 200

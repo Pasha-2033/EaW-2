@@ -1684,6 +1684,19 @@ ideas = {
 			visible = {
 				has_idea = generic_race
 			}
+			on_add = {
+				if = {
+					limit = {
+						NOT = {
+							has_tech = generic_race
+						}
+					}
+					set_technology = {
+						generic_race = 1
+						popup = no
+					}
+				}
+			}
 			removal_cost = -1
 			default = yes
 			cancel_if_invalid = no
@@ -1699,6 +1712,63 @@ ideas = {
 			visible = {
 				can_have_mylti_race = yes
 			}
+			on_add = {
+				if = {
+					limit = {
+						NOT = {
+							has_tech = pony_race
+						}
+					}
+					set_technology = {
+						pony_race = 1
+						popup = no
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_tech = changeling_race
+						}
+					}
+					set_technology = {
+						changeling_race = 1
+						popup = no
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_tech = deer_race
+						}
+					}
+					set_technology = {
+						deer_race = 1
+						popup = no
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_tech = griffon_race
+						}
+					}
+					set_technology = {
+						griffon_race = 1
+						popup = no
+					}
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_tech = diamond_dog_race
+						}
+					}
+					set_technology = {
+						diamond_dog_race = 1
+						popup = no
+					}
+				}
+			}
 			cost = 250
 			removal_cost = -1
 			cancel_if_invalid = no
@@ -1712,6 +1782,19 @@ ideas = {
 			}
 			visible = {
 				is_pony_mylti = yes
+			}
+			on_add = {
+				if = {
+					limit = {
+						NOT = {
+							has_tech = pony_race
+						}
+					}
+					set_technology = {
+						pony_race = 1
+						popup = no
+					}
+				}
 			}
 			cost = 250
 			removal_cost = -1
@@ -1727,6 +1810,19 @@ ideas = {
 			visible = {
 				is_changeling_mylti = yes
 			}
+			on_add = {
+				if = {
+					limit = {
+						NOT = {
+							has_tech = changeling_race
+						}
+					}
+					set_technology = {
+						changeling_race = 1
+						popup = no
+					}
+				}
+			}
 			cost = 250
 			removal_cost = -1
 			cancel_if_invalid = no
@@ -1740,6 +1836,19 @@ ideas = {
 			}
 			visible = {
 				is_deer_mylti = yes
+			}
+			on_add = {
+				if = {
+					limit = {
+						NOT = {
+							has_tech = deer_race
+						}
+					}
+					set_technology = {
+						deer_race = 1
+						popup = no
+					}
+				}
 			}
 			cost = 250
 			removal_cost = -1
@@ -1759,6 +1868,19 @@ ideas = {
 				OR = {
 					has_idea = mylti_race
 					has_idea = griffon_race
+				}
+			}
+			on_add = {
+				if = {
+					limit = {
+						NOT = {
+							has_tech = griffon_race
+						}
+					}
+					set_technology = {
+						griffon_race = 1
+						popup = no
+					}
 				}
 			}
 			cost = 250
@@ -1802,6 +1924,19 @@ ideas = {
 					has_idea = diamond_dog_race
 				}
 			}
+			on_add = {
+				if = {
+					limit = {
+						NOT = {
+							has_tech = diamond_dog_race
+						}
+					}
+					set_technology = {
+						diamond_dog_race = 1
+						popup = no
+					}
+				}
+			}
 			cost = 250
 			removal_cost = -1
 			cancel_if_invalid = no
@@ -1821,6 +1956,19 @@ ideas = {
 				OR = {
 					has_idea = mylti_race
 					has_idea = minotaur_race
+				}
+			}
+			on_add = {
+				if = {
+					limit = {
+						NOT = {
+							has_tech = minotaur_race
+						}
+					}
+					set_technology = {
+						minotaur_race = 1
+						popup = no
+					}
 				}
 			}
 			cost = 250

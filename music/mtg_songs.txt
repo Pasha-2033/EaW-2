@@ -53,7 +53,9 @@ music = {
 	chance = {
 		factor = 1
 		modifier = {
-			is_pony_race = no
+			NOT = {
+				has_idea = pony_race
+			}
 			factor = 0
 		}
 		modifier = {

@@ -12,13 +12,15 @@ defined_text = { # Country
 	name = GetAviationEffortDesc
 	text = {
 		trigger = {
-			is_griffon_race = yes
+			has_idea = griffon_race
 		}
 		localization_key = griffon_aviation_effort_desc_grif
 	}
 	text = {
 		trigger = {
-			is_griffon_race = no
+			NOT = {
+				has_idea = griffon_race
+			}
 		}
 		localization_key = griffon_aviation_effort_desc_other
 	}
@@ -27,13 +29,15 @@ defined_text = { # Country
 	name = GetPopularRevolutionDesc
 	text = {
 		trigger = {
-			is_griffon_race = yes
+			has_idea = griffon_race
 		}
 		localization_key = griffon_popular_revolution_desc_grif
 	}
 	text = {
 		trigger = {
-			is_griffon_race = no
+			NOT = {
+				has_idea = griffon_race
+			}
 		}
 		localization_key = griffon_popular_revolution_desc_other
 	}
@@ -42,20 +46,24 @@ defined_text = { # Country
 	name = GetTraditionalWarfareDesc
 	text = {
 		trigger = {
-			is_griffon_race = yes
+			has_idea = griffon_race
 		}
 		localization_key = griffon_traditonal_warfair_desc_grif
 	}
 	text = {
 		trigger = {
-			is_pony_race = yes
+			has_idea = pony_race
 		}
 		localization_key = griffon_traditonal_warfair_desc_pony
 	}
 	text = {
 		trigger = {
-			is_pony_race = no
-			is_griffon_race = no
+			NOT = {
+				has_idea = pony_race
+			}
+			NOT = {
+				has_idea = griffon_race
+			}
 		}
 		localization_key = griffon_traditonal_warfair_desc_other
 	}
