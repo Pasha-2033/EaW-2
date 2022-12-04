@@ -1,0 +1,407 @@
+focus_tree = {
+	id = default_962_focus_tree
+	country = {
+		base = 0
+		modifier = {
+			add = 1000
+			has_country_flag = default_962_focus_tree
+		}
+	}
+	continuous_focus_position = { 
+		x = 100 
+		y = 1500 
+	}
+	default = no
+	shared_focus = shared_focus_gpa_goverment_is_forced
+	focus = {
+		id = default_962_army_effort
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		x = 8
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_army_effort"
+		}
+	}
+	focus = {
+		id = default_962_special_forces
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_962_army_effort
+		prerequisite = {
+			focus = default_962_army_effort
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = -6
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_special_forces"
+		}
+	}
+	focus = {
+		id = default_962_national_guard
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_962_special_forces
+		prerequisite = {
+			focus = default_962_special_forces
+		}
+		mutually_exclusive = {
+			focus = default_962_royal_guard
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_national_guard"
+		}
+	}
+	focus = {
+		id = default_962_royal_guard
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_962_special_forces
+		prerequisite = {
+			focus = default_962_special_forces
+		}
+		mutually_exclusive = {
+			focus = default_962_national_guard
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_royal_guard"
+		}
+	}
+	focus = {
+		id = default_962_intencive_training
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id =default_962_royal_guard
+		prerequisite = {
+			focus = default_962_royal_guard
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_intencive_training"
+		}
+	}
+	focus = {
+		id = default_962_new_type_of_army
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_962_intencive_training
+		prerequisite = {
+			focus = default_962_intencive_training
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_new_type_of_army"
+		}
+	}
+	focus = {
+		id = default_962_urban_fighting
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_962_new_type_of_army
+		prerequisite = {
+			focus = default_962_new_type_of_army
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_urban_fighting"
+		}
+	}
+	focus = {
+		id = default_962_broad_training_program
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_962_national_guard
+		prerequisite = {
+			focus = default_962_national_guard
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_broad_training_program"
+		}
+	}
+	focus = {
+		id = default_962_cooperation_with_special_troops
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_962_broad_training_program
+		prerequisite = {
+			focus = default_962_broad_training_program
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_cooperation_with_special_troops"
+		}
+	}
+	focus = {
+		id = default_962_law_enforcement_officers
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_962_cooperation_with_special_troops
+		prerequisite = {
+			focus = default_962_cooperation_with_special_troops
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_law_enforcement_officers"
+		}
+	}
+	focus = {
+		id = default_962_experimental_army_technologies
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_962_army_effort
+		prerequisite = {
+			focus = default_962_army_effort
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_experimental_army_technologies"
+		}
+	}
+	focus = {
+		id = default_962_experimental_armored_car
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_962_experimental_army_technologies
+		prerequisite = {
+			focus = default_962_experimental_army_technologies
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_experimental_armored_car"
+		}
+	}
+	focus = {
+		id = default_962_experimental_tank
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_962_experimental_armored_car
+		prerequisite = {
+			focus = default_962_experimental_armored_car
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_experimental_tank"
+		}
+	}
+	focus = {
+		id = default_962_experimental_artillery
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_962_experimental_army_technologies
+		prerequisite = {
+			focus = default_962_experimental_army_technologies
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = -3
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_experimental_artillery"
+		}
+	}
+	focus = {
+		id = default_962_improve_artillery
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_962_experimental_artillery
+		prerequisite = {
+			focus = default_962_experimental_artillery
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_improve_artillery"
+		}
+	}
+	focus = {
+		id = default_962_improve_armored_car
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_962_experimental_armored_car
+		prerequisite = {
+			focus = default_962_experimental_armored_car
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_improve_armored_car"
+		}
+	}
+	focus = {
+		id = default_962_improve_tank
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_962_experimental_tank
+		prerequisite = {
+			focus = default_962_experimental_tank
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_improve_tank"
+		}
+	}
+	focus = {
+		id = default_962_motorised_infantry
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_962_experimental_army_technologies
+		prerequisite = {
+			focus = default_962_experimental_army_technologies
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 3
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_motorised_infantry"
+		}
+	}
+	focus = {
+		id = default_962_mechanised_infantry
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_962_improve_armored_car
+		prerequisite = {
+			focus = default_962_improve_armored_car
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_mechanised_infantry"
+		}
+	}
+	focus = {
+		id = default_962_new_doctrine
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_962_army_effort
+		prerequisite = {
+			focus = default_962_army_effort
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 6
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_new_doctrine"
+		}
+	}
+	focus = {
+		id = default_962_supply_effort
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_962_new_doctrine
+		prerequisite = {
+			focus = default_962_new_doctrine
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_supply_effort"
+		}
+	}
+
+
+
+
+	focus = {
+		id = default_962_economy_effort
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		x = 20
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_economy_effort"
+		}
+	}
+
+
+	focus = {
+		id = default_962_political_effort
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		x = 22
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_political_effort"
+		}
+	}
+}

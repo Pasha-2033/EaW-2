@@ -37,6 +37,12 @@ no_cost_index: "Бесплатно\n"
 #tooltip localisation
 subject_control_ml_idea_tt: "[subject_control_ml_idea_name_tt]"
 subject_control_ml_cost_tt: "[subject_control_ml_idea_cost_tt]"
+
+subject_control_e_idea_tt: "[subject_control_e_idea_name_tt]"
+#to do (and scripted loc)
+subject_control_pc_idea_tt: ""
+subject_control_pc_cost_tt: "add cost value (to do)\ncheck_variable={i_4 > 1} crashes - need fixes\n[power_concentration_limit_tt_delayed]"
+#errors
 no_idea_name: "§RОшибка:\nНазвание идеи не указано!§!"
 #title tooltips
 subject_control_title_tt: "Меню установки законов для субъекта"
@@ -68,4 +74,6 @@ current_race_tittle: "Текущая раса"
 new_race_tittle: "Новая раса"
 subject_control_of_subjects_title: "Контроль субъекта над своими субъектами"
 #limits
-power_concentration_limit: "При нашей §Yцентрализации власти§! §R$anarchy$§! нельзя устанавливать большинство законов о §Yцентрализации власти§! субъекту!"
+power_concentration_limit: "[power_concentration_limit_sl]"
+power_concentration_limit_sl_key: "Обладая §Yстепенью централизации власти§! §R$anarchy$§! мы не сможем установить множество законов субъекта о §Yстепени централизации власти§!!"
+power_concentration_limit_individual: "\nМы обладаем §Yстепенью централизации власти§! §R$anarchy$§!, это не позволяет нам установить этот закон!"

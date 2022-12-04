@@ -31,26 +31,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = eeq_focus_unfreeze
-		icon = GFX_goal_twilight_makes_friends
-		cost = 1
-		ai_will_do = {
-			factor = 200
-		}
-		relative_position_id = eeq_focus_unfreeze
-		prerequisite = {
-			focus = eeq_focus_unfreeze
-		}
-		x = 10
-		y = 1
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus eeq_focus_unfreeze"
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-	}
-	focus = {
 		id = eeq_twilight_makes_friends
 		icon = GFX_goal_twilight_makes_friends
 		cost = 1
@@ -64,7 +44,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus eeq_focus_unfreeze"
+			log = "[GetDateText]: [Root.GetName]: eeq_twilight_makes_friends"
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -84,7 +64,7 @@ focus_tree = {
 		x = 0
 		y = 1
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus eeq_focus_unfreeze"
+			log = "[GetDateText]: [Root.GetName]: Focus eeq_meet_pinky_pie"
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -104,7 +84,7 @@ focus_tree = {
 		x = 2
 		y = 1
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus eeq_focus_unfreeze"
+			log = "[GetDateText]: [Root.GetName]: Focus eeq_meet_apple_jack"
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -124,7 +104,7 @@ focus_tree = {
 		x = -2
 		y = 1
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus eeq_focus_unfreeze"
+			log = "[GetDateText]: [Root.GetName]: Focus eeq_meet_rainbow_dash"
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -144,7 +124,7 @@ focus_tree = {
 		x = -4
 		y = 1
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus eeq_focus_unfreeze"
+			log = "[GetDateText]: [Root.GetName]: Focus eeq_meet_rarity"
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -164,7 +144,7 @@ focus_tree = {
 		x = 4
 		y = 1
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus eeq_focus_unfreeze"
+			log = "[GetDateText]: [Root.GetName]: Focus eeq_meet_fluttershy"
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -196,7 +176,7 @@ focus_tree = {
 		x = 0
 		y = 2
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus eeq_focus_unfreeze"
+			log = "[GetDateText]: [Root.GetName]: Focus eeq_reveal_the_sixth_element_of_harmony"
 
 		}
 		search_filters = {
