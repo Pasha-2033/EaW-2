@@ -309,11 +309,13 @@ defined_text = {
 		trigger = {
 			always = yes
 			#why crashes?
-			#check_variable = {
-			#	i_4 > 1
-			#}
+			check_variable = {
+				i_4 > 0
+			}
 		}
 		localization_key = power_concentration_limit_individual
 	}
-	text = ""
+	text = {
+		localization_key = ""
+	}
 }
