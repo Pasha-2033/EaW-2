@@ -8,7 +8,9 @@ It also contains some modules that can be used in your mode.
 </br>
 <a href="https://github.com/Pasha-2033/EaW-2/blob/master/common/scripted_effects/data_storage_operators.txt">Data extention module</a>
 </br>
-<a href="https://github.com/Pasha-2033/EaW-2/blob/master/events/recursive.txt">Thread module</a>  
+<a href="https://github.com/Pasha-2033/EaW-2/blob/master/events/recursive.txt">Thread module</a>
+</br>
+<a href="https://github.com/Pasha-2033/EaW-2/blob/master/common/scripted_effects/unit_generator_scripted_effects.txt">Unit generator</a> 
 
 # Mod documentation (scenario and mechanics, tech and events)
 [English](docs/English.md)  
@@ -54,6 +56,9 @@ coming soon!
 
 # Thread module
 Allows to create async threads, that can be synchronised through static values.
+
+# Unit gerator
+Allows to spawn country units on_start_up without oob file (witch contains division location).
 
 # Mod code documentation
 Very important notes added to .doc files and files that starts from "00_".
