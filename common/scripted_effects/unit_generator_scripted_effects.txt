@@ -1,10 +1,16 @@
 #Created by lead programmer of EaW 2 (vk: @uber_medic, @communistic_sistema) https://github.com/Pasha-2033/EaW-2
-#vesrion 0.5
+#vesrion 1.0
 #use scriped effects, less code, write code with pleasure :)
 
 #argument array structure:
 #args^(n) - start ammount, this value allows to create unit if it > 0, every time unit created it decreases by 1, this can guarantee, that country won`t be created without any units
 #args^(n+1) - inrease step (how much every state will increase args^(n)), this value and args^(n) allowes to create states with no units: [yes, yes, yes, no, yes, no, yes...]
+#args^(n+2) - min xp for division (for random)
+#args^(n+3) - max xp for division (for random)
+#args^(n+4) - min equipment for division (for random)
+#args^(n+5) - max equipment for division (for random)
+#args^(n+6) - min manpower for division (for random)
+#args^(n+7) - max manpower for division (for random)
 
 #for division temlate switch access args by k, where k = 2 * i + argshift
 #k - access index
@@ -25,7 +31,14 @@ generate_units_962 = {
 		popup = no
 	}
 	#load division templates
-	load_oob = "_default_962_oob"
+	if = {
+		limit = {
+			NOT = {
+				has_template = "Generic Infantry Division"
+			}
+		}
+		load_oob = "_default_962_oob"
+	}
 	#init default arguments
 	add_to_array = {
 		args = 1
@@ -33,36 +46,132 @@ generate_units_962 = {
 	add_to_array = {
 		args = 0.25
 	}
+	add_to_array = {
+		args = 0.4
+	}
+	add_to_array = {
+		args = 0.6
+	}
+	add_to_array = {
+		args = 1
+	}
+	add_to_array = {
+		args = 1
+	}
+	add_to_array = {
+		args = 1
+	}
+	add_to_array = {
+		args = 1
+	}
+
+	add_to_array = {
+		args = 1
+	}
+	add_to_array = {
+		args = 0.25
+	}
+	add_to_array = {
+		args = 0.4
+	}
+	add_to_array = {
+		args = 0.6
+	}
+	add_to_array = {
+		args = 1
+	}
+	add_to_array = {
+		args = 1
+	}
+	add_to_array = {
+		args = 1
+	}
+	add_to_array = {
+		args = 1
+	}
 	#override default arguments
-	
-	#
+	for_loop_effect = {
+		end = prev.args^num
+		value = i
+		meta_effect = {
+			text = {
+				if = {
+					limit = {
+						has_variable = UG_ARG_[I]
+					}
+					set_variable = {
+						args^i = UG_ARG_[I]
+					}
+					clear_variable = UG_ARG_[I]
+				}
+			}
+			I = i
+		}
+	}
+	#generation
 	every_controlled_state = {
+		for_loop_effect = {
+			start = -7
+			end = 0
+			value = i
+			meta_effect = {
+				text = {
+					set_temp_variable = {
+						i_[I] = 8
+					}
+				}
+				I = i
+			}
+		}
 		for_loop_effect = {
 			end = PREV.args^num
 			value = i
-			add = 2
-			set_temp_variable = {
-				i_1 = i
+			add = 8
+			for_loop_effect = {
+				start = 1
+				end = 8
+				value = ii
+				meta_effect = {
+					text = {
+						add_to_temp_variable = {
+							i_[I] = 8
+						}
+					}
+					I = ii
+				}
 			}
-			add_to_temp_variable = {
-				i_1 = 1
-			}
-			log = "[?PREV.args^0]"
 			if = {
 				limit = {
 					check_variable = {
 						PREV.args^i > 0
 					}
 				}
-				#create unit (metaeffect probably)
+				set_variable_to_random = {
+					var = R_S_XP_F
+					min = PREV.args^i_2
+					max = PREV.args^i_3
+				}
+				set_variable_to_random = {
+					var = R_S_EQ_F
+					min = PREV.args^i_4
+					max = PREV.args^i_5
+				}
+				set_variable_to_random = {
+					var = R_S_MP_F
+					min = PREV.args^i_6
+					max = PREV.args^i_7
+				}
 				meta_effect = {
 					text = {
 						create_unit = {
-							division = "name = \"Generic Infantry Division\" division_template = \"[DT]\" start_experience_factor = 0.5"
+							division = "name = \"Generic Infantry Division\" division_template = \"[DT]\" start_experience_factor = [S_XP_F] start_equipment_factor = [S_EQ_F] start_manpower_factor = [S_MP_F]"
 							owner = PREV
 						}
 					}
-					DT = "Generic Infantry Division"
+					DT = "[DT_name_generator]"
+					S_XP_F = R_S_XP_F
+					S_EQ_F = R_S_EQ_F
+					S_MP_F = R_S_MP_F
 				}
 				subtract_from_variable = {
 					PREV.args^i = 1
