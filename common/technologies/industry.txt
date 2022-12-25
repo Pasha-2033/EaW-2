@@ -1,179 +1,146 @@
-#####---------------------------------------------------------------------> Mod by Sig "GreatExperiment" Altre
-
 technologies = {
-
 	basic_machine_tools = {
-
 		production_factory_max_efficiency_factor = 0.1
-
-
 		dependencies = {
 			melee_weapons1 = 1
 		}
-
 		path = {
 			leads_to_tech = improved_machine_tools
 			research_cost_coeff = 1
 		}
-
 		path = {
 			leads_to_tech = concentrated_industry
 			research_cost_coeff = 1
 		}
-
 		path = {
 			leads_to_tech = dispersed_industry
 			research_cost_coeff = 1
 		}
-
-		research_cost = 1.5
-		start_year = 1007
+		research_cost = 1
+		start_year = 962
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 0 }
+			position = {
+				x = 0
+				y = 0
+			}
 		}
-
 		ai_will_do = {
-			factor = 50
+			base = 50
 		}
-
 		categories = {
 			industry
-			ai_basic_start
+			ai_basic_economic_start
 			cat_production
 		}
 	}
-
 	#Machine tools branch
 	improved_machine_tools = {
 		dependencies = {
 			infantry_weapons = 1
 		}
 		production_factory_max_efficiency_factor = 0.1
-
 		path = {
 			leads_to_tech = advanced_machine_tools
 			research_cost_coeff = 1
 		}
-
 		path = {
 			leads_to_tech = improved_equipment_conversion
 			research_cost_coeff = 1
 		}
-
 		research_cost = 1.5
-		start_year = 1008
-
+		start_year = 963
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 4 }
-		}
-
-		ai_will_do = {
-			factor = 40
-
-			modifier = {
-				factor = 10
-				date > "1008.1.1"
+			position = {
+				x = 0
+				y = 2
 			}
 		}
-
+		ai_will_do = {
+			factor = 40
+			modifier = {
+				factor = 10
+				date > 964.1.1
+			}
+		}
 		categories = {
 			industry
-			ai_basic_start
+			ai_basic_economic_start
 			cat_production
 		}
 	}
-
 	advanced_machine_tools = {
-
 		production_factory_max_efficiency_factor = 0.1
-
 		path = {
 			leads_to_tech = assembly_line_production
 			research_cost_coeff = 1
 		}
-
 		research_cost = 2
-		start_year = 1010
-
+		start_year = 964
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 6 }
-		}
-
-		ai_will_do = {
-			factor = 30
-
-			modifier = {
-				factor = 10
-				date > "1010.1.1"
+			position = {
+				x = 0
+				y = 4
 			}
 		}
-
+		ai_will_do = {
+			factor = 30
+			modifier = {
+				factor = 10
+				date > 965.1.1
+			}
+		}
 		categories = {
 			industry
 			cat_production
 		}
 	}
-
 	assembly_line_production = {
-
 		production_factory_max_efficiency_factor = 0.1
-
 		path = {
 			leads_to_tech = flexible_line
 			research_cost_coeff = 1
 		}
-
 		path = {
 			leads_to_tech = streamlined_line
 			research_cost_coeff = 1
 		}
-
-
 		research_cost = 2
-		start_year = 1012
+		start_year = 964
 
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 8 }
-		}
-
-		ai_will_do = {
-			factor = 20
-
-			modifier = {
-				factor = 10
-				date > "1012.1.1"
+			position = {
+				x = 0 
+				y = 8
 			}
 		}
-
+		ai_will_do = {
+			factor = 20
+			modifier = {
+				factor = 10
+				date > 965.1.1
+			}
+		}
 		categories = {
 			industry
 			cat_production
 		}
 	}
-
-	###------> Old Manufacturing <><> <><> <><> <><> <><>
-
 	flexible_line = {
-
 		production_factory_max_efficiency_factor = 0.1
 		line_change_production_efficiency_factor = 0.2
-
 		path = {
 			leads_to_tech = flexible_line_a
 			research_cost_coeff = 1
 		}
-
 		research_cost = 2.5
 		start_year = 1014
-
 		XOR = {
 			streamlined_line
 		}
-
 		folder = {
 			name = industry_folder
 			position = { x = -1 y = 10 }
@@ -217,7 +184,7 @@ technologies = {
 		}
 
 		ai_will_do = {
-			factor = 20
+			base = 20
 
 			modifier = {
 				factor = 10
@@ -234,70 +201,60 @@ technologies = {
 
 	#Conversion branch - Enabled in DoD
 	improved_equipment_conversion = {
-
 		equipment_conversion_speed = 0.40
-
 		allow_branch = {
 			has_dlc = "Death or Dishonor"
 		}
-
 		path = {
 			leads_to_tech = advanced_equipment_conversion
 			research_cost_coeff = 1
 		}
-
 		research_cost = 2
-		start_year = 1008
-
+		start_year = 963
 		folder = {
 			name = industry_folder
-			position = { x = 2 y = 4 }
+			position = {
+				x = 2 
+				y = 2 
+			}
 		}
-
 		ai_will_do = {
-			factor = 1
-
+			base = 1
 			modifier = {
 				factor = 2
-				date > "1008.1.1"
+				date > 964.1.1
 			}
 
 		}
-
 		categories = {
-			industry
 			cat_production
 		}
 	}
-
 	advanced_equipment_conversion = {
-
 		equipment_conversion_speed = 0.40
-
 		research_cost = 2
 		start_year = 1010
-
 		folder = {
 			name = industry_folder
-			position = { x = 2 y = 6 }
+			position = { 
+				x = 2 
+				y = 4 
+			}
 		}
-
 		ai_will_do = {
-			factor = 1
-
+			base = 1
 			modifier = {
 				factor = 2
-				date > "1008.1.1"
+				date > 964.1.1
 			}
-
 			modifier = {
 				factor = 0
-				NOT = { has_government = fascism }
+				NOT = { 
+					has_government = fascism 
+				}
 			}
 		}
-
 		categories = {
-			industry
 			cat_production
 		}
 	}
@@ -2078,9 +2035,7 @@ technologies = {
 	#####################################
 
 	###------> Old Manufacturing <><> <><> <><> <><> <><>
-
 	construction1 = {
-
 		production_speed_buildings_factor = 0.10
 		industry_repair_factor = 0.10
 		dependencies = {
@@ -2094,55 +2049,106 @@ technologies = {
 			leads_to_tech = excavation1
 			research_cost_coeff = 1
 		}
-
+		path = {
+			leads_to_tech = roads1
+			research_cost_coeff = 1
+		}
 		research_cost = 2
-		start_year = 1007
+		start_year = 962
 		categories = {
-			industry
 			construction_tech
 		}
-
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 0 }
+			position = {
+				x = 0
+				y = 0
+			}
 		}
-
 		ai_will_do = {
-			factor = 50
-
+			base = 50
 			modifier = {
 				factor = 5
-				date > "1008.1.1"
+				date > 963.1.1
 			}
 		}
 	}
-
-	###------> X <><> <><> <><> <><> <><>
-
+	roads1 = {
+		research_cost = 2
+		start_year = 962
+		enable_building = {
+			building = infrastructure
+			level = 1
+		}
+		categories = {
+			cat_road_construction
+			cat_infrastructure
+			construction_tech
+		}
+		path = {
+			leads_to_tech = rails1
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = industry_folder
+			position = {
+				x = -2 
+				y = 0 
+			}
+		}
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 5
+				date > 963.1.1
+			}
+		}
+	}
+	rails1 = {
+		research_cost = 2
+		start_year = 962
+		enable_building = {
+			building = rail_way
+			level = 1
+		}
+		categories = {
+			cat_rail_way_construction
+			cat_infrastructure
+			construction_tech
+		}
+		folder = {
+			name = industry_folder
+			position = { 
+				x = -3 
+				y = 0 
+			}
+		}
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 5
+				date > 963.1.1
+			}
+		}
+	}
 	excavation1 = {
-
 		local_resources_factor = 0.10
-
 		path = {
 			research_cost_coeff = 1
 		}
-
 		research_cost = 2
-
 		categories = {
-			industry
-			construction_tech
 			excavation_tech
 		}
-
 		folder = {
 			name = industry_folder
-			position = { x = 2 y = 0 }
+			position = {
+				x = 2
+				y = 0
+			}
 		}
-
 		ai_will_do = {
-			factor = 1
-
+			base = 5
 			modifier = {
 				factor = 5.0
 				OR = {
@@ -2152,11 +2158,11 @@ technologies = {
 					tungsten > 0
 					steel > 0
 					chromium > 0
+					crystals > 0
 				}
 			}
-
 			modifier = {
-				factor = 1.5
+				factor = 2
 				OR = {
 					oil > 8
 					aluminium > 8
@@ -2168,12 +2174,9 @@ technologies = {
 			}
 		}
 	}
-
 	construction2 = {
-
 		production_speed_buildings_factor = 0.10
 		industry_repair_factor = 0.10
-
 		path = {
 			leads_to_tech = construction3
 			research_cost_coeff = 1
@@ -2182,30 +2185,88 @@ technologies = {
 			leads_to_tech = excavation2
 			research_cost_coeff = 1
 		}
-
+		path = {
+			leads_to_tech = roads2
+			research_cost_coeff = 1
+		}
 		research_cost = 2
 		start_year = 1008
-
 		categories = {
-			industry
 			construction_tech
 		}
-
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 2 }
+			position = { 
+				x = 0 
+				y = 2 
+			}
 		}
-
 		ai_will_do = {
-			factor = 4
-
+			base = 4
 			modifier = {
 				factor = 10
 				date > "1008.1.1"
 			}
 		}
 	}
-
+	roads2 = {
+		research_cost = 2
+		start_year = 963
+		enable_building = {
+			building = infrastructure
+			level = 2
+		}
+		categories = {
+			cat_road_construction
+			cat_infrastructure
+			construction_tech
+		}
+		path = {
+			leads_to_tech = rails2
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = industry_folder
+			position = { 
+				x = -2 
+				y = 2 
+			}
+		}
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 5
+				date > 964.1.1
+			}
+		}
+	}
+	rails2 = {
+		research_cost = 2
+		start_year = 963
+		enable_building = {
+			building = rail_way
+			level = 2
+		}
+		categories = {
+			cat_rail_way_construction
+			cat_infrastructure
+			construction_tech
+		}
+		folder = {
+			name = industry_folder
+			position = { 
+				x = -3 
+				y = 2 
+			}
+		}
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 5
+				date > 964.1.1
+			}
+		}
+	}
 	excavation2 = {
 
 		local_resources_factor = 0.10
@@ -2258,53 +2319,106 @@ technologies = {
 	}
 
 	construction3 = {
-
 		production_speed_buildings_factor = 0.10
 		industry_repair_factor = 0.10
-
 		path = {
 			leads_to_tech = construction4
 			research_cost_coeff = 1
 		}
-
 		path = {
 			leads_to_tech = excavation3
 			research_cost_coeff = 1
 		}
-
+		path = {
+			leads_to_tech = roads3
+			research_cost_coeff = 1
+		}
 		research_cost = 2
 		start_year = 1010
-
 		categories = {
-			industry
 			construction_tech
 		}
-
 		folder = {
 			name = industry_folder
-			position = { x = 0 y = 4 }
+			position = { 
+				x = 0 
+				y = 4 
+			}
 		}
-
 		ai_will_do = {
-			factor = 10
-
+			base = 10
 			modifier = {
 				factor = 1.5
 				has_war = yes
 			}
-
 			modifier = {
 				factor = 0.5
 				has_war = no
 			}
-
 			modifier = {
 				factor = 3
 				date > "1011.1.1"
 			}
 		}
 	}
-
+	roads3 = {
+		research_cost = 2
+		start_year = 964
+		enable_building = {
+			building = infrastructure
+			level = 3
+		}
+		categories = {
+			cat_road_construction
+			cat_infrastructure
+			construction_tech
+		}
+		path = {
+			leads_to_tech = rails3
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = industry_folder
+			position = { 
+				x = -2 
+				y = 4 
+			}
+		}
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 5
+				date > 965.1.1
+			}
+		}
+	}
+	rails3 = {
+		research_cost = 2
+		start_year = 964
+		enable_building = {
+			building = rail_way
+			level = 3
+		}
+		categories = {
+			cat_rail_way_construction
+			cat_infrastructure
+			construction_tech
+		}
+		folder = {
+			name = industry_folder
+			position = { 
+				x = -3 
+				y = 4 
+			}
+		}
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 5
+				date > 965.1.1
+			}
+		}
+	}
 
 	excavation3 = {
 
@@ -2370,7 +2484,10 @@ technologies = {
 			leads_to_tech = excavation4
 			research_cost_coeff = 1
 		}
-
+		path = {
+			leads_to_tech = roads4
+			research_cost_coeff = 1
+		}
 		research_cost = 2
 		start_year = 1012
 
@@ -2393,7 +2510,64 @@ technologies = {
 			}
 		}
 	}
-
+	roads4 = {
+		research_cost = 2
+		start_year = 964
+		enable_building = {
+			building = infrastructure
+			level = 4
+		}
+		categories = {
+			cat_road_construction
+			cat_infrastructure
+			construction_tech
+		}
+		path = {
+			leads_to_tech = rails4
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = industry_folder
+			position = { 
+				x = -2 
+				y = 6
+			}
+		}
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 5
+				date > 965.1.1
+			}
+		}
+	}
+	rails4 = {
+		research_cost = 2
+		start_year = 964
+		enable_building = {
+			building = rail_way
+			level = 4
+		}
+		categories = {
+			cat_rail_way_construction
+			cat_infrastructure
+			construction_tech
+		}
+		folder = {
+			name = industry_folder
+			position = { 
+				x = -3 
+				y = 6 
+			}
+		}
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 5
+				date > 965.1.1
+			}
+		}
+	}
 	excavation4 = {
 
 		local_resources_factor = 0.10
@@ -2456,7 +2630,10 @@ technologies = {
 			leads_to_tech = excavation5
 			research_cost_coeff = 1
 		}
-
+		path = {
+			leads_to_tech = roads5
+			research_cost_coeff = 1
+		}
 
 		path = {
 			leads_to_tech = construction_a
@@ -2484,7 +2661,64 @@ technologies = {
 			}
 		}
 	}
-
+	roads5 = {
+		research_cost = 2
+		start_year = 964
+		enable_building = {
+			building = infrastructure
+			level = 5
+		}
+		categories = {
+			cat_road_construction
+			cat_infrastructure
+			construction_tech
+		}
+		path = {
+			leads_to_tech = rails5
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = industry_folder
+			position = { 
+				x = -2 
+				y = 8
+			}
+		}
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 5
+				date > 965.1.1
+			}
+		}
+	}
+	rails5 = {
+		research_cost = 2
+		start_year = 964
+		enable_building = {
+			building = rail_way
+			level = 5
+		}
+		categories = {
+			cat_rail_way_construction
+			cat_infrastructure
+			construction_tech
+		}
+		folder = {
+			name = industry_folder
+			position = { 
+				x = -3 
+				y = 8 
+			}
+		}
+		ai_will_do = {
+			base = 50
+			modifier = {
+				factor = 5
+				date > 965.1.1
+			}
+		}
+	}
 	###------> X <><> <><> <><> <><> <><>
 
 	excavation5 = {

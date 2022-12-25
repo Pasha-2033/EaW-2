@@ -9,46 +9,46 @@ init_last_evil_mind_date_var = {
 	}
 }
 init_ideas_tag_list = {
+	#init ideas for subject control gui
 	resize_array = {
-		global.mobilization_idea_tags = 7
+		global.mobilization_idea_tokens = 7
 	}
 	resize_array = {
-		global.trade_idea_tags = 8
+		global.trade_idea_tokens = 8
 	}
 	resize_array = {
-		global.economy_idea_tags = 10
+		global.economy_idea_tokens = 10
 	}
 	resize_array = {
-		global.society_idea_tags = 19
+		global.society_idea_tokens = 19
 	}
 	resize_array = {
-		global.power_concentration_idea_tags = 7
+		global.power_concentration_idea_tokens = 7
 	}
 	resize_array = {
-		global.urbanization_idea_tags = 5
+		global.urbanization_idea_tokens = 5
 	}
 	resize_array = {
-		global.illiteracy_idea_tags = 6
+		global.illiteracy_idea_tokens = 6
 	}
 	resize_array = {
-		global.poverty_idea_tags = 7
+		global.poverty_idea_tokens = 7
 	}
 	resize_array = {
-		global.science_base_idea_tags = 6
+		global.science_base_idea_tokens = 6
 	}
 	resize_array = {
-		global.monatisation_idea_tags = 5
+		global.monatisation_idea_tokens = 5
 	}
 	resize_array = {
-		global.inflation_idea_tags = 6
+		global.inflation_idea_tokens = 6
 	}
 	resize_array = {
-		global.valuta_idea_tags = 9
+		global.valuta_idea_tokens = 9
 	}
 }
 init_mod_lore_screen_vars = {
 	init_tag_var = yes
-	init_mod_lore_screen_show_var = yes
 }
 init_tag_var = {
 	resize_array = {
@@ -56,41 +56,12 @@ init_tag_var = {
 		size = 0
 	}
 	add_to_array = {
-		global.countries_with_lore = VES.id
+		global.countries_with_lore = VES
 	}
 	add_to_array = {
-		global.countries_with_lore = EEQ.id
+		global.countries_with_lore = EEQ
 	}
 	#continue
-}
-init_mod_lore_screen_show_var = {
-	every_country = {
-		if = {
-			limit = {
-				is_ai = no
-			}
-			set_variable = {
-				mod_lore_screen = 1
-			}
-			for_each_loop = {
-				array = global.countries_with_lore
-				if = {
-					limit = {
-						check_variable = {
-							v = THIS.id
-						}
-					}
-					set_variable = {
-						country_lore = i
-					}
-					set_temp_variable = {
-						break = 1
-					}
-				}
-			}
-		}
-		
-	}
 }
 init_math_memory = {
 	resize_array = {

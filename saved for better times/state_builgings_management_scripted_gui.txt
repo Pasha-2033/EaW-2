@@ -1,0 +1,33 @@
+scripted_gui = {
+	state_buildings_management_scripted_gui = {
+		parent_window_token = selected_state_view
+		window_name = "state_buildings_management"
+		#dirty = global.building_management^num #to init gui from start
+		#dirty = building_level@military_manufacture
+		#dirty = building_level@arms_factory
+		#dirty = building_level@civil_manufacture
+		#dirty = building_level@industrial_complex
+		visible = {
+			
+		}
+		dynamic_lists = {
+			convert_buildings_grid = {
+				array = global.building_management_convertation
+				change_scope = no
+				entry_container = "convert_buildings_entry"
+				index = i_convertation
+				value = v_convertation
+			}
+			turn_on_off_buildings_grid = {
+				array = global.building_management_turn_on_off
+				change_scope = no
+				entry_container = "turn_on_off_buildings_entry"
+				index = i_turn_on_off
+				value = v_turn_on_off
+			}
+		}
+		triggers = {
+
+        }
+	}
+}

@@ -332,6 +332,13 @@ on_actions = {
 					}
 					calculate_state_building_slots = yes
 				}
+				#init generic focuses by scenarios
+				if = {
+					limit = {
+						has_country_flag = default_962_focus_tree
+					}
+					load_focus_tree = default_962_focus_tree
+				}
 			}
 		}
 	}

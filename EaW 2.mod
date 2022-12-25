@@ -45,6 +45,6 @@ tags={
 	"Events"
 	"Map"
 }
-supported_version="1.11.*"
+supported_version="1.12.*"
 picture="gfx/HOI4_icon.bmp"
 path="mod/EaW 2/"

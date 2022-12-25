@@ -412,17 +412,6 @@ DIPLOMACY_LEND_LEASE_ENABLE_TRIGGER = {
 	}
 	else_if = {
 		limit = {
-			has_idea = WNG_united_against_disharmony
-		}
-		FROM = {
-			OR = {
-				original_tag = EQS
-				original_tag = WNG
-			}
-		}
-	}
-	else_if = {
-		limit = {
 			has_game_rule = {
 				rule = allow_lend_lease
 				option = BLOCKED
@@ -939,17 +928,6 @@ DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER = {
 		custom_trigger_tooltip = {
 			tooltip = DIPLOMACY_NOT_DETACHED_COUNTRY
 			always = no
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = WNG_united_against_disharmony
-		}
-		FROM = {
-			OR = {
-				original_tag = EQS
-				original_tag = WNG
-			}
 		}
 	}
 	else_if = {

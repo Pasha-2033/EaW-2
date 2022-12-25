@@ -5,10 +5,16 @@ shared_focus = {
 	#allow_branch = {
 	#	is_great_projects_adaptation_possible = yes
 	#}
+	offset = {
+		x = 24
+		trigger = {
+			has_country_flag = default_962_focus_tree
+		}
+	}
 	ai_will_do = {
 		base = 200
 	}
-	x = 25
+	x = 26
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_polit_system_temp"
@@ -21,6 +27,7 @@ shared_focus = {
 	id = shared_focus_gpa_remilitarise_all_possible_states
 	icon = GFX_goal_generic_changeling
 	cost = 5
+	relative_position_id = shared_focus_gpa_goverment_is_forced
 	prerequisite = {
 		focus = shared_focus_gpa_goverment_is_forced
 	}
@@ -30,8 +37,8 @@ shared_focus = {
 	ai_will_do = {
 		base = 200
 	}
-	x = 25
-	y = 2
+	x = 0
+	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_polit_system_temp"
 	}
@@ -43,6 +50,7 @@ shared_focus = {
 	id = shared_focus_gpa_serious_war_production
 	icon = GFX_goal_generic_changeling
 	cost = 5
+	relative_position_id = shared_focus_gpa_remilitarise_all_possible_states
 	prerequisite = {
 		focus = shared_focus_gpa_remilitarise_all_possible_states
 	}
@@ -52,8 +60,8 @@ shared_focus = {
 	ai_will_do = {
 		base = 200
 	}
-	x = 25
-	y = 3
+	x = 0
+	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_gpa_serious_war_production"
 	}
@@ -65,6 +73,7 @@ shared_focus = {
 	id = shared_focus_gpa_rails_for_warmachine
 	icon = GFX_goal_generic_changeling
 	cost = 5
+	relative_position_id = shared_focus_gpa_serious_war_production
 	prerequisite = {
 		focus = shared_focus_gpa_serious_war_production
 	}
@@ -74,8 +83,8 @@ shared_focus = {
 	ai_will_do = {
 		base = 200
 	}
-	x = 25
-	y = 4
+	x = 0
+	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_gpa_rails_for_warmachine"
 	}

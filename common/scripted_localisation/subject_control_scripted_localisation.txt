@@ -307,8 +307,6 @@ defined_text = {
 	name = power_concentration_limit_tt_delayed
 	text = {
 		trigger = {
-			always = yes
-			#why crashes?
 			check_variable = {
 				i_4 > 0
 			}

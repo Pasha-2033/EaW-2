@@ -1,5 +1,5 @@
 #Created by lead programmer of EaW 2 (vk: @uber_medic, @communistic_sistema) https://github.com/Pasha-2033/EaW-2
-#vesrion 1.0
+#vesrion 1.1
 #use scriped effects, less code, write code with pleasure :)
 
 #argument array structure:
@@ -100,7 +100,7 @@ generate_units_962 = {
 						has_variable = UG_ARG_[I]
 					}
 					set_variable = {
-						args^i = UG_ARG_[I]
+						args^[I] = UG_ARG_[I]
 					}
 					clear_variable = UG_ARG_[I]
 				}
@@ -114,13 +114,20 @@ generate_units_962 = {
 			start = -7
 			end = 0
 			value = i
+			set_temp_variable = {
+				ni = 8
+			}
+			add_to_temp_variable = {
+				ni = i
+			}
 			meta_effect = {
 				text = {
 					set_temp_variable = {
-						i_[I] = 8
+						i_[NI] = [I]
 					}
 				}
 				I = i
+				NI = ni
 			}
 		}
 		for_loop_effect = {

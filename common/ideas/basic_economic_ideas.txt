@@ -23,6 +23,16 @@ ideas = {
 		priority_military_economy = {}
 		priority_gold_reserve = {}
 		priority_religion = {}
+		#экономический подьем
+		economy_forms_stable_structure = {
+			picture = clockwerk_economy			#to do (change)
+			modifier = {
+				production_factory_max_efficiency_factor = 0.05
+				stability_weekly = 0.01
+				political_power_factor = 0.25
+				monthly_population = 0.1
+			}
+		}
 	}
 	hidden_ideas = {
 		#исторические состояния режимов экономик

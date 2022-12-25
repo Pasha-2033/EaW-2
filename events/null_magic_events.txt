@@ -8,6 +8,7 @@ country_event = {
 		#also make them core to ECR, not to ELN
 		#add Sombra later
 		hidden_effect = {
+			clr_global_flag = NO_ECR
 			ECR = {
 				transfer_state = 344
 				transfer_state = 345
@@ -59,11 +60,10 @@ country_event = {
 	picture = GFX_event_swarm
 	major = yes
 	show_major = {
-		NOT = {
-			original_tag = ELN
-		}
+		always = yes
 	}
 	trigger = {
+		has_global_flag = NO_ECR
 		OR = {
 			date > 962.7.1
 			VES = {
@@ -71,7 +71,6 @@ country_event = {
 			}
 		}
 	}
-	fire_only_once = yes
 	option = {
 		name = null_magic_event.1.a
 		ai_chance = {
@@ -88,7 +87,7 @@ country_event = {
 			is_ai = no
 		}
 		ECR = {
-			change_tag_from = ELN
+			change_tag_from = ROOT
 		}
 	}
 }

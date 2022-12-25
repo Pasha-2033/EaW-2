@@ -10,7 +10,10 @@ It also contains some modules that can be used in your mode.
 </br>
 <a href="https://github.com/Pasha-2033/EaW-2/blob/master/events/recursive.txt">Thread module</a>
 </br>
-<a href="https://github.com/Pasha-2033/EaW-2/blob/master/common/scripted_effects/unit_generator_scripted_effects.txt">Unit generator</a> 
+<a href="https://github.com/Pasha-2033/EaW-2/blob/master/common/scripted_effects/unit_generator_scripted_effects.txt">Unit generator</a>
+</br>
+If you use this code as template or copy - please make referense to this readme.md.  
+This will extend your code documentation and promote these scripts being upgraded!
 
 # Mod documentation (scenario and mechanics, tech and events)
 [English](docs/English.md)  

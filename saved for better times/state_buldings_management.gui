@@ -1,0 +1,234 @@
+guiTypes = {
+	containerWindowType = {
+		name = "state_buildings_management"
+		position = {
+			x = 0
+			y = 5
+		}
+		size = {
+			width = 330
+			height = 490
+		}
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tiled_plain_bg" #change
+		}
+		show_position = { 
+			x = 461 
+			y = 5 
+		}
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 300
+		hide_sound = menu_close_window
+		show_sound = menu_open_window
+		instantTextBoxType = {
+			name = "title"
+			position = {
+				x = 10
+				y = 7
+			}
+			text = "state_buildings_management_title"
+			font = "hoi_30header"
+			maxWidth = 310
+			maxHeight = 36
+			fixedsize = yes
+			format = CENTER
+			pdx_tooltip_delayed = "state_buildings_management_title_tt"
+		}
+		containerWindowType = {
+			name = "convert_buildings_container"
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_tiled_plain_bg" #change
+			}
+			position = {
+				x = 15
+				y = 35
+			}
+			size = {
+				width = 150
+				height = 289
+			}
+			instantTextBoxType = {
+				name = "convert_title"
+				position = {
+					x = 9
+					y = 7
+				}
+				text = "convert_state_buildings_title"
+				font = "hoi_30header"
+				maxWidth = 132
+				maxHeight = 20
+				fixedsize = yes
+				format = CENTER
+			}
+			gridBoxType = {
+				name = "convert_buildings_grid"
+				position = {
+					x = 15
+					y = 34
+				}
+				size = {
+					width = 120
+					height = 240
+				}
+				slotsize = {
+					width = 60
+					height = 60
+				}
+				max_slots_horizontal = 2
+				format = "UPPER_LEFT"
+			}
+		}
+		containerWindowType = {
+			name = "turn_on_off_buildings_container"
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_tiled_plain_bg" #change
+			}
+			position = {
+				x = 170
+				y = 35
+			}
+			size = {
+				width = 150
+				height = 289
+			}
+			instantTextBoxType = {
+				name = "turn_on_off_title"
+				position = {
+					x = 9
+					y = 7
+				}
+				text = "turn_on_off_state_buildings_title"
+				font = "hoi_30header"
+				maxWidth = 132
+				maxHeight = 20
+				fixedsize = yes
+				format = CENTER
+			}
+			gridBoxType = {
+				name = "turn_on_off_buildings_grid"
+				position = {
+					x = 15
+					y = 34
+				}
+				size = {
+					width = 120
+					height = 240
+				}
+				slotsize = {
+					width = 60
+					height = 60
+				}
+				max_slots_horizontal = 2
+				format = "UPPER_LEFT"
+			}
+		}
+		containerWindowType = {
+			name = "upgrade_degrade_buildings_container"
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_tiled_plain_bg" #change
+			}
+			position = {
+				x = 33
+				y = 326 
+			}
+			size = {
+				width = 80%
+				height = 154
+			}
+			instantTextBoxType = {
+				name = "upgrade_degrade_title"
+				position = {
+					x = 10
+					y = 7
+				}
+				text = "upgrade_degrade_state_buildings_title"
+				font = "hoi_30header"
+				maxWidth = 244
+				maxHeight = 20
+				fixedsize = yes
+				format = CENTER
+			}
+			gridBoxType = {
+				name = "upgrade_degrade_buildings_grid"
+				position = {
+					x = 0
+					y = 10
+				}
+				size = {
+					width = 180
+					height = 120
+				}
+				slotsize = {
+					width = 60
+					height = 60
+				}
+				max_slots_horizontal = 3
+				format = "UPPER_LEFT"
+				add_horizontal = yes
+			}
+		}
+	}
+	#entries
+	containerWindowType = {
+		name = "convert_buildings_entry"
+		size = {
+			width = 60
+			height = 60
+		}
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tiled_plain_bg" #change
+		}
+		buttonType = {
+			name = "convert_buildings_entry_button"
+			quadTextureSprite ="GFX_closebutton"
+			orientation = CENTER
+			centerposition = yes
+			#pdx_tooltip = "subject_control_ml_idea_tt"
+			#pdx_tooltip_delayed = "subject_control_ml_cost_tt"
+		}
+	}
+	containerWindowType = {
+		name = "turn_on_off_buildings_entry"
+		size = {
+			width = 60
+			height = 60
+		}
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tiled_plain_bg" #change
+		}
+		buttonType = {
+			name = "turn_on_off_buildings_entry_button"
+			quadTextureSprite ="GFX_closebutton"
+			orientation = CENTER
+			centerposition = yes
+			#pdx_tooltip = "subject_control_ml_idea_tt"
+			#pdx_tooltip_delayed = "subject_control_ml_cost_tt"
+		}
+	}
+	containerWindowType = {
+		name = "upgrade_degrade_buildings_entry"
+		size = {
+			width = 60
+			height = 60
+		}
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tiled_plain_bg" #change
+		}
+		buttonType = {
+			name = "upgrade_degrade_buildings_entry_button"
+			quadTextureSprite ="GFX_closebutton"
+			orientation = CENTER
+			centerposition = yes
+			#pdx_tooltip = "subject_control_ml_idea_tt"
+			#pdx_tooltip_delayed = "subject_control_ml_cost_tt"
+		}
+	}
+}

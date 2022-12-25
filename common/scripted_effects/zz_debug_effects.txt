@@ -293,3 +293,39 @@ d_fix_popularities = {
 		}
 	}
 }
+
+#experimental
+d_gettokens = {
+	#meta_effect = {
+	#	text = {
+	#		set_temp_variable = {
+	#			Y_token = token:[T]
+	#		}
+	#	}
+	#	T = "none"
+	#}
+	#log = "T1:[?Y_token]"
+	#log = "T2:[?Y_token.GetTokenLocalizedKey]"
+	log = " [?358.GetTokenLocalizedKey]"
+	for_loop_effect = {
+		end = 20000
+		value = i
+		log = "token-[?i]:[?i.GetTokenKey]"
+		#meta_effect = {
+		#	text = {
+		#		log = "T-[I]:"
+		#	}
+		#	I = i
+		#}
+	}
+}
+d_etk = {
+	set_temp_variable = {
+		tv = 120 #width
+	}
+	set_temp_variable = {
+		tv2 = tv.GetTokenKey
+	}
+	log = " [?tv.GetTokenKey]"
+	log = " [?tv2]"
+}

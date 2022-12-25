@@ -1,5 +1,5 @@
 sub_units = {
-
+	#to do - land_air_wing_size & carrier_air_wing_size
 	fighter = {
 		sprite = light_plane
 		priority = 1
@@ -7,6 +7,7 @@ sub_units = {
 		type = { fighter }
 		need = { fighter_equipment = 1 }
 		categories = { category_fighter category_all_planes }
+		land_air_wing_size = 100
 	}
 
 	scout_plane = {
@@ -16,6 +17,7 @@ sub_units = {
 		type = { scout_plane }
 		need = { scout_plane_equipment = 1 }
 		categories = { category_scout_plane category_all_planes }
+		land_air_wing_size = 50
 	}
 
 	cv_fighter = {
@@ -25,6 +27,8 @@ sub_units = {
 		type = { fighter }
 		need = { cv_fighter_equipment = 1 }
 		categories = { category_fighter category_all_planes }
+		land_air_wing_size = 100
+		carrier_air_wing_size = 100
 	}
 
 	cas = {
