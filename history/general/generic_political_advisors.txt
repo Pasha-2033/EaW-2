@@ -33,102 +33,10 @@ every_possible_country = {
 			}
 		}
 	}
-	if = {
-		limit = {
-			has_idea = polar_race
-		}
-		set_portraits = {
-			character = generic_democratic_reformer
-			army = {
-				small = GFX_idea_unknown_advisor_bear
-			}
-		}
+	set_variable = {
+		character_token = token:generic_democratic_reformer
 	}
-	else_if = {
-		limit = {
-			has_idea = buffalo_race
-		}
-		set_portraits = {
-			character = generic_democratic_reformer
-			army = {
-				small = GFX_idea_unknown_advisor_buffalo
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = changeling_race
-		}
-		set_portraits = {
-			character = generic_democratic_reformer
-			army = {
-				small = GFX_idea_unknown_advisor_bug
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = diamond_dog_race
-		}
-		set_portraits = {
-			character = generic_democratic_reformer
-			army = {
-				small = GFX_idea_unknown_advisor_dog
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = dragon_race
-		}
-		set_portraits = {
-			character = generic_democratic_reformer
-			army = {
-				small = GFX_idea_unknown_advisor_dragon
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = griffon_race
-		}
-		set_portraits = {
-			character = generic_democratic_reformer
-			army = {
-				small = GFX_idea_unknown_advisor_griffon
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = minotaur_race
-		}
-		set_portraits = {
-			character = generic_democratic_reformer
-			army = {
-				small = GFX_idea_unknown_advisor_minotaur
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = penguin_race
-		}
-		set_portraits = {
-			character = generic_democratic_reformer
-			army = {
-				small = GFX_idea_unknown_advisor_pingu
-			}
-		}
-	}
-	else = {
-		set_portraits = {
-			character = generic_democratic_reformer
-			army = {
-				small = GFX_idea_unknown_advisor
-			}
-		}
-	}
+	generate_portrait = yes
 }
 #communism
 every_possible_country = {
@@ -157,102 +65,10 @@ every_possible_country = {
 			}
 		}
 	}
-	if = {
-		limit = {
-			has_idea = polar_race
-		}
-		set_portraits = {
-			character = generic_communist_revolutionary
-			army = {
-				small = GFX_idea_unknown_advisor_bear
-			}
-		}
+	set_variable = {
+		character_token = token:generic_communist_revolutionary
 	}
-	else_if = {
-		limit = {
-			has_idea = buffalo_race
-		}
-		set_portraits = {
-			character = generic_communist_revolutionary
-			army = {
-				small = GFX_idea_unknown_advisor_buffalo
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = changeling_race
-		}
-		set_portraits = {
-			character = generic_communist_revolutionary
-			army = {
-				small = GFX_idea_unknown_advisor_bug
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = diamond_dog_race
-		}
-		set_portraits = {
-			character = generic_communist_revolutionary
-			army = {
-				small = GFX_idea_unknown_advisor_dog
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = dragon_race
-		}
-		set_portraits = {
-			character = generic_communist_revolutionary
-			army = {
-				small = GFX_idea_unknown_advisor_dragon
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = griffon_race
-		}
-		set_portraits = {
-			character = generic_communist_revolutionary
-			army = {
-				small = GFX_idea_unknown_advisor_griffon
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = minotaur_race
-		}
-		set_portraits = {
-			character = generic_communist_revolutionary
-			army = {
-				small = GFX_idea_unknown_advisor_minotaur
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = penguin_race
-		}
-		set_portraits = {
-			character = generic_communist_revolutionary
-			army = {
-				small = GFX_idea_unknown_advisor_pingu
-			}
-		}
-	}
-	else = {
-		set_portraits = {
-			character = generic_communist_revolutionary
-			army = {
-				small = GFX_idea_unknown_advisor
-			}
-		}
-	}
+	generate_portrait = yes
 }
 #fascism
 every_possible_country = {
@@ -281,102 +97,10 @@ every_possible_country = {
 			}
 		}
 	}
-	if = {
-		limit = {
-			has_idea = polar_race
-		}
-		set_portraits = {
-			character = generic_fascist_demagogue
-			army = {
-				small = GFX_idea_unknown_advisor_bear
-			}
-		}
+	set_variable = {
+		character_token = token:generic_fascist_demagogue
 	}
-	else_if = {
-		limit = {
-			has_idea = buffalo_race
-		}
-		set_portraits = {
-			character = generic_fascist_demagogue
-			army = {
-				small = GFX_idea_unknown_advisor_buffalo
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = changeling_race
-		}
-		set_portraits = {
-			character = generic_fascist_demagogue
-			army = {
-				small = GFX_idea_unknown_advisor_bug
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = diamond_dog_race
-		}
-		set_portraits = {
-			character = generic_fascist_demagogue
-			army = {
-				small = GFX_idea_unknown_advisor_dog
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = dragon_race
-		}
-		set_portraits = {
-			character = generic_fascist_demagogue
-			army = {
-				small = GFX_idea_unknown_advisor_dragon
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = griffon_race
-		}
-		set_portraits = {
-			character = generic_fascist_demagogue
-			army = {
-				small = GFX_idea_unknown_advisor_griffon
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = minotaur_race
-		}
-		set_portraits = {
-			character = generic_fascist_demagogue
-			army = {
-				small = GFX_idea_unknown_advisor_minotaur
-			}
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = penguin_race
-		}
-		set_portraits = {
-			character = generic_fascist_demagogue
-			army = {
-				small = GFX_idea_unknown_advisor_pingu
-			}
-		}
-	}
-	else = {
-		set_portraits = {
-			character = generic_fascist_demagogue
-			army = {
-				small = GFX_idea_unknown_advisor
-			}
-		}
-	}
+	generate_portrait = yes
 }
 
 #neutrality

@@ -63,6 +63,9 @@ Allows to create async threads, that can be synchronised through static values.
 # Unit gerator
 Allows to spawn country units on_start_up without oob file (witch contains division location).
 
+# OOP has been finaly defined!
+See more in history/general.
+
 # Mod code documentation
 Very important notes added to .doc files and files that starts from "00_".
 Isn`t done yet.

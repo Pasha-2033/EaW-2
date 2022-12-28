@@ -326,62 +326,12 @@ on_actions = {
 	#to do - merge them to call same scripted effect
 	on_unit_leader_promote_from_ranks_green = {
 		effect = {
-			if = {
-				limit = {
-					owner = {
-						NOT = {
-							OR = {
-								has_country_flag = no_generic_militarist_political_advisor
-								has_custom_advisors = yes
-								has_allowed_idea_with_traits = {
-									idea = armourer
-									characters = yes
-								}
-							}
-						}
-					}
-				}
-				add_advisor_role = {
-					advisor = {
-						slot = political_advisor
-						cost = 50
-						idea_token = THIS
-						traits = {
-							armourer
-						}
-					}
-				}
-			}
+			generate_militarist_advisor = yes
 		}
 	}
 	on_unit_leader_promote_from_ranks_veteran = {
 		effect = {
-			if = {
-				limit = {
-					owner = {
-						NOT = {
-							OR = {
-								has_country_flag = no_generic_militarist_political_advisor
-								has_custom_advisors = yes
-								has_allowed_idea_with_traits = {
-									idea = armourer
-									characters = yes
-								}
-							}
-						}
-					}
-				}
-				add_advisor_role = {
-					advisor = {
-						slot = political_advisor
-						cost = 50
-						idea_token = THIS
-						traits = {
-							armourer
-						}
-					}
-				}
-			}
+			generate_militarist_advisor = yes
 		}
 	}
 
