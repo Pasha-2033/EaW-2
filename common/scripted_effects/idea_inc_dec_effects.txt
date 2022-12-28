@@ -582,6 +582,121 @@ decrease_poverty_level_idea = {
 		}
 	}
 }
+increase_inflation_idea = {
+	if = {
+		limit = {
+			has_idea = high_inflation
+		}
+		swap_ideas = {
+			remove_idea = high_inflation
+			add_idea = hyperinflation
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = medium_inflation
+		}
+		swap_ideas = {
+			remove_idea = medium_inflation
+			add_idea = high_inflation
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = low_inflation
+		}
+		swap_ideas = {
+			remove_idea = low_inflation
+			add_idea = medium_inflation
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = no_inflation
+		}
+		swap_ideas = {
+			remove_idea = no_inflation
+			add_idea = low_inflation
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = uninflation
+		}
+		swap_ideas = {
+			remove_idea = uninflation
+			add_idea = no_inflation
+		}
+	}
+}
+decrease_inflation_idea = {
+	if = {
+		limit = {
+			has_idea = no_inflation
+		}
+		swap_ideas = {
+			remove_idea = no_inflation
+			add_idea = uninflation
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = low_inflation
+		}
+		swap_ideas = {
+			remove_idea = low_inflation
+			add_idea = no_inflation
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = medium_inflation
+		}
+		swap_ideas = {
+			remove_idea = medium_inflation
+			add_idea = low_inflation
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = high_inflation
+		}
+		swap_ideas = {
+			remove_idea = high_inflation
+			add_idea = medium_inflation
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = hyperinflation
+		}
+		swap_ideas = {
+			remove_idea = hyperinflation
+			add_idea = high_inflation
+		}
+	}
+}
+stabilise_inflation = {
+	if = {
+		limit = {
+			NOT = {
+				has_idea = medium_inflation
+			}
+		}
+		if = {
+			limit = {
+				OR = {
+					has_idea = high_inflation
+					has_idea = hyperinflation
+				}
+			}
+			decrease_inflation_idea = yes
+		}
+		else = {
+			increase_inflation_idea = yes
+		}
+	}
+}
 #political ideas removal
 remove_harmony_spirits_effect = {}
 remove_socialism_spirits_effect = {}

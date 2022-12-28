@@ -318,15 +318,70 @@ on_actions = {
 		}
 	}
 
-	#Not run on a specific country.
-	on_startup = {
-		effect = {
-
-		}
-	}
 
 	on_unit_leader_created = {
+		effect = {}
+	}
+	#ROOT - unit leader, FROM - unit, owner - country
+	#to do - merge them to call same scripted effect
+	on_unit_leader_promote_from_ranks_green = {
 		effect = {
+			if = {
+				limit = {
+					owner = {
+						NOT = {
+							OR = {
+								has_country_flag = no_generic_militarist_political_advisor
+								has_custom_advisors = yes
+								has_allowed_idea_with_traits = {
+									idea = armourer
+									characters = yes
+								}
+							}
+						}
+					}
+				}
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						cost = 50
+						idea_token = THIS
+						traits = {
+							armourer
+						}
+					}
+				}
+			}
+		}
+	}
+	on_unit_leader_promote_from_ranks_veteran = {
+		effect = {
+			if = {
+				limit = {
+					owner = {
+						NOT = {
+							OR = {
+								has_country_flag = no_generic_militarist_political_advisor
+								has_custom_advisors = yes
+								has_allowed_idea_with_traits = {
+									idea = armourer
+									characters = yes
+								}
+							}
+						}
+					}
+				}
+				add_advisor_role = {
+					advisor = {
+						slot = political_advisor
+						cost = 50
+						idea_token = THIS
+						traits = {
+							armourer
+						}
+					}
+				}
+			}
 		}
 	}
 
@@ -410,6 +465,34 @@ on_actions = {
 			add_timed_unit_leader_trait = {
 				trait = recently_promoted
 				days = 100
+			}
+			#kill generic militarist, that has no field marshal role
+			FROM = {
+				if = {
+					limit = {
+						NOT = {
+							any_character = {
+								is_field_marshal = yes
+								has_ideology_group = militarism
+							}
+						}
+					}
+					hidden_effect = {
+						PREV = {
+							add_unit_leader_trait = country_leader_trait_militarist
+						}
+						add_country_leader_role = {
+							character = PREV
+							promote_leader = no
+							country_leader = {
+								ideology = ultramilitarism
+								#expire = "1965.1.1.1" #needed?
+								traits = {}
+							}
+						}
+						kill_ideology_leader = militarism
+					}
+				}
 			}
 		}
 	}

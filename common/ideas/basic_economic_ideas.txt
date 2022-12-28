@@ -18,8 +18,25 @@ ideas = {
 		chaos_rules_economy = {}
 		people_rule_economy = {}
 		#кому достается большая часть ВВП
-		priority_people = {}
-		priority_civil_economy = {}
+		priority_people = {
+			picture = clockwerk_economy			#to do (change)
+			modifier = {
+				stability_weekly = 0.01
+				monthly_population = 0.25
+				recruitable_population_factor = 0.01
+			}
+		}
+		priority_civil_economy = {
+			picture = clockwerk_economy			#to do (change)
+			modifier = {
+				stability_factor = -0.1
+				production_speed_synthetic_refinery_factor = 0.15
+				production_speed_industrial_complex_factor = 0.25
+				conversion_cost_mil_to_civ_factor = -0.25
+				production_speed_infrastructure_factor = 0.1
+				production_speed_rail_way_factor = 0.1
+			}
+		}
 		priority_military_economy = {}
 		priority_gold_reserve = {}
 		priority_religion = {}
@@ -31,6 +48,34 @@ ideas = {
 				stability_weekly = 0.01
 				political_power_factor = 0.25
 				monthly_population = 0.1
+			}
+		}
+		introduction_of_standardization = {
+			picture = clockwerk_economy			#to do (change)
+			modifier = {
+				civilian_intel_to_others = 10
+				army_intel_to_others = 5
+				navy_intel_to_others = 5
+				airforce_intel_to_others = 5
+				production_factory_start_efficiency_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor =	0.05
+				production_lack_of_resource_penalty_factor = 0.1
+				line_change_production_efficiency_factor = -0.05
+				production_speed_buildings_factor = 0.05
+			}
+			on_remove = {
+				add_ideas = wide_spread_standartisation
+			}
+		}
+		wide_spread_standartisation = {
+			picture = clockwerk_economy			#to do (change)
+			modifier = {
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.1
+				production_factory_efficiency_gain_factor =	0.05
+				line_change_production_efficiency_factor = -0.1
+				production_speed_buildings_factor = 0.05
 			}
 		}
 	}

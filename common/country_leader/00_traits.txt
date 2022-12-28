@@ -2458,57 +2458,39 @@ leader_traits = {
 	}
 
 	### IDEA TRAITS ###
-	
-	# drift is a percent applied weekly
 	communist_revolutionary = {
 		random = no
-		# Boosts Communism
 		communism_drift = 0.1
-		
-		ai_will_do = {
-			factor = 1
-			#modifier = {
-				#not = { has_completed_focus = USA_suspend_the_presecution }
-				#factor = 0
-			#}
-		}
-	}
-	
-	democratic_reformer = {
-		random = no
-		# Boosts Democracy
-		democratic_drift = 0.1
-		
 		ai_will_do = {
 			factor = 0
 		}
 	}
-	
+	democratic_reformer = {
+		random = no
+		democratic_drift = 0.1
+		ai_will_do = {
+			factor = 0
+		}
+	}
 	fascist_demagogue = {
 		random = no
-		# Boosts Fascism
 		fascism_drift = 0.1
-		
 		ai_will_do = {
-			factor = 1
-			#modifier = { 
-			#	not = { has_completed_focus = USA_america_first }
-			#	factor = 0
-			#}
+			factor = 0
 		}
 	}
 	staunch_monarchist = {
 		random = no
-		# Boosts Unaligned
 		neutrality_drift = 0.1
-		
 		ai_will_do = {
-			factor = 1
-			#modifier = {
-			#	tag = HUN
-			#	not = { has_completed_focus = HUN_invite_the_habsburg_prince }
-			#	factor = 0
-			#}
+			factor = 0
+		}
+	}
+	armourer = {
+		random = no
+		militarism_drift = 0.1
+		ai_will_do = {
+			factor = 0
 		}
 	}
 	

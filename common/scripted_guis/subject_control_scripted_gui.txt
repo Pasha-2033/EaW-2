@@ -4,7 +4,7 @@ scripted_gui = {
 		window_name = "subject_control_menu"
 		parent_window_token = selected_country_view_diplomacy
 		visible = {
-			is_subject_of = ROOT
+			is_puppet_of = ROOT
 			check_variable = {
 				ROOT.subject_control_visibility = 1
 			}
