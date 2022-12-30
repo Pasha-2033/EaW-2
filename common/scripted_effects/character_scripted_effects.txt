@@ -23,116 +23,33 @@ generate_militarist_advisor = {
 				traits = {
 					armourer
 				}
+				available = {
+					militarism > 0.15
+				}
 			}
 		}
 	}
 }
 generate_portrait = {
-	meta_effect = {
-		text = {
-			if = {
-				limit = {
-					has_idea = polar_race
-				}
-				set_portraits = {
-					character = [C]
-					army = {
-						small = GFX_idea_unknown_advisor_bear
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = buffalo_race
-				}
-				set_portraits = {
-					character = [C]
-					army = {
-						small = GFX_idea_unknown_advisor_buffalo
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = changeling_race
-				}
-				set_portraits = {
-					character = [C]
-					army = {
-						small = GFX_idea_unknown_advisor_bug
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = diamond_dog_race
-				}
-				set_portraits = {
-					character = [C]
-					army = {
-						small = GFX_idea_unknown_advisor_dog
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = dragon_race
-				}
-				set_portraits = {
-					character = [C]
-					army = {
-						small = GFX_idea_unknown_advisor_dragon
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = griffon_race
-				}
-				set_portraits = {
-					character = [C]
-					army = {
-						small = GFX_idea_unknown_advisor_griffon
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = minotaur_race
-				}
-				set_portraits = {
-					character = [C]
-					army = {
-						small = GFX_idea_unknown_advisor_minotaur
-					}
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = penguin_race
-				}
-				set_portraits = {
-					character = [C]
-					army = {
-						small = GFX_idea_unknown_advisor_pingu
-					}
-				}
-			}
-			else = {
-				set_portraits = {
-					character = [C]
-					army = {
-						small = GFX_idea_unknown_advisor
-					}
-				}
-			}
-		}
-		C = "[?character_token.GetTokenLocalizedKey]"
-	}
 	if = {
 		limit = {
 			has_variable = character_token
 		}
+		meta_effect = {
+			text = {
+				set_portraits = {
+					character = [C]
+					army = {
+						small = [P]
+					}
+				}
+			}
+			C = "[?character_token.GetTokenLocalizedKey]"
+			P = "[character_portrait_gfx_object]"
+		}
 		clear_variable = character_token
+	}
+	else = {
+		log = "Error - can`t get character without token"
 	}
 }

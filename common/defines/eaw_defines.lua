@@ -89,4 +89,4 @@ NDefines.NSupply.CAPITAL_ADDED_PENALTY_PER_PROVINCE = 1.0 -- added penalty as we
 
 NDefines.NTechnology.MIN_RESEARCH_SPEED = 0.001 -- Defines research speed, can't go below this value (default is 0.1)
 
-NDefines.NFrontend.CAMERA_MIN_HEIGHT = 1
+--NDefines.NFrontend.CAMERA_MIN_HEIGHT = 1 --if need a detailed model view

@@ -1248,7 +1248,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus default_962_militarism"
 			add_popularity = {
 				ideology = militarism
-				popularity = 10
+				popularity = 0.1
 			}
 		}
 	}
@@ -1272,6 +1272,10 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus default_962_militarization_of_youth"
+			add_timed_idea = {
+				idea = militarization_of_youth_idea
+				days = 90
+			}
 		}
 	}
 	focus = {
@@ -1294,6 +1298,7 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus default_962_form_military_hunta"
+			add_ideas = military_hunta_idea
 		}
 	}
 	focus = {

@@ -1,0 +1,45 @@
+ideas = {
+	country = {
+		national_socialism_idea = {
+			picture = generic_local_self_management #to do - change
+			modifier = {
+				fascism_drift = 0.1
+				militarism_drift = 0.08
+			}
+		}
+		militarization_of_youth_idea = {
+			picture = generic_local_self_management #to do - change
+			modifier = {
+				war_support_weekly = 0.05
+				fascism_drift = 0.05
+				militarism_drift = 0.15
+				recruitable_population_factor = 0.01
+			}
+			on_remove = {
+				add_ideas = militarized_youth_idea
+			}
+		}
+		militarized_youth_idea = {
+			modifier = {
+				war_support_factor = 0.05
+				militarism_drift = 0.01
+				recruitable_population_factor = 0.02
+			}
+		}
+		military_hunta_idea = {
+			picture = generic_local_self_management #to do - change
+			modifier = {
+				army_core_attack_factor = 0.1
+				army_core_defence_factor = 0.05
+			}
+			equipment_bonus = {
+				infantry_equipment = {
+					instant = yes
+					soft_attack = 0.1
+					hard_attack = 0.05
+					build_cost_ic = -0.05
+				}
+			}
+		}
+	}
+}
