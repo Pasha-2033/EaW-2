@@ -861,7 +861,7 @@ focus_tree = {
 	focus = {
 		id = default_962_new_scientific_discovers
 		icon = GFX_goal_generic_changeling
-		cost = 1
+		cost = 15
 		ai_will_do = {
 			factor = 200
 		}
@@ -873,12 +873,17 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus default_962_new_scientific_discovers"
+			increase_science_base_idea = yes
+			add_popularity = {
+				ideology = technocracy
+				popularity = 0.05
+			}
 		}
 	}
 	focus = {
 		id = default_962_populate_science
 		icon = GFX_goal_generic_changeling
-		cost = 1
+		cost = 7
 		ai_will_do = {
 			factor = 200
 		}
@@ -890,12 +895,16 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus default_962_populate_science"
+			add_timed_idea = {
+				idea = populate_science_idea
+				days = 180
+			}
 		}
 	}
 	focus = {
 		id = default_962_importance_of_science
 		icon = GFX_goal_generic_changeling
-		cost = 1
+		cost = 15
 		ai_will_do = {
 			factor = 200
 		}
@@ -903,16 +912,23 @@ focus_tree = {
 		prerequisite = {
 			focus = default_962_populate_science
 		}
+		available = {
+			technocracy > 0.3
+		}
 		x = 0
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus default_962_importance_of_science"
+			add_popularity = {
+				ideology = technocracy
+				popularity = 0.05
+			}
 		}
 	}
 	focus = {
 		id = default_962_ask_for_grants
 		icon = GFX_goal_generic_changeling
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			factor = 200
 		}
@@ -924,12 +940,16 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus default_962_ask_for_grants"
+			add_timed_idea = {
+				idea = grants_for_researching_idea
+				days = 180
+			}
 		}
 	}
 	focus = {
 		id = default_962_spread_scientists_influence
 		icon = GFX_goal_generic_changeling
-		cost = 1
+		cost = 15
 		ai_will_do = {
 			factor = 200
 		}
@@ -941,6 +961,7 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus default_962_spread_scientists_influence"
+			add_ideas = research_facilities
 		}
 	}
 
@@ -1125,7 +1146,7 @@ focus_tree = {
 	focus = {
 		id = default_962_revisionism
 		icon = GFX_goal_generic_changeling
-		cost = 1
+		cost = 10
 		ai_will_do = {
 			factor = 200
 		}
@@ -1196,7 +1217,7 @@ focus_tree = {
 	focus = {
 		id = default_962_national_socialism
 		icon = GFX_goal_generic_changeling
-		cost = 1
+		cost = 10
 		ai_will_do = {
 			factor = 200
 		}
@@ -1234,7 +1255,7 @@ focus_tree = {
 	focus = {
 		id = default_962_militarism
 		icon = GFX_goal_generic_changeling
-		cost = 1
+		cost = 10
 		ai_will_do = {
 			factor = 200
 		}
@@ -1255,7 +1276,7 @@ focus_tree = {
 	focus = {
 		id = default_962_militarization_of_youth
 		icon = GFX_goal_generic_changeling
-		cost = 1
+		cost = 15
 		ai_will_do = {
 			factor = 200
 		}
@@ -1281,7 +1302,7 @@ focus_tree = {
 	focus = {
 		id = default_962_form_military_hunta
 		icon = GFX_goal_generic_changeling
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			factor = 200
 		}
@@ -1304,7 +1325,7 @@ focus_tree = {
 	focus = {
 		id = default_962_speed_things_up
 		icon = GFX_goal_generic_changeling
-		cost = 1
+		cost = 10
 		ai_will_do = {
 			factor = 200
 		}

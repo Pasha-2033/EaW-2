@@ -41,5 +41,49 @@ ideas = {
 				}
 			}
 		}
+		populate_science_idea = {
+			picture = generic_local_self_management #to do - change
+			modifier = {
+				research_speed_factor = 0.02
+				technocracy_drift = 0.08
+				technocracy_acceptance = 5
+			}
+			allowed_civil_war = {
+				has_government = technocracy
+			}
+		}
+		grants_for_researching_idea = {
+			picture = generic_local_self_management #to do - change
+			modifier = {
+				research_speed_factor = 0.15
+				technocracy_drift = 0.06
+				political_power_gain = -0.75
+			}
+			allowed_civil_war = {
+				has_government = technocracy
+			}
+		}
+		research_facilities = {
+			picture = generic_local_self_management #to do - change
+			modifier = {
+				research_speed_factor = 0.05
+				materiel_manufacturer_cost_factor = -0.2
+				naval_manufacturer_cost_factor = -0.2
+				aircraft_manufacturer_cost_factor = -0.2
+				tank_manufacturer_cost_factor = -0.2
+				industrial_concern_cost_factor = -0.2
+			}
+			allowed_civil_war = {
+				has_government = technocracy
+			}
+			do_effect = {
+                technocracy > 0.6
+            }
+			cancel = {
+				NOT = {
+					has_government = technocracy
+				}
+			}
+		}
 	}
 }
