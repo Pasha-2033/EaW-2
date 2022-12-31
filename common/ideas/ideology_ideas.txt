@@ -18,12 +18,19 @@ ideas = {
 			on_remove = {
 				add_ideas = militarized_youth_idea
 			}
+			allowed_civil_war = {
+				has_government = militarism
+			}
 		}
 		militarized_youth_idea = {
+			picture = generic_local_self_management #to do - change
 			modifier = {
 				war_support_factor = 0.05
 				militarism_drift = 0.01
 				recruitable_population_factor = 0.02
+			}
+			allowed_civil_war = {
+				has_government = militarism
 			}
 		}
 		military_hunta_idea = {
@@ -31,6 +38,9 @@ ideas = {
 			modifier = {
 				army_core_attack_factor = 0.1
 				army_core_defence_factor = 0.05
+			}
+			allowed_civil_war = {
+				has_government = militarism
 			}
 			equipment_bonus = {
 				infantry_equipment = {
@@ -84,6 +94,40 @@ ideas = {
 					has_government = technocracy
 				}
 			}
+		}
+		church_constructioning = {
+			picture = generic_local_self_management #to do - change
+			modifier = {
+				research_speed_factor = -0.05
+				civilian_factory_use = 2
+				production_speed_industrial_complex_factor = 0.2
+				holy_drift = 0.1
+			}
+			allowed_civil_war = {
+				has_government = holy
+			}
+			do_effect = {
+                check_variable = {
+					num_of_civilian_factories_available_for_projects > 1
+				}
+            }
+		}
+		altars_constructioning = {
+			picture = generic_local_self_management #to do - change
+			modifier = {
+				research_speed_factor = -0.05
+				civilian_factory_use = 2
+				production_speed_arms_factory_factor = 0.2
+				unholy_drift = 0.1
+			}
+			allowed_civil_war = {
+				has_government = unholy
+			}
+			do_effect = {
+                check_variable = {
+					num_of_civilian_factories_available_for_projects > 1
+				}
+            }
 		}
 	}
 }

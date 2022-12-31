@@ -1,17 +1,12 @@
 capital = 262
-
 set_country_flag = queens_tower_flag
-
 set_research_slots = 2
 starting_train_buffer = 2
-
 set_technology = {
 	tech_jager = 1
 	melee_weapons = 1 #temp
 }
-
 set_oob = "SOR_962"
-
 set_politics = {
 	ruling_party = fascism
 	last_election = "953.11.9"
@@ -27,16 +22,17 @@ set_popularities = {
 	anarchism = 3
 	harmony = 4
 }
-
 add_ideas = {
 	changeling_race
 	limited_exports
 }
 add_timed_idea = { idea = CHN_synthetic_armament days = 365 }
 set_stability = 0.6
-
 recruit_character = SOR_queen_yaria
-
 set_rule = {
 	can_generate_female_aces = yes
+}
+962.1.1 = {
+	set_country_flag = default_962_focus_tree
+	generate_units_962 = yes
 }

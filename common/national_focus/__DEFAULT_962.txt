@@ -850,6 +850,12 @@ focus_tree = {
 		prerequisite = {
 			focus = default_962_political_effort
 		}
+		mutually_exclusive = {
+			focus = default_962_centrism
+			focus = default_962_religious_movement
+			focus = default_962_new_scientific_discovers
+			focus = default_962_revisionism
+		}
 		x = -3
 		y = 1
 		completion_reward = {
@@ -868,6 +874,12 @@ focus_tree = {
 		relative_position_id = default_962_political_effort
 		prerequisite = {
 			focus = default_962_political_effort
+		}
+		mutually_exclusive = {
+			focus = default_962_radicalism
+			focus = default_962_religious_movement
+			focus = default_962_centrism
+			focus = default_962_revisionism
 		}
 		x = 3
 		y = 1
@@ -978,10 +990,28 @@ focus_tree = {
 		prerequisite = {
 			focus = default_962_political_effort
 		}
+		mutually_exclusive = {
+			focus = default_962_radicalism
+			focus = default_962_centrism
+			focus = default_962_new_scientific_discovers
+			focus = default_962_revisionism
+		}
 		x = 0
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus default_962_religious_movement"
+			add_popularity = {
+				ideology = holy
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = unholy
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = technocracy
+				popularity = -0.1
+			}
 		}
 	}
 	focus = {
@@ -995,10 +1025,17 @@ focus_tree = {
 		prerequisite = {
 			focus = default_962_religious_movement
 		}
+		mutually_exclusive = {
+			focus = default_962_form_cults
+		}
 		x = -1
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus default_962_form_churchs"
+			add_timed_idea = {
+				idea = church_constructioning
+				days = 90
+			}
 		}
 	}
 	focus = {
@@ -1012,10 +1049,17 @@ focus_tree = {
 		prerequisite = {
 			focus = default_962_religious_movement
 		}
+		mutually_exclusive = {
+			focus = default_962_form_churchs
+		}
 		x = 1
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus default_962_form_cults"
+			add_timed_idea = {
+				idea = altars_constructioning
+				days = 90
+			}
 		}
 	}
 	focus = {
@@ -1066,6 +1110,12 @@ focus_tree = {
 		prerequisite = {
 			focus = default_962_political_effort
 		}
+		mutually_exclusive = {
+			focus = default_962_radicalism
+			focus = default_962_religious_movement
+			focus = default_962_new_scientific_discovers
+			focus = default_962_revisionism
+		}
 		x = -8
 		y = 1
 		completion_reward = {
@@ -1082,6 +1132,11 @@ focus_tree = {
 		relative_position_id = default_962_centrism
 		prerequisite = {
 			focus = default_962_centrism
+		}
+		mutually_exclusive = {
+			focus = default_962_spread_democratic_ideas
+			focus = default_962_anarchists
+			focus = default_962_spread_harmonic_ideas
 		}
 		x = -1
 		y = 1
@@ -1100,6 +1155,11 @@ focus_tree = {
 		prerequisite = {
 			focus = default_962_centrism
 		}
+		mutually_exclusive = {
+			focus = default_962_neutrals
+			focus = default_962_spread_democratic_ideas
+			focus = default_962_spread_harmonic_ideas
+		}
 		x = 1
 		y = 1
 		completion_reward = {
@@ -1117,6 +1177,11 @@ focus_tree = {
 		prerequisite = {
 			focus = default_962_centrism
 		}
+		mutually_exclusive = {
+			focus = default_962_neutrals
+			focus = default_962_anarchists
+			focus = default_962_spread_harmonic_ideas
+		}
 		x = -3
 		y = 1
 		completion_reward = {
@@ -1133,6 +1198,11 @@ focus_tree = {
 		relative_position_id = default_962_centrism
 		prerequisite = {
 			focus = default_962_centrism
+		}
+		mutually_exclusive = {
+			focus = default_962_neutrals
+			focus = default_962_anarchists
+			focus = default_962_spread_democratic_ideas
 		}
 		x = 3
 		y = 1
@@ -1153,6 +1223,12 @@ focus_tree = {
 		relative_position_id = default_962_political_effort
 		prerequisite = {
 			focus = default_962_political_effort
+		}
+		mutually_exclusive = {
+			focus = default_962_radicalism
+			focus = default_962_religious_movement
+			focus = default_962_new_scientific_discovers
+			focus = default_962_centrism
 		}
 		x = 8
 		y = 1
@@ -1191,12 +1267,102 @@ focus_tree = {
 		prerequisite = {
 			focus = default_962_revisionism
 		}
+		mutually_exclusive = {
+			focus = default_962_national_socialism
+			focus = default_962_socialism
+		}
 		x = -3
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus default_962_communism"
 		}
 	}
+	focus = {
+		id = default_962_factories_for_workers
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_962_communism
+		prerequisite = {
+			focus = default_962_communism
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_factories_for_workers"
+		}
+	}
+	focus = {
+		id = default_962_land_for_peasants
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_962_factories_for_workers
+		prerequisite = {
+			focus = default_962_factories_for_workers
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_land_for_peasants"
+		}
+	}
+	focus = {
+		id = default_962_new_society_type
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_962_land_for_peasants
+		prerequisite = {
+			focus = default_962_land_for_peasants
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_new_society_type"
+			custom_effect_tooltip = change_society_to_communal_society
+			if = {
+				limit = {
+					NOT = {
+						has_idea = communal_society
+					}
+				}
+				for_each_loop = {
+					array = global.society_idea_tokens
+					value = v
+					if = {
+						limit = {
+							meta_trigger = {
+								text = {
+									has_idea = [IDEA]
+								}
+								IDEA = "[?v.GetTokenKey]"
+							}
+						}
+						meta_effect = {
+							text = {
+								swap_ideas = {
+									remove_idea = [IDEA]
+									add_idea = communal_society
+								}
+							}
+							IDEA = "[?v.GetTokenKey]"
+						}
+						set_temp_variable = {
+							break = 1
+						}
+					}
+				}
+			}
+		}
+	}
+
 	focus = {
 		id = default_962_socialism
 		icon = GFX_goal_generic_changeling
@@ -1207,6 +1373,10 @@ focus_tree = {
 		relative_position_id = default_962_revisionism
 		prerequisite = {
 			focus = default_962_revisionism
+		}
+		mutually_exclusive = {
+			focus = default_962_national_socialism
+			focus = default_962_communism
 		}
 		x = 3
 		y = 1
@@ -1224,6 +1394,10 @@ focus_tree = {
 		relative_position_id = default_962_revisionism
 		prerequisite = {
 			focus = default_962_revisionism
+		}
+		mutually_exclusive = {
+			focus = default_962_communism
+			focus = default_962_socialism
 		}
 		x = 0
 		y = 1
@@ -1246,6 +1420,9 @@ focus_tree = {
 		prerequisite = {
 			focus = default_962_national_socialism
 		}
+		mutually_exclusive = {
+			focus = default_962_militarism
+		}
 		x = -1
 		y = 1
 		completion_reward = {
@@ -1262,6 +1439,9 @@ focus_tree = {
 		relative_position_id = default_962_national_socialism
 		prerequisite = {
 			focus = default_962_national_socialism
+		}
+		mutually_exclusive = {
+			focus = default_962_fascism
 		}
 		x = 1
 		y = 1
