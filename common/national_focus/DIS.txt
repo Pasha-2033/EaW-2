@@ -489,30 +489,6 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = dis_focus_first_strike_ves
-		icon = GFX_goal_generic_changeling
-		cost = 1
-		prerequisite = {
-			focus = dis_focus_treat_from_south
-		}
-		bypass = {
-			VES = {
-				exists = no
-			}
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		x = 2
-		y = 3
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-	}
-	focus = {
 		id = dis_focus_first_strike_vra
 		icon = GFX_goal_generic_changeling
 		cost = 1

@@ -697,6 +697,100 @@ stabilise_inflation = {
 		}
 	}
 }
+increase_valuta_idea = {
+	if = {
+		limit = {
+			has_idea = no_valuta
+		}
+		swap_ideas = {
+			remove_idea = no_valuta
+			add_idea = stone_coins
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = stone_coins
+		}
+		swap_ideas = {
+			remove_idea = stone_coins
+			add_idea = copper_coins
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = copper_coins
+		}
+		swap_ideas = {
+			remove_idea = copper_coins
+			add_idea = silver_coins
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = silver_coins
+		}
+		swap_ideas = {
+			remove_idea = silver_coins
+			add_idea = gold_coins
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = gold_coins
+		}
+		swap_ideas = {
+			remove_idea = gold_coins
+			add_idea = international_valuta
+		}
+	}
+}
+decrease_valuta_idea = {
+	if = {
+		limit = {
+			has_idea = international_valuta
+		}
+		swap_ideas = {
+			remove_idea = international_valuta
+			add_idea = gold_coins
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = gold_coins
+		}
+		swap_ideas = {
+			remove_idea = gold_coins
+			add_idea = silver_coins
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = silver_coins
+		}
+		swap_ideas = {
+			remove_idea = silver_coins
+			add_idea = copper_coins
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = copper_coins
+		}
+		swap_ideas = {
+			remove_idea = copper_coins
+			add_idea = stone_coins
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = stone_coins
+		}
+		swap_ideas = {
+			remove_idea = stone_coins
+			add_idea = no_valuta
+		}
+	}
+}
 #political ideas removal
 remove_harmony_spirits_effect = {}
 remove_socialism_spirits_effect = {}

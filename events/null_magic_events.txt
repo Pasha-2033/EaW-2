@@ -1,4 +1,5 @@
 add_namespace = null_magic_event
+add_namespace = null_magic_event_supporter
 #change picture everywhere
 country_event = {
 	id = null_magic_event.1
@@ -8,7 +9,6 @@ country_event = {
 		#also make them core to ECR, not to ELN
 		#add Sombra later
 		hidden_effect = {
-			clr_global_flag = NO_ECR
 			ECR = {
 				transfer_state = 344
 				transfer_state = 345
@@ -62,15 +62,7 @@ country_event = {
 	show_major = {
 		always = yes
 	}
-	trigger = {
-		has_global_flag = NO_ECR
-		OR = {
-			date > 962.7.1
-			VES = {
-				has_completed_focus = ves_focus_evil_mind_found
-			}
-		}
-	}
+	is_triggered_only = yes
 	option = {
 		name = null_magic_event.1.a
 		ai_chance = {
@@ -88,6 +80,29 @@ country_event = {
 		}
 		ECR = {
 			change_tag_from = ROOT
+		}
+	}
+}
+country_event = {
+	id = null_magic_event_supporter.1
+	hidden = yes
+	#trigger or mean_time_to_happen = { days = 180 }? test for optimisation (to do)
+	trigger = {
+		date > 962.3.1
+	}
+	fire_only_once = yes
+	option = {
+		if = {
+			limit = {
+				VES = {
+					NOT = {
+						has_completed_focus = ves_focus_evil_mind_found
+					}
+				}
+			}
+			country_event = {
+				id = null_magic_event.1
+			}
 		}
 	}
 }

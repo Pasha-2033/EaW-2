@@ -129,5 +129,75 @@ ideas = {
 				}
             }
 		}
+		factories_for_workers_idea = {
+			picture = generic_local_self_management #to do - change
+			modifier = {
+				stability_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_start_efficiency_factor = 0.1
+			}
+			allowed_civil_war = {
+				has_government = communism
+			}
+		}
+		land_for_peasants_idea = {
+			picture = generic_local_self_management #to do - change
+			modifier = {
+				compliance_growth = 0.1
+				resistance_activity = -0.05
+				resistance_target = -0.05
+				resistance_growth = -0.05
+				stability_factor = 0.05
+			}
+			allowed_civil_war = {
+				has_government = communism
+			}
+		}
+		internationalism_idea = {
+			picture = generic_local_self_management #to do - change
+			modifier = {
+				communism_drift = 0.2
+				weekly_manpower = 5000
+			}
+			allowed_civil_war = {
+				has_government = communism
+			}
+		}
+		omen_idea = {
+			picture = generic_local_self_management #to do - change
+			modifier = {
+				party_popularity_stability_factor = 0.2
+			}
+			allowed_civil_war = {
+				OR = {
+					has_government = holy
+					has_government = unholy
+				}
+			}
+		}
+		dark_magic_idea = {
+			picture = generic_local_self_management #to do - change
+			modifier = {
+				unholy_drift = 0.01
+				unholy_acceptance = 25
+				subjects_autonomy_gain = 0.5
+				land_night_attack = 0.05
+				air_night_penalty = -0.05
+			}
+			allowed_civil_war = {
+				has_government = unholy
+			}
+		}
+		god_with_us_idea = {
+			picture = generic_local_self_management #to do - change
+			modifier = {
+				ai_badass_factor = -0.5
+				defence = 0.08
+				offence = 0.02
+			}
+			allowed_civil_war = {
+				has_government = holy
+			}
+		}
 	}
 }

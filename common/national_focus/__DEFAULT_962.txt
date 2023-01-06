@@ -759,6 +759,7 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus default_962_new_valuta"
+			increase_valuta_idea = yes
 		}
 	}
 	focus = {
@@ -842,7 +843,7 @@ focus_tree = {
 	focus = {
 		id = default_962_radicalism
 		icon = GFX_goal_generic_changeling
-		cost = 1
+		cost = 10
 		ai_will_do = {
 			factor = 200
 		}
@@ -982,7 +983,7 @@ focus_tree = {
 	focus = {
 		id = default_962_religious_movement
 		icon = GFX_goal_generic_changeling
-		cost = 1
+		cost = 10
 		ai_will_do = {
 			factor = 200
 		}
@@ -1017,7 +1018,7 @@ focus_tree = {
 	focus = {
 		id = default_962_form_churchs
 		icon = GFX_goal_generic_changeling
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			factor = 200
 		}
@@ -1041,7 +1042,7 @@ focus_tree = {
 	focus = {
 		id = default_962_form_cults
 		icon = GFX_goal_generic_changeling
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			factor = 200
 		}
@@ -1063,9 +1064,45 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = default_962_dark_magic_for_all_minions
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_962_form_cults
+		prerequisite = {
+			focus = default_962_form_cults
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_dark_magic_for_all_minions"
+			add_ideas = dark_magic_idea
+		}
+	}
+	focus = {
+		id = default_962_new_evil_spirits
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_962_dark_magic_for_all_minions
+		prerequisite = {
+			focus = default_962_dark_magic_for_all_minions
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_new_evil_spirits"
+			add_ideas = religious_country
+		}
+	}
+	focus = {
 		id = default_962_new_religious_practices
 		icon = GFX_goal_generic_changeling
-		cost = 1
+		cost = 10
 		ai_will_do = {
 			factor = 200
 		}
@@ -1077,12 +1114,13 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus default_962_new_religious_practices"
+			add_ideas = religious_country
 		}
 	}
 	focus = {
 		id = default_962_new_gods
 		icon = GFX_goal_generic_changeling
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			factor = 200
 		}
@@ -1094,6 +1132,71 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus default_962_new_gods"
+			add_ideas = god_with_us_idea
+		}
+	}
+	focus = {
+		id = default_962_omens
+		icon = GFX_goal_generic_changeling
+		cost = 7
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_962_religious_movement
+		prerequisite = {
+			focus = default_962_new_gods
+			focus = default_962_new_evil_spirits
+		}
+		x = 0
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_omens"
+			add_ideas = omen_idea
+		}
+	}
+	focus = {
+		id = default_962_immortal_soul
+		icon = GFX_goal_generic_changeling
+		cost = 2
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_962_omens
+		prerequisite = {
+			focus = default_962_omens
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = holy_unholy_more_popular_than_ruling_party
+				OR = {
+					holy > party_popularity@ruling_party
+					unholy > party_popularity@ruling_party
+				}
+			}
+			OR = {
+				holy > 0.25
+				unholy > 0.25
+			}
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_962_immortal_soul"
+			if = {
+				limit = {
+					holy > party_popularity@unholy
+				}
+				set_politics = {
+					ruling_party = unholy
+					elections_allowed = no
+				}
+			}
+			else = {
+				set_politics = {
+					ruling_party = unholy
+					elections_allowed = no
+				}
+			}
 		}
 	}
 
@@ -1102,7 +1205,7 @@ focus_tree = {
 	focus = {
 		id = default_962_centrism
 		icon = GFX_goal_generic_changeling
-		cost = 1
+		cost = 10
 		ai_will_do = {
 			factor = 200
 		}
@@ -1259,7 +1362,7 @@ focus_tree = {
 	focus = {
 		id = default_962_communism
 		icon = GFX_goal_generic_changeling
-		cost = 1
+		cost = 10
 		ai_will_do = {
 			factor = 200
 		}
@@ -1275,6 +1378,10 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus default_962_communism"
+			add_timed_idea = {
+				idea = internationalism_idea
+				days = 200
+			}
 		}
 	}
 	focus = {
@@ -1292,6 +1399,8 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus default_962_factories_for_workers"
+			add_ideas = factories_for_workers_idea
+			add_ideas =	priority_people
 		}
 	}
 	focus = {
@@ -1309,6 +1418,7 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus default_962_land_for_peasants"
+			add_ideas = land_for_peasants_idea
 		}
 	}
 	focus = {
@@ -1326,47 +1436,14 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus default_962_new_society_type"
-			custom_effect_tooltip = change_society_to_communal_society
-			if = {
-				limit = {
-					NOT = {
-						has_idea = communal_society
-					}
-				}
-				for_each_loop = {
-					array = global.society_idea_tokens
-					value = v
-					if = {
-						limit = {
-							meta_trigger = {
-								text = {
-									has_idea = [IDEA]
-								}
-								IDEA = "[?v.GetTokenKey]"
-							}
-						}
-						meta_effect = {
-							text = {
-								swap_ideas = {
-									remove_idea = [IDEA]
-									add_idea = communal_society
-								}
-							}
-							IDEA = "[?v.GetTokenKey]"
-						}
-						set_temp_variable = {
-							break = 1
-						}
-					}
-				}
-			}
+			add_ideas = communal_society
 		}
 	}
 
 	focus = {
 		id = default_962_socialism
 		icon = GFX_goal_generic_changeling
-		cost = 1
+		cost = 10
 		ai_will_do = {
 			factor = 200
 		}

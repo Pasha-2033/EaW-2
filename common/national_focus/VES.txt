@@ -1154,6 +1154,16 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_evil_mind_found"
 			hidden_effect = {
 				mark_focus_tree_layout_dirty = yes
+				if = {
+					limit = {
+						check_variable = {
+							ECR.num_core_states = 0
+						}
+					}
+					country_event = {
+						id = null_magic_event.1
+					}
+				}
 			}
 		}
 		search_filters = {
