@@ -1,5 +1,5 @@
 #Created by lead programmer of EaW 2 (vk: @uber_medic, @communistic_sistema) https://github.com/Pasha-2033/EaW-2
-#vesrion 1.1
+#vesrion 1.2
 #use scriped effects, less code, write code with pleasure :)
 
 #argument array structure:
@@ -20,8 +20,8 @@
 
 #next versions (upper 1.0) will add new generation argument - for example generation will be repeated by state (state category influence)
 
-#scenario 962
-generate_units_962 = {
+#scenario 982
+generate_units_982 = {
 	#research all technologies, so division can be filled with regired equpment (only base tech! for better optionality)
 	set_technology = {
 		melee_weapons = 1
@@ -37,7 +37,14 @@ generate_units_962 = {
 				has_template = "Generic Infantry Division"
 			}
 		}
-		load_oob = "_default_962_oob"
+		load_oob = "_default_982_oob"
+	}
+	#init division MP size (after modding, update value there!)
+	add_to_array = { #infantry
+		division_manpower = 7300
+	}
+	add_to_array = { #mountaineer
+		division_manpower = 4300
 	}
 	#init default arguments
 	add_to_array = {
@@ -153,20 +160,35 @@ generate_units_962 = {
 						PREV.args^i > 0
 					}
 				}
-				set_variable_to_random = {
+				set_temp_variable_to_random = {
 					var = R_S_XP_F
 					min = PREV.args^i_2
 					max = PREV.args^i_3
 				}
-				set_variable_to_random = {
+				set_temp_variable_to_random = {
 					var = R_S_EQ_F
 					min = PREV.args^i_4
 					max = PREV.args^i_5
 				}
-				set_variable_to_random = {
+				set_temp_variable_to_random = {
 					var = R_S_MP_F
 					min = PREV.args^i_6
 					max = PREV.args^i_7
+				}
+				set_temp_variable = {
+					index = i
+				}
+				divide_temp_variable = {
+					index = 8 #num of division parametrs (update if modded!)
+				}
+				set_temp_variable = {
+					div_mp = PREV.division_manpower^index
+				}
+				multiply_temp_variable = {
+					div_mp = R_S_MP_F
+				}
+				PREV = {
+					add_manpower = div_mp
 				}
 				meta_effect = {
 					text = {
@@ -190,6 +212,7 @@ generate_units_962 = {
 		}
 	}
 	#clear data (temp data is lost in state loop)
+	clear_array = division_manpower
 	clear_array = args
 }
 
