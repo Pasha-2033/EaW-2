@@ -276,6 +276,10 @@ ideologies = {
 			army_intel_to_others = 5
 			navy_intel_to_others = 5
 			airforce_intel_to_others = 5
+			research_speed_factor = 0.1
+			research_sharing_per_country_bonus_factor = 0.1
+			encryption_factor = 0.05
+			decryption_factor = 0.05
 		}
 		can_host_government_in_exile = yes	
 		faction_modifiers = {}
@@ -311,6 +315,9 @@ ideologies = {
 			civilian_intel_to_others = 50
 			army_intel_to_others = 10
 			navy_intel_to_others = 10
+			surrender_limit = 1
+			forced_surrender_limit = 1
+			max_surrender_limit_offset = 1
 		}
 		can_host_government_in_exile = no	
 		faction_modifiers = {}
@@ -351,6 +358,8 @@ ideologies = {
 			army_intel_to_others = 5
 			navy_intel_to_others = 5
 			airforce_intel_to_others = 5
+			offence = 0.05
+			army_core_defence_factor = 0.05
 		}
 		can_host_government_in_exile = no	
 		faction_modifiers = {}

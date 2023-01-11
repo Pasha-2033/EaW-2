@@ -13,84 +13,6 @@
 #	}
 #
 
-## LUSHI
-has_elias_in_power = {
-	has_country_leader = { ruling_only = yes character = LUS_prince_elias_whitecrest }
-}
-has_gerar_in_power = {
-	has_country_leader = { ruling_only = yes character = LUS_prince_gerar_whitecrest }
-}
-owns_prywhen = {
-	590 = { is_owned_by = ROOT }
-	385 = { is_owned_by = ROOT }
-	589 = { is_owned_by = ROOT }
-	508 = { is_owned_by = ROOT }
-	588 = { is_owned_by = ROOT }
-	605 = { is_owned_by = ROOT }
-	414 = { is_owned_by = ROOT }
-	651 = { is_owned_by = ROOT}
-}
-
-has_super_force_attack = {
-	OR = {
-		tag = HLR
-		tag = NMS
-		has_completed_focus = SOL_god_empress
-		has_completed_focus = SOL_empress_mother
-		has_completed_focus = SOL_empress_protector
-		has_completed_focus = CRY_SOL_zeal
-		has_completed_focus = OLE_new_vikings
-		has_completed_focus = death_or_dishonour
-		has_completed_focus = AET_madness_calls
-		has_completed_focus = MNC_warriors
-		has_completed_focus = LCT_divine_sacrifice
-		has_completed_focus = FIR_divine_fury
-		has_completed_focus = FIR_skeleton_armies
-		has_completed_focus = NIM_fascism_focus_15
-		has_completed_focus = NIM_with_your_shield
-		has_completed_focus = VED_Age_Of_Chivalry
-		has_completed_focus = VED_Doom_Of_Griffonia
-		has_completed_focus = TEM_blood_sacrifice
-		has_completed_focus = FRN_priests_in_the_ranks
-	}
-}
-
-has_super_last_stand = {
-	OR = {
-		tag = HLR
-		tag = NMS
-		has_completed_focus = SOL_god_empress
-		has_completed_focus = SOL_empress_mother
-		has_completed_focus = SOL_empress_protector
-		has_completed_focus = CRY_SOL_zeal
-		has_completed_focus = OLE_new_vikings
-		has_completed_focus = death_or_dishonour
-		has_completed_focus = AET_madness_calls
-		has_completed_focus = MNC_warriors
-		has_completed_focus = LCT_divine_sacrifice
-		has_completed_focus = FIR_divine_fury
-		has_completed_focus = FIR_skeleton_armies
-		has_completed_focus = NIM_fascism_focus_15
-		has_completed_focus = NIM_with_your_shield
-		has_completed_focus = VED_Age_Of_Chivalry
-		has_completed_focus = VED_Doom_Of_Griffonia
-		has_completed_focus = TEM_blood_sacrifice
-		has_completed_focus = FRN_priests_in_the_ranks
-	}
-}
-
-can_remove_DED = {
-	OR = {
-		is_EQS_SOL = yes
-		tag = CHN
-		tag = NLR
-		has_country_leader = { ruling_only = yes character = AET_prelate_ludwig_ebonwing }
-		AND = {
-			has_country_leader = { ruling_only = yes character = MNC_eriviar_sunstriker }
-			has_completed_focus = MNC_chosen_of_maar
-		}
-	}
-}
 
 ### BUFFALO TRADER TRIGGERS BECAUSE I'M LAZY ####
 has_equestrian_traders = {
@@ -363,10 +285,6 @@ has_subjects = {
 
 is_exempt_from_division_limit = {
 	OR = {
-		has_game_rule = {
-			rule = ai_division_limiter
-			option = no
-		}
 		has_idea = detached_country
 		AND = {
 			has_country_flag = FIR_is_necromancer
@@ -386,7 +304,6 @@ is_exempt_from_division_limit = {
 		}
 		AND = {
 			tag = MNC
-			has_completed_focus = MNC_chosen_of_maar
 			has_country_leader = { ruling_only = yes character = MNC_eriviar_sunstriker }
 		}
 		AND = {

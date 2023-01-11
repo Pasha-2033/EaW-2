@@ -193,24 +193,25 @@ raiding_category = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision initiate_raid"
 			effect_tooltip = {
-				start_border_war = {
-					change_state_after_war = no
-					attacker = {
-						state = var:FROM.attacker_state_vs_@ROOT
-						num_provinces = 4
-						on_win = raiding.1
-						on_lose = raiding.3
-						on_cancel = raiding.2
-					}
-
-					defender = {
-						state = var:FROM.defender_state_vs_@ROOT
-						num_provinces = 4
-						on_win = raiding.6
-						on_lose = raiding.4
-						on_cancel = raiding.5
-					}
-				}
+				#wrong event id
+				#start_border_war = {
+				#	change_state_after_war = no
+				#	attacker = {
+				#		state = var:FROM.attacker_state_vs_@ROOT
+				#		num_provinces = 4
+				#		on_win = raiding.1
+				#		on_lose = raiding.3
+				#		on_cancel = raiding.2
+				#	}
+				#
+				#	defender = {
+				#		state = var:FROM.defender_state_vs_@ROOT
+				#		num_provinces = 4
+				#		on_win = raiding.6
+				#		on_lose = raiding.4
+				#		on_cancel = raiding.5
+				#	}
+				#}
 			}
 			if = {
 			    limit = {

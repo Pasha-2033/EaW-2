@@ -1,0 +1,24 @@
+ideas = {
+	country = {
+		unicorn_superirity = {
+			picture = generic_local_self_management
+			allowed = {
+				original_tag = EEQ
+			}
+			cancel = {
+				NOT = {
+					any_character = {
+						#has_trait = promoted_by_favor
+						is_political_advisor = yes
+					}
+				}
+			}
+			modifier = {
+				political_power_factor = -0.5
+				fascism_drift = 0.05
+				stability_weekly = -0.01
+				political_advisor_cost_factor = 0.75
+			}
+		}
+	}
+}

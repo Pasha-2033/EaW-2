@@ -368,6 +368,89 @@ increase_science_base_idea = {
 		}
 	}
 }
+increase_power_concentration_idea = {
+	if = {
+		limit = {
+			NOT = {
+				has_government = anarchism 
+			}
+		}
+		if = {
+			limit = {
+				has_idea = anarchy
+			}
+			swap_ideas = {
+				remove_idea = anarchy
+				add_idea = low_power_concentration
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = low_power_concentration
+			}
+			swap_ideas = {
+				remove_idea = low_power_concentration
+				add_idea = medium_power_concentration
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = medium_power_concentration
+			}
+			swap_ideas = {
+				remove_idea = medium_power_concentration
+				add_idea = high_power_concentration
+			}
+		}
+		else_if = {
+			limit = {
+				has_idea = high_power_concentration
+			}
+			swap_ideas = {
+				remove_idea = high_power_concentration
+				add_idea = authoritarism
+			}
+		}
+	}
+}
+decrease_power_concentration_idea = {
+	if = {
+		limit = {
+			has_idea = low_power_concentration
+		}
+		swap_ideas = {
+			remove_idea = low_power_concentration
+			add_idea = anarchy
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = medium_power_concentration
+		}
+		swap_ideas = {
+			remove_idea = medium_power_concentration
+			add_idea = low_power_concentration
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = high_power_concentration
+		}
+		swap_ideas = {
+			remove_idea = high_power_concentration
+			add_idea = medium_power_concentration
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = authoritarism
+		}
+		swap_ideas = {
+			remove_idea = authoritarism
+			add_idea = high_power_concentration
+		}
+	}
+}
 decrease_science_base_idea = {
 	if = {
 		limit = {

@@ -1,0 +1,1871 @@
+focus_tree = {
+	id = default_982_focus_tree
+	country = {
+		base = 0
+		modifier = {
+			add = 1000
+			has_country_flag = default_982_focus_tree
+		}
+	}
+	continuous_focus_position = { 
+		x = 100 
+		y = 1500 
+	}
+	default = no
+	shared_focus = shared_focus_gpa_goverment_is_forced
+	focus = {
+		id = default_982_army_effort
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		x = 8
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_army_effort"
+		}
+	}
+	focus = {
+		id = default_982_special_forces
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_982_army_effort
+		prerequisite = {
+			focus = default_982_army_effort
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = -6
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_special_forces"
+		}
+	}
+	focus = {
+		id = default_982_national_guard
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_982_special_forces
+		prerequisite = {
+			focus = default_982_special_forces
+		}
+		mutually_exclusive = {
+			focus = default_982_royal_guard
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_national_guard"
+		}
+	}
+	focus = {
+		id = default_982_royal_guard
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_982_special_forces
+		prerequisite = {
+			focus = default_982_special_forces
+		}
+		mutually_exclusive = {
+			focus = default_982_national_guard
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_royal_guard"
+		}
+	}
+	focus = {
+		id = default_982_intencive_training
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id =default_982_royal_guard
+		prerequisite = {
+			focus = default_982_royal_guard
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_intencive_training"
+		}
+	}
+	focus = {
+		id = default_982_new_type_of_army
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_982_intencive_training
+		prerequisite = {
+			focus = default_982_intencive_training
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_new_type_of_army"
+		}
+	}
+	focus = {
+		id = default_982_urban_fighting
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_982_new_type_of_army
+		prerequisite = {
+			focus = default_982_new_type_of_army
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_urban_fighting"
+		}
+	}
+	focus = {
+		id = default_982_broad_training_program
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_982_national_guard
+		prerequisite = {
+			focus = default_982_national_guard
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_broad_training_program"
+		}
+	}
+	focus = {
+		id = default_982_cooperation_with_special_troops
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_982_broad_training_program
+		prerequisite = {
+			focus = default_982_broad_training_program
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_cooperation_with_special_troops"
+		}
+	}
+	focus = {
+		id = default_982_law_enforcement_officers
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_982_cooperation_with_special_troops
+		prerequisite = {
+			focus = default_982_cooperation_with_special_troops
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_law_enforcement_officers"
+		}
+	}
+	focus = {
+		id = default_982_experimental_army_technologies
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_982_army_effort
+		prerequisite = {
+			focus = default_982_army_effort
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_experimental_army_technologies"
+		}
+	}
+	focus = {
+		id = default_982_experimental_armored_car
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_982_experimental_army_technologies
+		prerequisite = {
+			focus = default_982_experimental_army_technologies
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_experimental_armored_car"
+		}
+	}
+	focus = {
+		id = default_982_experimental_tank
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_982_experimental_armored_car
+		prerequisite = {
+			focus = default_982_experimental_armored_car
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_experimental_tank"
+		}
+	}
+	focus = {
+		id = default_982_experimental_artillery
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_982_experimental_army_technologies
+		prerequisite = {
+			focus = default_982_experimental_army_technologies
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = -3
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_experimental_artillery"
+		}
+	}
+	focus = {
+		id = default_982_improve_artillery
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_982_experimental_artillery
+		prerequisite = {
+			focus = default_982_experimental_artillery
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_improve_artillery"
+		}
+	}
+	focus = {
+		id = default_982_improve_armored_car
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_982_experimental_armored_car
+		prerequisite = {
+			focus = default_982_experimental_armored_car
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_improve_armored_car"
+		}
+	}
+	focus = {
+		id = default_982_improve_tank
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_982_experimental_tank
+		prerequisite = {
+			focus = default_982_experimental_tank
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_improve_tank"
+		}
+	}
+	focus = {
+		id = default_982_motorised_infantry
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_982_experimental_army_technologies
+		prerequisite = {
+			focus = default_982_experimental_army_technologies
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 3
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_motorised_infantry"
+		}
+	}
+	focus = {
+		id = default_982_mechanised_infantry
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_982_improve_armored_car
+		prerequisite = {
+			focus = default_982_improve_armored_car
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_mechanised_infantry"
+		}
+	}
+	focus = {
+		id = default_982_new_doctrine
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_982_army_effort
+		prerequisite = {
+			focus = default_982_army_effort
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 6
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_new_doctrine"
+		}
+	}
+	focus = {
+		id = default_982_supply_effort
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = default_982_new_doctrine
+		prerequisite = {
+			focus = default_982_new_doctrine
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_supply_effort"
+		}
+	}
+
+
+
+
+
+
+	focus = {
+		id = default_982_economy_effort
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		x = 20
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_economy_effort"
+			add_timed_idea = {
+				idea = economy_forms_stable_structure
+				days = 180
+			}
+		}
+	}
+	focus = {
+		id = default_982_no_buildings_without_tools
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_economy_effort
+		prerequisite = {
+			focus = default_982_economy_effort
+		}
+		x = -3
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_no_buildings_without_tools"
+			add_tech_bonus = {
+				#name = tooltip #to do
+				bonus = 0.25
+				category = cat_production
+			}
+		}
+	}
+	focus = {
+		id = default_982_use_more_power
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_no_buildings_without_tools
+		prerequisite = {
+			focus = default_982_no_buildings_without_tools
+		}
+		mutually_exclusive = {
+			focus = default_982_improve_tools
+		}
+		x = -1
+		y = 1
+		completion_reward = {	
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_use_more_power"
+			add_timed_idea = {
+				idea = priority_civil_economy
+				days = 240
+			}
+		}
+	}
+	focus = {
+		id = default_982_improve_tools
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_no_buildings_without_tools
+		prerequisite = {
+			focus = default_982_no_buildings_without_tools
+		}
+		mutually_exclusive = {
+			focus = default_982_use_more_power
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_improve_tools"
+			add_tech_bonus = {
+				#name = tooltip #to do
+				bonus = 0.25
+				category = cat_production
+			}
+		}
+	}
+	focus = {
+		id = default_982_modernise_society
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_no_buildings_without_tools
+		prerequisite = {
+			focus = default_982_use_more_power
+			focus = default_982_improve_tools
+		}
+		x = 0
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_modernise_society"
+			increase_society_development_idea = yes
+		}
+	}
+	focus = {
+		id = default_982_modernise_society2
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_modernise_society
+		prerequisite = {
+			focus = default_982_modernise_society
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_modernise_society2"
+			increase_society_development_idea = yes
+		}
+	}
+	focus = {
+		id = default_982_infrastructure_effort
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_economy_effort
+		prerequisite = {
+			focus = default_982_economy_effort
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_infrastructure_effort"
+			add_tech_bonus = {
+				#name = tooltip #to do
+				bonus = 0.25
+				category = cat_infrastructure
+				uses = 2
+			}
+			capital_scope = {
+				if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 2
+						instant_build = yes
+					}
+				}
+				else_if = {
+					limit = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = default_982_rail_way_effort
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_infrastructure_effort
+		prerequisite = {
+			focus = default_982_infrastructure_effort
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_rail_way_effort"
+			add_tech_bonus = {
+				#name = tooltip #to do
+				bonus = 0.5
+				category = cat_rail_way_construction
+			}
+			if = {
+				limit = {
+					any_owned_state = {
+						any_neighbor_state = {
+							is_capital = yes
+						}
+					}
+				}
+				hidden_effect = {
+					random_owned_state = {
+						limit = {
+							any_neighbor_state = {
+								is_capital = yes
+							}
+						}
+						set_temp_variable = {
+							PREV.end_state = THIS
+						}
+					}
+				}
+				build_railway = {
+					level = 1
+					build_only_on_allied = yes
+					controller_priority = {
+						base = 1
+						modifier = {
+							tag = ROOT
+							factor = 10
+						}
+					}
+					start_state = capital
+					target_state = end_state
+				}
+			}
+		}
+	}
+	focus = {
+		id = default_982_national_rail_way
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_rail_way_effort
+		prerequisite = {
+			focus = default_982_rail_way_effort
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_national_rail_way"
+			add_tech_bonus = {
+				#name = tooltip #to do
+				bonus = 0.25
+				category = cat_rail_way_construction
+			}
+			if = {
+				limit = {
+					any_owned_state = {
+						is_in_home_area = yes
+						is_capital = no
+					}
+				}
+				hidden_effect = {
+					random_owned_state = {
+						limit = {
+							is_in_home_area = yes
+							is_capital = no
+						}
+						set_temp_variable = {
+							PREV.end_state = THIS
+						}
+					}
+				}
+				build_railway = {
+					level = 1
+					build_only_on_allied = yes
+					controller_priority = {
+						base = 1
+						modifier = {
+							tag = ROOT
+							factor = 10
+						}
+					}
+					start_state = capital
+					target_state = end_state
+				}
+			}
+		}
+	}
+
+
+
+
+	focus = {
+		id = default_982_new_economic_policy
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_economy_effort
+		prerequisite = {
+			focus = default_982_economy_effort
+		}
+		x = 3
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_new_economic_policy"
+		}
+	}
+	focus = {
+		id = default_982_reduce_poverty
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		mutually_exclusive = {
+			focus = default_982_reserve_fund
+		}
+		relative_position_id = default_982_new_economic_policy
+		prerequisite = {
+			focus = default_982_new_economic_policy
+		}
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_reduce_poverty"
+			increase_poverty_level_idea = yes
+		}
+	}
+	focus = {
+		id = default_982_reserve_fund
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		mutually_exclusive = {
+			focus = default_982_reduce_poverty
+		}
+		relative_position_id = default_982_new_economic_policy
+		prerequisite = {
+			focus = default_982_new_economic_policy
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_reserve_fund"
+		}
+	}
+	focus = {
+		id = default_982_reduce_poverty_2
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_reduce_poverty
+		prerequisite = {
+			focus = default_982_reduce_poverty
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_reduce_poverty_2"
+			increase_poverty_level_idea = yes
+		}
+	}
+	focus = {
+		id = default_982_new_valuta
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_reserve_fund
+		prerequisite = {
+			focus = default_982_reserve_fund
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_new_valuta"
+			increase_valuta_idea = yes
+		}
+	}
+	focus = {
+		id = default_982_inflation
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_new_economic_policy
+		prerequisite = {
+			focus = default_982_reduce_poverty_2
+			focus = default_982_new_valuta
+		}
+		x = 0
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_inflation"
+			stabilise_inflation = yes
+		}
+	}
+
+	focus = {
+		id = default_982_standartisation
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_national_rail_way
+		prerequisite = {
+			focus = default_982_national_rail_way
+		}
+		prerequisite = {
+			focus = default_982_inflation
+		}
+		prerequisite = {
+			focus = default_982_modernise_society2
+		}
+		x = 0
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_standartisation"
+			set_temp_variable = {
+				temp = num_of_factories
+			}
+			multiply_temp_variable = {
+				temp = 5
+			}
+			add_timed_idea = {
+				idea = introduction_of_standardization
+				days = temp
+			}
+		}
+	}
+
+
+
+
+
+
+
+	focus = {
+		id = default_982_political_effort
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		x = 37
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_political_effort"
+			add_political_power = 150
+			add_stability = 0.1
+		}
+	}
+
+
+
+	focus = {
+		id = default_982_radicalism
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_political_effort
+		prerequisite = {
+			focus = default_982_political_effort
+		}
+		mutually_exclusive = {
+			focus = default_982_centrism
+			focus = default_982_religious_movement
+			focus = default_982_new_scientific_discovers
+			focus = default_982_revisionism
+		}
+		x = -3
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_radicalism"
+			add_political_power = 75
+			add_stability = -0.1
+			add_popularity = {
+				ideology = radicalism
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = default_982_rod
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_radicalism
+		prerequisite = {
+			focus = default_982_radicalism
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_rod"
+		}
+	}
+	focus = {
+		id = default_982_candy
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_rod
+		prerequisite = {
+			focus = default_982_rod
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_candy"
+		}
+	}
+	focus = {
+		id = default_982_dynamic_regime
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_candy
+		prerequisite = {
+			focus = default_982_candy
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_dynamic_regime"
+		}
+	}
+	focus = {
+		id = default_982_all_or_nothing
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_dynamic_regime
+		prerequisite = {
+			focus = default_982_dynamic_regime
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_all_or_nothing"
+		}
+	}
+
+
+	focus = {
+		id = default_982_new_scientific_discovers
+		icon = GFX_goal_generic_changeling
+		cost = 15
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_political_effort
+		prerequisite = {
+			focus = default_982_political_effort
+		}
+		mutually_exclusive = {
+			focus = default_982_radicalism
+			focus = default_982_religious_movement
+			focus = default_982_centrism
+			focus = default_982_revisionism
+		}
+		x = 3
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_new_scientific_discovers"
+			increase_science_base_idea = yes
+			add_popularity = {
+				ideology = technocracy
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = default_982_populate_science
+		icon = GFX_goal_generic_changeling
+		cost = 7
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_new_scientific_discovers
+		prerequisite = {
+			focus = default_982_new_scientific_discovers
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_populate_science"
+			add_timed_idea = {
+				idea = populate_science_idea
+				days = 180
+			}
+		}
+	}
+	focus = {
+		id = default_982_importance_of_science
+		icon = GFX_goal_generic_changeling
+		cost = 15
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_populate_science
+		prerequisite = {
+			focus = default_982_populate_science
+		}
+		available = {
+			technocracy > 0.3
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_importance_of_science"
+			add_popularity = {
+				ideology = technocracy
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = default_982_ask_for_grants
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_importance_of_science
+		prerequisite = {
+			focus = default_982_importance_of_science
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_ask_for_grants"
+			add_timed_idea = {
+				idea = grants_for_researching_idea
+				days = 180
+			}
+		}
+	}
+	focus = {
+		id = default_982_spread_scientists_influence
+		icon = GFX_goal_generic_changeling
+		cost = 15
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_ask_for_grants
+		prerequisite = {
+			focus = default_982_ask_for_grants
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_spread_scientists_influence"
+			add_ideas = research_facilities
+		}
+	}
+
+
+
+	focus = {
+		id = default_982_religious_movement
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_political_effort
+		prerequisite = {
+			focus = default_982_political_effort
+		}
+		mutually_exclusive = {
+			focus = default_982_radicalism
+			focus = default_982_centrism
+			focus = default_982_new_scientific_discovers
+			focus = default_982_revisionism
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_religious_movement"
+			add_popularity = {
+				ideology = holy
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = unholy
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = technocracy
+				popularity = -0.1
+			}
+		}
+	}
+	focus = {
+		id = default_982_form_churchs
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_religious_movement
+		prerequisite = {
+			focus = default_982_religious_movement
+		}
+		mutually_exclusive = {
+			focus = default_982_form_cults
+		}
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_form_churchs"
+			add_timed_idea = {
+				idea = church_constructioning
+				days = 90
+			}
+		}
+	}
+	focus = {
+		id = default_982_form_cults
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_religious_movement
+		prerequisite = {
+			focus = default_982_religious_movement
+		}
+		mutually_exclusive = {
+			focus = default_982_form_churchs
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_form_cults"
+			add_timed_idea = {
+				idea = altars_constructioning
+				days = 90
+			}
+		}
+	}
+	focus = {
+		id = default_982_dark_magic_for_all_minions
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_form_cults
+		prerequisite = {
+			focus = default_982_form_cults
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_dark_magic_for_all_minions"
+			add_ideas = dark_magic_idea
+		}
+	}
+	focus = {
+		id = default_982_new_evil_spirits
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_dark_magic_for_all_minions
+		prerequisite = {
+			focus = default_982_dark_magic_for_all_minions
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_new_evil_spirits"
+			add_ideas = religious_country
+		}
+	}
+	focus = {
+		id = default_982_new_religious_practices
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_form_churchs
+		prerequisite = {
+			focus = default_982_form_churchs
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_new_religious_practices"
+			add_ideas = religious_country
+		}
+	}
+	focus = {
+		id = default_982_new_gods
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_new_religious_practices
+		prerequisite = {
+			focus = default_982_new_religious_practices
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_new_gods"
+			add_ideas = god_with_us_idea
+		}
+	}
+	focus = {
+		id = default_982_omens
+		icon = GFX_goal_generic_changeling
+		cost = 7
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_religious_movement
+		prerequisite = {
+			focus = default_982_new_gods
+			focus = default_982_new_evil_spirits
+		}
+		x = 0
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_omens"
+			add_ideas = omen_idea
+		}
+	}
+	focus = {
+		id = default_982_immortal_soul
+		icon = GFX_goal_generic_changeling
+		cost = 2
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_omens
+		prerequisite = {
+			focus = default_982_omens
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = holy_unholy_more_popular_than_ruling_party
+				OR = {
+					holy > party_popularity@ruling_party
+					unholy > party_popularity@ruling_party
+				}
+			}
+			OR = {
+				holy > 0.25
+				unholy > 0.25
+			}
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_immortal_soul"
+			if = {
+				limit = {
+					holy > party_popularity@unholy
+				}
+				set_politics = {
+					ruling_party = unholy
+					elections_allowed = no
+				}
+			}
+			else = {
+				set_politics = {
+					ruling_party = unholy
+					elections_allowed = no
+				}
+			}
+		}
+	}
+
+
+
+	focus = {
+		id = default_982_centrism
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_political_effort
+		prerequisite = {
+			focus = default_982_political_effort
+		}
+		mutually_exclusive = {
+			focus = default_982_radicalism
+			focus = default_982_religious_movement
+			focus = default_982_new_scientific_discovers
+			focus = default_982_revisionism
+		}
+		x = -8
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_centrism"
+			add_popularity = {
+				ideology = democratic
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = neutrality
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.05
+			}
+			add_popularity = {
+				ideology = harmony
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = default_982_neutrals
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_centrism
+		prerequisite = {
+			focus = default_982_centrism
+		}
+		mutually_exclusive = {
+			focus = default_982_spread_democratic_ideas
+			focus = default_982_anarchists
+			focus = default_982_spread_harmonic_ideas
+		}
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_neutrals"
+		}
+	}
+	focus = {
+		id = default_982_anarchists
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_centrism
+		prerequisite = {
+			focus = default_982_centrism
+		}
+		mutually_exclusive = {
+			focus = default_982_neutrals
+			focus = default_982_spread_democratic_ideas
+			focus = default_982_spread_harmonic_ideas
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_anarchists"
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.1
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_government = anarchism
+					}
+				}
+				add_stability = -0.1
+			}
+		}
+	}
+
+	focus = {
+		id = default_982_decentralisation
+		icon = GFX_goal_generic_changeling
+		cost = 15
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_anarchists
+		prerequisite = {
+			focus = default_982_anarchists
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_decentralisation"
+			decrease_power_concentration_idea = yes
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.05
+			}
+		}
+	}
+	focus = {
+		id = default_982_deny_any_other_regime
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_decentralisation
+		prerequisite = {
+			focus = default_982_decentralisation
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_deny_any_other_regime"
+			add_political_power = 50
+			add_popularity = {
+				ideology = anarchism
+				popularity = 0.05
+			}
+			add_ideas = anarchy_deny_any_other_regime
+		}
+	}
+	focus = {
+		id = default_982_everyone_is_independent
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_deny_any_other_regime
+		prerequisite = {
+			focus = default_982_deny_any_other_regime
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_everyone_is_independent"
+			add_ideas = anarchy_independence
+		}
+	}
+	focus = {
+		id = default_982_brothers_for_everyone
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_everyone_is_independent
+		prerequisite = {
+			focus = default_982_everyone_is_independent
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_brothers_for_everyone"
+			if = {
+				limit = {
+					NOT = {
+						has_government = anarchism
+					}
+				}
+				random_list = {
+					100 = {
+						modifier = {
+							factor = party_popularity_100@anarchism
+						}
+						set_politics = {
+							ruling_party = anarchism
+							elections_allowed = no
+						}
+					}
+					50 = {
+						modifier = {
+							factor = party_popularity_100@ruling_party
+						}
+						set_politics = {
+							ruling_party = anarchism
+							elections_allowed = no
+						}
+						add_stability = -0.1
+						add_political_power = -100
+					}
+					25 = {
+						modifier = {
+							NOT = {
+								OR = {
+									has_government = democratic
+									has_government = neutrality
+									has_government = harmony
+									has_government = technocracy
+								}
+							}
+							factor = party_popularity_100@ruling_party
+						}
+						modifier = {
+							always = yes
+							set_temp_variable = {
+								temp = 1
+							}
+							subtract_from_temp_variable = {
+								temp = stability
+							}
+							multiply_temp_variable = {
+								temp = 2
+							}
+							factor = temp
+						}
+						start_civil_war = {
+							ideology = ROOT
+							ruling_party = anarchism
+							size = party_popularity@ruling_party
+						}
+					}
+				}
+				add_ideas = anarchy
+			}
+		}
+	}
+
+	focus = {
+		id = default_982_spread_democratic_ideas
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_centrism
+		prerequisite = {
+			focus = default_982_centrism
+		}
+		mutually_exclusive = {
+			focus = default_982_neutrals
+			focus = default_982_anarchists
+			focus = default_982_spread_harmonic_ideas
+		}
+		x = -3
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_spread_democratic_ideas"
+		}
+	}
+	focus = {
+		id = default_982_spread_harmonic_ideas
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_centrism
+		prerequisite = {
+			focus = default_982_centrism
+		}
+		mutually_exclusive = {
+			focus = default_982_neutrals
+			focus = default_982_anarchists
+			focus = default_982_spread_democratic_ideas
+		}
+		x = 3
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_spread_harmonic_ideas"
+		}
+	}
+
+
+
+	focus = {
+		id = default_982_revisionism
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_political_effort
+		prerequisite = {
+			focus = default_982_political_effort
+		}
+		mutually_exclusive = {
+			focus = default_982_radicalism
+			focus = default_982_religious_movement
+			focus = default_982_new_scientific_discovers
+			focus = default_982_centrism
+		}
+		x = 8
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_revisionism"
+			add_popularity = {
+				ideology = fascism
+    			popularity = 0.05
+			}
+			add_popularity = {
+				ideology = communism
+    			popularity = 0.05
+			}
+			add_popularity = {
+				ideology = socialism
+    			popularity = 0.05
+			}
+			add_popularity = {
+				ideology = militarism
+    			popularity = 0.05
+			}
+			add_popularity = {
+				ideology = technocracy
+    			popularity = 0.01
+			}
+		}
+	}
+	focus = {
+		id = default_982_communism
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_revisionism
+		prerequisite = {
+			focus = default_982_revisionism
+		}
+		mutually_exclusive = {
+			focus = default_982_national_socialism
+			focus = default_982_socialism
+		}
+		x = -3
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_communism"
+			add_timed_idea = {
+				idea = internationalism_idea
+				days = 200
+			}
+		}
+	}
+	focus = {
+		id = default_982_factories_for_workers
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_communism
+		prerequisite = {
+			focus = default_982_communism
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_factories_for_workers"
+			add_ideas = factories_for_workers_idea
+			add_ideas =	priority_people
+		}
+	}
+	focus = {
+		id = default_982_land_for_peasants
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_factories_for_workers
+		prerequisite = {
+			focus = default_982_factories_for_workers
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_land_for_peasants"
+			add_ideas = land_for_peasants_idea
+		}
+	}
+	focus = {
+		id = default_982_new_society_type
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_land_for_peasants
+		prerequisite = {
+			focus = default_982_land_for_peasants
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_new_society_type"
+			add_ideas = communal_society
+		}
+	}
+
+	focus = {
+		id = default_982_socialism
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_revisionism
+		prerequisite = {
+			focus = default_982_revisionism
+		}
+		mutually_exclusive = {
+			focus = default_982_national_socialism
+			focus = default_982_communism
+		}
+		x = 3
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_socialism"
+		}
+	}
+	focus = {
+		id = default_982_national_socialism
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_revisionism
+		prerequisite = {
+			focus = default_982_revisionism
+		}
+		mutually_exclusive = {
+			focus = default_982_communism
+			focus = default_982_socialism
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_national_socialism"
+			add_timed_idea = {
+				idea = national_socialism_idea
+				days = 180
+			}
+		}
+	}
+	focus = {
+		id = default_982_fascism
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_national_socialism
+		prerequisite = {
+			focus = default_982_national_socialism
+		}
+		mutually_exclusive = {
+			focus = default_982_militarism
+		}
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_fascism"
+		}
+	}
+	focus = {
+		id = default_982_militarism
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = default_982_national_socialism
+		prerequisite = {
+			focus = default_982_national_socialism
+		}
+		mutually_exclusive = {
+			focus = default_982_fascism
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_militarism"
+			add_popularity = {
+				ideology = militarism
+				popularity = 0.1
+			}
+		}
+	}
+	focus = {
+		id = default_982_militarization_of_youth
+		icon = GFX_goal_generic_changeling
+		cost = 15
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			any_army_leader = {
+				is_field_marshal = yes
+			}
+		}
+		relative_position_id = default_982_militarism
+		prerequisite = {
+			focus = default_982_militarism
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_militarization_of_youth"
+			add_timed_idea = {
+				idea = militarization_of_youth_idea
+				days = 90
+			}
+		}
+	}
+	focus = {
+		id = default_982_form_military_hunta
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			any_army_leader = {
+				is_field_marshal = yes
+			}
+		}
+		relative_position_id = default_982_militarization_of_youth
+		prerequisite = {
+			focus = default_982_militarization_of_youth
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_form_military_hunta"
+			add_ideas = military_hunta_idea
+		}
+	}
+	focus = {
+		id = default_982_speed_things_up
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			any_army_leader = {
+				is_field_marshal = yes
+			}
+		}
+		relative_position_id = default_982_form_military_hunta
+		prerequisite = {
+			focus = default_982_form_military_hunta
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus default_982_speed_things_up"
+			if = {
+				limit = {
+					militarism > party_popularity@ruling_party
+				}
+				if = {
+					limit = {
+						militarism < 0.5
+					}
+					add_stability = -0.15
+				}
+				set_politics = {
+					ruling_party = militarism
+					elections_allowed = no
+				}
+			}
+			else = {
+				start_civil_war = {
+					ruling_party = militarism
+    				ideology = ROOT
+					size = party_popularity@militarism
+				}
+			}
+		}
+	}
+}

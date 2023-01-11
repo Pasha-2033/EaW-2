@@ -1,40 +1,3 @@
-@953 = 0
-@962 = 2
-@964 = 4
-@966 = 6
-@967 = 8
-@968 = 10
-@969 = 12
-@971 = 14
-@973 = 16
-@975 = 18
-@976 = 20
-@977 = 22
-@980 = 24
-@982 = 26
-@983 = 28
-@984 = 30
-@987 = 32
-@989 = 34
-@1007 = 36
-@1008 = 38
-@1009 = 40
-@1010 = 42
-@1011 = 44
-@1012 = 46
-@1013 = 48
-@1014 = 50
-@1015 = 52
-@1017 = 54
-@1018 = 56
-@1019 = 58
-@1020 = 60
-@1021 = 62
-@1022 = 64
-@1023 = 66
-@1024 = 68
-@1025 = 70
-@1026 = 72
 technologies = {
 	#init folder dependencies
 	changeling_race = {
@@ -73,12 +36,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1
-		start_year = 953
+		start_year = 973
 		folder = {
 			name = changeling_folder
 			position = {
 				x = 2
-				y = @953
+				y = 0
 			}
 		}
 		categories = {
@@ -102,12 +65,12 @@ technologies = {
 		on_research_complete = {
 		}
 		research_cost = 1
-		start_year = 962
+		start_year = 982
 		folder = {
 			name = changeling_folder
 			position = {
 				x = 2
-				y = @962
+				y = 2
 			}
 		}
 		categories = {
@@ -119,11 +82,11 @@ technologies = {
 			factor = 2
 			modifier = {
 				factor = 1.5
-				date > "962.1.1"
+				date > "982.1.1"
 			}
 			modifier = {
 				factor = 2
-				date > "963.1.1"
+				date > "983.1.1"
 			}
 		}
 	}
@@ -147,12 +110,12 @@ technologies = {
 		on_research_complete = {
 		}
 		research_cost = 1.5
-		start_year = 964
+		start_year = 984
 		folder = {
 			name = changeling_folder
 			position = {
 				x = 2
-				y = @964
+				y = 4
 			}
 		}
 		categories = {
@@ -164,11 +127,11 @@ technologies = {
 			factor = 2
 			modifier = {
 				factor = 1.5
-				date > "964.1.1"
+				date > "984.1.1"
 			}
 			modifier = {
 				factor = 2
-				date > "965.1.1"
+				date > "985.1.1"
 			}
 		}
 	}
@@ -184,12 +147,12 @@ technologies = {
 		on_research_complete = {
 		}
 		research_cost = 1.5
-		start_year = 966
+		start_year = 986
 		folder = {
 			name = changeling_folder
 			position = {
 				x = 0
-				y = @966
+				y = 6
 			}
 		}
 		categories = {
@@ -201,11 +164,11 @@ technologies = {
 			factor = 2
 			modifier = {
 				factor = 1.5
-				date > "966.1.1"
+				date > "986.1.1"
 			}
 			modifier = {
 				factor = 2
-				date > "967.1.1"
+				date > "987.1.1"
 			}
 		}
 	}
@@ -224,12 +187,12 @@ technologies = {
 		on_research_complete = {
 		}
 		research_cost = 1.5
-		start_year = 966
+		start_year = 986
 		folder = {
 			name = changeling_folder
 			position = {
 				x = 2
-				y = @966
+				y = 6
 			}
 		}
 		categories = {
@@ -241,11 +204,11 @@ technologies = {
 			factor = 2
 			modifier = {
 				factor = 1.5
-				date > "966.1.1"
+				date > "986.1.1"
 			}
 			modifier = {
 				factor = 2
-				date > "967.1.1"
+				date > "987.1.1"
 			}
 		}
 	}
@@ -258,12 +221,12 @@ technologies = {
 			}
 		}
 		research_cost = 1.5
-		start_year = 966
+		start_year = 986
 		folder = {
 			name = changeling_folder
 			position = {
 				x = 4
-				y = @966
+				y = 6
 			}
 		}
 		dependencies = {
@@ -281,23 +244,23 @@ technologies = {
 			factor = 2
 			modifier = {
 				factor = 1.5
-				date > "966.1.1"
+				date > "986.1.1"
 			}
 			modifier = {
 				factor = 2
-				date > "967.1.1"
+				date > "987.1.1"
 			}
 		}
 	}
 	#royal guard tree
 	tech_rg = {
 		research_cost = 1.5
-		start_year = 953
+		start_year = 973
 		folder = {
 			name = changeling_folder
 			position = {
 				x = 6
-				y = @953
+				y = @983
 			}
 		}
 		dependencies = {
@@ -310,12 +273,12 @@ technologies = {
 	}
 	tech_rg1 = {
 		research_cost = 1.5
-		start_year = 962
+		start_year = 982
 		folder = {
 			name = changeling_folder
 			position = {
 				x = 6
-				y = @962
+				y = 2
 			}
 		}
 		path = {
@@ -325,12 +288,12 @@ technologies = {
 	}
 	tech_rg2 = {
 		research_cost = 1.5
-		start_year = 962
+		start_year = 982
 		folder = {
 			name = changeling_folder
 			position = {
 				x = 6
-				y = @964
+				y = 4
 			}
 		}
 		path = {

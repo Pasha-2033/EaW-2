@@ -1405,13 +1405,99 @@ ideas = {
 	power_concentration = {
 		law = yes
 		use_list_view = yes
-		anarchy = {}
-		low_power_concentration = {}
-		medium_power_concentration = {}
-		high_power_concentration = {}
-		authoritarism = {}
-		commune = {}
-		harmonic_power_concentration = {}
+		anarchy = {
+			level = 1
+			#picture = 
+			available = {
+				has_government = anarchism
+			}
+			cancel_if_invalid = no
+			modifier = {
+				political_power_factor = -0.7
+				opinion_gain_monthly_factor = -0.5
+				autonomy_manpower_share = 0.5
+			}
+		}
+		low_power_concentration = {
+			level = 2
+			#picture = 
+			available = {
+				NOT = {
+					has_government = anarchism
+				}
+			}
+			cancel_if_invalid = no
+			modifier = {}
+		}
+		medium_power_concentration = {
+			level = 3
+			#picture = 
+			available = {
+				NOT = {
+					has_government = anarchism
+				}
+			}
+			cancel_if_invalid = no
+			modifier = {}
+		}
+		high_power_concentration = {
+			level = 4
+			#picture = 
+			available = {
+				NOT = {
+					has_government = anarchism
+				}
+			}
+			cancel_if_invalid = no
+			modifier = {}
+		}
+		authoritarism = {
+			level = 5
+			#picture = 
+			available = {
+				OR = {
+					has_government = holy
+					has_government = unholy
+					has_government = neutrality
+					has_government = radicalism
+					has_government = technocracy
+					has_government = communism
+					has_government = fascism
+					has_government = militarism
+				}
+			}
+			cancel_if_invalid = no
+			modifier = {
+				political_power_factor = 1
+				opinion_gain_monthly_factor = 0.05
+				non_core_manpower = -0.5
+				surrender_limit = -0.1
+			}
+		}
+		commune = {
+			#picture = 
+			available = {
+				OR = {
+					has_government = communism
+					has_government = socialism
+				}
+			}
+			cancel_if_invalid = no
+			modifier = {}
+		}
+		harmonic_power_concentration = {
+			#picture = 
+			available = {
+				OR = {
+					has_government = democratic
+					has_government = neutrality
+					has_government = harmony
+					has_government = technocracy
+				}
+			}
+			cancel_if_invalid = no
+			modifier = {}
+		}
 	}
 	urbanization = {
 		law = yes
