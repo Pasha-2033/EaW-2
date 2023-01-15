@@ -25,6 +25,9 @@ ideas = {
 				monthly_population = 0.25
 				recruitable_population_factor = 0.01
 			}
+			allowed_civil_war = {
+				always = yes
+			}
 		}
 		priority_civil_economy = {
 			picture = clockwerk_economy			#to do (change)
@@ -36,10 +39,25 @@ ideas = {
 				production_speed_infrastructure_factor = 0.1
 				production_speed_rail_way_factor = 0.1
 			}
+			allowed_civil_war = {
+				always = yes
+			}
 		}
-		priority_military_economy = {}
-		priority_gold_reserve = {}
-		priority_religion = {}
+		priority_military_economy = {
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+		priority_gold_reserve = {
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+		priority_religion = {
+			allowed_civil_war = {
+				always = yes
+			}
+		}
 		#экономический подьем
 		economy_forms_stable_structure = {
 			picture = clockwerk_economy			#to do (change)
@@ -48,6 +66,9 @@ ideas = {
 				stability_weekly = 0.01
 				political_power_factor = 0.25
 				monthly_population = 0.1
+			}
+			allowed_civil_war = {
+				always = yes
 			}
 		}
 		introduction_of_standardization = {
@@ -67,6 +88,9 @@ ideas = {
 			on_remove = {
 				add_ideas = wide_spread_standartisation
 			}
+			allowed_civil_war = {
+				always = yes
+			}
 		}
 		wide_spread_standartisation = {
 			picture = clockwerk_economy			#to do (change)
@@ -76,6 +100,40 @@ ideas = {
 				production_factory_efficiency_gain_factor =	0.05
 				line_change_production_efficiency_factor = -0.1
 				production_speed_buildings_factor = 0.05
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+		overclocking = {
+			picture = clockwerk_economy			#to do (change)
+			modifier = {
+				production_factory_start_efficiency_factor = 0.2
+				production_factory_max_efficiency_factor = 0.2
+				production_factory_efficiency_gain_factor =	0.1
+				line_change_production_efficiency_factor = 0.1
+				production_speed_buildings_factor = 0.2
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			on_remove = {
+				add_timed_idea = {
+					idea = overclocking_cooldown
+					days = 90
+				}
+			}
+		}
+		overclocking_cooldown = {
+			picture = clockwerk_economy			#to do (change)
+			modifier = {
+				production_factory_start_efficiency_factor = -0.1
+				production_factory_max_efficiency_factor = -0.1
+				line_change_production_efficiency_factor = -0.1
+				production_speed_buildings_factor = -0.05
+			}
+			allowed_civil_war = {
+				always = yes
 			}
 		}
 	}

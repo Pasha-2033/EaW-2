@@ -24,8 +24,26 @@ guiTypes = {
 		clipping = no 
 		background = {
 			name = "background"		
-			quadTextureSprite ="GFX_frontend_bg"
-			#alwaystransparent = yes
+			quadTextureSprite = "GFX_frontend_bg"
+			alwaystransparent = yes
+		}
+		containerWindowType = {
+			name = "version_stamp"
+			position = { 
+				x = -30
+				y = -210
+			}
+			size = { 
+				width = 160 
+				height = 160 
+			}
+			orientation = LOWER_RIGHT
+			origo = LOWER_RIGHT
+			iconType = {
+				name = "frontend_alpha_stamp"
+				spriteType = "GFX_alpha_stamp"
+				scale = 0.5
+			}
 		}
 	}
 	### MAIN MENU PANEL (upperleft)
@@ -51,21 +69,6 @@ guiTypes = {
 			}
 		}
 	}
-	#containerWindowType = {
-	#	name  ="frontend_alpha_stamp"
-	#	position = { x=100 y =-100  }
-	#	size = { width = 131 height = 132}
-	#	orientation = lower_left
-	#	origo = lower_left
-	#	
-	#	iconType =
-	#	{
-	#		name ="frontend_alpha_stamp"
-	#		spriteType = "GFX_alpha_stamp"
-	#		position = { x= 0 y = 20 }
-	#	}		
-	#	
-	#}
 	### MAIN MENU PANEL (upperright)
 	containerWindowType = {
 		name ="mainmenu_panel_upperright"
@@ -236,7 +239,7 @@ guiTypes = {
 			height = 435
 		}
 		orientation = LOWER_LEFT
-		origo = LOWER_LEFT		
+		origo = LOWER_LEFT	
 		positionType = {
 			name = "subscription_size"
 			position = {

@@ -6,6 +6,9 @@ ideas = {
 				fascism_drift = 0.1
 				militarism_drift = 0.08
 			}
+			allowed_civil_war = {
+				always = yes
+			}
 		}
 		militarization_of_youth_idea = {
 			picture = generic_local_self_management #to do - change
@@ -86,14 +89,10 @@ ideas = {
 			allowed_civil_war = {
 				has_government = technocracy
 			}
-			do_effect = {
-                technocracy > 0.6
-            }
-			cancel = {
-				NOT = {
-					has_government = technocracy
-				}
-			}
+			#paradox broke this field (checked by variable)
+			#do_effect = {
+            #    technocracy > 0.6
+            #}
 		}
 		church_constructioning = {
 			picture = generic_local_self_management #to do - change
@@ -106,11 +105,6 @@ ideas = {
 			allowed_civil_war = {
 				has_government = holy
 			}
-			do_effect = {
-                check_variable = {
-					num_of_civilian_factories_available_for_projects > 1
-				}
-            }
 		}
 		altars_constructioning = {
 			picture = generic_local_self_management #to do - change
@@ -123,11 +117,6 @@ ideas = {
 			allowed_civil_war = {
 				has_government = unholy
 			}
-			do_effect = {
-                check_variable = {
-					num_of_civilian_factories_available_for_projects > 1
-				}
-            }
 		}
 		factories_for_workers_idea = {
 			picture = generic_local_self_management #to do - change
@@ -218,9 +207,131 @@ ideas = {
 				production_speed_buildings_factor = -0.05
 				industry_repair_factor = -0.05
 				industry_free_repair_factor = 5
+				subjects_autonomy_gain = -0.5
+				autonomy_gain = 0.5
+				legitimacy_gain_factor = 0.1
 			}
 			allowed_civil_war = {
 				has_government = anarchism
+			}
+		}
+		radicalism_better_bureaucracy = {
+			picture = generic_local_self_management #to do - change
+			modifier = {
+				society_development_idea_cost_factor = -0.15
+				power_concentration_cost_factor = -0.15
+				urbanization_cost_factor = -0.15
+				poverty_level_idea_cost_factor = -0.15
+			}
+			allowed_civil_war = {
+				has_government = radicalism
+			}
+		}
+		radicalism_minus_to_minus_equals_plus = {
+			picture = generic_local_self_management #to do - change
+			modifier = {
+				opinion_gain_monthly_same_ideology_factor = 0.1
+				faction_trade_opinion_factor = 0.25
+				subjects_autonomy_gain = 0.5
+				radicalism_acceptance = 20
+			}
+			allowed_civil_war = {
+				has_government = radicalism
+			}
+		}
+		democratic_parlament = {
+			picture = generic_local_self_management #to do - change
+			modifier = {
+				opinion_gain_monthly_factor = 0.1
+				faction_trade_opinion_factor = 0.1
+				defensive_war_stability_factor = 0.15
+				offensive_war_stability_factor = -0.3
+				trade_opinion_factor = 0.05
+				democratic_acceptance = 20
+				democratic_drift = 0.04
+			}
+			allowed_civil_war = {
+				has_government = democratic
+			}
+		}
+		harmony_says_no_to_rascism = {
+			picture = generic_local_self_management #to do - change
+			modifier = {
+				harmony_acceptance = 50
+				harmony_drift = 0.05
+				lend_lease_tension = -0.5
+				opinion_gain_monthly_factor = 0.25
+				opinion_gain_monthly_same_ideology_factor = 0.5
+				embargo_threshold_factor = 0.1
+				embargo_cost_factor = 0.25
+				conscription_factor = 0.02
+			}
+			allowed_civil_war = {
+				has_government = harmony
+			}
+		}
+		harmony_friendship = {
+			picture = generic_local_self_management #to do - change
+			modifier = {
+				army_morale_factor = 0.5
+				army_org_factor = 0.05
+				offence = -0.2
+				defence = 0.05
+				supply_consumption_factor = -0.05
+				generate_wargoal_tension = 0.25
+				justify_war_goal_time = 0.25
+				guarantee_cost = -0.1
+			}
+			allowed_civil_war = {
+				has_government = harmony
+			}
+		}
+		fascism_no_modernism = {
+			picture = generic_local_self_management #to do - change
+			modifier = {
+				recruitable_population = 0.015
+				non_core_manpower = 0.20
+				mobilization_speed = 0.1
+				experience_gain_army = 0.1
+				experience_gain_air = 0.1
+				experience_gain_navy = 0.1
+				fascism_drift = 0.05
+				fascism_acceptance = 10
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+		}
+		socialism_reform_party = {
+			picture = generic_local_self_management #to do - change
+			modifier = {
+				monthly_population = 0.1
+				political_power_factor = -0.1
+				stability_weekly_factor = 0.04
+			}
+			allowed_civil_war = {
+				has_government = socialism
+			}
+		}
+		socialism_soft_politic_to_masses = {
+			picture = generic_local_self_management #to do - change
+			modifier = {
+				monthly_population = 0.1
+				stability_weekly_factor = 0.02
+				war_support_weekly_factor = 0.02
+				production_factory_efficiency_gain_factor = -0.05
+			}
+			allowed_civil_war = {
+				has_government = socialism
+			}
+		}
+		socialism_building_brigades = {
+			picture = generic_local_self_management #to do - change
+			modifier = {
+				production_speed_buildings_factor = 0.15
+			}
+			allowed_civil_war = {
+				has_government = socialism
 			}
 		}
 	}

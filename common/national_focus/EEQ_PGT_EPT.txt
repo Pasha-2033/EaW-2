@@ -1,0 +1,218 @@
+focus_tree = {
+	id = eeq_pgt_ept_focus_tree
+	country = {
+		base = 0
+		modifier = {
+			add = 100
+			OR = {
+				tag = EEQ
+				tag = PGT
+				tag = EPT
+			}
+		}
+	}
+	default = no
+	shared_focus = shared_focus_eeq_start_eeq_tag
+	shared_focus = shared_focus_pgt_start_pgt_tag
+	shared_focus = shared_focus_ept_start_ept_tag
+	focus = {
+		id = eeq_pgt_ept_winter_spirits
+		icon = GFX_goal_generic_changeling
+		cost = 2.5
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			ICE = {
+				exists = yes
+			}
+		}
+		bypass_if_unavailable = yes
+		x = 5
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_winter_spirits"
+		}
+	}
+	focus = {
+		id = eeq_pgt_ept_desperate_situation
+		icon = GFX_goal_generic_changeling
+		cost = 2.5
+		relative_position_id = eeq_pgt_ept_winter_spirits
+		prerequisite = {
+			focus = eeq_pgt_ept_winter_spirits
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			ICE = {
+				exists = yes
+			}
+		}
+		bypass_if_unavailable = yes
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_desperate_situation"
+		}
+	}
+
+	
+
+	focus = {
+		id = eeq_pgt_ept_containment_techniques
+		icon = GFX_goal_generic_changeling
+		cost = 2.5
+		relative_position_id = eeq_pgt_ept_desperate_situation
+		prerequisite = {
+			focus = eeq_pgt_ept_desperate_situation
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			ICE = {
+				exists = yes
+			}
+		}
+		bypass_if_unavailable = yes
+		x = -4
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_containment_techniques"
+		}
+	}
+	focus = {
+		id = eeq_pgt_ept_wood_as_fuel
+		icon = GFX_goal_generic_changeling
+		cost = 2.5
+		relative_position_id = eeq_pgt_ept_containment_techniques
+		prerequisite = {
+			focus = eeq_pgt_ept_containment_techniques
+		}
+		mutually_exclusive = {
+			focus = eeq_pgt_ept_coal_as_fuel
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			ICE = {
+				exists = yes
+			}
+		}
+		bypass_if_unavailable = yes
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_wood_as_fuel"
+		}
+	}
+	focus = {
+		id = eeq_pgt_ept_coal_as_fuel
+		icon = GFX_goal_generic_changeling
+		cost = 2.5
+		relative_position_id = eeq_pgt_ept_containment_techniques
+		prerequisite = {
+			focus = eeq_pgt_ept_containment_techniques
+		}
+		mutually_exclusive = {
+			focus = eeq_pgt_ept_wood_as_fuel
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			ICE = {
+				exists = yes
+			}
+		}
+		bypass_if_unavailable = yes
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_coal_as_fuel"
+		}
+	}
+
+
+
+	focus = {
+		id = eeq_pgt_ept_defence_strategy
+		icon = GFX_goal_generic_changeling
+		cost = 2.5
+		relative_position_id = eeq_pgt_ept_desperate_situation
+		prerequisite = {
+			focus = eeq_pgt_ept_desperate_situation
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			ICE = {
+				exists = yes
+			}
+		}
+		bypass_if_unavailable = yes
+		x = 4
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_defence_strategy"
+		}
+	}
+
+
+
+	focus = {
+		id = eeq_pgt_ept_call_for_help
+		icon = GFX_goal_generic_changeling
+		cost = 2.5
+		relative_position_id = eeq_pgt_ept_desperate_situation
+		prerequisite = {
+			focus = eeq_pgt_ept_desperate_situation
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			ICE = {
+				exists = yes
+			}
+		}
+		bypass_if_unavailable = yes
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_call_for_help"
+		}
+	}
+	focus = {
+		id = eeq_pgt_ept_need_for_landlease
+		icon = GFX_goal_generic_changeling
+		cost = 2.5
+		relative_position_id = eeq_pgt_ept_call_for_help
+		prerequisite = {
+			focus = eeq_pgt_ept_call_for_help
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			ICE = {
+				exists = yes
+			}
+		}
+		bypass_if_unavailable = yes
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_need_for_landlease"
+		}
+	}
+
+	continuous_focus_position = {
+		x = 2700
+		y = 1350
+	}
+}

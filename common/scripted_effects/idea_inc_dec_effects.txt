@@ -405,6 +405,16 @@ increase_power_concentration_idea = {
 		else_if = {
 			limit = {
 				has_idea = high_power_concentration
+				OR = {
+					has_government = holy
+					has_government = unholy
+					has_government = neutrality
+					has_government = radicalism
+					has_government = technocracy
+					has_government = communism
+					has_government = fascism
+					has_government = militarism
+				}
 			}
 			swap_ideas = {
 				remove_idea = high_power_concentration

@@ -1,0 +1,9 @@
+default_982_reserve_fund_modifier = {
+	icon = GFX_idea_clockwerk_economy			#to do (change)
+	enable = {
+		check_variable = {
+			political_power < -10
+		}
+	}
+	political_power_gain = 1
+}
