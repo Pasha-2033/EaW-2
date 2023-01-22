@@ -1,5 +1,5 @@
 #Created by lead programmer of EaW 2 (vk: @uber_medic, @communistic_sistema) https://github.com/Pasha-2033/EaW-2
-#vesrion 1.2
+#vesrion 1.2.1
 #use scriped effects, less code, write code with pleasure :)
 
 #argument array structure:
@@ -21,6 +21,10 @@
 #next versions (upper 1.0) will add new generation argument - for example generation will be repeated by state (state category influence)
 
 #scenario 982
+#supported templates:
+#Generic Garnison Division
+#Generic Mountaineer Batalion
+#Generic Infantry Division
 generate_units_982 = {
 	#research all technologies, so division can be filled with regired equpment (only base tech! for better optionality)
 	set_technology = {
@@ -47,6 +51,31 @@ generate_units_982 = {
 		division_manpower = 4300
 	}
 	#init default arguments
+	add_to_array = {
+		args = 1
+	}
+	add_to_array = {
+		args = 0.25
+	}
+	add_to_array = {
+		args = 0.4
+	}
+	add_to_array = {
+		args = 0.6
+	}
+	add_to_array = {
+		args = 1
+	}
+	add_to_array = {
+		args = 1
+	}
+	add_to_array = {
+		args = 1
+	}
+	add_to_array = {
+		args = 1
+	}
+
 	add_to_array = {
 		args = 1
 	}
@@ -193,7 +222,7 @@ generate_units_982 = {
 				meta_effect = {
 					text = {
 						create_unit = {
-							division = "name = \"Generic Infantry Division\" division_template = \"[DT]\" start_experience_factor = [S_XP_F] start_equipment_factor = [S_EQ_F] start_manpower_factor = [S_MP_F]"
+							division = "name = \"[DT]\" division_template = \"[DT]\" start_experience_factor = [S_XP_F] start_equipment_factor = [S_EQ_F] start_manpower_factor = [S_MP_F]"
 							owner = PREV
 						}
 					}

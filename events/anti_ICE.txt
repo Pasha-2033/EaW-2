@@ -1,0 +1,34 @@
+add_namespace = eeq_pgt_ept_anti_ice_event
+country_event = {
+	id = eeq_pgt_ept_anti_ice_event.1
+	title = eeq_pgt_ept_anti_ice_event.1.t
+	desc = eeq_pgt_ept_anti_ice_event.1.d
+	is_triggered_only = yes
+	option = {
+		name = eeq_pgt_ept_anti_ice_event.1.a
+		ai_chance = {
+			base = 100
+		}
+		trigger = {
+			tag = EEQ
+		}
+	}
+	option = {
+		name = eeq_pgt_ept_anti_ice_event.1.b
+		ai_chance = {
+			base = 100
+		}
+		trigger = {
+			tag = PGT
+		}
+	}
+	option = {
+		name = eeq_pgt_ept_anti_ice_event.1.c
+		ai_chance = {
+			base = 100
+		}
+		trigger = {
+			tag = EPT
+		}
+	}
+}

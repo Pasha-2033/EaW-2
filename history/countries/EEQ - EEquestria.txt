@@ -17,8 +17,58 @@ set_politics = {
 }
 add_ideas = {
 	pony_race
-	unicorn_superirity
+	eeq_pgt_ept_scared_by_ice
+	unicorn_superiority
+	EEQ_tribal_crisis
 }
 982.1.1 = {
+	create_faction = equestrial_faction
+	if = {
+		limit = {
+			OR = {
+				has_dlc = "Together for Victory"
+				has_dlc = "Man the Guns"
+			}
+		}
+		set_autonomy = {
+			target = ENM
+			autonomous_state = autonomy_colony
+		}
+	}
+	else = {
+		puppet = ENM
+	}
+	add_to_faction = ENM
+	set_variable = {
+		UG_ARG_1 = 0.5
+	}
+	set_variable = {
+		UG_ARG_17 = 1
+	}
 	generate_units_982 = yes
+	#accoring to scenario - declare war (tribes)
+	declare_war_on = {
+		target = EPT
+		type = annex_everything
+	}
+	declare_war_on = {
+		target = PGT
+		type = annex_everything
+	}
+	PGT = {
+		declare_war_on = {
+			target = EPT
+			type = annex_everything
+		}
+		declare_war_on = {
+			target = ENM
+			type = annex_everything
+		}
+	}
+	ENM = {
+		declare_war_on = {
+			target = EPT
+			type = annex_everything
+		}
+	}
 }

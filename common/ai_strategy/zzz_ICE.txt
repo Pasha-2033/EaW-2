@@ -1,0 +1,162 @@
+close_north_pgt_encirclements_0 = {
+	allowed = {
+		original_tag = ICE
+	}
+	enable = {
+		has_offensive_war_with = EPT
+	}
+	abort = {
+		controls_state = 131
+	}
+	ai_strategy = {
+		type = front_control
+		state = 131
+		ratio = 0
+		priority = 1000
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_unit_request
+		state = 131
+		value = 200
+	}
+}
+close_north_pgt_encirclements_1 = {
+	allowed = {
+		original_tag = ICE
+	}
+	enable = {
+		has_offensive_war_with = EPT
+	}
+	abort = {
+		controls_state = 70
+		controls_state = 134
+		controls_state = 135
+	}
+	ai_strategy = {
+		type = front_control
+		state = 134
+		ratio = 0
+		priority = 1000
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_unit_request
+		state = 70
+		state = 134
+		state = 135
+		value = 250
+	}
+}
+close_north_pgt_encirclements_2 = {
+	allowed = {
+		original_tag = ICE
+	}
+	enable = {
+		has_offensive_war_with = EPT
+	}
+	abort = {
+		controls_state = 156
+		controls_state = 160
+		controls_state = 162
+		controls_state = 164
+		controls_state = 326
+	}
+	ai_strategy = {
+		type = front_control
+		state = 164
+		ratio = 0
+		priority = 1000
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_unit_request
+		state = 156
+		state = 160
+		state = 162
+		state = 164
+		state = 326
+		value = 250
+	}
+}
+no_time_for_defence = {
+	allowed = {
+		original_tag = ICE
+	}
+	enable = {
+		OR = {
+			has_offensive_war_with = EPT
+			has_offensive_war_with = EEQ
+			has_offensive_war_with = PGT
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = garrison_reinforcement_priority
+		value = -250
+	}
+}
+close_eeq_pgt_encirclement = {
+	allowed = {
+		original_tag = ICE
+	}
+	enable = {
+		OR = {
+			has_offensive_war_with = EPT
+			has_offensive_war_with = EEQ
+		}
+	}
+	abort = {
+		controls_state = 525
+		controls_state = 653
+		controls_state = 661
+		controls_state = 662
+	}
+	ai_strategy = {
+		type = front_control
+		state = 662
+		ratio = 0
+		ordertype = front
+		execution_type = rush
+		execute_order = yes
+	}
+	ai_strategy = {
+		type = front_unit_request
+		state = 525
+		state = 653
+		state = 661
+		state = 662
+		value = 250
+	}
+}
+do_not_close_canterlot_encirclement = {
+	allowed = {
+		original_tag = ICE
+	}
+	enable = {
+		has_offensive_war_with = EEQ
+	}
+	abort = {
+		always = no #to do
+	}
+	ai_strategy = {
+		type = front_control
+		state = 3
+		ratio = 0.5
+		ordertype = front
+		execution_type = careful
+		execute_order = no
+		manual_attack = no
+	}
+	ai_strategy = {
+		type = front_unit_request
+		area = central_eeq_area
+		value = -100 #too low
+	}
+}

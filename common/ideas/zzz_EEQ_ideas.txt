@@ -1,7 +1,7 @@
 ideas = {
 	country = {
-		unicorn_superirity = {
-			picture = generic_local_self_management
+		unicorn_superiority = {
+			picture = clockwerk_economy			#to do (change)
 			allowed = {
 				original_tag = EEQ
 			}
@@ -18,6 +18,26 @@ ideas = {
 				fascism_drift = 0.05
 				stability_weekly = -0.01
 				political_advisor_cost_factor = 0.75
+				ai_focus_aggressive_factor = 0.1
+			}
+		}
+		EEQ_tribal_crisis = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EEQ
+			}
+			targeted_modifier = {
+				tag = EPT
+				attack_bonus_against_cores = -0.25
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = EPT
+				attack_bonus_against_cores = -0.25
+				defense_bonus_against = 0.1
+			}
+			modifier = {
+				improve_relations_maintain_cost_factor = 1
 			}
 		}
 	}

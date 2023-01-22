@@ -18,9 +18,13 @@ focus_tree = {
 	focus = {
 		id = eeq_pgt_ept_winter_spirits
 		icon = GFX_goal_generic_changeling
-		cost = 2.5
+		cost = 1
 		ai_will_do = {
-			factor = 200
+			base = 0
+			modifier = {
+				has_war_with = ICE
+				add = 1000
+			}
 		}
 		available = {
 			ICE = {
@@ -32,18 +36,30 @@ focus_tree = {
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_winter_spirits"
+			add_war_support = 0.05
+			add_stability = 0.05
+			add_manpower = 10000
+			hidden_effect = {
+				country_event = {
+					id = eeq_pgt_ept_anti_ice_event.1
+				}
+			}
 		}
 	}
 	focus = {
 		id = eeq_pgt_ept_desperate_situation
 		icon = GFX_goal_generic_changeling
-		cost = 2.5
+		cost = 2
 		relative_position_id = eeq_pgt_ept_winter_spirits
 		prerequisite = {
 			focus = eeq_pgt_ept_winter_spirits
 		}
 		ai_will_do = {
-			factor = 200
+			base = 0
+			modifier = {
+				has_war_with = ICE
+				add = 1000
+			}
 		}
 		available = {
 			ICE = {
@@ -55,6 +71,11 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_desperate_situation"
+			add_timed_idea = {
+				idea = eeq_pgt_ept_desperate_situation_idea
+				days = 60
+			}
+			add_political_power = 50
 		}
 	}
 
@@ -159,6 +180,7 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_defence_strategy"
+			add_ideas = anti_ICE_defence
 		}
 	}
 

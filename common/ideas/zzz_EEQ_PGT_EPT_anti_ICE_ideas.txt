@@ -1,0 +1,53 @@
+ideas = {
+	country = {
+		eeq_pgt_ept_scared_by_ice = {
+			picture = clockwerk_economy			#to do (change)
+			cancel = {
+				ICE = {
+					exists = no
+				}
+			}
+			modifier = {
+				ai_focus_defense_factor = 0.25
+				surrender_limit = 0.1
+			}
+		}
+		eeq_pgt_ept_desperate_situation_idea = {
+			picture = clockwerk_economy			#to do (change)
+			targeted_modifier = {
+				tag = ICE
+				defense_bonus_against = 0.25
+			}
+			modifier = {
+				army_org_factor = 0.25
+				war_support_factor = 0.1
+				surrender_limit = 0.25
+			}
+		}
+		anti_ICE_defence = {
+			picture = clockwerk_economy			#to do (change)
+			targeted_modifier = {
+				tag = ICE
+				defense_bonus_against = 0.75
+			}
+			modifier = {
+				army_org_factor = 0.5
+				war_support_factor = 0.05
+				ai_focus_defense_factor = 0.1
+			}
+		}
+		frost_containment_technics = {
+			picture = clockwerk_economy			#to do (change)
+			targeted_modifier = {
+				tag = ICE
+				defense_bonus_against = 0.2
+			}
+			modifier = {
+				army_org_factor = 0.5
+				war_support_factor = 0.05
+				winter_attrition_factor = -0.25
+				ai_focus_defense_factor = 0.1
+			}
+		}
+	}
+}

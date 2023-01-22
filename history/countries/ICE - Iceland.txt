@@ -13,23 +13,34 @@ set_politics = {
 	elections_allowed = no
 }
 add_ideas = {
-	multi_race
+	ICE_winter_spirits
+	ICE_power_of_winter
+	ICE_power_of_nature
+}
+set_technology = {
+	tech_windigo_horrors = 1 #MUSTHAVE (for race based equipment and unit type)
 }
 set_stability = 0.05
 set_war_support = 0.05
+recruit_character = ICE_vindigo
 982.1.1 = {
 	set_country_flag = default_982_focus_tree
-	set_variable = {
-		UG_ARG_0 = 0
+	load_oob = "ICE_982"
+	#accoring to scenario - declare war (vendigo)
+	declare_war_on = {
+		target = EEQ
+		type = annex_everything
 	}
-	set_variable = {
-		UG_ARG_1 = 0.4
+	declare_war_on = {
+		target = EPT
+		type = annex_everything
 	}
-	set_variable = {
-		UG_ARG_8 = 0
+	declare_war_on = {
+		target = PGT
+		type = annex_everything
 	}
-	set_variable = {
-		UG_ARG_9 = 0.1
+	declare_war_on = {
+		target = ENM
+		type = annex_everything
 	}
-	generate_units_982 = yes
 }

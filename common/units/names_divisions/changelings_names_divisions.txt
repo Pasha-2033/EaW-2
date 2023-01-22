@@ -6,7 +6,7 @@ JAGER = {
 		VRA
 		DIS
 		LIK
-		CHN
+		#CHN
 	}
 	can_use = {
 		OR = {
@@ -15,11 +15,10 @@ JAGER = {
 			has_government = militarism
 		}
 	}
-	division_types = {"jager"}
-	fallback_name = "%d. Jäger-Division"
-	link_numbering_with = {
-		JAGER
+	division_types = {
+		"jager"
 	}
+	fallback_name = "%d. Jäger-Division"
 	ordered = { 
 		1 = {"%d. Jäger-Division 'Scharfschützen'"}
 		2 = {"%d. Jäger-Division 'Unsichtbar'"}
@@ -40,7 +39,7 @@ QG = {
 		VRA
 		DIS
 		LIK
-		CHN
+		#CHN
 	}
 	can_use = {
 		OR = {
@@ -49,17 +48,16 @@ QG = {
 			has_government = militarism
 		}
 	}
-	division_types = { "infantry" }
-	fallback_name = "%d. Garde-Grenadier-Division"
-	link_numbering_with = {
-		QG
+	division_types = {
+		"infantry"
 	}
+	fallback_name = "%d. Garde-Grenadier-Division"
 	ordered = {
-		1 = {"1. Leib-Division 'Chrysalis'" }
-		#1 = {"1. Leib-Division 'Chrysalis'" }
-		#1 = {"1. Leib-Division 'Chrysalis'" }
-		#1 = {"1. Leib-Division 'Chrysalis'" }
-		#1 = {"1. Leib-Division 'Chrysalis'" }
+		1 = {"%d. Leib-Division 'Chrysalis'" }
+		2 = {"%d. Leib-Division 'Chrysalis'" }
+		3 = {"%d. Leib-Division 'Chrysalis'" }
+		4 = {"%d. Leib-Division 'Chrysalis'" }
+		5 = {"%d. Leib-Division 'Chrysalis'" }
 		6 = {"%d. Leib-Grenadier-Division 'Vesalipolis'"}
 		7 = {"%d. Leib-Grenadier-Division 'Ditrysium'"}
 		8 = {"%d. Leib-Grenadier-Division 'Lyctida'"}

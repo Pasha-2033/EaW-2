@@ -1,0 +1,63 @@
+ideas = {
+	country = {
+		ICE_winter_spirits = {
+			picture = clockwerk_economy			#to do (change)
+			targeted_modifier = {
+				tag = EPT
+				attack_bonus_against = 1
+				defense_bonus_against = -0.5
+			}
+			targeted_modifier = {
+				tag = EEQ
+				attack_bonus_against = 1
+				defense_bonus_against = -0.5
+			}
+			targeted_modifier = {
+				tag = PGT
+				attack_bonus_against = 1
+				defense_bonus_against = -0.5
+			}
+			targeted_modifier = {
+				tag = WOP
+				attack_bonus_against = 0.5
+				defense_bonus_against = -0.25
+			}
+			targeted_modifier = {
+				tag = ESG
+				attack_bonus_against = 0.5
+				defense_bonus_against = -0.25
+			}
+			targeted_modifier = {
+				tag = ECR
+				attack_bonus_against = 0.5
+				defense_bonus_against = -0.25
+			}
+			targeted_modifier = {
+				tag = BPR
+				attack_bonus_against = 0.75
+				defense_bonus_against = -0.375
+			}
+			modifier = {
+				compliance_growth = -1
+				resistance_growth = 0.1
+				local_org_regain = 0.1
+				org_loss_when_moving = -0.1
+				army_org_factor = 0.1
+			}
+		}
+		ICE_power_of_winter = {
+			picture = clockwerk_economy			#to do (change)
+			modifier = {
+				supply_consumption_factor = -0.5
+				out_of_supply_factor = -0.5
+				ai_focus_aggressive_factor = 0.25
+			}
+		}
+		ICE_power_of_nature = {
+			picture = clockwerk_economy			#to do (change)
+			modifier = {
+				forced_surrender_limit = 1
+			}
+		}
+	}
+}
