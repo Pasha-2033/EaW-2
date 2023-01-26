@@ -1,712 +1,679 @@
 division_template = {
-	name = "Windigo spirits"
-	division_names_group = WS
+	name = "Garnison Division"
+	division_names_group = GDD
 	regiments = {
-		windigo_horrors = { x = 0 y = 0 }
-		windigo_horrors = { x = 1 y = 0 }
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Royal Guard Squad"
+	division_names_group = RGS
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+	support = {
+		unicorn_company = { x = 0 y = 0 }
+		engineer = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Mountaineer Batalion"
+	division_names_group = MDD
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
 	}
 }
 units = {
-	#Equus
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 35
-		division_template = "Windigo spirits"
+		location = 179
+		division_template = "Royal Guard Squad"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 124
-		division_template = "Windigo spirits"
+		location = 179
+		division_template = "Royal Guard Squad"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 351
-		division_template = "Windigo spirits"
+		location = 179
+		division_template = "Mountaineer Batalion"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 389
-		division_template = "Windigo spirits"
+		location = 179
+		division_template = "Mountaineer Batalion"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 457
-		division_template = "Windigo spirits"
+		location = 625
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 511
-		division_template = "Windigo spirits"
+		location = 746
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 655
-		division_template = "Windigo spirits"
+		location = 758
+		division_template = "Royal Guard Squad"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 773
-		division_template = "Windigo spirits"
+		location = 874
+		division_template = "Mountaineer Batalion"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 780
-		division_template = "Windigo spirits"
+		location = 950
+		division_template = "Royal Guard Squad"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 794
-		division_template = "Windigo spirits"
+		location = 967
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 869
-		division_template = "Windigo spirits"
+		location = 980
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 907
-		division_template = "Windigo spirits"
+		location = 1346
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 3044
-		division_template = "Windigo spirits"
+		location = 1440
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 3444
-		division_template = "Windigo spirits"
+		location = 3162
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 3478
-		division_template = "Windigo spirits"
+		location = 3162
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 3609
-		division_template = "Windigo spirits"
+		location = 3162
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 3645
-		division_template = "Windigo spirits"
+		location = 3283
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 3700
-		division_template = "Windigo spirits"
+		location = 3509
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 3893
-		division_template = "Windigo spirits"
+		location = 3669
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 3920
-		division_template = "Windigo spirits"
+		location = 3741
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 3983
-		division_template = "Windigo spirits"
+		location = 3749
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 4535
-		division_template = "Windigo spirits"
+		location = 3887
+		division_template = "Royal Guard Squad"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 4983
-		division_template = "Windigo spirits"
+		location = 3891
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 5012
-		division_template = "Windigo spirits"
+		location = 3915
+		division_template = "Mountaineer Batalion"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 6009
-		division_template = "Windigo spirits"
+		location = 3953
+		division_template = "Royal Guard Squad"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 6165
-		division_template = "Windigo spirits"
+		location = 3959
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 6280
-		division_template = "Windigo spirits"
+		location = 4080
+		division_template = "Royal Guard Squad"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 6415
-		division_template = "Windigo spirits"
+		location = 4109
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 6524
-		division_template = "Windigo spirits"
+		location = 6023
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 6542
-		division_template = "Windigo spirits"
+		location = 6023
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 6546
-		division_template = "Windigo spirits"
+		location = 6023
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 6552
-		division_template = "Windigo spirits"
+		location = 6136
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 6576
-		division_template = "Windigo spirits"
+		location = 6281
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 6789
-		division_template = "Windigo spirits"
+		location = 6529
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 6812
-		division_template = "Windigo spirits"
+		location = 6572
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 6864
-		division_template = "Windigo spirits"
+		location = 6666
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 6942
-		division_template = "Windigo spirits"
+		location = 6734
+		division_template = "Royal Guard Squad"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 6970
-		division_template = "Windigo spirits"
+		location = 6818
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 6996
-		division_template = "Windigo spirits"
+		location = 6926
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 7173
-		division_template = "Windigo spirits"
+		location = 6959
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 7624
-		division_template = "Windigo spirits"
+		location = 9138
+		division_template = "Mountaineer Batalion"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 9351
-		division_template = "Windigo spirits"
+		location = 9148
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 9357
-		division_template = "Windigo spirits"
+		location = 9539
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 9375
-		division_template = "Windigo spirits"
+		location = 9550
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 9457
-		division_template = "Windigo spirits"
+		location = 9598
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 9470
-		division_template = "Windigo spirits"
+		location = 9672
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 9522
-		division_template = "Windigo spirits"
+		location = 9689
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 9597
-		division_template = "Windigo spirits"
+		location = 9882
+		division_template = "Mountaineer Batalion"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 9867
-		division_template = "Windigo spirits"
+		location = 9924
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 10731
-		division_template = "Windigo spirits"
+		location = 9990
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 11029
-		division_template = "Windigo spirits"
+		location = 11100
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 11037
-		division_template = "Windigo spirits"
+		location = 11100
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 11082
-		division_template = "Windigo spirits"
+		location = 11100
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 11272
-		division_template = "Windigo spirits"
+		location = 11311
+		division_template = "Royal Guard Squad"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 11399
-		division_template = "Windigo spirits"
+		location = 11311
+		division_template = "Royal Guard Squad"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 11413
-		division_template = "Windigo spirits"
+		location = 11386
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 11511
-		division_template = "Windigo spirits"
+		location = 11407
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 11515
-		division_template = "Windigo spirits"
+		location = 11548
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 11623
-		division_template = "Windigo spirits"
+		location = 11672
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 11627
-		division_template = "Windigo spirits"
+		location = 11684
+		division_template = "Royal Guard Squad"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 11686
-		division_template = "Windigo spirits"
+		location = 11672
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 11702
-		division_template = "Windigo spirits"
+		location = 11707
+		division_template = "Garnison Division"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 11848
-		division_template = "Windigo spirits"
+		location = 11710
+		division_template = "Royal Guard Squad"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 	division = {
 		division_name = {
 			is_name_ordered = yes
 		}
-		location = 11875
-		division_template = "Windigo spirits"
+		location = 11838
+		division_template = "Mountaineer Batalion"
 		start_experience_factor = 0.5
 		start_equipment_factor = 1
-		start_manpower_factor = 0.75
-	}
-	division = {
-		division_name = {
-			is_name_ordered = yes
-		}
-		location = 12070
-		division_template = "Windigo spirits"
-		start_experience_factor = 0.5
-		start_equipment_factor = 1
-		start_manpower_factor = 0.75
-	}
-	division = {
-		division_name = {
-			is_name_ordered = yes
-		}
-		location = 12110
-		division_template = "Windigo spirits"
-		start_experience_factor = 0.5
-		start_equipment_factor = 1
-		start_manpower_factor = 0.75
-	}
-	#New Mairland
-	division = {
-		division_name = {
-			is_name_ordered = yes
-		}
-		location = 3160
-		division_template = "Windigo spirits"
-		start_experience_factor = 0.5
-		start_equipment_factor = 1
-		start_manpower_factor = 0.75
-	}
-	division = {
-		division_name = {
-			is_name_ordered = yes
-		}
-		location = 4968
-		division_template = "Windigo spirits"
-		start_experience_factor = 0.5
-		start_equipment_factor = 1
-		start_manpower_factor = 0.75
-	}
-	division = {
-		division_name = {
-			is_name_ordered = yes
-		}
-		location = 10106
-		division_template = "Windigo spirits"
-		start_experience_factor = 0.5
-		start_equipment_factor = 1
-		start_manpower_factor = 0.75
-	}
-	division = {
-		division_name = {
-			is_name_ordered = yes
-		}
-		location = 11137
-		division_template = "Windigo spirits"
-		start_experience_factor = 0.5
-		start_equipment_factor = 1
-		start_manpower_factor = 0.75
+		start_manpower_factor = 1
 	}
 }

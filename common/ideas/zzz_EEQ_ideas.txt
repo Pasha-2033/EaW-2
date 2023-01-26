@@ -1,18 +1,18 @@
 ideas = {
 	country = {
-		unicorn_superiority = {
-			picture = clockwerk_economy			#to do (change)
+		EEQ_unicorn_superiority = {
+			picture = EEQ_unicorn_superiority			#to do (change)
 			allowed = {
 				original_tag = EEQ
 			}
-			cancel = {
-				NOT = {
-					any_character = {
-						#has_trait = promoted_by_favor
-						is_political_advisor = yes
-					}
-				}
-			}
+			#cancel = {
+			#	NOT = {
+			#		any_character = {
+			#			#has_trait = promoted_by_favor
+			#			is_political_advisor = yes
+			#		}
+			#	}
+			#}
 			modifier = {
 				political_power_factor = -0.5
 				fascism_drift = 0.05
@@ -22,7 +22,7 @@ ideas = {
 			}
 		}
 		EEQ_tribal_crisis = {
-			picture = clockwerk_economy			#to do (change)
+			picture = EEQ_tribal_crisis			#to do (change)
 			allowed = {
 				original_tag = EEQ
 			}

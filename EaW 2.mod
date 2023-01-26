@@ -47,5 +47,5 @@ tags={
 	"Map"
 }
 supported_version="1.12.*"
-picture="gfx/HOI4_icon.bmp"
+picture="thumbnail.png"
 path="mod/EaW 2/"

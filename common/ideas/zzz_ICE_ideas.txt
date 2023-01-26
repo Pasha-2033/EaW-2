@@ -1,20 +1,23 @@
 ideas = {
 	country = {
 		ICE_winter_spirits = {
-			picture = clockwerk_economy			#to do (change)
+			picture = ICE_winter_spirits
+			allowed = {
+				original_tag = ICE
+			}
 			targeted_modifier = {
 				tag = EPT
-				attack_bonus_against = 1
+				attack_bonus_against = 0.5
 				defense_bonus_against = -0.5
 			}
 			targeted_modifier = {
 				tag = EEQ
-				attack_bonus_against = 1
+				attack_bonus_against = 0.5
 				defense_bonus_against = -0.5
 			}
 			targeted_modifier = {
 				tag = PGT
-				attack_bonus_against = 1
+				attack_bonus_against = 0.5
 				defense_bonus_against = -0.5
 			}
 			targeted_modifier = {
@@ -46,7 +49,10 @@ ideas = {
 			}
 		}
 		ICE_power_of_winter = {
-			picture = clockwerk_economy			#to do (change)
+			picture = ICE_power_of_winter
+			allowed = {
+				original_tag = ICE
+			}
 			modifier = {
 				supply_consumption_factor = -0.5
 				out_of_supply_factor = -0.5
@@ -55,6 +61,9 @@ ideas = {
 		}
 		ICE_power_of_nature = {
 			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = ICE
+			}
 			modifier = {
 				forced_surrender_limit = 1
 			}
