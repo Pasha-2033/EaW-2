@@ -1,4 +1,5 @@
 # Equestria at War 2
+# Attention! This is virus branch - do not use it, if u don`t understand what it does!
 <h2>This is mod repository.</h2>
 It also contains some modules that can be used in your mode.
 </br>
