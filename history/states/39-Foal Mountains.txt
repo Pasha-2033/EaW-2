@@ -36,26 +36,15 @@ state = {
 			owner = EEQ
 			add_core_of = EEQ
 			add_claim_by = ICE
-			add_resource = {
-				type = steel
-				amount = 6
-				state = THIS
-			}
-			add_resource = {
-				type = tungsten
-				amount = 8
-				state = THIS
-			}
-			add_resource = {
-				type = crystals
-				amount = 5
-				state = THIS
-			}
 		}
 		1007.1.1 = {
 			owner = NEQ
 			add_core_of = NEQ
 		}
 		1050.1.1 = {}
+	}
+	resources = {
+		steel = 6
+		tungsten = 8
 	}
 }

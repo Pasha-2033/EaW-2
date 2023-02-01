@@ -146,16 +146,15 @@ do_not_eleminate_eeq_fast = {
 		original_tag = ICE
 	}
 	enable = {
-		has_offensive_war_with = EEQ
+		always = yes
+		#has_offensive_war_with = EEQ
 	}
-	abort = {
-		always = no #to do
-	}
+	abort_when_not_enabled = yes
 	ai_strategy = {
 		type = front_control
 		tag = EEQ
-		ratio = 0.60
-		priority = 100
+		ratio = 1
+		priority = 10000
 		ordertype = front
 		execution_type = careful
 		execute_order = no
@@ -164,6 +163,6 @@ do_not_eleminate_eeq_fast = {
 	ai_strategy = {
 		type = front_unit_request
 		tag = EEQ
-		value = -50 #too low
+		value = -50
 	}
 }

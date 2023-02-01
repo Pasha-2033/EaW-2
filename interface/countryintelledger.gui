@@ -426,20 +426,33 @@ guiTypes = {
 					size = { width = 500 height = 69 }
 					horizontalScrollbar = "bottom_horizontal_slider"
 					clipping = yes
-					drag_scroll = { left middle }
-					background_margin = { bottom = 10 }
-					
+					drag_scroll = { 
+						left 
+						middle 
+					}
+					background_margin = { 
+						bottom = 10 
+					}
 					background = {
 						name = "Background"
 						spriteType ="GFX_mini_bg_grey"
 					}
 					gridBoxType = {
 						name = "resource_entries"
-						position = { x = -47 y = 5 }
-						size = { width = 877 height = 60 }
+						position = { 
+							x = -47 
+							y = 5 
+						}
+						size = { 
+							width = 1003 
+							height = 60 
+						}
 						format = "UPPER_LEFT"
-						slotsize = { width = 121 height = 30 }
-						max_slots_vertical = 7
+						slotsize = { 
+							width = 121 
+							height = 30 
+						}
+						max_slots_vertical = 8
 					}
 				}
 				

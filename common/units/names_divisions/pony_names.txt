@@ -2,6 +2,7 @@ GDD = { #decimal
 	name = "Garnison division"
 	for_countries = {
 		EEQ
+		PGT
 	}
 	division_types = {
 		"infantry"
@@ -16,6 +17,7 @@ MDD = { #decimal
 	name = "Mountaineer division" 
 	for_countries = {
 		EEQ
+		PGT
 	}
 	division_types = {
 		"mountaineers"
@@ -26,7 +28,7 @@ MDD = { #decimal
 	#	1 = {"%d. Windigo spirit formation '(to do)'"}
 	#}
 }
-RGS = {
+RGS = { #string
 	name = "Royal Guard Squad" 
 	for_countries = {
 		EEQ
@@ -35,6 +37,20 @@ RGS = {
 		"infantry"
 	}
 	fallback_name = "%s. Royal Guard Squad"
+	#to do
+	#ordered = {
+	#	1 = {"%d. Windigo spirit formation '(to do)'"}
+	#}
+}
+PM = { #string
+	name = "Pegas Militia" 
+	for_countries = {
+		PGT
+	}
+	division_types = {
+		"pegasi"
+	}
+	fallback_name = "%s. Pegas Militia"
 	#to do
 	#ordered = {
 	#	1 = {"%d. Windigo spirit formation '(to do)'"}

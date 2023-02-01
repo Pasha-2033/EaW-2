@@ -1,0 +1,57 @@
+spawn_anti_ice_militia = {
+	spawn_garnison = {
+		icon = infiltrate_state
+		state_target = yes
+		target_array = owned_controlled_states
+		on_map_mode = map_and_decisions_view
+		target_root_trigger = {
+			check_variable = {
+				owned_controlled_states^num > 0
+			}
+		}
+        cost = 20
+        days_remove = 3
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision spawn_garnison (anti ICE) target: [From.GetName]"
+            add_stability = -0.05
+			add_war_support = -0.05
+			FROM = {
+				create_unit = {
+					division = "division_template = \"Garnison Division\" start_experience_factor = 0.2 start_equipment_factor = 0.5"
+					owner = ROOT
+				}
+			}
+        }
+        ai_will_do = {
+            factor = 5000
+        }
+	}
+}
+ask_for_landlease_anti_ice = {
+	ask_for_infantry_equipment = {
+		icon = infiltrate_state
+		target_array = global.majors
+		days_re_enable = 180
+        cost = 20
+        days_remove = 14
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ask_for_infantry_equipment"
+			hidden_effect = {
+				FROM = {
+					meta_effect = {
+						text = {
+							country_event = {
+								id = eeq_pgt_ept_anti_ice_event.2.[TAG]
+							}
+						}
+						TAG = "ROOT.GetTag"
+					}
+				}
+			}
+			custom_effect_tooltip = send_request_for_infantry_eq
+        }
+        ai_will_do = {
+            factor = 5000
+        }
+	}
+}

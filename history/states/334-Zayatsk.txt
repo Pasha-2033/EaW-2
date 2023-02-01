@@ -23,21 +23,6 @@ state = {
 			add_core_of = ESG
 			add_claim_by = WOP
 			add_claim_by = ANP
-			add_resource = {
-				type = aluminium
-				amount = 16
-				state = THIS
-			}
-			add_resource = {
-				type = oil
-				amount = 5
-				state = THIS
-			}
-			add_resource = {
-				type = tungsten
-				amount = 5
-				state = THIS
-			}
 			buildings = {
 				infrastructure = 2
 				industrial_complex = 1
@@ -48,5 +33,10 @@ state = {
 			add_core_of = NSG
 		}
 		1050.1.1 = {}
+	}
+	resources = {
+		aluminium = 5
+		oil = 3
+		tungsten = 2
 	}
 }

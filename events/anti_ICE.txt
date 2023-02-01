@@ -10,7 +10,7 @@ country_event = {
 			base = 100
 		}
 		trigger = {
-			tag = EEQ
+			original_tag = EEQ
 		}
 	}
 	option = {
@@ -19,7 +19,7 @@ country_event = {
 			base = 100
 		}
 		trigger = {
-			tag = PGT
+			original_tag = PGT
 		}
 	}
 	option = {
@@ -28,7 +28,113 @@ country_event = {
 			base = 100
 		}
 		trigger = {
-			tag = EPT
+			original_tag = EPT
+		}
+	}
+}
+country_event = {
+	id = eeq_pgt_ept_anti_ice_event.2.EEQ
+	title = eeq_pgt_ept_anti_ice_event.2.EEQ.t
+	desc = eeq_pgt_ept_anti_ice_event.2.EEQ.d
+	is_triggered_only = yes
+	option = {
+		name = eeq_pgt_ept_anti_ice_event.2.a
+		ai_chance = {
+			base = 100
+		}
+		trigger = {
+			original_tag = EEQ
+			has_equipment = {
+				infantry_equipment > 999
+			}
+		}
+		send_equipment = {
+			equipment = infantry_equipment
+			amount = 1000
+			target = EEQ
+		}
+		modify_opinion_by_eq_donation_EEQ = yes
+	}
+	option = {
+		name = eeq_pgt_ept_anti_ice_event.2.b
+		ai_chance = {
+			base = 100
+		}
+		trigger = {
+			original_tag = EEQ
+			has_equipment = {
+				infantry_equipment > 499
+			}
+		}
+		send_equipment = {
+			equipment = infantry_equipment
+			amount = 500
+			target = EEQ
+		}
+		modify_opinion_by_eq_donation_EEQ = yes
+	}
+	option = {
+		name = eeq_pgt_ept_anti_ice_event.2.c
+		ai_chance = {
+			base = 100
+		}
+		hidden_effect = {
+			EEQ = {
+				add_political_power = 10
+			}
+		}
+	}
+}
+country_event = {
+	id = eeq_pgt_ept_anti_ice_event.2.EEQ
+	title = eeq_pgt_ept_anti_ice_event.2.EEQ.t
+	desc = eeq_pgt_ept_anti_ice_event.2.EEQ.d
+	is_triggered_only = yes
+	option = {
+		name = eeq_pgt_ept_anti_ice_event.2.a
+		ai_chance = {
+			base = 100
+		}
+		trigger = {
+			original_tag = EEQ
+			has_equipment = {
+				infantry_equipment > 999
+			}
+		}
+		send_equipment = {
+			equipment = infantry_equipment
+			amount = 1000
+			target = EEQ
+		}
+		modify_opinion_by_eq_donation_EEQ = yes
+	}
+	option = {
+		name = eeq_pgt_ept_anti_ice_event.2.b
+		ai_chance = {
+			base = 100
+		}
+		trigger = {
+			original_tag = EEQ
+			has_equipment = {
+				infantry_equipment > 499
+			}
+		}
+		send_equipment = {
+			equipment = infantry_equipment
+			amount = 500
+			target = EEQ
+		}
+		modify_opinion_by_eq_donation_EEQ = yes
+	}
+	option = {
+		name = eeq_pgt_ept_anti_ice_event.2.c
+		ai_chance = {
+			base = 100
+		}
+		hidden_effect = {
+			EEQ = {
+				add_political_power = 10
+			}
 		}
 	}
 }

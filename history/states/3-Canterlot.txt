@@ -29,16 +29,6 @@ state = {
 			owner = EEQ
 			add_core_of = EEQ
 			add_claim_by = ICE
-			add_resource = {
-				type = steel
-				amount = 28
-				state = THIS
-			}
-			add_resource = {
-				type = crystals
-				amount = 12
-				state = THIS
-			}
 			buildings = {
 				infrastructure = 2
 				air_base = 1
@@ -55,5 +45,9 @@ state = {
 			add_core_of = NEQ
 		}
 		1050.1.1 = {}
+	}
+	resources = {
+		steel = 4
+		crystals = 3
 	}
 }

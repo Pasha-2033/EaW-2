@@ -1,0 +1,155 @@
+division_template = {
+	name = "Garnison Division"
+	division_names_group = GDD
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+division_template = {
+	name = "Pegas Militia"
+	division_names_group = PM
+	regiments = {
+		pegasi = { x = 0 y = 0 }
+		pegasi = { x = 0 y = 1 }
+		pegasi = { x = 1 y = 0 }
+		pegasi = { x = 1 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 1 }
+	}
+}
+division_template = {
+	name = "Mountaineer Batalion"
+	division_names_group = MDD
+	regiments = {
+		mountaineers = { x = 0 y = 0 }
+		mountaineers = { x = 0 y = 1 }
+		mountaineers = { x = 1 y = 0 }
+		mountaineers = { x = 1 y = 1 }
+	}
+	support = {
+		engineer = { x = 0 y = 0 }
+	}
+}
+units = {
+	division = {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 693
+		division_template = "Garnison Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 3182
+		division_template = "Garnison Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 3192
+		division_template = "Garnison Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 3267
+		division_template = "Garnison Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 3846
+		division_template = "Garnison Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 6148
+		division_template = "Garnison Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 6562
+		division_template = "Garnison Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 10072
+		division_template = "Garnison Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 11197
+		division_template = "Garnison Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 11216
+		division_template = "Pegas Militia"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 11231
+		division_template = "Garnison Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 11953
+		division_template = "Garnison Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 13097
+		division_template = "Garnison Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 0.75
+	}
+}

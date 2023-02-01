@@ -11,20 +11,20 @@ state={
 	buildings_max_level_factor=1.00
 
 	history={
-		#owner = OLE
-		#add_core_of = OLE
+		victory_points = { 767 5 }
 		982.1.1 = {
 			owner = BR3
 			add_core_of = BR3
+			buildings = {
+				infrastructure = 1
+			}
 		}
 		1007.1.1 = {
 			owner = NOL
 			add_core_of = NOL
 		}
-		victory_points = { 767 5 }
-
-		buildings = {
-			infrastructure = 1
-		}
+	}
+	resources = {
+		food = 20
 	}
 }

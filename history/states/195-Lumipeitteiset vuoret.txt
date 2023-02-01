@@ -9,24 +9,22 @@ state={
 	manpower=7121
 	state_category=wasteland
 	buildings_max_level_factor=1.00
-
-	history={
+	history = {
 		982.1.1 = {
 			owner = BR4
 			add_core_of = BR4
+			buildings = {
+				infrastructure = 1
+			}
 		}
 		1007.1.1 = {
 			owner = NOL
 			add_core_of = NOL
 		}
-		buildings = {
-			infrastructure = 1
-		}
 	}
-
-	resources={
-		steel=12
-		aluminium=36
-		chromium=35
+	resources = {
+		steel = 4
+		aluminium = 6
+		chromium = 1
 	}
 }

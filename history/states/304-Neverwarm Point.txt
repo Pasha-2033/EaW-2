@@ -11,29 +11,17 @@ state={
 	buildings_max_level_factor=1.00
 
 	history={
+		victory_points = { 1547 10 }
 		982.1.1 = {
 			owner = LIK
 			add_core_of = LIK
-			add_resource = {
-				type = steel
-				amount = 10
-				state = THIS
-			}
-			add_resource = {
-				type = crystals
-				amount = 2
-				state = THIS
-			}
-		}
+			buildings = {
+				infrastructure = 2
+				dockyard = 2
 
-		victory_points = { 1547 10 }
-
-		buildings = {
-			infrastructure = 2
-			dockyard = 2
-
-			1547 = {
-				naval_base = 1
+				1547 = {
+					naval_base = 1
+				}
 			}
 		}
 		1007.1.1 = {
@@ -41,5 +29,10 @@ state={
 			add_core_of = UCH
 			controller = UCH
 		}
+	}
+	resources = {
+		steel = 4
+		crystals = 1
+		chromium = 3
 	}
 }

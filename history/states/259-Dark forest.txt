@@ -11,21 +11,24 @@ state={
 	buildings_max_level_factor=1.00
 
 	history={
-		owner = VRA
-		add_core_of = VRA
-
 		victory_points = { 722 20 }
-
-		buildings = {
-			infrastructure = 3
-			industrial_complex = 2
-			arms_factory = 4
-			fuel_silo = 1
+		982.1.1 = {
+			owner = VRA
+			add_core_of = VRA
+			buildings = {
+				infrastructure = 3
+				industrial_complex = 2
+				arms_factory = 4
+				fuel_silo = 1
+			}
 		}
 		1007.1.1 = {
 			owner = UCH
 			add_core_of = UCH
 			controller = UCH
 		}
+	}
+	resources = {
+		food = 80
 	}
 }

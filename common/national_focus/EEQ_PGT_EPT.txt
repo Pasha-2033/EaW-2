@@ -392,27 +392,7 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_need_for_landlease"
-		}
-	}
-	focus = {
-		id = eeq_pgt_ept_need_for_landlease
-		icon = GFX_goal_generic_changeling
-		cost = 2.5
-		relative_position_id = eeq_pgt_ept_call_for_help
-		prerequisite = {
-			focus = eeq_pgt_ept_call_for_help
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		available = {
-			has_defensive_war_with = ICE
-		}
-		bypass_if_unavailable = yes
-		x = 0
-		y = 1
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_need_for_landlease"
+			custom_effect_tooltip = allow_anti_ice_begging_for_equipment
 		}
 	}
 	focus = {
@@ -434,6 +414,7 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_need_for_divisions"
+			custom_effect_tooltip = allow_anti_ice_garnison_spawning
 		}
 	}
 	focus = {

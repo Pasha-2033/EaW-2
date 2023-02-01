@@ -11,28 +11,28 @@ state={
 	buildings_max_level_factor=1.00
 
 	history={
-		#owner = OLE
-		#add_core_of = OLE
+		victory_points = { 6950 20 }
 		982.1.1 = {
 			owner = BR1
 			add_core_of = BR1
+			buildings = {
+				infrastructure = 3
+				industrial_complex = 2
+				arms_factory = 1
+				dockyard = 1
+				air_base = 1
+
+				6950 = {
+					naval_base = 1
+				}
+			}
 		}
 		1007.1.1 = {
 			owner = NOL
 			add_core_of = NOL
 		}
-		victory_points = { 6950 20 }
-
-		buildings = {
-			infrastructure = 3
-			industrial_complex = 2
-			arms_factory = 1
-			dockyard = 1
-			air_base = 1
-
-			6950 = {
-				naval_base = 1
-			}
-		}
+	}
+	resources = {
+		food = 15
 	}
 }

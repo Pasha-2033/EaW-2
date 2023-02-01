@@ -11,28 +11,25 @@ state={
 	state_category=rural
 
 	history={
-		#owner = OLE
-		#add_core_of = OLE
+		victory_points = { 4057 3 }
 		982.1.1 = {
 			owner = BR2
 			add_core_of = BR2
+			buildings = {
+				infrastructure = 1
+
+				4057 = {
+					naval_base = 1
+				}
+			}
 		}
 		1007.1.1 = {
 			owner = NOL
 			add_core_of = NOL
 		}
-		victory_points = { 4057 3 }
-
-		buildings = {
-			infrastructure = 1
-
-			4057 = {
-				naval_base = 1
-			}
-		}
 	}
-
 	resources = {
 		oil = 5
+		food = 10
 	}
 }

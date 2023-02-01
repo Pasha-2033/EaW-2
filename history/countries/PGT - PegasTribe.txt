@@ -1,4 +1,10 @@
 capital = 66
+set_technology = {
+	melee_weapons = 1
+	tech_support = 1
+	tech_engineers = 1
+	tech_pegasi = 1
+}
 set_politics = {
 	ruling_party = militarism
 	elections_allowed = no
@@ -16,19 +22,4 @@ add_ideas = {
 	pony_race
 	eeq_pgt_ept_scared_by_ice
 }
-982.1.1 = {
-	set_variable = {
-		UG_ARG_1 = 0.334
-	}
-	set_variable = {
-		UG_ARG_9 = 0.1
-	}
-	set_variable = {
-		UG_ARG_16 = 1
-	}
-	set_variable = {
-		UG_ARG_17 = 1
-	}
-	generate_units_982 = yes
-	generate_units_982 = yes
-}
+set_oob = "982_PGT"
