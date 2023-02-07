@@ -3,8 +3,8 @@ ideas = {
 		eeq_pgt_ept_scared_by_ice = {
 			picture = clockwerk_economy			#to do (change)
 			cancel = {
-				ICE = {
-					exists = no
+				NOT = {
+					has_defensive_war_with = ICE
 				}
 			}
 			modifier = {
@@ -14,6 +14,11 @@ ideas = {
 		}
 		eeq_pgt_ept_desperate_situation_idea = {
 			picture = clockwerk_economy			#to do (change)
+			cancel = {
+				NOT = {
+					has_defensive_war_with = ICE
+				}
+			}
 			targeted_modifier = {
 				tag = ICE
 				defense_bonus_against = 0.25
@@ -26,6 +31,11 @@ ideas = {
 		}
 		anti_ICE_defence = {
 			picture = clockwerk_economy			#to do (change)
+			cancel = {
+				NOT = {
+					has_defensive_war_with = ICE
+				}
+			}
 			targeted_modifier = {
 				tag = ICE
 				defense_bonus_against = 0.75
@@ -38,6 +48,11 @@ ideas = {
 		}
 		frost_containment_technics = {
 			picture = clockwerk_economy			#to do (change)
+			cancel = {
+				NOT = {
+					has_defensive_war_with = ICE
+				}
+			}
 			targeted_modifier = {
 				tag = ICE
 				defense_bonus_against = 0.2
@@ -47,6 +62,105 @@ ideas = {
 				war_support_factor = 0.05
 				winter_attrition_factor = -0.25
 				ai_focus_defense_factor = 0.1
+			}
+		}
+		wood_as_fuel_idea = {
+			picture = clockwerk_economy			#to do (change)
+			cancel = {
+				NOT = {
+					has_defensive_war_with = ICE
+				}
+			}
+			modifier = {
+				supply_consumption_factor = -0.05
+				production_speed_buildings_factor = -0.08
+			}
+		}
+		coal_as_fuel_idea = {
+			picture = clockwerk_economy			#to do (change)
+			cancel = {
+				NOT = {
+					has_defensive_war_with = ICE
+				}
+			}
+			modifier = {
+				army_org_factor = 0.05
+				army_org_regain = 0.05
+				conscription = -0.01
+			}
+		}
+		better_heat_sources_idea = {
+			picture = clockwerk_economy			#to do (change)
+			cancel = {
+				NOT = {
+					has_defensive_war_with = ICE
+				}
+			}
+			targeted_modifier = {
+				tag = ICE
+				defense_bonus_against = 0.1
+				attack_bonus_against = 0.1
+			}
+			modifier = {
+				army_org_factor = 0.05
+				consumer_goods_factor = 0.25
+			}
+		}
+		more_heat_sources_idea = {
+			picture = clockwerk_economy			#to do (change)
+			cancel = {
+				NOT = {
+					has_defensive_war_with = ICE
+				}
+			}
+			targeted_modifier = {
+				tag = ICE
+				defense_bonus_against = 0.05
+				attack_bonus_against = 0.05
+			}
+			modifier = {
+				supply_consumption_factor = -0.05
+			}
+		}
+		heat_castle_idea = {
+			picture = clockwerk_economy			#to do (change)
+			cancel = {
+				NOT = {
+					has_defensive_war_with = ICE
+				}
+			}
+			targeted_modifier = {
+				tag = ICE
+				defense_bonus_against = 0.15
+				attack_bonus_against = 0.15
+			}
+			modifier = {
+				supply_consumption_factor = 0.05
+			}
+		}
+		showels_idea = {
+			picture = clockwerk_economy			#to do (change)
+			cancel = {
+				NOT = {
+					has_defensive_war_with = ICE
+				}
+			}
+			targeted_modifier = {
+				tag = ICE
+				defense_bonus_against = 0.1
+			}
+		}
+		heat_veapons_idea = {
+			picture = clockwerk_economy			#to do (change)
+			cancel = {
+				NOT = {
+					has_defensive_war_with = ICE
+				}
+			}
+			targeted_modifier = {
+				tag = ICE
+				defense_bonus_against = 0.05
+				attack_bonus_against = 0.05
 			}
 		}
 	}

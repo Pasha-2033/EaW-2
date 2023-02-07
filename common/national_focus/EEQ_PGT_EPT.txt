@@ -12,7 +12,7 @@ focus_tree = {
 		}
 	}
 	default = no
-	shared_focus = shared_focus_eeq_start_eeq_tag
+	shared_focus = shared_focus_eeq_harmony_isnot_lost
 	shared_focus = shared_focus_pgt_start_pgt_tag
 	shared_focus = shared_focus_ept_start_ept_tag
 	focus = {
@@ -25,9 +25,6 @@ focus_tree = {
 				has_war_with = ICE
 				add = 1000
 			}
-		}
-		available = {
-			has_defensive_war_with = ICE
 		}
 		bypass_if_unavailable = yes
 		x = 4
@@ -59,9 +56,6 @@ focus_tree = {
 				add = 1000
 			}
 		}
-		available = {
-			has_defensive_war_with = ICE
-		}
 		bypass_if_unavailable = yes
 		x = 0
 		y = 1
@@ -88,14 +82,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		available = {
-			has_defensive_war_with = ICE
-		}
 		bypass_if_unavailable = yes
 		x = -3
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_containment_techniques"
+
 		}
 	}
 	focus = {
@@ -112,14 +104,15 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		available = {
-			has_defensive_war_with = ICE
-		}
 		bypass_if_unavailable = yes
 		x = -1
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_wood_as_fuel"
+			add_timed_idea = {
+				idea = wood_as_fuel_idea
+				days = 60
+			}
 		}
 	}
 	focus = {
@@ -136,14 +129,15 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		available = {
-			has_defensive_war_with = ICE
-		}
 		bypass_if_unavailable = yes
 		x = 1
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_coal_as_fuel"
+			add_timed_idea = {
+				idea = coal_as_fuel_idea
+				days = 60
+			}
 		}
 	}
 	focus = {
@@ -161,14 +155,26 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		available = {
-			has_defensive_war_with = ICE
-		}
 		bypass_if_unavailable = yes
 		x = 0
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_better_heat_sources"
+			if = {
+				limit = {
+					has_completed_focus = eeq_pgt_ept_coal_as_fuel
+				}
+				add_timed_idea = {
+					idea = better_heat_sources_idea
+					days = 120
+				}
+			}
+			else = {
+				add_timed_idea = {
+					idea = better_heat_sources_idea
+					days = 90
+				}
+			}
 		}
 	}
 	focus = {
@@ -186,14 +192,26 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		available = {
-			has_defensive_war_with = ICE
-		}
 		bypass_if_unavailable = yes
 		x = 0
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_more_heat_sources"
+			if = {
+				limit = {
+					has_completed_focus = eeq_pgt_ept_wood_as_fuel
+				}
+				add_timed_idea = {
+					idea = more_heat_sources_idea
+					days = 120
+				}
+			}
+			else = {
+				add_timed_idea = {
+					idea = more_heat_sources_idea
+					days = 90
+				}
+			}
 		}
 	}
 	focus = {
@@ -208,14 +226,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		available = {
-			has_defensive_war_with = ICE
-		}
 		bypass_if_unavailable = yes
 		x = 0
 		y = 3
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_heat_castle"
+			add_ideas = heat_castle_idea
 		}
 	}
 
@@ -231,9 +247,6 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 200
-		}
-		available = {
-			has_defensive_war_with = ICE
 		}
 		bypass_if_unavailable = yes
 		x = 3
@@ -257,14 +270,13 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		available = {
-			has_defensive_war_with = ICE
-		}
 		bypass_if_unavailable = yes
 		x = -1
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_mobilise_civilian"
+			add_manpower = 45000
+			add_stability = -0.15
 		}
 	}
 	focus = {
@@ -281,14 +293,31 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		available = {
-			has_defensive_war_with = ICE
-		}
 		bypass_if_unavailable = yes
 		x = 1
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_mobilise_civilian"
+			capital_scope = {
+				create_unit = {
+					division = "division_template = \"Garnison Division\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "division_template = \"Garnison Division\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "division_template = \"Garnison Division\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "division_template = \"Garnison Division\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+					owner = ROOT
+				}
+			}
+			add_stability = -0.1
+			add_war_support = -0.1
 		}
 	}
 	focus = {
@@ -310,14 +339,15 @@ focus_tree = {
 				add = 1000
 			}
 		}
-		available = {
-			has_defensive_war_with = ICE
-		}
 		bypass_if_unavailable = yes
 		x = 0
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_use_heat_weapons"
+			add_timed_idea = {
+				idea = showels_idea
+				days = 30
+			}
 		}
 	}
 	focus = {
@@ -339,14 +369,15 @@ focus_tree = {
 				add = 1000
 			}
 		}
-		available = {
-			has_defensive_war_with = ICE
-		}
 		bypass_if_unavailable = yes
 		x = 0
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_use_more_shovels"
+			add_timed_idea = {
+				idea = showels_idea
+				days = 30
+			}
 		}
 	}
 
@@ -362,9 +393,6 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 200
-		}
-		available = {
-			has_defensive_war_with = ICE
 		}
 		bypass_if_unavailable = yes
 		x = 0
@@ -383,9 +411,6 @@ focus_tree = {
 		}
 		ai_will_do = {
 			factor = 200
-		}
-		available = {
-			has_defensive_war_with = ICE
 		}
 		bypass_if_unavailable = yes
 		x = 0
@@ -406,9 +431,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		available = {
-			has_defensive_war_with = ICE
-		}
 		bypass_if_unavailable = yes
 		x = 0
 		y = 1
@@ -428,14 +450,12 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		available = {
-			has_defensive_war_with = ICE
-		}
 		bypass_if_unavailable = yes
 		x = 0
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_need_for_volunteers"
+			custom_effect_tooltip = allow_anti_ice_volunteer_requests
 		}
 	}
 	continuous_focus_position = {

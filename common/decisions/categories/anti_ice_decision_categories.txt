@@ -10,7 +10,9 @@ spawn_anti_ice_militia = {
 	}
 	visible = {
 		has_completed_focus = eeq_pgt_ept_need_for_divisions
+		has_defensive_war_with = ICE
 	}
+	visible_when_empty = yes #for debug
 }
 ask_for_landlease_anti_ice = {
 	priority = 150
@@ -24,5 +26,23 @@ ask_for_landlease_anti_ice = {
 	}
 	visible = {
 		has_completed_focus = eeq_pgt_ept_need_for_landlease
+		has_defensive_war_with = ICE
 	}
+	visible_when_empty = yes #for debug
+}
+ask_for_volunteers_anti_ice = {
+	priority = 150
+	icon = generic_political_actions
+	allowed = {
+		OR = {
+			original_tag = EPT
+			original_tag = PGT
+			original_tag = EEQ
+		}
+	}
+	visible = {
+		has_completed_focus = eeq_pgt_ept_need_for_volunteers
+		has_defensive_war_with = ICE
+	}
+	visible_when_empty = yes #for debug
 }

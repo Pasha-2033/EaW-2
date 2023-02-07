@@ -1,56 +1,14 @@
-modify_opinion_by_eq_donation_EEQ = {
-	EEQ = {
-		if = {
-			limit = {
-				NOT = {
-					has_opinion_modifier = donated_equipment_against_ICE_NOT_ICE
-				}
-			}
-			add_opinion_modifier = {
-				target = ROOT
-				modifier = donated_equipment_against_ICE_NOT_ICE
-			}
+modify_opinion_by_eq_donation_againts_ICE = {
+	PREV = {
+		add_opinion_modifier = {
+			target = ROOT
+			modifier = donated_equipment_against_ICE_NOT_ICE
 		}
 	}
 	ICE = {
-		if = {
-			limit = {
-				NOT = {
-					has_opinion_modifier = donated_equipment_against_ICE_ICE
-				}
-			}
-			add_opinion_modifier = {
-				target = ROOT
-				modifier = donated_equipment_against_ICE_ICE
-			}
-		}
-	}
-}
-modify_opinion_by_eq_donation_EEQ = {
-	EEQ = {
-		if = {
-			limit = {
-				NOT = {
-					has_opinion_modifier = donated_equipment_against_ICE_NOT_ICE
-				}
-			}
-			add_opinion_modifier = {
-				target = ROOT
-				modifier = donated_equipment_against_ICE_NOT_ICE
-			}
-		}
-	}
-	ICE = {
-		if = {
-			limit = {
-				NOT = {
-					has_opinion_modifier = donated_equipment_against_ICE_ICE
-				}
-			}
-			add_opinion_modifier = {
-				target = ROOT
-				modifier = donated_equipment_against_ICE_ICE
-			}
+		add_opinion_modifier = {
+			target = ROOT
+			modifier = donated_equipment_against_ICE_ICE
 		}
 	}
 }

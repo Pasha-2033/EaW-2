@@ -36,19 +36,90 @@ ask_for_landlease_anti_ice = {
         days_remove = 14
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision ask_for_infantry_equipment"
-			hidden_effect = {
-				FROM = {
-					meta_effect = {
-						text = {
-							country_event = {
-								id = eeq_pgt_ept_anti_ice_event.2.[TAG]
-							}
-						}
-						TAG = "ROOT.GetTag"
-					}
+			FROM = {
+				country_event = {
+					id = eeq_pgt_ept_anti_ice_event.2
 				}
 			}
 			custom_effect_tooltip = send_request_for_infantry_eq
+        }
+        ai_will_do = {
+            factor = 5000
+        }
+	}
+	ask_for_artillery_equipment = {
+		icon = infiltrate_state
+		target_array = global.majors
+		days_re_enable = 180
+        cost = 20
+        days_remove = 14
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ask_for_artillery_equipment"
+			FROM = {
+				country_event = {
+					id = eeq_pgt_ept_anti_ice_event.3
+				}
+			}
+        }
+        ai_will_do = {
+            factor = 5000
+        }
+	}
+}
+ask_for_volunteers_anti_ice = {
+	ask_for_volunteers_anti_ice_desigion = {
+		icon = infiltrate_state
+		target_array = global.majors
+		target_trigger = {
+			NOT = {
+				is_in_array = {
+					ROOT.volunteers_against_ICE = THIS
+				}
+			}
+			ROOT = {
+				has_volunteers_amount_from = {
+					tag = PREV
+					count < 1
+				}
+			}
+		}
+		days_re_enable = 90
+        cost = 20
+        days_remove = 14
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ask_for_volunteers_anti_ice_desigion"
+			FROM = {
+				random_list = {
+					10 = {
+						modifier = {
+							always = yes
+							set_temp_variable = {
+								w = opinion@ROOT
+							}
+							clamp_temp_variable = {
+								var = w
+								min = 0
+								max = 100
+							}
+							factor = w
+						}
+						add_to_array = {
+							ROOT.volunteers_against_ICE = THIS
+						}
+						add_ai_strategy = {
+							type = send_volunteers_desire
+							id = ROOT
+							value = 1000
+						}
+						custom_effect_tooltip = will_donate_volunteers
+					}
+					2000 = {
+						ROOT = {
+							add_political_power = 10
+						}
+					}
+				}
+			}
         }
         ai_will_do = {
             factor = 5000
