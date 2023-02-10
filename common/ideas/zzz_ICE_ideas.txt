@@ -8,6 +8,9 @@ ideas = {
 			allowed = {
 				original_tag = ICE
 			}
+			allowed_civil_war = {
+				always = yes
+			}
 			targeted_modifier = {
 				tag = EPT
 				attack_bonus_against = 0.5
@@ -57,7 +60,10 @@ ideas = {
 			}
 			picture = ICE_power_of_winter
 			allowed = {
-				original_tag = ICE
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
 			}
 			modifier = {
 				supply_consumption_factor = -0.5
@@ -71,7 +77,10 @@ ideas = {
 			}
 			picture = clockwerk_economy			#to do (change)
 			allowed = {
-				original_tag = ICE
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
 			}
 			modifier = {
 				forced_surrender_limit = 1
