@@ -1,0 +1,29 @@
+units = {
+    division = {
+        #To set up division name you can pass field division_name 
+		#if name = "<DIVISION_NAME> defined in division_names_group and division has this name group
+		#see more in common/units/names_divisions docs
+        division_name = "Name" #or you can ovverride it
+		#or you can use enum for name
+		division_name = {
+			is_name_ordered = yes #use ordered or unordered name
+			name_order = 2 #index of enum
+		}
+		#define enum of unique oficer names
+		unique={
+			"Rudolf Veiel"
+		}
+		#asing 1 unique portrait
+		portraits = {
+			army = { #You can add starting portraits like this. The system expects a large and a small, and they will be cleared after the commander is promoted.
+				large=GFX_portrait_GER_erwin_rommel
+				small="GFX_idea_erwin_rommel"
+			}
+		}
+		location = 6521
+		division_template = "Panzer-Division"
+		start_experience_factor = 0.3
+		#use older equipment
+		force_equipment_variants = { light_tank_chassis_1 = { owner = "GER" version_name = "Panzer I Ausf. A" } }
+	}
+}

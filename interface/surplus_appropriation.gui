@@ -1,0 +1,78 @@
+guiTypes = {
+
+	containerWindowType = {
+		name = "surplus_appropriation_indicator"
+		position = { 
+			x = 970 
+			y = 5 
+		}
+		clipping = no
+		size = { 
+			width = 56 
+			height = 30 
+		}
+		orientation = UPPER_LEFT
+		background = {
+			name = "navy_xp_bg"
+			quadTextureSprite ="GFX_mini_tooltip"
+		}
+		iconType = {
+			name = "surplus_appropriation_icon"
+			spriteType = "GFX_navy_experience"
+			position = { x= 5 y = 7 }
+			Orientation = "UPPER_LEFT"
+			alwaystransparent = yes
+		}		
+		instantTextBoxType = {
+			name = "surplus_appropriation_value"
+			position = { 
+				x = 23 
+				y = 5 
+			}
+			font = "hoi_18mbs"
+			text = "999"
+			format = left
+			maxWidth = 30
+			maxHeight = 24
+			fixedsize = yes
+			alwaystransparent = yes
+		}
+	}
+	containerWindowType = {
+		name = "surplus_appropriation_menu_entry"
+		position = { 
+			x = 396 
+			y = 0
+		}
+		clipping = no
+		size = { 
+			width = 56 
+			height = 30 
+		}
+		orientation = UPPER_LEFT
+		buttonType = {
+			name = "surplus_appropriation_menu_entry_button"
+			quadTextureSprite ="GFX_staff_office_button"
+			orientation = "UPPER_LEFT"
+			clicksound = click_close
+			oversound = ui_menu_over
+		}
+	}
+	containerWindowType = {
+		name = "surplus_appropriation_menu"
+		position = { x=-400 y=78 }	
+		show_position = { x=0 y =78 }
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 300
+		size = { 
+			width = 156 
+			height = 300
+		}
+		orientation = UPPER_LEFT
+		background = {
+			name = "navy_xp_bg"
+			quadTextureSprite ="GFX_mini_tooltip"
+		}
+	}
+}

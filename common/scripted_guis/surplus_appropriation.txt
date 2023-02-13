@@ -1,0 +1,76 @@
+scripted_gui = {
+	surplus_appropriation_indicator = {
+		context_type = player_context
+		window_name = "surplus_appropriation_indicator"
+		parent_window_token = top_bar
+	}
+	surplus_appropriation_menu_entry = {
+		context_type = player_context
+		window_name = "surplus_appropriation_menu_entry"
+		parent_window_name = "after_intel_agency_button"
+		effects = {
+            surplus_appropriation_menu_entry_button_click = {
+				if = {
+					limit = {
+						check_variable = {
+							sam_menu = 1
+						}
+					}
+					set_variable = {
+						sam_menu = 0
+					}
+				}
+				else = {
+					set_variable = {
+						sam_menu = 1
+					}
+				}
+            }
+		}
+		triggers = {
+			surplus_appropriation_menu_entry_button_visible = {
+				set_temp_variable = {
+					SAME_FRAME = 1
+				}
+				add_to_temp_variable = {
+					SAME_FRAME = sam_menu
+				}
+			}
+		}
+		properties = {
+			surplus_appropriation_menu_entry_button = {
+				frame = SAME_FRAME
+			}
+		}
+	}
+	surplus_appropriation_menu = {
+		context_type = player_context
+		window_name = "surplus_appropriation_menu"
+		visible = {
+			check_variable = {
+				sam_menu = 1
+			}
+		}
+	}
+	close_SAM = {
+		effects = {
+            decisionview_button_click = {
+				if = {
+					limit = {
+						check_variable = {
+							sam_menu = 1
+						}
+					}
+					set_variable = {
+						sam_menu = 0
+					}
+				}
+				else = {
+					set_variable = {
+						sam_menu = 1
+					}
+				}
+            }
+		}
+	}
+}
