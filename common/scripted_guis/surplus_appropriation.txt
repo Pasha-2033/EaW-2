@@ -66,6 +66,18 @@ scripted_gui = {
 					sam_menu = 0
 				}
 			}
+			decrease_click = {
+				subtract_from_variable = {
+					surplus_appropriation_weights^sa_i = 0.1
+				}
+				calc_surplus_appropriation_real_values = yes
+			}
+			increase_click = {
+				add_to_variable = {
+					surplus_appropriation_weights^sa_i = 0.1
+				}
+				calc_surplus_appropriation_real_values = yes
+			}
 		}
 		properties = {
 			slider = {

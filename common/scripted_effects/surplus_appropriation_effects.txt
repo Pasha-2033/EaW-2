@@ -1,17 +1,109 @@
+d_tc = {
+	calc_surplus_appropriation_real_values = yes
+}
 calc_surplus_appropriation_real_values = {
-	set_temp_variable = {
-		resource_amount = resource@food
+	#calc consumers
+	add_to_temp_array = {
+		raw_consumers = max_manpower_k
 	}
-	set_temp_variable = {
-		building_amount = num_of_controlled_factories
+	add_to_temp_array = {
+		raw_consumers = num_of_controlled_factories
 	}
-	set_temp_variable = {
-		population_k = max_manpower_k
+	add_to_temp_array = {
+		raw_consumers = max_available_manpower_k
 	}
-	set_temp_variable = {
-		army_size = max_available_manpower_k
+	multiply_temp_variable = {
+		raw_consumers^0 = 0.004
 	}
+	multiply_temp_variable = {
+		raw_consumers^2 = 0.008
+	}
+	for_each_loop = {
+		array = raw_consumers
+		value = v
+		index = i
+		set_temp_variable = {
+			t = v
+		}
+		multiply_temp_variable = {
+			t = surplus_appropriation_weights^i
+		}
+		add_to_temp_array = {
+			consumers = t
+		}
+	}
+	#calc resource appropriation
+	for_each_loop = {
+		array = consumers
+		value = v
+		add_to_temp_variable = {
+			resource_consumtion_total = v
+		}
+	}
+	set_variable = {
+		food_storage_change = resource@food
+	}
+	subtract_from_variable = {
+		food_storage_change = resource_consumtion_total
+	}
+	log = "t:[?resource_consumtion_total]"
+	log = "c:[?consumers^0]"
+	log = "f:[?consumers^1]"
+	log = "a:[?consumers^2]"
+	if = {
+		limit = {
+			check_variable = {
+				food_storage_change < food_storage_value
+			}
+		}
+		set_temp_variable = {
+			food_final = food_storage_value
+		}
+		add_to_temp_variable = {
+			food_final = resource@food
+		}
+		log = "food:[?food_final]"
 
+
+
+
+		for_each_loop = {
+			array = consumers
+			value = v
+			add_to_temp_variable = {
+				k_sum = v
+			}
+			add_to_temp_array = {
+				k_a = v
+			}
+		}
+		for_each_loop = {
+			array = k_a
+			index = i
+			divide_temp_variable = {
+				k_a^i = k_sum
+			}
+			multiply_temp_variable = {
+				k_a^i = food_final
+			}
+			divide_temp_variable = {
+				k_a^i = raw_consumers^i
+			}
+			set_variable = {
+				surplus_appropriation_real_values^i = k_a^i
+			}
+		}
+	}
+	else = {
+		for_each_loop = {
+			array = surplus_appropriation_weights
+			index = i
+			value = v
+			set_variable = {
+				surplus_appropriation_real_values^i = v
+			}
+		}
+	}
 	d_update_sa_gui = yes
 }
 d_update_sa_gui = { #d_ added for debug issues
