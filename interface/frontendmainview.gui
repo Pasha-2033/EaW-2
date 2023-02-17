@@ -522,7 +522,7 @@ guiTypes = {
 				name = "new_message"
 				position = { 
 					x = 42 
-					y =5 
+					y = 5 
 				}
 				spriteType = "GFX_new_message_icon"
 				pdx_tooltip = "SOCIAL_NEW_MESSAGE"
@@ -537,56 +537,78 @@ guiTypes = {
 				pdx_tooltip = "SOCIAL_NEW_FRIEND"
 			}
 		}	
-		buttonType = {
+		ButtonType = {
 			name = "homepage_button"
-			position = {
-				x = 0
-				y = 0
+			position = { 
+				x = -20 
+				y = 0 
 			}
-			quadTextureSprite ="homepage"
+			quadTextureSprite = "homepage"
 			clicksound = click_default
 			pdx_tooltip = "MENU_HOMEPAGE"
 		}
-		buttonType = {
+		ButtonType = {
 			name = "forum_button"
-			position = {
-				x = 50
+			position = { 
+				x = 20
 				y = 0
 			}
-			quadTextureSprite ="forum"
+			quadTextureSprite = "forum"
 			clicksound = click_default
 			pdx_tooltip = "MENU_FORUM"
 			web_link = "http://forum.paradoxplaza.com/forum/forumdisplay.php?844-Hearts-of-Iron-IV"
 		}
-		buttonType = {
+		ButtonType = {
 			name = "facebook_button"
-			position = {
+			position = { 
+				x = 60
+				y = 0
+			}
+			quadTextureSprite = "facebook"
+			clicksound = click_default
+			pdx_tooltip = "MENU_FACEBOOK"
+			#web_link = "https://www.facebook.com/Heartsofiron"
+		}
+		ButtonType = {
+			name = "twitter_button"
+			position = { 
 				x = 100
 				y = 0
 			}
-			quadTextureSprite ="facebook"
-			clicksound = click_default
-			pdx_tooltip = "MENU_FACEBOOK"
-			web_link = "https://www.facebook.com/Heartsofiron"
-		}
-		buttonType = {
-			name = "twitter_button"
-			position = {
-				x = 150
-				y = 0
-			}
-			quadTextureSprite ="twitter"
+			quadTextureSprite = "twitter"
 			clicksound = click_default
 			pdx_tooltip = "MENU_TWITTER"
-			web_link = "https://twitter.com/hoi_game"
+			#web_link = "https://twitter.com/hoi_game"
 		}
-		buttonType = {
-			name = "privacy_policy_button"
-			position = {
-				x = 200
+		ButtonType = {
+			name = "instagram_button"
+			position = { 
+				x = 140
 				y = 0
 			}
-			quadTextureSprite ="privacy"
+			quadTextureSprite = "instagram"
+			clicksound = click_default
+			pdx_tooltip = "MENU_TWITTER"
+			#web_link = "https://www.instagram.com/hearts_of_iron_pdx"
+		}
+		ButtonType = {
+			name = "discord_button"
+			position = { 
+				x = 180
+				y = 0
+			}
+			quadTextureSprite = "discord"
+			clicksound = click_default
+			pdx_tooltip = "MENU_DISCORD"
+			web_link = "https://discord.gg/nQxabw7JaX"
+		}
+		ButtonType = {
+			name = "privacy_policy_button"
+			position = { 
+				x = 220
+				y = 0
+			}
+			quadTextureSprite = "privacy"
 			clicksound = click_default
 			pdx_tooltip = "MENU_PRIVACY_POLICY"
 		}

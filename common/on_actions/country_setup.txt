@@ -318,10 +318,6 @@ on_actions = {
 						}
 					}
 				}
-				add_to_array = {
-					#initiate list, but country realy has power upon itself :)
-					conquered_countries = THIS
-				}
 				every_owned_state = {
 					add_to_array = {
 						state_original_cores = PREV
@@ -335,6 +331,8 @@ on_actions = {
 					}
 					load_focus_tree = default_982_focus_tree
 				}
+				#init surplus_appropriation
+				init_surplus_appropriation = yes
 			}
 		}
 	}

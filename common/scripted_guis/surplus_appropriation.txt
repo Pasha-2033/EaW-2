@@ -46,31 +46,34 @@ scripted_gui = {
 	surplus_appropriation_menu = {
 		context_type = player_context
 		window_name = "surplus_appropriation_menu"
+		parent_window_token = top_bar
 		visible = {
 			check_variable = {
 				sam_menu = 1
 			}
 		}
-	}
-	close_SAM = {
+		dynamic_lists = {
+			management_grid = {
+				array = global.surplus_appropriation_grid
+				change_scope = no
+				entry_container = "management_container_entry"
+				index = sa_i
+			}
+		}
 		effects = {
-            decisionview_button_click = {
-				if = {
-					limit = {
-						check_variable = {
-							sam_menu = 1
-						}
-					}
-					set_variable = {
-						sam_menu = 0
-					}
+			close_button_click = {
+				set_variable = {
+					sam_menu = 0
 				}
-				else = {
-					set_variable = {
-						sam_menu = 1
-					}
-				}
-            }
+			}
+		}
+		properties = {
+			slider = {
+				x = surplus_appropriation_slider_x_pos^sa_i
+			}
+			progerss = {
+				frame = surplus_appropriation_progressbar_frame^sa_i
+			}
 		}
 	}
 }

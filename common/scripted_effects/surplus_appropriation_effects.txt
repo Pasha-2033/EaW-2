@@ -1,0 +1,46 @@
+calc_surplus_appropriation_real_values = {
+	set_temp_variable = {
+		resource_amount = resource@food
+	}
+	set_temp_variable = {
+		building_amount = num_of_controlled_factories
+	}
+	set_temp_variable = {
+		population_k = max_manpower_k
+	}
+	set_temp_variable = {
+		army_size = max_available_manpower_k
+	}
+
+	d_update_sa_gui = yes
+}
+d_update_sa_gui = { #d_ added for debug issues
+	update_sa_slider_x_pos = yes
+	update_sa_progressbar_frame = yes
+}
+update_sa_slider_x_pos = {
+	for_each_loop = {
+		array = surplus_appropriation_weights
+		value = v
+		index = i
+		set_variable = {
+			surplus_appropriation_slider_x_pos^i = v
+		}
+		multiply_variable = {
+			surplus_appropriation_slider_x_pos^i = 175
+		}
+	}
+}
+update_sa_progressbar_frame = {
+	for_each_loop = {
+		array = surplus_appropriation_real_values
+		value = v
+		index = i
+		set_variable = {
+			surplus_appropriation_progressbar_frame^i = v
+		}
+		multiply_variable = {
+			surplus_appropriation_progressbar_frame^i = 100
+		}
+	}
+}

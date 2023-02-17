@@ -1,0 +1,25 @@
+spriteTypes = {
+	spriteType = {
+		name = "GFX_surplus_appropriation_menu_entry"
+		texturefile = "gfx/interface/scripted_gui/surplus_appropriation/surplus_appropriation_menu_entry.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_sa_pointers"
+		texturefile = "gfx/interface/scripted_gui/surplus_appropriation/pointers.dds"
+		noOfFrames = 4
+		legacy_lazy_load = no
+	}
+	progressbartype = {
+		name = "GFX_surplus_appropriation_progressbar"
+		textureFile1 = "gfx/interface/garrison_bar_str.dds"
+		textureFile2 = "gfx/interface/garrison_bar_bg.dds"
+		size = {
+			x = 356
+			y = 8
+		}
+		effectFile = "gfx/FX/progress.lua"
+		horizontal = yes
+		steps = 200
+	}
+}
