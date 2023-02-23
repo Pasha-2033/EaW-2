@@ -12,14 +12,25 @@ spriteTypes = {
 	}
 	progressbartype = {
 		name = "GFX_surplus_appropriation_progressbar"
-		textureFile1 = "gfx/interface/garrison_bar_str.dds"
-		textureFile2 = "gfx/interface/garrison_bar_bg.dds"
+		color = { 0.0 0.5 0.0 }
+		colortwo = { 1.0 0.0 0.0 }
+		textureFile1 = "gfx/interface/prod_progress_bar2.dds"
+		textureFile2 = "gfx/interface/prod_progress_bar2_bg.dds"
 		size = {
 			x = 356
 			y = 8
 		}
-		effectFile = "gfx/FX/progress.lua"
+		effectFile = "gfx/FX/progress_startend.lua"
 		horizontal = yes
 		steps = 200
+	}
+	#вынести в отдельный gfx - эти спрайты общие, на все гуи
+	spriteType = {
+		name = "GFX_slider_18px"
+		texturefile = "gfx/interface/scripted_gui/slider_button_18px.dds"
+	}
+	spriteType = {
+		name = "GFX_slider_36px"
+		texturefile = "gfx/interface/scripted_gui/slider_button_36px.dds"
 	}
 }

@@ -34,6 +34,11 @@ ask_for_landlease_anti_ice = {
 		days_re_enable = 180
         cost = 20
         days_remove = 14
+		target_trigger = {
+			NOT = {
+				original_tag = ICE
+			}
+		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision ask_for_infantry_equipment"
 			FROM = {
@@ -53,6 +58,11 @@ ask_for_landlease_anti_ice = {
 		days_re_enable = 180
         cost = 20
         days_remove = 14
+		target_trigger = {
+			NOT = {
+				original_tag = ICE
+			}
+		}
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision ask_for_artillery_equipment"
 			FROM = {
@@ -81,6 +91,9 @@ ask_for_volunteers_anti_ice = {
 					tag = PREV
 					count < 1
 				}
+			}
+			NOT = {
+				original_tag = ICE
 			}
 		}
 		days_re_enable = 90

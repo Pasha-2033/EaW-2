@@ -18,6 +18,20 @@ init_surplus_appropriation = {
 	resize_array = {
 		surplus_appropriation_progressbar_frame = 3
 	}
+	resize_array = {
+		surplus_appropriation_mod_values = 3
+	}
+	#add modifiers of mechanic
+	add_dynamic_modifier = {
+		modifier = surplus_appropriation_civil_modifier
+	}
+	add_dynamic_modifier = {
+		modifier = surplus_appropriation_facilities_modifier
+	}
+	add_dynamic_modifier = {
+		modifier = surplus_appropriation_army_modifier
+	}
 	#init mechanic
 	calc_surplus_appropriation_real_values = yes
+	sa_tick_effects = yes
 }

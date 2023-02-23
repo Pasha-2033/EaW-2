@@ -1,5 +1,16 @@
-d_tc = {
+d_csarv = {
 	calc_surplus_appropriation_real_values = yes
+}
+d_sa_flag = {
+	if = {
+		limit = {
+			has_country_flag = no_sa_impact
+		}
+		clr_country_flag = no_sa_impact
+	}
+	else = {
+		set_country_flag = no_sa_impact
+	}
 }
 calc_surplus_appropriation_real_values = {
 	#calc consumers
@@ -31,29 +42,37 @@ calc_surplus_appropriation_real_values = {
 		add_to_temp_array = {
 			consumers = t
 		}
-	}
-	#calc resource appropriation
-	for_each_loop = {
-		array = consumers
-		value = v
 		add_to_temp_variable = {
-			resource_consumtion_total = v
+			k_sum = t
 		}
 	}
+	#init data out (conumption categories desc
+	set_variable = {
+		c_food_consumtion = consumers^0
+	}
+	set_variable = {
+		f_food_consumtion = consumers^1
+	}
+	set_variable = {
+		a_food_consumtion = consumers^2
+	}
+	#calc resource appropriation
 	set_variable = {
 		food_storage_change = resource@food
 	}
 	subtract_from_variable = {
-		food_storage_change = resource_consumtion_total
+		food_storage_change = k_sum
 	}
-	log = "t:[?resource_consumtion_total]"
-	log = "c:[?consumers^0]"
-	log = "f:[?consumers^1]"
-	log = "a:[?consumers^2]"
+	set_temp_variable = {
+		negative_food_storage_change = food_storage_change
+	}
+	multiply_temp_variable = {
+		negative_food_storage_change = -1
+	}
 	if = {
 		limit = {
 			check_variable = {
-				food_storage_change < food_storage_value
+				negative_food_storage_change > food_storage_value
 			}
 		}
 		set_temp_variable = {
@@ -62,35 +81,32 @@ calc_surplus_appropriation_real_values = {
 		add_to_temp_variable = {
 			food_final = resource@food
 		}
-		log = "food:[?food_final]"
-
-
-
-
 		for_each_loop = {
 			array = consumers
-			value = v
-			add_to_temp_variable = {
-				k_sum = v
-			}
-			add_to_temp_array = {
-				k_a = v
-			}
-		}
-		for_each_loop = {
-			array = k_a
 			index = i
-			divide_temp_variable = {
-				k_a^i = k_sum
+			if = {
+				limit = {
+					check_variable = {
+						raw_consumers^i > 0
+					}
+				}
+				divide_temp_variable = {
+					consumers^i = k_sum
+				}
+				multiply_temp_variable = {
+					consumers^i = food_final
+				}
+				divide_temp_variable = {
+					consumers^i = raw_consumers^i
+				}
+				set_variable = {
+					surplus_appropriation_real_values^i = consumers^i
+				}
 			}
-			multiply_temp_variable = {
-				k_a^i = food_final
-			}
-			divide_temp_variable = {
-				k_a^i = raw_consumers^i
-			}
-			set_variable = {
-				surplus_appropriation_real_values^i = k_a^i
+			else = {
+				set_variable = {
+					surplus_appropriation_real_values^i = surplus_appropriation_weights^i
+				}
 			}
 		}
 	}
@@ -104,7 +120,67 @@ calc_surplus_appropriation_real_values = {
 			}
 		}
 	}
+	#clear data for init purposes (otherwise will stack)
+	clear_temp_array = raw_consumers
+	clear_temp_array = consumers
+	set_temp_variable = {
+		k_sum = 0
+	}
 	d_update_sa_gui = yes
+}
+calc_surplus_appropriation_min_value = {
+	set_variable = {
+		sa_min_value = surplus_appropriation_real_values^0
+	}
+	for_loop_effect = {
+		start = 1
+		end = surplus_appropriation_real_values^num
+		value = i
+		if = {
+			limit = {
+				check_variable = {
+					surplus_appropriation_real_values^i < sa_min_value
+				}
+			}
+			set_variable = {
+				sa_min_value = surplus_appropriation_real_values^i
+			}
+		}
+	}
+}
+sa_tick_effects = {
+	if = {
+		limit = {
+			has_country_flag = no_sa_impact
+		}
+		for_loop_effect = {
+			end = surplus_appropriation_mod_values^num
+			value = i
+			set_variable = {
+				surplus_appropriation_mod_values^i = 1
+			}
+		}
+	}
+	else = {
+		add_to_variable = {
+			food_storage_value = food_storage_change
+		}
+		clamp_variable = {
+			var = food_storage_value
+			min = 0
+		}
+		calc_surplus_appropriation_real_values = yes
+		calc_surplus_appropriation_min_value = yes
+		for_each_loop = {
+			array = surplus_appropriation_real_values
+			index = i
+			value = v
+			set_variable = {
+				surplus_appropriation_mod_values^i = v
+			}
+		}
+	}
+	#calc modifier (to do)
 }
 d_update_sa_gui = { #d_ added for debug issues
 	update_sa_slider_x_pos = yes
@@ -135,4 +211,11 @@ update_sa_progressbar_frame = {
 			surplus_appropriation_progressbar_frame^i = 100
 		}
 	}
+}
+#IMPORTANT FOR GUI: CALL THIS IF YOU WANT TO DISABLE, DON`t JUST SET COUNTRY FLAG
+disable_sa_mechanic = {
+	set_variable = {
+		sam_menu = 0
+	}
+	set_country_flag = no_sa_impact
 }

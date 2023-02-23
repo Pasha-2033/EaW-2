@@ -1,3 +1,6 @@
+@food_modifier_title_x = 30
+@food_modifier_icon_x = 160
+@food_modifier_desc_x = 240
 guiTypes = {
 	containerWindowType = {
 		name = "surplus_appropriation_indicator"
@@ -7,7 +10,7 @@ guiTypes = {
 		}
 		clipping = no
 		size = { 
-			width = 56 
+			width = 66 
 			height = 30 
 		}
 		background = {
@@ -30,12 +33,11 @@ guiTypes = {
 				y = 5 
 			}
 			font = "hoi_18mbs"
-			text = "999"
+			text = "[min_value_indicator]"
 			format = left
-			maxWidth = 30
+			maxWidth = 40
 			maxHeight = 18
 			fixedsize = yes
-
 		}
 	}
 	containerWindowType = {
@@ -77,7 +79,7 @@ guiTypes = {
 		animation_time = 300
 		size = { 
 			width = 550
-			height = 550
+			height = 750
 		}
 		background = {
 			name = "background"
@@ -140,52 +142,65 @@ guiTypes = {
 				format = center	
 			}
 			instantTextboxType = {
-				name = "balance"
+				name = "food_balance"
 				position = {
 					x = 40 
 					y = 21 
 				}
 				font = "hoi_18"
-				text = "balance_value"
+				text = "food_balance_value"
 				maxWidth = 470
 				maxHeight = 18
 				format = left	
 			}
 			instantTextboxType = {
-				name = "civil_consumption"
+				name = "civil_food_consumption"
 				position = { 
 					x = 40 
 					y = 41 
 				}
 				font = "hoi_18"
-				text = "civil_consumption_value"
-				maxWidth = 470
+				text = "civil_food_consumption_value"
+				maxWidth = 300
 				maxHeight = 18
 				format = left	
 			}
 			instantTextboxType = {
-				name = "facilities_consumption"
+				name = "facilities_food_consumption"
 				position = { 
 					x = 40 
 					y = 61 
 				}
 				font = "hoi_18"
-				text = "facilities_consumption_value"
-				maxWidth = 470
+				text = "facilities_food_consumption_value"
+				maxWidth = 300
 				maxHeight = 18
 				format = left	
 			}
 			instantTextboxType = {
-				name = "army_consumption"
+				name = "army_food_consumption"
 				position = { 
 					x = 40 
 					y = 81 
 				}
 				font = "hoi_18"
-				text = "army_consumption_value"
-				maxWidth = 470
+				text = "army_food_consumption_value"
+				maxWidth = 300
 				maxHeight = 18
 				format = left	
+			}
+			instantTextboxType = {
+				name = "food_production"
+				position = { 
+					x = 340 
+					y = 41 
+				}
+				font = "hoi_18b"
+				text = "food_production_value"
+				maxWidth = 170
+				maxHeight = 54
+				format = center
+				vertical_alignment = center
 			}
 		}
 		containerWindowType = {
@@ -232,7 +247,7 @@ guiTypes = {
 			}
 			size = {
 				width = 100%%
-				height = 100
+				height = 100%%
 			}
 			instantTextboxType = {
 				name = "modifier_title"
@@ -248,17 +263,109 @@ guiTypes = {
 			}
 			#modifier icon (to do)
 			instantTextboxType = {
-				name = "modifier_values"
+				name = "civil_food_modifier_title"
 				position = { 
-					x = 40 
-					y = 41 
+					x = @food_modifier_title_x 
+					y = 68 
 				}
 				font = "hoi_18"
-				text = "modifier_values"
-				maxWidth = 470
-				maxHeight = 18
+				text = "civil_food_modifier_title"
+				maxWidth = 122
+				maxHeight = 36
 				format = left
 				vertical_alignment = center	
+			}
+			iconType = {
+				name = "civil_food_modifier_icon"
+				spriteType = "GFX_idea_agrarian_society"
+				position = { 
+					x = @food_modifier_icon_x 
+					y = 54 
+				}
+			}
+			instantTextboxType = {
+				name = "civil_food_modifier_values"
+				position = { 
+					x = @food_modifier_desc_x  
+					y = 41
+				}
+				font = "hoi_18"
+				text = "[civil_food_modifier_values]"
+				maxWidth = 280
+				maxHeight = 91
+				format = left
+				vertical_alignment = center
+				fixedsize = yes
+			}
+			instantTextboxType = {
+				name = "facilities_food_modifier_title"
+				position = { 
+					x = @food_modifier_title_x 
+					y = 168 
+				}
+				font = "hoi_18"
+				text = "facilities_food_modifier_title"
+				maxWidth = 122
+				maxHeight = 36
+				format = left
+				vertical_alignment = center	
+			}
+			iconType = {
+				name = "facilities_food_modifier_icon"
+				spriteType = "GFX_idea_agrarian_society"
+				position = { 
+					x = @food_modifier_icon_x 
+					y = 154 
+				}
+			}
+			instantTextboxType = {
+				name = "facilities_food_modifier_values"
+				position = { 
+					x = @food_modifier_desc_x
+					y = 141 
+				}
+				font = "hoi_18"
+				text = "[facilities_food_modifier_values]"
+				maxWidth = 280
+				maxHeight = 91
+				format = left
+				vertical_alignment = center
+				fixedsize = yes
+			}
+			instantTextboxType = {
+				name = "army_food_modifier_title"
+				position = { 
+					x = @food_modifier_title_x 
+					y = 268 
+				}
+				font = "hoi_18"
+				text = "army_food_modifier_title"
+				maxWidth = 122
+				maxHeight = 36
+				format = left
+				vertical_alignment = center	
+			}
+			iconType = {
+				name = "army_food_modifier_icon"
+				spriteType = "GFX_idea_agrarian_society"
+				position = { 
+					x = @food_modifier_icon_x 
+					y = 254
+				}
+			}
+			instantTextboxType = {
+				name = "army_food_modifier_values"
+				position = { 
+					x = @food_modifier_desc_x 
+					y = 241 
+				}
+				font = "hoi_18"
+				text = "[army_food_modifier_values]"
+				maxWidth = 280
+				maxHeight = 91
+				format = left
+				vertical_alignment = center
+				fixedsize = yes
 			}
 		}
 	}
@@ -338,10 +445,6 @@ guiTypes = {
 					height = 16
 				}
 				iconType = {
-					position = {
-						x = 0
-						y = 0
-					}
 					name = "slider"
 					spriteType = "GFX_scroll_drager"
 				}
@@ -422,10 +525,6 @@ guiTypes = {
 			}
 			instantTextboxType = {
 				name = "weight"
-				position = { 
-					x = 0 
-					y = 0
-				}
 				font = "hoi_18"
 				text = "w:[?surplus_appropriation_weights^sa_i|%]"
 				maxWidth = 90
@@ -433,7 +532,6 @@ guiTypes = {
 				format = left
 				pdx_tooltip = "surplus_appropriation_w_tt"
 			}
-			
 			instantTextboxType = {
 				name = "real_value"
 				position = { 
@@ -448,6 +546,50 @@ guiTypes = {
 				pdx_tooltip = "surplus_appropriation_v_tt"
 				pdx_tooltip_delayed = "surplus_appropriation_v_tt_delayed"
 			}
+		}
+		buttonType = {
+			name = "min_slider"
+			quadTextureSprite = "GFX_slider_18px"
+			position = {
+				x = 30
+				y = 36
+			}
+		}
+		buttonType = {
+			name = "max_slider"
+			quadTextureSprite = "GFX_slider_18px"
+			position = {
+				x = 372
+				y = 36
+			}
+		}
+		gridBoxType = {
+			name = "slider_buttons_grid"
+			position = {
+				x = 48
+				y = 36
+			}
+			size = {
+				width = 324
+				height = 16
+			}
+			slotsize = {
+				width = 36
+				height = 16
+			}
+			format = "UPPER_LEFT"
+		}
+	}
+	#вынести в отдельный gui - слишком общий код
+	containerWindowType = {
+		name = "slider_button_entry"
+		size = {
+			width = 36
+			height = 16
+		}
+		buttonType = {
+			name = "slider_button"
+			quadTextureSprite = "GFX_slider_36px"
 		}
 	}
 }
