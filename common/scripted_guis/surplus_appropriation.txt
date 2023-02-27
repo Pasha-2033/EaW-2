@@ -62,6 +62,26 @@ scripted_gui = {
 				frame = SAME_FRAME
 			}
 		}
+		ai_enabled = {
+			always = yes
+		}
+		ai_test_interval = 168
+		ai_test_variance = 0
+		ai_max_weight_taken_per_test = 1
+		ai_weights = {
+			surplus_appropriation_menu_entry_button_click = {
+				ai_will_do = {
+					base = 1000
+					modifier = {
+						check_variable = {
+							sam_menu = 1
+						}
+						factor = 0
+					}
+				}
+				weight = 1
+			}
+		}
 	}
 	surplus_appropriation_menu = {
 		context_type = player_context
@@ -81,6 +101,214 @@ scripted_gui = {
 				change_scope = no
 				entry_container = "management_container_entry"
 				index = sa_i
+				ai_weights = {
+					increase_click = {
+						ai_will_do = {
+							base = 0
+							modifier = {
+								#ai (to do)
+								set_temp_variable = {
+									r = 0
+								}
+								if = {
+									#if country will have "sa_ai_cap" array, ai will follow its values
+									#otherwise ai will deside by itself
+									#WARNING! array MUST be size of 3 (^num = 3)
+									limit = {
+										has_variable = sa_ai_cap^num
+									}
+									if = {
+										limit = {
+											check_variable = {
+												surplus_appropriation_weights^sa_i < sa_ai_cap^sa_i
+											}
+										}
+										add_to_temp_variable = {
+											r = 100
+										}
+									}
+								}
+								else = {
+									if = {
+										limit = {
+											check_variable = {
+												sa_i = 0
+											}
+										}
+										if = {
+											limit = {
+												check_variable = {
+													raw_consumers^0 = 0
+												}
+												check_variable = {
+													surplus_appropriation_weights^sa_i < 1
+												}
+											}
+											add_to_temp_variable = {
+												r = 100
+											}
+										}
+										else = {
+											##############
+										}
+									}
+									else_if = {
+										limit = {
+											check_variable = {
+												sa_i = 1
+											}
+										}
+										if = {
+											limit = {
+												check_variable = {
+													raw_consumers^1 = 0
+												}
+												check_variable = {
+													surplus_appropriation_weights^sa_i < 1
+												}
+											}
+											add_to_temp_variable = {
+												r = 100
+											}
+										}
+										else = {
+											##############
+										}
+									}
+									else = {
+										if = {
+											limit = {
+												check_variable = {
+													raw_consumers^2 = 0
+												}
+												check_variable = {
+													surplus_appropriation_weights^sa_i < 1
+												}
+											}
+											add_to_temp_variable = {
+												r = 100
+											}
+										}
+										else = {
+											##############
+										}
+									}
+								}
+								add = r
+							}
+							modifier = {
+								check_variable = {
+									surplus_appropriation_weights^sa_i > 1.8
+								}
+								factor = 0
+							}
+						}
+						weight = 1
+					}
+					decrease_click = {
+						ai_will_do = {
+							base = 0
+							modifier = {
+								#ai (to do)
+								set_temp_variable = {
+									r = 0
+								}
+								if = {
+									#if country will have "sa_ai_cap" array, ai will follow its values
+									#otherwise ai will deside by itself
+									#WARNING! array MUST be size of 3 (^num = 3)
+									limit = {
+										has_variable = sa_ai_cap^num
+									}
+									if = {
+										limit = {
+											check_variable = {
+												surplus_appropriation_weights^sa_i > sa_ai_cap^sa_i
+											}
+										}
+										add_to_temp_variable = {
+											r = 100
+										}
+									}
+								}
+								else = {
+									if = {
+										limit = {
+											check_variable = {
+												sa_i = 0
+											}
+										}
+										if = {
+											limit = {
+												check_variable = {
+													raw_consumers^0 = 0
+												}
+												check_variable = {
+													surplus_appropriation_weights^sa_i > 1
+												}
+											}
+											add_to_temp_variable = {
+												r = 100
+											}
+										}
+										else = {
+											##############
+										}
+									}
+									else_if = {
+										limit = {
+											check_variable = {
+												sa_i = 1
+											}
+										}
+										if = {
+											limit = {
+												check_variable = {
+													raw_consumers^1 = 0
+												}
+												check_variable = {
+													surplus_appropriation_weights^sa_i > 1
+												}
+											}
+											add_to_temp_variable = {
+												r = 100
+											}
+										}
+										else = {
+											##############
+										}
+									}
+									else = {
+										if = {
+											limit = {
+												check_variable = {
+													raw_consumers^2 = 0
+												}
+												check_variable = {
+													surplus_appropriation_weights^sa_i > 1
+												}
+											}
+											add_to_temp_variable = {
+												r = 100
+											}
+										}
+										else = {
+											##############
+										}
+									}
+								}
+								add = r
+							}
+							modifier = {
+								check_variable = {
+									surplus_appropriation_weights^sa_i < 0.2
+								}
+								factor = 0
+							}
+						}
+						weight = 1
+					}
+				}
 			}
 			slider_buttons_grid = {
 				array = global.surplus_appropriation_slider_buttons
@@ -156,18 +384,11 @@ scripted_gui = {
 			}
 		}
 		#to do ai later, when this shit can be fixed! blyat'!
-		#ai_enabled = {
-		#	always = yes
-		#}
-		#ai_test_interval = 24
-		#ai_test_variance = 0
-		#ai_max_weight_taken_per_test = 3
-		#ai_weights = {
-		#	increase_click = {
-		#		ai_will_do = {
-		#			base = 1000
-		#		}
-		#	}
-		#}
+		ai_enabled = {
+			always = yes
+		}
+		ai_test_interval = 168
+		ai_test_variance = 0
+		ai_max_weight_taken_per_test = 3
 	}
 }

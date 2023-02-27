@@ -4,11 +4,6 @@ spawn_anti_ice_militia = {
 		state_target = yes
 		target_array = owned_controlled_states
 		on_map_mode = map_and_decisions_view
-		target_root_trigger = {
-			check_variable = {
-				owned_controlled_states^num > 0
-			}
-		}
         cost = 20
         days_remove = 3
 		remove_effect = {
@@ -23,7 +18,7 @@ spawn_anti_ice_militia = {
 			}
         }
         ai_will_do = {
-            factor = 5000
+            base = 5000
         }
 	}
 }
@@ -31,12 +26,15 @@ ask_for_landlease_anti_ice = {
 	ask_for_infantry_equipment = {
 		icon = infiltrate_state
 		target_array = global.majors
-		days_re_enable = 180
+		days_re_enable = 90
         cost = 20
         days_remove = 14
 		target_trigger = {
 			NOT = {
-				original_tag = ICE
+				OR = {
+					original_tag = ICE
+					tag = ROOT
+				}
 			}
 		}
 		remove_effect = {
@@ -46,21 +44,29 @@ ask_for_landlease_anti_ice = {
 					id = eeq_pgt_ept_anti_ice_event.2
 				}
 			}
-			custom_effect_tooltip = send_request_for_infantry_eq
         }
         ai_will_do = {
-            factor = 5000
+            base = 5000
+			modifier = {
+				has_equipment = {
+					infantry_equipment < 100
+				}
+				factor = 0
+			}
         }
 	}
 	ask_for_artillery_equipment = {
 		icon = infiltrate_state
 		target_array = global.majors
-		days_re_enable = 180
+		days_re_enable = 90
         cost = 20
         days_remove = 14
 		target_trigger = {
 			NOT = {
-				original_tag = ICE
+				OR = {
+					original_tag = ICE
+					tag = ROOT
+				}
 			}
 		}
 		remove_effect = {
@@ -72,7 +78,13 @@ ask_for_landlease_anti_ice = {
 			}
         }
         ai_will_do = {
-            factor = 5000
+            base = 5000
+			modifier = {
+				has_equipment = {
+					artillery_equipment < 100
+				}
+				factor = 0
+			}
         }
 	}
 }
@@ -81,11 +93,6 @@ ask_for_volunteers_anti_ice = {
 		icon = infiltrate_state
 		target_array = global.majors
 		target_trigger = {
-			NOT = {
-				is_in_array = {
-					ROOT.volunteers_against_ICE = THIS
-				}
-			}
 			ROOT = {
 				has_volunteers_amount_from = {
 					tag = PREV
@@ -93,7 +100,13 @@ ask_for_volunteers_anti_ice = {
 				}
 			}
 			NOT = {
-				original_tag = ICE
+				OR = {
+					original_tag = ICE
+					tag = ROOT
+					is_in_array = {
+						ROOT.volunteers_against_ICE = THIS
+					}
+				}
 			}
 		}
 		days_re_enable = 90
@@ -135,7 +148,7 @@ ask_for_volunteers_anti_ice = {
 			}
         }
         ai_will_do = {
-            factor = 5000
+            base = 5000
         }
 	}
 }

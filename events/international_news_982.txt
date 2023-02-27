@@ -1,7 +1,7 @@
 add_namespace = enews
 #use news_event = { ... } instead of country_event
 #change picture everywhere
-country_event = {
+news_event = {
 	#evil mind is getting powerful
 	id = enews.1
 	immediate = {
@@ -11,6 +11,8 @@ country_event = {
 	desc = enews.1.d
 	#picture = GFX_event_swarm #(to do) change
 	is_triggered_only = yes
+	major = yes
+	fire_for_sender = no
 	option = {
 		name = enews.1.a
 		ai_chance = {
@@ -18,7 +20,7 @@ country_event = {
 		}
 	}
 }
-country_event = {
+news_event = {
 	#evil mind is executed
 	id = enews.2
 	immediate = {
@@ -28,6 +30,8 @@ country_event = {
 	desc = enews.2.d
 	#picture = GFX_event_swarm #(to do) change
 	is_triggered_only = yes
+	major = yes
+	fire_for_sender = no
 	option = {
 		name = enews.2.a
 		ai_chance = {
@@ -35,6 +39,7 @@ country_event = {
 		}
 	}
 }
+#redo this events
 country_event = {
 	#Canterlot attacked, changelings win
 	id = enews.3

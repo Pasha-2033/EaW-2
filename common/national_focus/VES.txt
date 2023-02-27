@@ -1156,8 +1156,8 @@ focus_tree = {
 				mark_focus_tree_layout_dirty = yes
 				if = {
 					limit = {
-						check_variable = {
-							ECR.num_core_states = 0
+						ECR = {
+							exists = no
 						}
 					}
 					country_event = {

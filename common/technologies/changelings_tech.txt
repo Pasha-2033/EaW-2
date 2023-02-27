@@ -1,3 +1,5 @@
+@step_0 = 982
+@step_1 = 983
 technologies = {
 	#init folder dependencies
 	changeling_race = {
@@ -20,7 +22,6 @@ technologies = {
 		on_research_complete = {
 			if = {
 				limit = {
-					is_changeling_mylti = yes
 					NOT = {
 						has_template_containing_unit = jager
 					}
@@ -36,7 +37,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1
-		start_year = 973
+		start_year = @step_0
 		folder = {
 			name = changeling_folder
 			position = {
@@ -65,7 +66,7 @@ technologies = {
 		on_research_complete = {
 		}
 		research_cost = 1
-		start_year = 982
+		start_year = @step_0
 		folder = {
 			name = changeling_folder
 			position = {
@@ -82,14 +83,17 @@ technologies = {
 			factor = 2
 			modifier = {
 				factor = 1.5
-				date > "982.1.1"
+				date > @step_0.1.1
 			}
 			modifier = {
 				factor = 2
-				date > "983.1.1"
+				date > @step_1.1.1
 			}
 		}
 	}
+
+
+	
 	tech_jager3 = {
 		jager = {
 			max_organisation = 5
@@ -262,6 +266,9 @@ technologies = {
 				x = 6
 				y = @983
 			}
+		}
+		enable_subunits = {
+			royal_guard
 		}
 		dependencies = {
 			changeling_race = 1

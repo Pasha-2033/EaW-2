@@ -1,0 +1,101 @@
+spirit_division = {
+	available_for = {
+        ICE
+    }
+    roles = {
+        infantry
+    }
+	upgrade_prio = {
+		base = 1000
+    }
+	match_to_count = 0.3
+	small_deafult_spirit_division_ICE = {
+		upgrade_prio = {
+            base = 15
+        }
+		production_prio = {
+			base = 15
+		}
+		target_width = 4
+        width_weight = 1
+		column_swap_factor = 0.1
+		# workaround for a PDX bug https://forum.paradoxplaza.com/forum/threads/hoi-4-incremental-division-upgrade-does-not-work-in-most-cases.1414193/
+		can_upgrade_in_field = { 
+			always = no 
+		}
+		allowed_types = {
+			windigo_horrors
+		}
+		target_template = {
+            weight = 0.75
+            match_value = 2000
+            regiments = {
+                windigo_horrors = 2
+            }
+        }
+	}
+	medium_deafult_spirit_division_ICE = {
+		upgrade_prio = {
+            base = 50
+        }
+		production_prio = {
+			base = 50
+		}
+		target_width = 14
+        width_weight = 1
+		column_swap_factor = 0.1
+		# workaround for a PDX bug https://forum.paradoxplaza.com/forum/threads/hoi-4-incremental-division-upgrade-does-not-work-in-most-cases.1414193/
+		can_upgrade_in_field = { 
+			always = no 
+		}
+		allowed_types = {
+			windigo_horrors
+			signal_company
+			recon
+		}
+		target_template = {
+            weight = 0.75
+            match_value = 5000
+            regiments = {
+                windigo_horrors = 7
+            }
+			support = {
+				signal_company = 1
+				recon = 1
+			}
+        }
+	}
+	large_deafult_spirit_division_ICE = {
+		upgrade_prio = {
+            base = 35
+        }
+		production_prio = {
+			base = 35
+		}
+		target_width = 40
+        width_weight = 1
+		column_swap_factor = 0.1
+		# workaround for a PDX bug https://forum.paradoxplaza.com/forum/threads/hoi-4-incremental-division-upgrade-does-not-work-in-most-cases.1414193/
+		can_upgrade_in_field = { 
+			always = no 
+		}
+		allowed_types = {
+			windigo_horrors
+			signal_company
+			recon
+			artillery
+		}
+		target_template = {
+            weight = 0.75
+            match_value = 3000
+            regiments = {
+                windigo_horrors = 20
+            }
+			support = {
+				signal_company = 1
+				recon = 1
+				artillery = 1
+			}
+        }
+	}
+}

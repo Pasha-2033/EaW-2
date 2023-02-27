@@ -59,9 +59,6 @@ country_event = {
 	desc = null_magic_event.1.d
 	picture = GFX_event_swarm
 	major = yes
-	show_major = {
-		always = yes
-	}
 	is_triggered_only = yes
 	option = {
 		name = null_magic_event.1.a
@@ -86,10 +83,7 @@ country_event = {
 country_event = {
 	id = null_magic_event_supporter.1
 	hidden = yes
-	#trigger or mean_time_to_happen = { days = 180 }? test for optimisation (to do)
-	trigger = {
-		date > 982.7.1
-	}
+	is_triggered_only = yes
 	fire_only_once = yes
 	option = {
 		if = {

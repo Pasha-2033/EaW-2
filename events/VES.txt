@@ -56,9 +56,8 @@ country_event = {
 		ai_chance = {
 			factor = 95
 		}
-		country_event = {
+		news_event = {
 			id = enews.1
-			days = 0
 		}
 	}
 	option = {
@@ -89,15 +88,8 @@ country_event = {
 			LIK = {
 				set_country_flag = no_evil_mind
 			}
-			every_country = {
-				limit = {
-					NOT = {
-						original_tag = ROOT
-					}
-				}
-				country_event = {
-					id = enews.1
-				}
+			news_event = {
+				id = enews.2
 			}
 		}
 		custom_effect_tooltip = evil_mind_executed_tt

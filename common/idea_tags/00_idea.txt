@@ -48,6 +48,25 @@ idea_categories = {
 		cost = 150
 		removal_cost = 0
 	}
+	people_development_ideas = {
+		slot = society_development_idea
+		slot = power_concentration
+		slot = urbanization
+		slot = illiteracy_level_idea
+		slot = poverty_level_idea
+		slot = race_pointer
+		cost = 150
+		removal_cost = -1
+		ledger = civilian
+	}
+	economic_development_ideas = {
+		slot = science_base
+		slot = monatisation
+		slot = inflation
+		slot = valuta
+		removal_cost = -1
+		ledger = civilian
+	}
 	academy_spirit = {
 		type = army_spirit
 		cost = 20
@@ -119,25 +138,6 @@ idea_categories = {
 		removal_cost = -1
 		ledger = hidden
 		slot = air_force_command_spirit
-	}
-	people_development_ideas = {
-		slot = society_development_idea
-		slot = power_concentration
-		slot = urbanization
-		slot = illiteracy_level_idea
-		slot = poverty_level_idea
-		slot = race_pointer
-		cost = 150
-		removal_cost = -1
-		ledger = civilian
-	}
-	economic_development_ideas = {
-		slot = science_base
-		slot = monatisation
-		slot = inflation
-		slot = valuta
-		removal_cost = -1
-		ledger = civilian
 	}
 }
 slot_ledgers = {

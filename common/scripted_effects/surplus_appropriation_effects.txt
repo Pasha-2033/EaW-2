@@ -13,21 +13,25 @@ d_sa_flag = {
 	}
 }
 calc_surplus_appropriation_real_values = {
+	#calc army consumtion (to do)
 	#calc consumers
-	add_to_temp_array = {
-		raw_consumers = max_manpower_k
+	set_variable = {
+		raw_consumers^0 = max_manpower_k
 	}
-	add_to_temp_array = {
-		raw_consumers = num_of_controlled_factories
+	set_variable = {
+		raw_consumers^1 = num_of_controlled_factories
 	}
-	add_to_temp_array = {
-		raw_consumers = max_available_manpower_k
+	set_variable = {
+		raw_consumers^2 = max_available_manpower_k
 	}
-	multiply_temp_variable = {
+	multiply_variable = {
 		raw_consumers^0 = 0.004
 	}
-	multiply_temp_variable = {
+	multiply_variable = {
 		raw_consumers^2 = 0.008
+	}
+	set_temp_variable = {
+		k_sum = 0
 	}
 	for_each_loop = {
 		array = raw_consumers
@@ -39,22 +43,12 @@ calc_surplus_appropriation_real_values = {
 		multiply_temp_variable = {
 			t = surplus_appropriation_weights^i
 		}
-		add_to_temp_array = {
-			consumers = t
+		set_variable = {
+			consumers^i = t
 		}
 		add_to_temp_variable = {
 			k_sum = t
 		}
-	}
-	#init data out (conumption categories desc
-	set_variable = {
-		c_food_consumtion = consumers^0
-	}
-	set_variable = {
-		f_food_consumtion = consumers^1
-	}
-	set_variable = {
-		a_food_consumtion = consumers^2
 	}
 	#calc resource appropriation
 	set_variable = {
@@ -90,17 +84,20 @@ calc_surplus_appropriation_real_values = {
 						raw_consumers^i > 0
 					}
 				}
+				set_temp_variable = {
+					t = consumers^i
+				}
 				divide_temp_variable = {
-					consumers^i = k_sum
+					t = k_sum
 				}
 				multiply_temp_variable = {
-					consumers^i = food_final
+					t = food_final
 				}
 				divide_temp_variable = {
-					consumers^i = raw_consumers^i
+					t = raw_consumers^i
 				}
 				set_variable = {
-					surplus_appropriation_real_values^i = consumers^i
+					surplus_appropriation_real_values^i = t
 				}
 			}
 			else = {
@@ -119,12 +116,6 @@ calc_surplus_appropriation_real_values = {
 				surplus_appropriation_real_values^i = v
 			}
 		}
-	}
-	#clear data for init purposes (otherwise will stack)
-	clear_temp_array = raw_consumers
-	clear_temp_array = consumers
-	set_temp_variable = {
-		k_sum = 0
 	}
 	d_update_sa_gui = yes
 }

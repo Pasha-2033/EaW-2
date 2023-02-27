@@ -1,3 +1,4 @@
+#replace####
 @989 = 0
 @1007 = 0
 @1009 = 2
@@ -18,406 +19,356 @@
 @1024 = 32
 @1025 = 34
 @1026 = 36
+###########
+@step_0 = 982
+@step_1 = 983
+@step_2 = 984
+@step_3 = 985
+@step_4 = 986
+@step_5 = 988
+@step_6 = 989
+@step_7 = 991
+@step_8 = 992
 
 technologies = {
-
 	deer_race = {
-
 		research_cost = 1
-
 		intel_network_gain_factor = -0.3
-
 		allow = {
 			always = no
 		}
-
 	}
-
 	#Spirit-aided Geology
 	tech_deer_misc = {
-
 		dependencies = {
 			deer_race = 1
 		}
-
 		local_resources_factor = 0.1
-
 		path = {
 			leads_to_tech = tech_deer_misc2
 			research_cost_coeff = 1
 		}
-
-		research_cost = 1.5
-		start_year = 1007
+		research_cost = 1.25
+		start_year = @step_0
 		folder = {
 			name = deer_folder
-			position = { x = 0 y = @1007 }
+			position = {
+				x = 0 
+				y = @1007
+			}
 		}
-
 		categories = {
 			race_tech
 			magical_tech
 		}
-
 		ai_will_do = {
 			factor = 2
-
 			modifier = {
 				factor = 1.5
-				date > "1008.1.1"
+				date > @step_1.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > "1009.1.1"
+				date > @step_2.1.1
 			}
 		}
 	}
-
 	#Modern Economic Theory
 	tech_deer_misc2 = {
-
 		consumer_goods_factor = -0.04
-
 		path = {
 			leads_to_tech = tech_deer_misc3
 			research_cost_coeff = 1
 		}
-
 		research_cost = 1.5
-		start_year = 1007
+		start_year = @step_0
 		folder = {
 			name = deer_folder
-			position = { x = 0 y = @1010 }
+			position = {
+				x = 0 
+				y = @1010
+			}
 		}
-
 		categories = {
 			race_tech
 		}
-
 		ai_will_do = {
 			factor = 2
-
 			modifier = {
 				factor = 1.5
-				date > "1011.1.1"
+				date > @step_1.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > "1012.1.1"
+				date > @step_2.1.1
 			}
 		}
 	}
-
 	#Magical Means of Production xdddd
 	tech_deer_misc3 = {
-
 		production_factory_efficiency_gain_factor = 0.1
 		industrial_capacity_dockyard = 0.05
-
 		path = {
 			leads_to_tech = tech_deer_misc_a
 			research_cost_coeff = 1
 		}
-
 		research_cost = 1.5
-		start_year = 1007
+		start_year = @step_1
 		folder = {
 			name = deer_folder
-			position = { x = 0 y = @1013 }
+			position = { 
+				x = 0 
+				y = @1013 
+			}
 		}
-
 		categories = {
 			race_tech
 			magical_tech
 		}
-
 		ai_will_do = {
 			factor = 2
-
 			modifier = {
 				factor = 1.5
-				date > "1014.1.1"
+				date > @step_2.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > "1015.1.1"
+				date > @step_3.1.1
 			}
 		}
 	}
-
 	#Natural Architecture
 	tech_deer_misc_a = {
-
 		production_speed_buildings_factor = 0.05
 		industry_air_damage_factor = -0.1
 		global_building_slots_factor = 0.1
-
 		path = {
 			leads_to_tech = tech_deer_misc_b
 			research_cost_coeff = 1
 		}
-
 		research_cost = 1.5
-		start_year = 1007
+		start_year = @step_2
 		folder = {
 			name = deer_folder
-			position = { x = 0 y = @1016 }
+			position = { 
+				x = 0 
+				y = @1016 
+			}
 		}
-
 		categories = {
 			race_tech
 			magical_tech
 		}
-
 		ai_will_do = {
 			factor = 2
-
 			modifier = {
 				factor = 1.5
-				date > "1017.1.1"
+				date > @step_3.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > "1018.1.1"
+				date > @step_4.1.1
 			}
 		}
 	}
-
 	#Preferential Trading
 	tech_deer_misc_b = {
-
 		trade_opinion_factor = 0.15
-
 		path = {
 			leads_to_tech = tech_deer_misc_c
 			research_cost_coeff = 1
 		}
-
 		research_cost = 1.5
-		start_year = 1007
+		start_year = @step_3
 		folder = {
 			name = deer_folder
-			position = { x = 0 y = @1020 }
+			position = {
+				x = 0
+				y = @1020
+			}
 		}
-
 		categories = {
 			race_tech
 		}
-
 		ai_will_do = {
 			factor = 2
-
 			modifier = {
 				factor = 1.5
-				date > "1021.1.1"
+				date > @step_4.1.1
 			}
 
 			modifier = {
 				factor = 2
-				date > "1022.1.1"
+				date > @step_5.1.1
 			}
 		}
 	}
-
 	#Reincardian Economics
 	tech_deer_misc_c = {
-
 		min_export = -0.10
-
 		research_cost = 1.5
-		start_year = 1007
+		start_year = @step_4
 		folder = {
 			name = deer_folder
-			position = { x = 0 y = @1024 }
+			position = {
+				x = 0
+				y = @1024
+			}
 		}
-
 		categories = {
 			race_tech
 		}
-
 		ai_will_do = {
 			factor = 2
 			modifier = {
 				factor = 1.5
-				date > "1025.1.1"
+				date > @step_5.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > "1026.1.1"
+				date > @step_6.1.1
 			}
 		}
 	}
-
 	#New Shipbuilding Methods
 	tech_deer_naval = {
-
 		dependencies = {
 			deer_race = 1
 		}
-
 		industrial_capacity_dockyard = 0.1
-
 		path = {
 			leads_to_tech = tech_deer_naval2
 			research_cost_coeff = 1
 		}
-
 		research_cost = 1.5
-		start_year = 1007
+		start_year = @step_0
 		folder = {
 			name = deer_folder
-			position = { x = 2 y = @1007 }
+			position = { 
+				x = 2 
+				y = @1007 
+			}
 		}
-
 		categories = {
 			naval_equipment
 			race_tech
 			deer_navy_tech
 		}
-
 		ai_will_do = {
 			factor = 2
-
 			modifier = {
 				factor = 1.5
-				date > "1008.1.1"
+				date > @step_1.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > "1009.1.1"
+				date > @step_2.1.1
 			}
 		}
 	}
-
 	#Hit and Run
 	tech_deer_naval2 = {
-
 		naval_retreat_chance = 0.1
 		naval_retreat_speed = 0.1
-
 		path = {
 			leads_to_tech = tech_deer_naval3
 			research_cost_coeff = 1
 		}
-
-
 		research_cost = 1
-		start_year = 1007
+		start_year = @step_2
 		folder = {
 			name = deer_folder
-			position = { x = 2 y = @1010 }
+			position = {
+				x = 2 
+				y = @1010
+			}
 		}
-
 		categories = {
 			naval_doctrine
 			race_tech
 			deer_navy_tech
 		}
-
 		ai_will_do = {
 			factor = 2
-
 			modifier = {
 				factor = 1.5
-				date > "1011.1.1"
+				date > @step_3.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > "1012.1.1"
+				date > @step_4.1.1
 			}
 		}
 	}
-
 	#Merchant Ship Designs
 	tech_deer_naval3 = {
-
 		path = {
 			leads_to_tech = tech_deer_naval_a
 			research_cost_coeff = 1
 		}
-
-		on_research_complete = {
-			hidden_effect = { add_ideas = OLE_convoy_bonus }
-			custom_effect_tooltip = tech_deer_naval3_tp
-		}
-
+		on_research_complete = {}
 		research_cost = 1.5
-		start_year = 1007
+		start_year = @step_3
 		folder = {
 			name = deer_folder
-			position = { x = 2 y = @1013 }
+			position = {
+				x = 2
+				y = @1013
+			}
 		}
-
 		categories = {
 			naval_equipment
 			race_tech
 			deer_navy_tech
 		}
-
 		ai_will_do = {
 			factor = 2
-
 			modifier = {
 				factor = 1.5
-				date > "1014.1.1"
+				date > @step_4.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > "1015.1.1"
+				date > @step_5.1.1
 			}
 		}
 	}
-
 	#Modern Pirates
 	tech_deer_naval_a = {
-
 		convoy_raiding_efficiency_factor = 0.15
 		navy_max_range_factor = 0.1
-
 		path = {
 			leads_to_tech = tech_deer_naval_b
 			research_cost_coeff = 1
 		}
-
 		research_cost = 1.5
-		start_year = 1007
+		start_year = @step_4
 		folder = {
 			name = deer_folder
-			position = { x = 2 y = @1016 }
+			position = {
+				x = 2
+				y = @1016
+			}
 		}
-
 		categories = {
 			naval_doctrine
 			race_tech
 			deer_navy_tech
 		}
-
 		ai_will_do = {
 			factor = 2
-
 			modifier = {
 				factor = 1.5
-				date > "1017.1.1"
+				date > @step_5.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > "1018.1.1"
+				date > @step_6.1.1
 			}
 		}
 	}
-
 	#Naval camouflage
 	tech_deer_naval_b = {
-
 		light_cruiser = {
 			surface_visibility = -0.15
 		}
@@ -430,7 +381,6 @@ technologies = {
 		battleship = {
 			surface_visibility = -0.15
 		}
-
 		destroyer = {
 			surface_visibility = -0.15
 		}
@@ -443,74 +393,69 @@ technologies = {
 		monitor = {
 			surface_visibility = -0.15
 		}
-
-
 		path = {
 			leads_to_tech = tech_deer_naval_c
 			research_cost_coeff = 1
 		}
-
 		research_cost = 1.5
-		start_year = 1007
+		start_year = @step_5
 		folder = {
 			name = deer_folder
-			position = { x = 2 y = @1020 }
+			position = {
+				x = 2
+				y = @1020
+			}
 		}
-
 		categories = {
 			naval_equipment
 			race_tech
 			deer_navy_tech
 		}
-
 		ai_will_do = {
 			factor = 2
-
 			modifier = {
 				factor = 1.5
-				date > "1021.1.1"
+				date > @step_6.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > "1022.1.1"
+				date > @step_7.1.1
 			}
 		}
 	}
-
 	#Spirits of the Sea
 	tech_deer_naval_c = {
-
 		naval_hit_chance = 0.1
 		naval_coordination = 0.07
-
 		research_cost = 1.5
-		start_year = 1007
+		start_year = @step_6
 		folder = {
 			name = deer_folder
-			position = { x = 2 y = @1022 }
+			position = {
+				x = 2
+				y = @1022
+			}
 		}
-
 		categories = {
 			race_tech
 			magical_tech
 			seer_tech
 			deer_navy_tech
 		}
-
 		ai_will_do = {
 			factor = 2
 			modifier = {
 				factor = 1.5
-				date > "1023.1.1"
+				date > @step_7.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > "1024.1.1"
+				date > @step_8.1.1
 			}
 		}
 	}
+
+	##################################this done#############################^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 	#Glimpses of the future
 	tech_deer_seer = {

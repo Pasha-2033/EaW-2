@@ -44,13 +44,13 @@ country_event = {
 		}
 		trigger = {
 			has_equipment = {
-				infantry_equipment > 999
+				infantry_equipment > 199
 			}
 		}
 		send_equipment = {
 			equipment = infantry_equipment
-			amount = 1000
-			target = PREV
+			amount = 200
+			target = FROM
 		}
 		modify_opinion_by_eq_donation_againts_ICE = yes
 	}
@@ -61,13 +61,13 @@ country_event = {
 		}
 		trigger = {
 			has_equipment = {
-				infantry_equipment > 499
+				infantry_equipment > 99
 			}
 		}
 		send_equipment = {
 			equipment = infantry_equipment
-			amount = 500
-			target = PREV
+			amount = 100
+			target = FROM
 		}
 		modify_opinion_by_eq_donation_againts_ICE = yes
 	}
@@ -77,7 +77,7 @@ country_event = {
 			base = 100
 		}
 		hidden_effect = {
-			PREV = {
+			FROM = {
 				add_political_power = 10
 			}
 		}
@@ -85,50 +85,50 @@ country_event = {
 }
 country_event = {
 	id = eeq_pgt_ept_anti_ice_event.3
-	title = eeq_pgt_ept_anti_ice_event.3.t
+	title = eeq_pgt_ept_anti_ice_event.2.t
 	desc = eeq_pgt_ept_anti_ice_event.3.d
 	is_triggered_only = yes
 	option = {
-		name = eeq_pgt_ept_anti_ice_event.3.a
+		name = eeq_pgt_ept_anti_ice_event.2.a
 		ai_chance = {
 			base = 100
 		}
 		trigger = {
 			has_equipment = {
-				infantry_equipment > 999
+				artillery_equipment > 199
 			}
 		}
 		send_equipment = {
 			equipment = artillery_equipment
-			amount = 1000
-			target = PREV
+			amount = 200
+			target = FROM
 		}
 		modify_opinion_by_eq_donation_againts_ICE = yes
 	}
 	option = {
-		name = eeq_pgt_ept_anti_ice_event.3.b
+		name = eeq_pgt_ept_anti_ice_event.2.b
 		ai_chance = {
 			base = 100
 		}
 		trigger = {
 			has_equipment = {
-				infantry_equipment > 499
+				artillery_equipment > 99
 			}
 		}
 		send_equipment = {
 			equipment = artillery_equipment
-			amount = 500
-			target = PREV
+			amount = 100
+			target = FROM
 		}
 		modify_opinion_by_eq_donation_againts_ICE = yes
 	}
 	option = {
-		name = eeq_pgt_ept_anti_ice_event.3.c
+		name = eeq_pgt_ept_anti_ice_event.2.c
 		ai_chance = {
 			base = 100
 		}
 		hidden_effect = {
-			PREV = {
+			FROM = {
 				add_political_power = 10
 			}
 		}

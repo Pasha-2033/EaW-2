@@ -329,3 +329,14 @@ d_etk = {
 	log = " [?tv.GetTokenKey]"
 	log = " [?tv2]"
 }
+d_major = {
+	if = {
+		limit = {
+			is_major = yes
+		}
+		log = "[THIS.GetTag] is major"
+	}
+	else = {
+		log = "[THIS.GetTag] is minor"
+	}
+}
