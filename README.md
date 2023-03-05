@@ -15,6 +15,9 @@ It also contains some modules that can be used in your mode.
 If you use this code as template or copy - please make referense to this readme.md.  
 This will extend your code documentation and promote these scripts being upgraded!
 
+# Mod policy
+The mod code is opensorce, so you can get ideas, script examples and copy algorithms. Also it provides a PDX Standart 1.6 example (not all files). If you copy any source of algorith or code - please point author (if metioned in file) and this mod.
+
 # Mod documentation (scenario and mechanics, tech and events)
 [English](docs/English.md)  
 [Russian](docs/Russian.md)

@@ -25,6 +25,25 @@ init_surplus_appropriation_grid = {
 		}
 	}
 }
+init_surplus_appropriation_modifier_steps = {
+	#civil modifier
+	init_sa_civ_mod_population_value = yes
+	init_sa_civ_mod_stability_value = yes
+	init_sa_civ_mod_master_ideology_value = yes
+	init_sa_civ_mod_ppf_value = yes
+	init_sa_civ_mod_surrender_value = yes
+	#facilities modifier
+	init_sa_fac_mod_building_value = yes
+	init_sa_fac_mod_converting_value = yes
+	init_sa_fac_mod_efficiency_value = yes
+	init_sa_fac_mod_max_efficiency_value = yes
+	#army modifier
+	init_sa_army_mod_support_value = yes
+	init_sa_army_mod_offence_value = yes
+	init_sa_army_mod_defence_value = yes
+	init_sa_army_mod_mobilization_value = yes
+	init_sa_army_mod_recruitable_value = yes
+}
 init_ideas_tag_list = {
 	#init idea arrays
 	resize_array = {
@@ -238,4 +257,187 @@ init_state_lore_vars = {
 	add_to_array = { global.states_with_lore = 22.id }
 	add_to_array = { global.states_with_lore = 67.id }
 	add_to_array = { global.states_with_lore = 136.id }
+}
+#arrays of surplus apopriation
+init_sa_civ_mod_population_value = {
+	add_to_array = { global.sa_civ_mod_population_value = -0.8	} #0%
+	add_to_array = { global.sa_civ_mod_population_value = -0.6	} #20%
+	add_to_array = { global.sa_civ_mod_population_value = -0.4	} #40%
+	add_to_array = { global.sa_civ_mod_population_value = -0.2	} #60%
+	add_to_array = { global.sa_civ_mod_population_value = -0.1	} #80%
+	add_to_array = { global.sa_civ_mod_population_value = 0		} #100%
+	add_to_array = { global.sa_civ_mod_population_value = 0.05	} #120%
+	add_to_array = { global.sa_civ_mod_population_value = 0.1	} #140%
+	add_to_array = { global.sa_civ_mod_population_value = 0.15	} #160%
+	add_to_array = { global.sa_civ_mod_population_value = 0.2	} #180%
+	add_to_array = { global.sa_civ_mod_population_value = 0.25	} #200%
+}
+init_sa_civ_mod_stability_value = {
+	add_to_array = { global.sa_civ_mod_stability_value = -0.1	} #0%
+	add_to_array = { global.sa_civ_mod_stability_value = -0.075	} #20%
+	add_to_array = { global.sa_civ_mod_stability_value = -0.05	} #40%
+	add_to_array = { global.sa_civ_mod_stability_value = -0.025	} #60%
+	add_to_array = { global.sa_civ_mod_stability_value = -0.01	} #80%
+	add_to_array = { global.sa_civ_mod_stability_value = 0		} #100%
+	add_to_array = { global.sa_civ_mod_stability_value = 0.01	} #120%
+	add_to_array = { global.sa_civ_mod_stability_value = 0.02	} #140%
+	add_to_array = { global.sa_civ_mod_stability_value = 0.03	} #160%
+	add_to_array = { global.sa_civ_mod_stability_value = 0.04	} #180%
+	add_to_array = { global.sa_civ_mod_stability_value = 0.05	} #200%
+}
+init_sa_civ_mod_master_ideology_value = {
+	add_to_array = { global.sa_civ_mod_master_ideology_value = -0.05} #0%
+	add_to_array = { global.sa_civ_mod_master_ideology_value = -0.04} #20%
+	add_to_array = { global.sa_civ_mod_master_ideology_value = -0.03} #40%
+	add_to_array = { global.sa_civ_mod_master_ideology_value = -0.02} #60%
+	add_to_array = { global.sa_civ_mod_master_ideology_value = -0.01} #80%
+	add_to_array = { global.sa_civ_mod_master_ideology_value = 0	} #100%
+	add_to_array = { global.sa_civ_mod_master_ideology_value = 0.01	} #120%
+	add_to_array = { global.sa_civ_mod_master_ideology_value = 0.01	} #140%
+	add_to_array = { global.sa_civ_mod_master_ideology_value = 0.02	} #160%
+	add_to_array = { global.sa_civ_mod_master_ideology_value = 0.02	} #180%
+	add_to_array = { global.sa_civ_mod_master_ideology_value = 0.03	} #200%
+}
+init_sa_civ_mod_ppf_value = {
+	add_to_array = { global.sa_civ_mod_ppf_value = -0.5	} #0%
+	add_to_array = { global.sa_civ_mod_ppf_value = -0.4	} #20%
+	add_to_array = { global.sa_civ_mod_ppf_value = -0.3	} #40%
+	add_to_array = { global.sa_civ_mod_ppf_value = -0.2	} #60%
+	add_to_array = { global.sa_civ_mod_ppf_value = -0.1	} #80%
+	add_to_array = { global.sa_civ_mod_ppf_value = 0	} #100%
+	add_to_array = { global.sa_civ_mod_ppf_value = 0.02	} #120%
+	add_to_array = { global.sa_civ_mod_ppf_value = 0.04	} #140%
+	add_to_array = { global.sa_civ_mod_ppf_value = 0.06	} #160%
+	add_to_array = { global.sa_civ_mod_ppf_value = 0.08	} #180%
+	add_to_array = { global.sa_civ_mod_ppf_value = 0.1	} #200%
+}
+init_sa_civ_mod_surrender_value = {
+	add_to_array = { global.sa_civ_mod_surrender_value = -0.2	} #0%
+	add_to_array = { global.sa_civ_mod_surrender_value = -0.16	} #20%
+	add_to_array = { global.sa_civ_mod_surrender_value = -0.12	} #40%
+	add_to_array = { global.sa_civ_mod_surrender_value = -0.08	} #60%
+	add_to_array = { global.sa_civ_mod_surrender_value = -0.04	} #80%
+	add_to_array = { global.sa_civ_mod_surrender_value = 0		} #100%
+	add_to_array = { global.sa_civ_mod_surrender_value = 0.01	} #120%
+	add_to_array = { global.sa_civ_mod_surrender_value = 0.02	} #140%
+	add_to_array = { global.sa_civ_mod_surrender_value = 0.03	} #160%
+	add_to_array = { global.sa_civ_mod_surrender_value = 0.04	} #180%
+	add_to_array = { global.sa_civ_mod_surrender_value = 0.05	} #200%
+}
+init_sa_fac_mod_building_value = {
+	add_to_array = { global.sa_fac_mod_building_value = -0.8	} #0%
+	add_to_array = { global.sa_fac_mod_building_value = -0.6	} #20%
+	add_to_array = { global.sa_fac_mod_building_value = -0.4	} #40%
+	add_to_array = { global.sa_fac_mod_building_value = -0.2	} #60%
+	add_to_array = { global.sa_fac_mod_building_value = -0.1	} #80%
+	add_to_array = { global.sa_fac_mod_building_value = 0		} #100%
+	add_to_array = { global.sa_fac_mod_building_value = 0.02	} #120%
+	add_to_array = { global.sa_fac_mod_building_value = 0.04	} #140%
+	add_to_array = { global.sa_fac_mod_building_value = 0.06	} #160%
+	add_to_array = { global.sa_fac_mod_building_value = 0.08	} #180%
+	add_to_array = { global.sa_fac_mod_building_value = 0.1		} #200%
+}
+init_sa_fac_mod_converting_value = {
+	add_to_array = { global.sa_fac_mod_converting_value = 1		} #0%
+	add_to_array = { global.sa_fac_mod_converting_value = 0.8	} #20%
+	add_to_array = { global.sa_fac_mod_converting_value = 0.6	} #40%
+	add_to_array = { global.sa_fac_mod_converting_value = 0.4	} #60%
+	add_to_array = { global.sa_fac_mod_converting_value = 0.2	} #80%
+	add_to_array = { global.sa_fac_mod_converting_value = 0		} #100%
+	add_to_array = { global.sa_fac_mod_converting_value = -0.04	} #120%
+	add_to_array = { global.sa_fac_mod_converting_value = -0.08	} #140%
+	add_to_array = { global.sa_fac_mod_converting_value = -0.12	} #160%
+	add_to_array = { global.sa_fac_mod_converting_value = -0.16	} #180%
+	add_to_array = { global.sa_fac_mod_converting_value = -0.2	} #200%
+}
+init_sa_fac_mod_efficiency_value = {
+	add_to_array = { global.sa_fac_mod_efficiency_value = -1	} #0%
+	add_to_array = { global.sa_fac_mod_efficiency_value = -0.7	} #20%
+	add_to_array = { global.sa_fac_mod_efficiency_value = -0.5	} #40%
+	add_to_array = { global.sa_fac_mod_efficiency_value = -0.3	} #60%
+	add_to_array = { global.sa_fac_mod_efficiency_value = -0.1	} #80%
+	add_to_array = { global.sa_fac_mod_efficiency_value = 0		} #100%
+	add_to_array = { global.sa_fac_mod_efficiency_value = 0.03	} #120%
+	add_to_array = { global.sa_fac_mod_efficiency_value = 0.06	} #140%
+	add_to_array = { global.sa_fac_mod_efficiency_value = 0.09	} #160%
+	add_to_array = { global.sa_fac_mod_efficiency_value = 0.12	} #180%
+	add_to_array = { global.sa_fac_mod_efficiency_value = 0.15	} #200%
+}
+init_sa_fac_mod_max_efficiency_value = {
+	add_to_array = { global.sa_fac_mod_max_efficiency_value = -0.8	} #0%
+	add_to_array = { global.sa_fac_mod_max_efficiency_value = -0.7	} #20%
+	add_to_array = { global.sa_fac_mod_max_efficiency_value = -0.6	} #40%
+	add_to_array = { global.sa_fac_mod_max_efficiency_value = -0.4	} #60%
+	add_to_array = { global.sa_fac_mod_max_efficiency_value = -0.2	} #80%
+	add_to_array = { global.sa_fac_mod_max_efficiency_value = 0		} #100%
+	add_to_array = { global.sa_fac_mod_max_efficiency_value = 0.02	} #120%
+	add_to_array = { global.sa_fac_mod_max_efficiency_value = 0.04	} #140%
+	add_to_array = { global.sa_fac_mod_max_efficiency_value = 0.06	} #160%
+	add_to_array = { global.sa_fac_mod_max_efficiency_value = 0.08	} #180%
+	add_to_array = { global.sa_fac_mod_max_efficiency_value = 0.1	} #200%
+}
+init_sa_army_mod_support_value = {
+	add_to_array = { global.sa_army_mod_support_value = -0.1	} #0%
+	add_to_array = { global.sa_army_mod_support_value = -0.08	} #20%
+	add_to_array = { global.sa_army_mod_support_value = -0.06	} #40%
+	add_to_array = { global.sa_army_mod_support_value = -0.04	} #60%
+	add_to_array = { global.sa_army_mod_support_value = -0.02	} #80%
+	add_to_array = { global.sa_army_mod_support_value = 0		} #100%
+	add_to_array = { global.sa_army_mod_support_value = 0.01	} #120%
+	add_to_array = { global.sa_army_mod_support_value = 0.01	} #140%
+	add_to_array = { global.sa_army_mod_support_value = 0.01	} #160%
+	add_to_array = { global.sa_army_mod_support_value = 0.01	} #180%
+	add_to_array = { global.sa_army_mod_support_value = 0.01	} #200%
+}
+init_sa_army_mod_offence_value = {
+	add_to_array = { global.sa_army_mod_offence_value = -0.2	} #0%
+	add_to_array = { global.sa_army_mod_offence_value = -0.16	} #20%
+	add_to_array = { global.sa_army_mod_offence_value = -0.12	} #40%
+	add_to_array = { global.sa_army_mod_offence_value = -0.08	} #60%
+	add_to_array = { global.sa_army_mod_offence_value = -0.04	} #80%
+	add_to_array = { global.sa_army_mod_offence_value = 0		} #100%
+	add_to_array = { global.sa_army_mod_offence_value = 0.01	} #120%
+	add_to_array = { global.sa_army_mod_offence_value = 0.02	} #140%
+	add_to_array = { global.sa_army_mod_offence_value = 0.03	} #160%
+	add_to_array = { global.sa_army_mod_offence_value = 0.04	} #180%
+	add_to_array = { global.sa_army_mod_offence_value = 0.05		} #200%
+}
+init_sa_army_mod_defence_value = {
+	add_to_array = { global.sa_army_mod_defence_value = -0.15	} #0%
+	add_to_array = { global.sa_army_mod_defence_value = -0.12	} #20%
+	add_to_array = { global.sa_army_mod_defence_value = -0.09	} #40%
+	add_to_array = { global.sa_army_mod_defence_value = -0.06	} #60%
+	add_to_array = { global.sa_army_mod_defence_value = -0.03	} #80%
+	add_to_array = { global.sa_army_mod_defence_value = 0		} #100%
+	add_to_array = { global.sa_army_mod_defence_value = 0.02	} #120%
+	add_to_array = { global.sa_army_mod_defence_value = 0.04	} #140%
+	add_to_array = { global.sa_army_mod_defence_value = 0.06	} #160%
+	add_to_array = { global.sa_army_mod_defence_value = 0.08	} #180%
+	add_to_array = { global.sa_army_mod_defence_value = 0.1		} #200%
+}
+init_sa_army_mod_mobilization_value = {
+	add_to_array = { global.sa_army_mod_mobilization_value = -0.5	} #0%
+	add_to_array = { global.sa_army_mod_mobilization_value = -0.4	} #20%
+	add_to_array = { global.sa_army_mod_mobilization_value = -0.3	} #40%
+	add_to_array = { global.sa_army_mod_mobilization_value = -0.2	} #60%
+	add_to_array = { global.sa_army_mod_mobilization_value = -0.1	} #80%
+	add_to_array = { global.sa_army_mod_mobilization_value = 0		} #100%
+	add_to_array = { global.sa_army_mod_mobilization_value = 0.03	} #120%
+	add_to_array = { global.sa_army_mod_mobilization_value = 0.06	} #140%
+	add_to_array = { global.sa_army_mod_mobilization_value = 0.09	} #160%
+	add_to_array = { global.sa_army_mod_mobilization_value = 0.12	} #180%
+	add_to_array = { global.sa_army_mod_mobilization_value = 0.15	} #200%
+}
+init_sa_army_mod_recruitable_value = {
+	add_to_array = { global.sa_army_mod_recruitable_value = -0.1	} #0%
+	add_to_array = { global.sa_army_mod_recruitable_value = -0.08	} #20%
+	add_to_array = { global.sa_army_mod_recruitable_value = -0.06	} #40%
+	add_to_array = { global.sa_army_mod_recruitable_value = -0.04	} #60%
+	add_to_array = { global.sa_army_mod_recruitable_value = -0.02	} #80%
+	add_to_array = { global.sa_army_mod_recruitable_value = 0		} #100%
+	add_to_array = { global.sa_army_mod_recruitable_value = 0.03	} #120%
+	add_to_array = { global.sa_army_mod_recruitable_value = 0.06	} #140%
+	add_to_array = { global.sa_army_mod_recruitable_value = 0.09	} #160%
+	add_to_array = { global.sa_army_mod_recruitable_value = 0.12	} #180%
+	add_to_array = { global.sa_army_mod_recruitable_value = 0.15	} #200%
 }

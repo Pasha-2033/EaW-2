@@ -3,7 +3,7 @@ scripted_gui = {
 		context_type = player_context
 		window_name = "surplus_appropriation_indicator"
 		parent_window_token = top_bar
-		dirty = sa_min_value
+		dirty = ROOT.sa_min_value
 		visible = {
 			NOT = {
 				has_country_flag = no_sa_impact
@@ -14,6 +14,7 @@ scripted_gui = {
 		context_type = player_context
 		window_name = "surplus_appropriation_menu_entry"
 		parent_window_name = "after_intel_agency_button"
+		dirty = ROOT.sam_menu
 		effects = {
             surplus_appropriation_menu_entry_button_click = {
 				if = {
@@ -87,6 +88,8 @@ scripted_gui = {
 		context_type = player_context
 		window_name = "surplus_appropriation_menu"
 		parent_window_token = top_bar
+		#for some reason gui cant work properly with dirty - not arrays, not custom variable
+		#if find solution - fix this issue (to do)
 		visible = {
 			check_variable = {
 				sam_menu = 1
@@ -115,7 +118,9 @@ scripted_gui = {
 									#otherwise ai will deside by itself
 									#WARNING! array MUST be size of 3 (^num = 3)
 									limit = {
-										has_variable = sa_ai_cap^num
+										check_variable = {
+											sa_ai_cap^num = 3
+										}
 									}
 									if = {
 										limit = {
@@ -218,7 +223,9 @@ scripted_gui = {
 									#otherwise ai will deside by itself
 									#WARNING! array MUST be size of 3 (^num = 3)
 									limit = {
-										has_variable = sa_ai_cap^num
+										check_variable = {
+											sa_ai_cap^num = 3
+										}
 									}
 									if = {
 										limit = {

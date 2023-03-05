@@ -2,14 +2,29 @@ surplus_appropriation_civil_modifier = {
 	enable = {
 		always = yes
 	}
+	monthly_population = global.sa_civ_mod_population_value^surplus_appropriation_mod_values^0
+	stability_weekly = global.sa_civ_mod_stability_value^surplus_appropriation_mod_values^0
+	master_ideology_drift = global.sa_civ_mod_master_ideology_value^surplus_appropriation_mod_values^0
+	political_power_factor = global.sa_civ_mod_ppf_value^surplus_appropriation_mod_values^0
+	surrender_limit = global.sa_civ_mod_surrender_value^surplus_appropriation_mod_values^0
 }
 surplus_appropriation_facilities_modifier = {
 	enable = {
 		always = yes
 	}
+	production_speed_buildings_factor = global.sa_fac_mod_building_value^surplus_appropriation_mod_values^1
+	conversion_cost_civ_to_mil_factor = global.sa_fac_mod_converting_value^surplus_appropriation_mod_values^1
+	conversion_cost_mil_to_civ_factor = global.sa_fac_mod_converting_value^surplus_appropriation_mod_values^1
+	production_factory_efficiency_gain_factor = global.sa_fac_mod_efficiency_value^surplus_appropriation_mod_values^1
+	production_factory_max_efficiency_factor = global.sa_fac_mod_max_efficiency_value^surplus_appropriation_mod_values^1
 }
 surplus_appropriation_army_modifier = {
 	enable = {
 		always = yes
 	}
+	war_support_weekly = global.sa_army_mod_support_value^surplus_appropriation_mod_values^2
+	offence = global.sa_army_mod_offence_value^surplus_appropriation_mod_values^2
+	defence = global.sa_army_mod_defence_value^surplus_appropriation_mod_values^2
+	mobilization_speed = global.sa_army_mod_mobilization_value^surplus_appropriation_mod_values^2
+	conscription_factor = global.sa_army_mod_recruitable_value^surplus_appropriation_mod_values^2
 }

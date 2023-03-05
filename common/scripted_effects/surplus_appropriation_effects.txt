@@ -148,7 +148,7 @@ sa_tick_effects = {
 			end = surplus_appropriation_mod_values^num
 			value = i
 			set_variable = {
-				surplus_appropriation_mod_values^i = 1
+				surplus_appropriation_mod_values^i = 5
 			}
 		}
 	}
@@ -166,12 +166,19 @@ sa_tick_effects = {
 			array = surplus_appropriation_real_values
 			index = i
 			value = v
+			#floor(surplus_appropriation_mod_values[i]) * 5
+			#for index purposes (persent 0-200 to index 0-10)
 			set_variable = {
 				surplus_appropriation_mod_values^i = v
 			}
+			multiply_variable = {
+				surplus_appropriation_mod_values^i = 0.005
+			}
+			multiply_variable = {
+				surplus_appropriation_mod_values^i = 1000
+			}
 		}
 	}
-	#calc modifier (to do)
 }
 d_update_sa_gui = { #d_ added for debug issues
 	update_sa_slider_x_pos = yes
