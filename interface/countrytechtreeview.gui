@@ -4094,122 +4094,273 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "deer_folder"
-			position = { x=0 y=47 }
-			size = { width = 100%% height = 100%% }
-			margin = { top = 13 left = 13 bottom = 24 right = 25}
-			drag_scroll = { left middle }
+			position = {
+				x = 0
+				y = 47
+			}
+			size = {
+				width = 100%%
+				height = 100%%
+			}
+			margin = {
+				top = 13
+				left = 13
+				bottom = 24 
+				right = 25
+			}
+			drag_scroll = { 
+				left 
+				middle
+			}
 			verticalScrollbar = "right_vertical_slider"
 			horizontalScrollbar = "bottom_horizontal_slider"
-
 			background = {
-				name = "Background"
-				quadTextureSprite ="GFX_tiled_window_2b_border"
+				name = "background"
+				quadTextureSprite = "GFX_tiled_window_2b_border"
 			}
-
 			containerWindowType = {
 				name = "techtree_stripes"
-				position = { x= 0 y= 0 }
 				size = {
-					width = 2800 height = 1100
-					min = { width = 100%% height = 100%% }
+					width = 2800
+					height = 1100
+					min = {
+						width = 100%%
+						height = 100%%
+					}
 				}
 				clipping = no
-
 				background = {
-					name = "Background"
-					quadTextureSprite ="GFX_techtree_stripes"
+					name = "background"
+					quadTextureSprite = "GFX_techtree_stripes"
 				}
-
 				iconType = {
-					name ="generic_techtree_bg"
+					name = "generic_techtree_bg"
 					spriteType = "GFX_generic_techtree_bg"
-					position = { x=0 y=0 }
 					alwaystransparent = yes
 				}
-
 			}
-
+			#YEARS
+			instantTextBoxType = {
+				name = "year_982"
+				position = {
+					x = 270
+					y = 50
+				}
+				font = "hoi_36header"
+				text = "982"
+				maxWidth = 72
+				maxHeight = 32
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "year_984"
+				position = {
+					x = 480
+					y = 50
+				}
+				font = "hoi_36header"
+				text = "984"
+				maxWidth = 72
+				maxHeight = 32
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "year_985"
+				position = {
+					x = 690
+					y = 50
+				}
+				font = "hoi_36header"
+				text = "985"
+				maxWidth = 72
+				maxHeight = 32
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "year_986"
+				position = {
+					x = 900
+					y = 50
+				}
+				font = "hoi_36header"
+				text = "986"
+				maxWidth = 72
+				maxHeight = 32
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "year_987"
+				position = {
+					x = 1110
+					y = 50
+				}
+				font = "hoi_36header"
+				text = "987"
+				maxWidth = 72
+				maxHeight = 32
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "year_989"
+				position = {
+					x = 1320
+					y = 50
+				}
+				font = "hoi_36header"
+				text = "989"
+				maxWidth = 72
+				maxHeight = 32
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "year_991"
+				position = {
+					x = 1530
+					y = 50
+				}
+				font = "hoi_36header"
+				text = "991"
+				maxWidth = 72
+				maxHeight = 32
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "year_994"
+				position = {
+					x = 1740
+					y = 50
+				}
+				font = "hoi_36header"
+				text = "994"
+				maxWidth = 72
+				maxHeight = 32
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
+				name = "year_997"
+				position = {
+					x = 1950
+					y = 50
+				}
+				font = "hoi_36header"
+				text = "997"
+				maxWidth = 72
+				maxHeight = 32
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+			#CATEGORY NAMES
 			instantTextBoxType = {
 				name = "deer_magic_society_subtitle"
-				position = { x = 100 y = 108 }
+				position = {
+					x = 100
+					y = 108
+				}
 				font = "hoi_33"
-				borderSize = {x = 0 y = 4}
-				text = "TITLE_DEER_SOCIETY_MAGIC_SUBTITLE"
+				text = "TITLE_DEER_MAGIC_SOCIETY_SUBTITLE"
 				maxWidth = 600
 				maxHeight = 62
 				format = left
 				Orientation = "UPPER_LEFT"
 			}
-
 			instantTextBoxType = {
 				name = "deer_magic_navy_subtitle"
-				position = { x = 100 y = 252 }
+				position = {
+					x = 100
+					y = 252
+				}
 				font = "hoi_33"
-				borderSize = {x = 0 y = 4}
-				text = "TITLE_DEER_NAVY_MAGIC_SUBTITLE"
+				text = "TITLE_DEER_MAGIC_NAVY_SUBTITLE"
 				maxWidth = 600
 				maxHeight = 62
 				format = left
 				Orientation = "UPPER_LEFT"
 			}
-
 			instantTextBoxType = {
 				name = "deer_magic_seer_subtitle"
-				position = { x = 100 y = 396 }
+				position = {
+					x = 100
+					y = 396
+				}
 				font = "hoi_33"
-				borderSize = {x = 0 y = 4}
-				text = "TITLE_DEER_SEER_MAGIC_SUBTITLE"
+				text = "TITLE_DEER_MAGIC_SEER_SUBTITLE"
 				maxWidth = 600
 				maxHeight = 62
 				format = left
 				Orientation = "UPPER_LEFT"
 			}
-
 			instantTextBoxType = {
 				name = "deer_magic_army_subtitle"
-				position = { x = 100 y = 684 }
+				position = {
+					x = 100
+					y = 684
+				}
 				font = "hoi_33"
-				borderSize = {x = 0 y = 4}
-				text = "TITLE_DEER_ARMY_MAGIC_SUBTITLE"
+				text = "TITLE_DEER_MAGIC_ARMY_SUBTITLE"
 				maxWidth = 600
 				maxHeight = 62
 				format = left
 				Orientation = "UPPER_LEFT"
 			}
-
+			#GRIDBOXES (FOR START TECH IN BRANCHES)
+			#slotsize is 70x70, otherwise spaces will occure
+			#same position because it`s more comfortable work with
 			gridboxtype = {
 				name = "tech_deer_misc_tree"
-				position = { x = 270 y = 200 }
-				#size = { width = 420 height = 500 }
-				slotsize = { width = 70 height = 70 }
+				position = {
+					x = 270
+					y = 200
+				}
+				slotsize = {
+					width = 70
+					height = 70
+				}
 				format = "LEFT"
 			}
-
 			gridboxtype = {
 				name = "tech_deer_naval_tree"
-				position = { x = 270 y = 200 }
-				#size = { width = 420 height = 500 }
-				slotsize = { width = 70 height = 70 }
+				position = {
+					x = 270
+					y = 200
+				}
+				slotsize = {
+					width = 70
+					height = 70
+				}
 				format = "LEFT"
 			}
-
 			gridboxtype = {
 				name = "tech_deer_seer_tree"
-				position = { x = 270 y = 200 }
-				#size = { width = 420 height = 500 }
-				slotsize = { width = 70 height = 70 }
+				position = {
+					x = 270
+					y = 200
+				}
+				slotsize = {
+					width = 70
+					height = 70
+				}
 				format = "LEFT"
 			}
-
 			gridboxtype = {
 				name = "tech_deer_army_tree"
-				position = { x = 270 y = 200 }
-				#size = { width = 420 height = 500 }
-				slotsize = { width = 70 height = 70 }
+				position = {
+					x = 270
+					y = 200
+				}
+				slotsize = { 
+					width = 70 
+					height = 70 
+				}
 				format = "LEFT"
 			}
-
-
 		}
 
 		containerWindowType = {

@@ -21,15 +21,16 @@
 @1026 = 36
 ###########
 @step_0 = 982
-@step_1 = 983
-@step_2 = 984
-@step_3 = 985
-@step_4 = 986
-@step_5 = 988
-@step_6 = 989
-@step_7 = 991
-@step_8 = 992
-
+@step_1 = 984
+@step_2 = 985
+@step_3 = 986
+@step_4 = 987
+@step_5 = 989
+@step_6 = 991
+@step_7 = 994
+@step_8 = 997
+@step_9 = 1000
+@step_10 = 1007
 technologies = {
 	deer_race = {
 		research_cost = 1
@@ -54,7 +55,7 @@ technologies = {
 			name = deer_folder
 			position = {
 				x = 0 
-				y = @1007
+				y = 0
 			}
 		}
 		categories = {
@@ -62,7 +63,7 @@ technologies = {
 			magical_tech
 		}
 		ai_will_do = {
-			factor = 2
+			base = 2
 			modifier = {
 				factor = 1.5
 				date > @step_1.1.1
@@ -81,26 +82,26 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = @step_0
+		start_year = @step_1
 		folder = {
 			name = deer_folder
 			position = {
 				x = 0 
-				y = @1010
+				y = 3
 			}
 		}
 		categories = {
 			race_tech
 		}
 		ai_will_do = {
-			factor = 2
+			base = 2
 			modifier = {
 				factor = 1.5
-				date > @step_1.1.1
+				date > @step_2.1.1
 			}
 			modifier = {
 				factor = 2
-				date > @step_2.1.1
+				date > @step_3.1.1
 			}
 		}
 	}
@@ -113,12 +114,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = @step_1
+		start_year = @step_3
 		folder = {
 			name = deer_folder
 			position = { 
 				x = 0 
-				y = @1013 
+				y = 9
 			}
 		}
 		categories = {
@@ -126,14 +127,14 @@ technologies = {
 			magical_tech
 		}
 		ai_will_do = {
-			factor = 2
+			base = 2
 			modifier = {
 				factor = 1.5
-				date > @step_2.1.1
+				date > @step_4.1.1
 			}
 			modifier = {
 				factor = 2
-				date > @step_3.1.1
+				date > @step_5.1.1
 			}
 		}
 	}
@@ -147,12 +148,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = @step_2
+		start_year = @step_4
 		folder = {
 			name = deer_folder
 			position = { 
 				x = 0 
-				y = @1016 
+				y = 12
 			}
 		}
 		categories = {
@@ -160,14 +161,14 @@ technologies = {
 			magical_tech
 		}
 		ai_will_do = {
-			factor = 2
+			base = 2
 			modifier = {
 				factor = 1.5
-				date > @step_3.1.1
+				date > @step_5.1.1
 			}
 			modifier = {
 				factor = 2
-				date > @step_4.1.1
+				date > @step_6.1.1
 			}
 		}
 	}
@@ -179,27 +180,26 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = @step_3
+		start_year = @step_5
 		folder = {
 			name = deer_folder
 			position = {
 				x = 0
-				y = @1020
+				y = 15
 			}
 		}
 		categories = {
 			race_tech
 		}
 		ai_will_do = {
-			factor = 2
+			base = 2
 			modifier = {
 				factor = 1.5
-				date > @step_4.1.1
+				date > @step_6.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > @step_5.1.1
+				date > @step_7.1.1
 			}
 		}
 	}
@@ -207,26 +207,26 @@ technologies = {
 	tech_deer_misc_c = {
 		min_export = -0.10
 		research_cost = 1.5
-		start_year = @step_4
+		start_year = @step_6
 		folder = {
 			name = deer_folder
 			position = {
 				x = 0
-				y = @1024
+				y = 18
 			}
 		}
 		categories = {
 			race_tech
 		}
 		ai_will_do = {
-			factor = 2
+			base = 2
 			modifier = {
 				factor = 1.5
-				date > @step_5.1.1
+				date > @step_7.1.1
 			}
 			modifier = {
 				factor = 2
-				date > @step_6.1.1
+				date > @step_8.1.1
 			}
 		}
 	}
@@ -246,7 +246,7 @@ technologies = {
 			name = deer_folder
 			position = { 
 				x = 2 
-				y = @1007 
+				y = 0
 			}
 		}
 		categories = {
@@ -255,7 +255,7 @@ technologies = {
 			deer_navy_tech
 		}
 		ai_will_do = {
-			factor = 2
+			base = 2
 			modifier = {
 				factor = 1.5
 				date > @step_1.1.1
@@ -275,12 +275,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1
-		start_year = @step_2
+		start_year = @step_1
 		folder = {
 			name = deer_folder
 			position = {
 				x = 2 
-				y = @1010
+				y = 3
 			}
 		}
 		categories = {
@@ -289,14 +289,14 @@ technologies = {
 			deer_navy_tech
 		}
 		ai_will_do = {
-			factor = 2
+			base = 2
 			modifier = {
 				factor = 1.5
-				date > @step_3.1.1
+				date > @step_2.1.1
 			}
 			modifier = {
 				factor = 2
-				date > @step_4.1.1
+				date > @step_3.1.1
 			}
 		}
 	}
@@ -308,12 +308,12 @@ technologies = {
 		}
 		on_research_complete = {}
 		research_cost = 1.5
-		start_year = @step_3
+		start_year = @step_2
 		folder = {
 			name = deer_folder
 			position = {
 				x = 2
-				y = @1013
+				y = 6
 			}
 		}
 		categories = {
@@ -322,14 +322,14 @@ technologies = {
 			deer_navy_tech
 		}
 		ai_will_do = {
-			factor = 2
+			base = 2
 			modifier = {
 				factor = 1.5
-				date > @step_4.1.1
+				date > @step_3.1.1
 			}
 			modifier = {
 				factor = 2
-				date > @step_5.1.1
+				date > @step_4.1.1
 			}
 		}
 	}
@@ -342,12 +342,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = @step_4
+		start_year = @step_3
 		folder = {
 			name = deer_folder
 			position = {
 				x = 2
-				y = @1016
+				y = 9
 			}
 		}
 		categories = {
@@ -356,14 +356,14 @@ technologies = {
 			deer_navy_tech
 		}
 		ai_will_do = {
-			factor = 2
+			base = 2
 			modifier = {
 				factor = 1.5
-				date > @step_5.1.1
+				date > @step_4.1.1
 			}
 			modifier = {
 				factor = 2
-				date > @step_6.1.1
+				date > @step_5.1.1
 			}
 		}
 	}
@@ -398,12 +398,12 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = @step_5
+		start_year = @step_4
 		folder = {
 			name = deer_folder
 			position = {
 				x = 2
-				y = @1020
+				y = 12
 			}
 		}
 		categories = {
@@ -412,7 +412,38 @@ technologies = {
 			deer_navy_tech
 		}
 		ai_will_do = {
-			factor = 2
+			base = 2
+			modifier = {
+				factor = 1.5
+				date > @step_5.1.1
+			}
+			modifier = {
+				factor = 2
+				date > @step_6.1.1
+			}
+		}
+	}
+	#Spirits of the Sea
+	tech_deer_naval_c = {
+		naval_hit_chance = 0.1
+		naval_coordination = 0.07
+		research_cost = 1.5
+		start_year = @step_5
+		folder = {
+			name = deer_folder
+			position = {
+				x = 2
+				y = 15
+			}
+		}
+		categories = {
+			race_tech
+			magical_tech
+			seer_tech
+			deer_navy_tech
+		}
+		ai_will_do = {
+			base = 2
 			modifier = {
 				factor = 1.5
 				date > @step_6.1.1
@@ -423,53 +454,16 @@ technologies = {
 			}
 		}
 	}
-	#Spirits of the Sea
-	tech_deer_naval_c = {
-		naval_hit_chance = 0.1
-		naval_coordination = 0.07
-		research_cost = 1.5
-		start_year = @step_6
-		folder = {
-			name = deer_folder
-			position = {
-				x = 2
-				y = @1022
-			}
-		}
-		categories = {
-			race_tech
-			magical_tech
-			seer_tech
-			deer_navy_tech
-		}
-		ai_will_do = {
-			factor = 2
-			modifier = {
-				factor = 1.5
-				date > @step_7.1.1
-			}
-			modifier = {
-				factor = 2
-				date > @step_8.1.1
-			}
-		}
-	}
-
-	##################################this done#############################^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 	#Glimpses of the future
 	tech_deer_seer = {
-
 		dependencies = {
 			deer_race = 1
 		}
-
 		recon_factor = 0.1
 		planning_speed = 0.1
 		category_recon = {
 			initiative = 0.12
 		}
-
 		path = {
 			leads_to_tech = tech_deer_seer2
 			research_cost_coeff = 1
@@ -478,42 +472,37 @@ technologies = {
 			leads_to_tech = tech_deer_seer3
 			research_cost_coeff = 1
 		}
-
 		research_cost = 1.5
-		start_year = 1007
+		start_year = @step_0
 		folder = {
 			name = deer_folder
-			position = { x = 4 y = @1007 }
+			position = {
+				x = 5
+				y = @1007
+			}
 		}
-
 		categories = {
 			magical_tech
 			seer_tech
 			race_tech
 		}
-
 		ai_will_do = {
-			factor = 3
-
+			base = 3
 			modifier = {
 				factor = 1.5
-				date > "1008.1.1"
+				date > @step_1.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > "1009.1.1"
+				date > @step_2.1.1
 			}
 		}
 	}
-
 	#Field Vala
 	tech_deer_seer2 = {
-
 		category_recon = {
 			recon = 1
 		}
-
 		recon = {
 			forest = {
 				movement = 0.05
@@ -644,210 +633,179 @@ technologies = {
 				movement = 0.05
 			}
 		}
-
 		path = {
 			leads_to_tech = tech_deer_seer_a
 			research_cost_coeff = 1
 		}
-
-
 		research_cost = 1
-		start_year = 1007
+		start_year = @step_1
 		folder = {
 			name = deer_folder
-			position = { x = 6 y = @1010 }
+			position = {
+				x = 6
+				y = 3
+			}
 		}
-
 		categories = {
 			magical_tech
 			seer_tech
 			race_tech
 		}
-
 		ai_will_do = {
-			factor = 3
+			base = 3
 			modifier = {
 				factor = 1.5
-				date > "1011.1.1"
+				date > @step_2.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > "1012.1.1"
+				date > @step_3.1.1
 			}
 		}
 	}
-
 	#Scientific visions
 	tech_deer_seer3 = {
-
 		research_speed_factor = 0.03
-
 		category_recon = {
 			hard_attack = 0.5
 		}
-
 		path = {
 			leads_to_tech = tech_deer_seer_b
 			research_cost_coeff = 1
 		}
-
 		research_cost = 1.5
-		start_year = 1007
+		start_year = @step_2
 		folder = {
 			name = deer_folder
-			position = { x = 4 y = @1013 }
+			position = { 
+				x = 4 
+				y = 6
+			}
 		}
-
 		categories = {
 			magical_tech
 			seer_tech
 			race_tech
 		}
-
 		ai_will_do = {
-			factor = 3
+			base = 3
 			modifier = {
 				factor = 1.5
-				date > "1014.1.1"
+				date > @step_3.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > "1015.1.1"
+				date > @step_4.1.1
 			}
 		}
 	}
-
 	#Strategic Visions
 	tech_deer_seer_a = {
-
 		foreign_subversive_activites = -0.2
 		decryption_factor = 0.1
-
 		path = {
 			leads_to_tech = tech_deer_seer_b
 			research_cost_coeff = 1
 		}
-
 		research_cost = 1.5
-		start_year = 1007
+		start_year = @step_2
 		folder = {
 			name = deer_folder
-			position = { x = 6 y = @1016 }
+			position = { 
+				x = 6 
+				y = 6 
+			}
 		}
-
 		categories = {
 			magical_tech
 			seer_tech
 			race_tech
 		}
-
 		ai_will_do = {
-			factor = 3
+			base = 3
 			modifier = {
 				factor = 1.5
-				date > "1017.1.1"
+				date > @step_3.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > "1018.1.1"
+				date > @step_4.1.1
 			}
 		}
 	}
-
 	#Predictive Planning
 	tech_deer_seer_b = {
-
 		max_planning = 0.1
-
-		path = {
-			leads_to_tech = tech_deer_naval_c
-			research_cost_coeff = 1
-		}
-
 		research_cost = 1.5
-		start_year = 1007
+		start_year = @step_4
 		folder = {
 			name = deer_folder
-			position = { x = 4 y = @1020 }
+			position = {
+				x = 5
+				y = 12
+			}
 		}
-
 		categories = {
 			magical_tech
 			seer_tech
 			race_tech
 		}
-
 		ai_will_do = {
-			factor = 3
+			base = 3
 			modifier = {
 				factor = 1.5
-				date > "1021.1.1"
+				date > @step_5.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > "1022.1.1"
+				date > @step_6.1.1
 			}
 		}
 	}
-
 	#Winter equipment
 	tech_deer_army = {
-
 		dependencies = {
 			deer_race = 1
 		}
-
 		winter_attrition_factor = -0.15
-
 		category_front_line = {
 			acclimatization_cold_climate_gain_factor = 0.25
 		}
-
 		path = {
 			leads_to_tech = tech_deer_army2
 			research_cost_coeff = 1
 		}
-
 		research_cost = 1
-		start_year = 1007
+		start_year = @step_0
 		folder = {
 			name = deer_folder
-			position = { x = 8 y = @1007 }
+			position = {
+				x = 8
+				y = @1007
+			}
 		}
-
 		categories = {
 			infantry_tech
 			deer_army_tech
 			race_tech
 		}
-
 		ai_will_do = {
-			factor = 3
-
+			base = 3
 			modifier = {
 				factor = 2
-				original_tag = OLE
 			}
-
 			modifier = {
 				factor = 1.5
-				date > "1008.1.1"
+				date > @step_1.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > "1009.1.1"
+				date > @step_2.1.1
 			}
 		}
 	}
-
 	#Skis
 	tech_deer_army2 = {
-
 		category_light_infantry = {
 			hills = {
 				movement = 0.05
@@ -856,7 +814,6 @@ technologies = {
 				movement = 0.1
 			}
 		}
-
 		mountaineers = {
 			hills = {
 				movement = 0.025
@@ -865,13 +822,10 @@ technologies = {
 				movement = 0.05
 			}
 		}
-
 		special_forces_cap = 0.05
-
 		on_research_complete = {
 			custom_effect_tooltip = tech_deer_army2_tp
 		}
-
 		path = {
 			leads_to_tech = tech_deer_army3
 			research_cost_coeff = 1
@@ -880,45 +834,35 @@ technologies = {
 			leads_to_tech = tech_deer_army2a
 			research_cost_coeff = 1
 		}
-
-
 		research_cost = 1
-		start_year = 1007
+		start_year = @step_1
 		folder = {
 			name = deer_folder
-			position = { x = 8 y = @1010 }
+			position = { 
+				x = 8 
+				y = 3
+			}
 		}
-
 		categories = {
 			infantry_tech
 			mountaineers_tech
 			deer_army_tech
 			race_tech
 		}
-
 		ai_will_do = {
-			factor = 3
-
-			modifier = {
-				factor = 2
-				original_tag = OLE
-			}
-
+			base = 3
 			modifier = {
 				factor = 1.5
-				date > "1011.1.1"
+				date > @step_2.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > "1012.1.1"
+				date > @step_3.1.1
 			}
 		}
 	}
-
 	#mountain artillery
 	tech_deer_army2a = {
-
 		artillery_brigade = {
 			hills = {
 				movement = 0.1
@@ -927,7 +871,6 @@ technologies = {
 				movement = 0.15
 			}
 		}
-
 		anti_tank_brigade = {
 			hills = {
 				movement = 0.1
@@ -936,46 +879,42 @@ technologies = {
 				movement = 0.15
 			}
 		}
-
 		on_research_complete = {
 			custom_effect_tooltip = tech_deer_army2a_tp
+			custom_effect_tooltip = temp_tech
 		}
-
 		research_cost = 1
-		start_year = 1007
+		start_year = @step_10
 		folder = {
 			name = deer_folder
-			position = { x = 10 y = @1013 }
+			position = {
+				x = 10
+				y = 3
+			}
 		}
-
 		categories = {
 			artillery
 			deer_army_tech
 			race_tech
 		}
-
 		ai_will_do = {
-			factor = 2
+			base = 2
 			modifier = {
 				factor = 1.5
-				date > "1011.1.1"
+				date > 3000.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > "1012.1.1"
+				date > 5000.1.1
 			}
 		}
 	}
-
 	#Sniper Teams
 	tech_deer_army3 = {
-
 		category_recon = {
 			soft_attack = 0.5
 			max_organisation = 20
 		}
-
 		path = {
 			leads_to_tech = tech_deer_army_def
 			research_cost_coeff = 1
@@ -984,145 +923,106 @@ technologies = {
 			leads_to_tech = tech_deer_army_atk
 			research_cost_coeff = 1
 		}
-
 		research_cost = 1.25
-		start_year = 1007
+		start_year = @step_2
 		folder = {
 			name = deer_folder
-			position = { x = 8 y = @1013 }
+			position = {
+				x = 8
+				y = 9
+			}
 		}
-
 		categories = {
 			infantry_tech
 			race_tech
 			deer_army_tech
 		}
-
 		ai_will_do = {
-			factor = 3
-
-			modifier = {
-				factor = 2
-				original_tag = OLE
-			}
-
+			base = 3
 			modifier = {
 				factor = 1.5
-				date > "1014.1.1"
+				date > @step_3.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > "1015.1.1"
+				date > @step_4.1.1
 			}
 		}
 	}
-
 	#Motti
 	tech_deer_army_def = {
-
 		enable_tactic = tactic_motti_tactics
 		resistance_growth_on_our_occupied_states = 0.15
-
 		path = {
 			leads_to_tech = tech_deer_army_def2
 			research_cost_coeff = 1
 		}
-
-		xor = { tech_deer_army_atk }
-
+		XOR = {
+			tech_deer_army_atk
+		}
 		research_cost = 1
-		start_year = 1007
+		start_year = @step_4
 		folder = {
 			name = deer_folder
-			position = { x = 8 y = @1016 }
+			position = {
+				x = 7
+				y = 12
+			}
 		}
-
 		categories = {
 			land_doctrine
 			magical_tech
 			race_tech
 			deer_army_tech
 		}
-
 		ai_will_do = {
-			factor = 3
-
-			modifier = {
-				factor = 2
-				original_tag = OLE
-			}
-
-			modifier = {
-				factor = 0
-				original_tag = OLV
-			}
-
-			modifier = {
-				factor = 2
-				has_government = democratic
-			}
-
-			modifier = {
-				factor = 0.3
-				NOT = { has_country_flag = OLE_CHN_puppet }
-				has_government = fascism
-			}
-
+			base = 3
 			modifier = {
 				factor = 1.5
-				date > "1017.1.1"
+				date > @step_5.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > "1018.1.1"
+				date > @step_6.1.1
 			}
 		}
 	}
-
 	#Mastery of terrain
 	tech_deer_army_def2 = {
-
 		army_core_attack_factor = 0.1
 		army_core_defence_factor = 0.1
-
 		path = {
 			leads_to_tech = tech_deer_army_def3
 			research_cost_coeff = 1
 		}
-
 		research_cost = 1.25
-		start_year = 1007
+		start_year = @step_5
 		folder = {
 			name = deer_folder
-			position = { x = 8 y = @1018 }
+			position = { 
+				x = 7 
+				y = 15 
+			}
 		}
-
 		categories = {
 			magical_tech
 			race_tech
 			deer_army_tech
 		}
-
 		ai_will_do = {
-			factor = 3
-
+			base = 3
 			modifier = {
 				factor = 1.5
-				date > "1019.1.1"
+				date > @step_6.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > "1020.1.1"
+				date > @step_7.1.1
 			}
 		}
 	}
-
 	#Mountain training
 	tech_deer_army_def3 = {
-
 		category_all_infantry = {
 			hills = {
 				attack = 0.05
@@ -1134,106 +1034,75 @@ technologies = {
 				movement = 0.07
 			}
 		}
-
 		on_research_complete = {
 			custom_effect_tooltip = tech_deer_army_def3_tp
 		}
-
 		research_cost = 1.25
-		start_year = 1007
+		start_year = @step_6
 		folder = {
 			name = deer_folder
-			position = { x = 8 y = @1022 }
+			position = {
+				x = 7
+				y = 18 
+			}
 		}
-
 		categories = {
 			infantry_tech
 			race_tech
 			deer_army_tech
 		}
-
 		ai_will_do = {
-			factor = 3
-
+			base = 3
 			modifier = {
 				factor = 1.5
-				date > "1023.1.1"
+				date > @step_7.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > "1024.1.1"
+				date > @step_8.1.1
 			}
 		}
 	}
-
 	#Spirits of the Ancestors
 	tech_deer_army_atk = {
-
 		enable_tactic = tactic_banzai_charge
 		attrition = -0.05
-
 		path = {
 			leads_to_tech = tech_deer_army_atk2
 			research_cost_coeff = 1
 		}
-
-		xor = { tech_deer_army_def }
-
+		XOR = { 
+			tech_deer_army_def 
+		}
 		research_cost = 1
-		start_year = 1007
+		start_year = @step_4
 		folder = {
 			name = deer_folder
-			position = { x = 10 y = @1016 }
+			position = { 
+				x = 9 
+				y = 12 
+			}
 		}
-
 		categories = {
 			land_doctrine
 			magical_tech
 			race_tech
 			deer_army_tech
 		}
-
 		ai_will_do = {
-			factor = 3
-
-			modifier = {
-				factor = 0.3
-				has_government = democratic
-				NOT = { original_tag = OLV }
-			}
-
-			modifier = {
-				factor = 2
-				original_tag = OLE
-			}
-
-			modifier = {
-				factor = 4
-				original_tag = OLV
-			}
-
-			modifier = {
-				factor = 2
-				NOT = { has_country_flag = OLE_CHN_puppet }
-				has_government = fascism
-			}
-
+			base = 3
 			modifier = {
 				factor = 1.5
-				date > "1017.1.1"
+				date > @step_5.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > "1018.1.1"
+				date > @step_6.1.1
 			}
 		}
 	}
-
 	#Spirits of the Woods
 	tech_deer_army_atk2 = {
-
 		category_all_infantry = {
 			forest = {
 				attack = 0.10
@@ -1241,87 +1110,74 @@ technologies = {
 				movement = 0.05
 			}
 		}
-
 		path = {
 			leads_to_tech = tech_deer_army_atk3
 			research_cost_coeff = 1
 		}
-
 		on_research_complete = {
 			custom_effect_tooltip = tech_deer_army_atk2_tp
 		}
-
 		research_cost = 1.25
-		start_year = 1007
+		start_year = @step_5
 		folder = {
 			name = deer_folder
-			position = { x = 10 y = @1018 }
+			position = { 
+				x = 9
+				y = 15 
+			}
 		}
-
 		categories = {
 			magical_tech
 			race_tech
 			deer_army_tech
 		}
-
 		ai_will_do = {
-			factor = 3
-
+			base = 3
 			modifier = {
 				factor = 1.5
-				date > "1019.1.1"
+				date > @step_6.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > "1020.1.1"
+				date > @step_7.1.1
 			}
 		}
 	}
-
 	#Raiding parties
 	tech_deer_army_atk3 = {
-
 		marine = {
 			soft_attack = 0.05
 			maximum_speed = 0.1
 			breakthrough = 0.1
 		}
-
 		recon = {
 			maximum_speed = 0.1
 		}
-
 		special_forces_no_supply_grace = 48
-
 		research_cost = 1.25
-		start_year = 1007
+		start_year = @step_6
 		folder = {
 			name = deer_folder
-			position = { x = 10 y = @1022 }
+			position = {
+				x = 9
+				y = 18
+			}
 		}
-
 		categories = {
 			marine_tech
 			race_tech
 			deer_army_tech
 		}
-
 		ai_will_do = {
-			factor = 3
-
+			base = 3
 			modifier = {
 				factor = 1.5
-				date > "1023.1.1"
+				date > @step_7.1.1
 			}
-
 			modifier = {
 				factor = 2
-				date > "1024.1.1"
+				date > @step_8.1.1
 			}
 		}
 	}
-
 }
-
-#####-----------------------------------------------------------> End
