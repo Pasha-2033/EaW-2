@@ -1,0 +1,33 @@
+CB1_raid{              
+    CB1_raid_on_LKI{
+        icon = generic_army_support
+        available = { 
+        }
+        visible = { 
+        }
+        days_remove = 30
+        days_re_enable = 120
+        remove_effect = {
+            start_border_war = {
+                change_state_after_war = no
+                attacker = {
+                    state = 301
+                    num_provinces = 1587
+                    on_win = raid.1
+                    on_lose = raid.2
+                    on_cancel = raid.2    #draw
+                    modifier = 0              #Default
+                    dig_in_factor = 0         #Default
+                    terrain_factor = 1        #Default 
+                }	
+                defender = {
+                    state = 302
+                    num_provinces = 4756
+                    on_win = raid.1
+                    on_lose = raid.2
+                    on_cancel = raid.2
+                }
+            }
+        }		
+    }    
+}
