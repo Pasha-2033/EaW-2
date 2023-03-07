@@ -1,0 +1,41 @@
+add_namespace = raid
+
+country_event = {   #победа в рейде
+	id = raid.1
+	is_triggered_only = yes
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event raid_win.1"
+	}
+	
+	title = raid.1.t
+	desc = raid.1.d
+	picture = GFX_event_swarm
+	
+	option = {
+		
+		name = raid_win.1.a
+		add_war_support = 0.03
+		add_stability = 0.03
+
+	}
+
+}
+country_event = {     #поражение в рейде
+	id = raid.2
+	is_triggered_only = yes
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event raid_lose.1"
+	}
+	
+	title = raid.2.t
+	desc = raid.2.d
+	picture = GFX_event_swarm
+	
+	option = {		
+		name = raid.2.a
+		add_war_support = -0.03
+		add_stability = -0.03
+
+	}
+
+}
