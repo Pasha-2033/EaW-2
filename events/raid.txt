@@ -35,7 +35,62 @@ country_event = {     #поражение в рейде
 		name = raid.2.a
 		add_war_support = -0.03
 		add_stability = -0.03
-
 	}
-
+}
+country_event = {     #eq for CB0
+	id = raid.3
+	is_triggered_only = yes
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event raid_lose.1"
+	}
+	
+	title = raid.3.t
+	desc = raid.3.d
+	picture = GFX_event_swarm
+	
+	option = {		
+		name = raid.3.a
+		send_equipment = {
+    	equipment = infantry_equipment
+    	amount = 1000
+    	target = CB0
+}
+	}
+}
+country_event = {     #eq for CB1
+	id = raid.4
+	is_triggered_only = yes
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event raid_lose.1"
+	}
+	
+	title = raid.4.t
+	desc = raid.4.d
+	picture = GFX_event_swarm
+	
+	option = {		
+		name = raid.4.a
+		equipment = infantry_equipment
+    	amount = 1000
+    	target = CB1
+		
+	}
+}
+country_event = {     #eq for CB2
+	id = raid.5
+	is_triggered_only = yes
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event raid_lose.1"
+	}
+	
+	title = raid.5.t
+	desc = raid.5.d
+	picture = GFX_event_swarm
+	
+	option = {		
+		name = raid.5.a
+		equipment = infantry_equipment
+    	amount = 1000
+    	target = CB1		
+	}
 }
