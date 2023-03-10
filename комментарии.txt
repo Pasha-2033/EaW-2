@@ -41,8 +41,11 @@ enable_building для ЖД
 
 сделать GFX_barrad_folder_icon и GFX_barrad_folder_tab в eaw_technologies, иначе в меню intel ledger принимает разные иконки
 
+перенести gfx из etat в технологии, сделать более четкую логику распределения файлов по технологиям
+
 !!!!!completely replaces removal_cost = -1 - use can_be_fired 
 !!!!!заменить enable_building в технологии для дорог - это ломает карту инфраструктуры
+!!!!!mark_focus_tree_layout_dirty = yes надо переместить из фокуса в hidden event, иначе будет неверная перезагрузка древа
 
 >>> оптимизация и читабельность:
 можно повысить читабельность (может даже оптимизацию, но это под вопросом) в subject_control_effects.txt, если 

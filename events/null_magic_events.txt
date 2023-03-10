@@ -7,55 +7,49 @@ country_event = {
 		log = "[GetDateText]: [Root.GetName]: event null_magic_event.1"
 		#transfer state, for ECR creation (it has no states from begining)
 		#also make them core to ECR, not to ELN
+		#for optimisation added if-block (this event is major)
 		#add Sombra later
 		hidden_effect = {
 			ECR = {
-				transfer_state = 344
-				transfer_state = 345
-				transfer_state = 53
-				transfer_state = 145
-				transfer_state = 151
-				transfer_state = 150
-				transfer_state = 141
-				transfer_state = 149
-				transfer_state = 144
-				transfer_state = 148
-				transfer_state = 147
-				transfer_state = 146
-				transfer_state = 142
-				transfer_state = 324
-				transfer_state = 343
-				transfer_state = 143
-				transfer_state = 318
-				transfer_state = 139
-				transfer_state = 77
-				transfer_state = 140
-				transfer_state = 142
-				transfer_state = 98
-				transfer_state = 236
-				transfer_state = 339
-				transfer_state = 152
-				every_controlled_state = {
-					set_demilitarized_zone = no
-					add_core_of = ECR
-					remove_core_of = ELN
+				if = {
+					limit = {
+						exists = no
+					}
+					transfer_state = 344
+					transfer_state = 345
+					transfer_state = 53
+					transfer_state = 145
+					transfer_state = 151
+					transfer_state = 150
+					transfer_state = 141
+					transfer_state = 149
+					transfer_state = 144
+					transfer_state = 148
+					transfer_state = 147
+					transfer_state = 146
+					transfer_state = 142
+					transfer_state = 324
+					transfer_state = 343
+					transfer_state = 143
+					transfer_state = 318
+					transfer_state = 139
+					transfer_state = 77
+					transfer_state = 140
+					transfer_state = 142
+					transfer_state = 98
+					transfer_state = 236
+					transfer_state = 339
+					transfer_state = 152
+					every_controlled_state = {
+						set_demilitarized_zone = no
+						add_core_of = ECR
+						remove_core_of = ELN
+					}
 				}
 			}
 		}
 	}
-	title = {
-		text = null_magic_event.1.t_eln
-		trigger = {
-			original_tag = ELN
-		}
-	}
 	title = null_magic_event.1.t
-	desc = {
-		text = null_magic_event.1.d_eln
-		trigger = {
-			original_tag = ELN
-		}
-	}
 	desc = null_magic_event.1.d
 	picture = GFX_event_swarm
 	major = yes
@@ -63,20 +57,36 @@ country_event = {
 	option = {
 		name = null_magic_event.1.a
 		ai_chance = {
-			factor = 5
+			base = 100
 		}
 	}
 	option = {
 		name = null_magic_event.1.b
 		ai_chance = {
-			factor = 5
+			base = 0
 		}
 		trigger = {
-			tag = ELN
 			is_ai = no
 		}
 		ECR = {
-			change_tag_from = ROOT
+			if = {
+				limit = {
+					has_game_rule = {
+						rule = plenty_tag_jump
+						option = yes
+					}
+				}
+				change_tag_from = ROOT
+			}
+			else_if = {
+				limit = {
+					is_ai = yes
+				}
+				change_tag_from = ROOT
+			}
+			else = {
+				custom_effect_tooltop = has_RULE_OPTION_BLOCK_PLENTY_JUMPS_DESC
+			}
 		}
 	}
 }

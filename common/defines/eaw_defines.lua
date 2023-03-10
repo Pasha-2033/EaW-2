@@ -1,5 +1,5 @@
 NDefines.NGame.START_DATE = "982.1.1.12"
-NDefines.NGame.END_DATE = "1030.1.1.1"
+NDefines.NGame.END_DATE = "1060.1.1.1"
 NDefines.NGame.HANDS_OFF_START_TAG = "ELN"
 
 NDefines.NDiplomacy.TENSION_TIME_SCALE_START_DATE = "982.1.1.12"
