@@ -4,7 +4,8 @@ CB0_raid{
         cost = 30
         available = { 
         }
-        visible = { 
+        visible = {
+            LIK{ exists = yes} 
         }
         days_remove = 30
         days_re_enable = 120
@@ -36,7 +37,8 @@ CB0_raid{
         cost = 60
         available = { 
         }
-        visible = { 
+        visible = {
+            LIK{ exists = yes} 
         }
         days_remove = 30
         days_re_enable = 120
