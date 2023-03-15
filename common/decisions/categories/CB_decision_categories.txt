@@ -1,0 +1,19 @@
+coalited_barons_decisions_against_lik = {                                  
+	icon = griffon
+	allowed = {
+		OR = {
+			original_tag = CB0
+			original_tag = CB1
+			original_tag = CB2
+		}
+	}
+	visible = {
+		LIK = {
+			exists = yes
+		}
+	}
+	visible_when_empty = yes
+	priority = {
+		base = 120
+	}
+}

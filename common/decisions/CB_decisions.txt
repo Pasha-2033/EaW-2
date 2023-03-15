@@ -1,0 +1,75 @@
+coalited_barons_decisions_against_lik = {              
+    cb_raid_for_artillery_eq = {
+        icon = generic_army_support
+        cost = 10
+        available = {
+            NOT = {
+                OR = {
+                    CB0 = {
+                        has_decision = cb_raid_for_artillery_eq
+                        #add other desicions - only one raid, only one type
+                    }
+                    CB1 = {
+                        has_decision = cb_raid_for_artillery_eq
+                        #add other desicions - only one raid, only one type
+                    }
+                    CB1 = {
+                        has_decision = cb_raid_for_artillery_eq
+                        #add other desicions - only one raid, only one type
+                    }
+                }
+            }
+        }
+        visible = {
+            LIK = { 
+                check_variable = {
+                    num_equipment@artillery_equipment > 0
+                }
+            } 
+        }
+        state_target = yes
+        target_array = LIK.controlled_states
+        target_trigger = {
+            FROM = {
+                any_neighbor_state = {
+                    is_owned_by = ROOT
+                }
+            }
+        }
+        on_map_mode = map_and_decisions_view
+        days_remove = 7
+        days_re_enable = 30
+        remove_effect = {
+            random_owned_controlled_state = {
+                limit = {
+                    any_neighbor_state = {
+                        is_owned_by = LIK 
+                    }
+                }
+                set_temp_variable = {
+                    PREV.root_state = THIS
+                }
+            }
+            start_border_war = {
+                change_state_after_war = no
+                attacker = {
+                    state = root_state
+                    num_provinces = 3
+                    on_win = cb_raid_on_lik.1
+                    on_lose = cb_raid_on_lik.2
+                    on_cancel = cb_raid_on_lik.2    #draw
+                    modifier = 0              #Default
+                    dig_in_factor = 0         #Default
+                    terrain_factor = 1        #Default 
+                }	
+                defender = {
+                    state = FROM
+                    num_provinces = 3
+                    on_win = cb_raid_on_lik_reversed.2
+                    on_lose = cb_raid_on_lik_reversed.1
+                    on_cancel = cb_raid_on_lik_reversed.2
+                }
+            }
+        }		
+    }   
+}

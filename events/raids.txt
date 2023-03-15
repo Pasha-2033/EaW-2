@@ -1,0 +1,58 @@
+add_namespace = cb_raid_on_lik
+add_namespace = cb_raid_on_lik_reversed
+country_event = {	#colatited_baron won, show to baron
+	id = cb_raid_on_lik.1
+	is_triggered_only = yes
+	title = cb_raid_on_lik.1.t
+	desc = cb_raid_on_lik.1.d
+	picture = GFX_event_swarm
+	option = {
+		name = cb_raid_on_lik.1.a
+		LIK = {
+			send_equipment = {
+				equipment = artillery_equipment
+				amount = 100
+				target = ROOT
+			}
+		}
+	}
+}
+country_event = {	#colatited_baron didn`t win, show to baron
+	id = cb_raid_on_lik.2
+	is_triggered_only = yes
+	title = cb_raid_on_lik.2.t
+	desc = cb_raid_on_lik.2.d
+	picture = GFX_event_swarm
+	option = {		
+		name = cb_raid_on_lik.2.a
+		add_war_support = -0.03
+	}
+}
+country_event = {	#colatited_baron won, show to liktida
+	id = cb_raid_on_lik_reversed.1
+	is_triggered_only = yes
+	title = cb_raid_on_lik_reversed.1.t
+	desc = cb_raid_on_lik_reversed.1.d
+	picture = GFX_event_swarm
+	option = {		
+		name = cb_raid_on_lik_reversed.1.a
+		effect_tooltip = {
+			send_equipment = {
+				equipment = artillery_equipment
+				amount = 100
+				target = FROM
+			}
+		}
+	}
+}
+country_event = {	#colatited_baron didn`t win, show to liktida
+	id = cb_raid_on_lik_reversed.2
+	is_triggered_only = yes
+	title = cb_raid_on_lik_reversed.2.t
+	desc = cb_raid_on_lik_reversed.2.d
+	picture = GFX_event_swarm
+	option = {
+		name = cb_raid_on_lik_reversed.2.a
+		add_stability = 0.03
+	}
+}
