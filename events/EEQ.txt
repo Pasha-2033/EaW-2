@@ -8,7 +8,7 @@ country_event = {
 	}
 	title = eequestria.1.t
 	desc = eequestria.1.d
-	#picture = GFX_event_swarm #(to do) change
+	picture = GFX_event_swarm #(to do) change
 	is_triggered_only = yes
 	option = {
 		#yes
@@ -20,6 +20,23 @@ country_event = {
 	option = {
 		#no
 		name = eequestria.1.b
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {
+	#friendship is not lost
+	id = eequestria.2
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event eequestria.2"
+	}
+	title = eequestria.2.t
+	desc = eequestria.2.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		name = eequestria.2.a
 		ai_chance = {
 			factor = 100
 		}

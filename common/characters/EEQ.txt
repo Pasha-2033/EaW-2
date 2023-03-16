@@ -1,0 +1,41 @@
+characters = {
+	EEQ_celestia = {
+		name = EEQ_celestia
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_CELESTIA_DESC"
+			ideology = harmonic_magocracy
+			traits = {}
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	EEQ_prince_blueblood = {
+		name = EEQ_prince_blueblood
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown"
+				small = "" #to do
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_PRINCE_BLUEBLOOD_DESC"
+			ideology = nazism
+			traits = {}
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = EEQ_prince_blueblood
+			traits = {}
+			allowed = {
+				original_tag = EEQ
+			}
+		}
+	}
+}

@@ -31,41 +31,54 @@ guiTypes = {
 
 	containerWindowType = {
 		name = "ledger_resource_entry"
-		position = { x=0 y=0 }
-		size = { width=108 height= 27 }
-		
+		position = {
+			x = 10 
+			y = 7 
+		}
+		size = { 
+			width = 140 
+			height = 30 
+		}
 		iconType = {
 			name = "resource"
-			position = { x=53 y=0 }	
+			position = { 
+				x = 20 
+				y = 0 
+			}
 			spriteType = "GFX_resources_strip"
 		}
-		
 		instantTextboxType = {
 			name = "amount"
-			position = { x = 82 y = 14 }
+			position = { 
+				x = 80 
+				y = 6 
+			}
 			font = "hoi_18mbs"
 			maxWidth = 60
 			maxHeight = 18
 			format = left
 			text = "123-421"
 		}
-		
 		iconType = {
 			name = "chart"
-			position = { x = 66 y = 26 }
+			position = { 
+				x = 63 
+				y = 3 
+			}
 			spriteType = "GFX_trade_resource_chart"
 		}
-		
 		iconType = {
 			name = "mini_piechart_overlay"
 			spriteType = "GFX_mini_piechart_overlay"
-			position = { x = 54 y = 24 }
+			position = { x = 51 y = 1 }
 			alwaystransparent = yes			
 		}
-		
 		iconType = {
 			name = "trade_icon"
-			position = { x = 70 y = 35 }
+			position = { 
+				x = 0 
+				y = 6 
+			}
 			spriteType = "GFX_traded_factories_icon"
 			scale = 0.45
 		}
@@ -451,16 +464,18 @@ guiTypes = {
 
 				containerWindowType = {
 					name = "resource_container"
-					position = { x = 20 y = 15 }
-					size = { width = 500 height = 69 }
+					position = { x = 25 y = 13 }
+					size = { width = 490 height = 69 }
 					horizontalScrollbar = "bottom_horizontal_slider"
 					clipping = yes
 					drag_scroll = { 
 						left 
 						middle 
 					}
-					background_margin = { 
-						bottom = 10 
+					background_margin = {
+						left = -5
+						right = -5
+						bottom = 24 
 					}
 					background = {
 						name = "Background"
@@ -470,15 +485,15 @@ guiTypes = {
 						name = "resource_entries"
 						position = { 
 							x = -47 
-							y = 5 
+							y = 2 
 						}
 						size = { 
-							width = 1003 
+							width = 1140
 							height = 60 
 						}
 						format = "UPPER_LEFT"
 						slotsize = { 
-							width = 121 
+							width = 140 
 							height = 30 
 						}
 						max_slots_vertical = 8

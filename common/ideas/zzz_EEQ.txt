@@ -3,10 +3,13 @@ ideas = {
 		EEQ_unicorn_superiority = {
 			picture = EEQ_unicorn_superiority			#to do (change)
 			allowed = {
-				always = no
+				original_tag = EEQ
 			}
 			allowed_civil_war = {
-				always = yes
+				OR = {
+					has_government = fascism
+					has_government = militarism
+				}
 			}
 			#cancel = {
 			#	NOT = {
@@ -27,7 +30,7 @@ ideas = {
 		EEQ_tribal_crisis = {
 			picture = EEQ_tribal_crisis			#to do (change)
 			allowed = {
-				always = no
+				original_tag = EEQ
 			}
 			allowed_civil_war = {
 				always = yes

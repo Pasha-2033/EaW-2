@@ -97,16 +97,6 @@ is_EQS_SOL = {
 	}
 }
 
-has_DB_ruler = {
-	custom_trigger_tooltip = {
-		tooltip = DB_is_in_lead_tt
-		EQS_princess_celestia = {
-			has_character_flag = EQS_celestia_is_db 
-		}
-		has_country_leader = { character = EQS_princess_celestia ruling_only = yes }
-	}
-}
-
 is_original_EQS = {
 	custom_trigger_tooltip = {
 		tooltip = is_original_EQS_tp
