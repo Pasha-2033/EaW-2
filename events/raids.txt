@@ -1,5 +1,8 @@
 add_namespace = cb_raid_on_lik
 add_namespace = cb_raid_on_lik_reversed
+
+#artillery_equipment
+
 country_event = {	#colatited_baron won, show to baron
 	id = cb_raid_on_lik.1
 	is_triggered_only = yes
@@ -53,6 +56,172 @@ country_event = {	#colatited_baron didn`t win, show to liktida
 	picture = GFX_event_swarm
 	option = {
 		name = cb_raid_on_lik_reversed.2.a
+		add_stability = 0.03
+	}
+}
+
+#support_equipment
+
+country_event = {	#colatited_baron won, show to baron
+	id = cb_raid_on_lik.3
+	is_triggered_only = yes
+	title = cb_raid_on_lik.3.t
+	desc = cb_raid_on_lik.3.d
+	picture = GFX_event_swarm
+	option = {
+		name = cb_raid_on_lik.3.a
+		LIK = {
+			send_equipment = {
+				equipment = support_equipment
+				amount = 100
+				target = ROOT
+			}
+		}
+	}
+}
+country_event = {	#colatited_baron didn`t win, show to baron
+	id = cb_raid_on_lik.4
+	is_triggered_only = yes
+	title = cb_raid_on_lik.4.t
+	desc = cb_raid_on_lik.4.d
+	picture = GFX_event_swarm
+	option = {		
+		name = cb_raid_on_lik.4.a
+		add_war_support = -0.03
+	}
+}
+country_event = {	#colatited_baron won, show to liktida
+	id = cb_raid_on_lik_reversed.3
+	is_triggered_only = yes
+	title = cb_raid_on_lik_reversed.3.t
+	desc = cb_raid_on_lik_reversed.3.d
+	picture = GFX_event_swarm
+	option = {		
+		name = cb_raid_on_lik_reversed.3.a
+		effect_tooltip = {
+			send_equipment = {
+				equipment = support_equipment
+				amount = 100
+				target = FROM
+			}
+		}
+	}
+}
+country_event = {	#colatited_baron didn`t win, show to liktida
+	id = cb_raid_on_lik_reversed.4
+	is_triggered_only = yes
+	title = cb_raid_on_lik_reversed.4.t
+	desc = cb_raid_on_lik_reversed.4.d
+	picture = GFX_event_swarm
+	option = {
+		name = cb_raid_on_lik_reversed.4.a
+		add_stability = 0.03
+	}
+}
+
+#infantry_equipment
+
+country_event = {	#colatited_baron won, show to baron
+	id = cb_raid_on_lik.5
+	is_triggered_only = yes
+	title = cb_raid_on_lik.5.t
+	desc = cb_raid_on_lik.5.d
+	picture = GFX_event_swarm
+	option = {
+		name = cb_raid_on_lik.5.a
+		LIK = {
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 1000
+				target = ROOT
+			}
+		}
+	}
+}
+country_event = {	#colatited_baron didn`t win, show to baron
+	id = cb_raid_on_lik.6
+	is_triggered_only = yes
+	title = cb_raid_on_lik.6.t
+	desc = cb_raid_on_lik.6.d
+	picture = GFX_event_swarm
+	option = {		
+		name = cb_raid_on_lik.6.a
+		add_war_support = -0.03
+	}
+}
+country_event = {	#colatited_baron won, show to liktida
+	id = cb_raid_on_lik_reversed.5
+	is_triggered_only = yes
+	title = cb_raid_on_lik_reversed.5.t
+	desc = cb_raid_on_lik_reversed.5.d
+	picture = GFX_event_swarm
+	option = {		
+		name = cb_raid_on_lik_reversed.5.a
+		effect_tooltip = {
+			send_equipment = {
+				equipment = infantry_equipment
+				amount = 1000
+				target = FROM
+			}
+		}
+	}
+}
+country_event = {	#colatited_baron didn`t win, show to liktida
+	id = cb_raid_on_lik_reversed.6
+	is_triggered_only = yes
+	title = cb_raid_on_lik_reversed.6.t
+	desc = cb_raid_on_lik_reversed.6.d
+	picture = GFX_event_swarm
+	option = {
+		name = cb_raid_on_lik_reversed.6.a
+		add_stability = 0.03
+	}
+}
+
+#stability
+country_event = {	#colatited_baron won, show to baron
+	id = cb_raid_on_lik.7
+	is_triggered_only = yes
+	title = cb_raid_on_lik.7.t
+	desc = cb_raid_on_lik.7.d
+	picture = GFX_event_swarm
+	option = {
+		name = cb_raid_on_lik.7.a
+		add_war_support = 0.02
+		add_stability = 0.02		
+	}
+}
+country_event = {	#colatited_baron didn`t win, show to baron
+	id = cb_raid_on_lik.8
+	is_triggered_only = yes
+	title = cb_raid_on_lik.8.t
+	desc = cb_raid_on_lik.8.d
+	picture = GFX_event_swarm
+	option = {		
+		name = cb_raid_on_lik.8.a
+		add_war_support = -0.03
+	}
+}
+country_event = {	#colatited_baron won, show to liktida
+	id = cb_raid_on_lik_reversed.7
+	is_triggered_only = yes
+	title = cb_raid_on_lik_reversed.7.t
+	desc = cb_raid_on_lik_reversed.7.d
+	picture = GFX_event_swarm
+	option = {		
+		name = cb_raid_on_lik_reversed.7.a
+		add_war_support = -0.02
+		add_stability = -0.02		
+	}
+}
+country_event = {	#colatited_baron didn`t win, show to liktida
+	id = cb_raid_on_lik_reversed.8
+	is_triggered_only = yes
+	title = cb_raid_on_lik_reversed.8.t
+	desc = cb_raid_on_lik_reversed.8.d
+	picture = GFX_event_swarm
+	option = {
+		name = cb_raid_on_lik_reversed.8.a
 		add_stability = 0.03
 	}
 }
