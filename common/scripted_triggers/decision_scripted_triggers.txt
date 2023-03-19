@@ -1,0 +1,31 @@
+cb_raid_on_lik_limit = {
+	OR = {
+		CB0 = {
+			OR = {
+				has_decision = cb_raid_for_artillery_equipment
+				has_decision = cb_raid_for_support_equipment
+				has_decision = cb_raid_for_infantry_equipment
+				has_decision = cb_raid_for_stability
+				has_decision = cb_raid_for_war_support
+			}
+		}
+		CB1 = {
+			OR = {
+				has_decision = cb_raid_for_artillery_equipment
+				has_decision = cb_raid_for_support_equipment
+				has_decision = cb_raid_for_infantry_equipment
+				has_decision = cb_raid_for_stability
+				has_decision = cb_raid_for_war_support
+			}
+		}
+		CB1 = {
+			OR = {
+				has_decision = cb_raid_for_artillery_equipment
+				has_decision = cb_raid_for_support_equipment
+				has_decision = cb_raid_for_infantry_equipment
+				has_decision = cb_raid_for_stability
+				has_decision = cb_raid_for_war_support
+			}
+		}
+	}
+}

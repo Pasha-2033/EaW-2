@@ -187,8 +187,7 @@ country_event = {	#colatited_baron won, show to baron
 	picture = GFX_event_swarm
 	option = {
 		name = cb_raid_on_lik.7.a
-		add_war_support = 0.02
-		add_stability = 0.02		
+		add_stability = 0.05		
 	}
 }
 country_event = {	#colatited_baron didn`t win, show to baron
@@ -210,8 +209,7 @@ country_event = {	#colatited_baron won, show to liktida
 	picture = GFX_event_swarm
 	option = {		
 		name = cb_raid_on_lik_reversed.7.a
-		add_war_support = -0.02
-		add_stability = -0.02		
+		add_stability = -0.05		
 	}
 }
 country_event = {	#colatited_baron didn`t win, show to liktida
@@ -222,6 +220,51 @@ country_event = {	#colatited_baron didn`t win, show to liktida
 	picture = GFX_event_swarm
 	option = {
 		name = cb_raid_on_lik_reversed.8.a
-		add_stability = 0.03
+		add_stability = 0.05
+	}
+}
+#war support
+country_event = {	#colatited_baron won, show to baron
+	id = cb_raid_on_lik.9
+	is_triggered_only = yes
+	title = cb_raid_on_lik.9.t
+	desc = cb_raid_on_lik.9.d
+	picture = GFX_event_swarm
+	option = {
+		name = cb_raid_on_lik.9.a
+		add_war_support = 0.04	
+	}
+}
+country_event = {	#colatited_baron didn`t win, show to baron
+	id = cb_raid_on_lik.10
+	is_triggered_only = yes
+	title = cb_raid_on_lik.10.t
+	desc = cb_raid_on_lik.10.d
+	picture = GFX_event_swarm
+	option = {		
+		name = cb_raid_on_lik.10.a
+		add_war_support = -0.04
+	}
+}
+country_event = {	#colatited_baron won, show to liktida
+	id = cb_raid_on_lik_reversed.9
+	is_triggered_only = yes
+	title = cb_raid_on_lik_reversed.9.t
+	desc = cb_raid_on_lik_reversed.9.d
+	picture = GFX_event_swarm
+	option = {		
+		name = cb_raid_on_lik_reversed.9.a
+		add_stability = -0.04		
+	}
+}
+country_event = {	#colatited_baron didn`t win, show to liktida
+	id = cb_raid_on_lik_reversed.10
+	is_triggered_only = yes
+	title = cb_raid_on_lik_reversed.10.t
+	desc = cb_raid_on_lik_reversed.10.d
+	picture = GFX_event_swarm
+	option = {
+		name = cb_raid_on_lik_reversed.10.a
+		add_stability = 0.04
 	}
 }
