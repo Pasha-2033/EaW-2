@@ -32,7 +32,36 @@ characters = {
 		advisor = {
 			slot = political_advisor
 			idea_token = EEQ_prince_blueblood
-			traits = {}
+			traits = {
+				unicorn_superirity
+			}
+			allowed = {
+				original_tag = EEQ
+			}
+			can_be_fired = no
+		}
+	}
+	EEQ_twilight = {
+		name = EEQ_twilight
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown"
+				small = "" #to do
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = EEQ_twilight
+			traits = {
+				HE_magic
+			}
+			available = {
+				has_completed_focus = shared_focus_eeq_twilight_initiative
+				has_government = harmony
+			}
+			visible = {
+				has_completed_focus = shared_focus_eeq_twilight_initiative
+			}
 			allowed = {
 				original_tag = EEQ
 			}
