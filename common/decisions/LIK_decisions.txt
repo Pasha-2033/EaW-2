@@ -1,0 +1,83 @@
+defense_lik = {                                  
+    desicions_defense_1 = {
+        available = {
+            NOT = {
+                LIK = {
+                    has_idea = LIK_speed_bunker_factor                    
+                }
+            }
+        }
+        fire_only_once = yes
+        icon = generic_army_support
+        cost = 50
+        complete_effect = {
+            add_timed_idea = {
+				idea = LIK_speed_bunker_factor
+				days = 365
+			}
+        }
+    }
+    desicions_defense_2 = {
+        available = {
+            NOT = {
+                LIK = {
+                    has_idea = LIK_speed_bunker_factor                    
+                }
+            }
+        }
+        fire_only_once = yes
+        icon = generic_army_support
+        complete_effect = {
+            add_timed_idea = {
+				idea = LIK_speed_bunker_factor
+				days = 365                
+			}          
+        }
+        modifier = {
+            political_power_gain = -0.6
+        }
+        days_remove = 100        
+    }
+    desicions_defense_3 = {
+        available = {
+            NOT = {
+                LIK = {
+                    has_idea = LIK_speed_bunker_factor                    
+                }
+            }
+        }
+        #fire_only_once = yes
+        icon = generic_army_support
+        complete_effect = {
+            add_timed_idea = {
+				idea = LIK_speed_bunker_factor
+				days = 365                
+			}           
+        }
+        modifier = {
+            stability_weekly = -0.01
+        }
+        days_remove = 100          
+    }
+    desicions_defense_4 = {
+        available = {
+            NOT = {
+                LIK = {
+                    has_idea = LIK_speed_bunker_factor                    
+                }
+            }
+        }
+        #fire_only_once = yes
+        icon = generic_army_support
+        complete_effect = {
+            add_timed_idea = {
+				idea = LIK_speed_bunker_factor
+				days = 365               
+			}
+        }
+        modifier = {
+            consumer_goods_factor = 0.05
+        }
+        days_remove = 100         
+    }
+}
