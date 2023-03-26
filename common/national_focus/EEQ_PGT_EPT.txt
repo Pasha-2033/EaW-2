@@ -34,10 +34,18 @@ focus_tree = {
 			add_war_support = 0.05
 			add_stability = 0.05
 			add_manpower = 10000
-			hidden_effect = {
-				country_event = {
-					id = eeq_pgt_ept_anti_ice_event.1
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+			country_event = {
+				id = eeq_pgt_ept_anti_ice_event.1
+			}
+			if = {
+				limit = {
+					original_tag = EEQ
 				}
+				add_political_power = 50
 			}
 		}
 	}
@@ -65,12 +73,18 @@ focus_tree = {
 				idea = eeq_pgt_ept_desperate_situation_idea
 				days = 60
 			}
-			add_political_power = 50
+			if = {
+				limit = {
+					original_tag = EEQ
+				}
+				add_political_power = 50
+			}
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
 		}
 	}
-
-	
-
 	focus = {
 		id = eeq_pgt_ept_containment_techniques
 		icon = GFX_goal_generic_changeling
@@ -87,7 +101,13 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_containment_techniques"
-
+			if = {
+				limit = {
+					original_tag = EEQ
+				}
+				add_political_power = 50
+			}
+			add_equipment_if_too_low_against_ice = yes
 		}
 	}
 	focus = {
@@ -113,6 +133,13 @@ focus_tree = {
 				idea = wood_as_fuel_idea
 				days = 60
 			}
+			if = {
+				limit = {
+					original_tag = EEQ
+				}
+				add_political_power = 50
+			}
+			add_equipment_if_too_low_against_ice = yes
 		}
 	}
 	focus = {
@@ -138,6 +165,13 @@ focus_tree = {
 				idea = coal_as_fuel_idea
 				days = 60
 			}
+			if = {
+				limit = {
+					original_tag = EEQ
+				}
+				add_political_power = 50
+			}
+			add_equipment_if_too_low_against_ice = yes
 		}
 	}
 	focus = {
@@ -175,6 +209,13 @@ focus_tree = {
 					days = 90
 				}
 			}
+			if = {
+				limit = {
+					original_tag = EEQ
+				}
+				add_political_power = 50
+			}
+			add_equipment_if_too_low_against_ice = yes
 		}
 	}
 	focus = {
@@ -212,6 +253,13 @@ focus_tree = {
 					days = 90
 				}
 			}
+			if = {
+				limit = {
+					original_tag = EEQ
+				}
+				add_political_power = 50
+			}
+			add_equipment_if_too_low_against_ice = yes
 		}
 	}
 	focus = {
@@ -232,11 +280,15 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_heat_castle"
 			add_ideas = heat_castle_idea
+			if = {
+				limit = {
+					original_tag = EEQ
+				}
+				add_political_power = 50
+			}
+			add_equipment_if_too_low_against_ice = yes
 		}
 	}
-
-
-
 	focus = {
 		id = eeq_pgt_ept_defence_strategy
 		icon = GFX_goal_generic_changeling
@@ -254,6 +306,13 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_defence_strategy"
 			add_ideas = anti_ICE_defence
+			if = {
+				limit = {
+					original_tag = EEQ
+				}
+				add_political_power = 50
+			}
+			add_equipment_if_too_low_against_ice = yes
 		}
 	}
 	focus = {
@@ -277,6 +336,13 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_mobilise_civilian"
 			add_manpower = 45000
 			add_stability = -0.15
+			if = {
+				limit = {
+					original_tag = EEQ
+				}
+				add_political_power = 50
+			}
+			add_equipment_if_too_low_against_ice = yes
 		}
 	}
 	focus = {
@@ -318,6 +384,17 @@ focus_tree = {
 			}
 			add_stability = -0.1
 			add_war_support = -0.1
+			add_popularity = {
+				ideology = militarism
+				popularity = 0.15
+			}
+			if = {
+				limit = {
+					original_tag = EEQ
+				}
+				add_political_power = 50
+			}
+			add_equipment_if_too_low_against_ice = yes
 		}
 	}
 	focus = {
@@ -348,6 +425,13 @@ focus_tree = {
 				idea = showels_idea
 				days = 30
 			}
+			if = {
+				limit = {
+					original_tag = EEQ
+				}
+				add_political_power = 50
+			}
+			add_equipment_if_too_low_against_ice = yes
 		}
 	}
 	focus = {
@@ -378,11 +462,15 @@ focus_tree = {
 				idea = showels_idea
 				days = 30
 			}
+			if = {
+				limit = {
+					original_tag = EEQ
+				}
+				add_political_power = 50
+			}
+			add_equipment_if_too_low_against_ice = yes
 		}
 	}
-
-
-
 	focus = {
 		id = eeq_pgt_ept_call_for_help
 		icon = GFX_goal_generic_changeling
@@ -399,6 +487,20 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_call_for_help"
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 1000
+			}
+			add_equipment_to_stockpile = {
+				type = support_equipment
+				amount = 250
+			}
+			if = {
+				limit = {
+					original_tag = EEQ
+				}
+				add_political_power = 50
+			}
 		}
 	}
 	focus = {
@@ -418,6 +520,13 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_need_for_landlease"
 			custom_effect_tooltip = allow_anti_ice_begging_for_equipment
+			if = {
+				limit = {
+					original_tag = EEQ
+				}
+				add_political_power = 50
+			}
+			add_equipment_if_too_low_against_ice = yes
 		}
 	}
 	focus = {
@@ -437,6 +546,13 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_need_for_divisions"
 			custom_effect_tooltip = allow_anti_ice_garnison_spawning
+			if = {
+				limit = {
+					original_tag = EEQ
+				}
+				add_political_power = 50
+			}
+			add_equipment_if_too_low_against_ice = yes
 		}
 	}
 	focus = {
@@ -456,6 +572,13 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eeq_pgt_ept_need_for_volunteers"
 			custom_effect_tooltip = allow_anti_ice_volunteer_requests
+			if = {
+				limit = {
+					original_tag = EEQ
+				}
+				add_political_power = 50
+			}
+			add_equipment_if_too_low_against_ice = yes
 		}
 	}
 	continuous_focus_position = {

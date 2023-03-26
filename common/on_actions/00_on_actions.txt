@@ -213,16 +213,23 @@ on_actions = {
 	# ROOT is capitulated country, FROM is winner
 	on_capitulation = {
 		effect = {
-			#if = {
-			#	limit = {
-			#		OR = {
-			#			NOT = { original_tag = BUF }
-			#			NOT = { has_country_flag = already_capitulated }
-			#		}
-			#	}
-			#	news_event = { id = country_capitulated.0 days = 0 }
-			#}
-			#set_country_flag = already_capitulated
+			#ICE capitulated
+			if = {
+				limit = {
+					tag = ICE
+				}
+				ICE = {
+					every_core_state = {
+						remove_core_of = ICE
+					}
+				}
+				every_state = {
+					limit = {
+						is_claimed_by = ICE
+					}
+					remove_claim_by = ICE
+				}
+			}
 		}
 	}
 

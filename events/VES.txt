@@ -110,9 +110,6 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ves_changelings.3.a
-		ai_chance = {
-			factor = 100
-		}
 	}
 }
 country_event = {
@@ -127,9 +124,6 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ves_changelings.4.a
-		ai_chance = {
-			factor = 100
-		}
 	}
 }
 country_event = {
@@ -144,9 +138,6 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ves_changelings.5.a
-		ai_chance = {
-			factor = 100
-		}
 	}
 }
 country_event = {
@@ -161,9 +152,6 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ves_changelings.6.a
-		ai_chance = {
-			factor = 100
-		}
 	}
 }
 country_event = {
@@ -189,9 +177,6 @@ country_event = {
 				days = 7
 			}
 		}
-		ai_chance = {
-			factor = 100
-		}
 	}
 }
 country_event = {
@@ -206,9 +191,6 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ves_changelings.8.a
-		ai_chance = {
-			factor = 100
-		}
 	}
 }
 country_event = {
@@ -252,9 +234,6 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ves_changelings.10.a
-		ai_chance = {
-			factor = 100
-		}
 	}
 }
 country_event = {
@@ -276,7 +255,7 @@ country_event = {
 	}
 	option = {
 		#he rules alone, play for him
-		name = ves_changelings.11.a
+		name = ves_changelings.11.b
 		ai_chance = {
 			factor = 100
 		}
@@ -284,7 +263,7 @@ country_event = {
 	option = {
 		#he rules alone, play for Chrysalis resistance
 		#start civil war - доделать
-		name = ves_changelings.11.a
+		name = ves_changelings.11.c
 		ai_chance = {
 			factor = 100
 		}
@@ -300,9 +279,6 @@ country_event = {
 	#todo
 	option = {
 		name = ves_changelings.12.a
-		ai_chance = {
-			factor = 100
-		}
 	}
 }
 country_event = {
@@ -314,9 +290,6 @@ country_event = {
 	#todo
 	option = {
 		name = ves_changelings.13.a
-		ai_chance = {
-			factor = 100
-		}
 	}
 }
 country_event = {
@@ -331,9 +304,6 @@ country_event = {
 	#todo
 	option = {
 		name = ves_changelings.14.a
-		ai_chance = {
-			factor = 100
-		}
 	}
 }
 country_event = {
@@ -344,6 +314,9 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = ves_changelings.15.a
+		ai_chance = {
+			factor = 100
+		}
 	}
 	#todo
 	option = {
@@ -368,9 +341,6 @@ country_event = {
 		custom_effect_tooltip = evil_mind_go_away_tt
 		hidden_effect = {
 			set_country_flag = no_evil_mind
-		}
-		ai_chance = {
-			factor = 100
 		}
 	}
 }

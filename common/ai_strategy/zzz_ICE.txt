@@ -148,15 +148,51 @@ do_not_eleminate_eeq_fast = {
 	enable = {
 		has_offensive_war_with = EEQ
 	}
-	abort_when_not_enabled = yes
+	abort = {
+		EEQ = {
+			has_completed_focus = shared_focus_eeq_friendship_is_magic
+		}
+	}
 	ai_strategy = {
 		type = front_control
 		tag = EEQ
-		ratio = 0.25
+		ratio = 0.5
+		priority = 1000
+		ordertype = front
+		execution_type = careful
+		execute_order = yes
+		manual_attack = yes
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = EEQ
+		value = 200
+	}
+}
+we_are_late = {
+	allowed = {
+		original_tag = ICE
+	}
+	enable = {
+		EEQ = {
+			has_completed_focus = shared_focus_eeq_friendship_is_magic
+		}
+	}
+	ai_strategy = {
+		type = front_control
+		tag = EEQ
+		tag = EPT
+		tag = PGT
+		ratio = 0.75
 		priority = 1000
 		ordertype = front
 		execution_type = careful
 		execute_order = no
 		manual_attack = yes
+	}
+	ai_strategy = {
+		type = front_unit_request
+		tag = EEQ
+		value = 150
 	}
 }

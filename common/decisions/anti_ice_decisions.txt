@@ -8,8 +8,12 @@ spawn_anti_ice_militia = {
         days_remove = 3
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision spawn_garnison (anti ICE) target: [From.GetName]"
-            add_stability = -0.05
-			add_war_support = -0.05
+            add_stability = -0.02
+			add_war_support = -0.02
+			add_popularity = {
+				ideology = militarism
+				popularity = 0.02
+			}
 			FROM = {
 				create_unit = {
 					division = "division_template = \"Garnison Division\" start_experience_factor = 0.2 start_equipment_factor = 0.5"

@@ -78,7 +78,30 @@ shared_focus = {
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_eeq_twilight_initiative"
 		activate_advisor = EEQ_twilight
-		add_political_power = 50
+		PGT = {
+			if = {
+				limit = {
+					has_war_with = EPT
+				}
+				hidden_effect = {
+					white_peace = {
+						tag = EPT
+						message = eeq_pgt_ept_anti_ice_white_peace_tt
+					}
+				}
+				custom_effect_tooltip = pgt_white_peace_with_ept_tt
+			}
+			give_military_access = EPT
+			country_event = {
+				id = eeq_pgt_ept_anti_ice_event.5
+			}
+		}
+		EPT = {
+			give_military_access = PGT
+			country_event = {
+				id = eeq_pgt_ept_anti_ice_event.5
+			}
+		}
 	}
 }
 shared_focus = {

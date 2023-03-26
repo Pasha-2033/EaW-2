@@ -12,3 +12,38 @@ modify_opinion_by_eq_donation_againts_ICE = {
 		}
 	}
 }
+add_equipment_if_too_low_against_ice = {
+	if = {
+		limit = {
+			has_equipment = {
+				infantry_equipment < -4000
+			}
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1000
+		}
+	}
+	if = {
+		limit = {
+			has_equipment = {
+				support_equipment < -2000
+			}
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 500
+		}
+	}
+	if = {
+		limit = {
+			has_equipment = {
+				artillery_equipment < -4000
+			}
+		}
+		add_equipment_to_stockpile = {
+			type = artillery_equipment
+			amount = 1000
+		}
+	}
+}

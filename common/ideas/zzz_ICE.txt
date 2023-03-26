@@ -13,17 +13,17 @@ ideas = {
 			}
 			targeted_modifier = {
 				tag = EPT
-				attack_bonus_against = 0.5
+				attack_bonus_against = 0.25
 				defense_bonus_against = -0.5
 			}
 			targeted_modifier = {
 				tag = EEQ
-				attack_bonus_against = 0.5
+				attack_bonus_against = 0.25
 				defense_bonus_against = -0.5
 			}
 			targeted_modifier = {
 				tag = PGT
-				attack_bonus_against = 0.5
+				attack_bonus_against = 0.25
 				defense_bonus_against = -0.5
 			}
 			modifier = {
@@ -32,6 +32,7 @@ ideas = {
 				local_org_regain = 0.1
 				org_loss_when_moving = -0.1
 				army_org_factor = 0.1
+				ai_focus_aggressive_factor = 0.2
 			}
 		}
 		ICE_winter_spirits_crushed = {
@@ -44,25 +45,27 @@ ideas = {
 			}
 			targeted_modifier = {
 				tag = EPT
-				attack_bonus_against = -0.5
-				defense_bonus_against = -0.5
+				attack_bonus_against = -0.75
+				defense_bonus_against = -0.75
 			}
 			targeted_modifier = {
 				tag = EEQ
-				attack_bonus_against = -0.5
-				defense_bonus_against = -0.5
+				attack_bonus_against = -0.75
+				defense_bonus_against = -0.75
 			}
 			targeted_modifier = {
 				tag = PGT
-				attack_bonus_against = -0.5
-				defense_bonus_against = -0.5
+				attack_bonus_against = -0.75
+				defense_bonus_against = -0.75
 			}
 			modifier = {
 				compliance_growth = -1
 				resistance_growth = 0.1
-				local_org_regain = 0.1
-				org_loss_when_moving = -0.1
-				army_org_factor = 0.1
+				local_org_regain = -0.5
+				org_loss_when_moving = 0.5
+				army_org_factor = -0.75
+				stability_weekly = -1
+				war_support_weekly = -1
 			}
 		}
 		ICE_power_of_winter = {

@@ -7,9 +7,15 @@ ideas = {
 					has_defensive_war_with = ICE
 				}
 			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_defensive_war_with = ICE
+			}
 			modifier = {
 				ai_focus_defense_factor = 0.25
-				surrender_limit = 0.1
+				surrender_limit = 0.5
 			}
 		}
 		eeq_pgt_ept_desperate_situation_idea = {
@@ -19,6 +25,13 @@ ideas = {
 					has_defensive_war_with = ICE
 				}
 			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_defensive_war_with = ICE
+			}
+			
 			targeted_modifier = {
 				tag = ICE
 				defense_bonus_against = 0.25
@@ -36,6 +49,12 @@ ideas = {
 					has_defensive_war_with = ICE
 				}
 			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_defensive_war_with = ICE
+			}
 			targeted_modifier = {
 				tag = ICE
 				defense_bonus_against = 0.75
@@ -52,6 +71,12 @@ ideas = {
 				NOT = {
 					has_defensive_war_with = ICE
 				}
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_defensive_war_with = ICE
 			}
 			targeted_modifier = {
 				tag = ICE
@@ -71,6 +96,12 @@ ideas = {
 					has_defensive_war_with = ICE
 				}
 			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_defensive_war_with = ICE
+			}
 			modifier = {
 				supply_consumption_factor = -0.05
 				production_speed_buildings_factor = -0.08
@@ -82,6 +113,12 @@ ideas = {
 				NOT = {
 					has_defensive_war_with = ICE
 				}
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_defensive_war_with = ICE
 			}
 			modifier = {
 				army_org_factor = 0.05
@@ -95,6 +132,12 @@ ideas = {
 				NOT = {
 					has_defensive_war_with = ICE
 				}
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_defensive_war_with = ICE
 			}
 			targeted_modifier = {
 				tag = ICE
@@ -113,6 +156,12 @@ ideas = {
 					has_defensive_war_with = ICE
 				}
 			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_defensive_war_with = ICE
+			}
 			targeted_modifier = {
 				tag = ICE
 				defense_bonus_against = 0.05
@@ -128,6 +177,12 @@ ideas = {
 				NOT = {
 					has_defensive_war_with = ICE
 				}
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_defensive_war_with = ICE
 			}
 			targeted_modifier = {
 				tag = ICE
@@ -145,6 +200,12 @@ ideas = {
 					has_defensive_war_with = ICE
 				}
 			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_defensive_war_with = ICE
+			}
 			targeted_modifier = {
 				tag = ICE
 				defense_bonus_against = 0.1
@@ -157,10 +218,49 @@ ideas = {
 					has_defensive_war_with = ICE
 				}
 			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_defensive_war_with = ICE
+			}
 			targeted_modifier = {
 				tag = ICE
 				defense_bonus_against = 0.05
 				attack_bonus_against = 0.05
+			}
+		}
+		anti_ice_union = {
+			cancel = {
+				OR = {
+					NOT = {
+						has_defensive_war_with = ICE
+					}
+					EEQ = {
+						OR = {
+							has_war_with = EPT
+							has_war_with = PGT
+						}
+					}
+					PGT = {
+						has_war_with = EPT
+					}
+				}
+			}
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				has_defensive_war_with = ICE
+			}
+			targeted_modifier = {
+				tag = ICE
+				defense_bonus_against = 0.05
+				attack_bonus_against = 0.05
+			}
+			modifier = {
+				supply_consumption_factor = -0.05
+				surrender_limit = 0.1
 			}
 		}
 	}
