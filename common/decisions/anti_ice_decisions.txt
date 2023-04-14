@@ -35,14 +35,12 @@ ask_for_landlease_anti_ice = {
         days_remove = 14
 		target_trigger = {
 			NOT = {
-				OR = {
-					has_equipment = {
-						support_equipment < 100
-					}
-					original_tag = ICE
-					tag = ROOT
-					has_war_with = ROOT
+				has_equipment = {
+					support_equipment < 100
 				}
+				original_tag = ICE
+				tag = ROOT
+				has_war_with = ROOT
 			}
 		}
 		remove_effect = {
@@ -65,14 +63,12 @@ ask_for_landlease_anti_ice = {
         days_remove = 14
 		target_trigger = {
 			NOT = {
-				OR = {
-					has_equipment = {
-						support_equipment < 100
-					}
-					original_tag = ICE
-					tag = ROOT
-					has_war_with = ROOT
+				has_equipment = {
+					support_equipment < 100
 				}
+				original_tag = ICE
+				tag = ROOT
+				has_war_with = ROOT
 			}
 		}
 		remove_effect = {
@@ -95,14 +91,12 @@ ask_for_landlease_anti_ice = {
         days_remove = 14
 		target_trigger = {
 			NOT = {
-				OR = {
-					has_equipment = {
-						support_equipment < 100
-					}
-					original_tag = ICE
-					tag = ROOT
-					has_war_with = ROOT
+				has_equipment = {
+					support_equipment < 100
 				}
+				original_tag = ICE
+				tag = ROOT
+				has_war_with = ROOT
 			}
 		}
 		remove_effect = {
@@ -130,12 +124,11 @@ ask_for_volunteers_anti_ice = {
 				}
 			}
 			NOT = {
-				OR = {
-					original_tag = ICE
-					tag = ROOT
-					is_in_array = {
-						ROOT.volunteers_against_ICE = THIS
-					}
+				original_tag = ICE
+				tag = ROOT
+				has_war_with = ROOT
+				is_in_array = {
+					ROOT.volunteers_against_ICE = THIS
 				}
 			}
 		}

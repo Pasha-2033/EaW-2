@@ -435,11 +435,13 @@ bool_xor = {
 					}
 				}
 				NOT = {
-					check_variable = {
-						global.BigInteger0^v = 1
-					}
-					check_variable = {
-						global.BigInteger1^v = 1
+					AND = {
+						check_variable = {
+							global.BigInteger0^v = 1
+						}
+						check_variable = {
+							global.BigInteger1^v = 1
+						}
 					}
 				}
 			}

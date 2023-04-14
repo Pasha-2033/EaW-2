@@ -192,10 +192,8 @@ country_event = { #may be we should killing each other - focus on vindigo
 			if = {
 				limit = {
 					NOT = {
-						OR = {
-							has_war_with = EPT
-							has_war_with = PGT
-						}
+						has_war_with = EPT
+						has_war_with = PGT
 					}
 				}
 				add_ideas = anti_ice_union

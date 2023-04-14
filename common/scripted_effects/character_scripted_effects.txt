@@ -4,13 +4,11 @@ generate_militarist_advisor = {
 		limit = {
 			owner = {
 				NOT = {
-					OR = {
-						has_country_flag = no_generic_militarist_political_advisor
-						has_custom_advisors = yes
-						has_allowed_idea_with_traits = {
-							idea = armourer
-							characters = yes
-						}
+					has_country_flag = no_generic_militarist_political_advisor
+					has_custom_advisors = yes
+					has_allowed_idea_with_traits = {
+						idea = armourer
+						characters = yes
 					}
 				}
 			}

@@ -6,13 +6,11 @@ subject_mobilization_law_0_available = {
 			has_idea = volunteer_only
 		}
 		NOT = {
-			OR = {
-				check_variable = {
-					overlord:political_power < mobilization_law_pp_cost_factor
-				}
-				check_variable = {
-					overlord:command_power < mobilization_law_cp_cost_factor
-				}
+			check_variable = {
+				overlord:political_power < mobilization_law_pp_cost_factor
+			}
+			check_variable = {
+				overlord:command_power < mobilization_law_cp_cost_factor
 			}
 		}
 	}
@@ -76,13 +74,11 @@ subject_mobilization_law_0_available = {
 			}
 		}
 		NOT = {
-			OR = {
-				check_variable = {
-					overlord:political_power < pp_cost
-				}
-				check_variable = {
-					overlord:command_power < cp_cost
-				}
+			check_variable = {
+				overlord:political_power < pp_cost
+			}
+			check_variable = {
+				overlord:command_power < cp_cost
 			}
 		}
 	}
@@ -96,13 +92,11 @@ subject_mobilization_law_1_available = {
 			}
 		}
 		NOT = {
-			OR = {
-				check_variable = {
-					overlord:political_power < mobilization_law_pp_cost_factor
-				}
-				check_variable = {
-					overlord:command_power < mobilization_law_cp_cost_factor
-				}
+			check_variable = {
+				overlord:political_power < mobilization_law_pp_cost_factor
+			}
+			check_variable = {
+				overlord:command_power < mobilization_law_cp_cost_factor
 			}
 		}
 	}
@@ -155,13 +149,11 @@ subject_mobilization_law_1_available = {
 			}
 		}
 		NOT = {
-			OR = {
-				check_variable = {
-					overlord:political_power < pp_cost
-				}
-				check_variable = {
-					overlord:command_power < cp_cost
-				}
+			check_variable = {
+				overlord:political_power < pp_cost
+			}
+			check_variable = {
+				overlord:command_power < cp_cost
 			}
 		}
 	}
@@ -175,13 +167,11 @@ subject_mobilization_law_2_available = {
 			}
 		}
 		NOT = {
-			OR = {
-				check_variable = {
-					overlord:political_power < mobilization_law_pp_cost_factor
-				}
-				check_variable = {
-					overlord:command_power < mobilization_law_cp_cost_factor
-				}
+			check_variable = {
+				overlord:political_power < mobilization_law_pp_cost_factor
+			}
+			check_variable = {
+				overlord:command_power < mobilization_law_cp_cost_factor
 			}
 		}
 	}
@@ -226,13 +216,11 @@ subject_mobilization_law_2_available = {
 			}
 		}
 		NOT = {
-			OR = {
-				check_variable = {
-					overlord:political_power < pp_cost
-				}
-				check_variable = {
-					overlord:command_power < cp_cost
-				}
+			check_variable = {
+				overlord:political_power < pp_cost
+			}
+			check_variable = {
+				overlord:command_power < cp_cost
 			}
 		}
 	}
@@ -246,13 +234,11 @@ subject_mobilization_law_3_available = {
 			}
 		}
 		NOT = {
-			OR = {
-				check_variable = {
-					overlord:political_power < mobilization_law_pp_cost_factor
-				}
-				check_variable = {
-					overlord:command_power < PREV.mobilization_law_cp_cost_factor
-				}
+			check_variable = {
+				overlord:political_power < mobilization_law_pp_cost_factor
+			}
+			check_variable = {
+				overlord:command_power < PREV.mobilization_law_cp_cost_factor
 			}
 		}
 	}
@@ -284,13 +270,11 @@ subject_mobilization_law_3_available = {
 			}
 		}
 		NOT = {
-			OR = {
-				check_variable = {
-					overlord:political_power < pp_cost
-				}
-				check_variable = {
-					overlord:command_power < cp_cost
-				}
+			check_variable = {
+				overlord:political_power < pp_cost
+			}
+			check_variable = {
+				overlord:command_power < cp_cost
 			}
 		}
 	}
@@ -304,13 +288,11 @@ subject_mobilization_law_4_available = {
 			}
 		}
 		NOT = {
-			OR = {
-				check_variable = {
-					overlord:political_power < mobilization_law_pp_cost_factor 
-				}
-				check_variable = {
-					overlord:command_power < mobilization_law_cp_cost_factor
-				}
+			check_variable = {
+				overlord:political_power < mobilization_law_pp_cost_factor 
+			}
+			check_variable = {
+				overlord:command_power < mobilization_law_cp_cost_factor
 			}
 		}
 	}
@@ -352,13 +334,11 @@ subject_mobilization_law_4_available = {
 			}		
 		}
 		NOT = {
-			OR = {
-				check_variable = {
-					overlord:political_power < pp_cost
-				}
-				check_variable = {
-					overlord:command_power < cp_cost
-				}
+			check_variable = {
+				overlord:political_power < pp_cost
+			}
+			check_variable = {
+				overlord:command_power < cp_cost
 			}
 		}
 	}
@@ -372,13 +352,11 @@ subject_mobilization_law_5_available = {
 			}
 		}
 		NOT = {
-			OR = {
-				check_variable = {
-					overlord:political_power < mobilization_law_pp_cost_factor
-				}
-				check_variable = {
-					overlord:command_power < mobilization_law_cp_cost_factor
-				}
+			check_variable = {
+				overlord:political_power < mobilization_law_pp_cost_factor
+			}
+			check_variable = {
+				overlord:command_power < mobilization_law_cp_cost_factor
 			}
 		}
 	}
@@ -431,13 +409,11 @@ subject_mobilization_law_5_available = {
 			}
 		}
 		NOT = {
-			OR = {
-				check_variable = {
-					overlord:political_power < pp_cost
-				}
-				check_variable = {
-					overlord:command_power < cp_cost
-				}
+			check_variable = {
+				overlord:political_power < pp_cost
+			}
+			check_variable = {
+				overlord:command_power < cp_cost
 			}
 		}
 	}
@@ -448,13 +424,11 @@ subject_mobilization_law_6_available = {
 			has_idea = all_adults_serve
 		}
 		NOT = {
-			OR = {
-				check_variable = {
-					overlord:political_power < mobilization_law_pp_cost_factor
-				}
-				check_variable = {
-					overlord:command_power < mobilization_law_cp_cost_factor
-				}
+			check_variable = {
+				overlord:political_power < mobilization_law_pp_cost_factor
+			}
+			check_variable = {
+				overlord:command_power < mobilization_law_cp_cost_factor
 			}
 		}
 	}
@@ -518,13 +492,11 @@ subject_mobilization_law_6_available = {
 			}
 		}
 		NOT = {
-			OR = {
-				check_variable = {
-					overlord:political_power < pp_cost
-				}
-				check_variable = {
-					overlord:command_power < cp_cost
-				}
+			check_variable = {
+				overlord:political_power < pp_cost
+			}
+			check_variable = {
+				overlord:command_power < cp_cost
 			}
 		}
 	}
@@ -4463,11 +4435,9 @@ subject_society_17_available = {
 				OR = {
 					has_idea = detached_country
 					NOT = {
-						OR = {
-							has_government = communism
-							has_government = socialism
-							has_government = radicalism
-						}
+						has_government = communism
+						has_government = socialism
+						has_government = radicalism
 					}
 				}
 			}

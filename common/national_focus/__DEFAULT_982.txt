@@ -1782,12 +1782,10 @@ focus_tree = {
 					25 = {
 						modifier = {
 							NOT = {
-								OR = {
-									has_government = democratic
-									has_government = neutrality
-									has_government = harmony
-									has_government = technocracy
-								}
+								has_government = democratic
+								has_government = neutrality
+								has_government = harmony
+								has_government = technocracy
 							}
 							factor = party_popularity_100@ruling_party
 						}
