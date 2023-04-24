@@ -1502,13 +1502,46 @@ ideas = {
 	urbanization = {
 		law = yes
 		use_list_view = yes
-		no_urbanization_control = {}
-		low_urbanization_focus = {}
+		no_urbanization_control = {
+			on_add = {
+				every_controlled_state = {
+					set_state_urbanization_modifier = yes
+				}
+				calc_urbanisation_migration_country = yes
+			}
+		}
+		low_urbanization_focus = {
+			on_add = {
+				every_controlled_state = {
+					set_state_urbanization_modifier = yes
+				}
+				calc_urbanisation_migration_country = yes
+			}
+		}
 		medium_urbanization_focus = {
 			default = yes
+			on_add = {
+				every_controlled_state = {
+					set_state_urbanization_modifier = yes
+				}
+			}
 		}
-		high_urbanization_focus = {}
-		very_high_urbanization_focus = {}
+		high_urbanization_focus = {
+			on_add = {
+				every_controlled_state = {
+					set_state_urbanization_modifier = yes
+				}
+				calc_urbanisation_migration_country = yes
+			}
+		}
+		very_high_urbanization_focus = {
+			on_add = {
+				every_controlled_state = {
+					set_state_urbanization_modifier = yes
+				}
+				calc_urbanisation_migration_country = yes
+			}
+		}
 	}
 	illiteracy_level_idea = {
 		law = yes

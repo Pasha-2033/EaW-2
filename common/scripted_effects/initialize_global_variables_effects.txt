@@ -44,6 +44,16 @@ init_surplus_appropriation_modifier_steps = {
 	init_sa_army_mod_mobilization_value = yes
 	init_sa_army_mod_recruitable_value = yes
 }
+init_urbanization_modifiers_tag_list = {
+	add_to_array = { global.urbanization_modifiers_tokens = token:no_urbanization_to_urban			}
+	add_to_array = { global.urbanization_modifiers_tokens = token:low_urbanization_to_urban			}
+	add_to_array = { global.urbanization_modifiers_tokens = token:high_urbanization_to_urban		}
+	add_to_array = { global.urbanization_modifiers_tokens = token:very_high_urbanization_to_urban	}
+	add_to_array = { global.urbanization_modifiers_tokens = token:no_urbanization_to_rural			}
+	add_to_array = { global.urbanization_modifiers_tokens = token:low_urbanization_to_rural			}
+	add_to_array = { global.urbanization_modifiers_tokens = token:high_urbanization_to_rural		}
+	add_to_array = { global.urbanization_modifiers_tokens = token:very_high_urbanization_to_rural	}
+}
 init_ideas_tag_list = {
 	#init idea arrays
 	resize_array = {
@@ -55,63 +65,25 @@ init_ideas_tag_list = {
 	resize_array = {
 		global.economy_idea_tokens = 10
 	}
-	add_to_array = {
-		global.society_idea_tokens = token:clockwerk_industry
-	}
-	add_to_array = {
-		global.society_idea_tokens = token:modern_society
-	}
-	add_to_array = {
-		global.society_idea_tokens = token:outdated_industry1
-	}
-	add_to_array = {
-		global.society_idea_tokens = token:outdated_industry
-	}
-	add_to_array = {
-		global.society_idea_tokens = token:pre_industrial_society3
-	}
-	add_to_array = {
-		global.society_idea_tokens = token:pre_industrial_society2
-	}
-	add_to_array = {
-		global.society_idea_tokens = token:pre_industrial_society1
-	}
-	add_to_array = {
-		global.society_idea_tokens = token:pre_industrial_society
-	}
-	add_to_array = {
-		global.society_idea_tokens = token:agrarian_society5
-	}
-	add_to_array = {
-		global.society_idea_tokens = token:agrarian_society4
-	}
-	add_to_array = {
-		global.society_idea_tokens = token:agrarian_society3
-	}
-	add_to_array = {
-		global.society_idea_tokens = token:agrarian_society2
-	}
-	add_to_array = {
-		global.society_idea_tokens = token:agrarian_society
-	}
-	add_to_array = {
-		global.society_idea_tokens = token:tribal_society3
-	}
-	add_to_array = {
-		global.society_idea_tokens = token:tribal_society2
-	}
-	add_to_array = {
-		global.society_idea_tokens = token:tribal_society1
-	}
-	add_to_array = {
-		global.society_idea_tokens = token:tribal_society
-	}
-	add_to_array = {
-		global.society_idea_tokens = token:communal_society
-	}
-	add_to_array = {
-		global.society_idea_tokens = token:religious_country
-	}
+	add_to_array = { global.society_idea_tokens = token:clockwerk_industry		}
+	add_to_array = { global.society_idea_tokens = token:modern_society			}
+	add_to_array = { global.society_idea_tokens = token:outdated_industry1		}
+	add_to_array = { global.society_idea_tokens = token:outdated_industry		}
+	add_to_array = { global.society_idea_tokens = token:pre_industrial_society3	}
+	add_to_array = { global.society_idea_tokens = token:pre_industrial_society2	}
+	add_to_array = { global.society_idea_tokens = token:pre_industrial_society1	}
+	add_to_array = { global.society_idea_tokens = token:pre_industrial_society	}
+	add_to_array = { global.society_idea_tokens = token:agrarian_society5		}
+	add_to_array = { global.society_idea_tokens = token:agrarian_society4		}
+	add_to_array = { global.society_idea_tokens = token:agrarian_society3		}
+	add_to_array = { global.society_idea_tokens = token:agrarian_society2		}
+	add_to_array = { global.society_idea_tokens = token:agrarian_society		}
+	add_to_array = { global.society_idea_tokens = token:tribal_society3			}
+	add_to_array = { global.society_idea_tokens = token:tribal_society2			}
+	add_to_array = { global.society_idea_tokens = token:tribal_society1			}
+	add_to_array = { global.society_idea_tokens = token:tribal_society			}
+	add_to_array = { global.society_idea_tokens = token:communal_society		}
+	add_to_array = { global.society_idea_tokens = token:religious_country		}
 	#token:detached_country isn`t used for gui purpose - create custom has_idea trigger
 	resize_array = {
 		global.power_concentration_idea_tokens = 7

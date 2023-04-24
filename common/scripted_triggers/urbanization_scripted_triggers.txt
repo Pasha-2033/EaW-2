@@ -1,0 +1,19 @@
+#THIS SCRIPTS WORKS ONLY IN STATE SCOPE!!!
+state_is_rural = {
+	if = {
+		limit = {
+			OR = {
+				has_state_category = wasteland
+				has_state_category = enclave
+				has_state_category = tiny_island
+				has_state_category = pastoral
+				has_state_category = small_island
+				has_state_category = rural
+			}
+		}
+		state_population_k < 5000 #even a rural state with 1M+ is not rural, this is not a mega willage :)
+	}
+	else = {
+		state_population_k < 50 #even an urban state without 50K+ is not urban, this is not a micro town :)
+	}
+}

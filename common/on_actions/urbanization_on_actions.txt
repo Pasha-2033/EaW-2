@@ -1,0 +1,40 @@
+on_actions = {
+	# Updates map modes for performance
+	on_monthly_VES = { #just a random tag (VES), it will prevent for every country iteration
+		effect = {
+			every_country = {
+				every_controlled_state = {
+					set_state_urbanization_modifier = yes
+				}
+				calc_urbanisation_migration_country = yes
+			}
+		}
+	}
+	on_state_control_changed = {
+		#ROOT is new controller
+		#FROM is old controller
+		#FROM.FROM is state
+		effect = {
+			FROM = {
+				FROM = {
+					set_state_urbanization_modifier = yes
+				}
+				calc_urbanisation_migration_country = yes
+			}
+			ROOT = {
+				calc_urbanisation_migration_country = yes
+			}
+		}
+	}
+	#init urbanisation
+	on_startup = {
+		effect = {
+			every_country = {
+				every_controlled_state = {
+					set_state_urbanization_modifier = yes
+				}
+				calc_urbanisation_migration_country = yes
+			}
+		}
+	}
+}
