@@ -1,0 +1,30 @@
+#Vindigo time focuses
+focus_tree = {
+	id = ept_focus_tree
+	country = {
+		base = 0
+		modifier = {
+			add = 100
+			tag = EPT
+		}
+	}
+	default = no
+	continuous_focus_position = {
+		x = 2700
+		y = 1350
+	}
+	shared_focus = eeq_pgt_ept_winter_spirits
+	focus = {
+		id = ept_focus_start_ept_tag
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 10
+		y = 0
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_start_ept_tag"
+		}
+	}
+}

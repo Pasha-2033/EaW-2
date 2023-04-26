@@ -1,0 +1,39 @@
+#call this triggers in character scope!
+has_unit_leader_political_trait = {
+	OR = {
+		has_unit_leader_sympathizes = yes
+		has_unit_leader_political_sympathy_trait = yes
+	}
+}
+has_unit_leader_sympathizes = {
+	OR = {
+		has_trait = country_leader_trait_democratic
+		has_trait = country_leader_trait_communism
+		has_trait = country_leader_trait_fascism
+		has_trait = country_leader_trait_neutrality
+		has_trait = country_leader_trait_harmony
+		has_trait = country_leader_trait_socialism
+		has_trait = country_leader_trait_radicalism
+		has_trait = country_leader_trait_unholy
+		has_trait = country_leader_trait_holy
+		has_trait = country_leader_trait_technocracy
+		has_trait = country_leader_trait_anarchism
+		has_trait = country_leader_trait_militarism
+	}
+}
+has_unit_leader_political_sympathy_trait = {
+	OR = {
+		has_trait = sympathizes_democratic_trait
+		has_trait = sympathizes_communism_trait
+		has_trait = sympathizes_fascism_trait
+		has_trait = sympathizes_neutrality_trait
+		has_trait = sympathizes_harmony_trait
+		has_trait = sympathizes_socialism_trait
+		has_trait = sympathizes_radicalism_trait
+		has_trait = sympathizes_unholy_trait
+		has_trait = sympathizes_holy_trait
+		has_trait = sympathizes_technocracy_trait
+		has_trait = sympathizes_anarchism_trait
+		has_trait = sympathizes_militarism_trait
+	}
+}

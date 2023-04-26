@@ -1,0 +1,100 @@
+EEQ_prince_blueblood_vs_twilight = {
+	initial_value = 0
+	left_side = twilight_harmonists
+	right_side = prince_blueblood_fascists
+	decision_category = EEQ_prince_blueblood_vs_twilight_decisions
+	range = {
+		id = mid_range
+		min = -0.1
+		max = 0.1
+		modifier = {
+			stability_weekly = 0.01
+			war_support_weekly = 0.01
+			political_power_factor = -0.25
+		}
+	}
+	side = {
+		id = twilight_harmonists
+		icon = GFX_idea_generic_agrarian_society
+		range = {
+			id = low_harmonic_support_range
+			min = -0.36
+			max = -0.1
+			modifier = {
+				stability_weekly = 0.02
+				harmony_drift = 0.01
+			}
+		}
+		range = {
+			id = medium_harmonic_support_range
+			min = -0.63
+			max = -0.36
+			modifier = {
+				stability_weekly = 0.03
+				harmony_drift = 0.02
+			}
+		}
+		range = {
+			id = large_harmonic_support_range
+			min = -0.9
+			max = -0.63
+			modifier = {
+				stability_weekly = 0.04
+				harmony_drift = 0.03
+			}
+		}
+		range = {
+			id = total_harmonic_support_range
+			min = -1
+			max = -0.9
+			modifier = {
+				stability_weekly = 0.05
+				harmony_drift = 0.1
+			}
+		}
+	}
+	side = {
+		id = prince_blueblood_fascists
+		icon = GFX_idea_generic_degauss_ship_hulls
+		range = {
+			id = low_fascist_support_range
+			min = 0.1
+			max = 0.36
+			modifier = {
+				war_support_weekly = 0.02
+				political_power_gain = 0.1
+				fascism_drift = 0.01
+			}
+		}
+		range = {
+			id = medium_fascist_support_range
+			min = 0.36
+			max = 0.63
+			modifier = {
+				war_support_weekly = 0.03
+				political_power_gain = 0.2
+				fascism_drift = 0.02
+			}
+		}
+		range = {
+			id = large_fascist_support_range
+			min = 0.63
+			max = 0.9
+			modifier = {
+				war_support_weekly = 0.04
+				political_power_gain = 0.3
+				fascism_drift = 0.03
+			}
+		}
+		range = {
+			id = total_fascist_support_range
+			min = 0.9
+			max = 1
+			modifier = {
+				war_support_weekly = 0.05
+				political_power_gain = 0.5
+				fascism_drift = 0.05
+			}
+		}
+	}
+}

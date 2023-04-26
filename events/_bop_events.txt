@@ -1,0 +1,120 @@
+add_namespace = bop_eeq_event
+country_event = {
+	#start EEQ_prince_blueblood_initiatives_mission
+	id = bop_eeq_event.1
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		activate_mission = EEQ_prince_blueblood_initiatives_mission
+	}
+}
+country_event = {
+	#start EEQ_arest_harmonic_officers_mission
+	id = bop_eeq_event.2
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		activate_mission = EEQ_arest_harmonic_officers_mission
+	}
+}
+country_event = {
+	#start EEQ_opposition_to_harmony_mission
+	id = bop_eeq_event.3
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		activate_mission = EEQ_opposition_to_harmony_mission
+	}
+}
+country_event = {
+	#start EEQ_fascist_recruit_general_marshal(admiral)
+	id = bop_eeq_event.4
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		if = {
+			limit = {
+				NOT = {
+					has_completed_focus = eeq_focus_friendship_is_magic
+				}
+				has_civil_war = no
+			}
+			set_variable = {
+				#fixes trigger (prevent THIS (country) = 0 become EEQ_fascism_vs_harmony_character)
+				EEQ_fascism_vs_harmony_character = 0
+			}
+			random_list = {
+				#0 = {
+				#	modifier = {
+				#		any_army_leader = {
+				#			has_unit_leader_political_trait = no
+				#		}
+				#		add = 50
+				#	}
+				#	random_army_leader = {
+				#		limit = {
+				#			has_unit_leader_political_trait = no
+				#		}
+				#		set_variable = { 
+				#			PREV.EEQ_fascism_vs_harmony_character = THIS 
+				#		}
+				#	}
+				#}
+				0 = {
+					modifier = {
+						any_navy_leader = {
+							has_unit_leader_political_trait = no
+						}
+						add = 50
+					}
+					random_navy_leader = {
+						limit = {
+							has_unit_leader_political_trait = no
+						}
+						set_variable = { 
+							PREV.EEQ_fascism_vs_harmony_character = THIS 
+						}
+					}
+				}
+			}
+			if = {
+				#if no character found - don`t start mission
+				limit = {
+					check_variable = {
+						EEQ_fascism_vs_harmony_character = 0
+					}
+				}
+				country_event = {
+					#recusion
+					id = bop_eeq_event.5
+				}
+			}
+			#else_if = {
+			#	limit = {
+			#		var:EEQ_fascism_vs_harmony_character = {
+			#			is_army_leader = yes
+			#		}
+			#	}
+			#	activate_mission = EEQ_fascist_recruit_general_marshal
+			#}
+			else = {
+				activate_mission = EEQ_fascist_recruit_admiral
+			}
+		}
+	}
+}
+country_event = {
+	#start EEQ_fascist_recruit_general_marshal(admiral) recusion
+	id = bop_eeq_event.5
+	immediate = {
+		log = "yes"
+		clear_variable = EEQ_fascism_vs_harmony_character
+	}
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		country_event = {
+			id = bop_eeq_event.4
+		}
+	}
+}
