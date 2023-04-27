@@ -2,7 +2,10 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 	#debug
 	add_harmony_10 = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon     
-		cost = 0                 
+		cost = 0
+		allowed = {
+			tag = EEQ
+		}               
 		complete_effect = {
 			add_power_balance_value = {
 				id = EEQ_prince_blueblood_vs_twilight
@@ -17,7 +20,10 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 	}
 	add_fascism_10 = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon     
-		cost = 0                 
+		cost = 0
+		allowed = {
+			tag = EEQ
+		}              
 		complete_effect = {
 			add_power_balance_value = {
 				id = EEQ_prince_blueblood_vs_twilight
@@ -27,6 +33,85 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 			add_power_balance_modifier = {
 				id = EEQ_prince_blueblood_vs_twilight
 				modifier = EEQ_fascism_propaganda
+			}
+		}
+	}
+
+
+
+	EEQ_antagonise_harmony_vs_fascism_recruiting = {
+		icon = GFX_decision_generic_operation # TODO_TA set correct icon
+		allowed = {
+			tag = EEQ
+		}
+		available = {
+			has_country_flag = {
+				flag = EEQ_fascism_vs_harmony_character_timer
+				days < 14
+			}
+		}
+		visible = {
+			OR = {
+				has_active_mission = EEQ_fascist_recruit_general_marshal
+				has_active_mission = EEQ_fascist_recruit_admiral
+				has_active_mission = EEQ_harmonist_recruit_general_marshal
+				has_active_mission = EEQ_harmonist_recruit_admiral
+			}
+			NOT = {
+				has_active_mission = EEQ_antagonise_harmony_vs_fascism_recruiting_mission
+			}
+		}
+		cost = 75
+		complete_effect = {
+			activate_mission = EEQ_antagonise_harmony_vs_fascism_recruiting_mission
+		}
+	}
+	EEQ_antagonise_harmony_vs_fascism_recruiting_mission = {
+		icon = GFX_decision_generic_operation # TODO_TA set correct icon
+		selectable_mission = no
+		allowed = {
+			tag = EEQ
+		}
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		activation = {
+			always = no #triggered by decision (EEQ_antagonise_harmony_vs_fascism_recruiting)
+		}
+		fire_only_once = no
+		is_good = yes
+		days_mission_timeout = 15
+		visible = {
+			hidden_trigger = {
+				has_civil_war = no
+			}
+		}
+		cancel_if_not_visible = yes
+		timeout_effect = {
+			if = {
+				limit = {
+					has_completed_focus = eeq_focus_twilight_initiative
+				}
+				var:EEQ_fascism_vs_harmony_character = {
+					add_unit_leader_trait = sympathizes_harmony_trait
+				}
+				add_power_balance_value = {
+					id = EEQ_prince_blueblood_vs_twilight
+					value = -0.06
+					tooltip_side = twilight_harmonists
+				}
+			}
+			else = {
+				var:EEQ_fascism_vs_harmony_character = {
+					add_unit_leader_trait = sympathizes_fascism_trait
+				}
+				add_power_balance_value = {
+					id = EEQ_prince_blueblood_vs_twilight
+					value = 0.06
+					tooltip_side = prince_blueblood_fascists
+				}
 			}
 		}
 	}
@@ -137,7 +222,7 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 			}
 		}
 		activation = {
-			always = no #triggered by event (todo)
+			always = no #triggered by event (bop_eeq_event.7)
 		}
 		fire_only_once = yes
 		is_good = no
@@ -149,19 +234,13 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 		}
 		cancel_if_not_visible = yes
 		timeout_effect = {
-			#add debuff idea (to do)
+			add_ideas = EEQ_unicorn_censorship
 			add_power_balance_modifier = {
 				id = EEQ_prince_blueblood_vs_twilight
 				modifier = EEQ_unicorn_censorship
 			}
-			add_political_power = -25
 		}
 	}
-
-
-
-
-
 	EEQ_fascist_recruit_general_marshal = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
 		selectable_mission = no
@@ -177,12 +256,11 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 			}
 		}
 		activation = {
-			always = no #triggered by event (todo)
+			always = no #triggered by event (bop_eeq_event.4)
 		}
 		fire_only_once = no
 		is_good = no
-		days_re_enable = 0
-		days_mission_timeout = 1
+		days_mission_timeout = 30
 		visible = {
 			hidden_trigger = {
 				has_civil_war = no
@@ -193,10 +271,17 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 			var:EEQ_fascism_vs_harmony_character = {
 				add_unit_leader_trait = sympathizes_fascism_trait
 			}
+			add_power_balance_value = {
+				id = EEQ_prince_blueblood_vs_twilight
+				value = 0.06
+				tooltip_side = prince_blueblood_fascists
+			}
 			hidden_effect = {
 				#launch another run
 				country_event = {
 					id = bop_eeq_event.5
+					days = 7
+					random_days = 7
 				}
 			}
 		}
@@ -205,6 +290,8 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 				#launch another run
 				country_event = {
 					id = bop_eeq_event.5
+					days = 7
+					random_days = 7
 				}
 			}
 		}
@@ -224,12 +311,11 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 			}
 		}
 		activation = {
-			always = no #triggered by event (todo)
+			always = no #triggered by event (bop_eeq_event.4)
 		}
 		fire_only_once = no
 		is_good = no
-		days_re_enable = 0
-		days_mission_timeout = 1
+		days_mission_timeout = 30
 		visible = {
 			hidden_trigger = {
 				has_civil_war = no
@@ -240,10 +326,16 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 			var:EEQ_fascism_vs_harmony_character = {
 				add_unit_leader_trait = sympathizes_fascism_trait
 			}
+			add_power_balance_value = {
+				id = EEQ_prince_blueblood_vs_twilight
+				value = 0.06
+			}
 			hidden_effect = {
 				#launch another run
 				country_event = {
 					id = bop_eeq_event.5
+					days = 7
+					random_days = 7
 				}
 			}
 		}
@@ -252,6 +344,8 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 				#launch another run
 				country_event = {
 					id = bop_eeq_event.5
+					days = 7
+					random_days = 7
 				}
 			}
 		}
@@ -289,4 +383,114 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 		}
 	}
 	#to do general/marshal/admiral recruiting
+	EEQ_harmonist_recruit_general_marshal = {
+		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
+		selectable_mission = no
+		allowed = {
+			tag = EEQ
+		}
+		available = {
+			var:EEQ_fascism_vs_harmony_character = {
+				OR = {
+					has_trait = sympathizes_fascism_trait
+					has_trait = country_leader_trait_fascism
+				}
+			}
+		}
+		activation = {
+			always = no #triggered by event (bop_eeq_event.4)
+		}
+		fire_only_once = no
+		is_good = no
+		days_mission_timeout = 30
+		visible = {
+			hidden_trigger = {
+				has_civil_war = no
+			}
+		}
+		cancel_if_not_visible = yes
+		timeout_effect = {
+			var:EEQ_fascism_vs_harmony_character = {
+				add_unit_leader_trait = sympathizes_harmony_trait
+			}
+			add_power_balance_value = {
+				id = EEQ_prince_blueblood_vs_twilight
+				value = -0.06
+				tooltip_side = twilight_harmonists
+			}
+			hidden_effect = {
+				#launch another run
+				country_event = {
+					id = bop_eeq_event.5
+					days = 7
+					random_days = 7
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				#launch another run
+				country_event = {
+					id = bop_eeq_event.5
+					days = 7
+					random_days = 7
+				}
+			}
+		}
+	}
+	EEQ_harmonist_recruit_admiral = {
+		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
+		selectable_mission = no
+		allowed = {
+			tag = EEQ
+		}
+		available = {
+			var:EEQ_fascism_vs_harmony_character = {
+				OR = {
+					has_trait = sympathizes_fascism_trait
+					has_trait = country_leader_trait_fascism
+				}
+			}
+		}
+		activation = {
+			always = no #triggered by event (bop_eeq_event.4)
+		}
+		fire_only_once = no
+		is_good = no
+		days_mission_timeout = 30
+		visible = {
+			hidden_trigger = {
+				has_civil_war = no
+			}
+		}
+		cancel_if_not_visible = yes
+		timeout_effect = {
+			var:EEQ_fascism_vs_harmony_character = {
+				add_unit_leader_trait = sympathizes_harmony_trait
+			}
+			add_power_balance_value = {
+				id = EEQ_prince_blueblood_vs_twilight
+				value = -0.06
+				tooltip_side = twilight_harmonists
+			}
+			hidden_effect = {
+				#launch another run
+				country_event = {
+					id = bop_eeq_event.5
+					days = 7
+					random_days = 7
+				}
+			}
+		}
+		complete_effect = {
+			hidden_effect = {
+				#launch another run
+				country_event = {
+					id = bop_eeq_event.5
+					days = 7
+					random_days = 7
+				}
+			}
+		}
+	}
 }

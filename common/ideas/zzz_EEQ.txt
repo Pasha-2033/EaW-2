@@ -49,8 +49,27 @@ ideas = {
 				improve_relations_maintain_cost_factor = 1
 			}
 		}
-		EEQ_earth_pony_refuses = {
-
+		EEQ_unicorn_censorship = {
+			picture = EEQ_tribal_crisis
+			allowed = {
+				original_tag = EEQ
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			cancel = {
+				has_government = fascism
+			}
+			modifier = {
+				fascism_drift = 0.02
+				political_power_cost = 0.25
+				political_advisor_cost_factor = 0.1
+				army_chief_cost_factor = 0.1
+				navy_chief_cost_factor = 0.1
+				air_chief_cost_factor = 0.1
+				high_command_cost_factor = 0.1
+				theorist_cost_factor = 0.1
+			}
 		}
 	}
 }

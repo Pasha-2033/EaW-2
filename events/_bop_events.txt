@@ -6,6 +6,11 @@ country_event = {
 	hidden = yes
 	option = {
 		activate_mission = EEQ_prince_blueblood_initiatives_mission
+		country_event = {
+			id = bop_eeq_event.7
+			days = 105
+			random_days = 35
+		}
 	}
 }
 country_event = {
@@ -28,6 +33,7 @@ country_event = {
 }
 country_event = {
 	#start EEQ_fascist_recruit_general_marshal(admiral)
+	#start EEQ_harmonist_recruit_general_marshal(admiral)
 	id = bop_eeq_event.4
 	is_triggered_only = yes
 	hidden = yes
@@ -35,8 +41,9 @@ country_event = {
 		if = {
 			limit = {
 				NOT = {
-					has_completed_focus = eeq_focus_friendship_is_magic
+					has_completed_focus = eeq_focus_friendship_is_magic #if become harmonic - stop fascists when friendship destroys vindigo
 				}
+				has_focus_tree = eeq_focus_tree #if become fascists - stop harmonists when fascism is supreme ideology
 				has_civil_war = no
 			}
 			set_variable = {
@@ -44,22 +51,22 @@ country_event = {
 				EEQ_fascism_vs_harmony_character = 0
 			}
 			random_list = {
-				#0 = {
-				#	modifier = {
-				#		any_army_leader = {
-				#			has_unit_leader_political_trait = no
-				#		}
-				#		add = 50
-				#	}
-				#	random_army_leader = {
-				#		limit = {
-				#			has_unit_leader_political_trait = no
-				#		}
-				#		set_variable = { 
-				#			PREV.EEQ_fascism_vs_harmony_character = THIS 
-				#		}
-				#	}
-				#}
+				0 = {
+					modifier = {
+						any_army_leader = {
+							has_unit_leader_political_trait = no
+						}
+						add = 50
+					}
+					random_army_leader = {
+						limit = {
+							has_unit_leader_political_trait = no
+						}
+						set_variable = { 
+							PREV.EEQ_fascism_vs_harmony_character = THIS 
+						}
+					}
+				}
 				0 = {
 					modifier = {
 						any_navy_leader = {
@@ -77,6 +84,7 @@ country_event = {
 					}
 				}
 			}
+			set_country_flag = EEQ_fascism_vs_harmony_character_timer
 			if = {
 				#if no character found - don`t start mission
 				limit = {
@@ -85,30 +93,46 @@ country_event = {
 					}
 				}
 				country_event = {
-					#recusion
+					#recusion (delay 7 days, we shouldn`t create a lot of checks)
 					id = bop_eeq_event.5
+					days = 7
 				}
 			}
-			#else_if = {
-			#	limit = {
-			#		var:EEQ_fascism_vs_harmony_character = {
-			#			is_army_leader = yes
-			#		}
-			#	}
-			#	activate_mission = EEQ_fascist_recruit_general_marshal
-			#}
-			else = {
+			else_if = {
+				limit = {
+					var:EEQ_fascism_vs_harmony_character = {
+						is_army_leader = yes
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = eeq_focus_twilight_initiative
+					}
+					activate_mission = EEQ_fascist_recruit_general_marshal
+				}
+				else = {
+					activate_mission = EEQ_harmonist_recruit_general_marshal
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = eeq_focus_twilight_initiative
+				}
 				activate_mission = EEQ_fascist_recruit_admiral
+			}
+			else = {
+				activate_mission = EEQ_harmonist_recruit_admiral
 			}
 		}
 	}
 }
 country_event = {
 	#start EEQ_fascist_recruit_general_marshal(admiral) recusion
+	#start EEQ_harmonist_recruit_general_marshal(admiral) recusion
 	id = bop_eeq_event.5
 	immediate = {
-		log = "yes"
 		clear_variable = EEQ_fascism_vs_harmony_character
+		clr_country_flag = EEQ_fascism_vs_harmony_character_timer
 	}
 	is_triggered_only = yes
 	hidden = yes
@@ -116,5 +140,23 @@ country_event = {
 		country_event = {
 			id = bop_eeq_event.4
 		}
+	}
+}
+country_event = {
+	#start EEQ_twilight_initiatives_mission
+	id = bop_eeq_event.6
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		activate_mission = EEQ_twilight_initiatives_mission
+	}
+}
+country_event = {
+	#start EEQ_unicorn_censorship_mission
+	id = bop_eeq_event.7
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		activate_mission = EEQ_unicorn_censorship_mission
 	}
 }

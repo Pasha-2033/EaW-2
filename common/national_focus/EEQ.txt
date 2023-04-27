@@ -346,7 +346,16 @@ focus_tree = {
 				id = EEQ_prince_blueblood_vs_twilight
 				set_default = yes
 			}
-			activate_mission = EEQ_twilight_initiatives_mission
+			hidden_effect = {
+				country_event = {
+					id = bop_eeq_event.6
+					days = 7
+					random_days = 7
+				}
+				country_event = {
+					id = bop_eeq_event.5
+				}
+			}
 		}
 	}
 	focus = {
