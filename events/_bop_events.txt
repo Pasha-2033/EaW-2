@@ -43,8 +43,9 @@ country_event = {
 				NOT = {
 					has_completed_focus = eeq_focus_friendship_is_magic #if become harmonic - stop fascists when friendship destroys vindigo
 				}
-				has_focus_tree = eeq_focus_tree #if become fascists - stop harmonists when fascism is supreme ideology
-				has_civil_war = no
+				has_power_balance = {
+					id = EEQ_prince_blueblood_vs_twilight
+				}
 			}
 			set_variable = {
 				#fixes trigger (prevent THIS (country) = 0 become EEQ_fascism_vs_harmony_character)
@@ -158,5 +159,56 @@ country_event = {
 	hidden = yes
 	option = {
 		activate_mission = EEQ_unicorn_censorship_mission
+	}
+}
+country_event = {
+	#start opposition propaganda
+	id = bop_eeq_event.8
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		if = {
+			limit = {
+				has_power_balance = {
+					id = EEQ_prince_blueblood_vs_twilight
+				}
+			}
+			random_list = {
+				25 = {
+					modifier = {
+						factor = 1
+						#if ideology is too low or bop is not good, chance for opposition activity should be higher (to do)
+					}
+					if = {
+						limit = {
+							has_completed_focus = eeq_focus_twilight_initiative
+						}
+						activate_mission = EEQ_fascism_propaganda_mission
+						add_ideas = EEQ_fascism_propaganda_bop
+					}
+					else = {
+						activate_mission = EEQ_harmony_propaganda_mission
+						add_ideas = EEQ_harmony_propaganda_bop
+					}
+				}
+				75 = {
+					country_event = {
+						id = bop_eeq_event.9
+						days = 7
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+	#start opposition propaganda recursion
+	id = bop_eeq_event.9
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		country_event = {
+			id = bop_eeq_event.8
+		}
 	}
 }

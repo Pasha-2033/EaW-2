@@ -130,7 +130,13 @@ focus_tree = {
 					random_days = 7
 				}
 				country_event = {
-					id = bop_eeq_event.5
+					id = bop_eeq_event.4
+					days = 2
+					random_days = 2
+				}
+				country_event = {
+					id = bop_eeq_event.8
+					days = 3
 				}
 			}
 		}
@@ -178,6 +184,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eeq_focus_earthpony_harmony"
+			add_power_balance_modifier = {
+				id = EEQ_prince_blueblood_vs_twilight
+				modifier = EEQ_earthpony_harmony
+			}
 		}
 	}
 	focus = {
@@ -194,7 +204,11 @@ focus_tree = {
 			focus = eeq_focus_twilight_initiative
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus eeq_focus_earthpony_harmony"
+			log = "[GetDateText]: [Root.GetName]: Focus eeq_focus_pegas_harmony"
+			add_power_balance_modifier = {
+				id = EEQ_prince_blueblood_vs_twilight
+				modifier = EEQ_pegas_harmony
+			}
 		}
 	}
 	focus = {
@@ -373,7 +387,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eeq_focus_desperate_measures"
-			
+			add_ideas = EEQ_desperate_measures
 		}
 	}
 	focus = {

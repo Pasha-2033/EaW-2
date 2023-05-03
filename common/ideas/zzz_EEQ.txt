@@ -50,7 +50,7 @@ ideas = {
 			}
 		}
 		EEQ_unicorn_censorship = {
-			picture = EEQ_tribal_crisis
+			picture = clockwerk_economy			#to do (change)
 			allowed = {
 				original_tag = EEQ
 			}
@@ -69,6 +69,69 @@ ideas = {
 				air_chief_cost_factor = 0.1
 				high_command_cost_factor = 0.1
 				theorist_cost_factor = 0.1
+			}
+		}
+		EEQ_desperate_measures = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EEQ
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			cancel = {
+				NOT = {
+					has_war_with = ICE
+				}
+			}
+			targeted_modifier = {
+				tag = ICE
+				#to do
+			}
+			modifier = {
+				
+			}
+		}
+		EEQ_fascism_propaganda_bop = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EEQ
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				fascism_drift = 0.05
+			}
+		}
+		EEQ_harmony_propaganda_bop = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EEQ
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				harmony_drift = 0.05
+			}
+		}
+		EEQ_lack_of_junior_officers = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EEQ
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = fascism
+					has_government = militarism
+				}
+			}
+			modifier = {
+				army_chief_cost_factor = 0.15
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+				army_org_regain = -0.05
 			}
 		}
 	}
