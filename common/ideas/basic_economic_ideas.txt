@@ -136,6 +136,37 @@ ideas = {
 				always = yes
 			}
 		}
+		#экономические кризисы
+		strong_starvation = {
+			picture = clockwerk_economy			#to do (change)
+			modifier = {
+				production_lack_of_resource_penalty_factor = 0.5
+				country_resource_food = -300
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+		medium_starvation = {
+			picture = clockwerk_economy			#to do (change)
+			modifier = {
+				production_lack_of_resource_penalty_factor = 0.3
+				country_resource_food = -200
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+		light_starvation = {
+			picture = clockwerk_economy			#to do (change)
+			modifier = {
+				production_lack_of_resource_penalty_factor = 0.1
+				country_resource_food = -100
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
 	}
 	hidden_ideas = {
 		#исторические состояния режимов экономик

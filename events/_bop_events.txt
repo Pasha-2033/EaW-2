@@ -1,55 +1,55 @@
-add_namespace = bop_eeq_event
+add_namespace = bop_eqs_event
 country_event = {
-	#start EEQ_prince_blueblood_initiatives_mission
-	id = bop_eeq_event.1
+	#start EQS_prince_blueblood_initiatives_mission
+	id = bop_eqs_event.1
 	is_triggered_only = yes
 	hidden = yes
 	option = {
-		activate_mission = EEQ_prince_blueblood_initiatives_mission
+		activate_mission = EQS_prince_blueblood_initiatives_mission
 		country_event = {
-			id = bop_eeq_event.7
+			id = bop_eqs_event.7
 			days = 105
 			random_days = 35
 		}
 	}
 }
 country_event = {
-	#start EEQ_arest_harmonic_officers_mission
-	id = bop_eeq_event.2
+	#start EQS_arest_harmonic_officers_mission
+	id = bop_eqs_event.2
 	is_triggered_only = yes
 	hidden = yes
 	option = {
-		activate_mission = EEQ_arest_harmonic_officers_mission
+		activate_mission = EQS_arest_harmonic_officers_mission
 	}
 }
 country_event = {
-	#start EEQ_opposition_to_harmony_mission
-	id = bop_eeq_event.3
+	#start EQS_opposition_to_harmony_mission
+	id = bop_eqs_event.3
 	is_triggered_only = yes
 	hidden = yes
 	option = {
-		activate_mission = EEQ_opposition_to_harmony_mission
+		activate_mission = EQS_opposition_to_harmony_mission
 	}
 }
 country_event = {
-	#start EEQ_fascist_recruit_general_marshal(admiral)
-	#start EEQ_harmonist_recruit_general_marshal(admiral)
-	id = bop_eeq_event.4
+	#start EQS_fascist_recruit_general_marshal(admiral)
+	#start EQS_harmonist_recruit_general_marshal(admiral)
+	id = bop_eqs_event.4
 	is_triggered_only = yes
 	hidden = yes
 	option = {
 		if = {
 			limit = {
 				NOT = {
-					has_completed_focus = eeq_focus_friendship_is_magic #if become harmonic - stop fascists when friendship destroys vindigo
+					has_completed_focus = eqs_focus_friendship_is_magic #if become harmonic - stop fascists when friendship destroys vindigo
 				}
 				has_power_balance = {
-					id = EEQ_prince_blueblood_vs_twilight
+					id = EQS_prince_blueblood_vs_twilight
 				}
 			}
 			set_variable = {
-				#fixes trigger (prevent THIS (country) = 0 become EEQ_fascism_vs_harmony_character)
-				EEQ_fascism_vs_harmony_character = 0
+				#fixes trigger (prevent THIS (country) = 0 become EQS_fascism_vs_harmony_character)
+				EQS_fascism_vs_harmony_character = 0
 			}
 			random_list = {
 				0 = {
@@ -64,7 +64,7 @@ country_event = {
 							has_unit_leader_political_trait = no
 						}
 						set_variable = { 
-							PREV.EEQ_fascism_vs_harmony_character = THIS 
+							PREV.EQS_fascism_vs_harmony_character = THIS 
 						}
 					}
 				}
@@ -80,97 +80,97 @@ country_event = {
 							has_unit_leader_political_trait = no
 						}
 						set_variable = { 
-							PREV.EEQ_fascism_vs_harmony_character = THIS 
+							PREV.EQS_fascism_vs_harmony_character = THIS 
 						}
 					}
 				}
 			}
-			set_country_flag = EEQ_fascism_vs_harmony_character_timer
+			set_country_flag = EQS_fascism_vs_harmony_character_timer
 			if = {
 				#if no character found - don`t start mission
 				limit = {
 					check_variable = {
-						EEQ_fascism_vs_harmony_character = 0
+						EQS_fascism_vs_harmony_character = 0
 					}
 				}
 				country_event = {
 					#recusion (delay 7 days, we shouldn`t create a lot of checks)
-					id = bop_eeq_event.5
+					id = bop_eqs_event.5
 					days = 7
 				}
 			}
 			else_if = {
 				limit = {
-					var:EEQ_fascism_vs_harmony_character = {
+					var:EQS_fascism_vs_harmony_character = {
 						is_army_leader = yes
 					}
 				}
 				if = {
 					limit = {
-						has_completed_focus = eeq_focus_twilight_initiative
+						has_completed_focus = eqs_focus_twilight_initiative
 					}
-					activate_mission = EEQ_fascist_recruit_general_marshal
+					activate_mission = EQS_fascist_recruit_general_marshal
 				}
 				else = {
-					activate_mission = EEQ_harmonist_recruit_general_marshal
+					activate_mission = EQS_harmonist_recruit_general_marshal
 				}
 			}
 			else_if = {
 				limit = {
-					has_completed_focus = eeq_focus_twilight_initiative
+					has_completed_focus = eqs_focus_twilight_initiative
 				}
-				activate_mission = EEQ_fascist_recruit_admiral
+				activate_mission = EQS_fascist_recruit_admiral
 			}
 			else = {
-				activate_mission = EEQ_harmonist_recruit_admiral
+				activate_mission = EQS_harmonist_recruit_admiral
 			}
 		}
 	}
 }
 country_event = {
-	#start EEQ_fascist_recruit_general_marshal(admiral) recusion
-	#start EEQ_harmonist_recruit_general_marshal(admiral) recusion
-	id = bop_eeq_event.5
+	#start EQS_fascist_recruit_general_marshal(admiral) recusion
+	#start EQS_harmonist_recruit_general_marshal(admiral) recusion
+	id = bop_eqs_event.5
 	immediate = {
-		clear_variable = EEQ_fascism_vs_harmony_character
-		clr_country_flag = EEQ_fascism_vs_harmony_character_timer
+		clear_variable = EQS_fascism_vs_harmony_character
+		clr_country_flag = EQS_fascism_vs_harmony_character_timer
 	}
 	is_triggered_only = yes
 	hidden = yes
 	option = {
 		country_event = {
-			id = bop_eeq_event.4
+			id = bop_eqs_event.4
 		}
 	}
 }
 country_event = {
-	#start EEQ_twilight_initiatives_mission
-	id = bop_eeq_event.6
+	#start EQS_twilight_initiatives_mission
+	id = bop_eqs_event.6
 	is_triggered_only = yes
 	hidden = yes
 	option = {
-		activate_mission = EEQ_twilight_initiatives_mission
+		activate_mission = EQS_twilight_initiatives_mission
 	}
 }
 country_event = {
-	#start EEQ_unicorn_censorship_mission
-	id = bop_eeq_event.7
+	#start EQS_unicorn_censorship_mission
+	id = bop_eqs_event.7
 	is_triggered_only = yes
 	hidden = yes
 	option = {
-		activate_mission = EEQ_unicorn_censorship_mission
+		activate_mission = EQS_unicorn_censorship_mission
 	}
 }
 country_event = {
 	#start opposition propaganda
-	id = bop_eeq_event.8
+	id = bop_eqs_event.8
 	is_triggered_only = yes
 	hidden = yes
 	option = {
 		if = {
 			limit = {
 				has_power_balance = {
-					id = EEQ_prince_blueblood_vs_twilight
+					id = EQS_prince_blueblood_vs_twilight
 				}
 			}
 			random_list = {
@@ -181,19 +181,19 @@ country_event = {
 					}
 					if = {
 						limit = {
-							has_completed_focus = eeq_focus_twilight_initiative
+							has_completed_focus = eqs_focus_twilight_initiative
 						}
-						activate_mission = EEQ_fascism_propaganda_mission
-						add_ideas = EEQ_fascism_propaganda_bop
+						activate_mission = EQS_fascism_propaganda_mission
+						add_ideas = EQS_fascism_propaganda_bop
 					}
 					else = {
-						activate_mission = EEQ_harmony_propaganda_mission
-						add_ideas = EEQ_harmony_propaganda_bop
+						activate_mission = EQS_harmony_propaganda_mission
+						add_ideas = EQS_harmony_propaganda_bop
 					}
 				}
 				75 = {
 					country_event = {
-						id = bop_eeq_event.9
+						id = bop_eqs_event.9
 						days = 7
 					}
 				}
@@ -203,12 +203,12 @@ country_event = {
 }
 country_event = {
 	#start opposition propaganda recursion
-	id = bop_eeq_event.9
+	id = bop_eqs_event.9
 	is_triggered_only = yes
 	hidden = yes
 	option = {
 		country_event = {
-			id = bop_eeq_event.8
+			id = bop_eqs_event.8
 		}
 	}
 }

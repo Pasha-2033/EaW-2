@@ -1,0 +1,70 @@
+characters = {
+	EQS_celestia = {
+		name = EQS_celestia
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_CELESTIA_DESC"
+			ideology = harmonic_magocracy
+			traits = {}
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	EQS_prince_blueblood = {
+		name = EQS_prince_blueblood
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown"
+				small = "" #to do
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_PRINCE_BLUEBLOOD_DESC"
+			ideology = nazism
+			traits = {}
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = EQS_prince_blueblood
+			traits = {
+				unicorn_superirity
+			}
+			allowed = {
+				original_tag = EQS
+			}
+			can_be_fired = no
+		}
+	}
+	EQS_twilight = {
+		name = EQS_twilight
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown"
+				small = "" #to do
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = EQS_twilight
+			traits = {
+				HE_magic
+			}
+			available = {
+				has_completed_focus = eqs_focus_twilight_initiative
+				has_government = harmony
+			}
+			visible = {
+				has_completed_focus = eqs_focus_twilight_initiative
+			}
+			allowed = {
+				original_tag = EQS
+			}
+		}
+	}
+}

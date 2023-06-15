@@ -1,0 +1,317 @@
+@country_lore_selection_grid_height = 540 # = 54 * n, where n is num of entries
+guiTypes = {
+	#inspired by original EaW welcome screen (reworked)
+	containerWindowType = {
+		name = "evil_mind_encyclopedia_container"
+		size = {
+			width = 1167 
+			height = 675
+		}
+		origo = CENTER
+		orientation = CENTER
+		moveable = yes
+		show_sound = menu_open_window
+		hide_sound = menu_close_window
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_evil_mind_encyclopedia_container_bg"
+		}
+		instantTextboxType = {
+			name = "evil_mind_encyclopedia_header"
+			position = {
+				x = -265 
+				y = 23 
+			}
+			font = "hoi_24header"
+			text = "encyclopedia_header"
+			orientation = center_up
+			format = center
+			maxWidth = 530
+			maxHeight = 30
+		}
+		buttonType = {
+			name = "encyclopedia_tab_1_off"
+			position = {
+				x = 58
+				y = 104
+			}
+			quadTextureSprite = "GFX_evil_mind_encyclopedia_tab_off"
+			font = "hoi_18mbs"
+			buttonText = "encyclopedia_tab_1"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "encyclopedia_tab_2_off"
+			position = {
+				x = 331
+				y = 104
+			}
+			quadTextureSprite = "GFX_evil_mind_encyclopedia_tab_off"
+			font = "hoi_18mbs"
+			buttonText = "encyclopedia_tab_2"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "encyclopedia_tab_3_off"
+			position = {
+				x = 596
+				y = 104
+			}
+			quadTextureSprite = "GFX_evil_mind_encyclopedia_tab_off"
+			font = "hoi_18mbs"
+			buttonText = "encyclopedia_tab_3"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "encyclopedia_tab_4_off"
+			position = {
+				x = 869
+				y = 104
+			}
+			quadTextureSprite = "GFX_evil_mind_encyclopedia_tab_off"
+			font = "hoi_18mbs"
+			buttonText = "encyclopedia_tab_4"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "close_button"
+			position = { 
+				x = -44 
+				y = 22 
+			}
+			quadTextureSprite = "GFX_closebutton"
+			shortcut = "ESCAPE"
+			Orientation = UPPER_RIGHT
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+	}
+	#WARNING!!!
+	#for optimisation every "child" gui has:
+	# - button encyclopedia_tab_<n>_on (with no effect)
+	# - header of gui
+	# - main gui body
+	#these gui has xy = (0,0), this common organisation alow to reduse trigger number
+	containerWindowType = {
+		#responsible for country lore (with selection)
+		#selection can be by country in politics/intel ledger or in list
+		name = "encyclopedia_tab_1_container"
+		size = {
+			width = 100%
+			height = 100%
+		}
+		buttonType = {
+			name = "encyclopedia_tab_1_on"
+			position = {
+				x = 58
+				y = 104
+			}
+			quadTextureSprite = "GFX_evil_mind_encyclopedia_tab_on"
+			font = "hoi_18mbs"
+			buttonText = "encyclopedia_tab_1"
+		}
+		instantTextboxType = {
+			name = "tab_1_header"
+			position = {
+				x = -550
+				y = 160 
+			}
+			font = "hoi_24header"
+			text = "encyclopedia_tab_1_header"
+			Orientation = center_up
+			format = center
+			maxWidth = 1100
+			maxHeight = 30
+		}
+		containerWindowType = {
+			name = "country_lore_selection_container"
+			size = {
+				width = 310
+				height = 445
+			}
+			position = { 
+				x = 25
+				y = 200 
+			}
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_blank"
+			}
+			verticalScrollbar = "right_vertical_slider"
+			containerWindowType = {
+				name = "country_lore_selection_grid_container"
+				size = {
+					width = 300
+					height = @country_lore_selection_grid_height
+				}
+				gridBoxType = {
+					name = "country_lore_selection_grid"
+					size = {
+						width = 300
+						height = @country_lore_selection_grid_height
+					}
+					slotsize = { 
+						width = 300 
+						height = 54 
+					}
+					format = "CENTER"
+					add_horizontal = no
+				}
+			}
+			
+		}
+		containerWindowType = {
+			name = "country_lore_container"
+			size = {
+				width = 800
+				height = 445
+			}
+			position = {
+				x = 340
+				y = 200
+			}
+			instantTextboxType = {
+				name = "country_lore"
+				font = "hoi_18mbs"
+				text = "country_lore_text"
+				maxWidth = 800
+				maxHeight = 445
+				format = left
+				scrollbarType = standardtext_slider
+			}
+		}
+	}
+	containerWindowType = {
+		name = "encyclopedia_tab_2_container"
+		size = {
+			width = 100%
+			height = 100%
+		}
+		buttonType = {
+			name = "encyclopedia_tab_2_on"
+			position = {
+				x = 331
+				y = 104
+			}
+			quadTextureSprite = "GFX_evil_mind_encyclopedia_tab_on"
+			font = "hoi_18mbs"
+			buttonText = "encyclopedia_tab_2"
+		}
+		instantTextboxType = {
+			name = "tab_2_header"
+			position = {
+				x = -550
+				y = 160 
+			}
+			font = "hoi_24header"
+			text = "encyclopedia_tab_2_header"
+			Orientation = center_up
+			format = center
+			maxWidth = 1100
+			maxHeight = 30
+		}
+	}
+	containerWindowType = {
+		name = "encyclopedia_tab_3_container"
+		size = {
+			width = 100%
+			height = 100%
+		}
+		buttonType = {
+			name = "encyclopedia_tab_3_on"
+			position = {
+				x = 596
+				y = 104
+			}
+			quadTextureSprite = "GFX_evil_mind_encyclopedia_tab_on"
+			font = "hoi_18mbs"
+			buttonText = "encyclopedia_tab_3"
+		}
+		instantTextboxType = {
+			name = "tab_3_header"
+			position = {
+				x = -550
+				y = 160 
+			}
+			font = "hoi_24header"
+			text = "encyclopedia_tab_3_header"
+			Orientation = center_up
+			format = center
+			maxWidth = 1100
+			maxHeight = 30
+		}
+	}
+	containerWindowType = {
+		name = "encyclopedia_tab_4_container"
+		size = {
+			width = 100%
+			height = 100%
+		}
+		buttonType = {
+			name = "encyclopedia_tab_4_on"
+			position = {
+				x = 869
+				y = 104
+			}
+			quadTextureSprite = "GFX_evil_mind_encyclopedia_tab_on"
+			font = "hoi_18mbs"
+			buttonText = "encyclopedia_tab_4"
+		}
+		instantTextboxType = {
+			name = "tab_4_header"
+			position = {
+				x = -550
+				y = 160 
+			}
+			font = "hoi_24header"
+			text = "encyclopedia_tab_4_header"
+			Orientation = center_up
+			format = center
+			maxWidth = 1100
+			maxHeight = 30
+		}
+		instantTextboxType = {
+			name = "change_log"
+			position = {
+				x = -550
+				y = 200 
+			}
+			font = "hoi_18mbs"
+			text = "change_log"
+			Orientation = center_up
+			maxWidth = 1100
+			maxHeight = 445
+			format = left
+			scrollbarType = standardtext_slider
+		}
+	}
+	containerWindowType = {
+		name = "encyclopedia_country_selection"
+		size = {
+			width = 300
+			height = 200
+		}
+		buttonType = {
+			name = "encyclopedia_country_selection_button"
+			quadTextureSprite = "GFX_encyclopedia_country_selection_button"
+			font = "hoi_18mbs"
+			buttonText = "[?v.GetTag]"
+		}
+		iconType = {
+			name = "encyclopedia_country_selection_icon"
+			spriteType = "GFX_flag_small2"
+			position = {
+				x = 220
+				y = 13
+			}
+		}
+		iconType = {
+			name = "encyclopedia_country_selection_icon_majority"
+			spriteType = "GFX_major_country_flag_overlay"
+			position = {
+				x = 220
+				y = 13
+			}
+		}
+	}
+}

@@ -386,9 +386,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_technogical_union"
 			add_stability = 0.3
-			EEQ = {
+			EQS = {
 				country_event = {
-					id = eequestria.1
+					id = equestria.1
 					days = 1
 				}
 			}
@@ -414,10 +414,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_equus_technounion"
 			add_stability = 0.1
 			add_research_slot = 1
-			EEQ = {
+			EQS = {
 				add_stability = 0.05
 			}
-			ESG = {
+			STG = {
 				add_stability = 0.05
 			}
 		}
@@ -630,7 +630,7 @@ focus_tree = {
 			focus = ves_focus_thorax_birthday
 		}
 		available = {
-			ECR = {
+			CRY = {
 				exists = yes
 			}
 		}
@@ -654,7 +654,7 @@ focus_tree = {
 			focus = ves_focus_thorax_in_cry
 		}
 		available = {
-			EEQ = {
+			EQS = {
 				exists = yes
 			}
 		}
@@ -1156,7 +1156,7 @@ focus_tree = {
 				mark_focus_tree_layout_dirty = yes
 				if = {
 					limit = {
-						ECR = {
+						CRY = {
 							exists = no
 						}
 					}

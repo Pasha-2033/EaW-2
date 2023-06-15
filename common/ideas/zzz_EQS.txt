@@ -1,0 +1,270 @@
+ideas = {
+	country = {
+		EQS_unicorn_superiority = {
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				OR = {
+					has_government = fascism
+					has_government = militarism
+				}
+			}
+			#cancel = {
+			#	NOT = {
+			#		any_character = {
+			#			has_trait = unicorn_superirity
+			#			is_political_advisor = yes
+			#		}
+			#	}
+			#}
+			modifier = {
+				political_power_factor = -0.5
+				fascism_drift = 0.05
+				stability_weekly = -0.01
+				political_advisor_cost_factor = 0.75
+				ai_focus_aggressive_factor = 0.1
+			}
+		}
+		EQS_tribal_crisis = {
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			targeted_modifier = {
+				tag = EPT
+				attack_bonus_against_cores = -0.25
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = PGT
+				attack_bonus_against_cores = -0.25
+				defense_bonus_against = 0.1
+			}
+			modifier = {
+				improve_relations_maintain_cost_factor = 1
+			}
+		}
+		EQS_unicorn_censorship = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			cancel = {
+				has_government = fascism
+			}
+			modifier = {
+				fascism_drift = 0.02
+				political_power_cost = 0.25
+				political_advisor_cost_factor = 0.1
+				army_chief_cost_factor = 0.1
+				navy_chief_cost_factor = 0.1
+				air_chief_cost_factor = 0.1
+				high_command_cost_factor = 0.1
+				theorist_cost_factor = 0.1
+			}
+		}
+		EQS_desperate_measures = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			cancel = {
+				NOT = {
+					has_war_with = ICE
+				}
+			}
+			targeted_modifier = {
+				tag = ICE
+				#to do
+			}
+			modifier = {
+				
+			}
+		}
+		EQS_fascism_propaganda_bop = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				fascism_drift = 0.05
+			}
+		}
+		EQS_harmony_propaganda_bop = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				harmony_drift = 0.05
+			}
+		}
+		EQS_lack_of_junior_officers = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				NOT = {
+					has_government = fascism
+					has_government = militarism
+				}
+			}
+			modifier = {
+				army_chief_cost_factor = 0.15
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+				army_org_regain = -0.05
+			}
+		}
+		EQS_political_overload = {
+			allowed = {
+				original_tag = EQS
+			}
+			cancel = {
+				NOT = {
+					has_power_balance = {
+						id = EQS_prince_blueblood_vs_twilight
+					}
+				}
+			}
+			modifier = {
+				political_power_gain = 2
+			}
+			on_remove = {
+				add_timed_idea = {
+					idea = EQS_political_exhaustion
+					days = 180
+				}
+			}
+		}
+		EQS_political_exhaustion = {
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				political_power_gain = -1
+			}
+		}
+		EQS_central_equus_defence_district = {
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			cancel = {
+				NOT = {
+					has_war_with = ICE
+					controls_state = 3
+				}
+			}
+			modifier = {
+				defence = 0.1
+				army_org_regain = 0.1
+				army_org = 10
+			}
+			on_add = {
+				3 = {
+					add_dynamic_modifier = {
+						modifier = EQS_canterlot_defence_district
+					}
+				}
+			}
+			on_remove = {
+				3 = {
+					remove_dynamic_modifier = {
+						modifier = EQS_canterlot_defence_district
+					}
+				}
+			}
+		}
+		EQS_central_high_command = {
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			modifier = {
+				max_command_power = 50
+				command_abilities_cost_factor = -0.1
+				command_power_gain_mult = 0.05
+				political_power_cost = 0.25
+			}
+			on_add = {
+				add_command_power = 100
+			}
+		}
+
+		####
+		EQS_fascist_indignation = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			modifier = {
+				
+			}
+		}
+		EQS_fascist_protests = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			modifier = {
+				
+			}
+		}
+		EQS_complex_goverment_fascist_and_harmonist = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				fascism > 0
+				harmony > 0
+			}
+			modifier = {
+				
+			}
+		}
+		EQS_admission_only_to_lower_positions_fascist_and_harmonist = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				fascism > 0
+				harmony > 0
+			}
+			modifier = {
+				
+			}
+		}
+	}
+}

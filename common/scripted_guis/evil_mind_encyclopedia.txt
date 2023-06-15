@@ -1,0 +1,127 @@
+scripted_gui = {
+	evil_mind_encyclopedia_container = {
+		context_type = player_context
+		window_name = "evil_mind_encyclopedia_container"
+		visible = {
+			is_ai = no
+			has_variable = encyclopedia_tab
+		}
+		#are triggers for encyclopedia_tab_<n>_off_visible essential? todo tests
+		effects = {
+			encyclopedia_tab_1_off_click = {
+				set_variable = {
+					encyclopedia_tab = 1
+				}
+			}
+			encyclopedia_tab_2_off_click = {
+				set_variable = {
+					encyclopedia_tab = 2
+				}
+			}
+			encyclopedia_tab_3_off_click = {
+				set_variable = {
+					encyclopedia_tab = 3
+				}
+			}
+			encyclopedia_tab_4_off_click = {
+				set_variable = {
+					encyclopedia_tab = 4
+				}
+			}
+			close_button_click = {
+				clear_variable = encyclopedia_tab
+			}
+		}
+	}
+	encyclopedia_tab_1_container = {
+		context_type = player_context
+		window_name = "encyclopedia_tab_1_container"
+		parent_window_name = "evil_mind_encyclopedia_container"
+		visible = {
+			check_variable = {
+				encyclopedia_tab = 1
+			}
+		}
+		dynamic_lists = {
+			country_lore_selection_grid = { #to do
+				array = global.country_with_lore
+				change_scope = no
+				entry_container = "encyclopedia_country_selection"
+				value = v
+			}
+		}
+		triggers = {
+			encyclopedia_country_selection_icon_majority_visible = {
+				var:v = {
+					is_major = yes
+				}
+			}
+			encyclopedia_country_selection_button_visible = {
+				set_temp_variable = {
+					ecsbv = 1
+				}
+				if = {
+					limit = {
+						meta_trigger = {
+							text = {
+								check_variable = {
+									[SC].id = [V].id
+								}
+							}
+							SC = "[?selected_country_with_lore.GetTag]"
+							V = "[?v.GetTag]"
+						}
+					}
+					add_to_temp_variable = {
+						ecsbv = 1
+					}
+				}
+			}
+		}
+		effects = {
+			encyclopedia_country_selection_button_click = {
+				set_variable = {
+					selected_country_with_lore = v
+				}
+			}
+		}
+		properties = {
+			encyclopedia_country_selection_icon = {
+				image = "[?v.GetFlag]"
+			}
+			encyclopedia_country_selection_button = {
+				frame = ecsbv
+			}
+		}
+	}
+	encyclopedia_tab_2_container = {
+		context_type = player_context
+		window_name = "encyclopedia_tab_2_container"
+		parent_window_name = "evil_mind_encyclopedia_container"
+		visible = {
+			check_variable = {
+				encyclopedia_tab = 2
+			}
+		}
+	}
+	encyclopedia_tab_3_container = {
+		context_type = player_context
+		window_name = "encyclopedia_tab_3_container"
+		parent_window_name = "evil_mind_encyclopedia_container"
+		visible = {
+			check_variable = {
+				encyclopedia_tab = 3
+			}
+		}
+	}
+	encyclopedia_tab_4_container = {
+		context_type = player_context
+		window_name = "encyclopedia_tab_4_container"
+		parent_window_name = "evil_mind_encyclopedia_container"
+		visible = {
+			check_variable = {
+				encyclopedia_tab = 4
+			}
+		}
+	}
+}

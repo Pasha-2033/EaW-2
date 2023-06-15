@@ -1,0 +1,36 @@
+capital = 7
+set_popularities = {
+	fascism = 74
+	radicalism = 8
+	neutrality = 15
+	harmony = 1
+	socialism = 2
+}
+set_politics = {
+	ruling_party = neutrality
+	last_election = "953.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+add_ideas = {
+	dragon_race
+}
+add_timed_idea = {
+	idea = DRG_crystal_mountain
+	days = 720
+}
+982.1.1 = {
+	set_variable = {
+		UG_ARG_1 = 0.334
+	}
+	set_variable = {
+		UG_ARG_9 = 0.1
+	}
+	set_variable = {
+		UG_ARG_16 = 0
+	}
+	set_variable = {
+		UG_ARG_17 = 0
+	}
+	generate_units_982 = yes
+}

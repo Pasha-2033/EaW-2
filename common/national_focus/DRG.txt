@@ -1,0 +1,739 @@
+focus_tree = {
+	id = drg_focus_tree
+	country = {
+		base = 0
+		modifier = {
+			add = 100
+			tag = DRG
+		}
+	}
+	default = no
+	continuousdrg_focus_position = {
+		x = 2700
+		y = 1350
+	}
+	#uniqe DRG focuses
+	#нужно чинить xy и relative pos
+	focus = {
+		id = drg_focus_competitions
+		icon = GFX_goal_generic_archonism
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		x = 11
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_old_leader
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_competitions
+		}
+		mutually_exclusive = {
+			focus = drg_focus_spike
+			focus = drg_focus_ember
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 2
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_spike
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_competitions
+		}
+		mutually_exclusive = {
+			focus = drg_focus_old_leader
+			focus = drg_focus_ember
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 9
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_ember
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_competitions
+		}
+		mutually_exclusive = {
+			focus = drg_focus_old_leader
+			focus = drg_focus_spike
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 19
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_elections_of_minions
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_old_leader
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 2
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_neutralitydrg_focus
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_elections_of_minions
+		}
+		mutually_exclusive = {
+			focus = drg_focus_ultranationalism_old_leader
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_ultranationalism_old_leader
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_elections_of_minions
+		}
+		mutually_exclusive = {
+			focus = drg_focus_neutralitydrg_focus
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 4
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_government_isolation
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_neutralitydrg_focus
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_economic_isolation
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_government_isolation
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_economic_autonomy_rises
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_economic_isolation
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_military_spirit
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_ultranationalism_old_leader
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 4
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_military_propaganda
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_military_spirit
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 3
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_youth_militarisation
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_military_propaganda
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 3
+		y = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_intensive_training
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_military_spirit
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 5
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_hatered_to_nondragon
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_intensive_training
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 5
+		y = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_conquer_nondragon
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_hatered_to_nondragon
+		}
+		prerequisite = {
+			focus = drg_focus_youth_militarisation
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 4
+		y = 7
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_neutrality_spike
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_spike
+		}
+		mutually_exclusive = {
+			focus = drg_focus_harmonydrg_focus
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 9
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_diplomacydrg_focus
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_neutrality_spike
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 8
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_improve_workers_conditions
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_neutrality_spike
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 10
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_one_year_plan
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_improve_workers_conditions
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 10
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_boost_economy
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_one_year_plan
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 10
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_improve_relations
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_diplomacydrg_focus
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 8
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_economic_help
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_improve_relations
+		}
+		prerequisite = {
+			focus = drg_focus_boost_economy
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 9
+		y = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_harmonydrg_focus
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_spike
+			focus = drg_focus_ember
+		}
+		mutually_exclusive = {
+			focus = drg_focus_neutrality_spike
+			focus = drg_focus_ultranationalism_ember
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 14
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_harmony_propoganda
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_harmonydrg_focus
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 14
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_open_friendship_school
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_harmony_propoganda
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 13
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_remove_opposition
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_open_friendship_school
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 13
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_equestrial_union
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_harmony_propoganda
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 15
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_friendship_with_ponies
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_equestrial_union
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 15
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_strengthen_friendship
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_friendship_with_ponies
+		}
+		prerequisite = {
+			focus = drg_focus_remove_opposition
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 14
+		y = 6
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_ultranationalism_ember
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_ember
+		}
+		mutually_exclusive = {
+			focus = drg_focus_harmonydrg_focus
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 19
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_industrialisation
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_ultranationalism_ember
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 18
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_research_institute
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_ultranationalism_ember
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 20
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_armydrg_focus
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_industrialisation
+		}
+		prerequisite = {
+			focus = drg_focus_research_institute
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 19
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_attack_equus
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_armydrg_focus
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 20
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = drg_focus_attack_griffon_continent
+		icon = GFXdrg_focus_indy_generic_political
+		cost = 1
+		prerequisite = {
+			focus = drg_focus_armydrg_focus
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 18
+		y = 5
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus to do"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+}

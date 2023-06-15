@@ -1,0 +1,21 @@
+ideas = {
+	country = {
+		NML_no_time_for_caution = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = NML
+			}
+			cancel = {
+				all_core_state = {
+					controller = {
+						original_tag = ROOT
+					}
+				}
+			}
+			modifier = {
+				ai_focus_aggressive_factor = 0.1
+				ai_focus_war_production_factor = 0.1
+			}
+		}
+	}
+}

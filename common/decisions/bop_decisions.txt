@@ -1,22 +1,22 @@
-EEQ_prince_blueblood_vs_twilight_decisions = {
+EQS_prince_blueblood_vs_twilight_decisions = {
 	#debug
 	add_harmony_10 = {
 		icon = GFX_decision_category_debug # TODO_TA set correct icon     
 		cost = 0
 		allowed = {
-			tag = EEQ
+			tag = EQS
 			is_debug = yes
 		}    
 		priority = 11           
 		complete_effect = {
 			add_power_balance_value = {
-				id = EEQ_prince_blueblood_vs_twilight
+				id = EQS_prince_blueblood_vs_twilight
 				value = -0.1
 				tooltip_side = twilight_harmonists
 			}
 			remove_power_balance_modifier = {
-				id = EEQ_prince_blueblood_vs_twilight
-				modifier = EEQ_fascism_propaganda
+				id = EQS_prince_blueblood_vs_twilight
+				modifier = EQS_fascism_propaganda
 			}
 		}
 	}
@@ -24,47 +24,44 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 		icon = GFX_decision_category_debug # TODO_TA set correct icon     
 		cost = 0
 		allowed = {
-			tag = EEQ
+			tag = EQS
 			is_debug = yes
 		}  
 		priority = 11               
 		complete_effect = {
 			add_power_balance_value = {
-				id = EEQ_prince_blueblood_vs_twilight
+				id = EQS_prince_blueblood_vs_twilight
 				value = 0.1
 				tooltip_side = prince_blueblood_fascists
 			}
 			add_power_balance_modifier = {
-				id = EEQ_prince_blueblood_vs_twilight
-				modifier = EEQ_fascism_propaganda
+				id = EQS_prince_blueblood_vs_twilight
+				modifier = EQS_fascism_propaganda
 			}
 		}
 	}
 
 
 
-	EEQ_antagonise_harmony_vs_fascism_recruiting = {
+	EQS_antagonise_harmony_vs_fascism_recruiting = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon
 		allowed = {
-			tag = EEQ
+			tag = EQS
 		}
 		available = {
 			has_country_flag = {
-				flag = EEQ_fascism_vs_harmony_character_timer
+				flag = EQS_fascism_vs_harmony_character_timer
 				days < 15
 			}
 		}
 		visible = {
 			hidden_trigger = {
 				OR = {
-					has_active_mission = EEQ_fascist_recruit_admiral
-					has_active_mission = EEQ_fascist_recruit_general_marshal
-					has_active_mission = EEQ_harmonist_recruit_admiral
-					has_active_mission = EEQ_harmonist_recruit_general_marshal
-				}
-				has_country_flag = {
-					flag = EEQ_fascism_vs_harmony_character_timer
-					days < 14
+					has_active_mission = EQS_fascist_recruit_admiral
+					has_active_mission = EQS_fascist_recruit_general_marshal
+					has_active_mission = EQS_harmonist_recruit_admiral
+					has_active_mission = EQS_harmonist_recruit_general_marshal
+					has_decision = EQS_antagonise_harmony_vs_fascism_recruiting
 				}
 			}
 		}
@@ -74,46 +71,43 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 		remove_effect = {
 			if = {
 				limit = {
-					has_completed_focus = eeq_focus_twilight_initiative
+					has_completed_focus = eqs_focus_twilight_initiative
 				}
-				var:EEQ_fascism_vs_harmony_character = {
+				var:EQS_fascism_vs_harmony_character = {
 					add_unit_leader_trait = sympathizes_harmony_trait
 				}
 				add_power_balance_value = {
-					id = EEQ_prince_blueblood_vs_twilight
+					id = EQS_prince_blueblood_vs_twilight
 					value = -0.06
 					tooltip_side = twilight_harmonists
 				}
 			}
 			else = {
-				var:EEQ_fascism_vs_harmony_character = {
+				var:EQS_fascism_vs_harmony_character = {
 					add_unit_leader_trait = sympathizes_fascism_trait
 				}
 				add_power_balance_value = {
-					id = EEQ_prince_blueblood_vs_twilight
+					id = EQS_prince_blueblood_vs_twilight
 					value = 0.06
 					tooltip_side = prince_blueblood_fascists
 				}
 			}
 		}
 	}
-	EEQ_antagonise_harmony_propaganda = {
+	EQS_antagonise_harmony_propaganda = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon
 		allowed = {
-			tag = EEQ
+			tag = EQS
 		}
 		available = {
-			hidden_trigger = {
-				has_active_mission = EEQ_fascism_propaganda_mission
-			}
-			has_completed_focus = eeq_focus_prince_blueblood_speaches
+			has_active_mission = EQS_harmony_propaganda_mission
 		}
 		visible = {
 			has_power_balance = {
-				id = EEQ_prince_blueblood_vs_twilight
+				id = EQS_prince_blueblood_vs_twilight
 			}
 			hidden_trigger = {
-				has_completed_focus = eeq_focus_prince_blueblood_speaches
+				has_active_mission = EQS_harmony_propaganda_mission
 			}
 		}
 		cancel_if_not_visible = yes
@@ -124,31 +118,24 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 			war_support_weekly = 0.03
 		}
 	}
-	EEQ_antagonise_harmony_support = {
+	EQS_antagonise_harmony_support = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon
 		allowed = {
-			tag = EEQ
+			tag = EQS
 		}
 		available = {
 			hidden_trigger = {
-				has_active_mission = EEQ_fascism_propaganda_mission
+				has_completed_focus = eqs_focus_prince_blueblood_speaches
 			}
-			has_completed_focus = eeq_focus_prince_blueblood_speaches
 		}
 		visible = {
-			has_power_balance = {
-				id = EEQ_prince_blueblood_vs_twilight
-			}
-			hidden_trigger = {
-				has_completed_focus = eeq_focus_prince_blueblood_speaches
-			}
+			has_completed_focus = eqs_focus_prince_blueblood_speaches
 		}
-		cancel_if_not_visible = yes
 		cost = 50
 		days_re_enable = 61 #~2months
 		complete_effect = {
 			add_power_balance_value = {
-				id = EEQ_prince_blueblood_vs_twilight
+				id = EQS_prince_blueblood_vs_twilight
 				value = 0.1
 				tooltip_side = prince_blueblood_fascists
 			}
@@ -160,23 +147,20 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 			}
 		}
 	}
-	EEQ_antagonise_fascism_propaganda = {
+	EQS_antagonise_fascism_propaganda = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon
 		allowed = {
-			tag = EEQ
+			tag = EQS
 		}
 		available = {
-			hidden_trigger = {
-				has_active_mission = EEQ_fascism_propaganda_mission
-			}
-			has_completed_focus = eeq_focus_twilight_initiative
+			has_active_mission = EQS_fascism_propaganda_mission
 		}
 		visible = {
 			has_power_balance = {
-				id = EEQ_prince_blueblood_vs_twilight
+				id = EQS_prince_blueblood_vs_twilight
 			}
 			hidden_trigger = {
-				has_completed_focus = eeq_focus_twilight_initiative
+				has_active_mission = EQS_fascism_propaganda_mission
 			}
 		}
 		cancel_if_not_visible = yes
@@ -187,31 +171,24 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 			stability_weekly = 0.03
 		}
 	}
-	EEQ_antagonise_fascism_support = {
+	EQS_antagonise_fascism_support = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon
 		allowed = {
-			tag = EEQ
+			tag = EQS
 		}
 		available = {
 			hidden_trigger = {
-				has_active_mission = EEQ_fascism_propaganda_mission
+				has_completed_focus = eqs_focus_twilight_initiative
 			}
-			has_completed_focus = eeq_focus_twilight_initiative
 		}
 		visible = {
-			has_power_balance = {
-				id = EEQ_prince_blueblood_vs_twilight
-			}
-			hidden_trigger = {
-				has_completed_focus = eeq_focus_twilight_initiative
-			}
+			has_completed_focus = eqs_focus_twilight_initiative
 		}
-		cancel_if_not_visible = yes
 		cost = 50
 		days_re_enable = 61 #~2months
 		complete_effect = {
 			add_power_balance_value = {
-				id = EEQ_prince_blueblood_vs_twilight
+				id = EQS_prince_blueblood_vs_twilight
 				value = -0.1
 				tooltip_side = twilight_harmonists
 			}
@@ -224,31 +201,31 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 		}
 	}
 	#opposition actions (prince blueblood)
-	EEQ_fascism_propaganda_mission = {
+	EQS_fascism_propaganda_mission = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon
 		priority = 10
 		selectable_mission = no
 		allowed = {
-			tag = EEQ
+			tag = EQS
 		}
 		available = {
 			NOT = {
 				has_power_balance = {
-					id = EEQ_prince_blueblood_vs_twilight
+					id = EQS_prince_blueblood_vs_twilight
 				}
 			}
 		}
 		activation = {
-			always = no #triggered by event (bop_eeq_event.8)
+			always = no #triggered by event (bop_eqs_event.8)
 		}
 		fire_only_once = no
 		is_good = no
 		days_mission_timeout = 30
 		complete_effect = {
-			remove_ideas = EEQ_fascism_propaganda_bop
+			remove_ideas = EQS_fascism_propaganda_bop
 		}
 		timeout_effect = {
-			remove_ideas = EEQ_fascism_propaganda_bop
+			remove_ideas = EQS_fascism_propaganda_bop
 			set_temp_variable = {
 				f_support = party_popularity@fascism
 			}
@@ -262,7 +239,7 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 					}
 				}
 				add_power_balance_value = {
-					id = EEQ_prince_blueblood_vs_twilight
+					id = EQS_prince_blueblood_vs_twilight
 					value = 0.25
 					tooltip_side = prince_blueblood_fascists
 				}
@@ -275,7 +252,7 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 				}
 				else = {
 					add_power_balance_value = {
-						id = EEQ_prince_blueblood_vs_twilight
+						id = EQS_prince_blueblood_vs_twilight
 						value = 0.188
 						tooltip_side = prince_blueblood_fascists
 					}
@@ -288,14 +265,14 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 					}
 				}
 				add_power_balance_value = {
-					id = EEQ_prince_blueblood_vs_twilight
+					id = EQS_prince_blueblood_vs_twilight
 					value = 0.125
 					tooltip_side = prince_blueblood_fascists
 				}
 			}
 			else = {
 				add_power_balance_value = {
-					id = EEQ_prince_blueblood_vs_twilight
+					id = EQS_prince_blueblood_vs_twilight
 					value = 0.062
 					tooltip_side = prince_blueblood_fascists
 				}
@@ -303,18 +280,18 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 			hidden_effect = {
 				#launch another run
 				country_event = {
-					id = bop_eeq_event.8
+					id = bop_eqs_event.8
 					days = 7
 				}
 			}
 		}
 	}
-	EEQ_prince_blueblood_initiatives_mission = {
+	EQS_prince_blueblood_initiatives_mission = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon
 		priority = 10
 		selectable_mission = no
 		allowed = {
-			tag = EEQ
+			tag = EQS
 		}
 		available = {
 			hidden_trigger = {
@@ -322,7 +299,7 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 			}
 		}
 		activation = {
-			always = no #triggered by focus (eeq_focus_twilight_initiative) trought event (bop_eeq_event.1)
+			always = no #triggered by focus (eqs_focus_twilight_initiative) trought event (bop_eqs_event.1)
 		}
 		fire_only_once = yes
 		is_good = no
@@ -330,25 +307,25 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 		visible = {
 			hidden_trigger = {
 				has_power_balance = {
-					id = EEQ_prince_blueblood_vs_twilight
+					id = EQS_prince_blueblood_vs_twilight
 				}
 			}
 		}
 		cancel_if_not_visible = yes
 		timeout_effect = {
 			add_power_balance_modifier = {
-				id = EEQ_prince_blueblood_vs_twilight
-				modifier = EEQ_prince_blueblood_initiatives
+				id = EQS_prince_blueblood_vs_twilight
+				modifier = EQS_prince_blueblood_initiatives
 			}
 			add_political_power = -25
 		}
 	}
-	EEQ_opposition_to_harmony_mission = {
+	EQS_opposition_to_harmony_mission = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon
 		priority = 10
 		selectable_mission = no
 		allowed = {
-			tag = EEQ
+			tag = EQS
 		}
 		available = {
 			hidden_trigger = {
@@ -356,7 +333,7 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 			}
 		}
 		activation = {
-			always = no #triggered by focus (eeq_focus_friendship_with_rarity) trought event (bop_eeq_event.3)
+			always = no #triggered by focus (eqs_focus_friendship_with_rarity) trought event (bop_eqs_event.3)
 		}
 		fire_only_once = yes
 		is_good = no
@@ -364,25 +341,25 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 		visible = {
 			hidden_trigger = {
 				has_power_balance = {
-					id = EEQ_prince_blueblood_vs_twilight
+					id = EQS_prince_blueblood_vs_twilight
 				}
 			}
 		}
 		cancel_if_not_visible = yes
 		timeout_effect = {
 			add_power_balance_modifier = {
-				id = EEQ_prince_blueblood_vs_twilight
-				modifier = EEQ_opposition_to_harmony
+				id = EQS_prince_blueblood_vs_twilight
+				modifier = EQS_opposition_to_harmony
 			}
 			add_political_power = -25
 		}
 	}
-	EEQ_arest_harmonic_officers_mission = {
+	EQS_arest_harmonic_officers_mission = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon
 		priority = 10
 		selectable_mission = no
 		allowed = {
-			tag = EEQ
+			tag = EQS
 		}
 		available = {
 			hidden_trigger = {
@@ -390,7 +367,7 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 			}
 		}
 		activation = {
-			always = no #triggered by focus (eeq_focus_unicorn_harmony) trought event (bop_eeq_event.2)
+			always = no #triggered by focus (eqs_focus_unicorn_harmony) trought event (bop_eqs_event.2)
 		}
 		fire_only_once = yes
 		is_good = no
@@ -398,26 +375,26 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 		visible = {
 			hidden_trigger = {
 				has_power_balance = {
-					id = EEQ_prince_blueblood_vs_twilight
+					id = EQS_prince_blueblood_vs_twilight
 				}
 			}
 		}
 		cancel_if_not_visible = yes
 		timeout_effect = {
-			add_ideas = EEQ_lack_of_junior_officers
+			add_ideas = EQS_lack_of_junior_officers
 			remove_power_balance_modifier = {
-				id = EEQ_prince_blueblood_vs_twilight
-				modifier = EEQ_unicorn_harmony
+				id = EQS_prince_blueblood_vs_twilight
+				modifier = EQS_unicorn_harmony
 			}
 			add_political_power = -25
 		}
 	}
-	EEQ_unicorn_censorship_mission = {
+	EQS_unicorn_censorship_mission = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon
 		priority = 10
 		selectable_mission = no
 		allowed = {
-			tag = EEQ
+			tag = EQS
 		}
 		available = {
 			hidden_trigger = {
@@ -425,7 +402,7 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 			}
 		}
 		activation = {
-			always = no #triggered by event (bop_eeq_event.7)
+			always = no #triggered by event (bop_eqs_event.7)
 		}
 		fire_only_once = yes
 		is_good = no
@@ -433,28 +410,28 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 		visible = {
 			hidden_trigger = {
 				has_power_balance = {
-					id = EEQ_prince_blueblood_vs_twilight
+					id = EQS_prince_blueblood_vs_twilight
 				}
 			}
 		}
 		cancel_if_not_visible = yes
 		timeout_effect = {
-			add_ideas = EEQ_unicorn_censorship
+			add_ideas = EQS_unicorn_censorship
 			add_power_balance_modifier = {
-				id = EEQ_prince_blueblood_vs_twilight
-				modifier = EEQ_unicorn_censorship
+				id = EQS_prince_blueblood_vs_twilight
+				modifier = EQS_unicorn_censorship
 			}
 		}
 	}
-	EEQ_fascist_recruit_general_marshal = {
+	EQS_fascist_recruit_general_marshal = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
 		priority = 10
 		selectable_mission = no
 		allowed = {
-			tag = EEQ
+			tag = EQS
 		}
 		available = {
-			var:EEQ_fascism_vs_harmony_character = {
+			var:EQS_fascism_vs_harmony_character = {
 				OR = {
 					has_trait = sympathizes_harmony_trait
 					has_trait = country_leader_trait_harmony
@@ -462,7 +439,7 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 			}
 		}
 		activation = {
-			always = no #triggered by event (bop_eeq_event.4)
+			always = no #triggered by event (bop_eqs_event.4)
 		}
 		fire_only_once = no
 		is_good = no
@@ -470,24 +447,24 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 		visible = {
 			hidden_trigger = {
 				has_power_balance = {
-					id = EEQ_prince_blueblood_vs_twilight
+					id = EQS_prince_blueblood_vs_twilight
 				}
 			}
 		}
 		cancel_if_not_visible = yes
 		timeout_effect = {
-			var:EEQ_fascism_vs_harmony_character = {
+			var:EQS_fascism_vs_harmony_character = {
 				add_unit_leader_trait = sympathizes_fascism_trait
 			}
 			add_power_balance_value = {
-				id = EEQ_prince_blueblood_vs_twilight
+				id = EQS_prince_blueblood_vs_twilight
 				value = 0.06
 				tooltip_side = prince_blueblood_fascists
 			}
 			hidden_effect = {
 				#launch another run
 				country_event = {
-					id = bop_eeq_event.4
+					id = bop_eqs_event.4
 					days = 7
 					random_days = 7
 				}
@@ -497,22 +474,22 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 			hidden_effect = {
 				#launch another run
 				country_event = {
-					id = bop_eeq_event.4
+					id = bop_eqs_event.4
 					days = 7
 					random_days = 7
 				}
 			}
 		}
 	}
-	EEQ_fascist_recruit_admiral = {
+	EQS_fascist_recruit_admiral = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
 		priority = 10
 		selectable_mission = no
 		allowed = {
-			tag = EEQ
+			tag = EQS
 		}
 		available = {
-			var:EEQ_fascism_vs_harmony_character = {
+			var:EQS_fascism_vs_harmony_character = {
 				OR = {
 					has_trait = sympathizes_harmony_trait
 					has_trait = country_leader_trait_harmony
@@ -520,7 +497,7 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 			}
 		}
 		activation = {
-			always = no #triggered by event (bop_eeq_event.4)
+			always = no #triggered by event (bop_eqs_event.4)
 		}
 		fire_only_once = no
 		is_good = no
@@ -528,23 +505,23 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 		visible = {
 			hidden_trigger = {
 				has_power_balance = {
-					id = EEQ_prince_blueblood_vs_twilight
+					id = EQS_prince_blueblood_vs_twilight
 				}
 			}
 		}
 		cancel_if_not_visible = yes
 		timeout_effect = {
-			var:EEQ_fascism_vs_harmony_character = {
+			var:EQS_fascism_vs_harmony_character = {
 				add_unit_leader_trait = sympathizes_fascism_trait
 			}
 			add_power_balance_value = {
-				id = EEQ_prince_blueblood_vs_twilight
+				id = EQS_prince_blueblood_vs_twilight
 				value = 0.06
 			}
 			hidden_effect = {
 				#launch another run
 				country_event = {
-					id = bop_eeq_event.4
+					id = bop_eqs_event.4
 					days = 7
 					random_days = 7
 				}
@@ -554,7 +531,7 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 			hidden_effect = {
 				#launch another run
 				country_event = {
-					id = bop_eeq_event.4
+					id = bop_eqs_event.4
 					days = 7
 					random_days = 7
 				}
@@ -562,31 +539,31 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 		}
 	}
 	#opposition actions (twilight)
-	EEQ_harmony_propaganda_mission = {
+	EQS_harmony_propaganda_mission = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon
 		priority = 10
 		selectable_mission = no
 		allowed = {
-			tag = EEQ
+			tag = EQS
 		}
 		available = {
 			NOT = {
 				has_power_balance = {
-					id = EEQ_prince_blueblood_vs_twilight
+					id = EQS_prince_blueblood_vs_twilight
 				}
 			}
 		}
 		activation = {
-			always = no #triggered by event (bop_eeq_event.8)
+			always = no #triggered by event (bop_eqs_event.8)
 		}
 		fire_only_once = no
 		is_good = no
 		days_mission_timeout = 30
 		complete_effect = {
-			remove_ideas = EEQ_harmony_propaganda_bop
+			remove_ideas = EQS_harmony_propaganda_bop
 		}
 		timeout_effect = {
-			remove_ideas = EEQ_harmony_propaganda_bop
+			remove_ideas = EQS_harmony_propaganda_bop
 			set_temp_variable = {
 				h_support = party_popularity@harmony
 			}
@@ -600,7 +577,7 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 					}
 				}
 				add_power_balance_value = {
-					id = EEQ_prince_blueblood_vs_twilight
+					id = EQS_prince_blueblood_vs_twilight
 					value = -0.25
 					tooltip_side = twilight_harmonists
 				}
@@ -613,7 +590,7 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 				}
 				else = {
 					add_power_balance_value = {
-						id = EEQ_prince_blueblood_vs_twilight
+						id = EQS_prince_blueblood_vs_twilight
 						value = -0.188
 						tooltip_side = twilight_harmonists
 					}
@@ -626,14 +603,14 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 					}
 				}
 				add_power_balance_value = {
-					id = EEQ_prince_blueblood_vs_twilight
+					id = EQS_prince_blueblood_vs_twilight
 					value = -0.125
 					tooltip_side = twilight_harmonists
 				}
 			}
 			else = {
 				add_power_balance_value = {
-					id = EEQ_prince_blueblood_vs_twilight
+					id = EQS_prince_blueblood_vs_twilight
 					value = -0.062
 					tooltip_side = twilight_harmonists
 				}
@@ -641,18 +618,18 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 			hidden_effect = {
 				#launch another run
 				country_event = {
-					id = bop_eeq_event.8
+					id = bop_eqs_event.8
 					days = 7
 				}
 			}
 		}
 	}
-	EEQ_twilight_initiatives_mission = {
+	EQS_twilight_initiatives_mission = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon
 		priority = 10
 		selectable_mission = no
 		allowed = {
-			tag = EEQ
+			tag = EQS
 		}
 		available = {
 			hidden_trigger = {
@@ -660,7 +637,7 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 			}
 		}
 		activation = {
-			always = no #triggered by focus (eeq_focus_prince_blueblood_speaches)
+			always = no #triggered by focus (eqs_focus_prince_blueblood_speaches)
 		}
 		fire_only_once = yes
 		is_good = no
@@ -668,28 +645,28 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 		visible = {
 			hidden_trigger = {
 				has_power_balance = {
-					id = EEQ_prince_blueblood_vs_twilight
+					id = EQS_prince_blueblood_vs_twilight
 				}
 			}
 		}
 		cancel_if_not_visible = yes
 		timeout_effect = {
 			add_power_balance_modifier = {
-				id = EEQ_prince_blueblood_vs_twilight
-				modifier = EEQ_twilight_initiatives
+				id = EQS_prince_blueblood_vs_twilight
+				modifier = EQS_twilight_initiatives
 			}
 			add_political_power = -25
 		}
 	}
-	EEQ_harmonist_recruit_general_marshal = {
+	EQS_harmonist_recruit_general_marshal = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
 		priority = 10
 		selectable_mission = no
 		allowed = {
-			tag = EEQ
+			tag = EQS
 		}
 		available = {
-			var:EEQ_fascism_vs_harmony_character = {
+			var:EQS_fascism_vs_harmony_character = {
 				OR = {
 					has_trait = sympathizes_fascism_trait
 					has_trait = country_leader_trait_fascism
@@ -697,7 +674,7 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 			}
 		}
 		activation = {
-			always = no #triggered by event (bop_eeq_event.4)
+			always = no #triggered by event (bop_eqs_event.4)
 		}
 		fire_only_once = no
 		is_good = no
@@ -705,24 +682,24 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 		visible = {
 			hidden_trigger = {
 				has_power_balance = {
-					id = EEQ_prince_blueblood_vs_twilight
+					id = EQS_prince_blueblood_vs_twilight
 				}
 			}
 		}
 		cancel_if_not_visible = yes
 		timeout_effect = {
-			var:EEQ_fascism_vs_harmony_character = {
+			var:EQS_fascism_vs_harmony_character = {
 				add_unit_leader_trait = sympathizes_harmony_trait
 			}
 			add_power_balance_value = {
-				id = EEQ_prince_blueblood_vs_twilight
+				id = EQS_prince_blueblood_vs_twilight
 				value = -0.06
 				tooltip_side = twilight_harmonists
 			}
 			hidden_effect = {
 				#launch another run
 				country_event = {
-					id = bop_eeq_event.4
+					id = bop_eqs_event.4
 					days = 7
 					random_days = 7
 				}
@@ -732,22 +709,22 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 			hidden_effect = {
 				#launch another run
 				country_event = {
-					id = bop_eeq_event.4
+					id = bop_eqs_event.4
 					days = 7
 					random_days = 7
 				}
 			}
 		}
 	}
-	EEQ_harmonist_recruit_admiral = {
+	EQS_harmonist_recruit_admiral = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
 		priority = 10
 		selectable_mission = no
 		allowed = {
-			tag = EEQ
+			tag = EQS
 		}
 		available = {
-			var:EEQ_fascism_vs_harmony_character = {
+			var:EQS_fascism_vs_harmony_character = {
 				OR = {
 					has_trait = sympathizes_fascism_trait
 					has_trait = country_leader_trait_fascism
@@ -755,7 +732,7 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 			}
 		}
 		activation = {
-			always = no #triggered by event (bop_eeq_event.4)
+			always = no #triggered by event (bop_eqs_event.4)
 		}
 		fire_only_once = no
 		is_good = no
@@ -763,24 +740,24 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 		visible = {
 			hidden_trigger = {
 				has_power_balance = {
-					id = EEQ_prince_blueblood_vs_twilight
+					id = EQS_prince_blueblood_vs_twilight
 				}
 			}
 		}
 		cancel_if_not_visible = yes
 		timeout_effect = {
-			var:EEQ_fascism_vs_harmony_character = {
+			var:EQS_fascism_vs_harmony_character = {
 				add_unit_leader_trait = sympathizes_harmony_trait
 			}
 			add_power_balance_value = {
-				id = EEQ_prince_blueblood_vs_twilight
+				id = EQS_prince_blueblood_vs_twilight
 				value = -0.06
 				tooltip_side = twilight_harmonists
 			}
 			hidden_effect = {
 				#launch another run
 				country_event = {
-					id = bop_eeq_event.4
+					id = bop_eqs_event.4
 					days = 7
 					random_days = 7
 				}
@@ -790,7 +767,7 @@ EEQ_prince_blueblood_vs_twilight_decisions = {
 			hidden_effect = {
 				#launch another run
 				country_event = {
-					id = bop_eeq_event.4
+					id = bop_eqs_event.4
 					days = 7
 					random_days = 7
 				}
