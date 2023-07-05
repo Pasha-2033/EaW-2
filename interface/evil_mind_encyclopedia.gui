@@ -23,7 +23,7 @@ guiTypes = {
 				y = 23 
 			}
 			font = "hoi_24header"
-			text = "encyclopedia_header"
+			text = "[encyclopedia_header_definition]"
 			orientation = center_up
 			format = center
 			maxWidth = 530
@@ -173,7 +173,7 @@ guiTypes = {
 			instantTextboxType = {
 				name = "country_lore"
 				font = "hoi_18mbs"
-				text = "country_lore_text"
+				text = "[eme_country_lore_scenario_definition]"
 				maxWidth = 800
 				maxHeight = 445
 				format = left
@@ -295,23 +295,38 @@ guiTypes = {
 			name = "encyclopedia_country_selection_button"
 			quadTextureSprite = "GFX_encyclopedia_country_selection_button"
 			font = "hoi_18mbs"
-			buttonText = "[?v.GetTag]"
 		}
-		iconType = {
-			name = "encyclopedia_country_selection_icon"
-			spriteType = "GFX_flag_small2"
+		instantTextBoxType = {
+			name = "country_name"
 			position = {
-				x = 220
+				x = 70
+				y = 2
+			}
+			text = "[eme_country_selection_text]"
+			font = "hoi_24header"
+			maxWidth = 200
+			maxHeight = 48
+			vertical_alignment = CENTER
+			fixedsize = yes
+			#alwaystransparent = yes
+		}
+		containerWindowType = {
+			name = "encyclopedia_country_selection_flag"
+			position = {
+				x = 20
 				y = 13
 			}
-		}
-		iconType = {
-			name = "encyclopedia_country_selection_icon_majority"
-			spriteType = "GFX_major_country_flag_overlay"
-			position = {
-				x = 220
-				y = 13
+			iconType = {
+				name = "encyclopedia_country_selection_icon"
+				spriteType = "GFX_flag_small2"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "encyclopedia_country_selection_icon_majority"
+				spriteType = "GFX_major_country_flag_overlay"
+				alwaystransparent = yes
 			}
 		}
+	
 	}
 }

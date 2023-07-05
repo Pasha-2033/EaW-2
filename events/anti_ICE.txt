@@ -197,11 +197,17 @@ country_event = { #may be we shouldn`t killing each other - focus on vindigo
 					}
 				}
 				add_ideas = anti_ice_union
-				EPT = {
-					add_ideas = anti_ice_union
-				}
 				PGT = {
 					add_ideas = anti_ice_union
+					white_peace = {
+						tag = EPT
+						message = eqs_pgt_ept_anti_ice_white_peace_tt
+					}
+					give_military_access = EPT
+				}
+				EPT = {
+					add_ideas = anti_ice_union
+					give_military_access = PGT
 				}
 			}
 		}
@@ -239,6 +245,10 @@ country_event = { #fascist want to fight against ICE cooperative
 	is_triggered_only = yes
 	option = {#we accept white peace
 		name = eqs_pgt_ept_anti_ice_event.7.a
+		ai_chance = {
+			#modify (to do!)
+			base = 100
+		}
 		white_peace = {
 			tag = EQS
 			message = eqs_pgt_ept_anti_ice_white_peace_tt
@@ -253,11 +263,11 @@ country_event = { #fascist want to fight against ICE cooperative
 			if = {
 				limit = {
 					NOT = {
-						EPT = {
-							has_war_with = EQS
-						}
-						PGT = {
-							has_war_with = EQS
+						EQS = {
+							NOT = {
+								has_war_with = EPT
+								has_war_with = PGT
+							}
 						}
 					}
 				}

@@ -10,14 +10,15 @@ ideas = {
 					has_government = militarism
 				}
 			}
-			#cancel = {
-			#	NOT = {
-			#		any_character = {
-			#			has_trait = unicorn_superirity
-			#			is_political_advisor = yes
-			#		}
-			#	}
-			#}
+			cancel = {
+				NOT = {
+					has_country_leader_with_trait = unicorn_superiority
+					any_character = {
+						has_trait = unicorn_superiority
+						is_political_advisor = yes
+					}
+				}
+			}
 			modifier = {
 				political_power_factor = -0.5
 				fascism_drift = 0.05

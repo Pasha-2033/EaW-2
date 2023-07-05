@@ -1,11 +1,16 @@
+#982 scenario
 #Vindigo time focuses
 focus_tree = {
-	id = eqs_focus_tree
+	id = eqs_focus_tree_vidigo
 	country = {
 		base = 0
 		modifier = {
 			add = 100
 			tag = EQS
+		}
+		modifier = {
+			factor = 0
+			has_start_date > 982.1.1
 		}
 	}
 	default = no
@@ -69,7 +74,7 @@ focus_tree = {
 				limit = {
 					has_country_leader = {
 						ruling_only = yes
-						character = EQS_celestia
+						character = EQS_982_celestia
 					}
 				}
 				add_political_power = 100
@@ -94,31 +99,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_twilight_initiative"
-			activate_advisor = EQS_twilight
-			PGT = {
-				if = {
-					limit = {
-						has_war_with = EPT
-					}
-					hidden_effect = {
-						white_peace = {
-							tag = EPT
-							message = eqs_pgt_ept_anti_ice_white_peace_tt
-						}
-					}
-					custom_effect_tooltip = pgt_white_peace_with_ept_tt
-				}
-				give_military_access = EPT
-				country_event = {
-					id = eqs_pgt_ept_anti_ice_event.5
-				}
-			}
-			EPT = {
-				give_military_access = PGT
-				country_event = {
-					id = eqs_pgt_ept_anti_ice_event.5
-				}
-			}
+			activate_advisor = EQS_982_twilight
 			set_power_balance = {
 				id = EQS_prince_blueblood_vs_twilight
 				set_default = yes
@@ -202,6 +183,9 @@ focus_tree = {
 					ideology = harmony
 					popularity = 0.05
 				}
+				country_event = {
+					id = eqs_pgt_ept_anti_ice_event.5
+				}
 			}
 		}
 	}
@@ -232,6 +216,9 @@ focus_tree = {
 				add_popularity = {
 					ideology = harmony
 					popularity = 0.05
+				}
+				country_event = {
+					id = eqs_pgt_ept_anti_ice_event.5
 				}
 			}
 		}
@@ -410,6 +397,10 @@ focus_tree = {
 				country_event = {
 					id = bop_eqs_event.5
 				}
+			}
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
 			}
 		}
 	}

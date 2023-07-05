@@ -1,0 +1,107 @@
+defined_text = {
+	name = encyclopedia_header_definition
+	text = { #982
+		trigger = {
+			has_start_date < 1007.1.1
+		}
+		localization_key = "encyclopedia_header_982"
+	}
+	text = { #1007
+		trigger = {
+			has_start_date < 1050.1.1
+		}
+		localization_key = "encyclopedia_header_1007"
+	}
+	text = { #1050
+		trigger = {
+			has_start_date < 1050.1.1
+		}
+		localization_key = "encyclopedia_header_1050"
+	}
+}
+defined_text = {
+	name = eme_country_selection_text
+	text = {
+		trigger = {
+			var:v = {
+				exists = no
+			}
+		}
+		localization_key = eme_country_selection_grey
+	}
+	text = {
+		trigger = {
+			var:v = {
+				has_war_with = ROOT
+			}
+		}
+		localization_key = eme_country_selection_red
+	}
+	text = {
+		trigger = {
+			var:v = {
+				tag = ROOT
+			}
+		}
+		localization_key = eme_country_selection_blue
+	}
+	text = {
+		trigger = {
+			var:v = {
+				is_in_faction_with = ROOT
+			}
+		}
+		localization_key = eme_country_selection_green
+	}
+	text = {
+		localization_key = eme_country_selection_white
+	}
+}
+defined_text = {
+	name = eme_country_lore_scenario_definition
+	text = { #982
+		trigger = {
+			has_start_date < 1007.1.1
+		}
+		localization_key = "[eme_982_country_lore_tag_definition]"
+	}
+	text = { #1007
+		trigger = {
+			has_start_date < 1050.1.1
+		}
+		localization_key = "[eme_1007_country_lore_tag_definition]"
+	}
+	text = { #1050
+		localization_key = "[eme_1050_country_lore_tag_definition]"
+	}
+}
+defined_text = {
+	name = eme_982_country_lore_tag_definition
+	text = {
+		trigger = {
+			var:selected_country_with_lore_982 = {
+				original_tag = EQS
+			}
+		}
+		localization_key = eme_982_country_lore_EQS
+	}
+	text = {
+		trigger = {
+			var:selected_country_with_lore_982 = {
+				original_tag = ICE
+			}
+		}
+		localization_key = eme_982_country_lore_ICE
+	}
+	text = {
+		trigger = {
+			var:selected_country_with_lore_982 = {
+				original_tag = VES
+			}
+		}
+		localization_key = eme_982_country_lore_VES
+	}
+	text = {
+		localization_key = eme_country_no_lore
+	}
+}

@@ -19,13 +19,10 @@ state = {
 	buildings_max_level_factor = 1.0
 	manpower = 46359
 	history = {
-		#owner = EQS
-		#add_core_of = EQS
 		982.1.1 = {
 			owner = EQS
 			add_core_of = EQS
 			add_claim_by = ICE
-			#add_claim_by = DRG #???
 			buildings = {
 				infrastructure = 1
 				dockyard = 1
@@ -44,8 +41,9 @@ state = {
 			}
 		}
 		1007.1.1 = {
-			owner = EQS
-			add_core_of = EQS
+			owner = DRG
+			remove_core_of = EQS
+			add_core_of = DRG
 		}
 		1050.1.1 = {}
 	}

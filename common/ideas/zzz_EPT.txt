@@ -1,5 +1,27 @@
 ideas = {
 	country = {
+		EPT_tribal_crisis = {
+			picture = EQS_tribal_crisis
+			allowed = {
+				original_tag = EPT
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			targeted_modifier = {
+				tag = EQS
+				attack_bonus_against_cores = -0.25
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = PGT
+				attack_bonus_against_cores = -0.25
+				defense_bonus_against = 0.1
+			}
+			modifier = {
+				improve_relations_maintain_cost_factor = 1
+			}
+		}
 		EPT_south_equus_defence_district = {
 			picture = clockwerk_economy			#to do (change)
 			allowed = {

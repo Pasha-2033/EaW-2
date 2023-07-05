@@ -186,15 +186,26 @@ guiTypes = {
 			instantTextboxType = {
 				name = "food_production"
 				position = { 
-					x = 340 
+					x = 280 
 					y = 41 
 				}
-				font = "hoi_18b"
+				font = "hoi_24header"
 				text = "food_production_value"
-				maxWidth = 170
-				maxHeight = 54
-				format = center
-				vertical_alignment = center
+				maxWidth = 250
+				maxHeight = 18
+				format = left
+			}
+			instantTextboxType = {
+				name = "food_consumtion"
+				position = { 
+					x = 280 
+					y = 61 
+				}
+				font = "hoi_24header"
+				text = "food_consumtion_value"
+				maxWidth = 250
+				maxHeight = 18
+				format = left
 			}
 		}
 		containerWindowType = {

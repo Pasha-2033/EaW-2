@@ -44,7 +44,7 @@ scripted_gui = {
 		}
 		dynamic_lists = {
 			country_lore_selection_grid = { #to do
-				array = global.country_with_lore
+				array = global.country_with_lore_982
 				change_scope = no
 				entry_container = "encyclopedia_country_selection"
 				value = v
@@ -68,7 +68,7 @@ scripted_gui = {
 									[SC].id = [V].id
 								}
 							}
-							SC = "[?selected_country_with_lore.GetTag]"
+							SC = "[?selected_country_with_lore_982.GetTag]"
 							V = "[?v.GetTag]"
 						}
 					}
@@ -81,7 +81,7 @@ scripted_gui = {
 		effects = {
 			encyclopedia_country_selection_button_click = {
 				set_variable = {
-					selected_country_with_lore = v
+					selected_country_with_lore_982 = v
 				}
 			}
 		}
