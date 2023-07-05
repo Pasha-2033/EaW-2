@@ -232,16 +232,21 @@ init_state_lore_vars = {
 }
 init_country_lore_vars = {
 	#if add/remove array element - change height of grid (evil_mind_enciclopedia.gui:1)
-	add_to_array = { global.country_with_lore_982 = EQS }
-	add_to_array = { global.country_with_lore_982 = ICE }
-	add_to_array = { global.country_with_lore_982 = VES }
-	add_to_array = { global.country_with_lore_982 = GRE }
-	add_to_array = { global.country_with_lore_982 = OLE }
-	add_to_array = { global.country_with_lore_982 = MET }
-	add_to_array = { global.country_with_lore_982 = NEM }
-	add_to_array = { global.country_with_lore_982 = CRY }
-	add_to_array = { global.country_with_lore_982 = ELN }
-	add_to_array = { global.country_with_lore_982 = DRG }
+	if = { #982
+		limit = {
+			has_start_date < 1007.1.1
+		}
+		add_to_array = { global.country_with_lore = EQS }
+		add_to_array = { global.country_with_lore = ICE }
+		add_to_array = { global.country_with_lore = VES }
+		add_to_array = { global.country_with_lore = GRE }
+		add_to_array = { global.country_with_lore = OLE }
+		add_to_array = { global.country_with_lore = MET }
+		add_to_array = { global.country_with_lore = NEM }
+		add_to_array = { global.country_with_lore = CRY }
+		add_to_array = { global.country_with_lore = ELN }
+		add_to_array = { global.country_with_lore = DRG }
+	}
 }
 #arrays of surplus apopriation
 init_sa_civ_mod_population_value = {

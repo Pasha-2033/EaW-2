@@ -1,4 +1,77 @@
 scripted_gui = {
+	#gui files contains keys/tokens that should be renamed (like EAW_HELP_TT -> HELP_TT)
+	help_button = {
+		context_type = player_context
+		parent_window_token = top_bar
+		window_name = "help_button_container"
+		visible = {
+			is_ai = no
+		}
+		effects = {
+			help_button_click = {
+				if = {
+					limit = {
+						has_country_flag = help_tab_on
+					}
+					clr_country_flag = help_tab_on
+				}
+				else = {
+					set_country_flag = help_tab_on
+				}
+			}
+		}
+	}
+	help_tab = {
+		context_type = player_context
+		window_name = "help_tab_container"
+		parent_window_name = "time_control_window"
+		visible = {
+			is_ai = no
+			has_country_flag = help_tab_on
+		}
+		effects = {
+			open_eme_click = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = encyclopedia_tab
+						}
+					}
+					set_variable = {
+						encyclopedia_tab = 1
+					}
+				}
+				else = {
+					clear_variable = encyclopedia_tab
+				}
+			}
+		}
+	}
+	eme_toggle = {
+		context_type = player_context
+		parent_window_token = politics_tab
+		window_name = "eme_toggle_container"
+		visible = {
+			is_ai = no
+		}
+		effects = {
+			open_eme_click = {
+				if = {
+					limit = {
+						NOT = {
+							has_variable = encyclopedia_tab
+						}
+					}
+					set_variable = {
+						encyclopedia_tab = 1
+					}
+				}
+				else = {
+					clear_variable = encyclopedia_tab
+				}
+			}
+		}
+	}
 	evil_mind_encyclopedia_container = {
 		context_type = player_context
 		window_name = "evil_mind_encyclopedia_container"
@@ -44,7 +117,7 @@ scripted_gui = {
 		}
 		dynamic_lists = {
 			country_lore_selection_grid = { #to do
-				array = global.country_with_lore_982
+				array = global.country_with_lore
 				change_scope = no
 				entry_container = "encyclopedia_country_selection"
 				value = v
@@ -68,7 +141,7 @@ scripted_gui = {
 									[SC].id = [V].id
 								}
 							}
-							SC = "[?selected_country_with_lore_982.GetTag]"
+							SC = "[?selected_country_with_lore.GetTag]"
 							V = "[?v.GetTag]"
 						}
 					}
@@ -81,7 +154,7 @@ scripted_gui = {
 		effects = {
 			encyclopedia_country_selection_button_click = {
 				set_variable = {
-					selected_country_with_lore_982 = v
+					selected_country_with_lore = v
 				}
 			}
 		}
