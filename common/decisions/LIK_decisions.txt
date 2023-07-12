@@ -11,27 +11,29 @@ defense_lik = {
         icon = generic_army_support
         cost = 50
         complete_effect = {
-            add_timed_idea = {
-				idea = LIK_speed_bunker_factor
-				days = 365
-			}
+            every_controlled_state = {
+                NOT = { has_modifier = speed_bunker_factor }
+                add_dynamic_modifier = {
+                modifier = speed_bunker_factor
+                days = 180
+                }
+            }
         }
     }
     desicions_defense_2 = {
         available = {
-            NOT = {
-                LIK = {
-                    has_idea = LIK_speed_bunker_factor                    
-                }
-            }
+
         }
         fire_only_once = yes
         icon = generic_army_support
         complete_effect = {
-            add_timed_idea = {
-				idea = LIK_speed_bunker_factor
-				days = 365                
-			}          
+            every_controlled_state = {
+                NOT = { has_modifier = speed_bunker_factor }
+                add_dynamic_modifier = {
+                modifier = speed_bunker_factor
+                days = 180
+                }
+            }
         }
         modifier = {
             political_power_gain = -0.6
@@ -40,19 +42,18 @@ defense_lik = {
     }
     desicions_defense_3 = {
         available = {
-            NOT = {
-                LIK = {
-                    has_idea = LIK_speed_bunker_factor                    
-                }
-            }
+
         }
         #fire_only_once = yes
         icon = generic_army_support
         complete_effect = {
-            add_timed_idea = {
-				idea = LIK_speed_bunker_factor
-				days = 365                
-			}           
+            every_controlled_state = {
+                NOT = { has_modifier = speed_bunker_factor }
+                add_dynamic_modifier = {
+                modifier = speed_bunker_factor
+                days = 180
+                }
+            }
         }
         modifier = {
             stability_weekly = -0.01
@@ -61,19 +62,18 @@ defense_lik = {
     }
     desicions_defense_4 = {
         available = {
-            NOT = {
-                LIK = {
-                    has_idea = LIK_speed_bunker_factor                    
-                }
-            }
+
         }
         #fire_only_once = yes
         icon = generic_army_support
         complete_effect = {
-            add_timed_idea = {
-				idea = LIK_speed_bunker_factor
-				days = 365               
-			}
+            every_controlled_state = {
+                NOT = { has_modifier = speed_bunker_factor }
+                add_dynamic_modifier = {
+                modifier = speed_bunker_factor
+                days = 180
+                }
+            }
         }
         modifier = {
             consumer_goods_factor = 0.05
