@@ -692,7 +692,7 @@ sub_units = {
 		max_strength = 20
 		max_organisation = 40
 		default_morale = 0.3
-		manpower = 1000
+		manpower = 2000
 		#Misc Abilities
 		training_time = 180
 		suppression = 2
@@ -705,7 +705,12 @@ sub_units = {
 			attack = -0.25
 		}
 		urban = {
-			attack = 0.1
+			attack = -0.1
+		}
+		mountain = {
+			attack = 0.05
+			defence = 0.05
+			movement = 0.2
 		}
 	}
 		

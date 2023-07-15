@@ -1,10 +1,6 @@
-#####---------------------------------------------------------------------Mod by Sig "GreatExperiment" Altre
-
 equipments = {
-	
 	windigo_equipment = {
-		year = 1
-		
+		year = 982
 		is_archetype = yes
 		picture = archetype_infantry_equipment
 		is_buildable = no
@@ -13,12 +9,11 @@ equipments = {
 		interface_category = interface_category_land
 		active = yes
 		#Misc Abilities
-		reliability = 0.8
-		maximum_speed = 12
+		reliability = 0.5
+		maximum_speed = 10
 		#Defensive Abilities
 		defense = 10
 		breakthrough = 10
-		armor_value = 5
 		#Offensive Abilities
 		soft_attack = 5
 		hard_attack = 1
@@ -30,15 +25,15 @@ equipments = {
 		resources = {
 			crystals = 2
 		}
+		can_be_produced = {
+			original_tag = ICE
+		}
 	}
-	
 	windigo_equipment_0 = {
-		year = 1
+		year = 982
 		archetype = windigo_equipment
 		priority = 12
 		visual_level = 0
 		is_convertable = no
 	}
 }
-
-#####---------------------------------------------------------------------End

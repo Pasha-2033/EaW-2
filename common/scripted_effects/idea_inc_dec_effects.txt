@@ -1,3 +1,5 @@
+#Laws
+#Society
 increase_society_development_idea = {
 	if = {
 		limit = {
@@ -290,6 +292,7 @@ decrease_society_development_idea = {
 		}
 	}
 }
+#Scince base
 increase_science_base_idea = {
 	if = {
 		limit = {
@@ -368,6 +371,45 @@ increase_science_base_idea = {
 		}
 	}
 }
+decrease_science_base_idea = {
+	if = {
+		limit = {
+			has_idea = outstanding_science_base
+		}
+		swap_ideas = {
+			remove_idea = outstanding_science_base
+			add_idea = proper_science_base
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = proper_science_base
+		}
+		swap_ideas = {
+			remove_idea = proper_science_base
+			add_idea = big_science_base
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = big_science_base
+		}
+		swap_ideas = {
+			remove_idea = big_science_base
+			add_idea = better_science_base
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = better_science_base
+		}
+		swap_ideas = {
+			remove_idea = better_science_base
+			add_idea = poor_science_base
+		}
+	}
+}
+#Power concentration
 increase_power_concentration_idea = {
 	if = {
 		limit = {
@@ -461,44 +503,7 @@ decrease_power_concentration_idea = {
 		}
 	}
 }
-decrease_science_base_idea = {
-	if = {
-		limit = {
-			has_idea = outstanding_science_base
-		}
-		swap_ideas = {
-			remove_idea = outstanding_science_base
-			add_idea = proper_science_base
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = proper_science_base
-		}
-		swap_ideas = {
-			remove_idea = proper_science_base
-			add_idea = big_science_base
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = big_science_base
-		}
-		swap_ideas = {
-			remove_idea = big_science_base
-			add_idea = better_science_base
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = better_science_base
-		}
-		swap_ideas = {
-			remove_idea = better_science_base
-			add_idea = poor_science_base
-		}
-	}
-}
+#Poverty
 increase_poverty_level_idea = {
 	if = {
 		limit = {
@@ -675,6 +680,7 @@ decrease_poverty_level_idea = {
 		}
 	}
 }
+#Inflation
 increase_inflation_idea = {
 	if = {
 		limit = {
@@ -790,6 +796,7 @@ stabilise_inflation = {
 		}
 	}
 }
+#Valuta
 increase_valuta_idea = {
 	if = {
 		limit = {
@@ -884,7 +891,50 @@ decrease_valuta_idea = {
 		}
 	}
 }
-#political ideas removal
+#Economic ideas
+#Starvation
+increase_starvation_idea = {
+	if = {
+		limit = {
+			has_idea = medium_starvation
+		}
+		swap_ideas = {
+			remove_idea = medium_starvation
+			add_idea = strong_starvation
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = light_starvation
+		}
+		swap_ideas = {
+			remove_idea = light_starvation
+			add_idea = medium_starvation
+		}
+	}
+}
+decrease_starvation_idea = {
+	if = {
+		limit = {
+			has_idea = strong_starvation
+		}
+		swap_ideas = {
+			remove_idea = strong_starvation
+			add_idea = medium_starvation
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = medium_starvation
+		}
+		swap_ideas = {
+			remove_idea = medium_starvation
+			add_idea = light_starvation
+		}
+	}
+}
+
+#Political ideas removal
 remove_harmony_spirits_effect = {}
 remove_socialism_spirits_effect = {}
 remove_radicalism_spirits_effect = {}

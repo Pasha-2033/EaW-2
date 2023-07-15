@@ -6,6 +6,10 @@ focus_tree = {
 			add = 100
 			tag = MET
 		}
+		modifier = {
+			factor = 0
+			has_start_date > 982.1.1
+		}
 	}
 	default = no
 	continuous_focus_position = { 
@@ -19,10 +23,6 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		available = {
-			always = yes
-		}
-		bypass_if_unavailable = yes
 		x = 11
 		y = 0
 		completion_reward = {

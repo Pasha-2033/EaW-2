@@ -9,3 +9,14 @@ EQS_canterlot_defence_district = {
 	mobilization_speed = 0.1
 	state_repair_speed_bunker_factor = 0.25
 }
+EQS_accept_harmonists = {
+	icon = clockwerk_economy			#to do (change)
+	enable = {
+		always = yes
+	}
+	stability_weekly_factor = accept_harmonists_stability_weekly_factor
+	war_support_weekly_factor = accept_harmonists_war_support_weekly_factor
+	weekly_casualties_war_support = accept_harmonists_weekly_casualties_war_support
+	opinion_gain_monthly_factor = accept_harmonists_opinion_gain_monthly_factor
+	political_power_factor = accept_harmonists_political_power_factor
+}

@@ -85,10 +85,80 @@ ideas = {
 			}
 			targeted_modifier = {
 				tag = ICE
-				#to do
+				defense_bonus_against = 0.1
 			}
 			modifier = {
-				
+				army_morale_factor = -0.05
+				breakthrough_factor = 0.05
+				army_core_attack_factor = 0.05
+				army_attack_speed_factor = 0.05
+				acclimatization_cold_climate_gain_factor = 0.1
+			}
+		}
+		EQS_war_of_offensive_war = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			cancel = {
+				NOT = {
+					has_war_with = ICE
+				}
+			}
+			modifier = {
+				offence = 0.1
+				defence = -0.05
+				initiative_factor = 0.2
+				max_dig_in_factor = -0.1
+				org_loss_when_moving = -0.15
+				ai_focus_aggressive_factor = 0.1
+			}
+		}
+		EQS_war_of_attrition = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			cancel = {
+				NOT = {
+					has_war_with = ICE
+				}
+			}
+			modifier = {
+				army_morale_factor = -0.1
+				production_lack_of_resource_penalty_factor = -0.20
+				production_factory_efficiency_gain_factor = -0.05
+				production_factory_start_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.15
+			}
+		}
+		EQS_stop_uncontrolled_militarism = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				has_government = fascism
+			}
+			cancel = {
+				NOT = {
+					has_war_with = ICE
+				}
+			}
+			modifier = {
+				assign_army_leader_cp_cost = 10
+				mobilization_speed = -0.05
+				war_support_weekly_factor = -0.05
+				stability_weekly_factor = 0.05
+				militarism_acceptance = -25
+				militarism_drift = -0.1
+				experience_loss_factor = -0.1
 			}
 		}
 		EQS_fascism_propaganda_bop = {
@@ -215,56 +285,23 @@ ideas = {
 				add_command_power = 100
 			}
 		}
-
-		####
-		EQS_fascist_indignation = {
-			picture = clockwerk_economy			#to do (change)
+		EQS_unicorn_censorship = {
 			allowed = {
 				original_tag = EQS
 			}
 			allowed_civil_war = {
 				has_government = fascism
 			}
-			modifier = {
-				
-			}
-		}
-		EQS_fascist_protests = {
-			picture = clockwerk_economy			#to do (change)
-			allowed = {
-				original_tag = EQS
-			}
-			allowed_civil_war = {
-				has_government = fascism
+			cancel = {
+				NOT = {
+					has_government = fascism
+				}
 			}
 			modifier = {
-				
-			}
-		}
-		EQS_complex_goverment_fascist_and_harmonist = {
-			picture = clockwerk_economy			#to do (change)
-			allowed = {
-				original_tag = EQS
-			}
-			allowed_civil_war = {
-				fascism > 0
-				harmony > 0
-			}
-			modifier = {
-				
-			}
-		}
-		EQS_admission_only_to_lower_positions_fascist_and_harmonist = {
-			picture = clockwerk_economy			#to do (change)
-			allowed = {
-				original_tag = EQS
-			}
-			allowed_civil_war = {
-				fascism > 0
-				harmony > 0
-			}
-			modifier = {
-				
+				stability_weekly = 0.03
+				political_power_cost = 0.1
+				fascism_drift = 0.02
+				fascism_acceptance = 10
 			}
 		}
 	}

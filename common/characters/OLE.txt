@@ -1,11 +1,39 @@
 characters = {
 	#982 scenario
+	OLE_982_bjorson = {
+		name = OLE_982_bjorson
+		portraits = {
+			civilian = {
+				small = "" #to do
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = OLE_982_bjorson
+			traits = {
+				sun_of_ruins
+			}
+			allowed = {
+				original_tag = OLE
+			}
+		}
+	}
+	#goodhlev
+	#staffan
+	#orzhan
 	OLE_982_alan_turing = {
 		name = OLE_982_alan_turing
 		portraits = {
 			civilian = {
 				small = "" #to do
 			}
+		}
+		country_leader = {
+			desc = "POLITICS_982_ALAN_TURING_DESC"
+			ideology = classic_technocracy
+			traits = {}
+			expire = "1965.1.1.1"
+			id = -1
 		}
 		advisor = {
 			slot = theorist

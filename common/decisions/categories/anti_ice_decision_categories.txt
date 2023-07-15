@@ -46,3 +46,27 @@ ask_for_volunteers_anti_ice = {
 	}
 	visible_when_empty = yes #for debug
 }
+state_temperature = {
+	priority = 150
+	icon = generic_political_actions
+	allowed = {
+		OR = {
+			original_tag = EPT
+			original_tag = PGT
+			original_tag = EQS
+			original_tag = ICE
+		}
+	}
+	visible = {
+		if = {
+			limit = {
+				original_tag = ICE
+			}
+			#has_completed_focus = #to do
+		}
+		else = {
+			has_war_with = ICE
+		}
+	}
+	#visible_when_empty = yes #for debug
+}

@@ -105,6 +105,11 @@ calc_surplus_appropriation_real_values = {
 					surplus_appropriation_real_values^i = surplus_appropriation_weights^i
 				}
 			}
+			clamp_variable = {
+				var = surplus_appropriation_real_values^i
+				min = 0
+				max = 2
+			}
 		}
 	}
 	else = {

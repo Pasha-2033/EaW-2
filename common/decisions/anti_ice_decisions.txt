@@ -2,7 +2,7 @@ spawn_anti_ice_militia = {
 	spawn_garnison = {
 		icon = infiltrate_state
 		state_target = yes
-		target_array = owned_controlled_states
+		target_array = controlled_states
 		on_map_mode = map_and_decisions_view
         cost = 20
         days_remove = 3
@@ -34,13 +34,15 @@ ask_for_landlease_anti_ice = {
         cost = 20
         days_remove = 14
 		target_trigger = {
-			NOT = {
-				has_equipment = {
-					support_equipment < 100
+			FROM = {
+				NOT = {
+					has_equipment = {
+						infantry_equipment < 100
+					}
+					original_tag = ICE
+					tag = ROOT
+					has_war_with = ROOT
 				}
-				original_tag = ICE
-				tag = ROOT
-				has_war_with = ROOT
 			}
 		}
 		remove_effect = {
@@ -62,13 +64,15 @@ ask_for_landlease_anti_ice = {
         cost = 20
         days_remove = 14
 		target_trigger = {
-			NOT = {
-				has_equipment = {
-					support_equipment < 100
+			FROM = {
+				NOT = {
+					has_equipment = {
+						artillery_equipment < 100
+					}
+					original_tag = ICE
+					tag = ROOT
+					has_war_with = ROOT
 				}
-				original_tag = ICE
-				tag = ROOT
-				has_war_with = ROOT
 			}
 		}
 		remove_effect = {
@@ -90,13 +94,15 @@ ask_for_landlease_anti_ice = {
         cost = 20
         days_remove = 14
 		target_trigger = {
-			NOT = {
-				has_equipment = {
-					support_equipment < 100
+			FROM = {
+				NOT = {
+					has_equipment = {
+						support_equipment < 100
+					}
+					original_tag = ICE
+					tag = ROOT
+					has_war_with = ROOT
 				}
-				original_tag = ICE
-				tag = ROOT
-				has_war_with = ROOT
 			}
 		}
 		remove_effect = {
@@ -123,12 +129,14 @@ ask_for_volunteers_anti_ice = {
 					count < 1
 				}
 			}
-			NOT = {
-				original_tag = ICE
-				tag = ROOT
-				has_war_with = ROOT
-				is_in_array = {
-					ROOT.volunteers_against_ICE = THIS
+			FROM = {
+				NOT = {
+					original_tag = ICE
+					tag = ROOT
+					has_war_with = ROOT
+					is_in_array = {
+						ROOT.volunteers_against_ICE = THIS
+					}
 				}
 			}
 		}
@@ -173,5 +181,62 @@ ask_for_volunteers_anti_ice = {
         ai_will_do = {
             base = 5000
         }
+	}
+}
+state_temperature = {
+	freese_unfreese = {
+		icon = infiltrate_state
+		state_target = yes
+		target_array = owned_controlled_states
+		on_map_mode = map_and_decisions_view
+		target_trigger = {
+			ROOT = {
+				has_full_control_of_state = FROM
+			}
+			FROM = {
+				has_dynamic_modifier = {
+					modifier = ICE_warm_cold_state
+				}
+			}
+		}
+		complete_effect = {
+			FROM = {
+				remove_dynamic_modifier = {
+					modifier = ICE_warm_cold_state
+				}
+			}
+		}
+	}
+	superfreese = {
+		icon = infiltrate_state
+		allowed = {
+			original_tag = ICE
+		}
+		state_target = yes
+		target_array = owned_controlled_states
+		on_map_mode = map_and_decisions_view
+		target_trigger = {
+			ROOT = {
+				has_full_control_of_state = FROM
+			}
+			FROM = {
+				NOT = {
+					is_core_of = ICE
+					has_dynamic_modifier = {
+						modifier = ICE_warm_cold_state
+					}
+					has_dynamic_modifier = {
+						modifier = ICE_supercold_state
+					}
+				}
+			}
+		}
+		complete_effect = {
+			FROM = {
+				add_dynamic_modifier = {
+					modifier = ICE_supercold_state
+				}
+			}
+		}
 	}
 }

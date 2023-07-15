@@ -1,0 +1,23 @@
+ICE_supercold_state = {
+	icon = clockwerk_economy			#to do (change)
+	enable = {
+		controller = {
+			has_full_control_of_state = PREV
+		}
+	}
+	army_speed_factor_for_controller = ICE.supercold_state_army_speed_factor
+	local_org_regain = ICE.supercold_state_org_regain
+	resistance_growth = ICE.supercold_state_resistance_growth
+	resistance_decay = ICE.supercold_state_resistance_decay
+}
+ICE_warm_cold_state = {
+	#applied to postwindigo/windigo controller
+	icon = clockwerk_economy			#to do (change)
+	enable = {
+		always = yes
+	}
+	local_org_regain = -0.1
+	attrition_for_controller = 0.1
+	resistance_growth = 0.25
+	local_factory_sabotage = 0.1
+}

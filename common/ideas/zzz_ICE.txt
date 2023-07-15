@@ -27,8 +27,6 @@ ideas = {
 				defense_bonus_against = -0.5
 			}
 			modifier = {
-				compliance_growth = -1
-				resistance_growth = 0.1
 				local_org_regain = 0.1
 				org_loss_when_moving = -0.1
 				army_org_factor = 0.1
@@ -60,7 +58,7 @@ ideas = {
 			}
 			modifier = {
 				compliance_growth = -1
-				resistance_growth = 0.1
+				resistance_growth = 1
 				local_org_regain = -0.5
 				org_loss_when_moving = 0.5
 				army_org_factor = -0.75
@@ -98,6 +96,26 @@ ideas = {
 			}
 			modifier = {
 				forced_surrender_limit = 1
+			}
+		}
+		ICE_deadly_expansion = {
+			traits = {
+				ICE_expansion
+			}
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = ICE
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				#define minimum war support and stability
+				stability_factor = 0.25
+				war_support_factor = 0.25
+				#define grouth of war support and stability
+				stability_weekly = 0.02
+				war_support_weekly = 0.02
 			}
 		}
 	}

@@ -3,7 +3,7 @@ on_actions = {
 		effect = {
 			if = { #982 scenario wars
 				limit = {
-					has_start_date < 1007.1.1.12
+					has_start_date < 1007.1.1
 				}
 				EQS = {
 					declare_war_on = {
@@ -28,6 +28,24 @@ on_actions = {
 				PGT = {
 					declare_war_on = {
 						target = EPT
+						type = annex_everything
+					}
+				}
+				ICE = {
+					declare_war_on = {
+						target = EQS
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = EPT
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = PGT
+						type = annex_everything
+					}
+					declare_war_on = {
+						target = NML
 						type = annex_everything
 					}
 				}

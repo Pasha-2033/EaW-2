@@ -144,23 +144,12 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = equestria.9.a
+		add_stability = -0.1
 		if = {
 			limit = {
-				has_idea = EQS_fascist_indignation
+				fascism > 0.5
 			}
-			swap_ideas = {
-				remove_idea = EQS_fascist_indignation
-				add_idea = EQS_fascist_protests
-			}
-		}
-		else_if = {
-			limit = {
-				NOT = {
-					has_idea = EQS_fascist_indignation
-					has_idea = EQS_fascist_indignation
-				}
-			}
-			add_ideas = EQS_fascist_indignation
+			add_political_power = -25
 		}
 	}
 }

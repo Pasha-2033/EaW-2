@@ -1,0 +1,238 @@
+#982 scenario
+#war with equestrail pony
+focus_tree = {
+	id = ice_focus_tree_winter_is_near
+	country = {
+		base = 0
+		modifier = {
+			add = 100
+			tag = ICE
+		}
+	}
+	default = no
+	continuous_focus_position = {
+		x = 200
+		y = 750
+	}
+	focus = {
+		id = ice_focus_winter_is_near
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			EQS = {
+				NOT = {
+					has_completed_focus = eqs_focus_friendship_is_magic
+				}
+			}
+		}
+		x = 10
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_winter_is_near"
+			add_manpower = 20000
+			add_equipment_to_stockpile = {
+				type = windigo_equipment_0
+				amount = 1000
+			}
+			#to do add event
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_extraction_of_hatred
+		icon = GFX_goal_generic_changeling
+		cost = 6
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			EQS = {
+				NOT = {
+					has_completed_focus = eqs_focus_friendship_is_magic
+				}
+			}
+		}
+		x = 2
+		y = 1
+		relative_position_id = ice_focus_winter_is_near
+		prerequisite = {
+			focus = ice_focus_winter_is_near
+		}
+		mutually_exclusive = {
+			focus = ice_focus_deadly_expansion
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_extraction_of_hatred"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_deadly_expansion
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			EQS = {
+				NOT = {
+					has_completed_focus = eqs_focus_friendship_is_magic
+				}
+			}
+		}
+		x = -2
+		y = 1
+		relative_position_id = ice_focus_winter_is_near
+		prerequisite = {
+			focus = ice_focus_winter_is_near
+		}
+		mutually_exclusive = {
+			focus = ice_focus_extraction_of_hatred
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_deadly_expansion"
+			add_ideas = ICE_deadly_expansion
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_spirit_appearance
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			EQS = {
+				NOT = {
+					has_completed_focus = eqs_focus_friendship_is_magic
+				}
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = ice_focus_deadly_expansion
+		prerequisite = {
+			focus = ice_focus_deadly_expansion
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_spirit_appearance"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_fast_batles
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			EQS = {
+				NOT = {
+					has_completed_focus = eqs_focus_friendship_is_magic
+				}
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = ice_focus_spirit_appearance
+		prerequisite = {
+			focus = ice_focus_spirit_appearance
+		}
+		mutually_exclusive = {
+			focus = ice_focus_high_frezingpower
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_fast_batles"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_high_frezingpower
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			EQS = {
+				NOT = {
+					has_completed_focus = eqs_focus_friendship_is_magic
+				}
+			}
+		}
+		x = -1
+		y = 1
+		relative_position_id = ice_focus_spirit_appearance
+		prerequisite = {
+			focus = ice_focus_spirit_appearance
+		}
+		mutually_exclusive = {
+			focus = ice_focus_fast_batles
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_high_frezingpower"
+		}
+		search_filters = {}
+	}
+
+
+	focus = {
+		id = ice_focus_spirit_transfomations
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			EQS = {
+				NOT = {
+					has_completed_focus = eqs_focus_friendship_is_magic
+				}
+			}
+		}
+		x = 0
+		y = 2
+		relative_position_id = ice_focus_winter_is_near
+		prerequisite = {
+			focus = ice_focus_deadly_expansion
+			focus = ice_focus_extraction_of_hatred
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_spirit_transfomations"
+		}
+		search_filters = {}
+	}
+
+
+	focus = {
+		id = ice_focus_convertion_other_to_spirits
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			EQS = {
+				NOT = {
+					has_completed_focus = eqs_focus_friendship_is_magic
+				}
+			}
+		}
+		x = 0
+		y = 1
+		relative_position_id = ice_focus_extraction_of_hatred
+		prerequisite = {
+			focus = ice_focus_extraction_of_hatred
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_convertion_other_to_spirits"
+			custom_effect_tooltip = this_is_a_draf_branch
+		}
+		search_filters = {}
+	}
+}

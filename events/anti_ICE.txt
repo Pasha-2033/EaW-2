@@ -1,4 +1,5 @@
 add_namespace = eqs_pgt_ept_anti_ice_event
+#eqs_pgt_ept_anti_ice_event.5 & 7 - to do events for EPT/PGT for asking if they agree to unite
 country_event = { #fuck other tribes - victory will be ours
 	id = eqs_pgt_ept_anti_ice_event.1
 	title = eqs_pgt_ept_anti_ice_event.1.t
@@ -262,12 +263,10 @@ country_event = { #fascist want to fight against ICE cooperative
 		hidden_effect = {
 			if = {
 				limit = {
-					NOT = {
-						EQS = {
-							NOT = {
-								has_war_with = EPT
-								has_war_with = PGT
-							}
+					EQS = {
+						NOT = {
+							has_war_with = EPT
+							has_war_with = PGT
 						}
 					}
 				}

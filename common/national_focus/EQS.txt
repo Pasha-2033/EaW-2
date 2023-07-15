@@ -15,8 +15,8 @@ focus_tree = {
 	}
 	default = no
 	continuous_focus_position = {
-		x = 2700
-		y = 1350
+		x = 1800
+		y = 950
 	}
 	shared_focus = eqs_pgt_ept_winter_spirits
 	focus = {
@@ -440,7 +440,24 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_war_of_attrition"
-			
+			add_ideas = EQS_war_of_attrition
+			if = {
+				limit = {
+					controls_state = 3
+				}
+				add_resource = {
+					type = food
+					amount = 20
+					state = 3
+				}
+			}
+			else = {
+				add_resource = {
+					type = food
+					amount = 10
+					state = capital
+				}
+			}
 		}
 	}
 	focus = {
@@ -458,7 +475,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_ration_cards"
-			
+			decrease_starvation_idea = yes
 		}
 	}
 	focus = {
@@ -479,7 +496,21 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_war_of_offensive_war"
-			
+			add_ideas = EQS_war_of_offensive_war
+			capital_scope = {
+				create_unit = {
+					division = "name = \"White Rook\" division_template = \"Royal Guard Squad\" start_experience_factor = 0.9"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "division_template = \"Garnison Division\" start_experience_factor = 0.25"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "division_template = \"Garnison Division\" start_experience_factor = 0.25"
+					owner = ROOT
+				}
+			}
 		}
 	}
 	focus = {
@@ -491,13 +522,50 @@ focus_tree = {
 		ai_will_do = {
 			base = 200
 		}
+		available = {
+			controls_state = 3
+		}
 		relative_position_id = eqs_focus_war_of_offensive_war
 		prerequisite = {
 			focus = eqs_focus_war_of_offensive_war
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_behind_is_canterlot"
-			
+			3 = { #Canterlot scope
+				#state buildings
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				#sity itself
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 179
+				}
+				#important roads
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 11114
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 911
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 6975
+				}
+			}
 		}
 	}
 	focus = {
@@ -516,7 +584,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_stop_uncontrolled_militarism"
-			
+			add_ideas = EQS_stop_uncontrolled_militarism
 		}
 	}
 	focus = {
@@ -728,7 +796,15 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_opposition_to_harmony"
-			
+			add_political_power = 150
+			NML = {
+				if = {
+					limit = {
+						is_subject_of = ROOT
+					}
+					add_ideas = NML_opposition_to_harmony
+				}	
+			}
 		}
 	}
 	focus = {
@@ -746,7 +822,15 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_press_on_twilight_the_sore_spot"
-			
+			add_popularity = {
+				ideology = harmony
+				popularity = -0.05
+			}
+			add_power_balance_value = {
+				id = EQS_prince_blueblood_vs_twilight
+				value = 0.1
+			}
+			add_stability = 0.1
 		}
 	}
 	focus = {
@@ -764,7 +848,22 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_arest_harmonic_officers"
-			
+			every_character = {
+				limit = {
+					has_trait = sympathizes_harmony_trait
+				}
+				retire_character = THIS
+			}
+			add_popularity = {
+				ideology = harmony
+				popularity = -0.05
+			}
+			add_war_support = -0.05
+			add_stability = 0.1
+			add_power_balance_value = {
+				id = EQS_prince_blueblood_vs_twilight
+				value = 0.1
+			}
 		}
 	}
 	focus = {
@@ -780,9 +879,12 @@ focus_tree = {
 		prerequisite = {
 			focus = eqs_focus_arest_harmonic_officers
 		}
+		available = {
+			fascism > 0.5
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_unicorn_censorship"
-			
+			add_ideas = EQS_unicorn_censorship
 		}
 	}
 	focus = {
@@ -807,8 +909,25 @@ focus_tree = {
 				ideology = fascism
 				popularity = -0.05
 			}
-			add_stability = -0.1
-			add_political_power = -50
+			hidden_effect = {
+				add_to_variable = {
+					accept_harmonists_war_support_weekly_factor = 0.02
+				}
+				subtract_from_variable = {
+					accept_harmonists_weekly_casualties_war_support = 0.02
+				}
+				add_to_variable = {
+					accept_harmonists_opinion_gain_monthly_factor = 0.05
+				}
+				add_dynamic_modifier = {
+					modifier = EQS_accept_harmonists
+				}
+			}
+			custom_effect_tooltip = add_dynamic_modifier_EQS_accept_harmonists_tt
+			country_event = {
+				id = equestria.9
+				days = 3
+			}
 		}
 	}
 	focus = {
@@ -826,21 +945,17 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_stop_persecution_of_harmonists"
-			if = {
-				limit = {
-					harmony > 0.5
-				}
-				add_stability = 0.1
-				add_political_power = 15
-			}
-			else_if = {
-				limit = {
-					harmony > 0.25
-				}
-				add_stability = 0.05
-				add_political_power = 10
-			}
 			country_event = equestria.9
+			add_to_variable = {
+				accept_harmonists_stability_weekly_factor = 0.02
+			}
+			add_to_variable = {
+				accept_harmonists_opinion_gain_monthly_factor = 0.05
+			}
+			subtract_from_variable = {
+				accept_harmonists_weekly_casualties_war_support = 0.03
+			}
+			custom_effect_tooltip = upgrade_EQS_accept_harmonists_tt
 		}
 	}
 	focus = {
@@ -862,25 +977,19 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_complex_goverment"
 			country_event = equestria.9
-			add_ideas = EQS_complex_goverment_fascist_and_harmonist
-			if = {
-				limit = {
-					fascism > 0.5
-				}
-				add_stability = -0.2
-				add_war_support = -0.2
+			add_to_variable = {
+				accept_harmonists_stability_weekly_factor = 0.02
 			}
-			else_if = {
-				limit = {
-					fascism > 0.25
-				}
-				add_stability = -0.15
-				add_war_support = -0.15
+			add_to_variable = {
+				accept_harmonists_opinion_gain_monthly_factor = 0.05
 			}
-			else = {
-				add_stability = -0.1
-				add_war_support = -0.1
+			add_to_variable = {
+				accept_harmonists_weekly_casualties_war_support = 0.02
 			}
+			add_to_variable = {
+				accept_harmonists_political_power_factor = 0.2
+			}
+			custom_effect_tooltip = upgrade_to_complex_goverment_tt
 		}
 	}
 	focus = {
@@ -902,21 +1011,19 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_admission_only_to_lower_positions"
 			country_event = equestria.9
-			add_ideas = EQS_admission_only_to_lower_positions_fascist_and_harmonist
-			if = {
-				limit = {
-					fascism > 0.5
-				}
-				add_stability = -0.1
-				add_war_support = -0.1
+			add_to_variable = {
+				accept_harmonists_stability_weekly_factor = 0.05
 			}
-			else_if = {
-				limit = {
-					fascism > 0.25
-				}
-				add_stability = -0.05
-				add_war_support = -0.05
+			add_to_variable = {
+				accept_harmonists_opinion_gain_monthly_factor = 0.02
 			}
+			add_to_variable = {
+				accept_harmonists_weekly_casualties_war_support = 0.04
+			}
+			add_to_variable = {
+				accept_harmonists_political_power_factor = 0.05
+			}
+			custom_effect_tooltip = upgrade_to_lower_positions_tt
 		}
 	}
 }

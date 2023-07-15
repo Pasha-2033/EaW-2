@@ -1,21 +1,55 @@
+#looks like Sweden
 capital = 76
+if = { #982 scenario script
+	limit = {
+		has_start_date < 1007.1.1
+	}
+	set_research_slots = 1
+	set_technology = {
+		melee_weapons = 1
+		tech_support = 1
+		tech_engineers = 1
+		tech_unicorn = 1
+	}
+	set_convoys = 4
+	set_popularities = {
+		fascism = 6
+		radicalism = 5
+		neutrality = 45
+		technocracy = 2
+		holy = 27
+		harmony = 15
+	}
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "953.10.10"
+		election_frequency = 36
+		elections_allowed = no
+	}
+	recruit_character = OLE_982_bjorson
+	recruit_character = OLE_982_alan_turing
+	activate_advisor = OLE_982_bjorson
+	add_ideas = {
+		deer_race
+	}
+	set_stability = 0.4
+	set_war_support = 0.35
+	country_event = { 
+		id = olenia.1 
+		days = 9 
+		random_days = 2 
+	}
+	else_if = { #1007 scenario script
+		limit = {
+			has_start_date < 1050.1.1
+		}
+		
+	}
+	else = { #1050 scenario script
 
-set_popularities = {
-	fascism = 9
-	radicalism = 13
-	neutrality = 78
-}
-set_politics = {
-	ruling_party = neutrality
-	last_election = "953.10.10"
-	election_frequency = 36
-	elections_allowed = no
-}
-add_ideas = {
-	deer_race
+	}
 }
 982.1.1 = {
-	set_country_flag = default_982_focus_tree
 	set_variable = {
 		UG_ARG_1 = 0.334
 	}

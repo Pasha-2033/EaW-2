@@ -1,7 +1,7 @@
 capital = 3
 if = { #982 scenario script
 	limit = {
-		has_start_date < 1007.1.1.12
+		has_start_date < 1007.1.1
 	}
 	set_research_slots = 2
 	set_technology = {
@@ -54,12 +54,13 @@ if = { #982 scenario script
 	set_oob = "982_EQS"
 	set_stability = 0.4
 	set_war_support = 0.69
-}
-else_if = { #1007 scenario script
-	limit = {
-		has_start_date < 1050.1.1.12
-	}
-}
-else = { #1050 scenario script
 
+	else_if = { #1007 scenario script
+		limit = {
+			has_start_date < 1050.1.1
+		}
+	}
+	else = { #1050 scenario script
+
+	}
 }
