@@ -1,6 +1,8 @@
 country_with_custom_characters = {
+	#use this trigger for bypassing all country_flags that blocks generic character generation
 	OR = {
-		is_major = yes
+		original_tag = VES
+		original_tag = OLE
 		#продолжить original_tag = <tag>
 	}
 }

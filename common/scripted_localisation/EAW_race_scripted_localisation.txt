@@ -23,12 +23,6 @@ defined_text = { # Country
 	}
 	text = {
 		trigger = {
-			has_idea = buffalo_race
-		}
-		localization_key = buffalo_race_type
-	}
-	text = {
-		trigger = {
 			has_idea = changeling_race
 		}
 		localization_key = changeling_race_type
@@ -67,7 +61,6 @@ defined_text = { # Country
 				has_idea = deer_race
 				has_idea = changeling_race
 				has_idea = yak_race
-				has_idea = buffalo_race
 			}
 		}
 		localization_key = hand_hoof
@@ -76,7 +69,7 @@ defined_text = { # Country
 		trigger = {
 			OR = {
 				has_idea = diamond_dog_race
-				has_idea = polar_race
+				has_idea = bear_race
 			}
 		}
 		localization_key = hand_paw
@@ -103,7 +96,6 @@ defined_text = { # Country
 				has_idea = deer_race
 				has_idea = changeling_race
 				has_idea = yak_race
-				has_idea = buffalo_race
 			}
 		}
 		localization_key = hand_hooves
@@ -112,7 +104,7 @@ defined_text = { # Country
 		trigger = {
 			OR = {
 				has_idea = diamond_dog_race
-				has_idea = polar_race
+				has_idea = bear_race
 			}
 		}
 		localization_key = hand_paws
@@ -12687,23 +12679,6 @@ defined_text = {
 			state = 2
 		}
 		localization_key = "GFX_portrait_minotaur_generic_operative_female_1"
-	}
-}
-
-defined_text = {
-	#max 2
-	name = Get_buffalo_operative_male_portrait
-	text = {
-		trigger = {
-			state = 1
-		}
-		localization_key = "GFX_portrait_buffalo_generic_operative_male_1"
-	}
-	text = {
-		trigger = {
-			state = 2
-		}
-		localization_key = "GFX_portrait_buffalo_generic_operative_male_1"
 	}
 }
 

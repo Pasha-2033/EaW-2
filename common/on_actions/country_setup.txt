@@ -318,8 +318,14 @@ on_actions = {
 						}
 					}
 				}
+				#init characters traits
+				country_event = {
+					id = country_setup_event.1
+				}
+				#init mapmodes
 				every_owned_state = {
 					add_to_array = {
+						#what is that array?
 						state_original_cores = PREV
 					}
 					calculate_state_building_slots = yes

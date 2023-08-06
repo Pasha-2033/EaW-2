@@ -1,0 +1,48 @@
+ideas = {
+	country = {
+		OLE_destroyed_kindom = {
+			picture = clockwerk_economy #to do (change)
+			allowed = {
+				original_tag = OLE
+			}
+			allowed_civil_war = {
+				tag = OLE
+			}
+			modifier = {
+				stability_factor = -0.1
+				war_support_factor = -0.1
+				fascism_drift = 0.05
+			}
+		}
+		OLE_high_nobles_influence = {
+			picture = clockwerk_economy #to do (change)
+			allowed = {
+				original_tag = OLE
+			}
+			allowed_civil_war = {
+				tag = OLE
+			}
+			modifier = {
+				political_power_factor = -0.4
+				stability_factor = -0.1
+			}
+		}
+		OLE_gossips_and_intrigues = {
+			picture = clockwerk_economy #to do (change)
+			allowed = {
+				original_tag = OLE
+			}
+			allowed_civil_war = {
+				tag = OLE
+			}
+			modifier = {
+				neutrality_drift = -0.05
+				consumer_goods_factor = 0.1
+				production_speed_buildings_factor = -0.2
+				production_factory_max_efficiency_factor = -0.15
+				army_org_factor = -0.15
+				army_speed_factor = -0.15
+			}
+		}
+	}
+}

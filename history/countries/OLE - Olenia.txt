@@ -13,12 +13,15 @@ if = { #982 scenario script
 	}
 	set_convoys = 4
 	set_popularities = {
-		fascism = 6
-		radicalism = 5
-		neutrality = 45
-		technocracy = 2
-		holy = 27
+		democratic = 6
+		communism = 3
+		fascism = 12
+		neutrality = 30
 		harmony = 15
+		socialism = 4
+		holy = 18
+		anarchism = 8
+		militarism = 4
 	}
 	set_politics = {
 		ruling_party = neutrality
@@ -26,11 +29,25 @@ if = { #982 scenario script
 		election_frequency = 36
 		elections_allowed = no
 	}
+	recruit_character = OLE_982_edelhjord
+	recruit_character = OLE_982_goodhlev
+	recruit_character = OLE_982_staffan
+	recruit_character = OLE_982_orzhan
+	recruit_character = OLE_982_alan
+	recruit_character = OLE_982_stormgran
 	recruit_character = OLE_982_bjorson
-	recruit_character = OLE_982_alan_turing
+	recruit_character = OLE_982_scholz
+	recruit_character = OLE_982_nordstern
+	recruit_character = OLE_982_haftorson
+	recruit_character = OLE_982_yorgensen
+	recruit_character = OLE_982_holmgrad
+	recruit_character = OLE_982_lundberg
 	activate_advisor = OLE_982_bjorson
 	add_ideas = {
 		deer_race
+		OLE_destroyed_kindom
+		OLE_high_nobles_influence
+		OLE_gossips_and_intrigues
 	}
 	set_stability = 0.4
 	set_war_support = 0.35

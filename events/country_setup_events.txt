@@ -1,0 +1,16 @@
+add_namespace = country_setup_event
+country_event = {
+	#start EQS_prince_blueblood_initiatives_mission
+	id = country_setup_event.1
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		every_character = {
+			limit = {
+				is_unit_leader = yes
+				has_race_trait = no
+			}
+			generate_race_trait = yes
+		}
+	}
+}

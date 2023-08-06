@@ -17,6 +17,7 @@ focus_tree = {
 		x = 800
 		y = 1350
 	}
+	#politics
 	focus = {
 		id = ole_focus_bjorsons_death
 		icon = GFX_goal_generic_changeling
@@ -29,7 +30,7 @@ focus_tree = {
 				has_character = OLE_982_bjorson
 			}
 		}
-		x = 11
+		x = 8
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ole_focus_bjorsons_death"
@@ -171,6 +172,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ole_focus_tax_nobles"
+			mark_focus_tree_layout_dirty = yes
+			custom_effect_tooltip = unlock_economic_branch_tt
 		}
 		search_filters = {}
 	}
@@ -227,7 +230,7 @@ focus_tree = {
 			focus = ole_focus_eleminate_heretics
 		}
 		mutually_exclusive = {
-			focus = ole_focus_puppet_king
+			focus = ole_focus_church_puppets_king
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ole_focus_remove_king"
@@ -376,6 +379,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ole_focus_lands_for_nobles"
+			mark_focus_tree_layout_dirty = yes
+			custom_effect_tooltip = unlock_economic_branch_tt
 		}
 		search_filters = {}
 	}
@@ -528,6 +533,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ole_focus_lands_for_peasants"
+			mark_focus_tree_layout_dirty = yes
+			custom_effect_tooltip = unlock_economic_branch_tt
 		}
 		search_filters = {}
 	}
@@ -639,6 +646,428 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ole_focus_start_unation_war"
+		}
+		search_filters = {}
+	}
+	#economics
+	focus = {
+		id = ole_focus_economic_reform_planing
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		allow_branch = {
+			
+		}
+		x = 23
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_economic_reform_planing"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_orzhan_plan
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			has_country_leader = {
+				character = OLE_982_orzhan
+				ruling_only = yes
+			}
+		}
+		relative_position_id = ole_focus_economic_reform_planing
+		prerequisite = {
+			focus = ole_focus_economic_reform_planing
+		}
+		x = 6
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_orzhan_plan"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_nationalise_noble_estates
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_orzhan_plan
+		prerequisite = {
+			focus = ole_focus_orzhan_plan
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_nationalise_noble_estates"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_freehold_land
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_nationalise_noble_estates
+		prerequisite = {
+			focus = ole_focus_nationalise_noble_estates
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_freehold_land"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_small_medium_business_financing
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_freehold_land
+		prerequisite = {
+			focus = ole_focus_freehold_land
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_small_medium_business_financing"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_tax_reform
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_staffan_plan
+		prerequisite = {
+			focus = ole_focus_orzhan_plan
+			focus = ole_focus_staffan_plan
+		}
+		x = 3
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_tax_reform"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_treasury_reform
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_tax_reform
+		prerequisite = {
+			focus = ole_focus_tax_reform
+		}
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_treasury_reform"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_tax_collection_reform
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_tax_reform
+		prerequisite = {
+			focus = ole_focus_tax_reform
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_tax_collection_reform"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_fin_institution_centralisation
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_tax_reform
+		prerequisite = {
+			focus = ole_focus_treasury_reform
+		}
+		prerequisite = {
+			focus = ole_focus_tax_collection_reform
+		}
+		x = 0
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_fin_institution_centralisation"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_staffan_plan
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			has_country_leader = {
+				character = OLE_982_staffan
+				ruling_only = yes
+			}
+		}
+		relative_position_id = ole_focus_economic_reform_planing
+		prerequisite = {
+			focus = ole_focus_economic_reform_planing
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_staffan_plan"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_serfdom_strengthening
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_staffan_plan
+		prerequisite = {
+			focus = ole_focus_staffan_plan
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_serfdom_strengthening"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_attach_peasants_to_the_land
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_serfdom_strengthening
+		prerequisite = {
+			focus = ole_focus_serfdom_strengthening
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_attach_peasants_to_the_land"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_big_business_financing
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_attach_peasants_to_the_land
+		prerequisite = {
+			focus = ole_focus_attach_peasants_to_the_land
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_big_business_financing"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_new_olenial_economy
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_big_business_financing
+		prerequisite = {
+			focus = ole_focus_big_business_financing
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_new_olenial_economy"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_agrarian_and_industrial_reforms
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_staffan_plan
+		prerequisite = {
+			focus = ole_focus_staffan_plan
+			focus = ole_focus_goodhlev_plan
+		}
+		x = -3
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_agrarian_and_industrial_reforms"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_expand_farms
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_agrarian_and_industrial_reforms
+		prerequisite = {
+			focus = ole_focus_agrarian_and_industrial_reforms
+		}
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_expand_farms"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_production_subsidies
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_agrarian_and_industrial_reforms
+		prerequisite = {
+			focus = ole_focus_agrarian_and_industrial_reforms
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_production_subsidies"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_reduce_poverty
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_agrarian_and_industrial_reforms
+		prerequisite = {
+			focus = ole_focus_expand_farms
+		}
+		prerequisite = {
+			focus = ole_focus_production_subsidies
+		}
+		x = 0
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_reduce_poverty"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_goodhlev_plan
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			has_country_leader = {
+				character = OLE_982_goodhlev
+				ruling_only = yes
+			}
+		}
+		relative_position_id = ole_focus_economic_reform_planing
+		prerequisite = {
+			focus = ole_focus_economic_reform_planing
+		}
+		x = -6
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_goodhlev_plan"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_create_diocese
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_goodhlev_plan
+		prerequisite = {
+			focus = ole_focus_goodhlev_plan
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_create_diocese"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_seize_nobles_lands
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_create_diocese
+		prerequisite = {
+			focus = ole_focus_create_diocese
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_seize_nobles_lands"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_rent_land_to_peasants
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_seize_nobles_lands
+		prerequisite = {
+			focus = ole_focus_seize_nobles_lands
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_rent_land_to_peasants"
 		}
 		search_filters = {}
 	}

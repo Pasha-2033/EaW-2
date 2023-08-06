@@ -2155,27 +2155,6 @@ ideas = {
 				factor = 0
 			}
 		}
-		buffalo_race = {
-			###has no tech###
-			available = {
-				OR = {
-					has_idea = multi_race
-					has_idea = buffalo_race
-				}
-			}
-			visible = {
-				OR = {
-					has_idea = multi_race
-					has_idea = buffalo_race
-				}
-			}
-			cost = 250
-			removal_cost = -1
-			cancel_if_invalid = no
-			ai_will_do = {
-				factor = 0
-			}
-		}
 		yak_race = {
 			###has no tech###
 			available = {
@@ -2197,35 +2176,21 @@ ideas = {
 				factor = 0
 			}
 		}
-		polar_race = {
+		bear_race = {
 			###has no tech###
 			available = {
 				OR = {
 					has_idea = multi_race
-					has_idea = polar_race
+					has_idea = bear_race
 				}
 			}
 			visible = {
 				OR = {
 					has_idea = multi_race
-					has_idea = polar_race
+					has_idea = bear_race
 				}
 			}
 			cost = 250
-			removal_cost = -1
-			cancel_if_invalid = no
-			ai_will_do = {
-				factor = 0
-			}
-		}
-		ice_spirits_race = {
-			###has no tech, picture###
-			allowed = {
-				always = no
-			}
-			visible = {
-				has_idea = ice_spirits_race
-			}
 			removal_cost = -1
 			cancel_if_invalid = no
 			ai_will_do = {

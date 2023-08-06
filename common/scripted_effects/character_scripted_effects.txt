@@ -51,3 +51,39 @@ generate_portrait = {
 		log = "Error - can`t get character without token"
 	}
 }
+generate_race_trait = {
+	if = {
+		limit = {
+			owner = {
+				has_idea = multi_race
+			}
+		}
+		add_trait = {
+			trait = generic_race_trait
+		}
+	}
+	else = {
+		for_each_loop = {
+			array = global.race_idea_tokens
+			value = v
+			meta_effect = {
+				text = {
+					if = {
+						limit = {
+							owner = {
+								has_idea = [I]
+							}
+						}
+						add_trait = {
+							trait = [I]_trait
+						}
+						set_temp_variable = {
+							break = 1
+						}
+					}
+				}
+				I = "[?v.GetTokenKey]"
+			}
+		}
+	}
+}
