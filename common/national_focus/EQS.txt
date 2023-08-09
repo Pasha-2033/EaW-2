@@ -1,3 +1,4 @@
+#!gfx:interface\zzz_EQS.gfx
 #982 scenario
 #Vindigo time focuses
 focus_tree = {
@@ -7,10 +8,6 @@ focus_tree = {
 		modifier = {
 			add = 100
 			tag = EQS
-		}
-		modifier = {
-			factor = 0
-			has_start_date > 982.1.1
 		}
 	}
 	default = no
@@ -852,7 +849,9 @@ focus_tree = {
 				limit = {
 					has_trait = sympathizes_harmony_trait
 				}
-				retire_character = THIS
+				ROOT = {
+					retire_character = PREV
+				}
 			}
 			add_popularity = {
 				ideology = harmony

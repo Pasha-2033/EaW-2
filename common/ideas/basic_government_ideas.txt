@@ -24,7 +24,6 @@ ideas = {
 			}
 			modifier = {
 				conscription = 0.015
-				exodus_national_appeal = -0.015
 			}
 			default = yes
 			cancel_if_invalid = no
@@ -41,7 +40,6 @@ ideas = {
 			}
 			modifier = {
 				conscription = 0.025
-				exodus_national_appeal = -0.025
 			}
 			ai_will_do = {
 				factor = 1
@@ -125,7 +123,6 @@ ideas = {
 			modifier = {
 				conscription = 0.05
 				training_time_factor = 0.1
-				exodus_national_appeal = -0.05
 			}
 			cancel_if_invalid = no
 		}
@@ -194,7 +191,6 @@ ideas = {
 				industrial_capacity_dockyard = -0.1
 				production_speed_buildings_factor = -0.1
 				training_time_factor = 0.2
-				exodus_national_appeal = -0.1
 			}
 			cancel_if_invalid = no
 		}
@@ -255,7 +251,6 @@ ideas = {
 				industrial_capacity_dockyard = -0.3
 				production_speed_buildings_factor = -0.3
 				training_time_factor = 0.3
-				exodus_national_appeal = -0.2
 			}
 			cancel_if_invalid = no
 		}
@@ -309,7 +304,6 @@ ideas = {
 				industrial_capacity_dockyard = -0.4
 				production_speed_buildings_factor = -0.4
 				training_time_factor = 0.5
-				exodus_national_appeal = -0.25
 			}
 			cancel_if_invalid = no
 		}
@@ -961,9 +955,7 @@ ideas = {
 				society_idea
 			}
 			removal_cost = -1
-			modifier = {
-				exodus_assimilation_proportion = 0.1
-			}
+			modifier = {}
 		}
 		outdated_industry1 = {
 			traits = { society_idea }
@@ -981,7 +973,6 @@ ideas = {
 				industry_repair_factor = -0.05
 				research_speed_factor = -0.05
 				local_resources_factor = -0.05
-				exodus_assimilation_proportion = 0.05
 				supply_consumption_factor = -0.05
 			}
 		}
@@ -998,7 +989,6 @@ ideas = {
 				industry_repair_factor = -0.1
 				research_speed_factor = -0.10
 				local_resources_factor = -0.1
-				exodus_assimilation_proportion = 0.05
 				supply_consumption_factor = -0.1
 			}
 		}
@@ -1022,7 +1012,6 @@ ideas = {
 				exodus_national_appeal = -0.025
 				local_resources_factor = -0.125
 				industry_air_damage_factor = -0.05
-				exodus_assimilation_proportion = 0.025
 				supply_consumption_factor = -0.15
 			}
 		}
@@ -1046,7 +1035,6 @@ ideas = {
 				exodus_national_appeal = -0.05
 				local_resources_factor = -0.15
 				industry_air_damage_factor = -0.1
-				exodus_assimilation_proportion = 0.025
 				supply_consumption_factor = -0.2
 			}
 		}
@@ -1070,7 +1058,6 @@ ideas = {
 				exodus_national_appeal = -0.075
 				local_resources_factor = -0.175
 				industry_air_damage_factor = -0.15
-				exodus_assimilation_proportion = 0.025
 				supply_consumption_factor = -0.25
 			}
 		}
@@ -1091,7 +1078,6 @@ ideas = {
 				exodus_national_appeal = -0.1
 				local_resources_factor = -0.2
 				industry_air_damage_factor = -0.2
-				exodus_assimilation_proportion = 0.025
 				supply_consumption_factor = -0.3
 			}
 		}
@@ -1116,7 +1102,6 @@ ideas = {
 				local_resources_factor = -0.25
 				industry_air_damage_factor = -0.25
 				max_fuel_factor = -0.02
-				exodus_assimilation_proportion = 0.01
 				supply_consumption_factor = -0.35
 			}
 		}
@@ -1141,7 +1126,6 @@ ideas = {
 				local_resources_factor = -0.3
 				industry_air_damage_factor = -0.3
 				max_fuel_factor = -0.03
-				exodus_assimilation_proportion = 0.01
 				supply_consumption_factor = -0.4
 			}
 		}
@@ -1166,7 +1150,6 @@ ideas = {
 				local_resources_factor = -0.35
 				industry_air_damage_factor = -0.35
 				max_fuel_factor = -0.05
-				exodus_assimilation_proportion = 0.01
 				supply_consumption_factor = -0.45
 			}
 		}
@@ -1191,7 +1174,6 @@ ideas = {
 				local_resources_factor = -0.4
 				industry_air_damage_factor = -0.4
 				max_fuel_factor = -0.1
-				exodus_assimilation_proportion = 0.01
 				supply_consumption_factor = -0.5
 			}
 		}
@@ -1213,7 +1195,6 @@ ideas = {
 				local_resources_factor = -0.45
 				industry_air_damage_factor = -0.45
 				max_fuel_factor = -0.15
-				exodus_assimilation_proportion = 0.01
 				supply_consumption_factor = -0.55
 			}
 		}
@@ -1243,7 +1224,6 @@ ideas = {
 				local_resources_factor = -0.55
 				industry_air_damage_factor = -0.55
 				max_fuel_factor = -0.25
-				exodus_assimilation_proportion = 0.005
 				supply_consumption_factor = -0.65
 			}
 		}
@@ -1273,7 +1253,6 @@ ideas = {
 				local_resources_factor = -0.6
 				industry_air_damage_factor = -0.6
 				max_fuel_factor = -0.3
-				exodus_assimilation_proportion = 0.005
 				supply_consumption_factor = -0.7
 			}
 		}
@@ -1303,7 +1282,6 @@ ideas = {
 				local_resources_factor = -0.65
 				industry_air_damage_factor = -0.65
 				max_fuel_factor = -0.35
-				exodus_assimilation_proportion = 0.005
 				supply_consumption_factor = -0.75
 			}
 		}
@@ -1331,7 +1309,6 @@ ideas = {
 				local_resources_factor = -0.7
 				industry_air_damage_factor = -0.7
 				max_fuel_factor = -0.4
-				exodus_assimilation_proportion = 0.005
 				supply_consumption_factor = -0.8
 			}
 		}
@@ -1358,7 +1335,6 @@ ideas = {
 				industry_air_damage_factor = -0.7
 				max_fuel_factor = -0.4
 				ai_focus_peaceful_factor = 0.25
-				exodus_assimilation_proportion = 0.01
 				supply_consumption_factor = -0.8
 			}
 		}

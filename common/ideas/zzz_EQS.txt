@@ -57,7 +57,7 @@ ideas = {
 				always = yes
 			}
 			cancel = {
-				has_government = fascism
+				#to do
 			}
 			modifier = {
 				fascism_drift = 0.02
@@ -283,25 +283,6 @@ ideas = {
 			}
 			on_add = {
 				add_command_power = 100
-			}
-		}
-		EQS_unicorn_censorship = {
-			allowed = {
-				original_tag = EQS
-			}
-			allowed_civil_war = {
-				has_government = fascism
-			}
-			cancel = {
-				NOT = {
-					has_government = fascism
-				}
-			}
-			modifier = {
-				stability_weekly = 0.03
-				political_power_cost = 0.1
-				fascism_drift = 0.02
-				fascism_acceptance = 10
 			}
 		}
 	}

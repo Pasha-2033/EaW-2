@@ -263,19 +263,13 @@ technologies = {
 				factor = 2
 				is_major = yes
 				not = {
-					tag = JAP
 					num_of_military_factories < 50
 				}
 			}
 			modifier = {
 				is_major = yes
-				not = { tag = JAP }
 				has_war = yes
 				factor = 10 #you are embarassing yourself
-			}
-			modifier = {
-				tag = SOV
-				factor = 3
 			}
 
 			modifier = {
@@ -335,15 +329,8 @@ technologies = {
 			modifier = {
 				factor = 2
 				is_major = yes
-				NOT = {
-					TAG = GER
-				}
 			}
 			modifier = {
-				OR = {
-					original_tag = USA
-					original_tag = JAP
-				}
 				factor = 2
 			}
 			modifier = {
@@ -400,10 +387,6 @@ technologies = {
 				is_major = yes
 			}
 			modifier = {
-				OR = {
-					original_tag = USA
-					original_tag = JAP
-				}
 				factor = 2
 			}
 			modifier = {
@@ -976,11 +959,6 @@ technologies = {
 				tag = FRA
 				factor = 3
 			}
-			modifier = {
-				tag = JAP
-				num_of_military_factories < 100
-				factor = 0
-			}
 		}
 
 		categories = {
@@ -1018,11 +996,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 0.8
-			modifier = {
-				tag = JAP
-				num_of_military_factories < 100
-				factor = 0
-			}
 			modifier = {
 				factor = 1.2
 				date > "1013.1.1"

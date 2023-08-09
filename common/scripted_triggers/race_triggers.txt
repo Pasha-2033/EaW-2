@@ -202,25 +202,6 @@ is_compatible_races = {
 		}
 	}
 }
-is_state_main_culture_changeling = {
-	OR = {
-		is_in_array = {
-			state_original_cores = VES
-		}
-		is_in_array = {
-			state_original_cores = SOR
-		}
-		is_in_array = {
-			state_original_cores = VRA
-		}
-		is_in_array = {
-			state_original_cores = DIS
-		}
-		is_in_array = {
-			state_original_cores = LIK
-		}
-	}
-}
 
 
 
@@ -373,24 +354,6 @@ uses_dragon_portraits = {
 	always = no
 }
 
-has_unit_leader_race_trait = {
-	OR = {
-		has_trait = generic_race_trait
-		has_trait = pony_race_trait
-		has_trait = thestral_race_trait
-		has_trait = zebra_race_trait
-		has_trait = penguin_race_trait
-		has_trait = bear_race_trait
-		has_trait = changeling_race_trait
-		has_trait = griffon_race_trait
-		has_trait = yak_race_trait
-		has_trait = deer_race_trait
-		has_trait = diamond_dog_race_trait
-		has_trait = minotaur_race_trait
-		has_trait = undead_race_trait
-		has_trait = dragon_race_trait
-	}
-}
 
 is_country_main_culture_changeling = {
 	OR = {
@@ -494,8 +457,6 @@ is_country_main_culture_herzlander = {
 		original_tag = PYT
 		original_tag = ROU
 		original_tag = BOI
-		original_tag = LAK
-		original_tag = YAL
 		original_tag = ANG
 		original_tag = STW
 		original_tag = HLQ
@@ -560,7 +521,6 @@ is_country_main_culture_southerner = {
 		original_tag = FRN
 		original_tag = ARA
 		original_tag = WNG
-		original_tag = FAL
 		original_tag = TAL
 		original_tag = JKR
 	}
@@ -695,8 +655,6 @@ is_state_main_culture_herzlander = {
 		is_in_array = { state_original_cores = PYT }
 		is_in_array = { state_original_cores = ROU }
 		is_in_array = { state_original_cores = BOI }
-		is_in_array = { state_original_cores = LAK }
-		is_in_array = { state_original_cores = YAL }
 		is_in_array = { state_original_cores = ANG }
 		is_in_array = { state_original_cores = STW }
 		is_in_array = { state_original_cores = HLQ }
@@ -787,7 +745,6 @@ is_state_main_culture_southerner = {
 		is_in_array = { state_original_cores = FRN }
 		is_in_array = { state_original_cores = ARA }
 		is_in_array = { state_original_cores = WNG }
-		is_in_array = { state_original_cores = FAL }
 		is_in_array = { state_original_cores = TAL }
 		is_in_array = { state_original_cores = JKR }
 	}
@@ -920,8 +877,6 @@ is_operative_main_culture_herzlander = {
 		has_nationality = PYT
 		has_nationality = ROU
 		has_nationality = BOI
-		has_nationality = LAK
-		has_nationality = YAL
 		has_nationality = ANG
 		has_nationality = STW
 		has_nationality = HLQ
@@ -986,7 +941,6 @@ is_operative_main_culture_southerner = {
 		has_nationality = FRN
 		has_nationality = ARA
 		has_nationality = WNG
-		has_nationality = FAL
 		has_nationality = TAL
 		has_nationality = JKR
 	}

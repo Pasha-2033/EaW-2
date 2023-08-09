@@ -238,7 +238,7 @@ guiTypes = {
 			
 			iconType = {
 				name = "constructions_bg3"
-				position = { x = 0 y = 658 } #y = 380
+				position = { x = 0 y = 458 } #y = 380
 				quadTextureSprite = "GFX_constructions_bg1"
 			}
 
@@ -256,7 +256,7 @@ guiTypes = {
 
 			iconType = {
 				name = "province_constructions"
-				position = { x = 5 y = 661 } #y = 383
+				position = { x = 5 y = 461 } #y = 383
 				quadTextureSprite = "GFX_province_constructions"
 			}
 			
@@ -280,22 +280,23 @@ guiTypes = {
 			
 			gridBoxType = {
 				name = "province_item_grid"
-				position = { x = 7 y = 700 } #y = 422
+				position = { x = 7 y = 500 } #y = 422
 				size = { width = 100% height = 100% }
 				slotsize = { width = 46 height = 44 }
 				max_slots_horizontal = 2
 				format = "UPPER_LEFT"
 			}
+			#this comment is for energy mechanics, that are planed, but not started
 			#if you foung error like <Could not find "convert_ic_button" in window countryconstructionsview> - ignore it, mod has unique buildings mechanics
-			#buttonType = {
-			#	name = "convert_ic_button"
-			#	position = { x = -51 y = 553 }
-			#	quadTextureSprite ="GFX_convert_ic_button"
-			#	buttonFont = "Main_14_black"
-			#	Orientation = "UPPER_RIGHT"
-			#	pdx_tooltip = "CONSTRUCTION_CONVERT_IC_TOOLTIP"
-			#	pdx_tooltip_delayed = "CONSTRUCTION_CONVERT_IC_TOOLTIP_DELAYED"
-			#}
+			buttonType = {
+				name = "convert_ic_button"
+				position = { x = -51 y = 383 }
+				quadTextureSprite ="GFX_convert_ic_button"
+				buttonFont = "Main_14_black"
+				Orientation = "UPPER_RIGHT"
+				pdx_tooltip = "CONSTRUCTION_CONVERT_IC_TOOLTIP"
+				pdx_tooltip_delayed = "CONSTRUCTION_CONVERT_IC_TOOLTIP_DELAYED"
+			}
 		}
 				
 		buttonType = {

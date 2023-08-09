@@ -9,7 +9,9 @@ scripted_map_modes = {
 				if = {
 					limit = {
 						FROM = {
-							is_state_main_culture_changeling = yes
+							check_variable = {
+								state_culture = token:changeling_race
+							}
 						}
 					}
 					set_temp_variable = { red = 0.235 }
@@ -20,7 +22,9 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							is_state_main_culture_olenian = yes
+							check_variable = {
+								state_culture = token:deer_race
+							}
 						}
 					}
 					set_temp_variable = { red = 0.878 }
@@ -31,18 +35,9 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							is_state_main_culture_old_olenian = yes
-						}
-					}
-					set_temp_variable = { red = 0.898 }
-					set_temp_variable = { green = 0.8 }
-					set_temp_variable = { blue = 1 }
-					set_temp_variable = { alpha = 0.7 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
-							is_state_main_culture_diamond_dog = yes
+							check_variable = {
+								state_culture = token:diamond_dog_race
+							}
 						}
 					}
 					set_temp_variable = { red = 0.552 }
@@ -53,7 +48,9 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							is_state_main_culture_dragon = yes
+							check_variable = {
+								state_culture = token:dragon_race
+							}
 						}
 					}
 					set_temp_variable = { red = 0.663 }
@@ -64,7 +61,9 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							is_state_main_culture_bear = yes
+							check_variable = {
+								state_culture = token:bear_race
+							}
 						}
 					}
 					set_temp_variable = { red = 0.58 }
@@ -86,7 +85,9 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							is_state_main_culture_equestrian = yes
+							check_variable = {
+								state_culture = token:pony_race
+							}
 						}
 					}
 					set_temp_variable = { red = 0.184 }
@@ -119,7 +120,9 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							is_state_main_culture_minotaur = yes
+							check_variable = {
+								state_culture = token:minotaur_race
+							}
 						}
 					}
 					set_temp_variable = { red = 0.556 }
@@ -141,7 +144,9 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							is_state_main_culture_penguin = yes
+							check_variable = {
+								state_culture = token:penguin_race
+							}
 						}
 					}
 					set_temp_variable = { red = 0.647 }
@@ -185,7 +190,9 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							is_state_main_culture_yak = yes
+							check_variable = {
+								state_culture = token:yak_race
+							}
 						}
 					}
 					set_temp_variable = { red = 0.486 }
