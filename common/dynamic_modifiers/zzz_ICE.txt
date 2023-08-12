@@ -1,8 +1,8 @@
 ICE_supercold_state = {
 	icon = clockwerk_economy			#to do (change)
 	enable = {
-		controller = {
-			has_full_control_of_state = PREV
+		ROOT = {
+			is_fully_controlled_by = ICE
 		}
 	}
 	army_speed_factor_for_controller = ICE.supercold_state_army_speed_factor
