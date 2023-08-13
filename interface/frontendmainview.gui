@@ -39,6 +39,20 @@ guiTypes = {
 			}
 			orientation = LOWER_RIGHT
 			origo = LOWER_RIGHT
+			containerWindowType = {
+				name = "gear_container"
+				scale = 0.8
+				position = {
+					x = 15
+					y = -17
+				}
+				buttonType = {
+					name = "version_stamp_gear"
+					quadTextureSprite = "GFX_alpha_gear"
+					font = "hoi_18mbs"
+					alwaystransparent = yes
+				}
+			}
 			iconType = {
 				name = "frontend_alpha_stamp"
 				spriteType = "GFX_alpha_stamp"
