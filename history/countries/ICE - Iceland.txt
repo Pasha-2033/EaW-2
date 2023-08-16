@@ -14,6 +14,9 @@ if = { #982 scenario script
 		elections_allowed = no
 	}
 	add_ideas = {
+		detached_country
+		closed_economy
+		deep_isolation
 		undead_race
 		ICE_winter_spirits
 		ICE_power_of_winter
@@ -41,10 +44,5 @@ if = { #982 scenario script
 	}
 	set_variable = {
 		supercold_state_resistance_decay = 0.05
-	}
-	capital_scope = {
-		add_dynamic_modifier = {
-			modifier = ICE_supercold_state
-		}
 	}
 }

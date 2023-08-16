@@ -12,13 +12,13 @@ if = { #982 scenario script
 	}
 	set_convoys = 9
 	set_popularities = {
-		harmony = 38
-		democratic = 3
+		harmony = 8
+		radicalism = 3
 		socialism = 1
-		fascism = 58
+		fascism = 88
 	}
 	set_politics = {
-		ruling_party = harmony
+		ruling_party = fascism
 		last_election = "953.10.10"
 		election_frequency = 36
 		elections_allowed = no
@@ -26,14 +26,15 @@ if = { #982 scenario script
 	recruit_character = EQS_982_celestia
 	recruit_character = EQS_982_prince_blueblood
 	recruit_character = EQS_982_twilight
-	activate_advisor = EQS_982_prince_blueblood
 	add_ideas = {
+		extensive_conscription
+		import_focus
+		authoritarism
 		pony_race
 		eqs_pgt_ept_scared_by_ice
 		EQS_unicorn_superiority
 		EQS_tribal_crisis
 		strong_starvation
-		extensive_conscription
 	}
 	create_faction = equestrial_faction
 	add_to_faction = NML

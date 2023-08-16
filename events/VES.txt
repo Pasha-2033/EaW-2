@@ -1,346 +1,82 @@
 add_namespace = ves_changelings
 #change picture everywhere
 country_event = {
-	#monarhy_question
+	#fate of evil mind
 	id = ves_changelings.1
 	immediate = {
 		log = "[GetDateText]: [Root.GetName]: event ves_changelings.1"
 	}
 	title = ves_changelings.1.t
-	desc = ves_changelings.1.d
-	picture = GFX_event_swarm
-	is_triggered_only = yes
-	option = {
-		name = ves_changelings.1.a
-		ai_chance = {
-			factor = 5
+	desc = {
+		trigger = {
+			tag = VES
 		}
+		text = ves_changelings.1.d_ves
 	}
-	option = {
-		name = ves_changelings.1.b
-		ai_chance = {
-			factor = 5
-		}
+	desc = {
+		text = ves_changelings.1.d
 	}
-	option = {
-		name = ves_changelings.1.c
-		ai_chance = {
-			factor = 5
-		}
-	}
-	option = {
-		name = ves_changelings.1.e
-		ai_chance = {
-			factor = 80
-		}
-		add_political_power = 50
-		add_popularity = {
-			ideology = fascism
-			popularity = 0.1
-		}
-	}
-}
-country_event = {
-	#fate of evil mind
-	id = ves_changelings.2
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event ves_changelings.2"
-	}
-	title = ves_changelings.2.t
-	desc = ves_changelings.2.d
 	picture = GFX_event_swarm
 	is_triggered_only = yes
 	option = {
 		#support him
-		name = ves_changelings.2.a
+		name = ves_changelings.1.a
+		activate_advisor = VES_evil_mind
+		mark_focus_tree_layout_dirty = yes
+		every_country = {
+			limit = {
+				has_country_flag = evil_mind_expeled
+			}
+			clr_country_flag = evil_mind_expeled
+		}
 		ai_chance = {
 			factor = 95
-		}
-		news_event = {
-			id = enews.1
 		}
 	}
 	option = {
 		#expel evil mind
-		name = ves_changelings.2.b
-		hidden_effect = {
-			set_country_flag = no_evil_mind
+		name = ves_changelings.1.b
+		trigger = {
+			any_other_country = {
+				has_idea = changeling_race
+				NOT = {
+					has_country_flag = evil_mind_expeled
+				}
+			}
 		}
-		custom_effect_tooltip = evil_mind_expeled_tt
+		set_country_flag = evil_mind_expeled
+		random_other_country = {
+			limit = {
+				has_idea = changeling_race
+				NOT = {
+					has_country_flag = evil_mind_expeled
+				}
+			}
+			ROOT = {
+				VES_evil_mind = {
+					set_nationality = PREV.PREV
+				}
+			}
+			country_event = {
+				id = ves_changelings.1
+			}
+		}
 		ai_chance = {
 			factor = 5
 		}
 	}
 	option = {
 		#kill evil mind
-		name = ves_changelings.2.c
-		hidden_effect = {
-			set_country_flag = no_evil_mind
-			SOR = {
-				set_country_flag = no_evil_mind
+		name = ves_changelings.1.c
+		retire_character = VES_evil_mind
+		every_country = {
+			limit = {
+				has_country_flag = evil_mind_expeled
 			}
-			DIS = {
-				set_country_flag = no_evil_mind
-			}
-			VRA = {
-				set_country_flag = no_evil_mind
-			}
-			LIK = {
-				set_country_flag = no_evil_mind
-			}
-			news_event = {
-				id = enews.2
-			}
+			clr_country_flag = evil_mind_expeled
 		}
-		custom_effect_tooltip = evil_mind_executed_tt
 		ai_chance = {
 			factor = 5
-		}
-	}
-}
-country_event = {
-	#monarhy uprise
-	id = ves_changelings.3
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event ves_changelings.3"
-	}
-	title = ves_changelings.3.t
-	desc = ves_changelings.3.d
-	picture = GFX_event_swarm
-	is_triggered_only = yes
-	option = {
-		name = ves_changelings.3.a
-	}
-}
-country_event = {
-	#sour uprise
-	id = ves_changelings.4
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event ves_changelings.4"
-	}
-	title = ves_changelings.4.t
-	desc = ves_changelings.4.d
-	picture = GFX_event_swarm
-	is_triggered_only = yes
-	option = {
-		name = ves_changelings.4.a
-	}
-}
-country_event = {
-	#military hunta uprise
-	id = ves_changelings.5
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event ves_changelings.5"
-	}
-	title = ves_changelings.5.t
-	desc = ves_changelings.5.d
-	picture = GFX_event_swarm
-	is_triggered_only = yes
-	option = {
-		name = ves_changelings.5.a
-	}
-}
-country_event = {
-	#workers front uprise
-	id = ves_changelings.6
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event ves_changelings.6"
-	}
-	title = ves_changelings.6.t
-	desc = ves_changelings.6.d
-	picture = GFX_event_swarm
-	is_triggered_only = yes
-	option = {
-		name = ves_changelings.6.a
-	}
-}
-country_event = {
-	#way of love uprise
-	id = ves_changelings.7
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event ves_changelings.7"
-	}
-	title = ves_changelings.7.t
-	desc = ves_changelings.7.d
-	picture = GFX_event_swarm
-	is_triggered_only = yes
-	option = {
-		name = ves_changelings.7.a
-		if = {
-			limit = {
-				NOT = {
-					has_country_flag = no_evil_mind
-				}
-			}
-			country_event = {
-				id = ves_changelings.16
-				days = 7
-			}
-		}
-	}
-}
-country_event = {
-	#chrysalis coronation
-	id = ves_changelings.8
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event ves_changelings.8"
-	}
-	title = ves_changelings.8.t
-	desc = ves_changelings.8.d
-	picture = GFX_event_swarm
-	is_triggered_only = yes
-	option = {
-		name = ves_changelings.8.a
-	}
-}
-country_event = {
-	#evil mind wants to help
-	id = ves_changelings.9
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event ves_changelings.9"
-	}
-	title = ves_changelings.9.t
-	desc = ves_changelings.9.d
-	picture = GFX_event_swarm
-	is_triggered_only = yes
-	option = {
-		#accept his offer
-		name = ves_changelings.10.a
-		ai_chance = {
-			factor = 100 #change
-		}
-	}
-	option = {
-		#refuse
-		name = ves_changelings.10.b
-		hidden_effect = {
-			set_country_flag = no_evil_mind
-		}
-		custom_effect_tooltip = evil_mind_go_away_tt
-		ai_chance = {
-			factor = 100 #change
-		}
-	}
-}
-country_event = {
-	#king coronation
-	id = ves_changelings.10
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event ves_changelings.10"
-	}
-	title = ves_changelings.10.t
-	desc = ves_changelings.10.d
-	picture = GFX_event_swarm
-	is_triggered_only = yes
-	option = {
-		name = ves_changelings.10.a
-	}
-}
-country_event = {
-	#evil mind incharge
-	id = ves_changelings.11
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event ves_changelings.11"
-	}
-	title = ves_changelings.11.t
-	desc = ves_changelings.11.d
-	picture = GFX_event_swarm
-	is_triggered_only = yes
-	option = {
-		#he stay with queen
-		name = ves_changelings.11.a
-		ai_chance = {
-			factor = 100
-		}
-	}
-	option = {
-		#he rules alone, play for him
-		name = ves_changelings.11.b
-		ai_chance = {
-			factor = 100
-		}
-	}
-	option = {
-		#he rules alone, play for Chrysalis resistance
-		#start civil war - доделать
-		name = ves_changelings.11.c
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-#VES loose canterlot race, winner wants us to join faction: SOR - 12, DIS - 13, LIK - 14, VRA - 15
-country_event = {
-	id = ves_changelings.12
-	title = ves_changelings.12.t
-	desc = ves_changelings.12.d
-	picture = GFX_event_swarm
-	is_triggered_only = yes
-	#todo
-	option = {
-		name = ves_changelings.12.a
-	}
-}
-country_event = {
-	id = ves_changelings.13
-	title = ves_changelings.13.t
-	desc = ves_changelings.13.d
-	picture = GFX_event_swarm
-	is_triggered_only = yes
-	#todo
-	option = {
-		name = ves_changelings.13.a
-	}
-}
-country_event = {
-	id = ves_changelings.14
-	title = ves_changelings.14.t
-	desc = ves_changelings.14.d
-	picture = GFX_event_swarm
-	is_triggered_only = yes
-	option = {
-		name = ves_changelings.14.a
-	}
-	#todo
-	option = {
-		name = ves_changelings.14.a
-	}
-}
-country_event = {
-	id = ves_changelings.15
-	title = ves_changelings.15.t
-	desc = ves_changelings.15.d
-	picture = GFX_event_swarm
-	is_triggered_only = yes
-	option = {
-		name = ves_changelings.15.a
-		ai_chance = {
-			factor = 100
-		}
-	}
-	#todo
-	option = {
-		name = ves_changelings.15.a
-		ai_chance = {
-			factor = 100
-		}
-	}
-}
-country_event = {
-	#evil mind against of way of love
-	id = ves_changelings.16
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event ves_changelings.16"
-	}
-	title = ves_changelings.16.t
-	desc = ves_changelings.16.d
-	picture = GFX_event_swarm
-	is_triggered_only = yes
-	option = {
-		name = ves_changelings.16.a
-		custom_effect_tooltip = evil_mind_go_away_tt
-		hidden_effect = {
-			set_country_flag = no_evil_mind
 		}
 	}
 }

@@ -1,0 +1,31 @@
+#evil mind greate projects (emgp)
+shared_focus = {
+	id = shared_focus_emgp_todo
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	allow_branch = {
+		if = {
+			limit = {
+				tag = VES
+			}
+			has_completed_focus = ves_focus_evil_mind_found
+		}
+		has_character = VES_evil_mind
+	}
+	available = {
+		VES_evil_mind = {
+			is_hired_as_advisor = yes
+		}
+	}
+	ai_will_do = {
+		base = 200
+	}
+	x = 26
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_changelings_polit_system_temp"
+	}
+	search_filters = {
+		#add
+	}
+}

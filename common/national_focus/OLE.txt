@@ -21,6 +21,11 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
+		allow_branch = {
+			NOT = {
+				has_completed_focus = ole_focus_start_unation_war
+			}
+		}
 		available = {
 			NOT = {
 				has_character = OLE_982_bjorson
@@ -642,6 +647,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ole_focus_start_unation_war"
+			mark_focus_tree_layout_dirty = yes
 		}
 		search_filters = {}
 	}
@@ -1064,6 +1070,366 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ole_focus_rent_land_to_peasants"
+		}
+		search_filters = {}
+	}
+	#unation war
+	focus = {
+		id = ole_focus_unation_plan
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		allow_branch = {
+			has_completed_focus = ole_focus_start_unation_war
+		}
+		x = 8
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_unation_plan"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_church_grandplan
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_unation_plan
+		prerequisite = {
+			focus = ole_focus_unation_plan
+		}
+		x = -4
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_church_grandplan"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_send_priests
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_church_grandplan
+		prerequisite = {
+			focus = ole_focus_church_grandplan
+		}
+		x = 0
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_send_priests"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_send_priests
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_church_grandplan
+		prerequisite = {
+			focus = ole_focus_church_grandplan
+		}
+		x = 0
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_send_priests"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_exploit_church_discontent
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_send_priests
+		prerequisite = {
+			focus = ole_focus_send_priests
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_exploit_church_discontent"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_guerrilla_fanaticism
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_exploit_church_discontent
+		prerequisite = {
+			focus = ole_focus_exploit_church_discontent
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_guerrilla_fanaticism"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_nobles_grandplan
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_unation_plan
+		prerequisite = {
+			focus = ole_focus_unation_plan
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_nobles_grandplan"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_use_old_connections
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_nobles_grandplan
+		prerequisite = {
+			focus = ole_focus_nobles_grandplan
+		}
+		x = 0
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_use_old_connections"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_promise_of_titles_to_feodals
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_use_old_connections
+		prerequisite = {
+			focus = ole_focus_use_old_connections
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_promise_of_titles_to_feodals"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_exploit_baron_differences
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_promise_of_titles_to_feodals
+		prerequisite = {
+			focus = ole_focus_promise_of_titles_to_feodals
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_exploit_baron_differences"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_destroy_separatists
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_nobles_grandplan
+		prerequisite = {
+			focus = ole_focus_nobles_grandplan
+			focus = ole_focus_church_grandplan
+		}
+		mutually_exclusive = {
+			focus = ole_focus_negotiation_with_separatists
+		}
+		x = -3
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_destroy_separatists"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_negotiation_with_separatists
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_nobles_grandplan
+		prerequisite = {
+			focus = ole_focus_nobles_grandplan
+			focus = ole_focus_church_grandplan
+		}
+		mutually_exclusive = {
+			focus = ole_focus_destroy_separatists
+		}
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_negotiation_with_separatists"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_destroy_anarchists
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_nobles_grandplan
+		prerequisite = {
+			focus = ole_focus_nobles_grandplan
+			focus = ole_focus_harmonist_grandplan
+		}
+		mutually_exclusive = {
+			focus = ole_focus_negotiation_with_anarchists
+		}
+		x = 3
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_destroy_anarchists"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_negotiation_with_anarchists
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_nobles_grandplan
+		prerequisite = {
+			focus = ole_focus_nobles_grandplan
+			focus = ole_focus_harmonist_grandplan
+		}
+		mutually_exclusive = {
+			focus = ole_focus_destroy_anarchists
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_negotiation_with_anarchists"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_harmonist_grandplan
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_unation_plan
+		prerequisite = {
+			focus = ole_focus_unation_plan
+		}
+		x = 4
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_harmonist_grandplan"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_use_peoples_discontent
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_harmonist_grandplan
+		prerequisite = {
+			focus = ole_focus_harmonist_grandplan
+		}
+		x = 0
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_use_peoples_discontent"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_support_opposition_of_separatists
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_use_peoples_discontent
+		prerequisite = {
+			focus = ole_focus_use_peoples_discontent
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_support_opposition_of_separatists"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_foment_peasant_riots_among_schismatics
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_support_opposition_of_separatists
+		prerequisite = {
+			focus = ole_focus_support_opposition_of_separatists
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_foment_peasant_riots_among_schismatics"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ole_focus_letters_to_frontiers
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ole_focus_exploit_baron_differences
+		prerequisite = {
+			focus = ole_focus_guerrilla_fanaticism
+			focus = ole_focus_exploit_baron_differences
+			focus = ole_focus_foment_peasant_riots_among_schismatics
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ole_focus_letters_to_frontiers"
 		}
 		search_filters = {}
 	}

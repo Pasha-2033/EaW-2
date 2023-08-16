@@ -32,6 +32,7 @@ focus_tree = {
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_winter_is_near"
+			unlock_decision_category_tooltip = ice_equipment_manpower_collecting
 			add_manpower = 20000
 			add_equipment_to_stockpile = {
 				type = windigo_equipment_0
@@ -112,7 +113,7 @@ focus_tree = {
 				}
 			}
 		}
-		x = 0
+		x = -4
 		y = 1
 		relative_position_id = ice_focus_deadly_expansion
 		prerequisite = {
@@ -182,7 +183,7 @@ focus_tree = {
 
 
 	focus = {
-		id = ice_focus_spirit_transfomations
+		id = ice_focus_new_high_command
 		icon = GFX_goal_generic_changeling
 		cost = 10
 		ai_will_do = {
@@ -195,7 +196,7 @@ focus_tree = {
 				}
 			}
 		}
-		x = 0
+		x = -1
 		y = 2
 		relative_position_id = ice_focus_winter_is_near
 		prerequisite = {
@@ -203,12 +204,49 @@ focus_tree = {
 			focus = ice_focus_extraction_of_hatred
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: ice_focus_spirit_transfomations"
+			log = "[GetDateText]: [Root.GetName]: ice_focus_spirit_transformations"
 		}
 		search_filters = {}
 	}
 
 
+	focus = {
+		id = ice_focus_spirit_transformations
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			EQS = {
+				NOT = {
+					has_completed_focus = eqs_focus_friendship_is_magic
+				}
+			}
+		}
+		x = 1
+		y = 2
+		relative_position_id = ice_focus_winter_is_near
+		prerequisite = {
+			focus = ice_focus_deadly_expansion
+			focus = ice_focus_extraction_of_hatred
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_spirit_transformations"
+			unlock_decision_tooltip = superfreese
+			capital_scope = {
+				if = {
+					limit = {
+						is_fully_controlled_by = ROOT
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = ICE_supercold_state
+				}
+			}
+		}
+		search_filters = {}
+	}
 	focus = {
 		id = ice_focus_convertion_other_to_spirits
 		icon = GFX_goal_generic_changeling
@@ -223,7 +261,7 @@ focus_tree = {
 				}
 			}
 		}
-		x = 0
+		x = 4
 		y = 1
 		relative_position_id = ice_focus_extraction_of_hatred
 		prerequisite = {

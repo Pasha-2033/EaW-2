@@ -171,7 +171,9 @@ country_event = { #land lease against ICE (to major, support)
 		}
 	}
 }
-country_event = { #may be we shouldn`t killing each other - focus on vindigo
+country_event = { #may be we shouldn`t killing each other - focus on vindigo (harmonist iniative)
+	#to do
+	#can give add_ideas = anti_ice_union
 	id = eqs_pgt_ept_anti_ice_event.5
 	title = eqs_pgt_ept_anti_ice_event.5.t
 	desc = eqs_pgt_ept_anti_ice_event.5.d
@@ -180,49 +182,6 @@ country_event = { #may be we shouldn`t killing each other - focus on vindigo
 		name = eqs_pgt_ept_anti_ice_event.5.a
 		ai_chance = {
 			base = 100
-		}
-		white_peace = {
-			tag = EQS
-			message = eqs_pgt_ept_anti_ice_white_peace_tt
-		}
-		ROOT = {
-			give_military_access = EQS
-		}
-		EQS = {
-			give_military_access = ROOT
-			if = {
-				limit = {
-					NOT = {
-						has_war_with = EPT
-						has_war_with = PGT
-					}
-				}
-				add_ideas = anti_ice_union
-				PGT = {
-					add_ideas = anti_ice_union
-					white_peace = {
-						tag = EPT
-						message = eqs_pgt_ept_anti_ice_white_peace_tt
-					}
-					give_military_access = EPT
-				}
-				EPT = {
-					add_ideas = anti_ice_union
-					give_military_access = PGT
-				}
-			}
-		}
-	}
-	option = { #you caused vindigo - we can`t deal with you
-		name = eqs_pgt_ept_anti_ice_event.5.b
-		ai_chance = {
-			#modify (to do!)
-			base = 0
-		}
-		EQS = {
-			country_event = {
-				id = eqs_pgt_ept_anti_ice_event.6
-			}
 		}
 	}
 }

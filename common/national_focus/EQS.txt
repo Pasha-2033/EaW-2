@@ -13,7 +13,7 @@ focus_tree = {
 	default = no
 	continuous_focus_position = {
 		x = 1800
-		y = 950
+		y = 1250
 	}
 	shared_focus = eqs_pgt_ept_winter_spirits
 	focus = {
@@ -29,16 +29,9 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_harmony_isnot_lost"
 			add_popularity = {
 				ideology = harmony
-				popularity = 0.08
+				popularity = 0.04
 			}
 			add_stability = 0.05
-			if = {
-				limit = {
-					has_idea = EQS_unicorn_superiority
-					fascism < 0.3
-				}
-				add_political_power = -50
-			}
 			country_event = {
 				id = equestria.2
 				days = 7
@@ -63,19 +56,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_friendship_flashbacks"
 			add_popularity = {
 				ideology = harmony
-				popularity = 0.1
+				popularity = 0.05
 			}
 			add_stability = 0.1
 			add_war_support = -0.05
-			if = {
-				limit = {
-					has_country_leader = {
-						ruling_only = yes
-						character = EQS_982_celestia
-					}
-				}
-				add_political_power = 100
-			}
 		}
 	}
 	focus = {
@@ -173,15 +157,12 @@ focus_tree = {
 			}
 			add_popularity = {
 				ideology = harmony
-				popularity = 0.05
+				popularity = 0.025
 			}
 			EPT = {
 				add_popularity = {
 					ideology = harmony
 					popularity = 0.05
-				}
-				country_event = {
-					id = eqs_pgt_ept_anti_ice_event.5
 				}
 			}
 		}
@@ -207,15 +188,12 @@ focus_tree = {
 			}
 			add_popularity = {
 				ideology = harmony
-				popularity = 0.05
+				popularity = 0.025
 			}
 			PGT = {
 				add_popularity = {
 					ideology = harmony
 					popularity = 0.05
-				}
-				country_event = {
-					id = eqs_pgt_ept_anti_ice_event.5
 				}
 			}
 		}
@@ -268,6 +246,59 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = eqs_focus_form_unicorn_harmonist_movemnt
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_friendship_with_rarity
+		prerequisite = {
+			focus = eqs_focus_friendship_with_rarity
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_form_unicorn_harmonist_movemnt"
+			add_popularity = {
+				ideology = harmony
+				popularity = 0.075
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_reveal_harmonist_movemnt
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_form_unicorn_harmonist_movemnt
+		prerequisite = {
+			focus = eqs_focus_form_unicorn_harmonist_movemnt
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_reveal_harmonist_movemnt"
+			set_politics = {
+				ruling_party = harmony
+			}
+			promote_character = EQS_982_twilight
+			set_temp_variable = {
+				ds = party_popularity@fascism
+			}
+			divide_temp_variable = {
+				ds = -5
+			}
+			add_war_support = ds
+			divide_temp_variable = {
+				ds = 2
+			}
+			add_stability = ds
+		}
+	}
+	focus = {
 		id = eqs_focus_friendship_with_rainbowdash
 		icon = GFX_goal_eqs_focus_friendship_with_rainbowdash
 		cost = 5
@@ -284,6 +315,57 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_friendship_with_rainbowdash"
 			country_event = {
 				id = equestria.4
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_form_pegas_harmonist_movemnt
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 2
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_pegas_harmony
+		prerequisite = {
+			focus = eqs_focus_friendship_with_fluttershy
+		}
+		prerequisite = {
+			focus = eqs_focus_friendship_with_rainbowdash
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_form_pegas_harmonist_movemnt"
+			PGT = {
+				add_popularity = {
+					ideology = harmony
+					popularity = 0.1
+				}
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_appeal_to_pegas_leader
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 2
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_form_pegas_harmonist_movemnt
+		prerequisite = {
+			focus = eqs_focus_form_pegas_harmonist_movemnt
+		}
+		prerequisite = {
+			focus = eqs_focus_reveal_harmonist_movemnt
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_appeal_to_pegas_leader"
+			PGT = {
+				country_event = {
+					id = equestria.5
+				}
 			}
 		}
 	}
@@ -328,29 +410,74 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = eqs_focus_friendship_is_magic
-		icon = GFX_goal_eqs_focus_friendship_is_magic
+		id = eqs_focus_form_earthpony_harmonist_movemnt
+		icon = GFX_goal_generic_changeling
 		cost = 5
 		x = 0
-		y = 1
+		y = 2
 		ai_will_do = {
 			base = 200
 		}
-		relative_position_id = eqs_focus_friendship_with_rarity
-		prerequisite = {
-			focus = eqs_focus_friendship_with_rarity
-		}
-		prerequisite = {
-			focus = eqs_focus_friendship_with_fluttershy
-		}
-		prerequisite = {
-			focus = eqs_focus_friendship_with_rainbowdash
-		}
+		relative_position_id = eqs_focus_earthpony_harmony
 		prerequisite = {
 			focus = eqs_focus_friendship_with_applejack
 		}
 		prerequisite = {
 			focus = eqs_focus_friendship_with_pinkypie
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_form_earthpony_harmonist_movemnt"
+			EPT = {
+				add_popularity = {
+					ideology = harmony
+					popularity = 0.1
+				}
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_appeal_to_earthpony_leader
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 2
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_form_earthpony_harmonist_movemnt
+		prerequisite = {
+			focus = eqs_focus_form_earthpony_harmonist_movemnt
+		}
+		prerequisite = {
+			focus = eqs_focus_reveal_harmonist_movemnt
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_appeal_to_earthpony_leader"
+			EPT = {
+				country_event = {
+					id = equestria.5
+				}
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_friendship_is_magic
+		icon = GFX_goal_eqs_focus_friendship_is_magic
+		cost = 5
+		x = 0
+		y = 4
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_friendship_with_rarity
+		prerequisite = {
+			focus = eqs_focus_reveal_harmonist_movemnt
+		}
+		prerequisite = {
+			focus = eqs_focus_appeal_to_pegas_leader
+		}
+		prerequisite = {
+			focus = eqs_focus_appeal_to_earthpony_leader
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_friendship_is_magic"

@@ -62,11 +62,22 @@ state_temperature = {
 			limit = {
 				original_tag = ICE
 			}
-			#has_completed_focus = #to do
+			has_completed_focus = ice_focus_spirit_transformations
 		}
 		else = {
 			has_war_with = ICE
 		}
+	}
+	#visible_when_empty = yes #for debug
+}
+ice_equipment_manpower_collecting = {
+	priority = 200
+	icon = generic_political_actions
+	allowed = {
+		original_tag = ICE
+	}
+	visible = {
+		has_completed_focus = ice_focus_winter_is_near
 	}
 	#visible_when_empty = yes #for debug
 }

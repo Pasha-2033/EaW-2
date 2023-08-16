@@ -15,6 +15,41 @@ characters = {
 			id = 1000
 		}
 	}
+	EQS_982_twilight = {
+		name = EQS_982_twilight
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+				small = "" #to do
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_982_CELESTIA_DESC"
+			ideology = harmonic_magocracy
+			traits = {}
+			expire = "1965.1.1.1"
+			id = 1000
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = EQS_982_twilight
+			traits = {
+				HE_magic
+			}
+			allowed = {
+				original_tag = EQS
+			}
+			available = {
+				#to do
+			}
+			visible = {
+				#to do
+			}
+			allowed = {
+				original_tag = EQS
+			}
+		}
+	}
 	EQS_982_prince_blueblood = {
 		name = EQS_982_prince_blueblood
 		portraits = {
@@ -31,43 +66,6 @@ characters = {
 			}
 			expire = "1965.1.1.1"
 			id = -1
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = EQS_982_prince_blueblood
-			traits = {
-				unicorn_superiority
-			}
-			allowed = {
-				original_tag = EQS
-			}
-			can_be_fired = no
-		}
-	}
-	EQS_982_twilight = {
-		name = EQS_982_twilight
-		portraits = {
-			civilian = {
-				large = "GFX_portrait_marshal_unknown" #to do
-				small = "" #to do
-			}
-		}
-		advisor = {
-			slot = political_advisor
-			idea_token = EQS_982_twilight
-			traits = {
-				HE_magic
-			}
-			available = {
-				has_completed_focus = eqs_focus_twilight_initiative
-				has_government = harmony
-			}
-			visible = {
-				has_completed_focus = eqs_focus_twilight_initiative
-			}
-			allowed = {
-				original_tag = EQS
-			}
 		}
 	}
 }

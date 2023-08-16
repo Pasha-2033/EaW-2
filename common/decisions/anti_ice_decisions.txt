@@ -215,6 +215,9 @@ state_temperature = {
 		state_target = yes
 		target_array = owned_controlled_states
 		on_map_mode = map_and_decisions_view
+		target_root_trigger = {
+			has_completed_focus = ice_focus_spirit_transformations
+		}
 		target_trigger = {
 			ROOT = {
 				has_full_control_of_state = FROM
@@ -238,4 +241,7 @@ state_temperature = {
 			}
 		}
 	}
+}
+ice_equipment_manpower_collecting = {
+
 }
