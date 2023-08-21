@@ -48,10 +48,9 @@ defined_text = {
 		localization_key = state_lore_date_last_evil_mind_date
 	}
 	text = {
+		#1007 scenario
 		trigger = {
-			NOT = {
-				date < 1007.1.1
-			}
+			date > 982.1.1
 			date < 1050.1.1
 			#продолжить триггер
 		}

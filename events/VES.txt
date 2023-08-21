@@ -75,6 +75,9 @@ country_event = {
 			}
 			clr_country_flag = evil_mind_expeled
 		}
+		set_variable = {
+			global.last_evil_mind_date = global.year
+		}
 		ai_chance = {
 			factor = 5
 		}
