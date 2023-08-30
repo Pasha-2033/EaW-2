@@ -12,7 +12,7 @@ focus_tree = {
 		x = 2700
 		y = 1350
 	}
-	shared_focus = shared_focus_emgp_todo
+	shared_focus = shared_focus_emgp_young_revolutionary_scientist
 	#uniqe VES focuses
 	focus = {
 		id = ves_focus_monarhy_guestion
@@ -515,11 +515,6 @@ focus_tree = {
 		cost = 5
 		prerequisite = {
 			focus = ves_focus_equus_technounion
-		}
-		available = {
-			NOT = {
-				has_completed_focus = shared_focus_changelings_attack_canterlot
-			}
 		}
 		ai_will_do = {
 			factor = 200

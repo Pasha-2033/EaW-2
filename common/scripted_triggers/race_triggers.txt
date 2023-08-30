@@ -244,10 +244,7 @@ uses_pony_generic_portraits = {
 }
 
 uses_pony_EQS_portraits = {
-	OR = {
-		original_tag = EQS
-		original_tag = EQC
-	}
+	original_tag = EQS
 }
 
 uses_pony_CRY_portraits = {
@@ -429,7 +426,6 @@ is_country_main_culture_equestrian = {
 		original_tag = TEM
 		original_tag = LSP
 		original_tag = ELF
-		original_tag = EQC
 	}
 }
 
@@ -616,7 +612,6 @@ is_state_main_culture_equestrian = {
 		is_in_array = { state_original_cores = TEM }
 		is_in_array = { state_original_cores = LSP }
 		is_in_array = { state_original_cores = ELF }
-		is_in_array = { state_original_cores = EQC }
 	}
 }
 
@@ -849,7 +844,6 @@ is_operative_main_culture_equestrian = {
 		has_nationality = TEM
 		has_nationality = LSP
 		has_nationality = ELF
-		has_nationality = EQC
 	}
 }
 
@@ -1047,9 +1041,8 @@ is_country_secondary_culture_riverlander = {
 	}
 }
 is_country_secondary_culture_southerner = {
-	OR = {
-		original_tag = EQC
-	}
+	#remove to do
+	always = no
 }
 is_country_secondary_culture_undead = {
 	always = no

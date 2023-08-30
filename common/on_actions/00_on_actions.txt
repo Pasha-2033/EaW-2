@@ -92,8 +92,8 @@ on_actions = {
 		}
 	}
 
+	#nuke mechanics, THIS(ROOT) - country-nukker, FROM - is nuked state
 	on_nuke_drop = {
-
 		effect = {
 			set_global_flag = first_nuke_dropped
 			if = {
@@ -104,7 +104,73 @@ on_actions = {
 				limit = { has_idea = race_for_the_bomb_outclassed }
 				remove_ideas = race_for_the_bomb_outclassed
 			}
-
+			FROM = {
+				#restore all anti nuke bunkers (undestructable)
+				set_temp_variable = {
+					anb_lvl = building_level@anti_nuke_bunker
+				}
+				remove_building = {
+					type = anti_nuke_bunker
+    				level = anb_lvl
+				}
+				random_list = {
+					#(test) (to do) if non int numbers works
+					1 = {
+						#nothing will happen
+						modifier = {
+							set_temp_variable = {
+								temp = PREV.modifier@nuke_anb_destruction_factor
+							}
+							multiply_temp_variable = {
+								temp = -1
+							}
+							add = temp
+						}
+					}
+					0 = {
+						#nuke was too powerfull - bunker destroyed
+						modifier = {
+							add = PREV.modifier@nuke_anb_destruction_factor
+						}
+						subtract_from_temp_variable = {
+							anb_lvl = 1
+						}
+					}
+				}
+				set_building_level = {
+					type = anti_nuke_bunker
+					level = anb_lvl
+					instant_build = yes
+				}
+				#nuke population
+				set_temp_variable = {
+					nuke_efficiency = 1
+				}
+				subtract_from_temp_variable = {
+					nuke_efficiency = modifier@nuke_defence_factor
+				}
+				set_temp_variable = {
+					max_nuked_population = -0.05
+				}
+				subtract_from_temp_variable = {
+					max_nuked_population = PREV.modifier@nuke_charge_power_factor
+				}
+				set_temp_variable_to_random = {
+					var = state_nuked_population
+					min = max_nuked_population
+					max = -0.05
+				}
+				multiply_temp_variable = {
+					state_nuked_population = state_population_k
+				}
+				multiply_temp_variable = {
+					state_nuked_population = nuke_efficiency
+				}
+				for_loop_effect = {
+					end = 1000
+					add_manpower = state_nuked_population
+				}
+			}
 		}
 		#random_events = {
 		#	100 = nuke_dropped.0

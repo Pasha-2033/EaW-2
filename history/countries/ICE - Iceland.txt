@@ -28,6 +28,9 @@ if = { #982 scenario script
 	set_stability = 0.05
 	set_war_support = 0.05
 	recruit_character = ICE_vindigo
+	recruit_character = ICE_night_lands
+	recruit_character = ICE_valar_morgulis
+	recruit_character = ICE_windoo
 	#set_country_flag = default_982_focus_tree
 	set_country_flag = no_sa_impact #turn off food mechanic
 	set_oob = "982_ICE"
@@ -44,5 +47,24 @@ if = { #982 scenario script
 	}
 	set_variable = {
 		supercold_state_resistance_decay = 0.05
+	}
+	#ICE equipment collection mechanic
+	set_variable = {
+		open_tomb_cost = 50
+	}
+	set_variable = {
+		open_tomb_cooldown = 30
+	}
+	set_variable = {
+		resurrect_fallen_cost = 300
+	}
+	set_variable = {
+		resurrect_fallen_cooldown = 90
+	}
+	set_variable = {
+		resurrect_fallen_efficiency = 100 #manpower in k, so it`s 10%
+	}
+	set_variable = {
+		resurrect_fallen_prev_casualties_k = 0
 	}
 }

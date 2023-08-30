@@ -136,6 +136,17 @@ buildings = {
 		infrastructure_construction_effect = yes
 	}
 
+	anti_nuke_bunker = {
+		show_on_map = 1
+		base_cost = 2000
+		icon_frame = 18
+		max_level = 20
+		show_modifier = yes #just for tooltip of custom modifier
+		nuke_defence_factor = 0.04
+		damage_factor = -999 #too deep to be easily damaged (FOR NUKE ONLY!)
+		value = 1
+	}
+
 	dockyard = {
 		show_on_map = 1
 		show_on_map_meshes = 3

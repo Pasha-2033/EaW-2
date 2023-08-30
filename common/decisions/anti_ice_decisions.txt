@@ -243,5 +243,46 @@ state_temperature = {
 	}
 }
 ice_equipment_manpower_collecting = {
-
+	open_tomb = {
+		allowed = {
+			original_tag = ICE
+		}
+		days_re_enable = open_tomb_cooldown
+        cost = open_tomb_cost
+		complete_effect = {
+			add_equipment_to_stockpile = {
+				type = windigo_equipment
+				amount = 200
+			}
+		}
+		ai_will_do = {
+            base = 5000
+        }
+	}
+	resurrect_fallen = {
+		allowed = {
+			original_tag = ICE
+		}
+		days_re_enable = resurrect_fallen_cooldown
+        cost = resurrect_fallen_cost
+		complete_effect = {
+			set_temp_variable = {
+				temp = casualties_k
+			}
+			subtract_from_temp_variable = {
+				temp = resurrect_fallen_prev_casualties_k
+			}
+			multiply_temp_variable = {
+				temp = resurrect_fallen_efficiency
+			}
+			add_manpower = temp
+			set_variable = {
+				resurrect_fallen_prev_casualties_k = casualties_k
+			}
+		}
+		ai_will_do = {
+            base = 5000
+        }
+	}
+	
 }

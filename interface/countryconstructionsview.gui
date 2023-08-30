@@ -226,43 +226,50 @@ guiTypes = {
 
 			iconType = {
 				name = "constructions_bg1"
-				position = { x = 0 y = 6 }
+				position = {
+					x = 0
+					y = -2
+				}
+				quadTextureSprite = "GFX_constructions_bg2"
+			}
+			iconType = {
+				name = "constructions_bg2"
+				position = {
+					x = 0
+					y = 182
+				}
+				quadTextureSprite = "GFX_constructions_bg4"
+			}
+			iconType = {
+				name = "constructions_bg3"
+				position = {
+					x = 0
+					y = 451 #444
+				}
 				quadTextureSprite = "GFX_constructions_bg2"
 			}
 
 			iconType = {
-				name = "constructions_bg2"
-				position = { x = 0 y = 152 }
-				quadTextureSprite = "GFX_constructions_bg4"
-			}
-			
-			iconType = {
-				name = "constructions_bg3"
-				position = { x = 0 y = 458 } #y = 380
-				quadTextureSprite = "GFX_constructions_bg1"
-			}
-
-			iconType = {
 				name = "state_constructions"
-				position = { x = 5 y = 9 }
+				position = { x = 5 y = 1 }
 				quadTextureSprite = "GFX_state_constructions"
 			}
 
 			iconType = {
 				name = "shared_constructions"
-				position = { x = 5 y = 155 }
+				position = { x = 5 y = 185 }
 				quadTextureSprite = "GFX_shared_constructions"
 			}
 
 			iconType = {
 				name = "province_constructions"
-				position = { x = 5 y = 461 } #y = 383
+				position = { x = 5 y = 455 } #y = 383
 				quadTextureSprite = "GFX_province_constructions"
 			}
 			
 			gridBoxType = {
 				name = "non_shared_item_grid"
-				position = { x = 7 y = 46 }
+				position = { x = 7 y = 38 }
 				size = { width = 100% height = 100% }
 				slotsize = { width = 46 height = 44 }
 				max_slots_horizontal = 2
@@ -271,7 +278,7 @@ guiTypes = {
 			
 			gridBoxType = {
 				name = "shared_item_grid"
-				position = { x = 7 y = 196 }
+				position = { x = 7 y = 222 }
 				size = { width = 100% height = 100% }
 				slotsize = { width = 46 height = 44 }
 				max_slots_horizontal = 2
@@ -280,7 +287,7 @@ guiTypes = {
 			
 			gridBoxType = {
 				name = "province_item_grid"
-				position = { x = 7 y = 500 } #y = 422
+				position = { x = 7 y = 492 } #y = 422
 				size = { width = 100% height = 100% }
 				slotsize = { width = 46 height = 44 }
 				max_slots_horizontal = 2
@@ -290,7 +297,7 @@ guiTypes = {
 			#if you foung error like <Could not find "convert_ic_button" in window countryconstructionsview> - ignore it, mod has unique buildings mechanics
 			buttonType = {
 				name = "convert_ic_button"
-				position = { x = -51 y = 383 }
+				position = { x = -51 y = 403 }
 				quadTextureSprite ="GFX_convert_ic_button"
 				buttonFont = "Main_14_black"
 				Orientation = "UPPER_RIGHT"

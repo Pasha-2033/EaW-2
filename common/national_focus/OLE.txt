@@ -1128,24 +1128,6 @@ focus_tree = {
 		search_filters = {}
 	}
 	focus = {
-		id = ole_focus_send_priests
-		icon = GFX_goal_generic_changeling
-		cost = 10
-		ai_will_do = {
-			factor = 200
-		}
-		relative_position_id = ole_focus_church_grandplan
-		prerequisite = {
-			focus = ole_focus_church_grandplan
-		}
-		x = 0
-		y = 2
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: ole_focus_send_priests"
-		}
-		search_filters = {}
-	}
-	focus = {
 		id = ole_focus_exploit_church_discontent
 		icon = GFX_goal_generic_changeling
 		cost = 10

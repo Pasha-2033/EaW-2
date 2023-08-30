@@ -64,23 +64,6 @@ should_initiate_resistance = {
     }
     else_if = {
         limit = {
-			FROM = {
-                original_tag = EQC
-                has_completed_focus = EQC_government_in_exile
-            }
-            FROM.FROM = {
-                exists = no
-            }
-        }
-        FROM.FROM = {
-            NOT = {
-                original_tag = ELF
-                original_tag = EQS
-            } 
-        }
-    }
-    else_if = {
-        limit = {
             FROM = {
                 has_war = yes
                 OR = {

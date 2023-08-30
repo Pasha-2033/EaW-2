@@ -83,7 +83,7 @@ characters = {
 		}
 		country_leader = {
 			desc = "POLITICS_VINDIGO_DESC"
-			ideology = teocracy
+			ideology = theocracy
 			traits = {
 				country_leader_trait_windigo
 			}
@@ -116,6 +116,37 @@ characters = {
 			}
 			expire = "1965.1.1.1"
 			id = -1
+		}
+	}
+	#HQ will be available by focuses
+	ICE_night_lands = {
+		#field marshal (ice_focus_new_high_command)
+		name = ICE_night_lands
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+				small = "" #to do
+			}
+		}
+	}
+	ICE_valar_morgulis = {
+		#general (ice_focus_new_high_command)
+		name = ICE_valar_morgulis
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+				small = "" #to do
+			}
+		}
+	}
+	ICE_windoo = {
+		#general (ice_focus_new_high_command)
+		name = ICE_windoo
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+				small = "" #to do
+			}
 		}
 	}
 }

@@ -335,12 +335,14 @@ on_actions = {
 				}
 				#init surplus_appropriation
 				init_surplus_appropriation = yes
+				#if has anarchy - fix power concentration
+				if = {
+					limit = {
+						has_government = anarchism
+					}
+					add_ideas = anarchy
+				}
 			}
-			#1 = {
-			#	every_state = {
-			#
-			#	}
-			#}
 		}
 	}
 }
