@@ -14,13 +14,15 @@ state={
 		#owner = EQS
 		#add_core_of = EQS
 		982.1.1 = {
-			owner = ICE
-			add_core_of = ICE
+			owner = EPT
+			add_core_of = EPT
 			add_core_of = EQS
+			add_claim_by = ICE
 		}
 		1007.1.1 = {
 			owner = EQS
-			add_core_of = EQS
+			remove_core_of = EPT
+			remove_claim_by = ICE
 		}
 		1050.1.1 = {}
 	}

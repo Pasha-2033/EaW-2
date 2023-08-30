@@ -28,21 +28,15 @@ state = {
 			owner = ICE
 			add_core_of = ICE
 			add_core_of = EQS
-			add_resource = {
-				type = steel
-				amount = 12
-				state = THIS
-			}
-			add_resource = {
-				type = tungsten
-				amount = 2
-				state = THIS
-			}
 		}
 		1007.1.1 = {
 			owner = EQS
-			add_core_of = EQS
+			remove_core_of = ICE
 		}
 		1050.1.1 = {}
+	}
+	resources = {
+		steel = 12
+		tungsten = 2
 	}
 }

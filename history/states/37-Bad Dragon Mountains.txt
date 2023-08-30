@@ -19,16 +19,18 @@ state = {
 		#owner = EQS
 		#add_core_of = EQS
 		#add_core_of = DRG
-		982.1.1 = {			
-			owner = DRG
+
+		#before occupation - there was DRG
+		982.1.1 = {
+			owner = ICE
 			add_core_of = DRG
-			add_resource = {
-				type = crystals
-				amount = 2
-				state = THIS
-			}
 		}
-		1007.1.1 = {}
+		1007.1.1 = {
+			owner = DRG
+		}
 		1050.1.1 = {}
+	}
+	resources = {
+		crystals = 2
 	}
 }
