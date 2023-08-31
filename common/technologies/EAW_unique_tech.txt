@@ -1746,12 +1746,12 @@ tech_vampire_armour = {
 			always = no
 		}
     	category_front_line = {
-				river = {
-					movement = 0.1
-      			}
-    		}
+			river = {
+				movement = 0.1
+			}
 		}
-	FRN_engineer_corps = {
+	}
+FRN_engineer_corps = {
 		research_cost = 1
 		allow = {
 			always = no
@@ -1763,8 +1763,8 @@ tech_vampire_armour = {
 			}
 		}
 	}
-		
-	CHN_indefinite_undercover_ops = {
+
+CHN_indefinite_undercover_ops = {
 		research_cost = 1
 	    allow = {
 			always = no
@@ -1776,11 +1776,11 @@ tech_vampire_armour = {
 	LSC_forest_warfare = {
 		research_cost = 1
 
-		allow = {
+allow = {
 			always = no
 		}
 
-		infantry = {
+infantry = {
 			forest = {
 				attack = 0.05
 				defence = 0.10
@@ -1818,12 +1818,12 @@ tech_vampire_armour = {
 	}
 	LSM_heavy_knights_armor = {
 
-		research_cost = 1
+research_cost = 1
 		allow = {
 			always = no
 		}
-		
-		knights = {
+
+knights = {
 			max_organisation = 5
 			hardness = 0.2
 			defense = 0.1
@@ -1853,6 +1853,9 @@ tech_vampire_armour = {
 			ap_attack = 0.25
 		}
 	}
+
+
+
 	tech_windigo_horrors = {
 		research_cost = 1
 		allow = {
@@ -1865,36 +1868,101 @@ tech_vampire_armour = {
 			windigo_horrors
 		}
 	}
-	finished_land_doctrine = {
+	#ICE grandplans only for focuses
+	ICE_nightlands_grandplan_movement_urban = {
 		research_cost = 1
 		allow = {
 			always = no
 		}
+		category_all_infantry = {
+			urban = {
+				movement = 0.05
+			}
+		}
 	}
-	finished_navy_doctrine_left = {
+	ICE_nightlands_grandplan_movement_mountain = {
 		research_cost = 1
 		allow = {
 			always = no
 		}
+		category_all_infantry = {
+			mountain = {
+				movement = 0.15
+			}
+		}
 	}
-	finished_navy_doctrine_center = {
+	ICE_nightlands_grandplan_movement_hills = {
 		research_cost = 1
 		allow = {
 			always = no
 		}
+		category_all_infantry = {
+			hills = {
+				movement = 0.1
+			}
+		}
 	}
-	finished_navy_doctrine_right = {
+	ICE_nightlands_grandplan_movement_forest = {
 		research_cost = 1
 		allow = {
 			always = no
 		}
+		category_all_infantry = {
+			forest = {
+				movement = 0.1
+			}
+		}
 	}
-	finished_air_doctrine = {
+	ICE_nightlands_grandplan_movement_jungle = {
 		research_cost = 1
 		allow = {
 			always = no
 		}
+		category_all_infantry = {
+			jungle = {
+				movement = 0.1
+			}
+		}
 	}
+	ICE_nightlands_grandplan_movement_marsh = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		category_all_infantry = {
+			marsh = {
+				movement = 0.1
+			}
+		}
+	}
+	ICE_nightlands_grandplan_movement_plains = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		category_all_infantry = {
+			plains = {
+				movement = 0.1
+			}
+		}
+	}
+	ICE_nightlands_grandplan_movement_desert = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		category_all_infantry = {
+			desert = {
+				movement = 0.05
+			}
+		}
+	}
+
+
+
+
+
+
 	penguin_race = {
 
 		research_cost = 1

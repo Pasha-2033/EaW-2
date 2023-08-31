@@ -206,7 +206,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_spirit_transformations"
 			add_field_marshal_role = {
-				character = ICE_night_lands
+				character = ICE_nightlands
 				traits = {
 					adaptable
 				}
@@ -303,21 +303,27 @@ focus_tree = {
 		}
 		search_filters = {}
 	}
-	#night_lands grand plan - organisation and speed
+	#nightlands grand plan - organisation and speed
 	focus = {
-		id = ice_focus_night_lands_grandplan
+		id = ice_focus_nightlands_grandplan
 		icon = GFX_goal_generic_changeling
 		cost = 5
 		ai_will_do = {
 			factor = 200
 		}
 		allow_branch = {
-			has_country_flag = night_lands_grandplan
+			#has_country_flag = nightlands_grandplan
 		}
-		x = 16
+		x = 17
 		y = 0
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: ice_focus_night_lands_grandplan"
+			log = "[GetDateText]: [Root.GetName]: ice_focus_nightlands_grandplan"
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = ICE_nightlands_grandplan
+				}
+			}
+			custom_effect_tooltip = add_ICE_nightlands_grandplan_tt
 		}
 		search_filters = {}
 	}
@@ -328,14 +334,19 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		relative_position_id = ice_focus_night_lands_grandplan
+		relative_position_id = ice_focus_nightlands_grandplan
 		prerequisite = {
-			focus = ice_focus_night_lands_grandplan
+			focus = ice_focus_nightlands_grandplan
 		}
-		x = -1
+		x = -2
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_battle_column_organisation"
+			subtract_from_variable = {
+				var = nightlands_grandplan_olwm
+				value = 0.05
+				tooltip = sub_ICE_nightlands_grandplan_olwm_5_tt
+			}
 		}
 		search_filters = {}
 	}
@@ -354,6 +365,11 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_parallel_movement"
+			subtract_from_variable = {
+				var = nightlands_grandplan_olwm
+				value = 0.05
+				tooltip = sub_ICE_nightlands_grandplan_olwm_5_tt
+			}
 		}
 		search_filters = {}
 	}
@@ -372,6 +388,14 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_march_throws"
+			subtract_from_variable = {
+				var = nightlands_grandplan_olwm
+				value = 0.1
+				tooltip = subadd_ICE_nightlands_grandplan_olwm_10_asf_5_tt
+			}
+			add_to_variable = {
+				nightlands_grandplan_asf = 0.05
+			}
 		}
 		search_filters = {}
 	}
@@ -382,17 +406,25 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		relative_position_id = ice_focus_night_lands_grandplan
+		relative_position_id = ice_focus_nightlands_grandplan
 		prerequisite = {
-			focus = ice_focus_night_lands_grandplan
+			focus = ice_focus_nightlands_grandplan
 		}
 		mutually_exclusive = {
 			focus = ice_focus_single_coordinated_strike
 		}
-		x = -3
+		x = -4
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_combat_subgroups"
+			add_to_variable = {
+				var = nightlands_grandplan_aof
+				value = 0.05
+				tooltip = addadd_ICE_nightlands_grandplan_aof_5_aor_10_tt
+			}
+			add_to_variable = {
+				nightlands_grandplan_aor = 0.1
+			}
 		}
 		search_filters = {}
 	}
@@ -403,17 +435,22 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		relative_position_id = ice_focus_night_lands_grandplan
+		relative_position_id = ice_focus_nightlands_grandplan
 		prerequisite = {
-			focus = ice_focus_night_lands_grandplan
+			focus = ice_focus_nightlands_grandplan
 		}
 		mutually_exclusive = {
 			focus = ice_focus_combat_subgroups
 		}
-		x = -6
+		x = -7
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_single_coordinated_strike"
+			add_to_variable = {
+				var = nightlands_grandplan_ollof
+				value = -0.25
+				tooltip = sub_ICE_nightlands_grandplan_ollof_25_tt
+			}
 		}
 		search_filters = {}
 	}
@@ -435,6 +472,11 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_division_hard_core"
+			add_to_variable = {
+				var = nightlands_grandplan_aof
+				value = 0.05
+				tooltip = add_ICE_nightlands_grandplan_aof_5_tt
+			}
 		}
 		search_filters = {}
 	}
@@ -456,6 +498,11 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_division_hard_front"
+			add_to_variable = {
+				var = nightlands_grandplan_aor
+				value = 0.05
+				tooltip = add_ICE_nightlands_grandplan_aor_5_tt
+			}
 		}
 		search_filters = {}
 	}
@@ -475,6 +522,11 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_extra_reserves"
+			add_to_variable = {
+				var = nightlands_grandplan_amf
+				value = 0.15
+				tooltip = add_ICE_nightlands_grandplan_amf_15_tt
+			}
 		}
 		search_filters = {}
 	}
@@ -493,6 +545,11 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_new_ambush_tactics"
+			add_to_variable = {
+				var = nightlands_grandplan_aof
+				value = 0.05
+				tooltip = add_ICE_nightlands_grandplan_aof_5_tt
+			}
 		}
 		search_filters = {}
 	}
@@ -511,6 +568,11 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_small_recon_groups"
+			add_to_variable = {
+				var = nightlands_grandplan_ollof
+				value = -0.1
+				tooltip = sub_ICE_nightlands_grandplan_ollof_10_tt
+			}
 		}
 		search_filters = {}
 	}
@@ -521,14 +583,19 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		relative_position_id = ice_focus_night_lands_grandplan
+		relative_position_id = ice_focus_nightlands_grandplan
 		prerequisite = {
-			focus = ice_focus_night_lands_grandplan
+			focus = ice_focus_nightlands_grandplan
 		}
-		x = 6
+		x = 7
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_udaptable_army"
+			add_to_variable = {
+				var = nightlands_grandplan_tpr
+				value = 0.1
+				tooltip = add_ICE_nightlands_grandplan_trp_10_tt
+			}
 		}
 		search_filters = {}
 	}
@@ -543,10 +610,21 @@ focus_tree = {
 		prerequisite = {
 			focus = ice_focus_udaptable_army
 		}
-		x = -5
+		x = -7
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_movement_in_cities"
+			hidden_effect = {
+				set_technology = {
+					ICE_nightlands_grandplan_movement_urban = 1
+					popup = no
+				}
+			}
+			add_to_variable = {
+				var = nightlands_grandplan_urban_movement
+				value = 0.05
+				tooltip = add_ICE_nightlands_grandplan_urban_movement_5_tt
+			}
 		}
 		search_filters = {}
 	}
@@ -561,10 +639,21 @@ focus_tree = {
 		prerequisite = {
 			focus = ice_focus_udaptable_army
 		}
-		x = -3
+		x = -5
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_movement_in_mountains"
+			hidden_effect = {
+				set_technology = {
+					ICE_nightlands_grandplan_movement_mountain = 1
+					popup = no
+				}
+			}
+			add_to_variable = {
+				var = nightlands_grandplan_mountain_movement
+				value = 0.15
+				tooltip = add_ICE_nightlands_grandplan_mountain_movement_15_tt
+			}
 		}
 		search_filters = {}
 	}
@@ -579,10 +668,21 @@ focus_tree = {
 		prerequisite = {
 			focus = ice_focus_udaptable_army
 		}
-		x = -1
+		x = -3
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_movement_in_hills"
+			hidden_effect = {
+				set_technology = {
+					ICE_nightlands_grandplan_movement_hills = 1
+					popup = no
+				}
+			}
+			add_to_variable = {
+				var = nightlands_grandplan_hills_movement
+				value = 0.1
+				tooltip = add_ICE_nightlands_grandplan_hills_movement_10_tt
+			}
 		}
 		search_filters = {}
 	}
@@ -597,10 +697,79 @@ focus_tree = {
 		prerequisite = {
 			focus = ice_focus_udaptable_army
 		}
-		x = 1
+		x = -1
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_movement_in_forests"
+			hidden_effect = {
+				set_technology = {
+					ICE_nightlands_grandplan_movement_forest = 1
+					popup = no
+				}
+			}
+			add_to_variable = {
+				var = nightlands_grandplan_forest_movement
+				value = 0.1
+				tooltip = add_ICE_nightlands_grandplan_forest_movement_10_tt
+			}
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_movement_in_jungle
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_udaptable_army
+		prerequisite = {
+			focus = ice_focus_udaptable_army
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_movement_in_jungle"
+			hidden_effect = {
+				set_technology = {
+					ICE_nightlands_grandplan_movement_jungle = 1
+					popup = no
+				}
+			}
+			add_to_variable = {
+				var = nightlands_grandplan_jungle_movement
+				value = 0.1
+				tooltip = add_ICE_nightlands_grandplan_jungle_movement_10_tt
+			}
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_movement_in_swamp
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_udaptable_army
+		prerequisite = {
+			focus = ice_focus_udaptable_army
+		}
+		x = 3
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_movement_in_swamp"
+			hidden_effect = {
+				set_technology = {
+					ICE_nightlands_grandplan_movement_marsh = 1
+					popup = no
+				}
+			}
+			add_to_variable = {
+				var = nightlands_grandplan_marsh_movement
+				value = 0.1
+				tooltip = add_ICE_nightlands_grandplan_marsh_movement_10_tt
+			}
 		}
 		search_filters = {}
 	}
@@ -615,10 +784,21 @@ focus_tree = {
 		prerequisite = {
 			focus = ice_focus_udaptable_army
 		}
-		x = 3
+		x = 5
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_movement_in_plains"
+			hidden_effect = {
+				set_technology = {
+					ICE_nightlands_grandplan_movement_plains = 1
+					popup = no
+				}
+			}
+			add_to_variable = {
+				var = nightlands_grandplan_plains_movement
+				value = 0.1
+				tooltip = add_ICE_nightlands_grandplan_plains_movement_10_tt
+			}
 		}
 		search_filters = {}
 	}
@@ -633,10 +813,21 @@ focus_tree = {
 		prerequisite = {
 			focus = ice_focus_udaptable_army
 		}
-		x = 5
+		x = 7
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_movement_in_deserts"
+			hidden_effect = {
+				set_technology = {
+					ICE_nightlands_grandplan_movement_desert = 1
+					popup = no
+				}
+			}
+			add_to_variable = {
+				var = nightlands_grandplan_desert_movement
+				value = 0.05
+				tooltip = add_ICE_nightlands_grandplan_desert_movement_5_tt
+			}
 		}
 		search_filters = {}
 	}
@@ -666,10 +857,21 @@ focus_tree = {
 		prerequisite = {
 			focus = ice_focus_movement_in_deserts
 		}
+		prerequisite = {
+			focus = ice_focus_movement_in_swamp
+		}
+		prerequisite = {
+			focus = ice_focus_movement_in_jungle
+		}
 		x = 0
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: heat_resistance"
+			add_to_variable = {
+				var = nightlands_grandplan_ahcgf
+				value = 0.1
+				tooltip = add_ICE_nightlands_grandplan_ahcgf_10_tt
+			}
 		}
 		search_filters = {}
 	}
@@ -685,12 +887,18 @@ focus_tree = {
 			factor = 200
 		}
 		allow_branch = {
-			#has_country_flag = valar_morgulis_grandplan
+			has_country_flag = valar_morgulis_grandplan
 		}
 		x = 13
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_valar_morgulis_grandplan"
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = ICE_valar_morgulis_grandplan
+				}
+			}
+			custom_effect_tooltip = add_ICE_valar_morgulis_grandplan_tt
 		}
 		search_filters = {}
 	}
@@ -1039,6 +1247,9 @@ focus_tree = {
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_windoo_grandplan"
+			add_dynamic_modifier = {
+				modifier = ICE_windoo_grandplan
+			}
 		}
 		search_filters = {}
 	}

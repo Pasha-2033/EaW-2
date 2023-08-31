@@ -749,14 +749,6 @@ technologies = {
 			position = { x = 2 y = 18 }
 		}
 
-		on_research_complete = {
-			hidden_effect = {
-				set_technology = {
-					finished_land_doctrine = 1
-					popup = no
-				}
-			}
-		}
 		
 		ai_will_do = {
 			factor = 20
@@ -925,14 +917,6 @@ technologies = {
 			position = { x = -2 y = 18 }
 		}
 		
-		on_research_complete = {
-			hidden_effect = {
-				set_technology = {
-					finished_land_doctrine = 1
-					popup = no
-				}
-			}
-		}
 
 		ai_will_do = {
 			factor = 20
@@ -1541,14 +1525,6 @@ technologies = {
 			position = { x = -2 y = 18 }
 		}
 
-		on_research_complete = {
-			hidden_effect = {
-				set_technology = {
-					finished_land_doctrine = 1
-					popup = no
-				}
-			}
-		}
 
 		ai_will_do = {
 			factor = 20
@@ -1775,14 +1751,6 @@ technologies = {
 			position = { x = 2 y = 18 }
 		}
 
-		on_research_complete = {
-			hidden_effect = {
-				set_technology = {
-					finished_land_doctrine = 1
-					popup = no
-				}
-			}
-		}
 		
 		ai_will_do = {
 			factor = 20
@@ -2315,14 +2283,6 @@ technologies = {
 			position = { x = -2 y = 18 }
 		}
 
-		on_research_complete = {
-			hidden_effect = {
-				set_technology = {
-					finished_land_doctrine = 1
-					popup = no
-				}
-			}
-		}
 		
 		ai_will_do = {
 			factor = 20
@@ -2644,14 +2604,6 @@ technologies = {
 			position = { x = 2 y = 18 }
 		}
 
-		on_research_complete = {
-			hidden_effect = {
-				set_technology = {
-					finished_land_doctrine = 1
-					popup = no
-				}
-			}
-		}
 		
 		ai_will_do = {
 			factor = 20
@@ -3191,15 +3143,6 @@ technologies = {
 			name = land_doctrine_folder
 			position = { x = -2 y = 18 }
 		}
-
-		on_research_complete = {
-			hidden_effect = {
-				set_technology = {
-					finished_land_doctrine = 1
-					popup = no
-				}
-			}
-		}
 		
 		ai_will_do = {
 			factor = 20
@@ -3457,14 +3400,6 @@ technologies = {
 			position = { x = 2 y = 14 }
 		}
 
-		on_research_complete = {
-			hidden_effect = {
-				set_technology = {
-					finished_land_doctrine = 1
-					popup = no
-				}
-			}
-		}
 		
 		ai_will_do = {
 			modifier = {
@@ -3512,7 +3447,6 @@ technologies = {
 		}
 		
 		dependencies = { 
-			finished_land_doctrine = 1
 			mechanised_infantry3 = 1
 		} 
 		
@@ -3533,13 +3467,6 @@ technologies = {
 		ai_will_do = {
 			factor = 20
 			
-			modifier = {
-				factor = 20
-				OR = {
-					original_tag = CHN
-					original_tag = GRI
-				}
-			}
 
 			modifier = {
 				factor = 8
@@ -3919,7 +3846,6 @@ technologies = {
 		xor = { global_path berlin_path warsaw_path }
 		
 		dependencies = {
-			finished_land_doctrine = 1
 			advanced_infantry_weapons2 = 1
 		}
 		
@@ -4313,7 +4239,6 @@ technologies = {
 		naval_invasion_planning_bonus_speed = 0.2
 		
 		dependencies = {
-			finished_land_doctrine = 1
 			advanced_infantry_weapons2 = 1
 		}
 		
@@ -4768,7 +4693,6 @@ technologies = {
 		land_reinforce_rate = 0.05
 
 		dependencies = {
-			finished_land_doctrine = 1
 			mechanised_infantry3 = 1
 		}
 		

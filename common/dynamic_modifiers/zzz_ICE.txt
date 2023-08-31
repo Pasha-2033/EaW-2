@@ -21,3 +21,40 @@ ICE_warm_cold_state = {
 	resistance_growth = 0.25
 	local_factory_sabotage = 0.1
 }
+ICE_valar_morgulis_grandplan = {
+	icon = clockwerk_economy			#to do (change)
+	enable = {
+		always = yes
+	}
+	army_attack_factor = valar_morgulis_grandplan_aaf
+	army_attack_speed_factor =valar_morgulis_grandplan_aasf
+	breakthrough_factor = valar_morgulis_grandplan_bf
+	land_night_attack = valar_morgulis_grandplan_lna
+	army_strength_factor = valar_morgulis_grandplan_asf
+	mobilization_speed = valar_morgulis_grandplan_ms
+}
+ICE_nightlands_grandplan = {
+	icon = clockwerk_economy			#to do (change)
+	enable = {
+		always = yes
+	}
+	army_morale_factor = nightlands_grandplan_amf
+	army_org_factor = nightlands_grandplan_aof
+	army_org_regain = nightlands_grandplan_aor
+	org_loss_when_moving = nightlands_grandplan_olwm
+	org_loss_at_low_org_factor = nightlands_grandplan_ollof
+	terrain_penalty_reduction = nightlands_grandplan_tpr
+	acclimatization_hot_climate_gain_factor = nightlands_grandplan_ahcgf
+	army_speed_factor = nightlands_grandplan_asf
+	custom_modifier_tooltip = ICE_nightlands_grandplan_div_modifiers_tt
+}
+ICE_windoo_grandplan = {
+	icon = clockwerk_economy			#to do (change)
+	enable = {
+		always = yes
+	}
+	dig_in_speed_factor = 0.05
+	pocket_penalty = -0.05
+	army_defence_factor = 0.05
+	max_dig_in = 15
+}
