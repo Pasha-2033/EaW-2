@@ -36,3 +36,26 @@ build_1_arms_factory_in_capital_or_somewhere = {
 		}
 	}
 }
+#ICE
+inspection_in_vindigo_army = {
+	if = {
+		limit = {
+			OR = {
+				check_variable = {
+					vindigo_army_inspection_time = vindigo_army_max_inspection_time
+				}
+				check_variable = {
+					vindigo_army_inspection_time > vindigo_army_max_inspection_time
+				}
+			}
+		}
+		country_event = {
+			id = vindigo.2
+		}
+	}
+	else = {
+		add_to_variable = {
+			vindigo_army_inspection_time = 1
+		}
+	}
+}

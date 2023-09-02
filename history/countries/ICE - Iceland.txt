@@ -62,7 +62,7 @@ if = { #982 scenario script
 		resurrect_fallen_cooldown = 90
 	}
 	set_variable = {
-		resurrect_fallen_efficiency = 100 #manpower in k, so it`s 10%
+		resurrect_fallen_efficiency = 0.1
 	}
 	set_variable = {
 		resurrect_fallen_prev_casualties_k = 0
@@ -73,5 +73,15 @@ if = { #982 scenario script
 	}
 	set_variable = {
 		valar_morgulis_grandplan_aaf = 0.05
+	}
+	set_variable = {
+		valar_morgulis_grandplan_lna = 0.1
+	}
+	#ICE army inspection events (time is new completed focuses - 1, because starts with 0)
+	set_variable = {
+		vindigo_army_max_inspection_time = 2
+	}
+	set_variable = {
+		vindigo_army_ingnoring_inspection_time = 2
 	}
 }

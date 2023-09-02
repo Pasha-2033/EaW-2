@@ -128,6 +128,23 @@ characters = {
 				small = "" #to do
 			}
 		}
+		allowed_civil_war = {
+			tag = ICE
+		}
+		advisor = {
+			slot = theorist
+			idea_token = ICE_nightlands
+			traits = {
+				master_of_speed_and_organisation
+			}
+			allowed = {
+				original_tag = ICE
+			}
+			visible = {
+				has_completed_focus = ice_focus_new_high_command
+			}
+			can_be_fired = no
+		}
 	}
 	ICE_valar_morgulis = {
 		#general (ice_focus_new_high_command)
@@ -138,6 +155,23 @@ characters = {
 				small = "" #to do
 			}
 		}
+		allowed_civil_war = {
+			tag = ICE
+		}
+		advisor = {
+			slot = theorist
+			idea_token = ICE_valar_morgulis
+			traits = {
+				master_of_attack_and_manpower
+			}
+			allowed = {
+				original_tag = ICE
+			}
+			visible = {
+				has_completed_focus = ice_focus_new_high_command
+			}
+			can_be_fired = no
+		}
 	}
 	ICE_windoo = {
 		#general (ice_focus_new_high_command)
@@ -147,6 +181,23 @@ characters = {
 				large = "GFX_portrait_marshal_unknown" #to do
 				small = "" #to do
 			}
+		}
+		allowed_civil_war = {
+			tag = ICE
+		}
+		advisor = {
+			slot = theorist
+			idea_token = ICE_windoo
+			traits = {
+				master_of_defence_and_equipment
+			}
+			allowed = {
+				original_tag = ICE
+			}
+			visible = {
+				has_completed_focus = ice_focus_new_high_command
+			}
+			can_be_fired = no
 		}
 	}
 }

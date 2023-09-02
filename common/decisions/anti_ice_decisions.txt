@@ -275,6 +275,9 @@ ice_equipment_manpower_collecting = {
 			multiply_temp_variable = {
 				temp = resurrect_fallen_efficiency
 			}
+			multiply_temp_variable = {
+				temp = 1000
+			}
 			add_manpower = temp
 			set_variable = {
 				resurrect_fallen_prev_casualties_k = casualties_k

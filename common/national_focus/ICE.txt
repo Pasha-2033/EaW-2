@@ -235,6 +235,11 @@ focus_tree = {
 				logistics_skill = 2
 				character = ICE_windoo
 			}
+			country_event = {
+				id = vindigo.1
+				days = 3
+				random_days = 2
+			}
 		}
 		search_filters = {}
 	}
@@ -312,7 +317,7 @@ focus_tree = {
 			factor = 200
 		}
 		allow_branch = {
-			#has_country_flag = nightlands_grandplan
+			has_country_flag = nightlands_grandplan
 		}
 		x = 17
 		y = 0
@@ -324,6 +329,7 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = add_ICE_nightlands_grandplan_tt
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -347,6 +353,7 @@ focus_tree = {
 				value = 0.05
 				tooltip = sub_ICE_nightlands_grandplan_olwm_5_tt
 			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -370,6 +377,7 @@ focus_tree = {
 				value = 0.05
 				tooltip = sub_ICE_nightlands_grandplan_olwm_5_tt
 			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -396,6 +404,7 @@ focus_tree = {
 			add_to_variable = {
 				nightlands_grandplan_asf = 0.05
 			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -425,6 +434,7 @@ focus_tree = {
 			add_to_variable = {
 				nightlands_grandplan_aor = 0.1
 			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -451,6 +461,7 @@ focus_tree = {
 				value = -0.25
 				tooltip = sub_ICE_nightlands_grandplan_ollof_25_tt
 			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -477,6 +488,7 @@ focus_tree = {
 				value = 0.05
 				tooltip = add_ICE_nightlands_grandplan_aof_5_tt
 			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -503,6 +515,7 @@ focus_tree = {
 				value = 0.05
 				tooltip = add_ICE_nightlands_grandplan_aor_5_tt
 			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -527,6 +540,7 @@ focus_tree = {
 				value = 0.15
 				tooltip = add_ICE_nightlands_grandplan_amf_15_tt
 			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -550,6 +564,7 @@ focus_tree = {
 				value = 0.05
 				tooltip = add_ICE_nightlands_grandplan_aof_5_tt
 			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -573,6 +588,7 @@ focus_tree = {
 				value = -0.1
 				tooltip = sub_ICE_nightlands_grandplan_ollof_10_tt
 			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -596,6 +612,7 @@ focus_tree = {
 				value = 0.1
 				tooltip = add_ICE_nightlands_grandplan_trp_10_tt
 			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -625,6 +642,7 @@ focus_tree = {
 				value = 0.05
 				tooltip = add_ICE_nightlands_grandplan_urban_movement_5_tt
 			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -654,6 +672,7 @@ focus_tree = {
 				value = 0.15
 				tooltip = add_ICE_nightlands_grandplan_mountain_movement_15_tt
 			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -683,6 +702,7 @@ focus_tree = {
 				value = 0.1
 				tooltip = add_ICE_nightlands_grandplan_hills_movement_10_tt
 			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -712,6 +732,7 @@ focus_tree = {
 				value = 0.1
 				tooltip = add_ICE_nightlands_grandplan_forest_movement_10_tt
 			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -741,6 +762,7 @@ focus_tree = {
 				value = 0.1
 				tooltip = add_ICE_nightlands_grandplan_jungle_movement_10_tt
 			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -770,6 +792,7 @@ focus_tree = {
 				value = 0.1
 				tooltip = add_ICE_nightlands_grandplan_marsh_movement_10_tt
 			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -799,6 +822,7 @@ focus_tree = {
 				value = 0.1
 				tooltip = add_ICE_nightlands_grandplan_plains_movement_10_tt
 			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -828,6 +852,7 @@ focus_tree = {
 				value = 0.05
 				tooltip = add_ICE_nightlands_grandplan_desert_movement_5_tt
 			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -872,6 +897,7 @@ focus_tree = {
 				value = 0.1
 				tooltip = add_ICE_nightlands_grandplan_ahcgf_10_tt
 			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -899,6 +925,7 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = add_ICE_valar_morgulis_grandplan_tt
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -920,6 +947,15 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_continuous_attack"
+			add_to_variable = {
+				var = valar_morgulis_grandplan_aaf
+				value = 0.15
+				tooltip = addsub_ICE_valar_morgulis_grandplan_aaf_15_aasf_20_tt
+			}
+			subtract_from_variable = {
+				valar_morgulis_grandplan_aasf = 0.2
+			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -941,6 +977,12 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_increase_wave_attack"
+			add_to_variable = {
+				var = valar_morgulis_grandplan_aaf
+				value = 0.1
+				tooltip = add_ICE_valar_morgulis_grandplan_aaf_10_tt
+			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -959,6 +1001,12 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_increase_wave_attack"
+			add_to_variable = {
+				var = valar_morgulis_grandplan_aasf
+				value = 0.05
+				tooltip = add_ICE_valar_morgulis_grandplan_aasf_5_tt
+			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -977,6 +1025,18 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_massive_assaults"
+			add_to_variable = {
+				var = valar_morgulis_grandplan_bf
+				value = 0.05
+				tooltip = addsubsub_ICE_valar_morgulis_grandplan_bf_5_aof_5_aor_5_tt
+			}
+			subtract_from_variable = {
+				valar_morgulis_grandplan_aof = 0.05
+			}
+			subtract_from_variable = {
+				valar_morgulis_grandplan_aor = 0.05
+			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -995,6 +1055,12 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_attack_tactics"
+			add_to_variable = {
+				var = valar_morgulis_grandplan_bf
+				value = 0.1
+				tooltip = add_ICE_valar_morgulis_grandplan_bf_10_tt
+			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -1013,6 +1079,12 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_attack_of_the_wounded"
+			add_to_variable = {
+				var = valar_morgulis_grandplan_asf
+				value = 0.1
+				tooltip = add_ICE_valar_morgulis_grandplan_asf_10_tt
+			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -1031,6 +1103,12 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_undiminished_morality"
+			add_to_variable = {
+				var = valar_morgulis_grandplan_amf
+				value = 0.25
+				tooltip = add_ICE_valar_morgulis_grandplan_amf_25_tt
+			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -1050,6 +1128,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_manpower_management"
 			add_manpower = 25000
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -1068,6 +1147,12 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_improve_coordination_of_mobilization"
+			add_to_variable = {
+				var = valar_morgulis_grandplan_ms
+				value = 0.25
+				tooltip = add_ICE_valar_morgulis_grandplan_ms_25_tt
+			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -1086,6 +1171,12 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_direct_recruit_transportation_to_army"
+			add_to_variable = {
+				var = valar_morgulis_grandplan_ms
+				value = 0.15
+				tooltip = add_ICE_valar_morgulis_grandplan_ms_15_tt
+			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -1109,6 +1200,7 @@ focus_tree = {
 				value = 50
 				tooltip = decrease_resurrect_fallen_cost_50_tt
 			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -1129,9 +1221,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_recovery_teams"
 			add_to_variable = {
 				var = resurrect_fallen_efficiency
-				value = 50
+				value = 0.05
 				tooltip = increase_resurrect_fallen_efficiency_5_tt
 			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -1151,6 +1244,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_lower_entry_rules_for_recruits"
 			increase_mobilization_law_idea = yes
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -1226,6 +1320,7 @@ focus_tree = {
 			else = {
 				add_manpower = 200000
 			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -1250,6 +1345,7 @@ focus_tree = {
 			add_dynamic_modifier = {
 				modifier = ICE_windoo_grandplan
 			}
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -1268,6 +1364,7 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_equipment_improvement"
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -1286,6 +1383,7 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_equipment_standarts"
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -1304,6 +1402,7 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_consolidate_occupied_states"
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
@@ -1322,6 +1421,7 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_fallback_patterns"
+			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}

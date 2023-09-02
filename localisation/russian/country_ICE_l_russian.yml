@@ -1,20 +1,39 @@
 ﻿l_russian:
 #characters
+ICE_vindigo: "Совет трех виндиго"
 ICE_nightlands: "Найтланд"
+ICE_valar_morgulis: "Валар Моргулис"
+ICE_windoo: "Винду"
+#traits
+master_of_speed_and_organisation: "Мастер скорости и организации"
+master_of_attack_and_manpower: "Мастер штурма и солдат"
+master_of_defence_and_equipment: "Мастер обороны и снаряжения"
+#army supply (equipment and man_power)
+ice_equipment_manpower_collecting: "Сбор снаряжения и солдат"
+open_tomb: "Вскрыть гробницы"
+open_tomb_desc: "Добыча снаряжения из захоронений является основным источником экипировки нашей армии. Лучше сохранить парочку гробниц, чем позволить врагу грабить наши склады."
+resurrect_fallen: "Воскресить павших"
+resurrect_fallen_desc: "Нативную черную магию можно применить к убитым бойцам и попытаться их воскресить. Часть из них слишком сильно повреждена, чтобы восстать и вернуться в ряды армии. Текущая сила заклинания позволяет вернуть [?resurrect_fallen_efficiency|+%] павших."
+decrease_resurrect_fallen_cost_50_tt: "Цену решения \"§Y$resurrect_fallen$§!\" снизится на 50£pol_power_icon." #end with any non empty symbol for delayed tooltip (for lines)
+increase_resurrect_fallen_efficiency_5_tt: "Эффективность воскрешения при использовании решения \"§Y$resurrect_fallen$§!\" увеличится на §G+5%§!"
 #grand plan modifiers:
 ICE_valar_morgulis_grandplan: "План Валара"
 ICE_nightlands_grandplan: "План Найтланда"
 ICE_windoo_grandplan: "План Винду"
-add_ICE_valar_morgulis_grandplan_tt: "Будет добавлен §Y$ICE_valar_morgulis_grandplan$§!, что дает:\n$MODIFIERS_ARMY_ATTACK_FACTOR$ [?nightlands_grandplan_aof|+=%]"
+add_ICE_valar_morgulis_grandplan_tt: "Будет добавлен §Y$ICE_valar_morgulis_grandplan$§!, что дает:\n$MODIFIERS_ARMY_ATTACK_FACTOR$: [?valar_morgulis_grandplan_aaf|+=%]\n$MODIFIER_LAND_NIGHT_ATTACK$: [?valar_morgulis_grandplan_lna|+=%]"
 add_ICE_nightlands_grandplan_tt: "Будет добавлен §Y$ICE_nightlands_grandplan$§!, что дает:\n$MODIFIER_ARMY_ORG_FACTOR$: [?nightlands_grandplan_aof|+=%]"
 add_ICE_windoo_grandplan_tt: "Будет добавлен §Y$ICE_windoo_grandplan$§!, что дает:\n"
-
-
+add_ICE_valar_morgulis_grandplan_ms_25_tt: "§Y$ICE_valar_morgulis_grandplan$§! изменится на:\n$MODIFIER_MOBILIZATION_SPEED$: §G+25%§!"
+add_ICE_valar_morgulis_grandplan_ms_15_tt: "§Y$ICE_valar_morgulis_grandplan$§! изменится на:\n$MODIFIER_MOBILIZATION_SPEED$: §G+15%§!"
+add_ICE_valar_morgulis_grandplan_bf_10_tt: "§Y$ICE_valar_morgulis_grandplan$§! изменится на:\n$MODIFIER_BREAKTHROUGH$: §G+10%§!"
+add_ICE_valar_morgulis_grandplan_asf_10_tt: "§Y$ICE_valar_morgulis_grandplan$§! изменится на:\n$MODIFIER_ARMY_STRENGTH$: §G+10%§!"
+add_ICE_valar_morgulis_grandplan_amf_25_tt: "§Y$ICE_valar_morgulis_grandplan$§! изменится на:\n$MODIFIER_ARMY_MORALE_FACTOR$: §G+25%§!"
+addsub_ICE_valar_morgulis_grandplan_aaf_15_aasf_20_tt: "§Y$ICE_valar_morgulis_grandplan$§! изменится на:\n$MODIFIERS_ARMY_ATTACK_FACTOR$: §G+15%§!\n$MODIFIER_ARMY_ATTACK_SPEED_FACTOR$: §R-20%§!"
+addsubsub_ICE_valar_morgulis_grandplan_bf_5_aof_5_aor_5_tt: "§Y$ICE_valar_morgulis_grandplan$§! изменится на:\n$MODIFIER_BREAKTHROUGH$: §G+5%§!\n$MODIFIER_ARMY_ORG_FACTOR$: §R-5%§!\n$MODIFIER_ARMY_ORG_REGAIN$: §R-5%§!"
+add_ICE_valar_morgulis_grandplan_aaf_10_tt: "§Y$ICE_valar_morgulis_grandplan$§! изменится на:\n$MODIFIERS_ARMY_ATTACK_FACTOR$: §G+10%§!"
+add_ICE_valar_morgulis_grandplan_aasf_5_tt: "§Y$ICE_valar_morgulis_grandplan$§! изменится на:\n$MODIFIER_ARMY_ATTACK_SPEED_FACTOR$: §G+5%§!"
 sub_ICE_nightlands_grandplan_olwm_5_tt: "§Y$ICE_nightlands_grandplan$§! изменится на:\n$MODIFIER_ORG_LOSS_WHEN_MOVING$: §G-5%§!"
 subadd_ICE_nightlands_grandplan_olwm_10_asf_5_tt: "§Y$ICE_nightlands_grandplan$§! изменится на:\n$MODIFIER_ORG_LOSS_WHEN_MOVING$: §G-10%§!\n$MODIFIER_ARMY_SPEED_FACTOR$: §G+5%§!"
-
-
-
 add_ICE_nightlands_grandplan_amf_15_tt: "§Y$ICE_nightlands_grandplan$§! изменится на:\n$MODIFIER_ARMY_MORALE_FACTOR$: §G+15%§!"
 addadd_ICE_nightlands_grandplan_aof_5_aor_10_tt: "§Y$ICE_nightlands_grandplan$§! изменится на:\n$MODIFIER_ARMY_ORG_FACTOR$: §G+5%§!\n$MODIFIER_ARMY_ORG_REGAIN$: §G+10%§!"
 add_ICE_nightlands_grandplan_aof_5_tt: "§Y$ICE_nightlands_grandplan$§! изменится на:\n$MODIFIER_ARMY_ORG_FACTOR$: §G+5%§!"
@@ -32,8 +51,6 @@ add_ICE_nightlands_grandplan_marsh_movement_10_tt: "§Y$ICE_nightlands_grandplan
 add_ICE_nightlands_grandplan_plains_movement_10_tt: "§Y$ICE_nightlands_grandplan$§! изменится на:\n$unit_modifier_all_inf_plains_movement$: §G+10%§!"
 add_ICE_nightlands_grandplan_desert_movement_5_tt: "§Y$ICE_nightlands_grandplan$§! изменится на:\n$unit_modifier_all_inf_desert_movement$: §G+5%§!"
 add_ICE_nightlands_grandplan_ahcgf_10_tt: "§Y$ICE_nightlands_grandplan$§! изменится на:\n$hot_climate$: §G+10%§!"
-
-
 ICE_nightlands_grandplan_div_modifiers_tt: "[ICE_all_inf_modifiers_title_sl]"
 ICE_nightlands_grandplan_div_modifiers_title_tt: "§Y$category_all_infantry$§!:\n[ICE_nightlands_grandplan_div_urban_movement_tt][ICE_nightlands_grandplan_div_mountain_movement_tt][ICE_nightlands_grandplan_div_hills_movement_tt][ICE_nightlands_grandplan_div_forest_movement_tt][ICE_nightlands_grandplan_div_jungle_movement_tt][ICE_nightlands_grandplan_div_marsh_movement_tt][ICE_nightlands_grandplan_div_plains_movement_tt][ICE_nightlands_grandplan_div_desert_movement_tt]"
 ICE_nightlands_grandplan_div_urban_movement_text_tt: "   Движение в городе: [?nightlands_grandplan_urban_movement|+=%]\n"
@@ -44,3 +61,20 @@ ICE_nightlands_grandplan_div_jungle_movement_text_tt: "   Движение в д
 ICE_nightlands_grandplan_div_marsh_movement_text_tt: "   Движение в болотах: [?nightlands_grandplan_marsh_movement|+=%]\n"
 ICE_nightlands_grandplan_div_plains_movement_text_tt: "   Движение на равнинах: [?nightlands_grandplan_plains_movement|+=%]\n"
 ICE_nightlands_grandplan_div_desert_movement_text_tt: "   Движение в пустыне: [?nightlands_grandplan_desert_movement|+=%]\n"
+
+#country_flags
+nightlands_grandplan: "Активно развивает §Y$ICE_nightlands_grandplan$§!"
+valar_morgulis_grandplan: "Активно развивает §Y$ICE_valar_morgulis_grandplan$§!"
+windoo_grandplan: "Активно развивает §Y$ICE_windoo_grandplan$§!"
+#events
+vindigo.1.t: "Планы ведения войны"
+vindigo.1.d: "В долгосрочной перспективе наша армия не сможет оказать достойное сопротивление. Надо улучшить методики и примненеие нативной черной магии для усовершенстования вооруженных сил."
+vindigo.1.a: "Нам не хватает организованности"
+vindigo.1.b: "Нам не хватает урона"
+vindigo.1.c: "Нам нужна обороноспособность"
+vindigo.2.t: "Оценка эффективности теоретика"
+vindigo.2.d: "$ICE_vindigo$ ожидал больших результатов от текущего теоретика. Другие советники готовы предложить свои варианты, как успешно вести войну."
+vindigo.2.a: "Еще рано делать выводы"
+vindigo.2.b: "$ICE_nightlands$ - лучшее решение"
+vindigo.2.c: "$ICE_valar_morgulis$ - лучшее решение"
+vindigo.2.e: "$ICE_windoo$ - лучшее решение"

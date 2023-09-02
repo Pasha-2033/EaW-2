@@ -1,0 +1,162 @@
+add_namespace = vindigo
+#change picture everywhere
+country_event = {
+	#select theorist for grandplan
+	id = vindigo.1
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event vindigo.1"
+	}
+	title = vindigo.1.t
+	desc = vindigo.1.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#select ICE_nightlands
+		name = vindigo.1.a
+		ai_chance = {
+			factor = 100
+		}
+		set_country_flag = nightlands_grandplan
+		activate_advisor = ICE_nightlands
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = {
+		#select ICE_valar_morgulis
+		name = vindigo.1.b
+		ai_chance = {
+			factor = 100
+		}
+		set_country_flag = valar_morgulis_grandplan
+		activate_advisor = ICE_valar_morgulis
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = {
+		#select ICE_windoo
+		name = vindigo.1.c
+		ai_chance = {
+			factor = 100
+		}
+		set_country_flag = windoo_grandplan
+		activate_advisor = ICE_windoo
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+country_event = {
+	#inspection showed, that theorist is uneffective
+	id = vindigo.2
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event vindigo.2"
+	}
+	title = vindigo.2.t
+	desc = vindigo.2.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#challange the insection results
+		name = vindigo.2.a
+		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			check_variable = {
+				vindigo_army_inspection_time < vindigo_army_ingnoring_inspection_time
+			}
+		}
+		add_to_variable = {
+			vindigo_army_inspection_time = 1
+		}
+	}
+	option = {
+		#select ICE_nightlands
+		name = vindigo.2.b
+		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			ICE_nightlands = {
+				is_hired_as_advisor = no
+			}
+		}
+		if = {
+			limit = {
+				ICE_valar_morgulis = {
+					is_hired_as_advisor = yes
+				}
+			}
+			clr_country_flag = valar_morgulis_grandplan
+			deactivate_advisor = ICE_valar_morgulis
+		}
+		else = {
+			clr_country_flag = windoo_grandplan
+			deactivate_advisor = ICE_windoo
+		}
+		set_country_flag = nightlands_grandplan
+		activate_advisor = ICE_nightlands
+		mark_focus_tree_layout_dirty = yes
+		set_variable = {
+			vindigo_army_inspection_time = 0 
+		}
+	}
+	option = {
+		#select ICE_valar_morgulis
+		name = vindigo.2.c
+		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			ICE_valar_morgulis = {
+				is_hired_as_advisor = no
+			}
+		}
+		if = {
+			limit = {
+				ICE_nightlands = {
+					is_hired_as_advisor = yes
+				}
+			}
+			clr_country_flag = nightlands_grandplan
+			deactivate_advisor = ICE_nightlands
+		}
+		else = {
+			clr_country_flag = windoo_grandplan
+			deactivate_advisor = ICE_windoo
+		}
+		set_country_flag = valar_morgulis_grandplan
+		activate_advisor = ICE_valar_morgulis
+		mark_focus_tree_layout_dirty = yes
+		set_variable = {
+			vindigo_army_inspection_time = 0 
+		}
+	}
+	option = {
+		#select ICE_windoo
+		name = vindigo.2.e
+		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			ICE_windoo = {
+				is_hired_as_advisor = no
+			}
+		}
+		if = {
+			limit = {
+				ICE_valar_morgulis = {
+					is_hired_as_advisor = yes
+				}
+			}
+			clr_country_flag = valar_morgulis_grandplan
+			deactivate_advisor = ICE_valar_morgulis
+		}
+		else = {
+			clr_country_flag = nightlands_grandplan
+			deactivate_advisor = ICE_nightlands
+		}
+		set_country_flag = windoo_grandplan
+		activate_advisor = ICE_windoo
+		mark_focus_tree_layout_dirty = yes
+		set_variable = {
+			vindigo_army_inspection_time = 0 
+		}
+	}
+}

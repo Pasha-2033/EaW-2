@@ -1,0 +1,23 @@
+@tier1 = 30
+@tier2 = 20
+@tier3 = 10
+
+leader_traits = {
+	#ICE windigo traits for theorists
+	master_of_speed_and_organisation = {
+		random = no
+		army_speed_factor = 0.05
+		army_org_factor = 0.05
+	}
+	master_of_attack_and_manpower = {
+		random = no
+		army_attack_factor = 0.05
+		army_attack_speed_factor = 0.05
+		mobilization_speed = 0.1
+	}
+	master_of_defence_and_equipment = {
+		random = no
+		army_defence_factor = 0.1
+		no_supply_grace = 24
+	}
+}
