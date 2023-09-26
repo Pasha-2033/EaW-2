@@ -34,7 +34,6 @@ technologies = {
 		allow = {
 			always = no
 		}
-
 	}
 
 	#Earth pony farming
@@ -48,12 +47,12 @@ technologies = {
 		supply_consumption_factor = -0.075
 
 		path = {
-			leads_to_tech = tech_pony_misc3
+			leads_to_tech = tech_pony_farm2
 			research_cost_coeff = 1
 		}
 
 		research_cost = 1.5
-		start_year = 1007
+		start_year = 982
 		folder = {
 			name = pony_folder
 			position = { x = 1 y = @1007 }
@@ -80,19 +79,19 @@ technologies = {
 	}
 
 	#Earth Pony Sappers
-	tech_pony_misc3 = {
+	tech_pony_farm2 = {
 
 		category_engineer = {
 			entrenchment  = 2
 		}
 
 		path = {
-			leads_to_tech = tech_pony_misc_a
+			leads_to_tech = tech_pony_farm_army
 			research_cost_coeff = 1
 		}
 
 		path = {
-			leads_to_tech = tech_pony_misc_a2
+			leads_to_tech = tech_pony_farm_industry
 			research_cost_coeff = 1
 		}
 
@@ -124,14 +123,14 @@ technologies = {
 	}
 
 	#Pegasi Weather Engineering
-	tech_pony_misc_a = {
+	tech_pony_farm_army = {
 
 		air_weather_penalty = -0.05
 		winter_attrition_factor = -0.1
 		heat_attrition_factor = -0.1
 
 		path = {
-			leads_to_tech = tech_pony_misc2
+			leads_to_tech = tech_pony_farm_army2
 			research_cost_coeff = 1
 		}
 
@@ -163,14 +162,14 @@ technologies = {
 	}
 
 	#Earth Pony Industry
-	tech_pony_misc_a2 = {
+	tech_pony_farm_industry = {
 
 		industrial_capacity_factory = 0.1
 		industrial_capacity_dockyard = 0.1
 		production_speed_buildings_factor = 0.05
 
 		path = {
-			leads_to_tech = tech_pony_misc2
+			leads_to_tech = tech_pony_farm_industry2
 			research_cost_coeff = 1
 		}
 
@@ -202,12 +201,12 @@ technologies = {
 	}
 
 	#Pegasi weather manipulation
-	tech_pony_misc2 = {
+	tech_pony_farm_army2 = {
 
 		air_weather_penalty = -0.15
 
 		path = {
-			leads_to_tech = tech_pony_misc_b
+			leads_to_tech = tech_pony_farm_army3
 			research_cost_coeff = 1
 		}
 
@@ -215,7 +214,7 @@ technologies = {
 		start_year = 1007
 		folder = {
 			name = pony_folder
-			position = { x = 1 y = @1016 }
+			position = { x = 2 y = @1016 }
 		}
 
 		categories = {
@@ -237,19 +236,12 @@ technologies = {
 			}
 		}
 	}
+	tech_pony_farm_industry2 = {
 
-	#Earth Pony Mining
-	tech_pony_misc_b = {
-
-		local_resources_factor = 0.10
+		air_weather_penalty = -0.15
 
 		path = {
-			leads_to_tech = tech_pony_misc_c
-			research_cost_coeff = 1
-		}
-
-		path = {
-			leads_to_tech = tech_pony_misc_c2
+			leads_to_tech = tech_pony_farm_industry3
 			research_cost_coeff = 1
 		}
 
@@ -257,7 +249,42 @@ technologies = {
 		start_year = 1007
 		folder = {
 			name = pony_folder
-			position = { x = 1 y = @1020 }
+			position = { x = 0 y = @1016 }
+		}
+
+		categories = {
+			race_tech
+			pegasi_tech
+		}
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 1.5
+				date > "1011.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1012.1.1"
+			}
+		}
+	}
+	tech_pony_farm_industry3 = {
+
+		local_resources_factor = 0.10
+
+		path = {
+			leads_to_tech = tech_pony_farm_industry4
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 0 y = @1020 }
 		}
 
 		categories = {
@@ -280,22 +307,39 @@ technologies = {
 		}
 	}
 
-	#Military Weather Application
-	tech_pony_misc_c = {
+	tech_pony_farm_industry4 = {
 
-		dependencies = {
-			tech_pegasi = 1
+		air_weather_penalty = -0.15
+
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = pony_folder
+			position = { x = 0 y = @1024 }
 		}
 
-		enemy_army_bonus_air_superiority_factor = -0.1
-		air_cas_present_factor = 0.1
-		pegasi = {
-			air_attack = 3000
+		categories = {
+			race_tech
+			pegasi_tech
 		}
-		on_research_complete = {
-			custom_effect_tooltip = percentage_increase_notice
+
+		ai_will_do = {
+			factor = 2
+
+			modifier = {
+				factor = 1.5
+				date > "1011.1.1"
+			}
+
+			modifier = {
+				factor = 2
+				date > "1012.1.1"
+			}
 		}
-		xor = { tech_pony_misc_c2 }
+	}
+	tech_pony_farm_army4 = {
+
+		air_weather_penalty = -0.15
 
 		research_cost = 1.5
 		start_year = 1007
@@ -311,33 +355,35 @@ technologies = {
 
 		ai_will_do = {
 			factor = 2
+
 			modifier = {
 				factor = 1.5
-				date > "1025.1.1"
+				date > "1011.1.1"
 			}
 
 			modifier = {
 				factor = 2
-				date > "1026.1.1"
+				date > "1012.1.1"
 			}
 		}
-	}
+	}	
 
-	#Earth Pony Medicine
-	tech_pony_misc_c2 = {
+	#Earth Pony Mining
+	tech_pony_farm_army3 = {
 
-		field_hospital = {
-			casualty_trickleback = 0.05
-			experience_loss_factor = -0.10
+		local_resources_factor = 0.10
+
+		path = {
+			leads_to_tech = tech_pony_farm_army4
+			research_cost_coeff = 1
 		}
 
-		xor = { tech_pony_misc_c }
 
 		research_cost = 1.5
 		start_year = 1007
 		folder = {
 			name = pony_folder
-			position = { x = 0 y = @1024 }
+			position = { x = 2 y = @1020 }
 		}
 
 		categories = {
@@ -347,22 +393,22 @@ technologies = {
 
 		ai_will_do = {
 			factor = 2
+
 			modifier = {
 				factor = 1.5
-				date > "1025.1.1"
+				date > "1021.1.1"
 			}
 
 			modifier = {
 				factor = 2
-				date > "1026.1.1"
-			}
-
-			modifier = {
-				factor = 0
-				tag = NIM
+				date > "1022.1.1"
 			}
 		}
 	}
+
+
+	#Earth Pony Medicine
+
 
 
 	tech_pegasi = {
