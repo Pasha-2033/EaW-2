@@ -262,6 +262,14 @@ init_country_lore_vars = {
 		add_to_array = { global.country_with_lore = DRG }
 	}
 }
+#init scripted gui entries for global mechanic descs
+init_global_mechanics_desc = {
+	resize_array = {
+		array = global.global_mechanic_desc
+		size = 2
+		value = 2
+	}
+}
 #arrays of surplus apopriation
 init_sa_civ_mod_population_value = {
 	add_to_array = { global.sa_civ_mod_population_value = -0.8	} #0%

@@ -16,7 +16,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_winter_is_near
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -44,7 +44,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_extraction_of_hatred
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 6
 		ai_will_do = {
 			factor = 200
@@ -72,7 +72,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_deadly_expansion
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 10
 		ai_will_do = {
 			factor = 200
@@ -101,7 +101,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_spirit_appearance
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 10
 		ai_will_do = {
 			factor = 200
@@ -126,7 +126,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_fast_batles
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 10
 		ai_will_do = {
 			factor = 200
@@ -154,7 +154,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_high_frezingpower
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 10
 		ai_will_do = {
 			factor = 200
@@ -184,7 +184,7 @@ focus_tree = {
 
 	focus = {
 		id = ice_focus_new_high_command
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 10
 		ai_will_do = {
 			factor = 200
@@ -208,6 +208,7 @@ focus_tree = {
 			add_field_marshal_role = {
 				character = ICE_nightlands
 				traits = {
+					undead_race_trait
 					adaptable
 				}
 				skill = 3
@@ -218,6 +219,9 @@ focus_tree = {
 			}
 			add_corps_commander_role = {
 				character = ICE_valar_morgulis
+				traits = {
+					undead_race_trait
+				}
 				skill = 1
 				attack_skill = 3
 				defense_skill = 1
@@ -226,6 +230,7 @@ focus_tree = {
 			}
 			add_corps_commander_role = {
 				traits = {
+					undead_race_trait
 					commando
 				}
 				skill = 2
@@ -247,7 +252,7 @@ focus_tree = {
 
 	focus = {
 		id = ice_focus_spirit_transformations
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 10
 		ai_will_do = {
 			factor = 200
@@ -284,7 +289,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_convertion_other_to_spirits
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 10
 		ai_will_do = {
 			factor = 200
@@ -311,13 +316,16 @@ focus_tree = {
 	#nightlands grand plan - organisation and speed
 	focus = {
 		id = ice_focus_nightlands_grandplan
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
 		}
 		allow_branch = {
-			has_country_flag = nightlands_grandplan
+			ICE_nightlands = {
+				is_hired_as_advisor = yes
+			}
+			ended_nightlands_branch = no
 		}
 		x = 17
 		y = 0
@@ -335,7 +343,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_battle_column_organisation
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -359,7 +367,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_parallel_movement
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -383,7 +391,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_march_throws
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -404,13 +412,13 @@ focus_tree = {
 			add_to_variable = {
 				nightlands_grandplan_asf = 0.05
 			}
-			inspection_in_vindigo_army = yes
+			end_of_nightlands_subbranch = yes
 		}
 		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_combat_subgroups
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -440,7 +448,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_single_coordinated_strike
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -467,7 +475,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_division_hard_core
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -494,7 +502,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_division_hard_front
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -521,7 +529,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_extra_reserves
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -540,13 +548,13 @@ focus_tree = {
 				value = 0.15
 				tooltip = add_ICE_nightlands_grandplan_amf_15_tt
 			}
-			inspection_in_vindigo_army = yes
+			end_of_nightlands_subbranch = yes
 		}
 		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_new_ambush_tactics
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -570,7 +578,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_small_recon_groups
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -588,13 +596,13 @@ focus_tree = {
 				value = -0.1
 				tooltip = sub_ICE_nightlands_grandplan_ollof_10_tt
 			}
-			inspection_in_vindigo_army = yes
+			end_of_nightlands_subbranch = yes
 		}
 		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_udaptable_army
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -618,7 +626,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_movement_in_cities
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -648,7 +656,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_movement_in_mountains
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -678,7 +686,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_movement_in_hills
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -708,7 +716,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_movement_in_forests
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -738,7 +746,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_movement_in_jungle
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -768,7 +776,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_movement_in_swamp
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -798,7 +806,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_movement_in_plains
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -828,7 +836,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_movement_in_deserts
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -858,7 +866,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_heat_resistance
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -897,23 +905,24 @@ focus_tree = {
 				value = 0.1
 				tooltip = add_ICE_nightlands_grandplan_ahcgf_10_tt
 			}
-			inspection_in_vindigo_army = yes
+			end_of_nightlands_subbranch = yes
 		}
 		search_filters = {}
 	}
-
-
 	#valar_morgulis grand plan - manpower and attack
 	#to do(not finished)
 	focus = {
 		id = ice_focus_valar_morgulis_grandplan
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
 		}
 		allow_branch = {
-			has_country_flag = valar_morgulis_grandplan
+			ICE_valar_morgulis = {
+				is_hired_as_advisor = yes
+			}
+			ended_valar_branch = no
 		}
 		x = 13
 		y = 0
@@ -931,7 +940,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_continuous_attack
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -961,7 +970,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_increase_wave_attack
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -988,7 +997,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_reconnaissance_in_force
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -1006,13 +1015,13 @@ focus_tree = {
 				value = 0.05
 				tooltip = add_ICE_valar_morgulis_grandplan_aasf_5_tt
 			}
-			inspection_in_vindigo_army = yes
+			end_of_valar_subbranch = yes
 		}
 		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_massive_assaults
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -1036,13 +1045,13 @@ focus_tree = {
 			subtract_from_variable = {
 				valar_morgulis_grandplan_aor = 0.05
 			}
-			inspection_in_vindigo_army = yes
+			end_of_valar_subbranch = yes
 		}
 		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_attack_tactics
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -1066,7 +1075,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_attack_of_the_wounded
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -1090,7 +1099,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_undiminished_morality
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -1108,13 +1117,13 @@ focus_tree = {
 				value = 0.25
 				tooltip = add_ICE_valar_morgulis_grandplan_amf_25_tt
 			}
-			inspection_in_vindigo_army = yes
+			end_of_valar_subbranch = yes
 		}
 		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_manpower_management
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -1134,7 +1143,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_improve_coordination_of_mobilization
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -1158,7 +1167,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_direct_recruit_transportation_to_army
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -1176,13 +1185,13 @@ focus_tree = {
 				value = 0.15
 				tooltip = add_ICE_valar_morgulis_grandplan_ms_15_tt
 			}
-			inspection_in_vindigo_army = yes
+			end_of_valar_subbranch = yes
 		}
 		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_resurrection
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -1206,7 +1215,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_recovery_teams
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -1224,13 +1233,13 @@ focus_tree = {
 				value = 0.05
 				tooltip = increase_resurrect_fallen_efficiency_5_tt
 			}
-			inspection_in_vindigo_army = yes
+			end_of_valar_subbranch = yes
 		}
 		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_lower_entry_rules_for_recruits
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -1250,7 +1259,7 @@ focus_tree = {
 	}
 	focus = {
 		id = ice_focus_army_without_civilians
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -1320,38 +1329,41 @@ focus_tree = {
 			else = {
 				add_manpower = 200000
 			}
-			inspection_in_vindigo_army = yes
+			end_of_valar_subbranch = yes
 		}
 		search_filters = {}
 	}
-
-
-
 	#windoo grand plan - equipment and defence
 	focus = {
 		id = ice_focus_windoo_grandplan
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
 		}
 		allow_branch = {
-			has_country_flag = windoo_grandplan
+			ICE_windoo = {
+				is_hired_as_advisor = yes
+			}
+			ended_windoo_branch = no
 		}
 		x = 12
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_windoo_grandplan"
-			add_dynamic_modifier = {
-				modifier = ICE_windoo_grandplan
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = ICE_windoo_grandplan
+				}
 			}
+			custom_effect_tooltip = add_ICE_windoo_grandplan_tt
 			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_equipment_improvement
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -1360,17 +1372,21 @@ focus_tree = {
 		prerequisite = {
 			focus = ice_focus_windoo_grandplan
 		}
-		x = -2
+		x = -3
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_equipment_improvement"
+			multiply_variable = {
+				open_tomb_eq_ammont = 3
+				tooltip = mul_ICE_windoo_grandland_otea_3_tt
+			}
 			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_equipment_standarts
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -1383,13 +1399,20 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_equipment_standarts"
-			inspection_in_vindigo_army = yes
+			subtract_from_variable = {
+				open_tomb_cooldown = 5
+				tooltip = submul_ICE_windoo_grandland_otc_5_otea_2_tt
+			}
+			multiply_variable = {
+				open_tomb_eq_ammont = 2
+			}
+			end_of_windoo_subbranch = yes
 		}
 		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_consolidate_occupied_states
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -1398,17 +1421,24 @@ focus_tree = {
 		prerequisite = {
 			focus = ice_focus_windoo_grandplan
 		}
-		x = 2
+		x = -1
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_consolidate_occupied_states"
+			subtract_from_variable = {
+				windoo_grandplan_rt = 0.15
+				tooltip = subsub_ICE_windoo_grandland_rt_15_rgf_10_tt
+			}
+			subtract_from_variable = {
+				windoo_grandplan_rgf = 0.1
+			}
 			inspection_in_vindigo_army = yes
 		}
 		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_fallback_patterns
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ice_focus_generic
 		cost = 5
 		ai_will_do = {
 			factor = 200
@@ -1417,11 +1447,130 @@ focus_tree = {
 		prerequisite = {
 			focus = ice_focus_windoo_grandplan
 		}
-		x = 0
+		x = 1
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_fallback_patterns"
+			add_to_variable = {
+				windoo_grandplan_adf = 0.1
+				tooltip = add_ICE_windoo_grandland_adf_10_tt
+			}
+			end_of_windoo_subbranch = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_supply_management
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_consolidate_occupied_states
+		prerequisite = {
+			focus = ice_focus_consolidate_occupied_states
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_supply_management"
+			add_to_variable = {
+				windoo_grandplan_snr = 0.5
+				tooltip = add_ICE_windoo_grandland_snr_50_tt
+			}
 			inspection_in_vindigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_destroy_buildings_for_equipment
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_supply_management
+		prerequisite = {
+			focus = ice_focus_supply_management
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_destroy_buildings_for_equipment"
+			custom_effect_tooltip = unlock_destroy_buildings_decision_tt #decision is targered, so instance localisation is wrong, tooltip required
+			end_of_windoo_subbranch = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_power_of_distaction
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_windoo_grandplan
+		prerequisite = {
+			focus = ice_focus_windoo_grandplan
+		}
+		x = 3
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_power_of_distaction"
+			add_to_variable = {
+				windoo_grandplan_mps = 0.1
+				tooltip = addadd_ICE_windoo_grandland_mps_10_ps_10_tt
+			}
+			add_to_variable = {
+				windoo_grandplan_ps = 0.1
+			}
+			inspection_in_vindigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_attack_is_defence_too
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_power_of_distaction
+		prerequisite = {
+			focus = ice_focus_power_of_distaction
+		}
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_attack_is_defence_toon"
+			add_to_variable = {
+				windoo_grandplan_cb = 0.1
+				tooltip = add_ICE_windoo_grandland_cb_10_tt
+			}
+			end_of_windoo_subbranch = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_rotation_prototype
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_power_of_distaction
+		prerequisite = {
+			focus = ice_focus_power_of_distaction
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_rotation_prototype"
+			subtract_from_variable = {
+				windoo_grandplan_pp = 0.1
+				tooltip = sub_ICE_windoo_grandplan_pp_10_tt
+			}
+			end_of_windoo_subbranch = yes
 		}
 		search_filters = {}
 	}

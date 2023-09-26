@@ -48,6 +48,20 @@ inspection_in_vindigo_army = {
 					vindigo_army_inspection_time > vindigo_army_max_inspection_time
 				}
 			}
+			NOT = {
+				#don`t call inspection - other branches already done
+				AND = {
+					ended_nightlands_branch = yes
+					OR = {
+						ended_valar_branch = yes
+						ended_windoo_branch = yes
+					}
+				}
+				AND = {
+					ended_valar_branch = yes
+					ended_windoo_branch = yes
+				}
+			}
 		}
 		country_event = {
 			id = vindigo.2
@@ -56,6 +70,96 @@ inspection_in_vindigo_army = {
 	else = {
 		add_to_variable = {
 			vindigo_army_inspection_time = 1
+		}
+	}
+}
+end_of_nightlands_subbranch = {
+	if = {
+		limit = {
+			ended_nightlands_branch = yes
+		}
+		country_event = {
+			id = vindigo.4
+		}
+	}
+	else = {
+		effect_tooltip = {
+			if = {
+				limit = {
+					is_about_to_end_nightlands_branch = yes
+				}
+				country_event = {
+					id = vindigo.4
+				}
+			}
+			else = {
+				inspection_in_vindigo_army = yes
+			}
+		}
+		hidden_effect = {
+			inspection_in_vindigo_army = yes
+		}
+	}
+}
+end_of_valar_subbranch = {
+	if = {
+		limit = {
+			ended_valar_branch = yes
+		}
+		country_event = {
+			id = vindigo.4
+		}
+	}
+	else_if = {
+		limit = {
+			is_about_to_end_valar_branch = no
+		}
+		inspection_in_vindigo_army = yes
+	}
+	else = {
+		effect_tooltip = {
+			if = {
+				limit = {
+					is_about_to_end_valar_branch = yes
+				}
+				country_event = {
+					id = vindigo.4
+				}
+			}
+			else = {
+				inspection_in_vindigo_army = yes
+			}
+		}
+		hidden_effect = {
+			inspection_in_vindigo_army = yes
+		}
+	}
+}
+end_of_windoo_subbranch = {
+	if = {
+		limit = {
+			ended_windoo_branch = yes
+		}
+		country_event = {
+			id = vindigo.4
+		}
+	}
+	else = {
+		effect_tooltip = {
+			if = {
+				limit = {
+					is_about_to_end_windoo_branch = yes
+				}
+				country_event = {
+					id = vindigo.4
+				}
+			}
+			else = {
+				inspection_in_vindigo_army = yes
+			}
+		}
+		hidden_effect = {
+			inspection_in_vindigo_army = yes
 		}
 	}
 }

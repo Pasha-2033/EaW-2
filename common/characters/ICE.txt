@@ -140,6 +140,16 @@ characters = {
 			allowed = {
 				original_tag = ICE
 			}
+			available = {
+				if = {
+					limit = {
+						ICE_nightlands = {
+							is_hired_as_advisor = no
+						}
+					}
+					ended_nightlands_branch = yes
+				}
+			}
 			visible = {
 				has_completed_focus = ice_focus_new_high_command
 			}
@@ -167,6 +177,16 @@ characters = {
 			allowed = {
 				original_tag = ICE
 			}
+			available = {
+				if = {
+					limit = {
+						ICE_valar_morgulis = {
+							is_hired_as_advisor = no
+						}
+					}
+					ended_valar_branch = yes
+				}
+			}
 			visible = {
 				has_completed_focus = ice_focus_new_high_command
 			}
@@ -193,6 +213,16 @@ characters = {
 			}
 			allowed = {
 				original_tag = ICE
+			}
+			available = {
+				if = {
+					limit = {
+						ICE_windoo = {
+							is_hired_as_advisor = no
+						}
+					}
+					ended_windoo_branch = yes
+				}
 			}
 			visible = {
 				has_completed_focus = ice_focus_new_high_command

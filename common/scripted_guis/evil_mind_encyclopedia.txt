@@ -116,7 +116,7 @@ scripted_gui = {
 			}
 		}
 		dynamic_lists = {
-			country_lore_selection_grid = { #to do
+			country_lore_selection_grid = {
 				array = global.country_with_lore
 				change_scope = no
 				entry_container = "encyclopedia_country_selection"
@@ -186,6 +186,44 @@ scripted_gui = {
 				encyclopedia_tab = 3
 			}
 		}
+		dirty = selected_global_mechanic
+		dynamic_lists = {
+			global_mechanic_selection_grid = {
+				array = global.global_mechanic_desc
+				change_scope = no
+				entry_container = "encyclopedia_global_mechanic_selection"
+				index = i
+			}
+		}
+		effects = {
+			encyclopedia_global_mechanic_selection_button_click = {
+				set_variable = {
+					selected_global_mechanic = i
+				}
+			}
+		}
+		triggers = {
+			encyclopedia_global_mechanic_selection_button_visible = {
+				set_temp_variable = {
+					egmsbv = 1
+				}
+				if = {
+					limit = {
+						check_variable = {
+							selected_global_mechanic = i
+						}
+					}
+					add_to_temp_variable = {
+						egmsbv = 1
+					}
+				}
+			}
+		}
+		properties = {
+			encyclopedia_global_mechanic_selection_button = {
+				frame = egmsbv
+			}
+		}
 	}
 	encyclopedia_tab_4_container = {
 		context_type = player_context
@@ -194,6 +232,27 @@ scripted_gui = {
 		visible = {
 			check_variable = {
 				encyclopedia_tab = 4
+			}
+		}
+	}
+	#tab dependand guis
+	encyclopedia_global_mechanic_nuke_container = {
+		context_type = player_context
+		window_name = "encyclopedia_global_mechanic_nuke_container"
+		parent_window_name = "global_mechanic_desc_container"
+		visible = {
+			check_variable = {
+				selected_global_mechanic = 0
+			}
+		}
+	}
+	encyclopedia_global_mechanic_sa_container = {
+		context_type = player_context
+		window_name = "encyclopedia_global_mechanic_sa_container"
+		parent_window_name = "global_mechanic_desc_container"
+		visible = {
+			check_variable = {
+				selected_global_mechanic = 1
 			}
 		}
 	}

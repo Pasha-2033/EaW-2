@@ -7,8 +7,7 @@ country_event = {
 		log = "[GetDateText]: [Root.GetName]: event null_magic_event.1"
 		#transfer state, for CRY creation (it has no states from begining)
 		#also make them core to CRY, not to ELN
-		#for optimisation added if-block (this event is major)
-		#add Sombra later
+		#for optimisation added if-block (this event is major), (to do) may be put in fire-once event?
 		hidden_effect = {
 			CRY = {
 				if = {

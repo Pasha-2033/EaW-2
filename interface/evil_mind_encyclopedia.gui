@@ -1,4 +1,5 @@
 @country_lore_selection_grid_height = 540 # = 54 * n, where n is num of entries
+@global_mechanic_selection_grid_height = 108 # = 54 * n, where n is num of entries
 guiTypes = {
 	#inspired by original EaW welcome screen (reworked)
 	containerWindowType = {
@@ -298,6 +299,18 @@ guiTypes = {
 			maxWidth = 1100
 			maxHeight = 30
 		}
+		instantTextboxType = {
+			name = "tab_2_mechanics_desc"
+			position = {
+				x = 27
+				y = 203 
+			}
+			font = "hoi_24header"
+			text = "[eme_country_mechanics_scenario_definition]"
+			maxWidth = 1097
+			maxHeight = 440
+			scrollbarType = standardtext_slider
+		}
 	}
 	containerWindowType = {
 		name = "encyclopedia_tab_3_container"
@@ -327,6 +340,54 @@ guiTypes = {
 			format = center
 			maxWidth = 1100
 			maxHeight = 30
+		}
+		containerWindowType = {
+			name = "global_mechanic_selection_container"
+			size = {
+				width = 310
+				height = 445
+			}
+			position = { 
+				x = 25
+				y = 200 
+			}
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_blank"
+			}
+			verticalScrollbar = "right_vertical_slider"
+			containerWindowType = {
+				name = "global_mechanic_selection_grid_container"
+				size = {
+					width = 300
+					height = @global_mechanic_selection_grid_height
+				}
+				gridBoxType = {
+					name = "global_mechanic_selection_grid"
+					size = {
+						width = 300
+						height = @global_mechanic_selection_grid_height
+					}
+					slotsize = { 
+						width = 300 
+						height = 54 
+					}
+					#format = CENTER
+					add_horizontal = no
+				}
+			}
+		}
+		containerWindowType = {
+			name = "global_mechanic_desc_container"
+			#every mechanic will have custom_gui - use this parent window
+			size = {
+				width = 800
+				height = 445
+			}
+			position = {
+				x = 340
+				y = 200
+			}
 		}
 	}
 	containerWindowType = {
@@ -415,6 +476,87 @@ guiTypes = {
 				alwaystransparent = yes
 			}
 		}
-	
+	}
+	containerWindowType = {
+		name = "encyclopedia_global_mechanic_selection"
+		size = {
+			width = 300
+			height = 200
+		}
+		buttonType = {
+			name = "encyclopedia_global_mechanic_selection_button"
+			quadTextureSprite = "GFX_encyclopedia_country_selection_button"
+			font = "hoi_18mbs"
+		}
+		instantTextBoxType = {
+			name = "global_mechanic_name"
+			position = {
+				x = 13
+				y = 2
+			}
+			text = "[get_global_mechanic_name]"
+			font = "hoi_24header"
+			maxWidth = 260
+			maxHeight = 48
+			format = CENTER
+			vertical_alignment = CENTER
+			fixedsize = yes
+			#alwaystransparent = yes
+		}
+	}
+	containerWindowType = {
+		name = "encyclopedia_global_mechanic_nuke_container"
+		size = {
+			width = 100%
+			height = 100%
+		}
+		instantTextBoxType = {
+			name = "global_mechanic_name"
+			text = "global_mechanic_nuke_name"
+			font = "hoi_36header"
+			maxWidth = 800
+			maxHeight = 36
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "global_mechanic_desc"
+			text = "global_mechanic_nuke_desc"
+			position = {
+				x = 0
+				y = 36
+			}
+			font = "hoi_24header"
+			maxWidth = 800
+			maxHeight = 240
+			fixedsize = yes
+		}
+	}
+	containerWindowType = {
+		name = "encyclopedia_global_mechanic_sa_container"
+		size = {
+			width = 100%
+			height = 100%
+		}
+		instantTextBoxType = {
+			name = "global_mechanic_name"
+			text = "global_mechanic_sa_name"
+			font = "hoi_36header"
+			maxWidth = 800
+			maxHeight = 36
+			fixedsize = yes
+		}
+		instantTextBoxType = {
+			name = "global_mechanic_desc"
+			text = "global_mechanic_sa_desc"
+			position = {
+				x = 0
+				y = 36
+			}
+			font = "hoi_24header"
+			maxWidth = 800
+			maxHeight = 240
+			
+			fixedsize = yes
+		}
 	}
 }

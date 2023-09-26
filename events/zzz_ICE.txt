@@ -10,13 +10,13 @@ country_event = {
 	desc = vindigo.1.d
 	picture = GFX_event_swarm #(to do) change
 	is_triggered_only = yes
+	timeout_days = 7
 	option = {
 		#select ICE_nightlands
 		name = vindigo.1.a
 		ai_chance = {
 			factor = 100
 		}
-		set_country_flag = nightlands_grandplan
 		activate_advisor = ICE_nightlands
 		mark_focus_tree_layout_dirty = yes
 	}
@@ -26,7 +26,6 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		set_country_flag = valar_morgulis_grandplan
 		activate_advisor = ICE_valar_morgulis
 		mark_focus_tree_layout_dirty = yes
 	}
@@ -36,7 +35,6 @@ country_event = {
 		ai_chance = {
 			factor = 100
 		}
-		set_country_flag = windoo_grandplan
 		activate_advisor = ICE_windoo
 		mark_focus_tree_layout_dirty = yes
 	}
@@ -51,6 +49,7 @@ country_event = {
 	desc = vindigo.2.d
 	picture = GFX_event_swarm #(to do) change
 	is_triggered_only = yes
+	timeout_days = 7
 	option = {
 		#challange the insection results
 		name = vindigo.2.a
@@ -67,15 +66,105 @@ country_event = {
 		}
 	}
 	option = {
-		#select ICE_nightlands
+		#challange the insection results (but can`t change theorist)
 		name = vindigo.2.b
+		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			NOT = {
+				check_variable = {
+					vindigo_army_inspection_time < vindigo_army_ingnoring_inspection_time
+				}
+			}
+			if = {
+				limit = {
+					ICE_nightlands = {
+						is_hired_as_advisor = yes
+					}
+				}
+				OR = {
+					ICE_valar_morgulis = {
+						has_trait = wounded
+					}
+					ended_nightlands_branch = yes
+				}
+				OR = {
+					ICE_windoo = {
+						has_trait = wounded
+					}
+					ended_windoo_branch = yes
+				}
+			}
+			else_if = {
+				limit = {
+					ICE_valar_morgulis = {
+						is_hired_as_advisor = yes
+					}
+				}
+				OR = {
+					ICE_nightlands = {
+						has_trait = wounded
+					}
+					ended_nightlands_branch = yes
+				}
+				OR = {
+					ICE_windoo = {
+						has_trait = wounded
+					}
+					ended_windoo_branch = yes
+				}
+			}
+			else = {
+				OR = {
+					ICE_nightlands = {
+						has_trait = wounded
+					}
+					ended_nightlands_branch = yes
+				}
+				OR = {
+					ICE_valar_morgulis = {
+						has_trait = wounded
+					}
+					ended_valar_branch = yes
+				}
+			}
+		}
+		#we have to use temp var separately from vindigo_army_inspection_time, because temp var calculated instatly for effect tooltip
+		set_temp_variable = {
+			pp_cost = vindigo_army_ingnoring_inspection_time
+		}
+		add_to_temp_variable = {
+			pp_cost = 1
+		}
+		subtract_from_temp_variable = {
+			pp_cost = vindigo_army_inspection_time
+		}
+		subtract_from_temp_variable = {
+			pp_cost = 1
+		}
+		multiply_temp_variable = {
+			pp_cost = 25
+		}
+		add_political_power = pp_cost
+		add_to_variable = {
+			vindigo_army_inspection_time = 1
+		}
+	}
+	option = {
+		#select ICE_nightlands
+		name = vindigo.2.c
 		ai_chance = {
 			factor = 100
 		}
 		trigger = {
 			ICE_nightlands = {
 				is_hired_as_advisor = no
+				NOT = {
+					has_trait = wounded
+				}
 			}
+			ended_nightlands_branch = no
 		}
 		if = {
 			limit = {
@@ -83,14 +172,11 @@ country_event = {
 					is_hired_as_advisor = yes
 				}
 			}
-			clr_country_flag = valar_morgulis_grandplan
 			deactivate_advisor = ICE_valar_morgulis
 		}
 		else = {
-			clr_country_flag = windoo_grandplan
 			deactivate_advisor = ICE_windoo
 		}
-		set_country_flag = nightlands_grandplan
 		activate_advisor = ICE_nightlands
 		mark_focus_tree_layout_dirty = yes
 		set_variable = {
@@ -99,14 +185,18 @@ country_event = {
 	}
 	option = {
 		#select ICE_valar_morgulis
-		name = vindigo.2.c
+		name = vindigo.2.e
 		ai_chance = {
 			factor = 100
 		}
 		trigger = {
 			ICE_valar_morgulis = {
 				is_hired_as_advisor = no
+				NOT = {
+					has_trait = wounded
+				}
 			}
+			ended_valar_branch = no
 		}
 		if = {
 			limit = {
@@ -114,14 +204,11 @@ country_event = {
 					is_hired_as_advisor = yes
 				}
 			}
-			clr_country_flag = nightlands_grandplan
 			deactivate_advisor = ICE_nightlands
 		}
 		else = {
-			clr_country_flag = windoo_grandplan
 			deactivate_advisor = ICE_windoo
 		}
-		set_country_flag = valar_morgulis_grandplan
 		activate_advisor = ICE_valar_morgulis
 		mark_focus_tree_layout_dirty = yes
 		set_variable = {
@@ -130,14 +217,18 @@ country_event = {
 	}
 	option = {
 		#select ICE_windoo
-		name = vindigo.2.e
+		name = vindigo.2.f
 		ai_chance = {
 			factor = 100
 		}
 		trigger = {
 			ICE_windoo = {
 				is_hired_as_advisor = no
+				NOT = {
+					has_trait = wounded
+				}
 			}
+			ended_windoo_branch = no
 		}
 		if = {
 			limit = {
@@ -145,18 +236,390 @@ country_event = {
 					is_hired_as_advisor = yes
 				}
 			}
-			clr_country_flag = valar_morgulis_grandplan
 			deactivate_advisor = ICE_valar_morgulis
 		}
 		else = {
-			clr_country_flag = nightlands_grandplan
 			deactivate_advisor = ICE_nightlands
 		}
-		set_country_flag = windoo_grandplan
 		activate_advisor = ICE_windoo
 		mark_focus_tree_layout_dirty = yes
 		set_variable = {
 			vindigo_army_inspection_time = 0 
 		}
+	}
+}
+unit_leader_event = {
+	#grand plan theorist is wounded
+	id = vindigo.3
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event vindigo.3"
+		hidden_effect = {
+			FROM = {
+				add_timed_unit_leader_trait = {
+					trait = wounded
+					days = 30
+				}
+				if = {
+					limit = {
+						is_character = ICE_nightlands
+					}
+					ROOT = {
+						deactivate_advisor = ICE_nightlands
+					}
+				}
+				else_if = {
+					limit = {
+						is_character = ICE_valar_morgulis
+					}
+					ROOT = {
+						deactivate_advisor = ICE_valar_morgulis
+					}
+				}
+				else = {
+					ROOT = {
+						deactivate_advisor = ICE_windoo
+					}
+				}
+			}
+		}
+		set_variable = {
+			vindigo_army_inspection_time = 0 
+		}
+	}
+	title = vindigo.3.t
+	desc = vindigo.3.d
+	is_triggered_only = yes
+	timeout_days = 7
+	option = {
+		#we can`t change theorist
+		name = vindigo.3.a
+		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			OR = {
+				ICE_nightlands = {
+					has_trait = wounded
+				}
+				ended_nightlands_branch = yes
+			}
+			OR = {
+				ICE_valar_morgulis = {
+					has_trait = wounded
+				}
+				ended_valar_branch = yes
+			}
+			OR = {
+				ICE_windoo = {
+					has_trait = wounded
+				}
+				ended_windoo_branch = yes
+			}
+		}
+		effect_tooltip = {
+			FROM = {
+				add_timed_unit_leader_trait = {
+					trait = wounded
+					days = 30
+				}
+			}
+		}
+		add_timed_idea = {
+			idea = high_command_disorganization
+			days = 90
+		}
+	}
+	option = {
+		#select ICE_nightlands
+		name = vindigo.3.b
+		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			ICE_nightlands = {
+				NOT = {
+					has_trait = wounded
+				}
+			}
+			ended_nightlands_branch = no
+		}
+		effect_tooltip = {
+			FROM = {
+				add_timed_unit_leader_trait = {
+					trait = wounded
+					days = 30
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						is_character = ICE_valar_morgulis
+					}
+				}
+				deactivate_advisor = ICE_valar_morgulis
+			}
+			else = {
+				deactivate_advisor = ICE_windoo
+			}
+		}
+		set_variable = {
+			vindigo_army_inspection_time = 0 
+		}
+		activate_advisor = ICE_nightlands
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = {
+		#select ICE_valar_morgulis
+		name = vindigo.3.c
+		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			ICE_valar_morgulis = {
+				NOT = {
+					has_trait = wounded
+				}
+			}
+			ended_valar_branch = no
+		}
+		effect_tooltip = {
+			FROM = {
+				add_timed_unit_leader_trait = {
+					trait = wounded
+					days = 30
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						is_character = ICE_nightlands
+					}
+				}
+				deactivate_advisor = ICE_nightlands
+			}
+			else = {
+				deactivate_advisor = ICE_windoo
+			}
+		}
+		set_variable = {
+			vindigo_army_inspection_time = 0 
+		}
+		activate_advisor = ICE_valar_morgulis
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = {
+		#select ICE_windoo
+		name = vindigo.3.e
+		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			ICE_windoo = {
+				NOT = {
+					has_trait = wounded
+				}
+			}
+			ended_windoo_branch = no
+		}
+		effect_tooltip = {
+			FROM = {
+				add_timed_unit_leader_trait = {
+					trait = wounded
+					days = 30
+				}
+			}
+			if = {
+				limit = {
+					FROM = {
+						is_character = ICE_nightlands
+					}
+				}
+				deactivate_advisor = ICE_nightlands
+			}
+			else = {
+				deactivate_advisor = ICE_valar_morgulis
+			}
+		}
+		set_variable = {
+			vindigo_army_inspection_time = 0 
+		}
+		activate_advisor = ICE_windoo
+		mark_focus_tree_layout_dirty = yes
+	}
+}
+country_event = {
+	#grandplan developed
+	id = vindigo.4
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event vindigo.4"
+	}
+	title = vindigo.4.t
+	desc = {
+		trigger = {
+			ICE_nightlands = {
+				is_hired_as_advisor = yes
+			}
+		}
+		text = vindigo.4.d_nightlands
+	}
+	desc = {
+		trigger = {
+			ICE_valar_morgulis = {
+				is_hired_as_advisor = yes
+			}
+		}
+		text = vindigo.4.d_valar
+	}
+	desc = {
+		text = vindigo.4.d_windoo
+	}
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#everything is developed
+		name = vindigo.4.a
+		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			ended_nightlands_branch = yes
+			ended_valar_branch = yes
+			ended_windoo_branch = yes
+		}
+		if = {
+			limit = {
+				ICE_nightlands = {
+					is_hired_as_advisor = yes
+				}
+			}
+			set_can_be_fired_in_advisor_role = {
+				character = ICE_nightlands
+				value = yes
+			}
+		}
+		else_if = {
+			limit = {
+				ICE_valar_morgulis = {
+					is_hired_as_advisor = yes
+				}
+			}
+			set_can_be_fired_in_advisor_role = {
+				character = ICE_valar_morgulis
+				value = yes
+			}
+		}
+		else = {
+			set_can_be_fired_in_advisor_role = {
+				character = ICE_windoo
+				value = yes
+			}
+		}
+		army_experience = 50
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = {
+		#select ICE_nightlands
+		name = vindigo.4.b
+		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			ended_nightlands_branch = no
+		}
+		if = {
+			limit = {
+				ICE_valar_morgulis = {
+					is_hired_as_advisor = yes
+				}
+			}
+			set_can_be_fired_in_advisor_role = {
+				character = ICE_valar_morgulis
+				value = yes
+			}
+			deactivate_advisor = ICE_valar_morgulis
+		}
+		else = {
+			set_can_be_fired_in_advisor_role = {
+				character = ICE_windoo
+				value = yes
+			}
+			deactivate_advisor = ICE_windoo
+		}
+		set_variable = {
+			vindigo_army_inspection_time = 0 
+		}
+		army_experience = 25
+		activate_advisor = ICE_nightlands
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = {
+		#select ICE_valar_morgulis
+		name = vindigo.4.c
+		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			ended_valar_branch = no
+		}
+		if = {
+			limit = {
+				ICE_nightlands = {
+					is_hired_as_advisor = yes
+				}
+			}
+			set_can_be_fired_in_advisor_role = {
+				character = ICE_nightlands
+				value = yes
+			}
+			deactivate_advisor = ICE_nightlands
+		}
+		else = {
+			set_can_be_fired_in_advisor_role = {
+				character = ICE_windoo
+				value = yes
+			}
+			deactivate_advisor = ICE_windoo
+		}
+		set_variable = {
+			vindigo_army_inspection_time = 0 
+		}
+		army_experience = 25
+		activate_advisor = ICE_valar_morgulis
+		mark_focus_tree_layout_dirty = yes
+	}
+	option = {
+		#select ICE_windoo
+		name = vindigo.4.d
+		ai_chance = {
+			factor = 100
+		}
+		trigger = {
+			ended_windoo_branch = no
+		}
+		if = {
+			limit = {
+				ICE_nightlands = {
+					is_hired_as_advisor = yes
+				}
+			}
+			set_can_be_fired_in_advisor_role = {
+				character = ICE_nightlands
+				value = yes
+			}
+			deactivate_advisor = ICE_nightlands
+		}
+		else = {
+			set_can_be_fired_in_advisor_role = {
+				character = ICE_valar_morgulis
+				value = yes
+			}
+			deactivate_advisor = ICE_valar_morgulis
+		}
+		set_variable = {
+			vindigo_army_inspection_time = 0 
+		}
+		army_experience = 25
+		activate_advisor = ICE_windoo
+		mark_focus_tree_layout_dirty = yes
 	}
 }

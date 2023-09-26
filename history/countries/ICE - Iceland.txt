@@ -3,7 +3,6 @@ if = { #982 scenario script
 	limit = {
 		has_start_date < 1007.1.1
 	}
-	set_research_slots = 1
 	set_popularities = {
 		unholy = 100
 	}
@@ -56,6 +55,9 @@ if = { #982 scenario script
 		open_tomb_cooldown = 30
 	}
 	set_variable = {
+		open_tomb_eq_ammont = 200
+	}
+	set_variable = {
 		resurrect_fallen_cost = 300
 	}
 	set_variable = {
@@ -76,6 +78,9 @@ if = { #982 scenario script
 	}
 	set_variable = {
 		valar_morgulis_grandplan_lna = 0.1
+	}
+	set_variable = {
+		windoo_grandplan_pp = -0.05
 	}
 	#ICE army inspection events (time is new completed focuses - 1, because starts with 0)
 	set_variable = {

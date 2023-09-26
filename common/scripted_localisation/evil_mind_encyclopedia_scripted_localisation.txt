@@ -69,10 +69,10 @@ defined_text = {
 		trigger = {
 			has_start_date < 1050.1.1
 		}
-		localization_key = "[eme_1007_country_lore_tag_definition]"
+		localization_key = "[eme_1007_country_lore_tag_definition]" #no scripted text provided, to do in future scenarios
 	}
 	text = { #1050
-		localization_key = "[eme_1050_country_lore_tag_definition]"
+		localization_key = "[eme_1050_country_lore_tag_definition]" #no scripted text provided, to do in future scenarios
 	}
 }
 defined_text = {
@@ -103,5 +103,57 @@ defined_text = {
 	}
 	text = {
 		localization_key = eme_country_no_lore
+	}
+}
+defined_text = {
+	name = eme_country_mechanics_scenario_definition
+	text = { #982
+		trigger = {
+			has_start_date < 1007.1.1
+		}
+		localization_key = "[eme_982_country_mechanics_tag_definition]"
+	}
+	text = { #1007
+		trigger = {
+			has_start_date < 1050.1.1
+		}
+		localization_key = "[eme_1007_country_mechanics_tag_definition]" #no scripted text provided, to do in future scenarios
+	}
+	text = { #1050
+		localization_key = "[eme_1050_country_mechanics_tag_definition]" #no scripted text provided, to do in future scenarios
+	}
+}
+defined_text = {
+	name = eme_982_country_mechanics_tag_definition
+	text = {
+		trigger = {
+			original_tag = ICE
+		}
+		localization_key = eme_982_country_mechanics_ICE
+	}
+	text = {
+		localization_key = eme_country_no_mechanics
+	}
+}
+defined_text = {
+	name = get_global_mechanic_name
+	text = {
+		trigger = {
+			check_variable = {
+				i = 0
+			}
+		}
+		localization_key = global_mechanic_nuke_name
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				i = 1
+			}
+		}
+		localization_key = global_mechanic_sa_name
+	}
+	text = {
+		localization_key = global_mechanic_loc_error
 	}
 }
