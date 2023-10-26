@@ -356,25 +356,17 @@ guiTypes = {
 				quadTextureSprite = "GFX_blank"
 			}
 			verticalScrollbar = "right_vertical_slider"
-			containerWindowType = {
-				name = "global_mechanic_selection_grid_container"
+			gridBoxType = {
+				name = "global_mechanic_selection_grid"
 				size = {
 					width = 300
 					height = @global_mechanic_selection_grid_height
 				}
-				gridBoxType = {
-					name = "global_mechanic_selection_grid"
-					size = {
-						width = 300
-						height = @global_mechanic_selection_grid_height
-					}
-					slotsize = { 
-						width = 300 
-						height = 54 
-					}
-					#format = CENTER
-					add_horizontal = no
+				slotsize = { 
+					width = 300 
+					height = 54 
 				}
+				add_horizontal = no
 			}
 		}
 		containerWindowType = {

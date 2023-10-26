@@ -1177,7 +1177,36 @@ guiTypes = {
 				max_slots_horizontal = 1
 			}
 		}
+		containerWindowType = {
+			name = "production_MIOs"
+			position = { x= 20 y = 12}
+			clipping = no
+			size = { width=80 height=35 }
+			Orientation = UPPER_LEFT
 
+				background = {
+					name = "MIO_bg"
+					quadTextureSprite ="GFX_mini_bg"
+				}
+		
+			iconType = {
+				name ="MIO_icon"
+				spriteType = "GFX_industrial_manufacturer_icon"
+				position = { x= 7 y = 7 }
+				Orientation = "UPPER_LEFT"
+			}
+		
+			instantTextBoxType = {
+				name ="available_MIOs"
+				position = { x= 35 y = 8 }
+				font = "hoi_18mbs"
+				text = "999"
+				format = left
+				maxWidth = 30
+				maxHeight = 24
+				fixedsize = yes
+			}
+		}	
 		buttonType = {
 			name = "checkbox"
 			position = { x = -355 y = 14 }
@@ -1433,6 +1462,37 @@ guiTypes = {
 			}
 		}
 
+		containerWindowType = {
+			name = "production_MIOs"
+			position = { x= 20 y = 12}
+			clipping = no
+			size = { width=80 height=35 }
+			Orientation = UPPER_LEFT
+
+				background = {
+					name = "MIO_bg"
+					quadTextureSprite ="GFX_mini_bg"
+				}
+		
+			iconType = {
+				name ="MIO_icon"
+				spriteType = "GFX_industrial_manufacturer_icon"
+				position = { x= 5 y = 3 }
+				Orientation = "UPPER_LEFT"
+			}
+		
+			instantTextBoxType = {
+				name ="available_MIOs"
+				position = { x= 40 y = 8 }
+				font = "hoi_18mbs"
+				text = "999"
+				format = left
+				maxWidth = 30
+				maxHeight = 24
+				fixedsize = yes
+			}
+		}
+
 		buttonType = {
 			name = "checkbox"
 			position = { x = -355 y = 14 }
@@ -1587,6 +1647,11 @@ guiTypes = {
 			name = "Background"
 			quadTextureSprite ="GFX_production_item"
 			pdx_tooltip = "PRODUCTION_DRAG_N_DROP"
+		}
+		iconType = {
+			name = "has_mio_background"
+			quadTextureSprite ="GFX_production_item_has_mio"
+			alwaystransparent = yes
 		}
 
 		iconType = {
@@ -1901,7 +1966,10 @@ guiTypes = {
 			quadTextureSprite ="GFX_production_item_collapsed"
 			pdx_tooltip = "PRODUCTION_DRAG_N_DROP"
 		}
-
+		iconType = {
+			name = "has_mio_background"
+			quadTextureSprite ="GFX_production_item_has_mio"
+		}
 		iconType = {
 			name ="production_line_selected"
 			spriteType = "GFX_production_line_selected_collapsed"
@@ -2202,7 +2270,11 @@ guiTypes = {
 			name = "Background"
 			quadTextureSprite ="GFX_production_item"
 		}
-
+		iconType = {
+			name = "has_mio_background"
+			quadTextureSprite ="GFX_production_item_has_mio"
+			alwaystransparent = yes
+		}
 		iconType = {
 			name ="production_line_selected"
 			spriteType = "GFX_production_line_selected"
@@ -2479,7 +2551,11 @@ guiTypes = {
 			pdx_tooltip = "PRODUCTION_DRAG_N_DROP"
 			frame = 1
 		}
-
+		iconType = {
+			name = "has_mio_background"
+			quadTextureSprite ="GFX_production_item_has_mio"
+			alwaystransparent = yes
+		}
 		iconType = {
 			name ="production_line_selected"
 			spriteType = "GFX_production_line_selected"
@@ -2835,7 +2911,10 @@ guiTypes = {
 			pdx_tooltip = "PRODUCTION_DRAG_N_DROP"
 			frame = 1
 		}
-
+		iconType = {
+			name = "has_mio_background"
+			quadTextureSprite ="GFX_production_item_has_mio"
+		}
 		iconType = {
 			name ="production_line_selected"
 			spriteType = "GFX_production_line_selected_collapsed"
@@ -3143,7 +3222,11 @@ guiTypes = {
 			pdx_tooltip = "PRODUCTION_DRAG_N_DROP"
 			frame = 1
 		}
-
+		iconType = {
+			name = "has_mio_background"
+			quadTextureSprite ="GFX_production_item_has_mio"
+			alwaystransparent = yes
+		}
 		iconType = {
 			name ="production_line_selected"
 			spriteType = "GFX_production_line_selected"
@@ -3404,7 +3487,11 @@ guiTypes = {
 			pdx_tooltip = "PRODUCTION_DRAG_N_DROP"
 			frame = 1
 		}
-
+		iconType = {
+			name = "has_mio_background"
+			quadTextureSprite ="GFX_production_item_has_mio"
+			alwaystransparent = yes
+		}
 		iconType = {
 			name ="production_line_selected"
 			spriteType = "GFX_production_line_selected"
@@ -3665,7 +3752,10 @@ guiTypes = {
 			pdx_tooltip = "PRODUCTION_DRAG_N_DROP"
 			frame = 1
 		}
-
+		iconType = {
+			name = "has_mio_background"
+			quadTextureSprite ="GFX_production_item_has_mio"
+		}
 		iconType = {
 			name ="production_line_selected"
 			spriteType = "GFX_production_line_selected_collapsed"
@@ -3890,7 +3980,10 @@ guiTypes = {
 			quadTextureSprite ="GFX_production_item_collapsed"
 			pdx_tooltip = "PRODUCTION_DRAG_N_DROP"
 		}
-
+		iconType = {
+			name = "has_mio_background"
+			quadTextureSprite ="GFX_production_item_has_mio"
+		}
 		iconType = {
 			name ="production_line_selected"
 			spriteType = "GFX_production_line_selected_collapsed"
@@ -4091,7 +4184,11 @@ guiTypes = {
 			name = "Background"
 			quadTextureSprite ="GFX_production_item"
 		}
-
+		iconType = {
+			name = "has_mio_background"
+			quadTextureSprite ="GFX_production_item_has_mio"
+			alwaystransparent = yes
+		}
 
   
 		iconType = {

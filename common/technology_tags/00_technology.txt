@@ -218,6 +218,13 @@ technology_categories = {
 	cat_air_guns
 	cat_air_engine
 	cat_air_bombs
+
+
+
+	special_forces_doctrine
+	cat_mountaineers_doctrine
+	cat_marines_doctrine
+	cat_paratroopers_doctrine
 }
 
 technology_folders = {
@@ -285,6 +292,13 @@ technology_folders = {
 	}
 	air_doctrine_folder = {
 		ledger = air
+		doctrine = yes
+	}
+	special_forces_doctrine_folder = {
+		available = {
+			has_dlc = "Arms Against Tyranny"
+		}
+		ledger = hidden #For now
 		doctrine = yes
 	}
 	electronics_folder = {
