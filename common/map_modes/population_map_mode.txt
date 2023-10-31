@@ -73,7 +73,7 @@ scripted_map_modes = {
 						}
 						set_temp_variable = { population_percent = r }
 					}
-					clamp_variable = {
+					clamp_temp_variable = {
 						var = population_percent
 						min = 0
 						max = 1
