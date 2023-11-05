@@ -22,6 +22,12 @@ ideas = {
 					has_idea = disarmed_nation
 				}
 			}
+			allowed_to_remove = {
+				NOT = {
+					#windigo can never develop or change serio
+					has_country_leader_with_trait = country_leader_trait_windigo
+				}
+			}
 			modifier = {
 				conscription = 0.015
 			}
@@ -36,6 +42,12 @@ ideas = {
 				NOT = {
 					has_country_flag = demilitarized
 					has_country_flag = manpower_laws_blocked 
+				}
+			}
+			allowed_to_remove = {
+				NOT = {
+					#windigo can never develop or change serio
+					has_country_leader_with_trait = country_leader_trait_windigo
 				}
 			}
 			modifier = {
@@ -91,6 +103,12 @@ ideas = {
 					}
 				}
 			}
+			allowed_to_remove = {
+				NOT = {
+					#windigo can never develop or change serio
+					has_country_leader_with_trait = country_leader_trait_windigo
+				}
+			}
 			ai_will_do = {
 				factor = 1
 				modifier = {
@@ -144,6 +162,12 @@ ideas = {
 							surrender_progress > 0
 						}
 					}
+				}
+			}
+			allowed_to_remove = {
+				NOT = {
+					#windigo can never develop or change serio
+					has_country_leader_with_trait = country_leader_trait_windigo
 				}
 			}
 			ai_will_do = {
@@ -208,6 +232,12 @@ ideas = {
 					surrender_progress > 0.15
 				}
 			}
+			allowed_to_remove = {
+				NOT = {
+					#windigo can never develop or change serio
+					has_country_leader_with_trait = country_leader_trait_windigo
+				}
+			}
 			ai_will_do = {
 				factor = 1
 				modifier = {
@@ -265,6 +295,12 @@ ideas = {
 				OR = {
 					has_war_support > 0.85
 					surrender_progress > 0.25
+				}
+			}
+			allowed_to_remove = {
+				NOT = {
+					#windigo can never develop or change serio
+					has_country_leader_with_trait = country_leader_trait_windigo
 				}
 			}
 			ai_will_do = {

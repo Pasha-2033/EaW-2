@@ -1,19 +1,19 @@
-add_namespace = vindigo
+add_namespace = windigo
 #change picture everywhere
 country_event = {
 	#select theorist for grandplan
-	id = vindigo.1
+	id = windigo.1
 	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event vindigo.1"
+		log = "[GetDateText]: [Root.GetName]: event windigo.1"
 	}
-	title = vindigo.1.t
-	desc = vindigo.1.d
+	title = windigo.1.t
+	desc = windigo.1.d
 	picture = GFX_event_swarm #(to do) change
 	is_triggered_only = yes
 	timeout_days = 7
 	option = {
 		#select ICE_nightlands
-		name = vindigo.1.a
+		name = windigo.1.a
 		ai_chance = {
 			factor = 100
 		}
@@ -22,7 +22,7 @@ country_event = {
 	}
 	option = {
 		#select ICE_valar_morgulis
-		name = vindigo.1.b
+		name = windigo.1.b
 		ai_chance = {
 			factor = 100
 		}
@@ -31,7 +31,7 @@ country_event = {
 	}
 	option = {
 		#select ICE_windoo
-		name = vindigo.1.c
+		name = windigo.1.c
 		ai_chance = {
 			factor = 100
 		}
@@ -41,40 +41,40 @@ country_event = {
 }
 country_event = {
 	#inspection showed, that theorist is uneffective
-	id = vindigo.2
+	id = windigo.2
 	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event vindigo.2"
+		log = "[GetDateText]: [Root.GetName]: event windigo.2"
 	}
-	title = vindigo.2.t
-	desc = vindigo.2.d
+	title = windigo.2.t
+	desc = windigo.2.d
 	picture = GFX_event_swarm #(to do) change
 	is_triggered_only = yes
 	timeout_days = 7
 	option = {
 		#challange the insection results
-		name = vindigo.2.a
+		name = windigo.2.a
 		ai_chance = {
 			factor = 100
 		}
 		trigger = {
 			check_variable = {
-				vindigo_army_inspection_time < vindigo_army_ingnoring_inspection_time
+				windigo_army_inspection_time < windigo_army_ingnoring_inspection_time
 			}
 		}
 		add_to_variable = {
-			vindigo_army_inspection_time = 1
+			windigo_army_inspection_time = 1
 		}
 	}
 	option = {
 		#challange the insection results (but can`t change theorist)
-		name = vindigo.2.b
+		name = windigo.2.b
 		ai_chance = {
 			factor = 100
 		}
 		trigger = {
 			NOT = {
 				check_variable = {
-					vindigo_army_inspection_time < vindigo_army_ingnoring_inspection_time
+					windigo_army_inspection_time < windigo_army_ingnoring_inspection_time
 				}
 			}
 			if = {
@@ -130,15 +130,15 @@ country_event = {
 				}
 			}
 		}
-		#we have to use temp var separately from vindigo_army_inspection_time, because temp var calculated instatly for effect tooltip
+		#we have to use temp var separately from windigo_army_inspection_time, because temp var calculated instatly for effect tooltip
 		set_temp_variable = {
-			pp_cost = vindigo_army_ingnoring_inspection_time
+			pp_cost = windigo_army_ingnoring_inspection_time
 		}
 		add_to_temp_variable = {
 			pp_cost = 1
 		}
 		subtract_from_temp_variable = {
-			pp_cost = vindigo_army_inspection_time
+			pp_cost = windigo_army_inspection_time
 		}
 		subtract_from_temp_variable = {
 			pp_cost = 1
@@ -148,12 +148,12 @@ country_event = {
 		}
 		add_political_power = pp_cost
 		add_to_variable = {
-			vindigo_army_inspection_time = 1
+			windigo_army_inspection_time = 1
 		}
 	}
 	option = {
 		#select ICE_nightlands
-		name = vindigo.2.c
+		name = windigo.2.c
 		ai_chance = {
 			factor = 100
 		}
@@ -180,12 +180,12 @@ country_event = {
 		activate_advisor = ICE_nightlands
 		mark_focus_tree_layout_dirty = yes
 		set_variable = {
-			vindigo_army_inspection_time = 0 
+			windigo_army_inspection_time = 0 
 		}
 	}
 	option = {
 		#select ICE_valar_morgulis
-		name = vindigo.2.e
+		name = windigo.2.e
 		ai_chance = {
 			factor = 100
 		}
@@ -212,12 +212,12 @@ country_event = {
 		activate_advisor = ICE_valar_morgulis
 		mark_focus_tree_layout_dirty = yes
 		set_variable = {
-			vindigo_army_inspection_time = 0 
+			windigo_army_inspection_time = 0 
 		}
 	}
 	option = {
 		#select ICE_windoo
-		name = vindigo.2.f
+		name = windigo.2.f
 		ai_chance = {
 			factor = 100
 		}
@@ -244,15 +244,15 @@ country_event = {
 		activate_advisor = ICE_windoo
 		mark_focus_tree_layout_dirty = yes
 		set_variable = {
-			vindigo_army_inspection_time = 0 
+			windigo_army_inspection_time = 0 
 		}
 	}
 }
 unit_leader_event = {
 	#grand plan theorist is wounded
-	id = vindigo.3
+	id = windigo.3
 	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event vindigo.3"
+		log = "[GetDateText]: [Root.GetName]: event windigo.3"
 		hidden_effect = {
 			FROM = {
 				add_timed_unit_leader_trait = {
@@ -283,16 +283,16 @@ unit_leader_event = {
 			}
 		}
 		set_variable = {
-			vindigo_army_inspection_time = 0 
+			windigo_army_inspection_time = 0 
 		}
 	}
-	title = vindigo.3.t
-	desc = vindigo.3.d
+	title = windigo.3.t
+	desc = windigo.3.d
 	is_triggered_only = yes
 	timeout_days = 7
 	option = {
 		#we can`t change theorist
-		name = vindigo.3.a
+		name = windigo.3.a
 		ai_chance = {
 			factor = 100
 		}
@@ -331,7 +331,7 @@ unit_leader_event = {
 	}
 	option = {
 		#select ICE_nightlands
-		name = vindigo.3.b
+		name = windigo.3.b
 		ai_chance = {
 			factor = 100
 		}
@@ -363,14 +363,14 @@ unit_leader_event = {
 			}
 		}
 		set_variable = {
-			vindigo_army_inspection_time = 0 
+			windigo_army_inspection_time = 0 
 		}
 		activate_advisor = ICE_nightlands
 		mark_focus_tree_layout_dirty = yes
 	}
 	option = {
 		#select ICE_valar_morgulis
-		name = vindigo.3.c
+		name = windigo.3.c
 		ai_chance = {
 			factor = 100
 		}
@@ -402,14 +402,14 @@ unit_leader_event = {
 			}
 		}
 		set_variable = {
-			vindigo_army_inspection_time = 0 
+			windigo_army_inspection_time = 0 
 		}
 		activate_advisor = ICE_valar_morgulis
 		mark_focus_tree_layout_dirty = yes
 	}
 	option = {
 		#select ICE_windoo
-		name = vindigo.3.e
+		name = windigo.3.e
 		ai_chance = {
 			factor = 100
 		}
@@ -441,7 +441,7 @@ unit_leader_event = {
 			}
 		}
 		set_variable = {
-			vindigo_army_inspection_time = 0 
+			windigo_army_inspection_time = 0 
 		}
 		activate_advisor = ICE_windoo
 		mark_focus_tree_layout_dirty = yes
@@ -449,18 +449,18 @@ unit_leader_event = {
 }
 country_event = {
 	#grandplan developed
-	id = vindigo.4
+	id = windigo.4
 	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event vindigo.4"
+		log = "[GetDateText]: [Root.GetName]: event windigo.4"
 	}
-	title = vindigo.4.t
+	title = windigo.4.t
 	desc = {
 		trigger = {
 			ICE_nightlands = {
 				is_hired_as_advisor = yes
 			}
 		}
-		text = vindigo.4.d_nightlands
+		text = windigo.4.d_nightlands
 	}
 	desc = {
 		trigger = {
@@ -468,16 +468,16 @@ country_event = {
 				is_hired_as_advisor = yes
 			}
 		}
-		text = vindigo.4.d_valar
+		text = windigo.4.d_valar
 	}
 	desc = {
-		text = vindigo.4.d_windoo
+		text = windigo.4.d_windoo
 	}
 	picture = GFX_event_swarm #(to do) change
 	is_triggered_only = yes
 	option = {
 		#everything is developed
-		name = vindigo.4.a
+		name = windigo.4.a
 		ai_chance = {
 			factor = 100
 		}
@@ -519,7 +519,7 @@ country_event = {
 	}
 	option = {
 		#select ICE_nightlands
-		name = vindigo.4.b
+		name = windigo.4.b
 		ai_chance = {
 			factor = 100
 		}
@@ -546,7 +546,7 @@ country_event = {
 			deactivate_advisor = ICE_windoo
 		}
 		set_variable = {
-			vindigo_army_inspection_time = 0 
+			windigo_army_inspection_time = 0 
 		}
 		army_experience = 25
 		activate_advisor = ICE_nightlands
@@ -554,7 +554,7 @@ country_event = {
 	}
 	option = {
 		#select ICE_valar_morgulis
-		name = vindigo.4.c
+		name = windigo.4.c
 		ai_chance = {
 			factor = 100
 		}
@@ -581,7 +581,7 @@ country_event = {
 			deactivate_advisor = ICE_windoo
 		}
 		set_variable = {
-			vindigo_army_inspection_time = 0 
+			windigo_army_inspection_time = 0 
 		}
 		army_experience = 25
 		activate_advisor = ICE_valar_morgulis
@@ -589,7 +589,7 @@ country_event = {
 	}
 	option = {
 		#select ICE_windoo
-		name = vindigo.4.d
+		name = windigo.4.d
 		ai_chance = {
 			factor = 100
 		}
@@ -616,7 +616,7 @@ country_event = {
 			deactivate_advisor = ICE_valar_morgulis
 		}
 		set_variable = {
-			vindigo_army_inspection_time = 0 
+			windigo_army_inspection_time = 0 
 		}
 		army_experience = 25
 		activate_advisor = ICE_windoo

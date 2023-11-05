@@ -37,15 +37,15 @@ build_1_arms_factory_in_capital_or_somewhere = {
 	}
 }
 #ICE
-inspection_in_vindigo_army = {
+inspection_in_windigo_army = {
 	if = {
 		limit = {
 			OR = {
 				check_variable = {
-					vindigo_army_inspection_time = vindigo_army_max_inspection_time
+					windigo_army_inspection_time = windigo_army_max_inspection_time
 				}
 				check_variable = {
-					vindigo_army_inspection_time > vindigo_army_max_inspection_time
+					windigo_army_inspection_time > windigo_army_max_inspection_time
 				}
 			}
 			NOT = {
@@ -64,12 +64,12 @@ inspection_in_vindigo_army = {
 			}
 		}
 		country_event = {
-			id = vindigo.2
+			id = windigo.2
 		}
 	}
 	else = {
 		add_to_variable = {
-			vindigo_army_inspection_time = 1
+			windigo_army_inspection_time = 1
 		}
 	}
 }
@@ -79,7 +79,7 @@ end_of_nightlands_subbranch = {
 			ended_nightlands_branch = yes
 		}
 		country_event = {
-			id = vindigo.4
+			id = windigo.4
 		}
 	}
 	else = {
@@ -89,15 +89,15 @@ end_of_nightlands_subbranch = {
 					is_about_to_end_nightlands_branch = yes
 				}
 				country_event = {
-					id = vindigo.4
+					id = windigo.4
 				}
 			}
 			else = {
-				inspection_in_vindigo_army = yes
+				inspection_in_windigo_army = yes
 			}
 		}
 		hidden_effect = {
-			inspection_in_vindigo_army = yes
+			inspection_in_windigo_army = yes
 		}
 	}
 }
@@ -107,14 +107,14 @@ end_of_valar_subbranch = {
 			ended_valar_branch = yes
 		}
 		country_event = {
-			id = vindigo.4
+			id = windigo.4
 		}
 	}
 	else_if = {
 		limit = {
 			is_about_to_end_valar_branch = no
 		}
-		inspection_in_vindigo_army = yes
+		inspection_in_windigo_army = yes
 	}
 	else = {
 		effect_tooltip = {
@@ -123,15 +123,15 @@ end_of_valar_subbranch = {
 					is_about_to_end_valar_branch = yes
 				}
 				country_event = {
-					id = vindigo.4
+					id = windigo.4
 				}
 			}
 			else = {
-				inspection_in_vindigo_army = yes
+				inspection_in_windigo_army = yes
 			}
 		}
 		hidden_effect = {
-			inspection_in_vindigo_army = yes
+			inspection_in_windigo_army = yes
 		}
 	}
 }
@@ -141,7 +141,7 @@ end_of_windoo_subbranch = {
 			ended_windoo_branch = yes
 		}
 		country_event = {
-			id = vindigo.4
+			id = windigo.4
 		}
 	}
 	else = {
@@ -151,15 +151,15 @@ end_of_windoo_subbranch = {
 					is_about_to_end_windoo_branch = yes
 				}
 				country_event = {
-					id = vindigo.4
+					id = windigo.4
 				}
 			}
 			else = {
-				inspection_in_vindigo_army = yes
+				inspection_in_windigo_army = yes
 			}
 		}
 		hidden_effect = {
-			inspection_in_vindigo_army = yes
+			inspection_in_windigo_army = yes
 		}
 	}
 }

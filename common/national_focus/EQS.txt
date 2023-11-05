@@ -1,8 +1,8 @@
 #!gfx:interface\zzz_EQS.gfx
 #982 scenario
-#Vindigo time focuses
+#Windigo time focuses
 focus_tree = {
-	id = eqs_focus_tree_vidigo
+	id = eqs_focus_tree_widigo
 	country = {
 		base = 0
 		modifier = {
@@ -617,7 +617,25 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_ration_cards"
-			decrease_starvation_idea = yes
+			set_temp_variable = {
+				hf_food = harvest_failure_food
+			}
+			multiply_temp_variable = {
+				hf_food = -0.25
+			}
+			set_temp_variable = {
+				hf_supply = harvest_failure_supply
+			}
+			multiply_temp_variable = {
+				hf_supply = -0.15
+			}
+			add_to_variable = {
+				harvest_failure_food = hf_food
+			}
+			add_to_variable = {
+				harvest_failure_supply = hf_supply
+			}
+			custom_effect_tooltip = mulmul_harvest_failure_food_075_supply_085
 		}
 		search_filters = {
 			FOCUS_FILTER_SURPLUS_APPROPRIATION

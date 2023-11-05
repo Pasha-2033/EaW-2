@@ -986,48 +986,7 @@ decrease_valuta_idea = {
 		}
 	}
 }
-#Economic ideas
-#Starvation
-increase_starvation_idea = {
-	if = {
-		limit = {
-			has_idea = medium_starvation
-		}
-		swap_ideas = {
-			remove_idea = medium_starvation
-			add_idea = strong_starvation
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = light_starvation
-		}
-		swap_ideas = {
-			remove_idea = light_starvation
-			add_idea = medium_starvation
-		}
-	}
-}
-decrease_starvation_idea = {
-	if = {
-		limit = {
-			has_idea = strong_starvation
-		}
-		swap_ideas = {
-			remove_idea = strong_starvation
-			add_idea = medium_starvation
-		}
-	}
-	else_if = {
-		limit = {
-			has_idea = medium_starvation
-		}
-		swap_ideas = {
-			remove_idea = medium_starvation
-			add_idea = light_starvation
-		}
-	}
-}
+
 
 #Political ideas removal
 remove_harmony_spirits_effect = {}

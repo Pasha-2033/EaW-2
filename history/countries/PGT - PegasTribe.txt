@@ -22,7 +22,16 @@ add_ideas = {
 	partial_economic_mobilisation
 	pony_race
 	eqs_pgt_ept_scared_by_ice
-	strong_starvation
-	EPT_tribal_crisis
+	PGT_tribal_crisis
+}
+#harvest failure
+set_variable = {
+	harvest_failure_food = -600
+}
+set_variable = {
+	harvest_failure_supply = -0.15
+}
+add_dynamic_modifier = {
+	modifier = harvest_failure_modifier
 }
 set_oob = "982_PGT"
