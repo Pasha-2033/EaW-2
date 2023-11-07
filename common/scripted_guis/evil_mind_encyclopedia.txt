@@ -109,7 +109,7 @@ scripted_gui = {
 	encyclopedia_tab_1_container = {
 		context_type = player_context
 		window_name = "encyclopedia_tab_1_container"
-		parent_window_name = "evil_mind_encyclopedia_container"
+		parent_scripted_gui = "evil_mind_encyclopedia_container"
 		visible = {
 			check_variable = {
 				encyclopedia_tab = 1
@@ -170,7 +170,7 @@ scripted_gui = {
 	encyclopedia_tab_2_container = {
 		context_type = player_context
 		window_name = "encyclopedia_tab_2_container"
-		parent_window_name = "evil_mind_encyclopedia_container"
+		parent_scripted_gui = "evil_mind_encyclopedia_container"
 		visible = {
 			check_variable = {
 				encyclopedia_tab = 2
@@ -180,7 +180,7 @@ scripted_gui = {
 	encyclopedia_tab_3_container = {
 		context_type = player_context
 		window_name = "encyclopedia_tab_3_container"
-		parent_window_name = "evil_mind_encyclopedia_container"
+		parent_scripted_gui = "evil_mind_encyclopedia_container"
 		visible = {
 			check_variable = {
 				encyclopedia_tab = 3
@@ -228,31 +228,10 @@ scripted_gui = {
 	encyclopedia_tab_4_container = {
 		context_type = player_context
 		window_name = "encyclopedia_tab_4_container"
-		parent_window_name = "evil_mind_encyclopedia_container"
+		parent_scripted_gui = "evil_mind_encyclopedia_container"
 		visible = {
 			check_variable = {
 				encyclopedia_tab = 4
-			}
-		}
-	}
-	#tab dependand guis
-	encyclopedia_global_mechanic_nuke_container = {
-		context_type = player_context
-		window_name = "encyclopedia_global_mechanic_nuke_container"
-		parent_window_name = "global_mechanic_desc_container"
-		visible = {
-			check_variable = {
-				selected_global_mechanic = 0
-			}
-		}
-	}
-	encyclopedia_global_mechanic_sa_container = {
-		context_type = player_context
-		window_name = "encyclopedia_global_mechanic_sa_container"
-		parent_window_name = "global_mechanic_desc_container"
-		visible = {
-			check_variable = {
-				selected_global_mechanic = 1
 			}
 		}
 	}

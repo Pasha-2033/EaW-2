@@ -157,3 +157,25 @@ defined_text = {
 		localization_key = global_mechanic_loc_error
 	}
 }
+defined_text = {
+	name = get_selected_global_mechanic_desc
+	text = {
+		trigger = {
+			check_variable = {
+				selected_global_mechanic = 0
+			}
+		}
+		localization_key = global_mechanic_nuke_desc
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				selected_global_mechanic = 1
+			}
+		}
+		localization_key = global_mechanic_sa_desc
+	}
+	text = {
+		localization_key = global_mechanic_loc_error
+	}
+}
