@@ -1,4 +1,5 @@
 scripted_map_modes = {
+	#shows main country species
 	species_map_mode = {
 		top = {
 			type = none
@@ -99,16 +100,6 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							has_idea = buffalo_race
-						}
-					}
-					set_temp_variable = { red = 0.549 }
-					set_temp_variable = { green = 0.439 }
-					set_temp_variable = { blue = 0.333 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
 							has_idea = yak_race
 						}
 					}
@@ -119,19 +110,14 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							has_idea = polar_race
+							has_idea = bear_race
 						}
 					}
 					set_temp_variable = { red = 0.580 }
 					set_temp_variable = { green = 0.573 }
 					set_temp_variable = { blue = 0.643 }
 				}
-				else_if = {
-					limit = {
-						FROM = {
-							is_other_race = yes
-						}
-					}
+				else = {
 					set_temp_variable = { red = 0.901 }
 					set_temp_variable = { green = 0.916 }
 					set_temp_variable = { blue = 1.000 }

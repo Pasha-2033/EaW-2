@@ -186,15 +186,26 @@ guiTypes = {
 			instantTextboxType = {
 				name = "food_production"
 				position = { 
-					x = 340 
+					x = 280 
 					y = 41 
 				}
-				font = "hoi_18b"
+				font = "hoi_24header"
 				text = "food_production_value"
-				maxWidth = 170
-				maxHeight = 54
-				format = center
-				vertical_alignment = center
+				maxWidth = 250
+				maxHeight = 18
+				format = left
+			}
+			instantTextboxType = {
+				name = "food_consumtion"
+				position = { 
+					x = 280 
+					y = 61 
+				}
+				font = "hoi_24header"
+				text = "food_consumtion_value"
+				maxWidth = 250
+				maxHeight = 18
+				format = left
 			}
 		}
 		containerWindowType = {
@@ -255,7 +266,6 @@ guiTypes = {
 				maxHeight = 20
 				format = center	
 			}
-			#modifier icon (to do)
 			instantTextboxType = {
 				name = "civil_food_modifier_title"
 				position = { 
@@ -271,7 +281,7 @@ guiTypes = {
 			}
 			iconType = {
 				name = "civil_food_modifier_icon"
-				spriteType = "GFX_idea_agrarian_society"
+				spriteType = "GFX_surplus_appropriation_civil_modifier_picture"
 				position = { 
 					x = @food_modifier_icon_x 
 					y = 54 
@@ -306,7 +316,7 @@ guiTypes = {
 			}
 			iconType = {
 				name = "facilities_food_modifier_icon"
-				spriteType = "GFX_idea_agrarian_society"
+				spriteType = "GFX_surplus_appropriation_facilities_modifier_picture"
 				position = { 
 					x = @food_modifier_icon_x 
 					y = 154 
@@ -341,7 +351,7 @@ guiTypes = {
 			}
 			iconType = {
 				name = "army_food_modifier_icon"
-				spriteType = "GFX_idea_agrarian_society"
+				spriteType = "GFX_surplus_appropriation_army_modifier_picture"
 				position = { 
 					x = @food_modifier_icon_x 
 					y = 254

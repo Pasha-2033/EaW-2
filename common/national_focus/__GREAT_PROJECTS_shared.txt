@@ -1,0 +1,328 @@
+#evil mind greate projects (emgp)
+shared_focus = {
+	id = shared_focus_emgp_young_revolutionary_scientist
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	allow_branch = {
+		#for debug
+		#if = {
+		#	limit = {
+		#		tag = VES
+		#	}
+		#	has_completed_focus = ves_focus_evil_mind_found
+		#}
+		#has_character = VES_evil_mind
+	}
+	available = {
+		VES_evil_mind = {
+			is_hired_as_advisor = yes
+		}
+	}
+	ai_will_do = {
+		base = 200
+	}
+	x = 26
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_emgp_young_revolutionary_scientist"
+		add_popularity = {
+			ideology = technocracy
+			popularity = 0.05
+		}
+		increase_science_base_idea = yes
+	}
+	search_filters = {
+		FOCUS_FILTER_RESEARCH
+	}
+}
+shared_focus = {
+	id = shared_focus_emgp_new_scince_fields
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	available = {
+		VES_evil_mind = {
+			is_hired_as_advisor = yes
+		}
+	}
+	ai_will_do = {
+		base = 200
+	}
+	relative_position_id = shared_focus_emgp_young_revolutionary_scientist
+	prerequisite = {
+		focus = shared_focus_emgp_young_revolutionary_scientist
+	}
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_emgp_new_scince_fields"
+	}
+	search_filters = {
+		FOCUS_FILTER_RESEARCH
+	}
+}
+shared_focus = {
+	id = shared_focus_emgp_math_discipline
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	available = {
+		VES_evil_mind = {
+			is_hired_as_advisor = yes
+		}
+	}
+	ai_will_do = {
+		base = 200
+	}
+	relative_position_id = shared_focus_emgp_new_scince_fields
+	prerequisite = {
+		focus = shared_focus_emgp_new_scince_fields
+	}
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_emgp_math_discipline"
+	}
+	search_filters = {
+		FOCUS_FILTER_RESEARCH
+	}
+}
+shared_focus = {
+	id = shared_focus_emgp_physic_discipline
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	available = {
+		VES_evil_mind = {
+			is_hired_as_advisor = yes
+		}
+	}
+	ai_will_do = {
+		base = 200
+	}
+	relative_position_id = shared_focus_emgp_new_scince_fields
+	prerequisite = {
+		focus = shared_focus_emgp_new_scince_fields
+	}
+	x = -2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_emgp_physic_discipline"
+	}
+	search_filters = {
+		FOCUS_FILTER_RESEARCH
+	}
+}
+shared_focus = {
+	id = shared_focus_emgp_bio_discipline
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	available = {
+		VES_evil_mind = {
+			is_hired_as_advisor = yes
+		}
+	}
+	ai_will_do = {
+		base = 200
+	}
+	relative_position_id = shared_focus_emgp_new_scince_fields
+	prerequisite = {
+		focus = shared_focus_emgp_new_scince_fields
+	}
+	x = 2
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_emgp_bio_discipline"
+	}
+	search_filters = {
+		FOCUS_FILTER_RESEARCH
+	}
+}
+
+shared_focus = {
+	id = shared_focus_emgp_poject_SILO
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	available = {
+		VES_evil_mind = {
+			is_hired_as_advisor = yes
+		}
+	}
+	ai_will_do = {
+		base = 200
+	}
+	relative_position_id = shared_focus_emgp_young_revolutionary_scientist
+	prerequisite = {
+		focus = shared_focus_emgp_young_revolutionary_scientist
+	}
+	x = 4
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_emgp_poject_SILO"
+	}
+	search_filters = {
+		FOCUS_FILTER_GREAT_PROJECT
+	}
+}
+
+
+
+shared_focus = {
+	id = shared_focus_emgp_poject_MAGITRON
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	available = {
+		VES_evil_mind = {
+			is_hired_as_advisor = yes
+		}
+	}
+	ai_will_do = {
+		base = 200
+	}
+	relative_position_id = shared_focus_emgp_young_revolutionary_scientist
+	prerequisite = {
+		focus = shared_focus_emgp_young_revolutionary_scientist
+	}
+	x = -5
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_emgp_poject_MAGITRON"
+	}
+	search_filters = {
+		FOCUS_FILTER_GREAT_PROJECT
+	}
+}
+shared_focus = {
+	id = shared_focus_emgp_MAGITRON_under_capital
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	available = {
+		VES_evil_mind = {
+			is_hired_as_advisor = yes
+		}
+	}
+	ai_will_do = {
+		base = 200
+	}
+	relative_position_id = shared_focus_emgp_poject_MAGITRON
+	prerequisite = {
+		focus = shared_focus_emgp_poject_MAGITRON
+	}
+	mutually_exclusive = {
+		focus = shared_focus_emgp_MAGITRON_under_wasteland
+	}
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_emgp_MAGITRON_under_capital"
+	}
+	search_filters = {
+		FOCUS_FILTER_GREAT_PROJECT
+	}
+}
+shared_focus = {
+	id = shared_focus_emgp_MAGITRON_under_wasteland
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	available = {
+		VES_evil_mind = {
+			is_hired_as_advisor = yes
+		}
+	}
+	ai_will_do = {
+		base = 200
+	}
+	relative_position_id = shared_focus_emgp_poject_MAGITRON
+	prerequisite = {
+		focus = shared_focus_emgp_poject_MAGITRON
+	}
+	mutually_exclusive = {
+		focus = shared_focus_emgp_MAGITRON_under_capital
+	}
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_emgp_MAGITRON_under_wasteland"
+	}
+	search_filters = {
+		FOCUS_FILTER_GREAT_PROJECT
+	}
+}
+shared_focus = {
+	id = shared_focus_emgp_mobilise_economy_for_building
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	available = {
+		VES_evil_mind = {
+			is_hired_as_advisor = yes
+		}
+	}
+	ai_will_do = {
+		base = 200
+	}
+	relative_position_id = shared_focus_emgp_poject_MAGITRON
+	prerequisite = {
+		focus = shared_focus_emgp_MAGITRON_under_capital
+		focus = shared_focus_emgp_MAGITRON_under_wasteland
+	}
+	x = -1
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_emgp_mobilise_economy_for_building"
+	}
+	search_filters = {
+		FOCUS_FILTER_GREAT_PROJECT
+	}
+}
+shared_focus = {
+	id = shared_focus_emgp_mobilise_manpower_for_building
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	available = {
+		VES_evil_mind = {
+			is_hired_as_advisor = yes
+		}
+	}
+	ai_will_do = {
+		base = 200
+	}
+	relative_position_id = shared_focus_emgp_poject_MAGITRON
+	prerequisite = {
+		focus = shared_focus_emgp_MAGITRON_under_capital
+		focus = shared_focus_emgp_MAGITRON_under_wasteland
+	}
+	x = 1
+	y = 2
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_emgp_mobilise_manpower_for_building"
+	}
+	search_filters = {
+		FOCUS_FILTER_GREAT_PROJECT
+	}
+}
+
+
+shared_focus = {
+	id = shared_focus_emgp_military_academy
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	available = {
+		VES_evil_mind = {
+			is_hired_as_advisor = yes
+		}
+	}
+	ai_will_do = {
+		base = 200
+	}
+	relative_position_id = shared_focus_emgp_young_revolutionary_scientist
+	prerequisite = {
+		focus = shared_focus_emgp_young_revolutionary_scientist
+	}
+	x = -8
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus shared_focus_emgp_military_academy"
+	}
+	search_filters = {
+		#add
+	}
+}
+
+#hoofogon (hfgn)

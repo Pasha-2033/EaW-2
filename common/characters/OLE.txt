@@ -1,0 +1,249 @@
+characters = {
+	#982 scenario
+	#country leaders
+	OLE_982_edelhjord = {
+		name = OLE_982_edelhjord
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_982_EDELHJORD_DESC"
+			ideology = despotism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	OLE_982_goodhlev = {
+		name = OLE_982_goodhlev
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_982_GOODHLEV_DESC"
+			ideology = theocracy
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	OLE_982_staffan = {
+		name = OLE_982_staffan
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_982_STAFFAN_DESC"
+			ideology = oligarchism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	OLE_982_orzhan = {
+		name = OLE_982_orzhan
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_982_ORZHAN_DESC"
+			ideology = harmonic_libertarianism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	OLE_982_alan = {
+		#alan turing
+		name = OLE_982_alan
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_982_ALAN_TURING_DESC"
+			ideology = classic_technocracy
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		advisor = {
+			slot = theorist
+			idea_token = OLE_982_alan
+			allowed = {
+				original_tag = OLE
+			}
+			on_add = {
+				add_political_power = 100
+			}
+		}
+	}
+	OLE_982_stormgran = {
+		name = OLE_982_stormgran
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_982_ALAN_TURING_DESC"
+			ideology = ultramilitarism
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		field_marshal = {
+			#desc = OLE_982_stormgran_desc #to do (may be, may other too)
+			traits = {
+				country_leader_trait_militarism
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	#advisors
+	OLE_982_bjorson = {
+		name = OLE_982_bjorson
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = OLE_982_bjorson
+			traits = {
+				sun_of_ruins
+			}
+			allowed = {
+				original_tag = OLE
+			}
+			can_be_fired = no
+		}
+	}
+	#army leaders
+	OLE_982_scholz = {
+		name = OLE_982_scholz
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+			}
+		}
+		corps_commander={
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	OLE_982_nordstern = {
+		name = OLE_982_nordstern
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+			}
+		}
+		corps_commander={
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	OLE_982_bergson = {
+		name = OLE_982_bergson
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+			}
+		}
+		corps_commander={
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	OLE_982_haftorson = {
+		name = OLE_982_haftorson
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+			}
+		}
+		corps_commander={
+			traits = {
+				#deer_race_trait
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	OLE_982_yorgensen = {
+		name = OLE_982_yorgensen
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+			}
+		}
+		corps_commander={
+			traits = {
+				#deer_race_trait
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+	}
+	OLE_982_holmgrad = {
+		name = OLE_982_holmgrad
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+			}
+		}
+		navy_leader = {
+			traits = {
+				#deer_race_trait
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			maneuvering_skill = 1
+			coordination_skill = 1
+		}
+	}
+	OLE_982_lundberg = {
+		name = OLE_982_lundberg
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+			}
+		}
+		corps_commander={
+			traits = {
+				#deer_race_trait
+			}
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+		}
+		gender = female
+	}
+}

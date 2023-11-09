@@ -1,0 +1,27 @@
+ideas = {
+	country = {
+		MET_separatists = {
+			picture = ICE_winter_spirits #to do (change)
+			allowed = {
+				original_tag = MET
+			}
+			allowed_civil_war = {
+				tag = MET
+			}
+			modifier = {
+				compliance_growth = -1
+				resistance_growth = 0.1
+				local_org_regain = 0.1
+				org_loss_when_moving = -0.1
+				army_org_factor = 0.1
+			}
+			on_add = {
+				activate_mission = met_mission_rebelion_incoming
+			}
+			#do it via focus
+			#on_remove = {
+			#	remove_mission = met_mission_rebelion_incoming
+			#}
+		}
+	}
+}

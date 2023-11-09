@@ -1,0 +1,108 @@
+#medium_urbanization lvl has no effects!!!
+no_urbanization_to_urban = {
+	enable = { always = yes }
+	icon = GFX_modifiers_sabotaged_resource #change (to do)
+	mobilization_speed = -0.05
+	resistance_growth = -0.02
+	compliance_growth = -0.02
+	resistance_decay = 0.04
+	resistance_damage_to_garrison = -0.08
+	state_resources_factor = -0.1
+	urbanization_modifier_population_growth = u_population_growth
+}
+low_urbanization_to_urban = {
+	enable = { always = yes }
+	icon = GFX_modifiers_sabotaged_resource #change (to do)
+	resistance_growth = -0.01
+	compliance_growth = -0.01
+	resistance_decay = 0.02
+	resistance_damage_to_garrison = -0.05
+	state_resources_factor = -0.05
+	urbanization_modifier_population_growth = u_population_growth
+}
+high_urbanization_to_urban = {
+	enable = { always = yes }
+	icon = GFX_modifiers_sabotaged_resource #change (to do)
+	mobilization_speed = 0.05
+	resistance_growth = 0.06
+	compliance_growth = 0.05
+	resistance_decay = -0.04
+	resistance_damage_to_garrison = 0.2
+	state_resources_factor = 0.05
+	urbanization_modifier_population_growth = u_population_growth
+}
+very_high_urbanization_to_urban = {
+	enable = { always = yes }
+	icon = GFX_modifiers_sabotaged_resource #change (to do)
+	mobilization_speed = 0.1
+	resistance_growth = 0.1
+	compliance_growth = 0.1
+	resistance_decay = -0.06
+	resistance_damage_to_garrison = 0.25
+	state_resources_factor = 0.1
+	urbanization_modifier_population_growth = u_population_growth
+}
+
+
+no_urbanization_to_rural = {
+	enable = { always = yes }
+	icon = GFX_modifiers_sabotaged_resource #change (to do)
+	urbanization_modifier_population_growth = u_population_growth
+}
+low_urbanization_to_rural = {
+	enable = { always = yes }
+	icon = GFX_modifiers_sabotaged_resource #change (to do)
+	urbanization_modifier_population_growth = u_population_growth
+}
+high_urbanization_to_rural = {
+	enable = { always = yes }
+	icon = GFX_modifiers_sabotaged_resource #change (to do)
+	urbanization_modifier_population_growth = u_population_growth
+}
+very_high_urbanization_to_rural = {
+	enable = { always = yes }
+	icon = GFX_modifiers_sabotaged_resource #change (to do)
+	urbanization_modifier_population_growth = u_population_growth
+}
+
+
+
+
+
+
+
+
+
+
+no_urbanization_to_urban_target = {
+	enable = { always = yes }
+	urbanization_modifier_population_growth_target = -0.04
+}
+low_urbanization_to_urban_target = {
+	enable = { always = yes }
+	urbanization_modifier_population_growth_target = -0.02
+}
+high_urbanization_to_urban_target = {
+	enable = { always = yes }
+	urbanization_modifier_population_growth_target = 0.02
+}
+very_high_urbanization_to_urban_target = {
+	enable = { always = yes }
+	urbanization_modifier_population_growth_target = 0.04
+}
+no_urbanization_to_rural_target = {
+	enable = { always = yes }
+	urbanization_modifier_population_growth_target = 0.1
+}
+low_urbanization_to_rural_target = {
+	enable = { always = yes }
+	urbanization_modifier_population_growth_target = 0.05
+}
+high_urbanization_to_rural_target = {
+	enable = { always = yes }
+	urbanization_modifier_population_growth_target = -0.05
+}
+very_high_urbanization_to_rural_target = {
+	enable = { always = yes }
+	urbanization_modifier_population_growth_target = -0.1
+}

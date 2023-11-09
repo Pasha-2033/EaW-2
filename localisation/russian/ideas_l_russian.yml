@@ -1,7 +1,40 @@
 ﻿l_russian:
 #basic government ideas
-#mobilisation laws
+
+#categories
+government: "Правительство и законы"
+research_production: "Исследования и производство"
+military_staff: "Военное руководство"
+people_development_ideas: "Организация общества"
+economic_development_ideas: "Экономическая политика"
+
+#slot names
 mobilization_laws: "Законы о призыве"
+trade_laws: "Законы, регулирующие торговлю"
+economy: "Законы, регулирующие экономику"
+political_advisor: "Политический советник"
+tank_manufacturer: "Конструктор танков"
+naval_manufacturer: "Конструктор кораблей"
+aircraft_manufacturer: "Авиаконструктор"
+materiel_manufacturer: "Конструктор материального обеспечения"
+industry_concern: "Промышленный концерн"
+theorist: "Теоретик"
+army_chief: "Главнокомандующий армией"
+navy_chief: "Главнокомандующий ВМФ"
+air_chief: "Главнокомандующий ВВС"
+high_command: "Высшее военное командование"
+society_development_idea: "Законы об организации общеста"
+power_concentration: "Законы о централизации власти"
+urbanization: "Законы об урбанизации"
+illiteracy_level_idea: "Уровень неграмотности"
+poverty_level_idea: "Законы о бедности"
+race_pointer: "Главенствующая раса"
+science_base: "Научная база"
+monatisation: "Законы о монетизации"
+inflation: "Законы об инфляции"
+valuta: "Государственная валюта"
+
+#mobilisation laws
 disarmed_nation: "Обезаруженная нация"
 volunteer_only: "Только добровольцы"
 limited_conscription: "Ограниченный призыв"
@@ -10,7 +43,6 @@ service_by_requirement: "Обязательная сслужба"
 all_adults_serve: "Все взрослые проходят службу"
 scraping_the_barrel: "Всех под ружье"
 #trade laws
-trade_laws: "Законы о торговле"
 free_trade: "Свободная торговля"
 #uncontrolled_exports - see replace
 export_focus: "Приоритет на экспорт"
@@ -20,7 +52,6 @@ limited_imports: "Ограниченный импорт"
 import_focus: "Приоритет на импорт"
 uncontrolled_imports: "Бесконтрольный импорт"
 #economy
-economy: "Экономические законы"
 deep_isolation: "Глухая изоляция"
 isolation: "Изоляция"
 primitive_economy: "Примитивная экономика"
@@ -32,11 +63,7 @@ war_economy: "Военная экономика"
 tot_economic_mobilisation: "Всеобщая мобилизация"
 tot_militarisation: "Тотальная милитаризация"
 collectivized_society: "Коллективизированное производство"
-#political advisor
-political_advisor: "Политический советник"
 #society development
-society_idea: "§YОбщество§!"
-society_development_idea: "Законы об организации общеста"
 clockwerk_industry: "Технологические прорывы"
 modern_society: "Современное общество"
 outdated_industry1: "Поздняя индустриализация"
@@ -58,7 +85,6 @@ communal_society: "Коммунальное общество"
 religious_country: "Религиозная страна"
 detached_country: "Изолированное общество"
 #power concentration
-power_concentration: "Законы о централизации власти"
 anarchy: "Анархическое общество"
 low_power_concentration: "Низкий уровень централизации"
 medium_power_concentration: "Средний уровень централизации"
@@ -67,7 +93,6 @@ authoritarism: "Авторитаризм"
 commune: "Коммуна"
 harmonic_power_concentration: "Гармоничное распределение власти"
 #urbanization
-urbanization: "Законы об урбанизации"
 no_urbanization_control: "Без урбанизации"
 low_urbanization_focus: "Слабая урбанизация"
 medium_urbanization_focus: "Средняя урбанизация"
@@ -75,8 +100,6 @@ high_urbanization_focus: "Высокая урбанизация"
 very_high_urbanization_focus: "Крайне высокая урбанизация"
 
 #poverty
-poverty_idea: "§YБедность§!"
-poverty_level_idea: "Законы о бедности"
 no_poverty: "Отсутсвие бедности"
 poverty5: "Низкий уровень бедности"
 poverty4: "Ниже среднего уровень бедности"
@@ -86,17 +109,21 @@ poverty1: "Высокий уровень бедности"
 poverty: "Крайне высокий уровень бедности"
 
 #monatisation
-monatisation: "Законы о монетизации"
 only_goods: "Только товары"
 low_barter_focus: "Низкий уровень бартера"
 medium_barter_focus: "Средний уровень бартера"
 high_barter_focus: "Высокий уровень бартера"
 only_money: "Только деньги"
 #inflation
-inflation: "Законы об инфляции"
 uninflation: "Анифляция"
 no_inflation: "Нет инфляции"
 low_inflation: "Низкий уровень инфляции"
 medium_inflation: "Средний уровень инфляции"
 high_inflation: "Высокий уровень инфляции"
 hyperinflation: "Гиперинфляция"
+#valuta
+
+
+SPIRIT_ADD_IDEA: "§GЩелкните, и добавится $GROUP|H$§!"
+CHANGE_ADVISOR: "\nЭтого советника можно заменить, щелкнув здесь и выбрав замену."
+

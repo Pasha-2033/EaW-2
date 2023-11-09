@@ -2,7 +2,7 @@ init_division_limiter_counter = {
 	#change for code durability
 	if = {
 		limit = {
-			has_start_date < 982.1.2
+			has_start_date < 1007.1.1
 		}
 		set_variable = {
 			global.max_division_counter = 100 #change value
@@ -13,7 +13,7 @@ init_division_limiter_counter = {
 init_division_limiter_index = {
 	if = {
 		limit = {
-			has_start_date < 982.1.2
+			has_start_date < 1007.1.1
 		}
 		init_division_limiter_index_982 = yes
 	}

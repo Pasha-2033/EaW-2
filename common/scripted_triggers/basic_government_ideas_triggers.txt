@@ -11,9 +11,8 @@ can_have_multi_race = {
 			has_country_flag = has_minotaur_race
 			has_country_flag = has_penguin_race
 			has_country_flag = has_dragon_race
-			has_country_flag = has_buffalo_race
 			has_country_flag = has_yak_race
-			has_country_flag = has_polar_race
+			has_country_flag = has_bear_race
 		}
 		has_idea = multi_race
 	}
@@ -72,22 +71,16 @@ is_dragon_mylti = {
 		has_idea = dragon_race
 	}
 }
-is_buffalo_mylti = {
-	OR = {
-		has_idea = multi_race
-		has_idea = buffalo_race
-	}
-}
 is_yak_mylti = {
 	OR = {
 		has_idea = multi_race
 		has_idea = yak_race
 	}
 }
-is_polar_mylti = {
+is_bear_mylti = {
 	OR = {
 		has_idea = multi_race
-		has_idea = polar_race
+		has_idea = bear_race
 	}
 }
 #society

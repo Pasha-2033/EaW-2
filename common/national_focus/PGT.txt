@@ -1,0 +1,30 @@
+#Windigo time focuses
+focus_tree = {
+	id = pgt_focus_tree
+	country = {
+		base = 0
+		modifier = {
+			add = 100
+			tag = PGT
+		}
+	}
+	default = no
+	continuous_focus_position = {
+		x = 2700
+		y = 1350
+	}
+	shared_focus = eqs_pgt_ept_winter_spirits
+	focus = {
+		id = pgt_focus_start_pgt_tag
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 10
+		y = 0
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_start_pgt_tag"
+		}
+	}
+}

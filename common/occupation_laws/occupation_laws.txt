@@ -188,14 +188,6 @@ foreign_civilian_oversight = {
 				}
 			}
 		}
-		if = {
-			limit = {
-				original_tag = EQC
-			}
-			NOT = {
-				has_country_flag = is_maresoc
-			}
-		}
 	}
 
 	state_modifier = {
@@ -240,14 +232,6 @@ local_police_force_garrison = {
 					original_tag = DED
 					hidden_trigger = { original_tag = EWI }
 				}
-			}
-		}
-		if = {
-			limit = {
-				original_tag = EQC
-			}
-			NOT = {
-				has_country_flag = is_maresoc
 			}
 		}
 	}

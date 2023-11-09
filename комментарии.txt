@@ -5,7 +5,13 @@
 
 если при генерации юнитов их представление кубики - пропишите их gfx группу в common/countries
 
+
+чтобы отображать древо фокусов/что либо еще с иконками нужно в txt применить это: https://github.com/herbix/hoi4modutilities/wiki/Reference-custom-sprite_type
 >>> необходимо сделать:
+надо прописать 3д модель аграрного комплекса в gfx/entities в buildings.gfx и buildings.asset
+
+надо придумать как ограничить загрузку древа фокусов относительно годов (загрузка в modifier по start date не работает почему-то)
+
 actually_fix_weapon_techs - необходимо изменить/добавить, лежит в EAW_misc_effect
 необходимо сделать mark_focus_tree_layout_dirty = yes для каждой страны при:
 	событии захвата, и других геополитических действиях
@@ -15,13 +21,12 @@ actually_fix_weapon_techs - необходимо изменить/добавит
 добавить иконку маленькую в texticons для royal_guard
 difficulty_settings вместо рас в иконки установить флаги
 написать _desc для субидеологий
-has_changeling_gueen = #add fo CHN too
 
 написать триггер check_has_focus_tree_to_switch_to_<ideology> = yes для определения смен идеологии
 
 idea_effects - написать триггеры
 
-фокусы EDR есть какие-то ошибки при парсеринге, исправить
+фокусы DRG есть какие-то ошибки при парсеринге, исправить
 
 интегрировать и изменить diplomacy_scripted_triggers.txt смотреть в исходном моде
 
@@ -41,8 +46,11 @@ enable_building для ЖД
 
 сделать GFX_barrad_folder_icon и GFX_barrad_folder_tab в eaw_technologies, иначе в меню intel ledger принимает разные иконки
 
+перенести gfx из etat в технологии, сделать более четкую логику распределения файлов по технологиям
+
 !!!!!completely replaces removal_cost = -1 - use can_be_fired 
 !!!!!заменить enable_building в технологии для дорог - это ломает карту инфраструктуры
+!!!!!mark_focus_tree_layout_dirty = yes надо переместить из фокуса в hidden event, иначе будет неверная перезагрузка древа
 
 >>> оптимизация и читабельность:
 можно повысить читабельность (может даже оптимизацию, но это под вопросом) в subject_control_effects.txt, если 

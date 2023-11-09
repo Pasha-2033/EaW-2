@@ -1,0 +1,483 @@
+guiTypes = {
+	#inspired by original EaW welcome screen (reworked)
+	containerWindowType = {
+		name = "help_button_container"
+		orientation = UPPER_RIGHT
+		buttonType = {
+			name = "help_button"
+			position = {
+				x = -29
+				y = 34
+			}
+			quadTextureSprite = "GFX_help_button"
+			clicksound = click_ok
+			oversound = ui_menu_over
+			orientation = UPPER_RIGHT
+			pdx_tooltip = "HELP_MENU"
+		}
+	}
+	containerWindowType = {
+		name = "help_tab_container"
+		position = {
+			x = 127
+			y = 81 
+		}
+		show_position = { 
+			x = 85
+			y = 81
+		}
+		show_animation_type = decelerated
+		hide_animation_type = accelerated
+		animation_time = 450
+		Orientation = upper_right
+		clipping = no
+		size = { 
+			width = 42
+			height = 228
+		}
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_help_bar_bg"
+		}
+		buttonType = {
+			name = "open_eme"
+			quadTextureSprite = "GFX_eaw_welcome_screen_btn"
+			pdx_tooltip = "EAW_WS_OPEN_TT"
+			position = {
+				x = -34
+				y = 1
+			}
+			Orientation = "UPPER_RIGHT"
+			scale = 0.8
+		}
+		buttonType = {
+			name = "eaw_2_wiki"
+			quadTextureSprite = "eaw_wiki"
+			position = {
+				x = -36
+				y = 31
+			}
+			Orientation = "UPPER_RIGHT"
+			pdx_tooltip = "EAW_WIKI_OPEN"
+			web_link = "https://vk.com/e_hsa"
+			scale = 0.75
+		}
+		buttonType = {
+			name = "hoi_wiki"
+			quadTextureSprite ="homepage"
+			clicksound = click_default
+			pdx_tooltip = "MENU_BAR_GAME_WIKI"
+			web_link = ""
+			position = {
+				x = -36
+				y = 61
+			}
+			Orientation = "UPPER_RIGHT"
+			scale = 0.75
+		}
+	}
+	containerWindowType = {
+		name = "eme_toggle_container"
+		buttonType = {
+			name = "open_eme"
+			quadTextureSprite = "GFX_eaw_welcome_screen_btn"
+			pdx_tooltip = "EAW_WS_OPEN_TT"
+			position = {
+				x = 420
+				y = 3
+			}
+		}
+	}
+	containerWindowType = {
+		name = "evil_mind_encyclopedia_container"
+		size = {
+			width = 1167 
+			height = 675
+		}
+		origo = CENTER
+		orientation = CENTER
+		moveable = yes
+		show_sound = menu_open_window
+		hide_sound = menu_close_window
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_evil_mind_encyclopedia_container_bg"
+		}
+		instantTextboxType = {
+			name = "evil_mind_encyclopedia_header"
+			position = {
+				x = -265 
+				y = 23 
+			}
+			font = "hoi_24header"
+			text = "[encyclopedia_header_definition]"
+			orientation = center_up
+			format = center
+			maxWidth = 530
+			maxHeight = 30
+		}
+		buttonType = {
+			name = "encyclopedia_tab_1_off"
+			position = {
+				x = 58
+				y = 104
+			}
+			quadTextureSprite = "GFX_evil_mind_encyclopedia_tab_off"
+			font = "hoi_18mbs"
+			buttonText = "encyclopedia_tab_1"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "encyclopedia_tab_2_off"
+			position = {
+				x = 331
+				y = 104
+			}
+			quadTextureSprite = "GFX_evil_mind_encyclopedia_tab_off"
+			font = "hoi_18mbs"
+			buttonText = "encyclopedia_tab_2"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "encyclopedia_tab_3_off"
+			position = {
+				x = 596
+				y = 104
+			}
+			quadTextureSprite = "GFX_evil_mind_encyclopedia_tab_off"
+			font = "hoi_18mbs"
+			buttonText = "encyclopedia_tab_3"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "encyclopedia_tab_4_off"
+			position = {
+				x = 869
+				y = 104
+			}
+			quadTextureSprite = "GFX_evil_mind_encyclopedia_tab_off"
+			font = "hoi_18mbs"
+			buttonText = "encyclopedia_tab_4"
+			clicksound = click_default
+		}
+		buttonType = {
+			name = "close_button"
+			position = { 
+				x = -44 
+				y = 22 
+			}
+			quadTextureSprite = "GFX_closebutton"
+			shortcut = "ESCAPE"
+			Orientation = UPPER_RIGHT
+			clicksound = click_close
+			pdx_tooltip = "CLOSE"
+		}
+	}
+	#WARNING!!!
+	#for optimisation every "child" gui has:
+	# - button encyclopedia_tab_<n>_on (with no effect)
+	# - header of gui
+	# - main gui body
+	#these gui has xy = (0,0), this common organisation alow to reduse trigger number
+	containerWindowType = {
+		#responsible for country lore (with selection)
+		#selection can be by country in politics/intel ledger or in list
+		name = "encyclopedia_tab_1_container"
+		size = {
+			width = 100%
+			height = 100%
+		}
+		buttonType = {
+			name = "encyclopedia_tab_1_on"
+			position = {
+				x = 58
+				y = 104
+			}
+			quadTextureSprite = "GFX_evil_mind_encyclopedia_tab_on"
+			font = "hoi_18mbs"
+			buttonText = "encyclopedia_tab_1"
+		}
+		instantTextboxType = {
+			name = "tab_1_header"
+			position = {
+				x = -550
+				y = 160 
+			}
+			font = "hoi_24header"
+			text = "encyclopedia_tab_1_header"
+			Orientation = center_up
+			format = center
+			maxWidth = 1100
+			maxHeight = 30
+		}
+		containerWindowType = {
+			name = "country_lore_selection_container"
+			size = {
+				width = 310
+				height = 445
+			}
+			position = { 
+				x = 25
+				y = 200 
+			}
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_blank"
+			}
+			verticalScrollbar = "right_vertical_slider"
+			gridBoxType = {
+				name = "country_lore_selection_grid"
+				slotsize = { 
+					width = 300 
+					height = 54 
+				}
+				format = UPPER_LEFT
+				add_horizontal = no
+			}
+		}
+		containerWindowType = {
+			name = "country_lore_container"
+			size = {
+				width = 800
+				height = 445
+			}
+			position = {
+				x = 340
+				y = 200
+			}
+			instantTextboxType = {
+				name = "country_lore"
+				font = "hoi_18mbs"
+				text = "[eme_country_lore_scenario_definition]"
+				maxWidth = 800
+				maxHeight = 445
+				format = left
+				scrollbarType = standardtext_slider
+			}
+		}
+	}
+	containerWindowType = {
+		name = "encyclopedia_tab_2_container"
+		size = {
+			width = 100%
+			height = 100%
+		}
+		buttonType = {
+			name = "encyclopedia_tab_2_on"
+			position = {
+				x = 331
+				y = 104
+			}
+			quadTextureSprite = "GFX_evil_mind_encyclopedia_tab_on"
+			font = "hoi_18mbs"
+			buttonText = "encyclopedia_tab_2"
+		}
+		instantTextboxType = {
+			name = "tab_2_header"
+			position = {
+				x = -550
+				y = 160 
+			}
+			font = "hoi_24header"
+			text = "encyclopedia_tab_2_header"
+			Orientation = center_up
+			format = center
+			maxWidth = 1100
+			maxHeight = 30
+		}
+		instantTextboxType = {
+			name = "tab_2_mechanics_desc"
+			position = {
+				x = 27
+				y = 203 
+			}
+			font = "hoi_24header"
+			text = "[eme_country_mechanics_scenario_definition]"
+			maxWidth = 1097
+			maxHeight = 440
+			scrollbarType = standardtext_slider
+		}
+	}
+	containerWindowType = {
+		name = "encyclopedia_tab_3_container"
+		size = {
+			width = 100%
+			height = 100%
+		}
+		buttonType = {
+			name = "encyclopedia_tab_3_on"
+			position = {
+				x = 596
+				y = 104
+			}
+			quadTextureSprite = "GFX_evil_mind_encyclopedia_tab_on"
+			font = "hoi_18mbs"
+			buttonText = "encyclopedia_tab_3"
+		}
+		instantTextboxType = {
+			name = "tab_3_header"
+			position = {
+				x = -550
+				y = 160 
+			}
+			font = "hoi_24header"
+			text = "encyclopedia_tab_3_header"
+			Orientation = center_up
+			format = center
+			maxWidth = 1100
+			maxHeight = 30
+		}
+		containerWindowType = {
+			name = "global_mechanic_selection_container"
+			size = {
+				width = 310
+				height = 445
+			}
+			position = { 
+				x = 25
+				y = 200 
+			}
+			background = {
+				name = "background"
+				quadTextureSprite = "GFX_blank"
+			}
+			verticalScrollbar = "right_vertical_slider"
+			gridBoxType = {
+				name = "global_mechanic_selection_grid"
+				slotsize = { 
+					width = 300 
+					height = 54 
+				}
+				add_horizontal = no
+				format = UPPER_LEFT
+			}
+		}
+		instantTextBoxType = {
+			name = "global_mechanic_desc"
+			text = "[get_selected_global_mechanic_desc]"
+			position = {
+				x = 340
+				y = 200
+			}
+			font = "hoi_24header"
+			maxWidth = 800
+			maxHeight = 445
+			format = left
+			scrollbarType = standardtext_slider
+		}
+	}
+	containerWindowType = {
+		name = "encyclopedia_tab_4_container"
+		size = {
+			width = 100%
+			height = 100%
+		}
+		buttonType = {
+			name = "encyclopedia_tab_4_on"
+			position = {
+				x = 869
+				y = 104
+			}
+			quadTextureSprite = "GFX_evil_mind_encyclopedia_tab_on"
+			font = "hoi_18mbs"
+			buttonText = "encyclopedia_tab_4"
+		}
+		instantTextboxType = {
+			name = "tab_4_header"
+			position = {
+				x = -550
+				y = 160 
+			}
+			font = "hoi_24header"
+			text = "encyclopedia_tab_4_header"
+			Orientation = center_up
+			format = center
+			maxWidth = 1100
+			maxHeight = 30
+		}
+		instantTextboxType = {
+			name = "change_log"
+			position = {
+				x = -550
+				y = 200 
+			}
+			font = "hoi_18mbs"
+			text = "change_log"
+			Orientation = center_up
+			maxWidth = 1100
+			maxHeight = 445
+			format = left
+			scrollbarType = standardtext_slider
+		}
+	}
+	containerWindowType = {
+		name = "encyclopedia_country_selection"
+		size = {
+			width = 300
+			height = 54
+		}
+		buttonType = {
+			name = "encyclopedia_country_selection_button"
+			quadTextureSprite = "GFX_encyclopedia_country_selection_button"
+			font = "hoi_18mbs"
+		}
+		instantTextBoxType = {
+			name = "country_name"
+			position = {
+				x = 70
+				y = 2
+			}
+			text = "[eme_country_selection_text]"
+			font = "hoi_24header"
+			maxWidth = 200
+			maxHeight = 48
+			vertical_alignment = CENTER
+			fixedsize = yes
+			#alwaystransparent = yes
+		}
+		containerWindowType = {
+			name = "encyclopedia_country_selection_flag"
+			position = {
+				x = 20
+				y = 13
+			}
+			iconType = {
+				name = "encyclopedia_country_selection_icon"
+				spriteType = "GFX_flag_small2"
+				alwaystransparent = yes
+			}
+			iconType = {
+				name = "encyclopedia_country_selection_icon_majority"
+				spriteType = "GFX_major_country_flag_overlay"
+				alwaystransparent = yes
+			}
+		}
+	}
+	containerWindowType = {
+		name = "encyclopedia_global_mechanic_selection"
+		size = {
+			width = 300
+			height = 54
+		}
+		buttonType = {
+			name = "encyclopedia_global_mechanic_selection_button"
+			quadTextureSprite = "GFX_encyclopedia_country_selection_button"
+			font = "hoi_18mbs"
+		}
+		instantTextBoxType = {
+			name = "global_mechanic_name"
+			position = {
+				x = 13
+				y = 2
+			}
+			text = "[get_global_mechanic_name]"
+			font = "hoi_24header"
+			maxWidth = 260
+			maxHeight = 48
+			format = CENTER
+			vertical_alignment = CENTER
+			fixedsize = yes
+			#alwaystransparent = yes
+		}
+	}
+}

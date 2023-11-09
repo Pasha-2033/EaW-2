@@ -1,0 +1,85 @@
+add_namespace = ves_changelings
+#change picture everywhere
+country_event = {
+	#fate of evil mind
+	id = ves_changelings.1
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event ves_changelings.1"
+	}
+	title = ves_changelings.1.t
+	desc = {
+		trigger = {
+			tag = VES
+		}
+		text = ves_changelings.1.d_ves
+	}
+	desc = {
+		text = ves_changelings.1.d
+	}
+	picture = GFX_event_swarm
+	is_triggered_only = yes
+	option = {
+		#support him
+		name = ves_changelings.1.a
+		activate_advisor = VES_evil_mind
+		mark_focus_tree_layout_dirty = yes
+		every_country = {
+			limit = {
+				has_country_flag = evil_mind_expeled
+			}
+			clr_country_flag = evil_mind_expeled
+		}
+		ai_chance = {
+			factor = 95
+		}
+	}
+	option = {
+		#expel evil mind
+		name = ves_changelings.1.b
+		trigger = {
+			any_other_country = {
+				has_idea = changeling_race
+				NOT = {
+					has_country_flag = evil_mind_expeled
+				}
+			}
+		}
+		set_country_flag = evil_mind_expeled
+		random_other_country = {
+			limit = {
+				has_idea = changeling_race
+				NOT = {
+					has_country_flag = evil_mind_expeled
+				}
+			}
+			ROOT = {
+				VES_evil_mind = {
+					set_nationality = PREV.PREV
+				}
+			}
+			country_event = {
+				id = ves_changelings.1
+			}
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+	option = {
+		#kill evil mind
+		name = ves_changelings.1.c
+		retire_character = VES_evil_mind
+		every_country = {
+			limit = {
+				has_country_flag = evil_mind_expeled
+			}
+			clr_country_flag = evil_mind_expeled
+		}
+		set_variable = {
+			global.last_evil_mind_date = global.year
+		}
+		ai_chance = {
+			factor = 5
+		}
+	}
+}

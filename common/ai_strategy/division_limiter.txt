@@ -28,6 +28,7 @@ population_division_limiter = {
 		}
 	}
 	enable = {
+		always = yes
 		#write trigger
 	}
 	ai_strategy = {}
@@ -40,21 +41,20 @@ manpower_division_limiter = {
 		}
 	}
 	enable = {
+		always = yes
 		#write trigger
 	}
 	ai_strategy = {}
 }
-paratrooper_limit = {}
-marine_limit = {}
-mountaineer_limit = {}
+#paratrooper_limit = {}
+#marine_limit = {}
+#mountaineer_limit = {}
 
 
 division_limiter = {
 	allowed = {
-		NOT = {
-			tag = DED
-			tag = EWI
-		}
+		#temp
+		always = yes
 	}
 	enable = {
 		is_exempt_from_division_limit = no

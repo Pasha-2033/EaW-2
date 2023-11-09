@@ -12,9 +12,7 @@ focus_tree = {
 		x = 2700
 		y = 1350
 	}
-	shared_focus = shared_focus_changelings_start_canterlot_race
-	shared_focus = shared_focus_changelings_initiate_great_projects
-	shared_focus = shared_focus_changelings_polit_system_temp #temp
+	shared_focus = shared_focus_emgp_young_revolutionary_scientist
 	#uniqe VES focuses
 	focus = {
 		id = ves_focus_monarhy_guestion
@@ -28,19 +26,6 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_monarhy_guestion"
 			add_stability = 0.1
-			country_event = {
-				id = ves_changelings.1
-				days = 1
-			}
-			if = {
-				limit = {
-					has_completed_focus = ves_focus_evil_mind_found
-				}
-				country_event = {
-					id = ves_changelings.2
-					days = 2
-				}
-			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -76,10 +61,6 @@ focus_tree = {
 			add_popularity = {
 				ideology = neutrality
 				popularity = 0.15
-			}
-			country_event = {
-				id = ves_changelings.3
-				days = 1
 			}
 		}
 		search_filters = {
@@ -128,10 +109,6 @@ focus_tree = {
 				uses = 3
 				category = industry
 			}
-			country_event = {
-				id = ves_changelings.4
-				days = 1
-			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -165,10 +142,6 @@ focus_tree = {
 			add_popularity = {
 				ideology = militarism
 				popularity = 0.2
-			}
-			country_event = {
-				id = ves_changelings.5
-				days = 1
 			}
 		}
 		search_filters = {
@@ -216,10 +189,6 @@ focus_tree = {
 				ideology = radicalism
 				popularity = 0.05
 			}
-			country_event = {
-				id = ves_changelings.6
-				days = 1
-			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -251,10 +220,6 @@ focus_tree = {
 				ideology = harmony
 				popularity = 0.1
 			}
-			country_event = {
-				id = ves_changelings.7
-				days = 1
-			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -283,10 +248,6 @@ focus_tree = {
 			add_popularity = {
 				ideology = fascism
 				popularity = 0.2
-			}
-			country_event = {
-				id = ves_changelings.8
-				days = 1
 			}
 		}
 		search_filters = {
@@ -318,10 +279,6 @@ focus_tree = {
 				popularity = 0.4
 			}
 			add_manpower = 15000
-			country_event = {
-				id = ves_changelings.10
-				days = 1
-			}
 		}
 		search_filters = {
 			FOCUS_FILTER_STABILITY
@@ -357,10 +314,6 @@ focus_tree = {
 				ideology = technocracy
 				popularity = 0.3
 			}
-			country_event = {
-				id = ves_changelings.11
-				days = 1
-			}
 		}
 		search_filters = {
 			FOCUS_FILTER_WAR_SUPPORT
@@ -386,9 +339,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_technogical_union"
 			add_stability = 0.3
-			EEQ = {
+			EQS = {
 				country_event = {
-					id = eequestria.1
+					id = equestria.1
 					days = 1
 				}
 			}
@@ -414,10 +367,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_equus_technounion"
 			add_stability = 0.1
 			add_research_slot = 1
-			EEQ = {
+			EQS = {
 				add_stability = 0.05
 			}
-			ESG = {
+			STG = {
 				add_stability = 0.05
 			}
 		}
@@ -483,10 +436,6 @@ focus_tree = {
 			if = {
 				limit = {
 					has_completed_focus = ves_focus_evil_mind_found
-				}
-				country_event = {
-					id = ves_changelings.9
-					days = 1
 				}
 			}
 		}
@@ -567,11 +516,6 @@ focus_tree = {
 		prerequisite = {
 			focus = ves_focus_equus_technounion
 		}
-		available = {
-			NOT = {
-				has_completed_focus = shared_focus_changelings_attack_canterlot
-			}
-		}
 		ai_will_do = {
 			factor = 200
 		}
@@ -630,7 +574,7 @@ focus_tree = {
 			focus = ves_focus_thorax_birthday
 		}
 		available = {
-			ECR = {
+			CRY = {
 				exists = yes
 			}
 		}
@@ -654,7 +598,7 @@ focus_tree = {
 			focus = ves_focus_thorax_in_cry
 		}
 		available = {
-			EEQ = {
+			EQS = {
 				exists = yes
 			}
 		}
@@ -1153,10 +1097,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_evil_mind_found"
 			hidden_effect = {
-				mark_focus_tree_layout_dirty = yes
 				if = {
 					limit = {
-						ECR = {
+						CRY = {
 							exists = no
 						}
 					}
@@ -1164,6 +1107,9 @@ focus_tree = {
 						id = null_magic_event.1
 					}
 				}
+			}
+			country_event = {
+				id = ves_changelings.1
 			}
 		}
 		search_filters = {

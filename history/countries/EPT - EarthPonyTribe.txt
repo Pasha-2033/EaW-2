@@ -12,9 +12,24 @@ set_popularities = {
 	democratic = 33
 	harmony = 41
 }
+recruit_character = EPT_copperhoof
+recruit_character = EPT_national_defence_council
+recruit_character = EPT_applejack
 add_ideas = {
+	partial_economic_mobilisation
 	pony_race
-	eeq_pgt_ept_scared_by_ice
+	eqs_pgt_ept_scared_by_ice
+	EPT_tribal_crisis
+}
+#harvest failure
+set_variable = {
+	harvest_failure_food = -400
+}
+set_variable = {
+	harvest_failure_supply = -0.1
+}
+add_dynamic_modifier = {
+	modifier = harvest_failure_modifier
 }
 982.1.1 = {
 	set_variable = {

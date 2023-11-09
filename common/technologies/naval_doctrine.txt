@@ -400,15 +400,6 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = -1 y = 12 }
 		}
-		on_research_complete = {
-			hidden_effect = {
-				set_technology = {
-					finished_navy_doctrine_left = 1
-					finished_navy_doctrine_center = 1
-					popup = no
-				}
-			}
-		}
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -844,14 +835,6 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 2 y = 8 }
 		}
-		on_research_complete = {
-			hidden_effect = {
-				set_technology = {
-					finished_navy_doctrine_right = 1
-					popup = no
-				}
-			}
-		}
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -1252,14 +1235,6 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 2 y = 10 }
 		}
-		on_research_complete = {
-			hidden_effect = {
-				set_technology = {
-					finished_navy_doctrine_right = 1
-					popup = no
-				}
-			}
-		}
 		ai_will_do = {
 			factor = 1
 			
@@ -1543,15 +1518,6 @@ technologies = {
 		folder = {
 			name = naval_doctrine_folder
 			position = { x = -1 y = 10 }
-		}
-		on_research_complete = {
-			hidden_effect = {
-				set_technology = {
-					finished_navy_doctrine_left = 1
-					finished_navy_doctrine_center = 1
-					popup = no
-				}
-			}
 		}
 		ai_will_do = {
 			factor = 1
@@ -2111,14 +2077,6 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 2 y = 10 }
 		}
-		on_research_complete = {
-			hidden_effect = {
-				set_technology = {
-					finished_navy_doctrine_right = 1
-					popup = no
-				}
-			}
-		}
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -2384,14 +2342,6 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = 0 y = 8 }
 		}
-		on_research_complete = {
-			hidden_effect = {
-				set_technology = {
-					finished_navy_doctrine_center = 1
-					popup = no
-				}
-			}
-		}
 		ai_will_do = {
 			factor = 1
 			modifier = {
@@ -2626,14 +2576,6 @@ technologies = {
 			name = naval_doctrine_folder
 			position = { x = -2 y = 8 }
 		}
-		on_research_complete = {
-			hidden_effect = {
-				set_technology = {
-					finished_navy_doctrine_left = 1
-					popup = no
-				}
-			}
-		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -2700,11 +2642,6 @@ technologies = {
 		path = {
 			leads_to_tech = cv_support_role
 			research_cost_coeff = 1
-		}
-		dependencies = {
-			finished_navy_doctrine_left = 1
-			finished_navy_doctrine_center = 1
-			finished_navy_doctrine_right = 1
 		}
 		xp_research_type = navy
 		xp_unlock_cost = 100

@@ -1,0 +1,642 @@
+#982 scenario
+focus_tree = {
+	id = olr_focus_tree
+	country = {
+		base = 0
+		modifier = {
+			add = 100
+			tag = OLR
+		}
+	}
+	default = no
+	continuous_focus_position = {
+		x = 2700
+		y = 1350
+	}
+	focus = {
+		id = olr_focus_down_with_the_king
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 10
+		y = 0
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus olr_focus_down_with_the_king"
+		}
+	}
+	focus = {
+		id = olr_focus_peasant_council
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = olr_focus_down_with_the_king
+		prerequisite = {
+			focus = olr_focus_down_with_the_king
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus olr_focus_peasant_council"
+			promote_character = OLR_982_peasant_council
+			hidden_effect = {
+				retire_character = OLR_982_unorganised_revolutioneers
+			}
+		}
+	}
+	focus = {
+		id = olr_focus_extend_peasant_council
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = olr_focus_peasant_council
+		prerequisite = {
+			focus = olr_focus_peasant_council
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus olr_focus_extend_peasant_council"
+		}
+	}
+	focus = {
+		id = olr_focus_council_defines_economy
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = olr_focus_extend_peasant_council
+		prerequisite = {
+			focus = olr_focus_extend_peasant_council
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus olr_focus_council_defines_economy"
+			mark_focus_tree_layout_dirty = yes
+			custom_effect_tooltip = unlock_economic_branch_tt
+		}
+	}
+	focus = {
+		id = olr_focus_council_defines_politics
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = olr_focus_extend_peasant_council
+		prerequisite = {
+			focus = olr_focus_extend_peasant_council
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus olr_focus_council_defines_politics"
+			mark_focus_tree_layout_dirty = yes
+			custom_effect_tooltip = unlock_politic_branch_tt
+		}
+	}
+	focus = {
+		id = olr_focus_council_defines_social_laws
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = olr_focus_extend_peasant_council
+		prerequisite = {
+			focus = olr_focus_extend_peasant_council
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus olr_focus_council_defines_social_laws"
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	focus = {
+		id = olr_focus_voluntary_education
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = olr_focus_council_defines_social_laws
+		prerequisite = {
+			focus = olr_focus_council_defines_social_laws
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus olr_focus_voluntary_education"
+			add_research_slot = 1
+		}
+	}
+	#economy
+	#food
+	focus = {
+		id = olr_focus_solve_supply_problems
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 15
+		y = 0
+		allow_branch = {
+			#has_completed_focus = olr_focus_down_with_the_king
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus olr_focus_solve_supply_problems"
+		}
+	}
+	focus = {
+		id = olr_focus_risk_farming_zones
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = olr_focus_solve_supply_problems
+		prerequisite = {
+			focus = olr_focus_solve_supply_problems
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus olr_focus_risk_farming_zones"
+		}
+	}
+	focus = {
+		id = olr_focus_build_new_farms
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		available = {
+			has_full_control_of_state = 203
+		}
+		relative_position_id = olr_focus_risk_farming_zones
+		prerequisite = {
+			focus = olr_focus_risk_farming_zones
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus olr_focus_build_new_farms"
+			203 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = agrarian_complex
+					level = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = olr_focus_open_food_silos
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = olr_focus_solve_supply_problems
+		prerequisite = {
+			focus = olr_focus_solve_supply_problems
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus olr_focus_open_food_silos"
+			add_to_variable = {
+				var = food_storage_value
+				value = 10
+				tooltip = add_10_food_to_storage_tt
+			}
+		}
+	}
+	focus = {
+		id = olr_focus_upgrade_food_storage
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		available = {
+			has_full_control_of_state = 203
+		}
+		relative_position_id = olr_focus_open_food_silos
+		prerequisite = {
+			focus = olr_focus_open_food_silos
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus olr_focus_upgrade_food_storage"
+			203 = {
+				add_building_construction = {
+					type = supply_node
+					level = 1
+					province = 4270
+				}
+			}
+		}
+	}
+	#production
+	focus = {
+		id = olr_focus_first_manufacture
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 20
+		y = 0
+		allow_branch = {
+			#has_completed_focus = olr_focus_down_with_the_king
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus  olr_focus_first_manufacture"
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = olr_focus_first_dockyard
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -2
+		y = 1
+		available = {
+			any_owned_state = {
+				is_coastal = yes
+				is_fully_controlled_by = ROOT
+			}
+		}
+		relative_position_id = olr_focus_first_manufacture
+		prerequisite = {
+			focus = olr_focus_first_manufacture
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus olr_focus_first_dockyard"
+			if = {
+				limit = {
+					capital_scope = {
+						is_coastal = yes
+						is_fully_controlled_by = ROOT
+					}
+				}
+				capital_scope = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+					}
+				}
+			}
+			else = {
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						is_fully_controlled_by = ROOT
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = olr_focus_first_military_production
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = olr_focus_first_manufacture
+		prerequisite = {
+			focus = olr_focus_first_manufacture
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus olr_focus_first_military_production"
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+			}
+		}
+	}
+	focus = {
+		id = olr_focus_manti_railroad
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		available = {
+			num_of_civilian_factories > 5
+			has_full_control_of_state = 201
+			has_full_control_of_state = 203
+			has_full_control_of_state = 213
+		}
+		relative_position_id = olr_focus_first_manufacture
+		prerequisite = {
+			focus = olr_focus_first_manufacture
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus olr_focus_manti_railroad"
+			build_railway = {
+				level = 1
+				path = {
+					11555
+					9540
+					9664
+					12577
+					3733
+				}
+			}
+		}
+	}
+	focus = {
+		id = olr_focus_totoal_nationalisation
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -1
+		y = 2
+		relative_position_id = olr_focus_first_manufacture
+		prerequisite = {
+			focus = olr_focus_first_manufacture
+		}
+		mutually_exclusive = {
+			focus = olr_focus_allow_investments
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus olr_focus_totoal_nationalisation"
+		}
+	}
+	focus = {
+		id = olr_focus_allow_investments
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 1
+		y = 2
+		relative_position_id = olr_focus_first_manufacture
+		prerequisite = {
+			focus = olr_focus_first_manufacture
+		}
+		mutually_exclusive = {
+			focus = olr_focus_totoal_nationalisation
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus olr_focus_allow_investments"
+		}
+	}
+	focus = {
+		id = olr_focus_capital_is_economic_center
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = olr_focus_totoal_nationalisation
+		prerequisite = {
+			focus = olr_focus_totoal_nationalisation
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus olr_focus_allow_investments"
+			capital_scope = {
+				if = {
+					limit = {
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 1
+					}
+				}
+				else = {
+					add_extra_state_shared_building_slots = 2
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+				}
+			}
+		}
+	}
+	#defence against OLE (main enemy and main force in former kindom)
+	focus = {
+		id = olr_focus_repair_units
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 25
+		y = 0
+		allow_branch = {
+			#to do
+			#has_completed_focus = 
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus olr_focus_repair_units"
+		}
+	}
+	focus = {
+		id = olr_focus_improve_trench_standarts
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = olr_focus_repair_units
+		prerequisite = {
+			focus = olr_focus_repair_units
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus olr_focus_improve_trench_standarts"
+		}
+	}
+	focus = {
+		id = olr_focus_increase_conscription
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = olr_focus_repair_units
+		prerequisite = {
+			focus = olr_focus_repair_units
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus olr_focus_increase_conscription"
+			increase_mobilization_law_idea = yes
+		}
+	}
+	focus = {
+		id = olr_focus_manti_stronghold
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 30
+		y = 0
+		allow_branch = {
+			#to do
+			#has_completed_focus = 
+		}
+		available = {
+			controls_state = 213
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus olr_focus_manti_stronghold"
+			213 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 11555
+				}
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 11555
+				}
+			}
+		}
+	}
+	focus = {
+		id = olr_focus_new_castles
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -1
+		y = 1
+		available = {
+			has_full_control_of_state = 203
+			has_full_control_of_state = 201
+		}
+		relative_position_id = olr_focus_manti_stronghold
+		prerequisite = {
+			focus = olr_focus_manti_stronghold
+		}
+		mutually_exclusive = {
+			focus = olr_focus_improve_manti_defence_system
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus olr_focus_new_castles"
+			201 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 9758
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 9786
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 11740
+				}
+			}
+			203 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 1436
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 4345
+				}
+			}
+		}
+	}
+	focus = {
+		id = olr_focus_improve_manti_defence_system
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 1
+		y = 1
+		available = {
+			has_full_control_of_state = 213
+		}
+		relative_position_id = olr_focus_manti_stronghold
+		prerequisite = {
+			focus = olr_focus_manti_stronghold
+		}
+		mutually_exclusive = {
+			focus = olr_focus_new_castles
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus olr_focus_improve_manti_defence_system"
+			213 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11555
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 9540
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 510
+				}
+			}
+		}
+	}
+}

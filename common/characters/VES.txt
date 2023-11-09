@@ -19,13 +19,14 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "GFX_portrait_marshal_unknown"
+				#small
 			}
 			army = {
 				large = "GFX_portrait_marshal_unknown"
 			}
 		}
 		country_leader = {
-			ideology = SoUR
+			ideology = sour
 			traits = {
 				warmonger
 				experimental_genius
@@ -81,21 +82,28 @@ characters = {
 			planning_skill = 5
 			logistics_skill = 5
 			legacy_id = 600
-			desc = CHN_DESC_TRIMMEL
+			desc = CHN_DESC_TRIMMEL #to do (change)
 		}
 		advisor = {
 			slot = theorist
-			idea_token = idea_evil_mind_theorist
+			idea_token = VES_evil_mind
 			ledger = army
 			cost = 150
 			allowed = {
 				original_tag = VES
 			}
 			available = {
-				NOT = { has_idea = idea_evil_mind_commander }
+				NOT = {
+					has_country_leader = {
+						character = VES_evil_mind
+						ruling_only = yes
+					}
+				}
 			}
 			traits = {
 				blitzkrieg_theorist
+				#add race research speed
+				#add common research speed
 			}
 		}
 	}
@@ -155,7 +163,7 @@ characters = {
 		}
 
 		country_leader={
-			ideology=leninism
+			ideology=marxism
 			expire="1965.1.1.1"
 			id= 6
 		}

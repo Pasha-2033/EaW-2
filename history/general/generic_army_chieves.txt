@@ -7,13 +7,11 @@
 every_possible_country = {
 	limit = {
 		NOT = {
-			OR = {
-				has_country_flag = no_generic_army_chief_off
-				has_custom_army_chieves = yes
-				has_allowed_idea_with_traits = {
-					idea = army_chief_offensive_1
-					characters = yes
-				}
+			has_country_flag = no_generic_army_chief_off
+			has_custom_army_chieves = yes
+			has_allowed_idea_with_traits = {
+				idea = army_chief_offensive_1
+				characters = yes
 			}
 		}
 	}
@@ -36,13 +34,11 @@ every_possible_country = {
 every_possible_country = {
 	limit = {
 		NOT = {
-			OR = {
-				has_country_flag = no_generic_army_chief_def
-				has_custom_army_chieves = yes
-				has_allowed_idea_with_traits = {
-					idea = army_chief_defensive_1
-					characters = yes
-				}
+			has_country_flag = no_generic_army_chief_def
+			has_custom_army_chieves = yes
+			has_allowed_idea_with_traits = {
+				idea = army_chief_defensive_1
+				characters = yes
 			}
 		}
 	}

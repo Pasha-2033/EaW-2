@@ -3,22 +3,28 @@ bookmarks = {
 		#еще не модифицировался
 		name = "GATHERING_STORM_NAME"
 		desc = "GATHERING_STORM_DESC"
-		date = 1007.1.1.12
+		date = 1007.1.1
 		picture = "GFX_select_date_1936"
-		default_country = "NEQ"
+		default_country = "EQS"
 		default = no
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }
 		}
-		"NEQ" = {
-			history = "NEQ_GATHERING_STORM_DESC"
+		"EQS" = {
+			history = "EQS_GATHERING_STORM_DESC"
 			ideology = harmony
 			ideas = {}
 			focuses = {}
 		}
-		"UCH" = {
-			history = "UCH_GATHERING_STORM_DESC"
+		"STG" = {
+			history = "STG_GATHERING_STORM_DESC"
+			ideology = communism
+			ideas = {}
+			focuses = {}
+		}
+		"VES" = {
+			history = "VES_GATHERING_STORM_DESC"
 			ideology = fascism
 			ideas = {}
 			focuses = {}

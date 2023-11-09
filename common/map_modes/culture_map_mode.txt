@@ -9,72 +9,67 @@ scripted_map_modes = {
 				if = {
 					limit = {
 						FROM = {
-							is_state_main_culture_changeling = yes
+							check_variable = {
+								state_culture = token:changeling_race
+							}
 						}
 					}
 					set_temp_variable = { red = 0.235 }
 					set_temp_variable = { green = 0.25 }
 					set_temp_variable = { blue = 0.337 }
+					set_temp_variable = { alpha = 0.7 }
 				}
 				else_if = {
 					limit = {
 						FROM = {
-							is_state_main_culture_olenian = yes
+							check_variable = {
+								state_culture = token:deer_race
+							}
 						}
 					}
 					set_temp_variable = { red = 0.878 }
 					set_temp_variable = { green = 0.882 }
 					set_temp_variable = { blue = 0.976 }
+					set_temp_variable = { alpha = 0.7 }
 				}
 				else_if = {
 					limit = {
 						FROM = {
-							is_state_main_culture_old_olenian = yes
-						}
-					}
-					set_temp_variable = { red = 0.898 }
-					set_temp_variable = { green = 0.8 }
-					set_temp_variable = { blue = 1 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
-							is_state_main_culture_diamond_dog = yes
+							check_variable = {
+								state_culture = token:diamond_dog_race
+							}
 						}
 					}
 					set_temp_variable = { red = 0.552 }
 					set_temp_variable = { green = 0.619 }
 					set_temp_variable = { blue = 0.663 }
+					set_temp_variable = { alpha = 0.7 }
 				}
 				else_if = {
 					limit = {
 						FROM = {
-							is_state_main_culture_dragon = yes
+							check_variable = {
+								state_culture = token:dragon_race
+							}
 						}
 					}
 					set_temp_variable = { red = 0.663 }
 					set_temp_variable = { green = 0.764 }
 					set_temp_variable = { blue = 0.643 }
+					set_temp_variable = { alpha = 0.7 }
 				}
 				else_if = {
 					limit = {
 						FROM = {
-							is_state_main_culture_bear = yes
+							check_variable = {
+								state_culture = token:bear_race
+							}
 						}
 					}
 					set_temp_variable = { red = 0.58 }
 					set_temp_variable = { green = 0.572 }
 					set_temp_variable = { blue = 0.643 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
-							is_state_main_culture_buffalo = yes
-						}
-					}
-					set_temp_variable = { red = 0.549 }
-					set_temp_variable = { green = 0.439 }
-					set_temp_variable = { blue = 0.333 }
+					set_temp_variable = { alpha = 0.7 }
 				}
 				else_if = {
 					limit = {
@@ -85,16 +80,20 @@ scripted_map_modes = {
 					set_temp_variable = { red = 0.552 }
 					set_temp_variable = { green = 0.262 }
 					set_temp_variable = { blue = 0.369 }
+					set_temp_variable = { alpha = 0.7 }
 				}
 				else_if = {
 					limit = {
 						FROM = {
-							is_state_main_culture_equestrian = yes
+							check_variable = {
+								state_culture = token:pony_race
+							}
 						}
 					}
 					set_temp_variable = { red = 0.184 }
 					set_temp_variable = { green = 0.619 }
 					set_temp_variable = { blue = 0.388 }
+					set_temp_variable = { alpha = 0.7 }
 				}
 				else_if = {
 					limit = {
@@ -105,6 +104,7 @@ scripted_map_modes = {
 					set_temp_variable = { red = 0.815 }
 					set_temp_variable = { green = 0.576 }
 					set_temp_variable = { blue = 0.223 }
+					set_temp_variable = { alpha = 0.7 }
 				}
 				else_if = {
 					limit = {
@@ -115,16 +115,20 @@ scripted_map_modes = {
 					set_temp_variable = { red = 0.898 }
 					set_temp_variable = { green = 0.867 }
 					set_temp_variable = { blue = 0.470 }
+					set_temp_variable = { alpha = 0.7 }
 				}
 				else_if = {
 					limit = {
 						FROM = {
-							is_state_main_culture_minotaur = yes
+							check_variable = {
+								state_culture = token:minotaur_race
+							}
 						}
 					}
 					set_temp_variable = { red = 0.556 }
 					set_temp_variable = { green = 0.909 }
 					set_temp_variable = { blue = 0.6 }
+					set_temp_variable = { alpha = 0.7 }
 				}
 				else_if = {
 					limit = {
@@ -135,16 +139,20 @@ scripted_map_modes = {
 					set_temp_variable = { red = 0.341 }
 					set_temp_variable = { green = 0.643 }
 					set_temp_variable = { blue = 0.443 }
+					set_temp_variable = { alpha = 0.7 }
 				}
 				else_if = {
 					limit = {
 						FROM = {
-							is_state_main_culture_penguin = yes
+							check_variable = {
+								state_culture = token:penguin_race
+							}
 						}
 					}
 					set_temp_variable = { red = 0.647 }
 					set_temp_variable = { green = 0.576 }
 					set_temp_variable = { blue = 0.98 }
+					set_temp_variable = { alpha = 0.7 }
 				}
 				else_if = {
 					limit = {
@@ -155,6 +163,7 @@ scripted_map_modes = {
 					set_temp_variable = { red = 0.227 }
 					set_temp_variable = { green = 0.745 }
 					set_temp_variable = { blue = 0.372 }
+					set_temp_variable = { alpha = 0.7 }
 				}
 				else_if = {
 					limit = {
@@ -165,6 +174,7 @@ scripted_map_modes = {
 					set_temp_variable = { red = 0.592 }
 					set_temp_variable = { green = 0.431 }
 					set_temp_variable = { blue = 1 }
+					set_temp_variable = { alpha = 0.7 }
 				}
 				else_if = {
 					limit = {
@@ -175,16 +185,20 @@ scripted_map_modes = {
 					set_temp_variable = { red = 0.259 }
 					set_temp_variable = { green = 0.267 }
 					set_temp_variable = { blue = 0.416 }
+					set_temp_variable = { alpha = 0.7 }
 				}
 				else_if = {
 					limit = {
 						FROM = {
-							is_state_main_culture_yak = yes
+							check_variable = {
+								state_culture = token:yak_race
+							}
 						}
 					}
 					set_temp_variable = { red = 0.486 }
 					set_temp_variable = { green = 0.776 }
 					set_temp_variable = { blue = 0.941 }
+					set_temp_variable = { alpha = 0.7 }
 				}
 				else_if = {
 					limit = {
@@ -195,13 +209,14 @@ scripted_map_modes = {
 					set_temp_variable = { red = 0.976 }
 					set_temp_variable = { green = 0.976 }
 					set_temp_variable = { blue = 0.239 }
+					set_temp_variable = { alpha = 0.7 }
 				}
 				else = {
 					set_temp_variable = { red = 0 }
 					set_temp_variable = { green = 0 }
 					set_temp_variable = { blue = 0 }
+					set_temp_variable = { alpha = 0}
 				}
-				set_temp_variable = { alpha = 0.7 }
 			}
 		}
 		far_text = country

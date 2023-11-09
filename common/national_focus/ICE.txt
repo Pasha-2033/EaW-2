@@ -1,0 +1,1577 @@
+#982 scenario
+#war with equestrail pony
+focus_tree = {
+	id = ice_focus_tree_winter_is_near
+	country = {
+		base = 0
+		modifier = {
+			add = 100
+			tag = ICE
+		}
+	}
+	default = no
+	continuous_focus_position = {
+		x = 200
+		y = 750
+	}
+	focus = {
+		id = ice_focus_winter_is_near
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			EQS = {
+				NOT = {
+					has_completed_focus = eqs_focus_friendship_is_magic
+				}
+			}
+		}
+		x = 4
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_winter_is_near"
+			unlock_decision_category_tooltip = ice_equipment_manpower_collecting
+			add_manpower = 20000
+			add_equipment_to_stockpile = {
+				type = windigo_equipment_0
+				amount = 1000
+			}
+			#to do add event
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_extraction_of_hatred
+		icon = GFX_goal_ice_focus_generic
+		cost = 6
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			EQS = {
+				NOT = {
+					has_completed_focus = eqs_focus_friendship_is_magic
+				}
+			}
+		}
+		x = 2
+		y = 1
+		relative_position_id = ice_focus_winter_is_near
+		prerequisite = {
+			focus = ice_focus_winter_is_near
+		}
+		mutually_exclusive = {
+			focus = ice_focus_deadly_expansion
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_extraction_of_hatred"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_deadly_expansion
+		icon = GFX_goal_ice_focus_generic
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			EQS = {
+				NOT = {
+					has_completed_focus = eqs_focus_friendship_is_magic
+				}
+			}
+		}
+		x = -2
+		y = 1
+		relative_position_id = ice_focus_winter_is_near
+		prerequisite = {
+			focus = ice_focus_winter_is_near
+		}
+		mutually_exclusive = {
+			focus = ice_focus_extraction_of_hatred
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_deadly_expansion"
+			add_ideas = ICE_deadly_expansion
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_spirit_appearance
+		icon = GFX_goal_ice_focus_generic
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			EQS = {
+				NOT = {
+					has_completed_focus = eqs_focus_friendship_is_magic
+				}
+			}
+		}
+		x = -1
+		y = 1
+		relative_position_id = ice_focus_deadly_expansion
+		prerequisite = {
+			focus = ice_focus_deadly_expansion
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_spirit_appearance"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_fast_batles
+		icon = GFX_goal_ice_focus_generic
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			EQS = {
+				NOT = {
+					has_completed_focus = eqs_focus_friendship_is_magic
+				}
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = ice_focus_spirit_appearance
+		prerequisite = {
+			focus = ice_focus_spirit_appearance
+		}
+		mutually_exclusive = {
+			focus = ice_focus_high_frezingpower
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_fast_batles"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_high_frezingpower
+		icon = GFX_goal_ice_focus_generic
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			EQS = {
+				NOT = {
+					has_completed_focus = eqs_focus_friendship_is_magic
+				}
+			}
+		}
+		x = -1
+		y = 1
+		relative_position_id = ice_focus_spirit_appearance
+		prerequisite = {
+			focus = ice_focus_spirit_appearance
+		}
+		mutually_exclusive = {
+			focus = ice_focus_fast_batles
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_high_frezingpower"
+		}
+		search_filters = {}
+	}
+
+
+	focus = {
+		id = ice_focus_new_high_command
+		icon = GFX_goal_ice_focus_generic
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			EQS = {
+				NOT = {
+					has_completed_focus = eqs_focus_friendship_is_magic
+				}
+			}
+		}
+		x = -1
+		y = 2
+		relative_position_id = ice_focus_winter_is_near
+		prerequisite = {
+			focus = ice_focus_deadly_expansion
+			focus = ice_focus_extraction_of_hatred
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_spirit_transformations"
+			add_field_marshal_role = {
+				character = ICE_nightlands
+				traits = {
+					undead_race_trait
+					adaptable
+				}
+				skill = 3
+				attack_skill = 4
+				defense_skill = 2
+				planning_skill = 2
+				logistics_skill = 1
+			}
+			add_corps_commander_role = {
+				character = ICE_valar_morgulis
+				traits = {
+					undead_race_trait
+				}
+				skill = 1
+				attack_skill = 3
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			add_corps_commander_role = {
+				traits = {
+					undead_race_trait
+					commando
+				}
+				skill = 2
+				attack_skill = 2
+				defense_skill = 2
+				planning_skill = 1
+				logistics_skill = 2
+				character = ICE_windoo
+			}
+			country_event = {
+				id = windigo.1
+				days = 3
+				random_days = 2
+			}
+		}
+		search_filters = {}
+	}
+
+
+	focus = {
+		id = ice_focus_spirit_transformations
+		icon = GFX_goal_ice_focus_generic
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			EQS = {
+				NOT = {
+					has_completed_focus = eqs_focus_friendship_is_magic
+				}
+			}
+		}
+		x = 1
+		y = 2
+		relative_position_id = ice_focus_winter_is_near
+		prerequisite = {
+			focus = ice_focus_deadly_expansion
+			focus = ice_focus_extraction_of_hatred
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_spirit_transformations"
+			unlock_decision_tooltip = superfreese
+			capital_scope = {
+				if = {
+					limit = {
+						is_fully_controlled_by = ROOT
+					}
+				}
+				add_dynamic_modifier = {
+					modifier = ICE_supercold_state
+				}
+			}
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_convertion_other_to_spirits
+		icon = GFX_goal_ice_focus_generic
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			EQS = {
+				NOT = {
+					has_completed_focus = eqs_focus_friendship_is_magic
+				}
+			}
+		}
+		x = 1
+		y = 1
+		relative_position_id = ice_focus_extraction_of_hatred
+		prerequisite = {
+			focus = ice_focus_extraction_of_hatred
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_convertion_other_to_spirits"
+			custom_effect_tooltip = this_is_a_draf_branch
+		}
+		search_filters = {}
+	}
+	#nightlands grand plan - organisation and speed
+	focus = {
+		id = ice_focus_nightlands_grandplan
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		allow_branch = {
+			ICE_nightlands = {
+				is_hired_as_advisor = yes
+			}
+			ended_nightlands_branch = no
+		}
+		x = 17
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_nightlands_grandplan"
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = ICE_nightlands_grandplan
+				}
+			}
+			custom_effect_tooltip = add_ICE_nightlands_grandplan_tt
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_battle_column_organisation
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_nightlands_grandplan
+		prerequisite = {
+			focus = ice_focus_nightlands_grandplan
+		}
+		x = -2
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_battle_column_organisation"
+			subtract_from_variable = {
+				var = nightlands_grandplan_olwm
+				value = 0.05
+				tooltip = sub_ICE_nightlands_grandplan_olwm_5_tt
+			}
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_parallel_movement
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_battle_column_organisation
+		prerequisite = {
+			focus = ice_focus_battle_column_organisation
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_parallel_movement"
+			subtract_from_variable = {
+				var = nightlands_grandplan_olwm
+				value = 0.05
+				tooltip = sub_ICE_nightlands_grandplan_olwm_5_tt
+			}
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_march_throws
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_parallel_movement
+		prerequisite = {
+			focus = ice_focus_parallel_movement
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_march_throws"
+			subtract_from_variable = {
+				var = nightlands_grandplan_olwm
+				value = 0.1
+				tooltip = subadd_ICE_nightlands_grandplan_olwm_10_asf_5_tt
+			}
+			add_to_variable = {
+				nightlands_grandplan_asf = 0.05
+			}
+			end_of_nightlands_subbranch = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_combat_subgroups
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_nightlands_grandplan
+		prerequisite = {
+			focus = ice_focus_nightlands_grandplan
+		}
+		mutually_exclusive = {
+			focus = ice_focus_single_coordinated_strike
+		}
+		x = -4
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_combat_subgroups"
+			add_to_variable = {
+				var = nightlands_grandplan_aof
+				value = 0.05
+				tooltip = addadd_ICE_nightlands_grandplan_aof_5_aor_10_tt
+			}
+			add_to_variable = {
+				nightlands_grandplan_aor = 0.1
+			}
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_single_coordinated_strike
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_nightlands_grandplan
+		prerequisite = {
+			focus = ice_focus_nightlands_grandplan
+		}
+		mutually_exclusive = {
+			focus = ice_focus_combat_subgroups
+		}
+		x = -7
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_single_coordinated_strike"
+			add_to_variable = {
+				var = nightlands_grandplan_ollof
+				value = -0.25
+				tooltip = sub_ICE_nightlands_grandplan_ollof_25_tt
+			}
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_division_hard_core
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_single_coordinated_strike
+		prerequisite = {
+			focus = ice_focus_single_coordinated_strike
+		}
+		mutually_exclusive = {
+			focus = ice_focus_division_hard_front
+		}
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_division_hard_core"
+			add_to_variable = {
+				var = nightlands_grandplan_aof
+				value = 0.05
+				tooltip = add_ICE_nightlands_grandplan_aof_5_tt
+			}
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_division_hard_front
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_single_coordinated_strike
+		prerequisite = {
+			focus = ice_focus_single_coordinated_strike
+		}
+		mutually_exclusive = {
+			focus = ice_focus_division_hard_core
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_division_hard_front"
+			add_to_variable = {
+				var = nightlands_grandplan_aor
+				value = 0.05
+				tooltip = add_ICE_nightlands_grandplan_aor_5_tt
+			}
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_extra_reserves
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_single_coordinated_strike
+		prerequisite = {
+			focus = ice_focus_division_hard_front
+			focus = ice_focus_division_hard_core
+		}
+		x = 0
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_extra_reserves"
+			add_to_variable = {
+				var = nightlands_grandplan_amf
+				value = 0.15
+				tooltip = add_ICE_nightlands_grandplan_amf_15_tt
+			}
+			end_of_nightlands_subbranch = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_new_ambush_tactics
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_combat_subgroups
+		prerequisite = {
+			focus = ice_focus_combat_subgroups
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_new_ambush_tactics"
+			add_to_variable = {
+				var = nightlands_grandplan_aof
+				value = 0.05
+				tooltip = add_ICE_nightlands_grandplan_aof_5_tt
+			}
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_small_recon_groups
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_new_ambush_tactics
+		prerequisite = {
+			focus = ice_focus_new_ambush_tactics
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_small_recon_groups"
+			add_to_variable = {
+				var = nightlands_grandplan_ollof
+				value = -0.1
+				tooltip = sub_ICE_nightlands_grandplan_ollof_10_tt
+			}
+			end_of_nightlands_subbranch = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_udaptable_army
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_nightlands_grandplan
+		prerequisite = {
+			focus = ice_focus_nightlands_grandplan
+		}
+		x = 7
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_udaptable_army"
+			add_to_variable = {
+				var = nightlands_grandplan_tpr
+				value = 0.1
+				tooltip = add_ICE_nightlands_grandplan_trp_10_tt
+			}
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_movement_in_cities
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_udaptable_army
+		prerequisite = {
+			focus = ice_focus_udaptable_army
+		}
+		x = -7
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_movement_in_cities"
+			hidden_effect = {
+				set_technology = {
+					ICE_nightlands_grandplan_movement_urban = 1
+					popup = no
+				}
+			}
+			add_to_variable = {
+				var = nightlands_grandplan_urban_movement
+				value = 0.05
+				tooltip = add_ICE_nightlands_grandplan_urban_movement_5_tt
+			}
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_movement_in_mountains
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_udaptable_army
+		prerequisite = {
+			focus = ice_focus_udaptable_army
+		}
+		x = -5
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_movement_in_mountains"
+			hidden_effect = {
+				set_technology = {
+					ICE_nightlands_grandplan_movement_mountain = 1
+					popup = no
+				}
+			}
+			add_to_variable = {
+				var = nightlands_grandplan_mountain_movement
+				value = 0.15
+				tooltip = add_ICE_nightlands_grandplan_mountain_movement_15_tt
+			}
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_movement_in_hills
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_udaptable_army
+		prerequisite = {
+			focus = ice_focus_udaptable_army
+		}
+		x = -3
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_movement_in_hills"
+			hidden_effect = {
+				set_technology = {
+					ICE_nightlands_grandplan_movement_hills = 1
+					popup = no
+				}
+			}
+			add_to_variable = {
+				var = nightlands_grandplan_hills_movement
+				value = 0.1
+				tooltip = add_ICE_nightlands_grandplan_hills_movement_10_tt
+			}
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_movement_in_forests
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_udaptable_army
+		prerequisite = {
+			focus = ice_focus_udaptable_army
+		}
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_movement_in_forests"
+			hidden_effect = {
+				set_technology = {
+					ICE_nightlands_grandplan_movement_forest = 1
+					popup = no
+				}
+			}
+			add_to_variable = {
+				var = nightlands_grandplan_forest_movement
+				value = 0.1
+				tooltip = add_ICE_nightlands_grandplan_forest_movement_10_tt
+			}
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_movement_in_jungle
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_udaptable_army
+		prerequisite = {
+			focus = ice_focus_udaptable_army
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_movement_in_jungle"
+			hidden_effect = {
+				set_technology = {
+					ICE_nightlands_grandplan_movement_jungle = 1
+					popup = no
+				}
+			}
+			add_to_variable = {
+				var = nightlands_grandplan_jungle_movement
+				value = 0.1
+				tooltip = add_ICE_nightlands_grandplan_jungle_movement_10_tt
+			}
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_movement_in_swamp
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_udaptable_army
+		prerequisite = {
+			focus = ice_focus_udaptable_army
+		}
+		x = 3
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_movement_in_swamp"
+			hidden_effect = {
+				set_technology = {
+					ICE_nightlands_grandplan_movement_marsh = 1
+					popup = no
+				}
+			}
+			add_to_variable = {
+				var = nightlands_grandplan_marsh_movement
+				value = 0.1
+				tooltip = add_ICE_nightlands_grandplan_marsh_movement_10_tt
+			}
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_movement_in_plains
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_udaptable_army
+		prerequisite = {
+			focus = ice_focus_udaptable_army
+		}
+		x = 5
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_movement_in_plains"
+			hidden_effect = {
+				set_technology = {
+					ICE_nightlands_grandplan_movement_plains = 1
+					popup = no
+				}
+			}
+			add_to_variable = {
+				var = nightlands_grandplan_plains_movement
+				value = 0.1
+				tooltip = add_ICE_nightlands_grandplan_plains_movement_10_tt
+			}
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_movement_in_deserts
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_udaptable_army
+		prerequisite = {
+			focus = ice_focus_udaptable_army
+		}
+		x = 7
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_movement_in_deserts"
+			hidden_effect = {
+				set_technology = {
+					ICE_nightlands_grandplan_movement_desert = 1
+					popup = no
+				}
+			}
+			add_to_variable = {
+				var = nightlands_grandplan_desert_movement
+				value = 0.05
+				tooltip = add_ICE_nightlands_grandplan_desert_movement_5_tt
+			}
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_heat_resistance
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_udaptable_army
+		prerequisite = {
+			focus = ice_focus_movement_in_cities
+		}
+		prerequisite = {
+			focus = ice_focus_movement_in_mountains
+		}
+		prerequisite = {
+			focus = ice_focus_movement_in_hills
+		}
+		prerequisite = {
+			focus = ice_focus_movement_in_forests
+		}
+		prerequisite = {
+			focus = ice_focus_movement_in_plains
+		}
+		prerequisite = {
+			focus = ice_focus_movement_in_deserts
+		}
+		prerequisite = {
+			focus = ice_focus_movement_in_swamp
+		}
+		prerequisite = {
+			focus = ice_focus_movement_in_jungle
+		}
+		x = 0
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: heat_resistance"
+			add_to_variable = {
+				var = nightlands_grandplan_ahcgf
+				value = 0.1
+				tooltip = add_ICE_nightlands_grandplan_ahcgf_10_tt
+			}
+			end_of_nightlands_subbranch = yes
+		}
+		search_filters = {}
+	}
+	#valar_morgulis grand plan - manpower and attack
+	#to do(not finished)
+	focus = {
+		id = ice_focus_valar_morgulis_grandplan
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		allow_branch = {
+			ICE_valar_morgulis = {
+				is_hired_as_advisor = yes
+			}
+			ended_valar_branch = no
+		}
+		x = 13
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_valar_morgulis_grandplan"
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = ICE_valar_morgulis_grandplan
+				}
+			}
+			custom_effect_tooltip = add_ICE_valar_morgulis_grandplan_tt
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_continuous_attack
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_valar_morgulis_grandplan
+		prerequisite = {
+			focus = ice_focus_valar_morgulis_grandplan
+		}
+		mutually_exclusive = {
+			focus = ice_focus_increase_wave_attack
+		}
+		x = -2
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_continuous_attack"
+			add_to_variable = {
+				var = valar_morgulis_grandplan_aaf
+				value = 0.15
+				tooltip = addsub_ICE_valar_morgulis_grandplan_aaf_15_aasf_20_tt
+			}
+			subtract_from_variable = {
+				valar_morgulis_grandplan_aasf = 0.2
+			}
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_increase_wave_attack
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_valar_morgulis_grandplan
+		prerequisite = {
+			focus = ice_focus_valar_morgulis_grandplan
+		}
+		mutually_exclusive = {
+			focus = ice_focus_continuous_attack
+		}
+		x = -4
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_increase_wave_attack"
+			add_to_variable = {
+				var = valar_morgulis_grandplan_aaf
+				value = 0.1
+				tooltip = add_ICE_valar_morgulis_grandplan_aaf_10_tt
+			}
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_reconnaissance_in_force
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_increase_wave_attack
+		prerequisite = {
+			focus = ice_focus_increase_wave_attack
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_increase_wave_attack"
+			add_to_variable = {
+				var = valar_morgulis_grandplan_aasf
+				value = 0.05
+				tooltip = add_ICE_valar_morgulis_grandplan_aasf_5_tt
+			}
+			end_of_valar_subbranch = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_massive_assaults
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_continuous_attack
+		prerequisite = {
+			focus = ice_focus_continuous_attack
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_massive_assaults"
+			add_to_variable = {
+				var = valar_morgulis_grandplan_bf
+				value = 0.05
+				tooltip = addsubsub_ICE_valar_morgulis_grandplan_bf_5_aof_5_aor_5_tt
+			}
+			subtract_from_variable = {
+				valar_morgulis_grandplan_aof = 0.05
+			}
+			subtract_from_variable = {
+				valar_morgulis_grandplan_aor = 0.05
+			}
+			end_of_valar_subbranch = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_attack_tactics
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_valar_morgulis_grandplan
+		prerequisite = {
+			focus = ice_focus_valar_morgulis_grandplan
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_attack_tactics"
+			add_to_variable = {
+				var = valar_morgulis_grandplan_bf
+				value = 0.1
+				tooltip = add_ICE_valar_morgulis_grandplan_bf_10_tt
+			}
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_attack_of_the_wounded
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_attack_tactics
+		prerequisite = {
+			focus = ice_focus_attack_tactics
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_attack_of_the_wounded"
+			add_to_variable = {
+				var = valar_morgulis_grandplan_asf
+				value = 0.1
+				tooltip = add_ICE_valar_morgulis_grandplan_asf_10_tt
+			}
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_undiminished_morality
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_attack_of_the_wounded
+		prerequisite = {
+			focus = ice_focus_attack_of_the_wounded
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_undiminished_morality"
+			add_to_variable = {
+				var = valar_morgulis_grandplan_amf
+				value = 0.25
+				tooltip = add_ICE_valar_morgulis_grandplan_amf_25_tt
+			}
+			end_of_valar_subbranch = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_manpower_management
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_valar_morgulis_grandplan
+		prerequisite = {
+			focus = ice_focus_valar_morgulis_grandplan
+		}
+		x = 4
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_manpower_management"
+			add_manpower = 25000
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_improve_coordination_of_mobilization
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_manpower_management
+		prerequisite = {
+			focus = ice_focus_manpower_management
+		}
+		x = -2
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_improve_coordination_of_mobilization"
+			add_to_variable = {
+				var = valar_morgulis_grandplan_ms
+				value = 0.25
+				tooltip = add_ICE_valar_morgulis_grandplan_ms_25_tt
+			}
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_direct_recruit_transportation_to_army
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_improve_coordination_of_mobilization
+		prerequisite = {
+			focus = ice_focus_improve_coordination_of_mobilization
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_direct_recruit_transportation_to_army"
+			add_to_variable = {
+				var = valar_morgulis_grandplan_ms
+				value = 0.15
+				tooltip = add_ICE_valar_morgulis_grandplan_ms_15_tt
+			}
+			end_of_valar_subbranch = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_resurrection
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_manpower_management
+		prerequisite = {
+			focus = ice_focus_manpower_management
+		}
+		x = 2
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_resurrection"
+			subtract_from_variable = {
+				var = resurrect_fallen_cost
+				value = 50
+				tooltip = decrease_resurrect_fallen_cost_50_tt
+			}
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_recovery_teams
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_resurrection
+		prerequisite = {
+			focus = ice_focus_resurrection
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_recovery_teams"
+			add_to_variable = {
+				var = resurrect_fallen_efficiency
+				value = 0.05
+				tooltip = increase_resurrect_fallen_efficiency_5_tt
+			}
+			end_of_valar_subbranch = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_lower_entry_rules_for_recruits
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_manpower_management
+		prerequisite = {
+			focus = ice_focus_manpower_management
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_lower_entry_rules_for_recruits"
+			increase_mobilization_law_idea = yes
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_army_without_civilians
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_lower_entry_rules_for_recruits
+		prerequisite = {
+			focus = ice_focus_lower_entry_rules_for_recruits
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_army_without_civilians"
+			if = {
+				limit = {
+					has_idea = disarmed_nation
+				}
+				swap_ideas = {
+					remove_idea = disarmed_nation
+					add_idea = scraping_the_barrel
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = volunteer_only
+				}
+				swap_ideas = {
+					remove_idea = volunteer_only
+					add_idea = scraping_the_barrel
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = limited_conscription
+				}
+				swap_ideas = {
+					remove_idea = limited_conscription
+					add_idea = scraping_the_barrel
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = extensive_conscription
+				}
+				swap_ideas = {
+					remove_idea = extensive_conscription
+					add_idea = scraping_the_barrel
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = service_by_requirement
+				}
+				swap_ideas = {
+					remove_idea = service_by_requirement
+					add_idea = scraping_the_barrel
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = all_adults_serve
+				}
+				swap_ideas = {
+					remove_idea = all_adults_serve
+					add_idea = scraping_the_barrel
+				}
+			}
+			else = {
+				add_manpower = 200000
+			}
+			end_of_valar_subbranch = yes
+		}
+		search_filters = {}
+	}
+	#windoo grand plan - equipment and defence
+	focus = {
+		id = ice_focus_windoo_grandplan
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		allow_branch = {
+			ICE_windoo = {
+				is_hired_as_advisor = yes
+			}
+			ended_windoo_branch = no
+		}
+		x = 12
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_windoo_grandplan"
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = ICE_windoo_grandplan
+				}
+			}
+			custom_effect_tooltip = add_ICE_windoo_grandplan_tt
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_equipment_improvement
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_windoo_grandplan
+		prerequisite = {
+			focus = ice_focus_windoo_grandplan
+		}
+		x = -3
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_equipment_improvement"
+			multiply_variable = {
+				open_tomb_eq_ammont = 3
+				tooltip = mul_ICE_windoo_grandland_otea_3_tt
+			}
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_equipment_standarts
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_equipment_improvement
+		prerequisite = {
+			focus = ice_focus_equipment_improvement
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_equipment_standarts"
+			subtract_from_variable = {
+				open_tomb_cooldown = 5
+				tooltip = submul_ICE_windoo_grandland_otc_5_otea_2_tt
+			}
+			multiply_variable = {
+				open_tomb_eq_ammont = 2
+			}
+			end_of_windoo_subbranch = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_consolidate_occupied_states
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_windoo_grandplan
+		prerequisite = {
+			focus = ice_focus_windoo_grandplan
+		}
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_consolidate_occupied_states"
+			subtract_from_variable = {
+				windoo_grandplan_rt = 0.15
+				tooltip = subsub_ICE_windoo_grandland_rt_15_rgf_10_tt
+			}
+			subtract_from_variable = {
+				windoo_grandplan_rgf = 0.1
+			}
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_fallback_patterns
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_windoo_grandplan
+		prerequisite = {
+			focus = ice_focus_windoo_grandplan
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_fallback_patterns"
+			add_to_variable = {
+				windoo_grandplan_adf = 0.1
+				tooltip = add_ICE_windoo_grandland_adf_10_tt
+			}
+			end_of_windoo_subbranch = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_supply_management
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_consolidate_occupied_states
+		prerequisite = {
+			focus = ice_focus_consolidate_occupied_states
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_supply_management"
+			add_to_variable = {
+				windoo_grandplan_snr = 0.5
+				tooltip = add_ICE_windoo_grandland_snr_50_tt
+			}
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_destroy_buildings_for_equipment
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_supply_management
+		prerequisite = {
+			focus = ice_focus_supply_management
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_destroy_buildings_for_equipment"
+			custom_effect_tooltip = unlock_destroy_buildings_decision_tt #decision is targered, so instance localisation is wrong, tooltip required
+			end_of_windoo_subbranch = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_power_of_distaction
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_windoo_grandplan
+		prerequisite = {
+			focus = ice_focus_windoo_grandplan
+		}
+		x = 3
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_power_of_distaction"
+			add_to_variable = {
+				windoo_grandplan_mps = 0.1
+				tooltip = addadd_ICE_windoo_grandland_mps_10_ps_10_tt
+			}
+			add_to_variable = {
+				windoo_grandplan_ps = 0.1
+			}
+			inspection_in_windigo_army = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_attack_is_defence_too
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_power_of_distaction
+		prerequisite = {
+			focus = ice_focus_power_of_distaction
+		}
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_attack_is_defence_toon"
+			add_to_variable = {
+				windoo_grandplan_cb = 0.1
+				tooltip = add_ICE_windoo_grandland_cb_10_tt
+			}
+			end_of_windoo_subbranch = yes
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = ice_focus_rotation_prototype
+		icon = GFX_goal_ice_focus_generic
+		cost = 5
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = ice_focus_power_of_distaction
+		prerequisite = {
+			focus = ice_focus_power_of_distaction
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: ice_focus_rotation_prototype"
+			subtract_from_variable = {
+				windoo_grandplan_pp = 0.1
+				tooltip = sub_ICE_windoo_grandplan_pp_10_tt
+			}
+			end_of_windoo_subbranch = yes
+		}
+		search_filters = {}
+	}
+}

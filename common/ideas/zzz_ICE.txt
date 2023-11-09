@@ -1,0 +1,146 @@
+ideas = {
+	country = {
+		ICE_winter_spirits = {
+			traits = {
+				ICE_expansion
+			}
+			picture = ICE_winter_spirits
+			allowed = {
+				original_tag = ICE
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			targeted_modifier = {
+				tag = EPT
+				attack_bonus_against = 0.25
+				defense_bonus_against = -0.5
+			}
+			targeted_modifier = {
+				tag = EQS
+				attack_bonus_against = 0.25
+				defense_bonus_against = -0.5
+			}
+			targeted_modifier = {
+				tag = PGT
+				attack_bonus_against = 0.25
+				defense_bonus_against = -0.5
+			}
+			modifier = {
+				local_org_regain = 0.1
+				org_loss_when_moving = -0.1
+				army_org_factor = 0.1
+				ai_focus_aggressive_factor = 0.2
+			}
+		}
+		ICE_winter_spirits_crushed = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = ICE
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			targeted_modifier = {
+				tag = EPT
+				attack_bonus_against = -0.75
+				defense_bonus_against = -0.75
+			}
+			targeted_modifier = {
+				tag = EQS
+				attack_bonus_against = -0.75
+				defense_bonus_against = -0.75
+			}
+			targeted_modifier = {
+				tag = PGT
+				attack_bonus_against = -0.75
+				defense_bonus_against = -0.75
+			}
+			modifier = {
+				compliance_growth = -1
+				resistance_growth = 1
+				local_org_regain = -0.5
+				org_loss_when_moving = 0.5
+				army_org_factor = -0.75
+				stability_weekly = -1
+				war_support_weekly = -1
+			}
+		}
+		ICE_power_of_winter = {
+			traits = {
+				ICE_expansion
+			}
+			picture = ICE_power_of_winter
+			allowed = {
+				original_tag = ICE
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				supply_consumption_factor = -0.15
+				out_of_supply_factor = -0.15
+				ai_focus_aggressive_factor = 0.1
+			}
+		}
+		ICE_power_of_nature = {
+			traits = {
+				ICE_expansion
+			}
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = ICE
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				forced_surrender_limit = 1
+			}
+		}
+		ICE_deadly_expansion = {
+			traits = {
+				ICE_expansion
+			}
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = ICE
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				#define minimum war support and stability
+				stability_factor = 0.25
+				war_support_factor = 0.25
+				#define grouth of war support and stability
+				stability_weekly = 0.02
+				war_support_weekly = 0.02
+			}
+		}
+		ICE_spirit_appearance = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = ICE
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				
+			}
+		}
+		ICE_convertion_other_to_spirits = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = ICE
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				
+			}
+		}
+	}
+}

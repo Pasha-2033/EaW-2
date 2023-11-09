@@ -30,8 +30,8 @@ calc_surplus_appropriation_real_values = {
 	multiply_variable = {
 		raw_consumers^2 = 0.008
 	}
-	set_temp_variable = {
-		k_sum = 0
+	set_variable = {
+		sa_consumtion_sum = 0
 	}
 	for_each_loop = {
 		array = raw_consumers
@@ -46,8 +46,8 @@ calc_surplus_appropriation_real_values = {
 		set_variable = {
 			consumers^i = t
 		}
-		add_to_temp_variable = {
-			k_sum = t
+		add_to_variable = {
+			sa_consumtion_sum = t
 		}
 	}
 	#calc resource appropriation
@@ -55,7 +55,7 @@ calc_surplus_appropriation_real_values = {
 		food_storage_change = resource@food
 	}
 	subtract_from_variable = {
-		food_storage_change = k_sum
+		food_storage_change = sa_consumtion_sum
 	}
 	set_temp_variable = {
 		negative_food_storage_change = food_storage_change
@@ -88,7 +88,7 @@ calc_surplus_appropriation_real_values = {
 					t = consumers^i
 				}
 				divide_temp_variable = {
-					t = k_sum
+					t = sa_consumtion_sum
 				}
 				multiply_temp_variable = {
 					t = food_final
@@ -104,6 +104,11 @@ calc_surplus_appropriation_real_values = {
 				set_variable = {
 					surplus_appropriation_real_values^i = surplus_appropriation_weights^i
 				}
+			}
+			clamp_variable = {
+				var = surplus_appropriation_real_values^i
+				min = 0
+				max = 2
 			}
 		}
 	}

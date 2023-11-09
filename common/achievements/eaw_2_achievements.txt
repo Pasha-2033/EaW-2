@@ -1,13 +1,21 @@
 unique_id = eaw_2_achievements
+feel_like_a_dev = {
+	possible = {
+		always = yes
+    }
+    happened = {
+		is_debug = yes
+	}   
+}
 unfreese = {
 	possible = {
         # classic triggers used in all vanilla achievements
 		is_ironman = yes
         difficulty > 1
-        has_start_date < 982.01.02
+        has_start_date < 1007.1.1
         has_any_custom_difficulty_setting = no
         game_rules_allow_achievements = yes
-		tag = EEQ
+		tag = EQS
     }
     happened = {
 		ICE = {

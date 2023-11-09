@@ -1,0 +1,93 @@
+on_actions = {
+	#anarchism - power concentration ideas
+	on_government_change = {
+		effect = {
+			if = {
+				limit = {
+					has_government = anarchism
+				}
+				add_ideas = anarchy
+			}
+			else_if = {
+				limit = {
+					has_idea = anarchy
+				}
+				if = {
+					limit = {
+						has_government = harmony
+					}
+					add_ideas = harmonic_power_concentration
+				}
+				else_if = {
+					limit = {
+						OR = {
+							has_government = socialism
+							has_government = communism
+						}
+					}
+					add_ideas = commune
+				}
+				else = {
+					add_ideas = low_power_concentration
+				}
+			}
+		}
+	}
+	#ICE and ICE`s enemies
+	on_state_control_changed = {
+		#ROOT is new controller
+		#FROM is old controller
+		#FROM.FROM is state
+		effect = {
+			if = {
+				limit = {
+					ROOT = {
+						has_war_with = FROM
+					}
+					OR = {
+						FROM = {
+							tag = ICE
+						}
+						ROOT = {
+							tag = ICE
+						}
+					}
+				}
+				FROM = {
+					if = {
+						limit = {
+							FROM = {
+								has_dynamic_modifier = {
+									modifier = ICE_supercold_state
+								}
+							}
+							tag = ICE
+						}
+						FROM = {
+							remove_dynamic_modifier = {
+								modifier = ICE_supercold_state
+							}
+						}
+					}
+					FROM = {
+						if = {
+							limit = {
+								has_dynamic_modifier = {
+									modifier = ICE_warm_cold_state
+								}
+							}
+							remove_dynamic_modifier = {
+								modifier = ICE_warm_cold_state
+							}
+						}
+						else = {
+							add_dynamic_modifier = {
+								modifier = ICE_warm_cold_state
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

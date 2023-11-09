@@ -11,13 +11,6 @@ buildings = {
 		infrastructure = yes
 		max_level = 5
 		value = 1
-		local_resources_steel = 0
-		local_resources_tungsten = 0
-		local_resources_rubber = 0
-		local_resources_aluminium = 0
-		local_resources_chromium = 0
-		local_resources_oil = 0
-		local_resources_crystals = 0
 		show_modifier = yes
 		max_fuel_building = 1.5 #k
 		allied_build = yes
@@ -34,13 +27,6 @@ buildings = {
 		max_level = 20
 		shares_slots = yes
 		value = 8
-		local_resources_steel = 0
-		local_resources_tungsten = 0
-		local_resources_rubber = 0
-		local_resources_aluminium = 0
-		local_resources_chromium = 0
-		local_resources_oil = 0
-		local_resources_crystals = 0
 		infrastructure_construction_effect = yes
 	}
 
@@ -53,13 +39,17 @@ buildings = {
 		max_level = 20
 		shares_slots = yes
 		value = 5
-		local_resources_steel = 0
-		local_resources_tungsten = 0
-		local_resources_rubber = 0
-		local_resources_aluminium = 0
-		local_resources_chromium = 0
-		local_resources_oil = 0
-		local_resources_crystals = 0
+		infrastructure_construction_effect = yes
+	}
+
+	agrarian_complex = {
+		refinery = yes
+		show_on_map = 6
+		base_cost = 5000
+		icon_frame = 17
+		max_level = 20
+		shares_slots = yes
+		local_resources_food = 10
 		infrastructure_construction_effect = yes
 	}
 
@@ -70,13 +60,6 @@ buildings = {
 		air_base = yes
 		max_level = 10
 		value = 1
-		local_resources_steel = 0
-		local_resources_tungsten = 0
-		local_resources_rubber = 0
-		local_resources_aluminium = 0
-		local_resources_chromium = 0
-		local_resources_oil = 0
-		local_resources_crystals = 0
 		damage_factor = 0.5
 		allied_build = yes
 		infrastructure_construction_effect = yes
@@ -152,6 +135,17 @@ buildings = {
 		infrastructure_construction_effect = yes
 	}
 
+	anti_nuke_bunker = {
+		show_on_map = 1
+		base_cost = 2000
+		icon_frame = 18
+		max_level = 20
+		show_modifier = yes #just for tooltip of custom modifier
+		nuke_defence_factor = 0.04
+		damage_factor = -999 #too deep to be easily damaged (FOR NUKE ONLY!)
+		value = 1
+	}
+
 	dockyard = {
 		show_on_map = 1
 		show_on_map_meshes = 3
@@ -163,13 +157,6 @@ buildings = {
 		max_level = 20
 		shares_slots = yes
 		value = 5
-		local_resources_steel = 0
-		local_resources_tungsten = 0
-		local_resources_rubber = 0
-		local_resources_aluminium = 0
-		local_resources_chromium = 0
-		local_resources_oil = 0
-		local_resources_crystals = 0
 		infrastructure_construction_effect = yes
 	}
 
@@ -183,13 +170,6 @@ buildings = {
 		air_defence = 1
 		max_level = 5 # This is the max unlock level
 		damage_factor = 0.1
-		local_resources_steel = 0
-		local_resources_tungsten = 0
-		local_resources_rubber = 0
-		local_resources_aluminium = 0
-		local_resources_chromium = 0
-		local_resources_oil = 0
-		local_resources_crystals = 0
 		value = 1
 		infrastructure_construction_effect = yes
 	}
@@ -200,12 +180,6 @@ buildings = {
 		icon_frame = 10
 		#local_resources_oil = 1 # May use local_resources_ + any resource name
 		local_resources_rubber = 3 # May use local_resources_ + any resource name
-		local_resources_steel = 0
-		local_resources_tungsten = 0
-		local_resources_aluminium = 0
-		local_resources_chromium = 0
-		local_resources_oil = 0
-		local_resources_crystals = 0
 		refinery = yes
 		max_level = 3 # This is the max unlock level
 		shares_slots = yes
@@ -225,13 +199,6 @@ buildings = {
 		value = 5
 		infrastructure_construction_effect = yes
 		fuel_silo = yes
-		local_resources_steel = 0
-		local_resources_tungsten = 0
-		local_resources_rubber = 0
-		local_resources_aluminium = 0
-		local_resources_chromium = 0
-		local_resources_oil = 0
-		local_resources_crystals = 0
 		show_modifier = yes
 		max_fuel_building = 100.0 #k
 	}
@@ -245,13 +212,6 @@ buildings = {
 		max_level = 9 # This is the max unlock level
 		damage_factor = 0.5
 		value = 4
-		local_resources_steel = 0
-		local_resources_tungsten = 0
-		local_resources_rubber = 0
-		local_resources_aluminium = 0
-		local_resources_chromium = 0
-		local_resources_oil = 0
-		local_resources_crystals = 0
 		centered = yes
 		allied_build = yes
 		infrastructure_construction_effect = yes
@@ -266,13 +226,6 @@ buildings = {
 		max_level = 5
 		shares_slots = yes
 		value = 1
-		local_resources_steel = 0
-		local_resources_tungsten = 0
-		local_resources_rubber = 0
-		local_resources_aluminium = 0
-		local_resources_chromium = 0
-		local_resources_oil = 0
-		local_resources_crystals = 0
 		infrastructure_construction_effect = yes
 	}
 
@@ -287,12 +240,5 @@ buildings = {
 		country_resource_cost_crystals = 12
 		value = 10
 		infrastructure_construction_effect = yes
-		local_resources_steel = 0
-		local_resources_tungsten = 0
-		local_resources_rubber = 0
-		local_resources_aluminium = 0
-		local_resources_chromium = 0
-		local_resources_oil = 0
-		local_resources_crystals = 0
 	}
 }

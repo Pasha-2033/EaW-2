@@ -1,0 +1,76 @@
+#ICE
+is_about_to_end_nightlands_branch = {
+	custom_trigger_tooltip = {
+		tooltip = is_about_to_end_nightlands_branch_tt
+		count_triggers = {
+			amount = 2
+			OR = {
+				has_completed_focus = ice_focus_extra_reserves
+				has_completed_focus = ice_focus_small_recon_groups
+			}
+			has_completed_focus = ice_focus_march_throws
+			has_completed_focus = ice_focus_heat_resistance
+		}
+	}
+}
+is_about_to_end_valar_branch = {
+	custom_trigger_tooltip = {
+		tooltip = is_about_to_end_valar_branch_tt
+		count_triggers = {
+			amount = 3
+			OR = {
+				has_completed_focus = ice_focus_reconnaissance_in_force
+				has_completed_focus = ice_focus_massive_assaults
+			}
+			has_completed_focus = ice_focus_undiminished_morality
+			has_completed_focus = ice_focus_direct_recruit_transportation_to_army
+			has_completed_focus = ice_focus_recovery_teams
+		}
+	}
+}
+is_about_to_end_windoo_branch = {
+	custom_trigger_tooltip = {
+		tooltip = is_about_to_end_windoo_branch_tt
+		count_triggers = {
+			amount = 4
+			has_completed_focus = ice_focus_equipment_standarts
+			has_completed_focus = ice_focus_destroy_buildings_for_equipment
+			has_completed_focus = ice_focus_fallback_patterns
+			has_completed_focus = ice_focus_attack_is_defence_too
+			has_completed_focus = ice_focus_rotation_prototype
+		}
+	}
+}
+ended_nightlands_branch = {
+	custom_trigger_tooltip = {
+		tooltip = ended_nightlands_branch_tt		
+		OR = {
+			has_completed_focus = ice_focus_extra_reserves
+			has_completed_focus = ice_focus_small_recon_groups
+		}
+		has_completed_focus = ice_focus_march_throws
+		has_completed_focus = ice_focus_heat_resistance
+	}
+}
+ended_valar_branch = {
+	custom_trigger_tooltip = {
+		tooltip = ended_valar_branch_tt	
+		OR = {
+			has_completed_focus = ice_focus_reconnaissance_in_force
+			has_completed_focus = ice_focus_massive_assaults
+		}
+		has_completed_focus = ice_focus_undiminished_morality
+		has_completed_focus = ice_focus_direct_recruit_transportation_to_army
+		has_completed_focus = ice_focus_recovery_teams
+	}
+}
+ended_windoo_branch = {
+	custom_trigger_tooltip = {
+		tooltip = ended_windoo_branch_tt	
+		has_completed_focus = ice_focus_equipment_standarts
+		has_completed_focus = ice_focus_destroy_buildings_for_equipment
+		has_completed_focus = ice_focus_fallback_patterns
+		has_completed_focus = ice_focus_attack_is_defence_too
+		has_completed_focus = ice_focus_rotation_prototype
+	}
+}

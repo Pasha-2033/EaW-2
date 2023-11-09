@@ -47,12 +47,6 @@ is_same_race_as_PREV = {
 			}
 		}
 		AND = {
-			has_idea = buffalo_race
-			PREV = {
-				has_idea = buffalo_race
-			}
-		}
-		AND = {
 			has_idea = deer_race
 			PREV = {
 				has_idea = deer_race
@@ -77,9 +71,9 @@ is_same_race_as_PREV = {
 			}
 		}
 		AND = {
-			has_idea = polar_race
+			has_idea = bear_race
 			PREV = {
-				has_idea = polar_race
+				has_idea = bear_race
 			}
 		}
 		AND = {
@@ -92,12 +86,6 @@ is_same_race_as_PREV = {
 			has_idea = undead_race
 			PREV = {
 				has_idea = undead_race
-			}
-		}
-		AND = {
-			has_idea = ice_spirits_race
-			PREV = {
-				has_idea = ice_spirits_race
 			}
 		}
 		AND = {
@@ -121,14 +109,6 @@ is_incompatible_races = {
 			PREV = {
 				NOT = {
 					has_idea = undead_race
-				}
-			}
-		}
-		AND = {
-			has_idea = ice_spirits_race
-			PREV = {
-				NOT = {
-					has_idea = ice_spirits_race
 				}
 			}
 		}
@@ -163,18 +143,6 @@ is_incompatible_races = {
 is_compatible_races = {
 	OR = {
 		AND = {
-			has_idea = buffalo_race
-			PREV = {
-				has_idea = yak_race
-			}
-		}
-		AND = {
-			has_idea = yak_race
-			PREV = {
-				has_idea = buffalo_race
-			}
-		}
-		AND = {
 			OR = {
 				has_government = harmony
 				has_government = socialism
@@ -182,12 +150,9 @@ is_compatible_races = {
 			}
 			AND = {
 				NOT = {
-					OR = {
-						has_idea = multi_race
-						has_idea = generic_race
-						has_idea = ice_spirits_race
-						has_idea = undead_race
-					}
+					has_idea = multi_race
+					has_idea = generic_race
+					has_idea = undead_race
 				}
 			}
 			PREV = {
@@ -228,34 +193,12 @@ is_compatible_races = {
 				}
 				AND = {
 					NOT = {
-						OR = {
-							has_idea = multi_race
-							has_idea = generic_race
-							has_idea = ice_spirits_race
-							has_idea = undead_race
-						}
+						has_idea = multi_race
+						has_idea = generic_race
+						has_idea = undead_race
 					}
 				}
 			}
-		}
-	}
-}
-is_state_main_culture_changeling = {
-	OR = {
-		is_in_array = {
-			state_original_cores = VES
-		}
-		is_in_array = {
-			state_original_cores = SOR
-		}
-		is_in_array = {
-			state_original_cores = VRA
-		}
-		is_in_array = {
-			state_original_cores = DIS
-		}
-		is_in_array = {
-			state_original_cores = LIK
 		}
 	}
 }
@@ -301,10 +244,7 @@ uses_pony_generic_portraits = {
 }
 
 uses_pony_EQS_portraits = {
-	OR = {
-		original_tag = EQS
-		original_tag = EQC
-	}
+	original_tag = EQS
 }
 
 uses_pony_CRY_portraits = {
@@ -357,7 +297,7 @@ uses_changeling_portraits = {
 		original_tag = LIK
 		original_tag = SOR
 		original_tag = DIS
-		original_tag = UCH
+		original_tag = VES
 	}
 }
 
@@ -407,33 +347,10 @@ uses_bear_portraits = {
 	always = no
 }
 
-uses_buffalo_portraits = {
-	original_tag = BUF
-}
-
 uses_dragon_portraits = {
 	always = no
 }
 
-has_unit_leader_race_trait = {
-	OR = {
-		has_trait = unspecified_race_trait
-		has_trait = pony_race_trait
-		has_trait = thestral_race_trait
-		has_trait = zebra_race_trait
-		has_trait = penguin_race_trait
-		has_trait = bear_race_trait
-		has_trait = changeling_race_trait
-		has_trait = griffon_race_trait
-		has_trait = yak_race_trait
-		has_trait = deer_race_trait
-		has_trait = diamond_dog_race_trait
-		has_trait = minotaur_race_trait
-		has_trait = undead_race_trait
-		has_trait = buffalo_race_trait
-		has_trait = dragon_race_trait
-	}
-}
 
 is_country_main_culture_changeling = {
 	OR = {
@@ -475,12 +392,6 @@ is_country_main_culture_bear = {
 	}
 }
 
-is_country_main_culture_buffalo = {
-	OR = {
-		original_tag = BUF
-	}
-}
-
 is_country_main_culture_aquileian = {
 	OR = {
 		original_tag = ERI
@@ -515,7 +426,6 @@ is_country_main_culture_equestrian = {
 		original_tag = TEM
 		original_tag = LSP
 		original_tag = ELF
-		original_tag = EQC
 	}
 }
 
@@ -543,8 +453,6 @@ is_country_main_culture_herzlander = {
 		original_tag = PYT
 		original_tag = ROU
 		original_tag = BOI
-		original_tag = LAK
-		original_tag = YAL
 		original_tag = ANG
 		original_tag = STW
 		original_tag = HLQ
@@ -609,7 +517,6 @@ is_country_main_culture_southerner = {
 		original_tag = FRN
 		original_tag = ARA
 		original_tag = WNG
-		original_tag = FAL
 		original_tag = TAL
 		original_tag = JKR
 	}
@@ -670,12 +577,6 @@ is_state_main_culture_bear = {
 	}
 }
 
-is_state_main_culture_buffalo = {
-	OR = {
-		is_in_array = { state_original_cores = BUF }
-	}
-}
-
 is_state_main_culture_aquileian = {
 	OR = {
 		state = 500 # Balefire
@@ -711,7 +612,6 @@ is_state_main_culture_equestrian = {
 		is_in_array = { state_original_cores = TEM }
 		is_in_array = { state_original_cores = LSP }
 		is_in_array = { state_original_cores = ELF }
-		is_in_array = { state_original_cores = EQC }
 	}
 }
 
@@ -750,8 +650,6 @@ is_state_main_culture_herzlander = {
 		is_in_array = { state_original_cores = PYT }
 		is_in_array = { state_original_cores = ROU }
 		is_in_array = { state_original_cores = BOI }
-		is_in_array = { state_original_cores = LAK }
-		is_in_array = { state_original_cores = YAL }
 		is_in_array = { state_original_cores = ANG }
 		is_in_array = { state_original_cores = STW }
 		is_in_array = { state_original_cores = HLQ }
@@ -842,7 +740,6 @@ is_state_main_culture_southerner = {
 		is_in_array = { state_original_cores = FRN }
 		is_in_array = { state_original_cores = ARA }
 		is_in_array = { state_original_cores = WNG }
-		is_in_array = { state_original_cores = FAL }
 		is_in_array = { state_original_cores = TAL }
 		is_in_array = { state_original_cores = JKR }
 	}
@@ -913,12 +810,6 @@ is_operative_main_culture_bear = {
 	}
 }
 
-is_operative_main_culture_buffalo = {
-	OR = {
-		has_nationality = BUF
-	}
-}
-
 is_operative_main_culture_aquileian = {
 	OR = {
 		has_nationality = ERI
@@ -953,7 +844,6 @@ is_operative_main_culture_equestrian = {
 		has_nationality = TEM
 		has_nationality = LSP
 		has_nationality = ELF
-		has_nationality = EQC
 	}
 }
 
@@ -981,8 +871,6 @@ is_operative_main_culture_herzlander = {
 		has_nationality = PYT
 		has_nationality = ROU
 		has_nationality = BOI
-		has_nationality = LAK
-		has_nationality = YAL
 		has_nationality = ANG
 		has_nationality = STW
 		has_nationality = HLQ
@@ -1047,7 +935,6 @@ is_operative_main_culture_southerner = {
 		has_nationality = FRN
 		has_nationality = ARA
 		has_nationality = WNG
-		has_nationality = FAL
 		has_nationality = TAL
 		has_nationality = JKR
 	}
@@ -1103,11 +990,6 @@ is_country_secondary_culture_bear = {
 	OR = {
 	}
 }
-is_country_secondary_culture_buffalo = {
-	always = no
-	OR = {
-	}
-}
 is_country_secondary_culture_aquileian = {
 	OR = {
 		original_tag = EYR
@@ -1159,9 +1041,8 @@ is_country_secondary_culture_riverlander = {
 	}
 }
 is_country_secondary_culture_southerner = {
-	OR = {
-		original_tag = EQC
-	}
+	#remove to do
+	always = no
 }
 is_country_secondary_culture_undead = {
 	always = no

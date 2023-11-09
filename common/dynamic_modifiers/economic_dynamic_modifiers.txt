@@ -1,0 +1,15 @@
+reserve_fund_modifier = {
+	icon = GFX_idea_clockwerk_economy			#to do (change)
+	enable = {
+		check_variable = {
+			political_power < -25
+		}
+	}
+	political_power_gain = 1
+}
+#NOTE: CLAMP VARIABLES, DO NOT ALLOW VARS BE POSITIVE, REMOVE IF NO NEGATIVE MODIFIER LEFT
+harvest_failure_modifier = {
+	icon = GFX_idea_clockwerk_economy			#to do (change)
+	country_resource_food = harvest_failure_food
+	supply_factor = harvest_failure_supply
+}

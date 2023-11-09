@@ -1,16 +1,16 @@
 characters = {
-	ICE_vindigo = {
-		name = ICE_vindigo
+	ICE_windigo = {
+		name = ICE_windigo
 		portraits = {
 			civilian = {
-				large = "GFX_portrait_vindigo"
+				large = "GFX_portrait_windigo"
 			}
 		}
 		allowed_civil_war = {
 			has_government = fascism
 		}		
 		country_leader = {
-			desc = "POLITICS_VINDIGO_DESC"
+			desc = "POLITICS_WINDIGO_DESC"
 			ideology = liberalism
 			traits = {
 				country_leader_trait_windigo
@@ -19,7 +19,7 @@ characters = {
 			id = -1
 		}
 		country_leader = {
-			desc = "POLITICS_VINDIGO_DESC"
+			desc = "POLITICS_WINDIGO_DESC"
 			ideology = primitive_communism
 			traits = {
 				country_leader_trait_windigo
@@ -28,7 +28,7 @@ characters = {
 			id = -1
 		}
 		country_leader = {
-			desc = "POLITICS_VINDIGO_DESC"
+			desc = "POLITICS_WINDIGO_DESC"
 			ideology = ultranationalism
 			traits = {
 				country_leader_trait_windigo
@@ -37,7 +37,7 @@ characters = {
 			id = -1
 		}
 		country_leader = {
-			desc = "POLITICS_VINDIGO_DESC"
+			desc = "POLITICS_WINDIGO_DESC"
 			ideology = centrism
 			traits = {
 				country_leader_trait_windigo
@@ -46,7 +46,7 @@ characters = {
 			id = -1
 		}
 		country_leader = {
-			desc = "POLITICS_VINDIGO_DESC"
+			desc = "POLITICS_WINDIGO_DESC"
 			ideology = harmonic_magocracy
 			traits = {
 				country_leader_trait_windigo
@@ -55,7 +55,7 @@ characters = {
 			id = -1
 		}
 		country_leader = {
-			desc = "POLITICS_VINDIGO_DESC"
+			desc = "POLITICS_WINDIGO_DESC"
 			ideology = socialist_anarchism
 			traits = {
 				country_leader_trait_windigo
@@ -64,7 +64,7 @@ characters = {
 			id = -1
 		}
 		country_leader = {
-			desc = "POLITICS_VINDIGO_DESC"
+			desc = "POLITICS_WINDIGO_DESC"
 			ideology = magocracy
 			traits = {
 				country_leader_trait_windigo
@@ -73,7 +73,7 @@ characters = {
 			id = -1
 		}
 		country_leader = {
-			desc = "POLITICS_VINDIGO_DESC"
+			desc = "POLITICS_WINDIGO_DESC"
 			ideology = undead_horde
 			traits = {
 				country_leader_trait_windigo
@@ -82,8 +82,8 @@ characters = {
 			id = -1
 		}
 		country_leader = {
-			desc = "POLITICS_VINDIGO_DESC"
-			ideology = church
+			desc = "POLITICS_WINDIGO_DESC"
+			ideology = theocracy
 			traits = {
 				country_leader_trait_windigo
 			}
@@ -91,7 +91,7 @@ characters = {
 			id = -1
 		}
 		country_leader = {
-			desc = "POLITICS_VINDIGO_DESC"
+			desc = "POLITICS_WINDIGO_DESC"
 			ideology = classic_technocracy
 			traits = {
 				country_leader_trait_windigo
@@ -100,7 +100,7 @@ characters = {
 			id = -1
 		}
 		country_leader = {
-			desc = "POLITICS_VINDIGO_DESC"
+			desc = "POLITICS_WINDIGO_DESC"
 			ideology = anarchoprimitivism
 			traits = {
 				country_leader_trait_windigo
@@ -109,13 +109,134 @@ characters = {
 			id = -1
 		}
 		country_leader = {
-			desc = "POLITICS_VINDIGO_DESC"
+			desc = "POLITICS_WINDIGO_DESC"
 			ideology = ultramilitarism
 			traits = {
 				country_leader_trait_windigo
 			}
 			expire = "1965.1.1.1"
 			id = -1
+		}
+	}
+	#HQ will be available by focuses
+	ICE_nightlands = {
+		#field marshal (ice_focus_new_high_command)
+		name = ICE_nightlands
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+				small = "" #to do
+			}
+		}
+		allowed_civil_war = {
+			tag = ICE
+		}
+		advisor = {
+			slot = theorist
+			idea_token = ICE_nightlands
+			traits = {
+				master_of_speed_and_organisation
+			}
+			allowed = {
+				original_tag = ICE
+			}
+			available = {
+				if = {
+					limit = {
+						ICE_nightlands = {
+							is_hired_as_advisor = no
+						}
+					}
+					ended_nightlands_branch = yes
+				}
+				hidden_trigger = {
+					has_completed_focus = ice_focus_new_high_command
+				}
+			}
+			visible = {
+				has_completed_focus = ice_focus_new_high_command
+			}
+			can_be_fired = no
+		}
+	}
+	ICE_valar_morgulis = {
+		#general (ice_focus_new_high_command)
+		name = ICE_valar_morgulis
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+				small = "" #to do
+			}
+		}
+		allowed_civil_war = {
+			tag = ICE
+		}
+		advisor = {
+			slot = theorist
+			idea_token = ICE_valar_morgulis
+			traits = {
+				master_of_attack_and_manpower
+			}
+			allowed = {
+				original_tag = ICE
+			}
+			available = {
+				if = {
+					limit = {
+						ICE_valar_morgulis = {
+							is_hired_as_advisor = no
+						}
+					}
+					ended_valar_branch = yes
+				}
+				hidden_trigger = {
+					has_completed_focus = ice_focus_new_high_command
+				}
+			}
+			visible = {
+				has_completed_focus = ice_focus_new_high_command
+			}
+			can_be_fired = no
+		}
+	}
+	ICE_windoo = {
+		#general (ice_focus_new_high_command)
+		name = ICE_windoo
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+				small = "" #to do
+			}
+		}
+		allowed_civil_war = {
+			tag = ICE
+		}
+		advisor = {
+			slot = theorist
+			idea_token = ICE_windoo
+			traits = {
+				master_of_defence_and_equipment
+			}
+			allowed = {
+				original_tag = ICE
+			}
+			available = {
+				if = {
+					limit = {
+						ICE_windoo = {
+							is_hired_as_advisor = no
+						}
+					}
+					ended_windoo_branch = yes
+				}
+				hidden_trigger = {
+					has_completed_focus = ice_focus_new_high_command
+				}
+			}
+			visible = {
+				has_completed_focus = ice_focus_new_high_command
+			}
+			can_be_fired = no
 		}
 	}
 }

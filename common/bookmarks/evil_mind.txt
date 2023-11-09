@@ -3,7 +3,7 @@ bookmarks = {
 		#в разработке
 		name = "EVIL_MIND_NAME"
 		desc = "EVIL_MIND_DESC"
-		date = 982.1.1.12
+		date = 982.1.1
 		picture = "GFX_select_date_1936"
 		default_country = "VES"
 		default = yes
@@ -23,14 +23,17 @@ bookmarks = {
 			focuses = {
 				ves_focus_chrysalis_coronation
 				ves_focus_land_nationalisation
-				shared_focus_changelings_initiate_great_projects
-				shared_focus_changelings_start_canterlot_race
+				shared_focus_emgp_young_revolutionary_scientist
 			}
 		}
-		"EEQ" = {
-			history = "EEQ_EVIL_MIND_DESC"
+		"EQS" = {
+			history = "EQS_EVIL_MIND_DESC"
 			ideology = fascism
-			ideas = {}
+			ideas = {
+				pony_race
+				EQS_unicorn_superiority
+				EQS_tribal_crisis
+			}
 			focuses = {
 				
 			}
@@ -38,7 +41,12 @@ bookmarks = {
 		"ICE" = {
 			history = "ICE_EVIL_MIND_DESC"
 			ideology = fascism
-			ideas = {}
+			ideas = {
+				undead_race
+				ICE_winter_spirits
+				ICE_power_of_winter
+				ICE_power_of_nature
+			}
 			focuses = {}
 		}
 		"NEM" = {
@@ -47,16 +55,23 @@ bookmarks = {
 			ideas = {}
 			focuses = {}
 		}
-		"EOL" = {
-			history = "EOL_EVIL_MIND_DESC"
+		"OLE" = {
+			history = "OLE_EVIL_MIND_DESC"
 			ideology = fascism
-			ideas = {}
+			ideas = {
+				deer_race
+				OLE_destroyed_kindom
+				OLE_high_nobles_influence
+				OLE_gossips_and_intrigues
+			}
 			focuses = {}
 		}
-		"EGE" = {
-			history = "EGE_EVIL_MIND_DESC"
+		"GRE" = {
+			history = "GRE_EVIL_MIND_DESC"
 			ideology = neutrality
-			ideas = {}
+			ideas = {
+				griffon_race
+			}
 			focuses = {}
 		}
 		"MET" = {
@@ -73,28 +88,36 @@ bookmarks = {
 			minor = yes
 			history = "DIS_EVIL_MIND_DESC"
 			ideology = fascism
-			ideas = {}
+			ideas = {
+				changeling_race
+			}
 			focuses = {}
 		}
 		"LIK" = {
 			minor = yes
 			history = "LIK_EVIL_MIND_DESC"
 			ideology = fascism
-			ideas = {}
+			ideas = {
+				changeling_race
+			}
 			focuses = {}
 		}
 		"SOR" = {
 			minor = yes
 			history = "SOR_EVIL_MIND_DESC"
 			ideology = fascism
-			ideas = {}
+			ideas = {
+				changeling_race
+			}
 			focuses = {}
 		}
 		"VRA" = {
 			minor = yes
 			history = "VRA_EVIL_MIND_DESC"
 			ideology = fascism
-			ideas = {}
+			ideas = {
+				changeling_race
+			}
 			focuses = {}
 		}
 
@@ -103,22 +126,38 @@ bookmarks = {
 			minor = yes
 			history = "PGT_EVIL_MIND_DESC"
 			ideology = militarism
-			ideas = {}
+			ideas = {
+				pony_race
+				PGT_tribal_crisis
+			}
 			focuses = {}
 		}
 		"EPT" = {
 			minor = yes
 			history = "EPT_EVIL_MIND_DESC"
 			ideology = harmony
-			ideas = {}
+			ideas = {
+				pony_race
+				EPT_tribal_crisis
+			}
 			focuses = {}
 		}
-		"EDR" = {
+		"DRG" = {
 			minor = yes
-			history = "EDR_EVIL_MIND_DESC"
+			history = "DRG_EVIL_MIND_DESC"
 			ideology = neutrality
 			ideas = {
-				EDR_crystal_mountain
+				dragon_race
+				DRG_crystal_mountain
+			}
+			focuses = {}
+		}
+		"OLR" = {
+			minor = yes
+			history = "OLR_EVIL_MIND_DESC"
+			ideology = anarchism
+			ideas = {
+				deer_race
 			}
 			focuses = {}
 		}

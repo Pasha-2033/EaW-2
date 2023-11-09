@@ -284,6 +284,34 @@ guiTypes = {
 				format = left
 			}
 		}
+		#Grouped text and checkbox for easier positioning
+		containerWindowType = {
+			name = "minor_event_checkbox_window"
+			position = {x=235 y=60}
+			Orientation = upper_right
+
+
+			checkBoxType = {
+				name = "popup_minor_events_checkbox"
+				position = { x = -11 y = -7 }
+				quadTextureSprite = "GFX_generic_checkbox3"
+				clicksound = decisions_ui_button
+				pdx_tooltip = "MINOR_EVENT_POPUP_CHECKBOX_TOOLTIP"
+			}
+
+			instantTextboxType = {
+				name = "minor_events_popup_text"
+				position = { x = 23 y = -10 }
+				textureFile = ""
+				font = "hoi_16mbs"
+				borderSize = { x = 0 y = 0 }
+				text = "POPUP_MINOR_EVENTS"
+				maxWidth = 110
+				maxHeight = 32
+				format = left
+				vertical_alignment = CENTER
+			}
+		}
 	}
 
 	containerWindowType = {
@@ -400,6 +428,7 @@ guiTypes = {
 			maxWidth = 330
 			maxHeight = 20
 			format = left
+			vertical_alignment = CENTER
 		}
 
 		iconType = {
@@ -476,7 +505,7 @@ guiTypes = {
 
 		instantTextboxType = {
 			name = "name_text"
-			position = { x = 62 y = 9 }
+			position = { x = 63 y = 9 }
 			textureFile = ""
 			font = "hoi_16mbs"
 			borderSize = { x = 0 y = 0 }
@@ -484,6 +513,7 @@ guiTypes = {
 			maxWidth = 280
 			maxHeight = 20
 			format = left
+			vertical_alignment = CENTER
 		}
 
 		iconType = {
@@ -573,10 +603,23 @@ guiTypes = {
 			spriteType = "GFX_decision_unknown"
 			centerposition = yes
 		}
+		iconType = {
+			name = "target_flag"	
+			position = { x= 32 y = 17 }			
+			quadTextureSprite = "GFX_flag_small2_not_masked"
+			scale = 0.5
+		}
+		iconType = {
+			name = "target_flag_frame"
+			quadTextureSprite = "GFX_small_flag_frame_thin2"
+			position = { x= 30 y = 15 }
+			alwaystransparent = yes
+			scale = 0.5
+		}
 
 		instantTextboxType = {
 			name = "name_text"
-			position = { x = 62 y = 12 }
+			position = { x = 63 y = 12 }
 			textureFile = ""
 			font = "hoi_16mbs"
 			borderSize = { x = 0 y = 0 }
@@ -584,6 +627,7 @@ guiTypes = {
 			maxWidth = 200
 			maxHeight = 20
 			format = left
+			vertical_alignment = CENTER
 		}
 
 		iconType = {

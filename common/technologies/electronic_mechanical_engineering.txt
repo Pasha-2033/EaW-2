@@ -1,9 +1,5 @@
-#####-----------------------------------------------------------> Mod by Sig "Greatexperiment" Altre
-
 technologies = {
-
 	electronic_mechanical_engineering = {
-
 		# small boost to research speed
 		research_speed_factor = 0.03
 		path = {
@@ -1259,17 +1255,35 @@ technologies = {
 			factor = 1
 		}
 	}
-
+	radioactivity_activity = {
+		research_cost = 1.5
+		start_year = 1022
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		path = {
+			leads_to_tech = atomic_research
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			base = 0
+		}
+		categories = {}
+	}
 	atomic_research = {
 
 		research_speed_factor = 0.04
 
-		dependencies = {
-			infantry_weapons = 1
-		}
-
 		path = {
 			leads_to_tech = nuclear_reactor
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = radiation_isolation_methods
 			research_cost_coeff = 1
 		}
 
@@ -1278,7 +1292,10 @@ technologies = {
 
 		folder = {
 			name = electronics_folder
-			position = { x = 0 y = 0 }
+			position = {
+				x = 0
+				y = 2
+			}
 		}
 
 		ai_will_do = {
@@ -1311,7 +1328,7 @@ technologies = {
 
 
 	}
-
+	#nuclear production and bombs
 	nuclear_reactor = {
 
 		# can build reactors
@@ -1321,7 +1338,10 @@ technologies = {
 
 		folder = {
 			name = electronics_folder
-			position = { x = 0 y = 2 }
+			position = {
+				x = 1
+				y = 4
+			}
 		}
 
 		path = {
@@ -1347,8 +1367,6 @@ technologies = {
 		}
 	}
 
-	###------> Old Nukes <><> <><> <><> <><> <><>
-
 	nukes = {
 
 		start_year = 1016
@@ -1356,9 +1374,11 @@ technologies = {
 
 		folder = {
 			name = electronics_folder
-			position = { x = 0 y = 6 }
+			position = {
+				x = 1
+				y = 6
+			}
 		}
-
 		ai_will_do = {
 			factor = 10
 			modifier = {
@@ -1380,8 +1400,6 @@ technologies = {
 		}
 	}
 
-	###------> New Nukes <><> <><> <><> <><> <><>
-
 	nuke_naval = {
 
 		start_year = 1017
@@ -1400,7 +1418,10 @@ technologies = {
 
 		folder = {
 			name = electronics_folder
-			position = { x = 0 y = 8 }
+			position = {
+				x = 1
+				y = 8
+			}
 		}
 
 		path = {
@@ -1424,7 +1445,7 @@ technologies = {
 		research_cost = 5
 
 		research_speed_factor = 0.05
-		killed_pop_by_nuclear_attack_factor = 10
+		nuke_charge_power_factor = 0.1
 		nuclear_production_factor = 0.05
 
 		on_research_complete = {
@@ -1437,7 +1458,10 @@ technologies = {
 
 		folder = {
 			name = electronics_folder
-			position = { x = 0 y = 12 }
+			position = {
+				x = 1
+				y = 12
+			}
 		}
 
 		path = {
@@ -1461,7 +1485,8 @@ technologies = {
 		research_cost = 7
 		
 		research_speed_factor = 0.04
-		killed_pop_by_nuclear_attack_factor = 10
+		nuke_charge_power_factor = 0.1
+		nuke_anb_destruction_factor = 0.1
 		nuclear_production_factor = 0.05
 
 		on_research_complete = {
@@ -1474,7 +1499,10 @@ technologies = {
 
 		folder = {
 			name = electronics_folder
-			position = { x = 0 y = 14 }
+			position = {
+				x = 1
+				y = 14
+			}
 		}
 		
 		ai_will_do = {
@@ -1486,10 +1514,51 @@ technologies = {
 		}
 		show_effect_as_desc = yes
 	}
+	#antiradiation protection
+	radiation_isolation_methods = {
+		path = {
+			leads_to_tech = nuklear_shelters
+			research_cost_coeff = 1
+		}
+		start_year = 1011
+		research_cost = 5
+		folder = {
+			name = electronics_folder
+			position = {
+				x = -1
+				y = 4
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+		enable_building = {
+			building = anti_nuke_bunker
+			level = 1
+		}
+		categories = {}
+	}
+	nuklear_shelters = {
+		start_year = 1011
+		research_cost = 5
+		folder = {
+			name = electronics_folder
+			position = {
+				x = -1
+				y = 6
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+		enable_building = {
+			building = anti_nuke_bunker
+			level = 5
+		}
+		categories = {}
+	}
 
-	###------> X <><> <><> <><> <><> <><>
-
-	###------> New Radar <><> <><> <><> <><> <><>
+	
 
 	future_radar = {
 
@@ -2441,7 +2510,77 @@ technologies = {
 			decryption_tech
 		}
 	}
-
+	#special technologies branch
+	steam_control_systems = {
+		research_cost = 1.5
+		start_year = 1022
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+		path = {
+			leads_to_tech = high_pressure_experimental_systems
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			base = 0
+		}
+		categories = {}
+	}
+	high_pressure_experimental_systems = {
+		research_cost = 1.5
+		start_year = 1022
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 2
+			}
+		}
+		path = {
+			leads_to_tech = overloaded_cores
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			base = 0
+		}
+		categories = {}
+	}
+	overloaded_cores = {
+		research_cost = 1.5
+		start_year = 1022
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 4
+			}
+		}
+		path = {
+			leads_to_tech = high_voltage_capacitors
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			base = 0
+		}
+		categories = {}
+	}
+	high_voltage_capacitors = {
+		research_cost = 1.5
+		start_year = 1022
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0
+				y = 4
+			}
+		}
+		ai_will_do = {
+			base = 0
+		}
+		categories = {}
+	}
 }
-
-#####-----------------------------------------------------------> End

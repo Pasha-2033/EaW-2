@@ -670,62 +670,7 @@ war_measures = {
 }
 
 foreign_politics = {
-	object_to_attaches = {
-
-		allowed = {
-			has_dlc = "Waking the Tiger"
-		}
-
-		cost = 50
-		fire_only_once = no
-
-		days_re_enable = 30
-
-		available = {
-		}
-
-		visible = {
-			NOT = { has_idea = detached_country }
-			has_war = yes
-			has_capitulated = no
-			FROM = {
-				NOT = { has_country_flag = rejected_withdrawing_attache }
-				NOT = { has_country_flag = rejected_withdrawing_attache@ROOT }
-				NOT = { has_country_flag = object_attache_going_on }
-			}
-			NOT = { has_war_with = FROM }
-			any_enemy_country = {
-				has_attache_from = FROM
-			}
-		}
-
-		target_root_trigger = {
-			NOT = { has_idea = detached_country }
-			has_war = yes
-			has_capitulated = no
-		}
-
-		target_array = global.countries_that_sent_attaches
-
-		target_trigger = {
-			NOT = { has_war_with = FROM }
-			#FROM = { has_sent_attache = yes } # Make such trigger to optimize if it becomes a performance problem again.
-			any_enemy_country = {
-				has_attache_from = FROM
-			}
-		}
-
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision object_to_attaches target: [From.GetName]"
-			FROM = { country_event = { id = generic.14 hours = 6 } }
-			hidden_effect = {
-				FROM = { set_country_flag = object_attache_going_on }
-			}
-		}
-		ai_will_do = {
-			factor = 1
-		}
-	}
+	#object_to_attaches #to do
 }
 
 economy_decisions = {

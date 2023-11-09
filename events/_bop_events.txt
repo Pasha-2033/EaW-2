@@ -1,0 +1,214 @@
+add_namespace = bop_eqs_event
+country_event = {
+	#start EQS_prince_blueblood_initiatives_mission
+	id = bop_eqs_event.1
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		activate_mission = EQS_prince_blueblood_initiatives_mission
+		country_event = {
+			id = bop_eqs_event.7
+			days = 105
+			random_days = 35
+		}
+	}
+}
+country_event = {
+	#start EQS_arest_harmonic_officers_mission
+	id = bop_eqs_event.2
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		activate_mission = EQS_arest_harmonic_officers_mission
+	}
+}
+country_event = {
+	#start EQS_opposition_to_harmony_mission
+	id = bop_eqs_event.3
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		activate_mission = EQS_opposition_to_harmony_mission
+	}
+}
+country_event = {
+	#start EQS_fascist_recruit_general_marshal(admiral)
+	#start EQS_harmonist_recruit_general_marshal(admiral)
+	id = bop_eqs_event.4
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		if = {
+			limit = {
+				NOT = {
+					has_completed_focus = eqs_focus_friendship_is_magic #if become harmonic - stop fascists when friendship destroys windigo
+				}
+				has_power_balance = {
+					id = EQS_prince_blueblood_vs_twilight
+				}
+			}
+			set_variable = {
+				#fixes trigger (prevent THIS (country) = 0 become EQS_fascism_vs_harmony_character)
+				EQS_fascism_vs_harmony_character = 0
+			}
+			random_list = {
+				0 = {
+					modifier = {
+						any_army_leader = {
+							has_unit_leader_political_trait = no
+						}
+						add = 50
+					}
+					random_army_leader = {
+						limit = {
+							has_unit_leader_political_trait = no
+						}
+						set_variable = { 
+							PREV.EQS_fascism_vs_harmony_character = THIS 
+						}
+					}
+				}
+				0 = {
+					modifier = {
+						any_navy_leader = {
+							has_unit_leader_political_trait = no
+						}
+						add = 50
+					}
+					random_navy_leader = {
+						limit = {
+							has_unit_leader_political_trait = no
+						}
+						set_variable = { 
+							PREV.EQS_fascism_vs_harmony_character = THIS 
+						}
+					}
+				}
+			}
+			set_country_flag = EQS_fascism_vs_harmony_character_timer
+			if = {
+				#if no character found - don`t start mission
+				limit = {
+					check_variable = {
+						EQS_fascism_vs_harmony_character = 0
+					}
+				}
+				country_event = {
+					#recusion (delay 7 days, we shouldn`t create a lot of checks)
+					id = bop_eqs_event.5
+					days = 7
+				}
+			}
+			else_if = {
+				limit = {
+					var:EQS_fascism_vs_harmony_character = {
+						is_army_leader = yes
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = eqs_focus_twilight_initiative
+					}
+					activate_mission = EQS_fascist_recruit_general_marshal
+				}
+				else = {
+					activate_mission = EQS_harmonist_recruit_general_marshal
+				}
+			}
+			else_if = {
+				limit = {
+					has_completed_focus = eqs_focus_twilight_initiative
+				}
+				activate_mission = EQS_fascist_recruit_admiral
+			}
+			else = {
+				activate_mission = EQS_harmonist_recruit_admiral
+			}
+		}
+	}
+}
+country_event = {
+	#start EQS_fascist_recruit_general_marshal(admiral) recusion
+	#start EQS_harmonist_recruit_general_marshal(admiral) recusion
+	id = bop_eqs_event.5
+	immediate = {
+		clear_variable = EQS_fascism_vs_harmony_character
+		clr_country_flag = EQS_fascism_vs_harmony_character_timer
+	}
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		country_event = {
+			id = bop_eqs_event.4
+		}
+	}
+}
+country_event = {
+	#start EQS_twilight_initiatives_mission
+	id = bop_eqs_event.6
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		activate_mission = EQS_twilight_initiatives_mission
+	}
+}
+country_event = {
+	#start EQS_unicorn_censorship_mission
+	id = bop_eqs_event.7
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		activate_mission = EQS_unicorn_censorship_mission
+	}
+}
+country_event = {
+	#start opposition propaganda
+	id = bop_eqs_event.8
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		if = {
+			limit = {
+				has_power_balance = {
+					id = EQS_prince_blueblood_vs_twilight
+				}
+			}
+			random_list = {
+				25 = {
+					modifier = {
+						factor = 1
+						#if ideology is too low or bop is not good, chance for opposition activity should be higher (to do)
+					}
+					if = {
+						limit = {
+							has_completed_focus = eqs_focus_twilight_initiative
+						}
+						activate_mission = EQS_fascism_propaganda_mission
+						add_ideas = EQS_fascism_propaganda_bop
+					}
+					else = {
+						activate_mission = EQS_harmony_propaganda_mission
+						add_ideas = EQS_harmony_propaganda_bop
+					}
+				}
+				75 = {
+					country_event = {
+						id = bop_eqs_event.9
+						days = 7
+					}
+				}
+			}
+		}
+	}
+}
+country_event = {
+	#start opposition propaganda recursion
+	id = bop_eqs_event.9
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		country_event = {
+			id = bop_eqs_event.8
+		}
+	}
+}

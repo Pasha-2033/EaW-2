@@ -1,0 +1,1200 @@
+#!gfx:interface\zzz_EQS.gfx
+#982 scenario
+#Windigo time focuses
+focus_tree = {
+	id = eqs_focus_tree_widigo
+	country = {
+		base = 0
+		modifier = {
+			add = 100
+			tag = EQS
+		}
+	}
+	default = no
+	continuous_focus_position = {
+		x = 1800
+		y = 1250
+	}
+	shared_focus = eqs_pgt_ept_winter_spirits
+	focus = {
+		id = eqs_focus_harmony_isnot_lost
+		icon = GFX_goal_eqs_focus_harmony_isnot_lost
+		cost = 5
+		x = 21
+		y = 0
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_harmony_isnot_lost"
+			add_popularity = {
+				ideology = harmony
+				popularity = 0.04
+			}
+			add_stability = 0.05
+			country_event = {
+				id = equestria.2
+				days = 7
+				random_days = 7
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_friendship_flashbacks
+		icon = GFX_goal_eqs_focus_friendship_flashbacks
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_harmony_isnot_lost
+		prerequisite = {
+			focus = eqs_focus_harmony_isnot_lost
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_friendship_flashbacks"
+			add_popularity = {
+				ideology = harmony
+				popularity = 0.05
+			}
+			add_stability = 0.1
+			add_war_support = -0.05
+		}
+	}
+	focus = {
+		id = eqs_focus_twilight_initiative
+		icon = GFX_goal_eqs_focus_twilight_initiative
+		cost = 5
+		x = -6
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_friendship_flashbacks
+		prerequisite = {
+			focus = eqs_focus_friendship_flashbacks
+		}
+		mutually_exclusive = {
+			focus = eqs_focus_prince_blueblood_speaches
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_twilight_initiative"
+			activate_advisor = EQS_982_twilight
+			set_power_balance = {
+				id = EQS_prince_blueblood_vs_twilight
+				set_default = yes
+			}
+			add_ideas = EQS_political_overload
+			hidden_effect = {
+				country_event = {
+					id = bop_eqs_event.1
+					days = 7
+					random_days = 7
+				}
+				country_event = {
+					id = bop_eqs_event.4
+					days = 2
+					random_days = 2
+				}
+				country_event = {
+					id = bop_eqs_event.8
+					days = 3
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_BALANCE_OF_POWER
+		}
+	}
+	focus = {
+		id = eqs_focus_unicorn_harmony
+		icon = GFX_goal_eqs_focus_unicorn_harmony
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_twilight_initiative
+		prerequisite = {
+			focus = eqs_focus_twilight_initiative
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_unicorn_harmony"
+			hidden_effect = {
+				country_event = {
+					id = bop_eqs_event.2
+					days = 7
+					random_days = 7
+				}
+			}
+			add_power_balance_modifier = {
+				id = EQS_prince_blueblood_vs_twilight
+				modifier = EQS_unicorn_harmony
+			}
+			add_popularity = {
+				ideology = harmony
+				popularity = 0.05
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_BALANCE_OF_POWER
+		}
+	}
+	focus = {
+		id = eqs_focus_earthpony_harmony
+		icon = GFX_goal_eqs_focus_earthpony_harmony
+		cost = 5
+		x = 3
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_twilight_initiative
+		prerequisite = {
+			focus = eqs_focus_twilight_initiative
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_earthpony_harmony"
+			add_power_balance_modifier = {
+				id = EQS_prince_blueblood_vs_twilight
+				modifier = EQS_earthpony_harmony
+			}
+			add_popularity = {
+				ideology = harmony
+				popularity = 0.025
+			}
+			EPT = {
+				add_popularity = {
+					ideology = harmony
+					popularity = 0.05
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_BALANCE_OF_POWER
+		}
+	}
+	focus = {
+		id = eqs_focus_pegas_harmony
+		icon = GFX_goal_eqs_focus_pegas_harmony
+		cost = 5
+		x = -3
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_twilight_initiative
+		prerequisite = {
+			focus = eqs_focus_twilight_initiative
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_pegas_harmony"
+			add_power_balance_modifier = {
+				id = EQS_prince_blueblood_vs_twilight
+				modifier = EQS_pegas_harmony
+			}
+			add_popularity = {
+				ideology = harmony
+				popularity = 0.025
+			}
+			PGT = {
+				add_popularity = {
+					ideology = harmony
+					popularity = 0.05
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_BALANCE_OF_POWER
+		}
+	}
+	focus = {
+		id = eqs_focus_friendship_with_rarity
+		icon = GFX_goal_eqs_focus_friendship_with_rarity
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_unicorn_harmony
+		prerequisite = {
+			focus = eqs_focus_unicorn_harmony
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_friendship_with_rarity"
+			hidden_effect = {
+				country_event = {
+					id = bop_eqs_event.3
+					days = 7
+					random_days = 7
+				}
+			}
+			country_event = {
+				id = equestria.7
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_friendship_with_fluttershy
+		icon = GFX_goal_eqs_focus_friendship_with_fluttershy
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_pegas_harmony
+		prerequisite = {
+			focus = eqs_focus_pegas_harmony
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_friendship_with_fluttershy"
+			country_event = {
+				id = equestria.3
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_form_unicorn_harmonist_movemnt
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_friendship_with_rarity
+		prerequisite = {
+			focus = eqs_focus_friendship_with_rarity
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_form_unicorn_harmonist_movemnt"
+			add_popularity = {
+				ideology = harmony
+				popularity = 0.075
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_reveal_harmonist_movemnt
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_form_unicorn_harmonist_movemnt
+		prerequisite = {
+			focus = eqs_focus_form_unicorn_harmonist_movemnt
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_reveal_harmonist_movemnt"
+			set_politics = {
+				ruling_party = harmony
+			}
+			promote_character = EQS_982_twilight
+			set_temp_variable = {
+				ds = party_popularity@fascism
+			}
+			divide_temp_variable = {
+				ds = -5
+			}
+			add_war_support = ds
+			divide_temp_variable = {
+				ds = 2
+			}
+			add_stability = ds
+		}
+	}
+	focus = {
+		id = eqs_focus_friendship_with_rainbowdash
+		icon = GFX_goal_eqs_focus_friendship_with_rainbowdash
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_pegas_harmony
+		prerequisite = {
+			focus = eqs_focus_pegas_harmony
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_friendship_with_rainbowdash"
+			country_event = {
+				id = equestria.4
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_form_pegas_harmonist_movemnt
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 2
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_pegas_harmony
+		prerequisite = {
+			focus = eqs_focus_friendship_with_fluttershy
+		}
+		prerequisite = {
+			focus = eqs_focus_friendship_with_rainbowdash
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_form_pegas_harmonist_movemnt"
+			PGT = {
+				add_popularity = {
+					ideology = harmony
+					popularity = 0.1
+				}
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_appeal_to_pegas_leader
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 2
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_form_pegas_harmonist_movemnt
+		prerequisite = {
+			focus = eqs_focus_form_pegas_harmonist_movemnt
+		}
+		prerequisite = {
+			focus = eqs_focus_reveal_harmonist_movemnt
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_appeal_to_pegas_leader"
+			PGT = {
+				country_event = {
+					id = equestria.5
+				}
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_friendship_with_applejack
+		icon = GFX_goal_eqs_focus_friendship_with_applejack
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_earthpony_harmony
+		prerequisite = {
+			focus = eqs_focus_earthpony_harmony
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_friendship_with_applejack"
+			country_event = {
+				id = equestria.5
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_friendship_with_pinkypie
+		icon = GFX_goal_eqs_focus_friendship_with_pinkypie
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_earthpony_harmony
+		prerequisite = {
+			focus = eqs_focus_earthpony_harmony
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_friendship_with_pinkypie"
+			country_event = {
+				id = equestria.6
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_form_earthpony_harmonist_movemnt
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 2
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_earthpony_harmony
+		prerequisite = {
+			focus = eqs_focus_friendship_with_applejack
+		}
+		prerequisite = {
+			focus = eqs_focus_friendship_with_pinkypie
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_form_earthpony_harmonist_movemnt"
+			EPT = {
+				add_popularity = {
+					ideology = harmony
+					popularity = 0.1
+				}
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_appeal_to_earthpony_leader
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 2
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_form_earthpony_harmonist_movemnt
+		prerequisite = {
+			focus = eqs_focus_form_earthpony_harmonist_movemnt
+		}
+		prerequisite = {
+			focus = eqs_focus_reveal_harmonist_movemnt
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_appeal_to_earthpony_leader"
+			EPT = {
+				country_event = {
+					id = equestria.5
+				}
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_friendship_is_magic
+		icon = GFX_goal_eqs_focus_friendship_is_magic
+		cost = 5
+		x = 0
+		y = 4
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_friendship_with_rarity
+		prerequisite = {
+			focus = eqs_focus_reveal_harmonist_movemnt
+		}
+		prerequisite = {
+			focus = eqs_focus_appeal_to_pegas_leader
+		}
+		prerequisite = {
+			focus = eqs_focus_appeal_to_earthpony_leader
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_friendship_is_magic"
+			ICE = {
+				remove_ideas_with_trait = ICE_expansion
+			}
+			ICE = {
+				add_ideas = ICE_winter_spirits_crushed
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_prince_blueblood_speaches
+		icon = GFX_goal_eqs_focus_prince_blueblood_speaches
+		cost = 5
+		x = 7
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_friendship_flashbacks
+		prerequisite = {
+			focus = eqs_focus_friendship_flashbacks
+		}
+		mutually_exclusive = {
+			focus = eqs_focus_twilight_initiative
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_prince_blueblood_speaches"
+			set_power_balance = {
+				id = EQS_prince_blueblood_vs_twilight
+				set_default = yes
+			}
+			add_ideas = EQS_political_overload
+			hidden_effect = {
+				country_event = {
+					id = bop_eqs_event.6
+					days = 7
+					random_days = 7
+				}
+				country_event = {
+					id = bop_eqs_event.5
+				}
+			}
+			set_politics = {
+				ruling_party = fascism
+				elections_allowed = no
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_BALANCE_OF_POWER
+		}
+	}
+	focus = {
+		id = eqs_focus_desperate_measures
+		icon = GFX_goal_eqs_focus_desperate_measures
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_prince_blueblood_speaches
+		prerequisite = {
+			focus = eqs_focus_prince_blueblood_speaches
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_desperate_measures"
+			add_ideas = EQS_desperate_measures
+		}
+	}
+	focus = {
+		id = eqs_focus_war_of_attrition
+		icon = GFX_goal_eqs_focus_war_of_attrition
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_desperate_measures
+		prerequisite = {
+			focus = eqs_focus_desperate_measures
+		}
+		mutually_exclusive = {
+			focus = eqs_focus_war_of_offensive_war
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_war_of_attrition"
+			add_ideas = EQS_war_of_attrition
+			if = {
+				limit = {
+					controls_state = 3
+				}
+				add_resource = {
+					type = food
+					amount = 20
+					state = 3
+				}
+			}
+			else = {
+				add_resource = {
+					type = food
+					amount = 10
+					state = capital
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_SURPLUS_APPROPRIATION
+		}
+	}
+	focus = {
+		id = eqs_focus_ration_cards
+		icon = GFX_goal_eqs_focus_ration_cards
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_war_of_attrition
+		prerequisite = {
+			focus = eqs_focus_war_of_attrition
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_ration_cards"
+			set_temp_variable = {
+				hf_food = harvest_failure_food
+			}
+			multiply_temp_variable = {
+				hf_food = -0.25
+			}
+			set_temp_variable = {
+				hf_supply = harvest_failure_supply
+			}
+			multiply_temp_variable = {
+				hf_supply = -0.15
+			}
+			add_to_variable = {
+				harvest_failure_food = hf_food
+			}
+			add_to_variable = {
+				harvest_failure_supply = hf_supply
+			}
+			custom_effect_tooltip = mulmul_harvest_failure_food_075_supply_085
+		}
+		search_filters = {
+			FOCUS_FILTER_SURPLUS_APPROPRIATION
+		}
+	}
+	focus = {
+		id = eqs_focus_war_of_offensive_war
+		icon = GFX_goal_eqs_focus_war_of_offensive_war
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_desperate_measures
+		prerequisite = {
+			focus = eqs_focus_desperate_measures
+		}
+		mutually_exclusive = {
+			focus = eqs_focus_war_of_attrition
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_war_of_offensive_war"
+			add_ideas = EQS_war_of_offensive_war
+			capital_scope = {
+				create_unit = {
+					division = "name = \"White Rook\" division_template = \"Royal Guard Squad\" start_experience_factor = 0.9"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "division_template = \"Garnison Division\" start_experience_factor = 0.25"
+					owner = ROOT
+				}
+				create_unit = {
+					division = "division_template = \"Garnison Division\" start_experience_factor = 0.25"
+					owner = ROOT
+				}
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_behind_is_canterlot
+		icon = GFX_goal_eqs_focus_behind_is_canterlot
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		available = {
+			controls_state = 3
+		}
+		relative_position_id = eqs_focus_war_of_offensive_war
+		prerequisite = {
+			focus = eqs_focus_war_of_offensive_war
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_behind_is_canterlot"
+			3 = { #Canterlot scope
+				#state buildings
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				#sity itself
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 179
+				}
+				#important roads
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 11114
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 911
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 6975
+				}
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_stop_uncontrolled_militarism
+		icon = GFX_goal_eqs_focus_stop_uncontrolled_militarism
+		cost = 5
+		x = 0
+		y = 3
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_desperate_measures
+		prerequisite = {
+			focus = eqs_focus_behind_is_canterlot
+			focus = eqs_focus_ration_cards
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_stop_uncontrolled_militarism"
+			add_ideas = EQS_stop_uncontrolled_militarism
+		}
+	}
+	focus = {
+		id = eqs_focus_foreign_policy
+		icon = GFX_goal_eqs_focus_foreign_policy
+		cost = 5
+		x = 5
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_prince_blueblood_speaches
+		prerequisite = {
+			focus = eqs_focus_prince_blueblood_speaches
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_foreign_policy"
+			add_political_power = 25
+			country_event = {
+				id = equestria.8
+				days = 4
+				random_days = 1
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_white_peace_with_pgt
+		icon = GFX_goal_eqs_focus_white_peace_with_pgt
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_foreign_policy
+		prerequisite = {
+			focus = eqs_focus_foreign_policy
+		}
+		available = {
+			has_war_with = PGT
+		}
+		bypass_if_unavailable = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_white_peace_with_pgt"
+			PGT = {
+				country_event = {
+					id = eqs_pgt_ept_anti_ice_event.7
+				}
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_white_peace_with_ept
+		icon = GFX_goal_eqs_focus_white_peace_with_ept
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_foreign_policy
+		prerequisite = {
+			focus = eqs_focus_foreign_policy
+		}
+		available = {
+			has_war_with = EPT
+		}
+		bypass_if_unavailable = yes
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_white_peace_with_ept"
+			EPT = {
+				country_event = {
+					id = eqs_pgt_ept_anti_ice_event.7
+				}
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_central_equus_defence_district
+		icon = GFX_goal_eqs_focus_central_equus_defence_district
+		cost = 5
+		x = 0
+		y = 2
+		ai_will_do = {
+			base = 200
+		}
+		available = {
+			NOT = {
+				has_war_with = EPT
+				has_war_with = PGT
+			}
+		}
+		relative_position_id = eqs_focus_foreign_policy
+		prerequisite = {
+			focus = eqs_focus_white_peace_with_ept
+		}
+		prerequisite = {
+			focus = eqs_focus_white_peace_with_pgt
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_central_equus_defence_district"
+			army_experience = 50
+			navy_experience = 10
+			air_experience = 10
+			add_ideas = EQS_central_high_command
+		}
+	}
+	focus = {
+		id = eqs_focus_canterlot_district
+		icon = GFX_goal_eqs_focus_canterlot_district
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		available = {
+			has_civil_war = no
+			controls_state = 3
+		}
+		relative_position_id = eqs_focus_central_equus_defence_district
+		prerequisite = {
+			focus = eqs_focus_central_equus_defence_district
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_canterlot_district"
+			add_ideas = EQS_central_equus_defence_district
+		}
+	}
+	focus = {
+		id = eqs_focus_las_pegasus_district
+		icon = GFX_goal_eqs_focus_las_pegasus_district
+		cost = 5
+		x = -2
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		available = {
+			NOT = {
+				has_war_with = PGT
+			}
+			PGT = {
+				controls_state = 66
+			}
+		}
+		relative_position_id = eqs_focus_central_equus_defence_district
+		prerequisite = {
+			focus = eqs_focus_central_equus_defence_district
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_las_pegasus_district"
+			PGT = {
+				add_ideas = PGT_west_equus_defence_district
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = built_defence_district
+				}
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_stableside_district
+		icon = GFX_goal_eqs_focus_stableside_district
+		cost = 5
+		x = 2
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		available = {
+			NOT = {
+				has_war_with = EPT
+			}
+			EPT = {
+				controls_state = 15
+			}
+		}
+		relative_position_id = eqs_focus_central_equus_defence_district
+		prerequisite = {
+			focus = eqs_focus_central_equus_defence_district
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_stableside_district"
+			EPT = {
+				add_ideas = EPT_south_equus_defence_district
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = built_defence_district
+				}
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_opposition_to_harmony
+		icon = GFX_goal_eqs_focus_opposition_to_harmony
+		cost = 5
+		x = -3
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_prince_blueblood_speaches
+		prerequisite = {
+			focus = eqs_focus_prince_blueblood_speaches
+		}
+		mutually_exclusive = {
+			focus = eqs_focus_make_concessions_for_harmony
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_opposition_to_harmony"
+			add_political_power = 150
+			NML = {
+				if = {
+					limit = {
+						is_subject_of = ROOT
+					}
+					add_ideas = NML_opposition_to_harmony
+				}	
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_press_on_twilight_the_sore_spot
+		icon = GFX_goal_eqs_focus_press_on_twilight_the_sore_spot
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_opposition_to_harmony
+		prerequisite = {
+			focus = eqs_focus_opposition_to_harmony
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_press_on_twilight_the_sore_spot"
+			add_popularity = {
+				ideology = harmony
+				popularity = -0.05
+			}
+			add_power_balance_value = {
+				id = EQS_prince_blueblood_vs_twilight
+				value = 0.1
+			}
+			add_stability = 0.1
+		}
+		search_filters = {
+			FOCUS_FILTER_BALANCE_OF_POWER
+		}
+	}
+	focus = {
+		id = eqs_focus_arest_harmonic_officers
+		icon = GFX_goal_eqs_focus_arest_harmonic_officers
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_press_on_twilight_the_sore_spot
+		prerequisite = {
+			focus = eqs_focus_press_on_twilight_the_sore_spot
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_arest_harmonic_officers"
+			every_character = {
+				limit = {
+					has_trait = sympathizes_harmony_trait
+				}
+				ROOT = {
+					retire_character = PREV
+				}
+			}
+			add_popularity = {
+				ideology = harmony
+				popularity = -0.05
+			}
+			add_war_support = -0.05
+			add_stability = 0.1
+			add_power_balance_value = {
+				id = EQS_prince_blueblood_vs_twilight
+				value = 0.1
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_BALANCE_OF_POWER
+		}
+	}
+	focus = {
+		id = eqs_focus_unicorn_censorship
+		icon = GFX_goal_eqs_focus_unicorn_censorship
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_arest_harmonic_officers
+		prerequisite = {
+			focus = eqs_focus_arest_harmonic_officers
+		}
+		available = {
+			fascism > 0.5
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_unicorn_censorship"
+			add_ideas = EQS_unicorn_censorship
+		}
+	}
+	focus = {
+		id = eqs_focus_make_concessions_for_harmony
+		icon = GFX_goal_eqs_focus_make_concessions_for_harmony
+		cost = 5
+		x = -6
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_prince_blueblood_speaches
+		prerequisite = {
+			focus = eqs_focus_prince_blueblood_speaches
+		}
+		mutually_exclusive = {
+			focus = eqs_focus_opposition_to_harmony
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_make_concessions_for_harmony"
+			add_popularity = {
+				ideology = fascism
+				popularity = -0.05
+			}
+			hidden_effect = {
+				add_to_variable = {
+					accept_harmonists_war_support_weekly_factor = 0.02
+				}
+				subtract_from_variable = {
+					accept_harmonists_weekly_casualties_war_support = 0.02
+				}
+				add_to_variable = {
+					accept_harmonists_opinion_gain_monthly_factor = 0.05
+				}
+				add_dynamic_modifier = {
+					modifier = EQS_accept_harmonists
+				}
+			}
+			custom_effect_tooltip = add_dynamic_modifier_EQS_accept_harmonists_tt
+			country_event = {
+				id = equestria.9
+				days = 3
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_stop_persecution_of_harmonists
+		icon = GFX_goal_eqs_focus_stop_persecution_of_harmonists
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_make_concessions_for_harmony
+		prerequisite = {
+			focus = eqs_focus_make_concessions_for_harmony
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_stop_persecution_of_harmonists"
+			country_event = equestria.9
+			add_to_variable = {
+				accept_harmonists_stability_weekly_factor = 0.02
+			}
+			add_to_variable = {
+				accept_harmonists_opinion_gain_monthly_factor = 0.05
+			}
+			subtract_from_variable = {
+				accept_harmonists_weekly_casualties_war_support = 0.03
+			}
+			custom_effect_tooltip = upgrade_EQS_accept_harmonists_tt
+		}
+	}
+	focus = {
+		id = eqs_focus_complex_goverment
+		icon = GFX_goal_eqs_focus_complex_goverment
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_stop_persecution_of_harmonists
+		prerequisite = {
+			focus = eqs_focus_stop_persecution_of_harmonists
+		}
+		mutually_exclusive = {
+			focus = eqs_focus_admission_only_to_lower_positions
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_complex_goverment"
+			country_event = equestria.9
+			add_to_variable = {
+				accept_harmonists_stability_weekly_factor = 0.02
+			}
+			add_to_variable = {
+				accept_harmonists_opinion_gain_monthly_factor = 0.05
+			}
+			add_to_variable = {
+				accept_harmonists_weekly_casualties_war_support = 0.02
+			}
+			add_to_variable = {
+				accept_harmonists_political_power_factor = 0.2
+			}
+			custom_effect_tooltip = upgrade_to_complex_goverment_tt
+		}
+	}
+	focus = {
+		id = eqs_focus_admission_only_to_lower_positions
+		icon = GFX_goal_eqs_focus_admission_only_to_lower_positions
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_stop_persecution_of_harmonists
+		prerequisite = {
+			focus = eqs_focus_stop_persecution_of_harmonists
+		}
+		mutually_exclusive = {
+			focus = eqs_focus_complex_goverment
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_admission_only_to_lower_positions"
+			country_event = equestria.9
+			add_to_variable = {
+				accept_harmonists_stability_weekly_factor = 0.05
+			}
+			add_to_variable = {
+				accept_harmonists_opinion_gain_monthly_factor = 0.02
+			}
+			add_to_variable = {
+				accept_harmonists_weekly_casualties_war_support = 0.04
+			}
+			add_to_variable = {
+				accept_harmonists_political_power_factor = 0.05
+			}
+			custom_effect_tooltip = upgrade_to_lower_positions_tt
+		}
+	}
+}

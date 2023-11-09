@@ -13,15 +13,14 @@ state={
 		#owner = EQS
 		#add_core_of = EQS
 		#add_core_of = BUF
-		982.1.1 = {
-			owner = EPT
-			add_core_of = EPT
-			add_core_of = EEQ
-			add_claim_by = ICE
+		982.1.1 = {			
+			owner = ICE
+			add_core_of = ICE
+			add_core_of = EQS
 		}
 		1007.1.1 = {
-			owner = NEQ
-			add_core_of = NEQ
+			owner = EQS
+			remove_core_of = ICE
 		}
 		1050.1.1 = {}
 		victory_points = { 3631 3 }
@@ -30,6 +29,5 @@ state={
 
 	resources = {
 		oil = 3
-		food = 5
 	}
 }

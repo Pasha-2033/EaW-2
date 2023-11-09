@@ -1,0 +1,219 @@
+#THIS SCRIPTS WORKS ONLY IN STATE SCOPE!!!
+remove_urbanization_modifier = {
+	for_each_loop = {
+		array = global.urbanization_modifiers_tokens
+		value = v
+		meta_effect = {
+			text = {
+				if = {
+					limit = {
+						has_dynamic_modifier = {
+							modifier = [M]
+						}
+					}
+					remove_dynamic_modifier = {
+						modifier = [M]
+					}
+					remove_dynamic_modifier = {
+						modifier = [M]_target
+					}
+				}
+			}
+			M = "[?v.GetTokenKey]"
+		}	
+	}
+}
+set_state_urbanization_modifier = {
+	remove_urbanization_modifier = yes
+	#to do turn of for targered states
+	set_temp_variable = {
+		temp_i = 0
+	}
+	if = {
+		limit = {
+			state_is_rural = yes
+		}
+		add_to_temp_variable = {
+			temp_i = 4
+		}
+	}
+	if = {
+		limit = {
+			controller = {
+				NOT = {
+					has_idea = medium_urbanization_focus
+				}
+			}
+		}
+		if = {
+			limit = {
+				controller = {
+					has_idea = low_urbanization_focus
+				}
+			}
+			add_to_temp_variable = {
+				temp_i = 1
+			}
+		}
+		else_if = {
+			limit = {
+				controller = {
+					has_idea = high_urbanization_focus
+				}
+			}
+			add_to_temp_variable = {
+				temp_i = 2
+			}
+		}
+		else_if = {
+			limit = {
+				controller = {
+					has_idea = very_high_urbanization_focus
+				}
+			}
+			add_to_temp_variable = {
+				temp_i = 3
+			}
+		}
+		meta_effect = {
+			text = {
+				add_dynamic_modifier = {
+					modifier = [M]
+				}
+				add_dynamic_modifier = {
+					modifier = [M]_target
+				}
+			}
+			M = "[?global.urbanization_modifiers_tokens^temp_i.GetTokenKey]"
+		}
+	}
+}
+apply_urbanisation_mechanic_to_state = {
+	set_temp_variable = {
+		population = state_population_k
+	}
+	multiply_temp_variable = {
+		population = modifier@urbanization_modifier_population_growth
+	}
+	multiply_temp_variable = {
+		population = 1000
+	}
+	add_manpower = population
+	set_state_urbanization_modifier = yes
+}
+#THIS SCRIPTS WORKS ONLY IN COUNTRY SCOPE
+calc_urbanisation_migration_country = {
+	if = {
+		limit = {
+			NOT = {
+				has_idea = medium_urbanization_focus
+			}
+		}
+		set_temp_variable = {
+			migration_k = 0
+		}
+		if = {
+			limit = {
+				OR = {
+					has_idea = no_urbanization_control
+					has_idea = low_urbanization_focus
+				}
+			}
+			for_each_loop = {
+				array = controlled_states
+				value = v
+				if = {
+					limit = {
+						var:v = {
+							state_is_rural = yes
+						}
+					}
+					add_to_temp_array = { states_getters = v }
+				}
+				else = {
+					add_to_temp_array = { states_senders = v }
+					#test for overflow (to do)!!! if country is too big, like 2B+ population
+					add_to_temp_variable = {
+						migration_k = v:state_population_k
+					}
+				}
+			}
+		}
+		else = {
+			for_each_loop = {
+				array = controlled_states
+				value = v
+				if = {
+					limit = {
+						var:v = {
+							state_is_rural = yes
+						}
+					}
+					add_to_temp_array = { states_senders = v }
+					#test for overflow (to do)!!! if country is too big, like 2B+ population
+					add_to_temp_variable = {
+						migration_k = v:state_population_k
+					}
+				}
+				else = {
+					add_to_temp_array = { states_getters = v }
+				}
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					states_getters^num > 0
+				}
+			}
+			var:states_senders^0 = {
+				multiply_temp_variable = {
+					PREV.migration_k = modifier@urbanization_modifier_population_growth_target
+				}
+			}
+			divide_temp_variable = {
+				migration_k = states_getters^num
+			}
+			multiply_temp_variable = {
+				migration_k = -1
+			}
+			for_each_loop = {
+				array = states_getters
+				value = v
+				var:v = {
+					set_temp_variable = {
+						population_percent = migration_k
+					}
+					divide_temp_variable = {
+						population_percent = state_population_k
+					}
+					set_variable = {
+						u_population_growth = population_percent
+					}
+				}
+			}
+			for_each_loop = {
+				array = states_senders
+				value = v
+				var:v = {
+					set_variable = {
+						u_population_growth = modifier@urbanization_modifier_population_growth_target
+					}
+				}
+			}
+		}
+		else = {
+			for_each_loop = {
+				array = states_senders
+				value = v
+				var:v = {
+					set_variable = {
+						u_population_growth = 0
+					}
+				}
+			}
+		}
+		clear_temp_array = states_getters
+		clear_temp_array = states_senders
+	}
+}

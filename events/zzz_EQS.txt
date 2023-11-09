@@ -1,0 +1,155 @@
+add_namespace = equestria
+#change picture everywhere
+country_event = {
+	#create research group with VES
+	id = equestria.1
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event equestria.1"
+	}
+	title = equestria.1.t
+	desc = equestria.1.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#yes
+		name = equestria.1.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		#no
+		name = equestria.1.b
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {
+	#friendship is not lost
+	id = equestria.2
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event equestria.2"
+	}
+	title = equestria.2.t
+	desc = equestria.2.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		name = equestria.2.a
+	}
+}
+country_event = {
+	#eqs_focus_friendship_with_fluttershy
+	id = equestria.3
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event equestria.3"
+	}
+	title = equestria.3.t
+	desc = equestria.3.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		name = equestria.3.a
+	}
+}
+country_event = {
+	#eqs_focus_friendship_with_rainbowdash
+	id = equestria.4
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event equestria.4"
+	}
+	title = equestria.4.t
+	desc = equestria.4.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		name = equestria.4.a
+	}
+}
+country_event = {
+	#eqs_focus_friendship_with_applejack
+	id = equestria.5
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event equestria.5"
+	}
+	title = equestria.5.t
+	desc = equestria.5.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		name = equestria.5.a
+	}
+}
+country_event = {
+	#eqs_focus_friendship_with_pinkypie
+	id = equestria.6
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event equestria.6"
+	}
+	title = equestria.6.t
+	desc = equestria.6.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		name = equestria.6.a
+	}
+}
+country_event = {
+	#eqs_focus_friendship_with_rarity
+	id = equestria.7
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event equestria.7"
+	}
+	title = equestria.7.t
+	desc = equestria.7.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		name = equestria.7.a
+	}
+}
+country_event = {
+	#foreing policy
+	id = equestria.8
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event equestria.8"
+	}
+	title = equestria.8.t
+	desc = equestria.8.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#we have to focus on Equestral space (EPT, PGT)
+		name = equestria.8.a
+	}
+	option = {
+		#we have to focus on North space (hives, deers, MET, NEM)
+		name = equestria.8.b
+	}
+	option = {
+		#we have to focus on South space and Griffons (GRE, DRG)
+		name = equestria.8.c
+	}
+}
+country_event = {
+	#fascist dont like our actions
+	id = equestria.9
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event equestria.9"
+	}
+	title = equestria.9.t
+	desc = equestria.9.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		name = equestria.9.a
+		add_stability = -0.1
+		if = {
+			limit = {
+				fascism > 0.5
+			}
+			add_political_power = -25
+		}
+	}
+}

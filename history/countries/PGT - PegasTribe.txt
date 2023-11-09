@@ -19,7 +19,19 @@ set_popularities = {
 	harmony = 33
 }
 add_ideas = {
+	partial_economic_mobilisation
 	pony_race
-	eeq_pgt_ept_scared_by_ice
+	eqs_pgt_ept_scared_by_ice
+	PGT_tribal_crisis
+}
+#harvest failure
+set_variable = {
+	harvest_failure_food = -600
+}
+set_variable = {
+	harvest_failure_supply = -0.15
+}
+add_dynamic_modifier = {
+	modifier = harvest_failure_modifier
 }
 set_oob = "982_PGT"

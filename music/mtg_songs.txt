@@ -28,22 +28,7 @@ music = {
 	song = "communist_america"
 
 	chance = {
-		factor = 1
-		modifier = {
-			not = { has_completed_focus = EQC_recognise_stalliongrad }
-			not = { has_government = communism }
-			factor = 0
-		}
-		modifier = {
-			original_tag = EQC
-			has_idea_with_trait = communist_revolutionary
-			not = { has_government = communism }
-			factor = 2
-		}
-		modifier = {
-			has_completed_focus = EQC_burn_celestias_portrait
-			factor = 3
-		}
+		base = 1
 	}
 }
 

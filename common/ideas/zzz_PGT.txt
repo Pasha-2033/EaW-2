@@ -1,0 +1,60 @@
+ideas = {
+	country = {
+		PGT_tribal_crisis = {
+			picture = EQS_tribal_crisis
+			allowed = {
+				original_tag = EPT
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			targeted_modifier = {
+				tag = EQS
+				attack_bonus_against_cores = -0.25
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = EPT
+				attack_bonus_against_cores = -0.25
+				defense_bonus_against = 0.1
+			}
+			modifier = {
+				improve_relations_maintain_cost_factor = 1
+			}
+		}
+		PGT_west_equus_defence_district = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = PGT
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			cancel = {
+				NOT = {
+					has_war_with = ICE
+					controls_state = 66
+				}
+			}
+			modifier = {
+				defence = 0.1
+				army_org_regain = 0.1
+				army_org = 10
+			}
+			on_add = {
+				66 = {
+					add_dynamic_modifier = {
+						modifier = PGT_las_pegasus_defence_district
+					}
+				}
+			}
+			on_remove = {
+				66 = {
+					remove_dynamic_modifier = {
+						modifier = PGT_las_pegasus_defence_district
+					}
+				}
+			}
+		}
+	}
+}

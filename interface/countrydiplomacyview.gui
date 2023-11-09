@@ -139,16 +139,14 @@ guiTypes = {
 				}
 			}
 
-			iconType =
-			{
-				name ="stability_bg"
+			iconType = {
+				name = "stability_bg"
 				spriteType = "GFX_diplo_unity_bg"
 				position = { x= 447 y = 1 } #position = { x= 370 y = 1 }
 			}	
 			
-			iconType =
-			{
-				name ="stability_icon"
+			iconType = {
+				name = "stability_icon"
 				spriteType = "GFX_stability_icon"
 				position = { x= 455 y = 9 } #position = { x= 378 y = 9 }
 			}			
@@ -163,15 +161,13 @@ guiTypes = {
 				format = center
 			}
 			
-			iconType =
-			{
+			iconType = {
 				name ="war_support_bg"
 				spriteType = "GFX_diplo_unity_bg"
 				position = { x= 490 y = 1 } #position = { x= 414 y = 1 }
 			}	
 			
-			iconType =
-			{
+			iconType = {
 				name ="war_support_icon"
 				spriteType = "GFX_war_support_icon"
 				position = { x= 497 y = 9 } #position = { x= 421 y = 9 }
@@ -292,7 +288,7 @@ guiTypes = {
 						position = { x = 5 y = 25 }
 						font = "hoi_16mbs"
 						text = "elections"
-						maxWidth = 205
+						maxWidth = 150
 						maxHeight = 20
 					}
 				}
@@ -722,12 +718,27 @@ guiTypes = {
 			
 			buttonType = {
 				name = "back_button"
-				position = { x = 165 y = -48 }
+				position = { 
+					x = 24 
+					y = -48 
+				}
 				clicksound = click_close
-				quadTextureSprite ="GFX_button_221x34"
+				quadTextureSprite = "GFX_button_221x34"
 				buttonFont = "hoi_16mbs"
 				Orientation = "LOWER_LEFT"
 				buttonText = "OPEN_COUNTRY_LIST"
+				clicksound = click_close
+			}
+			buttonType = {
+				name = "logistics_button"
+				position = { 
+					x = 296 
+					y = -48 
+				}
+				quadTextureSprite = "GFX_button_221x34"
+				buttonFont = "hoi_16mbs"
+				Orientation = "LOWER_LEFT"
+				buttonText = "OPEN_COUNTRY_LOGISTICS"
 				clicksound = click_close
 			}
 		}

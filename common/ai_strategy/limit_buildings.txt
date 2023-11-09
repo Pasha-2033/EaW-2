@@ -1,13 +1,11 @@
 no_rails_without_tech = {
 	enable = {
 		NOT = { 
-			OR = {
-				has_tech = rails1
-				has_tech = rails2
-				has_tech = rails3
-				has_tech = rails4
-				has_tech = rails5
-			}
+			has_tech = rails1
+			has_tech = rails2
+			has_tech = rails3
+			has_tech = rails4
+			has_tech = rails5
 		}
 	}
 	abort_when_not_enabled = yes

@@ -1,204 +1,5 @@
 leader_traits = {
 	##################################
-	# Race Traits
-	##################################
-
-	unspecified_race_trait = {
-		type = all
-		trait_type = status_trait
-
-		modifier = {
-			own_operative_detection_chance_factor = 0.1
-			operation_outcome = -0.1
-			operation_cost = 0.1
-		}
-
-		new_commander_weight = { factor = 0 }
-	}
-	pony_race_trait = {
-		type = all
-		trait_type = status_trait
-
-		modifier = {
-			own_operative_detection_chance_factor = 0.1
-			operation_outcome = -0.1
-			operation_cost = 0.1
-		}
-
-		new_commander_weight = { factor = 0 }
-	}
-
-	thestral_race_trait = {
-		type = all
-		trait_type = status_trait
-
-		modifier = {
-			own_operative_detection_chance_factor = 0.1
-			operation_outcome = -0.1
-			operation_cost = 0.1
-		}
-
-		new_commander_weight = { factor = 0 }
-	}
-
-	zebra_race_trait = {
-		type = all
-		trait_type = status_trait
-
-		modifier = {
-			own_operative_detection_chance_factor = 0.1
-			operation_outcome = -0.1
-			operation_cost = 0.1
-		}
-
-		new_commander_weight = { factor = 0 }
-	}
-
-	penguin_race_trait = {
-		type = all
-		trait_type = status_trait
-
-		modifier = {
-			own_operative_detection_chance_factor = 0.1
-			operation_outcome = -0.1
-			operation_cost = 0.1
-		}
-
-		new_commander_weight = { factor = 0 }
-	}
-
-	bear_race_trait = {
-		type = all
-		trait_type = status_trait
-
-		modifier = {
-			own_operative_detection_chance_factor = 0.1
-			operation_outcome = -0.1
-			operation_cost = 0.1
-		}
-
-		new_commander_weight = { factor = 0 }
-	}
-
-	changeling_race_trait = {
-		type = all
-		trait_type = status_trait
-
-		new_commander_weight = { factor = 0 }
-	}
-
-	griffon_race_trait = {
-		type = all
-		trait_type = status_trait
-
-		modifier = {
-			own_operative_detection_chance_factor = 0.1
-			operation_outcome = -0.1
-			operation_cost = 0.1
-		}
-
-		new_commander_weight = { factor = 0 }
-	}
-
-	yak_race_trait = {
-		type = all
-		trait_type = status_trait
-
-		modifier = {
-			own_operative_detection_chance_factor = 0.1
-			operation_outcome = -0.1
-			operation_cost = 0.1
-		}
-
-		new_commander_weight = { factor = 0 }
-	}
-
-	deer_race_trait = {
-		type = all
-		trait_type = status_trait
-
-		modifier = {
-			own_operative_detection_chance_factor = 0.1
-			operation_outcome = -0.1
-			operation_cost = 0.1
-		}
-
-		new_commander_weight = { factor = 0 }
-	}
-
-	diamond_dog_race_trait = {
-		type = all
-		trait_type = status_trait
-
-		modifier = {
-			own_operative_detection_chance_factor = 0.1
-			operation_outcome = -0.1
-			operation_cost = 0.1
-		}
-
-		new_commander_weight = { factor = 0 }
-	}
-
-	minotaur_race_trait = {
-		type = all
-		trait_type = status_trait
-
-		modifier = {
-			own_operative_detection_chance_factor = 0.1
-			operation_outcome = -0.1
-			operation_cost = 0.1
-		}
-
-		new_commander_weight = { factor = 0 }
-	}
-
-	undead_race_trait = {
-		type = all
-		trait_type = status_trait
-		
-		modifier = {
-			own_operative_detection_chance_factor = 0.1
-			operation_outcome = -0.1
-			operation_cost = 0.1
-		}
-
-		new_commander_weight = { factor = 0 }
-	}
-
-	buffalo_race_trait = {
-		type = all
-		trait_type = status_trait
-
-		modifier = {
-			own_operative_detection_chance_factor = 0.1
-			operation_outcome = -0.1
-			operation_cost = 0.1
-		}
-
-		new_commander_weight = { factor = 0 }
-	}
-
-	dragon_race_trait = {
-		type = all
-		trait_type = status_trait
-
-		modifier = {
-			own_operative_detection_chance_factor = 0.1
-			operation_outcome = -0.1
-			operation_cost = 0.1
-		}
-
-		new_commander_weight = { factor = 0 }
-	}
-
-	human_race_trait = {
-		type = all
-		trait_type = status_trait
-
-		new_commander_weight = { factor = 0 }
-	}
-
-	##################################
 	# Common Traits
 	##################################
 	promising_general = {
@@ -845,7 +646,7 @@ leader_traits = {
 		}
 
 		trait_type = assignable_trait
-		parent = artillery_specialist
+		any_parent = { artillery_specialist }
 		gui_row = 16
 	}
 
@@ -872,7 +673,7 @@ leader_traits = {
         trait_type = assignable_terrain_trait
         gui_row = 0
         
-        parent = heat_specialist
+        any_parent = { heat_specialist }
         
         gain_xp = {
             always = no # not gainable
@@ -1487,7 +1288,7 @@ leader_traits = {
 		
 		non_shared_modifier = {
 			experience_gain_factor = -0.5
-    }
+    	}
   }
   trait_berserker = {
 		type = all

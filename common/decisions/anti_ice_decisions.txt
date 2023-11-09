@@ -2,14 +2,18 @@ spawn_anti_ice_militia = {
 	spawn_garnison = {
 		icon = infiltrate_state
 		state_target = yes
-		target_array = owned_controlled_states
+		target_array = controlled_states
 		on_map_mode = map_and_decisions_view
         cost = 20
         days_remove = 3
 		remove_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision spawn_garnison (anti ICE) target: [From.GetName]"
-            add_stability = -0.05
-			add_war_support = -0.05
+            add_stability = -0.02
+			add_war_support = -0.02
+			add_popularity = {
+				ideology = militarism
+				popularity = 0.02
+			}
 			FROM = {
 				create_unit = {
 					division = "division_template = \"Garnison Division\" start_experience_factor = 0.2 start_equipment_factor = 0.5"
@@ -30,10 +34,16 @@ ask_for_landlease_anti_ice = {
         cost = 20
         days_remove = 14
 		target_trigger = {
-			NOT = {
-				OR = {
+			FROM = {
+				NOT = {
+					has_equipment = {
+						infantry_equipment < 100
+					}
 					original_tag = ICE
-					tag = ROOT
+					original_tag = EQS
+					original_tag = EPT
+					original_tag = PGT
+					has_war_with = ROOT
 				}
 			}
 		}
@@ -41,18 +51,12 @@ ask_for_landlease_anti_ice = {
 			log = "[GetDateText]: [Root.GetName]: Decision ask_for_infantry_equipment"
 			FROM = {
 				country_event = {
-					id = eeq_pgt_ept_anti_ice_event.2
+					id = eqs_pgt_ept_anti_ice_event.2
 				}
 			}
         }
         ai_will_do = {
-            base = 5000
-			modifier = {
-				has_equipment = {
-					infantry_equipment < 100
-				}
-				factor = 0
-			}
+            base = 500
         }
 	}
 	ask_for_artillery_equipment = {
@@ -62,10 +66,14 @@ ask_for_landlease_anti_ice = {
         cost = 20
         days_remove = 14
 		target_trigger = {
-			NOT = {
-				OR = {
+			FROM = {
+				NOT = {
+					has_equipment = {
+						artillery_equipment < 100
+					}
 					original_tag = ICE
 					tag = ROOT
+					has_war_with = ROOT
 				}
 			}
 		}
@@ -73,18 +81,42 @@ ask_for_landlease_anti_ice = {
 			log = "[GetDateText]: [Root.GetName]: Decision ask_for_artillery_equipment"
 			FROM = {
 				country_event = {
-					id = eeq_pgt_ept_anti_ice_event.3
+					id = eqs_pgt_ept_anti_ice_event.3
 				}
 			}
         }
         ai_will_do = {
-            base = 5000
-			modifier = {
-				has_equipment = {
-					artillery_equipment < 100
+            base = 500
+        }
+	}
+	ask_for_support_equipment = {
+		icon = infiltrate_state
+		target_array = global.majors
+		days_re_enable = 90
+        cost = 20
+        days_remove = 14
+		target_trigger = {
+			FROM = {
+				NOT = {
+					has_equipment = {
+						support_equipment < 100
+					}
+					original_tag = ICE
+					tag = ROOT
+					has_war_with = ROOT
 				}
-				factor = 0
 			}
+		}
+		remove_effect = {
+			log = "[GetDateText]: [Root.GetName]: Decision ask_for_support_equipment"
+			FROM = {
+				country_event = {
+					id = eqs_pgt_ept_anti_ice_event.4
+				}
+			}
+        }
+        ai_will_do = {
+            base = 500
         }
 	}
 }
@@ -99,10 +131,11 @@ ask_for_volunteers_anti_ice = {
 					count < 1
 				}
 			}
-			NOT = {
-				OR = {
+			FROM = {
+				NOT = {
 					original_tag = ICE
 					tag = ROOT
+					has_war_with = ROOT
 					is_in_array = {
 						ROOT.volunteers_against_ICE = THIS
 					}
@@ -150,5 +183,64 @@ ask_for_volunteers_anti_ice = {
         ai_will_do = {
             base = 5000
         }
+	}
+}
+state_temperature = {
+	freese_unfreese = {
+		icon = infiltrate_state
+		state_target = yes
+		target_array = owned_controlled_states
+		on_map_mode = map_and_decisions_view
+		target_trigger = {
+			ROOT = {
+				has_full_control_of_state = FROM
+			}
+			FROM = {
+				has_dynamic_modifier = {
+					modifier = ICE_warm_cold_state
+				}
+			}
+		}
+		complete_effect = {
+			FROM = {
+				remove_dynamic_modifier = {
+					modifier = ICE_warm_cold_state
+				}
+			}
+		}
+	}
+	superfreese = {
+		icon = infiltrate_state
+		allowed = {
+			original_tag = ICE
+		}
+		state_target = yes
+		target_array = owned_controlled_states
+		on_map_mode = map_and_decisions_view
+		target_root_trigger = {
+			has_completed_focus = ice_focus_spirit_transformations
+		}
+		target_trigger = {
+			ROOT = {
+				has_full_control_of_state = FROM
+			}
+			FROM = {
+				NOT = {
+					has_dynamic_modifier = {
+						modifier = ICE_warm_cold_state
+					}
+					has_dynamic_modifier = {
+						modifier = ICE_supercold_state
+					}
+				}
+			}
+		}
+		complete_effect = {
+			FROM = {
+				add_dynamic_modifier = {
+					modifier = ICE_supercold_state
+				}
+			}
+		}
 	}
 }

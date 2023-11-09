@@ -2,7 +2,7 @@ light_armor_generic = {
 
 	blocked_for = {
 		#continue! (to do)
-		EEQ
+		EQS
 		ICE
 	}
 
@@ -89,7 +89,6 @@ medium_armor_generic = {
 
 	blocked_for = {
 		EQS
-		EQC
 		NLR
 		CRY
 		SCS
@@ -150,10 +149,8 @@ medium_armor_generic = {
 			modifier = {
 				factor = 0
 				NOT = { 
-					OR = {
-						has_tech = basic_medium_tank
-						has_tech = basic_medium_tank_chassis
-					} 
+					has_tech = basic_medium_tank
+					has_tech = basic_medium_tank_chassis 
 				}
 			}
 			modifier = {
@@ -396,7 +393,6 @@ modern_armor_generic = {
 
 	blocked_for = {
 		EQS
-		EQC
 		NLR
 		CRY
 		SCS
@@ -433,10 +429,8 @@ modern_armor_generic = {
 		modifier = {
 			factor = 0
 			NOT = {
-				OR = {
-					has_tech = main_battle_tank
-					has_tech = main_battle_tank_chassis
-				}
+				has_tech = main_battle_tank
+				has_tech = main_battle_tank_chassis
 				has_tech = mechanised_infantry
 			}
 		}
@@ -502,10 +496,8 @@ modern_armor_generic = {
 			modifier = {
 				factor = 0
 				NOT = {
-					OR = {
-						has_tech = main_battle_tank
-						has_tech = main_battle_tank_chassis
-					}
+					has_tech = main_battle_tank
+					has_tech = main_battle_tank_chassis
 					has_tech = mechanised_infantry
 				}
 			}
@@ -862,7 +854,6 @@ infantry_generic = {
 
 	blocked_for = {
 		EQS
-		EQC
 		NLR
 		CRY
 		SCS
@@ -898,10 +889,8 @@ infantry_generic = {
 		modifier = {
 			factor = 40
 			NOT = {
-				OR = {
-					has_tech = basic_medium_tank
-					has_tech = basic_medium_tank_chassis
-				}
+				has_tech = basic_medium_tank
+				has_tech = basic_medium_tank_chassis
 			}
 		}
 		modifier = {
@@ -1219,7 +1208,6 @@ magical_infantry_generic = {
 
 	blocked_for = {
 		EQS
-		EQC
 		NLR
 		CRY
 		SCS
@@ -1310,7 +1298,6 @@ mountaineers_generic = {
 
 	blocked_for = {
 		EQS
-		EQC
 		NLR
 		CRY
 		SCS
@@ -1441,7 +1428,6 @@ marines_generic = {
 
 	blocked_for = {
 		EQS
-		EQC
 		NLR
 		CRY
 		SCS
@@ -1663,7 +1649,6 @@ paratrooper_generic = {
 
 	blocked_for = {
 		EQS
-		EQC
 		NLR
 		CRY
 		SCS

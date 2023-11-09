@@ -14,61 +14,6 @@
 #
 
 
-### BUFFALO TRADER TRIGGERS BECAUSE I'M LAZY ####
-has_equestrian_traders = {
-	OR = {
-		has_idea = BUF_equestrian_traders
-		has_idea = BUF_equestrian_traders2
-		has_idea = BUF_equestrian_traders3
-		has_idea = BUF_equestrian_traders4
-		has_idea = BUF_equestrian_traders5
-		has_idea = BUF_equestrian_traders6
-		has_idea = BUF_equestrian_traders7
-		has_idea = BUF_equestrian_traders8
-		has_idea = BUF_equestrian_traders9
-		has_idea = BUF_equestrian_traders10
-		has_idea = BUF_equestrian_traders11
-		has_idea = BUF_equestrian_traders12
-		has_idea = BUF_equestrian_traders13
-		has_idea = BUF_equestrian_traders14
-	}
-}
-has_equestrian_traders_small = {
-	OR = {
-		has_idea = BUF_equestrian_traders
-		has_idea = BUF_equestrian_traders2
-		has_idea = BUF_equestrian_traders3
-		has_idea = BUF_equestrian_traders4
-		has_idea = BUF_equestrian_traders5
-	}
-}
-has_equestrian_traders_bigger = {
-	OR = {
-		has_idea = BUF_equestrian_traders6
-		has_idea = BUF_equestrian_traders7
-		has_idea = BUF_equestrian_traders8
-		has_idea = BUF_equestrian_traders9
-	}
-}
-has_equestrian_traders_large = {
-	OR = {
-		has_idea = BUF_equestrian_traders10
-		has_idea = BUF_equestrian_traders11
-		has_idea = BUF_equestrian_traders12
-		has_idea = BUF_equestrian_traders13
-		has_idea = BUF_equestrian_traders14
-	}
-}
-has_food_shortages_STG = {
-	OR = {
-		has_idea = severe_famine
-		has_idea = severe_famine2
-		has_idea = severe_famine3
-		has_idea = severe_famine4
-		has_idea = severe_famine5
-		has_idea = severe_famine6
-	}
-}
 
 #For nicer localization
 is_not_EQS_SOL = {
@@ -90,20 +35,7 @@ is_EQS_SOL = {
 		tooltip = is_EQS_SOL_tp
 		original_tag = EQS
 		has_government = fascism
-		EQS_princess_celestia = {
-			has_character_flag = EQS_celestia_is_db 
-		}
 		
-	}
-}
-
-has_DB_ruler = {
-	custom_trigger_tooltip = {
-		tooltip = DB_is_in_lead_tt
-		EQS_princess_celestia = {
-			has_character_flag = EQS_celestia_is_db 
-		}
-		has_country_leader = { character = EQS_princess_celestia ruling_only = yes }
 	}
 }
 
@@ -350,7 +282,6 @@ is_griffon_continent_country = {
 		original_tag = LNS
 		original_tag = KAT
 		original_tag = ANG
-		original_tag = YAL
 		original_tag = ROU
 		original_tag = PYT
 		original_tag = HEL
@@ -370,8 +301,6 @@ is_griffon_continent_country = {
 		original_tag = EYR
 		original_tag = BOI
 		original_tag = BAN
-		original_tag = LAK
-		original_tag = FAL
 		original_tag = ARA
 		original_tag = FRN
 		original_tag = TAL
@@ -414,7 +343,6 @@ is_griffon_continent_country = {
 		original_tag = JRV
 		original_tag = JAS
 		original_tag = JEV
-		original_tag = EQC
 	}
 }
 
@@ -427,7 +355,6 @@ is_griffon_empire_country = {
 			original_tag = PYT
 			original_tag = BRZ
 			original_tag = GRI
-			original_tag = YAL
 			original_tag = ANG
 			original_tag = KAT
 			original_tag = ROU
@@ -444,7 +371,6 @@ is_core_of_griffon_empire_country = {
 			is_core_of = PYT
 			is_core_of = BRZ
 			is_core_of = GRI
-			is_core_of = YAL
 			is_core_of = ANG
 			is_core_of = KAT
 			is_core_of = ROU
@@ -478,7 +404,6 @@ is_wng_country = {
 		original_tag = TAL
 		original_tag = FRN
 		original_tag = ARA
-		original_tag = FAL
 	}
 }
 is_griffon_continent_griffon_country = {
@@ -497,7 +422,6 @@ is_griffon_continent_griffon_country = {
 		original_tag = LSM
 		original_tag = KAT
 		original_tag = ANG
-		original_tag = YAL
 		original_tag = ROU
 		original_tag = PYT
 		original_tag = HEL
@@ -517,8 +441,6 @@ is_griffon_continent_griffon_country = {
 		original_tag = EYR
 		original_tag = BOI
 		original_tag = BAN
-		original_tag = LAK
-		original_tag = FAL
 		original_tag = ARA
 		original_tag = FRN
 		original_tag = TAL
@@ -591,7 +513,6 @@ is_feudal_vassal = {
 		original_tag = LSM
 		original_tag = KAT
 		original_tag = ANG
-		original_tag = YAL
 		original_tag = ROU
 		original_tag = PYT
 		original_tag = HEL
@@ -609,8 +530,6 @@ is_feudal_vassal = {
 		original_tag = EYR
 		original_tag = BOI
 		original_tag = BAN
-		original_tag = LAK
-		original_tag = FAL
 		original_tag = ARA
 		original_tag = FRN
 		original_tag = TAL
@@ -793,7 +712,6 @@ is_eqs_civil_war_tag = {
 #		original_tag = JAK
 #		original_tag = TRD
 #		original_tag = CCN
-#		original_tag = EQC
 #		original_tag = DED
 #		original_tag = HLR
 #		original_tag = EWI
@@ -811,7 +729,6 @@ is_eqs_civil_war_tag = {
 #		original_tag = LCT
 #		original_tag = FRE
 #		original_tag = DMT
-#		original_tag = FAL
 #		original_tag = DRG
 #		original_tag = NMS
 #		original_tag = LUS
@@ -841,11 +758,9 @@ is_eqs_civil_war_tag = {
 #		original_tag = FEZ
 #		original_tag = FLO
 #		original_tag = ANG
-#		original_tag = YAL
 #		original_tag = KAT
 #		original_tag = PYT
 #		original_tag = AVI
-#		original_tag = LAK
 #		original_tag = BAK
 #		original_tag = NCR
 #		original_tag = FRN
@@ -880,9 +795,7 @@ country_with_custom_designers = {
 		original_tag = TRD
 		original_tag = YAK
 		original_tag = JAK
-		original_tag = EQC
 		original_tag = CCN
-		original_tag = FAL
 		original_tag = LUS
 		original_tag = WIT
 		original_tag = LCT
@@ -907,7 +820,6 @@ country_with_custom_designers = {
 		original_tag = ANG
 		original_tag = KAT
 		original_tag = PYT
-		original_tag = YAL
 		original_tag = STW
 		original_tag = ZES
 	    original_tag = NCR

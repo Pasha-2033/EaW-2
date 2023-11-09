@@ -1,0 +1,165 @@
+build_1_arms_factory_in_capital_or_somewhere = {
+	if = {
+		limit = {
+			capital_scope = {
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+			}
+		}
+		capital_scope = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	else = {
+		random_core_state = {
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 0
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = arms_factory
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+}
+#ICE
+inspection_in_windigo_army = {
+	if = {
+		limit = {
+			OR = {
+				check_variable = {
+					windigo_army_inspection_time = windigo_army_max_inspection_time
+				}
+				check_variable = {
+					windigo_army_inspection_time > windigo_army_max_inspection_time
+				}
+			}
+			NOT = {
+				#don`t call inspection - other branches already done
+				AND = {
+					ended_nightlands_branch = yes
+					OR = {
+						ended_valar_branch = yes
+						ended_windoo_branch = yes
+					}
+				}
+				AND = {
+					ended_valar_branch = yes
+					ended_windoo_branch = yes
+				}
+			}
+		}
+		country_event = {
+			id = windigo.2
+		}
+	}
+	else = {
+		add_to_variable = {
+			windigo_army_inspection_time = 1
+		}
+	}
+}
+end_of_nightlands_subbranch = {
+	if = {
+		limit = {
+			ended_nightlands_branch = yes
+		}
+		country_event = {
+			id = windigo.4
+		}
+	}
+	else = {
+		effect_tooltip = {
+			if = {
+				limit = {
+					is_about_to_end_nightlands_branch = yes
+				}
+				country_event = {
+					id = windigo.4
+				}
+			}
+			else = {
+				inspection_in_windigo_army = yes
+			}
+		}
+		hidden_effect = {
+			inspection_in_windigo_army = yes
+		}
+	}
+}
+end_of_valar_subbranch = {
+	if = {
+		limit = {
+			ended_valar_branch = yes
+		}
+		country_event = {
+			id = windigo.4
+		}
+	}
+	else_if = {
+		limit = {
+			is_about_to_end_valar_branch = no
+		}
+		inspection_in_windigo_army = yes
+	}
+	else = {
+		effect_tooltip = {
+			if = {
+				limit = {
+					is_about_to_end_valar_branch = yes
+				}
+				country_event = {
+					id = windigo.4
+				}
+			}
+			else = {
+				inspection_in_windigo_army = yes
+			}
+		}
+		hidden_effect = {
+			inspection_in_windigo_army = yes
+		}
+	}
+}
+end_of_windoo_subbranch = {
+	if = {
+		limit = {
+			ended_windoo_branch = yes
+		}
+		country_event = {
+			id = windigo.4
+		}
+	}
+	else = {
+		effect_tooltip = {
+			if = {
+				limit = {
+					is_about_to_end_windoo_branch = yes
+				}
+				country_event = {
+					id = windigo.4
+				}
+			}
+			else = {
+				inspection_in_windigo_army = yes
+			}
+		}
+		hidden_effect = {
+			inspection_in_windigo_army = yes
+		}
+	}
+}

@@ -1,0 +1,29 @@
+spriteTypes = {
+	corneredTileSpriteType = {
+		name = "GFX_evil_mind_encyclopedia_container_bg"
+		size = {
+			x = 1167
+			y = 458
+		}
+		textureFile = "gfx/interface/evil_mind_encyclopedia_container_bg.dds"
+		borderSize = {
+			x = 583
+			y = 240
+		}
+		tilingCenter = yes
+		effectFile = "gfx/FX/buttonstate_nodowneffect.lua"
+	}
+	spriteType = {
+		name = "GFX_evil_mind_encyclopedia_tab_on"
+		textureFile = "gfx/interface/evil_mind_encyclopedia_screen_tab_on.dds"
+	}
+	spriteType = {
+		name = "GFX_evil_mind_encyclopedia_tab_off"
+		textureFile = "gfx/interface/evil_mind_encyclopedia_screen_tab_off.dds"
+	}
+	spriteType = {
+		name = "GFX_encyclopedia_country_selection_button"
+		textureFile = "gfx/interface/scripted_gui/evil_mind_encyclopedia/encyclopedia_country_selection_button.dds"
+		noOfFrames = 2
+	}
+}

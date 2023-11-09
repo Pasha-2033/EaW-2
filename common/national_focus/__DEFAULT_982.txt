@@ -1,3 +1,629 @@
+joint_focus = {
+	id = default_982_faction_politics
+	icon = GFX_goal_generic_changeling
+	cost = 10
+	ai_will_do = {
+		factor = 1
+	}
+	x = 67
+	y = 0
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_982_faction_politics"
+		add_political_power = 250
+	}
+	completion_reward_joint_member = {
+		add_political_power = 100
+	}
+}
+joint_focus = {
+	id = default_982_diplomacy_vector
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_982_faction_politics
+	ai_will_do = {
+		factor = 200
+	}
+	prerequisite = {
+		focus = default_982_faction_politics
+	}
+	x = -6
+	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	available = {
+		is_subject = no
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_982_diplomacy_vector"
+		add_political_power = 250
+	}
+	completion_reward_joint_member = {
+		add_political_power = 100
+	}
+}
+joint_focus = {
+	id = default_982_agressive_expansion
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_982_diplomacy_vector
+	prerequisite = {
+		focus = default_982_diplomacy_vector
+	}
+	mutually_exclusive = {
+		focus = default_982_peacefull_unification
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = -1
+	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	available = {
+		is_subject = no
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_982_agressive_expansion"
+		add_political_power = 250
+	}
+	completion_reward_joint_member = {
+		add_political_power = 100
+	}
+}
+joint_focus = {
+	id = default_982_peacefull_unification
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_982_diplomacy_vector
+	prerequisite = {
+		focus = default_982_diplomacy_vector
+	}
+	mutually_exclusive = {
+		focus = default_982_agressive_expansion
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 1
+	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	available = {
+		is_subject = no
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_982_peacefull_unification"
+		add_political_power = 250
+	}
+	completion_reward_joint_member = {
+		add_political_power = 100
+	}
+}
+joint_focus = {
+	id = default_982_annexation_path
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_982_diplomacy_vector
+	prerequisite = {
+		focus = default_982_agressive_expansion
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = -2
+	y = 2
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	available = {
+		is_subject = no
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_982_annexation_path"
+		add_political_power = 250
+	}
+	completion_reward_joint_member = {
+		add_political_power = 100
+	}
+}
+joint_focus = {
+	id = default_982_supress_patrisans
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_982_annexation_path
+	prerequisite = {
+		focus = default_982_annexation_path
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 0
+	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	available = {
+		is_subject = no
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_982_supress_patrisans"
+		add_political_power = 250
+	}
+	completion_reward_joint_member = {
+		add_political_power = 100
+	}
+}
+joint_focus = {
+	id = default_982_puppet_path
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_982_diplomacy_vector
+	prerequisite = {
+		focus = default_982_agressive_expansion
+		focus = default_982_peacefull_unification
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 0
+	y = 2
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	available = {
+		is_subject = no
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_982_puppet_path"
+		add_political_power = 250
+	}
+	completion_reward_joint_member = {
+		add_political_power = 100
+	}
+}
+joint_focus = {
+	id = default_982_polymetropolis
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_982_puppet_path
+	prerequisite = {
+		focus = default_982_puppet_path
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 0
+	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	available = {
+		is_subject = no
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_982_polymetropolis"
+		add_political_power = 250
+	}
+	completion_reward_joint_member = {
+		add_political_power = 100
+	}
+}
+joint_focus = {
+	id = default_982_confederate_path
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_982_diplomacy_vector
+	prerequisite = {
+		focus = default_982_peacefull_unification
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 2
+	y = 2
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	available = {
+		is_subject = no
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_982_confederate_path"
+		add_political_power = 250
+	}
+	completion_reward_joint_member = {
+		add_political_power = 100
+	}
+}
+joint_focus = {
+	id = default_982_compensation_of_racial_disadvantages
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_982_confederate_path
+	prerequisite = {
+		focus = default_982_confederate_path
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 0
+	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	available = {
+		is_subject = no
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_982_compensation_of_racial_disadvantages"
+		add_political_power = 250
+	}
+	completion_reward_joint_member = {
+		add_political_power = 100
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+joint_focus = {
+	id = default_982_military_cooperation
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_982_faction_politics
+	prerequisite = {
+		focus = default_982_faction_politics
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 0
+	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_982_military_cooperation"
+		add_political_power = 250
+	}
+	completion_reward_joint_member = {
+		add_political_power = 100
+	}
+}
+joint_focus = {
+	id = default_982_general_navy_HQ
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_982_military_cooperation
+	prerequisite = {
+		focus = default_982_military_cooperation
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = -2
+	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_982_general_navy_HQ"
+		add_political_power = 250
+	}
+	completion_reward_joint_member = {
+		add_political_power = 100
+	}
+}
+joint_focus = {
+	id = default_982_common_waters
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_982_general_navy_HQ
+	prerequisite = {
+		focus = default_982_general_navy_HQ
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 0
+	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_982_common_waters"
+		add_political_power = 250
+	}
+	completion_reward_joint_member = {
+		add_political_power = 100
+	}
+}
+joint_focus = {
+	id = default_982_general_army_HQ
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_982_military_cooperation
+	prerequisite = {
+		focus = default_982_military_cooperation
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 2
+	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_982_general_army_HQ"
+		add_political_power = 250
+	}
+	completion_reward_joint_member = {
+		add_political_power = 100
+	}
+}
+joint_focus = {
+	id = default_982_common_lands
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_982_general_army_HQ
+	prerequisite = {
+		focus = default_982_general_army_HQ
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 0
+	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_982_common_lands"
+		add_political_power = 250
+	}
+	completion_reward_joint_member = {
+		add_political_power = 100
+	}
+}
+joint_focus = {
+	id = default_982_general_air_HQ
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_982_military_cooperation
+	prerequisite = {
+		focus = default_982_military_cooperation
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 0
+	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_982_general_air_HQ"
+		add_political_power = 250
+	}
+	completion_reward_joint_member = {
+		add_political_power = 100
+	}
+}
+joint_focus = {
+	id = default_982_common_sky
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_982_general_air_HQ
+	prerequisite = {
+		focus = default_982_general_air_HQ
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 0
+	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_982_common_sky"
+		add_political_power = 250
+	}
+	completion_reward_joint_member = {
+		add_political_power = 100
+	}
+}
+shared_focus = {
+	id = default_982_preparation_for_exile
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_982_common_sky
+	prerequisite = {
+		focus = default_982_common_waters
+	}
+	prerequisite = {
+		focus = default_982_common_lands
+	}
+	prerequisite = {
+		focus = default_982_common_sky
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	cost = 10
+	x = 0
+	y = 1
+	available = {
+		surrender_progress > 0.1
+		any_allied_country = {
+			has_capitulated = no
+		}
+	}
+	bypass = {
+		has_capitulated = yes
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_982_preparation_for_exile"
+		add_political_power = 250
+	}
+}
+
+
+
+
+
+
+joint_focus = {
+	id = default_982_economic_integration
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_982_faction_politics
+	prerequisite = {
+		focus = default_982_faction_politics
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 5
+	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_982_economic_integration"
+		add_political_power = 250
+	}
+	completion_reward_joint_member = {
+		add_political_power = 100
+	}
+}
+joint_focus = {
+	id = default_982_export_building_materials
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_982_economic_integration
+	prerequisite = {
+		focus = default_982_economic_integration
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = -1
+	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_982_export_building_materials"
+		add_political_power = 250
+	}
+	completion_reward_joint_member = {
+		add_political_power = 100
+	}
+}
+joint_focus = {
+	id = default_982_supply_chains
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_982_export_building_materials
+	prerequisite = {
+		focus = default_982_export_building_materials
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 0
+	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_982_supply_chains"
+		add_political_power = 250
+	}
+	completion_reward_joint_member = {
+		add_political_power = 100
+	}
+}
+joint_focus = {
+	id = default_982_association_of_agricultural_complexes
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_982_economic_integration
+	prerequisite = {
+		focus = default_982_economic_integration
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 1
+	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_982_association_of_agricultural_complexes"
+		add_political_power = 250
+	}
+	completion_reward_joint_member = {
+		add_political_power = 100
+	}
+}
+joint_focus = {
+	id = default_982_siderurgy
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_982_association_of_agricultural_complexes
+	prerequisite = {
+		focus = default_982_association_of_agricultural_complexes
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 0
+	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_982_siderurgy"
+		add_political_power = 250
+	}
+	completion_reward_joint_member = {
+		add_political_power = 100
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+joint_focus = {
+	id = default_982_scientific_cooperation
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_982_faction_politics
+	prerequisite = {
+		focus = default_982_faction_politics
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	x = 8
+	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_982_scientific_cooperation"
+		add_political_power = 250
+	}
+	completion_reward_joint_member = {
+		add_political_power = 100
+	}
+}
+
+
+
+
+
 focus_tree = {
 	id = default_982_focus_tree
 	country = {
@@ -12,7 +638,7 @@ focus_tree = {
 		y = 1500 
 	}
 	default = no
-	shared_focus = shared_focus_gpa_goverment_is_forced
+	shared_focus = default_982_faction_politics
 	focus = {
 		id = default_982_army_effort
 		icon = GFX_goal_generic_changeling
@@ -953,7 +1579,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus default_982_reserve_fund"
 			add_dynamic_modifier = {
-				modifier = default_982_reserve_fund_modifier
+				modifier = reserve_fund_modifier
 			}
 		}
 	}
@@ -1782,12 +2408,10 @@ focus_tree = {
 					25 = {
 						modifier = {
 							NOT = {
-								OR = {
-									has_government = democratic
-									has_government = neutrality
-									has_government = harmony
-									has_government = technocracy
-								}
+								has_government = democratic
+								has_government = neutrality
+								has_government = harmony
+								has_government = technocracy
 							}
 							factor = party_popularity_100@ruling_party
 						}
@@ -2750,4 +3374,5 @@ focus_tree = {
 			}
 		}
 	}
+
 }

@@ -1,0 +1,566 @@
+shared_focus = {
+	id = eqs_pgt_ept_winter_spirits
+	icon = GFX_goal_generic_changeling
+	cost = 1
+	ai_will_do = {
+		base = 0
+		modifier = {
+			has_war_with = ICE
+			add = 1000
+		}
+	}
+	bypass_if_unavailable = yes
+	x = 4
+	y = 0
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_pgt_ept_winter_spirits"
+		add_war_support = 0.05
+		add_stability = 0.05
+		add_manpower = 10000
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1000
+		}
+		country_event = {
+			id = eqs_pgt_ept_anti_ice_event.1
+		}
+		if = {
+			limit = {
+				original_tag = EQS
+			}
+			add_political_power = 50
+		}
+	}
+}
+shared_focus = {
+	id = eqs_pgt_ept_desperate_situation
+	icon = GFX_goal_generic_changeling
+	cost = 2
+	relative_position_id = eqs_pgt_ept_winter_spirits
+	prerequisite = {
+		focus = eqs_pgt_ept_winter_spirits
+	}
+	ai_will_do = {
+		base = 0
+		modifier = {
+			has_war_with = ICE
+			add = 1000
+		}
+	}
+	bypass_if_unavailable = yes
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_pgt_ept_desperate_situation"
+		add_timed_idea = {
+			idea = eqs_pgt_ept_desperate_situation_idea
+			days = 60
+		}
+		if = {
+			limit = {
+				original_tag = EQS
+			}
+			add_political_power = 50
+		}
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1000
+		}
+	}
+}
+shared_focus = {
+	id = eqs_pgt_ept_containment_techniques
+	icon = GFX_goal_generic_changeling
+	cost = 2.5
+	relative_position_id = eqs_pgt_ept_desperate_situation
+	prerequisite = {
+		focus = eqs_pgt_ept_desperate_situation
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	bypass_if_unavailable = yes
+	x = -3
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_pgt_ept_containment_techniques"
+		if = {
+			limit = {
+				original_tag = EQS
+			}
+			add_political_power = 50
+		}
+		add_equipment_if_too_low_against_ice = yes
+	}
+}
+shared_focus = {
+	id = eqs_pgt_ept_wood_as_fuel
+	icon = GFX_goal_generic_changeling
+	cost = 2.5
+	relative_position_id = eqs_pgt_ept_containment_techniques
+	prerequisite = {
+		focus = eqs_pgt_ept_containment_techniques
+	}
+	mutually_exclusive = {
+		focus = eqs_pgt_ept_coal_as_fuel
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	bypass_if_unavailable = yes
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_pgt_ept_wood_as_fuel"
+		add_timed_idea = {
+			idea = wood_as_fuel_idea
+			days = 60
+		}
+		if = {
+			limit = {
+				original_tag = EQS
+			}
+			add_political_power = 50
+		}
+		add_equipment_if_too_low_against_ice = yes
+	}
+}
+shared_focus = {
+	id = eqs_pgt_ept_coal_as_fuel
+	icon = GFX_goal_generic_changeling
+	cost = 2.5
+	relative_position_id = eqs_pgt_ept_containment_techniques
+	prerequisite = {
+		focus = eqs_pgt_ept_containment_techniques
+	}
+	mutually_exclusive = {
+		focus = eqs_pgt_ept_wood_as_fuel
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	bypass_if_unavailable = yes
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_pgt_ept_coal_as_fuel"
+		add_timed_idea = {
+			idea = coal_as_fuel_idea
+			days = 60
+		}
+		if = {
+			limit = {
+				original_tag = EQS
+			}
+			add_political_power = 50
+		}
+		add_equipment_if_too_low_against_ice = yes
+	}
+}
+shared_focus = {
+	id = eqs_pgt_ept_better_heat_sources
+	icon = GFX_goal_generic_changeling
+	cost = 2.5
+	relative_position_id = eqs_pgt_ept_coal_as_fuel
+	prerequisite = {
+		focus = eqs_pgt_ept_coal_as_fuel
+		focus = eqs_pgt_ept_coal_as_fuel
+	}
+	mutually_exclusive = {
+		focus = eqs_pgt_ept_more_heat_sources
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	bypass_if_unavailable = yes
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_pgt_ept_better_heat_sources"
+		if = {
+			limit = {
+				has_completed_focus = eqs_pgt_ept_coal_as_fuel
+			}
+			add_timed_idea = {
+				idea = better_heat_sources_idea
+				days = 120
+			}
+		}
+		else = {
+			add_timed_idea = {
+				idea = better_heat_sources_idea
+				days = 90
+			}
+		}
+		if = {
+			limit = {
+				original_tag = EQS
+			}
+			add_political_power = 50
+		}
+		add_equipment_if_too_low_against_ice = yes
+	}
+}
+shared_focus = {
+	id = eqs_pgt_ept_more_heat_sources
+	icon = GFX_goal_generic_changeling
+	cost = 2.5
+	relative_position_id = eqs_pgt_ept_wood_as_fuel
+	prerequisite = {
+		focus = eqs_pgt_ept_wood_as_fuel
+		focus = eqs_pgt_ept_coal_as_fuel
+	}
+	mutually_exclusive = {
+		focus = eqs_pgt_ept_better_heat_sources
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	bypass_if_unavailable = yes
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_pgt_ept_more_heat_sources"
+		if = {
+			limit = {
+				has_completed_focus = eqs_pgt_ept_wood_as_fuel
+			}
+			add_timed_idea = {
+				idea = more_heat_sources_idea
+				days = 120
+			}
+		}
+		else = {
+			add_timed_idea = {
+				idea = more_heat_sources_idea
+				days = 90
+			}
+		}
+		if = {
+			limit = {
+				original_tag = EQS
+			}
+			add_political_power = 50
+		}
+		add_equipment_if_too_low_against_ice = yes
+	}
+}
+shared_focus = {
+	id = eqs_pgt_ept_heat_castle
+	icon = GFX_goal_generic_changeling
+	cost = 2.5
+	relative_position_id = eqs_pgt_ept_containment_techniques
+	prerequisite = {
+		focus = eqs_pgt_ept_more_heat_sources
+		focus = eqs_pgt_ept_better_heat_sources
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	bypass_if_unavailable = yes
+	x = 0
+	y = 3
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_pgt_ept_heat_castle"
+		add_ideas = heat_castle_idea
+		if = {
+			limit = {
+				original_tag = EQS
+			}
+			add_political_power = 50
+		}
+		add_equipment_if_too_low_against_ice = yes
+	}
+}
+shared_focus = {
+	id = eqs_pgt_ept_defence_strategy
+	icon = GFX_goal_generic_changeling
+	cost = 2.5
+	relative_position_id = eqs_pgt_ept_desperate_situation
+	prerequisite = {
+		focus = eqs_pgt_ept_desperate_situation
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	bypass_if_unavailable = yes
+	x = 3
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_pgt_ept_defence_strategy"
+		add_ideas = anti_ICE_defence
+		if = {
+			limit = {
+				original_tag = EQS
+			}
+			add_political_power = 50
+		}
+		add_equipment_if_too_low_against_ice = yes
+	}
+}
+shared_focus = {
+	id = eqs_pgt_ept_mobilise_civilian
+	icon = GFX_goal_generic_changeling
+	cost = 2.5
+	relative_position_id = eqs_pgt_ept_defence_strategy
+	prerequisite = {
+		focus = eqs_pgt_ept_defence_strategy
+	}
+	mutually_exclusive = {
+		focus = eqs_pgt_ept_call_old_warriors
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	bypass_if_unavailable = yes
+	x = -1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_pgt_ept_mobilise_civilian"
+		add_manpower = 45000
+		add_stability = -0.15
+		if = {
+			limit = {
+				original_tag = EQS
+			}
+			add_political_power = 50
+		}
+		add_equipment_if_too_low_against_ice = yes
+	}
+}
+shared_focus = {
+	id = eqs_pgt_ept_call_old_warriors
+	icon = GFX_goal_generic_changeling
+	cost = 2.5
+	relative_position_id = eqs_pgt_ept_defence_strategy
+	prerequisite = {
+		focus = eqs_pgt_ept_defence_strategy
+	}
+	mutually_exclusive = {
+		focus = eqs_pgt_ept_mobilise_civilian
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	bypass_if_unavailable = yes
+	x = 1
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_pgt_ept_mobilise_civilian"
+		capital_scope = {
+			create_unit = {
+				division = "division_template = \"Garnison Division\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "division_template = \"Garnison Division\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "division_template = \"Garnison Division\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+				owner = ROOT
+			}
+			create_unit = {
+				division = "division_template = \"Garnison Division\" start_experience_factor = 0.5 start_equipment_factor = 0.75"
+				owner = ROOT
+			}
+		}
+		add_stability = -0.1
+		add_war_support = -0.1
+		add_popularity = {
+			ideology = militarism
+			popularity = 0.15
+		}
+		if = {
+			limit = {
+				original_tag = EQS
+			}
+			add_political_power = 50
+		}
+		add_equipment_if_too_low_against_ice = yes
+	}
+}
+shared_focus = {
+	id = eqs_pgt_ept_use_heat_weapons
+	icon = GFX_goal_generic_changeling
+	cost = 2
+	relative_position_id = eqs_pgt_ept_call_old_warriors
+	prerequisite = {
+		focus = eqs_pgt_ept_mobilise_civilian
+		focus = eqs_pgt_ept_call_old_warriors
+	}
+	mutually_exclusive = {
+		focus = eqs_pgt_ept_use_more_shovels
+	}
+	ai_will_do = {
+		base = 0
+		modifier = {
+			has_war_with = ICE
+			add = 1000
+		}
+	}
+	bypass_if_unavailable = yes
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_pgt_ept_use_heat_weapons"
+		add_timed_idea = {
+			idea = showels_idea
+			days = 30
+		}
+		if = {
+			limit = {
+				original_tag = EQS
+			}
+			add_political_power = 50
+		}
+		add_equipment_if_too_low_against_ice = yes
+	}
+}
+shared_focus = {
+	id = eqs_pgt_ept_use_more_shovels
+	icon = GFX_goal_generic_changeling
+	cost = 2
+	relative_position_id = eqs_pgt_ept_mobilise_civilian
+	prerequisite = {
+		focus = eqs_pgt_ept_mobilise_civilian
+		focus = eqs_pgt_ept_call_old_warriors
+	}
+	mutually_exclusive = {
+		focus = eqs_pgt_ept_use_heat_weapons
+	}
+	ai_will_do = {
+		base = 0
+		modifier = {
+			has_war_with = ICE
+			add = 1000
+		}
+	}
+	bypass_if_unavailable = yes
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_pgt_ept_use_more_shovels"
+		add_timed_idea = {
+			idea = showels_idea
+			days = 30
+		}
+		if = {
+			limit = {
+				original_tag = EQS
+			}
+			add_political_power = 50
+		}
+		add_equipment_if_too_low_against_ice = yes
+	}
+}
+shared_focus = {
+	id = eqs_pgt_ept_call_for_help
+	icon = GFX_goal_generic_changeling
+	cost = 2.5
+	relative_position_id = eqs_pgt_ept_desperate_situation
+	prerequisite = {
+		focus = eqs_pgt_ept_desperate_situation
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	bypass_if_unavailable = yes
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_pgt_ept_call_for_help"
+		add_equipment_to_stockpile = {
+			type = infantry_equipment
+			amount = 1000
+		}
+		add_equipment_to_stockpile = {
+			type = support_equipment
+			amount = 250
+		}
+		if = {
+			limit = {
+				original_tag = EQS
+			}
+			add_political_power = 50
+		}
+	}
+}
+shared_focus = {
+	id = eqs_pgt_ept_need_for_landlease
+	icon = GFX_goal_generic_changeling
+	cost = 2.5
+	relative_position_id = eqs_pgt_ept_call_for_help
+	prerequisite = {
+		focus = eqs_pgt_ept_call_for_help
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	bypass_if_unavailable = yes
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_pgt_ept_need_for_landlease"
+		custom_effect_tooltip = allow_anti_ice_begging_for_equipment
+		if = {
+			limit = {
+				original_tag = EQS
+			}
+			add_political_power = 50
+		}
+		add_equipment_if_too_low_against_ice = yes
+	}
+}
+shared_focus = {
+	id = eqs_pgt_ept_need_for_divisions
+	icon = GFX_goal_generic_changeling
+	cost = 2.5
+	relative_position_id = eqs_pgt_ept_need_for_landlease
+	prerequisite = {
+		focus = eqs_pgt_ept_need_for_landlease
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	bypass_if_unavailable = yes
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_pgt_ept_need_for_divisions"
+		custom_effect_tooltip = allow_anti_ice_garnison_spawning
+		if = {
+			limit = {
+				original_tag = EQS
+			}
+			add_political_power = 50
+		}
+		add_equipment_if_too_low_against_ice = yes
+	}
+}
+shared_focus = {
+	id = eqs_pgt_ept_need_for_volunteers
+	icon = GFX_goal_generic_changeling
+	cost = 2.5
+	relative_position_id = eqs_pgt_ept_need_for_divisions
+	prerequisite = {
+		focus = eqs_pgt_ept_need_for_divisions
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	bypass_if_unavailable = yes
+	x = 0
+	y = 1
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_pgt_ept_need_for_volunteers"
+		custom_effect_tooltip = allow_anti_ice_volunteer_requests
+		if = {
+			limit = {
+				original_tag = EQS
+			}
+			add_political_power = 50
+		}
+		add_equipment_if_too_low_against_ice = yes
+	}
+}

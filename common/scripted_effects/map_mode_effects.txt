@@ -42,11 +42,13 @@ calculate_state_building_slots = {
 	add_to_variable = {
 		common_builded_slots = building_level@nuclear_reactor
 	}
-	resize_temp_array = {
-		temp_array = 26
+	add_to_variable = {
+		common_builded_slots = building_level@agrarian_complex
 	}
-	for_each_loop = {
-		array = temp_array
+	for_loop_effect = {
+		start = 1
+		end = 31
+		value = i
 		if = {
 			limit = {
 				meta_trigger = {

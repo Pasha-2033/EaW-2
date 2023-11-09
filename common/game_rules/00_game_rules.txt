@@ -851,8 +851,9 @@ ai_div_limiter = {
 }
 #ui settings
 obsolete_focus_branches_visibility = {
-	name = "OBSOLETE_FOCUS_BRANCHES_VISIBILITY"
+	name = OBSOLETE_FOCUS_BRANCHES_VISIBILITY
 	group = "RULE_GROUP_GENERAL_UI"
+	icon = "GFX_scorched_earth" #change
 	default = {
 		name = HIDE
 		text = "RULE_OPTION_HIDE"
@@ -862,7 +863,25 @@ obsolete_focus_branches_visibility = {
 	option = {
 		name = SHOW
 		text = "RULE_OPTION_SHOW"
-		desc = "RULE_OPTION_SHOW_DESC_DESC"
+		desc = "RULE_OPTION_SHOW_DESC"
+		allow_achievements = yes
+	}
+}
+#tag settings
+plenty_tag_jump = {
+	name = PLENTY_PLAYERS_PER_TAG_JUMP
+	group = "TAG_RULES"
+	icon = "GFX_scorched_earth" #change
+	default = {
+		name = yes
+		text = "RULE_OPTION_ALLOWED"
+		desc = "RULE_OPTION_ALLOW_PLENTY_JUMPS_DESC"
+		allow_achievements = yes
+	}
+	option = {
+		name = no
+		text = "RULE_OPTION_BLOCKED"
+		desc = "RULE_OPTION_BLOCK_PLENTY_JUMPS_DESC"
 		allow_achievements = yes
 	}
 }

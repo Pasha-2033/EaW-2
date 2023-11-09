@@ -8,13 +8,11 @@ every_possible_country = {
 	if = {
 		limit = {
 			NOT = {
-				OR = {
-					has_country_flag = no_generic_military_theorist
-					has_custom_theorist = yes
-					has_allowed_idea_with_traits = {
-						idea = military_theorist
-						characters = yes
-					}
+				has_country_flag = no_generic_military_theorist
+				has_custom_theorist = yes
+				has_allowed_idea_with_traits = {
+					idea = military_theorist
+					characters = yes
 				}
 			}
 		}
@@ -38,13 +36,11 @@ every_possible_country = {
 	if = {
 		limit = {
 			NOT = {
-				OR = {
-					has_country_flag = no_generic_naval_theorist
-					has_custom_theorist = yes
-					has_allowed_idea_with_traits = {
-						idea = naval_theorist
-						characters = yes
-					}
+				has_country_flag = no_generic_naval_theorist
+				has_custom_theorist = yes
+				has_allowed_idea_with_traits = {
+					idea = naval_theorist
+					characters = yes
 				}
 			}
 		}
@@ -68,13 +64,11 @@ every_possible_country = {
 	if = {
 		limit = {
 			NOT = {
-				OR = {
-					has_country_flag = no_generic_air_warfare_theorist
-					has_custom_theorist = yes
-					has_allowed_idea_with_traits = {
-						idea = air_warfare_theorist
-						characters = yes
-					}
+				has_country_flag = no_generic_air_warfare_theorist
+				has_custom_theorist = yes
+				has_allowed_idea_with_traits = {
+					idea = air_warfare_theorist
+					characters = yes
 				}
 			}
 		}

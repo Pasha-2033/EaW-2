@@ -1,0 +1,509 @@
+#Windigo time focuses
+focus_tree = {
+	id = ept_focus_tree
+	country = {
+		base = 0
+		modifier = {
+			add = 100
+			tag = EPT
+		}
+	}
+	default = no
+	continuous_focus_position = {
+		x = 2700
+		y = 1350
+	}
+	shared_focus = eqs_pgt_ept_winter_spirits
+	#common branch
+	focus = {
+		id = ept_focus_marshal_of_countrymen
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 16
+		y = 0
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_marshal_of_countrymen"
+		}
+	}
+	focus = {
+		id = ept_focus_new_and_young_government
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = ept_focus_marshal_of_countrymen
+		prerequisite = {
+			focus = ept_focus_marshal_of_countrymen
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_new_and_young_government"
+		}
+	}
+	focus = {
+		id = ept_focus_directive_number_one
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = ept_focus_new_and_young_government
+		prerequisite = {
+			focus = ept_focus_new_and_young_government
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_directive_number_one"
+		}
+	}
+	focus = {
+		id = ept_focus_directive_volunteer_mobilisation
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = ept_focus_directive_number_one
+		prerequisite = {
+			focus = ept_focus_directive_number_one
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_directive_volunteer_mobilisation"
+		}
+	}
+	focus = {
+		id = ept_focus_directive_army_mobilising
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = ept_focus_directive_number_one
+		prerequisite = {
+			focus = ept_focus_directive_number_one
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_directive_army_mobilising"
+		}
+	}
+	focus = {
+		id = ept_focus_directive_special_powers
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = ept_focus_directive_number_one
+		prerequisite = {
+			focus = ept_focus_directive_number_one
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_directive_special_powers"
+		}
+	}
+	focus = {
+		id = ept_focus_establish_an_agrarian_militia
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = ept_focus_directive_volunteer_mobilisation
+		prerequisite = {
+			focus = ept_focus_directive_volunteer_mobilisation
+		}
+		prerequisite = {
+			focus = ept_focus_directive_army_mobilising
+		}
+		prerequisite = {
+			focus = ept_focus_directive_special_powers
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_establish_an_agrarian_militia"
+		}
+	}
+	focus = {
+		id = ept_focus_prepare_for_total_war
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = ept_focus_directive_army_mobilising
+		prerequisite = {
+			focus = ept_focus_directive_volunteer_mobilisation
+		}
+		prerequisite = {
+			focus = ept_focus_directive_army_mobilising
+		}
+		prerequisite = {
+			focus = ept_focus_directive_special_powers
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_prepare_for_total_war"
+		}
+	}
+	focus = {
+		id = ept_focus_order_guardians
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = ept_focus_directive_special_powers
+		prerequisite = {
+			focus = ept_focus_directive_volunteer_mobilisation
+		}
+		prerequisite = {
+			focus = ept_focus_directive_army_mobilising
+		}
+		prerequisite = {
+			focus = ept_focus_directive_special_powers
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_order_guardians"
+		}
+	}
+	focus = {
+		id = ept_focus_directive_private_property
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = ept_focus_order_guardians
+		prerequisite = {
+			focus = ept_focus_order_guardians
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_directive_private_property"
+		}
+	}
+	focus = {
+		id = ept_focus_directive_agrarian_complex_nationalisation
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = ept_focus_establish_an_agrarian_militia
+		prerequisite = {
+			focus = ept_focus_establish_an_agrarian_militia
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_directive_agrarian_complex_nationalisation"
+		}
+	}
+	focus = {
+		id = ept_focus_fight_for_survival
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 2
+		relative_position_id = ept_focus_prepare_for_total_war
+		prerequisite = {
+			focus = ept_focus_prepare_for_total_war
+		}
+		prerequisite = {
+			focus = ept_focus_directive_agrarian_complex_nationalisation
+		}
+		prerequisite = {
+			focus = ept_focus_directive_private_property
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_fight_for_survival"
+		}
+	}
+	#economic branch
+	focus = {
+		id = ept_focus_economic_affairs_commission
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 22
+		y = 0
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_economic_affairs_commission"
+		}
+	}
+	focus = {
+		id = ept_focus_convening_of_farmers
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = ept_focus_economic_affairs_commission
+		prerequisite = {
+			focus = ept_focus_economic_affairs_commission
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_convening_of_farmers"
+		}
+		search_filters = {
+			FOCUS_FILTER_SURPLUS_APPROPRIATION
+		}
+	}
+	focus = {
+		id = ept_focus_change_surplus_appopriation_policy
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = ept_focus_convening_of_farmers
+		prerequisite = {
+			focus = ept_focus_convening_of_farmers
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_change_surplus_appopriation_policy"
+		}
+		search_filters = {
+			FOCUS_FILTER_SURPLUS_APPROPRIATION
+		}
+	}
+	focus = {
+		id = ept_focus_food_stamps
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = ept_focus_change_surplus_appopriation_policy
+		prerequisite = {
+			focus = ept_focus_change_surplus_appopriation_policy
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_food_stamps"
+		}
+		search_filters = {
+			FOCUS_FILTER_SURPLUS_APPROPRIATION
+		}
+	}
+	#government branch
+	focus = {
+		id = ept_focus_formation_of_legislative_apparatus
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 28
+		y = 0
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_formation_of_legislative_apparatus"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = ept_focus_administrative_system_reforms
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = ept_focus_formation_of_legislative_apparatus
+		prerequisite = {
+			focus = ept_focus_formation_of_legislative_apparatus
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_administrative_system_reforms"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = ept_focus_full_fledged_bureaucracy
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = ept_focus_administrative_system_reforms
+		prerequisite = {
+			focus = ept_focus_administrative_system_reforms
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_full_fledged_bureaucracy"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = ept_focus_extend_directive_number_one
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = ept_focus_full_fledged_bureaucracy
+		prerequisite = {
+			focus = ept_focus_full_fledged_bureaucracy
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_extend_directive_number_one"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	#hooftagon branch
+	focus = {
+		id = ept_focus_emergency_hq_hooftagon
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 25
+		y = 0
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_emergency_hq_hooftagon"
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = greate_project_hooftagon_HQ
+				}
+				add_dynamic_modifier = {
+					modifier = greate_project_hooftagon_FP
+				}
+				add_dynamic_modifier = {
+					modifier = greate_project_hooftagon_MI
+				}
+				#init hooftagon modifier values
+				resize_array = {
+					hooftagon = 68
+				}
+				#init hooftagon HQ
+				add_to_variable = { #army_core_attack_factor
+					hooftagon^0 = 0.05
+				}
+				add_to_variable = { #army_core_defence_factor
+					hooftagon^1 = 0.05
+				}
+				#init hooftagon FP
+				subtract_from_variable = {
+					hooftagon^45 = 0.05
+				}
+				#init hooftagon MI
+				add_to_variable = { #production_speed_bunker_factor
+					hooftagon^61 = 0.05
+				}
+			}
+			custom_effect_tooltip = found_hooftagon
+		}
+		search_filters = {
+			FOCUS_FILTER_GREAT_PROJECT
+		}
+	}
+	focus = {
+		id = ept_focus_convening_of_the_hc
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = ept_focus_emergency_hq_hooftagon
+		prerequisite = {
+			focus = ept_focus_emergency_hq_hooftagon
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_convening_of_the_hc"
+		}
+	}
+	focus = {
+		id = ept_focus_new_young_officers
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = ept_focus_convening_of_the_hc
+		prerequisite = {
+			focus = ept_focus_convening_of_the_hc
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_new_young_officers"
+		}
+	}
+	focus = {
+		id = ept_focus_open_old_military_warehouses
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = ept_focus_emergency_hq_hooftagon
+		prerequisite = {
+			focus = ept_focus_emergency_hq_hooftagon
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_open_old_military_warehouses"
+		}
+	}
+	focus = {
+		id = ept_focus_expand_recruitment_of_volunteers
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = ept_focus_open_old_military_warehouses
+		prerequisite = {
+			focus = ept_focus_open_old_military_warehouses
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_expand_recruitment_of_volunteers"
+		}
+	}
+}

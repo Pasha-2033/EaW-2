@@ -33,56 +33,24 @@ defined_text = {
 defined_text = {
 	name = state_lore_date
 	text = {
+		#evil mind is alive (982 scenario)
 		trigger = {
 			date < 1007.1.1
-			NOT = {
-				VES = {
-					has_country_flag = no_evil_mind
-				}
-				SOR = {
-					has_country_flag = no_evil_mind
-				}
-				DIS = {
-					has_country_flag = no_evil_mind
-				}
-				VRA = {
-					has_country_flag = no_evil_mind
-				}
-				LIK = {
-					has_country_flag = no_evil_mind
-				}
-			}
+			evil_mind_alive = yes
 		}
 		localization_key = state_lore_date_current
 	}
 	text = {
+		#evil mind is dead (982 scenario)
 		trigger = {
 			date < 1007.1.1
-			AND = {
-				VES = {
-					has_country_flag = no_evil_mind
-				}
-				SOR = {
-					has_country_flag = no_evil_mind
-				}
-				DIS = {
-					has_country_flag = no_evil_mind
-				}
-				VRA = {
-					has_country_flag = no_evil_mind
-				}
-				LIK = {
-					has_country_flag = no_evil_mind
-				}
-			}
 		}
 		localization_key = state_lore_date_last_evil_mind_date
 	}
 	text = {
+		#1007 scenario
 		trigger = {
-			NOT = {
-				date < 1007.1.1
-			}
+			date > 982.1.1
 			date < 1050.1.1
 			#продолжить триггер
 		}

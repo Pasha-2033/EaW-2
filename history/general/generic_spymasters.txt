@@ -8,13 +8,11 @@ every_possible_country = {
 	limit = {
 		has_dlc = "La Resistance"
 		NOT = {
-			OR = {
-				has_country_flag = no_generic_spymaster
-				has_custom_spymaster = yes
-				has_allowed_idea_with_traits = {
-					idea = head_of_intelligence
-					characters = yes
-				}
+			has_country_flag = no_generic_spymaster
+			has_custom_spymaster = yes
+			has_allowed_idea_with_traits = {
+				idea = head_of_intelligence
+				characters = yes
 			}
 		}
 	}

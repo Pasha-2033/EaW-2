@@ -1,0 +1,67 @@
+ICE_supercold_state = {
+	icon = GFX_idea_clockwerk_economy			#to do (change)
+	enable = {
+		ROOT = {
+			is_fully_controlled_by = ICE
+		}
+	}
+	army_speed_factor_for_controller = ICE.supercold_state_army_speed_factor
+	local_org_regain = ICE.supercold_state_org_regain
+	resistance_growth = ICE.supercold_state_resistance_growth
+	resistance_decay = ICE.supercold_state_resistance_decay
+}
+ICE_warm_cold_state = {
+	#applied to postwindigo/windigo controller
+	icon = GFX_idea_clockwerk_economy			#to do (change)
+	enable = {
+		always = yes
+	}
+	local_org_regain = -0.1
+	attrition_for_controller = 0.1
+	resistance_growth = 0.25
+	local_factory_sabotage = 0.1
+}
+ICE_valar_morgulis_grandplan = {
+	icon = GFX_idea_clockwerk_economy			#to do (change)
+	enable = {
+		always = yes
+	}
+	army_attack_factor = valar_morgulis_grandplan_aaf
+	army_attack_speed_factor = valar_morgulis_grandplan_aasf
+	army_morale_factor = valar_morgulis_grandplan_amf
+	breakthrough_factor = valar_morgulis_grandplan_bf
+	land_night_attack = valar_morgulis_grandplan_lna
+	army_strength_factor = valar_morgulis_grandplan_asf
+	mobilization_speed = valar_morgulis_grandplan_ms
+	army_org_factor = valar_morgulis_grandplan_aof
+	army_org_regain = valar_morgulis_grandplan_aor
+}
+ICE_nightlands_grandplan = {
+	icon = GFX_idea_clockwerk_economy			#to do (change)
+	enable = {
+		always = yes
+	}
+	army_morale_factor = nightlands_grandplan_amf
+	army_org_factor = nightlands_grandplan_aof
+	army_org_regain = nightlands_grandplan_aor
+	org_loss_when_moving = nightlands_grandplan_olwm
+	org_loss_at_low_org_factor = nightlands_grandplan_ollof
+	terrain_penalty_reduction = nightlands_grandplan_tpr
+	acclimatization_hot_climate_gain_factor = nightlands_grandplan_ahcgf
+	army_speed_factor = nightlands_grandplan_asf
+	custom_modifier_tooltip = ICE_nightlands_grandplan_div_modifiers_tt
+}
+ICE_windoo_grandplan = {
+	icon = GFX_idea_clockwerk_economy			#to do (change)
+	enable = {
+		always = yes
+	}
+	supply_node_range = windoo_grandplan_snr
+	resistance_target = windoo_grandplan_rt
+	required_garrison_factor = windoo_grandplan_rgf
+	pocket_penalty = windoo_grandplan_pp
+	army_defence_factor = windoo_grandplan_adf
+	coordination_bonus = windoo_grandplan_cb
+	max_planning_factor = windoo_grandplan_mps
+	planning_speed = windoo_grandplan_ps
+}

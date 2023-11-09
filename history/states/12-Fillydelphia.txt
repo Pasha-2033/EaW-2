@@ -23,9 +23,9 @@ state = {
 		#add_core_of = EQS
 		victory_points = {950 30}
 		982.1.1 = {
-			owner = EEQ
+			owner = EQS
 			add_core_of = EPT
-			add_core_of = EEQ
+			add_core_of = EQS
 			add_claim_by = ICE
 			buildings = {
 				infrastructure = 1
@@ -38,8 +38,10 @@ state = {
 			}
 		}
 		1007.1.1 = {
-			owner = NEQ
-			add_core_of = NEQ
+			#removing 982 cores and claims#
+			remove_core_of = EPT
+			remove_claim_by = ICE
+			###############################
 		}
 		1050.1.1 = {}
 	}

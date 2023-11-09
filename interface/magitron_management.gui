@@ -1,0 +1,57 @@
+guiTypes = {
+	containerWindowType = {
+		name = "magitron_management"
+		show_sound = open_sub_window
+		size = {
+			width = 500
+			height = 500
+		}
+		orientation = center
+		origo = center
+		moveable = yes
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tiled_plain_bg"
+		}
+		iconType = {
+			name = "magitron_control_sector_icon"
+			spriteType = "GFX_magitron_control_sector"
+			position = {
+				x = 53 #50
+				y = 0
+			}
+		}
+		iconType = {
+			name = "magitron_computing_sector_icon"
+			spriteType = "GFX_magitron_computing_sector"
+			position = {
+				x = 232
+				y = 46
+			}
+		}
+		iconType = {
+			name = "magitron_electric_sector_icon"
+			spriteType = "GFX_magitron_electric_sector"
+			position = {
+				x = 0
+				y = 47
+			}
+		}
+		iconType = {
+			name = "magitron_material_sector_icon"
+			spriteType = "GFX_magitron_material_sector"
+			position = {
+				x = 41
+				y = 217
+			}
+		}
+		iconType = {
+			name = "magitron_central_dogma_sector_icon"
+			spriteType = "GFX_magitron_central_dogma_sector"
+			position = {
+				x = 91
+				y = 85
+			}
+		}
+	}
+}

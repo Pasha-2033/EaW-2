@@ -1,0 +1,101 @@
+focus_tree = {
+	id = met_focus_tree
+	country = {
+		base = 0
+		modifier = {
+			add = 100
+			tag = MET
+		}
+	}
+	default = no
+	continuous_focus_position = { 
+		x = 100 
+		y = 900
+	}
+	focus = {
+		id = met_focus_internal_problems
+		icon = GFX_goal_generic_archonism
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		x = 11
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus met_focus_internal_problems"
+		}
+		search_filters = {}
+	}
+	focus = {
+		id = met_focus_separatists_activity
+		icon = GFX_goal_generic_archonism
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		relative_position_id = met_focus_internal_problems
+		prerequisite = {
+			focus = met_focus_internal_problems
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus met_focus_separatists_activity"
+		}
+		search_filters = {}
+	}
+	focus = { #separatists in charge
+		id = met_focus_kings_abdication
+		icon = GFX_goal_generic_archonism
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		x = 4
+		y = 1
+		relative_position_id = met_focus_separatists_activity
+		prerequisite = {
+			focus = met_focus_separatists_activity
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus met_focus_kings_abdication"
+		}
+		search_filters = {}
+	}
+	focus = { #try to find compromices
+		id = met_focus_policy_easing
+		icon = GFX_goal_generic_archonism
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		relative_position_id = met_focus_separatists_activity
+		prerequisite = {
+			focus = met_focus_separatists_activity
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus met_focus_policy_easing"
+		}
+		search_filters = {}
+	}
+	focus = { #try to stabilise absolute monarchy
+		id = met_focus_tougher_laws
+		icon = GFX_goal_generic_archonism
+		cost = 10
+		ai_will_do = {
+			factor = 200
+		}
+		x = -4
+		y = 1
+		relative_position_id = met_focus_separatists_activity
+		prerequisite = {
+			focus = met_focus_separatists_activity
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus met_focus_tougher_laws"
+		}
+		search_filters = {}
+	}
+}

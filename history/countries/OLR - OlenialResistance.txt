@@ -1,12 +1,21 @@
 capital = 213
+set_research_slots = 0
 add_ideas = {
 	deer_race
+	disarmed_nation
+	closed_economy
 }
+set_technology = {
+	melee_weapons = 1
+}
+set_oob = 982_OLR
 set_popularities = {
-	fascism = 19
-	radicalism = 13
+	fascism = 15
+	radicalism = 9
 	neutrality = 11
-	anarchism = 57
+	anarchism = 52
+	harmony = 8
+	democratic = 5
 }
 set_politics = {
 	ruling_party = anarchism
@@ -14,19 +23,5 @@ set_politics = {
 	election_frequency = 36
 	elections_allowed = no
 }
-982.1.1 = {
-	set_country_flag = default_982_focus_tree
-	set_variable = {
-		UG_ARG_1 = 0.334
-	}
-	set_variable = {
-		UG_ARG_9 = 0.1
-	}
-	set_variable = {
-		UG_ARG_16 = 0
-	}
-	set_variable = {
-		UG_ARG_17 = 0
-	}
-	generate_units_982 = yes
-}
+recruit_character = OLR_982_unorganised_revolutioneers
+recruit_character = OLR_982_peasant_council

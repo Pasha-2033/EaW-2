@@ -1,0 +1,87 @@
+characters = {
+	EPT_national_defence_council = {
+		name = EPT_copperhoof
+		portraits = {
+			#to do
+			civilian = {
+				large = "GFX_portrait_marshal_unknown"
+			}
+			army = {
+				large = "GFX_portrait_marshal_unknown"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_COPPERHOOF_DESC"
+			ideology = harmonic_libertarianism
+			traits = {}
+			expire = "1965.1.1.1"
+			id = -1
+		}
+	}
+	EPT_copperhoof = {
+		name = EPT_copperhoof
+		portraits = {
+			#to do
+			civilian = {
+				large = "GFX_portrait_marshal_unknown"
+			}
+			army = {
+				large = "GFX_portrait_marshal_unknown"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_COPPERHOOF_DESC"
+			ideology = harmonic_libertarianism
+			traits = {}
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 2
+			planning_skill = 1
+			logistics_skill = 2
+			traits = {
+				pony_race_trait
+			}
+		}
+	}
+	EPT_applejack = {
+		#to do
+		name = EPT_applejack
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor"
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = EPT_applejack
+			traits = {
+				farmer
+			}
+			allowed = {
+				OR = {
+					original_tag = EQS
+					original_tag = EPT
+				}
+			}
+			available = {
+				#to do
+			}
+			visible = {
+				#to do
+			}
+		}
+	}
+	EPT_pinkypie = {
+		name = EPT_pinkypie
+		#to do
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor"
+			}
+		}
+	}
+}
