@@ -128,10 +128,6 @@ init_mod_lore_screen_vars = {
 	init_tag_var = yes
 }
 init_tag_var = {
-	resize_array = {
-		array = global.countries_with_lore
-		size = 0
-	}
 	add_to_array = {
 		global.countries_with_lore = VES
 	}
@@ -265,9 +261,7 @@ init_country_lore_vars = {
 #init scripted gui entries for global mechanic descs
 init_global_mechanics_desc = {
 	resize_array = {
-		array = global.global_mechanic_desc
-		size = 2
-		value = 2
+		global.global_mechanic_desc = 2
 	}
 }
 #arrays of surplus apopriation

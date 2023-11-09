@@ -402,15 +402,37 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_emergency_hq_hooftagon"
-			add_dynamic_modifier = {
-				modifier = greate_project_hooftagon_HQ
+			hidden_effect = {
+				add_dynamic_modifier = {
+					modifier = greate_project_hooftagon_HQ
+				}
+				add_dynamic_modifier = {
+					modifier = greate_project_hooftagon_FP
+				}
+				add_dynamic_modifier = {
+					modifier = greate_project_hooftagon_MI
+				}
+				#init hooftagon modifier values
+				resize_array = {
+					hooftagon = 68
+				}
+				#init hooftagon HQ
+				add_to_variable = { #army_core_attack_factor
+					hooftagon^0 = 0.05
+				}
+				add_to_variable = { #army_core_defence_factor
+					hooftagon^1 = 0.05
+				}
+				#init hooftagon FP
+				subtract_from_variable = {
+					hooftagon^45 = 0.05
+				}
+				#init hooftagon MI
+				add_to_variable = { #production_speed_bunker_factor
+					hooftagon^61 = 0.05
+				}
 			}
-			add_dynamic_modifier = {
-				modifier = greate_project_hooftagon_FP
-			}
-			add_dynamic_modifier = {
-				modifier = greate_project_hooftagon_MI
-			}
+			custom_effect_tooltip = found_hooftagon
 		}
 		search_filters = {
 			FOCUS_FILTER_GREAT_PROJECT
