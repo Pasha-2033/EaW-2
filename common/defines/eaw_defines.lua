@@ -21,6 +21,7 @@ NDefines.NCountry.FEMALE_UNIT_LEADER_BASE_CHANCE = {
     1.0, -- air leaders
     1.0, -- operatives
 }
+NDefines.NCountry.BASE_RESEARCH_SLOTS = 0
 
 NDefines.NResistance.GARRISON_MANPOWER_LOST_BY_ATTACK = 0.01 	-- Ratio of manpower lost by garrison at each attack on garrison (this number will be reduced by the hardness of garrison template)
 

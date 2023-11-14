@@ -222,3 +222,68 @@ disable_sa_mechanic = {
 	}
 	set_country_flag = no_sa_impact
 }
+#harvest failure update (for proper indication)
+#use temp vars delta_harvest_failure_food & delta_harvest_failure_supply for modification
+#NOTE: adding positive value will make modifier more powerfull
+#NOTE: USE IN COUNTRY SCOPE!
+harvest_failure_update = {
+	if = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = harvest_failure_modifier
+			}
+		}
+		clamp_temp_variable = {
+			var = delta_harvest_failure_food
+			min = harvest_failure_food
+		}
+		clamp_temp_variable = {
+			var = delta_harvest_failure_supply
+			min = harvest_failure_supply
+		}
+		if = {
+			limit = {
+				check_variable = {
+					delta_harvest_failure_food = harvest_failure_food
+				}
+				check_variable = {
+					delta_harvest_failure_supply = harvest_failure_supply
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = harvest_failure_modifier
+			}
+			clear_variable = harvest_failure_food
+			clear_variable = harvest_failure_supply
+		}
+		else_if = {
+			limit = {
+				OR = {
+					check_variable = {
+						var = delta_harvest_failure_food
+						value = 0
+						compare = not_equals
+					}
+					check_variable = {
+						var = delta_harvest_failure_supply
+						value = 0
+						compare = not_equals
+					}
+				}
+			}
+			subtract_from_variable = {
+				harvest_failure_food = delta_harvest_failure_food
+			}
+			subtract_from_variable = {
+				harvest_failure_supply = delta_harvest_failure_supply
+			}
+			multiply_temp_variable = {
+				delta_harvest_failure_food = -1
+			}
+			multiply_temp_variable = {
+				delta_harvest_failure_supply = -1
+			}
+			custom_effect_tooltip = change_harvest_failure_modifier
+		}
+	}
+}

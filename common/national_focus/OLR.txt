@@ -196,6 +196,7 @@ focus_tree = {
 				add_building_construction = {
 					type = agrarian_complex
 					level = 1
+					instant_build = yes
 				}
 			}
 		}
@@ -245,6 +246,7 @@ focus_tree = {
 					type = supply_node
 					level = 1
 					province = 4270
+					instant_build = yes
 				}
 			}
 		}
@@ -269,6 +271,7 @@ focus_tree = {
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
+					instant_build = yes
 				}
 			}
 		}
@@ -306,6 +309,7 @@ focus_tree = {
 					add_building_construction = {
 						type = dockyard
 						level = 1
+						instant_build = yes
 					}
 				}
 			}
@@ -319,6 +323,7 @@ focus_tree = {
 					add_building_construction = {
 						type = dockyard
 						level = 1
+						instant_build = yes
 					}
 				}
 			}
@@ -344,6 +349,7 @@ focus_tree = {
 				add_building_construction = {
 					type = arms_factory
 					level = 1
+					instant_build = yes
 				}
 			}
 		}
@@ -445,6 +451,7 @@ focus_tree = {
 					add_building_construction = {
 						type = dockyard
 						level = 1
+						instant_build = yes
 					}
 				}
 				else = {
@@ -453,10 +460,12 @@ focus_tree = {
 				add_building_construction = {
 					type = arms_factory
 					level = 1
+					instant_build = yes
 				}
 				add_building_construction = {
 					type = industrial_complex
 					level = 1
+					instant_build = yes
 				}
 			}
 		}
@@ -537,11 +546,13 @@ focus_tree = {
 					type = bunker
 					level = 1
 					province = 11555
+					instant_build = yes
 				}
 				add_building_construction = {
 					type = coastal_bunker
 					level = 1
 					province = 11555
+					instant_build = yes
 				}
 			}
 		}
@@ -572,29 +583,23 @@ focus_tree = {
 				add_building_construction = {
 					type = bunker
 					level = 1
-					province = 9758
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 9786
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 11740
+					province = {
+						id = 9758
+						id = 9786
+						id = 11740
+					}
+					instant_build = yes
 				}
 			}
 			203 = {
 				add_building_construction = {
 					type = bunker
 					level = 1
-					province = 1436
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 4345
+					province = {
+						id = 1436
+						id = 4345
+					}
+					instant_build = yes
 				}
 			}
 		}
@@ -625,16 +630,16 @@ focus_tree = {
 					type = bunker
 					level = 2
 					province = 11555
+					instant_build = yes
 				}
 				add_building_construction = {
 					type = bunker
 					level = 1
-					province = 9540
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					province = 510
+					province = {
+						id = 510
+						id = 9540
+					}
+					instant_build = yes
 				}
 			}
 		}

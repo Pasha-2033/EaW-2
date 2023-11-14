@@ -64,3 +64,31 @@ defined_text = {
 		localization_key = "army_food_modifier_value_non_100"
 	}
 }
+defined_text = {
+	name = "change_harvest_failure_food_scripted_localisation"
+	text = {
+		trigger = {
+			check_variable = {
+				delta_harvest_failure_food = 0
+			}
+		}
+		localization_key = ""
+	}
+	text = {
+		localization_key = "change_harvest_failure_food"
+	}
+}
+defined_text = {
+	name = "change_harvest_failure_supply_scripted_localisation"
+	text = {
+		trigger = {
+			check_variable = {
+				delta_harvest_failure_supply = 0
+			}
+		}
+		localization_key = ""
+	}
+	text = {
+		localization_key = "change_harvest_failure_supply"
+	}
+}

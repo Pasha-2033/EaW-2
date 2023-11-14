@@ -8,6 +8,7 @@ reserve_fund_modifier = {
 	political_power_gain = 1
 }
 #NOTE: CLAMP VARIABLES, DO NOT ALLOW VARS BE POSITIVE, REMOVE IF NO NEGATIVE MODIFIER LEFT
+#please use harvest_failure_update scripted effect for proper functioning
 harvest_failure_modifier = {
 	icon = GFX_idea_clockwerk_economy			#to do (change)
 	country_resource_food = harvest_failure_food

@@ -5,11 +5,11 @@ country_event = {
 	is_triggered_only = yes
 	hidden = yes
 	option = {
-		every_character = {
-			limit = {
-				is_unit_leader = yes
-				has_race_trait = no
-			}
+		every_unit_leader = {
+			generate_race_trait = yes
+			generate_country_leader_trait = yes
+		}
+		every_operative = {
 			generate_race_trait = yes
 		}
 	}

@@ -668,10 +668,7 @@ focus_tree = {
 				create_unit = {
 					division = "division_template = \"Garnison Division\" start_experience_factor = 0.25"
 					owner = ROOT
-				}
-				create_unit = {
-					division = "division_template = \"Garnison Division\" start_experience_factor = 0.25"
-					owner = ROOT
+					count = 2
 				}
 			}
 		}
@@ -714,19 +711,11 @@ focus_tree = {
 					type = bunker
 					level = 1
 					instant_build = yes
-					province = 11114
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					instant_build = yes
-					province = 911
-				}
-				add_building_construction = {
-					type = bunker
-					level = 1
-					instant_build = yes
-					province = 6975
+					province = {
+						id = 911
+						id = 6975
+						id = 11114
+					}
 				}
 			}
 		}
