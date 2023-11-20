@@ -24,12 +24,6 @@ state = {
 			owner = WOP
 			add_core_of = WOP
 			add_claim_by = EQW
-			add_claim_by = ANP
-			add_resource = {
-				type = steel
-				amount = 3
-				state = THIS
-			}
 			buildings = {
 				infrastructure = 1
 				dockyard = 1
@@ -40,5 +34,8 @@ state = {
 			add_core_of = STG
 		}
 		1050.1.1 = {}
+	}
+	resources = {
+		steel = 3
 	}
 }
