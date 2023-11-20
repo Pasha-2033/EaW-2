@@ -1,3 +1,10 @@
+#NOTE: use var surplus_appropriation_weight_<i> for setting start weight for each category (default is 1)
+#surplus_appropriation_real_value_<i> for setting start real value for each category (default is start weight)
+#if food storage is > 0, real value will be set to start weight
+#categories(i): 0 - civil, 1 - production, 2 - military
+#weight ∈ {0, 0.2, 0.4, 0.6, 0.8, 1, 1.2, 1.4, 1.6, 1.8, 2}
+#real value ∈ [0, 2]
+#WARNING: setting weight or real value to other values will break mechanic, so this script will fix it (will use floor function)
 init_surplus_appropriation = {
 	#init weights
 	resize_array = {
@@ -35,7 +42,136 @@ init_surplus_appropriation = {
 	add_dynamic_modifier = {
 		modifier = surplus_appropriation_army_modifier
 	}
+	#prevent initial negative storage
+	if = {
+		limit = {
+			has_variable = food_storage_value
+		}
+		clamp_variable = {
+			var = food_storage_value
+			min = 0
+		}
+	}
 	#init mechanic
-	calc_surplus_appropriation_real_values = yes
-	sa_tick_effects = yes
+	if = {
+		limit = {
+			has_country_flag = no_sa_impact
+		}
+		for_loop_effect = {
+			end = surplus_appropriation_mod_values^num
+			value = i
+			set_variable = {
+				surplus_appropriation_mod_values^i = 5
+			}
+			set_variable = {
+				surplus_appropriation_weights^i = 1
+			}
+		}
+	}
+	else = {
+		#fix unexpected var value
+		for_loop_effect = {
+			end = 3
+			value = i
+			meta_effect = {
+				text = {
+					if = {
+						limit = {
+							has_variable = surplus_appropriation_weight_[I]
+						}
+						clamp_variable = {
+							var = surplus_appropriation_weight_[I]
+							min = 0
+							max = 2
+						}
+						set_temp_variable = {
+							temp_surplus_appropriation_weight = surplus_appropriation_weight_[I]
+						}
+						#we need to make variable int because of modulo#
+						multiply_temp_variable = {
+							temp_surplus_appropriation_weight = 1000
+						}
+						modulo_temp_variable = {
+							temp_surplus_appropriation_weight = 200
+						}
+						divide_temp_variable = {
+							temp_surplus_appropriation_weight = 1000
+						}
+						#----------------------------------------------#
+						subtract_from_variable = {
+							surplus_appropriation_weight_[I] = temp_surplus_appropriation_weight
+						}
+					}
+					else = {
+						set_variable = {
+							surplus_appropriation_weight_[I] = 1
+						}
+					}
+				}
+				I = "[?i]"
+			}
+		}
+		if = {
+			limit = {
+				check_variable = {
+					food_storage_value > 0
+				}
+			}
+			for_loop_effect = {
+				end = 3
+				value = i
+				meta_effect = {
+					text = {
+						set_variable = {
+							surplus_appropriation_weights^i = surplus_appropriation_weight_[I]
+						}
+						clear_variable = surplus_appropriation_weight_[I]
+					}
+					I = "[?i]"
+				}
+				set_variable = {
+					surplus_appropriation_real_values^i = surplus_appropriation_weights^i
+				}
+			}
+		}
+		else = {
+			for_loop_effect = {
+				end = 3
+				value = i
+				meta_effect = {
+					text = {
+						set_variable = {
+							surplus_appropriation_weights^i = surplus_appropriation_weight_[I]
+						}
+						set_variable = {
+							surplus_appropriation_real_values^i = surplus_appropriation_real_value_[I]?surplus_appropriation_weights^i
+						}
+						clear_variable = surplus_appropriation_weight_[I]
+						clear_variable = surplus_appropriation_real_value_[I]
+					}
+					I = "[?i]"
+				}
+				#fix unexpected var value
+				clamp_variable = {
+					var = surplus_appropriation_real_values^i
+					min = 0
+					max = 2
+				}
+			}
+		}
+		calc_surplus_appropriation_min_value = yes
+		for_each_loop = {
+			array = surplus_appropriation_real_values
+			index = i
+			value = v
+			#floor(surplus_appropriation_mod_values[i]) * 5
+			#for index purposes (persent 0-200 to index 0-10)
+			set_variable = {
+				surplus_appropriation_mod_values^i = v
+			}
+			multiply_variable = {
+				surplus_appropriation_mod_values^i = 5
+			}
+		}
+	}
 }

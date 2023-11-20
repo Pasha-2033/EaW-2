@@ -1,7 +1,7 @@
-d_csarv = {
+d_csarv = {	#only for debug issues
 	calc_surplus_appropriation_real_values = yes
 }
-d_sa_flag = {
+d_sa_flag = {	#d_ added for debug issues
 	if = {
 		limit = {
 			has_country_flag = no_sa_impact
@@ -84,20 +84,17 @@ calc_surplus_appropriation_real_values = {
 						raw_consumers^i > 0
 					}
 				}
-				set_temp_variable = {
-					t = consumers^i
-				}
-				divide_temp_variable = {
-					t = sa_consumtion_sum
-				}
-				multiply_temp_variable = {
-					t = food_final
-				}
-				divide_temp_variable = {
-					t = raw_consumers^i
-				}
 				set_variable = {
-					surplus_appropriation_real_values^i = t
+					surplus_appropriation_real_values^i = consumers^i
+				}
+				divide_variable = {
+					surplus_appropriation_real_values^i = sa_consumtion_sum
+				}
+				multiply_variable = {
+					surplus_appropriation_real_values^i = food_final
+				}
+				divide_variable = {
+					surplus_appropriation_real_values^i = raw_consumers^i
 				}
 			}
 			else = {
@@ -125,23 +122,9 @@ calc_surplus_appropriation_real_values = {
 	d_update_sa_gui = yes
 }
 calc_surplus_appropriation_min_value = {
-	set_variable = {
-		sa_min_value = surplus_appropriation_real_values^0
-	}
-	for_loop_effect = {
-		start = 1
-		end = surplus_appropriation_real_values^num
-		value = i
-		if = {
-			limit = {
-				check_variable = {
-					surplus_appropriation_real_values^i < sa_min_value
-				}
-			}
-			set_variable = {
-				sa_min_value = surplus_appropriation_real_values^i
-			}
-		}
+	find_lowest_in_array = {
+		array = surplus_appropriation_real_values
+		value = sa_min_value
 	}
 }
 sa_tick_effects = {
@@ -177,10 +160,7 @@ sa_tick_effects = {
 				surplus_appropriation_mod_values^i = v
 			}
 			multiply_variable = {
-				surplus_appropriation_mod_values^i = 0.005
-			}
-			multiply_variable = {
-				surplus_appropriation_mod_values^i = 1000
+				surplus_appropriation_mod_values^i = 5
 			}
 		}
 	}
@@ -215,7 +195,50 @@ update_sa_progressbar_frame = {
 		}
 	}
 }
+#use script for modifing food storage directly with tooltip and food consumption update
+#use temp vars delta_food_storage for modification
+add_to_food_storage = {
+	multiply_temp_variable = {
+		delta_food_storage = -1
+	}
+	clamp_temp_variable = {
+		var = delta_food_storage
+		max = food_storage_value
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					delta_food_storage = 0
+				}
+			}
+		}
+		multiply_temp_variable = {
+			delta_food_storage = -1
+		}
+		add_to_variable = {
+			food_storage_value = delta_food_storage
+		}
+		calc_surplus_appropriation_real_values = yes
+		calc_surplus_appropriation_min_value = yes
+		for_each_loop = {
+			array = surplus_appropriation_real_values
+			index = i
+			value = v
+			#floor(surplus_appropriation_mod_values[i]) * 5
+			#for index purposes (persent 0-200 to index 0-10)
+			set_variable = {
+				surplus_appropriation_mod_values^i = v
+			}
+			multiply_variable = {
+				surplus_appropriation_mod_values^i = 5
+			}
+		}
+		custom_effect_tooltip = change_food_storage_value
+	}
+}
 #IMPORTANT FOR GUI: CALL THIS IF YOU WANT TO DISABLE, DON`t JUST SET COUNTRY FLAG
+#Note: this will also close surplus appropriation window
 disable_sa_mechanic = {
 	set_variable = {
 		sam_menu = 0

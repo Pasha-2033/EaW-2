@@ -27,6 +27,19 @@ add_ideas = {
 	eqs_pgt_ept_scared_by_ice
 	EPT_tribal_crisis
 }
+#set surplus appropriation
+set_variable = {
+	food_storage_value = 820
+}
+set_variable = {
+	surplus_appropriation_weight_0 = 0.2
+}
+set_variable = {
+	surplus_appropriation_weight_1 = 0.6
+}
+set_variable = {
+	surplus_appropriation_weight_2 = 0.8
+}
 #harvest failure
 set_variable = {
 	harvest_failure_food = -400

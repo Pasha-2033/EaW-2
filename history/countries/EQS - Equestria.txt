@@ -37,6 +37,19 @@ if = { #982 scenario script
 		EQS_tribal_crisis
 		EQS_magically_sealed_discord
 	}
+	#set surplus appropriation
+	set_variable = {
+		food_storage_value = 2100
+	}
+	set_variable = {
+		surplus_appropriation_weight_0 = 0.2
+	}
+	set_variable = {
+		surplus_appropriation_weight_1 = 0.2
+	}
+	set_variable = {
+		surplus_appropriation_weight_2 = 1
+	}
 	#harvest failure
 	set_variable = {
 		harvest_failure_food = -600
