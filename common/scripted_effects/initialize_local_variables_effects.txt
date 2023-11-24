@@ -27,6 +27,9 @@ init_surplus_appropriation = {
 		surplus_appropriation_mod_values = 3
 	}
 	resize_array = {
+		super_raw_consumers = 3
+	}
+	resize_array = {
 		raw_consumers = 3
 	}
 	resize_array = {
@@ -160,6 +163,7 @@ init_surplus_appropriation = {
 			}
 		}
 		calc_surplus_appropriation_min_value = yes
+		calc_surplus_appropriation_real_values = yes #make real values for 1st week (prev code is for 0 week and for min value)
 		for_each_loop = {
 			array = surplus_appropriation_real_values
 			index = i

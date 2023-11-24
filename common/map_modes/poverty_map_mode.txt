@@ -1,9 +1,6 @@
 scripted_map_modes = {
 	poverty_map_mode = {
 		top = {
-			type = none
-		}
-		bottom = {
             type = country
             color = {	
 				if = {
@@ -105,6 +102,9 @@ scripted_map_modes = {
 				set_temp_variable = { alpha = 0.9 }
             }
         }
+		bottom = {
+			type = none
+		}
         far_text = country
         near_text = none
     }

@@ -1,6 +1,6 @@
 characters = {
 	EPT_national_defence_council = {
-		name = EPT_copperhoof
+		name = EPT_national_defence_council
 		portraits = {
 			#to do
 			civilian = {
@@ -11,7 +11,7 @@ characters = {
 			}
 		}
 		country_leader = {
-			desc = "POLITICS_COPPERHOOF_DESC"
+			desc = "POLITICS_NATIONAL_DEFENCE_CONCIL_DESC"
 			ideology = harmonic_libertarianism
 			traits = {}
 			expire = "1965.1.1.1"
@@ -32,11 +32,22 @@ characters = {
 		country_leader = {
 			desc = "POLITICS_COPPERHOOF_DESC"
 			ideology = harmonic_libertarianism
-			traits = {}
+			traits = {
+				country_leader_trait_army_innovator
+			}
 			expire = "1965.1.1.1"
 			id = -1
 		}
-		corps_commander = {
+		country_leader = {
+			desc = "POLITICS_COPPERHOOF_DESC"
+			ideology = ultramilitarism
+			traits = {
+				country_leader_trait_army_innovator
+			}
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		field_marshal = {
 			skill = 1
 			attack_skill = 1
 			defense_skill = 2

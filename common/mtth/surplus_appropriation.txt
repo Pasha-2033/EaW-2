@@ -1,0 +1,12 @@
+real_food_production = {
+	base = 0
+	modifier = {
+		add = resource@food
+	}
+	modifier = {
+		check_variable = {
+			resource@food > 0
+		}
+		factor = mtth:food_gain_factor
+	}
+}

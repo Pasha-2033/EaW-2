@@ -359,6 +359,11 @@ scripted_gui = {
 					afm_frame = 1
 				}
 			}
+			food_production_visible = {
+				set_temp_variable = {
+					real_food_production = mtth:real_food_production
+				}
+			}
 		}
 		effects = {
 			close_button_click = {

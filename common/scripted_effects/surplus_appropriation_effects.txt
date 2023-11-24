@@ -13,7 +13,7 @@ d_sa_flag = {	#d_ added for debug issues
 	}
 }
 calc_surplus_appropriation_real_values = {
-	#calc army consumtion (to do)
+	#calc army consumtion (to do more complicated and precise)
 	#calc consumers
 	set_variable = {
 		raw_consumers^0 = max_manpower_k
@@ -37,22 +37,67 @@ calc_surplus_appropriation_real_values = {
 		array = raw_consumers
 		value = v
 		index = i
-		set_temp_variable = {
-			t = v
+		set_variable = {
+			consumers^i = v
 		}
-		multiply_temp_variable = {
-			t = surplus_appropriation_weights^i
+		multiply_variable = {
+			consumers^i = surplus_appropriation_weights^i
 		}
 		set_variable = {
-			consumers^i = t
+			super_raw_consumers^i = consumers^i
 		}
+	}
+	#applying modifiers#
+	multiply_variable = {
+		consumers^0 = mtth:civil_consumption_factor
+	}
+	clamp_variable = {
+		var = consumers^0
+		min = 0
+	}
+	multiply_variable = {
+		consumers^1 = mtth:facilities_consumption_factor
+	}
+	clamp_variable = {
+		var = consumers^1
+		min = 0
+	}
+	multiply_variable = {
+		consumers^2 = mtth:army_consumption_factor
+	}
+	clamp_variable = {
+		var = consumers^2
+		min = 0
+	}
+	#calc total consumtion
+	for_each_loop = {
+		array = consumers
+		value = v
 		add_to_variable = {
-			sa_consumtion_sum = t
+			sa_consumtion_sum = v
 		}
 	}
 	#calc resource appropriation
 	set_variable = {
 		food_storage_change = resource@food
+	}
+	if = {
+		limit = {
+			#prevent negative effect from buffing negative resources
+			check_variable = {
+				food_storage_change > 0
+			}
+		}
+		multiply_variable = {
+			food_storage_change = mtth:food_gain_factor
+		}
+		clamp_variable = {
+			var = food_storage_change
+			min = 0
+		}
+	}
+	add_to_variable = {
+		food_storage_change = modifier@food_gain
 	}
 	subtract_from_variable = {
 		food_storage_change = sa_consumtion_sum
@@ -70,10 +115,10 @@ calc_surplus_appropriation_real_values = {
 			}
 		}
 		set_temp_variable = {
-			food_final = food_storage_value
+			food_vs_consumtion = food_storage_value
 		}
-		add_to_temp_variable = {
-			food_final = resource@food
+		divide_temp_variable = {
+			food_vs_consumtion = negative_food_storage_change
 		}
 		for_each_loop = {
 			array = consumers
@@ -85,16 +130,10 @@ calc_surplus_appropriation_real_values = {
 					}
 				}
 				set_variable = {
-					surplus_appropriation_real_values^i = consumers^i
-				}
-				divide_variable = {
-					surplus_appropriation_real_values^i = sa_consumtion_sum
+					surplus_appropriation_real_values^i = surplus_appropriation_weights^i
 				}
 				multiply_variable = {
-					surplus_appropriation_real_values^i = food_final
-				}
-				divide_variable = {
-					surplus_appropriation_real_values^i = raw_consumers^i
+					surplus_appropriation_real_values^i = food_vs_consumtion
 				}
 			}
 			else = {
@@ -124,7 +163,11 @@ calc_surplus_appropriation_real_values = {
 calc_surplus_appropriation_min_value = {
 	find_lowest_in_array = {
 		array = surplus_appropriation_real_values
-		value = sa_min_value
+		value = temp_sa_min_value
+	}
+	#find_lowest_in_array value stores temp variable - set to non temp variable
+	set_variable = {
+		sa_min_value = temp_sa_min_value
 	}
 }
 sa_tick_effects = {

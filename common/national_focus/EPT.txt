@@ -27,7 +27,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_inevitable_defense"
 			if = {
 				limit = {
-					has_greate_project_hooftagon = yes
+					has_great_project_hooftagon = yes
 				}
 				add_to_variable = {
 					hooftagon^61 = 0.01
@@ -72,7 +72,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_hooffington_arch"
 			if = {
 				limit = {
-					has_greate_project_hooftagon = yes
+					has_great_project_hooftagon = yes
 				}
 				add_to_variable = {
 					hooftagon^61 = 0.01
@@ -167,7 +167,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_ayakatchli_galloprey_line"
 			if = {
 				limit = {
-					has_greate_project_hooftagon = yes
+					has_great_project_hooftagon = yes
 				}
 				add_to_variable = {
 					hooftagon^61 = 0.01
@@ -256,7 +256,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = ept_focus_teonaltzintli_greate_wall
+		id = ept_focus_teonaltzintli_great_wall
 		icon = GFX_goal_generic_changeling
 		cost = 5
 		x = 0
@@ -277,10 +277,10 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_tеonaltzintli_greate_wall"
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_tеonaltzintli_great_wall"
 			if = {
 				limit = {
-					has_greate_project_hooftagon = yes
+					has_great_project_hooftagon = yes
 				}
 				add_to_variable = {
 					hooftagon^61 = 0.01
@@ -435,6 +435,14 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_directive_number_one"
+			set_power_balance = {
+				id = EPT_government_formation
+				set_default = yes
+			}
+			add_power_balance_modifier = {
+				id = EPT_government_formation
+				modifier = EPT_directive_number_one
+			}
 		}
 	}
 	focus = {
@@ -453,6 +461,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_directive_volunteer_mobilisation"
 		}
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
 	}
 	focus = {
 		id = ept_focus_directive_army_mobilising
@@ -469,6 +480,9 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_directive_army_mobilising"
+		}
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
 		}
 	}
 	focus = {
@@ -488,7 +502,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_directive_special_powers"
 			if = {
 				limit = {
-					has_greate_project_hooftagon = yes
+					has_great_project_hooftagon = yes
 				}
 				add_to_variable = {
 					hooftagon^8 = 3
@@ -640,6 +654,21 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_economic_affairs_commission"
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_timed_idea = {
+				idea = EPT_economic_affairs_commission
+				days = 365
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
 		}
 	}
 	focus = {
@@ -806,8 +835,25 @@ focus_tree = {
 		ai_will_do = {
 			base = 200
 		}
+		available = {
+			has_completed_focus = ept_focus_directive_number_one
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_extend_directive_number_one"
+			if = {
+				limit = {
+					has_idea = young_state
+				}
+				remove_ideas = young_state
+			}
+			else = {
+				add_political_power = 50
+				add_stability = 0.05
+				add_popularity = {
+					ideology = var:current_party_ideology_group
+					popularity = 0.05
+				}
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -827,13 +873,13 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_emergency_hq_hooftagon"
 			hidden_effect = {
 				add_dynamic_modifier = {
-					modifier = greate_project_hooftagon_HQ
+					modifier = great_project_hooftagon_HQ
 				}
 				add_dynamic_modifier = {
-					modifier = greate_project_hooftagon_FP
+					modifier = great_project_hooftagon_FP
 				}
 				add_dynamic_modifier = {
-					modifier = greate_project_hooftagon_MI
+					modifier = great_project_hooftagon_MI
 				}
 				#init hooftagon modifier values
 				resize_array = {
@@ -882,6 +928,9 @@ focus_tree = {
 			}
 			army_experience = 25
 		}
+		search_filters = {
+			FOCUS_FILTER_GREAT_PROJECT
+		}
 	}
 	focus = {
 		id = ept_focus_new_young_officers
@@ -906,6 +955,9 @@ focus_tree = {
 				hooftagon^7 = 0.05
 			}
 			army_experience = 15
+		}
+		search_filters = {
+			FOCUS_FILTER_GREAT_PROJECT
 		}
 	}
 	focus = {
@@ -932,6 +984,9 @@ focus_tree = {
 				hooftagon^50 = 12
 			}
 		}
+		search_filters = {
+			FOCUS_FILTER_GREAT_PROJECT
+		}
 	}
 	focus = {
 		id = ept_focus_expand_recruitment_of_volunteers
@@ -953,6 +1008,9 @@ focus_tree = {
 				value = 0.1
 				tooltip = add_hooftagon_i24_10
 			}
+		}
+		search_filters = {
+			FOCUS_FILTER_GREAT_PROJECT
 		}
 	}
 }

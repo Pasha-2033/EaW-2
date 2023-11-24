@@ -22,6 +22,19 @@ ideas = {
 				improve_relations_maintain_cost_factor = 1
 			}
 		}
+		EPT_escaped_army = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EPT
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				offence = -0.05
+				defence = -0.05
+			}
+		}
 		EPT_south_equus_defence_district = {
 			picture = clockwerk_economy			#to do (change)
 			allowed = {
@@ -54,6 +67,22 @@ ideas = {
 						modifier = EPT_stableside_defence_district
 					}
 				}
+			}
+		}
+		EPT_economic_affairs_commission = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EPT
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = -0.50
+				production_speed_buildings_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				production_lack_of_resource_penalty_factor = -0.05
 			}
 		}
 	}

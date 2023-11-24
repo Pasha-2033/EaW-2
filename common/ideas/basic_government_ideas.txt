@@ -524,7 +524,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = 0.50
+				consumer_goods_expected_value = 0.50
 				production_speed_industrial_complex_factor = -0.5
 				production_speed_arms_factory_factor = -0.5
 				production_speed_dockyard_factor = -0.5
@@ -551,7 +551,7 @@ ideas = {
 			}	
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = 0.4
+				consumer_goods_expected_value = 0.4
 				production_speed_industrial_complex_factor = -0.4
 				production_speed_arms_factory_factor = -0.4
 				production_speed_dockyard_factor = -0.4
@@ -577,7 +577,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = 0.40
+				consumer_goods_expected_value = 0.40
 				production_speed_industrial_complex_factor = -0.50
 				production_speed_arms_factory_factor = -0.50
 				conversion_cost_civ_to_mil_factor= 0.40
@@ -603,7 +603,7 @@ ideas = {
             picture = outlaw_economy
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = 0.20
+				consumer_goods_expected_value = 0.20
                 fuel_gain_factor = 0.20
                 industrial_capacity_factory = 0.20
                 production_speed_industrial_complex_factor = -0.20
@@ -630,7 +630,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = 0.35
+				consumer_goods_expected_value = 0.35
 				production_speed_industrial_complex_factor = 0.15
 				production_speed_arms_factory_factor = -0.2
 				conversion_cost_civ_to_mil_factor = 0.3
@@ -658,7 +658,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = 0.3
+				consumer_goods_expected_value = 0.3
 				production_speed_industrial_complex_factor = 0.05
 				production_speed_arms_factory_factor = -0.1
 				conversion_cost_civ_to_mil_factor = 0.1
@@ -690,7 +690,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = 0.25
+				consumer_goods_expected_value = 0.25
 				production_speed_arms_factory_factor = 0.1
 				conversion_cost_civ_to_mil_factor = 0.1
 				conversion_cost_mil_to_civ_factor = 0.1
@@ -730,7 +730,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = 0.2
+				consumer_goods_expected_value = 0.2
 				production_speed_arms_factory_factor = 0.1
 				conversion_cost_civ_to_mil_factor = 0.2
 				conversion_cost_mil_to_civ_factor = -0.2
@@ -794,7 +794,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = 0.1
+				consumer_goods_expected_value = 0.1
 				conscription = -0.03
 				production_speed_arms_factory_factor = 0.3
 				conversion_cost_civ_to_mil_factor= -0.3
@@ -847,7 +847,7 @@ ideas = {
 			}
 			removal_cost = -1
 			modifier = {
-				consumer_goods_factor = -0.1
+				consumer_goods_expected_value = -0.1
 				stability_weekly_factor = -0.02
 				war_support_weekly_factor = -0.02
 				conscription = -0.03
@@ -878,7 +878,7 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				resistance_target = -0.2
-				consumer_goods_factor = 0.15
+				consumer_goods_expected_value = 0.15
 				production_speed_industrial_complex_factor = 0.15
 				production_speed_arms_factory_factor = 0.3
 				conversion_cost_civ_to_mil_factor= -0.3
@@ -1548,22 +1548,6 @@ ideas = {
 			removal_cost = -1
 			modifier = {
 				research_speed_factor = -0.3
-			}
-		}
-	}
-	country = { #poverty, move to unigue ideas
-		feudalism = {
-			allowed = {
-				always = no
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
-			modifier = {
-				local_resources_factor = -0.10				
-				political_power_cost = -0.2
-				research_speed_factor = -0.1
 			}
 		}
 	}
@@ -2339,5 +2323,41 @@ ideas = {
 		silver_coins = {}
 		gold_coins = {}
 		international_valuta = {}
+	}
+	country = { 
+		feudalism = { #poverty, move to unigue ideas
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				local_resources_factor = -0.10				
+				political_power_cost = -0.2
+				research_speed_factor = -0.1
+			}
+		}
+		young_state = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				always = no
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			removal_cost = -1
+			modifier = {
+				political_power_factor = -0.25
+				trade_opinion_factor = -0.5
+				improve_relations_maintain_cost_factor = 0.5
+				stability_factor = -0.1
+				war_support_factor = -0.25
+				mobilization_laws_cost_factor = 0.5
+				trade_laws_cost_factor = 0.5
+				economy_cost_factor = 0.5
+			}
+		}
 	}
 }
