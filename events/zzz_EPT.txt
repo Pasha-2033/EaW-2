@@ -1,0 +1,19 @@
+add_namespace = earth_pony_tribe
+#change picture everywhere
+country_event = {
+	#army dislikes barrier detachments
+	id = earth_pony_tribe.1
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event earth_pony_tribe.1"
+	}
+	title = earth_pony_tribe.1.t
+	desc = earth_pony_tribe.1.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#more submission - less violence
+		name = earth_pony_tribe.1.a
+		add_war_support = -0.1
+		remove_ideas = EPT_escaped_army
+	}
+}

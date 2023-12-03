@@ -56,15 +56,31 @@ init_urbanization_modifiers_tag_list = {
 }
 init_ideas_tag_list = {
 	#init idea arrays
-	resize_array = {
-		global.mobilization_idea_tokens = 7
-	}
-	resize_array = {
-		global.trade_idea_tokens = 8
-	}
-	resize_array = {
-		global.economy_idea_tokens = 10
-	}
+	add_to_array = { global.mobilization_idea_tokens = token:disarmed_nation		}
+	add_to_array = { global.mobilization_idea_tokens = token:volunteer_only			}
+	add_to_array = { global.mobilization_idea_tokens = token:limited_conscription	}
+	add_to_array = { global.mobilization_idea_tokens = token:extensive_conscription	}
+	add_to_array = { global.mobilization_idea_tokens = token:service_by_requirement	}
+	add_to_array = { global.mobilization_idea_tokens = token:all_adults_serve		}
+	add_to_array = { global.mobilization_idea_tokens = token:scraping_the_barrel	}
+	add_to_array = { global.trade_idea_tokens = token:free_trade			}
+	add_to_array = { global.trade_idea_tokens = token:uncontrolled_exports	}
+	add_to_array = { global.trade_idea_tokens = token:export_focus			}
+	add_to_array = { global.trade_idea_tokens = token:limited_exports		}
+	add_to_array = { global.trade_idea_tokens = token:closed_economy		}
+	add_to_array = { global.trade_idea_tokens = token:limited_imports		}
+	add_to_array = { global.trade_idea_tokens = token:import_focus			}
+	add_to_array = { global.trade_idea_tokens = token:uncontrolled_imports	}
+	add_to_array = { global.economy_idea_tokens = token:isolation						}
+	add_to_array = { global.economy_idea_tokens = token:primitive_economy				}
+	add_to_array = { global.economy_idea_tokens = token:outlaw_economy					}
+	add_to_array = { global.economy_idea_tokens = token:civilian_economy				}
+	add_to_array = { global.economy_idea_tokens = token:low_economic_mobilisation		}
+	add_to_array = { global.economy_idea_tokens = token:partial_economic_mobilisation	}
+	add_to_array = { global.economy_idea_tokens = token:war_economy						}
+	add_to_array = { global.economy_idea_tokens = token:tot_economic_mobilisation		}
+	add_to_array = { global.economy_idea_tokens = token:tot_militarisation				}
+	add_to_array = { global.economy_idea_tokens = token:collectivized_society			}
 	add_to_array = { global.society_idea_tokens = token:clockwerk_industry		}
 	add_to_array = { global.society_idea_tokens = token:modern_society			}
 	add_to_array = { global.society_idea_tokens = token:outdated_industry1		}
@@ -100,7 +116,7 @@ init_ideas_tag_list = {
 	add_to_array = { global.race_idea_tokens = token:bear_race			}
 	#token:multi_race isn`t real race
 	resize_array = {
-		global.power_concentration_idea_tokens = 7
+		global.power_concentration_idea_tokens = 6
 	}
 	resize_array = {
 		global.urbanization_idea_tokens = 5
@@ -261,7 +277,7 @@ init_country_lore_vars = {
 #init scripted gui entries for global mechanic descs
 init_global_mechanics_desc = {
 	resize_array = {
-		global.global_mechanic_desc = 2
+		global.global_mechanic_desc = 3
 	}
 }
 #arrays of surplus apopriation

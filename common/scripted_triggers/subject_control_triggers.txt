@@ -4839,14 +4839,6 @@ subject_power_concentration_0_available = {
 subject_power_concentration_1_available = {
 	if = {
 		limit = {
-			overlord = {
-				has_idea = anarchy
-			}
-		}
-		always = no
-	}
-	else_if = {
-		limit = {
 			has_idea = medium_power_concentration
 		}
 		NOT = {
@@ -4898,14 +4890,6 @@ subject_power_concentration_1_available = {
 subject_power_concentration_2_available = {
 	if = {
 		limit = {
-			overlord = {
-				has_idea = anarchy
-			}
-		}
-		always = no
-	}
-	else_if = {
-		limit = {
 			OR = {
 				has_idea = low_power_concentration
 				has_idea = high_power_concentration
@@ -4955,14 +4939,6 @@ subject_power_concentration_2_available = {
 subject_power_concentration_3_available = {
 	if = {
 		limit = {
-			overlord = {
-				has_idea = anarchy
-			}
-		}
-		always = no
-	}
-	else_if = {
-		limit = {
 			OR = {
 				has_idea = medium_power_concentration
 				has_idea = authoritarism
@@ -5003,14 +4979,6 @@ subject_power_concentration_3_available = {
 }
 subject_power_concentration_4_available = {
 	if = {
-		limit = {
-			overlord = {
-				has_idea = anarchy
-			}
-		}
-		always = no
-	}
-	else_if = {
 		limit = {
 			OR = {
 				has_idea = high_power_concentration
@@ -5060,14 +5028,6 @@ subject_power_concentration_4_available = {
 }
 subject_power_concentration_5_available = {
 	if = {
-		limit = {
-			overlord = {
-				has_idea = anarchy
-			}
-		}
-		always = no
-	}
-	else_if = {
 		limit = {
 			OR = {
 				has_idea = authoritarism
@@ -5122,14 +5082,6 @@ subject_power_concentration_5_available = {
 }
 subject_power_concentration_6_available = {
 	if = {
-		limit = {
-			overlord = {
-				has_idea = anarchy
-			}
-		}
-		always = no
-	}
-	else_if = {
 		limit = {
 			has_idea = commune
 		}

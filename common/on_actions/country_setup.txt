@@ -46,7 +46,15 @@ on_actions = {
 						limit = {
 							has_power_concentration = no
 						}
-						add_ideas = medium_power_concentration
+						if = {
+							limit = {
+								has_government = anarchism
+							}
+							add_ideas = anarchy
+						}
+						else = {
+							add_ideas = medium_power_concentration
+						}
 					}
 					#urbanization
 					if = {

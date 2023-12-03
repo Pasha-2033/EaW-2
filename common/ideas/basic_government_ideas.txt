@@ -1355,7 +1355,7 @@ ideas = {
 			modifier = {
 				political_power_factor = -0.7
 				opinion_gain_monthly_factor = -0.5
-				autonomy_manpower_share = 0.5
+				non_core_manpower = -0.25
 			}
 		}
 		low_power_concentration = {
@@ -1367,7 +1367,11 @@ ideas = {
 				}
 			}
 			cancel_if_invalid = no
-			modifier = {}
+			modifier = {
+				political_power_factor = -0.25
+				non_core_manpower = 0.1
+				surrender_limit = 0.05
+			}
 		}
 		medium_power_concentration = {
 			level = 3
@@ -1378,7 +1382,9 @@ ideas = {
 				}
 			}
 			cancel_if_invalid = no
-			modifier = {}
+			modifier = {
+				non_core_manpower = 0.05
+			}
 		}
 		high_power_concentration = {
 			level = 4
@@ -1389,7 +1395,11 @@ ideas = {
 				}
 			}
 			cancel_if_invalid = no
-			modifier = {}
+			modifier = {
+				political_power_factor = 0.25
+				non_core_manpower = -0.05
+				surrender_limit = -0.05
+			}
 		}
 		authoritarism = {
 			level = 5
@@ -1410,7 +1420,7 @@ ideas = {
 			modifier = {
 				political_power_factor = 0.5
 				opinion_gain_monthly_factor = 0.05
-				non_core_manpower = -0.5
+				non_core_manpower = -0.1
 				surrender_limit = -0.1
 			}
 		}

@@ -53,10 +53,6 @@ shared_focus = {
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_pgt_ept_desperate_situation"
-		add_timed_idea = {
-			idea = eqs_pgt_ept_desperate_situation_idea
-			days = 60
-		}
 		if = {
 			limit = {
 				original_tag = EQS
@@ -113,10 +109,6 @@ shared_focus = {
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_pgt_ept_wood_as_fuel"
-		add_timed_idea = {
-			idea = wood_as_fuel_idea
-			days = 60
-		}
 		if = {
 			limit = {
 				original_tag = EQS
@@ -145,10 +137,6 @@ shared_focus = {
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_pgt_ept_coal_as_fuel"
-		add_timed_idea = {
-			idea = coal_as_fuel_idea
-			days = 60
-		}
 		if = {
 			limit = {
 				original_tag = EQS
@@ -180,21 +168,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_pgt_ept_better_heat_sources"
 		if = {
 			limit = {
-				has_completed_focus = eqs_pgt_ept_coal_as_fuel
-			}
-			add_timed_idea = {
-				idea = better_heat_sources_idea
-				days = 120
-			}
-		}
-		else = {
-			add_timed_idea = {
-				idea = better_heat_sources_idea
-				days = 90
-			}
-		}
-		if = {
-			limit = {
 				original_tag = EQS
 			}
 			add_political_power = 50
@@ -224,21 +197,6 @@ shared_focus = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_pgt_ept_more_heat_sources"
 		if = {
 			limit = {
-				has_completed_focus = eqs_pgt_ept_wood_as_fuel
-			}
-			add_timed_idea = {
-				idea = more_heat_sources_idea
-				days = 120
-			}
-		}
-		else = {
-			add_timed_idea = {
-				idea = more_heat_sources_idea
-				days = 90
-			}
-		}
-		if = {
-			limit = {
 				original_tag = EQS
 			}
 			add_political_power = 50
@@ -263,7 +221,6 @@ shared_focus = {
 	y = 3
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_pgt_ept_heat_castle"
-		add_ideas = heat_castle_idea
 		if = {
 			limit = {
 				original_tag = EQS
@@ -289,7 +246,6 @@ shared_focus = {
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_pgt_ept_defence_strategy"
-		add_ideas = anti_ICE_defence
 		if = {
 			limit = {
 				original_tag = EQS
@@ -394,10 +350,6 @@ shared_focus = {
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_pgt_ept_use_heat_weapons"
-		add_timed_idea = {
-			idea = showels_idea
-			days = 30
-		}
 		if = {
 			limit = {
 				original_tag = EQS
@@ -431,10 +383,6 @@ shared_focus = {
 	y = 1
 	completion_reward = {
 		log = "[GetDateText]: [Root.GetName]: Focus eqs_pgt_ept_use_more_shovels"
-		add_timed_idea = {
-			idea = showels_idea
-			days = 30
-		}
 		if = {
 			limit = {
 				original_tag = EQS

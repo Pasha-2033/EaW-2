@@ -66,6 +66,16 @@ EPT_government_formation = {
 				max_command_power_mult = 0.5
 				harmony_drift = 0.05
 			}
+			on_activate = {
+				if = {
+					limit = {
+						EPT_copperhoof = {
+							is_country_leader = yes
+						}
+					}
+					promote_character = EPT_national_defence_council
+				}
+			}
 		}
 	}
 	side = {
@@ -126,6 +136,19 @@ EPT_government_formation = {
 				stability_factor = -0.2
 				war_support_factor = 0.15
 				militarism_drift = 0.05
+			}
+			on_activate = {
+				if = {
+					limit = {
+						EPT_national_defence_council = {
+							is_country_leader = yes
+						}
+					}
+					promote_character = {
+						character = EPT_copperhoof
+						ideology = harmonic_libertarianism
+					}
+				}
 			}
 		}
 	}

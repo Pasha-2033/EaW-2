@@ -35,10 +35,12 @@ power_concentration_law_pp_cost: "£pol_power_icon [?FROM.power_concentration_pp
 
 no_cost_index: "Бесплатно\n"
 #tooltip localisation
-subject_control_ml_idea_tt: "[subject_control_ml_idea_name_tt]"
-subject_control_ml_cost_tt: "[subject_control_ml_idea_cost_tt]"
-
-subject_control_e_idea_tt: "[subject_control_e_idea_name_tt]"
+subject_control_ml_idea_tt: "[?v_0.GetTokenLocalizedKey]"
+subject_control_ml_cost_tt: "[!subject_control_mobilization_law_button_click]"
+subject_control_tl_idea_tt: "[?v_1.GetTokenLocalizedKey]"
+subject_control_tl_cost_tt: "[!subject_control_trade_button_click]"
+subject_control_e_idea_tt: "[?v_2.GetTokenLocalizedKey]"
+subject_control_e_cost_tt: "subject_control_e_cost_tt todo"
 #to do (and scripted loc)
 subject_control_pc_idea_tt: ""
 subject_control_pc_cost_tt: "add cost value (to do)\n[power_concentration_limit_tt_delayed]"
