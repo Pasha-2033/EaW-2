@@ -673,43 +673,43 @@ foreign_politics = {
 	#object_to_attaches #to do
 }
 
-building_slot_decisions = {
+economy_decisions = {
 	infrastructure_building_slot = {
 		icon = generic_construction
-		allowed = {
-			always = yes
-		}
-		cost = 100
-		days_re_enable = 30
-		visible = {
-			any_owned_state = {
-				NOT = {
-					has_state_flag = infrastructure_building_slot_flag
-				}
-				free_building_slots = {
-					building = infrastructure
-					size < 1
-				}
-			}
-		}
+        allowed = {
+            always = yes
+        }
+        cost = 100
+        fire_only_once = no
+        days_re_enable = 30
 		available = {
 			any_owned_state = {
-				NOT = {
-					has_state_flag = infrastructure_building_slot_flag
-				}
+				NOT = { has_state_flag = infrastructure_building_slot_flag }
+				is_fully_controlled_by = ROOT
 				free_building_slots = {
 					building = infrastructure
 					size < 1
 				}
 			}
 		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision infrastructure_building_slot"
+		visible = {
+			any_owned_state = {
+				NOT = { has_state_flag = infrastructure_building_slot_flag }
+				is_fully_controlled_by = ROOT
+				free_building_slots = {
+					building = infrastructure
+					size < 1
+				}
+			}
+		}
+        complete_effect = {
 			random_owned_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
-					check_variable = {
-						common_empty_slots = 0
+            		free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
 					}
 					free_building_slots = {
 						building = infrastructure
@@ -722,40 +722,49 @@ building_slot_decisions = {
 			}
 		}
 		ai_will_do = {
-			base = 1
+			factor = 1
+			modifier = {
+				factor = 10
+				any_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = no } }
+			}
 		}
-	}
+    }
+
     war_building_slot = {
+
     	icon = generic_construction
+
         allowed = {
             always = yes
         }
+
         cost = 50
+        fire_only_once = no
+
         available = {
             has_war = yes
             any_owned_state = {
-            	NOT = {
-					has_state_flag = war_building_slot_flag
-				}
+            	NOT = { has_state_flag = war_building_slot_flag }
+            	is_fully_controlled_by = ROOT
             }
         }
         visible = {
 			has_war = yes
 			any_owned_state = {
-				NOT = {
-					has_state_flag = war_building_slot_flag
-				}
+				NOT = { has_state_flag = war_building_slot_flag }
+				is_fully_controlled_by = ROOT
 			}
 		}
-		complete_effect = {
-			log = "[GetDateText]: [Root.GetName]: Decision war_building_slot"
+        complete_effect = {
         	add_war_support = -0.025
 			add_stability = -0.025
 			random_owned_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
-					check_variable = {
-						common_empty_slots = 0
+					free_building_slots = {
+						building = industrial_complex
+						size > 1
+						include_locked = yes
 					}
 					NOT = { has_state_flag = war_building_slot_flag }
 				}
