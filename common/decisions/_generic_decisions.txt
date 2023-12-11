@@ -71,7 +71,7 @@ political_actions = {
 		visible = {
 			always = yes
 		}
-		fire_only_once = no
+		
 		modifier = {
 			stability_weekly = 0.005
 			consumer_goods_factor = 0.05
@@ -130,7 +130,7 @@ political_actions = {
 			has_war = yes
 			has_war_support < 0.05
 		}
-		fire_only_once = no
+		
 		modifier = {
 			stability_weekly = 0.005
 			war_support_weekly = -0.01
@@ -265,7 +265,7 @@ propaganda_efforts = {
 			}
 		}
 
-		fire_only_once = no
+		
 
 		days_remove = 90
 		days_re_enable = 180
@@ -471,7 +471,7 @@ war_measures = {
 			has_offensive_war = no
 		}
 
-		fire_only_once = no
+		
 
 		days_re_enable = 90
 
@@ -499,7 +499,7 @@ war_measures = {
 			has_offensive_war = yes
 		}
 
-		fire_only_once = no
+		
 
 		days_re_enable = 90
 
@@ -528,7 +528,7 @@ war_measures = {
 			surrender_progress > 0
 		}
 
-		fire_only_once = no
+		
 
 		days_remove = 45
 		days_re_enable = 360
@@ -591,7 +591,7 @@ war_measures = {
 			has_war = yes
 		}
 
-		fire_only_once = no
+		
 
 		days_remove = 180
 
@@ -673,44 +673,43 @@ foreign_politics = {
 	#object_to_attaches #to do
 }
 
-economy_decisions = {
+building_slot_decisions = {
 	infrastructure_building_slot = {
-
 		icon = generic_construction
-
 		allowed = {
 			always = yes
 		}
-
 		cost = 100
-		fire_only_once = no
-
 		days_re_enable = 30
-
 		visible = {
 			any_owned_state = {
-				NOT = { has_state_flag = infrastructure_building_slot_flag }
-				is_fully_controlled_by = ROOT
+				NOT = {
+					has_state_flag = infrastructure_building_slot_flag
+				}
 				free_building_slots = {
 					building = infrastructure
 					size < 1
 				}
 			}
-			if = {
-				limit = { original_tag = BAL }
-				NOT = { is_subject_of = CHN }
+		}
+		available = {
+			any_owned_state = {
+				NOT = {
+					has_state_flag = infrastructure_building_slot_flag
+				}
+				free_building_slots = {
+					building = infrastructure
+					size < 1
+				}
 			}
 		}
-
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision infrastructure_building_slot"
 			random_owned_state = {
 				limit = {
 					is_fully_controlled_by = ROOT
-					free_building_slots = {
-						building = industrial_complex
-						size > 1
-						include_locked = yes
+					check_variable = {
+						common_empty_slots = 0
 					}
 					free_building_slots = {
 						building = infrastructure
@@ -723,120 +722,45 @@ economy_decisions = {
 			}
 		}
 		ai_will_do = {
-			factor = 1
-			modifier = {
-				factor = 10
-				any_owned_state = { free_building_slots = { building = industrial_complex size < 1 include_locked = no } }
-			}
+			base = 1
 		}
 	}
-
     war_building_slot = {
-
     	icon = generic_construction
-
         allowed = {
             always = yes
         }
-
         cost = 50
-        fire_only_once = no
-
         available = {
             has_war = yes
             any_owned_state = {
-            	NOT = { has_state_flag = war_building_slot_flag }
-            	is_fully_controlled_by = ROOT
+            	NOT = {
+					has_state_flag = war_building_slot_flag
+				}
             }
-			if = {
-				limit = { original_tag = BAL }
-				NOT = { is_subject_of = CHN }
-			}
         }
-
         visible = {
 			has_war = yes
 			any_owned_state = {
-				NOT = { has_state_flag = war_building_slot_flag }
-				is_fully_controlled_by = ROOT
+				NOT = {
+					has_state_flag = war_building_slot_flag
+				}
 			}
 		}
-
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Decision war_building_slot"
         	add_war_support = -0.025
 			add_stability = -0.025
-			if = {
+			random_owned_state = {
 				limit = {
-					any_owned_state = {
-						is_fully_controlled_by = ROOT
-            			free_building_slots = {
-							building = industrial_complex
-							size > 1
-							include_locked = yes
-						}
-						NOT = { has_state_flag = war_building_slot_flag }
-						infrastructure > 4
+					is_fully_controlled_by = ROOT
+					check_variable = {
+						common_empty_slots = 0
 					}
+					NOT = { has_state_flag = war_building_slot_flag }
 				}
-				random_owned_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-            			free_building_slots = {
-							building = industrial_complex
-							size > 1
-							include_locked = yes
-						}
-						NOT = { has_state_flag = war_building_slot_flag }
-						infrastructure > 4
-					}
-					add_extra_state_shared_building_slots = 1
-					set_state_flag = war_building_slot_flag
-				}
-			}
-			else_if = {
-				limit = {
-					any_owned_state = {
-						is_fully_controlled_by = ROOT
-            			free_building_slots = {
-							building = industrial_complex
-							size > 1
-							include_locked = yes
-						}
-						NOT = { has_state_flag = war_building_slot_flag }
-						infrastructure > 2
-					}
-				}
-				random_owned_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-            			free_building_slots = {
-							building = industrial_complex
-							size > 1
-							include_locked = yes
-						}
-						NOT = { has_state_flag = war_building_slot_flag }
-						infrastructure > 2
-					}
-					add_extra_state_shared_building_slots = 1
-					set_state_flag = war_building_slot_flag
-				}
-			}
-			else = {
-				random_owned_state = {
-					limit = {
-						is_fully_controlled_by = ROOT
-            			free_building_slots = {
-							building = industrial_complex
-							size > 1
-							include_locked = yes
-						}
-						NOT = { has_state_flag = war_building_slot_flag }
-						infrastructure > 4
-					}
-					add_extra_state_shared_building_slots = 1
-					set_state_flag = war_building_slot_flag
-				}
+				add_extra_state_shared_building_slots = 1
+				set_state_flag = war_building_slot_flag
 			}
 		}
 		ai_will_do = {

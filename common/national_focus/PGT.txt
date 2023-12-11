@@ -1,6 +1,6 @@
 #Windigo time focuses
 focus_tree = {
-	id = pgt_focus_tree
+	id = pgt_focus_tree_windigo
 	country = {
 		base = 0
 		modifier = {
@@ -13,9 +13,9 @@ focus_tree = {
 		x = 2700
 		y = 1350
 	}
-	shared_focus = eqs_pgt_ept_winter_spirits
+	#common branch
 	focus = {
-		id = pgt_focus_start_pgt_tag
+		id = pgt_focus_way_of_warriors
 		icon = GFX_goal_generic_changeling
 		cost = 5
 		x = 10
@@ -24,7 +24,253 @@ focus_tree = {
 			base = 200
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_start_pgt_tag"
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_way_of_warriors"
+		}
+	}
+	focus = {
+		id = pgt_focus_surrounded_but_not_broken
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_way_of_warriors
+		prerequisite = {
+			focus = pgt_focus_way_of_warriors
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_surrounded_but_not_broken"
+		}
+	}
+	#pockets branch
+	focus = {
+		id = pgt_focus_northern_pockets
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 16
+		y = 0
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_northern_pockets"
+		}
+	}
+	focus = {
+		id = pgt_focus_eastern_pockets
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 18
+		y = 0
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_eastern_pockets"
+		}
+	}
+
+
+
+
+	focus = {
+		id = pgt_focus_escape_to_stg
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = pgt_focus_eastern_pockets
+		prerequisite = {
+			focus = pgt_focus_eastern_pockets
+		}
+		mutually_exclusive = {
+			focus = pgt_focus_aid_from_stg
+		}
+		ai_will_do = {
+			base = 200
+		}
+		available = {
+			has_full_control_of_state = 160
+			has_full_control_of_state = 162
+			has_full_control_of_state = 164
+			has_full_control_of_state = 326
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_escape_to_stg"
+			delete_unit = {
+				state = 160
+				disband = yes
+			}
+			delete_unit = {
+				state = 162
+				disband = yes
+			}
+			delete_unit = {
+				state = 164
+				disband = yes
+			}
+			delete_unit = {
+				state = 326
+				disband = yes
+			}
+			custom_effect_tooltip = evacuate_divisions_to_stg
+			160 = {
+				add_core_of = STG
+				transfer_state_to = STG
+				remove_core_of = PGT
+				set_demilitarized_zone = yes
+			}
+			162 = {
+				add_core_of = STG
+				transfer_state_to = STG
+				remove_core_of = PGT
+				set_demilitarized_zone = yes
+			}
+			164 = {
+				add_core_of = STG
+				transfer_state_to = STG
+				remove_core_of = PGT
+				set_demilitarized_zone = yes
+			}
+			326 = {
+				add_core_of = STG
+				transfer_state_to = STG
+				remove_core_of = PGT
+				set_demilitarized_zone = yes
+			}
+			add_stability = 0.05
+		}
+	}
+	focus = {
+		id = pgt_focus_aid_from_stg
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 3
+		y = 1
+		relative_position_id = pgt_focus_eastern_pockets
+		prerequisite = {
+			focus = pgt_focus_eastern_pockets
+		}
+		mutually_exclusive = {
+			focus = pgt_focus_escape_to_stg
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_aid_from_stg"
+			#to do other effects
+			custom_effect_tooltip = todo
+			add_war_support = 0.05
+		}
+	}
+	focus = {
+		id = pgt_focus_escape_from_solside
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -3
+		y = 1
+		relative_position_id = pgt_focus_northern_pockets
+		prerequisite = {
+			focus = pgt_focus_northern_pockets
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_albion_port_fortress"
+		}
+	}
+
+
+
+	focus = {
+		id = pgt_focus_fortify_vinniapolice
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = pgt_focus_northern_pockets
+		prerequisite = {
+			focus = pgt_focus_northern_pockets
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_albion_port_fortress"
+		}
+	}
+
+
+
+
+
+
+	focus = {
+		id = pgt_focus_evacuation_from_albion
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 5
+		y = 1
+		relative_position_id = pgt_focus_eastern_pockets
+		prerequisite = {
+			focus = pgt_focus_eastern_pockets
+		}
+		mutually_exclusive = {
+			focus = pgt_focus_albion_port_fortress
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_evacuation_from_albion"
+		}
+	}
+	focus = {
+		id = pgt_focus_albion_port_fortress
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 7
+		y = 1
+		relative_position_id = pgt_focus_eastern_pockets
+		prerequisite = {
+			focus = pgt_focus_eastern_pockets
+		}
+		mutually_exclusive = {
+			focus = pgt_focus_evacuation_from_albion
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_albion_port_fortress"
+		}
+	}
+
+
+
+
+
+
+	focus = {
+		id = pgt_focus_war_without_supplies
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = pgt_focus_northern_pockets
+		prerequisite = {
+			focus = pgt_focus_northern_pockets
+			focus = pgt_focus_eastern_pockets
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_war_without_supplies"
 		}
 	}
 }

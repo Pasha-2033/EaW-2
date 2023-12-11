@@ -1,7 +1,7 @@
 add_namespace = equestria
 #change picture everywhere
 country_event = {
-	#create research group with VES
+	#fascist dont like our actions
 	id = equestria.1
 	immediate = {
 		log = "[GetDateText]: [Root.GetName]: event equestria.1"
@@ -11,17 +11,13 @@ country_event = {
 	picture = GFX_event_swarm #(to do) change
 	is_triggered_only = yes
 	option = {
-		#yes
 		name = equestria.1.a
-		ai_chance = {
-			factor = 100
-		}
-	}
-	option = {
-		#no
-		name = equestria.1.b
-		ai_chance = {
-			factor = 100
+		add_stability = -0.1
+		if = {
+			limit = {
+				fascism > 0.5
+			}
+			add_political_power = -25
 		}
 	}
 }
@@ -51,6 +47,30 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = equestria.3.a
+		PGT = {
+			remove_trait = {
+				character = PGT_fluttershy
+				slot = political_advisor
+				trait = defender_of_nature
+			}
+			add_trait = {
+				character = PGT_fluttershy
+				slot = political_advisor
+				trait = HE_kindness
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						PGT_fluttershy = {
+							is_hired_as_advisor = yes
+						}
+					}
+					country_event = {
+						id = pegas_tribe.1
+					}
+				}
+			}
+		}
 	}
 }
 country_event = {
@@ -65,6 +85,30 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = equestria.4.a
+		PGT = {
+			remove_trait = {
+				character = PGT_rainbowdash
+				slot = political_advisor
+				trait = ideological_inspirer
+			}
+			add_trait = {
+				character = PGT_rainbowdash
+				slot = political_advisor
+				trait = HE_loyalty
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						PGT_rainbowdash = {
+							is_hired_as_advisor = yes
+						}
+					}
+					country_event = {
+						id = pegas_tribe.2
+					}
+				}
+			}
+		}
 	}
 }
 country_event = {
@@ -79,6 +123,30 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = equestria.5.a
+		EPT = {
+			remove_trait = {
+				character = EPT_applejack
+				slot = political_advisor
+				trait = farmer
+			}
+			add_trait = {
+				character = EPT_applejack
+				slot = political_advisor
+				trait = HE_honesty
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						EPT_applejack = {
+							is_hired_as_advisor = yes
+						}
+					}
+					country_event = {
+						id = earth_pony_tribe.2
+					}
+				}
+			}
+		}
 	}
 }
 country_event = {
@@ -93,6 +161,30 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = equestria.6.a
+		EPT = {
+			remove_trait = {
+				character = EPT_pinkypie
+				slot = political_advisor
+				trait = merry_fellow
+			}
+			add_trait = {
+				character = EPT_pinkypie
+				slot = political_advisor
+				trait = HE_laughter
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						EPT_pinkypie = {
+							is_hired_as_advisor = yes
+						}
+					}
+					country_event = {
+						id = earth_pony_tribe.3
+					}
+				}
+			}
+		}
 	}
 }
 country_event = {
@@ -107,6 +199,16 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = equestria.7.a
+		remove_trait = {
+			character = EQS_982_rarity
+			slot = political_advisor
+			trait = fashion_designer
+		}
+		add_trait = {
+			character = EQS_982_rarity
+			slot = political_advisor
+			trait = HE_generosity
+		}
 	}
 }
 country_event = {
@@ -130,26 +232,5 @@ country_event = {
 	option = {
 		#we have to focus on South space and Griffons (GRE, DRG)
 		name = equestria.8.c
-	}
-}
-country_event = {
-	#fascist dont like our actions
-	id = equestria.9
-	immediate = {
-		log = "[GetDateText]: [Root.GetName]: event equestria.9"
-	}
-	title = equestria.9.t
-	desc = equestria.9.d
-	picture = GFX_event_swarm #(to do) change
-	is_triggered_only = yes
-	option = {
-		name = equestria.9.a
-		add_stability = -0.1
-		if = {
-			limit = {
-				fascism > 0.5
-			}
-			add_political_power = -25
-		}
 	}
 }

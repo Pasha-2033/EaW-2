@@ -20,11 +20,11 @@ characters = {
 		portraits = {
 			civilian = {
 				large = "GFX_portrait_marshal_unknown" #to do
-				small = "" #to do
+				small = "GFX_idea_unknown_advisor" #to do
 			}
 		}
 		country_leader = {
-			desc = "POLITICS_982_CELESTIA_DESC"
+			desc = "POLITICS_982_TWILIGHT_DESC"
 			ideology = harmonic_magocracy
 			traits = {}
 			expire = "1965.1.1.1"
@@ -35,6 +35,30 @@ characters = {
 			idea_token = EQS_982_twilight
 			traits = {
 				HE_magic
+			}
+			allowed = {
+				original_tag = EQS
+			}
+			available = {
+				#to do
+			}
+			visible = {
+				#to do
+			}
+		}
+	}
+	EQS_982_rarity = {
+		name = EQS_982_rarity
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor" #to do
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = EQS_982_rarity
+			traits = {
+				fashion_designer
 			}
 			allowed = {
 				original_tag = EQS

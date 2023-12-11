@@ -15,12 +15,12 @@ focus_tree = {
 		x = 1800
 		y = 1250
 	}
-	shared_focus = eqs_pgt_ept_winter_spirits
+	#common branch
 	focus = {
 		id = eqs_focus_harmony_isnot_lost
 		icon = GFX_goal_eqs_focus_harmony_isnot_lost
 		cost = 5
-		x = 21
+		x = 10
 		y = 0
 		ai_will_do = {
 			base = 200
@@ -100,6 +100,7 @@ focus_tree = {
 				country_event = {
 					id = bop_eqs_event.8
 					days = 3
+					random_days = 5
 				}
 			}
 		}
@@ -1086,7 +1087,7 @@ focus_tree = {
 			}
 			custom_effect_tooltip = add_dynamic_modifier_EQS_accept_harmonists_tt
 			country_event = {
-				id = equestria.9
+				id = equestria.1
 				days = 3
 			}
 		}
@@ -1106,7 +1107,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_stop_persecution_of_harmonists"
-			country_event = equestria.9
+			country_event = equestria.1
 			add_to_variable = {
 				accept_harmonists_stability_weekly_factor = 0.02
 			}
@@ -1137,7 +1138,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_complex_goverment"
-			country_event = equestria.9
+			country_event = equestria.1
 			add_to_variable = {
 				accept_harmonists_stability_weekly_factor = 0.02
 			}
@@ -1171,7 +1172,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_admission_only_to_lower_positions"
-			country_event = equestria.9
+			country_event = equestria.1
 			add_to_variable = {
 				accept_harmonists_stability_weekly_factor = 0.05
 			}

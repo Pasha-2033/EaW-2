@@ -61,7 +61,7 @@ characters = {
 		name = EPT_applejack
 		portraits = {
 			civilian = {
-				small = "GFX_idea_unknown_advisor"
+				small = "GFX_idea_unknown_advisor" #to do
 			}
 		}
 		advisor = {
@@ -89,7 +89,26 @@ characters = {
 		#to do
 		portraits = {
 			civilian = {
-				small = "GFX_idea_unknown_advisor"
+				small = "GFX_idea_unknown_advisor" #to do
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = EPT_pinkypie
+			traits = {
+				merry_fellow
+			}
+			allowed = {
+				OR = {
+					original_tag = EQS
+					original_tag = EPT
+				}
+			}
+			available = {
+				#to do
+			}
+			visible = {
+				#to do
 			}
 		}
 	}

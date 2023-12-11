@@ -1,0 +1,53 @@
+add_namespace = pegas_tribe
+country_event = {
+	#fluttershy adheres to harmony
+	id = pegas_tribe.1
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event pegas_tribe.1"
+	}
+	title = pegas_tribe.1.t
+	desc = pegas_tribe.1.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#it`s okay
+		name = pegas_tribe.1.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		#fire her until it`s too late!
+		name = pegas_tribe.1.b
+		deactivate_advisor = PGT_fluttershy
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {
+	#rainbowdash adheres to harmony
+	id = pegas_tribe.2
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event pegas_tribe.2"
+	}
+	title = pegas_tribe.2.t
+	desc = pegas_tribe.2.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#it`s okay
+		name = pegas_tribe.2.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		#fire her until it`s too late!
+		name = pegas_tribe.2.b
+		deactivate_advisor = PGT_rainbowdash
+		ai_chance = {
+			factor = 100
+		}
+	}
+}

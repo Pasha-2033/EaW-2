@@ -120,6 +120,17 @@ economy_decisions = {
 		NOT = { tag = BAR }
 	}
 }
+building_slot_decisions = {
+	icon = generic_economy
+	visible = {
+		any_owned_state = {
+			check_variable = {
+				common_empty_slots = 0
+			}
+			is_fully_controlled_by = ROOT
+		}
+	}
+}
 
 prospect_for_resources = {
 	icon = generic_prospect_for_resources

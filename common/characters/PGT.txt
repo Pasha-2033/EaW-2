@@ -1,0 +1,58 @@
+characters = {
+	PGT_rainbowdash = {
+		name = PGT_rainbowdash
+		#to do
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor" #to do
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = PGT_rainbowdash
+			traits = {
+				ideological_inspirer
+			}
+			allowed = {
+				OR = {
+					original_tag = EQS
+					original_tag = PGT
+				}
+			}
+			available = {
+				#to do
+			}
+			visible = {
+				#to do
+			}
+		}
+	}
+	PGT_fluttershy = {
+		name = PGT_fluttershy
+		#to do
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor" #to do
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = PGT_fluttershy
+			traits = {
+				defender_of_nature
+			}
+			allowed = {
+				OR = {
+					original_tag = EQS
+					original_tag = PGT
+				}
+			}
+			available = {
+				#to do
+			}
+			visible = {
+				#to do
+			}
+		}
+	}
+}

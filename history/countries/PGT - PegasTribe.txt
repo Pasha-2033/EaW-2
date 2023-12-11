@@ -18,10 +18,25 @@ set_popularities = {
 	anarchism = 3
 	harmony = 33
 }
+recruit_character = PGT_rainbowdash
+recruit_character = PGT_fluttershy
 add_ideas = {
 	partial_economic_mobilisation
 	pony_race
 	PGT_tribal_crisis
+}
+#set surplus appropriation
+set_variable = {
+	food_storage_value = 670
+}
+set_variable = {
+	surplus_appropriation_weight_0 = 0.6
+}
+set_variable = {
+	surplus_appropriation_weight_1 = 0.2
+}
+set_variable = {
+	surplus_appropriation_weight_2 = 0.6
 }
 #harvest failure
 set_variable = {

@@ -17,3 +17,55 @@ country_event = {
 		remove_ideas = EPT_escaped_army
 	}
 }
+country_event = {
+	#applejack adheres to harmony
+	id = earth_pony_tribe.2
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event earth_pony_tribe.2"
+	}
+	title = earth_pony_tribe.2.t
+	desc = earth_pony_tribe.2.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#it`s okay
+		name = earth_pony_tribe.2.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		#fire her until it`s too late!
+		name = earth_pony_tribe.2.a
+		deactivate_advisor = EPT_applejack
+		ai_chance = {
+			factor = 100
+		}
+	}
+}
+country_event = {
+	#pinkypie adheres to harmony
+	id = earth_pony_tribe.3
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event earth_pony_tribe.3"
+	}
+	title = earth_pony_tribe.3.t
+	desc = earth_pony_tribe.3.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#it`s okay
+		name = earth_pony_tribe.3.a
+		ai_chance = {
+			factor = 100
+		}
+	}
+	option = {
+		#fire her until it`s too late!
+		name = earth_pony_tribe.3.b
+		deactivate_advisor = EPT_pinkypie
+		ai_chance = {
+			factor = 100
+		}
+	}
+}

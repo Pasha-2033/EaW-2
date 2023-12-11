@@ -3,6 +3,76 @@
 @tier3 = 10
 
 leader_traits = {
+	#common traits (can be converted to HE)
+	fashion_designer = {
+		random = no
+		#to do
+	}
+	farmer = {
+		random = no
+		production_speed_agrarian_complex_factor = 0.1
+		country_resource_cost_food = -10
+	}
+	merry_fellow = {
+		random = no
+		#to do
+	}
+	ideological_inspirer = {
+		random = no
+		#to do
+	}
+	defender_of_nature = {
+		random = no
+		#to do
+	}
+	#leader`s stategy
+	unicorn_superiority = {
+		random = no
+		fascism_drift = 0.1
+		political_power_factor = 0.1
+		stability_factor = -0.1
+	}
+
+
+	#EQS & EPT & PGT
+	#six elements of harmony (Harmonic Element)
+	HE_magic = {
+		random = no
+		research_speed_factor = 0.05
+		political_power_gain = 0.2
+		harmony_drift = 0.05
+	}
+	HE_generosity = {
+		random = no
+		#to do
+		harmony_drift = 0.05
+	}
+	HE_honesty = {
+		random = no
+		production_speed_agrarian_complex_factor = 0.15
+		country_resource_cost_food = -25
+		harmony_drift = 0.05
+	}
+	HE_laughter = {
+		random = no
+		#to do
+		harmony_drift = 0.05
+	}
+	HE_loyalty = {
+		random = no
+		#to do
+		harmony_drift = 0.05
+	}
+	HE_kindness = {
+		random = no
+		#to do
+		harmony_drift = 0.05
+	}
+	#OLE
+	sun_of_ruins = {
+		random = no
+		#to do
+	}
 	#ICE windigo traits for theorists
 	master_of_speed_and_organisation = {
 		random = no
