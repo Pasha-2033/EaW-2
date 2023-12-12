@@ -13,13 +13,17 @@ focus_tree = {
 		x = 2700
 		y = 1350
 	}
-	#common branch
+	#militarists branch
 	focus = {
 		id = pgt_focus_way_of_warriors
 		icon = GFX_goal_generic_changeling
 		cost = 5
-		x = 10
+		x = 6
 		y = 0
+		mutually_exclusive = {
+			focus = pgt_focus_save_harmonic_principles
+			focus = pgt_focus_dying_nation
+		}
 		ai_will_do = {
 			base = 200
 		}
@@ -42,6 +46,59 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_surrounded_but_not_broken"
+		}
+	}
+	#harmonists branch
+	focus = {
+		id = pgt_focus_save_harmonic_principles
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 2
+		y = 0
+		mutually_exclusive = {
+			focus = pgt_focus_way_of_warriors
+			focus = pgt_focus_dying_nation
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_save_harmonic_principles"
+		}
+	}
+	focus = {
+		id = pgt_focus_allow_harmonists_to_perform
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_save_harmonic_principles
+		prerequisite = {
+			focus = pgt_focus_save_harmonic_principles
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_allow_harmonists_to_perform"
+		}
+	}
+	#radicalists branch
+	focus = {
+		id = pgt_focus_dying_nation
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 10
+		y = 0
+		mutually_exclusive = {
+			focus = pgt_focus_way_of_warriors
+			focus = pgt_focus_save_harmonic_principles
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_dying_nation"
 		}
 	}
 	#pockets branch

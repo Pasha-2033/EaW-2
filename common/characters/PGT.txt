@@ -1,4 +1,29 @@
 characters = {
+	PGT_cloudforce = {
+		name = PGT_cloudforce
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+			}
+			army = {
+				large = "GFX_portrait_marshal_unknown" #to do
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_982_CLOUDFORCE_DESC"
+			ideology = moderate_militarism
+			traits = {}
+			expire = "1965.1.1.1"
+		}
+		field_marshal = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = {}
+		}
+	}
 	PGT_rainbowdash = {
 		name = PGT_rainbowdash
 		#to do
