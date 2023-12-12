@@ -11,7 +11,7 @@ focus_tree = {
 	}
 	default = no
 	continuous_focus_position = {
-		x = 200
+		x = 100
 		y = 750
 	}
 	focus = {
@@ -50,11 +50,13 @@ focus_tree = {
 			factor = 200
 		}
 		available = {
-			EQS = {
-				NOT = {
-					has_completed_focus = eqs_focus_friendship_is_magic
-				}
-			}
+			#EQS = {
+			#	NOT = {
+			#		has_completed_focus = eqs_focus_friendship_is_magic
+			#	}
+			#}
+			#todo temp
+			always = no
 		}
 		x = 2
 		y = 1
@@ -67,6 +69,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_extraction_of_hatred"
+			custom_effect_tooltip = this_is_a_draf_branch
 		}
 		search_filters = {}
 	}

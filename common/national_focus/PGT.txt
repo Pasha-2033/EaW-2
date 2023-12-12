@@ -105,7 +105,7 @@ focus_tree = {
 	focus = {
 		id = pgt_focus_northern_pockets
 		icon = GFX_goal_generic_changeling
-		cost = 5
+		cost = 1
 		x = 16
 		y = 0
 		ai_will_do = {
@@ -118,7 +118,7 @@ focus_tree = {
 	focus = {
 		id = pgt_focus_eastern_pockets
 		icon = GFX_goal_generic_changeling
-		cost = 5
+		cost = 1
 		x = 18
 		y = 0
 		ai_will_do = {
@@ -135,7 +135,7 @@ focus_tree = {
 	focus = {
 		id = pgt_focus_escape_to_stg
 		icon = GFX_goal_generic_changeling
-		cost = 5
+		cost = 2
 		x = 1
 		y = 1
 		relative_position_id = pgt_focus_eastern_pockets
@@ -203,7 +203,7 @@ focus_tree = {
 	focus = {
 		id = pgt_focus_aid_from_stg
 		icon = GFX_goal_generic_changeling
-		cost = 5
+		cost = 3
 		x = 3
 		y = 1
 		relative_position_id = pgt_focus_eastern_pockets
@@ -237,7 +237,7 @@ focus_tree = {
 			base = 200
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_albion_port_fortress"
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_escape_from_solside"
 		}
 	}
 
@@ -257,7 +257,7 @@ focus_tree = {
 			base = 200
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_albion_port_fortress"
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_fortify_vinniapolice"
 		}
 	}
 
@@ -269,7 +269,7 @@ focus_tree = {
 	focus = {
 		id = pgt_focus_evacuation_from_albion
 		icon = GFX_goal_generic_changeling
-		cost = 5
+		cost = 2
 		x = 5
 		y = 1
 		relative_position_id = pgt_focus_eastern_pockets
@@ -289,7 +289,7 @@ focus_tree = {
 	focus = {
 		id = pgt_focus_albion_port_fortress
 		icon = GFX_goal_generic_changeling
-		cost = 5
+		cost = 3
 		x = 7
 		y = 1
 		relative_position_id = pgt_focus_eastern_pockets
