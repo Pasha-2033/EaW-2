@@ -46,6 +46,10 @@ country_event = {
 					}
 				}
 			}
+			#update focuses for countries that have dependency on CRY tag in allow_branch
+			PGT = {
+				mark_focus_tree_layout_dirty = yes
+			}
 		}
 	}
 	title = null_magic_event.1.t

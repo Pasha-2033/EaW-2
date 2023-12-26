@@ -34,7 +34,7 @@ focus_tree = {
 				}
 				add_to_variable = {
 					hooftagon^61 = 0.01
-					tooltip = addadd_hooftagon_i61_1_i62_1
+					tooltip = addadd_hooftagon_i61_1_i62_1_tt
 				}
 				add_to_variable = {
 					hooftagon^62 = 0.01
@@ -68,7 +68,7 @@ focus_tree = {
 		}
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = controls_mountainous_region_of_hills_of_hugs
+				tooltip = controls_mountainous_region_of_hills_of_hugs_tt
 				controls_province = 606
 				controls_province = 797
 				controls_province = 817
@@ -76,7 +76,7 @@ focus_tree = {
 				controls_province = 11741
 			}
 			custom_trigger_tooltip = {
-				tooltip = controls_opposite_bank_hooffington_river
+				tooltip = controls_opposite_bank_hooffington_river_tt
 				controls_province = 9595
 				controls_province = 9611
 				controls_province = 11594
@@ -90,7 +90,7 @@ focus_tree = {
 				}
 				add_to_variable = {
 					hooftagon^61 = 0.01
-					tooltip = addadd_hooftagon_i61_1_i62_1
+					tooltip = addadd_hooftagon_i61_1_i62_1_tt
 				}
 				add_to_variable = {
 					hooftagon^62 = 0.01
@@ -189,7 +189,7 @@ focus_tree = {
 		}
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = controls_opposite_bank_galloprey_river
+				tooltip = controls_opposite_bank_galloprey_river_tt
 				controls_province = 3943
 				controls_province = 6513
 				controls_province = 6942
@@ -207,7 +207,7 @@ focus_tree = {
 				}
 				add_to_variable = {
 					hooftagon^61 = 0.01
-					tooltip = addadd_hooftagon_i61_1_i62_1
+					tooltip = addadd_hooftagon_i61_1_i62_1_tt
 				}
 				add_to_variable = {
 					hooftagon^62 = 0.01
@@ -273,7 +273,7 @@ focus_tree = {
 		}
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = controls_teonaltzintli_and_its_surroundings
+				tooltip = controls_teonaltzintli_and_its_surroundings_tt
 				controls_province = 3444
 				controls_province = 3553
 				controls_province = 11456
@@ -328,7 +328,7 @@ focus_tree = {
 		}
 		available = {
 			custom_trigger_tooltip = {
-				tooltip = controls_teonaltzintli_river_and_shore
+				tooltip = controls_teonaltzintli_river_and_shore_tt
 				controls_province = 3547
 				controls_province = 9429
 				controls_province = 11556
@@ -342,7 +342,7 @@ focus_tree = {
 				}
 				add_to_variable = {
 					hooftagon^61 = 0.01
-					tooltip = addadd_hooftagon_i61_1_i62_1
+					tooltip = addadd_hooftagon_i61_1_i62_1_tt
 				}
 				add_to_variable = {
 					hooftagon^62 = 0.01
@@ -571,7 +571,7 @@ focus_tree = {
 				modifier = EPT_directive_number_one
 			}
 			mark_focus_tree_layout_dirty = yes
-			custom_effect_tooltip = copperhoof_gains_special_powers
+			custom_effect_tooltip = copperhoof_gains_special_powers_tt
 		}
 		search_filters = {
 			FOCUS_FILTER_BALANCE_OF_POWER
@@ -598,7 +598,7 @@ focus_tree = {
 				}
 				add_to_variable = {
 					hooftagon^24 = 0.05
-					tooltip = add_hooftagon_i24_5
+					tooltip = add_hooftagon_i24_5_tt
 				}
 				add_manpower = 12500
 			}
@@ -632,7 +632,7 @@ focus_tree = {
 				}
 				add_to_variable = {
 					hooftagon^24 = 0.05
-					tooltip = add_hooftagon_i24_5
+					tooltip = add_hooftagon_i24_5_tt
 				}
 			}
 			increase_mobilization_law_idea = yes
@@ -662,7 +662,7 @@ focus_tree = {
 				}
 				add_to_variable = {
 					hooftagon^8 = 3
-					tooltip = addsub_hooftagon_i8_3_i49_5
+					tooltip = addsub_hooftagon_i8_3_i49_5_tt
 				}
 				subtract_from_variable = {
 					hooftagon^49 = 0.05
@@ -780,7 +780,7 @@ focus_tree = {
 				}
 				add_to_variable = {
 					hooftagon^25 = 0.1
-					tooltip = add_hooftagon_i25_10
+					tooltip = add_hooftagon_i25_10_tt
 				}
 				army_experience = 10
 			}
@@ -1190,7 +1190,7 @@ focus_tree = {
 				multiply_temp_variable = {
 					unstability = -5000
 				}
-				custom_effect_tooltip = more_council_support_less_pp_loses
+				custom_effect_tooltip = more_council_support_less_pp_loses_tt
 				add_political_power = unstability
 			}
 		}
@@ -1244,7 +1244,7 @@ focus_tree = {
 					hooftagon^61 = 0.05
 				}
 			}
-			custom_effect_tooltip = found_hooftagon
+			custom_effect_tooltip = found_hooftagon_tt
 			if = {
 				limit = {
 					has_power_balance = {
@@ -1278,7 +1278,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_convening_of_the_hc"
 			add_to_variable = {
 				hooftagon^25 = 0.05
-				tooltip = add_hooftagon_i25_5
+				tooltip = add_hooftagon_i25_5_tt
 			}
 			army_experience = 25
 			if = {
@@ -1314,7 +1314,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_new_young_officers"
 			add_to_variable = {
 				hooftagon^6 = 0.05
-				tooltip = addadd_hooftagon_i6_5_i7_5
+				tooltip = addadd_hooftagon_i6_5_i7_5_tt
 			}
 			add_to_variable = {
 				hooftagon^7 = 0.05
@@ -1354,7 +1354,7 @@ focus_tree = {
 			subtract_from_variable = {
 				var = hooftagon^48
 				value = 0.05
-				tooltip = subadd_hooftagon_i48_5_i50_12
+				tooltip = subadd_hooftagon_i48_5_i50_12_tt
 			}
 			add_to_variable = {
 				hooftagon^50 = 12
@@ -1393,7 +1393,7 @@ focus_tree = {
 			add_to_variable = {
 				var = hooftagon^24
 				value = 0.1
-				tooltip = add_hooftagon_i24_10
+				tooltip = add_hooftagon_i24_10_tt
 			}
 			if = {
 				limit = {

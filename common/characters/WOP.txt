@@ -1,0 +1,31 @@
+characters = {
+	WOP_kolchak = {
+		name = WOP_kolchak
+		portraits = {
+			#to do
+			civilian = {
+				large = "GFX_portrait_marshal_unknown"
+			}
+			army = {
+				large = "GFX_portrait_marshal_unknown"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_KOLCHAK_DESC"
+			ideology = despotism
+			traits = {}
+			expire = "1965.1.1.1"
+			id = -1
+		}
+		field_marshal = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 1
+			traits = {
+				naval_invader
+			}
+		}
+	}
+}

@@ -57,5 +57,38 @@ ideas = {
 				}
 			}
 		}
+		PGT_escape_from_solside = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = PGT
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				command_power_gain_mult = 0.5
+				planning_speed = 0.15
+			}
+			targeted_modifier = {
+				tag = ICE
+				breakthrough_bonus_against = 0.2
+				attack_bonus_against = 0.1
+			}
+		}
+		PGT_solside_lifeline = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = PGT
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				no_supply_grace = 72
+				out_of_supply_factor = -0.25
+				attrition = -0.1
+				winter_attrition_factor = -0.2
+			}
+		}
 	}
 }

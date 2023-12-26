@@ -222,15 +222,61 @@ country_event = {
 	picture = GFX_event_swarm #(to do) change
 	is_triggered_only = yes
 	option = {
-		#we have to focus on Equestral space (EPT, PGT)
+		#we have to sell some lands to get military advantage
 		name = equestria.8.a
+		ai_chance = {
+			base = 1
+		}
 	}
 	option = {
-		#we have to focus on North space (hives, deers, MET, NEM)
+		#we have to focus on NML
 		name = equestria.8.b
+		trigger = {
+			has_subject = NML
+		}
+		ai_chance = {
+			base = 1
+		}
 	}
 	option = {
-		#we have to focus on South space and Griffons (GRE, DRG)
+		#we have to focus on separatists (EPT, PGT)
 		name = equestria.8.c
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {
+	#STG removes our cores in former baykall pocket
+	id = equestria.9
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event equestria.9"
+	}
+	title = equestria.9.t
+	desc = equestria.9.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#we have enough enemies
+		name = equestria.9.a
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		#we demand reparations!
+		name = equestria.9.b
+		STG = {
+			country_event = {
+				id = staliongrad.5
+				days = 7
+				random_days = 3
+			}
+		}
+		custom_effect_tooltip = if_they_reject_tt
+		event_option_tooltip = staliongrad.5.c
+		ai_chance = {
+			base = 1
+		}
 	}
 }

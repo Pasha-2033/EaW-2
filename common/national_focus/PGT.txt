@@ -46,6 +46,54 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_surrounded_but_not_broken"
+			if = {
+				limit = {
+					has_completed_focus = pgt_focus_aid_from_stg
+					has_completed_focus = pgt_focus_albion_port_fortress
+				}
+				add_to_variable = {
+					var = surrender_under_eastern_pockets
+					value = 0.1
+					tooltip = add_surrender_under_eastern_pockets_10_tt
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_completed_focus = pgt_focus_aid_from_stg
+						has_completed_focus = pgt_focus_albion_port_fortress
+					}
+				}
+				add_to_variable = {
+					var = surrender_under_eastern_pockets
+					value = 0.05
+					tooltip = add_surrender_under_eastern_pockets_5_tt
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = pgt_focus_fortify_vinniapolice
+					has_completed_focus = pgt_focus_escape_from_solside
+				}
+				add_to_variable = {
+					var = surrender_under_northern_pockets
+					value = 0.1
+					tooltip = add_surrender_under_northern_pockets_10_tt
+				}
+			}
+			else_if = {
+				limit = {
+					OR = {
+						has_completed_focus = pgt_focus_fortify_vinniapolice
+						has_completed_focus = pgt_focus_escape_from_solside
+					}
+				}
+				add_to_variable = {
+					var = surrender_under_northern_pockets
+					value = 0.05
+					tooltip = add_surrender_under_northern_pockets_5_tt
+				}
+			}
 		}
 	}
 	#harmonists branch
@@ -113,6 +161,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_northern_pockets"
+			add_to_variable = {
+				var = surrender_under_northern_pockets
+				value = 0.05
+				tooltip = add_surrender_under_northern_pockets_5_tt
+			}
 		}
 	}
 	focus = {
@@ -126,12 +179,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_eastern_pockets"
+			add_to_variable = {
+				var = surrender_under_eastern_pockets
+				value = 0.05
+				tooltip = add_surrender_under_eastern_pockets_5_tt
+			}
 		}
 	}
-
-
-
-
 	focus = {
 		id = pgt_focus_escape_to_stg
 		icon = GFX_goal_generic_changeling
@@ -172,32 +226,118 @@ focus_tree = {
 				state = 326
 				disband = yes
 			}
-			custom_effect_tooltip = evacuate_divisions_to_stg
+			custom_effect_tooltip = evacuate_divisions_to_stg_tt
 			160 = {
-				add_core_of = STG
 				transfer_state_to = STG
-				remove_core_of = PGT
 				set_demilitarized_zone = yes
 			}
 			162 = {
-				add_core_of = STG
 				transfer_state_to = STG
-				remove_core_of = PGT
 				set_demilitarized_zone = yes
 			}
 			164 = {
-				add_core_of = STG
 				transfer_state_to = STG
-				remove_core_of = PGT
 				set_demilitarized_zone = yes
 			}
 			326 = {
-				add_core_of = STG
 				transfer_state_to = STG
-				remove_core_of = PGT
 				set_demilitarized_zone = yes
 			}
 			add_stability = 0.05
+			STG = {
+				hidden_effect = {
+					country_event = {
+						id = staliongrad.1
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = STG_baykall_pocket
+				}
+			}
+			add_to_variable = {
+				var = surrender_under_eastern_pockets
+				value = 0.05
+				tooltip = eastern_pocket_evacuated_tt
+			}
+			add_to_variable = {
+				morale_under_eastern_pockets = 0.1
+			}
+			add_to_variable = {
+				initiative_under_eastern_pockets = 0.1
+			}
+			subtract_from_variable = {
+				pocket_penalty_under_eastern_pockets = 0.25
+			}
+		}
+	}
+	#pgt_focus_escape_to_stg continuation (in case STG decided remove PGT cores in former baykall pocket)
+	focus = {
+		id = pgt_focus_send_protest_note_to_stg
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		allow_branch = {
+			160 = { #we need only one state to trigger (because all 4 states have same conditions and effects)
+				NOT = {
+					is_core_of = ROOT
+				}
+			}
+		}
+		relative_position_id = pgt_focus_escape_to_stg
+		prerequisite = {
+			focus = pgt_focus_escape_to_stg
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_send_protest_note_to_stg"
+			STG = {
+				country_event = {
+					id = staliongrad.4
+				}
+				if = {
+					limit = {
+						has_opinion_modifier = STG_baykall_pocket
+					}
+					remove_opinion_modifier = {
+						target = ROOT
+						modifier = STG_baykall_pocket
+					}
+					add_opinion_modifier = {
+						target = ROOT
+						modifier = STG_baykall_pocket_weak
+					}
+				}
+				add_political_power = -50
+			}
+			add_political_power = 50
+		}
+	}
+	focus = {
+		id = pgt_focus_demand_reparations
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_send_protest_note_to_stg
+		prerequisite = {
+			focus = pgt_focus_send_protest_note_to_stg
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_demand_reparations"
+			STG = {
+				country_event = {
+					id = staliongrad.5
+				}
+			}
+			custom_effect_tooltip = if_they_reject_tt
+			event_option_tooltip = staliongrad.5.c
 		}
 	}
 	focus = {
@@ -216,11 +356,131 @@ focus_tree = {
 		ai_will_do = {
 			base = 200
 		}
+		available = {
+			has_full_control_of_state = 160
+			has_full_control_of_state = 164
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_aid_from_stg"
-			#to do other effects
-			custom_effect_tooltip = todo
+			division_template = {
+				name = "Soviet Volunteers"
+				is_locked = yes
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+				}
+				priority = 0
+				template_counter = 0
+			}
+			160 = {
+				create_unit = {
+					division = "name = \"1. Soviet Volunteer brigade\" division_template = \"Soviet Volunteers\""
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"2. Soviet Volunteer brigade\" division_template = \"Soviet Volunteers\""
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"3. Soviet Volunteer brigade\" division_template = \"Soviet Volunteers\""
+					owner = ROOT
+				}
+			}
+			164 = {
+				create_unit = {
+					division = "name = \"4. Soviet Volunteer brigade\" division_template = \"Soviet Volunteers\""
+					owner = ROOT
+				}
+				create_unit = {
+					division = "name = \"5. Soviet Volunteer brigade\" division_template = \"Soviet Volunteers\""
+					owner = ROOT
+				}
+			}
+			custom_effect_tooltip = volunteer_corps_will_be_removed_after_victory_over_ICE_tt
 			add_war_support = 0.05
+			add_to_variable = {
+				var = initiative_under_eastern_pockets
+				value = 0.075
+				tooltip = addsub_under_eastern_pockets_i_pp_7.5_12.5_tt
+			}
+			subtract_from_variable = {
+				pocket_penalty_under_eastern_pockets = 0.125
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.075
+			}
+			STG = {
+				add_political_power = 75
+			}
+			add_political_power = -75
+		}
+	}
+	focus = {
+		id = pgt_focus_desperate_defense_in_baykall
+		icon = GFX_goal_generic_changeling
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_aid_from_stg
+		prerequisite = {
+			focus = pgt_focus_aid_from_stg
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_desperate_defense_in_baykall"
+			add_to_variable = {
+				var = surrender_under_eastern_pockets
+				value = 0.05
+				tooltip = addaddaddaddsub_under_eastern_pockets_s_a_d_m_pp_5_1_2.5_10_7.5_tt
+			}
+			add_to_variable = {
+				attack_under_eastern_pockets = 0.01
+			}
+			add_to_variable = {
+				defence_under_eastern_pockets = 0.025
+			}
+			add_to_variable = {
+				morale_under_eastern_pockets = 0.1
+			}
+			subtract_from_variable = {
+				pocket_penalty_under_eastern_pockets = 0.075
+			}
+		}
+	}
+	focus = {
+		id = pgt_focus_request_passage_from_STG
+		icon = GFX_goal_generic_changeling
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_desperate_defense_in_baykall
+		prerequisite = {
+			focus = pgt_focus_desperate_defense_in_baykall
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_request_passage_from_STG"
+			STG = {
+				give_military_access = ROOT
+				add_political_power = 50
+			}
+			add_political_power = -50
+			subtract_from_variable = {
+				var = pocket_penalty_under_eastern_pockets
+				value = 0.075
+				tooltip = sub_under_eastern_pockets_pp_7.5_tt
+			}
+			add_popularity = {
+				ideology = communism
+				popularity = 0.025
+			}
 		}
 	}
 	focus = {
@@ -236,17 +496,77 @@ focus_tree = {
 		ai_will_do = {
 			base = 200
 		}
+		available = {
+			controls_state = 131
+			controls_state = 138
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_escape_from_solside"
+			add_timed_idea = {
+				idea = PGT_escape_from_solside
+				days = 90
+			}
+			add_command_power = 50
+			add_to_variable = {
+				var = morale_under_northern_pockets
+				value = 0.05
+				tooltip = addaddaddsub_under_eastern_pockets_m_i_a_pp_5_5_2_5_tt
+			}
+			add_to_variable = {
+				initiative_under_northern_pockets = 0.05
+			}
+			add_to_variable = {
+				attack_under_northern_pockets = 0.02
+			}
+			subtract_from_variable = {
+				pocket_penalty_under_northern_pockets = 0.05
+			}
 		}
 	}
-
-
-
+	focus = {
+		id = pgt_focus_solside_lifeline
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_escape_from_solside
+		prerequisite = {
+			focus = pgt_focus_escape_from_solside
+		}
+		ai_will_do = {
+			base = 200
+		}
+		available = {
+			controls_state = 131
+			controls_state = 138
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_solside_lifeline"
+			add_timed_idea = {
+				idea = PGT_solside_lifeline
+				days = 180
+			}
+			add_command_power = 25
+			add_to_variable = {
+				var = morale_under_northern_pockets
+				value = 0.05
+				tooltip = addaddaddsub_under_eastern_pockets_m_i_d_pp_5_5_3_5_tt
+			}
+			add_to_variable = {
+				initiative_under_northern_pockets = 0.05
+			}
+			add_to_variable = {
+				defence_under_northern_pockets = 0.03
+			}
+			subtract_from_variable = {
+				pocket_penalty_under_northern_pockets = 0.05
+			}
+		}
+	}
 	focus = {
 		id = pgt_focus_fortify_vinniapolice
 		icon = GFX_goal_generic_changeling
-		cost = 5
+		cost = 2
 		x = -1
 		y = 1
 		relative_position_id = pgt_focus_northern_pockets
@@ -256,16 +576,147 @@ focus_tree = {
 		ai_will_do = {
 			base = 200
 		}
+		available = {
+			has_full_control_of_state = 70
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_fortify_vinniapolice"
+			70 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = {
+						id = 476
+						id = 3526
+						id = 6055
+						id = 6990
+						id = 9481
+						id = 9799
+						id = 9887
+						id = 11778
+					}
+					instant_build = yes
+				}
+			}
+			add_to_variable = {
+				var = attack_under_northern_pockets
+				value = 0.01
+				tooltip = addaddsub_under_northern_pockets_a_d_pp_1_3.5_15_tt
+			}
+			add_to_variable = {
+				defence_under_northern_pockets = 0.035
+			}
+			subtract_from_variable = {
+				pocket_penalty_under_northern_pockets = 0.15
+			} 
 		}
 	}
-
-
-
-
-
-
+	focus = {
+		id = pgt_focus_isolate_vinnisota
+		icon = GFX_goal_generic_changeling
+		cost = 2
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_fortify_vinniapolice
+		prerequisite = {
+			focus = pgt_focus_fortify_vinniapolice
+		}
+		ai_will_do = {
+			base = 200
+		}
+		available = {
+			controls_state = 70
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_isolate_vinnisota"
+			add_to_variable = {
+				var = surrender_under_northern_pockets
+				value = 0.05
+				tooltip = addaddaddaddsub_under_northern_pockets_s_a_d_m_pp_5_1_3.5_7.5_10_tt
+			}
+			add_to_variable = {
+				attack_under_northern_pockets = 0.01
+			}
+			add_to_variable = {
+				defence_under_northern_pockets = 0.035
+			}
+			add_to_variable = {
+				morale_under_northern_pockets = 0.075
+			}
+			subtract_from_variable = {
+				pocket_penalty_under_northern_pockets = 0.1
+			}
+		}
+	}
+	focus = {
+		id = pgt_focus_vinnisota_autonomy
+		icon = GFX_goal_generic_changeling
+		cost = 3
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_isolate_vinnisota
+		prerequisite = {
+			focus = pgt_focus_isolate_vinnisota
+		}
+		ai_will_do = {
+			base = 200
+		}
+		available = {
+			controls_state = 70
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_vinnisota_autonomy"
+			70 = {
+				create_unit = {
+					division = "division_name = { is_name_ordered = yes } division_template = \"Garnison Division\" start_equipment_factor = 0.6"
+					owner = ROOT
+					count = 4
+				}
+			}
+			add_to_variable = {
+				var = initiative_under_northern_pockets
+				value = 0.05
+				tooltip = addadd_under_northern_pockets_i_m_5_2.5_tt
+			}
+			add_to_variable = {
+				morale_under_northern_pockets = 0.025
+			}
+		}
+	}
+	focus = {
+		id = pgt_focus_request_passage_from_CRY
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		allow_branch = {
+			CRY = {
+				exists = yes
+			}
+		}
+		relative_position_id = pgt_focus_vinnisota_autonomy
+		prerequisite = {
+			focus = pgt_focus_vinnisota_autonomy
+		}
+		ai_will_do = {
+			base = 200
+		}
+		available = {
+			controls_state = 70
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_request_passage_from_CRY"
+			CRY = {
+				give_military_access = ROOT
+				add_political_power = 50
+			}
+			add_political_power = -50
+			add_popularity = {
+				ideology = fascism
+				popularity = 2.5
+			}
+		}
+	}
 	focus = {
 		id = pgt_focus_evacuation_from_albion
 		icon = GFX_goal_generic_changeling
@@ -282,14 +733,45 @@ focus_tree = {
 		ai_will_do = {
 			base = 200
 		}
+		available = {
+			controls_state = 525
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_evacuation_from_albion"
+			delete_unit = {
+				state = 525
+				disband = yes
+			}
+			delete_unit = {
+				state = 661
+				disband = yes
+			}
+			add_equipment_to_stockpile = { 
+				type = convoy
+				amount = 1
+			}
+			custom_effect_tooltip = evacuate_divisions_from_albion_tt
+			add_stability = 0.05
+			add_to_variable = {
+				var = surrender_under_eastern_pockets
+				value = 0.05
+				tooltip = eastern_pocket_evacuated_tt
+			}
+			add_to_variable = {
+				morale_under_eastern_pockets = 0.1
+			}
+			add_to_variable = {
+				initiative_under_eastern_pockets = 0.1
+			}
+			subtract_from_variable = {
+				pocket_penalty_under_eastern_pockets = 0.25
+			}
 		}
 	}
 	focus = {
 		id = pgt_focus_albion_port_fortress
 		icon = GFX_goal_generic_changeling
-		cost = 3
+		cost = 2
 		x = 7
 		y = 1
 		relative_position_id = pgt_focus_eastern_pockets
@@ -302,16 +784,256 @@ focus_tree = {
 		ai_will_do = {
 			base = 200
 		}
+		available = {
+			controls_state = 525
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_albion_port_fortress"
+			525 = {
+				add_building_construction = {
+					type = coastal_bunker
+					level = 1
+					province = 10359
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 10359
+					instant_build = yes
+				}
+			}
+			add_to_variable = {
+				var = initiative_under_eastern_pockets
+				value = 0.1
+				tooltip = addadd_under_eastern_pockets_i_m_10_5_tt
+			}
+			add_to_variable = {
+				morale_under_eastern_pockets = 0.05
+			}
 		}
 	}
-
-
-
-
-
-
+	focus = {
+		id = pgt_focus_someland_port
+		icon = GFX_goal_generic_changeling
+		cost = 2
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_albion_port_fortress
+		prerequisite = {
+			focus = pgt_focus_albion_port_fortress
+		}
+		ai_will_do = {
+			base = 200
+		}
+		available = {
+			has_full_control_of_state = 661
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_someland_port"
+			661 = {
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					province = 10395
+					instant_build = yes
+				}
+			}
+			add_to_variable = {
+				var = initiative_under_eastern_pockets
+				value = 0.05
+				tooltip = addsub_under_eastern_pockets_i_pp_5_7.5_tt
+			}
+			subtract_from_variable = {
+				pocket_penalty_under_eastern_pockets = 0.075
+			}
+		}
+	}
+	focus = {
+		id = pgt_focus_someland_defence_area
+		icon = GFX_goal_generic_changeling
+		cost = 2
+		x = 1
+		y = 1
+		relative_position_id = pgt_focus_someland_port
+		prerequisite = {
+			focus = pgt_focus_someland_port
+		}
+		ai_will_do = {
+			base = 200
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = controls_east_albion_tt
+				controls_province = 1493
+				controls_province = 1576
+				controls_province = 7635
+				controls_province = 10485
+				controls_province = 12359
+				controls_province = 12465
+			}
+			has_full_control_of_state = 661
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_someland_defence_area"
+			661 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 10395
+					instant_build = yes
+				}
+			}
+			525 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = {
+						id = 1493
+						id = 1576
+						id = 12359
+						id = 12465
+					}
+					instant_build = yes
+				}
+			}
+			add_to_variable = {
+				var = attack_under_eastern_pockets
+				value = 0.01
+				tooltip = addadd_under_eastern_pockets_a_d_1_2.5_tt
+			}
+			add_to_variable = {
+				defence_under_eastern_pockets = 0.025
+			}
+		}
+	}
+	focus = {
+		id = pgt_focus_albion_city_defence
+		icon = GFX_goal_generic_changeling
+		cost = 2
+		x = -1
+		y = 1
+		relative_position_id = pgt_focus_someland_port
+		prerequisite = {
+			focus = pgt_focus_someland_port
+		}
+		ai_will_do = {
+			base = 200
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = controls_albion_outskirts_tt
+				#albion`s outskirts
+				OR = {
+					controls_province = 1576
+					controls_province = 5073
+					controls_province = 10510
+					controls_province = 11671
+				}
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_albion_city_defence"
+			525 = {
+				if = {
+					limit = {
+						ROOT = {
+							controls_province = 1576
+						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = 1576
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							controls_province = 5073
+						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = 5073
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							controls_province = 10510
+						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = 10510
+						instant_build = yes
+					}
+				}
+				if = {
+					limit = {
+						ROOT = {
+							controls_province = 11671
+						}
+					}
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = 11671
+						instant_build = yes
+					}
+				}
+			}
+			add_to_variable = {
+				var = attack_under_eastern_pockets
+				value = 0.01
+				tooltip = addadd_under_eastern_pockets_a_d_1_2.5_tt
+			}
+			add_to_variable = {
+				defence_under_eastern_pockets = 0.025
+			}
+		}
+	}
+	focus = {
+		id = pgt_focus_supply_for_ports
+		icon = GFX_goal_generic_changeling
+		cost = 2
+		x = 0
+		y = 2
+		relative_position_id = pgt_focus_someland_port
+		prerequisite = {
+			focus = pgt_focus_someland_defence_area
+			focus = pgt_focus_albion_city_defence
+		}
+		ai_will_do = {
+			base = 200
+		}
+		available = {
+			OR = {
+				controls_state = 525
+				controls_state = 661
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_supply_for_ports"
+			add_equipment_to_stockpile = {
+				type = convoy
+				amount = 3
+			}
+			add_to_variable = {
+				var = morale_under_eastern_pockets
+				value = 0.1
+				tooltip = addsub_under_eastern_pockets_m_pp_10_20_tt
+			}
+			subtract_from_variable = {
+				pocket_penalty_under_eastern_pockets = 0.2
+			}
+		}
+	}
 	focus = {
 		id = pgt_focus_war_without_supplies
 		icon = GFX_goal_generic_changeling
@@ -321,6 +1043,8 @@ focus_tree = {
 		relative_position_id = pgt_focus_northern_pockets
 		prerequisite = {
 			focus = pgt_focus_northern_pockets
+		}
+		prerequisite = {
 			focus = pgt_focus_eastern_pockets
 		}
 		ai_will_do = {

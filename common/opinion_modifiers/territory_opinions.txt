@@ -1,0 +1,17 @@
+opinion_modifiers = {
+	STG_baykall_pocket = { #PGT transfer states to STG (pgt_focus_escape_to_stg)
+		value = 36
+		decay = 1
+		years = 3
+	}
+	STG_baykall_pocket_weak = { #PGT transfer states to STG (pgt_focus_send_protest_note_to_stg), but PGT want them be core againg
+		value = 12
+		decay = 1
+		years = 1
+	}
+	baykall_pocket = {
+		value = -75
+		decay = 1
+		max_trust = -25
+	}
+}
