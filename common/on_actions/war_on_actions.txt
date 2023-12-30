@@ -1,0 +1,48 @@
+on_action = {
+	#ROOT is capitulated country, FROM is winner
+	on_capitulation = {
+		effect = {
+		}
+	}
+	#ROOT is capitulated country, FROM is winner
+	on_capitulation_immediate = {
+		effect = {
+			#ICE capitulated
+			if = {
+				limit = {
+					tag = ICE
+				}
+				#remove every core of ICE
+				ICE = {
+					every_core_state = {
+						remove_core_of = ICE
+					}
+				}
+				#remove every claims of ICE
+				every_state = {
+					limit = {
+						is_claimed_by = ICE
+					}
+					remove_claim_by = ICE
+				}
+				PGT = {
+					#remove every passage from PGT that granted by focuses
+					diplomatic_relation = {
+						country = STG
+						relation = military_access
+						active = no
+					}
+					diplomatic_relation = {
+						country = CRY
+						relation = military_access
+						active = no
+					}
+					#remove every volunteers
+					delete_unit_template_and_units = {
+						division_template = "Soviet Volunteers"
+					}
+				}
+			}
+		}
+	}
+}

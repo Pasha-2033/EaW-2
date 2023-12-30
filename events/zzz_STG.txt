@@ -108,29 +108,6 @@ country_event = {
 	is_triggered_only = yes
 	option = { #agree (EQS)
 		name = staliongrad.5.a
-		trigger = {
-			FROM = {
-				tag = EQS
-			}
-		}
-		FROM = {
-			remove_opinion_modifier = {
-				target = ROOT
-				modifier = baykall_pocket
-			}
-		}
-		#todo reparations
-		ai_chance = {
-			base = 1
-		}
-	}
-	option = { #agree (PGT)
-		name = staliongrad.5.b
-		trigger = {
-			FROM = {
-				tag = PGT
-			}
-		}
 		FROM = {
 			remove_opinion_modifier = {
 				target = ROOT
@@ -143,7 +120,7 @@ country_event = {
 		}
 	}
 	option = { #deny
-		name = staliongrad.5.c
+		name = staliongrad.5.b
 		FROM = {
 			add_opinion_modifier = {
 				target = ROOT
@@ -162,7 +139,7 @@ country_event = {
 			}
 			remove_opinion_modifier = {
 				target = FROM
-				modifier = baykall_pocket
+				modifier = STG_baykall_pocket_weak
 			}
 		}
 		ai_chance = {

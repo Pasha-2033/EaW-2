@@ -270,29 +270,6 @@ on_actions = {
 		}
 	}
 
-	# ROOT is capitulated country, FROM is winner
-	on_capitulation = {
-		effect = {
-			#ICE capitulated
-			if = {
-				limit = {
-					tag = ICE
-				}
-				ICE = {
-					every_core_state = {
-						remove_core_of = ICE
-					}
-				}
-				every_state = {
-					limit = {
-						is_claimed_by = ICE
-					}
-					remove_claim_by = ICE
-				}
-			}
-		}
-	}
-
 	# ROOT is previously capitulated country
 	on_uncapitulation = {
 	}

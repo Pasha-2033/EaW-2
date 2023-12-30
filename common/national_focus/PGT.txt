@@ -467,19 +467,15 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_request_passage_from_STG"
-			STG = {
-				give_military_access = ROOT
-				add_political_power = 50
-			}
-			add_political_power = -50
 			subtract_from_variable = {
 				var = pocket_penalty_under_eastern_pockets
 				value = 0.075
 				tooltip = sub_under_eastern_pockets_pp_7.5_tt
 			}
-			add_popularity = {
-				ideology = communism
-				popularity = 0.025
+			STG = {
+				country_event = pegas_tribe.3
+				custom_effect_tooltip = if_they_accept
+				event_option_tooltip = pegas_tribe.3.a
 			}
 		}
 	}
@@ -707,13 +703,9 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_request_passage_from_CRY"
 			CRY = {
-				give_military_access = ROOT
-				add_political_power = 50
-			}
-			add_political_power = -50
-			add_popularity = {
-				ideology = fascism
-				popularity = 2.5
+				country_event = pegas_tribe.3
+				custom_effect_tooltip = if_they_accept
+				event_option_tooltip = pegas_tribe.3.a
 			}
 		}
 	}

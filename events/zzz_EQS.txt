@@ -280,3 +280,110 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	#EPT(by event)/PGT(by event)/EQS(by focus) offers white peace
+	id = equestria.10
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event equestria.10"
+	}
+	title = equestria.10.t
+	desc = equestria.10.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#we accept
+		name = equestria.10.a
+		trigger = {
+			tag = EPT
+		}
+		if = {
+			limit = {
+				PGT = {
+					NOT = {
+						has_defensive_war_with = EQS
+					}
+				}
+			}
+			PGT = {
+				country_event = {
+					id = equestria.10
+					days = 7
+					random_days = 3
+				}
+			}
+		}
+		white_peace = {
+			tag = FROM
+			message = anti_ICE_white_peace_tt
+		}
+		add_stability = -0.075
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		#we accept
+		name = equestria.10.b
+		trigger = {
+			tag = PGT
+		}
+		if = {
+			limit = {
+				EPT = {
+					NOT = {
+						has_defensive_war_with = EQS
+					}
+				}
+			}
+			EPT = {
+				country_event = {
+					id = equestria.10
+					days = 7
+					random_days = 3
+				}
+			}
+		}
+		white_peace = {
+			tag = FROM
+			message = anti_ICE_white_peace_tt
+		}
+		add_stability = -0.075
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		#we deny
+		name = equestria.10.c
+		hidden_effect = {
+			FROM = {
+				country_event = {
+					id = equestria.11
+					days = 7
+					random_days = 3
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {
+	#EPT/PGT denies white peace
+	id = equestria.11
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event equestria.11"
+	}
+	title = equestria.11.t
+	desc = equestria.11.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#fuck!
+		name = equestria.11.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}
