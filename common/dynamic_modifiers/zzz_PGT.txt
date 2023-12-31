@@ -33,3 +33,13 @@ PGT_eastern_pockets = {
 	initiative_factor = initiative_under_eastern_pockets
 	pocket_penalty = pocket_penalty_under_eastern_pockets
 }
+PGT_vinnisota_autonomy = {
+	icon = GFX_idea_clockwerk_economy			#to do (change)
+	enable = {
+		always = yes
+	}
+	state_resources_factor = -0.75
+	local_factories = -0.75
+	local_building_slots_factor = -0.8
+	local_intel_to_enemies = -0.25
+}

@@ -506,7 +506,7 @@ focus_tree = {
 			add_to_variable = {
 				var = morale_under_northern_pockets
 				value = 0.05
-				tooltip = addaddaddsub_under_eastern_pockets_m_i_a_pp_5_5_2_5_tt
+				tooltip = addaddaddsub_under_northern_pockets_m_i_a_pp_5_5_2_5_tt
 			}
 			add_to_variable = {
 				initiative_under_northern_pockets = 0.05
@@ -546,7 +546,7 @@ focus_tree = {
 			add_to_variable = {
 				var = morale_under_northern_pockets
 				value = 0.05
-				tooltip = addaddaddsub_under_eastern_pockets_m_i_d_pp_5_5_3_5_tt
+				tooltip = addaddaddsub_under_northern_pockets_m_i_d_pp_5_5_3_5_tt
 			}
 			add_to_variable = {
 				initiative_under_northern_pockets = 0.05
@@ -667,6 +667,9 @@ focus_tree = {
 					division = "division_name = { is_name_ordered = yes } division_template = \"Garnison Division\" start_equipment_factor = 0.6"
 					owner = ROOT
 					count = 4
+				}
+				add_dynamic_modifier = {
+					modifier = PGT_vinnisota_autonomy
 				}
 			}
 			add_to_variable = {
@@ -1044,6 +1047,26 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_war_without_supplies"
+		}
+	}
+	focus = {
+		id = pgt_focus_food_stamps
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_war_without_supplies
+		prerequisite = {
+			focus = pgt_focus_war_without_supplies
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_food_stamps"
+		}
+		search_filters = {
+			FOCUS_FILTER_SURPLUS_APPROPRIATION
 		}
 	}
 }
