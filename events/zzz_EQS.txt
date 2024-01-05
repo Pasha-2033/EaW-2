@@ -382,8 +382,64 @@ country_event = {
 	option = {
 		#fuck!
 		name = equestria.11.a
-		ai_chance = {
-			base = 1
+	}
+}
+country_event = {
+	#harmonists vs fascist civil war 
+	id = equestria.12
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event equestria.12"
+		hidden_effect = {
+			if = {
+				limit = {
+					has_completed_focus = eqs_focus_prince_blueblood_speaches
+				}
+				start_civil_war = {
+					ideology = harmony
+					size = civil_war_power
+					keep_unit_leaders_trigger = {
+						OR = {
+							can_be_country_leader = yes					#prevent country leader transfer - optional, but recommended
+							has_character_political_loyalty = yes		#keep loyal characters
+							has_trait = sympathizes_harmony_trait		#keep unloyal chacharcters - made for proper transfer script work
+						}
+					}
+					set_temp_variable = {
+						transfer_chance = civil_war_power				#defines chance of transfer if character loyal to both sides, optional, default is 0.5
+					}
+					transfer_unit_leader_by_ideology_sympathy = yes		#transfers character (if unloyal or loyal to both sides with chance "transfer_chance")
+					transfer_operative_by_ideology_sympathy = yes
+				}
+			}
+			else = {
+				start_civil_war = {
+					ideology = fascism
+					size = civil_war_power
+					keep_unit_leaders_trigger = {
+						OR = {
+							can_be_country_leader = yes					#prevent country leader transfer - optional, but recommended
+							has_character_political_loyalty = yes		#keep loyal characters
+							has_trait = sympathizes_fascism_trait		#keep unloyal chacharcters - made for proper transfer script work
+						}
+					}
+					set_temp_variable = {
+						transfer_chance = civil_war_power				#defines chance of transfer if character loyal to both sides, optional, default is 0.5
+					}
+					transfer_unit_leader_by_ideology_sympathy = yes		#transfers character (if unloyal or loyal to both sides with chance "transfer_chance")
+					transfer_operative_by_ideology_sympathy = yes
+				}
+			}
+			clear_variable = civil_war_power
+			remove_ideas = EQS_harmony_vs_fascism_civil_war_preparations
+			mark_focus_tree_layout_dirty = yes
 		}
+	}
+	title = equestria.12.t
+	desc = equestria.12.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#fuck them!
+		name = equestria.12.a
 	}
 }

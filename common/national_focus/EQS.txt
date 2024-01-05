@@ -1,6 +1,6 @@
 #!gfx:interface\zzz_EQS.gfx
 #982 scenario
-#Windigo time focuses
+#Windigo time focuses (stage 1)
 focus_tree = {
 	id = eqs_focus_tree_widigo
 	country = {
@@ -8,6 +8,8 @@ focus_tree = {
 		modifier = {
 			add = 100
 			tag = EQS
+			#982 scenario only!
+			has_start_date < 1007.1.1
 		}
 	}
 	default = no
@@ -1193,4 +1195,82 @@ focus_tree = {
 			custom_effect_tooltip = upgrade_to_lower_positions_tt
 		}
 	}
+}
+#After war with windigo (stage 2)
+#civil war preparations branch (shared)
+shared_focus = {
+	id = eqs_focus_civi_war_preparations
+	icon = GFX_goal_generic_changeling
+	cost = 5
+	x = 15
+	y = 0
+	ai_will_do = {
+		base = 200
+	}
+	allow_branch = {
+		has_idea = EQS_harmony_vs_fascism_civil_war_preparations
+	}
+	completion_reward = {
+		log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_civi_war_preparations"
+		#to do event (national holiday)
+	}
+}
+#Fascist tree
+focus_tree = {
+	id = eqs_focus_tree_fascism_consolidation
+	country = {
+		#only by load_focus_tree!
+		base = 0
+	}
+	default = no
+	continuous_focus_position = {
+		x = 1800
+		y = 1250
+	}
+	focus = {
+		id = eqs_focus_defeating_windigo
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 10
+		y = 0
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_defeating_windigo"
+			#to do event (national holiday)
+		}
+	}
+	shared_focus = eqs_focus_civi_war_preparations
+	#necessary respite branch
+
+	#no time for caution branch
+}
+#harmonist tree
+focus_tree = {
+	id = eqs_focus_tree_harmony_consolidation
+	country = {
+		#only by load_focus_tree!
+		base = 0
+	}
+	default = no
+	continuous_focus_position = {
+		x = 1800
+		y = 1250
+	}
+	focus = {
+		id = eqs_focus_we_can_be_friends_again
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 10
+		y = 0
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_we_can_be_friends_again"
+			#to do event (national holiday)
+		}
+	}
+	shared_focus = eqs_focus_civi_war_preparations
 }

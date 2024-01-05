@@ -292,6 +292,8 @@ ideas = {
 				original_tag = EQS
 			}
 			allowed_civil_war = {
+				#to do (strange, too simple)
+				#sealed in ponyvile
 				tag = EQS
 			}
 			modifier = {
@@ -318,6 +320,15 @@ ideas = {
 			}
 			on_remove = {
 				calc_surplus_appropriation_real_values = yes
+			}
+		}
+		EQS_harmony_vs_fascism_civil_war_preparations = {
+			#just for tooltip and triggers
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				always = no
 			}
 		}
 	}

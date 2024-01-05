@@ -1,16 +1,15 @@
-on_action = {
+on_actions = {
 	#ROOT is capitulated country, FROM is winner
-	on_capitulation = {
-		effect = {
-		}
-	}
+	on_capitulation = {}
 	#ROOT is capitulated country, FROM is winner
 	on_capitulation_immediate = {
 		effect = {
-			#ICE capitulated
+			#ICE capitulation
 			if = {
 				limit = {
-					tag = ICE
+					ROOT = {
+						tag = ICE
+					}
 				}
 				#remove every core of ICE
 				ICE = {
@@ -40,6 +39,114 @@ on_action = {
 					#remove every volunteers
 					delete_unit_template_and_units = {
 						division_template = "Soviet Volunteers"
+					}
+				}
+				EQS = {
+					#define political success
+					if = {
+						limit = {
+							OR = {
+								has_completed_focus = eqs_focus_prince_blueblood_speaches
+								has_government = fascism	#for gigachads who forgot to complete any political focus
+							}
+						}
+						if = {
+							limit = {
+								is_power_balance_in_range = {
+									id = EQS_prince_blueblood_vs_twilight
+									range < medium_fascist_support
+								}
+							}
+							set_variable = {
+								civil_war_power = 0.36
+							}
+							#civil_war_power will be from 0 to 1.36 (dividing by 1.36 will give from 0 to 1)
+							if = {
+								limit = {
+									power_balance_value = {
+										id = EQS_prince_blueblood_vs_twilight
+										value > 0
+									}
+								}
+								subtract_from_variable = {
+									civil_war_power = power_balance_value
+								}
+							}
+							else = {
+								add_to_variable = {
+									civil_war_power = power_balance_value
+								}
+							}
+							divide_variable = {
+								civil_war_power = 1.36
+							}
+							#who need civil war with 1% power? let it be 10% minimum!
+							clamp_variable = {
+								var = civil_war_power
+								min = 0.1
+							}
+							add_ideas = EQS_harmony_vs_fascism_civil_war_preparations
+							country_event = {
+								id = equestria.12
+								days = 180
+								random_days = 90
+								random_hours = 12
+							}
+						}
+						load_focus_tree = {
+							tree = eqs_focus_tree_fascism_consolidation
+						}
+					}
+					else = {
+						if = {
+							limit = {
+								is_power_balance_in_range = {
+									id = EQS_prince_blueblood_vs_twilight
+									range > medium_harmonic_support
+								}
+							}
+							set_variable = {
+								civil_war_power = 0.36
+							}
+							#civil_war_power will be from 0 to 1.36 (dividing by 1.36 will give from 0 to 1)
+							if = {
+								limit = {
+									power_balance_value = {
+										id = EQS_prince_blueblood_vs_twilight
+										value < 0
+									}
+								}
+								subtract_from_variable = {
+									civil_war_power = power_balance_value
+								}
+							}
+							else = {
+								add_to_variable = {
+									civil_war_power = power_balance_value
+								}
+							}
+							divide_variable = {
+								civil_war_power = 1.36
+							}
+							#who need civil war with 1% power? let it be 10% minimum!
+							clamp_variable = {
+								var = civil_war_power
+								min = 0.1
+							}
+							add_ideas = EQS_harmony_vs_fascism_civil_war_preparations
+							country_event = {
+								id = equestria.12
+								days = 180
+								random_days = 90
+								random_hours = 12
+							}
+						}
+						load_focus_tree = {
+							tree = eqs_focus_tree_harmony_consolidation
+						}
+					}
+					remove_power_balance = {
+						id = EQS_prince_blueblood_vs_twilight
 					}
 				}
 			}

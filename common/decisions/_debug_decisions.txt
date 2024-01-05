@@ -56,3 +56,33 @@ debug_society_idea_decisions = {
 		}
 	}
 }
+debug_EQS_focuses_decisions = {
+	load_eqs_focus_tree_widigo = {
+		icon = generic_research
+		available = {
+			NOT = {
+				has_focus_tree = eqs_focus_tree_widigo
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Debug-decision load_eqs_focus_tree_widigo"
+			load_focus_tree = {
+				tree = eqs_focus_tree_widigo
+			}
+		}
+	}
+	load_eqs_focus_tree_fascism_consolidation = {
+		icon = generic_research
+		available = {
+			NOT = {
+				has_focus_tree = eqs_focus_tree_fascism_consolidation
+			}
+		}
+		complete_effect = {
+			log = "[GetDateText]: [Root.GetName]: Debug-decision load_eqs_focus_tree_fascism_consolidation"
+			load_focus_tree = {
+				tree = eqs_focus_tree_fascism_consolidation
+			}
+		}
+	}
+}
