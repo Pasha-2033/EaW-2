@@ -40,6 +40,16 @@ on_actions = {
 					delete_unit_template_and_units = {
 						division_template = "Soviet Volunteers"
 					}
+					#if has PGT_farmer_riot - offer a compromise
+					if = {
+						limit = {
+							has_idea = PGT_farmer_riot
+						}
+						remove_ideas = PGT_farmer_riot
+						country_event = {
+							id = pegas_tribe.5
+						}
+					}
 				}
 				EQS = {
 					#define political success

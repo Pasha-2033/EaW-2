@@ -104,6 +104,10 @@ focus_tree = {
 					days = 3
 					random_days = 5
 				}
+				#update PGT national focuses
+				PGT = {
+					mark_focus_tree_layout_dirty = yes
+				}
 			}
 		}
 		search_filters = {
@@ -378,9 +382,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_appeal_to_pegas_leader"
 			PGT = {
-				country_event = {
-					id = equestria.5
-				}
+				country_event = equestria.13
 			}
 		}
 	}
@@ -469,9 +471,7 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_appeal_to_earthpony_leader"
 			EPT = {
-				country_event = {
-					id = equestria.5
-				}
+				country_event = equestria.13
 			}
 		}
 	}
@@ -535,6 +535,10 @@ focus_tree = {
 				}
 				country_event = {
 					id = bop_eqs_event.5
+				}
+				#update PGT national focuses
+				PGT = {
+					mark_focus_tree_layout_dirty = yes
 				}
 			}
 			set_politics = {
@@ -789,9 +793,9 @@ focus_tree = {
 				country_event = {
 					id = equestria.10
 				}
+				custom_effect_tooltip = if_they_accept
+				event_option_tooltip = equestria.10.b
 			}
-			custom_effect_tooltip = if_they_accept
-			event_option_tooltip = equestria.10.b
 		}
 	}
 	focus = {
@@ -817,9 +821,9 @@ focus_tree = {
 				country_event = {
 					id = equestria.10
 				}
+				custom_effect_tooltip = if_they_accept
+				event_option_tooltip = equestria.10.a
 			}
-			custom_effect_tooltip = if_they_accept
-			event_option_tooltip = equestria.10.a
 		}
 	}
 	focus = {

@@ -18,10 +18,13 @@ characters = {
 		field_marshal = {
 			skill = 2
 			attack_skill = 2
-			defense_skill = 1
+			defense_skill = 3
 			planning_skill = 1
 			logistics_skill = 1
-			traits = {}
+			traits = {
+				politically_connected
+				old_guard
+			}
 		}
 	}
 	PGT_rainbowdash = {
@@ -77,6 +80,34 @@ characters = {
 			}
 			visible = {
 				#to do
+			}
+		}
+	}
+	#army leaders (by focus)
+	PGT_soarin = {
+		name = PGT_soarin
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+				small = "" #to do
+			}
+		}
+	}
+	PGT_mistyfly = {
+		name = PGT_mistyfly
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+				small = "" #to do
+			}
+		}
+	}
+	PGT_spitfire = {
+		name = PGT_spitfire
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+				small = "" #to do
 			}
 		}
 	}

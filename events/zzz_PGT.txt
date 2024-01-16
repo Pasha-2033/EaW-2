@@ -109,6 +109,38 @@ country_event = {
 	is_triggered_only = yes
 	option = { #fuck!
 		name = pegas_tribe.4.a
+	}
+}
+country_event = {
+	#farmers can provide compromise (to do)
+	id = pegas_tribe.5
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event pegas_tribe.5"
+	}
+	title = pegas_tribe.5.t
+	desc = pegas_tribe.5.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = { #we will help in recovery now
+		name = pegas_tribe.5.a
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #we will help in recovery after civil war
+		name = pegas_tribe.5.b
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #we can`t afford this, let`s negotiate
+		name = pegas_tribe.5.c
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #fuck you! (will start farmers rebelion again)
+		name = pegas_tribe.5.c
 		ai_chance = {
 			base = 1
 		}

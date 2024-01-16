@@ -298,9 +298,12 @@ country_event = {
 		}
 		if = {
 			limit = {
-				PGT = {
-					NOT = {
+				NOT = {
+					PGT = {
 						has_defensive_war_with = EQS
+					}
+					FROM = {
+						tag = PGT
 					}
 				}
 			}
@@ -329,9 +332,12 @@ country_event = {
 		}
 		if = {
 			limit = {
-				EPT = {
-					NOT = {
+				NOT = {
+					EPT = {
 						has_defensive_war_with = EQS
+					}
+					FROM = {
+						tag = EPT
 					}
 				}
 			}
@@ -441,5 +447,67 @@ country_event = {
 	option = {
 		#fuck them!
 		name = equestria.12.a
+	}
+}
+#country event 13 (appeal to leader)
+country_event = {
+	#harmonists vs fascist civil war 
+	id = equestria.13
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event equestria.12"
+	}
+	title = equestria.13.t
+	desc = equestria.13.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#we agree to cooperate
+		name = equestria.13.a
+		if = {
+			limit = {
+				has_government = harmony
+			}
+			add_political_power = 10
+		}
+		else = {
+			add_stability = -0.05
+			add_political_power = -10
+			add_popularity = {
+				ideology = harmony
+				popularity = 0.05
+			}
+		}
+		if = {
+			limit = {
+				PGT = {
+					has_country_flag = cooperation_with_twilight
+				}
+			}
+			white_peace = PGT
+		}
+		else_if = {
+			limit = {
+				EPT = {
+					has_country_flag = cooperation_with_twilight
+				}
+			}
+			white_peace = EPT
+		}
+		set_country_flag = cooperation_with_twilight
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		#we deny to cooperate
+		name = equestria.13.a
+		add_war_support = 0.05
+		reverse_add_opinion_modifier = {
+			target = FROM
+			modifier = denied_cooperation_with_twilight
+		}
+		ai_chance = {
+			base = 1
+		}
 	}
 }

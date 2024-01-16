@@ -90,5 +90,79 @@ ideas = {
 				winter_attrition_factor = -0.2
 			}
 		}
+		PGT_chaos_in_army = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = PGT
+			}
+			allowed_civil_war = {
+				has_government = radicalism
+			}
+			modifier = {
+				army_org_factor = -0.1
+				army_org_regain = -0.05
+				war_support_weekly = -0.02
+			}
+		}
+		PGT_dying_nation = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = PGT
+			}
+			allowed_civil_war = {
+				has_government = radicalism
+			}
+			modifier = {
+				stability_weekly = -0.01
+				war_support_weekly = 0.004
+				war_support_factor = 0.05
+			}
+			rule = {
+				can_join_factions = no
+			}
+		}
+		PGT_way_of_overcoming = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = PGT
+			}
+			allowed_civil_war = {
+				has_government = radicalism
+			}
+			modifier = {
+				org_loss_at_low_org_factor = -0.7
+				industry_free_repair_factor = 0.1
+				industry_repair_factor = 0.05
+			}
+		}
+		PGT_agricultural_decline = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = PGT
+			}
+			allowed_civil_war = {
+				has_government = radicalism
+			}
+			modifier = {
+				food_gain_factor = -0.2
+				repair_speed_agrarian_complex_factor = -0.1
+				production_speed_agrarian_complex_factor = -0.1
+			}
+		}
+		PGT_farmer_riot = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = PGT
+			}
+			allowed_civil_war = {
+				has_government = radicalism
+			}
+			modifier = {
+				food_gain_factor = -0.05
+				repair_speed_agrarian_complex_factor = -0.05
+				production_speed_agrarian_complex_factor = -0.05
+				production_lack_of_resource_penalty_factor = 0.1
+			}
+		}
 	}
 }

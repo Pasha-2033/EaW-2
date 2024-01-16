@@ -1,0 +1,33 @@
+guiTypes = {
+	containerWindowType = {
+		name = "PGT_farmer_riot_container"
+		size = {
+			width = 100%%
+			height = 120
+		}
+		iconType = {
+			name = "oreol"
+			spriteType = "GFX_red_dimond_oreol"
+			orientation = CENTER
+			scale = 2
+			position = {
+				x = -56
+				y = -55
+			}
+		}
+		instantTextBoxType = {
+			name = "farmer_influence_text"
+			font = "hoi_36header"
+			text = "[?farmer_influence|1%]"
+			position = {
+				x = -50
+				y = -13
+			}
+			format = CENTER
+			maxWidth = 100
+			maxHeight = 26
+			orientation = CENTER
+			pdx_tooltip = "farmer_influence_text_tt"
+		}
+	}
+}

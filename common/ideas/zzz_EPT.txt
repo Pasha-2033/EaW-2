@@ -177,5 +177,32 @@ ideas = {
 				attack_bonus_against = 0.05
 			}
 		}
+		EPT_full_evacuation_of_hoofington = {
+			allowed = {
+				original_tag = EPT
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				org_loss_at_low_org_factor = 0.1
+				org_loss_when_moving = 0.2
+				army_org_regain = -0.1
+				army_org_factor = -0.05
+			}
+		}
+		EPT_partial_evacuation_of_hoofington = {
+			allowed = {
+				original_tag = EPT
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				org_loss_at_low_org_factor = 0.02
+				org_loss_when_moving = 0.1
+				army_org_regain = -0.03
+			}
+		}
 	}
 }

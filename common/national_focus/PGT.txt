@@ -18,7 +18,7 @@ focus_tree = {
 		id = pgt_focus_way_of_warriors
 		icon = GFX_goal_generic_changeling
 		cost = 5
-		x = 6
+		x = 9
 		y = 0
 		mutually_exclusive = {
 			focus = pgt_focus_save_harmonic_principles
@@ -96,12 +96,343 @@ focus_tree = {
 			}
 		}
 	}
+	focus = {
+		id = pgt_focus_scrapping_the_barrel
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_surrounded_but_not_broken
+		prerequisite = {
+			focus = pgt_focus_surrounded_but_not_broken
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_scrapping_the_barrel"
+		}
+	}
+	focus = {
+		id = pgt_focus_new_elite_troops
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_scrapping_the_barrel
+		prerequisite = {
+			focus = pgt_focus_scrapping_the_barrel
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_new_elite_troops"
+		}
+	}
+	focus = {
+		id = pgt_focus_army_reorganisation
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_new_elite_troops
+		prerequisite = {
+			focus = pgt_focus_new_elite_troops
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_army_reorganisation"
+		}
+	}
+	focus = {
+		id = pgt_focus_buy_equipment_for_divisions
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = pgt_focus_army_reorganisation
+		prerequisite = {
+			focus = pgt_focus_army_reorganisation
+		}
+		mutually_exclusive = {
+			focus = pgt_focus_conversion_to_arms_factory
+		}
+		available = {
+			num_of_civilian_factories > 0
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_buy_equipment_for_divisions"
+		}
+	}
+	focus = {
+		id = pgt_focus_refit_company
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_buy_equipment_for_divisions
+		prerequisite = {
+			focus = pgt_focus_buy_equipment_for_divisions
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_refit_company"
+			set_technology = {
+				tech_maintenance_company = 1
+				popup = no
+			}
+		}
+	}
+	focus = {
+		id = pgt_focus_conversion_to_arms_factory
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = pgt_focus_army_reorganisation
+		prerequisite = {
+			focus = pgt_focus_army_reorganisation
+		}
+		mutually_exclusive = {
+			focus = pgt_focus_buy_equipment_for_divisions
+		}
+		available = {
+			num_of_civilian_factories > 0
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_conversion_to_arms_factory"
+			random_owned_controlled_state = {
+				limit = {
+					check_variable = {
+						industrial_complex_level > 0
+					}
+				}
+				remove_building = {
+					type = industrial_complex
+					level = industrial_complex_level
+				}
+				add_building_construction = {
+					type = arms_factory
+					level = industrial_complex_level
+				}
+			}
+			capital_scope = {
+				if = {
+					limit = {
+						check_variable = {
+							industrial_complex_level > 0
+						}
+					}
+					remove_building = {
+						type = industrial_complex
+						level = industrial_complex_level
+					}
+					add_building_construction = {
+						type = arms_factory
+						level = industrial_complex_level
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = pgt_focus_infantry_mio
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_conversion_to_arms_factory
+		prerequisite = {
+			focus = pgt_focus_conversion_to_arms_factory
+		}
+		available = {
+			num_of_military_factories > 0
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_infantry_mio"
+		}
+	}
+	focus = {
+		id = pgt_focus_new_officers
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 3
+		y = 1
+		relative_position_id = pgt_focus_new_elite_troops
+		prerequisite = {
+			focus = pgt_focus_new_elite_troops
+			focus = pgt_focus_call_bandits_to_arms
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_new_officers"
+			#special if position for nicer tooltip
+			PGT_soarin = {
+				add_corps_commander_role = {
+					traits = {
+						pony_race_trait
+						wonderbolt
+					}
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+				}
+				if = {
+					limit = {
+						PREV = {
+							has_government = militarism
+						}
+					}
+					add_unit_leader_trait = winter_specialist
+				}
+			}
+			PGT_mistyfly = {
+				add_corps_commander_role = {
+					traits = {
+						pony_race_trait
+						wonderbolt
+					}
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+				}
+				if = {
+					limit = {
+						PREV = {
+							has_government = militarism
+						}
+					}
+					add_unit_leader_trait = winter_specialist
+				}
+			}
+			PGT_spitfire = {
+				add_corps_commander_role = {
+					traits = {
+						pony_race_trait
+						wonderbolt
+						trait_reckless
+					}
+					skill = 1
+					attack_skill = 1
+					defense_skill = 1
+					planning_skill = 1
+					logistics_skill = 1
+				}
+				if = {
+					limit = {
+						PREV = {
+							has_government = militarism
+						}
+					}
+					add_unit_leader_trait = winter_specialist
+					add_unit_leader_trait = expert_delegator
+				}
+			}
+		}
+	}
+	focus = {
+		id = pgt_focus_return_frozen_motherland
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = pgt_focus_surrounded_but_not_broken
+		prerequisite = {
+			focus = pgt_focus_surrounded_but_not_broken
+		}
+		allow_branch = {
+			EQS = {
+				has_completed_focus = eqs_focus_prince_blueblood_speaches
+			}
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_return_frozen_motherland"
+		}
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
+	focus = {
+		id = pgt_focus_claim_east_passage
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_return_frozen_motherland
+		prerequisite = {
+			focus = pgt_focus_return_frozen_motherland
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_claim_east_passage"
+			add_state_claim = 159
+			add_state_claim = 167
+			add_state_claim = 229
+		}
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
+	focus = {
+		id = pgt_focus_secure_las_pegasus
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_claim_east_passage
+		prerequisite = {
+			focus = pgt_focus_claim_east_passage
+		}
+		ai_will_do = {
+			base = 200
+		}
+		available = {
+			controls_state = 66
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_claim_east_passage"
+			add_state_core = 38
+			add_state_core = 87
+			add_state_core = 95
+			add_state_core = 118
+			add_state_core = 119
+			add_state_core = 125
+		}
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
 	#harmonists branch
 	focus = {
 		id = pgt_focus_save_harmonic_principles
 		icon = GFX_goal_generic_changeling
 		cost = 5
-		x = 2
+		x = 5
 		y = 0
 		mutually_exclusive = {
 			focus = pgt_focus_way_of_warriors
@@ -131,12 +462,452 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_allow_harmonists_to_perform"
 		}
 	}
+	focus = {
+		id = pgt_focus_evacuation_from_winter_front
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_allow_harmonists_to_perform
+		prerequisite = {
+			focus = pgt_focus_allow_harmonists_to_perform
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_evacuation_from_winter_front"
+		}
+	}
+	focus = {
+		id = pgt_focus_we_fight_for_the_people
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_evacuation_from_winter_front
+		prerequisite = {
+			focus = pgt_focus_evacuation_from_winter_front
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_we_fight_for_the_people"
+		}
+	}
+	focus = {
+		id = pgt_focus_place_only_for_harmony
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_we_fight_for_the_people
+		prerequisite = {
+			focus = pgt_focus_we_fight_for_the_people
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_place_only_for_harmony"
+		}
+	}
+	focus = {
+		id = pgt_focus_no_place_for_radicalism
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = pgt_focus_place_only_for_harmony
+		prerequisite = {
+			focus = pgt_focus_place_only_for_harmony
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_no_place_for_radicalism"
+		}
+	}
+	focus = {
+		id = pgt_focus_no_place_for_militarism
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = pgt_focus_place_only_for_harmony
+		prerequisite = {
+			focus = pgt_focus_place_only_for_harmony
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_no_place_for_militarism"
+		}
+	}
+	focus = {
+		id = pgt_focus_cloudforce_accepts_harmony
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 1
+		y = 2
+		relative_position_id = pgt_focus_place_only_for_harmony
+		prerequisite = {
+			focus = pgt_focus_no_place_for_militarism
+		}
+		mutually_exclusive = {
+			focus = pgt_focus_fire_cloudforce
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_cloudforce_accepts_harmony"
+		}
+	}
+	focus = {
+		id = pgt_focus_fire_cloudforce
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -1
+		y = 2
+		relative_position_id = pgt_focus_place_only_for_harmony
+		prerequisite = {
+			focus = pgt_focus_no_place_for_radicalism
+		}
+		mutually_exclusive = {
+			focus = pgt_focus_cloudforce_accepts_harmony
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_fire_cloudforce"
+		}
+	}
+	focus = {
+		id = pgt_focus_food_for_people
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -3
+		y = 1
+		relative_position_id = pgt_focus_allow_harmonists_to_perform
+		prerequisite = {
+			focus = pgt_focus_allow_harmonists_to_perform
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_food_for_people"
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = PGT_food_stamps
+					}
+				}
+				custom_effect_tooltip = add_civil_to_food_stamps_tt
+			}
+			else = {
+				hidden_effect = {
+					add_dynamic_modifier = {
+						modifier = PGT_food_stamps
+					}
+				}
+				custom_effect_tooltip = add_food_stamps_civil_tt
+			}
+			add_to_variable = {
+				pgt_food_stamps_sf = 0.05
+			}
+			subtract_from_variable = {
+				pgt_food_stamps_wsf = 0.05
+			}
+			subtract_from_variable = {
+				pgt_food_stamps_ccf = 0.15
+			}
+			#0.017*country_population = ~200
+			set_temp_variable = {
+				delta_food_storage = -0.017
+			}
+			multiply_temp_variable = {
+				delta_food_storage = max_manpower_k
+			}
+			add_to_food_storage = yes
+		}
+		search_filters = {
+			FOCUS_FILTER_SURPLUS_APPROPRIATION
+		}
+	}
+	focus = {
+		id = pgt_focus_ask_aid_from_OLE
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = pgt_focus_food_for_people
+		prerequisite = {
+			focus = pgt_focus_food_for_people
+		}
+		available = {
+			OLE = {
+				exists = yes
+			}
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_ask_aid_from_OLE"
+		}
+		search_filters = {
+			FOCUS_FILTER_SURPLUS_APPROPRIATION
+		}
+	}
+	focus = {
+		id = pgt_focus_destroy_piracy
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_ask_aid_from_OLE
+		prerequisite = {
+			focus = pgt_focus_ask_aid_from_OLE
+		}
+		available = {
+			any_controlled_state = {
+				is_coastal = yes
+			}
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_destroy_piracy"
+			if = {
+				limit = {
+					capital_scope = {
+						is_coastal = yes
+					}
+				}
+				capital_scope = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				random_controlled_state = {
+					limit = {
+						is_coastal = yes
+					}
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = dockyard
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			#to do
+			custom_effect_tooltip = todo
+		}
+		search_filters = {
+			FOCUS_FILTER_SURPLUS_APPROPRIATION
+		}
+	}
+	focus = {
+		id = pgt_focus_ask_aid_from_hives
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = pgt_focus_food_for_people
+		prerequisite = {
+			focus = pgt_focus_food_for_people
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = any_hive_exists
+				OR = {
+					VES = {
+						exists = yes
+					}
+					VRA = {
+						exists = yes
+					}
+					LIK = {
+						exists = yes
+					}
+					SOR = {
+						exists = yes
+					}
+					DIS = {
+						exists = yes
+					}
+				}
+			}
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_ask_aid_from_hives"
+		}
+		search_filters = {
+			FOCUS_FILTER_SURPLUS_APPROPRIATION
+		}
+	}
+	focus = {
+		id = pgt_focus_contact_with_twilight
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = pgt_focus_surrounded_but_not_broken
+		prerequisite = {
+			focus = pgt_focus_allow_harmonists_to_perform
+			focus = pgt_focus_surrounded_but_not_broken
+		}
+		allow_branch = {
+			EQS = {
+				has_completed_focus = eqs_focus_twilight_initiative
+			}
+		}
+		available = {
+			#if we going to be harmonists, we can take the initiative
+			#else we should face twilight`s actions
+			if = {
+				limit = {
+					has_completed_focus = pgt_focus_way_of_warriors
+				}
+				PGT_fluttershy = {
+					has_trait = HE_kindness
+				}
+				PGT_rainbowdash = {
+					has_trait = HE_loyalty
+				}
+			}
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_food_for_people"
+		}
+	}
+	focus = {
+		id = pgt_focus_cooperation_of_harmonic_leaders
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_contact_with_twilight
+		prerequisite = {
+			focus = pgt_focus_contact_with_twilight
+		}
+		available = {
+			if = {
+				limit = {
+					has_completed_focus = pgt_focus_allow_harmonists_to_perform
+				}
+				has_government = harmony
+			}
+			else = {
+				has_country_flag = cooperation_with_twilight
+			}
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_cooperation_of_harmonic_leaders"
+		}
+	}
+	focus = {
+		id = pgt_focus_unite_with_EPT_HQ
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_cooperation_of_harmonic_leaders
+		prerequisite = {
+			focus = pgt_focus_cooperation_of_harmonic_leaders
+		}
+		available = {
+			EPT = {
+				has_completed_focus = ept_focus_emergency_hq_hooftagon
+				has_country_flag = cooperation_with_twilight
+			}
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_unite_with_EPT_HQ"
+		}
+	}
+	#militarist-radicalist surply branch
+	focus = {
+		id = pgt_focus_food_for_army
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = pgt_focus_surrounded_but_not_broken
+		prerequisite = {
+			focus = pgt_focus_way_of_overcoming
+			focus = pgt_focus_surrounded_but_not_broken
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_food_for_people"
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = PGT_food_stamps
+					}
+				}
+				custom_effect_tooltip = add_militiary_to_food_stamps_tt
+			}
+			else = {
+				hidden_effect = {
+					add_dynamic_modifier = {
+						modifier = PGT_food_stamps
+					}
+				}
+				custom_effect_tooltip = add_food_stamps_militiary_tt
+			}
+			subtract_from_variable = {
+				pgt_food_stamps_sf = 0.05
+			}
+			add_to_variable = {
+				pgt_food_stamps_wsf = 0.05
+			}
+			subtract_from_variable = {
+				pgt_food_stamps_acf = 0.15
+			}
+			set_temp_variable = {
+				delta_food_storage = 100
+			}
+			add_to_food_storage = yes
+		}
+		search_filters = {
+			FOCUS_FILTER_SURPLUS_APPROPRIATION
+		}
+	}
 	#radicalists branch
 	focus = {
 		id = pgt_focus_dying_nation
 		icon = GFX_goal_generic_changeling
 		cost = 5
-		x = 10
+		x = 15
 		y = 0
 		mutually_exclusive = {
 			focus = pgt_focus_way_of_warriors
@@ -147,6 +918,409 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_dying_nation"
+			add_ideas = PGT_dying_nation
+			add_stability = -0.05
+
+		}
+	}
+	focus = {
+		#(для перевода) Путь превозмогания
+		id = pgt_focus_way_of_overcoming
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_dying_nation
+		prerequisite = {
+			focus = pgt_focus_dying_nation
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_way_of_overcoming"
+			add_popularity = {
+				ideology = radicalism
+				popularity = 0.02
+			}
+			add_ideas = PGT_way_of_overcoming
+		}
+	}
+	focus = {
+		id = pgt_focus_deep_isolation
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_way_of_overcoming
+		prerequisite = {
+			focus = pgt_focus_way_of_overcoming
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_deep_isolation"
+		}
+	}
+	focus = {
+		id = pgt_focus_call_bandits_to_arms
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_deep_isolation
+		prerequisite = {
+			focus = pgt_focus_deep_isolation
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_call_bandits_to_arms"
+		}
+	}
+	focus = {
+		id = pgt_focus_we_will_return_that_belongs_to_us
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_call_bandits_to_arms
+		prerequisite = {
+			focus = pgt_focus_call_bandits_to_arms
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_we_will_return_that_belongs_to_us"
+			add_state_claim = 126
+			add_state_claim = 130
+			add_state_claim = 132
+			add_state_claim = 170
+			add_state_core = 54
+			add_state_core = 133
+			add_state_core = 169
+			add_state_core = 173
+			add_state_core = 174
+			add_state_core = 175
+		}
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
+		}
+	}
+	focus = {
+		id = pgt_focus_rob_farms
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 2
+		y = 1
+		relative_position_id = pgt_focus_way_of_overcoming
+		prerequisite = {
+			focus = pgt_focus_way_of_overcoming
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_rob_farms"
+			add_timed_idea = {
+				idea = PGT_agricultural_decline
+				days = 90
+			}
+			set_temp_variable = {
+				d_stability = party_popularity@harmony
+			}
+			divide_temp_variable = {
+				d_stability = -2
+			}
+			subtract_from_temp_variable = {
+				d_stability = 0.1
+			}
+			add_stability = d_stability
+			set_temp_variable = {
+				delta_food_storage = 7500
+			}
+			add_to_food_storage = yes
+		}
+		search_filters = {
+			FOCUS_FILTER_SURPLUS_APPROPRIATION
+		}
+	}
+	focus = {
+		id = pgt_focus_agrarian_complex_nationalisation
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_rob_farms
+		prerequisite = {
+			focus = pgt_focus_rob_farms
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_agrarian_complex_nationalisation"
+			capital_scope = {
+				add_building_construction = {
+					type = agrarian_complex
+					level = 1
+				}
+			}
+			random_owned_controlled_state = {
+				add_building_construction = {
+					type = agrarian_complex
+					level = 1
+				}
+			}
+			add_stability = -0.05
+			add_popularity = {
+				ideology = radicalism
+				popularity = 0.03
+			}
+			set_temp_variable = {
+				delta_food_storage = 2500
+			}
+			add_to_food_storage = yes
+			add_ideas = PGT_farmer_riot
+			activate_mission = PGT_mission_farmrs_rebelion_incoming
+			set_Temp_variable = {
+				t_farmer_influence = party_popularity@harmony
+			}
+			clamp_temp_variable = {
+				var = t_farmer_influence
+				min = 0.25
+			}
+			custom_effect_tooltip = farmers_will_start_with_n_influence
+			set_variable = {
+				farmer_influence = t_farmer_influence
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_SURPLUS_APPROPRIATION
+		}
+	}
+	focus = {
+		id = pgt_focus_supress_resisting_farmers
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_agrarian_complex_nationalisation
+		prerequisite = {
+			focus = pgt_focus_agrarian_complex_nationalisation
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = farmer_influence_less_than_5_tt
+				check_variable = {
+					farmer_influence < 0.05
+				}
+			}
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_supress_resisting_farmers"
+			add_timed_idea = {
+				idea = PGT_agricultural_decline
+				days = 90
+			}
+			add_popularity = {
+				ideology = radicalism
+				popularity = 0.03
+			}
+			add_war_support = 0.075
+			add_stability = -0.025
+			set_temp_variable = {
+				delta_food_storage = 500
+			}
+			add_to_food_storage = yes
+			remove_ideas = PGT_farmer_riot
+		}
+		search_filters = {
+			FOCUS_FILTER_SURPLUS_APPROPRIATION
+		}
+	}
+	focus = {
+		id = pgt_focus_survival_of_the_fittest
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = pgt_focus_we_will_return_that_belongs_to_us
+		prerequisite = {
+			focus = pgt_focus_we_will_return_that_belongs_to_us
+		}
+		prerequisite = {
+			focus = pgt_focus_supress_resisting_farmers
+		}
+		mutually_exclusive = {
+			focus = pgt_focus_spare_the_poor
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_survival_of_the_fittest"
+		}
+	}
+	focus = {
+		id = pgt_focus_cloudforce_assasination
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_survival_of_the_fittest
+		prerequisite = {
+			focus = pgt_focus_survival_of_the_fittest
+		}
+		available = {
+			has_government = militarism
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_cloudforce_assasination"
+			kill_ideology_leader = militarism
+			try_replacing_militarist = yes
+			set_politics = {
+				ruling_party = radicalism
+				elections_allowed = no
+			}
+			add_stability = -0.05
+			add_timed_idea = {
+				idea = PGT_chaos_in_army
+				days = 60
+			}
+		}
+	}
+	focus = {
+		id = pgt_focus_spare_the_poor
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = pgt_focus_we_will_return_that_belongs_to_us
+		prerequisite = {
+			focus = pgt_focus_we_will_return_that_belongs_to_us
+		}
+		mutually_exclusive = {
+			focus = pgt_focus_survival_of_the_fittest
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_spare_the_poor"
+		}
+	}
+	focus = {
+		id = pgt_focus_support_from_below
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_spare_the_poor
+		prerequisite = {
+			focus = pgt_focus_spare_the_poor
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_support_from_below"
+		}
+	}
+	focus = {
+		id = pgt_focus_demand_cloudforce_retirement
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_support_from_below
+		prerequisite = {
+			focus = pgt_focus_support_from_below
+		}
+		available = {
+			radicalism > 0.5
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_demand_cloudforce_retirement"
+			set_politics = {
+				ruling_party = radicalism
+				elections_allowed = no
+			}
+		}
+	}
+	focus = {
+		#strike while iron is hot (separeted focuses, next)
+		id = pgt_focus_strike_iron
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -2
+		y = 1
+		relative_position_id = pgt_focus_way_of_overcoming
+		prerequisite = {
+			focus = pgt_focus_way_of_overcoming
+			focus = pgt_focus_surrounded_but_not_broken
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_strike_iron"
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+				add_resource = {
+					type = steel
+					amount = 3
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus = {
+		#strike while iron is hot (separeted focuses, prev)
+		id = pgt_focus_while_hot
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = pgt_focus_strike_iron
+		prerequisite = {
+			focus = pgt_focus_strike_iron
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_while_hot"
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
 		}
 	}
 	#pockets branch
@@ -154,7 +1328,7 @@ focus_tree = {
 		id = pgt_focus_northern_pockets
 		icon = GFX_goal_generic_changeling
 		cost = 1
-		x = 16
+		x = 22
 		y = 0
 		ai_will_do = {
 			base = 200
@@ -172,7 +1346,7 @@ focus_tree = {
 		id = pgt_focus_eastern_pockets
 		icon = GFX_goal_generic_changeling
 		cost = 1
-		x = 18
+		x = 24
 		y = 0
 		ai_will_do = {
 			base = 200
@@ -1064,6 +2238,31 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_food_stamps"
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = PGT_food_stamps
+					}
+				}
+				custom_effect_tooltip = add_common_to_food_stamps_tt
+			}
+			else = {
+				hidden_effect = {
+					add_dynamic_modifier = {
+						modifier = PGT_food_stamps
+					}
+				}
+				custom_effect_tooltip = add_food_stamps_common_tt
+			}
+			subtract_from_variable = {
+				pgt_food_stamps_ccf = 0.05
+			}
+			subtract_from_variable = {
+				pgt_food_stamps_fcf = 0.05
+			}
+			subtract_from_variable = {
+				pgt_food_stamps_acf = 0.05
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_SURPLUS_APPROPRIATION

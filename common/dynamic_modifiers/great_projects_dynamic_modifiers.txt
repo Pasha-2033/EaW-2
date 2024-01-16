@@ -2,7 +2,7 @@
 #it`s simple to check if country has hooftagon - all these modifiers will be together
 #but there is already one trigger with provided tootip - has_great_project_hooftagon
 great_project_hooftagon_HQ = {	#Headquarters
-	icon = GFX_idea_clockwerk_economy
+	icon = GFX_modifier_hooftagon_HQ
 	#land forces
 	army_core_attack_factor = hooftagon^0
 	army_core_defence_factor = hooftagon^1
@@ -43,7 +43,7 @@ great_project_hooftagon_HQ = {	#Headquarters
 	railway_gun_bombardment_factor = hooftagon^32
 }
 great_project_hooftagon_FP = {	#Foreign Policy
-	icon = GFX_idea_clockwerk_economy
+	icon = GFX_modifier_hooftagon_FP
 	#intell
 	agency_upgrade_time = hooftagon^33
 	decryption_factor = hooftagon^34
@@ -61,7 +61,7 @@ great_project_hooftagon_FP = {	#Foreign Policy
 	request_lease_tension = hooftagon^45
 }
 great_project_hooftagon_MI = { #Military Infrastructure
-	icon = GFX_idea_clockwerk_economy
+	icon = GFX_modifier_hooftagon_MI
 	#fuel
 	max_fuel_factor = hooftagon^46
 	army_fuel_capacity_factor = hooftagon^47

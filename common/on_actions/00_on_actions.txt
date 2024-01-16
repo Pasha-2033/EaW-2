@@ -492,13 +492,12 @@ on_actions = {
 				trait = recently_promoted
 				days = 100
 			}
-			#kill generic militarist, that has no field marshal role
 			FROM = {
 				if = {
 					limit = {
 						NOT = {
 							any_character = {
-								is_field_marshal = yes
+								is_unit_leader = yes
 								has_ideology_group = militarism
 							}
 						}
@@ -506,16 +505,15 @@ on_actions = {
 					hidden_effect = {
 						PREV = {
 							add_unit_leader_trait = country_leader_trait_militarism
-						}
-						add_country_leader_role = {
-							character = PREV
-							promote_leader = no
-							country_leader = {
-								ideology = ultramilitarism
-								#expire = "1965.1.1.1" #needed?
-								traits = {}
+							add_country_leader_role = {
+								promote_leader = no
+								country_leader = {
+									ideology = ultramilitarism
+									traits = {}
+								}
 							}
 						}
+						#kill generic militarist, that has no unit role
 						kill_ideology_leader = militarism
 					}
 				}

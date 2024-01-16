@@ -43,3 +43,14 @@ PGT_vinnisota_autonomy = {
 	local_building_slots_factor = -0.8
 	local_intel_to_enemies = -0.25
 }
+PGT_food_stamps = {
+	icon = GFX_idea_clockwerk_economy			#to do (change)
+	enable = {
+		always = yes
+	}
+	stability_factor = pgt_food_stamps_sf
+	war_support_factor = pgt_food_stamps_wsf
+	civil_consumption_factor = pgt_food_stamps_ccf
+	facilities_consumption_factor = pgt_food_stamps_fcf
+	army_consumption_factor = pgt_food_stamps_acf
+}

@@ -1,19 +1,31 @@
-met_revolution_incoming = {
-	met_mission_rebelion_incoming = {
+PGT_farmrs_rebelion  = {
+	PGT_mission_farmrs_rebelion_incoming = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
 		allowed = { 
-			original_tag = MET 
+			original_tag = PGT
 		}
 		available = {
-			always = no
+			NOT = {
+				has_idea = PGT_farmer_riot
+			}
+		}
+		activation = {
+			#always = no
 		}
 		days_mission_timeout = 200
-		is_good = yes 
+		is_good = no 
 		fire_only_once = yes                        
 		selectable_mission = no
+		complete_effect = {
+			remove_ideas = PGT_farmer_riot
+			clear_variable = farmer_influence
+		}
 		timeout_effect = {
-			remove_ideas = MET_separatists
-			#start civ war
+			#to do
+			start_civil_war = {
+				ideology = harmony
+			}
+			clear_variable = farmer_influence
 		}
 	}
 }

@@ -1,3 +1,4 @@
+#!gfx:interface\zzz_EPT.gfx
 #Windigo time focuses (stage 1)
 focus_tree = {
 	id = ept_focus_tree_windigo
@@ -431,12 +432,16 @@ focus_tree = {
 		}
 		cancel_if_invalid = no
 		continue_if_invalid = yes
+		cancelable = no
 		select_effect = {
 			19 = {
 				remove_building = {
 					type = arms_factory
 					level = 1
 				}
+			}
+			country_event = {
+				id = earth_pony_tribe.4
 			}
 		}
 		completion_reward = {
@@ -750,7 +755,7 @@ focus_tree = {
 			add_state_core = 120
 		}
 		search_filters = {
-			FOCUS_FILTER_EXPANTION
+			FOCUS_FILTER_ANNEXATION
 		}
 	}
 	focus = {
@@ -1202,7 +1207,7 @@ focus_tree = {
 	#hooftagon branch
 	focus = {
 		id = ept_focus_emergency_hq_hooftagon
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ept_focus_emergency_hq_hooftagon
 		cost = 5
 		x = 25
 		y = 0
