@@ -1,9 +1,6 @@
 scripted_map_modes = {
 	population_map_mode = {
 		top = {
-			type = none
-		}
-		bottom = {
 			type = state
 			color = {
 				FROM = {
@@ -85,6 +82,9 @@ scripted_map_modes = {
 					set_temp_variable = { alpha = 1 }
 				}
 			}
+		}
+		bottom = {
+			type = none
 		}
 		far_text = country
 		near_text = state

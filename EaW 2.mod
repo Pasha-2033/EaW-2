@@ -51,4 +51,4 @@ tags={
 }
 supported_version="1.13.*"
 picture="thumbnail.png"
-path="mod/EaW 2/"
+path="mod/EaW-2/"

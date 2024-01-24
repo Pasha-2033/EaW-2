@@ -46,6 +46,7 @@ ideas = {
 			}
 			modifier = {
 				improve_relations_maintain_cost_factor = 1
+				surrender_limit = 0.25
 			}
 		}
 		EQS_unicorn_censorship = {
@@ -291,10 +292,43 @@ ideas = {
 				original_tag = EQS
 			}
 			allowed_civil_war = {
+				#to do (strange, too simple)
+				#sealed in ponyvile
 				tag = EQS
 			}
 			modifier = {
 				stability_factor = -0.05
+			}
+		}
+		EQS_food_stamps = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				civil_consumption_factor = -0.2
+				facilities_consumption_factor = -0.05
+				army_consumption_factor = -0.05
+				stability_factor = -0.1
+				war_support_factor = -0.05
+			}
+			on_add = {
+				calc_surplus_appropriation_real_values = yes
+			}
+			on_remove = {
+				calc_surplus_appropriation_real_values = yes
+			}
+		}
+		EQS_harmony_vs_fascism_civil_war_preparations = {
+			#just for tooltip and triggers
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				always = no
 			}
 		}
 	}

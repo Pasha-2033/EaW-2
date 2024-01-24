@@ -1,0 +1,71 @@
+mio_laspegasus_arms_factory = {
+	allowed = {
+		original_tag = PGT
+	}
+	visible = {
+		FROM = {
+			has_completed_focus = pgt_focus_infantry_mio
+		}
+	}
+	equipment_type = {
+		infantry_equipment
+	}
+	research_categories = {
+		infantry_weapons
+	}
+	research_bonus = 0.2 # optional, default is define DESIGN_TEAM_RESEARCH_BONUS
+	task_capacity = 1
+	ai_will_do = {
+		base = 1
+	}
+	tree_header_text = {
+		text = my_flavor_text_loc_key
+		x = 1
+	}
+	initial_trait = {
+		name = my_loc_key # token initial_trait will be used for default name
+		limit_to_equipment_type = {
+			infantry_equipment
+		}
+		equipment_bonus = {
+			hard_attack = -0.05
+			breakthrough = -0.05
+			defense = 0.05
+		}
+		organization_modifier = {
+			production_lack_of_resource_penalty_factor = -0.05
+		}
+	}
+	trait = {
+		token = upgrade_1 # mandatory
+		name = loc_key # optional
+		# if name provided, use TAG_loc_key if it exists. if not use loc_key (where TAG is the tag of the MIO owner)
+		# if localization key TAG_my_MIO_token_upgrade_1 exists, use it 
+		# else use loc key my_MIO_token_upgrade_1
+		icon = GFX_generic_mio_trait_icon_resources
+		special_trait_background = yes
+		available = {
+			FROM = {
+				has_completed_focus = pgt_focus_war_without_supplies
+			}
+		}
+		on_complete = {} # optional
+		# current MIO scope - FROM = country
+		# Effects that will be executed when the trait is completed (aka unlocked)
+		equipment_bonus = {
+			defense = 0.05
+		}
+		organization_modifier = {
+			production_lack_of_resource_penalty_factor = -0.2
+		}
+		position = {
+			x = 1 y = 0
+		}
+		# AI weight modifier for this trait
+		# For documentation, see examples of ai_will_do throughout the content
+		# Warning : if the trait is part of a central tree, the trait's ai_will_do will override the central tree's!
+		ai_will_do = {
+			base = 1
+		}
+	}
+}

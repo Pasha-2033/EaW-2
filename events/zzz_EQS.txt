@@ -1,7 +1,7 @@
 add_namespace = equestria
 #change picture everywhere
 country_event = {
-	#create research group with VES
+	#fascist dont like our actions
 	id = equestria.1
 	immediate = {
 		log = "[GetDateText]: [Root.GetName]: event equestria.1"
@@ -11,17 +11,13 @@ country_event = {
 	picture = GFX_event_swarm #(to do) change
 	is_triggered_only = yes
 	option = {
-		#yes
 		name = equestria.1.a
-		ai_chance = {
-			factor = 100
-		}
-	}
-	option = {
-		#no
-		name = equestria.1.b
-		ai_chance = {
-			factor = 100
+		add_stability = -0.1
+		if = {
+			limit = {
+				fascism > 0.5
+			}
+			add_political_power = -25
 		}
 	}
 }
@@ -51,6 +47,30 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = equestria.3.a
+		PGT = {
+			remove_trait = {
+				character = PGT_fluttershy
+				slot = political_advisor
+				trait = defender_of_nature
+			}
+			add_trait = {
+				character = PGT_fluttershy
+				slot = political_advisor
+				trait = HE_kindness
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						PGT_fluttershy = {
+							is_hired_as_advisor = yes
+						}
+					}
+					country_event = {
+						id = pegas_tribe.1
+					}
+				}
+			}
+		}
 	}
 }
 country_event = {
@@ -65,6 +85,30 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = equestria.4.a
+		PGT = {
+			remove_trait = {
+				character = PGT_rainbowdash
+				slot = political_advisor
+				trait = ideological_inspirer
+			}
+			add_trait = {
+				character = PGT_rainbowdash
+				slot = political_advisor
+				trait = HE_loyalty
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						PGT_rainbowdash = {
+							is_hired_as_advisor = yes
+						}
+					}
+					country_event = {
+						id = pegas_tribe.2
+					}
+				}
+			}
+		}
 	}
 }
 country_event = {
@@ -79,6 +123,30 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = equestria.5.a
+		EPT = {
+			remove_trait = {
+				character = EPT_applejack
+				slot = political_advisor
+				trait = farmer
+			}
+			add_trait = {
+				character = EPT_applejack
+				slot = political_advisor
+				trait = HE_honesty
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						EPT_applejack = {
+							is_hired_as_advisor = yes
+						}
+					}
+					country_event = {
+						id = earth_pony_tribe.2
+					}
+				}
+			}
+		}
 	}
 }
 country_event = {
@@ -93,6 +161,30 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = equestria.6.a
+		EPT = {
+			remove_trait = {
+				character = EPT_pinkypie
+				slot = political_advisor
+				trait = merry_fellow
+			}
+			add_trait = {
+				character = EPT_pinkypie
+				slot = political_advisor
+				trait = HE_laughter
+			}
+			hidden_effect = {
+				if = {
+					limit = {
+						EPT_pinkypie = {
+							is_hired_as_advisor = yes
+						}
+					}
+					country_event = {
+						id = earth_pony_tribe.3
+					}
+				}
+			}
+		}
 	}
 }
 country_event = {
@@ -107,6 +199,16 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = equestria.7.a
+		remove_trait = {
+			character = EQS_982_rarity
+			slot = political_advisor
+			trait = fashion_designer
+		}
+		add_trait = {
+			character = EQS_982_rarity
+			slot = political_advisor
+			trait = HE_generosity
+		}
 	}
 }
 country_event = {
@@ -120,20 +222,32 @@ country_event = {
 	picture = GFX_event_swarm #(to do) change
 	is_triggered_only = yes
 	option = {
-		#we have to focus on Equestral space (EPT, PGT)
+		#we have to sell some lands to get military advantage
 		name = equestria.8.a
+		ai_chance = {
+			base = 1
+		}
 	}
 	option = {
-		#we have to focus on North space (hives, deers, MET, NEM)
+		#we have to focus on NML
 		name = equestria.8.b
+		trigger = {
+			has_subject = NML
+		}
+		ai_chance = {
+			base = 1
+		}
 	}
 	option = {
-		#we have to focus on South space and Griffons (GRE, DRG)
+		#we have to focus on separatists (EPT, PGT)
 		name = equestria.8.c
+		ai_chance = {
+			base = 1
+		}
 	}
 }
 country_event = {
-	#fascist dont like our actions
+	#STG removes our cores in former baykall pocket
 	id = equestria.9
 	immediate = {
 		log = "[GetDateText]: [Root.GetName]: event equestria.9"
@@ -143,13 +257,257 @@ country_event = {
 	picture = GFX_event_swarm #(to do) change
 	is_triggered_only = yes
 	option = {
+		#we have enough enemies
 		name = equestria.9.a
-		add_stability = -0.1
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		#we demand reparations!
+		name = equestria.9.b
+		STG = {
+			country_event = {
+				id = staliongrad.5
+				days = 7
+				random_days = 3
+			}
+		}
+		custom_effect_tooltip = if_they_reject_tt
+		event_option_tooltip = staliongrad.5.c
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {
+	#EPT(by event)/PGT(by event)/EQS(by focus) offers white peace
+	id = equestria.10
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event equestria.10"
+	}
+	title = equestria.10.t
+	desc = equestria.10.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#we accept
+		name = equestria.10.a
+		trigger = {
+			tag = EPT
+		}
 		if = {
 			limit = {
-				fascism > 0.5
+				NOT = {
+					PGT = {
+						has_defensive_war_with = EQS
+					}
+					FROM = {
+						tag = PGT
+					}
+				}
 			}
-			add_political_power = -25
+			PGT = {
+				country_event = {
+					id = equestria.10
+					days = 7
+					random_days = 3
+				}
+			}
+		}
+		white_peace = {
+			tag = FROM
+			message = anti_ICE_white_peace_tt
+		}
+		add_stability = -0.075
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		#we accept
+		name = equestria.10.b
+		trigger = {
+			tag = PGT
+		}
+		if = {
+			limit = {
+				NOT = {
+					EPT = {
+						has_defensive_war_with = EQS
+					}
+					FROM = {
+						tag = EPT
+					}
+				}
+			}
+			EPT = {
+				country_event = {
+					id = equestria.10
+					days = 7
+					random_days = 3
+				}
+			}
+		}
+		white_peace = {
+			tag = FROM
+			message = anti_ICE_white_peace_tt
+		}
+		add_stability = -0.075
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		#we deny
+		name = equestria.10.c
+		hidden_effect = {
+			FROM = {
+				country_event = {
+					id = equestria.11
+					days = 7
+					random_days = 3
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {
+	#EPT/PGT denies white peace
+	id = equestria.11
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event equestria.11"
+	}
+	title = equestria.11.t
+	desc = equestria.11.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#fuck!
+		name = equestria.11.a
+	}
+}
+country_event = {
+	#harmonists vs fascist civil war 
+	id = equestria.12
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event equestria.12"
+		hidden_effect = {
+			if = {
+				limit = {
+					has_completed_focus = eqs_focus_prince_blueblood_speaches
+				}
+				start_civil_war = {
+					ideology = harmony
+					size = civil_war_power
+					keep_unit_leaders_trigger = {
+						OR = {
+							can_be_country_leader = yes					#prevent country leader transfer - optional, but recommended
+							has_character_political_loyalty = yes		#keep loyal characters
+							has_trait = sympathizes_harmony_trait		#keep unloyal chacharcters - made for proper transfer script work
+						}
+					}
+					set_temp_variable = {
+						transfer_chance = civil_war_power				#defines chance of transfer if character loyal to both sides, optional, default is 0.5
+					}
+					transfer_unit_leader_by_ideology_sympathy = yes		#transfers character (if unloyal or loyal to both sides with chance "transfer_chance")
+					transfer_operative_by_ideology_sympathy = yes
+				}
+			}
+			else = {
+				start_civil_war = {
+					ideology = fascism
+					size = civil_war_power
+					keep_unit_leaders_trigger = {
+						OR = {
+							can_be_country_leader = yes					#prevent country leader transfer - optional, but recommended
+							has_character_political_loyalty = yes		#keep loyal characters
+							has_trait = sympathizes_fascism_trait		#keep unloyal chacharcters - made for proper transfer script work
+						}
+					}
+					set_temp_variable = {
+						transfer_chance = civil_war_power				#defines chance of transfer if character loyal to both sides, optional, default is 0.5
+					}
+					transfer_unit_leader_by_ideology_sympathy = yes		#transfers character (if unloyal or loyal to both sides with chance "transfer_chance")
+					transfer_operative_by_ideology_sympathy = yes
+				}
+			}
+			clear_variable = civil_war_power
+			remove_ideas = EQS_harmony_vs_fascism_civil_war_preparations
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+	title = equestria.12.t
+	desc = equestria.12.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#fuck them!
+		name = equestria.12.a
+	}
+}
+#country event 13 (appeal to leader)
+country_event = {
+	#harmonists vs fascist civil war 
+	id = equestria.13
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event equestria.12"
+	}
+	title = equestria.13.t
+	desc = equestria.13.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#we agree to cooperate
+		name = equestria.13.a
+		if = {
+			limit = {
+				has_government = harmony
+			}
+			add_political_power = 10
+		}
+		else = {
+			add_stability = -0.05
+			add_political_power = -10
+			add_popularity = {
+				ideology = harmony
+				popularity = 0.05
+			}
+		}
+		if = {
+			limit = {
+				PGT = {
+					has_country_flag = cooperation_with_twilight
+				}
+			}
+			white_peace = PGT
+		}
+		else_if = {
+			limit = {
+				EPT = {
+					has_country_flag = cooperation_with_twilight
+				}
+			}
+			white_peace = EPT
+		}
+		set_country_flag = cooperation_with_twilight
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		#we deny to cooperate
+		name = equestria.13.a
+		add_war_support = 0.05
+		reverse_add_opinion_modifier = {
+			target = FROM
+			modifier = denied_cooperation_with_twilight
+		}
+		ai_chance = {
+			base = 1
 		}
 	}
 }

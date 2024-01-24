@@ -1,7 +1,7 @@
-d_csarv = {
+d_csarv = {	#only for debug issues
 	calc_surplus_appropriation_real_values = yes
 }
-d_sa_flag = {
+d_sa_flag = {	#d_ added for debug issues
 	if = {
 		limit = {
 			has_country_flag = no_sa_impact
@@ -13,7 +13,7 @@ d_sa_flag = {
 	}
 }
 calc_surplus_appropriation_real_values = {
-	#calc army consumtion (to do)
+	#calc army consumtion (to do more complicated and precise)
 	#calc consumers
 	set_variable = {
 		raw_consumers^0 = max_manpower_k
@@ -37,22 +37,67 @@ calc_surplus_appropriation_real_values = {
 		array = raw_consumers
 		value = v
 		index = i
-		set_temp_variable = {
-			t = v
+		set_variable = {
+			consumers^i = v
 		}
-		multiply_temp_variable = {
-			t = surplus_appropriation_weights^i
+		multiply_variable = {
+			consumers^i = surplus_appropriation_weights^i
 		}
 		set_variable = {
-			consumers^i = t
+			super_raw_consumers^i = consumers^i
 		}
+	}
+	#applying modifiers#
+	multiply_variable = {
+		consumers^0 = mtth:civil_consumption_factor
+	}
+	clamp_variable = {
+		var = consumers^0
+		min = 0
+	}
+	multiply_variable = {
+		consumers^1 = mtth:facilities_consumption_factor
+	}
+	clamp_variable = {
+		var = consumers^1
+		min = 0
+	}
+	multiply_variable = {
+		consumers^2 = mtth:army_consumption_factor
+	}
+	clamp_variable = {
+		var = consumers^2
+		min = 0
+	}
+	#calc total consumtion
+	for_each_loop = {
+		array = consumers
+		value = v
 		add_to_variable = {
-			sa_consumtion_sum = t
+			sa_consumtion_sum = v
 		}
 	}
 	#calc resource appropriation
 	set_variable = {
 		food_storage_change = resource@food
+	}
+	if = {
+		limit = {
+			#prevent negative effect from buffing negative resources
+			check_variable = {
+				food_storage_change > 0
+			}
+		}
+		multiply_variable = {
+			food_storage_change = mtth:food_gain_factor
+		}
+		clamp_variable = {
+			var = food_storage_change
+			min = 0
+		}
+	}
+	add_to_variable = {
+		food_storage_change = modifier@food_gain
 	}
 	subtract_from_variable = {
 		food_storage_change = sa_consumtion_sum
@@ -70,10 +115,10 @@ calc_surplus_appropriation_real_values = {
 			}
 		}
 		set_temp_variable = {
-			food_final = food_storage_value
+			food_vs_consumtion = food_storage_value
 		}
-		add_to_temp_variable = {
-			food_final = resource@food
+		divide_temp_variable = {
+			food_vs_consumtion = negative_food_storage_change
 		}
 		for_each_loop = {
 			array = consumers
@@ -84,20 +129,11 @@ calc_surplus_appropriation_real_values = {
 						raw_consumers^i > 0
 					}
 				}
-				set_temp_variable = {
-					t = consumers^i
-				}
-				divide_temp_variable = {
-					t = sa_consumtion_sum
-				}
-				multiply_temp_variable = {
-					t = food_final
-				}
-				divide_temp_variable = {
-					t = raw_consumers^i
-				}
 				set_variable = {
-					surplus_appropriation_real_values^i = t
+					surplus_appropriation_real_values^i = surplus_appropriation_weights^i
+				}
+				multiply_variable = {
+					surplus_appropriation_real_values^i = food_vs_consumtion
 				}
 			}
 			else = {
@@ -125,23 +161,13 @@ calc_surplus_appropriation_real_values = {
 	d_update_sa_gui = yes
 }
 calc_surplus_appropriation_min_value = {
-	set_variable = {
-		sa_min_value = surplus_appropriation_real_values^0
+	find_lowest_in_array = {
+		array = surplus_appropriation_real_values
+		value = temp_sa_min_value
 	}
-	for_loop_effect = {
-		start = 1
-		end = surplus_appropriation_real_values^num
-		value = i
-		if = {
-			limit = {
-				check_variable = {
-					surplus_appropriation_real_values^i < sa_min_value
-				}
-			}
-			set_variable = {
-				sa_min_value = surplus_appropriation_real_values^i
-			}
-		}
+	#find_lowest_in_array value stores temp variable - set to non temp variable
+	set_variable = {
+		sa_min_value = temp_sa_min_value
 	}
 }
 sa_tick_effects = {
@@ -177,10 +203,7 @@ sa_tick_effects = {
 				surplus_appropriation_mod_values^i = v
 			}
 			multiply_variable = {
-				surplus_appropriation_mod_values^i = 0.005
-			}
-			multiply_variable = {
-				surplus_appropriation_mod_values^i = 1000
+				surplus_appropriation_mod_values^i = 5
 			}
 		}
 	}
@@ -215,10 +238,118 @@ update_sa_progressbar_frame = {
 		}
 	}
 }
+#use script for modifing food storage directly with tooltip and food consumption update
+#use temp vars delta_food_storage for modification
+add_to_food_storage = {
+	multiply_temp_variable = {
+		delta_food_storage = -1
+	}
+	clamp_temp_variable = {
+		var = delta_food_storage
+		max = food_storage_value
+	}
+	if = {
+		limit = {
+			NOT = {
+				check_variable = {
+					delta_food_storage = 0
+				}
+			}
+		}
+		multiply_temp_variable = {
+			delta_food_storage = -1
+		}
+		add_to_variable = {
+			food_storage_value = delta_food_storage
+		}
+		calc_surplus_appropriation_real_values = yes
+		calc_surplus_appropriation_min_value = yes
+		for_each_loop = {
+			array = surplus_appropriation_real_values
+			index = i
+			value = v
+			#floor(surplus_appropriation_mod_values[i]) * 5
+			#for index purposes (persent 0-200 to index 0-10)
+			set_variable = {
+				surplus_appropriation_mod_values^i = v
+			}
+			multiply_variable = {
+				surplus_appropriation_mod_values^i = 5
+			}
+		}
+		custom_effect_tooltip = change_food_storage_value
+	}
+}
 #IMPORTANT FOR GUI: CALL THIS IF YOU WANT TO DISABLE, DON`t JUST SET COUNTRY FLAG
+#Note: this will also close surplus appropriation window
 disable_sa_mechanic = {
 	set_variable = {
 		sam_menu = 0
 	}
 	set_country_flag = no_sa_impact
+}
+#harvest failure update (for proper indication)
+#use temp vars delta_harvest_failure_food & delta_harvest_failure_supply for modification
+#NOTE: adding positive value will make modifier more powerfull
+#NOTE: USE IN COUNTRY SCOPE!
+harvest_failure_update = {
+	if = {
+		limit = {
+			has_dynamic_modifier = {
+				modifier = harvest_failure_modifier
+			}
+		}
+		clamp_temp_variable = {
+			var = delta_harvest_failure_food
+			min = harvest_failure_food
+		}
+		clamp_temp_variable = {
+			var = delta_harvest_failure_supply
+			min = harvest_failure_supply
+		}
+		if = {
+			limit = {
+				check_variable = {
+					delta_harvest_failure_food = harvest_failure_food
+				}
+				check_variable = {
+					delta_harvest_failure_supply = harvest_failure_supply
+				}
+			}
+			remove_dynamic_modifier = {
+				modifier = harvest_failure_modifier
+			}
+			clear_variable = harvest_failure_food
+			clear_variable = harvest_failure_supply
+		}
+		else_if = {
+			limit = {
+				OR = {
+					check_variable = {
+						var = delta_harvest_failure_food
+						value = 0
+						compare = not_equals
+					}
+					check_variable = {
+						var = delta_harvest_failure_supply
+						value = 0
+						compare = not_equals
+					}
+				}
+			}
+			subtract_from_variable = {
+				harvest_failure_food = delta_harvest_failure_food
+			}
+			subtract_from_variable = {
+				harvest_failure_supply = delta_harvest_failure_supply
+			}
+			multiply_temp_variable = {
+				delta_harvest_failure_food = -1
+			}
+			multiply_temp_variable = {
+				delta_harvest_failure_supply = -1
+			}
+			custom_effect_tooltip = change_harvest_failure_modifier
+		}
+	}
 }

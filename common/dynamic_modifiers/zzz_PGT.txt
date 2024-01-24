@@ -1,5 +1,5 @@
 PGT_las_pegasus_defence_district = {
-	icon = clockwerk_economy			#to do (change)
+	icon = GFX_idea_clockwerk_economy			#to do (change)
 	enable = {
 		always = yes
 	}
@@ -8,4 +8,49 @@ PGT_las_pegasus_defence_district = {
 	local_manpower = 0.5
 	mobilization_speed = 0.1
 	state_repair_speed_bunker_factor = 0.25
+}
+PGT_northern_pockets = {
+	icon = GFX_idea_clockwerk_economy			#to do (change)
+	enable = {
+		always = yes
+	}
+	surrender_limit = surrender_under_northern_pockets
+	army_core_attack_factor = attack_under_northern_pockets
+	army_core_defence_factor = defence_under_northern_pockets
+	army_morale_factor = morale_under_northern_pockets
+	initiative_factor = initiative_under_northern_pockets
+	pocket_penalty = pocket_penalty_under_northern_pockets
+}
+PGT_eastern_pockets = {
+	icon = GFX_idea_clockwerk_economy			#to do (change)
+	enable = {
+		always = yes
+	}
+	surrender_limit = surrender_under_eastern_pockets
+	army_core_attack_factor = attack_under_eastern_pockets
+	army_core_defence_factor = defence_under_eastern_pockets
+	army_morale_factor = morale_under_eastern_pockets
+	initiative_factor = initiative_under_eastern_pockets
+	pocket_penalty = pocket_penalty_under_eastern_pockets
+}
+PGT_vinnisota_autonomy = {
+	icon = GFX_idea_clockwerk_economy			#to do (change)
+	enable = {
+		always = yes
+	}
+	state_resources_factor = -0.75
+	local_factories = -0.75
+	local_building_slots_factor = -0.8
+	local_intel_to_enemies = -0.25
+}
+PGT_food_stamps = {
+	icon = GFX_idea_clockwerk_economy			#to do (change)
+	enable = {
+		always = yes
+	}
+	stability_factor = pgt_food_stamps_sf
+	war_support_factor = pgt_food_stamps_wsf
+	civil_consumption_factor = pgt_food_stamps_ccf
+	facilities_consumption_factor = pgt_food_stamps_fcf
+	army_consumption_factor = pgt_food_stamps_acf
 }

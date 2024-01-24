@@ -1,0 +1,116 @@
+characters = {
+	PGT_cloudforce = {
+		name = PGT_cloudforce
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+			}
+			army = {
+				large = "GFX_portrait_marshal_unknown" #to do
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_982_CLOUDFORCE_DESC"
+			ideology = moderate_militarism
+			traits = {}
+			expire = "1965.1.1.1"
+		}
+		field_marshal = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 1
+			logistics_skill = 1
+			traits = {
+				politically_connected
+				old_guard
+			}
+		}
+	}
+	PGT_rainbowdash = {
+		name = PGT_rainbowdash
+		#to do
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor" #to do
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = PGT_rainbowdash
+			traits = {
+				ideological_inspirer
+			}
+			allowed = {
+				OR = {
+					original_tag = EQS
+					original_tag = PGT
+				}
+			}
+			available = {
+				#to do
+			}
+			visible = {
+				#to do
+			}
+		}
+	}
+	PGT_fluttershy = {
+		name = PGT_fluttershy
+		#to do
+		portraits = {
+			civilian = {
+				small = "GFX_idea_unknown_advisor" #to do
+			}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = PGT_fluttershy
+			traits = {
+				defender_of_nature
+			}
+			allowed = {
+				OR = {
+					original_tag = EQS
+					original_tag = PGT
+				}
+			}
+			available = {
+				#to do
+			}
+			visible = {
+				#to do
+			}
+		}
+	}
+	#army leaders (by focus)
+	PGT_soarin = {
+		name = PGT_soarin
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+				small = "" #to do
+			}
+		}
+	}
+	PGT_mistyfly = {
+		name = PGT_mistyfly
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+				small = "" #to do
+			}
+		}
+		gender = female
+	}
+	PGT_spitfire = {
+		name = PGT_spitfire
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+				small = "" #to do
+			}
+		}
+		gender = female
+	}
+}

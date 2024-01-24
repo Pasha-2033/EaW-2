@@ -46,6 +46,10 @@ country_event = {
 					}
 				}
 			}
+			#update focuses for countries that have dependency on CRY tag in allow_branch
+			PGT = {
+				mark_focus_tree_layout_dirty = yes
+			}
 		}
 	}
 	title = null_magic_event.1.t
@@ -55,15 +59,9 @@ country_event = {
 	is_triggered_only = yes
 	option = {
 		name = null_magic_event.1.a
-		ai_chance = {
-			base = 100
-		}
 	}
 	option = {
 		name = null_magic_event.1.b
-		ai_chance = {
-			base = 0
-		}
 		trigger = {
 			is_ai = no
 		}

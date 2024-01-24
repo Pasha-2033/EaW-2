@@ -1,10 +1,11 @@
-met_revolution_incoming = {
+PGT_farmrs_rebelion = {
 	icon = generic_magic
 	allowed = {
-		tag = MET
+		original_tag = PGT
 	}
 	visible = {
-		has_idea = MET_separatists
+		has_idea = PGT_farmer_riot
 	}
+	scripted_gui = PGT_farmer_riot
 	priority = 333 #very important decigions
 }

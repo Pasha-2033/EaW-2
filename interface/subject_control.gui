@@ -49,6 +49,15 @@ guiTypes = {
 			clicksound = click_close
 			pdx_tooltip = "CLOSE"
 		}
+		buttonType = {
+			name = "info_button"
+			position = { x = -90 y = 7 }
+			quadTextureSprite = "GFX_info"
+			buttonFont = "Main_14_black"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_close
+			pdx_tooltip = "find_info_in_encyclopedia"
+		}
 		containerWindowType = {
 			name = "subject_items_window"
 			position = {
@@ -496,7 +505,7 @@ guiTypes = {
 							y = 10
 						}
 						size = {
-							width = 560
+							width = 480
 							height = 64
 						}
 						slotsize = {
@@ -532,15 +541,6 @@ guiTypes = {
 						maxWidth = 100
 						maxHeight = 54
 						format = CENTER
-					}
-					iconType = {
-						name = "power_concentration_limit_warnings"
-						position = {
-							x = 42
-							y = 65
-						}
-						spriteType = "GFX_power_concentration_limit_warnings"
-						pdx_tooltip = "power_concentration_limit"
 					}
 				}
 			}
@@ -1122,6 +1122,8 @@ guiTypes = {
 			quadTextureSprite = "GFX_subject_control_temp" #change (to do)
 			orientation = CENTER
 			centerposition = yes
+			pdx_tooltip = "subject_control_tl_idea_tt"
+			pdx_tooltip_delayed = "subject_control_tl_cost_tt"
 		}
 	}
 	containerWindowType = {
@@ -1136,6 +1138,7 @@ guiTypes = {
 			orientation = CENTER
 			centerposition = yes
 			pdx_tooltip = "subject_control_e_idea_tt"
+			pdx_tooltip_delayed = "subject_control_e_cost_tt"
 		}
 	}
 	containerWindowType = {
@@ -1162,7 +1165,6 @@ guiTypes = {
 			quadTextureSprite = "GFX_subject_control_temp" #change (to do)
 			orientation = CENTER
 			centerposition = yes
-			pdx_tooltip = "subject_control_pc_cost_tt"
 		}
 	}
 	containerWindowType = {

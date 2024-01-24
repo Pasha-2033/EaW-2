@@ -1,19 +1,210 @@
-met_revolution_incoming = {
-	met_mission_rebelion_incoming = {
+PGT_farmrs_rebelion  = {
+	PGT_mission_farmrs_rebelion_incoming = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
 		allowed = { 
-			original_tag = MET 
+			original_tag = PGT
 		}
 		available = {
+			NOT = {
+				has_idea = PGT_farmer_riot
+			}
+		}
+		activation = {
 			always = no
 		}
-		days_mission_timeout = 200
-		is_good = yes 
+		days_mission_timeout = 0
+		is_good = no 
 		fire_only_once = yes                        
 		selectable_mission = no
+		complete_effect = {
+			remove_ideas = PGT_farmer_riot
+			clear_variable = farmer_influence
+			hidden_effect = {
+				#end all missions - they have failed
+				remove_mission = PGT_farmers_ask_support_from_EPT
+				remove_mission = PGT_farmers_ask_support_from_OLE
+			}
+		}
 		timeout_effect = {
-			remove_ideas = MET_separatists
-			#start civ war
+			hidden_effect = {
+				#end all missions - time has come, there is no more underground activities
+				remove_mission = PGT_farmers_ask_support_from_EPT
+				remove_mission = PGT_farmers_ask_support_from_OLE
+			}
+			clamp_variable = {
+				var = farmer_influence
+				min = 0.1
+			}
+			start_civil_war = {
+				ideology = harmony
+				size = farmer_influence
+				
+				ICE = {
+					declare_war_on = {
+						target = PREV
+					}
+				}
+				keep_political_leader = yes
+			}
+			clear_variable = farmer_influence
+		}
+	}
+	#our actions
+	PGT_public_executions = {
+		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
+		allowed = { 
+			original_tag = PGT
+		}
+		cost = 20
+		days_re_enable = 14
+		complete_effect = {
+			set_temp_variable_to_random = prisoners
+			multiply_temp_variable = {
+				prisoners = -500
+			}
+			clamp_temp_variable = {
+				var = prisoners
+				max = -10
+			}
+			add_manpower = prisoners
+			subtract_from_variable = {
+				var = farmer_influence
+				value = 0.03
+				tooltip = sub_farmer_influence_3_tt
+			}
+			add_stability = -0.02
+		}
+	}
+	PGT_plunder_caches = {
+		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
+		allowed = { 
+			original_tag = PGT
+		}
+		cost = 20
+		days_re_enable = 14
+		complete_effect = {
+			subtract_from_variable = {
+				var = farmer_influence
+				value = 0.05
+				tooltip = sub_farmer_influence_5_tt
+			}
+
+		}
+	}
+	PGT_political_isolation = {
+		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
+		allowed = { 
+			original_tag = PGT
+		}
+		cost = 20
+		days_re_enable = 7
+		days_remove = 14
+		modifier = {
+			improve_relations_maintain_cost_factor = 0.1
+			opinion_gain_monthly_factor = -0.25
+		}
+		complete_effect = {
+			subtract_from_variable = {
+				var = farmer_influence
+				value = 0.05
+				tooltip = sub_farmer_influence_5_tt
+			}
+
+		}
+	}
+	PGT_cutoff_bridges_with_EPT = {
+		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
+		allowed = { 
+			original_tag = PGT
+		}
+		available = {
+			has_active_mission = PGT_farmers_ask_support_from_EPT
+		}
+		visible = {
+			#has_active_mission = PGT_farmers_ask_support_from_EPT
+		}
+		days_remove = 20
+		fire_only_once = yes
+		complete_effect = {
+			remove_mission = PGT_farmers_ask_support_from_EPT
+		}
+	}
+	PGT_cutoff_bridges_with_OLE = {
+		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
+		allowed = { 
+			original_tag = PGT
+		}
+		available = {
+			has_active_mission = PGT_farmers_ask_support_from_OLE
+		}
+		visible = {
+			#has_active_mission = PGT_farmers_ask_support_from_OLE
+		}
+		days_remove = 20
+		fire_only_once = yes
+		complete_effect = {
+			remove_mission = PGT_farmers_ask_support_from_OLE
+		}
+	}
+	#farmers` actions
+	PGT_farmers_ask_support_from_EPT = {
+		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
+		allowed = { 
+			original_tag = PGT
+		}
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		activation = {
+			always = no
+		}
+		days_mission_timeout = 50
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = no
+		timeout_effect = {
+			add_to_variable = {
+				var = farmer_influence
+				value = 0.2
+				tooltip = add_farmer_influence_20_tt
+			}
+			add_popularity = {
+				ideology = EPT
+				popularity = 0.075
+			}
+			set_country_flag = farmers_under_EPT
+		}
+	}
+	PGT_farmers_ask_support_from_OLE = {
+		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
+		allowed = { 
+			original_tag = PGT
+		}
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		activation = {
+			always = no
+		}
+		days_mission_timeout = 50
+		is_good = no 
+		fire_only_once = yes
+		selectable_mission = no
+		timeout_effect = {
+			add_to_variable = {
+				var = farmer_influence
+				value = 0.15
+				tooltip = add_farmer_influence_15_tt
+			}
+			add_popularity = {
+				ideology = OLE
+				popularity = 0.075
+			}
+			set_country_flag = farmers_under_OLE
 		}
 	}
 }

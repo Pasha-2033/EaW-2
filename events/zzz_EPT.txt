@@ -1,0 +1,153 @@
+add_namespace = earth_pony_tribe
+#change picture everywhere
+country_event = {
+	#army dislikes barrier detachments
+	id = earth_pony_tribe.1
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event earth_pony_tribe.1"
+	}
+	title = earth_pony_tribe.1.t
+	desc = earth_pony_tribe.1.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#more submission - less violence
+		name = earth_pony_tribe.1.a
+		add_war_support = -0.1
+		remove_ideas = EPT_escaped_army
+	}
+}
+country_event = {
+	#applejack adheres to harmony
+	id = earth_pony_tribe.2
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event earth_pony_tribe.2"
+	}
+	title = earth_pony_tribe.2.t
+	desc = earth_pony_tribe.2.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#it`s okay
+		name = earth_pony_tribe.2.a
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		#fire her until it`s too late!
+		name = earth_pony_tribe.2.a
+		deactivate_advisor = EPT_applejack
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = {
+	#pinkypie adheres to harmony
+	id = earth_pony_tribe.3
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event earth_pony_tribe.3"
+	}
+	title = earth_pony_tribe.3.t
+	desc = earth_pony_tribe.3.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#it`s okay
+		name = earth_pony_tribe.3.a
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		#fire her until it`s too late!
+		name = earth_pony_tribe.3.b
+		deactivate_advisor = EPT_pinkypie
+		ai_chance = {
+			base = 100
+		}
+	}
+}
+country_event = {
+	#evacuation workers and civilians of hoofington arms_basey
+	id = earth_pony_tribe.4
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event earth_pony_tribe.4"
+	}
+	title = earth_pony_tribe.4.t
+	desc = earth_pony_tribe.4.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#use army to evacuate civilians and workrs
+		name = earth_pony_tribe.4.a
+		#we can use state_population instead of state_population_k
+		#because state population can`t grow so much (from ~1M) that we were forsed to use _k
+		set_temp_variable = {
+			temp_population = 19.state_population
+		}
+		#only 50% can be evacuated
+		divide_temp_variable = {
+			temp_population = 2
+		}
+		#we don`t want to add 1.5 of manpower, do we?
+		round_temp_variable = temp_population
+		capital_scope = {
+			add_manpower = temp_population
+		}
+		multiply_temp_variable = {
+			temp_population = -1
+		}
+		19 = {
+			add_manpower = temp_population
+		}
+		add_timed_idea = {
+			idea = EPT_full_evacuation_of_hoofington
+			days = 35
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		#use army to evacuate only workrs
+		name = earth_pony_tribe.4.b
+		#we can use state_population instead of state_population_k
+		#because state population can`t grow so much (from ~1M) that we were forsed to use _k
+		set_temp_variable = {
+			temp_population = 19.state_population
+		}
+		#only 10% can be evacuated
+		divide_temp_variable = {
+			temp_population = 10
+		}
+		#we don`t want to add 1.5 of manpower, do we?
+		round_temp_variable = temp_population
+		capital_scope = {
+			add_manpower = temp_population
+		}
+		multiply_temp_variable = {
+			temp_population = -1
+		}
+		19 = {
+			add_manpower = temp_population
+		}
+		add_stability = -0.1
+		add_timed_idea = {
+			idea = EPT_partial_evacuation_of_hoofington
+			days = 35
+		}
+		ai_chance = {
+			base = 100
+		}
+	}
+	option = {
+		#there is nothing we can do
+		name = earth_pony_tribe.4.c
+		add_stability = -0.25
+		ai_chance = {
+			base = 100
+		}
+	}
+}

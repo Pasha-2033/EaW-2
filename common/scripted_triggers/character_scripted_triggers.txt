@@ -1,11 +1,11 @@
 #call this triggers in character scope!
 has_unit_leader_political_trait = {
 	OR = {
-		has_unit_leader_sympathizes = yes
+		has_unit_leader_political_leadership_trait = yes
 		has_unit_leader_political_sympathy_trait = yes
 	}
 }
-has_unit_leader_sympathizes = {
+has_unit_leader_political_leadership_trait = {
 	OR = {
 		has_trait = country_leader_trait_democratic
 		has_trait = country_leader_trait_communism
@@ -35,6 +35,21 @@ has_unit_leader_political_sympathy_trait = {
 		has_trait = sympathizes_technocracy_trait
 		has_trait = sympathizes_anarchism_trait
 		has_trait = sympathizes_militarism_trait
+	}
+}
+#use in unit leader/operative scope
+has_character_political_loyalty = {
+	#PDX can`t use "owner" in localisation stack, setting temp variable
+	owner = {
+		set_temp_variable = {
+			PREV.owner_ideology = current_party_ideology_group
+		}
+	}
+	meta_trigger = {
+		text = {
+			has_trait = sympathizes_[I]_trait
+		}
+		I = "[?owner_ideology.GetTokenKey]"
 	}
 }
 has_race_trait = {

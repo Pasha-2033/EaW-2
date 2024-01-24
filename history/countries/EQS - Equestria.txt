@@ -12,10 +12,9 @@ if = { #982 scenario script
 		tech_unicorn = 1
 	}
 	set_popularities = {
-		harmony = 8
-		radicalism = 3
-		socialism = 1
-		fascism = 88
+		harmony = 10
+		radicalism = 5
+		fascism = 85
 	}
 	set_politics = {
 		ruling_party = fascism
@@ -26,16 +25,29 @@ if = { #982 scenario script
 	recruit_character = EQS_982_celestia
 	recruit_character = EQS_982_prince_blueblood
 	recruit_character = EQS_982_twilight
+	recruit_character = EQS_982_rarity
 	add_ideas = {
 		extensive_conscription
 		partial_economic_mobilisation
 		import_focus
 		authoritarism
 		pony_race
-		eqs_pgt_ept_scared_by_ice
 		EQS_unicorn_superiority
 		EQS_tribal_crisis
 		EQS_magically_sealed_discord
+	}
+	#set surplus appropriation
+	set_variable = {
+		food_storage_value = 2100
+	}
+	set_variable = {
+		surplus_appropriation_weight_0 = 0.2
+	}
+	set_variable = {
+		surplus_appropriation_weight_1 = 0.2
+	}
+	set_variable = {
+		surplus_appropriation_weight_2 = 1
 	}
 	#harvest failure
 	set_variable = {

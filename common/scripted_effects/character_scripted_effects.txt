@@ -1,11 +1,9 @@
-#use in unit leader (officer) scope!
+#use in unit leader (promotedd from officer) scope!
 generate_militarist_advisor = {
 	if = {
 		limit = {
 			owner = {
 				NOT = {
-					has_country_flag = no_generic_militarist_political_advisor
-					has_custom_advisors = yes
 					has_allowed_idea_with_traits = {
 						idea = armourer
 						characters = yes
@@ -21,12 +19,44 @@ generate_militarist_advisor = {
 				traits = {
 					armourer
 				}
-				#role addition can`t have triggers
+				#TODO: role addition can`t have triggers
 				#available = {
 				#	militarism > 0.15
 				#}
 			}
 		}
+	}
+}
+try_replacing_militarist = {
+	#if any unit leader is militarist - do nothing, we already have militarist
+	if = {
+		limit = {
+			NOT = {
+				any_character = {
+					is_unit_leader = yes
+					has_ideology_group = militarism
+				}
+			}
+		}
+		random_unit_leader = {
+			limit = {
+				is_field_marshal = yes
+			}
+			add_unit_leader_trait = country_leader_trait_militarism
+			add_country_leader_role = {
+				promote_leader = no
+				country_leader = {
+					ideology = ultramilitarism
+					traits = {}
+				}
+			}
+		}
+		#kill generic militarist
+		kill_ideology_leader = militarism
+	}
+	else = {
+		#tooltip for nice desc
+		custom_effect_tooltip = random_marshal_try_becoming_militarist
 	}
 }
 generate_portrait = {
@@ -52,39 +82,174 @@ generate_portrait = {
 		log = "Error - can`t get character without token"
 	}
 }
+#use in unit leader/operative scope
 generate_race_trait = {
 	if = {
 		limit = {
-			owner = {
-				has_idea = multi_race
+			has_race_trait = no
+		}
+		if = {
+			limit = {
+				owner = {
+					has_idea = multi_race
+				}
+			}
+			add_trait = {
+				trait = generic_race_trait
 			}
 		}
-		add_trait = {
-			trait = generic_race_trait
-		}
-	}
-	else = {
-		for_each_loop = {
-			array = global.race_idea_tokens
-			value = v
-			meta_effect = {
-				text = {
-					if = {
-						limit = {
-							owner = {
-								has_idea = [I]
+		else = {
+			for_each_loop = {
+				array = global.race_idea_tokens
+				value = v
+				meta_effect = {
+					text = {
+						if = {
+							limit = {
+								owner = {
+									has_idea = [I]
+								}
+							}
+							add_trait = {
+								trait = [I]_trait
+							}
+							set_temp_variable = {
+								break = 1
 							}
 						}
-						add_trait = {
-							trait = [I]_trait
-						}
-						set_temp_variable = {
-							break = 1
-						}
 					}
+					I = "[?v.GetTokenKey]"
 				}
-				I = "[?v.GetTokenKey]"
 			}
 		}
 	}
 }
+#use in unit leader scope
+#NOTE: use this only at game start - because it can`t regulate between sympathy, leadership and neutrality to ideology
+#it just fills country_leader_trait_<ideology> if character has country leader role
+#if removing country leader role, it would be more optimised to remove country_leader_trait_<ideology> (and probably add sympathy after) than calling this metaeffect
+generate_country_leader_trait = {
+	for_each_loop = {
+		array = global.ideology_groups
+		value = v
+		meta_effect = {
+			text = {
+				if = {
+					limit = {
+						has_ideology_group = [I]
+					}
+					add_trait = {
+						trait = country_leader_trait_[I]
+					}
+					#if leading ideology - can`t follow it, remove sympathy
+					#this code fixes status redundancy, but not solves these errors in character files completely
+					#please do not use sympathizes_<ideology>_trait in unit leader role if character has country_leader role (in character file)
+					if = {
+						limit = {
+							has_trait = sympathizes_[I]_trait
+						}
+						remove_trait = {
+							trait = sympathizes_[I]_trait
+						}
+						log = "MOD CODE ERROR: character [GetName] has sympathizes_[I]_trait when he leading this ideology"
+					}
+				}
+				#can`t lead not yours ideology, remove leadership
+				#please do not use country_leader_trait_<ideology> in unit leader role if character has no country_leader role for <ideology> (in character file)
+				else_if = {
+					limit = {
+						has_trait = country_leader_trait_[I]
+					}
+					remove_trait = {
+						trait = country_leader_trait_[I]
+					}
+					log = "MOD CODE ERROR: character [GetName] has country_leader_trait_[I] when he not leading this ideology"
+				}
+			}
+			I = "[?v.GetTokenKey]"
+		}
+	}
+}
+#NOTE: it`s default script, if you have more complicated civil war - use your own sorter, application example is below
+#REMEMBER: EVERY COUNTRY CAN HAVE CHARACTER WITH UNPREDICTED BY CONTENT/LORE IDEOLOGY TRAIT!
+#THIS is receiver (variable "transfer_chance" defines chance of transfer if character loyal to both sides)
+#PREV is original owner
+transfer_unit_leader_by_ideology_sympathy = {
+	#PDX can`t use "owner" in localisation stack
+	set_temp_variable = {
+		PREV.this_ideology = current_party_ideology_group
+	}
+	PREV = {
+		every_unit_leader = {
+			limit = {
+				meta_trigger = {
+					text = {
+						has_trait = sympathizes_[I]_trait
+					}
+					I = "[?PREV.PREV.current_party_ideology_group.GetTokenKey]"
+				}
+				if = {
+					limit = {
+						has_character_political_loyalty = yes
+					}
+					check_variable = {
+						random > PREV.PREV.transfer_chance?0.5
+					}
+				}
+				#country leader with unit leader role - another type of transfer
+				#it`s too complicated to de generic coded, default - all political leaders will be kept
+				can_be_country_leader = no
+			}
+			set_nationality = PREV.PREV
+		}
+	}
+}
+#NOTE: it`s default script, if you have more complicated civil war - use your own sorter, application example is below
+#REMEMBER: EVERY COUNTRY CAN HAVE CHARACTER WITH UNPREDICTED BY CONTENT/LORE IDEOLOGY TRAIT!
+#THIS is receiver (variable "transfer_chance" defines chance of transfer if character loyal to both sides)
+#PREV is original owner
+transfer_operative_by_ideology_sympathy = {
+	PREV = {
+		every_operative = {
+			limit = {
+				meta_trigger = {
+					text = {
+						has_trait = sympathizes_[I]_trait
+					}
+					I = "[?PREV.PREV.current_party_ideology_group.GetTokenKey]"
+				}
+				if = {
+					limit = {
+						has_character_political_loyalty = yes
+					}
+					check_variable = {
+						random > PREV.PREV.transfer_chance?0.5
+					}
+				}
+				#country leader with operative role - another type of transfer
+				#it`s too complicated to de generic coded, default - all political leaders will be kept
+				can_be_country_leader = no
+			}
+			set_nationality = PREV.PREV
+		}
+	}
+}
+#GENERIC CIVIL WAR EXAMPLE:
+#start_civil_war = {
+#	ideology = <ideology>
+#	keep_unit_leaders_trigger = {
+#		OR = {
+#			can_be_country_leader = yes					#prevent country leader transfer - optional, but recommended
+#			has_character_political_loyalty = yes		#keep loyal characters
+#			has_trait = sympathizes_radicalism_trait	#keep unloyal chacharcters - made for proper transfer script work
+#		}
+#	}
+#	set_temp_variable = {
+#		transfer_chance = 0.25							#defines chance of transfer if character loyal to both sides, optional, default is 0.5
+#	}
+#	transfer_unit_leader_by_ideology_sympathy = yes		#transfers character (if unloyal or loyal to both sides with chance "transfer_chance")
+#	set_temp_variable = {
+#		transfer_chance = 0.75							#defines chance of transfer if character loyal to both sides, optional, default is 0.5
+#	}
+#	transfer_operative_by_ideology_sympathy = yes
+#}

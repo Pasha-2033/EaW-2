@@ -1,6 +1,7 @@
-#Windigo time focuses
+#!gfx:interface\zzz_EPT.gfx
+#Windigo time focuses (stage 1)
 focus_tree = {
-	id = ept_focus_tree
+	id = ept_focus_tree_windigo
 	country = {
 		base = 0
 		modifier = {
@@ -13,19 +14,518 @@ focus_tree = {
 		x = 2700
 		y = 1350
 	}
-	shared_focus = eqs_pgt_ept_winter_spirits
+	#defencive branch
+	focus = {
+		id = ept_focus_inevitable_defense
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 14
+		y = 0
+		ai_will_do = {
+			base = 200
+		}
+		allow_branch = {
+			has_completed_focus = ept_focus_directive_number_one
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_inevitable_defense"
+			if = {
+				limit = {
+					has_great_project_hooftagon = yes
+				}
+				add_to_variable = {
+					hooftagon^61 = 0.01
+					tooltip = addadd_hooftagon_i61_1_i62_1_tt
+				}
+				add_to_variable = {
+					hooftagon^62 = 0.01
+				}
+			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = EPT_government_formation
+					}
+				}
+				add_power_balance_value = {
+					id = EPT_government_formation
+					value = 0.01
+				}
+			}
+		}
+	}
+	focus = {
+		id = ept_focus_hooffington_arch
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 1
+		y = 1
+		relative_position_id = ept_focus_inevitable_defense
+		prerequisite = {
+			focus = ept_focus_inevitable_defense
+		}
+		ai_will_do = {
+			base = 200
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = controls_mountainous_region_of_hills_of_hugs_tt
+				controls_province = 606
+				controls_province = 797
+				controls_province = 817
+				controls_province = 11572
+				controls_province = 11741
+			}
+			custom_trigger_tooltip = {
+				tooltip = controls_opposite_bank_hooffington_river_tt
+				controls_province = 9595
+				controls_province = 9611
+				controls_province = 11594
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_hooffington_arch"
+			if = {
+				limit = {
+					has_great_project_hooftagon = yes
+				}
+				add_to_variable = {
+					hooftagon^61 = 0.01
+					tooltip = addadd_hooftagon_i61_1_i62_1_tt
+				}
+				add_to_variable = {
+					hooftagon^62 = 0.01
+				}
+			}
+			19 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = {
+						id = 606
+						id = 797
+						id = 817
+						id = 11572
+						id = 11741
+					}
+				}
+			}
+			81 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = {
+						id = 9595
+						id = 9611
+						id = 11594 
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = EPT_government_formation
+					}
+				}
+				add_power_balance_value = {
+					id = EPT_government_formation
+					value = 0.01
+				}
+			}
+		}
+	}
+	focus = {
+		id = ept_focus_fortify_city_galloprey
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 3
+		y = 1
+		relative_position_id = ept_focus_inevitable_defense
+		prerequisite = {
+			focus = ept_focus_inevitable_defense
+		}
+		ai_will_do = {
+			base = 200
+		}
+		available = {
+			controls_state = 50
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_fortify_city_galloprey"
+			50 = {
+				add_building_construction = {
+					type = bunker
+					level = 2
+					instant_build = yes
+					province = 9572
+				}
+			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = EPT_government_formation
+					}
+				}
+				add_power_balance_value = {
+					id = EPT_government_formation
+					value = 0.01
+				}
+			}
+		}
+	}
+	focus = {
+		id = ept_focus_ayakatchli_galloprey_line
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = ept_focus_fortify_city_galloprey
+		prerequisite = {
+			focus = ept_focus_fortify_city_galloprey
+		}
+		ai_will_do = {
+			base = 200
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = controls_opposite_bank_galloprey_river_tt
+				controls_province = 3943
+				controls_province = 6513
+				controls_province = 6942
+				controls_province = 6983
+				controls_province = 9524
+				controls_province = 9586
+				controls_province = 9894
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_ayakatchli_galloprey_line"
+			if = {
+				limit = {
+					has_great_project_hooftagon = yes
+				}
+				add_to_variable = {
+					hooftagon^61 = 0.01
+					tooltip = addadd_hooftagon_i61_1_i62_1_tt
+				}
+				add_to_variable = {
+					hooftagon^62 = 0.01
+				}
+			}
+			15 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 9524
+				}
+			}
+			32 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = {
+						id = 3943
+						id = 6942
+						id = 6983
+						id = 9586
+					}
+				}
+			}
+			86 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = {
+						id = 6513
+						id = 9894
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = EPT_government_formation
+					}
+				}
+				add_power_balance_value = {
+					id = EPT_government_formation
+					value = 0.01
+				}
+			}
+		}
+	}
+	focus = {
+		id = ept_focus_teonaltzintli_stronghold
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -1
+		y = 1
+		relative_position_id = ept_focus_inevitable_defense
+		prerequisite = {
+			focus = ept_focus_inevitable_defense
+		}
+		ai_will_do = {
+			base = 200
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = controls_teonaltzintli_and_its_surroundings_tt
+				controls_province = 3444
+				controls_province = 3553
+				controls_province = 11456
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_tеonaltzintli_stronghold"
+			88 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 11456
+				}
+			}
+			348 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = {
+						id = 3444
+						id = 3553
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = EPT_government_formation
+					}
+				}
+				add_power_balance_value = {
+					id = EPT_government_formation
+					value = 0.01
+				}
+			}
+		}
+	}
+	focus = {
+		id = ept_focus_teonaltzintli_great_wall
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = ept_focus_teonaltzintli_stronghold
+		prerequisite = {
+			focus = ept_focus_teonaltzintli_stronghold
+		}
+		ai_will_do = {
+			base = 200
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = controls_teonaltzintli_river_and_shore_tt
+				controls_province = 3547
+				controls_province = 9429
+				controls_province = 11556
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_tеonaltzintli_great_wall"
+			if = {
+				limit = {
+					has_great_project_hooftagon = yes
+				}
+				add_to_variable = {
+					hooftagon^61 = 0.01
+					tooltip = addadd_hooftagon_i61_1_i62_1_tt
+				}
+				add_to_variable = {
+					hooftagon^62 = 0.01
+				}
+			}
+			88 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 3547
+				}
+			}
+			348 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 9429
+				}
+			}
+			350 = {
+				add_building_construction = {
+					type = bunker
+					level = 1
+					instant_build = yes
+					province = 11556
+				}
+			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = EPT_government_formation
+					}
+				}
+				add_power_balance_value = {
+					id = EPT_government_formation
+					value = 0.01
+				}
+			}
+		}
+	}
+	focus = {
+		id = ept_focus_ukoltan_port
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = ept_focus_teonaltzintli_great_wall
+		prerequisite = {
+			focus = ept_focus_teonaltzintli_great_wall
+		}
+		ai_will_do = {
+			base = 200
+		}
+		available = {
+			has_full_control_of_state = 25
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_tеonaltzintli_great_wall"
+			25 = {
+				add_building_construction = {
+					type = naval_base
+					level = 1
+					instant_build = yes
+					province = 336
+				}
+			}
+		}
+	}
+	focus = {
+		id = ept_focus_our_last_arms_factory
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -3
+		y = 1
+		relative_position_id = ept_focus_inevitable_defense
+		prerequisite = {
+			focus = ept_focus_inevitable_defense
+		}
+		ai_will_do = {
+			base = 200
+		}
+		available = {
+			controls_state = 19
+		}
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		cancelable = no
+		select_effect = {
+			19 = {
+				remove_building = {
+					type = arms_factory
+					level = 1
+				}
+			}
+			country_event = {
+				id = earth_pony_tribe.4
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_our_last_arms_factory"
+			capital_scope = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				if = {
+					limit = {
+						ROOT = {
+							NOT = {
+								controls_state = 19
+							}
+						}
+					}
+					damage_building = {
+						type = arms_factory
+						damage = 0.25
+					}
+				}
+			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = EPT_government_formation
+					}
+				}
+				add_power_balance_value = {
+					id = EPT_government_formation
+					value = 0.01
+				}
+			}
+		}
+	}
+	focus = {
+		id = ept_focus_corps_of_scientists
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		relative_position_id = ept_focus_our_last_arms_factory
+		prerequisite = {
+			focus = ept_focus_our_last_arms_factory
+		}
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_corps_of_scientists"
+			add_popularity = {
+				ideology = technocracy
+				popularity = 0.05
+			}
+			add_research_slot = 1
+			#TODO call event to countries with greate scientists for scientific cooperation of windigo research (in other focus)
+			if = {
+				limit = {
+					has_power_balance = {
+						id = EPT_government_formation
+					}
+				}
+				add_power_balance_value = {
+					id = EPT_government_formation
+					value = 0.01
+				}
+			}
+		}
+	}
 	#common branch
 	focus = {
 		id = ept_focus_marshal_of_countrymen
 		icon = GFX_goal_generic_changeling
 		cost = 5
-		x = 16
+		x = 4
 		y = 0
 		ai_will_do = {
 			base = 200
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_marshal_of_countrymen"
+			increase_power_concentration_idea = yes
 		}
 	}
 	focus = {
@@ -43,6 +543,13 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_new_and_young_government"
+			swap_ideas = {
+				remove_idea = EPT_not_a_goverment
+				add_idea = young_state
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
 		}
 	}
 	focus = {
@@ -60,6 +567,19 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_directive_number_one"
+			set_power_balance = {
+				id = EPT_government_formation
+				set_default = yes
+			}
+			add_power_balance_modifier = {
+				id = EPT_government_formation
+				modifier = EPT_directive_number_one
+			}
+			mark_focus_tree_layout_dirty = yes
+			custom_effect_tooltip = copperhoof_gains_special_powers_tt
+		}
+		search_filters = {
+			FOCUS_FILTER_BALANCE_OF_POWER
 		}
 	}
 	focus = {
@@ -77,6 +597,23 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_directive_volunteer_mobilisation"
+			if = {
+				limit = {
+					has_great_project_hooftagon = yes
+				}
+				add_to_variable = {
+					hooftagon^24 = 0.05
+					tooltip = add_hooftagon_i24_5_tt
+				}
+				add_manpower = 12500
+			}
+			else = {
+				add_manpower = 15000
+			}
+			add_stability = -0.05
+		}
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
 		}
 	}
 	focus = {
@@ -94,6 +631,19 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_directive_army_mobilising"
+			if = {
+				limit = {
+					has_great_project_hooftagon = yes
+				}
+				add_to_variable = {
+					hooftagon^24 = 0.05
+					tooltip = add_hooftagon_i24_5_tt
+				}
+			}
+			increase_mobilization_law_idea = yes
+		}
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
 		}
 	}
 	focus = {
@@ -111,6 +661,25 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_directive_special_powers"
+			if = {
+				limit = {
+					has_great_project_hooftagon = yes
+				}
+				add_to_variable = {
+					hooftagon^8 = 3
+					tooltip = addsub_hooftagon_i8_3_i49_5_tt
+				}
+				subtract_from_variable = {
+					hooftagon^49 = 0.05
+				}
+			}
+			set_technology = {
+				tech_military_police = 1
+				popup = no
+			}
+			country_event = {
+				id = earth_pony_tribe.1
+			}
 		}
 	}
 	focus = {
@@ -134,6 +703,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_establish_an_agrarian_militia"
+			add_ideas = EPT_agrarian_militia
+		}
+		search_filters = {
+			FOCUS_FILTER_SURPLUS_APPROPRIATION
 		}
 	}
 	focus = {
@@ -157,6 +730,32 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_prepare_for_total_war"
+			add_state_claim = 4
+			add_state_core = 20
+			add_state_core = 21
+			add_state_core = 22
+			add_state_core = 23
+			add_state_core = 35
+			add_state_core = 42
+			add_state_core = 43
+			add_state_core = 44
+			add_state_core = 47
+			add_state_core = 49
+			add_state_core = 51
+			add_state_core = 71
+			add_state_core = 78
+			add_state_core = 80
+			add_state_core = 85
+			add_state_core = 89
+			add_state_core = 91
+			add_state_core = 92
+			add_state_core = 93
+			add_state_core = 94
+			add_state_core = 113
+			add_state_core = 120
+		}
+		search_filters = {
+			FOCUS_FILTER_ANNEXATION
 		}
 	}
 	focus = {
@@ -180,6 +779,22 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_order_guardians"
+			if = {
+				limit = {
+					has_great_project_hooftagon = yes
+				}
+				add_to_variable = {
+					hooftagon^25 = 0.1
+					tooltip = add_hooftagon_i25_10_tt
+				}
+				army_experience = 10
+			}
+			else = {
+				army_experience = 25
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_ARMY_XP
 		}
 	}
 	focus = {
@@ -197,6 +812,23 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_directive_private_property"
+			if = {
+				limit = {
+					has_power_balance = {
+						id = EPT_government_formation
+					}
+				}
+				add_power_balance_modifier = {
+					id = EPT_government_formation
+					modifier = EPT_directive_private_property
+				}
+				add_stability = 0.05
+				add_political_power = 25
+			}
+			else = {
+				add_stability = 0.075
+				add_political_power = 50
+			}
 		}
 	}
 	focus = {
@@ -214,6 +846,23 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_directive_agrarian_complex_nationalisation"
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = agrarian_complex
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_stability = -0.05
+		}
+		search_filters = {
+			FOCUS_FILTER_SURPLUS_APPROPRIATION
 		}
 	}
 	focus = {
@@ -237,6 +886,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_fight_for_survival"
+			add_ideas = EPT_fight_for_survival
 		}
 	}
 	#economic branch
@@ -249,8 +899,37 @@ focus_tree = {
 		ai_will_do = {
 			base = 200
 		}
+		allow_branch = {
+			has_completed_focus = ept_focus_directive_number_one
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_economic_affairs_commission"
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			add_timed_idea = {
+				idea = EPT_economic_affairs_commission
+				days = 365
+			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = EPT_government_formation
+					}
+				}
+				add_power_balance_value = {
+					id = EPT_government_formation
+					value = 0.03
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
 		}
 	}
 	focus = {
@@ -268,6 +947,34 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_convening_of_farmers"
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = agrarian_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_temp_variable = {
+				delta_harvest_failure_food = -100
+			}
+			harvest_failure_update = yes
+			set_temp_variable = {
+				delta_food_storage = 500
+			}
+			add_to_food_storage = yes
+			add_stability = -0.05
+			if = {
+				limit = {
+					has_power_balance = {
+						id = EPT_government_formation
+					}
+				}
+				add_power_balance_value = {
+					id = EPT_government_formation
+					value = 0.03
+				}
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_SURPLUS_APPROPRIATION
@@ -288,6 +995,29 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_change_surplus_appopriation_policy"
+			capital_scope = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = agrarian_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			set_temp_variable = {
+				delta_harvest_failure_food = -50
+			}
+			harvest_failure_update = yes
+			if = {
+				limit = {
+					has_power_balance = {
+						id = EPT_government_formation
+					}
+				}
+				add_power_balance_value = {
+					id = EPT_government_formation
+					value = 0.03
+				}
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_SURPLUS_APPROPRIATION
@@ -308,6 +1038,25 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_food_stamps"
+			set_temp_variable = {
+				delta_harvest_failure_food = -25
+			}
+			set_temp_variable = {
+				delta_harvest_failure_supply = -0.05
+			}
+			harvest_failure_update = yes
+			add_ideas = EPT_food_stamps
+			if = {
+				limit = {
+					has_power_balance = {
+						id = EPT_government_formation
+					}
+				}
+				add_power_balance_value = {
+					id = EPT_government_formation
+					value = 0.03
+				}
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_SURPLUS_APPROPRIATION
@@ -323,11 +1072,22 @@ focus_tree = {
 		ai_will_do = {
 			base = 200
 		}
+		allow_branch = {
+			has_completed_focus = ept_focus_directive_number_one
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_formation_of_legislative_apparatus"
+			add_power_balance_value = {
+				id = EPT_government_formation
+				value = -0.1
+			}
+			add_power_balance_modifier = {
+				id = EPT_government_formation
+				modifier = EPT_legimate_apparatus
+			}
 		}
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_BALANCE_OF_POWER
 		}
 	}
 	focus = {
@@ -345,9 +1105,17 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_administrative_system_reforms"
+			add_power_balance_value = {
+				id = EPT_government_formation
+				value = -0.1
+			}
+			add_power_balance_modifier = {
+				id = EPT_government_formation
+				modifier = EPT_administrative_system_reforms
+			}
 		}
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_BALANCE_OF_POWER
 		}
 	}
 	focus = {
@@ -365,9 +1133,17 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_full_fledged_bureaucracy"
+			add_power_balance_value = {
+				id = EPT_government_formation
+				value = -0.1
+			}
+			add_power_balance_modifier = {
+				id = EPT_government_formation
+				modifier = EPT_legimate_apparatus
+			}
 		}
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_BALANCE_OF_POWER
 		}
 	}
 	focus = {
@@ -383,56 +1159,108 @@ focus_tree = {
 		ai_will_do = {
 			base = 200
 		}
+		available = {
+			is_power_balance_in_range = {
+				id = EPT_government_formation
+				range < medium_national_defence_council_influence
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_extend_directive_number_one"
+			remove_ideas = young_state
+			remove_power_balance = {
+				id = EPT_government_formation
+			}
+			if = {
+				limit = {
+					EPT_copperhoof = {
+						is_country_leader = yes
+					}
+				}
+				promote_character = EPT_national_defence_council
+				set_temp_variable = {
+					unstability = 1
+				}
+				if = {
+					limit = {
+						power_balance_value = {
+							id = EPT_government_formation
+							value < 0
+						}
+					}
+					subtract_from_temp_variable = {
+						unstability = power_balance_value
+					}
+				}
+				multiply_temp_variable = {
+					unstability = -5000
+				}
+				custom_effect_tooltip = more_council_support_less_pp_loses_tt
+				add_political_power = unstability
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_BALANCE_OF_POWER
 		}
 	}
 	#hooftagon branch
 	focus = {
 		id = ept_focus_emergency_hq_hooftagon
-		icon = GFX_goal_generic_changeling
+		icon = GFX_goal_ept_focus_emergency_hq_hooftagon
 		cost = 5
 		x = 25
 		y = 0
 		ai_will_do = {
 			base = 200
 		}
+		allow_branch = {
+			has_completed_focus = ept_focus_directive_number_one
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_emergency_hq_hooftagon"
 			hidden_effect = {
 				add_dynamic_modifier = {
-					modifier = greate_project_hooftagon_HQ
+					modifier = great_project_hooftagon_HQ
 				}
 				add_dynamic_modifier = {
-					modifier = greate_project_hooftagon_FP
+					modifier = great_project_hooftagon_FP
 				}
 				add_dynamic_modifier = {
-					modifier = greate_project_hooftagon_MI
+					modifier = great_project_hooftagon_MI
 				}
 				#init hooftagon modifier values
 				resize_array = {
 					hooftagon = 68
 				}
-				#init hooftagon HQ
+				#set hooftagon HQ start bonuses
 				add_to_variable = { #army_core_attack_factor
 					hooftagon^0 = 0.05
 				}
 				add_to_variable = { #army_core_defence_factor
 					hooftagon^1 = 0.05
 				}
-				#init hooftagon FP
+				#set hooftagon FP start bonuses
 				subtract_from_variable = {
 					hooftagon^45 = 0.05
 				}
-				#init hooftagon MI
+				#set hooftagon MI start bonuses
 				add_to_variable = { #production_speed_bunker_factor
 					hooftagon^61 = 0.05
 				}
 			}
-			custom_effect_tooltip = found_hooftagon
+			custom_effect_tooltip = found_hooftagon_tt
+			if = {
+				limit = {
+					has_power_balance = {
+						id = EPT_government_formation
+					}
+				}
+				add_power_balance_value = {
+					id = EPT_government_formation
+					value = 0.05
+				}
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_GREAT_PROJECT
@@ -453,6 +1281,25 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_convening_of_the_hc"
+			add_to_variable = {
+				hooftagon^25 = 0.05
+				tooltip = add_hooftagon_i25_5_tt
+			}
+			army_experience = 25
+			if = {
+				limit = {
+					has_power_balance = {
+						id = EPT_government_formation
+					}
+				}
+				add_power_balance_value = {
+					id = EPT_government_formation
+					value = 0.03
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_GREAT_PROJECT
 		}
 	}
 	focus = {
@@ -470,6 +1317,28 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_new_young_officers"
+			add_to_variable = {
+				hooftagon^6 = 0.05
+				tooltip = addadd_hooftagon_i6_5_i7_5_tt
+			}
+			add_to_variable = {
+				hooftagon^7 = 0.05
+			}
+			army_experience = 15
+			if = {
+				limit = {
+					has_power_balance = {
+						id = EPT_government_formation
+					}
+				}
+				add_power_balance_value = {
+					id = EPT_government_formation
+					value = 0.03
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_GREAT_PROJECT
 		}
 	}
 	focus = {
@@ -487,6 +1356,28 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_open_old_military_warehouses"
+			subtract_from_variable = {
+				var = hooftagon^48
+				value = 0.05
+				tooltip = subadd_hooftagon_i48_5_i50_12_tt
+			}
+			add_to_variable = {
+				hooftagon^50 = 12
+			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = EPT_government_formation
+					}
+				}
+				add_power_balance_value = {
+					id = EPT_government_formation
+					value = 0.03
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_GREAT_PROJECT
 		}
 	}
 	focus = {
@@ -504,6 +1395,25 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_expand_recruitment_of_volunteers"
+			add_to_variable = {
+				var = hooftagon^24
+				value = 0.1
+				tooltip = add_hooftagon_i24_10_tt
+			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = EPT_government_formation
+					}
+				}
+				add_power_balance_value = {
+					id = EPT_government_formation
+					value = 0.03
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_GREAT_PROJECT
 		}
 	}
 }

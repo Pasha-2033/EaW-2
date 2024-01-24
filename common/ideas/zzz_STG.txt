@@ -1,0 +1,124 @@
+ideas = {
+	country = {
+		STG_south_states_intergration = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = STG
+			}
+			allowed_civil_war = {
+				OR = {
+					controls_state = 160
+					controls_state = 162
+					controls_state = 164
+					controls_state = 326
+				}
+			}
+			modifier = {
+				political_power_cost = 0.2
+				required_garrison_factor = 0.1
+				resistance_activity = 0.1
+				resistance_target = 0.5
+				compliance_growth = 1.5
+			}
+			on_remove = {
+				add_state_core = 160
+				add_state_core = 162
+				add_state_core = 164
+				add_state_core = 326
+				country_event = {
+					id = staliongrad.2
+				}
+			}
+		}
+		STG_eradicate_dissent_in_south_states = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = STG
+			}
+			allowed_civil_war = {
+				OR = {
+					controls_state = 160
+					controls_state = 162
+					controls_state = 164
+					controls_state = 326
+				}
+			}
+			modifier = {
+				political_power_cost = 0.3
+				drift_defence_factor = 0.1
+				enemy_operative_capture_chance_factor = 0.1
+			}
+			on_remove = {
+				PGT = {
+					remove_state_core = 160
+					remove_state_core = 162
+					remove_state_core = 164
+					remove_state_core = 326
+					mark_focus_tree_layout_dirty = yes
+					add_opinion_modifier = {
+						target = STG
+						modifier = baykall_pocket
+					}
+				}
+				EQS = {
+					remove_state_core = 160
+					remove_state_core = 162
+					remove_state_core = 164
+					remove_state_core = 326
+					if = {
+						limit = {
+							has_completed_focus = eqs_focus_foreign_policy
+						}
+						country_event = {
+							id = equestria.9
+							days = 7
+							random_days = 3
+						}
+					}
+					add_opinion_modifier = {
+						target = STG
+						modifier = baykall_pocket
+					}
+				}
+				if = {
+					limit = {
+						has_war = no
+					}
+					country_event = {
+						id = staliongrad.3
+					}
+				}
+			}
+		}
+		STG_militarize_south_states = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = STG
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			cancel = {
+				has_war = yes
+			}
+			modifier = {
+				political_power_cost = 0.4
+				war_support_weekly = 0.01
+			}
+			on_remove = {
+				160 = {
+					set_demilitarized_zone = no
+				}
+				162 = {
+					set_demilitarized_zone = no
+				}
+				164 = {
+					set_demilitarized_zone = no
+				}
+				326 = {
+					set_demilitarized_zone = no
+				}
+			}
+		}
+	}
+}

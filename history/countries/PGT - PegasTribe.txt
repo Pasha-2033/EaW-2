@@ -1,4 +1,5 @@
 capital = 66
+set_research_slots = 1
 set_technology = {
 	melee_weapons = 1
 	tech_support = 1
@@ -10,19 +11,35 @@ set_politics = {
 	elections_allowed = no
 }
 set_popularities = {
-	fascism = 6
 	militarism = 49
-	communism = 3
-	socialism = 1
 	neutrality = 5
-	anarchism = 3
-	harmony = 33
+	radicalism = 15
+	harmony = 31
 }
+recruit_character = PGT_cloudforce
+recruit_character = PGT_rainbowdash
+recruit_character = PGT_fluttershy
+recruit_character = PGT_soarin
+recruit_character = PGT_mistyfly
+recruit_character = PGT_spitfire
 add_ideas = {
+	limited_conscription
 	partial_economic_mobilisation
 	pony_race
-	eqs_pgt_ept_scared_by_ice
 	PGT_tribal_crisis
+}
+#set surplus appropriation
+set_variable = {
+	food_storage_value = 670
+}
+set_variable = {
+	surplus_appropriation_weight_0 = 0.6
+}
+set_variable = {
+	surplus_appropriation_weight_1 = 0.2
+}
+set_variable = {
+	surplus_appropriation_weight_2 = 0.6
 }
 #harvest failure
 set_variable = {
@@ -33,5 +50,30 @@ set_variable = {
 }
 add_dynamic_modifier = {
 	modifier = harvest_failure_modifier
+}
+#pocket debufs
+set_variable = {
+	morale_under_eastern_pockets = -0.2
+}
+set_variable = {
+	initiative_under_eastern_pockets = -0.2
+}
+set_variable = {
+	pocket_penalty_under_eastern_pockets = 0.5
+}
+set_variable = {
+	morale_under_northern_pockets = -0.15
+}
+set_variable = {
+	initiative_under_northern_pockets = -0.1
+}
+set_variable = {
+	pocket_penalty_under_northern_pockets = 0.3
+}
+add_dynamic_modifier = {
+	modifier = PGT_eastern_pockets
+}
+add_dynamic_modifier = {
+	modifier = PGT_northern_pockets
 }
 set_oob = "982_PGT"

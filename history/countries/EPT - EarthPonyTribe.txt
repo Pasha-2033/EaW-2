@@ -1,25 +1,45 @@
 capital = 15
-
+set_convoys = 3
 set_politics = {
 	ruling_party = harmony
 	elections_allowed = no
 }
 set_popularities = {
-	fascism = 12
-	militarism = 2
-	communism = 8
-	socialism = 4
+	radicalism = 7
+	militarism = 19
 	democratic = 33
 	harmony = 41
+}
+set_technology = {
+	melee_weapons = 1
+	tech_support = 1
+	tech_engineers = 1
 }
 recruit_character = EPT_copperhoof
 recruit_character = EPT_national_defence_council
 recruit_character = EPT_applejack
+recruit_character = EPT_pinkypie
 add_ideas = {
 	partial_economic_mobilisation
+	agrarian_society4
 	pony_race
-	eqs_pgt_ept_scared_by_ice
+	low_power_concentration
 	EPT_tribal_crisis
+	EPT_escaped_army
+	EPT_not_a_goverment
+}
+#set surplus appropriation
+set_variable = {
+	food_storage_value = 820
+}
+set_variable = {
+	surplus_appropriation_weight_0 = 0.2
+}
+set_variable = {
+	surplus_appropriation_weight_1 = 0.6
+}
+set_variable = {
+	surplus_appropriation_weight_2 = 0.8
 }
 #harvest failure
 set_variable = {
@@ -31,21 +51,4 @@ set_variable = {
 add_dynamic_modifier = {
 	modifier = harvest_failure_modifier
 }
-982.1.1 = {
-	set_variable = {
-		UG_ARG_0 = 1
-	}
-	set_variable = {
-		UG_ARG_1 = 0.5
-	}
-	set_variable = {
-		UG_ARG_8 = 1
-	}
-	set_variable = {
-		UG_ARG_9 = 0.1
-	}
-	set_variable = {
-		UG_ARG_17 = 1
-	}
-	generate_units_982 = yes
-}
+set_oob = "982_EPT"

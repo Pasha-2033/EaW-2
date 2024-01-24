@@ -1,0 +1,31 @@
+#WARNING: PREV must have hooftagon project, use has_great_project_hooftagon trigger!
+transfer_hooftagon_from_PREV = {
+	for_loop_effect = {
+		end = hooftagon^num
+		value = i
+		add_to_array = {
+			hooftagon = PREV.hooftagon^i
+		}
+	}
+	PREV = {
+		remove_dynamic_modifier = {
+			modifier = great_project_hooftagon_HQ
+		}
+		remove_dynamic_modifier = {
+			modifier = great_project_hooftagon_FP
+		}
+		remove_dynamic_modifier = {
+			modifier = great_project_hooftagon_MI
+		}
+	}
+	add_dynamic_modifier = {
+		modifier = great_project_hooftagon_HQ
+	}
+	add_dynamic_modifier = {
+		modifier = great_project_hooftagon_FP
+	}
+	add_dynamic_modifier = {
+		modifier = great_project_hooftagon_MI
+	}
+	clear_array = PREV.hooftagon
+}

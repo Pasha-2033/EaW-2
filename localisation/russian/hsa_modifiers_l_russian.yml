@@ -5,13 +5,15 @@ nuke_charge_power_factor: "Мощность ядерного оружия"
 nuke_anb_destruction_factor: "Шанс уничтожить противоядерный бункер"
 #building related modifiers
 modifier_production_speed_anti_nuke_bunker_factor: "Скорость строительства §Yпротивоядерных бункеров§!"
-modifier_production_speed_anti_nuke_bunker_desc: "Изменяет скорость строительства противоядерных бункеров."
+modifier_production_speed_anti_nuke_bunker_factor_desc: "Изменяет скорость строительства противоядерных бункеров."
 modifier_state_production_speed_anti_nuke_bunker_factor: "§Y$anti_nuke_bunker$§! — скорость строительства"
-modifier_state_production_speed_anti_nuke_bunker_desc: "Изменяет скорость возведения следующей постройки в этом регионе: §Y$anti_nuke_bunker$§!."
+modifier_state_production_speed_anti_nuke_bunker_factor_desc: "Изменяет скорость возведения следующей постройки в этом регионе: §Y$anti_nuke_bunker$§!."
+modifier_repair_speed_anti_nuke_bunker_factor: "Скорость восстановления противоядерных бункеров"
 modifier_production_speed_agrarian_complex_factor: "Скорость строительства §Yаграрных комплексов§!"
 modifier_production_speed_agrarian_complex_factor_desc: "Изменяет скорость строительства аграрных комплексов."
 modifier_state_production_speed_agrarian_complex_factor: "§Y$agrarian_complex$§! — скорость строительства"
 modifier_state_production_speed_agrarian_complex_factor_desc: "Изменяет скорость возведения следующей постройки в этом регионе: §Y$agrarian_complex$§!."
+modifier_repair_speed_agrarian_complex_factor: "Скорость восстановления аграрных комплексов"
 #unit modifiers
 unit_modifier_all_inf_urban_movement: "§Y$category_all_infantry$§!: Движение в городе"
 unit_modifier_all_inf_mountain_movement: "§Y$category_all_infantry$§!: Движение в горах"
@@ -23,3 +25,13 @@ unit_modifier_all_inf_plains_movement: "§Y$category_all_infantry$§!: Движ�
 unit_modifier_all_inf_desert_movement: "§Y$category_all_infantry$§!: Движение в пустыне"
 #economic modifiers
 harvest_failure_modifier: "Неурожай"
+change_harvest_failure_modifier: "§Y$harvest_failure_modifier$§! изменится на: [change_harvest_failure_food_scripted_localisation][change_harvest_failure_supply_scripted_localisation]"
+change_harvest_failure_food: "\n$country_resource_food$: [?delta_harvest_failure_food|+0]"
+change_harvest_failure_supply: "\n$MODIFIER_SUPPLY_FACTOR$: [?delta_harvest_failure_supply|+%]"
+change_food_storage_value: "На наши склады еды поступит [?delta_food_storage|+0] единиц снабжения."
+#ideas modifiers
+modify_building_resources_ac_food_2: "Изменить продукцию здания §Y$agrarian_complex$§! на: §G+2§!£resources_strip|8"
+#unit modifiers
+modifier_army_sub_unit_pegasi_attack_factor: "Атака пегасов"
+modifier_army_sub_unit_pegasi_defence_factor: "Оборона пегасов"
+modifier_army_sub_unit_pegasi_speed_factor: "Скорость пегасов"

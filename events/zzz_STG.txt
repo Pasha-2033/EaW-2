@@ -1,0 +1,149 @@
+add_namespace = staliongrad
+#change picture everywhere
+country_event = {
+	#PGT want evacuate baykall pocket
+	id = staliongrad.1
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event staliongrad.1"
+	}
+	title = staliongrad.1.t
+	desc = staliongrad.1.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = { #let`s warm up comrades (intergrate states)
+		name = staliongrad.1.a
+		add_timed_idea = {
+			idea = STG_south_states_intergration
+			days = 270
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #nice solution (do nothing)
+		name = staliongrad.1.b
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {
+	#eradicate dissent in south states
+	id = staliongrad.2
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event staliongrad.2"
+	}
+	title = staliongrad.2.t
+	desc = staliongrad.2.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = { #let`s eradicate dissent (remove core of PGT)
+		name = staliongrad.2.a
+		add_timed_idea = {
+			idea = STG_eradicate_dissent_in_south_states
+			days = 90
+		}
+		ai_chance = { 
+			base = 1
+		}
+	}
+	option = { #we have done enough (do nothing)
+		name = staliongrad.2.b
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {
+	#militarize south states
+	id = staliongrad.3
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event staliongrad.3"
+	}
+	title = staliongrad.3.t
+	desc = staliongrad.3.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = { #we are allowed to build anything on our territory! (militarize states)
+		name = staliongrad.3.a
+		add_timed_idea = {
+			idea = STG_militarize_south_states
+			days = 30
+		}
+		ai_chance = { 
+			base = 1
+		}
+	}
+	option = { #we have done enough (do nothing)
+		name = staliongrad.3.b
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {
+	#PGT send note of protest
+	id = staliongrad.4
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event staliongrad.4"
+	}
+	title = staliongrad.4.t
+	desc = staliongrad.4.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = { #go to hell!
+		name = staliongrad.4.a
+		#to do
+	}
+}
+country_event = {
+	#PGT/EQS demand reparations for former core territories
+	id = staliongrad.5
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event staliongrad.5"
+	}
+	title = staliongrad.5.t
+	desc = staliongrad.5.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = { #agree (EQS)
+		name = staliongrad.5.a
+		FROM = {
+			remove_opinion_modifier = {
+				target = ROOT
+				modifier = baykall_pocket
+			}
+		}
+		#todo reparations
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #deny
+		name = staliongrad.5.b
+		FROM = {
+			add_opinion_modifier = {
+				target = ROOT
+				modifier = baykall_pocket
+			}
+			add_state_claim = 160
+			add_state_claim = 162
+			add_state_claim = 164
+			add_state_claim = 326
+		}
+		if = {
+			limit = {
+				FROM = {
+					tag = PGT
+				}
+			}
+			remove_opinion_modifier = {
+				target = FROM
+				modifier = STG_baykall_pocket_weak
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}

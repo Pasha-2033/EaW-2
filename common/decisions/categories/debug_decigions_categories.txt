@@ -1,7 +1,19 @@
+#common debugs
 debug_society_idea_decisions = {
 	icon = GFX_decision_category_debug
 	priority = 999
 	visible = {
 		is_debug = yes
+		is_ai = no
+	}
+}
+#focuses debugs
+debug_EQS_focuses_decisions = {
+	icon = GFX_decision_category_debug
+	priority = 998
+	visible = {
+		is_debug = yes
+		is_ai = no
+		tag = EQS
 	}
 }

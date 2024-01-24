@@ -1,0 +1,142 @@
+add_namespace = pegas_tribe
+country_event = {
+	#fluttershy adheres to harmony
+	id = pegas_tribe.1
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event pegas_tribe.1"
+	}
+	title = pegas_tribe.1.t
+	desc = pegas_tribe.1.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#it`s okay
+		name = pegas_tribe.1.a
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		#fire her until it`s too late!
+		name = pegas_tribe.1.b
+		deactivate_advisor = PGT_fluttershy
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {
+	#rainbowdash adheres to harmony
+	id = pegas_tribe.2
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event pegas_tribe.2"
+	}
+	title = pegas_tribe.2.t
+	desc = pegas_tribe.2.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#it`s okay
+		name = pegas_tribe.2.a
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = {
+		#fire her until it`s too late!
+		name = pegas_tribe.2.b
+		deactivate_advisor = PGT_rainbowdash
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {
+	#PGT asks for military access
+	id = pegas_tribe.3
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event pegas_tribe.3"
+	}
+	title = pegas_tribe.3.t
+	desc = pegas_tribe.3.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = { #agree
+		name = pegas_tribe.3.a
+		add_political_power = 50
+		give_military_access = FROM
+		FROM = {
+			add_political_power = -50
+			add_popularity = {
+				ideology = PREV
+				popularity = 0.025
+			}
+		}
+		#todo reparations
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #deny
+		name = pegas_tribe.3.b
+		hidden_effect = {
+			FROM = {
+				country_event = {
+					id = pegas_tribe.4
+					days = 7
+					random_days = 3
+				}
+			}
+		}
+		reverse_add_opinion_modifier = {
+			target = FROM
+			modifier = refused_grand_military_access
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {
+	#CRY/STG refuses to give military access
+	id = pegas_tribe.4
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event pegas_tribe.4"
+	}
+	title = pegas_tribe.4.t
+	desc = pegas_tribe.4.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = { #fuck!
+		name = pegas_tribe.4.a
+	}
+}
+country_event = {
+	#farmers can provide compromise (to do)
+	id = pegas_tribe.5
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event pegas_tribe.5"
+	}
+	title = pegas_tribe.5.t
+	desc = pegas_tribe.5.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = { #we will help in recovery
+		name = pegas_tribe.5.a
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #we can`t afford this, let`s negotiate
+		name = pegas_tribe.5.b
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #fuck you!
+		name = pegas_tribe.5.c
+		ai_chance = {
+			base = 1
+		}
+	}
+}

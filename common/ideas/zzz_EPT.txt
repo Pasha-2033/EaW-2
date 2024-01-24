@@ -20,6 +20,20 @@ ideas = {
 			}
 			modifier = {
 				improve_relations_maintain_cost_factor = 1
+				surrender_limit = 0.25
+			}
+		}
+		EPT_escaped_army = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EPT
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				offence = -0.05
+				defence = -0.05
 			}
 		}
 		EPT_south_equus_defence_district = {
@@ -54,6 +68,140 @@ ideas = {
 						modifier = EPT_stableside_defence_district
 					}
 				}
+			}
+		}
+		EPT_economic_affairs_commission = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EPT
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				consumer_goods_factor = -0.50
+				production_speed_buildings_factor = 0.1
+				production_factory_efficiency_gain_factor = 0.1
+				production_factory_max_efficiency_factor = 0.05
+				production_lack_of_resource_penalty_factor = -0.05
+			}
+		}
+		EPT_food_stamps = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EPT
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				civil_consumption_factor = -0.15
+				facilities_consumption_factor = -0.05
+				army_consumption_factor = -0.05
+				stability_factor = -0.05
+			}
+			on_add = {
+				calc_surplus_appropriation_real_values = yes
+			}
+			on_remove = {
+				calc_surplus_appropriation_real_values = yes
+			}
+		}
+		EPT_not_a_goverment = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EPT
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				stability_factor = -0.25
+				war_support_factor = -0.25
+				political_power_factor = -0.5
+				war_stability_factor = 0.5
+				trade_opinion_factor = -0.5
+				improve_relations_maintain_cost_factor = 0.75
+				mobilization_laws_cost_factor = 0.75
+				trade_laws_cost_factor = 0.75
+				economy_cost_factor = 0.75
+			}
+		}
+		EPT_agrarian_militia = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EPT
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				repair_speed_agrarian_complex_factor = 0.15
+				production_speed_agrarian_complex_factor = 0.05
+				custom_modifier_tooltip = modify_building_resources_ac_food_2
+			}
+			on_add = {
+				modify_building_resources = {
+					building = agrarian_complex
+					resource = food
+					amount = 2
+				}
+			}
+			on_remove = {
+				modify_building_resources = {
+					building = agrarian_complex
+					resource = food
+					amount = -2
+				}
+			}
+		}
+		EPT_fight_for_survival = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EPT
+			}
+			allowed_civil_war = {
+				has_defensive_war_with = ICE
+			}
+			cancel = {
+				NOT = {
+					has_war_with = ICE
+				}
+			}
+			modifier = {
+				surrender_limit = 0.1
+			}
+			targeted_modifier = {
+				tag = ICE
+				defense_bonus_against = 0.1
+				attack_bonus_against = 0.05
+			}
+		}
+		EPT_full_evacuation_of_hoofington = {
+			allowed = {
+				original_tag = EPT
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				org_loss_at_low_org_factor = 0.1
+				org_loss_when_moving = 0.2
+				army_org_regain = -0.1
+				army_org_factor = -0.05
+			}
+		}
+		EPT_partial_evacuation_of_hoofington = {
+			allowed = {
+				original_tag = EPT
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				org_loss_at_low_org_factor = 0.02
+				org_loss_when_moving = 0.1
+				army_org_regain = -0.03
 			}
 		}
 	}

@@ -4,7 +4,7 @@ EQS_prince_blueblood_vs_twilight_decisions = {
 		icon = GFX_decision_category_debug # TODO_TA set correct icon     
 		cost = 0
 		allowed = {
-			tag = EQS
+			original_tag = EQS
 		}    
 		priority = 11           
 		complete_effect = {
@@ -23,7 +23,7 @@ EQS_prince_blueblood_vs_twilight_decisions = {
 		icon = GFX_decision_category_debug # TODO_TA set correct icon     
 		cost = 0
 		allowed = {
-			tag = EQS
+			original_tag = EQS
 		}  
 		priority = 11               
 		complete_effect = {
@@ -44,7 +44,7 @@ EQS_prince_blueblood_vs_twilight_decisions = {
 	EQS_antagonise_harmony_vs_fascism_recruiting = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon
 		allowed = {
-			tag = EQS
+			original_tag = EQS
 		}
 		available = {
 			has_country_flag = {
@@ -59,7 +59,6 @@ EQS_prince_blueblood_vs_twilight_decisions = {
 					has_active_mission = EQS_fascist_recruit_general_marshal
 					has_active_mission = EQS_harmonist_recruit_admiral
 					has_active_mission = EQS_harmonist_recruit_general_marshal
-					has_decision = EQS_antagonise_harmony_vs_fascism_recruiting
 				}
 			}
 		}
@@ -95,7 +94,7 @@ EQS_prince_blueblood_vs_twilight_decisions = {
 	EQS_antagonise_harmony_propaganda = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon
 		allowed = {
-			tag = EQS
+			original_tag = EQS
 		}
 		available = {
 			has_active_mission = EQS_harmony_propaganda_mission
@@ -119,7 +118,7 @@ EQS_prince_blueblood_vs_twilight_decisions = {
 	EQS_antagonise_harmony_support = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon
 		allowed = {
-			tag = EQS
+			original_tag = EQS
 		}
 		available = {
 			hidden_trigger = {
@@ -148,7 +147,7 @@ EQS_prince_blueblood_vs_twilight_decisions = {
 	EQS_antagonise_fascism_propaganda = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon
 		allowed = {
-			tag = EQS
+			original_tag = EQS
 		}
 		available = {
 			has_active_mission = EQS_fascism_propaganda_mission
@@ -172,7 +171,7 @@ EQS_prince_blueblood_vs_twilight_decisions = {
 	EQS_antagonise_fascism_support = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon
 		allowed = {
-			tag = EQS
+			original_tag = EQS
 		}
 		available = {
 			hidden_trigger = {
@@ -204,7 +203,7 @@ EQS_prince_blueblood_vs_twilight_decisions = {
 		priority = 10
 		selectable_mission = no
 		allowed = {
-			tag = EQS
+			original_tag = EQS
 		}
 		available = {
 			NOT = {
@@ -216,7 +215,6 @@ EQS_prince_blueblood_vs_twilight_decisions = {
 		activation = {
 			always = no #triggered by event (bop_eqs_event.8)
 		}
-		fire_only_once = no
 		is_good = no
 		days_mission_timeout = 30
 		complete_effect = {
@@ -289,7 +287,7 @@ EQS_prince_blueblood_vs_twilight_decisions = {
 		priority = 10
 		selectable_mission = no
 		allowed = {
-			tag = EQS
+			original_tag = EQS
 		}
 		available = {
 			hidden_trigger = {
@@ -323,7 +321,7 @@ EQS_prince_blueblood_vs_twilight_decisions = {
 		priority = 10
 		selectable_mission = no
 		allowed = {
-			tag = EQS
+			original_tag = EQS
 		}
 		available = {
 			hidden_trigger = {
@@ -357,7 +355,7 @@ EQS_prince_blueblood_vs_twilight_decisions = {
 		priority = 10
 		selectable_mission = no
 		allowed = {
-			tag = EQS
+			original_tag = EQS
 		}
 		available = {
 			hidden_trigger = {
@@ -392,7 +390,7 @@ EQS_prince_blueblood_vs_twilight_decisions = {
 		priority = 10
 		selectable_mission = no
 		allowed = {
-			tag = EQS
+			original_tag = EQS
 		}
 		available = {
 			hidden_trigger = {
@@ -426,7 +424,7 @@ EQS_prince_blueblood_vs_twilight_decisions = {
 		priority = 10
 		selectable_mission = no
 		allowed = {
-			tag = EQS
+			original_tag = EQS
 		}
 		available = {
 			var:EQS_fascism_vs_harmony_character = {
@@ -439,7 +437,6 @@ EQS_prince_blueblood_vs_twilight_decisions = {
 		activation = {
 			always = no #triggered by event (bop_eqs_event.4)
 		}
-		fire_only_once = no
 		is_good = no
 		days_mission_timeout = 30
 		visible = {
@@ -484,7 +481,7 @@ EQS_prince_blueblood_vs_twilight_decisions = {
 		priority = 10
 		selectable_mission = no
 		allowed = {
-			tag = EQS
+			original_tag = EQS
 		}
 		available = {
 			var:EQS_fascism_vs_harmony_character = {
@@ -497,7 +494,6 @@ EQS_prince_blueblood_vs_twilight_decisions = {
 		activation = {
 			always = no #triggered by event (bop_eqs_event.4)
 		}
-		fire_only_once = no
 		is_good = no
 		days_mission_timeout = 30
 		visible = {
@@ -542,7 +538,7 @@ EQS_prince_blueblood_vs_twilight_decisions = {
 		priority = 10
 		selectable_mission = no
 		allowed = {
-			tag = EQS
+			original_tag = EQS
 		}
 		available = {
 			NOT = {
@@ -554,7 +550,6 @@ EQS_prince_blueblood_vs_twilight_decisions = {
 		activation = {
 			always = no #triggered by event (bop_eqs_event.8)
 		}
-		fire_only_once = no
 		is_good = no
 		days_mission_timeout = 30
 		complete_effect = {
@@ -627,7 +622,7 @@ EQS_prince_blueblood_vs_twilight_decisions = {
 		priority = 10
 		selectable_mission = no
 		allowed = {
-			tag = EQS
+			original_tag = EQS
 		}
 		available = {
 			hidden_trigger = {
@@ -661,7 +656,7 @@ EQS_prince_blueblood_vs_twilight_decisions = {
 		priority = 10
 		selectable_mission = no
 		allowed = {
-			tag = EQS
+			original_tag = EQS
 		}
 		available = {
 			var:EQS_fascism_vs_harmony_character = {
@@ -674,7 +669,6 @@ EQS_prince_blueblood_vs_twilight_decisions = {
 		activation = {
 			always = no #triggered by event (bop_eqs_event.4)
 		}
-		fire_only_once = no
 		is_good = no
 		days_mission_timeout = 30
 		visible = {
@@ -719,7 +713,7 @@ EQS_prince_blueblood_vs_twilight_decisions = {
 		priority = 10
 		selectable_mission = no
 		allowed = {
-			tag = EQS
+			original_tag = EQS
 		}
 		available = {
 			var:EQS_fascism_vs_harmony_character = {
@@ -732,7 +726,6 @@ EQS_prince_blueblood_vs_twilight_decisions = {
 		activation = {
 			always = no #triggered by event (bop_eqs_event.4)
 		}
-		fire_only_once = no
 		is_good = no
 		days_mission_timeout = 30
 		visible = {
@@ -769,6 +762,37 @@ EQS_prince_blueblood_vs_twilight_decisions = {
 					days = 7
 					random_days = 7
 				}
+			}
+		}
+	}
+}
+EPT_government_formation_decisions = {
+	#debug
+	add_council_10 = {
+		icon = GFX_decision_category_debug # TODO_TA set correct icon     
+		cost = 0
+		allowed = {
+			original_tag = EPT
+		}    
+		priority = 11           
+		complete_effect = {
+			add_power_balance_value = {
+				id = EPT_government_formation
+				value = -0.1
+			}
+		}
+	}
+	add_copperhoof_10 = {
+		icon = GFX_decision_category_debug # TODO_TA set correct icon     
+		cost = 0
+		allowed = {
+			original_tag = EPT
+		}  
+		priority = 11               
+		complete_effect = {
+			add_power_balance_value = {
+				id = EPT_government_formation
+				value = 0.1
 			}
 		}
 	}

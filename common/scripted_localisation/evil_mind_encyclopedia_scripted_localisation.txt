@@ -154,6 +154,14 @@ defined_text = {
 		localization_key = global_mechanic_sa_name
 	}
 	text = {
+		trigger = {
+			check_variable = {
+				i = 2
+			}
+		}
+		localization_key = global_mechanic_sc_name
+	}
+	text = {
 		localization_key = global_mechanic_loc_error
 	}
 }
@@ -174,6 +182,14 @@ defined_text = {
 			}
 		}
 		localization_key = global_mechanic_sa_desc
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				selected_global_mechanic = 2
+			}
+		}
+		localization_key = global_mechanic_sc_desc
 	}
 	text = {
 		localization_key = global_mechanic_loc_error

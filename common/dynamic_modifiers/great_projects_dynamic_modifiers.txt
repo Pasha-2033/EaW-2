@@ -1,6 +1,8 @@
-#HQ hooftagon
-greate_project_hooftagon_HQ = {	#Headquarters
-	icon = GFX_idea_clockwerk_economy
+#hooftagon
+#it`s simple to check if country has hooftagon - all these modifiers will be together
+#but there is already one trigger with provided tootip - has_great_project_hooftagon
+great_project_hooftagon_HQ = {	#Headquarters
+	icon = GFX_modifier_hooftagon_HQ
 	#land forces
 	army_core_attack_factor = hooftagon^0
 	army_core_defence_factor = hooftagon^1
@@ -40,8 +42,8 @@ greate_project_hooftagon_HQ = {	#Headquarters
 	floating_harbor_supply = hooftagon^31
 	railway_gun_bombardment_factor = hooftagon^32
 }
-greate_project_hooftagon_FP = {	#Foreign Policy
-	icon = GFX_idea_clockwerk_economy
+great_project_hooftagon_FP = {	#Foreign Policy
+	icon = GFX_modifier_hooftagon_FP
 	#intell
 	agency_upgrade_time = hooftagon^33
 	decryption_factor = hooftagon^34
@@ -58,8 +60,8 @@ greate_project_hooftagon_FP = {	#Foreign Policy
 	lend_lease_tension = hooftagon^44
 	request_lease_tension = hooftagon^45
 }
-greate_project_hooftagon_MI = { #Military Infrastructure
-	icon = GFX_idea_clockwerk_economy
+great_project_hooftagon_MI = { #Military Infrastructure
+	icon = GFX_modifier_hooftagon_MI
 	#fuel
 	max_fuel_factor = hooftagon^46
 	army_fuel_capacity_factor = hooftagon^47
@@ -85,4 +87,7 @@ greate_project_hooftagon_MI = { #Military Infrastructure
 	production_speed_radar_station_factor = hooftagon^65
 	production_speed_rocket_site_factor = hooftagon^66
 	production_speed_nuclear_reactor_factor = hooftagon^67
+	#fortification effectiveness
+	land_bunker_effectiveness_factor = hooftagon^68
+	coastal_bunker_effectiveness_factor = hooftagon^69
 }
