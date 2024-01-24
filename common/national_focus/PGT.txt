@@ -29,6 +29,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_way_of_warriors"
+			add_war_support = 0.1
+			add_popularity = {
+				ideology = militarism
+				popularity = 0.15
+			}
+			add_manpower = 2500
 		}
 	}
 	focus = {
@@ -94,6 +100,100 @@ focus_tree = {
 					tooltip = add_surrender_under_northern_pockets_5_tt
 				}
 			}
+			add_ideas = PGT_surrounded_but_not_broken
+			set_temp_variable = {
+				ws = 0
+			}
+			set_temp_variable = {
+				s = 0
+			}
+			if = {
+				limit = {
+					controls_state = 131
+				}
+				add_to_temp_variable = {
+					s = 0.03
+				}
+			}
+			else = {
+				add_to_temp_variable = {
+					ws = 0.03
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						controls_state = 70
+						controls_state = 134
+						controls_state = 135
+					}
+				}
+				add_to_temp_variable = {
+					s = 0.03
+				}
+			}
+			else = {
+				add_to_temp_variable = {
+					ws = 0.03
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						controls_state = 156
+						controls_state = 160
+						controls_state = 162
+						controls_state = 164
+						controls_state = 326
+					}
+				}
+				add_to_temp_variable = {
+					s = 0.03
+				}
+			}
+			else = {
+				add_to_temp_variable = {
+					ws = 0.03
+				}
+			}
+			if = {
+				limit = {
+					OR = {
+						controls_state = 525
+						controls_state = 653
+						controls_state = 661
+						controls_state = 662
+					}
+				}
+				add_to_temp_variable = {
+					s = 0.03
+				}
+			}
+			else = {
+				add_to_temp_variable = {
+					ws = 0.03
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							s = 0
+						}
+					}
+				}
+				add_stability = s
+			}
+			if = {
+				limit = {
+					NOT = {
+						check_variable = {
+							ws = 0
+						}
+					}
+				}
+				add_war_support = ws
+			}
 		}
 	}
 	focus = {
@@ -111,6 +211,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_scrapping_the_barrel"
+			add_ideas = scraping_the_barrel
+			add_manpower = 5000
+			add_war_support = 0.05
+			add_stability = -0.1
 		}
 	}
 	focus = {
@@ -123,11 +227,50 @@ focus_tree = {
 		prerequisite = {
 			focus = pgt_focus_scrapping_the_barrel
 		}
+		available = {
+			has_template = "Pegas Militia"
+			has_army_experience > 4.999
+		}
 		ai_will_do = {
 			base = 200
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_new_elite_troops"
+			capital_scope = {
+				create_unit = {
+					division = "division_template = \"Pegas Militia\" start_manpower_factor = 1 start_equipment_factor = 1 start_experience_factor = 0.9"
+					owner = ROOT
+					count = 4
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					state = 70
+				}
+				create_unit = {
+					division = "division_template = \"Pegas Militia\" start_manpower_factor = 0.8 start_equipment_factor = 0.65 start_experience_factor = 0.8"
+					owner = ROOT
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					state = 162
+				}
+				create_unit = {
+					division = "division_template = \"Pegas Militia\" start_manpower_factor = 0.8 start_equipment_factor = 0.65 start_experience_factor = 0.8"
+					owner = ROOT
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					state = 525
+				}
+				create_unit = {
+					division = "division_template = \"Pegas Militia\" start_manpower_factor = 1 start_equipment_factor = 0.85 start_experience_factor = 0.85"
+					owner = ROOT
+				}
+			}
+			army_experience = -5
 		}
 	}
 	focus = {
@@ -143,8 +286,26 @@ focus_tree = {
 		ai_will_do = {
 			base = 200
 		}
+		cancelable = no
+		select_effect = {
+			add_ideas = PGT_army_reorganisation_in_proccess
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_army_reorganisation"
+			#Tooltip purposes (Select Effect)
+			custom_effect_tooltip = focus_select_effect_tt
+			effect_tooltip = {
+				add_ideas = PGT_army_reorganisation_in_proccess
+			}
+			#(Complete Effect)
+			custom_effect_tooltip = focus_complete_effect_tt
+			hidden_effect = {
+				remove_ideas = PGT_army_reorganisation_in_proccess
+			}
+			add_timed_idea = {
+				idea = PGT_army_reorganisation_in_result
+				days = 180
+			}
 		}
 	}
 	focus = {
@@ -244,6 +405,10 @@ focus_tree = {
 					}
 				}
 			}
+			add_stability = -0.1
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
 		}
 	}
 	focus = {
@@ -257,13 +422,18 @@ focus_tree = {
 			focus = pgt_focus_conversion_to_arms_factory
 		}
 		available = {
-			num_of_military_factories > 0
+			controls_state = 66
+			66 = {
+				arms_factory > 0
+			}
 		}
 		ai_will_do = {
 			base = 200
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_infantry_mio"
+			custom_effect_tooltip = unlock_mio_tt
+			show_mio_tooltip = mio_laspegasus_arms_factory
 		}
 	}
 	focus = {
@@ -282,72 +452,61 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_new_officers"
-			#special if position for nicer tooltip
-			PGT_soarin = {
-				add_corps_commander_role = {
-					traits = {
-						pony_race_trait
-						wonderbolt
-					}
-					skill = 1
-					attack_skill = 1
-					defense_skill = 1
-					planning_skill = 1
-					logistics_skill = 1
+			add_corps_commander_role = {
+				character = PGT_soarin
+				traits = {
+					pony_race_trait
+					wonderbolt
 				}
-				if = {
-					limit = {
-						PREV = {
-							has_government = militarism
-						}
-					}
-					add_unit_leader_trait = winter_specialist
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			add_corps_commander_role = {
+				character = PGT_mistyfly
+				traits = {
+					pony_race_trait
+					wonderbolt
+				}
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			add_corps_commander_role = {
+				character = PGT_spitfire
+				traits = {
+					pony_race_trait
+					wonderbolt
+					trait_reckless
+				}
+				skill = 1
+				attack_skill = 1
+				defense_skill = 1
+				planning_skill = 1
+				logistics_skill = 1
+			}
+			if = {
+				limit = {
+					has_government = militarism
 				}
 			}
-			PGT_mistyfly = {
-				add_corps_commander_role = {
-					traits = {
-						pony_race_trait
-						wonderbolt
-					}
-					skill = 1
-					attack_skill = 1
-					defense_skill = 1
-					planning_skill = 1
-					logistics_skill = 1
-				}
-				if = {
-					limit = {
-						PREV = {
-							has_government = militarism
-						}
-					}
+			hidden_effect = {
+				PGT_soarin = {
 					add_unit_leader_trait = winter_specialist
 				}
-			}
-			PGT_spitfire = {
-				add_corps_commander_role = {
-					traits = {
-						pony_race_trait
-						wonderbolt
-						trait_reckless
-					}
-					skill = 1
-					attack_skill = 1
-					defense_skill = 1
-					planning_skill = 1
-					logistics_skill = 1
+				PGT_mistyfly = {
+					add_unit_leader_trait = winter_specialist
 				}
-				if = {
-					limit = {
-						PREV = {
-							has_government = militarism
-						}
-					}
+				PGT_spitfire = {
 					add_unit_leader_trait = winter_specialist
 					add_unit_leader_trait = expert_delegator
 				}
 			}
+			custom_effect_tooltip = new_officers_more_experienced_in_militaristic_pgt_tt
 		}
 	}
 	focus = {
@@ -961,6 +1120,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_deep_isolation"
+			add_ideas = deep_isolation
+			add_political_power = 25
+			add_popularity = {
+				ideology = radicalism
+				popularity = 0.02
+			}
 		}
 	}
 	focus = {
@@ -978,6 +1143,39 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_call_bandits_to_arms"
+			capital_scope = {
+				create_unit = {
+					division = "division_template = \"Garnison Division\" start_equipment_factor = 0.15 start_experience_factor = 0.1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 5
+				}
+			}
+			random_owned_controlled_state = {
+				limit = {
+					is_capital = no
+				}
+				create_unit = {
+					division = "division_template = \"Garnison Division\" start_equipment_factor = 0.1 start_experience_factor = 0 start_manpower_factor = 0.75"
+					owner = ROOT
+					count = 3
+				}
+			}
+			if = {
+				limit = {
+					#random state, but not capital and not prev(random_owned_controlled_state)
+					num_of_controlled_states > 2
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_capital = no
+					}
+					create_unit = {
+						division = "division_template = \"Garnison Division\" start_equipment_factor = 0.1 start_experience_factor = 0 start_manpower_factor = 0.75"
+						owner = ROOT
+						count = 3
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -1166,6 +1364,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_survival_of_the_fittest"
+			add_popularity = {
+				ideology = militarism
+				popularity = 0.05
+			}
+			add_ideas = PGT_survival_of_the_fittest
 		}
 	}
 	focus = {
@@ -1248,6 +1451,7 @@ focus_tree = {
 		}
 		available = {
 			radicalism > 0.5
+			has_government = militarism
 		}
 		ai_will_do = {
 			base = 200
@@ -1531,8 +1735,8 @@ focus_tree = {
 			base = 200
 		}
 		available = {
-			has_full_control_of_state = 160
-			has_full_control_of_state = 164
+			controls_state = 160
+			controls_state = 164
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_aid_from_stg"

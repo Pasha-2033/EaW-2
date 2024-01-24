@@ -216,11 +216,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus olr_focus_open_food_silos"
-			add_to_variable = {
-				var = food_storage_value
-				value = 10
-				tooltip = add_10_food_to_storage_tt
+			set_temp_variable = {
+				delta_food_storage = 10
 			}
+			add_to_food_storage = yes
 		}
 	}
 	focus = {

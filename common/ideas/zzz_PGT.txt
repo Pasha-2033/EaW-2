@@ -164,5 +164,82 @@ ideas = {
 				production_lack_of_resource_penalty_factor = 0.1
 			}
 		}
+		PGT_survival_of_the_fittest = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = PGT
+			}
+			allowed_civil_war = {
+				has_government = radicalism
+			}
+			modifier = {
+				experience_loss_factor = -0.15
+				coordination_bonus = -0.1
+				army_strength_factor = -0.1
+				stability_weekly = -0.005
+				war_support_weekly = -0.002
+			}
+			targeted_modifier = {
+				tag = ICE
+				attack_bonus_against = 0.1
+				defense_bonus_against = 0.1
+				breakthrough_bonus_against = 0.1
+			}
+		}
+		PGT_army_reorganisation_in_proccess = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = PGT
+			}
+			allowed_civil_war = {
+				has_government = militarism
+			}
+			modifier = {
+				army_org_factor = -0.1
+				army_attack_factor = -0.05
+				army_defence_factor = -0.05
+				army_advisor_cost_factor = 0.25
+			}
+		}
+		PGT_army_reorganisation_in_result = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = PGT
+			}
+			allowed_civil_war = {
+				has_government = militarism
+			}
+			modifier = {
+				experience_gain_army = 0.5
+				army_advisor_cost_factor = -0.1
+			}
+			targeted_modifier = {
+				tag = ICE
+				defense_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = EPT
+				defense_bonus_against = 0.05
+			}
+			targeted_modifier = {
+				tag = EQS
+				defense_bonus_against = 0.05
+			}
+		}
+		PGT_surrounded_but_not_broken = {
+			allowed = {
+				original_tag = PGT
+			}
+			allowed_civil_war = {
+				has_government = militarism
+			}
+			modifier = {
+				pocket_penalty = -0.1
+				defence = 0.05
+				army_morale_factor = 0.1
+				intel_from_combat_factor = 0.25
+				intelligence_agency_defense = 2
+			}
+		}
 	}
 }

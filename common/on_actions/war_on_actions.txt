@@ -45,7 +45,10 @@ on_actions = {
 						limit = {
 							has_idea = PGT_farmer_riot
 						}
-						remove_ideas = PGT_farmer_riot
+						add_days_mission_timeout = {
+							mission = PGT_mission_farmrs_rebelion_incoming
+							days = 20
+						}
 						country_event = {
 							id = pegas_tribe.5
 						}

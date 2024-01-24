@@ -121,25 +121,19 @@ country_event = {
 	desc = pegas_tribe.5.d
 	picture = GFX_event_swarm #(to do) change
 	is_triggered_only = yes
-	option = { #we will help in recovery now
+	option = { #we will help in recovery
 		name = pegas_tribe.5.a
 		ai_chance = {
 			base = 1
 		}
 	}
-	option = { #we will help in recovery after civil war
+	option = { #we can`t afford this, let`s negotiate
 		name = pegas_tribe.5.b
 		ai_chance = {
 			base = 1
 		}
 	}
-	option = { #we can`t afford this, let`s negotiate
-		name = pegas_tribe.5.c
-		ai_chance = {
-			base = 1
-		}
-	}
-	option = { #fuck you! (will start farmers rebelion again)
+	option = { #fuck you!
 		name = pegas_tribe.5.c
 		ai_chance = {
 			base = 1
