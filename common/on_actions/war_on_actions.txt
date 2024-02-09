@@ -17,12 +17,28 @@ on_actions = {
 						remove_core_of = ICE
 					}
 				}
-				#remove every claims of ICE
+				#remove every anti ICE idea
+				every_country = {
+					remove_ideas_with_trait = anti_ICE_confrontation
+				}
+				#remove every claims of ICE and temperature instability
 				every_state = {
-					limit = {
-						is_claimed_by = ICE
+					if = {
+						limit = {
+							is_claimed_by = ICE
+						}
+						remove_claim_by = ICE
 					}
-					remove_claim_by = ICE
+					if = {
+						limit = {
+							has_dynamic_modifier = {
+								modifier = ICE_warm_cold_state
+							}
+						}
+						remove_dynamic_modifier = {
+							modifier = ICE_warm_cold_state
+						}
+					}
 				}
 				PGT = {
 					#remove every passage from PGT that granted by focuses
@@ -50,7 +66,7 @@ on_actions = {
 							days = 20
 						}
 						country_event = {
-							id = pegas_tribe.5
+							id = pegas_tribe.6
 						}
 					}
 				}
@@ -162,6 +178,7 @@ on_actions = {
 						id = EQS_prince_blueblood_vs_twilight
 					}
 				}
+				#to do, declare civil war STG to WOP
 			}
 		}
 	}

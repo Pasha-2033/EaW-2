@@ -14,6 +14,7 @@ country_event = {
 					limit = {
 						exists = no
 					}
+					#transfer state ownership and core
 					transfer_state = 344
 					transfer_state = 345
 					transfer_state = 53
@@ -43,6 +44,57 @@ country_event = {
 						set_demilitarized_zone = no
 						add_core_of = CRY
 						remove_core_of = ELN
+					}
+					#set resources
+					add_resource = {
+						type = food
+						amount = 27
+						state = 53
+					}
+					add_resource = {
+						type = crystals
+						amount = 11
+						state = 77
+					}
+					add_resource = {
+						type = steel
+						amount = 4
+						state = 77
+					}
+					add_resource = {
+						type = chromium
+						amount = 2
+						state = 77
+					}
+					add_resource = {
+						type = food
+						amount = 11
+						state = 152
+					}
+					add_resource = {
+						type = food
+						amount = 6
+						state = 324
+					}
+					add_resource = {
+						type = crystals
+						amount = 13
+						state = 339
+					}
+					add_resource = {
+						type = steel
+						amount = 2
+						state = 339
+					}
+					add_resource = {
+						type = crystals
+						amount = 20
+						state = 344
+					}
+					add_resource = {
+						type = crystals
+						amount = 15
+						state = 345
 					}
 				}
 			}

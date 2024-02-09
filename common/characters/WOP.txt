@@ -13,22 +13,27 @@ characters = {
 		country_leader = {
 			desc = "POLITICS_KOLCHAK_DESC"
 			ideology = despotism
-			traits = {}
+			traits = {
+				polar_explorer
+			}
 			expire = "1965.1.1.1"
 			id = -1
 		}
 		field_marshal = {
-			skill = 1
+			skill = 2
 			attack_skill = 1
 			defense_skill = 1
 			planning_skill = 1
 			logistics_skill = 1
 			traits = {
 				naval_invader
+				winter_specialist
+				winter_expert
 			}
 		}
 	}
 	WOP_grzegorz = {
+		#Grzegorz Brzęczyszczykiewicz
 		name = WOP_grzegorz
 		portraits = {
 			#to do

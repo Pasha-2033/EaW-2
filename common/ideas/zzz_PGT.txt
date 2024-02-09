@@ -31,9 +31,11 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
+			traits = {
+				anti_ICE_confrontation
+			}
 			cancel = {
 				NOT = {
-					has_war_with = ICE
 					controls_state = 66
 				}
 			}
@@ -172,6 +174,9 @@ ideas = {
 			allowed_civil_war = {
 				has_government = radicalism
 			}
+			traits = {
+				anti_ICE_confrontation
+			}
 			modifier = {
 				experience_loss_factor = -0.15
 				coordination_bonus = -0.1
@@ -227,6 +232,7 @@ ideas = {
 			}
 		}
 		PGT_surrounded_but_not_broken = {
+			picture = clockwerk_economy			#to do (change)
 			allowed = {
 				original_tag = PGT
 			}
@@ -239,6 +245,264 @@ ideas = {
 				army_morale_factor = 0.1
 				intel_from_combat_factor = 0.25
 				intelligence_agency_defense = 2
+			}
+		}
+		PGT_support_from_below = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = PGT
+			}
+			allowed_civil_war = {
+				has_government = radicalism
+			}
+			modifier = {
+				stability_weekly = 0.01
+				radicalism_drift = 0.01
+			}
+		}
+		PGT_buying_weapons = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = PGT
+			}
+			allowed_civil_war = {
+				has_government = militarism
+			}
+			modifier = {
+				license_production_speed = 0.1
+				license_purchase_cost = -0.25
+				license_tech_difference_speed = 0.15
+				ai_license_acceptance = -25
+				consumer_goods_factor = 0.1
+			}
+			on_remove = {
+				every_country = {
+					limit = {
+						OR = {
+							original_tag = OLE
+							original_tag = MET
+							original_tag = NEM
+							original_tag = VES
+							original_tag = DIS
+							original_tag = WOP
+							original_tag = STG
+						}
+						has_idea = PGT_selling_weapons
+					}
+					remove_ideas = PGT_selling_weapons
+				}
+			}
+		}
+		PGT_selling_weapons = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				OR = {
+					original_tag = OLE
+					original_tag = MET
+					original_tag = NEM
+					original_tag = VES
+					original_tag = DIS
+					original_tag = WOP
+					original_tag = STG
+				}
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			cancel = {
+				has_war_with = PGT
+			}
+			targeted_modifier = {
+				tag = PGT
+				ai_license_acceptance = 50
+				extra_trade_to_target_factor = 0.1
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+				production_speed_arms_factory_factor = 0.02
+			}
+		}
+		PGT_no_place_for_militarism = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = PGT
+			}
+			allowed_civil_war = {
+				has_government = harmony
+			}
+			modifier = {
+				militarism_drift = -0.002
+				militarism_acceptance = -25
+				war_support_weekly = -0.01
+			}
+		}
+		PGT_no_place_for_radicalism = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = PGT
+			}
+			allowed_civil_war = {
+				has_government = harmony
+			}
+			modifier = {
+				radicalism_drift = -0.002
+				radicalism_acceptance = -25
+				war_support_weekly = -0.005
+				stability_weekly = 0.005
+			}
+		}
+		PGT_place_only_for_harmony = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = PGT
+			}
+			allowed_civil_war = {
+				has_government = harmony
+			}
+			modifier = {
+				harmony_drift = 0.001
+				harmony_acceptance = 25
+				political_power_factor = -0.15
+			}
+		}
+		PGT_evacuation_from_winter_front = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = PGT
+			}
+			allowed_civil_war = {
+				has_government = harmony
+			}
+			traits = {
+				anti_ICE_confrontation
+			}
+			modifier = {
+				winter_attrition_factor = -0.25
+				org_loss_at_low_org_factor = -0.1
+				army_speed_factor = -0.1
+			}
+			targeted_modifier = {
+				tag = ICE
+				defense_bonus_against = 0.05
+			}
+		}
+		PGT_defensive_complexes = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = PGT
+			}
+			allowed_civil_war = {
+				has_government = harmony
+			}
+			traits = {
+				anti_ICE_confrontation
+			}
+			modifier = {
+				justify_war_goal_time = 0.25
+				repair_speed_bunker_factor = 0.1
+				production_speed_bunker_factor = 0.05
+				army_core_attack_factor = 0.05
+				army_core_defence_factor = 0.1
+			}
+		}
+		PGT_selling_food = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				OR = {
+					original_tag = OLE
+					original_tag = VES
+					original_tag = DIS
+					original_tag = SOR
+					original_tag = VRA
+					original_tag = LIK
+				}
+			}
+			allowed_civil_war = {
+				OR = {
+					tag = OLE
+					tag = VES
+					tag = DIS
+					tag = SOR
+					tag = VRA
+					tag = LIK
+				}
+			}
+			traits = {
+				anti_ICE_confrontation
+			}
+			modifier = {
+				country_resource_food = -10
+			}
+			on_remove = {
+				PGT = {
+					subtract_from_variable = {
+						pgt_food_stamps_fg = -20
+					}
+				}
+			}
+		}
+		PGT_selling_food_expanded = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = OLE
+			}
+			allowed_civil_war = {
+				tag = OLE
+			}
+			traits = {
+				anti_ICE_confrontation
+			}
+			modifier = {
+				country_resource_food = -15
+				transport_capacity = -0.15
+			}
+			on_remove = {
+				PGT = {
+					subtract_from_variable = {
+						pgt_food_stamps_fg = -60
+					}
+				}
+			}
+		}
+		PGT_unite_with_EPT_HQ = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = PGT
+			}
+			allowed_civil_war = {
+				OR = {
+					has_government = militarism
+					has_government = harmony
+				}
+			}
+			modifier = {
+				repair_speed_bunker_factor = 0.1
+				repair_speed_coastal_bunker_factor = 0.1
+				production_speed_bunker_factor = 0.05
+				production_speed_coastal_bunker_factor = 0.05
+				land_bunker_effectiveness_factor = 0.07
+				coastal_bunker_effectiveness_factor = 0.07
+				army_core_defence_factor = 0.05
+			}
+		}
+		PGT_return_frozen_motherland = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = PGT
+			}
+			allowed_civil_war = {
+				has_government = militarism
+			}
+			traits = {
+				anti_ICE_confrontation
+			}
+			modifier = {
+				army_core_defence_factor = 0.05
+				army_core_attack_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = ICE
+				attack_bonus_against = 0.15
 			}
 		}
 	}

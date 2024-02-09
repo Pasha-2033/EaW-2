@@ -1,4 +1,5 @@
 characters = {
+	#country leaders
 	PGT_cloudforce = {
 		name = PGT_cloudforce
 		portraits = {
@@ -27,6 +28,21 @@ characters = {
 			}
 		}
 	}
+	PGT_harshwhinny = {
+		name = PGT_harshwhinny
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown" #to do
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_982_HARSHWHINNY_DESC"
+			ideology = tribal_federation
+			traits = {}
+			expire = "1965.1.1.1"
+		}
+	}
+	#advisors
 	PGT_rainbowdash = {
 		name = PGT_rainbowdash
 		#to do
@@ -87,7 +103,7 @@ characters = {
 	PGT_soarin = {
 		name = PGT_soarin
 		portraits = {
-			civilian = {
+			army = {
 				large = "GFX_portrait_marshal_unknown" #to do
 				small = "" #to do
 			}
@@ -96,7 +112,7 @@ characters = {
 	PGT_mistyfly = {
 		name = PGT_mistyfly
 		portraits = {
-			civilian = {
+			army = {
 				large = "GFX_portrait_marshal_unknown" #to do
 				small = "" #to do
 			}
@@ -106,11 +122,41 @@ characters = {
 	PGT_spitfire = {
 		name = PGT_spitfire
 		portraits = {
-			civilian = {
+			army = {
 				large = "GFX_portrait_marshal_unknown" #to do
 				small = "" #to do
 			}
 		}
 		gender = female
+	}
+	#army leader
+	PGT_froin = {
+		name = PGT_froin
+		portraits = {
+			army = {
+				large = "GFX_portrait_marshal_unknown" #to do
+				small = "" #to do
+			}
+		}
+		advisor = {
+			slot = high_command
+			idea_token = PGT_froin
+			traits = {
+				army_logistics_1
+			}
+			allowed = {
+				OR = {
+					original_tag = EQS
+					original_tag = PGT
+				}
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 3
+		}
 	}
 }

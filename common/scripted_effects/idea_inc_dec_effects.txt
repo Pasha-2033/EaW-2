@@ -997,3 +997,81 @@ remove_holy_spirits_effect = {}
 remove_technocracy_spirits_effect = {}
 remove_anarchism_spirits_effect = {}
 remove_militarism_spirits_effect = {}
+
+#CRY_sombra_curse_remnants (see in common/ideas/zzz_CRY.txt)
+increase_sombra_curse_idea = {
+	if = {
+		limit = {
+			has_idea = CRY_sombra_curse_remnants_3
+		}
+		swap_ideas = {
+			remove_idea = CRY_sombra_curse_remnants_3
+			add_idea = CRY_sombra_curse_remnants_4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CRY_sombra_curse_remnants_2
+		}
+		swap_ideas = {
+			remove_idea = CRY_sombra_curse_remnants_2
+			add_idea = CRY_sombra_curse_remnants_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CRY_sombra_curse_remnants_1
+		}
+		swap_ideas = {
+			remove_idea = CRY_sombra_curse_remnants_1
+			add_idea = CRY_sombra_curse_remnants_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CRY_sombra_curse_remnants_0
+		}
+		swap_ideas = {
+			remove_idea = CRY_sombra_curse_remnants_0
+			add_idea = CRY_sombra_curse_remnants_1
+		}
+	}
+}
+decrease_sombra_curse_idea = {
+	if = {
+		limit = {
+			has_idea = CRY_sombra_curse_remnants_1
+		}
+		swap_ideas = {
+			remove_idea = CRY_sombra_curse_remnants_1
+			add_idea = CRY_sombra_curse_remnants_0
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CRY_sombra_curse_remnants_2
+		}
+		swap_ideas = {
+			remove_idea = CRY_sombra_curse_remnants_2
+			add_idea = CRY_sombra_curse_remnants_1
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CRY_sombra_curse_remnants_3
+		}
+		swap_ideas = {
+			remove_idea = CRY_sombra_curse_remnants_3
+			add_idea = CRY_sombra_curse_remnants_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CRY_sombra_curse_remnants_4
+		}
+		swap_ideas = {
+			remove_idea = CRY_sombra_curse_remnants_4
+			add_idea = CRY_sombra_curse_remnants_3
+		}
+	}
+}

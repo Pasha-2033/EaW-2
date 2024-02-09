@@ -9,6 +9,7 @@ mio_laspegasus_arms_factory = {
 	}
 	equipment_type = {
 		infantry_equipment
+		support_equipment
 	}
 	research_categories = {
 		infantry_weapons
@@ -37,11 +38,8 @@ mio_laspegasus_arms_factory = {
 		}
 	}
 	trait = {
-		token = upgrade_1 # mandatory
-		name = loc_key # optional
-		# if name provided, use TAG_loc_key if it exists. if not use loc_key (where TAG is the tag of the MIO owner)
-		# if localization key TAG_my_MIO_token_upgrade_1 exists, use it 
-		# else use loc key my_MIO_token_upgrade_1
+		token = non_strategic_materials
+		name = non_strategic_materials
 		icon = GFX_generic_mio_trait_icon_resources
 		special_trait_background = yes
 		available = {
@@ -49,23 +47,362 @@ mio_laspegasus_arms_factory = {
 				has_completed_focus = pgt_focus_war_without_supplies
 			}
 		}
-		on_complete = {} # optional
-		# current MIO scope - FROM = country
-		# Effects that will be executed when the trait is completed (aka unlocked)
-		equipment_bonus = {
-			defense = 0.05
+		limit_to_equipment_type = {
+			infantry_equipment
 		}
-		organization_modifier = {
-			production_lack_of_resource_penalty_factor = -0.2
+		equipment_bonus = {
+			soft_attack = -0.03
+			hard_attack = -0.05
+			defense = -0.02
+		}
+		production_bonus = {
+			production_resource_penalty_factor = -0.2
 		}
 		position = {
-			x = 1 y = 0
+			x = 6
+			y = 0
 		}
-		# AI weight modifier for this trait
-		# For documentation, see examples of ai_will_do throughout the content
-		# Warning : if the trait is part of a central tree, the trait's ai_will_do will override the central tree's!
 		ai_will_do = {
 			base = 1
+		}
+	}
+	trait = {
+		token = low_quality_alloys
+		name = low_quality_alloys
+		icon = GFX_generic_mio_trait_icon_resources
+		special_trait_background = yes
+		available = {
+			FROM = {
+				has_completed_focus = pgt_focus_strike_iron
+			}
+		}
+		equipment_bonus = {
+			reliability = -0.1
+		}
+		production_bonus = {
+			production_resource_need_factor = -0.2
+		}
+		relative_position_id = non_strategic_materials
+		position = {
+			x = 2
+			y = 0
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	trait = {
+		token = high_carbon_steel_processing
+		name = high_carbon_steel_processing
+		icon = GFX_generic_mio_trait_icon_resources
+		special_trait_background = yes
+		limit_to_equipment_type = {
+			infantry_equipment
+		}
+		equipment_bonus = {
+			defense = 0.05
+			soft_attack = 0.07
+			hard_attack = 0.05
+		}
+		production_bonus = {
+			production_resource_need_factor = 0.05
+			production_resource_penalty_factor = 0.05
+		}
+		relative_position_id = non_strategic_materials
+		position = {
+			x = 1
+			y = 1
+		}
+		all_parents = {
+			non_strategic_materials
+			low_quality_alloys
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	trait = {
+		token = mine_powder
+		name = mine_powder
+		icon = GFX_generic_mio_trait_icon_resources
+		special_trait_background = yes
+		available = {
+			#always = no
+		}
+		limit_to_equipment_type = {
+			infantry_equipment
+		}
+		equipment_bonus = {
+			defense = 0.1
+			build_cost_ic = 0.05
+		}
+		relative_position_id = high_carbon_steel_processing
+		position = {
+			x = 0
+			y = 1
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	trait = {
+		token = smokeless_powder
+		name = smokeless_powder
+		icon = GFX_generic_mio_trait_icon_resources
+		special_trait_background = yes
+		available = {
+			#always = no
+		}
+		limit_to_equipment_type = {
+			mio_cat_inf_eq_firearms
+		}
+		equipment_bonus = {
+			soft_attack = 0.1
+			hard_attack = 0.05
+			defense = 0.05
+			build_cost_ic = 0.075
+		}
+		relative_position_id = mine_powder
+		position = {
+			x = 0
+			y = 1
+		}
+		all_parents = {
+			mine_powder
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	trait = {
+		token = handicraft_production_adaptation
+		name = handicraft_production_adaptation
+		icon = GFX_generic_mio_trait_icon_resources
+		production_bonus = {
+			production_efficiency_gain_factor = 0.02
+			production_efficiency_cap_factor = 0.05
+		}
+		position = {
+			x = 2
+			y = 0
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	trait = {
+		token = mio_research_control
+		name = mio_research_control
+		icon = GFX_generic_mio_trait_icon_resources
+		organization_modifier = {
+			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_task_capacity = 1
+			military_industrial_organization_size_up_requirement = 0.1
+		}
+		position = {
+			x = 4
+			y = 0
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	trait = {
+		token = mio_testing_groups
+		name = mio_testing_groups
+		icon = GFX_generic_mio_trait_icon_resources
+		organization_modifier = {
+			military_industrial_organization_research_bonus = -0.1
+			military_industrial_organization_size_up_requirement = 0.2
+		}
+		on_complete = {
+			FROM = {
+				add_research_slot = 1
+			}
+		}
+		position = {
+			x = -1
+			y = 1
+		}
+		relative_position_id = mio_research_control
+		all_parents = {
+			mio_research_control
+			handicraft_production_adaptation
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	trait = {
+		token = lighter_pegasi_equipment
+		icon = GFX_generic_mio_trait_icon_resources
+		limit_to_equipment_type = {
+			infantry_equipment
+		}
+		equipment_bonus = {
+			breakthrough = 0.05
+		}
+		production_bonus = {
+			production_resource_penalty_factor = 0.05
+		}
+		position = {
+			x = 0
+			y = 1
+		}
+		relative_position_id = mio_testing_groups
+		all_parents = {
+			mio_testing_groups
+		}
+		ai_will_do = {
+			base = 1
+		}
+	}
+	trait = {
+		token = simplify_equipment_construction
+		name = simplify_equipment_construction
+		icon = GFX_generic_mio_trait_icon_resources
+		production_bonus = {
+			production_efficiency_gain_factor = 0.1
+		}
+		all_parents = {
+			handicraft_production_adaptation
+		}
+		relative_position_id = handicraft_production_adaptation
+		position = {
+			x = -1
+			y = 1
+		}
+	}
+	trait = {
+		token = isotermal_heat_treatment
+		name = isotermal_heat_treatment
+		icon = GFX_generic_mio_trait_icon_resources
+		limit_to_equipment_type = {
+			mio_cat_inf_eq_steelarms
+		}
+		equipment_bonus = {
+			reliability = 0.05
+			defense = 0.01
+			soft_attack = 0.01
+			hard_attack = 0.01
+			build_cost_ic = 0.075
+		}
+		all_parents = {
+			simplify_equipment_construction
+		}
+		mutually_exclusive = {
+			oil_hardening
+		}
+		relative_position_id = simplify_equipment_construction
+		position = {
+			x = -1
+			y = 1
+		}
+	}
+	trait = {
+		token = oil_hardening
+		name = oil_hardening
+		icon = GFX_generic_mio_trait_icon_resources
+		limit_to_equipment_type = {
+			mio_cat_inf_eq_steelarms
+		}
+		equipment_bonus = {
+			reliability = 0.03
+			defense = 0.02
+			build_cost_ic = 0.05
+		}
+		all_parents = {
+			simplify_equipment_construction
+		}
+		mutually_exclusive = {
+			isotermal_heat_treatment
+		}
+		relative_position_id = simplify_equipment_construction
+		position = {
+			x = 1
+			y = 1
+		}
+	}
+	trait = {
+		token = breastplate_reinforcement
+		icon = GFX_generic_mio_trait_icon_resources
+		limit_to_equipment_type = {
+			mio_cat_inf_eq_steelarms
+		}
+		equipment_bonus = {
+			defense = 0.05
+			maximum_speed = -0.1
+			build_cost_ic = 0.02
+		}
+		any_parent = {
+			isotermal_heat_treatment
+			oil_hardening
+		}
+		relative_position_id = simplify_equipment_construction
+		position = {
+			x = 0
+			y = 2
+		}
+	}
+	trait = {
+		token = mio_takeover_polygons
+		name = mio_takeover_polygons
+		icon = GFX_generic_mio_trait_icon_resources
+		organization_modifier = {
+			military_industrial_organization_design_team_change_cost = 1
+			military_industrial_organization_research_bonus = 0.05
+			military_industrial_organization_task_capacity = 1
+		}
+		all_parents = {
+			mio_research_control
+		}
+		relative_position_id = mio_research_control
+		position = {
+			x = 1
+			y = 1
+		}
+	}
+	trait = {
+		token = mio_soldier_survey
+		name = mio_soldier_survey
+		icon = GFX_generic_mio_trait_icon_resources
+		equipment_bonus = {
+			reliability = 0.05
+		}
+		organization_modifier = {
+			military_industrial_organization_funds_gain = -0.12
+			military_industrial_organization_research_bonus = 0.05
+		}
+		all_parents = {
+			mio_research_control
+		}
+		relative_position_id = mio_takeover_polygons
+		position = {
+			x = 0
+			y = 1
+		}
+	}
+	trait = {
+		token = improve_support_equipment
+		icon = GFX_generic_mio_trait_icon_resources
+		limit_to_equipment_type = {
+			support_equipment
+		}
+		equipment_bonus = {
+			reliability = 0.1
+			build_cost_ic = -0.02
+		}
+		production_bonus = {
+			production_resource_need_factor = 0.075
+		}
+		all_parents = {
+			mio_soldier_survey
+			lighter_pegasi_equipment
+		}
+		relative_position_id = mio_soldier_survey
+		position = {
+			x = -1
+			y = 1
 		}
 	}
 }

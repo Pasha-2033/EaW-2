@@ -79,10 +79,8 @@ ideas = {
 			allowed_civil_war = {
 				has_government = fascism
 			}
-			cancel = {
-				NOT = {
-					has_war_with = ICE
-				}
+			traits = {
+				anti_ICE_confrontation
 			}
 			targeted_modifier = {
 				tag = ICE
@@ -104,10 +102,8 @@ ideas = {
 			allowed_civil_war = {
 				has_government = fascism
 			}
-			cancel = {
-				NOT = {
-					has_war_with = ICE
-				}
+			traits = {
+				anti_ICE_confrontation
 			}
 			modifier = {
 				offence = 0.1
@@ -126,10 +122,8 @@ ideas = {
 			allowed_civil_war = {
 				has_government = fascism
 			}
-			cancel = {
-				NOT = {
-					has_war_with = ICE
-				}
+			traits = {
+				anti_ICE_confrontation
 			}
 			modifier = {
 				army_morale_factor = -0.1
@@ -147,10 +141,8 @@ ideas = {
 			allowed_civil_war = {
 				has_government = fascism
 			}
-			cancel = {
-				NOT = {
-					has_war_with = ICE
-				}
+			traits = {
+				anti_ICE_confrontation
 			}
 			modifier = {
 				assign_army_leader_cp_cost = 10
@@ -243,9 +235,11 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
+			traits = {
+				anti_ICE_confrontation
+			}
 			cancel = {
 				NOT = {
-					has_war_with = ICE
 					controls_state = 3
 				}
 			}

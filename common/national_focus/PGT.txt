@@ -10,8 +10,8 @@ focus_tree = {
 	}
 	default = no
 	continuous_focus_position = {
-		x = 2700
-		y = 1350
+		x = 2200
+		y = 650
 	}
 	#militarists branch
 	focus = {
@@ -329,6 +329,31 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_buy_equipment_for_divisions"
+			add_timed_idea = {
+				idea = PGT_buying_weapons
+				days = 180
+			}
+			every_country = {
+				limit = {
+					OR = {
+						original_tag = OLE
+						original_tag = MET
+						original_tag = NEM
+						original_tag = VES
+						original_tag = DIS
+						original_tag = WOP
+						original_tag = STG
+					}
+				}
+				add_ideas = PGT_selling_weapons
+			}
+			add_offsite_building = {
+				type = arms_factory
+				level = 1
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
 		}
 	}
 	focus = {
@@ -432,8 +457,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_infantry_mio"
-			custom_effect_tooltip = unlock_mio_tt
-			show_mio_tooltip = mio_laspegasus_arms_factory
+			unlock_military_industrial_organization_tooltip = mio:mio_laspegasus_arms_factory
 		}
 	}
 	focus = {
@@ -508,6 +532,9 @@ focus_tree = {
 			}
 			custom_effect_tooltip = new_officers_more_experienced_in_militaristic_pgt_tt
 		}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_CHARACTER
+		}
 	}
 	focus = {
 		id = pgt_focus_return_frozen_motherland
@@ -529,9 +556,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_return_frozen_motherland"
-		}
-		search_filters = {
-			FOCUS_FILTER_ANNEXATION
+			add_ideas = PGT_return_frozen_motherland
 		}
 	}
 	focus = {
@@ -543,6 +568,11 @@ focus_tree = {
 		relative_position_id = pgt_focus_return_frozen_motherland
 		prerequisite = {
 			focus = pgt_focus_return_frozen_motherland
+		}
+		available = {
+			PGT_froin = {
+				is_hired_as_advisor = yes
+			}
 		}
 		ai_will_do = {
 			base = 200
@@ -602,6 +632,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_save_harmonic_principles"
+			add_stability = 0.05
+			add_popularity = {
+				ideology = harmony
+				popularity = 0.05
+			}
+			add_political_power = -25
 		}
 	}
 	focus = {
@@ -619,6 +655,24 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_allow_harmonists_to_perform"
+			add_political_power = -50
+			if = {
+				limit = {
+					has_government = militarism
+				}
+				PGT_cloudforce = {
+					add_country_leader_trait = uneffective_leader
+				}
+			}
+			else_if = {
+				limit = {
+					NOT = {
+						has_government = harmony
+					}
+				}
+				add_stability = -0.05
+				add_war_support = -0.05
+			}
 		}
 	}
 	focus = {
@@ -636,6 +690,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_evacuation_from_winter_front"
+			add_ideas = PGT_evacuation_from_winter_front
+			PGT_cloudforce = {
+				add_unit_leader_trait = winter_specialist
+			}
 		}
 	}
 	focus = {
@@ -653,6 +711,46 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_we_fight_for_the_people"
+			add_ideas = PGT_defensive_complexes
+			if = {
+				limit = {
+					controls_province = 69
+				}
+				66 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 69
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_province = 2064
+				}
+				46 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 2064
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_province = 585
+				}
+				14 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						instant_build = yes
+						province = 585
+					}
+				}
+			}
 		}
 	}
 	focus = {
@@ -670,6 +768,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_place_only_for_harmony"
+			add_timed_idea = {
+				idea = PGT_place_only_for_harmony
+				days = 90
+			}
 		}
 	}
 	focus = {
@@ -687,6 +789,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_no_place_for_radicalism"
+			add_timed_idea = {
+				idea = PGT_no_place_for_radicalism
+				days = 90
+			}
+			add_political_power = 25
 		}
 	}
 	focus = {
@@ -704,6 +811,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_no_place_for_militarism"
+			add_timed_idea = {
+				idea = PGT_no_place_for_militarism
+				days = 90
+			}
+			add_political_power = 25
 		}
 	}
 	focus = {
@@ -722,8 +834,43 @@ focus_tree = {
 		ai_will_do = {
 			base = 200
 		}
+		available = {
+			if = {
+				limit = {
+					has_government = militarism
+				}
+				harmony > 0.8
+			}
+			command_power > 49
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_cloudforce_accepts_harmony"
+			add_country_leader_role = {
+				character = PGT_cloudforce
+				promote_leader = yes
+				country_leader = {
+					ideology = tribal_federation
+					expire = "1965.1.1.1"
+				}
+			}
+			hidden_effect = {
+				PGT_cloudforce = {
+					add_unit_leader_trait = country_leader_trait_harmony
+				}
+			}
+			PGT_cloudforce = {
+				if = {
+					limit = {
+						has_trait = uneffective_leader
+					}
+					remove_country_leader_trait = uneffective_leader
+				}
+			}
+			set_politics = {
+				ruling_party = harmony
+				elections_allowed = no
+			}
+			add_command_power = -50
 		}
 	}
 	focus = {
@@ -739,11 +886,21 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = pgt_focus_cloudforce_accepts_harmony
 		}
+		available = {
+			has_government = militarism
+			harmony > 0.6
+		}
 		ai_will_do = {
 			base = 200
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_fire_cloudforce"
+			retire_country_leader = yes
+			add_war_support = -0.1
+			set_politics = {
+				ruling_party = harmony
+				elections_allowed = no
+			}
 		}
 	}
 	focus = {
@@ -819,6 +976,15 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_ask_aid_from_OLE"
+			OLE = {
+				country_event = {
+					id = pegas_tribe.7
+					days = 7
+					random_days = 3
+				}
+				custom_effect_tooltip = if_they_accept
+				event_option_tooltip = pegas_tribe.7.a
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_SURPLUS_APPROPRIATION
@@ -837,6 +1003,9 @@ focus_tree = {
 		available = {
 			any_controlled_state = {
 				is_coastal = yes
+			}
+			OLE = {
+				has_idea = PGT_selling_food
 			}
 		}
 		ai_will_do = {
@@ -872,8 +1041,17 @@ focus_tree = {
 					}
 				}
 			}
-			#to do
-			custom_effect_tooltip = todo
+			OLE = {
+				swap_ideas = {
+					remove_idea = PGT_selling_food
+					add_idea = PGT_selling_food_expanded
+				}
+			}
+			add_to_variable = {
+				var = pgt_food_stamps_fg
+				value = 60
+				tooltip = add_pgt_food_stamps_fg_40_tt
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_SURPLUS_APPROPRIATION
@@ -916,6 +1094,25 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_ask_aid_from_hives"
+			every_country = {
+				limit = {
+					OR = {
+						tag = VES
+						tag = VRA
+						tag = LIK
+						tag = SOR
+						tag = DIS
+					}
+					exists = yes
+				}
+				country_event = {
+					id = pegas_tribe.7
+					days = 14
+					random_days = 10
+				}
+				custom_effect_tooltip = if_they_accept
+				event_option_tooltip = pegas_tribe.7.a
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_SURPLUS_APPROPRIATION
@@ -952,11 +1149,31 @@ focus_tree = {
 				}
 			}
 		}
+		bypass = {
+			EQS = {
+				has_completed_focus = eqs_focus_appeal_to_pegas_leader
+			}
+		}
 		ai_will_do = {
 			base = 200
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_food_for_people"
+			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_contact_with_twilight"
+			add_popularity = {
+				ideology = harmony
+				popularity = 0.02
+			}
+			EQS = {
+				add_popularity = {
+					ideology = harmony
+					popularity = 0.05
+				}
+				add_power_balance_value = {
+					id = EQS_prince_blueblood_vs_twilight
+					value = -0.1
+				}
+			}
+			custom_effect_tooltip = support_equestrial_harmonism
 		}
 	}
 	focus = {
@@ -985,6 +1202,7 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_cooperation_of_harmonic_leaders"
+			white_peace = EQS
 		}
 	}
 	focus = {
@@ -998,9 +1216,13 @@ focus_tree = {
 			focus = pgt_focus_cooperation_of_harmonic_leaders
 		}
 		available = {
+			country_exists = EPT
 			EPT = {
 				has_completed_focus = ept_focus_emergency_hq_hooftagon
 				has_country_flag = cooperation_with_twilight
+				NOT = {
+					has_war_with = ROOT
+				}
 			}
 		}
 		ai_will_do = {
@@ -1008,6 +1230,31 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_unite_with_EPT_HQ"
+			if = {
+				limit = {
+					has_completed_focus = pgt_focus_save_harmonic_principles
+				}
+				add_ideas = PGT_unite_with_EPT_HQ
+			}
+			else = {
+				add_timed_idea = {
+					idea = PGT_unite_with_EPT_HQ
+					days = 270
+				}
+			}
+			EPT = {
+				army_experience = 5
+				navy_experience = 2.5
+				air_experience = 5
+				add_to_variable = {
+					var = hooftagon^68
+					value = 0.07
+					tooltip = addadd_hooftagon_i68_i69_7_7_tt
+				}
+				add_to_variable = {
+					hooftagon^69 = 0.07
+				}
+			}
 		}
 	}
 	#militarist-radicalist surply branch
@@ -1284,6 +1531,18 @@ focus_tree = {
 			add_to_food_storage = yes
 			add_ideas = PGT_farmer_riot
 			activate_mission = PGT_mission_farmrs_rebelion_incoming
+			hidden_effect = {
+				country_event = {
+					id = pegas_tribe.10
+					days = 60
+					random_days = 30
+				}
+				country_event = {
+					id = pegas_tribe.11
+					days = 90
+					random_days = 30
+				}
+			}
 			set_Temp_variable = {
 				t_farmer_influence = party_popularity@harmony
 			}
@@ -1366,7 +1625,7 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_survival_of_the_fittest"
 			add_popularity = {
 				ideology = militarism
-				popularity = 0.05
+				popularity = -0.03
 			}
 			add_ideas = PGT_survival_of_the_fittest
 		}
@@ -1420,6 +1679,29 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_spare_the_poor"
+			increase_poverty_level_idea = yes
+			set_temp_variable = {
+				delta_food_storage = -500
+			}
+			add_to_food_storage = yes
+			#calc dp AFTER, clamp is in add_to_food_storage effect
+			set_temp_variable = {
+				dp = -500
+			}
+			subtract_from_temp_variable = {
+				dp = delta_food_storage
+			}
+			if = {
+				limit = {
+					check_variable = {
+						dp < 0
+					}
+				}
+				divide_temp_variable = {
+					dp = 5
+				}
+				add_political_power = dp
+			}
 		}
 	}
 	focus = {
@@ -1437,6 +1719,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_support_from_below"
+			add_timed_idea = {
+				idea = PGT_support_from_below
+				days = 90
+			}
+			add_political_power = 50
 		}
 	}
 	focus = {
@@ -1491,6 +1778,16 @@ focus_tree = {
 				add_resource = {
 					type = steel
 					amount = 3
+				}
+			}
+			if = {
+				limit = {
+					mio:mio_laspegasus_arms_factory = {
+						is_mio_available = yes
+					}
+				}
+				mio:mio_laspegasus_arms_factory = {
+					unlock_mio_trait_tooltip = low_quality_alloys
 				}
 			}
 		}
@@ -2425,6 +2722,65 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_war_without_supplies"
+			if = {
+				limit = {
+					mio:mio_laspegasus_arms_factory = {
+						is_mio_available = yes
+					}
+				}
+				mio:mio_laspegasus_arms_factory = {
+					unlock_mio_trait_tooltip = non_strategic_materials
+				}
+			}
+			army_experience = 2.5
+			navy_experience = 1
+			air_experience = 1
+			set_temp_variable = {
+				dpp = -0.01
+			}
+			if = {
+				limit = {
+					controls_state = 160
+					controls_state = 162
+					controls_state = 164
+					controls_state = 326
+				}
+				subtract_from_temp_variable = {
+					dpp = 0.01
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 131
+					controls_state = 138
+				}
+				subtract_from_temp_variable = {
+					dpp = 0.01
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 70
+				}
+				subtract_from_temp_variable = {
+					dpp = 0.01
+				}
+			}
+			if = {
+				limit = {
+					controls_state = 525
+				}
+				subtract_from_temp_variable = {
+					dpp = 0.01
+				}
+			}
+			add_to_variable = {
+				pocket_penalty_under_eastern_pockets = dpp
+			}
+			add_to_variable = {
+				pocket_penalty_under_northern_pockets = dpp
+			}
+			custom_effect_tooltip = add_dpp_to_pocket_modifiers
 		}
 	}
 	focus = {
