@@ -122,7 +122,7 @@ railway_gun_high_requirements = {
 						limit_to_border = yes
 					}
 					building = bunker
-					level > 2
+					level > 5
 				}
 			}
 		}
@@ -168,6 +168,9 @@ switch_planes_to_aa_equipment = {
 }
 stop_planes_production_that_will_be_shot_down = {
 	enable = {
+		check_variable = {
+			num_deployed_planes > 0 #prevent from fighter_ratio / num_deployed_planes, where num_deployed_planes = 0
+		}
 		set_temp_variable = {
 			fighter_ratio = num_deployed_planes_with_type@fighter
 		}
@@ -232,6 +235,7 @@ increase_armor_thickness = {
 	enable = {
 		num_of_military_factories > 19
 		any_enemy_country = {
+			num_divisions > 0 #prevent from ap_ratio / num_divisions, where num_divisions = 0
 			set_temp_variable = {
 				ap_ratio = num_battalions_with_type@anti_tank_brigade
 			}
