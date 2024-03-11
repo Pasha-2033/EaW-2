@@ -27,5 +27,40 @@ ideas = {
 				fascism_drift = 0.1
 			}
 		}
+		NML_self_sufficiency = {
+			allowed = {
+				original_tag = NML
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				harmony_drift = 0.1
+				autonomy_gain = 1
+			}
+		}
+		NML_parallel_import = {
+			allowed = {
+				original_tag = NML
+			}
+			allowed_civil_war = {
+				tag = NML
+			}
+			cancel = {
+				has_war_with = EQS
+			}
+			modifier = {
+				food_gain = -25
+				consumer_goods_factor = -0.1
+				autonomy_gain = 0.75
+				production_speed_agrarian_complex_factor = 0.1
+				repair_speed_agrarian_complex_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = EQS
+				extra_trade_to_target_factor = 0.1
+				trade_cost_for_target_factor = -0.1
+			}
+		}
 	}
 }

@@ -17,5 +17,19 @@ ideas = {
 				country_resource_crystals = 15
 			}
 		}
+		DRG_spa_islands_payment = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = DRG
+			}
+			allowed_civil_war = {
+				controls_state = 4
+			}
+			modifier = {
+				food_gain = -25
+				production_speed_buildings_factor = -0.05
+				consumer_goods_factor = 0.1
+			}
+		}
 	}
 }

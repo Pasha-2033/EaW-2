@@ -347,7 +347,7 @@ ideas = {
 	trade_laws = {
 		law = yes
 		use_list_view = yes
-		free_trade = {			
+		uncontrolled_exports = {
 			available = {
 				NOT = {
 					has_country_flag = trade_laws_blocked
@@ -360,7 +360,6 @@ ideas = {
 					has_idea = collectivized_society
 				}
 			}
-			cost = 150
 			removal_cost = -1
 			modifier = {
 				min_export = 0.8
@@ -371,26 +370,6 @@ ideas = {
 				trade_opinion_factor = 0.3
 				civilian_intel_to_others = 40.0
 				navy_intel_to_others = 20.0
-			}
-			cancel_if_invalid = no
-		}
-		uncontrolled_exports = {
-			available = {
-				NOT = {
-					has_country_flag = trade_laws_blocked
-					has_idea = deep_isolation
-					has_idea = primitive_economy
-					has_idea = outlaw_economy
-					has_idea = tot_militarisation
-				}
-			}
-			removal_cost = -1
-			modifier = {
-				min_export = 0.25
-				consumer_goods_factor = 0.05
-				civilian_intel_to_others = 40.0
-				navy_intel_to_others = 40.0
-				agency_upgrade_time = 0.15
 			}
 			cancel_if_invalid = no
 		}
@@ -476,6 +455,10 @@ ideas = {
 			on_add = {
 				###################################???
 				custom_effect_tooltip = closed_economy_TT
+			}
+			rule = {
+				can_access_market = no
+				desc = can_not_access_market_closed_economy
 			}
 			cancel_if_invalid = no
 			ai_will_do = {
@@ -1720,6 +1703,12 @@ ideas = {
 					}
 				}
 			}
+			modifier = {
+				civilian_intel_to_others = -0.1
+				army_intel_to_others = -0.05
+				navy_intel_to_others = -0.05
+				airforce_intel_to_others = -0.05
+			}
 			removal_cost = -1
 			default = yes
 			cancel_if_invalid = no
@@ -1819,6 +1808,15 @@ ideas = {
 					}
 				}
 			}
+			modifier = {
+				food_gain_factor = 0.075
+				modifier_army_sub_unit_magical_infantry_attack_factor = 0.05
+				modifier_army_sub_unit_magical_infantry_defence_factor = 0.05
+				modifier_army_sub_unit_magical_motorized_attack_factor = 0.05
+				modifier_army_sub_unit_magical_motorized_defence_factor = 0.05
+				modifier_army_sub_unit_magical_mechanized_attack_factor = 0.05
+				modifier_army_sub_unit_magical_mechanized_defence_factor = 0.05
+			}
 			cost = 250
 			removal_cost = -1
 			cancel_if_invalid = no
@@ -1845,6 +1843,18 @@ ideas = {
 						popup = no
 					}
 				}
+			}
+			modifier = {
+				monthly_population = 0.1
+				army_strength_factor = -0.075
+				operative_slot = 2
+				own_operative_capture_chance_factor = -0.1
+				own_operative_detection_chance_factor = -0.05
+				intel_from_combat_factor = 0.05
+				root_out_resistance_effectiveness_factor = 0.05
+				intel_network_gain_factor = 0.1
+				operation_risk = -0.1
+				agency_upgrade_time = -0.1
 			}
 			cost = 250
 			removal_cost = -1
@@ -2037,6 +2047,12 @@ ideas = {
 				}
 			}
 			cost = 250
+			modifier = {
+				monthly_population = -0.25
+				army_strength_factor = 0.1
+				offence = 0.05
+				defence = 0.05
+			}
 			removal_cost = -1
 			cancel_if_invalid = no
 			ai_will_do = {

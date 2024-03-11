@@ -1,92 +1,87 @@
 capital = 38
-if = { #982 scenario script
-	limit = {
-		has_start_date < 1007.1.1
-	}
-	set_popularities = {
-		unholy = 100
-	}
-	set_politics = {
-		ruling_party = unholy
-		last_election = "953.10.10"
-		election_frequency = 36
-		elections_allowed = no
-	}
-	add_ideas = {
-		detached_country
-		closed_economy
-		deep_isolation
-		undead_race
-		ICE_winter_spirits
-		ICE_power_of_winter
-		ICE_power_of_nature
-	}
-	set_technology = {
-		tech_windigo_horrors = 1 #MUSTHAVE (for race based equipment and unit type)
-	}
-	set_stability = 0.05
-	set_war_support = 0.05
-	recruit_character = ICE_windigo
-	recruit_character = ICE_nightlands
-	recruit_character = ICE_valar_morgulis
-	recruit_character = ICE_windoo
-	#set_country_flag = default_982_focus_tree
-	set_country_flag = no_sa_impact #turn off food mechanic
-	set_oob = "982_ICE"
-	add_manpower = 200000 #for building army
-	#ICE freezing states mechanic
-	set_variable = {
-		supercold_state_army_speed_factor = 0.05
-	}
-	set_variable = {
-		supercold_state_org_regain = 0.05
-	}
-	set_variable = {
-		supercold_state_resistance_growth = -0.05
-	}
-	set_variable = {
-		supercold_state_resistance_decay = 0.05
-	}
-	#ICE equipment collection mechanic
-	set_variable = {
-		open_tomb_cost = 50
-	}
-	set_variable = {
-		open_tomb_cooldown = 30
-	}
-	set_variable = {
-		open_tomb_eq_ammont = 200
-	}
-	set_variable = {
-		resurrect_fallen_cost = 300
-	}
-	set_variable = {
-		resurrect_fallen_cooldown = 90
-	}
-	set_variable = {
-		resurrect_fallen_efficiency = 0.1
-	}
-	set_variable = {
-		resurrect_fallen_prev_casualties_k = 0
-	}
-	#ICE grand plans
-	set_variable = {
-		nightlands_grandplan_aof = 0.05
-	}
-	set_variable = {
-		valar_morgulis_grandplan_aaf = 0.05
-	}
-	set_variable = {
-		valar_morgulis_grandplan_lna = 0.1
-	}
-	set_variable = {
-		windoo_grandplan_pp = -0.05
-	}
-	#ICE army inspection events (time is new completed focuses - 1, because starts with 0)
-	set_variable = {
-		windigo_army_max_inspection_time = 2
-	}
-	set_variable = {
-		windigo_army_ingnoring_inspection_time = 2
-	}
+set_popularities = {
+	unholy = 100
+}
+set_politics = {
+	ruling_party = unholy
+	last_election = "953.10.10"
+	election_frequency = 36
+	elections_allowed = no
+}
+add_ideas = {
+	detached_country
+	closed_economy
+	deep_isolation
+	undead_race
+	ICE_winter_spirits
+	ICE_power_of_winter
+	ICE_power_of_nature
+}
+set_technology = {
+	tech_windigo_horrors = 1 #MUSTHAVE (for race based equipment and unit type)
+}
+set_stability = 0.05
+set_war_support = 0.05
+recruit_character = ICE_windigo
+recruit_character = ICE_nightlands
+recruit_character = ICE_valar_morgulis
+recruit_character = ICE_windoo
+#set_country_flag = default_982_focus_tree
+set_country_flag = no_sa_impact #turn off food mechanic
+set_oob = "982_ICE"
+add_manpower = 200000 #for building army
+#ICE freezing states mechanic
+set_variable = {
+	supercold_state_army_speed_factor = 0.05
+}
+set_variable = {
+	supercold_state_org_regain = 0.05
+}
+set_variable = {
+	supercold_state_resistance_growth = -0.05
+}
+set_variable = {
+	supercold_state_resistance_decay = 0.05
+}
+#ICE equipment collection mechanic
+set_variable = {
+	open_tomb_cost = 50
+}
+set_variable = {
+	open_tomb_cooldown = 30
+}
+set_variable = {
+	open_tomb_eq_ammont = 200
+}
+set_variable = {
+	resurrect_fallen_cost = 300
+}
+set_variable = {
+	resurrect_fallen_cooldown = 90
+}
+set_variable = {
+	resurrect_fallen_efficiency = 0.1
+}
+set_variable = {
+	resurrect_fallen_prev_casualties_k = 0
+}
+#ICE grand plans
+set_variable = {
+	nightlands_grandplan_aof = 0.05
+}
+set_variable = {
+	valar_morgulis_grandplan_aaf = 0.05
+}
+set_variable = {
+	valar_morgulis_grandplan_lna = 0.1
+}
+set_variable = {
+	windoo_grandplan_pp = -0.05
+}
+#ICE army inspection events (time is new completed focuses - 1, because starts with 0)
+set_variable = {
+	windigo_army_max_inspection_time = 2
+}
+set_variable = {
+	windigo_army_ingnoring_inspection_time = 2
 }

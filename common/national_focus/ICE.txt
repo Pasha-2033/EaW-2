@@ -40,7 +40,9 @@ focus_tree = {
 			}
 			#to do add event
 		}
-		search_filters = {}
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
 	}
 	focus = {
 		id = ice_focus_extraction_of_hatred
@@ -50,13 +52,11 @@ focus_tree = {
 			factor = 200
 		}
 		available = {
-			#EQS = {
-			#	NOT = {
-			#		has_completed_focus = eqs_focus_friendship_is_magic
-			#	}
-			#}
-			#todo temp
-			always = no
+			EQS = {
+				NOT = {
+					has_completed_focus = eqs_focus_friendship_is_magic
+				}
+			}
 		}
 		x = 2
 		y = 1
@@ -69,9 +69,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_extraction_of_hatred"
-			custom_effect_tooltip = this_is_a_draf_branch
+			add_ideas = ICE_hatred_extraction
 		}
-		search_filters = {}
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+			FOCUS_FILTER_WAR_SUPPORT
+		}
 	}
 	focus = {
 		id = ice_focus_deadly_expansion
@@ -100,7 +103,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_deadly_expansion"
 			add_ideas = ICE_deadly_expansion
 		}
-		search_filters = {}
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+			FOCUS_FILTER_WAR_SUPPORT
+		}
 	}
 	focus = {
 		id = ice_focus_spirit_appearance
@@ -124,8 +130,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_spirit_appearance"
+			add_ideas = ICE_spirit_appearance_0
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_fast_batles
@@ -152,8 +158,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_fast_batles"
+			swap_ideas = {
+				remove_idea = ICE_spirit_appearance_0
+				add_idea = ICE_spirit_appearance_1
+			}
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_high_frezingpower
@@ -180,11 +189,54 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_high_frezingpower"
+			capital_scope = {
+				create_unit = {
+					division = "division_name = { is_name_ordered = yes } division_template = \"Windigo spirits\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 3
+				}
+				EPT = {
+					every_owned_state = {
+						limit = {
+							is_controlled_by = EPT
+						}
+						random_select_amount = 2
+						create_unit = {
+							division = "division_name = { is_name_ordered = yes } division_template = \"Windigo spirits\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				PGT = {
+					every_owned_state = {
+						limit = {
+							is_controlled_by = PGT
+						}
+						random_select_amount = 2
+						create_unit = {
+							division = "division_name = { is_name_ordered = yes } division_template = \"Windigo spirits\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				EQS = {
+					every_owned_state = {
+						limit = {
+							is_controlled_by = EQS
+						}
+						random_select_amount = 2
+						create_unit = {
+							division = "division_name = { is_name_ordered = yes } division_template = \"Windigo spirits\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+			}
 		}
-		search_filters = {}
 	}
-
-
 	focus = {
 		id = ice_focus_new_high_command
 		icon = GFX_goal_ice_focus_generic
@@ -213,6 +265,8 @@ focus_tree = {
 				traits = {
 					undead_race_trait
 					adaptable
+					winter_specialist
+					winter_expert
 				}
 				skill = 3
 				attack_skill = 4
@@ -224,6 +278,8 @@ focus_tree = {
 				character = ICE_valar_morgulis
 				traits = {
 					undead_race_trait
+					winter_specialist
+					winter_expert
 				}
 				skill = 1
 				attack_skill = 3
@@ -235,6 +291,8 @@ focus_tree = {
 				traits = {
 					undead_race_trait
 					commando
+					winter_specialist
+					winter_expert
 				}
 				skill = 2
 				attack_skill = 2
@@ -249,10 +307,10 @@ focus_tree = {
 				random_days = 2
 			}
 		}
-		search_filters = {}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_CHARACTER
+		}
 	}
-
-
 	focus = {
 		id = ice_focus_spirit_transformations
 		icon = GFX_goal_ice_focus_generic
@@ -288,7 +346,6 @@ focus_tree = {
 				}
 			}
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_convertion_other_to_spirits
@@ -312,9 +369,22 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_convertion_other_to_spirits"
-			custom_effect_tooltip = this_is_a_draf_branch
+			if = {
+				limit = {
+					has_intelligence_agency = no
+				}
+				create_intelligence_agency = {
+					name = "Winter is near"
+					icon = GFX_intelligence_agency_logo_generic_2
+				}
+			}
+			else = {
+				army_experience = 5
+				navy_experience = 1
+				air_experience = 1
+			}
+			add_ideas = ICE_convertion_other_to_spirits
 		}
-		search_filters = {}
 	}
 	#nightlands grand plan - organisation and speed
 	focus = {
@@ -342,7 +412,6 @@ focus_tree = {
 			custom_effect_tooltip = add_ICE_nightlands_grandplan_tt
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_battle_column_organisation
@@ -366,7 +435,6 @@ focus_tree = {
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_parallel_movement
@@ -390,7 +458,6 @@ focus_tree = {
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_march_throws
@@ -417,7 +484,6 @@ focus_tree = {
 			}
 			end_of_nightlands_subbranch = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_combat_subgroups
@@ -447,7 +513,6 @@ focus_tree = {
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_single_coordinated_strike
@@ -474,7 +539,6 @@ focus_tree = {
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_division_hard_core
@@ -501,7 +565,6 @@ focus_tree = {
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_division_hard_front
@@ -528,7 +591,6 @@ focus_tree = {
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_extra_reserves
@@ -553,7 +615,6 @@ focus_tree = {
 			}
 			end_of_nightlands_subbranch = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_new_ambush_tactics
@@ -577,7 +638,6 @@ focus_tree = {
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_small_recon_groups
@@ -601,7 +661,6 @@ focus_tree = {
 			}
 			end_of_nightlands_subbranch = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_udaptable_army
@@ -625,7 +684,6 @@ focus_tree = {
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_movement_in_cities
@@ -655,7 +713,6 @@ focus_tree = {
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_movement_in_mountains
@@ -685,7 +742,6 @@ focus_tree = {
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_movement_in_hills
@@ -715,7 +771,6 @@ focus_tree = {
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_movement_in_forests
@@ -745,7 +800,6 @@ focus_tree = {
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_movement_in_jungle
@@ -775,7 +829,6 @@ focus_tree = {
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_movement_in_swamp
@@ -805,7 +858,6 @@ focus_tree = {
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_movement_in_plains
@@ -835,7 +887,6 @@ focus_tree = {
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_movement_in_deserts
@@ -865,7 +916,6 @@ focus_tree = {
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_heat_resistance
@@ -910,7 +960,6 @@ focus_tree = {
 			}
 			end_of_nightlands_subbranch = yes
 		}
-		search_filters = {}
 	}
 	#valar_morgulis grand plan - manpower and attack
 	#to do(not finished)
@@ -939,7 +988,6 @@ focus_tree = {
 			custom_effect_tooltip = add_ICE_valar_morgulis_grandplan_tt
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_continuous_attack
@@ -969,7 +1017,6 @@ focus_tree = {
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_increase_wave_attack
@@ -996,7 +1043,6 @@ focus_tree = {
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_reconnaissance_in_force
@@ -1020,7 +1066,6 @@ focus_tree = {
 			}
 			end_of_valar_subbranch = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_massive_assaults
@@ -1050,7 +1095,6 @@ focus_tree = {
 			}
 			end_of_valar_subbranch = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_attack_tactics
@@ -1074,7 +1118,6 @@ focus_tree = {
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_attack_of_the_wounded
@@ -1098,7 +1141,6 @@ focus_tree = {
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_undiminished_morality
@@ -1122,7 +1164,6 @@ focus_tree = {
 			}
 			end_of_valar_subbranch = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_manpower_management
@@ -1142,7 +1183,6 @@ focus_tree = {
 			add_manpower = 25000
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_improve_coordination_of_mobilization
@@ -1166,7 +1206,6 @@ focus_tree = {
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_direct_recruit_transportation_to_army
@@ -1190,7 +1229,6 @@ focus_tree = {
 			}
 			end_of_valar_subbranch = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_resurrection
@@ -1214,7 +1252,6 @@ focus_tree = {
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_recovery_teams
@@ -1238,7 +1275,6 @@ focus_tree = {
 			}
 			end_of_valar_subbranch = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_lower_entry_rules_for_recruits
@@ -1258,7 +1294,6 @@ focus_tree = {
 			increase_mobilization_law_idea = yes
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_army_without_civilians
@@ -1334,7 +1369,6 @@ focus_tree = {
 			}
 			end_of_valar_subbranch = yes
 		}
-		search_filters = {}
 	}
 	#windoo grand plan - equipment and defence
 	focus = {
@@ -1362,7 +1396,6 @@ focus_tree = {
 			custom_effect_tooltip = add_ICE_windoo_grandplan_tt
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_equipment_improvement
@@ -1380,12 +1413,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_equipment_improvement"
 			multiply_variable = {
-				open_tomb_eq_ammont = 3
+				var = open_tomb_eq_ammont
+				value = 3
 				tooltip = mul_ICE_windoo_grandland_otea_3_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_equipment_standarts
@@ -1403,7 +1436,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_equipment_standarts"
 			subtract_from_variable = {
-				open_tomb_cooldown = 5
+				var = open_tomb_cooldown
+				value = 5
 				tooltip = submul_ICE_windoo_grandland_otc_5_otea_2_tt
 			}
 			multiply_variable = {
@@ -1411,7 +1445,6 @@ focus_tree = {
 			}
 			end_of_windoo_subbranch = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_consolidate_occupied_states
@@ -1429,7 +1462,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_consolidate_occupied_states"
 			subtract_from_variable = {
-				windoo_grandplan_rt = 0.15
+				var = windoo_grandplan_rt
+				value = 0.15
 				tooltip = subsub_ICE_windoo_grandland_rt_15_rgf_10_tt
 			}
 			subtract_from_variable = {
@@ -1437,7 +1471,6 @@ focus_tree = {
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_fallback_patterns
@@ -1455,12 +1488,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_fallback_patterns"
 			add_to_variable = {
-				windoo_grandplan_adf = 0.1
+				var = windoo_grandplan_adf
+				value = 0.1
 				tooltip = add_ICE_windoo_grandland_adf_10_tt
 			}
 			end_of_windoo_subbranch = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_supply_management
@@ -1478,12 +1511,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_supply_management"
 			add_to_variable = {
-				windoo_grandplan_snr = 0.5
+				var = windoo_grandplan_snr
+				value = 0.5
 				tooltip = add_ICE_windoo_grandland_snr_50_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_destroy_buildings_for_equipment
@@ -1503,7 +1536,6 @@ focus_tree = {
 			custom_effect_tooltip = unlock_destroy_buildings_decision_tt #decision is targered, so instance localisation is wrong, tooltip required
 			end_of_windoo_subbranch = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_power_of_distaction
@@ -1521,7 +1553,8 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_power_of_distaction"
 			add_to_variable = {
-				windoo_grandplan_mps = 0.1
+				var = windoo_grandplan_mps
+				value = 0.1
 				tooltip = addadd_ICE_windoo_grandland_mps_10_ps_10_tt
 			}
 			add_to_variable = {
@@ -1529,7 +1562,6 @@ focus_tree = {
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_attack_is_defence_too
@@ -1547,12 +1579,12 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_attack_is_defence_toon"
 			add_to_variable = {
-				windoo_grandplan_cb = 0.1
+				var = windoo_grandplan_cb
+				value = 0.1
 				tooltip = add_ICE_windoo_grandland_cb_10_tt
 			}
 			end_of_windoo_subbranch = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_rotation_prototype
@@ -1570,11 +1602,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_rotation_prototype"
 			subtract_from_variable = {
-				windoo_grandplan_pp = 0.1
+				var = windoo_grandplan_pp
+				value = 0.1
 				tooltip = sub_ICE_windoo_grandplan_pp_10_tt
 			}
 			end_of_windoo_subbranch = yes
 		}
-		search_filters = {}
 	}
 }

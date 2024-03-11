@@ -126,11 +126,26 @@ ideas = {
 				original_tag = STG
 				original_tag = WOP
 			}
+			allowed_civil_war = {
+				always = no
+			}
 			modifier = {
 				stability_factor = -0.1
 			}
+		}
+		STG_railroad_constructioning = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = STG
+				original_tag = WOP
+			}
 			allowed_civil_war = {
 				always = no
+			}
+			modifier = {
+				repair_speed_rail_way_factor = 0.2
+				production_speed_rail_way_factor = 0.1
+				production_speed_supply_node_factor = 0.1
 			}
 		}
 	}

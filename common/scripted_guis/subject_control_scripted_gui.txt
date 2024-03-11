@@ -408,42 +408,10 @@ scripted_gui = {
 				set_temp_variable = {
 					frame_1 = 1
 				}
-				if = {
-					limit = {
-						check_variable = {
-							i_1 = 0
-						}
-					}
-					if = {
-						limit = {
-							FROM = {
-								has_idea = free_trade
-							}
-						}
-						add_to_temp_variable = {
-							frame_1 = 1
-						}
-					}
-					else_if = {
-						limit = {
-							always = no
-						}
-						#change trigger (if ideas are possible for subject and overlord)
-						always = no
-					}
-					else_if = {
-						limit = {
-							subject_trade_0_available = no
-						}
-						add_to_temp_variable = {
-							frame_1 = 2
-						}
-					}
-				}
 				else_if = {
 					limit = {
 						check_variable = {
-							i_1 = 1
+							i_1 = 0
 						}
 					}
 					if = {
@@ -475,7 +443,7 @@ scripted_gui = {
 				else_if = {
 					limit = {
 						check_variable = {
-							i_1 = 2
+							i_1 = 1
 						}
 					}
 					if = {
@@ -507,7 +475,7 @@ scripted_gui = {
 				else_if = {
 					limit = {
 						check_variable = {
-							i_1 = 3
+							i_1 = 2
 						}
 					}
 					if = {
@@ -539,7 +507,7 @@ scripted_gui = {
 				else_if = {
 					limit = {
 						check_variable = {
-							i_1 = 4
+							i_1 = 3
 						}
 					}
 					if = {
@@ -571,7 +539,7 @@ scripted_gui = {
 				else_if = {
 					limit = {
 						check_variable = {
-							i_1 = 5
+							i_1 = 4
 						}
 					}
 					if = {
@@ -603,7 +571,7 @@ scripted_gui = {
 				else_if = {
 					limit = {
 						check_variable = {
-							i_1 = 6
+							i_1 = 5
 						}
 					}
 					if = {

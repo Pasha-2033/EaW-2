@@ -1,448 +1,132 @@
 joint_focus = {
-	id = default_982_faction_politics
+	id = default_faction_politics
 	icon = GFX_goal_generic_changeling
-	cost = 10
+	cost = 5
 	ai_will_do = {
 		factor = 1
 	}
-	x = 67
-	y = 0
+	offset = {
+		x = 58
+		trigger = {
+			has_focus_tree = default_982_focus_tree
+			#to do other scenarios triggers
+		}
+	}
 	joint_trigger = {
 		is_in_faction_with = ROOT
+	}
+	available = {
+		num_faction_members > 1
 	}
 	completion_reward_joint_originator = {
 		log = "[GetDateText]: [Root.GetName]: Focus default_982_faction_politics"
-		add_political_power = 250
+		hidden_effect = {
+			every_country = {
+				limit = {
+					is_in_faction_with = ROOT
+				}
+				add_political_power = 40
+			}
+		}
+		add_political_power = 35
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			add_autonomy_score = {
+				value = 75
+			}
+		}
+		else_if = {
+			limit = {
+				num_subjects > 0
+			}
+			hidden_effect = {
+				every_subject_country = {
+					add_autonomy_score = {
+						value = -25
+					}
+				}
+			}
+			custom_effect_tooltip = default_suppress_subjects_tt
+		}
 	}
-	completion_reward_joint_member = {
-		add_political_power = 100
+	completion_reward = {
+		effect_tooltip = {
+			add_political_power = 40
+		}
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
 	}
 }
 joint_focus = {
-	id = default_982_diplomacy_vector
+	id = default_diplomacy_vector
 	icon = GFX_goal_generic_changeling
-	relative_position_id = default_982_faction_politics
+	relative_position_id = default_faction_politics
 	ai_will_do = {
 		factor = 200
 	}
 	prerequisite = {
-		focus = default_982_faction_politics
+		focus = default_faction_politics
 	}
-	x = -6
+	cost = 5
+	x = 4
 	y = 1
 	joint_trigger = {
 		is_in_faction_with = ROOT
 	}
 	available = {
-		is_subject = no
+		num_faction_members > 1
 	}
 	completion_reward_joint_originator = {
-		log = "[GetDateText]: [Root.GetName]: Focus default_982_diplomacy_vector"
-		add_political_power = 250
+		log = "[GetDateText]: [Root.GetName]: Focus default_diplomacy_vector"
+		hidden_effect = {
+			#we already has tooltip for everyone in completion_reward
+			every_country = {
+				limit = {
+					is_in_faction_with = ROOT
+				}
+			}
+			add_political_power = 100
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			add_autonomy_score = {
+				value = 50
+			}
+		}
+		else_if = {
+			limit = {
+				num_subjects > 0
+			}
+			hidden_effect = {
+				every_subject_country = {
+					add_autonomy_score = {
+						value = -25
+					}
+				}
+			}
+			custom_effect_tooltip = default_suppress_subjects_tt
+		}
 	}
-	completion_reward_joint_member = {
-		add_political_power = 100
+	completion_reward = {
+		effect_tooltip = {
+			add_political_power = 100
+		}
+	}
+	search_filters = {
+		FOCUS_FILTER_POLITICAL
 	}
 }
 joint_focus = {
-	id = default_982_agressive_expansion
+	id = default_military_cooperation
 	icon = GFX_goal_generic_changeling
-	relative_position_id = default_982_diplomacy_vector
+	relative_position_id = default_faction_politics
 	prerequisite = {
-		focus = default_982_diplomacy_vector
-	}
-	mutually_exclusive = {
-		focus = default_982_peacefull_unification
-	}
-	ai_will_do = {
-		factor = 200
-	}
-	x = -1
-	y = 1
-	joint_trigger = {
-		is_in_faction_with = ROOT
-	}
-	available = {
-		is_subject = no
-	}
-	completion_reward_joint_originator = {
-		log = "[GetDateText]: [Root.GetName]: Focus default_982_agressive_expansion"
-		add_political_power = 250
-	}
-	completion_reward_joint_member = {
-		add_political_power = 100
-	}
-}
-joint_focus = {
-	id = default_982_peacefull_unification
-	icon = GFX_goal_generic_changeling
-	relative_position_id = default_982_diplomacy_vector
-	prerequisite = {
-		focus = default_982_diplomacy_vector
-	}
-	mutually_exclusive = {
-		focus = default_982_agressive_expansion
-	}
-	ai_will_do = {
-		factor = 200
-	}
-	x = 1
-	y = 1
-	joint_trigger = {
-		is_in_faction_with = ROOT
-	}
-	available = {
-		is_subject = no
-	}
-	completion_reward_joint_originator = {
-		log = "[GetDateText]: [Root.GetName]: Focus default_982_peacefull_unification"
-		add_political_power = 250
-	}
-	completion_reward_joint_member = {
-		add_political_power = 100
-	}
-}
-joint_focus = {
-	id = default_982_annexation_path
-	icon = GFX_goal_generic_changeling
-	relative_position_id = default_982_diplomacy_vector
-	prerequisite = {
-		focus = default_982_agressive_expansion
-	}
-	ai_will_do = {
-		factor = 200
-	}
-	x = -2
-	y = 2
-	joint_trigger = {
-		is_in_faction_with = ROOT
-	}
-	available = {
-		is_subject = no
-	}
-	completion_reward_joint_originator = {
-		log = "[GetDateText]: [Root.GetName]: Focus default_982_annexation_path"
-		add_political_power = 250
-	}
-	completion_reward_joint_member = {
-		add_political_power = 100
-	}
-}
-joint_focus = {
-	id = default_982_supress_patrisans
-	icon = GFX_goal_generic_changeling
-	relative_position_id = default_982_annexation_path
-	prerequisite = {
-		focus = default_982_annexation_path
-	}
-	ai_will_do = {
-		factor = 200
-	}
-	x = 0
-	y = 1
-	joint_trigger = {
-		is_in_faction_with = ROOT
-	}
-	available = {
-		is_subject = no
-	}
-	completion_reward_joint_originator = {
-		log = "[GetDateText]: [Root.GetName]: Focus default_982_supress_patrisans"
-		add_political_power = 250
-	}
-	completion_reward_joint_member = {
-		add_political_power = 100
-	}
-}
-joint_focus = {
-	id = default_982_puppet_path
-	icon = GFX_goal_generic_changeling
-	relative_position_id = default_982_diplomacy_vector
-	prerequisite = {
-		focus = default_982_agressive_expansion
-		focus = default_982_peacefull_unification
-	}
-	ai_will_do = {
-		factor = 200
-	}
-	x = 0
-	y = 2
-	joint_trigger = {
-		is_in_faction_with = ROOT
-	}
-	available = {
-		is_subject = no
-	}
-	completion_reward_joint_originator = {
-		log = "[GetDateText]: [Root.GetName]: Focus default_982_puppet_path"
-		add_political_power = 250
-	}
-	completion_reward_joint_member = {
-		add_political_power = 100
-	}
-}
-joint_focus = {
-	id = default_982_polymetropolis
-	icon = GFX_goal_generic_changeling
-	relative_position_id = default_982_puppet_path
-	prerequisite = {
-		focus = default_982_puppet_path
-	}
-	ai_will_do = {
-		factor = 200
-	}
-	x = 0
-	y = 1
-	joint_trigger = {
-		is_in_faction_with = ROOT
-	}
-	available = {
-		is_subject = no
-	}
-	completion_reward_joint_originator = {
-		log = "[GetDateText]: [Root.GetName]: Focus default_982_polymetropolis"
-		add_political_power = 250
-	}
-	completion_reward_joint_member = {
-		add_political_power = 100
-	}
-}
-joint_focus = {
-	id = default_982_confederate_path
-	icon = GFX_goal_generic_changeling
-	relative_position_id = default_982_diplomacy_vector
-	prerequisite = {
-		focus = default_982_peacefull_unification
-	}
-	ai_will_do = {
-		factor = 200
-	}
-	x = 2
-	y = 2
-	joint_trigger = {
-		is_in_faction_with = ROOT
-	}
-	available = {
-		is_subject = no
-	}
-	completion_reward_joint_originator = {
-		log = "[GetDateText]: [Root.GetName]: Focus default_982_confederate_path"
-		add_political_power = 250
-	}
-	completion_reward_joint_member = {
-		add_political_power = 100
-	}
-}
-joint_focus = {
-	id = default_982_compensation_of_racial_disadvantages
-	icon = GFX_goal_generic_changeling
-	relative_position_id = default_982_confederate_path
-	prerequisite = {
-		focus = default_982_confederate_path
-	}
-	ai_will_do = {
-		factor = 200
-	}
-	x = 0
-	y = 1
-	joint_trigger = {
-		is_in_faction_with = ROOT
-	}
-	available = {
-		is_subject = no
-	}
-	completion_reward_joint_originator = {
-		log = "[GetDateText]: [Root.GetName]: Focus default_982_compensation_of_racial_disadvantages"
-		add_political_power = 250
-	}
-	completion_reward_joint_member = {
-		add_political_power = 100
-	}
-}
-
-
-
-
-
-
-
-
-
-
-
-joint_focus = {
-	id = default_982_military_cooperation
-	icon = GFX_goal_generic_changeling
-	relative_position_id = default_982_faction_politics
-	prerequisite = {
-		focus = default_982_faction_politics
-	}
-	ai_will_do = {
-		factor = 200
-	}
-	x = 0
-	y = 1
-	joint_trigger = {
-		is_in_faction_with = ROOT
-	}
-	completion_reward_joint_originator = {
-		log = "[GetDateText]: [Root.GetName]: Focus default_982_military_cooperation"
-		add_political_power = 250
-	}
-	completion_reward_joint_member = {
-		add_political_power = 100
-	}
-}
-joint_focus = {
-	id = default_982_general_navy_HQ
-	icon = GFX_goal_generic_changeling
-	relative_position_id = default_982_military_cooperation
-	prerequisite = {
-		focus = default_982_military_cooperation
-	}
-	ai_will_do = {
-		factor = 200
-	}
-	x = -2
-	y = 1
-	joint_trigger = {
-		is_in_faction_with = ROOT
-	}
-	completion_reward_joint_originator = {
-		log = "[GetDateText]: [Root.GetName]: Focus default_982_general_navy_HQ"
-		add_political_power = 250
-	}
-	completion_reward_joint_member = {
-		add_political_power = 100
-	}
-}
-joint_focus = {
-	id = default_982_common_waters
-	icon = GFX_goal_generic_changeling
-	relative_position_id = default_982_general_navy_HQ
-	prerequisite = {
-		focus = default_982_general_navy_HQ
-	}
-	ai_will_do = {
-		factor = 200
-	}
-	x = 0
-	y = 1
-	joint_trigger = {
-		is_in_faction_with = ROOT
-	}
-	completion_reward_joint_originator = {
-		log = "[GetDateText]: [Root.GetName]: Focus default_982_common_waters"
-		add_political_power = 250
-	}
-	completion_reward_joint_member = {
-		add_political_power = 100
-	}
-}
-joint_focus = {
-	id = default_982_general_army_HQ
-	icon = GFX_goal_generic_changeling
-	relative_position_id = default_982_military_cooperation
-	prerequisite = {
-		focus = default_982_military_cooperation
-	}
-	ai_will_do = {
-		factor = 200
-	}
-	x = 2
-	y = 1
-	joint_trigger = {
-		is_in_faction_with = ROOT
-	}
-	completion_reward_joint_originator = {
-		log = "[GetDateText]: [Root.GetName]: Focus default_982_general_army_HQ"
-		add_political_power = 250
-	}
-	completion_reward_joint_member = {
-		add_political_power = 100
-	}
-}
-joint_focus = {
-	id = default_982_common_lands
-	icon = GFX_goal_generic_changeling
-	relative_position_id = default_982_general_army_HQ
-	prerequisite = {
-		focus = default_982_general_army_HQ
-	}
-	ai_will_do = {
-		factor = 200
-	}
-	x = 0
-	y = 1
-	joint_trigger = {
-		is_in_faction_with = ROOT
-	}
-	completion_reward_joint_originator = {
-		log = "[GetDateText]: [Root.GetName]: Focus default_982_common_lands"
-		add_political_power = 250
-	}
-	completion_reward_joint_member = {
-		add_political_power = 100
-	}
-}
-joint_focus = {
-	id = default_982_general_air_HQ
-	icon = GFX_goal_generic_changeling
-	relative_position_id = default_982_military_cooperation
-	prerequisite = {
-		focus = default_982_military_cooperation
-	}
-	ai_will_do = {
-		factor = 200
-	}
-	x = 0
-	y = 1
-	joint_trigger = {
-		is_in_faction_with = ROOT
-	}
-	completion_reward_joint_originator = {
-		log = "[GetDateText]: [Root.GetName]: Focus default_982_general_air_HQ"
-		add_political_power = 250
-	}
-	completion_reward_joint_member = {
-		add_political_power = 100
-	}
-}
-joint_focus = {
-	id = default_982_common_sky
-	icon = GFX_goal_generic_changeling
-	relative_position_id = default_982_general_air_HQ
-	prerequisite = {
-		focus = default_982_general_air_HQ
-	}
-	ai_will_do = {
-		factor = 200
-	}
-	x = 0
-	y = 1
-	joint_trigger = {
-		is_in_faction_with = ROOT
-	}
-	completion_reward_joint_originator = {
-		log = "[GetDateText]: [Root.GetName]: Focus default_982_common_sky"
-		add_political_power = 250
-	}
-	completion_reward_joint_member = {
-		add_political_power = 100
-	}
-}
-shared_focus = {
-	id = default_982_preparation_for_exile
-	icon = GFX_goal_generic_changeling
-	relative_position_id = default_982_common_sky
-	prerequisite = {
-		focus = default_982_common_waters
-	}
-	prerequisite = {
-		focus = default_982_common_lands
-	}
-	prerequisite = {
-		focus = default_982_common_sky
+		focus = default_faction_politics
 	}
 	ai_will_do = {
 		factor = 200
@@ -450,18 +134,655 @@ shared_focus = {
 	cost = 10
 	x = 0
 	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
 	available = {
+		num_faction_members > 1
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_military_cooperation"
+		hidden_effect = {
+			#we already has tooltip for everyone in completion_reward
+			every_country = {
+				limit = {
+					is_in_faction_with = ROOT
+				}
+				army_experience = 10
+				if = {
+					limit = {
+						any_controlled_state = {
+							any_province_building_level = {
+								province = {
+									all_provinces = yes
+									limit_to_coastal = yes
+								}
+								building = naval_base
+								level > 0
+							}
+						}
+					}
+					navy_experience = 10
+				}
+				if = {
+					limit = {
+						any_controlled_state = {
+							air_base > 6
+						}
+					}
+					air_experience = 10
+				}
+			}
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			add_autonomy_score = {
+				value = 50
+			}
+		}
+		else_if = {
+			limit = {
+				num_subjects > 0
+			}
+			hidden_effect = {
+				every_subject_country = {
+					add_autonomy_score = {
+						value = -25
+					}
+				}
+			}
+			custom_effect_tooltip = default_suppress_subjects_tt
+		}
+	}
+	completion_reward = {
+		effect_tooltip = {
+			army_experience = 10
+			add_command_power = 10
+		}
+		custom_effect_tooltip = default_military_cooperation_tt
+	}
+	search_filters = {
+		FOCUS_FILTER_ARMY_XP
+		FOCUS_FILTER_NAVY_XP
+		FOCUS_FILTER_AIR_XP
+	}
+}
+joint_focus = {
+	id = default_general_navy_HQ
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_military_cooperation
+	prerequisite = {
+		focus = default_military_cooperation
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	cost = 10
+	x = -2
+	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	available = {
+		num_faction_members > 1
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_general_navy_HQ"
+		hidden_effect = {
+			#we already has tooltip for everyone in completion_reward
+			every_country = {
+				limit = {
+					is_in_faction_with = ROOT
+				}
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.5
+					uses = 1
+					category = naval_doctrine
+				}
+				navy_experience = 25
+				add_command_power = 10
+			}
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			add_autonomy_score = {
+				value = 50
+			}
+		}
+		else_if = {
+			limit = {
+				num_subjects > 0
+			}
+			hidden_effect = {
+				every_subject_country = {
+					add_autonomy_score = {
+						value = -25
+					}
+				}
+			}
+			custom_effect_tooltip = default_suppress_subjects_tt
+		}
+	}
+	completion_reward = {
+		effect_tooltip = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = naval_doctrine
+			}
+			navy_experience = 25
+			add_command_power = 10
+		}
+	}
+	search_filters = {
+		FOCUS_FILTER_NAVY_XP
+	}
+}
+joint_focus = {
+	id = default_common_waters
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_general_navy_HQ
+	prerequisite = {
+		focus = default_general_navy_HQ
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	cost = 10
+	x = 0
+	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	available = {
+		num_faction_members > 1
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_common_waters"
+		hidden_effect = {
+			#we already has tooltip for everyone in completion_reward
+			every_country = {
+				limit = {
+					is_in_faction_with = ROOT
+				}
+				if = {
+					limit = {
+						capital_scope = {
+							is_coastal = yes
+							free_building_slots = {
+								building = dockyard
+								size > 0
+								include_locked = yes
+							}
+						}
+					}
+					capital_scope = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = dockyard
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				else = {
+					random_owned_controlled_state = {
+						limit = {
+							is_coastal = yes
+							free_building_slots = {
+								building = dockyard
+								size > 0
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = dockyard
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				navy_experience = 10
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.25
+					uses = 1
+					category = naval_doctrine
+				}
+			}
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			add_autonomy_score = {
+				value = 50
+			}
+		}
+		else_if = {
+			limit = {
+				num_subjects > 0
+			}
+			hidden_effect = {
+				every_subject_country = {
+					add_autonomy_score = {
+						value = -25
+					}
+				}
+			}
+			custom_effect_tooltip = default_suppress_subjects_tt
+		}
+	}
+	completion_reward = {
+		effect_tooltip = {
+			navy_experience = 10
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.25
+				uses = 1
+				category = naval_doctrine
+			}
+		}
+		custom_effect_tooltip = default_common_waters_tt
+	}
+	search_filters = {
+		FOCUS_FILTER_NAVY_XP
+	}
+}
+joint_focus = {
+	id = default_general_army_HQ
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_military_cooperation
+	prerequisite = {
+		focus = default_military_cooperation
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	cost = 10
+	x = 2
+	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	available = {
+		num_faction_members > 1
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_general_army_HQ"
+		hidden_effect = {
+			#we already has tooltip for everyone in completion_reward
+			every_country = {
+				limit = {
+					is_in_faction_with = ROOT
+				}
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.5
+					uses = 1
+					category = land_doctrine
+				}
+				army_experience = 25
+				add_command_power = 10
+			}
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			add_autonomy_score = {
+				value = 50
+			}
+		}
+		else_if = {
+			limit = {
+				num_subjects > 0
+			}
+			hidden_effect = {
+				every_subject_country = {
+					add_autonomy_score = {
+						value = -25
+					}
+				}
+			}
+			custom_effect_tooltip = default_suppress_subjects_tt
+		}
+	}
+	completion_reward = {
+		effect_tooltip = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = land_doctrine
+			}
+			army_experience = 25
+			add_command_power = 10
+		}
+	}
+	search_filters = {
+		FOCUS_FILTER_ARMY_XP
+	}
+}
+joint_focus = {
+	id = default_common_lands
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_general_army_HQ
+	prerequisite = {
+		focus = default_general_army_HQ
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	cost = 10
+	x = 0
+	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	available = {
+		num_faction_members > 1
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_common_lands"
+		hidden_effect = {
+			#we already has tooltip for everyone in completion_reward
+			every_country = {
+				limit = {
+					is_in_faction_with = ROOT
+				}
+				if = {
+					limit = {
+						capital_scope = {
+							free_building_slots = {
+								building = arms_factory
+								size > 0
+								include_locked = yes
+							}
+						}
+					}
+					capital_scope = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				else = {
+					random_owned_controlled_state = {
+						limit = {
+							free_building_slots = {
+								building = arms_factory
+								size > 0
+								include_locked = yes
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+					}
+				}
+				army_experience = 10
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.25
+					uses = 1
+					category = land_doctrine
+				}
+			}
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			add_autonomy_score = {
+				value = 50
+			}
+		}
+		else_if = {
+			limit = {
+				num_subjects > 0
+			}
+			hidden_effect = {
+				every_subject_country = {
+					add_autonomy_score = {
+						value = -25
+					}
+				}
+			}
+			custom_effect_tooltip = default_suppress_subjects_tt
+		}
+	}
+	completion_reward = {
+		effect_tooltip = {
+			army_experience = 10
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.25
+				uses = 1
+				category = land_doctrine
+			}
+		}
+		custom_effect_tooltip = default_common_lands_tt
+	}
+	search_filters = {
+		FOCUS_FILTER_ARMY_XP
+	}
+}
+joint_focus = {
+	id = default_general_air_HQ
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_military_cooperation
+	prerequisite = {
+		focus = default_military_cooperation
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	cost = 10
+	x = 0
+	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	available = {
+		num_faction_members > 1
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_general_air_HQ"
+		hidden_effect = {
+			#we already has tooltip for everyone in completion_reward
+			every_country = {
+				limit = {
+					is_in_faction_with = ROOT
+				}
+				add_doctrine_cost_reduction = {
+					cost_reduction = 0.5
+					uses = 1
+					category = air_doctrine
+				}
+				air_experience = 25
+				add_command_power = 10
+			}
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			add_autonomy_score = {
+				value = 50
+			}
+		}
+		else_if = {
+			limit = {
+				num_subjects > 0
+			}
+			hidden_effect = {
+				every_subject_country = {
+					add_autonomy_score = {
+						value = -25
+					}
+				}
+			}
+			custom_effect_tooltip = default_suppress_subjects_tt
+		}
+	}
+	completion_reward = {
+		effect_tooltip = {
+			add_doctrine_cost_reduction = {
+				cost_reduction = 0.5
+				uses = 1
+				category = air_doctrine
+			}
+			air_experience = 25
+			add_command_power = 10
+		}
+	}
+	search_filters = {
+		FOCUS_FILTER_AIR_XP
+	}
+}
+joint_focus = {
+	id = default_common_sky
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_general_air_HQ
+	prerequisite = {
+		focus = default_general_air_HQ
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	cost = 10
+	x = 0
+	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	available = {
+		num_faction_members > 1
+	}
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_common_sky"
+		hidden_effect = {
+			#we already has tooltip for everyone in completion_reward
+			every_country = {
+				limit = {
+					is_in_faction_with = ROOT
+				}
+				if = {
+					limit = {
+						any_owned_state = {
+							is_controlled_by = PREV
+							has_resources_amount = {
+								resource = aluminium
+								amount > 0
+							}
+						}
+					}
+					random_owned_controlled_state = {
+						limit = {
+							has_resources_amount = {
+								resource = aluminium
+								amount > 0
+							}
+						}
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+						add_resource = {
+							type = aluminium
+							amount = 4
+						}
+					}
+				}
+				else = {
+					capital_scope = {
+						add_extra_state_shared_building_slots = 1
+						add_building_construction = {
+							type = arms_factory
+							level = 1
+							instant_build = yes
+						}
+						add_resource = {
+							type = aluminium
+							amount = 4
+						}
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			add_autonomy_score = {
+				value = 50
+			}
+		}
+		else_if = {
+			limit = {
+				num_subjects > 0
+			}
+			hidden_effect = {
+				every_subject_country = {
+					add_autonomy_score = {
+						value = -25
+					}
+				}
+			}
+			custom_effect_tooltip = default_suppress_subjects_tt
+		}
+	}
+	completion_reward = {
+		custom_effect_tooltip = default_common_sky_tt
+	}
+	search_filters = {
+		FOCUS_FILTER_AIR_XP
+	}
+}
+shared_focus = {
+	id = default_preparation_for_exile
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_common_sky
+	prerequisite = {
+		focus = default_common_waters
+		focus = default_common_lands
+		focus = default_common_sky
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	cost = 7.143
+	x = 0
+	y = 1
+	available = {
+		num_faction_members > 1
 		surrender_progress > 0.1
 		any_allied_country = {
 			has_capitulated = no
 		}
 	}
 	bypass = {
+		#is really need?
 		has_capitulated = yes
 	}
 	completion_reward = {
-		log = "[GetDateText]: [Root.GetName]: Focus default_982_preparation_for_exile"
-		add_political_power = 250
+		log = "[GetDateText]: [Root.GetName]: Focus default_preparation_for_exile"
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			add_autonomy_score = {
+				value = -250
+			}
+		}
 	}
 }
 
@@ -471,159 +792,551 @@ shared_focus = {
 
 
 joint_focus = {
-	id = default_982_economic_integration
+	id = default_economic_integration
 	icon = GFX_goal_generic_changeling
-	relative_position_id = default_982_faction_politics
+	relative_position_id = default_faction_politics
 	prerequisite = {
-		focus = default_982_faction_politics
+		focus = default_faction_politics
 	}
 	ai_will_do = {
 		factor = 200
 	}
-	x = 5
+	cost = 10
+	x = -5
 	y = 1
 	joint_trigger = {
 		is_in_faction_with = ROOT
 	}
-	completion_reward_joint_originator = {
-		log = "[GetDateText]: [Root.GetName]: Focus default_982_economic_integration"
-		add_political_power = 250
+	available = {
+		num_faction_members > 1
 	}
-	completion_reward_joint_member = {
-		add_political_power = 100
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_economic_integration"
+		hidden_effect = {
+			#we already has tooltip for everyone in completion_reward
+			every_country = {
+				limit = {
+					is_in_faction_with = ROOT
+				}
+				add_timed_idea = {
+					idea = economic_integration
+					days = 180
+				}
+			}
+		}
+		if = {
+			limit = {
+				num_subjects > 0
+			}
+			hidden_effect = {
+				every_subject_country = {
+					add_autonomy_score = {
+						value = -25
+					}
+				}
+			}
+			custom_effect_tooltip = default_suppress_subjects_tt
+		}
+	}
+	completion_reward = {
+		effect_tooltip = {
+			add_timed_idea = {
+				idea = economic_integration
+				days = 180
+			}
+		}
 	}
 }
 joint_focus = {
-	id = default_982_export_building_materials
+	id = default_export_building_materials
 	icon = GFX_goal_generic_changeling
-	relative_position_id = default_982_economic_integration
+	relative_position_id = default_economic_integration
 	prerequisite = {
-		focus = default_982_economic_integration
+		focus = default_economic_integration
 	}
 	ai_will_do = {
 		factor = 200
 	}
+	cost = 10
 	x = -1
 	y = 1
 	joint_trigger = {
 		is_in_faction_with = ROOT
 	}
-	completion_reward_joint_originator = {
-		log = "[GetDateText]: [Root.GetName]: Focus default_982_export_building_materials"
-		add_political_power = 250
+	available = {
+		num_faction_members > 1
 	}
-	completion_reward_joint_member = {
-		add_political_power = 100
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_export_building_materials"
+		hidden_effect = {
+			#we already has tooltip for everyone in completion_reward
+			every_country = {
+				limit = {
+					is_in_faction_with = ROOT
+				}
+				add_timed_idea = {
+					idea = export_building_materials
+					days = 270
+				}
+			}
+		}
+		random_owned_controlled_state = {
+			limit = {
+				industrial_complex > 0
+				infrastructure > 1
+			}
+			add_resource = {
+				type = steel
+				amount = 3
+				state = THIS
+			}
+			add_resource = {
+				type = aluminium
+				amount = 1
+				state = THIS
+			}
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			add_autonomy_score = {
+				value = 50
+			}
+		}
+		else_if = {
+			limit = {
+				num_subjects > 0
+			}
+			hidden_effect = {
+				every_subject_country = {
+					add_autonomy_score = {
+						value = -25
+					}
+				}
+			}
+			custom_effect_tooltip = default_suppress_subjects_tt
+		}
+	}
+	completion_reward = {
+		effect_tooltip = {
+			add_timed_idea = {
+				idea = export_building_materials
+				days = 270
+			}
+		}
+	}
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY
 	}
 }
 joint_focus = {
-	id = default_982_supply_chains
+	id = default_supply_chains
 	icon = GFX_goal_generic_changeling
-	relative_position_id = default_982_export_building_materials
+	relative_position_id = default_export_building_materials
 	prerequisite = {
-		focus = default_982_export_building_materials
+		focus = default_export_building_materials
 	}
 	ai_will_do = {
 		factor = 200
 	}
+	cost = 10
 	x = 0
 	y = 1
 	joint_trigger = {
 		is_in_faction_with = ROOT
 	}
-	completion_reward_joint_originator = {
-		log = "[GetDateText]: [Root.GetName]: Focus default_982_supply_chains"
-		add_political_power = 250
+	available = {
+		num_faction_members > 1
 	}
-	completion_reward_joint_member = {
-		add_political_power = 100
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_supply_chains"
+		hidden_effect = {
+			every_neighbor_country = {
+				limit = {
+					is_in_faction_with = ROOT
+					var:ROOT.capital = {
+						is_in_home_area = yes
+					}
+				}
+				build_railway = {
+					level = 1
+					build_only_on_allied = yes
+					controller_priority = {
+						base = 1
+						modifier = {
+							tag = ROOT
+							factor = 10
+						}
+						modifier = {
+							has_war_with = ROOT
+							factor = 0.1
+						}
+					}
+					start_state = ROOT.capital
+					target_state = capital
+				}
+			}
+		}
+		custom_effect_tooltip = default_supply_chains_tt
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			add_autonomy_score = {
+				value = 50
+			}
+		}
+		else_if = {
+			limit = {
+				num_subjects > 0
+			}
+			hidden_effect = {
+				every_subject_country = {
+					add_autonomy_score = {
+						value = -25
+					}
+				}
+			}
+			custom_effect_tooltip = default_suppress_subjects_tt
+		}
 	}
 }
 joint_focus = {
-	id = default_982_association_of_agricultural_complexes
+	id = default_association_of_agricultural_complexes
 	icon = GFX_goal_generic_changeling
-	relative_position_id = default_982_economic_integration
+	relative_position_id = default_economic_integration
 	prerequisite = {
-		focus = default_982_economic_integration
+		focus = default_economic_integration
 	}
 	ai_will_do = {
 		factor = 200
 	}
+	cost = 5
 	x = 1
 	y = 1
 	joint_trigger = {
 		is_in_faction_with = ROOT
 	}
-	completion_reward_joint_originator = {
-		log = "[GetDateText]: [Root.GetName]: Focus default_982_association_of_agricultural_complexes"
-		add_political_power = 250
+	available = {
+		num_faction_members > 1
 	}
-	completion_reward_joint_member = {
-		add_political_power = 100
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_association_of_agricultural_complexes"
+		hidden_effect = {
+			#we already has tooltip for everyone in completion_reward
+			every_country = {
+				limit = {
+					is_in_faction_with = ROOT
+				}
+				capital_scope = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = agrarian_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			add_autonomy_score = {
+				value = 50
+			}
+		}
+		else_if = {
+			limit = {
+				num_subjects > 0
+			}
+			hidden_effect = {
+				every_subject_country = {
+					add_autonomy_score = {
+						value = -25
+					}
+				}
+			}
+			custom_effect_tooltip = default_suppress_subjects_tt
+		}
+	}
+	completion_reward = {
+		custom_effect_tooltip = default_association_of_agricultural_complexes_tt
+	}
+	search_filters = {
+		FOCUS_FILTER_SURPLUS_APPROPRIATION
 	}
 }
 joint_focus = {
-	id = default_982_siderurgy
+	id = default_siderurgy
 	icon = GFX_goal_generic_changeling
-	relative_position_id = default_982_association_of_agricultural_complexes
+	relative_position_id = default_association_of_agricultural_complexes
 	prerequisite = {
-		focus = default_982_association_of_agricultural_complexes
+		focus = default_association_of_agricultural_complexes
 	}
 	ai_will_do = {
 		factor = 200
 	}
+	cost = 10
 	x = 0
 	y = 1
 	joint_trigger = {
 		is_in_faction_with = ROOT
 	}
-	completion_reward_joint_originator = {
-		log = "[GetDateText]: [Root.GetName]: Focus default_982_siderurgy"
-		add_political_power = 250
+	available = {
+		num_faction_members > 1
 	}
-	completion_reward_joint_member = {
-		add_political_power = 100
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_siderurgy"
+		hidden_effect = {
+			#we already has tooltip for everyone in completion_reward
+			every_country = {
+				limit = {
+					is_in_faction_with = ROOT
+				}
+				set_temp_variable = {
+					temp_state = capital
+				}
+				if = {
+					limit = {
+						check_variable = {
+							temp_state:building_level@agrarian_complex > 1
+						}
+					}
+					var:temp_state = {
+						add_resource = {
+							type = steel
+							amount = 5
+							state = THIS
+						}
+					}
+				}
+				for_each_loop = {
+					array = owned_controlled_states
+					value = v
+					if = {
+						limit = {
+							check_variable = {
+								v:building_level@agrarian_complex > temp_state:building_level@agrarian_complex
+							}
+						}
+						set_temp_variable = {
+							temp_state = v
+						}
+					}
+				}
+				var:temp_state = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = industrial_complex
+						level = 1
+						instant_build = yes
+					}
+					add_resource = {
+						type = steel
+						amount = 2
+						state = THIS
+					}
+				}
+			}
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			add_autonomy_score = {
+				value = 50
+			}
+		}
+		else_if = {
+			limit = {
+				num_subjects > 0
+			}
+			hidden_effect = {
+				every_subject_country = {
+					add_autonomy_score = {
+						value = -25
+					}
+				}
+			}
+			custom_effect_tooltip = default_suppress_subjects_tt
+		}
+	}
+	completion_reward = {
+		custom_effect_tooltip = default_siderurgy_tt
+	}
+	search_filters = {
+		FOCUS_FILTER_INDUSTRY
 	}
 }
-
-
-
-
-
-
-
-
-
-
-
 joint_focus = {
-	id = default_982_scientific_cooperation
+	id = default_scientific_cooperation
 	icon = GFX_goal_generic_changeling
-	relative_position_id = default_982_faction_politics
+	relative_position_id = default_faction_politics
 	prerequisite = {
-		focus = default_982_faction_politics
+		focus = default_faction_politics
 	}
 	ai_will_do = {
 		factor = 200
 	}
-	x = 8
+	cost = 10
+	x = 6
 	y = 1
 	joint_trigger = {
 		is_in_faction_with = ROOT
 	}
-	completion_reward_joint_originator = {
-		log = "[GetDateText]: [Root.GetName]: Focus default_982_scientific_cooperation"
-		add_political_power = 250
+	available = {
+		num_faction_members > 1
 	}
-	completion_reward_joint_member = {
-		add_political_power = 100
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_scientific_cooperation"
+		hidden_effect = {
+			#we already has tooltip for everyone in completion_reward
+			every_country = {
+				limit = {
+					is_in_faction_with = ROOT
+				}
+				if = {
+					limit = {
+						amount_research_slots < 3
+					}
+					add_research_slot = 1
+				}
+				increase_science_base_idea = yes
+				add_popularity = {
+					ideology = technocracy
+					popularity = 0.05
+				}
+			}
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			add_autonomy_score = {
+				value = 50
+			}
+		}
+		else_if = {
+			limit = {
+				num_subjects > 0
+			}
+			hidden_effect = {
+				every_subject_country = {
+					add_autonomy_score = {
+						value = -25
+					}
+				}
+			}
+			custom_effect_tooltip = default_suppress_subjects_tt
+		}
+	}
+	completion_reward = {
+		effect_tooltip = {
+			add_popularity = {
+				ideology = technocracy
+				popularity = 0.05
+			}
+		}
+		custom_effect_tooltip = default_scientific_cooperation_tt
+	}
+	search_filters = {
+		FOCUS_FILTER_RESEARCH
 	}
 }
-
-
-
-
-
+joint_focus = {
+	id = default_invite_scientists
+	icon = GFX_goal_generic_changeling
+	relative_position_id = default_scientific_cooperation
+	prerequisite = {
+		focus = default_scientific_cooperation
+	}
+	prerequisite = {
+		focus = default_diplomacy_vector
+	}
+	ai_will_do = {
+		factor = 200
+	}
+	cost = 10
+	x = -1
+	y = 1
+	joint_trigger = {
+		is_in_faction_with = ROOT
+	}
+	available = {
+		num_faction_members > 1
+	}
+	select_effect = {
+		ROOT = {
+			add_ideas = populate_science_idea
+		}
+	}
+	cancelable = no
+	completion_reward_joint_originator = {
+		log = "[GetDateText]: [Root.GetName]: Focus default_invite_scientists"
+		hidden_effect = {
+			remove_ideas = populate_science_idea
+			#we already has tooltip for everyone in completion_reward
+			every_country = {
+				limit = {
+					is_in_faction_with = ROOT
+				}
+				if = {
+					limit = {
+						has_idea = no_lack_of_scientists
+					}
+					add_political_power = 50
+				}
+				else = {
+					increase_lack_of_scientists_idea = yes
+				}
+				add_popularity = {
+					ideology = technocracy
+					popularity = 0.05
+				}
+			}
+		}
+		#Tooltip purposes (Select Effect)
+		custom_effect_tooltip = focus_select_effect_tt
+		effect_tooltip = {
+			add_ideas = populate_science_idea
+		}
+		if = {
+			limit = {
+				is_subject = yes
+			}
+			add_autonomy_score = {
+				value = 50
+			}
+		}
+		else_if = {
+			limit = {
+				num_subjects > 0
+			}
+			hidden_effect = {
+				every_subject_country = {
+					add_autonomy_score = {
+						value = -25
+					}
+				}
+			}
+			custom_effect_tooltip = default_suppress_subjects_tt
+		}
+	}
+	completion_reward = {
+		custom_effect_tooltip = default_invite_scientists_tt
+		effect_tooltip = {
+			add_popularity = {
+				ideology = technocracy
+				popularity = 0.05
+			}
+		}
+	}
+	search_filters = {
+		FOCUS_FILTER_RESEARCH
+	}
+}
 focus_tree = {
 	id = default_982_focus_tree
 	country = {
@@ -638,7 +1351,7 @@ focus_tree = {
 		y = 1500 
 	}
 	default = no
-	shared_focus = default_982_faction_politics
+	shared_focus = default_faction_politics
 	focus = {
 		id = default_982_army_effort
 		icon = GFX_goal_generic_changeling
@@ -1144,6 +1857,10 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus default_982_rail_industry"
+			add_timed_idea = {
+				idea = rail_industry
+				days = 120
+			}
 			if = {
 				limit = {
 					capital_scope = {
@@ -1164,7 +1881,7 @@ focus_tree = {
 				}
 			}
 			else = {
-				random_core_state = {
+				random_owned_controlled_state = {
 					limit = {
 						free_building_slots = {
 							building = industrial_complex
@@ -1178,6 +1895,40 @@ focus_tree = {
 						level = 1
 						instant_build = yes
 					}
+				}
+			}
+			if = {
+				limit = {
+					any_owned_state = {
+						is_in_home_area = yes
+						is_capital = no
+						rail_way < 1
+					}
+				}
+				hidden_effect = {
+					random_owned_state = {
+						limit = {
+							is_in_home_area = yes
+							is_capital = no
+							rail_way < 1
+						}
+						set_temp_variable = {
+							PREV.end_state = THIS
+						}
+					}
+				}
+				build_railway = {
+					level = 1
+					build_only_on_allied = yes
+					controller_priority = {
+						base = 1
+						modifier = {
+							tag = ROOT
+							factor = 10
+						}
+					}
+					start_state = capital
+					target_state = end_state
 				}
 			}
 		}
@@ -1203,27 +1954,80 @@ focus_tree = {
 				category = cat_infrastructure
 				uses = 2
 			}
-			capital_scope = {
-				if = {
-					limit = {
+			if = {
+				limit = {
+					capital_scope = {
 						free_building_slots = {
 							building = infrastructure
 							size > 1
 						}
 					}
+				}
+				capital_scope = {
 					add_building_construction = {
 						type = infrastructure
 						level = 2
 						instant_build = yes
 					}
 				}
-				else_if = {
+				every_owned_state = {
 					limit = {
+						is_controlled_by = ROOT
 						free_building_slots = {
 							building = infrastructure
 							size > 0
 						}
 					}
+					random_select_amount = 2
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else_if = {
+				limit = {
+					capital_scope = {
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+				every_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					random_select_amount = 3
+					add_building_construction = {
+						type = infrastructure
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+			else = {
+				every_owned_state = {
+					limit = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = infrastructure
+							size > 0
+						}
+					}
+					random_select_amount = 4
 					add_building_construction = {
 						type = infrastructure
 						level = 1
@@ -1314,6 +2118,7 @@ focus_tree = {
 					any_owned_state = {
 						is_in_home_area = yes
 						is_capital = no
+						rail_way < 1
 					}
 				}
 				hidden_effect = {
@@ -1321,6 +2126,7 @@ focus_tree = {
 						limit = {
 							is_in_home_area = yes
 							is_capital = no
+							rail_way < 1
 						}
 						set_temp_variable = {
 							PREV.end_state = THIS
@@ -2950,59 +3756,16 @@ focus_tree = {
 				ideology = socialism
 				popularity = 0.05
 			}
-			random_owned_state = {
+			every_owned_state = {
 				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = arms_factory
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
+					is_controlled_by = ROOT
 					free_building_slots = {
 						building = industrial_complex
 						size > 0
 						include_locked = yes
 					}
 				}
+				random_select_amount = 3
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = industrial_complex
@@ -3010,32 +3773,19 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
-			random_owned_state = {
+			every_owned_state = {
 				limit = {
+					is_controlled_by = ROOT
 					free_building_slots = {
-						building = industrial_complex
+						building = arms_factory
 						size > 0
 						include_locked = yes
 					}
 				}
+				random_select_amount = 3
 				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
-					type = industrial_complex
-					level = 1
-					instant_build = yes
-				}
-			}
-			random_owned_state = {
-				limit = {
-					free_building_slots = {
-						building = industrial_complex
-						size > 0
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 1
-				add_building_construction = {
-					type = industrial_complex
+					type = arms_factory
 					level = 1
 					instant_build = yes
 				}

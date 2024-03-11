@@ -404,12 +404,12 @@ focus_tree = {
 						industrial_complex_level > 0
 					}
 				}
-				remove_building = {
-					type = industrial_complex
-					level = industrial_complex_level
-				}
 				add_building_construction = {
 					type = arms_factory
+					level = industrial_complex_level
+				}
+				remove_building = {
+					type = industrial_complex
 					level = industrial_complex_level
 				}
 			}
@@ -420,12 +420,12 @@ focus_tree = {
 							industrial_complex_level > 0
 						}
 					}
-					remove_building = {
-						type = industrial_complex
-						level = industrial_complex_level
-					}
 					add_building_construction = {
 						type = arms_factory
+						level = industrial_complex_level
+					}
+					remove_building = {
+						type = industrial_complex
 						level = industrial_complex_level
 					}
 				}

@@ -27,10 +27,15 @@ ideas = {
 				defense_bonus_against = -0.5
 			}
 			modifier = {
+				winter_attrition_factor = -1
 				local_org_regain = 0.1
 				org_loss_when_moving = -0.1
 				army_org_factor = 0.1
 				ai_focus_aggressive_factor = 0.2
+			}
+			rule = {
+				can_access_market = no
+				can_send_volunteers = no
 			}
 		}
 		ICE_winter_spirits_crushed = {
@@ -57,6 +62,7 @@ ideas = {
 				defense_bonus_against = -0.75
 			}
 			modifier = {
+				winter_attrition_factor = -1
 				compliance_growth = -1
 				resistance_growth = 1
 				local_org_regain = -0.5
@@ -64,6 +70,10 @@ ideas = {
 				army_org_factor = -0.75
 				stability_weekly = -1
 				war_support_weekly = -1
+			}
+			rule = {
+				can_access_market = no
+				can_send_volunteers = no
 			}
 		}
 		ICE_power_of_winter = {
@@ -118,7 +128,7 @@ ideas = {
 				war_support_weekly = 0.02
 			}
 		}
-		ICE_spirit_appearance = {
+		ICE_spirit_appearance_0 = {
 			picture = clockwerk_economy			#to do (change)
 			allowed = {
 				original_tag = ICE
@@ -127,7 +137,23 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				
+				army_speed_factor = 0.05
+				breakthrough_factor = 0.1
+			}
+		}
+		ICE_spirit_appearance_1 = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = ICE
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				experience_loss_factor = 0.05
+				army_org_regain = 0.1
+				army_speed_factor = 0.1
+				breakthrough_factor = 0.15
 			}
 		}
 		ICE_convertion_other_to_spirits = {
@@ -139,7 +165,36 @@ ideas = {
 				always = yes
 			}
 			modifier = {
-				
+				recon_factor = 0.1
+				own_operative_detection_chance_factor = -0.1
+				operative_slot = 1
+			}
+		}
+		ICE_hatred_extraction = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = ICE
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				ai_focus_aggressive_factor = 0.1
+				stability_weekly = 0.01
+				war_support_factor = 0.01
+				political_power_factor = 0.35
+			}
+			targeted_modifier = {
+				tag = EQS
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = EPT
+				attack_bonus_against = 0.1
+			}
+			targeted_modifier = {
+				tag = PGT
+				attack_bonus_against = 0.1
 			}
 		}
 	}

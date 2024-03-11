@@ -806,7 +806,7 @@ change_subject_mobilization_law_6 = {
 change_subject_trade_0 = {
 	if = {
 		limit = {
-			has_idea = free_trade
+			has_idea = uncontrolled_exports
 		}
 		#pass (for preventing other if checks, optimisation)
 	}
@@ -823,26 +823,14 @@ change_subject_trade_0 = {
 			}
 			if = {
 				limit = {
-					has_idea = uncontrolled_exports
-				}
-				swap_ideas = {
-					remove_idea = uncontrolled_exports
-					add_idea = free_trade
-				}
-				multiply_temp_variable = {
-					pp_cost = -1
-				}
-			}
-			else_if = {
-				limit = {
 					has_idea = export_focus
 				}
 				swap_ideas = {
 					remove_idea = export_focus
-					add_idea = free_trade
+					add_idea = uncontrolled_exports
 				}
 				multiply_temp_variable = {
-					pp_cost = -2
+					pp_cost = -1
 				}
 			}
 			else_if = {
@@ -851,10 +839,10 @@ change_subject_trade_0 = {
 				}
 				swap_ideas = {
 					remove_idea = limited_exports
-					add_idea = free_trade
+					add_idea = uncontrolled_exports
 				}
 				multiply_temp_variable = {
-					pp_cost = -3
+					pp_cost = -2
 				}
 			}
 			else_if = {
@@ -863,10 +851,10 @@ change_subject_trade_0 = {
 				}
 				swap_ideas = {
 					remove_idea = closed_economy
-					add_idea = free_trade
+					add_idea = uncontrolled_exports
 				}
 				multiply_temp_variable = {
-					pp_cost = -4
+					pp_cost = -3
 				}
 			}
 			else_if = {
@@ -875,10 +863,10 @@ change_subject_trade_0 = {
 				}
 				swap_ideas = {
 					remove_idea = limited_imports
-					add_idea = free_trade
+					add_idea = uncontrolled_exports
 				}
 				multiply_temp_variable = {
-					pp_cost = -5
+					pp_cost = -4
 				}
 			}
 			else_if = {
@@ -887,19 +875,19 @@ change_subject_trade_0 = {
 				}
 				swap_ideas = {
 					remove_idea = import_focus
-					add_idea = free_trade
+					add_idea = uncontrolled_exports
 				}
 				multiply_temp_variable = {
-					pp_cost = -6
+					pp_cost = -5
 				}
 			}
 			else = {
 				swap_ideas = {
 					remove_idea = uncontrolled_imports
-					add_idea = free_trade
+					add_idea = uncontrolled_exports
 				}
 				multiply_temp_variable = {
-					pp_cost = -7
+					pp_cost = -6
 				}
 			}
 		}
@@ -911,7 +899,7 @@ change_subject_trade_0 = {
 change_subject_trade_1 = {
 	if = {
 		limit = {
-			has_idea = uncontrolled_exports
+			has_idea = export_focus
 		}
 		#pass (for preventing other if checks, optimisation)
 	}
@@ -928,129 +916,11 @@ change_subject_trade_1 = {
 			}
 			if = {
 				limit = {
-					has_idea = limited_exports
-				}
-				swap_ideas = {
-					remove_idea = limited_exports
-					add_idea = uncontrolled_exports
-				}
-				multiply_temp_variable = {
-					pp_cost = -2
-				}
-			}
-			else_if = {
-				limit = {
 					has_idea = closed_economy
 				}
 				swap_ideas = {
 					remove_idea = closed_economy
-					add_idea = uncontrolled_exports
-				}
-				multiply_temp_variable = {
-					pp_cost = -3
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = limited_imports
-				}
-				swap_ideas = {
-					remove_idea = limited_imports
-					add_idea = uncontrolled_exports
-				}
-				multiply_temp_variable = {
-					pp_cost = -4
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = import_focus
-				}
-				swap_ideas = {
-					remove_idea = import_focus
-					add_idea = uncontrolled_exports
-				}
-				multiply_temp_variable = {
-					pp_cost = -5
-				}
-			}
-			else_if = {
-				limit = {
-					has_idea = uncontrolled_imports
-				}
-				swap_ideas = {
-					remove_idea = uncontrolled_imports
-					add_idea = uncontrolled_exports
-				}
-				multiply_temp_variable = {
-					pp_cost = -6
-				}
-			}
-			else = {
-				if = {
-					limit = {
-						has_idea = free_trade
-					}
-					swap_ideas = {
-						remove_idea = free_trade
-						add_idea = uncontrolled_exports
-					}
-				}
-				else = {
-					swap_ideas = {
-						remove_idea = export_focus
-						add_idea = uncontrolled_exports
-					}
-				}
-				multiply_temp_variable = {
-					pp_cost = -1
-				}
-			}
-		}
-		overlord = {
-			add_political_power = pp_cost
-		}
-	}
-}
-change_subject_trade_2 = {
-	if = {
-		limit = {
-			has_idea = export_focus
-		}
-		#pass (for preventing other if checks, optimisation)
-	}
-	else_if = {
-		limit = {
-			subject_trade_2_available = no
-		}
-		#todo tooltip (too much cost)
-	}
-	else = {
-		THIS = {
-			set_temp_variable = {
-				pp_cost = trade_pp_cost_factor
-			}
-			if = {
-				limit = {
-					OR = {
-						has_idea = free_trade
-						has_idea = closed_economy
-					}
-				}
-				if = {
-					limit = {
-						has_idea = free_trade
-					}
-					swap_ideas = {
-						remove_idea = free_trade
-						add_idea = export_focus
-					}
-				}
-				else = {
-					swap_ideas = {
-						remove_idea = closed_economy
-						add_idea = export_focus
-					}
+					add_idea = export_focus
 				}
 				multiply_temp_variable = {
 					pp_cost = -2
@@ -1089,7 +959,7 @@ change_subject_trade_2 = {
 					add_idea = export_focus
 				}
 				multiply_temp_variable = {
-					pp_cost = -3
+					pp_cost = -2
 				}
 			}
 			else_if = {
@@ -1101,7 +971,7 @@ change_subject_trade_2 = {
 					add_idea = export_focus
 				}
 				multiply_temp_variable = {
-					pp_cost = -4
+					pp_cost = -3
 				}
 			}
 			else = {
@@ -1110,7 +980,7 @@ change_subject_trade_2 = {
 					add_idea = export_focus
 				}
 				multiply_temp_variable = {
-					pp_cost = -5
+					pp_cost = -4
 				}
 			}
 		}
@@ -1119,7 +989,7 @@ change_subject_trade_2 = {
 		}
 	}
 }
-change_subject_trade_3 = {
+change_subject_trade_2 = {
 	if = {
 		limit = {
 			has_idea = limited_exports
@@ -1128,7 +998,7 @@ change_subject_trade_3 = {
 	}
 	else_if = {
 		limit = {
-			subject_trade_3_available = no
+			subject_trade_2_available = no
 		}
 		#todo tooltip (too much cost)
 	}
@@ -1139,18 +1009,6 @@ change_subject_trade_3 = {
 			}
 			if = {
 				limit = {
-					has_idea = free_trade
-				}
-				swap_ideas = {
-					remove_idea = free_trade
-					add_idea = limited_exports
-				}
-				multiply_temp_variable = {
-					pp_cost = -3
-				}
-			}
-			else_if = {
-				limit = {
 					has_idea = import_focus
 				}
 				swap_ideas = {
@@ -1163,25 +1021,11 @@ change_subject_trade_3 = {
 			}
 			else_if = {
 				limit = {
-					OR = {
-						has_idea = uncontrolled_exports
-						has_idea = limited_imports
-					}
+					has_idea = uncontrolled_exports
 				}
-				if = {
-					limit = {
-						has_idea = uncontrolled_exports
-					}
-					swap_ideas = {
-						remove_idea = uncontrolled_exports
-						add_idea = limited_exports
-					}
-				}
-				else = {
-					swap_ideas = {
-						remove_idea = limited_imports
-						add_idea = limited_exports
-					}
+				swap_ideas = {
+					remove_idea = uncontrolled_exports
+					add_idea = limited_exports
 				}
 				multiply_temp_variable = {
 					pp_cost = -2
@@ -1189,28 +1033,50 @@ change_subject_trade_3 = {
 			}
 			else_if = {
 				limit = {
-					OR = {
-						has_idea = export_focus
-						has_idea = closed_economy
-					}
+					has_idea = export_focus
 				}
-				if = {
-					limit = {
-						has_idea = export_focus
-					}
-					swap_ideas = {
-						remove_idea = export_focus
-						add_idea = limited_exports
-					}
-				}
-				else = {
-					swap_ideas = {
-						remove_idea = closed_economy
-						add_idea = limited_exports
-					}
+				swap_ideas = {
+					remove_idea = export_focus
+					add_idea = limited_exports
 				}
 				multiply_temp_variable = {
 					pp_cost = -1
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = closed_economy
+				}
+				swap_ideas = {
+					remove_idea = closed_economy
+					add_idea = limited_exports
+				}
+				multiply_temp_variable = {
+					pp_cost = -1
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = limited_imports
+				}
+				swap_ideas = {
+					remove_idea = limited_imports
+					add_idea = limited_exports
+				}
+				multiply_temp_variable = {
+					pp_cost = -2
+				}
+			}
+			else_if = {
+				limit = {
+					has_idea = import_focus
+				}
+				swap_ideas = {
+					remove_idea = import_focus
+					add_idea = limited_exports
+				}
+				multiply_temp_variable = {
+					pp_cost = -3
 				}
 			}
 			else = {
@@ -1228,7 +1094,7 @@ change_subject_trade_3 = {
 		}	
 	}
 }
-change_subject_trade_4 = {
+change_subject_trade_3 = {
 	if = {
 		limit = {
 			has_idea = closed_economy
@@ -1237,7 +1103,7 @@ change_subject_trade_4 = {
 	}
 	else_if = {
 		limit = {
-			subject_trade_4_available = no
+			subject_trade_3_available = no
 		}
 		#todo tooltip (too much cost)
 	}
@@ -1247,18 +1113,6 @@ change_subject_trade_4 = {
 				pp_cost = trade_pp_cost_factor
 			}
 			if = {
-				limit = {
-					has_idea = free_trade
-				}
-				swap_ideas = {
-					remove_idea = free_trade
-					add_idea = closed_economy
-				}
-				multiply_temp_variable = {
-					pp_cost = -4
-				}
-			}
-			else_if = {
 				limit = {
 					has_idea = uncontrolled_exports
 				}
@@ -1306,21 +1160,22 @@ change_subject_trade_4 = {
 					pp_cost = -2
 				}
 			}
-			else = {
-				if = {
-					limit = {
-						has_idea = limited_exports
-					}
-					swap_ideas = {
-						remove_idea = limited_exports
-						add_idea = closed_economy
-					}
+			else_if = {
+				limit = {
+					has_idea = limited_exports
 				}
-				else = {
-					swap_ideas = {
-						remove_idea = limited_imports
-						add_idea = closed_economy
-					}
+				swap_ideas = {
+					remove_idea = limited_exports
+					add_idea = closed_economy
+				}
+				multiply_temp_variable = {
+					pp_cost = -1
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = limited_imports
+					add_idea = closed_economy
 				}
 				multiply_temp_variable = {
 					pp_cost = -1
@@ -1332,7 +1187,7 @@ change_subject_trade_4 = {
 		}
 	}
 }
-change_subject_trade_5 = {
+change_subject_trade_4 = {
 	if = {
 		limit = {
 			has_idea = limited_imports
@@ -1341,7 +1196,7 @@ change_subject_trade_5 = {
 	}
 	else_if = {
 		limit = {
-			subject_trade_5_available = no
+			subject_trade_4_available = no
 		}
 		#todo tooltip (too much cost)
 	}
@@ -1351,18 +1206,6 @@ change_subject_trade_5 = {
 				pp_cost = trade_pp_cost_factor
 			}
 			if = {
-				limit = {
-					has_idea = free_trade
-				}
-				swap_ideas = {
-					remove_idea = free_trade
-					add_idea = limited_imports
-				}
-				multiply_temp_variable = {
-					pp_cost = -5
-				}
-			}
-			else_if = {
 				limit = {
 					has_idea = uncontrolled_exports
 				}
@@ -1410,21 +1253,22 @@ change_subject_trade_5 = {
 					pp_cost = -2
 				}
 			}
-			else = {
-				if = {
-					limit = {
-						has_idea = closed_economy
-					}
-					swap_ideas = {
-						remove_idea = closed_economy
-						add_idea = limited_imports
-					}
+			else_if = {
+				limit = {
+					has_idea = closed_economy
 				}
-				else = {
-					swap_ideas = {
-						remove_idea = import_focus
-						add_idea = limited_imports
-					}
+				swap_ideas = {
+					remove_idea = closed_economy
+					add_idea = limited_imports
+				}
+				multiply_temp_variable = {
+					pp_cost = -1
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = import_focus
+					add_idea = limited_imports
 				}
 				multiply_temp_variable = {
 					pp_cost = -1
@@ -1436,7 +1280,7 @@ change_subject_trade_5 = {
 		}
 	}
 }
-change_subject_trade_6 = {
+change_subject_trade_5 = {
 	if = {
 		limit = {
 			has_idea = import_focus
@@ -1445,7 +1289,7 @@ change_subject_trade_6 = {
 	}
 	else_if = {
 		limit = {
-			subject_trade_6_available = no
+			subject_trade_5_available = no
 		}
 		#todo tooltip (too much cost)
 	}
@@ -1455,18 +1299,6 @@ change_subject_trade_6 = {
 				pp_cost = trade_pp_cost_factor
 			}
 			if = {
-				limit = {
-					has_idea = free_trade
-				}
-				swap_ideas = {
-					remove_idea = free_trade
-					add_idea = uncontrolled_imports
-				}
-				multiply_temp_variable = {
-					pp_cost = -6
-				}
-			}
-			else_if = {
 				limit = {
 					has_idea = uncontrolled_exports
 				}
@@ -1514,21 +1346,22 @@ change_subject_trade_6 = {
 					pp_cost = -2
 				}
 			}
-			else = {
-				if = {
-					limit = {
-						has_idea = limited_imports
-					}
-					swap_ideas = {
-						remove_idea = limited_imports
-						add_idea = import_focus
-					}
+			else_if = {
+				limit = {
+					has_idea = limited_imports
 				}
-				else = {
-					swap_ideas = {
-						remove_idea = uncontrolled_imports
-						add_idea = import_focus
-					}
+				swap_ideas = {
+					remove_idea = limited_imports
+					add_idea = import_focus
+				}
+				multiply_temp_variable = {
+					pp_cost = -1
+				}
+			}
+			else = {
+				swap_ideas = {
+					remove_idea = uncontrolled_imports
+					add_idea = import_focus
 				}
 				multiply_temp_variable = {
 					pp_cost = -1
@@ -1540,7 +1373,7 @@ change_subject_trade_6 = {
 		}
 	}
 }
-change_subject_trade_7 = {
+change_subject_trade_6 = {
 	if = {
 		limit = {
 			has_idea = uncontrolled_imports
@@ -1549,7 +1382,7 @@ change_subject_trade_7 = {
 	}
 	else_if = {
 		limit = {
-			subject_trade_7_available = no
+			subject_trade_6_available = no
 		}
 		#todo tooltip (too much cost)
 	}
@@ -1559,18 +1392,6 @@ change_subject_trade_7 = {
 				pp_cost = trade_pp_cost_factor
 			}
 			if = {
-				limit = {
-					has_idea = free_trade
-				}
-				swap_ideas = {
-					remove_idea = free_trade
-					add_idea = uncontrolled_imports
-				}
-				multiply_temp_variable = {
-					pp_cost = -7
-				}
-			}
-			else_if = {
 				limit = {
 					has_idea = uncontrolled_exports
 				}

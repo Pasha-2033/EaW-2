@@ -1,0 +1,526 @@
+focus_tree = {
+	id = stg_focus_tree_revolutional
+	country = {
+		base = 0
+		modifier = {
+			add = 100
+			tag = STG
+		}
+	}
+	default = no
+	continuous_focus_position = {
+		x = 2700
+		y = 1350
+	}
+	#political branch
+	focus = {
+		id = stg_focus_ignition_of_revolution_flame
+		icon = GFX_goal_generic_workers_democracy
+		cost = 1
+		mutually_exclusive = {
+			focus = stg_focus_forgotten_past
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 7
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_ignition_of_revolution_flame"
+		}
+	}
+	focus = {
+		id = stg_focus_fraction_kropotkin_loyalty
+		icon = GFX_goal_generic_workers_democracy
+		cost = 1
+		prerequisite = {
+			focus = stg_focus_ignition_of_revolution_flame
+		}
+		mutually_exclusive = {
+			focus = stg_focus_fraction_martov_loyalty
+			focus = stg_focus_fraction_stalion_loyalty
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_ignition_of_revolution_flame
+		x = -4
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_fraction_kropotkin_loyalty"
+		}
+	}
+	focus = {
+		id = stg_focus_fraction_martov_loyalty
+		icon = GFX_goal_generic_workers_democracy
+		cost = 1
+		prerequisite = {
+			focus = stg_focus_ignition_of_revolution_flame
+		}
+		mutually_exclusive = {
+			focus = stg_focus_fraction_kropotkin_loyalty
+			focus = stg_focus_fraction_stalion_loyalty
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_ignition_of_revolution_flame
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_fraction_martov_loyalty"
+		}
+	}
+	focus = {
+		id = stg_focus_fraction_stalion_loyalty
+		icon = GFX_goal_generic_workers_democracy
+		cost = 1
+		prerequisite = {
+			focus = stg_focus_ignition_of_revolution_flame
+		}
+		mutually_exclusive = {
+			focus = stg_focus_fraction_martov_loyalty
+			focus = stg_focus_fraction_kropotkin_loyalty
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_ignition_of_revolution_flame
+		x = 4
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_fraction_stalion_loyalty"
+		}
+	}
+
+
+
+
+
+
+
+
+	focus = {
+		id = stg_focus_forgotten_past
+		icon = GFX_focus_generic_monarchy_1
+		cost = 1
+		mutually_exclusive = {
+			focus = stg_focus_ignition_of_revolution_flame
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 15
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_forgotten_past"
+		}
+	}
+	#economic branch
+	focus = {
+		id = stg_focus_gold_mines
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		x = 24
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_gold_mines"
+		}
+	}
+	focus = {
+		id = stg_focus_first_five_year_plan
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		x = 29
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_first_five_year_plan"
+		}
+	}
+	focus = {
+		id = stg_focus_railroad_marks_staliongrad
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_first_five_year_plan
+		x = -3
+		y = 1
+		prerequisite = {
+			focus = stg_focus_first_five_year_plan
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = controls_shortest_way_marks_staliongrad_tt
+				controls_province = 488
+				controls_province = 3584
+				controls_province = 11454
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_railroad_marks_staliongrad"
+			if = {
+				limit = {
+					has_completed_focus = stg_focus_railroad_hoovbeat_staliongrad
+				}
+				build_railway = {
+					path = { 11454 3584 }
+				}
+			}
+			else = {
+				build_railway = {
+					path = { 488 11454 3584 }
+				}
+			}
+			custom_effect_tooltip = build_railroad_marks_staliongrad_tt
+			add_timed_idea = {
+				idea = STG_railroad_constructioning
+				days = 30
+			}
+		}
+	}
+	focus = {
+		id = stg_focus_railroad_hoovbeat_staliongrad
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_first_five_year_plan
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = stg_focus_first_five_year_plan
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = controls_shortest_way_hoovbeat_staliongrad_tt
+				controls_province = 488
+				controls_province = 11438
+				controls_province = 11454
+				controls_province = 11546
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_railroad_hoovbeat_staliongrad"
+			if = {
+				limit = {
+					has_completed_focus = stg_focus_railroad_marks_staliongrad
+				}
+				build_railway = {
+					path = { 11454 11438 11546 }
+				}
+			}
+			else = {
+				build_railway = {
+					path = { 488 11454 11438 11546 }
+				}
+			}
+			custom_effect_tooltip = build_railroad_hoovbeat_staliongrad_tt
+			add_timed_idea = {
+				idea = STG_railroad_constructioning
+				days = 30
+			}
+		}
+	}
+	focus = {
+		id = stg_focus_railroad_zlatocvet_staliongrad
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_first_five_year_plan
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = stg_focus_first_five_year_plan
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = controls_shortest_way_zlatocvet_staliongrad_tt
+				controls_province = 488
+				controls_province = 6507
+				controls_province = 11161
+				controls_province = 11504
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_railroad_zlatocvet_staliongrad"
+			build_railway = {
+				path = { 488 6507 11504 11161 }
+			}
+			custom_effect_tooltip = build_railroad_zlatocvet_staliongrad_tt
+			add_timed_idea = {
+				idea = STG_railroad_constructioning
+				days = 30
+			}
+		}
+	}
+	focus = {
+		id = stg_focus_railroad_zayatsk_staliongrad
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_first_five_year_plan
+		x = 3
+		y = 1
+		prerequisite = {
+			focus = stg_focus_first_five_year_plan
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = controls_shortest_way_zayatsk_staliongrad_tt
+				controls_province = 488
+				controls_province = 2082
+				controls_province = 6423
+				controls_province = 6507
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_railroad_zayatsk_staliongrad"
+			if = {
+				limit = {
+					has_completed_focus = stg_focus_railroad_zlatocvet_staliongrad
+				}
+				build_railway = {
+					path = { 6507 6423 2082 }
+				}
+			}
+			else = {
+				build_railway = {
+					path = { 488 6507 6423 2082 }
+				}
+			}
+			custom_effect_tooltip = build_railroad_zayatsk_staliongrad_tt
+			add_timed_idea = {
+				idea = STG_railroad_constructioning
+				days = 30
+			}
+		}
+	}
+	focus = {
+		id = stg_focus_infrastructure_in_staliongrad
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 1
+		relative_position_id = stg_focus_railroad_marks_staliongrad
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = stg_focus_railroad_marks_staliongrad
+		}
+		available = {
+			controls_state = 153
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_infrastructure_in_staliongrad"
+			153 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = stg_focus_infrastructure_in_marks
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 1
+		relative_position_id = stg_focus_railroad_hoovbeat_staliongrad
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = stg_focus_railroad_hoovbeat_staliongrad
+		}
+		available = {
+			controls_state = 235
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_infrastructure_in_marks"
+			235 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = stg_focus_infrastructure_in_zlatocvet
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 1
+		relative_position_id = stg_focus_railroad_zlatocvet_staliongrad
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = stg_focus_railroad_zlatocvet_staliongrad
+		}
+		available = {
+			controls_state = 165
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_infrastructure_in_zlatocvet"
+			165 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = stg_focus_infrastructure_in_zayatsk
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 1
+		relative_position_id = stg_focus_railroad_zayatsk_staliongrad
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = stg_focus_railroad_zayatsk_staliongrad
+		}
+		available = {
+			controls_state = 334
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_infrastructure_in_zayatsk"
+			334 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = stg_focus_infrastructure_in_starlight_village
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 1
+		relative_position_id = stg_focus_railroad_zayatsk_staliongrad
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = stg_focus_railroad_zayatsk_staliongrad
+		}
+		available = {
+			controls_state = 57
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_infrastructure_in_starlight_village"
+			57 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = stg_focus_civil_industry_effort
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 1
+		relative_position_id = stg_focus_first_five_year_plan
+		x = -2
+		y = 3
+		prerequisite = {
+			focus = stg_focus_infrastructure_in_marks
+		}
+		prerequisite = {
+			focus = stg_focus_infrastructure_in_staliongrad
+		}
+		prerequisite = {
+			focus = stg_focus_infrastructure_in_zayatsk
+		}
+		prerequisite = {
+			focus = stg_focus_infrastructure_in_zlatocvet
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_civil_industry_effort"
+			capital_scope = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = stg_focus_military_industry_effort
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 1
+		relative_position_id = stg_focus_first_five_year_plan
+		x = 2
+		y = 3
+		prerequisite = {
+			focus = stg_focus_infrastructure_in_marks
+		}
+		prerequisite = {
+			focus = stg_focus_infrastructure_in_staliongrad
+		}
+		prerequisite = {
+			focus = stg_focus_infrastructure_in_zayatsk
+		}
+		prerequisite = {
+			focus = stg_focus_infrastructure_in_zlatocvet
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_military_industry_effort"
+			capital_scope = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			random_owned_state = {
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+
+	focus = {
+		id = stg_focus_SLV_improvement
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 1
+		x = 34
+		y = 0
+		available = {
+			has_subject = SLV
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_SLV_improvement"
+			SLV = {
+				add_autonomy_score = {
+					value = -30
+				}
+			}
+		}
+	}
+	
+}
