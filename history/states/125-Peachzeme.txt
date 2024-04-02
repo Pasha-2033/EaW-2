@@ -11,16 +11,14 @@ state={
 	buildings_max_level_factor=1.00
 
 	history={
-		#owner = EQS
-		#add_core_of = EQS
 		982.1.1 = {
 			owner = ICE
 			add_core_of = ICE
 			add_core_of = EQS
 		}
-		1007.1.1 = {
+		1002.1.1 = {
 			owner = EQS
-			add_core_of = EQS
+			remove_core_of = ICE
 		}
 		victory_points = { 11515 1 }
 	}

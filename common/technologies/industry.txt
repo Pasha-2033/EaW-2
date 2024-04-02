@@ -2,7 +2,7 @@ technologies = {
 	basic_machine_tools = {
 		production_factory_max_efficiency_factor = 0.1
 		dependencies = {
-			melee_weapons1 = 1
+			melee_weapons_1 = 1
 		}
 		path = {
 			leads_to_tech = improved_machine_tools
@@ -37,7 +37,7 @@ technologies = {
 	#Machine tools branch
 	improved_machine_tools = {
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 		production_factory_max_efficiency_factor = 0.1
 		path = {
@@ -270,7 +270,7 @@ technologies = {
 		global_building_slots_factor = 0.20
 		
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 		path = {
 			leads_to_tech = concentrated_industry2
@@ -485,7 +485,7 @@ technologies = {
 		industry_air_damage_factor = -0.15
 		global_building_slots_factor = 0.2
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 		path = {
 			leads_to_tech = dispersed_industry2
@@ -701,7 +701,7 @@ technologies = {
 	fuel_silos = {
 
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 
 		enable_building = {
@@ -1052,7 +1052,7 @@ technologies = {
 		}
 
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 
 		path = {
@@ -2039,7 +2039,7 @@ technologies = {
 		production_speed_buildings_factor = 0.10
 		industry_repair_factor = 0.10
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 		path = {
 			leads_to_tech = construction2

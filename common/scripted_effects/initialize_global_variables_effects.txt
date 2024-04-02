@@ -259,7 +259,7 @@ init_country_lore_vars = {
 	#if add/remove array element - change height of grid (evil_mind_enciclopedia.gui:1)
 	if = { #982
 		limit = {
-			has_start_date < 1007.1.1
+			has_start_date < 1002.1.1
 		}
 		add_to_array = { global.country_with_lore = EQS }
 		add_to_array = { global.country_with_lore = ICE }
@@ -715,6 +715,6 @@ init_state_culture = {
 
 	678	= { set_variable = { state_culture = token:pony_race		} }
 	#982 scenario speciality
-	#1007 scenario speciality
+	#1002 scenario speciality
 	#1050 scenario speciality
 }

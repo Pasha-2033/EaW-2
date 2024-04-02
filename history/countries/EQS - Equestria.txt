@@ -2,7 +2,7 @@ capital = 3
 set_convoys = 9
 if = { #982 scenario script
 	limit = {
-		has_start_date < 1007.1.1
+		has_start_date < 1002.1.1
 	}
 	if = {
 		limit = {
@@ -23,7 +23,7 @@ if = { #982 scenario script
 	add_to_faction = NML
 	set_research_slots = 2
 	set_technology = {
-		melee_weapons = 1
+		melee_weapons_0 = 1
 		tech_support = 1
 		tech_engineers = 1
 		tech_unicorn = 1
@@ -80,7 +80,7 @@ if = { #982 scenario script
 	set_oob = "982_EQS"
 	set_stability = 0.4
 	set_war_support = 0.69
-	else_if = { #1007 scenario script
+	else_if = { #1002 scenario script
 		limit = {
 			has_start_date < 1050.1.1
 		}

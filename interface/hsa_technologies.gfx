@@ -1,53 +1,317 @@
 spriteTypes = {
+	#FOLDER ICONS
+	spriteType = {
+		name = "GFX_generic_folder_icon"
+		textureFile = "gfx/interface/techtree/icons/magic_folder_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_pony_folder_icon"
+		textureFile = "gfx/interface/techtree/icons/magic_folder_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_deer_folder_icon"
+		textureFile = "gfx/interface/techtree/icons/magic_deer_folder_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_changeling_folder_icon"
+		textureFile = "gfx/interface/techtree/icons/magic_chn_folder_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_griffon_folder_icon"
+		textureFile = "gfx/interface/techtree/icons/magic_griffon_folder_icon.dds"
+	}
+	spriteType = {
+		name = "GFX_diamond_dog_folder_icon"
+		textureFile = "gfx/interface/techtree/icons/magic_diamond_dog_folder_icon.dds"
+	}
+	#FOLDER TABS
+	spriteType = {
+		name = "GFX_generic_folder_tab"
+		textureFile = "gfx/interface/techtree/techtree_magic_tab.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_pony_folder_tab"
+		textureFile = "gfx/interface/techtree/techtree_magic_tab.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_changeling_folder_tab"
+		textureFile = "gfx/interface/techtree/techtree_magic_chn_tab.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_deer_folder_tab"
+		textureFile = "gfx/interface/techtree/techtree_magic_deer_tab.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_griffon_folder_tab"
+		textureFile = "gfx/interface/techtree/techtree_magic_griffon_tab.dds"
+		noOfFrames = 2
+	}
+	spriteType = {
+		name = "GFX_diamond_dog_folder_tab"
+		textureFile = "gfx/interface/techtree/techtree_magic_diamond_dog_tab.dds"
+		noOfFrames = 2
+	}
+	#ITEM RESEARCHED
+	spriteType = {
+		name = "GFX_technology_generic_folder_researched_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_researched_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_pony_folder_researched_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_researched_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_changeling_folder_researched_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_researched_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_deer_folder_researched_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_researched_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_griffon_folder_researched_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_researched_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_diamond_dog_folder_researched_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_researched_item_bg.dds"
+	}
+	#ITEM RESEARCHING
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_generic_folder_currently_researching_item_bg"
+		texturefile = "gfx/interface/techtree/tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_pony_folder_currently_researching_item_bg"
+		texturefile = "gfx/interface/techtree/tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_changeling_folder_currently_researching_item_bg"
+		texturefile = "gfx/interface/techtree/tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_deer_folder_currently_researching_item_bg"
+		texturefile = "gfx/interface/techtree/tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_griffon_folder_currently_researching_item_bg"
+		texturefile = "gfx/interface/techtree/tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_diamond_dog_folder_currently_researching_item_bg"
+		texturefile = "gfx/interface/techtree/tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
+	#ITEM AVAILABLE
+	spriteType = {
+		name = "GFX_technology_generic_folder_available_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_available_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_pony_folder_available_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_available_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_changeling_folder_available_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_available_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_deer_folder_available_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_available_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_griffon_folder_available_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_available_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_diamond_dog_folder_available_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_available_item_bg.dds"
+	}
+	#ITEM UNAVAILABLE
+	spriteType = {
+		name = "GFX_technology_generic_folder_unavailable_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_unavailable_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_pony_folder_unavailable_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_unavailable_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_changeling_folder_unavailable_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_unavailable_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_deer_folder_unavailable_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_unavailable_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_griffon_folder_unavailable_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_unavailable_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_diamond_dog_folder_unavailable_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_unavailable_item_bg.dds"
+	}
+	#BRANCH ITEM
+	spriteType = {
+		name = "GFX_technology_generic_folder_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_pony_folder_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_changeling_folder_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_deer_folder_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_griffon_folder_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+	spriteType = {
+		name = "GFX_technology_diamond_dog_folder_branch_item_bg"
+		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
+	}
+	#TECH ICONS
+	#infantry techonologies
+	spriteType = {
+		name = "GFX_improved_infantry_weapons_3_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_a.dds"
+	}
+	spriteType = {
+		name = "GFX_improved_infantry_weapons_4_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_b.dds"
+	}
+	spriteType = {
+		name = "GFX_improved_infantry_weapons_5_medium"
+		texturefile = "gfx/interface/technologies/infantry/infantry_weapons_c.dds"
+	}
+	#special technologies
+	spriteType = {
+		name = "GFX_trinitrophenol_medium"
+		texturefile = "gfx/interface/technologies/trinitrophenol.dds"
+	}
+	spriteType = {
+		name = "GFX_nitroglycerine_medium"
+		texturefile = "gfx/interface/technologies/nitroglycerine.dds"
+	}
+	spriteType = {
+		name = "GFX_trotyl_medium"
+		texturefile = "gfx/interface/technologies/trotyl.dds"
+	}
+	spriteType = {
+		name = "GFX_magnetism_phenomenon_medium"
+		texturefile = "gfx/interface/technologies/magnetism_phenomenon.dds"
+	}
+	spriteType = {
+		name = "GFX_direct_current_medium"
+		texturefile = "gfx/interface/technologies/direct_current.dds"
+	}
+	spriteType = {
+		name = "GFX_alternating_current_medium"
+		texturefile = "gfx/interface/technologies/alternating_current.dds"
+	}
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	SpriteType = {
 		name = "GFX_archetype_magical_equipment_medium"
 		texturefile = "gfx/interface/archetype_infantry_equipment.dds"
 	}
 
 	SpriteType = {
-		name = "GFX_magical_weapons_medium"
+		name = "GFX_magical_weapons_0_medium"
 		texturefile = "gfx/interface/technologies/magical_equipment_1.dds"
 	}
 
 	SpriteType = {
-		name = "GFX_magical_weapons1_medium"
+		name = "GFX_magical_weapons_1_medium"
 		texturefile = "gfx/interface/technologies/magical_equipment_2.dds"
 	}
 	SpriteType = {
-		name = "GFX_magical_weapons2_medium"
+		name = "GFX_magical_weapons_2_medium"
 		texturefile = "gfx/interface/technologies/magical_equipment_3.dds"
 	}
 	SpriteType = {
-		name = "GFX_magical_weapons3_medium"
+		name = "GFX_magical_weapons_3_medium"
 		texturefile = "gfx/interface/technologies/magical_equipment_4.dds"
-	}
-	SpriteType = {
-		name = "GFX_EQS_magical_weapons_medium"
-		texturefile = "gfx/interface/technologies/EQS_magical_equipment_1.dds"
 	}
 
 	SpriteType = {
-		name = "GFX_EQS_magical_weapons1_medium"
-		texturefile = "gfx/interface/technologies/EQS_magical_equipment_2.dds"
-	}
-	SpriteType = {
-		name = "GFX_EQS_magical_weapons2_medium"
+		name = "GFX_EQS_magical_weapons_2_medium"
 		texturefile = "gfx/interface/technologies/EQS_magical_equipment_3.dds"
 	}
 	SpriteType = {
-		name = "GFX_EQS_magical_weapons3_medium"
+		name = "GFX_EQS_magical_weapons_3_medium"
 		texturefile = "gfx/interface/technologies/EQS_magical_equipment_4.dds"
 	}
 	SpriteType = {
-		name = "GFX_EQS_motorised_infantry_medium"
-		texturefile = "gfx/interface/technologies/EQS_motorized_equipment_1.dds"
-	}
-	SpriteType = {
 		name = "GFX_EQS_motorized_equipment_1_medium"
-		texturefile = "gfx/interface/technologies/EQS_motorized_equipment_1.dds"
-	}
-	SpriteType = {
-		name = "GFX_commonwealth_2d_motorised_infantry_medium"
 		texturefile = "gfx/interface/technologies/EQS_motorized_equipment_1.dds"
 	}
 	SpriteType = {
@@ -56,310 +320,199 @@ spriteTypes = {
 	}
 
 	#### STALLIONGRAD ######
-	SpriteType = {
-		name = "GFX_STG_magical_weapons_medium"
-		texturefile = "gfx/interface/technologies/STG_magical_equipment_1.dds"
-	}
+
 
 	SpriteType = {
-		name = "GFX_STG_magical_weapons1_medium"
-		texturefile = "gfx/interface/technologies/STG_magical_equipment_2.dds"
-	}
-	SpriteType = {
-		name = "GFX_STG_magical_weapons2_medium"
+		name = "GFX_STG_magical_weapons_2_medium"
 		texturefile = "gfx/interface/technologies/STG_magical_equipment_3.dds"
 	}
 	SpriteType = {
-		name = "GFX_STG_magical_weapons3_medium"
+		name = "GFX_STG_magical_weapons_3_medium"
 		texturefile = "gfx/interface/technologies/STG_magical_equipment_4.dds"
-	}
-	SpriteType = {
-		name = "GFX_STG_motorised_infantry_medium"
-		texturefile = "gfx/interface/technologies/STG_motorised.dds"
 	}
 	SpriteType = {
 		name = "GFX_STG_motorized_equipment_1_medium"
 		texturefile = "gfx/interface/technologies/STG_motorised.dds"
 	}
 	#### OUR TOWN ######
-	SpriteType = {
-		name = "GFX_STL_magical_weapons_medium"
-		texturefile = "gfx/interface/technologies/STG_magical_equipment_1.dds"
-	}
+
 
 	SpriteType = {
-		name = "GFX_STL_magical_weapons1_medium"
-		texturefile = "gfx/interface/technologies/STG_magical_equipment_2.dds"
-	}
-	SpriteType = {
-		name = "GFX_STL_magical_weapons2_medium"
+		name = "GFX_STL_magical_weapons_2_medium"
 		texturefile = "gfx/interface/technologies/STG_magical_equipment_3.dds"
 	}
 	SpriteType = {
-		name = "GFX_STL_magical_weapons3_medium"
+		name = "GFX_STL_magical_weapons_3_medium"
 		texturefile = "gfx/interface/technologies/STG_magical_equipment_4.dds"
 	}
 	#### NOVA GRIFFONIA AND VIRGILIA ######
-	SpriteType = {
-		name = "GFX_GRF_magical_weapons_medium"
-		texturefile = "gfx/interface/technologies/GRF_magical_equipment_1.dds"
-	}
+
 
 	SpriteType = {
-		name = "GFX_GRF_magical_weapons1_medium"
-		texturefile = "gfx/interface/technologies/GRF_magical_equipment_2.dds"
-	}
-	SpriteType = {
-		name = "GFX_GRF_magical_weapons2_medium"
+		name = "GFX_GRF_magical_weapons_2_medium"
 		texturefile = "gfx/interface/technologies/GRF_magical_equipment_3.dds"
 	}
 	SpriteType = {
-		name = "GFX_GRF_magical_weapons3_medium"
+		name = "GFX_GRF_magical_weapons_3_medium"
 		texturefile = "gfx/interface/technologies/GRF_magical_equipment_4.dds"
 	}
 
-	SpriteType = {
-		name = "GFX_GFF_magical_weapons_medium"
-		texturefile = "gfx/interface/technologies/GRF_magical_equipment_1.dds"
-	}
 
 	SpriteType = {
-		name = "GFX_GFF_magical_weapons1_medium"
-		texturefile = "gfx/interface/technologies/GRF_magical_equipment_2.dds"
-	}
-	SpriteType = {
-		name = "GFX_GFF_magical_weapons2_medium"
+		name = "GFX_GFF_magical_weapons_2_medium"
 		texturefile = "gfx/interface/technologies/GRF_magical_equipment_3.dds"
 	}
 	SpriteType = {
-		name = "GFX_GFF_magical_weapons3_medium"
+		name = "GFX_GFF_magical_weapons_3_medium"
 		texturefile = "gfx/interface/technologies/GRF_magical_equipment_4.dds"
 	}
 	### GRIFFON EMPIRE ###
-	SpriteType = {
-		name = "GFX_GRI_magical_weapons_medium"
-		texturefile = "gfx/interface/technologies/GRF_magical_equipment_1.dds"
-	}
+
+
 
 	SpriteType = {
-		name = "GFX_GRI_magical_weapons1_medium"
-		texturefile = "gfx/interface/technologies/GRF_magical_equipment_2.dds"
-	}
-	SpriteType = {
-		name = "GFX_GRI_magical_weapons2_medium"
+		name = "GFX_GRI_magical_weapons_2_medium"
 		texturefile = "gfx/interface/technologies/GRF_magical_equipment_3.dds"
 	}
 	SpriteType = {
-		name = "GFX_GRI_magical_weapons3_medium"
+		name = "GFX_GRI_magical_weapons_3_medium"
 		texturefile = "gfx/interface/technologies/GRF_magical_equipment_4.dds"
 	}
 
-	SpriteType = {
-		name = "GFX_CYA_magical_weapons_medium"
-		texturefile = "gfx/interface/technologies/GRF_magical_equipment_1.dds"
-	}
+
 
 	SpriteType = {
-		name = "GFX_CYA_magical_weapons1_medium"
-		texturefile = "gfx/interface/technologies/GRF_magical_equipment_2.dds"
-	}
-	SpriteType = {
-		name = "GFX_CYA_magical_weapons2_medium"
+		name = "GFX_CYA_magical_weapons_2_medium"
 		texturefile = "gfx/interface/technologies/GRF_magical_equipment_3.dds"
 	}
 	SpriteType = {
-		name = "GFX_CYA_magical_weapons3_medium"
+		name = "GFX_CYA_magical_weapons_3_medium"
 		texturefile = "gfx/interface/technologies/GRF_magical_equipment_4.dds"
 	}
-	### GRIFFONIAN REPUBLIC ###
-	SpriteType = {
-		name = "GFX_FAT_magical_weapons_medium"
-		texturefile = "gfx/interface/technologies/GRF_magical_equipment_1.dds"
-	}
+	### GRIFFONIAN REPUBLIC ##
+
 
 	SpriteType = {
-		name = "GFX_FAT_magical_weapons1_medium"
-		texturefile = "gfx/interface/technologies/GRF_magical_equipment_2.dds"
-	}
-	SpriteType = {
-		name = "GFX_FAT_magical_weapons2_medium"
+		name = "GFX_FAT_magical_weapons_2_medium"
 		texturefile = "gfx/interface/technologies/GRF_magical_equipment_3.dds"
 	}
 	SpriteType = {
-		name = "GFX_FAT_magical_weapons3_medium"
+		name = "GFX_FAT_magical_weapons_3_medium"
 		texturefile = "gfx/interface/technologies/GRF_magical_equipment_4.dds"
 	}
 	### SKYNAVIA ###
-	SpriteType = {
-		name = "GFX_SRS_magical_weapons_medium"
-		texturefile = "gfx/interface/technologies/GRF_magical_equipment_1.dds"
-	}
+
 
 	SpriteType = {
-		name = "GFX_SRS_magical_weapons1_medium"
-		texturefile = "gfx/interface/technologies/GRF_magical_equipment_2.dds"
-	}
-	SpriteType = {
-		name = "GFX_SRS_magical_weapons2_medium"
+		name = "GFX_SRS_magical_weapons_2_medium"
 		texturefile = "gfx/interface/technologies/GRF_magical_equipment_3.dds"
 	}
 	SpriteType = {
-		name = "GFX_SRS_magical_weapons3_medium"
+		name = "GFX_SRS_magical_weapons_3_medium"
 		texturefile = "gfx/interface/technologies/GRF_magical_equipment_4.dds"
 	}
 	### AQUILEA ###
-	SpriteType = {
-		name = "GFX_JER_magical_weapons_medium"
-		texturefile = "gfx/interface/technologies/GRF_magical_equipment_1.dds"
-	}
 
 	SpriteType = {
-		name = "GFX_JER_magical_weapons1_medium"
-		texturefile = "gfx/interface/technologies/GRF_magical_equipment_2.dds"
-	}
-	SpriteType = {
-		name = "GFX_JER_magical_weapons2_medium"
+		name = "GFX_JER_magical_weapons_2_medium"
 		texturefile = "gfx/interface/technologies/GRF_magical_equipment_3.dds"
 	}
 	SpriteType = {
-		name = "GFX_JER_magical_weapons3_medium"
+		name = "GFX_JER_magical_weapons_3_medium"
 		texturefile = "gfx/interface/technologies/GRF_magical_equipment_4.dds"
 	}
 	### AQUILEA ###
-	SpriteType = {
-		name = "GFX_WNG_magical_weapons_medium"
-		texturefile = "gfx/interface/technologies/GRF_magical_equipment_1.dds"
-	}
 
 	SpriteType = {
-		name = "GFX_WNG_magical_weapons1_medium"
-		texturefile = "gfx/interface/technologies/GRF_magical_equipment_2.dds"
-	}
-	SpriteType = {
-		name = "GFX_WNG_magical_weapons2_medium"
+		name = "GFX_WNG_magical_weapons_2_medium"
 		texturefile = "gfx/interface/technologies/GRF_magical_equipment_3.dds"
 	}
 	SpriteType = {
-		name = "GFX_WNG_magical_weapons3_medium"
+		name = "GFX_WNG_magical_weapons_3_medium"
 		texturefile = "gfx/interface/technologies/GRF_magical_equipment_4.dds"
 	}
 	#### CRYSTAL EMPIRE ############
-	SpriteType = {
-		name = "GFX_CRY_magical_weapons_medium"
-		texturefile = "gfx/interface/technologies/CRY_magical_equipment_1.dds"
-	}
+
 
 	SpriteType = {
-		name = "GFX_CRY_magical_weapons1_medium"
-		texturefile = "gfx/interface/technologies/CRY_magical_equipment_2.dds"
-	}
-	SpriteType = {
-		name = "GFX_CRY_magical_weapons2_medium"
+		name = "GFX_CRY_magical_weapons_2_medium"
 		texturefile = "gfx/interface/technologies/CRY_magical_equipment_3.dds"
 	}
 	SpriteType = {
-		name = "GFX_CRY_magical_weapons3_medium"
+		name = "GFX_CRY_magical_weapons_3_medium"
 		texturefile = "gfx/interface/technologies/CRY_magical_equipment_4.dds"
 	}
 	#### CHANGELINGS ######
-	SpriteType = {
-		name = "GFX_CHN_magical_weapons_medium"
-		texturefile = "gfx/interface/technologies/CHN_magical_equipment_1.dds"
-	}
+
 
 	SpriteType = {
-		name = "GFX_CHN_magical_weapons1_medium"
-		texturefile = "gfx/interface/technologies/CHN_magical_equipment_2.dds"
-	}
-	SpriteType = {
-		name = "GFX_CHN_magical_weapons2_medium"
+		name = "GFX_CHN_magical_weapons_2_medium"
 		texturefile = "gfx/interface/technologies/CHN_magical_equipment_3.dds"
 	}
 	SpriteType = {
-		name = "GFX_CHN_magical_weapons3_medium"
+		name = "GFX_CHN_magical_weapons_3_medium"
 		texturefile = "gfx/interface/technologies/CHN_magical_equipment_4.dds"
 	}
-	SpriteType = {
-		name = "GFX_CCN_magical_weapons_medium"
-		texturefile = "gfx/interface/technologies/CHN_magical_equipment_1.dds"
-	}
 
 	SpriteType = {
-		name = "GFX_CCN_magical_weapons1_medium"
-		texturefile = "gfx/interface/technologies/CHN_magical_equipment_2.dds"
-	}
-	SpriteType = {
-		name = "GFX_CCN_magical_weapons2_medium"
+		name = "GFX_CCN_magical_weapons_2_medium"
 		texturefile = "gfx/interface/technologies/CHN_magical_equipment_3.dds"
 	}
 	SpriteType = {
-		name = "GFX_CCN_magical_weapons3_medium"
+		name = "GFX_CCN_magical_weapons_3_medium"
 		texturefile = "gfx/interface/technologies/CHN_magical_equipment_4.dds"
 	}
 	### EQUESTRIA AREA #######
 	SpriteType = {
-		name = "GFX_commonwealth_2d_magical_weapons2_medium"
+		name = "GFX_commonwealth_2d_magical_weapons_2_medium"
 		texturefile = "gfx/interface/technologies/EQS_magical_equipment_3.dds"
 	}
 	SpriteType = {
-		name = "GFX_commonwealth_2d_magical_weapons1_medium"
-		texturefile = "gfx/interface/technologies/EQS_magical_equipment_2.dds"
-	}
-	SpriteType = {
-		name = "GFX_commonwealth_2d_magical_weapons_medium"
-		texturefile = "gfx/interface/technologies/EQS_magical_equipment_1.dds"
-	}
-	SpriteType = {
-		name = "GFX_commonwealth_2d_magical_weapons3_medium"
+		name = "GFX_commonwealth_2d_magical_weapons_3_medium"
 		texturefile = "gfx/interface/technologies/EQS_magical_equipment_4.dds"
-	}
-	### OLENIA ###
-	SpriteType = {
-		name = "GFX_OLE_magical_weapons_medium"
-		texturefile = "gfx/interface/technologies/OLE_magical_equipment_1.dds"
 	}
 	### Melee ##
 	SpriteType = {
-		name = "GFX_melee_weapons_medium"
+		name = "GFX_melee_weapons_0_medium"
 		texturefile = "gfx/interface/technologies/melee_weapons.dds"
 	}
 	SpriteType = {
-		name = "GFX_melee_weapons1_medium"
+		name = "GFX_melee_weapons_1_medium"
 		texturefile = "gfx/interface/technologies/melee_weapons1.dds"
 	}
 	SpriteType = {
-		name = "GFX_EQS_melee_weapons_medium"
+		name = "GFX_EQS_melee_weapons_0_medium"
 		texturefile = "gfx/interface/technologies/EQS_melee_weapons.dds"
 	}
 	SpriteType = {
-		name = "GFX_EQS_melee_weapons1_medium"
+		name = "GFX_EQS_melee_weapons_1_medium"
 		texturefile = "gfx/interface/technologies/EQS_melee_weapons1.dds"
 	}
 	SpriteType = {
-		name = "GFX_CHN_melee_weapons1_medium"
+		name = "GFX_CHN_melee_weapons_1_medium"
 		texturefile = "gfx/interface/technologies/CHN_musket.dds"
 	}
 	SpriteType = {
-		name = "GFX_SOL_melee_weapons_medium"
+		name = "GFX_SOL_melee_weapons_0_medium"
 		texturefile = "gfx/interface/technologies/EQS_melee_weapons.dds"
 	}
 	SpriteType = {
-		name = "GFX_SOL_melee_weapons1_medium"
+		name = "GFX_SOL_melee_weapons_1_medium"
 		texturefile = "gfx/interface/technologies/EQS_melee_weapons1.dds"
 	}
 
 	SpriteType = {
-		name = "GFX_GRW_melee_weapons1_medium"
+		name = "GFX_GRW_melee_weapons_1_medium"
 		texturefile = "gfx/interface/technologies/GRW_melee_weapons1.dds"
 	}
 
 	SpriteType = {
-		name = "GFX_BRF_melee_weapons1_medium"
+		name = "GFX_BRF_melee_weapons_1_medium"
 		texturefile = "gfx/interface/technologies/GRW_melee_weapons1.dds"
 	}
 
 	SpriteType = {
-		name = "GFX_BUF_melee_weapons_medium"
+		name = "GFX_BUF_melee_weapons_0_medium"
 		texturefile = "gfx/interface/technologies/BUF_melee_weapons.dds"
 	}
 
@@ -400,262 +553,20 @@ spriteTypes = {
 		alwaystransparent = yes
 	}
 
-	spriteType = {
-		name = "GFX_pony_folder_tab"
-		textureFile = "gfx/interface/techtree/techtree_magic_tab.dds"
-		noOfFrames = 2
-	}
 
-	spriteType = {
-		name = "GFX_pony_folder_icon"
-		textureFile = "gfx/interface/techtree/icons/magic_folder_icon.dds"
-	}
 
-	spriteType = {
-		name = "GFX_generic_folder_tab"
-		textureFile = "gfx/interface/techtree/techtree_magic_tab.dds"
-		noOfFrames = 2
-	}
 
-	spriteType = {
-		name = "GFX_generic_folder_icon"
-		textureFile = "gfx/interface/techtree/icons/magic_folder_icon.dds"
-	}
 
-	spriteType = {
-		name = "GFX_deer_folder_tab"
-		textureFile = "gfx/interface/techtree/techtree_magic_deer_tab.dds"
-		noOfFrames = 2
-	}
+	
 
-	spriteType = {
-		name = "GFX_deer_folder_icon"
-		textureFile = "gfx/interface/techtree/icons/magic_deer_folder_icon.dds"
-	}
 
-	spriteType = {
-		name = "GFX_changeling_folder_tab"
-		textureFile = "gfx/interface/techtree/techtree_magic_chn_tab.dds"
-		noOfFrames = 2
-	}
 
-	spriteType = {
-		name = "GFX_changeling_folder_icon"
-		textureFile = "gfx/interface/techtree/icons/magic_chn_folder_icon.dds"
-	}
 
-	spriteType = {
-		name = "GFX_griffon_folder_tab"
-		textureFile = "gfx/interface/techtree/techtree_magic_griffon_tab.dds"
-		noOfFrames = 2
-	}
 
-	spriteType = {
-		name = "GFX_griffon_folder_icon"
-		textureFile = "gfx/interface/techtree/icons/magic_griffon_folder_icon.dds"
-	}
 
-	spriteType = {
-		name = "GFX_diamond_dog_folder_tab"
-		textureFile = "gfx/interface/techtree/techtree_magic_diamond_dog_tab.dds"
-		noOfFrames = 2
-	}
+	
 
-	spriteType = {
-		name = "GFX_diamond_dog_folder_icon"
-		textureFile = "gfx/interface/techtree/icons/magic_diamond_dog_folder_icon.dds"
-	}
-
-	spriteType = {
-		name = "GFX_technology_generic_folder_researched_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_researched_item_bg.dds"
-	}
-
-	frameAnimatedSpriteType = {
-		name = "GFX_technology_generic_folder_currently_researching_item_bg"
-		texturefile = "gfx/interface/techtree/tech_doctrine_researching_anim_strip.dds"
-		noOfFrames = 9
-		loadType = "INGAME"
-		transparencecheck = yes
-		animation_rate_fps = 15
-		looping = yes
-		play_on_show = yes
-		pause_on_loop = 0.0
-	}
-
-	spriteType = {
-		name = "GFX_technology_generic_folder_available_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_available_item_bg.dds"
-	}
-
-	spriteType = {
-		name = "GFX_technology_generic_folder_unavailable_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_unavailable_item_bg.dds"
-	}
-
-	spriteType = {
-		name = "GFX_technology_generic_folder_branch_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
-	}
-	spriteType = {
-		name = "GFX_technology_griffon_folder_researched_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_researched_item_bg.dds"
-	}
-
-	frameAnimatedSpriteType = {
-		name = "GFX_technology_griffon_folder_currently_researching_item_bg"
-		texturefile = "gfx/interface/techtree/tech_doctrine_researching_anim_strip.dds"
-		noOfFrames = 9
-		loadType = "INGAME"
-		transparencecheck = yes
-		animation_rate_fps = 15
-		looping = yes
-		play_on_show = yes
-		pause_on_loop = 0.0
-	}
-
-	spriteType = {
-		name = "GFX_technology_griffon_folder_available_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_available_item_bg.dds"
-	}
-
-	spriteType = {
-		name = "GFX_technology_griffon_folder_unavailable_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_unavailable_item_bg.dds"
-	}
-
-	spriteType = {
-		name = "GFX_technology_griffon_folder_branch_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
-	}
-
-	spriteType = {
-		name = "GFX_technology_deer_folder_researched_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_researched_item_bg.dds"
-	}
-
-	frameAnimatedSpriteType = {
-		name = "GFX_technology_deer_folder_currently_researching_item_bg"
-		texturefile = "gfx/interface/techtree/tech_doctrine_researching_anim_strip.dds"
-		noOfFrames = 9
-		loadType = "INGAME"
-		transparencecheck = yes
-		animation_rate_fps = 15
-		looping = yes
-		play_on_show = yes
-		pause_on_loop = 0.0
-	}
-
-	spriteType = {
-		name = "GFX_technology_deer_folder_available_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_available_item_bg.dds"
-	}
-
-	spriteType = {
-		name = "GFX_technology_deer_folder_unavailable_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_unavailable_item_bg.dds"
-	}
-
-	spriteType = {
-		name = "GFX_technology_deer_folder_branch_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
-	}
-
-	spriteType = {
-		name = "GFX_technology_pony_folder_researched_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_researched_item_bg.dds"
-	}
-
-	frameAnimatedSpriteType = {
-		name = "GFX_technology_pony_folder_currently_researching_item_bg"
-		texturefile = "gfx/interface/techtree/tech_doctrine_researching_anim_strip.dds"
-		noOfFrames = 9
-		loadType = "INGAME"
-		transparencecheck = yes
-		animation_rate_fps = 15
-		looping = yes
-		play_on_show = yes
-		pause_on_loop = 0.0
-	}
-
-	spriteType = {
-		name = "GFX_technology_pony_folder_available_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_available_item_bg.dds"
-	}
-
-	spriteType = {
-		name = "GFX_technology_pony_folder_unavailable_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_unavailable_item_bg.dds"
-	}
-
-	spriteType = {
-		name = "GFX_technology_pony_folder_branch_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
-	}
-
-	spriteType = {
-		name = "GFX_technology_changeling_folder_researched_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_researched_item_bg.dds"
-	}
-
-	frameAnimatedSpriteType = {
-		name = "GFX_technology_changeling_folder_currently_researching_item_bg"
-		texturefile = "gfx/interface/techtree/tech_doctrine_researching_anim_strip.dds"
-		noOfFrames = 9
-		loadType = "INGAME"
-		transparencecheck = yes
-		animation_rate_fps = 15
-		looping = yes
-		play_on_show = yes
-		pause_on_loop = 0.0
-	}
-
-	spriteType = {
-		name = "GFX_technology_changeling_folder_available_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_available_item_bg.dds"
-	}
-
-	spriteType = {
-		name = "GFX_technology_changeling_folder_unavailable_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_unavailable_item_bg.dds"
-	}
-
-	spriteType = {
-		name = "GFX_technology_changeling_folder_branch_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
-	}
-
-	spriteType = {
-		name = "GFX_technology_diamond_dog_folder_researched_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_researched_item_bg.dds"
-	}
-
-	frameAnimatedSpriteType = {
-		name = "GFX_technology_diamond_dog_folder_currently_researching_item_bg"
-		texturefile = "gfx/interface/techtree/tech_doctrine_researching_anim_strip.dds"
-		noOfFrames = 9
-		loadType = "INGAME"
-		transparencecheck = yes
-		animation_rate_fps = 15
-		looping = yes
-		play_on_show = yes
-		pause_on_loop = 0.0
-	}
-
-	spriteType = {
-		name = "GFX_technology_diamond_dog_folder_available_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_available_item_bg.dds"
-	}
-
-	spriteType = {
-		name = "GFX_technology_diamond_dog_folder_unavailable_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_unavailable_item_bg.dds"
-	}
-
-	spriteType = {
-		name = "GFX_technology_diamond_dog_folder_branch_item_bg"
-		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
-	}
+	
 
 	### Pegasi ###
 
@@ -1362,6 +1273,13 @@ spriteTypes = {
 		name = "GFX_windigo_equipment_0_medium"
 		texturefile = "gfx/interface/technologies/dragon_equipment.tga"
 	}
+
+
+
+
+
+
+
 	### Barrad ###
 	spriteType = {
 		name = "GFX_technology_barrad_folder_researched_item_bg"
@@ -1394,6 +1312,18 @@ spriteTypes = {
 		name = "GFX_technology_barrad_folder_branch_item_bg"
 		textureFile = "gfx/interface/techtree/tech_doctrine_branch_item_bg.dds"
 	}
+
+
+
+
+
+
+
+
+
+
+
+
 	### Additional Amphibious Vehicles ###
 	SpriteType = {
 		name = "GFX_amphibious_mechanized_infantry_3_medium"
@@ -1488,7 +1418,7 @@ SpriteType = {
 	}
 	### Misc ###
 	SpriteType = {
-		name = "GFX_infantry_acclimatization_medium"
+		name = "GFX_infantry_acclimatization_0_medium"
 		texturefile = "gfx/interface/technologies/infantry/allweatheroutfits.tga"
 	}
 	SpriteType = {
@@ -5214,6 +5144,16 @@ SpriteType = {
 		name = "GFX_modern_rubber_processing_d_medium"
 		texturefile = "gfx/interface/technologies/industry/goldrubber2.tga"
 	}
+
+
+
+
+
+
+
+
+
+
 
 
 }

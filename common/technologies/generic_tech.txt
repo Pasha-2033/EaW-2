@@ -20,7 +20,7 @@ technologies = {
 	#misc tree
 	tech_generic_misc = {
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 		industrial_capacity_factory = 0.1
 		industrial_capacity_dockyard = 0.1
@@ -209,7 +209,7 @@ technologies = {
 	#l tree
 	tech_generic_l = {
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 		category_front_line = {
 			breakthrough = 0.04
@@ -288,9 +288,6 @@ technologies = {
 		}
 	}
 	tech_generic_l3 = {
-		category_mechanical = {
-			maximum_speed = 0.06
-		}
 		path = {
 			leads_to_tech = tech_generic_l4
 			research_cost_coeff = 1
@@ -408,7 +405,7 @@ technologies = {
 	#r tree
 	tech_generic_r = {
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 		category_special_forces = {
 			hard_attack = 0.05

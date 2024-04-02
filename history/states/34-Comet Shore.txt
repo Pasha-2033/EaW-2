@@ -9,8 +9,6 @@ state = {
 	buildings_max_level_factor = 1.0
 	manpower = 152000
 	history = {
-		#owner = EQS
-		#add_core_of = EQS
 		victory_points = {9630 3}
 		982.1.1 = {			
 			owner = EPT
@@ -18,12 +16,10 @@ state = {
 			add_core_of = EQS
 			add_claim_by = ICE
 		}
-		1007.1.1 = {
-			#removing 982 cores and claims#
+		1002.1.1 = {
+			owner = EQS
 			remove_core_of = EPT
 			remove_claim_by = ICE
-			###############################
-			owner = EQS
 		}
 		1050.1.1 = {}	
 	}

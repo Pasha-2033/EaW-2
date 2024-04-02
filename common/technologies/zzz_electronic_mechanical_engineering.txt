@@ -1,4 +1,254 @@
 technologies = {
+	#special technologies (steam, trains, railways)
+	steam_control_systems = {
+		path = {
+			leads_to_tech = high_pressure_steam_systems
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 980
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0 
+				y = 0 
+			}
+		}
+	}
+	high_pressure_steam_systems = {
+		path = {
+			leads_to_tech = overloaded_cores
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 983
+		folder = {
+			name = electronics_folder
+			position = { 
+				x = 0 
+				y = 2 
+			}
+		}
+	}
+	overloaded_cores = {
+		research_cost = 1
+		start_year = 987
+		folder = {
+			name = electronics_folder
+			position = { 
+				x = 0 
+				y = 8 
+			}
+		}
+	}
+	#special technologies (engines)
+	internal_combustion_engine = {
+		path = {
+			leads_to_tech = overloaded_cores
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 985
+		folder = {
+			name = electronics_folder
+			position = { 
+				x = 0 
+				y = 0 
+			}
+		}
+	}
+	#special technologies (explosive materials)
+	trinitrophenol = {
+		path = {
+			leads_to_tech = nitroglycerine
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 985
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 0 
+				y = 0 
+			}
+		}
+		folder = {
+			name = infantry_folder
+			position = {
+				x = 0
+				y = 0
+			}
+		}
+	}
+	nitroglycerine = {
+		path = {
+			leads_to_tech = trotyl
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 998
+		folder = {
+			name = electronics_folder
+			position = { 
+				x = 0 
+				y = 4 
+			}
+		}
+		folder = {
+			name = infantry_folder
+			position = {
+				x = 0
+				y = 14
+			}
+		}
+	}
+	trotyl = {
+		research_cost = 1
+		start_year = 1009
+		folder = {
+			name = electronics_folder
+			position = { 
+				x = 0 
+				y = 8 
+			}
+		}
+		folder = {
+			name = infantry_folder
+			position = {
+				x = 0
+				y = 26
+			}
+		}
+	}
+	#special technologies (electricity)
+	magnetism_phenomenon = {
+		path = {
+			leads_to_tech = direct_current
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 980
+		folder = {
+			name = electronics_folder
+			position = { 
+				x = 0 
+				y = 0 
+			}
+		}
+	}
+	direct_current = {
+		path = {
+			leads_to_tech = alternating_current
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 984
+		folder = {
+			name = electronics_folder
+			position = { 
+				x = 0 
+				y = 4 
+			}
+		}
+	}
+	alternating_current = {
+		path = {
+			leads_to_tech = high_voltage_systems
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 987
+		folder = {
+			name = electronics_folder
+			position = { 
+				x = 0 
+				y = 8 
+			}
+		}
+	}
+	high_voltage_systems = {
+		research_cost = 1
+		start_year = 990
+		folder = {
+			name = electronics_folder
+			position = { 
+				x = 0 
+				y = 10 
+			}
+		}
+	}
+	#special technologies (electricity)
+	high_alloy_steel = {
+		path = {
+			leads_to_tech = polyphase_alloys
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 983
+		folder = {
+			name = electronics_folder
+			position = { 
+				x = 0 
+				y = 0 
+			}
+		}
+	}
+	polyphase_alloys = {
+		path = {
+			leads_to_tech = superhard_alloys
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 990
+		folder = {
+			name = electronics_folder
+			position = { 
+				x = 0 
+				y = 8
+			}
+		}
+	}
+	superhard_alloys = {
+		path = {
+			leads_to_tech = alloys_with_whisker_like_nanocrystals
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 990 #todo change
+		folder = {
+			name = electronics_folder
+			position = { 
+				x = 0 
+				y = 10 
+			}
+		}
+	}
+	alloys_with_whisker_like_nanocrystals = {
+		research_cost = 1
+		start_year = 990 #todo change
+		folder = {
+			name = electronics_folder
+			position = { 
+				x = 0 
+				y = 12 
+			}
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 	electronic_mechanical_engineering = {
 		# small boost to research speed
 		research_speed_factor = 0.03
@@ -15,7 +265,7 @@ technologies = {
 			ship_torpedo_data_computer_0
 		}
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 
 		research_cost = 1
@@ -743,7 +993,7 @@ technologies = {
 		}
 		
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 
 		start_year = 1007
@@ -961,7 +1211,7 @@ technologies = {
 		}
 
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 
 		path = {
@@ -2509,78 +2759,5 @@ technologies = {
 			electronics
 			decryption_tech
 		}
-	}
-	#special technologies branch
-	steam_control_systems = {
-		research_cost = 1.5
-		start_year = 1022
-		folder = {
-			name = electronics_folder
-			position = {
-				x = 0
-				y = 0
-			}
-		}
-		path = {
-			leads_to_tech = high_pressure_experimental_systems
-			research_cost_coeff = 1
-		}
-		ai_will_do = {
-			base = 0
-		}
-		categories = {}
-	}
-	high_pressure_experimental_systems = {
-		research_cost = 1.5
-		start_year = 1022
-		folder = {
-			name = electronics_folder
-			position = {
-				x = 0
-				y = 2
-			}
-		}
-		path = {
-			leads_to_tech = overloaded_cores
-			research_cost_coeff = 1
-		}
-		ai_will_do = {
-			base = 0
-		}
-		categories = {}
-	}
-	overloaded_cores = {
-		research_cost = 1.5
-		start_year = 1022
-		folder = {
-			name = electronics_folder
-			position = {
-				x = 0
-				y = 4
-			}
-		}
-		path = {
-			leads_to_tech = high_voltage_capacitors
-			research_cost_coeff = 1
-		}
-		ai_will_do = {
-			base = 0
-		}
-		categories = {}
-	}
-	high_voltage_capacitors = {
-		research_cost = 1.5
-		start_year = 1022
-		folder = {
-			name = electronics_folder
-			position = {
-				x = 0
-				y = 4
-			}
-		}
-		ai_will_do = {
-			base = 0
-		}
-		categories = {}
 	}
 }

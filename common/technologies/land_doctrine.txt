@@ -12,7 +12,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 		category_all_armor = {
 			breakthrough = 0.20
@@ -172,10 +172,6 @@ technologies = {
 		xor={
 			armored_spearhead
 		}
-		category_motmech = {
-			maximum_speed = 0.1
-			default_morale = 0.2
-		}
 		armored_car = {
 			maximum_speed = 0.1
 			default_morale = 0.2
@@ -311,9 +307,6 @@ technologies = {
 		xp_research_type = army
 		xp_unlock_cost = 100
 
-		category_motmech = {
-			max_organisation = 15
-		}
 		armored_car = {
 			max_organisation = 6
 		}
@@ -508,9 +501,6 @@ technologies = {
 
 		enable_tactic = tactic_breakthrough
 		
-		category_motmech = {
-			max_organisation = 5
-		}	
 
 		
 		path = {
@@ -948,7 +938,7 @@ technologies = {
 		}
 		
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 		category_front_line = {
 			 soft_attack = 0.1
@@ -1559,9 +1549,6 @@ technologies = {
 		category_all_infantry = { 
 			soft_attack = 0.05 
 		}
-		category_artillery = { 
-			soft_attack = 0.05
-		}
 		path = {
 			leads_to_tech = forward_observers 
 			research_cost_coeff = 1
@@ -1731,10 +1718,6 @@ technologies = {
 			soft_attack = 0.05 
 			hard_attack = 0.05
 		}
-		category_artillery = { 
-			soft_attack = 0.05
-			hard_attack = 0.05
-		}
 		enable_tactic = tactic_breakthrough
 				
 		doctrine = yes	
@@ -1788,7 +1771,7 @@ technologies = {
 		
 		
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 		path = {
 			leads_to_tech = grand_battle_plan 
@@ -1831,7 +1814,7 @@ technologies = {
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
+			infantry_weapons_0 = 1.5
 			motorized_equipment = 1.0
 		}
 	}
@@ -1876,7 +1859,7 @@ technologies = {
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 2.5
+			infantry_weapons_0 = 2.5
 			motorized_equipment = 2.0
 		}
 	}
@@ -1921,7 +1904,7 @@ technologies = {
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
+			infantry_weapons_0 = 1.5
 			motorized_equipment = 1.0
 		}
 	}
@@ -1978,7 +1961,7 @@ technologies = {
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
+			infantry_weapons_0 = 1.5
 			motorized_equipment = 1.0
 		}
 	}
@@ -1990,9 +1973,7 @@ technologies = {
 			infantry_offensive
 		}
 	
-		category_motmech = {
-			max_organisation = 5
-		}
+
 		armored_car = {
 			max_organisation = 5
 		}
@@ -2039,7 +2020,7 @@ technologies = {
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
+			infantry_weapons_0 = 1.5
 			motorized_equipment = 1.0
 			cat_mechanized_equipment = 1.0
 		}
@@ -2090,7 +2071,7 @@ technologies = {
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
+			infantry_weapons_0 = 1.5
 			motorized_equipment = 1.0
 			cat_mechanized_equipment = 1.0
 		}
@@ -2148,7 +2129,7 @@ technologies = {
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
+			infantry_weapons_0 = 1.5
 			motorized_equipment = 1.0
 		}
 	}
@@ -2201,7 +2182,7 @@ technologies = {
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
+			infantry_weapons_0 = 1.5
 			motorized_equipment = 1.0
 			cat_mechanized_equipment = 1.0
 		}
@@ -2251,7 +2232,7 @@ technologies = {
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
+			infantry_weapons_0 = 1.5
 			motorized_equipment = 1.0
 		}
 	}
@@ -2303,7 +2284,7 @@ technologies = {
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
+			infantry_weapons_0 = 1.5
 			motorized_equipment = 1.0
 		}
 	}
@@ -2359,7 +2340,7 @@ technologies = {
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
+			infantry_weapons_0 = 1.5
 			motorized_equipment = 1.0
 		}
 	}
@@ -2419,7 +2400,7 @@ technologies = {
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
+			infantry_weapons_0 = 1.5
 			motorized_equipment = 1.0
 		}
 	}
@@ -2469,7 +2450,7 @@ technologies = {
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
+			infantry_weapons_0 = 1.5
 			motorized_equipment = 1.0
 		}
 	}
@@ -2521,7 +2502,7 @@ technologies = {
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
+			infantry_weapons_0 = 1.5
 			motorized_equipment = 1.0
 		}
 	}
@@ -2576,7 +2557,7 @@ technologies = {
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
+			infantry_weapons_0 = 1.5
 			motorized_equipment = 1.0
 		}
 	}
@@ -2624,7 +2605,7 @@ technologies = {
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.5
+			infantry_weapons_0 = 1.5
 			motorized_equipment = 1.0
 		}
 	}
@@ -2641,7 +2622,7 @@ technologies = {
 		}
 		
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 		land_reinforce_rate = 0.02
 		minimum_training_level = -0.1		
@@ -3074,10 +3055,7 @@ technologies = {
 			max_organisation = 4
 			default_morale = 0.1
 		}	
-		category_motmech = {
-			max_organisation = 10
-			default_morale = 0.1
-		}	
+
 		
 		path = {
 			leads_to_tech = continuous_offensive
@@ -3370,7 +3348,7 @@ technologies = {
 		}
 		
 		ai_research_weights = {
-			infantry_weapons = 1.0
+			infantry_weapons_0 = 1.0
 			industry = 2.0
 		}
 	}
@@ -3691,9 +3669,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 			
-		category_motmech = {
-			max_organisation = 15
-		}
+
 		
 					
 		doctrine = yes	
@@ -3726,10 +3702,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 			
-		category_motmech = {
-			maximum_speed = 0.1
-			default_morale = 0.1
-		}
+
 		category_all_armor = {
 			maximum_speed = 0.1
 			default_morale = 0.1
@@ -3845,9 +3818,9 @@ technologies = {
 		
 		xor = { global_path berlin_path warsaw_path }
 		
-		dependencies = {
-			advanced_infantry_weapons2 = 1
-		}
+		#dependencies = {
+		#	advanced_infantry_weapons_2 = 1
+		#}
 		
 		path = {
 			leads_to_tech = battlespace_organization 
@@ -4238,9 +4211,9 @@ technologies = {
 		max_planning = 0.10
 		naval_invasion_planning_bonus_speed = 0.2
 		
-		dependencies = {
-			advanced_infantry_weapons2 = 1
-		}
+		#dependencies = {
+		#	advanced_infantry_weapons_2 = 1
+		#}
 		
 		xor = { brussels_path warsaw_path berlin_path }
 		
@@ -4398,10 +4371,7 @@ technologies = {
 		xor = { military_schools }
 		xp_research_type = army
 		xp_unlock_cost = 100
-		category_motmech = {
-			max_organisation = 5
-			breakthrough = 0.1
-		}
+
 		
 		path = {
 			leads_to_tech = full_spectrum_arms 
@@ -4766,10 +4736,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		
-		category_motmech = {
-			max_organisation = 5
-			default_morale = 0.1
-		}
+
 			
 			
 		# category_all_armor = {

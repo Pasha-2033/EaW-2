@@ -1,0 +1,81 @@
+ideas = {
+	#hidden_ideas = {
+	country = {
+		shields_tech_idea = {
+			allowed = {
+				#granted by technology
+				always = no
+			}
+			allowed_civil_war = {
+				has_tech = shields
+			}
+			equipment_bonus = {
+				melee_equipment_0 = {
+					build_cost_ic = 0.1
+					reliability = -0.04
+					hardness = 4
+					breakthrough = 0.5
+					defense = 0.666
+					instant = yes
+				}
+			}
+		}
+		harness_tech_idea = {
+			allowed = {
+				#granted by technology
+				always = no
+			}
+			allowed_civil_war = {
+				has_tech = harness
+			}
+			equipment_bonus = {
+				melee_equipment_0 = {
+					build_cost_ic = 0.2
+					armor_value = 10
+					ap_attack = 10
+					reliability = -0.06
+					hardness = 5
+					defense = 0.334
+					instant = yes
+				}
+			}
+		}
+		plate_infantry_armor_tech_idea = {
+			allowed = {
+				#granted by technology
+				always = no
+			}
+			allowed_civil_war = {
+				has_tech = plate_infantry_armor
+			}
+			equipment_bonus = {
+				melee_equipment_2 = {
+					build_cost_ic = 0.2
+					armor_value = 2
+					ap_attack = 2
+					reliability = -0.06
+					hardness = 1
+					defense = 0.1
+					instant = yes
+				}
+			}
+		}
+		cartridge_tech_idea = {
+			allowed = {
+				#granted by technology
+				always = no
+			}
+			allowed_civil_war = {
+				has_tech = cartridge
+			}
+			equipment_bonus = {
+				infantry_equipment_0 = {
+					soft_attack = 0.25
+					hard_attack = 0.2
+					reliability = 0.1
+					instant = yes
+				}
+			}
+		}
+	}
+}
