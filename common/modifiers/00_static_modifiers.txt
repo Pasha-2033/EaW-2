@@ -63,6 +63,7 @@ weather_blizzard = { # on Region
 	supply_factor = -0.25
 	truck_attrition_factor = 1.0
 	army_attack_speed_factor = -0.25
+	winter_attrition = 0.05
 }
 weather_sandstorm = { # on Region
 	air_accidents = 0.6
@@ -74,6 +75,7 @@ weather_sandstorm = { # on Region
 	org_loss_when_moving = 0.25
 	supply_factor = -0.15
 	truck_attrition_factor = 3.0
+	heat_attrition = 0.05
 }
 
 weather_arctic_water = { # on Region
@@ -98,7 +100,7 @@ weather_extreme_cold = { # on Province
 	local_org_regain = -0.05
 	supply_factor = -0.15
 	truck_attrition_factor = 1.0
-	winter_attrition = 0.25
+	winter_attrition = 0.5
 }
 weather_very_cold = { # on Province
 	army_attack_factor = -0.1
@@ -107,13 +109,13 @@ weather_very_cold = { # on Province
 	winter_attrition = 0.25
 }
 weather_very_hot = { # on Province
-	heat_attrition = 0.1
+	heat_attrition = 0.25
 	local_org_regain = -0.05
 	supply_factor = -0.05
 }
 weather_extreme_hot = { # on Province
 	army_attack_factor = -0.1
-	heat_attrition = 0.2
+	heat_attrition = 0.5
 	local_org_regain = -0.1
 	supply_consumption_factor = 0.5
 	truck_attrition_factor = 0.1

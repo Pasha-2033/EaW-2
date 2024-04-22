@@ -464,7 +464,7 @@ technologies = {
 
 		on_research_complete_limit = {
 			is_ai = yes
-			has_tech = amphibious_mechanized_infantry
+			has_tech = amphibious_mechanized_infantry_0
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -1271,7 +1271,7 @@ technologies = {
 			hidden_effect = {
 				army_experience = -30
 				if = {
-					limit = { has_tech = mechanised_infantry }
+					limit = { has_tech = mechanised_infantry_0 }
 					load_oob = "unlock_modern_tanks_mech"
 					else = {
 						load_oob = "unlock_modern_tanks_mot"

@@ -1,5 +1,35 @@
 upgrades = {
-
+	#early fregate
+	early_fregate_firepower_upgrade = {
+		max_level = 5
+		cost = naval
+		lg_attack = 0.05
+		naval_speed = -0.01
+		reliability = -0.004
+		build_cost_ic = 0.04
+	}
+	early_fregate_movement_upgrade = {
+		max_level = 5
+		cost = naval
+		naval_speed = 0.05
+		naval_range = 0.05
+		reliability = -0.004
+		build_cost_ic = 0.04
+	}
+	early_fregate_reliability_upgrade = {
+		max_level = 5
+		cost = naval
+		reliability = 0.01
+		build_cost_ic = 0.04
+	}
+	early_fregate_strength_upgrade = {
+		max_level = 5
+		cost = naval
+		max_strength = 0.06
+		reliability = -0.004
+		build_cost_ic = 0.04
+	}
+	#########################
 	ship_gun_upgrade = {
 		max_level = 5
 		cost = naval				# This determies how much XP it will cost, controlled by defines, there are 3 cost types: air, land and naval

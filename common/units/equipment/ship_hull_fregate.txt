@@ -1,0 +1,121 @@
+equipments = {
+	ship_hull_fregate = {
+		year = 962
+		is_archetype = yes
+		is_buildable = no
+		type = screen_ship
+		interface_category = interface_category_screen_ships
+		priority = 2200
+
+
+		lg_attack = 0.75		
+		surface_detection = 20
+		sub_detection = 1
+		sub_attack = 1
+		surface_visibility = 10
+		naval_speed = 15
+		reliability = 0.50		
+		naval_range = 500		
+		max_strength = 10
+		fuel_consumption = 0	
+		build_cost_ic = 100
+		resources = {
+			steel = 2
+		}	
+		manpower = 250
+	}
+	ship_hull_fregate_0 = {
+		year = 962
+		type = screen_ship
+		archetype = ship_hull_fregate
+		upgrades = {
+			early_fregate_firepower_upgrade
+			early_fregate_movement_upgrade
+			early_fregate_reliability_upgrade
+			early_fregate_strength_upgrade
+		}
+	}
+	ship_hull_fregate_1 = {
+		year = 983
+		archetype = ship_hull_fregate
+		parent = ship_hull_fregate_0
+		lg_attack = 1
+		naval_speed = 15
+		reliability = 0.60		
+		naval_range = 750
+		upgrades = {
+			early_fregate_firepower_upgrade
+			early_fregate_movement_upgrade
+			early_fregate_reliability_upgrade
+			early_fregate_strength_upgrade
+		}
+	}
+	ship_hull_fregate_2 = {
+		year = 983
+		archetype = ship_hull_fregate
+		parent = ship_hull_fregate_1
+		module_slots = {
+			fixed_ship_battery_slot = {
+				required = yes
+				allowed_module_categories = { ship_light_battery }
+			}
+			fixed_ship_anti_air_slot = {
+				required = no
+				allowed_module_categories = { ship_anti_air }
+			}
+			fixed_ship_fire_control_system_slot = {
+				required = no
+				allowed_module_categories = { ship_fire_control_system ship_torpedo_data_computer ship_sonar }
+			}
+			fixed_ship_radar_slot = {
+				required = no
+				allowed_module_categories = { ship_radar ship_sonar }
+			}
+			fixed_ship_torpedo_slot = {
+				required = no
+				allowed_module_categories = { ship_torpedo }
+			}
+			fixed_ship_engine_slot = {
+				required = yes
+				allowed_module_categories = { light_ship_engine }
+			}
+
+			mid_1_custom_slot = {
+				required = no
+				allowed_module_categories = {
+					ship_torpedo
+					ship_mine_warfare
+					ship_mine_layer
+					ship_anti_air
+					ship_depth_charge
+				}
+			}
+			rear_1_custom_slot = mid_1_custom_slot
+		}
+		
+		module_count_limit = {
+			category = ship_radar
+			count < 2
+		}
+		
+		module_count_limit = {
+			category = ship_sonar
+			count < 2
+		}
+		
+		default_modules = {
+			fixed_ship_battery_slot = empty
+			fixed_ship_anti_air_slot = empty
+			fixed_ship_fire_control_system_slot = empty
+			fixed_ship_radar_slot = empty
+			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_torpedo_slot = empty
+			mid_1_custom_slot = empty
+			rear_1_custom_slot = empty
+		}
+		lg_attack = 1
+		naval_speed = 15
+		reliability = 0.60		
+		naval_range = 750
+	}
+}
