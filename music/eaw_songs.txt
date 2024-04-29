@@ -2,10 +2,20 @@ music_station = "eaw"
 
 ##### Equestria Peace ######
 music = {
-	song = "maintheme" #Neighsayer - Equestria's Finest
+	song = "maintheme"
+	chance = {
+		base = 2
+	}
+	modifier = {
+		factor = 3
+		has_war_with = ICE
+	}
+}
+
+music = {
+	song = "Neighsayer_Equestrias_Finest"
 	chance = {
 		factor = 2
-
 		modifier = {
 			factor = 2
 			has_idea = pony_race
@@ -21,6 +31,9 @@ music = {
 		}
 	}
 }
+
+
+
 music = {
 	song = "Radiarc_Uncertainty" #Radiarc - Uncertainty
 	chance = {

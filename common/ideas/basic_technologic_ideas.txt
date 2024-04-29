@@ -77,5 +77,44 @@ ideas = {
 				}
 			}
 		}
+		#electronic and engineering
+		steam_control_systems_idea = {
+			allowed = {
+				#granted by technology
+				always = no
+			}
+			allowed_civil_war = {
+				has_tech = steam_control_systems
+			}
+			equipment_bonus = {
+				ship_hull_fregate_0 = {
+					naval_speed = 0.1
+					instant = yes
+				}
+				ship_hull_fregate_1 = {
+					naval_speed = 0.1
+					instant = yes
+				}
+			}
+		}
+		high_pressure_steam_systems_idea = {
+			allowed = {
+				#granted by technology
+				always = no
+			}
+			allowed_civil_war = {
+				has_tech = high_pressure_steam_systems
+			}
+			equipment_bonus = {
+				ship_hull_fregate_0 = {
+					naval_speed = 0.1
+					instant = yes
+				}
+				ship_hull_fregate_1 = {
+					naval_speed = 0.1
+					instant = yes
+				}
+			}
+		}
 	}
 }

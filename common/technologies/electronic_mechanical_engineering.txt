@@ -14,6 +14,9 @@ technologies = {
 				y = 0 
 			}
 		}
+		on_research_complete = {
+			add_ideas = steam_control_systems_idea
+		}
 	}
 	high_pressure_steam_systems = {
 		path = {
@@ -28,6 +31,9 @@ technologies = {
 				x = 0 
 				y = 2 
 			}
+		}
+		on_research_complete = {
+			add_ideas = high_pressure_steam_systems_idea
 		}
 	}
 	overloaded_cores = {

@@ -110,13 +110,21 @@ equipments = {
 		
 		manpower = 250
 	}
-
-	ship_hull_light_1 = {
+	ship_hull_light_0 = {
 		year = 993
 
 		archetype = ship_hull_light
 		priority = 2000
 		#alias = destroyer_1
+		
+		module_slots = inherit
+	}
+	ship_hull_light_1 = {
+		year = 993
+
+		archetype = ship_hull_light
+		priority = 2000
+		parent = ship_hull_light_0
 		
 		module_slots = inherit
 	}

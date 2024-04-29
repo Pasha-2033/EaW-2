@@ -1,10 +1,28 @@
 equipment_modules = {
+	#base battery
+	ship_basic_battery_0 = {
+		category = ship_basic_battery
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			lg_attack = 1
+			build_cost_ic = 90
+		}
+		multiply_stats = {
+			naval_speed = -0.01
+		}
+		add_average_stats = {
+			lg_armor_piercing = 1
+		}
+		critical_parts = {
+			damaged_light_guns
+		}
+	}
 	#   ###  ##  #  # ###     ###   ##  ### ### ### ###  #   # 
 	#    #  #    #  #  #      #  # #  #  #   #  #   #  #  # #  
 	#    #  # ## ####  #      ###  ####  #   #  ##  ###    #   
 	#    #  #  # #  #  #      #  # #  #  #   #  #   #  #   #   
 	### ###  ##  #  #  #      ###  #  #  #   #  ### #  #   #   
-	ship_light_battery_1 = {
+	ship_light_battery_0 = {
 		category = ship_light_battery
 		sfx = sfx_ui_sd_module_turret
 		add_stats = {
@@ -25,9 +43,9 @@ equipment_modules = {
 			damaged_light_guns
 		}
 	}
-	ship_light_battery_2 = {
+	ship_light_battery_1 = {
 		category = ship_light_battery
-		parent = ship_light_battery_1
+		parent = ship_light_battery_0
 		sfx = sfx_ui_sd_module_turret
 		add_stats = {
 			lg_attack = 1.5
@@ -51,9 +69,9 @@ equipment_modules = {
 			damaged_light_guns
 		}
 	}
-	ship_light_battery_3 = {
+	ship_light_battery_2 = {
 		category = ship_light_battery
-		parent = ship_light_battery_2
+		parent = ship_light_battery_1
 		sfx = sfx_ui_sd_module_turret
 		add_stats = {
 			lg_attack = 2
@@ -77,9 +95,9 @@ equipment_modules = {
 			damaged_light_guns
 		}
 	}
-	ship_light_battery_4 = {
+	ship_light_battery_3 = {
 		category = ship_light_battery
-		parent = ship_light_battery_3
+		parent = ship_light_battery_2
 		sfx = sfx_ui_sd_module_turret
 		add_stats = {
 			lg_attack = 3
@@ -108,7 +126,7 @@ equipment_modules = {
 	}
 	dp_light_battery = {
 		category = ship_light_battery
-		gfx = ship_light_battery_5
+		gfx = ship_light_battery_4
 		sfx = sfx_ui_sd_module_turret
 		add_stats = {
 			lg_attack = 3

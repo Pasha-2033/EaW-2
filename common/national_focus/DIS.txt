@@ -9,670 +9,958 @@ focus_tree = {
 	}
 	default = no
 	continuous_focus_position = {
-		x = 2700
-		y = 1350
+		x = 1665
+		y = 600
 	}
-	#uniqe SOR focuses
-	#нужно чинить
+	#main tree
 	focus = {
-		id = dis_focus_monarhy_guestion
+		id = dis_focus_queen_helvia_reign
 		icon = GFX_goal_generic_changeling
 		cost = 1
 		ai_will_do = {
 			factor = 200
 		}
-		x = 7
+		x = 4
 		y = 0
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_queen_helvia_reign"
 		}
 	}
 	focus = {
-		id = dis_focus_support_queen_helvia
-		icon = GFX_goal_chn_man_crown
+		id = dis_focus_military_report
+		icon = GFX_goal_generic_changeling
 		cost = 1
+		relative_position_id = dis_focus_queen_helvia_reign
 		prerequisite = {
-			focus = dis_focus_monarhy_guestion
+			focus = dis_focus_queen_helvia_reign
 		}
 		ai_will_do = {
 			factor = 200
 		}
-		x = 7
+		x = 1
 		y = 1
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_military_report"
 		}
 	}
 	focus = {
-		id = dis_focus_consolidate_influence
+		id = dis_focus_economic_report
 		icon = GFX_goal_generic_changeling
 		cost = 1
+		relative_position_id = dis_focus_queen_helvia_reign
 		prerequisite = {
-			focus = dis_focus_support_queen_helvia
+			focus = dis_focus_queen_helvia_reign
 		}
 		ai_will_do = {
 			factor = 200
 		}
-		x = 7
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_economic_report"
+		}
+	}
+	focus = {
+		id = dis_focus_ellert_resignation
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = dis_focus_queen_helvia_reign
+		prerequisite = {
+			focus = dis_focus_military_report
+		}
+		prerequisite = {
+			focus = dis_focus_economic_report
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
 		y = 2
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_ellert_resignation"
 		}
 	}
 	focus = {
-		id = dis_focus_hive_of_port
+		id = dis_focus_stop_intentional_isolationism
 		icon = GFX_goal_generic_changeling
 		cost = 1
+		relative_position_id = dis_focus_ellert_resignation
 		prerequisite = {
-			focus = dis_focus_consolidate_influence
+			focus = dis_focus_ellert_resignation
 		}
 		ai_will_do = {
 			factor = 200
 		}
-		x = 7
-		y = 3
+		x = 0
+		y = 2
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_stop_intentional_isolationism"
 		}
 	}
 	focus = {
-		id = dis_focus_building_fleet
+		id = dis_focus_royal_parade
 		icon = GFX_goal_generic_changeling
 		cost = 1
+		relative_position_id = dis_focus_queen_helvia_reign
+		ai_will_do = {
+			factor = 200
+		}
+		x = 6
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_royal_parade"
+		}
+	}
+	focus = {
+		id = dis_focus_kriegers_death
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = dis_focus_royal_parade
 		prerequisite = {
-			focus = dis_focus_hive_of_port
+			focus = dis_focus_royal_parade
 		}
 		ai_will_do = {
 			factor = 200
 		}
-		x = 7
-		y = 4
+		x = 0
+		y = 1
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_kriegers_death"
 		}
 	}
 	focus = {
-		id = dis_focus_trade_fleet
+		id = dis_focus_shmidts_plan
 		icon = GFX_goal_generic_changeling
 		cost = 1
+		relative_position_id = dis_focus_kriegers_death
 		prerequisite = {
-			focus = dis_focus_building_fleet
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		x = 5
-		y = 5
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-	}
-	focus = {
-		id = dis_focus_submarines
-		icon = GFX_goal_generic_changeling
-		cost = 1
-		prerequisite = {
-			focus = dis_focus_building_fleet
+			focus = dis_focus_kriegers_death
 		}
 		mutually_exclusive = {
-			focus = dis_focus_batleships
+			focus = dis_focus_fishers_plan
 		}
 		ai_will_do = {
 			factor = 200
 		}
-		x = 7
-		y = 5
+		x = 1
+		y = 1
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_shmidts_plan"
 		}
 	}
 	focus = {
-		id = dis_focus_batleships
+		id = dis_focus_fishers_plan
 		icon = GFX_goal_generic_changeling
 		cost = 1
+		relative_position_id = dis_focus_kriegers_death
 		prerequisite = {
-			focus = dis_focus_building_fleet
+			focus = dis_focus_kriegers_death
 		}
 		mutually_exclusive = {
-			focus = dis_focus_submarines
+			focus = dis_focus_shmidts_plan
 		}
 		ai_will_do = {
 			factor = 200
 		}
-		x = 9
-		y = 5
+		x = -1
+		y = 1
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_fishers_plan"
 		}
 	}
 	focus = {
-		id = dis_focus_maritime_doctrine
+		id = dis_focus_military_industry_expansion
 		icon = GFX_goal_generic_changeling
 		cost = 1
+		relative_position_id = dis_focus_shmidts_plan
 		prerequisite = {
-			focus = dis_focus_batleships
-			focus = dis_focus_submarines
-		}
-		prerequisite = {
-			focus = dis_focus_trade_fleet
+			focus = dis_focus_shmidts_plan
 		}
 		ai_will_do = {
 			factor = 200
 		}
-		x = 7
-		y = 6
+		x = 1
+		y = 1
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_military_industry_expansion"
 		}
 	}
 	focus = {
-		id = dis_focus_treat_from_south
+		id = dis_focus_regional_military_schools
 		icon = GFX_goal_generic_changeling
 		cost = 1
+		relative_position_id = dis_focus_kriegers_death
 		prerequisite = {
-			focus = dis_focus_support_queen_helvia
+			focus = dis_focus_shmidts_plan
+			focus = dis_focus_fishers_plan
 		}
-		bypass = {
-			VES = {
-				exists = no
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_regional_military_schools"
+		}
+	}
+	focus = {
+		id = dis_focus_fleet_resources_extension
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = dis_focus_fishers_plan
+		prerequisite = {
+			focus = dis_focus_fishers_plan
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_fleet_resources_extension"
+		}
+	}
+	focus = {
+		id = dis_focus_queens_elite_corps
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = dis_focus_military_industry_expansion
+		prerequisite = {
+			focus = dis_focus_military_industry_expansion
+		}
+		mutually_exclusive = {
+			focus = dis_focus_queens_armada
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_queens_elite_corps"
+		}
+	}
+	focus = {
+		id = dis_focus_queens_armada
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = dis_focus_military_industry_expansion
+		prerequisite = {
+			focus = dis_focus_military_industry_expansion
+		}
+		prerequisite = {
+			focus = dis_focus_regional_military_schools
+		}
+		mutually_exclusive = {
+			focus = dis_focus_queens_elite_corps
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_queens_armada"
+		}
+	}
+	focus = {
+		id = dis_focus_new_ship_hulls
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = dis_focus_fleet_resources_extension
+		prerequisite = {
+			focus = dis_focus_fleet_resources_extension
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_new_ship_hulls"
+		}
+	}
+	focus = {
+		id = dis_focus_internal_combustion_engine
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = dis_focus_new_ship_hulls
+		prerequisite = {
+			focus = dis_focus_new_ship_hulls
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_internal_combustion_engine"
+		}
+	}
+	focus = {
+		id = dis_focus_cancel_the_calm_decree
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = dis_focus_kriegers_death
+		prerequisite = {
+			focus = dis_focus_kriegers_death
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = -4
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_cancel_the_calm_decree"
+		}
+	}
+	focus = {
+		id = dis_focus_queen_controlled_piracy
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = dis_focus_cancel_the_calm_decree
+		prerequisite = {
+			focus = dis_focus_cancel_the_calm_decree
+		}
+		prerequisite = {
+			focus = dis_focus_ellert_resignation
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_queen_controlled_piracy"
+		}
+	}
+	focus = {
+		id = dis_focus_deer_raids
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = dis_focus_queen_controlled_piracy
+		prerequisite = {
+			focus = dis_focus_queen_controlled_piracy
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_deer_raids"
+		}
+	}
+	focus = {
+		id = dis_focus_colonial_expeditions
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = dis_focus_deer_raids
+		prerequisite = {
+			focus = dis_focus_new_ship_hulls
+		}
+		prerequisite = {
+			focus = dis_focus_deer_raids
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_colonial_expeditions"
+		}
+	}
+	focus = {
+		id = dis_focus_long_distance_raids
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = dis_focus_deer_raids
+		prerequisite = {
+			focus = dis_focus_deer_raids
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_long_distance_raids"
+		}
+	}
+	focus = {
+		id = dis_focus_gorax_farms
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		relative_position_id = dis_focus_queen_helvia_reign
+		ai_will_do = {
+			factor = 200
+		}
+		x = -2
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_gorax_farms"
+			312 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = agrarian_complex
+    				level = 1
+    				instant_build = yes
+				}
 			}
-			VRA = {
-				exists = no
+		}
+	}
+	focus = {
+		id = dis_focus_infrastructure_effort_on_east
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		relative_position_id = dis_focus_queen_helvia_reign
+		ai_will_do = {
+			factor = 200
+		}
+		x = -4
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_infrastructure_effort_on_east"
+			305 = {
+				add_building_construction = {
+					type = infrastructure
+    				level = 1
+    				instant_build = yes
+				}
 			}
+			312 = {
+				add_building_construction = {
+					type = infrastructure
+    				level = 1
+    				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = dis_focus_finish_lemenns_plan
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		relative_position_id = dis_focus_gorax_farms
+		prerequisite = {
+			focus = dis_focus_gorax_farms
+		}
+		prerequisite = {
+			focus = dis_focus_infrastructure_effort_on_east
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_finish_lemenns_plan"
+			add_to_variable = {
+				var = lemenns_plan_cgf
+				value = 0.05
+				tooltip = addaddaddadd_DIS_lemenns_plan_cgf_5_psbf_2.5_psif_5_psacf_5_tt
+			}
+			add_to_variable = {
+				lemenns_plan_psbf = 0.025
+			}
+			add_to_variable = {
+				lemenns_plan_psif = 0.05
+			}
+			add_to_variable = {
+				lemenns_plan_psacf = 0.05
+			}
+		}
+	}
+	focus = {
+		id = dis_focus_gorax_supplies
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = dis_focus_finish_lemenns_plan
+		prerequisite = {
+			focus = dis_focus_finish_lemenns_plan
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_gorax_supplies"
+		}
+	}
+	focus = {
+		id = dis_focus_expand_ditrisium_dockyards
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		relative_position_id = dis_focus_finish_lemenns_plan
+		prerequisite = {
+			focus = dis_focus_finish_lemenns_plan
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_expand_ditrisium_dockyards"
+			add_to_variable = {
+				var = lemenns_plan_psdf
+				value = 0.025
+				tooltip = addadd_DIS_lemenns_plan_psdf_2.5_tt
+			}
+			add_to_variable = {
+				lemenns_plan_psnbf = 0.04
+			}
+			252 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+    				level = 2
+    				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = dis_focus_ditrisium_royal_dockyards
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		relative_position_id = dis_focus_expand_ditrisium_dockyards
+		prerequisite = {
+			focus = dis_focus_expand_ditrisium_dockyards
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_ditrisium_royal_dockyards"
+			add_to_variable = {
+				var = lemenns_plan_psdf
+				value = 0.045
+				tooltip = add_DIS_lemenns_plan_psdf_4.5_psnbf_4_tt
+			}
+			add_to_variable = {
+				lemenns_plan_psnbf = 0.04
+			}
+			252 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+    				level = 1
+    				instant_build = yes
+				}
+				add_building_construction = {
+					type = naval_base
+    				level = 2
+    				instant_build = yes
+					province = 11509
+				}
+				add_building_construction = {
+					type = naval_base
+    				level = 1
+    				instant_build = yes
+					province = 860
+				}
+			}
+		}
+	}
+	focus = {
+		id = dis_focus_study_foreign_technologies
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		relative_position_id = dis_focus_ditrisium_royal_dockyards
+		prerequisite = {
+			focus = dis_focus_ditrisium_royal_dockyards
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_study_foreign_technologies"
+			add_research_slot = 1
+		}
+	}
+	focus = {
+		id = dis_focus_increase_trade
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = dis_focus_ditrisium_royal_dockyards
+		prerequisite = {
+			focus = dis_focus_stop_intentional_isolationism
+		}
+		prerequisite = {
+			focus = dis_focus_ditrisium_royal_dockyards
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_increase_trade"
+		}
+	}
+	focus = {
+		id = dis_focus_agricultural_products_import
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = dis_focus_increase_trade
+		prerequisite = {
+			focus = dis_focus_increase_trade
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_agricultural_products_import"
+		}
+	}
+	focus = {
+		id = dis_focus_second_lemenns_plan
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = dis_focus_finish_lemenns_plan
+		prerequisite = {
+			focus = dis_focus_finish_lemenns_plan
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_second_lemenns_plan"
+		}
+	}
+	focus = {
+		id = dis_focus_anglossata_port
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = dis_focus_second_lemenns_plan
+		prerequisite = {
+			focus = dis_focus_second_lemenns_plan
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_anglossata_port"
+
+		}
+	}
+	focus = {
+		id = dis_focus_unite_gorax_naval_industry
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		relative_position_id = dis_focus_anglossata_port
+		prerequisite = {
+			focus = dis_focus_anglossata_port
+		}
+		prerequisite = {
+			focus = dis_focus_study_foreign_technologies
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_unite_gorax_naval_industry"
+			312 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+    				level = 1
+    				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = dis_focus_unite_anglossata_naval_industry
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		relative_position_id = dis_focus_anglossata_port
+		prerequisite = {
+			focus = dis_focus_anglossata_port
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_unite_anglossata_naval_industry"
+			305 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = dockyard
+    				level = 1
+    				instant_build = yes
+				}
+			}
+		}
+	}
+	focus = {
+		id = dis_focus_stable_logistic
+		icon = GFX_goal_generic_changeling
+		cost = 10
+		relative_position_id = dis_focus_unite_gorax_naval_industry
+		prerequisite = {
+			focus = dis_focus_unite_gorax_naval_industry
+		}
+		prerequisite = {
+			focus = dis_focus_unite_anglossata_naval_industry
+		}
+		prerequisite = {
+			focus = dis_focus_agricultural_products_import
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 2
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_stable_logistic"
+			add_to_variable = {
+				var = lemenns_plan_snr
+				value = 0.05
+				tooltip = add_DIS_lemenns_plan_snr_5_tt
+			}
+			252 = {
+				add_building_construction = {
+					type = naval_base
+    				level = 1
+    				instant_build = yes
+					province = 10909
+				}
+			}
+			305 = {
+				add_building_construction = {
+					type = naval_base
+    				level = 1
+    				instant_build = yes
+					province = 12346
+				}
+			}
+			312 = {
+				add_building_construction = {
+					type = naval_base
+    				level = 1
+    				instant_build = yes
+					province = 12305
+				}
+			}
+		}
+	}
+	#love race tree
+	focus = {
+		id = dis_focus_race_for_love
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		ai_will_do = {
+			factor = 200
+		}
+		x = 20
+		y = 0
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_race_for_love"
+		}
+	}
+	focus = {
+		id = dis_focus_target_OLE
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = dis_focus_race_for_love
+		prerequisite = {
+			focus = dis_focus_race_for_love
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = -3
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_target_OLE"
+		}
+	}
+	focus = {
+		id = dis_focus_consolidation_in_OLE
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = dis_focus_target_OLE
+		prerequisite = {
+			focus = dis_focus_target_OLE
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_consolidation_in_OLE"
+		}
+	}
+	focus = {
+		id = dis_focus_raid_hjortland
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = dis_focus_consolidation_in_OLE
+		prerequisite = {
+			focus = dis_focus_consolidation_in_OLE
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_raid_hjortland"
+		}
+	}
+	focus = {
+		id = dis_focus_target_EQS
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = dis_focus_race_for_love
+		prerequisite = {
+			focus = dis_focus_race_for_love
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = -5
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_target_EQS"
+		}
+	}
+	focus = {
+		id = dis_focus_implementation_in_EQS
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = dis_focus_target_EQS
+		prerequisite = {
+			focus = dis_focus_target_EQS
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_implementation_in_EQS"
+		}
+	}
+	focus = {
+		id = dis_focus_expedition_to_PGT
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = dis_focus_race_for_love
+		prerequisite = {
+			focus = dis_focus_race_for_love
 		}
 		ai_will_do = {
 			factor = 200
 		}
 		x = 3
-		y = 2
+		y = 1
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_expedition_to_PGT"
 		}
 	}
 	focus = {
-		id = dis_focus_treat_from_east_and_west
+		id = dis_focus_expedition_to_MET
 		icon = GFX_goal_generic_changeling
 		cost = 1
+		relative_position_id = dis_focus_race_for_love
 		prerequisite = {
-			focus = dis_focus_support_queen_helvia
-		}
-		bypass = {
-			SOR = {
-				exists = no
-			}
-			LIK = {
-				exists = no
-			}
+			focus = dis_focus_race_for_love
 		}
 		ai_will_do = {
 			factor = 200
 		}
-		x = 11
-		y = 2
+		x = 5
+		y = 1
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_expedition_to_MET"
 		}
 	}
 	focus = {
-		id = dis_focus_first_strike_sor
+		id = dis_focus_expedition_to_NEM
 		icon = GFX_goal_generic_changeling
 		cost = 1
+		relative_position_id = dis_focus_race_for_love
 		prerequisite = {
-			focus = dis_focus_treat_from_east_and_west
-		}
-		bypass = {
-			SOR = {
-				exists = no
-			}
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		x = 10
-		y = 3
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-	}
-	focus = {
-		id = dis_focus_first_strike_lik
-		icon = GFX_goal_generic_changeling
-		cost = 1
-		prerequisite = {
-			focus = dis_focus_treat_from_east_and_west
-		}
-		bypass = {
-			LIK = {
-				exists = no
-			}
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		x = 12
-		y = 3
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-	}
-	focus = {
-		id = dis_focus_crystal_monopoly
-		icon = GFX_goal_generic_changeling
-		cost = 1
-		prerequisite = {
-			focus = dis_focus_first_strike_sor
-		}
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = is_dis_crystal_monopoly_able_tt
-				OR = {
-					AND = {
-						SOR = {
-							exists = no
-						}
-						262 = {
-							is_owned_by = DIS
-						}
-						264 = {
-							is_owned_by = DIS
-						}
-						314 = {
-							is_owned_by = DIS
-						}
-						315 = {
-							is_owned_by = DIS
-						}
-						323 = {
-							is_owned_by = DIS
-						}
-					}
-					AND = {
-						SOR = {
-							OR = {
-								is_puppet_of = DIS
-								is_subject_of = DIS
-							}
-						}
-						262 = {
-							OR = {
-								is_owned_by = DIS
-								is_owned_by = SOR
-							}
-						}
-						264 = {
-							OR = {
-								is_owned_by = DIS
-								is_owned_by = SOR
-							}
-						}
-						314 = {
-							OR = {
-								is_owned_by = DIS
-								is_owned_by = SOR
-							}
-						}
-						315 = {
-							OR = {
-								is_owned_by = DIS
-								is_owned_by = SOR
-							}
-						}
-						323 = {
-							OR = {
-								is_owned_by = DIS
-								is_owned_by = SOR
-							}
-						}
-					}
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		x = 10
-		y = 4
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-	}
-	focus = {
-		id = dis_focus_steel_monopoly
-		icon = GFX_goal_generic_changeling
-		cost = 1
-		prerequisite = {
-			focus = dis_focus_first_strike_lik
-		}
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = is_dis_steel_monopoly_able_tt
-				OR = {
-					AND = {
-						LIK = {
-							exists = no
-						}
-						260 = {
-							is_owned_by = DIS
-						}
-						303 = {
-							is_owned_by = DIS
-						}
-						304 = {
-							is_owned_by = DIS
-						}
-						308 = {
-							is_owned_by = DIS
-						}
-						309 = {
-							is_owned_by = DIS
-						}
-					}
-					AND = {
-						LIK = {
-							OR = {
-								is_puppet_of = DIS
-								is_subject_of = DIS
-							}
-						}
-						260 = {
-							OR = {
-								is_owned_by = DIS
-								is_owned_by = LIK
-							}
-						}
-						303 = {
-							OR = {
-								is_owned_by = DIS
-								is_owned_by = LIK
-							}
-						}
-						304 = {
-							OR = {
-								is_owned_by = DIS
-								is_owned_by = LIK
-							}
-						}
-						308 = {
-							OR = {
-								is_owned_by = DIS
-								is_owned_by = LIK
-							}
-						}
-						309 = {
-							OR = {
-								is_owned_by = DIS
-								is_owned_by = LIK
-							}
-						}
-					}
-				}
-			}
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		x = 12
-		y = 4
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-	}
-	focus = {
-		id = dis_focus_first_strike_ves
-		icon = GFX_goal_generic_changeling
-		cost = 1
-		prerequisite = {
-			focus = dis_focus_treat_from_south
-		}
-		bypass = {
-			VES = {
-				exists = no
-			}
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		x = 2
-		y = 3
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-	}
-	focus = {
-		id = dis_focus_first_strike_vra
-		icon = GFX_goal_generic_changeling
-		cost = 1
-		prerequisite = {
-			focus = dis_focus_treat_from_south
-		}
-		available = {
-			is_neighbor_of = VRA
-		}
-		bypass = {
-			VRA = {
-				exists = no
-			}
+			focus = dis_focus_race_for_love
 		}
 		ai_will_do = {
 			factor = 200
 		}
 		x = 4
-		y = 3
+		y = 2
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_expedition_to_NEM"
 		}
 	}
 	focus = {
-		id = dis_focus_capture_evil_mind
+		id = dis_focus_helvias_spitzels
 		icon = GFX_goal_generic_changeling
 		cost = 1
+		relative_position_id = dis_focus_race_for_love
 		prerequisite = {
-			focus = dis_focus_first_strike_ves
-		}
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = is_dis_able_to_capture_evil_mind_tt
-				is_in_array = {
-					occupied_countries = VES
-				}
-			}
+			focus = dis_focus_race_for_love
 		}
 		ai_will_do = {
 			factor = 200
 		}
-		x = 2
-		y = 4
+		x = 0
+		y = 1
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
-			hidden_effect = {
-				mark_focus_tree_layout_dirty = yes
-			}
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_helvias_spitzels"
 		}
 	}
 	focus = {
-		id = dis_focus_militarisation
+		id = dis_focus_spying_on_VES
 		icon = GFX_goal_generic_changeling
 		cost = 1
+		relative_position_id = dis_focus_helvias_spitzels
 		prerequisite = {
-			focus = dis_focus_first_strike_vra
-		}
-		available = {
-			custom_trigger_tooltip = {
-				tooltip = is_dis_militarisation_able_tt
-				OR = {
-					AND = {
-						VRA = {
-							exists = no
-						}
-						246 = {
-							is_owned_by = DIS
-						}
-						247 = {
-							is_owned_by = DIS
-						}
-						248 = {
-							is_owned_by = DIS
-						}
-						250 = {
-							is_owned_by = DIS
-						}
-						258 = {
-							is_owned_by = DIS
-						}
-						259 = {
-							is_owned_by = DIS
-						}
-						291 = {
-							is_owned_by = DIS
-						}
-						307 = {
-							is_owned_by = DIS
-						}
-						316 = {
-							is_owned_by = DIS
-						}
-						319 = {
-							is_owned_by = DIS
-						}
-					}
-					AND = {
-						VRA = {
-							OR = {
-								is_puppet_of = DIS
-								is_subject_of = DIS
-							}
-						}
-						246 = {
-							OR = {
-								is_owned_by = DIS
-								is_owned_by = VRA
-							}
-						}
-						247 = {
-							OR = {
-								is_owned_by = DIS
-								is_owned_by = VRA
-							}
-						}
-						248 = {
-							OR = {
-								is_owned_by = DIS
-								is_owned_by = VRA
-							}
-						}
-						250 = {
-							OR = {
-								is_owned_by = DIS
-								is_owned_by = VRA
-							}
-						}
-						258 = {
-							OR = {
-								is_owned_by = DIS
-								is_owned_by = VRA
-							}
-						}
-						259 = {
-							OR = {
-								is_owned_by = DIS
-								is_owned_by = VRA
-							}
-						}
-						291 = {
-							OR = {
-								is_owned_by = DIS
-								is_owned_by = VRA
-							}
-						}
-						307 = {
-							OR = {
-								is_owned_by = DIS
-								is_owned_by = VRA
-							}
-						}
-						316 = {
-							OR = {
-								is_owned_by = DIS
-								is_owned_by = VRA
-							}
-						}
-						319 = {
-							OR = {
-								is_owned_by = DIS
-								is_owned_by = VRA
-							}
-						}
-					}
-				}
-			}
+			focus = dis_focus_helvias_spitzels
 		}
 		ai_will_do = {
 			factor = 200
 		}
-		x = 4
-		y = 4
+		x = -1
+		y = 1
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus vra_focus_monarhy_guestion"
-			hidden_effect = {
-				mark_focus_tree_layout_dirty = yes
-			}
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_spying_on_VES"
 		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
+	}
+	focus = { #against SOR
+		id = dis_focus_secure_influenfe_in_NEM
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		relative_position_id = dis_focus_helvias_spitzels
+		prerequisite = {
+			focus = dis_focus_helvias_spitzels
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_secure_influenfe_in_NEM"
 		}
 	}
 }

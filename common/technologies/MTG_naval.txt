@@ -87,10 +87,7 @@ technologies = {
 	}
 	fregate_hull_3 = {
 		enable_equipments = {
-			ship_hull_light_1
-		}
-		enable_equipment_modules = { 
-			light_ship_engine_1
+			ship_hull_fregate_3
 		}
 		path = {
 			leads_to_tech = fregate_hull_4
@@ -115,10 +112,7 @@ technologies = {
 	}
 	fregate_hull_4 = {
 		enable_equipments = {
-			ship_hull_light_1
-		}
-		enable_equipment_modules = { 
-			light_ship_engine_1
+			ship_hull_fregate_4
 		}
 		path = {
 			leads_to_tech = fregate_hull_5
@@ -143,10 +137,7 @@ technologies = {
 	}
 	fregate_hull_5 = {
 		enable_equipments = {
-			ship_hull_light_1
-		}
-		enable_equipment_modules = { 
-			light_ship_engine_1
+			ship_hull_fregate_5
 		}
 		path = {
 			leads_to_tech = fregate_hull_6
@@ -171,10 +162,7 @@ technologies = {
 	}
 	fregate_hull_6 = {
 		enable_equipments = {
-			ship_hull_light_1
-		}
-		enable_equipment_modules = { 
-			light_ship_engine_1
+			ship_hull_fregate_6
 		}
 		path = {
 			leads_to_tech = fregate_hull_7
@@ -223,11 +211,11 @@ technologies = {
 	}
 	destroyer_hull_0 = {
 		enable_equipments = { 
-			ship_hull_light_2
+			ship_hull_light_0
 		}
-		enable_equipment_modules = { 
-			light_ship_engine_2
-		}
+		#enable_equipment_modules = { 
+		#	light_ship_engine_0
+		#}
 		path = {
 			leads_to_tech = destroyer_hull_1 
 			research_cost_coeff = 1
@@ -254,10 +242,10 @@ technologies = {
 	}
 	destroyer_hull_1 = {
 		enable_equipments = { 
-			ship_hull_light_3
+			ship_hull_light_1
 		}
 		enable_equipment_modules = { 
-			light_ship_engine_3
+			light_ship_engine_1
 		}
 		path = {
 			leads_to_tech = destroyer_hull_2 
@@ -282,10 +270,10 @@ technologies = {
 	}
 	destroyer_hull_2 = {
 		enable_equipments = { 
-			ship_hull_light_4
+			ship_hull_light_2
 		}
 		enable_equipment_modules = { 
-			light_ship_engine_4
+			light_ship_engine_2
 		}	
 		path = {
 			leads_to_tech = destroyer_hull_3 
@@ -310,10 +298,10 @@ technologies = {
 	}
 	destroyer_hull_3 = {
 		enable_equipments = { 
-			ship_hull_light_5
+			ship_hull_light_3
 		}
 		enable_equipment_modules = { 
-			light_ship_engine_5
+			light_ship_engine_3
 		}			
 		path = {
 			leads_to_tech = destroyer_hull_4 
@@ -338,6 +326,62 @@ technologies = {
 	}
 	destroyer_hull_4 = {
 		enable_equipments = { 
+			ship_hull_light_4
+		}
+		enable_equipment_modules = { 
+			light_ship_engine_4
+		}
+		path = {
+			leads_to_tech = destroyer_hull_5 
+			research_cost_coeff = 1
+		}
+		research_cost = 2.5
+		start_year = 1023
+		folder = {
+			name = mtgnavalfolder
+			position = { 
+				x = 1 
+				y = 42
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			naval_equipment
+			dd_tech
+		}
+	}
+	destroyer_hull_5 = {
+		enable_equipments = { 
+			ship_hull_light_5
+		}
+		enable_equipment_modules = { 
+			light_ship_engine_5
+		}
+		path = {
+			leads_to_tech = destroyer_hull_6 
+			research_cost_coeff = 1
+		}
+		research_cost = 2.5
+		start_year = 1023
+		folder = {
+			name = mtgnavalfolder
+			position = { 
+				x = 1 
+				y = 48
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			naval_equipment
+			dd_tech
+		}
+	}
+	destroyer_hull_6 = {
+		enable_equipments = { 
 			ship_hull_light_6
 		}
 		enable_equipment_modules = { 
@@ -349,7 +393,7 @@ technologies = {
 			name = mtgnavalfolder
 			position = { 
 				x = 1 
-				y = 42
+				y = 54
 			}
 		}
 		ai_will_do = {

@@ -1795,6 +1795,19 @@ focus_tree = {
 				add_to_temp_variable = {
 					essbs = total_ic_level
 				}
+				set_temp_variable = {
+					damage_factor = random
+				}
+				clamp_temp_variable = {
+					var = damage_factor
+					min = 0.25
+				}
+				multiply_temp_variable = {
+					state_bl_af = damage_factor
+				}
+				multiply_temp_variable = {
+					state_bl_ic = damage_factor
+				}
 				67 = {
 					add_extra_state_shared_building_slots = essbs
 					add_building_construction = {

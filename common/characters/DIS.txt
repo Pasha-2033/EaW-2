@@ -1,4 +1,5 @@
 characters = {
+	#country leaders
 	DIS_queen_helvia = {
 		name = DIS_queen_helvia
 		portraits = {
@@ -12,10 +13,103 @@ characters = {
 		country_leader = {
 			desc = "POLITICS_CHRYSALIS_DESC"
 			ideology = ultranationalism
-			traits = { warmonger }
+			traits = {
+				warmonger
+			}
 			expire = "1965.1.1.1"
 			id = -1
 		}
 		gender = female
+	}
+	#advisors
+	DIS_ellert = { #queen's confidant
+		name = DIS_ellert
+		portraits = {
+			#civilian = {
+			#	small = "GFX_portrait_marshal_unknown" #to do
+			#}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = DIS_ellert
+			traits = {
+				
+			}
+			allowed = {
+				original_tag = DIS
+			}
+		}
+	}
+	DIS_lemenn = { #economist
+		name = DIS_lemenn
+		portraits = {
+			#civilian = {
+			#	small = "GFX_portrait_marshal_unknown" #to do
+			#}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = DIS_lemenn
+			traits = {
+				
+			}
+			allowed = {
+				original_tag = DIS
+			}
+		}
+	}
+	#army leaders
+	DIS_krieger = {
+		name = DIS_krieger
+		portraits = {
+			#civilian = {
+			#	small = "GFX_portrait_marshal_unknown" #to do
+			#}
+			army = {
+				large = "GFX_portrait_marshal_unknown" #to do
+			}
+		}
+		field_marshal = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 1
+			traits = {
+				politically_connected
+				old_guard
+			}
+		}
+	}
+	DIS_shmidt = {
+		name = DIS_shmidt
+		portraits = {
+			army = {
+				large = "GFX_portrait_marshal_unknown" #to do
+			}
+		}
+		corps_commander = {
+			skill = 1
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 1
+			logistics_skill = 2
+		}
+	}
+	#navy leaders
+	DIS_fisher = {
+		name = DIS_fisher
+		portraits = {
+			army = {
+				large = "GFX_portrait_marshal_unknown" #to do
+			}
+		}
+		navy_leader = {
+			skill = 2
+			attack_skill = 2
+			defense_skill = 1
+			maneuvering_skill = 4
+			coordination_skill = 2
+		}
 	}
 }
