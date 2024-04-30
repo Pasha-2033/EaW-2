@@ -877,11 +877,161 @@ equipment_modules = {
 			convert_cost_ic = 90
 		}
 	}
-	### #  #  ##  ### #  # ### 
-	#   ## # #     #  ## # #   
-	##  # ## # ##  #  # ## ##  
-	#   #  # #  #  #  #  # #   
-	### #  #  ##  ### #  # ### 
+	#engines
+	frigate_ship_engine_0 = {
+		category = frigate_ship_engine
+		sfx = sfx_ui_sd_module_engine
+		add_stats = {
+			naval_speed = 3
+			fuel_consumption = 4
+			build_cost_ic = 70
+		}
+		multiply_stats = {
+			naval_speed = 0.25
+			reliability = -0.2
+		}
+		can_convert_from = {
+			module_category = frigate_ship_engine
+			convert_cost_ic = 150
+		}
+		can_convert_from = {
+			module = frigate_ship_engine_1
+			convert_cost_ic = 100
+		}
+	}
+	frigate_ship_engine_1 = {
+		category = frigate_ship_engine
+		parent = frigate_ship_engine_0
+		sfx = sfx_ui_sd_module_engine
+		add_stats = {
+			naval_speed = 4
+			fuel_consumption = 5
+			build_cost_ic = 90
+		}
+		multiply_stats = {
+			naval_speed = 0.4
+			reliability = -0.2
+		}
+		can_convert_from = {
+			module_category = frigate_ship_engine
+			convert_cost_ic = 150
+		}
+		can_convert_from = {
+			module = frigate_ship_engine_0
+			convert_cost_ic = 130
+		}
+		can_convert_from = {
+			module = frigate_ship_engine_2
+			convert_cost_ic = 100
+		}
+	}
+	frigate_ship_engine_2 = {
+		category = frigate_ship_engine
+		parent = frigate_ship_engine_1
+		sfx = sfx_ui_sd_module_engine
+		add_stats = {
+			naval_speed = 5
+			fuel_consumption = 6
+			build_cost_ic = 110
+		}
+		multiply_stats = {
+			naval_speed = 0.55
+			reliability = -0.2
+		}
+		can_convert_from = {
+			module_category = frigate_ship_engine
+			convert_cost_ic = 150
+		}
+		can_convert_from = {
+			module = frigate_ship_engine_1
+			convert_cost_ic = 130
+		}
+		can_convert_from = {
+			module = frigate_ship_engine_3
+			convert_cost_ic = 100
+		}
+	}
+	frigate_ship_engine_3 = {
+		category = frigate_ship_engine
+		parent = frigate_ship_engine_2
+		sfx = sfx_ui_sd_module_engine
+		add_stats = {
+			naval_speed = 6
+			fuel_consumption = 7
+			build_cost_ic = 130
+		}
+		multiply_stats = {
+			naval_speed = 0.7
+			reliability = -0.2
+		}
+		can_convert_from = {
+			module_category = frigate_ship_engine
+			convert_cost_ic = 150
+		}
+		can_convert_from = {
+			module = frigate_ship_engine_2
+			convert_cost_ic = 130
+		}
+		can_convert_from = {
+			module = frigate_ship_engine_4
+			convert_cost_ic = 100
+		}
+	}
+	frigate_ship_engine_4 = {
+		category = frigate_ship_engine
+		parent = frigate_ship_engine_3
+		sfx = sfx_ui_sd_module_engine
+		add_stats = {
+			naval_speed = 7
+			fuel_consumption = 8
+			build_cost_ic = 150
+		}
+		multiply_stats = {
+			naval_speed = 0.85
+			reliability = -0.2
+		}
+		can_convert_from = {
+			module_category = frigate_ship_engine
+			convert_cost_ic = 150
+		}
+		can_convert_from = {
+			module = frigate_ship_engine_3
+			convert_cost_ic = 130
+		}
+		can_convert_from = {
+			module = frigate_ship_engine_5
+			convert_cost_ic = 100
+		}
+	}
+	frigate_ship_engine_5 = {
+		category = frigate_ship_engine
+		parent = frigate_ship_engine_1
+		sfx = sfx_ui_sd_module_engine
+		add_stats = {
+			naval_speed = 8
+			fuel_consumption = 8
+			build_cost_ic = 170
+		}
+		multiply_stats = {
+			naval_speed = 1
+			reliability = -0.2
+		}
+		can_convert_from = {
+			module_category = frigate_ship_engine
+			convert_cost_ic = 150
+		}
+		can_convert_from = {
+			module = frigate_ship_engine_4
+			convert_cost_ic = 130
+		}
+	}
+
+
+
+
+
+
+
 	light_ship_engine_1 = {
 		category = light_ship_engine
 		sfx = sfx_ui_sd_module_engine

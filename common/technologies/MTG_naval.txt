@@ -1,12 +1,12 @@
 technologies = {
-	#NOTE: fregate_hull_0 and fregate_hull_1 are prototypes of real ship equipment and serve for convoy rainding mostly
-	#fregates and destroyers
-	fregate_hull_0 = {
+	#NOTE: frigate_hull_0 and frigate_hull_1 are prototypes of real ship equipment and serve for convoy rainding mostly
+	#frigates and destroyers
+	frigate_hull_0 = {
 		enable_equipments = {
-			ship_hull_fregate_0
+			ship_hull_frigate_0
 		}
 		path = {
-			leads_to_tech = fregate_hull_1
+			leads_to_tech = frigate_hull_1
 			research_cost_coeff = 1
 		}
 		folder = {
@@ -20,12 +20,12 @@ technologies = {
 			factor = 2
 		}
 	}
-	fregate_hull_1 = {
+	frigate_hull_1 = {
 		enable_equipments = {
-			ship_hull_fregate_1
+			ship_hull_frigate_1
 		}
 		path = {
-			leads_to_tech = fregate_hull_2
+			leads_to_tech = frigate_hull_2
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
@@ -45,9 +45,12 @@ technologies = {
 			dd_tech
 		}
 	}
-	fregate_hull_2 = {
+	frigate_hull_2 = {
 		enable_equipments = {
-			ship_hull_fregate_2
+			ship_hull_frigate_2
+		}
+		enable_equipment_modules = {
+			frigate_ship_engine_0
 		}
 		dependencies = {
 			internal_combustion_engine = 1
@@ -57,7 +60,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = fregate_hull_3
+			leads_to_tech = frigate_hull_3
 			research_cost_coeff = 1
 		}
 		path = {
@@ -85,12 +88,15 @@ technologies = {
 			dd_tech
 		}
 	}
-	fregate_hull_3 = {
+	frigate_hull_3 = {
 		enable_equipments = {
-			ship_hull_fregate_3
+			ship_hull_frigate_3
+		}
+		enable_equipment_modules = {
+			frigate_ship_engine_1
 		}
 		path = {
-			leads_to_tech = fregate_hull_4
+			leads_to_tech = frigate_hull_4
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
@@ -110,12 +116,15 @@ technologies = {
 			dd_tech
 		}
 	}
-	fregate_hull_4 = {
+	frigate_hull_4 = {
 		enable_equipments = {
-			ship_hull_fregate_4
+			ship_hull_frigate_4
+		}
+		enable_equipment_modules = {
+			frigate_ship_engine_2
 		}
 		path = {
-			leads_to_tech = fregate_hull_5
+			leads_to_tech = frigate_hull_5
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
@@ -135,12 +144,15 @@ technologies = {
 			dd_tech
 		}
 	}
-	fregate_hull_5 = {
+	frigate_hull_5 = {
 		enable_equipments = {
-			ship_hull_fregate_5
+			ship_hull_frigate_5
+		}
+		enable_equipment_modules = {
+			frigate_ship_engine_3
 		}
 		path = {
-			leads_to_tech = fregate_hull_6
+			leads_to_tech = frigate_hull_6
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
@@ -160,12 +172,15 @@ technologies = {
 			dd_tech
 		}
 	}
-	fregate_hull_6 = {
+	frigate_hull_6 = {
 		enable_equipments = {
-			ship_hull_fregate_6
+			ship_hull_frigate_6
+		}
+		enable_equipment_modules = {
+			frigate_ship_engine_4
 		}
 		path = {
-			leads_to_tech = fregate_hull_7
+			leads_to_tech = frigate_hull_7
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
@@ -185,12 +200,12 @@ technologies = {
 			dd_tech
 		}
 	}
-	fregate_hull_7 = {
+	frigate_hull_7 = {
 		enable_equipments = {
-			ship_hull_light_1
+			ship_hull_frigate_7
 		}
-		enable_equipment_modules = { 
-			light_ship_engine_1
+		enable_equipment_modules = {
+			frigate_ship_engine_5
 		}
 		research_cost = 1.5
 		start_year = 1007

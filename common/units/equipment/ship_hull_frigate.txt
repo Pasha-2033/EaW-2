@@ -1,5 +1,5 @@
 equipments = {
-	ship_hull_fregate = {
+	ship_hull_frigate = {
 		year = 962
 		is_archetype = yes
 		is_buildable = no
@@ -13,7 +13,7 @@ equipments = {
 		sub_detection = 1
 
 		surface_visibility = 10
-		naval_speed = 15
+		naval_speed = 30
 		reliability = 0.50		
 		naval_range = 500		
 		max_strength = 10
@@ -24,24 +24,25 @@ equipments = {
 		}	
 		manpower = 250
 	}
-	ship_hull_fregate_0 = {
+	ship_hull_frigate_0 = {
 		year = 962
-		archetype = ship_hull_fregate
+		archetype = ship_hull_frigate
 		upgrades = {
-			early_fregate_firepower_upgrade
-			early_fregate_movement_upgrade
-			early_fregate_reliability_upgrade
-			early_fregate_strength_upgrade
+			early_frigate_firepower_upgrade
+			early_frigate_movement_upgrade
+			early_frigate_reliability_upgrade
+			early_frigate_strength_upgrade
 		}
 		lg_attack = 0.75
 		sub_attack = 1
-	}
-	ship_hull_fregate_1 = {
-		year = 983
-		archetype = ship_hull_fregate
-		parent = ship_hull_fregate_0
-		lg_attack = 1
 		naval_speed = 15
+	}
+	ship_hull_frigate_1 = {
+		year = 983
+		archetype = ship_hull_frigate
+		parent = ship_hull_frigate_0
+		lg_attack = 1
+		naval_speed = 20
 		reliability = 0.60		
 		naval_range = 750
 		module_slots = {
@@ -92,10 +93,10 @@ equipments = {
 			steel = 2
 		}	
 	}
-	ship_hull_fregate_2 = {
+	ship_hull_frigate_2 = {
 		year = 983
-		archetype = ship_hull_fregate
-		parent = ship_hull_fregate_1
+		archetype = ship_hull_frigate
+		parent = ship_hull_frigate_1
 		module_slots = {
 			#fixed modules
 			fixed_ship_battery_slot = inherit
@@ -116,7 +117,9 @@ equipments = {
 			}
 			fixed_ship_engine_slot = {
 				required = yes
-				allowed_module_categories = { light_ship_engine }
+				allowed_module_categories = {
+					frigate_ship_engine
+				}
 			}
 			#rear, middle and front
 			rear_1_custom_slot = {
@@ -135,16 +138,15 @@ equipments = {
 		default_modules = {
 			fixed_ship_fire_control_system_slot = empty
 			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = light_ship_engine_1
+			fixed_ship_engine_slot = frigate_ship_engine_0
 		}
-		naval_speed = 15
 		reliability = 0.60		
 		naval_range = 750
 	}
-	ship_hull_fregate_3 = {
+	ship_hull_frigate_3 = {
 		year = 983
-		archetype = ship_hull_fregate
-		parent = ship_hull_fregate_2
+		archetype = ship_hull_frigate
+		parent = ship_hull_frigate_2
 		module_slots = {
 			#fixed modules
 			fixed_ship_battery_slot = {
@@ -168,16 +170,15 @@ equipments = {
 			mid_1_custom_slot = inherit
 		}
 		default_modules = {
-			fixed_ship_engine_slot = light_ship_engine_2
+			fixed_ship_engine_slot = frigate_ship_engine_1
 		}
-		naval_speed = 15
 		reliability = 0.60		
 		naval_range = 750
 	}
-	ship_hull_fregate_4 = {
+	ship_hull_frigate_4 = {
 		year = 983
-		archetype = ship_hull_fregate
-		parent = ship_hull_fregate_3
+		archetype = ship_hull_frigate
+		parent = ship_hull_frigate_3
 		module_slots = {
 			#fixed modules
 			fixed_ship_battery_slot = inherit
@@ -191,16 +192,15 @@ equipments = {
 			mid_1_custom_slot = inherit
 		}
 		default_modules = {
-			fixed_ship_engine_slot = light_ship_engine_3
+			fixed_ship_engine_slot = frigate_ship_engine_2
 		}
-		naval_speed = 15
 		reliability = 0.60		
 		naval_range = 750
 	}
-	ship_hull_fregate_5 = {
+	ship_hull_frigate_5 = {
 		year = 983
-		archetype = ship_hull_fregate
-		parent = ship_hull_fregate_4
+		archetype = ship_hull_frigate
+		parent = ship_hull_frigate_4
 		module_slots = {
 			#fixed modules
 			fixed_ship_battery_slot = inherit
@@ -222,16 +222,15 @@ equipments = {
 			}
 		}
 		default_modules = {
-			fixed_ship_engine_slot = light_ship_engine_4
+			fixed_ship_engine_slot = frigate_ship_engine_3
 		}
-		naval_speed = 15
 		reliability = 0.60		
 		naval_range = 750
 	}
-	ship_hull_fregate_6 = {
+	ship_hull_frigate_6 = {
 		year = 983
-		archetype = ship_hull_fregate
-		parent = ship_hull_fregate_5
+		archetype = ship_hull_frigate
+		parent = ship_hull_frigate_5
 		module_slots = {
 			#fixed modules
 			fixed_ship_battery_slot = inherit
@@ -246,9 +245,31 @@ equipments = {
 			front_1_custom_slot = inherit
 		}
 		default_modules = {
-			fixed_ship_engine_slot = light_ship_engine_5
+			fixed_ship_engine_slot = frigate_ship_engine_4
 		}
-		naval_speed = 15
+		reliability = 0.60		
+		naval_range = 750
+	}
+	ship_hull_frigate_7 = {
+		year = 983
+		archetype = ship_hull_frigate
+		parent = ship_hull_frigate_6
+		module_slots = {
+			#fixed modules
+			fixed_ship_battery_slot = inherit
+			fixed_ship_anti_air_slot = inherit
+			fixed_ship_fire_control_system_slot = inherit
+			fixed_ship_radar_slot = inherit
+			fixed_ship_torpedo_slot = inherit
+			fixed_ship_engine_slot = inherit
+			#rear, middle and front
+			rear_1_custom_slot = inherit
+			mid_1_custom_slot = inherit
+			front_1_custom_slot = inherit
+		}
+		default_modules = {
+			fixed_ship_engine_slot = frigate_ship_engine_5
+		}
 		reliability = 0.60		
 		naval_range = 750
 	}
