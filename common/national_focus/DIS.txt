@@ -17,53 +17,77 @@ focus_tree = {
 		id = dis_focus_queen_helvia_reign
 		icon = GFX_goal_generic_changeling
 		cost = 1
-		ai_will_do = {
-			factor = 200
-		}
 		x = 4
 		y = 0
+		ai_will_do = { factor = 200 }
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_queen_helvia_reign"
+			305 = {
+				add_extra_state_shared_building_slots = 1
+			}
+			312 = {
+				add_extra_state_shared_building_slots = 1
+			}
 		}
 	}
 	focus = {
 		id = dis_focus_military_report
 		icon = GFX_goal_generic_changeling
 		cost = 1
+		x = 1
+		y = 1
+		ai_will_do = { factor = 200 }
 		relative_position_id = dis_focus_queen_helvia_reign
 		prerequisite = {
 			focus = dis_focus_queen_helvia_reign
 		}
-		ai_will_do = {
-			factor = 200
-		}
-		x = 1
-		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_military_report"
+			305 = {
+				add_building_construction = {
+					type = arms_factory
+    				level = 1
+    				instant_build = yes
+				}
+			}
+			312 = {
+				add_building_construction = {
+					type = arms_factory
+    				level = 1
+    				instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
 		id = dis_focus_economic_report
 		icon = GFX_goal_generic_changeling
 		cost = 1
+		x = -1
+		y = 1
+		ai_will_do = { factor = 200 }
 		relative_position_id = dis_focus_queen_helvia_reign
 		prerequisite = {
 			focus = dis_focus_queen_helvia_reign
 		}
-		ai_will_do = {
-			factor = 200
-		}
-		x = -1
-		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_economic_report"
+			252 = {
+				add_building_construction = {
+					type = infrastructure
+    				level = 1
+    				instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
 		id = dis_focus_ellert_resignation
 		icon = GFX_goal_generic_changeling
 		cost = 1
+		x = 0
+		y = 2
+		ai_will_do = { factor = 200 }
 		relative_position_id = dis_focus_queen_helvia_reign
 		prerequisite = {
 			focus = dis_focus_military_report
@@ -71,13 +95,9 @@ focus_tree = {
 		prerequisite = {
 			focus = dis_focus_economic_report
 		}
-		ai_will_do = {
-			factor = 200
-		}
-		x = 0
-		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_ellert_resignation"
+			add_stability = 0.1
 		}
 	}
 	focus = {
@@ -95,43 +115,45 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_stop_intentional_isolationism"
+			add_political_power = 200
 		}
 	}
 	focus = {
 		id = dis_focus_royal_parade
 		icon = GFX_goal_generic_changeling
 		cost = 1
-		relative_position_id = dis_focus_queen_helvia_reign
-		ai_will_do = {
-			factor = 200
-		}
 		x = 6
 		y = 0
+		ai_will_do = { factor = 200 }
+		relative_position_id = dis_focus_queen_helvia_reign
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_royal_parade"
+			add_political_power = 100
 		}
 	}
 	focus = {
 		id = dis_focus_kriegers_death
 		icon = GFX_goal_generic_changeling
 		cost = 1
+		x = 0
+		y = 1
+		ai_will_do = { factor = 200 }
 		relative_position_id = dis_focus_royal_parade
 		prerequisite = {
 			focus = dis_focus_royal_parade
 		}
-		ai_will_do = {
-			factor = 200
-		}
-		x = 0
-		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_kriegers_death"
+			add_stability = 0.1
 		}
 	}
 	focus = {
 		id = dis_focus_shmidts_plan
 		icon = GFX_goal_generic_changeling
 		cost = 1
+		x = 1
+		y = 1
+		ai_will_do = { factor = 200 }
 		relative_position_id = dis_focus_kriegers_death
 		prerequisite = {
 			focus = dis_focus_kriegers_death
@@ -139,19 +161,18 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = dis_focus_fishers_plan
 		}
-		ai_will_do = {
-			factor = 200
-		}
-		x = 1
-		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_shmidts_plan"
+			add_political_power = 100
 		}
 	}
 	focus = {
 		id = dis_focus_fishers_plan
 		icon = GFX_goal_generic_changeling
 		cost = 1
+		x = -1
+		y = 1
+		ai_will_do = { factor = 200 }
 		relative_position_id = dis_focus_kriegers_death
 		prerequisite = {
 			focus = dis_focus_kriegers_death
@@ -159,30 +180,32 @@ focus_tree = {
 		mutually_exclusive = {
 			focus = dis_focus_shmidts_plan
 		}
-		ai_will_do = {
-			factor = 200
-		}
-		x = -1
-		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_fishers_plan"
+			add_stability = 0.1
 		}
 	}
 	focus = {
 		id = dis_focus_military_industry_expansion
 		icon = GFX_goal_generic_changeling
 		cost = 1
+		x = 1
+		y = 1
+		ai_will_do = { factor = 200 }
 		relative_position_id = dis_focus_shmidts_plan
 		prerequisite = {
 			focus = dis_focus_shmidts_plan
 		}
-		ai_will_do = {
-			factor = 200
-		}
-		x = 1
-		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_military_industry_expansion"
+			252 = {
+				add_building_construction = {
+					type = arms_factory
+    				level = 1
+    				instant_build = yes
+				}
+			add_command_power = 100
+			}
 		}
 	}
 	focus = {
@@ -201,6 +224,7 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_regional_military_schools"
+			army_experience = 10
 		}
 	}
 	focus = {
@@ -218,6 +242,7 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_fleet_resources_extension"
+			navy_experience = 10
 		}
 	}
 	focus = {
@@ -267,17 +292,16 @@ focus_tree = {
 		id = dis_focus_new_ship_hulls
 		icon = GFX_goal_generic_changeling
 		cost = 1
+		x = 0
+		y = 1
+		ai_will_do = { factor = 200 }
 		relative_position_id = dis_focus_fleet_resources_extension
 		prerequisite = {
 			focus = dis_focus_fleet_resources_extension
 		}
-		ai_will_do = {
-			factor = 200
-		}
-		x = 0
-		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_new_ship_hulls"
+			navy_experience = 20
 		}
 	}
 	focus = {
@@ -312,6 +336,8 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_cancel_the_calm_decree"
+			add_manpower = 100000
+			add_stability = -0.1
 		}
 	}
 	focus = {
@@ -332,23 +358,23 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_queen_controlled_piracy"
+			add_political_power = 100
 		}
 	}
 	focus = {
 		id = dis_focus_deer_raids
 		icon = GFX_goal_generic_changeling
 		cost = 1
+		x = 1
+		y = 1
+		ai_will_do = { factor = 200 }
 		relative_position_id = dis_focus_queen_controlled_piracy
 		prerequisite = {
 			focus = dis_focus_queen_controlled_piracy
 		}
-		ai_will_do = {
-			factor = 200
-		}
-		x = 1
-		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_deer_raids"
+			add_political_power = 300
 		}
 	}
 	focus = {
@@ -476,17 +502,29 @@ focus_tree = {
 		id = dis_focus_gorax_supplies
 		icon = GFX_goal_generic_changeling
 		cost = 1
+		x = 0
+		y = 2
+		ai_will_do = { factor = 200 }
 		relative_position_id = dis_focus_finish_lemenns_plan
 		prerequisite = {
 			focus = dis_focus_finish_lemenns_plan
 		}
-		ai_will_do = {
-			factor = 200
-		}
-		x = 0
-		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_gorax_supplies"
+			305 = {
+				add_building_construction = {
+					type = agrarian_complex
+    				level = 1
+    				instant_build = yes
+				}
+			}
+			312 = {
+				add_building_construction = {
+					type = agrarian_complex
+    				level = 1
+    				instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -626,17 +664,22 @@ focus_tree = {
 		id = dis_focus_second_lemenns_plan
 		icon = GFX_goal_generic_changeling
 		cost = 1
+		x = -1
+		y = 1
+		ai_will_do = { factor = 200 }
 		relative_position_id = dis_focus_finish_lemenns_plan
 		prerequisite = {
 			focus = dis_focus_finish_lemenns_plan
 		}
-		ai_will_do = {
-			factor = 200
-		}
-		x = -1
-		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_second_lemenns_plan"
+			252 = {
+				add_building_construction = {
+					type = agrarian_complex
+    				level = 1
+    				instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
@@ -654,7 +697,13 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus dis_focus_anglossata_port"
-
+			305 = {
+				add_building_construction = {
+					type = naval_base
+    				level = 1
+    				instant_build = yes
+				}
+			}
 		}
 	}
 	focus = {
