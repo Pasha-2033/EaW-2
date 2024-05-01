@@ -1025,14 +1025,7 @@ equipment_modules = {
 			convert_cost_ic = 130
 		}
 	}
-
-
-
-
-
-
-
-	light_ship_engine_1 = {
+	light_ship_engine_0 = {
 		category = light_ship_engine
 		sfx = sfx_ui_sd_module_engine
 		add_stats = {
@@ -1047,6 +1040,28 @@ equipment_modules = {
 		can_convert_from = {
 			module_category = light_ship_engine
 			convert_cost_ic = 250
+		}
+	}
+	light_ship_engine_1 = {
+		category = light_ship_engine
+		parent = light_ship_engine_0
+		sfx = sfx_ui_sd_module_engine
+		add_stats = {
+			naval_speed = 5
+			fuel_consumption = 8
+			build_cost_ic = 120
+		}
+		multiply_stats = {
+			naval_speed = 0.32
+			reliability = -0.2
+		}
+		can_convert_from = {
+			module_category = light_ship_engine
+			convert_cost_ic = 250
+		}
+		can_convert_from = {
+			module = light_ship_engine_0
+			convert_cost_ic = 230
 		}
 	}
 	light_ship_engine_2 = {
@@ -1112,6 +1127,50 @@ equipment_modules = {
 		}
 		can_convert_from = {
 			module = light_ship_engine_3
+			convert_cost_ic = 230
+		}
+	}
+	light_ship_engine_5 = {
+		category = light_ship_engine
+		parent = light_ship_engine_4
+		sfx = sfx_ui_sd_module_engine
+		add_stats = {
+			naval_speed = 5
+			fuel_consumption = 10
+			build_cost_ic = 170
+		}
+		multiply_stats = {
+			naval_speed = 0.47
+			reliability = -0.2
+		}
+		can_convert_from = {
+			module_category = light_ship_engine
+			convert_cost_ic = 250
+		}
+		can_convert_from = {
+			module = light_ship_engine_4
+			convert_cost_ic = 230
+		}
+	}
+	light_ship_engine_6 = {
+		category = light_ship_engine
+		parent = light_ship_engine_5
+		sfx = sfx_ui_sd_module_engine
+		add_stats = {
+			naval_speed = 5
+			fuel_consumption = 10
+			build_cost_ic = 170
+		}
+		multiply_stats = {
+			naval_speed = 0.47
+			reliability = -0.2
+		}
+		can_convert_from = {
+			module_category = light_ship_engine
+			convert_cost_ic = 250
+		}
+		can_convert_from = {
+			module = light_ship_engine_5
 			convert_cost_ic = 230
 		}
 	}
@@ -1648,12 +1707,8 @@ equipment_modules = {
 			naval_speed = -0.02
 		}
 	}
-	###  ### ###  ### #  #      ##  #  #  ##  ###   ##  ### 
-	#  # #   #  #  #  #  #     #  # #  # #  # #  # #    #   
-	#  # ##  ###   #  ####     #    #### #### ###  # ## ##  
-	#  # #   #     #  #  #     #  # #  # #  # #  # #  # #   
-	###  ### #     #  #  #      ##  #  # #  # #  #  ##  ### 
-	ship_depth_charge_1 = {
+	#ship_depth_charge
+	ship_depth_charge_0 = {
 		category = ship_depth_charge
 		sfx = sfx_ui_sd_module_turret
 		add_stats = {
@@ -1663,6 +1718,21 @@ equipment_modules = {
 		can_convert_from = {
 			module_category = ship_depth_charge
 			convert_cost_ic = 60
+		}
+		multiply_stats = {
+			naval_speed = -0.02
+		}
+	}
+	ship_depth_charge_1 = {
+		category = ship_depth_charge
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			sub_attack = 12
+			build_cost_ic = 120
+		}
+		can_convert_from = {
+			module_category = ship_depth_charge
+			convert_cost_ic = 90
 		}
 		multiply_stats = {
 			naval_speed = -0.02
@@ -1785,7 +1855,29 @@ equipment_modules = {
 		gfx = ship_deck_space
 		add_equipment_type = capital_ship
 		add_stats = {
-			carrier_size = 20
+			carrier_size = 1
+			build_cost_ic = 2000
+		}
+		manpower = 500		#outside the add_stats section for code reasons
+		multiply_stats = {
+			naval_speed = -0.05
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			module_category = ship_deck_space
+			convert_cost_ic = 1000
+		}
+		dismantle_cost_ic = 700
+	}
+	ship_deck_space_1 = {
+		category = ship_deck_space
+		parent = ship_deck_space
+		gfx = ship_deck_space
+		add_equipment_type = capital_ship
+		add_stats = {
+			carrier_size = 2
 			build_cost_ic = 2000
 		}
 		manpower = 500		#outside the add_stats section for code reasons

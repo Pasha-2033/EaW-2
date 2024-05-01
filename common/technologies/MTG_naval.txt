@@ -228,9 +228,9 @@ technologies = {
 		enable_equipments = { 
 			ship_hull_light_0
 		}
-		#enable_equipment_modules = { 
-		#	light_ship_engine_0
-		#}
+		enable_equipment_modules = { 
+			light_ship_engine_0
+		}
 		path = {
 			leads_to_tech = destroyer_hull_1 
 			research_cost_coeff = 1
@@ -422,7 +422,7 @@ technologies = {
 	#depth charges
 	basic_depth_charges = {
 		enable_equipment_modules = { 
-			ship_depth_charge_1
+			ship_depth_charge_0
 		}
 		path = {
 			leads_to_tech = improved_depth_charges
@@ -459,7 +459,7 @@ technologies = {
 	}
 	improved_depth_charges = {
 		enable_equipment_modules = { 
-			ship_depth_charge_2
+			ship_depth_charge_1
 		}
 		path = {
 			leads_to_tech = advanced_depth_charges
@@ -496,7 +496,7 @@ technologies = {
 	}
 	advanced_depth_charges = {
 		enable_equipment_modules = { 
-			ship_depth_charge_3
+			ship_depth_charge_2
 		}
 		path = {
 			leads_to_tech = modern_depth_charges
@@ -530,7 +530,7 @@ technologies = {
 	}
 	modern_depth_charges = {
 		enable_equipment_modules = { 
-			ship_depth_charge_4
+			ship_depth_charge_3
 		}
 		path = {
 			leads_to_tech = modern_depth_charges_2
@@ -564,7 +564,7 @@ technologies = {
 	}
 	modern_depth_charges_2 = {
 		enable_equipment_modules = { 
-			ship_depth_charge_5
+			ship_depth_charge_4
 		}
 		path = {
 			leads_to_tech = modern_depth_charges_3
@@ -598,10 +598,14 @@ technologies = {
 	}
 	modern_depth_charges_3 = {
 		enable_equipment_modules = { 
-			ship_depth_charge_6
+			ship_depth_charge_5
 		}
 		path = {
 			leads_to_tech = anti_sub_helicopter
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = modern_depth_charges_4
 			research_cost_coeff = 1
 		}
 		xp_research_type = navy
@@ -614,6 +618,36 @@ technologies = {
 			position = { 
 				x = 2 
 				y = 42 
+			}
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				anti_submarine_strategy_required_trigger = yes
+			}
+		}
+		categories = {
+			naval_equipment
+			naval_weaponry
+			dd_tech
+			asw_tech
+		}
+	}
+	modern_depth_charges_4 = {
+		enable_equipment_modules = { 
+			ship_depth_charge_6
+		}
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1.5
+		start_year = 1023	
+		folder = {
+			name = mtgnavalfolder
+			position = { 
+				x = 2 
+				y = 48 
 			}
 		}
 		ai_will_do = {
@@ -1341,7 +1375,7 @@ technologies = {
 		
 		folder = {
 			name = mtgnavalfolder
-			position = {  x = 2 y = 48 }
+			position = {  x = 2 y = 54 }
 		}
 		
 		ai_will_do = {
@@ -2126,13 +2160,8 @@ technologies = {
 		}
 	}
 
- ##   ##  ###  ###  ### ### ###   ## 
-#  # #  # #  # #  #  #  #   #  # #   
-#    #### ###  ###   #  ##  ###   #  
-#  # #  # #  # #  #  #  #   #  #   # 
- ##  #  # #  # #  # ### ### #  # ##  
-
-early_ship_hull_carrier = {
+	#carrier 
+	early_ship_hull_carrier = {
 
 		enable_equipments = {
 			ship_hull_carrier_conversion_bb
@@ -2151,7 +2180,10 @@ early_ship_hull_carrier = {
 			leads_to_tech = basic_ship_hull_carrier
 			research_cost_coeff = 1
 		}
-		
+		path = {
+			leads_to_tech = carrier_deck_space_1
+			research_cost_coeff = 1
+		}
 		dependencies = {
 			early_fighter = 1
 		}
@@ -2466,6 +2498,38 @@ early_ship_hull_carrier = {
 		}
 	}
 	######## Mod End ########	
+
+	#starts with _1 because _0 is opened by first carrier hull
+	carrier_deck_space_1 = {
+		enable_equipment_modules = { 
+			ship_deck_space_1
+		}	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1.25
+		start_year = 1026	
+		folder = {
+			name = mtgnavalfolder
+			position = {  
+				x = 1 
+				y = 1 
+			}
+		}	
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			naval_equipment
+			cv_tech
+			nuclear
+		}
+	}
+
+
+
+
+
 
 ###  ##  ###  ###  ### ###   ##      #   #  ##  ###   ##  ### ###  ###                  ## #  # ###  #   #  ##  ###  ### #  # ###  ## 
  #  #  # #  # #  # #   #  # #  #     #   # #  # #  # #  # #   #  # #       {~._.~}     #   #  # #  # ## ## #  # #  #  #  ## # #   #   
