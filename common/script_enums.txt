@@ -1,7 +1,12 @@
 script_enum_equipment_bonus_type = {
-	melee_equipment_0
+	## This script enum contains all equipment types that can be used in equipment_bonus
+	## or in game/common/military_industrial_organization scripts.
 
+	## This list contains either equipment category (see script_enum_equipment_category above)
+	## or equipment archetypes & types defined in game/common/units/equipments
 
+	## This enum should be updated every time either of those is updated
+	## (there will be a log error at startup as a reminder)
 	## Air
 	fighter_equipment
 	cv_fighter_equipment
@@ -37,8 +42,21 @@ script_enum_equipment_bonus_type = {
 	tactical_bomber
 	scout_plane
 
-	## Land
-	infantry_equipment
+	# Land
+	infantry_equipment 
+	melee_equipment_0
+	melee_equipment_1
+	melee_equipment_2
+	infantry_equipment_0
+	infantry_equipment_1
+	infantry_equipment_2
+	infantry_equipment_3
+	infantry_equipment_4
+	infantry_equipment_5
+	infantry_equipment_6
+
+
+
 	support_equipment
 	artillery_equipment
 	rocket_artillery_equipment
@@ -70,14 +88,23 @@ script_enum_equipment_bonus_type = {
 	medium_tank_destroyer_chassis
 	heavy_tank_destroyer_chassis
 
-	## Sea
+	# Sea
+	ship_hull_frigate
+	ship_hull_frigate_0
+	ship_hull_frigate_1
+	ship_hull_frigate_2
+	ship_hull_frigate_3
+	ship_hull_frigate_4
+	ship_hull_frigate_5
+	ship_hull_frigate_6
+	ship_hull_frigate_7
 	ship_hull_light
-	ship_hull_heavy
-	ship_hull_submarine
 	ship_hull_cruiser
-	ship_hull_carrier
-	ship_hull_super_heavy
+	ship_hull_heavy
+	ship_hull_super_heavy_0
 	ship_hull_super_heavy_1
+	ship_hull_carrier
+	ship_hull_submarine
 
 	convoy
 	submarine
@@ -89,6 +116,39 @@ script_enum_equipment_bonus_type = {
 
 	ship_hull_cruiser_coastal_defense_ship
 	floating_harbor_equipment
+}
+script_enum_equipment_category = {
+	convoy
+	train
+	floating_harbor
+	railway_gun
+	armor
+	motorized
+	mechanized
+	infantry
+	capital_ship
+	submarine
+	screen_ship
+	fighter
+	heavy_fighter
+	interceptor
+	tactical_bomber
+	strategic_bomber
+	cas
+	naval_bomber
+	missile
+	suicide
+	scout_plane
+	maritime_patrol_plane
+	air_transport
+	carrier
+	support
+	amphibious
+	anti_air
+	artillery
+	anti_tank
+	rocket
+	flame
 }
 
 script_enum_operative_mission_type = {
@@ -108,7 +168,9 @@ script_enum_advisor_slot_type = {
 	political_advisor
 }
 
-script_enum_equipment_stat = {
+
+script_enum_equipment_stat = {	
+	#Viktors note for modders and future CDs: If you want to use a stat in the MIOs it has to be in the equipment category itself, not on the battalion level. So stuff like defense works because its contained within the equipment, but stuff like recon will not work because its owned by the battalion. Adding stuff like recon will not throw an error, but it will _not_ work. Moving stats to the equipment level from the bat-level might fix this if you are brave enough, but it is very risk and might break other stuff. Ive commented what is currently on the battalion level below and should not be used with MIOs.
 	default_morale 					#Cannot be used with MIOS
 	defense
 	breakthrough

@@ -1,0 +1,181 @@
+#THIS SCRIPTS WORKS ONLY IN STATE SCOPE!!!
+blocked_nuclear_damage = {
+	#restore state buildings
+	set_temp_variable = {
+		building_level = infrastructure_level
+	}
+	remove_building = {
+		type = infrastructure
+		level = building_level
+	}
+	set_building_level = {
+		type = infrastructure
+		level = building_level
+		instant_build = yes
+	}
+	set_temp_variable = {
+		building_level = arms_factory_level
+	}
+	remove_building = {
+		type = arms_factory
+		level = building_level
+	}
+	set_building_level = {
+		type = arms_factory
+		level = building_level
+		instant_build = yes
+	}
+	set_temp_variable = {
+		building_level = industrial_complex_level
+	}
+	remove_building = {
+		type = industrial_complex
+		level = building_level
+	}
+	set_building_level = {
+		type = industrial_complex
+		level = building_level
+		instant_build = yes
+	}
+	set_temp_variable = {
+		building_level = building_level@agrarian_complex
+	}
+	remove_building = {
+		type = agrarian_complex
+		level = building_level
+	}
+	set_building_level = {
+		type = agrarian_complex
+		level = building_level
+		instant_build = yes
+	}
+	set_temp_variable = {
+		building_level = building_level@air_base
+	}
+	remove_building = {
+		type = air_base
+		level = building_level
+	}
+	set_building_level = {
+		type = air_base
+		level = building_level
+		instant_build = yes
+	}
+	set_temp_variable = {
+		building_level = building_level@dockyard
+	}
+	remove_building = {
+		type = dockyard
+		level = building_level
+	}
+	set_building_level = {
+		type = dockyard
+		level = building_level
+		instant_build = yes
+	}
+	set_temp_variable = {
+		building_level = building_level@anti_air_building
+	}
+	remove_building = {
+		type = anti_air_building
+		level = building_level
+	}
+	set_building_level = {
+		type = anti_air_building
+		level = building_level
+		instant_build = yes
+	}
+	set_temp_variable = {
+		building_level = building_level@synthetic_refinery
+	}
+	remove_building = {
+		type = synthetic_refinery
+		level = building_level
+	}
+	set_building_level = {
+		type = synthetic_refinery
+		level = building_level
+		instant_build = yes
+	}
+	set_temp_variable = {
+		building_level = building_level@fuel_silo
+	}
+	remove_building = {
+		type = fuel_silo
+		level = building_level
+	}
+	set_building_level = {
+		type = fuel_silo
+		level = building_level
+		instant_build = yes
+	}
+	set_temp_variable = {
+		building_level = building_level@radar_station
+	}
+	remove_building = {
+		type = radar_station
+		level = building_level
+	}
+	set_building_level = {
+		type = radar_station
+		level = building_level
+		instant_build = yes
+	}
+	set_temp_variable = {
+		building_level = building_level@rocket_site
+	}
+	remove_building = {
+		type = rocket_site
+		level = building_level
+	}
+	set_building_level = {
+		type = rocket_site
+		level = building_level
+		instant_build = yes
+	}
+	set_temp_variable = {
+		building_level = building_level@nuclear_reactor
+	}
+	remove_building = {
+		type = nuclear_reactor
+		level = building_level
+	}
+	set_building_level = {
+		type = nuclear_reactor
+		level = building_level
+		instant_build = yes
+	}
+}
+#anti_nuke_bunker destructions (PREV should be country that dropped nuke)
+nuke_anb = {
+	set_temp_variable = {
+		anb_level = building_level@anti_nuke_bunker
+	}
+	set_temp_variable = {
+		max_destruction = PREV.modifier@nuke_charge_power_factor
+	}
+	add_to_temp_variable = {
+		max_destruction = 1
+	}
+	multiply_temp_variable = {
+		max_destruction = 2
+	}
+	set_temp_variable_to_random = {
+		var = delta_anb_level
+		min = 1
+		max = max_destruction
+	}
+	subtract_from_temp_variable = {
+		anb_level = delta_anb_level
+	}
+	round_temp_variable = anb_level
+	remove_building = {
+		type = anti_nuke_bunker
+		level = building_level@anti_nuke_bunker
+	}
+	set_building_level = {
+		type = anti_nuke_bunker
+		level = anb_level
+		instant_build = yes
+	}
+}

@@ -11,11 +11,12 @@ on_actions = {
 						tag = ICE
 					}
 				}
-				#remove every core of ICE
+				#remove every core of ICE and achievement possibility
 				ICE = {
 					every_core_state = {
 						remove_core_of = ICE
 					}
+					clr_country_flag = can_get_winter_is_coming_achievement
 				}
 				#remove every anti ICE idea
 				every_country = {
@@ -179,6 +180,60 @@ on_actions = {
 					}
 				}
 				#to do, declare civil war STG to WOP
+			}
+			#EQS capitultation
+			else_if = {
+				limit = {
+					ROOT = {
+						tag = EQS
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							tag = ICE
+						}
+					}
+					ICE = {
+						set_country_flag = capitulated_EQS
+					}
+				}
+			}
+			#EPT capitultation
+			else_if = {
+				limit = {
+					ROOT = {
+						tag = EPT
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							tag = ICE
+						}
+					}
+					ICE = {
+						set_country_flag = capitulated_EPT
+					}
+				}
+			}
+			#PGT capitultation
+			else_if = {
+				limit = {
+					ROOT = {
+						tag = PGT
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							tag = ICE
+						}
+					}
+					ICE = {
+						set_country_flag = capitulated_PGT
+					}
+				}
 			}
 		}
 	}

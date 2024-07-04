@@ -172,66 +172,58 @@ generate_country_leader_trait = {
 }
 #NOTE: it`s default script, if you have more complicated civil war - use your own sorter, application example is below
 #REMEMBER: EVERY COUNTRY CAN HAVE CHARACTER WITH UNPREDICTED BY CONTENT/LORE IDEOLOGY TRAIT!
-#THIS is receiver (variable "transfer_chance" defines chance of transfer if character loyal to both sides)
-#PREV is original owner
+#THIS is original owner (variable "transfer_chance" defines chance of transfer if character loyal to both sides)
+#PREV is receiver
 transfer_unit_leader_by_ideology_sympathy = {
-	#PDX can`t use "owner" in localisation stack
-	set_temp_variable = {
-		PREV.this_ideology = current_party_ideology_group
-	}
-	PREV = {
-		every_unit_leader = {
-			limit = {
-				meta_trigger = {
-					text = {
-						has_trait = sympathizes_[I]_trait
-					}
-					I = "[?PREV.PREV.current_party_ideology_group.GetTokenKey]"
+	every_unit_leader = {
+		limit = {
+			#country leader with unit leader role - another type of transfer
+			#it`s too complicated to de generic coded, default - all political leaders will be kept
+			can_be_country_leader = no
+			meta_trigger = {
+				text = {
+					has_trait = sympathizes_[I]_trait
 				}
-				if = {
-					limit = {
-						has_character_political_loyalty = yes
-					}
-					check_variable = {
-						random > PREV.PREV.transfer_chance?0.5
-					}
-				}
-				#country leader with unit leader role - another type of transfer
-				#it`s too complicated to de generic coded, default - all political leaders will be kept
-				can_be_country_leader = no
+				I = "[?PREV.PREV.current_party_ideology_group.GetTokenKey]"
 			}
-			set_nationality = PREV.PREV
+			if = {
+				limit = {
+					has_character_political_loyalty = yes
+				}
+				check_variable = {
+					random > transfer_chance?0.5
+				}
+			}
 		}
+		set_nationality = PREV.PREV
 	}
 }
 #NOTE: it`s default script, if you have more complicated civil war - use your own sorter, application example is below
 #REMEMBER: EVERY COUNTRY CAN HAVE CHARACTER WITH UNPREDICTED BY CONTENT/LORE IDEOLOGY TRAIT!
-#THIS is receiver (variable "transfer_chance" defines chance of transfer if character loyal to both sides)
-#PREV is original owner
+#THIS is original owner (variable "transfer_chance" defines chance of transfer if character loyal to both sides)
+#PREV is receiver
 transfer_operative_by_ideology_sympathy = {
-	PREV = {
-		every_operative = {
-			limit = {
-				meta_trigger = {
-					text = {
-						has_trait = sympathizes_[I]_trait
-					}
-					I = "[?PREV.PREV.current_party_ideology_group.GetTokenKey]"
+	every_operative = {
+		limit = {
+			#country leader with operative role - another type of transfer
+			#it`s too complicated to de generic coded, default - all political leaders will be kept
+			can_be_country_leader = no
+			meta_trigger = {
+				text = {
+					trait = sympathizes_[I]_trait
 				}
-				if = {
-					limit = {
-						has_character_political_loyalty = yes
-					}
-					check_variable = {
-						random > PREV.PREV.transfer_chance?0.5
-					}
-				}
-				#country leader with operative role - another type of transfer
-				#it`s too complicated to de generic coded, default - all political leaders will be kept
-				can_be_country_leader = no
+				I = "[?PREV.PREV.current_party_ideology_group.GetTokenKey]"
 			}
-			set_nationality = PREV.PREV
+			if = {
+				limit = {
+					has_character_political_loyalty = yes
+				}
+				check_variable = {
+					random > transfer_chance?0.5
+				}
+			}
 		}
+		set_nationality = PREV.PREV
 	}
 }
 #GENERIC CIVIL WAR EXAMPLE:
@@ -241,15 +233,17 @@ transfer_operative_by_ideology_sympathy = {
 #		OR = {
 #			can_be_country_leader = yes					#prevent country leader transfer - optional, but recommended
 #			has_character_political_loyalty = yes		#keep loyal characters
-#			has_trait = sympathizes_radicalism_trait	#keep unloyal chacharcters - made for proper transfer script work
+#			has_trait = sympathizes_<ideology>_trait	#keep unloyal chacharcters - made for proper transfer script work
 #		}
 #	}
-#	set_temp_variable = {
-#		transfer_chance = 0.25							#defines chance of transfer if character loyal to both sides, optional, default is 0.5
+#	PREV = {
+#		set_temp_variable = {
+#			transfer_chance = 0.25							#defines chance of transfer if character loyal to both sides, optional, default is 0.5
+#		}
+#		transfer_unit_leader_by_ideology_sympathy = yes		#transfers character (if unloyal or loyal to both sides with chance "transfer_chance")
+#		set_temp_variable = {
+#			transfer_chance = 0.75							#defines chance of transfer if character loyal to both sides, optional, default is 0.5
+#		}
+#		transfer_operative_by_ideology_sympathy = yes
 #	}
-#	transfer_unit_leader_by_ideology_sympathy = yes		#transfers character (if unloyal or loyal to both sides with chance "transfer_chance")
-#	set_temp_variable = {
-#		transfer_chance = 0.75							#defines chance of transfer if character loyal to both sides, optional, default is 0.5
-#	}
-#	transfer_operative_by_ideology_sympathy = yes
 #}

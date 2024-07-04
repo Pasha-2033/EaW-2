@@ -1,7 +1,38 @@
 # Do not change tags in here without changing every other reference to them.
 # If adding new technology, make sure they are uniquely named.
 
-
+#naval folders (all)
+technology_categories = {
+	#common
+	cat_naval_tech
+	#common (hull/module/armor)
+	cat_ship_hull
+	cat_ship_module
+	cat_ship_armor
+	#hulls
+	cat_frigate_tech
+	cat_destroyer_tech
+	cat_cruiser_tech
+	cat_linear_ship_tech	#batleships and batlecruisers
+	cat_superbatleship_tech
+	cat_carrier_tech
+	cat_supercarrier_tech
+	cat_submarine_tech
+	cat_missile_submarine_tech
+	#hull specific modules
+	cat_depth_charges_module
+	cat_sonar_module
+	cat_airplane_launcher_module
+	cat_cruiser_armor
+	cat_linear_ship_armor
+	cat_carrier_armor
+	cat_carrier_deck_module
+	cat_snorkel_module
+	#module groups
+	cat_anti_sub_modules	#depth charges and sonar
+	cat_cruiser_modules		#airplane launcher and cruiser armor
+	cat_carrier_modules		#carrier deck and carrier armor
+}
 #indusry folder
 technology_categories = {
 	#production and factory management
@@ -29,7 +60,7 @@ technology_categories = {
 	cat_mechanized_equipment
 	naval_equipment
 	rocketry
-	nuclear
+	nuclear	#save (to do)
 	industry
 	electronics
 	land_doctrine

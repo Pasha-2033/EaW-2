@@ -39,17 +39,15 @@ has_unit_leader_political_sympathy_trait = {
 }
 #use in unit leader/operative scope
 has_character_political_loyalty = {
-	#PDX can`t use "owner" in localisation stack, setting temp variable
 	owner = {
-		set_temp_variable = {
-			PREV.owner_ideology = current_party_ideology_group
+		meta_trigger = {
+			text = {
+				PREV = {
+					has_trait = sympathizes_[I]_trait
+				}
+			}
+			I = "[?current_party_ideology_group.GetTokenKey]"
 		}
-	}
-	meta_trigger = {
-		text = {
-			has_trait = sympathizes_[I]_trait
-		}
-		I = "[?owner_ideology.GetTokenKey]"
 	}
 }
 has_race_trait = {

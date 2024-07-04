@@ -254,13 +254,13 @@ military_training_category = {
 				name_group = GENERIC_WEAPON_NAMING
 				parent_version = 0
 				modules = {
-					fixed_ship_battery_slot = dp_light_battery
+					fixed_ship_battery_slot = dp_light_battery_0
 					fixed_ship_anti_air_slot = ship_anti_air_3
 					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
 					fixed_ship_radar_slot = ship_sonar_2
 					fixed_ship_engine_slot = light_ship_engine_3
 					fixed_ship_torpedo_slot = ship_torpedo_2
-					front_1_custom_slot = dp_light_battery
+					front_1_custom_slot = dp_light_battery_0
 					mid_1_custom_slot = ship_torpedo_2
 					rear_1_custom_slot = ship_depth_charge_2
 				}
@@ -275,7 +275,7 @@ military_training_category = {
 		available = {
 			
 			num_of_naval_factories > 7
-			has_tech = improved_ship_hull_cruiser 
+			has_tech = cruiser_hull_2 
 			has_tech = dp_secondary_battery 
 		}
 		visible = {
@@ -293,17 +293,17 @@ military_training_category = {
 				name_group = GENERIC_ARMOUR_NAMING
 				parent_version = 0
 				modules = {
-					fixed_ship_battery_slot = ship_light_medium_battery_2
+					fixed_ship_battery_slot = ship_light_medium_battery_1
 					fixed_ship_anti_air_slot = ship_anti_air_3
 					fixed_ship_fire_control_system_slot = ship_fire_control_system_2
 					fixed_ship_radar_slot = empty
 					fixed_ship_engine_slot = cruiser_ship_engine_2
 					fixed_ship_armor_slot = ship_armor_cruiser_2
-					fixed_ship_secondaries_slot = dp_ship_secondaries
+					fixed_ship_secondaries_slot = dp_ship_secondaries_0
 					front_1_custom_slot = ship_anti_air_3
-					mid_1_custom_slot = dp_ship_secondaries
-					mid_2_custom_slot = dp_ship_secondaries
-					rear_1_custom_slot = ship_light_medium_battery_2
+					mid_1_custom_slot = dp_ship_secondaries_0
+					mid_2_custom_slot = dp_ship_secondaries_0
+					rear_1_custom_slot = ship_light_medium_battery_1
 					rear_2_custom_slot = ship_airplane_launcher_2
 				}
 			}
@@ -343,7 +343,7 @@ military_training_category = {
 		icon = generic_naval
 		available = {
 			has_tech = cruiser_submarines
-			has_tech = advanced_ship_hull_submarine
+			has_tech = submarine_hull_3
 		}
 		visible = {
 			has_tech = cruiser_submarines

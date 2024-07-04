@@ -50,7 +50,8 @@ equipments = {
 			fixed_ship_battery_slot = {
 				required = yes
 				allowed_module_categories = {
-					ship_basic_battery 
+					ship_basic_battery
+					ship_light_battery
 				}
 			}
 			fixed_ship_anti_air_slot = {
@@ -69,6 +70,7 @@ equipments = {
 					ship_depth_charge
 					ship_anti_air
 					ship_basic_battery
+					ship_light_battery
 				}
 			}
 			mid_1_custom_slot = {
@@ -122,17 +124,7 @@ equipments = {
 				}
 			}
 			#rear, middle and front
-			rear_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_torpedo
-					ship_mine_warfare
-					ship_mine_layer
-					ship_depth_charge
-					ship_anti_air
-					ship_light_battery
-				}
-			}
+			rear_1_custom_slot = inherit
 			mid_1_custom_slot = inherit
 		}
 		default_modules = {

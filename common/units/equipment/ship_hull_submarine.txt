@@ -91,8 +91,7 @@ equipments = {
 		
 		manpower = 200
 	}
-
-	ship_hull_submarine_1 = {
+	ship_hull_submarine_0 = {
 		year = 993
 
 		archetype = ship_hull_submarine
@@ -100,7 +99,14 @@ equipments = {
 		
 		module_slots = inherit
 	}
+	ship_hull_submarine_1 = {
+		year = 993
 
+		archetype = ship_hull_submarine
+		priority = 2500
+		parent = ship_hull_submarine_0
+		module_slots = inherit
+	}
 	ship_hull_submarine_2 = {
 		year = 1007
 
@@ -500,7 +506,7 @@ equipments = {
 		manpower = 300				
 	}	
 	
-	ship_hull_missile_submarine_1 = {
+	ship_hull_missile_submarine_0 = {
 		year = 1023
 
 		archetype = ship_hull_submarine

@@ -31,5 +31,26 @@ ideas = {
 				consumer_goods_factor = 0.1
 			}
 		}
+		DRG_hydra_cult = {
+			allowed = {
+				original_tag = DRG
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				fascism_drift = 0.05
+				fascism_acceptance = 25
+				radicalism_drift = 0.04
+				radicalism_acceptance = 20
+				militarism_drift = 0.03
+				militarism_acceptance = 15
+				democratic_acceptance = -10
+				harmony_acceptance = -10
+				anarchism_acceptance = -10
+				war_support_weekly = 0.01
+				conscription_factor = 0.1
+			}
+		}
 	}
 }

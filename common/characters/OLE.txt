@@ -1,8 +1,7 @@
 characters = {
-	#982 scenario
 	#country leaders
-	OLE_982_edelhjord = {
-		name = OLE_982_edelhjord
+	OLE_edelhjord = {
+		name = OLE_edelhjord
 		portraits = {
 			civilian = {
 				large = "GFX_portrait_marshal_unknown" #to do
@@ -11,12 +10,10 @@ characters = {
 		country_leader = {
 			desc = "POLITICS_982_EDELHJORD_DESC"
 			ideology = despotism
-			expire = "1965.1.1.1"
-			id = -1
 		}
 	}
-	OLE_982_goodhlev = {
-		name = OLE_982_goodhlev
+	OLE_goodhlev = {
+		name = OLE_goodhlev
 		portraits = {
 			civilian = {
 				large = "GFX_portrait_marshal_unknown" #to do
@@ -25,12 +22,10 @@ characters = {
 		country_leader = {
 			desc = "POLITICS_982_GOODHLEV_DESC"
 			ideology = theocracy
-			expire = "1965.1.1.1"
-			id = -1
 		}
 	}
-	OLE_982_staffan = {
-		name = OLE_982_staffan
+	OLE_staffan = {
+		name = OLE_staffan
 		portraits = {
 			civilian = {
 				large = "GFX_portrait_marshal_unknown" #to do
@@ -39,12 +34,10 @@ characters = {
 		country_leader = {
 			desc = "POLITICS_982_STAFFAN_DESC"
 			ideology = oligarchism
-			expire = "1965.1.1.1"
-			id = -1
 		}
 	}
-	OLE_982_orzhan = {
-		name = OLE_982_orzhan
+	OLE_orzhan = {
+		name = OLE_orzhan
 		portraits = {
 			civilian = {
 				large = "GFX_portrait_marshal_unknown" #to do
@@ -53,13 +46,11 @@ characters = {
 		country_leader = {
 			desc = "POLITICS_982_ORZHAN_DESC"
 			ideology = harmonic_libertarianism
-			expire = "1965.1.1.1"
-			id = -1
 		}
 	}
-	OLE_982_alan = {
+	OLE_alan = {
 		#alan turing
-		name = OLE_982_alan
+		name = OLE_alan
 		portraits = {
 			civilian = {
 				large = "GFX_portrait_marshal_unknown" #to do
@@ -68,12 +59,10 @@ characters = {
 		country_leader = {
 			desc = "POLITICS_982_ALAN_TURING_DESC"
 			ideology = classic_technocracy
-			expire = "1965.1.1.1"
-			id = -1
 		}
 		advisor = {
 			slot = theorist
-			idea_token = OLE_982_alan
+			idea_token = OLE_alan
 			allowed = {
 				original_tag = OLE
 			}
@@ -82,8 +71,8 @@ characters = {
 			}
 		}
 	}
-	OLE_982_stormgran = {
-		name = OLE_982_stormgran
+	OLE_stormgran = {
+		name = OLE_stormgran
 		portraits = {
 			civilian = {
 				large = "GFX_portrait_marshal_unknown" #to do
@@ -92,11 +81,9 @@ characters = {
 		country_leader = {
 			desc = "POLITICS_982_STORMGRAN_DESC"
 			ideology = ultramilitarism
-			expire = "1965.1.1.1"
-			id = -1
 		}
 		field_marshal = {
-			#desc = OLE_982_stormgran_desc #to do (may be, may other too)
+			#desc = OLE_stormgran_desc #to do (may be, may other too)
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -105,8 +92,8 @@ characters = {
 		}
 	}
 	#advisors
-	OLE_982_bjorson = {
-		name = OLE_982_bjorson
+	OLE_bjorson = {
+		name = OLE_bjorson
 		portraits = {
 			#civilian = {
 			#	small = "GFX_portrait_marshal_unknown" #to do
@@ -114,7 +101,7 @@ characters = {
 		}
 		advisor = {
 			slot = political_advisor
-			idea_token = OLE_982_bjorson
+			idea_token = OLE_bjorson
 			traits = {
 				sun_of_ruins
 			}
@@ -125,14 +112,14 @@ characters = {
 		}
 	}
 	#army leaders
-	OLE_982_scholz = {
-		name = OLE_982_scholz
+	OLE_scholz = {
+		name = OLE_scholz
 		portraits = {
 			civilian = {
 				large = "GFX_portrait_marshal_unknown" #to do
 			}
 		}
-		corps_commander={
+		corps_commander = {
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -140,14 +127,14 @@ characters = {
 			logistics_skill = 1
 		}
 	}
-	OLE_982_nordstern = {
-		name = OLE_982_nordstern
+	OLE_nordstern = {
+		name = OLE_nordstern
 		portraits = {
 			civilian = {
 				large = "GFX_portrait_marshal_unknown" #to do
 			}
 		}
-		corps_commander={
+		corps_commander = {
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -155,14 +142,14 @@ characters = {
 			logistics_skill = 1
 		}
 	}
-	OLE_982_bergson = {
-		name = OLE_982_bergson
+	OLE_bergson = {
+		name = OLE_bergson
 		portraits = {
 			civilian = {
 				large = "GFX_portrait_marshal_unknown" #to do
 			}
 		}
-		corps_commander={
+		corps_commander = {
 			skill = 1
 			attack_skill = 1
 			defense_skill = 1
@@ -170,14 +157,14 @@ characters = {
 			logistics_skill = 1
 		}
 	}
-	OLE_982_haftorson = {
-		name = OLE_982_haftorson
+	OLE_haftorson = {
+		name = OLE_haftorson
 		portraits = {
 			civilian = {
 				large = "GFX_portrait_marshal_unknown" #to do
 			}
 		}
-		corps_commander={
+		corps_commander = {
 			traits = {}
 			skill = 1
 			attack_skill = 1
@@ -186,14 +173,14 @@ characters = {
 			logistics_skill = 1
 		}
 	}
-	OLE_982_yorgensen = {
-		name = OLE_982_yorgensen
+	OLE_yorgensen = {
+		name = OLE_yorgensen
 		portraits = {
 			civilian = {
 				large = "GFX_portrait_marshal_unknown" #to do
 			}
 		}
-		corps_commander={
+		corps_commander = {
 			traits = {}
 			skill = 1
 			attack_skill = 1
@@ -202,8 +189,8 @@ characters = {
 			logistics_skill = 1
 		}
 	}
-	OLE_982_holmgrad = {
-		name = OLE_982_holmgrad
+	OLE_holmgrad = {
+		name = OLE_holmgrad
 		portraits = {
 			civilian = {
 				large = "GFX_portrait_marshal_unknown" #to do
@@ -218,14 +205,14 @@ characters = {
 			coordination_skill = 1
 		}
 	}
-	OLE_982_lundberg = {
-		name = OLE_982_lundberg
+	OLE_lundberg = {
+		name = OLE_lundberg
 		portraits = {
 			civilian = {
 				large = "GFX_portrait_marshal_unknown" #to do
 			}
 		}
-		corps_commander={
+		corps_commander = {
 			traits = {}
 			skill = 1
 			attack_skill = 1

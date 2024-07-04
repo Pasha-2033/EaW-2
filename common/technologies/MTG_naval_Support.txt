@@ -1,5 +1,5 @@
 technologies = {
-	#basic weapons for all hulls
+	#basic weapon for frigate_hull_1 (can be improved and replaced with light batery
 	basic_battery = {
 		xp_research_type = navy
 		xp_boost_cost = 50
@@ -10,25 +10,19 @@ technologies = {
 			pre_gw_artillery = 1
 		}
 		path = {
-			leads_to_tech = basic_light_battery
+			leads_to_tech = light_battery_0
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = basic_medium_battery
+			leads_to_tech = medium_battery_0
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = basic_heavy_battery
+			leads_to_tech = heavy_battery_0
 			research_cost_coeff = 1
 		}
 		enable_equipment_modules = {
 			ship_basic_battery_0
-
-
-
-			ship_medium_battery_1
-			ship_light_medium_battery_1
-			ship_heavy_battery_1
 		}
 		folder = {
 			name = mtgnavalsupportfolder
@@ -47,18 +41,18 @@ technologies = {
 		}
 	}
 	#light hull weapons
-	basic_light_battery = {
+	light_battery_0 = {
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
 		research_cost = 1
 		start_year = 1007
 		path = {
-			leads_to_tech = improved_light_battery
+			leads_to_tech = light_battery_1
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = basic_light_shell
+			leads_to_tech = light_shell_0
 			research_cost_coeff = 1
 		}
 		enable_equipment_modules = { 
@@ -81,7 +75,7 @@ technologies = {
 			naval_light_artillery
 		}
 	}
-	basic_light_shell = {	
+	light_shell_0 = {	
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
@@ -126,18 +120,18 @@ technologies = {
 			naval_ammunition
 		}
 	}
-	improved_light_battery = {
+	light_battery_1 = {
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
 		research_cost = 1
 		start_year = 1011
 		path = {
-			leads_to_tech = advanced_light_battery
+			leads_to_tech = light_battery_2
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = improved_light_shell
+			leads_to_tech = light_shell_1
 			research_cost_coeff = 1
 		}
 		enable_equipment_modules = { 
@@ -160,7 +154,7 @@ technologies = {
 			naval_light_artillery
 		}
 	}
-	improved_light_shell = {
+	light_shell_1 = {
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
@@ -209,7 +203,7 @@ technologies = {
 			naval_ammunition
 		}
 	}
-	advanced_light_battery = {
+	light_battery_2 = {
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
@@ -219,7 +213,11 @@ technologies = {
 			ship_light_battery_2
 		}
 		path = {
-			leads_to_tech = basic_light_missile
+			leads_to_tech = light_battery_3
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = dp_light_battery_0
 			research_cost_coeff = 1
 		}
 		folder = {
@@ -239,7 +237,92 @@ technologies = {
 			naval_light_artillery
 		}
 	}
-	basic_light_missile = {
+	#to do (name and equipment name issue)
+	dp_light_battery_0 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 1015
+		enable_equipment_modules = { 
+			dp_light_battery_0
+		}
+		path = {
+			leads_to_tech = dp_light_shell_0
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -4
+				y = 24 
+			}
+		}	
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			naval_equipment
+			naval_weaponry
+			naval_artillery
+			naval_light_artillery
+		}
+	}
+	#to do (name issue)
+	dp_light_shell_0 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 1015
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -5
+				y = 27 
+			}
+		}	
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			naval_equipment
+			naval_weaponry
+			naval_artillery
+			naval_light_artillery
+		}
+	}
+	light_battery_3 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 1015
+		enable_equipment_modules = { 
+			ship_light_battery_3
+		}
+		path = {
+			leads_to_tech = light_missile_0
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -2 
+				y = 24 
+			}
+		}	
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			naval_equipment
+			naval_weaponry
+			naval_artillery
+			naval_light_artillery
+		}
+	}
+	light_missile_0 = {
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
@@ -253,34 +336,8 @@ technologies = {
 			improved_rocket_engines = 1
 		}
 		path = {
-			leads_to_tech = improved_light_missile
+			leads_to_tech = light_missile_1
 			research_cost_coeff = 1
-		}
-		folder = {
-			name = mtgnavalsupportfolder
-			position = { 
-				x = -2 
-				y = 24 
-			}
-		}
-		ai_will_do = {
-			factor = 2
-		}
-		categories = {
-			naval_equipment
-			naval_weaponry
-			rocketry
-		}
-	}
-	improved_light_missile = {
-		xp_research_type = navy
-		xp_boost_cost = 50
-		xp_research_bonus = 1.50
-		research_cost = 1
-		start_year = 1026
-		enable_equipment_modules = {
-			ship_light_ASM_battery_2
-			ship_medium_ASM_battery_2
 		}
 		folder = {
 			name = mtgnavalsupportfolder
@@ -298,24 +355,50 @@ technologies = {
 			rocketry
 		}
 	}
+	light_missile_1 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 1026
+		enable_equipment_modules = {
+			ship_light_ASM_battery_2
+			ship_medium_ASM_battery_2
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -2 
+				y = 36 
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			naval_equipment
+			naval_weaponry
+			rocketry
+		}
+	}
 	#medium hull weapons
-	basic_medium_battery = {
+	medium_battery_0 = {
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
 		research_cost = 1
 		start_year = 1007
 		path = {
-			leads_to_tech = improved_medium_battery
+			leads_to_tech = medium_battery_1
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = basic_medium_shell
+			leads_to_tech = medium_shell_0
 			research_cost_coeff = 1
 		}
 		enable_equipment_modules = { 
-			ship_medium_battery_2
-			ship_light_medium_battery_2
+			ship_heavy_medium_battery_0
+			ship_light_medium_battery_0
 		}
 		folder = {
 			name = mtgnavalsupportfolder
@@ -334,7 +417,7 @@ technologies = {
 			naval_medium_artillery
 		}
 	}
-	basic_medium_shell = {
+	medium_shell_0 = {
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
@@ -364,23 +447,23 @@ technologies = {
 			naval_ammunition
 		}
 	}
-	improved_medium_battery = {
+	medium_battery_1 = {
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
 		research_cost = 1
 		start_year = 1011
 		path = {
-			leads_to_tech = advanced_medium_battery
+			leads_to_tech = medium_battery_2
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = improved_medium_shell
+			leads_to_tech = medium_shell_1
 			research_cost_coeff = 1
 		}
 		enable_equipment_modules = { 
-			ship_medium_battery_3
-			ship_light_medium_battery_3
+			ship_heavy_medium_battery_1
+			ship_light_medium_battery_1
 		}
 		folder = {
 			name = mtgnavalsupportfolder
@@ -399,7 +482,7 @@ technologies = {
 			naval_medium_artillery
 		}
 	}
-	improved_medium_shell = {	
+	medium_shell_1 = {	
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
@@ -430,15 +513,19 @@ technologies = {
 			naval_ammunition
 		}
 	}
-	advanced_medium_battery = {
+	medium_battery_2 = {
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
 		research_cost = 1
 		start_year = 1015
+		path = {
+			leads_to_tech = medium_battery_3
+			research_cost_coeff = 1
+		}
 		enable_equipment_modules = { 
-			ship_medium_battery_4
-			ship_light_medium_battery_4
+			ship_heavy_medium_battery_2
+			ship_light_medium_battery_2
 		}
 		folder = {
 			name = mtgnavalsupportfolder
@@ -457,23 +544,50 @@ technologies = {
 			naval_medium_artillery
 		}
 	}
+	medium_battery_3 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 1015
+		enable_equipment_modules = { 
+			ship_heavy_medium_battery_3
+			ship_light_medium_battery_3
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 24 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			naval_equipment
+			naval_weaponry
+			naval_artillery
+			naval_medium_artillery
+		}
+	}
 	#heavy hull weapons
-	basic_heavy_battery = {
+	heavy_battery_0 = {
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
 		research_cost = 1
 		start_year = 1007
 		path = {
-			leads_to_tech = improved_heavy_battery
+			leads_to_tech = heavy_battery_1
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = basic_heavy_shell
+			leads_to_tech = heavy_shell_0
 			research_cost_coeff = 1
 		}
 		enable_equipment_modules = { 
-			ship_heavy_battery_2
+			ship_heavy_battery_0
 		}
 		folder = {
 			name = mtgnavalsupportfolder
@@ -492,7 +606,7 @@ technologies = {
 			naval_heavy_artillery
 		}
 	}
-	basic_heavy_shell = {
+	heavy_shell_0 = {
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
@@ -525,22 +639,22 @@ technologies = {
 			naval_ammunition
 		}
 	}
-	improved_heavy_battery = {
+	heavy_battery_1 = {
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
 		research_cost = 1
 		start_year = 1011
 		path = {
-			leads_to_tech = advanced_heavy_battery
+			leads_to_tech = heavy_battery_2
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = improved_heavy_shell
+			leads_to_tech = heavy_shell_1
 			research_cost_coeff = 1
 		}
 		enable_equipment_modules = { 
-			ship_heavy_battery_3
+			ship_heavy_battery_1
 		}
 		folder = {
 			name = mtgnavalsupportfolder
@@ -559,7 +673,7 @@ technologies = {
 			naval_heavy_artillery
 		}
 	}
-	improved_heavy_shell = {
+	heavy_shell_1 = {
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
@@ -595,7 +709,7 @@ technologies = {
 			naval_ammunition
 		}
 	}
-	advanced_heavy_battery = {
+	heavy_battery_2 = {
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
@@ -604,10 +718,10 @@ technologies = {
 		start_year = 1015
 
 		enable_equipment_modules = { 
-			ship_heavy_battery_4
+			ship_heavy_battery_2
 		}
 		path = {
-			leads_to_tech = basic_heavy_missile
+			leads_to_tech = heavy_battery_3
 			research_cost_coeff = 1
 		}
 		path = {
@@ -619,6 +733,39 @@ technologies = {
 			position = { 
 				x = 2 
 				y = 18 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		
+		categories = {
+			naval_equipment
+			naval_weaponry
+			naval_artillery
+			naval_heavy_artillery
+		}
+	}
+	heavy_battery_3 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+
+		start_year = 1015
+
+		enable_equipment_modules = { 
+			ship_heavy_battery_3
+		}
+		path = {
+			leads_to_tech = basic_heavy_missile
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 2 
+				y = 24 
 			}
 		}
 		ai_will_do = {
@@ -650,7 +797,7 @@ technologies = {
 		}
 		folder = {
 			name = mtgnavalsupportfolder
-			position = { x = 2 y = 24 }
+			position = { x = 2 y = 30 }
 		}
 		ai_will_do = {
 			factor = 2
@@ -667,7 +814,6 @@ technologies = {
 			rocketry
 		}
 	}
-
 	improved_heavy_missile = {
 		xp_research_type = navy
 		xp_boost_cost = 50
@@ -679,7 +825,7 @@ technologies = {
 		}
 		folder = {
 			name = mtgnavalsupportfolder
-			position = { x = 2 y = 30 }
+			position = { x = 2 y = 36 }
 		}
 		ai_will_do = {
 			factor = 2
@@ -706,7 +852,7 @@ technologies = {
 		start_year = 1015
 
 		enable_equipment_modules = { 
-			ship_super_heavy_battery_1
+			ship_super_heavy_battery_0
 		}
 		path = {
 			leads_to_tech = super_heavy_battery_1
@@ -739,7 +885,7 @@ technologies = {
 		start_year = 1015
 
 		enable_equipment_modules = { 
-			ship_super_heavy_battery_2
+			ship_super_heavy_battery_1
 		}
 		folder = {
 			name = mtgnavalsupportfolder
@@ -759,36 +905,23 @@ technologies = {
 			naval_ammunition
 		}
 	}
-
-
-
-
-
 	#secondary
-	
-
-	basic_secondary_battery = {
-		
+	basic_secondary_battery = {	
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
 		research_cost = 0.8
-
 		start_year = 993
-
 		path = {
 			leads_to_tech = improved_secondary_battery
 			research_cost_coeff = 1
 		}
-
 		enable_equipment_modules = { 
-			ship_secondaries_1
+			ship_secondaries_0
 		}
-		
 		dependencies = {
 			pre_gw_artillery = 1
 		}
-
 		folder = {
 			name = mtgnavalsupportfolder
 			position = { x = 0 y = 0 }
@@ -796,13 +929,6 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				OR = {
-					has_tech = early_ship_hull_cruiser 
-					has_tech = early_ship_hull_heavy
-				}
-				factor = 5
-			}
 		}
 		
 		categories = {
@@ -813,43 +939,32 @@ technologies = {
 		}
 	}
 	improved_secondary_battery = {
-		
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
 		research_cost = 0.8
-
 		start_year = 1007
-
 		path = {
-			leads_to_tech = dp_secondary_battery
+			leads_to_tech = secondary_battery_2
 			research_cost_coeff = 1
 		}
-
 		enable_equipment_modules = { 
-			ship_secondaries_2
+			ship_secondaries_1
 		}
-		
-		dependencies = {
-			gw_artillery = 1
-		}
-
 		folder = {
 			name = mtgnavalsupportfolder
 			position = { x = 0 y = 6 }
 		}
-		
 		ai_will_do = {
 			factor = 5
 			modifier = {
 				OR = {
-					has_tech = basic_ship_hull_cruiser 
-					has_tech = basic_ship_hull_heavy
+					has_tech = cruiser_hull_1 
+					has_tech = heavy_hull_1
 				}
 				factor = 5
 			}
-		}
-		
+		}	
 		categories = {
 			naval_equipment
 			naval_weaponry
@@ -857,26 +972,60 @@ technologies = {
 			naval_light_artillery
 		}
 	}
-	dp_secondary_battery = {
-		
+	secondary_battery_2 = {
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
 		research_cost = 0.8
-
-		start_year = 1011
-
-		enable_equipment_modules = { 
-			dp_ship_secondaries
-			dp_light_battery
+		start_year = 1007
+		path = {
+			leads_to_tech = dp_secondary_battery
+			research_cost_coeff = 1
 		}
- 		path = {
+		path = {
+			leads_to_tech = secondary_battery_3
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = { 
+			ship_secondaries_2
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { x = 0 y = 12 }
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				OR = {
+					has_tech = cruiser_hull_1 
+					has_tech = heavy_hull_1
+				}
+				factor = 5
+			}
+		}
+		categories = {
+			naval_equipment
+			naval_weaponry
+			naval_artillery
+			naval_light_artillery
+		}
+	}
+	dp_secondary_battery = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 0.8
+		start_year = 1011
+		enable_equipment_modules = { 
+			dp_ship_secondaries_0
+		}
+		path = {
 			leads_to_tech = advanced_dp_secondary_battery
 			research_cost_coeff = 1
 		}
 		folder = {
 			name = mtgnavalsupportfolder
-			position = { x = 0 y = 12 }
+			position = { x = -1 y = 18 }
 		}
 		ai_will_do = {
 			factor = 10
@@ -884,7 +1033,6 @@ technologies = {
 				factor = 20
 				is_major = yes
 			}
-
 		}
 		categories = {
 			naval_equipment
@@ -893,24 +1041,46 @@ technologies = {
 			naval_light_artillery
 		}
 	}
-	advanced_dp_secondary_battery = {
-		
+	secondary_battery_3 = {	
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
 		research_cost = 0.8
-
-		start_year = 1015
-
-		enable_equipment_modules = { 
-			dp_ship_secondaries_2
-		}
-
+		start_year = 1007
 		folder = {
 			name = mtgnavalsupportfolder
-			position = { x = 0 y = 18 }
+			position = { x = 1 y = 18 }
 		}
-	
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				OR = {
+					has_tech = cruiser_hull_1 
+					has_tech = heavy_hull_1
+				}
+				factor = 5
+			}
+		}	
+		categories = {
+			naval_equipment
+			naval_weaponry
+			naval_artillery
+			naval_light_artillery
+		}
+	}
+	advanced_dp_secondary_battery = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 0.8
+		start_year = 1015
+		enable_equipment_modules = { 
+			dp_ship_secondaries_1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { x = -1 y = 24 }
+		}
 		ai_will_do = {
 			factor = 2
 			modifier = {
@@ -919,7 +1089,6 @@ technologies = {
 			}
 
 		}
-	
 		categories = {
 			naval_equipment
 			naval_weaponry
@@ -1078,7 +1247,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		folder = {
-			name = mtgnavalfolder
+			name = mtgnavalsupportfolder
 			position = { x = 0 y = 24 }
 		}	
 		ai_will_do = {
@@ -1104,7 +1273,7 @@ technologies = {
 			ship_torpedo_6
 		}
 		folder = {
-			name = mtgnavalfolder
+			name = mtgnavalsupportfolder
 			position = { 
 				x = 0 
 				y = 30 
@@ -1398,6 +1567,45 @@ technologies = {
 			naval_equipment
 			naval_weaponry
 			torpedo_tech
+		}
+	}
+	#staff improvement
+	cabin_expansion_0 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		path = {
+			leads_to_tech = cabin_expansion_1
+			research_cost_coeff = 1
+		}
+		research_cost = 2.5
+		start_year = 1016
+		navy_org_factor = 0.05
+		naval_morale_factor = -0.02
+		naval_coordination = -0.02
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0
+				y = 0 
+			}
+		}
+	}
+	cabin_expansion_1 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 2.5
+		start_year = 1016
+		navy_org_factor = 0.05
+		naval_morale_factor = -0.02
+		naval_coordination = -0.02
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0
+				y = 6 
+			}
 		}
 	}
 	#fire controll

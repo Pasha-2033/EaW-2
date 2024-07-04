@@ -7,7 +7,7 @@ feel_like_a_dev = {
 		is_debug = yes
 	}   
 }
-unfreese = {
+winter_is_coming = {
 	possible = {
         # classic triggers used in all vanilla achievements
 		is_ironman = yes
@@ -15,12 +15,12 @@ unfreese = {
         has_start_date < 1002.1.1
         has_any_custom_difficulty_setting = no
         game_rules_allow_achievements = yes
-		tag = EQS
+		tag = ICE
     }
     happened = {
-		ICE = {
-			has_capitulated = yes
-		}
+		has_country_flag = capitulated_EQS
+		has_country_flag = capitulated_EPT
+		has_country_flag = capitulated_PGT
 		date < 984.1.1
     }    
 }
