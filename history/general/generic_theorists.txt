@@ -28,10 +28,9 @@ every_possible_country = {
 				cost = 100
 			}
 		}
-		set_variable = {
-			character_token = token:generic_military_theorist
+		generic_military_theorist = {
+			generate_portrait = yes
 		}
-		generate_portrait = yes
 	}
 	if = {
 		limit = {
@@ -56,10 +55,9 @@ every_possible_country = {
 				cost = 100
 			}
 		}
-		set_variable = {
-			character_token = token:generic_naval_theorist
+		generic_naval_theorist = {
+			generate_portrait = yes
 		}
-		generate_portrait = yes
 	}
 	if = {
 		limit = {
@@ -84,29 +82,8 @@ every_possible_country = {
 				cost = 100
 			}
 		}
-		set_variable = {
-			character_token = token:generic_air_warfare_theorist
-		}
-		generate_portrait = yes
-	}
-	#DO NOT DELETE if BELOW#
-	#It updates tokens, it MUST be called after latest needed generic character!
-	#Otherwise token will be non-zero value, but GetTokenKey and GetTokenLocalizedKey won`t be able to get key!
-	#If you have questions - ask leaddev (it`s his code)
-	if = {
-		limit = {
-			always = no
-		}
-		generate_character = {
-			token_base = update_generic_tokens
-			name = update_generic_tokens
-			advisor = {
-				slot = theorist
-				traits = {}
-				ledger = air
-				cost = 0
-			}
+		generic_air_warfare_theorist = {
+			generate_portrait = yes
 		}
 	}
-	########################
 }
