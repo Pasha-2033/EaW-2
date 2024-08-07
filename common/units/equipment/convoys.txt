@@ -32,7 +32,12 @@ equipments = {
 		max_strength = 60
 		max_organisation = 30
 		anti_air_attack = 0.1
-
+		upgrades = {
+			convoy_movement_upgrade
+			convoy_anti_air_upgrade
+			convoy_strength_upgrade
+			convoy_visibility_upgrade
+		}
 
         #Space taken in convoy
         lend_lease_cost = 0
@@ -46,14 +51,16 @@ equipments = {
 			steel = 1
 		}
 	}
-
+	convoy_0 = {
+		year = 950
+		archetype = convoy
+		active = yes
+		priority = 10
+	}
 	convoy_1 = {
 		year = 981
-
 		archetype = convoy
-		type = { 
-			convoy
-		}
+		parent = convoy_0
 		active = yes
 		priority = 10
 	}

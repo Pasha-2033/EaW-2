@@ -55,3 +55,22 @@ recruit_character = DIS_fisher
 set_rule = {
 	can_generate_female_aces = yes
 }
+#equipment variants
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		frigate_hull_0 = 1
+	}
+	create_equipment_variant = {
+		name = "Aufsässig Class"
+		type = ship_hull_frigate_0
+		#name_group (to do)
+		upgrades = {
+			early_frigate_movement_upgrade = 3
+			early_frigate_reliability_upgrade = 1
+		}
+	}
+	set_naval_oob = "982_DIS_naval_MTG"
+}
