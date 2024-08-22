@@ -179,7 +179,7 @@ on_actions = {
 									desperate_repair_destruction_chance = 0.25
 								}
 								subtract_from_temp_variable = {
-									desperate_repair_destruction_chance = FROM.controller.modifier@anb_desperate_repeair_destruction_chance
+									desperate_repair_destruction_chance = controller.modifier@anb_desperate_repeair_destruction_chance
 								}
 								check_variable = {
 									random > desperate_repair_destruction_chance
@@ -201,6 +201,56 @@ on_actions = {
 						blocked_nuclear_damage = yes
 					}
 				}
+			}
+			set_temp_variable = {
+				org_damage_to_units = 0.5
+			}
+			add_to_temp_variable = {
+				org_damage_to_units = modifier@nuke_charge_power_factor
+			}
+			set_temp_variable = {
+				damage_to_units_ratio = 1
+			}
+			subtract_from_temp_variable = {
+				damage_to_units_ratio = FROM.modifier@nuke_defence_factor
+			}
+			multiply_temp_variable = {
+				org_damage_to_units = damage_to_units_ratio
+			}
+			set_temp_variable = {
+				str_damage_to_units = org_damage_to_units
+			}
+			divide_temp_variable = {
+				str_damage_to_units = 4
+			}
+			#damage to enemy
+			damage_units = {
+				state = FROM
+				org_damage = org_damage_to_units
+				str_damage = str_damage_to_units
+				limit = {
+					has_war_with = ROOT
+				}
+				ratio = yes
+				army = yes
+				navy = yes
+			}
+			divide_temp_variable = {
+				str_damage_to_units = 2
+			}
+			#damage to neutral/allies/yourself
+			damage_units = {
+				state = FROM
+				org_damage = org_damage_to_units
+				str_damage = str_damage_to_units
+				limit = {
+					NOT = {
+						has_war_with = ROOT
+					}
+				}
+				ratio = yes
+				army = yes
+				navy = yes
 			}
 		}
 		#random_events = {

@@ -35,6 +35,7 @@ NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.05
 NDefines.NMilitary.ARMY_EXP_BASE_LEVEL = 5
 NDefines.NMilitary.MIN_DIVISION_BRIGADE_HEIGHT = 2	-- vanila is 4, make doctrines more valuable
 NDefines.NMilitary.BASE_NIGHT_ATTACK_PENALTY = -0.8
+NDefines.NMilitary.NUKE_MAX_DAMAGE_PERCENT = 0.3 -- vanila is 0.9
 
 NDefines.NNavy.SHORE_BOMBARDMENT_CAP = 0.3 -- Vanilla is 0.25
 NDefines.NNavy.SCREENS_TO_CAPITAL_RATIO = 3.0 -- Vanilla is 4.0, mostly AI stuff
