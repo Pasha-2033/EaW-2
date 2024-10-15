@@ -1,0 +1,1947 @@
+focus_tree = {
+	id = gws_focus_tree
+	country = {
+		base = 0
+		modifier = {
+			add = 100
+			tag = GWS
+		}
+	}
+	continuous_focus_position = { 
+		x = 8000 
+		y = 100 
+	}
+	#sciense tree
+	focus = {
+		id = gws_focus_convening_academic_council
+		#icon
+		cost = 5
+		x = 18
+		y = 0
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_great_projects
+		#icon
+		cost = 5
+		x = -18
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_convening_academic_council
+		prerequisite = { 
+			focus = gws_focus_convening_academic_council 
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_expand_science_base_limits
+		#icon
+		cost = 5
+		x = 24
+		y = 1
+		offset = {
+			trigger = {
+				has_completed_focus = gws_focus_magitron_initial
+			}
+			x = 4
+		}
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_convening_academic_council
+		prerequisite = { 
+			focus = gws_focus_convening_academic_council
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_noxar_research_institute
+		#icon
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_convening_academic_council
+		prerequisite = { 
+			focus = gws_focus_convening_academic_council 
+		}
+		completion_reward = {}
+	}
+	#math
+	focus = {
+		id = gws_focus_mathematical_discipline
+		#icon
+		cost = 5
+		x = -9
+		y = 1
+		offset = {
+			trigger = {
+				has_completed_focus = gws_focus_magitron_initial
+			}
+			x = -4
+		}
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_expand_science_base_limits
+		prerequisite = { 
+			focus = gws_focus_expand_science_base_limits
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_is_there_any_unknown_numbers
+		#icon
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_mathematical_discipline
+		prerequisite = { 
+			focus = gws_focus_mathematical_discipline
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_simple_equations
+		#icon
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_mathematical_discipline
+		prerequisite = { 
+			focus = gws_focus_mathematical_discipline
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_all_describing_functional_equations
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_simple_equations
+		prerequisite = { 
+			focus = gws_focus_simple_equations
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_matrices
+		#icon
+		cost = 5
+		x = -3
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_mathematical_discipline
+		prerequisite = { 
+			focus = gws_focus_mathematical_discipline
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_mathematical_operator
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_matrices
+		prerequisite = { 
+			focus = gws_focus_matrices
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_axioms_and_theorems
+		#icon
+		cost = 5
+		x = 3
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_mathematical_discipline
+		prerequisite = { 
+			focus = gws_focus_mathematical_discipline
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_projection_and_height
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_axioms_and_theorems
+		prerequisite = {
+			focus = gws_focus_axioms_and_theorems
+		}
+		completion_reward = {}
+	}
+	#logic
+	focus = {
+		id = gws_focus_logic_discipline
+		#icon
+		cost = 5
+		x = -18
+		y = 1
+		offset = {
+			trigger = {
+				has_completed_focus = gws_focus_magitron_initial
+			}
+			x = -4
+		}
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_expand_science_base_limits
+		prerequisite = { 
+			focus = gws_focus_expand_science_base_limits
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_specialisation_of_methods
+		#icon
+		cost = 5
+		x = -3
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_logic_discipline
+		prerequisite = { 
+			focus = gws_focus_logic_discipline
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_application_scope 
+		#icon
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_logic_discipline
+		prerequisite = { 
+			focus = gws_focus_logic_discipline
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_degree_of_automation
+		#icon
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_logic_discipline
+		prerequisite = { 
+			focus = gws_focus_logic_discipline
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_arrays
+		#icon
+		cost = 5
+		x = 3
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_logic_discipline
+		prerequisite = { 
+			focus = gws_focus_logic_discipline
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_polydimentional_arrays
+		#icon
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_arrays
+		prerequisite = { 
+			focus = gws_focus_arrays
+		}
+		prerequisite = { 
+			focus = gws_focus_matrices
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_complex_data_strutures
+		#icon
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_arrays
+		prerequisite = { 
+			focus = gws_focus_arrays
+		}
+		completion_reward = {}
+	}
+	#physics
+	focus = {
+		id = gws_focus_physical_discipline
+		#icon
+		cost = 5
+		x = -1
+		y = 1
+		offset = {
+			trigger = {
+				has_completed_focus = gws_focus_magitron_initial
+			}
+			x = -4
+		}
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_expand_science_base_limits
+		prerequisite = { 
+			focus = gws_focus_expand_science_base_limits
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_experimental_physics
+		#icon
+		cost = 5
+		x = -3
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_physical_discipline
+		prerequisite = { 
+			focus = gws_focus_physical_discipline
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_theoretical_physics
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_experimental_physics
+		prerequisite = { 
+			focus = gws_focus_experimental_physics
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_materials_science
+		#icon
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_physical_discipline
+		prerequisite = { 
+			focus = gws_focus_physical_discipline
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_optics_and_wave_theory
+		#icon
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_physical_discipline
+		prerequisite = { 
+			focus = gws_focus_physical_discipline
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_radiophysics
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_optics_and_wave_theory
+		prerequisite = { 
+			focus = gws_focus_optics_and_wave_theory
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_thermodynamics
+		#icon
+		cost = 5
+		x = 3
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_physical_discipline
+		prerequisite = { 
+			focus = gws_focus_physical_discipline
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_atomic_physics
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_thermodynamics
+		prerequisite = { 
+			focus = gws_focus_thermodynamics
+		}
+		mutually_exclusive = { 
+			focus = gws_focus_quantum_chemistry 
+		}
+		completion_reward = {}
+	}
+	#chemistry
+	focus = {
+		id = gws_focus_chemical_discipline
+		#icon
+		cost = 5
+		x = 9
+		y = 1
+		offset = {
+			trigger = {
+				has_completed_focus = gws_focus_magitron_initial
+			}
+			x = -4
+		}
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_expand_science_base_limits
+		prerequisite = { 
+			focus = gws_focus_expand_science_base_limits
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_inorganic_chemistry
+		#icon
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_chemical_discipline
+		prerequisite = { 
+			focus = gws_focus_chemical_discipline
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_nanotechnology
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_inorganic_chemistry
+		prerequisite = { 
+			focus = gws_focus_inorganic_chemistry
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_organic_chemistry
+		#icon
+		cost = 5
+		x = 3
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_chemical_discipline
+		prerequisite = { 
+			focus = gws_focus_chemical_discipline
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_retrosynthetic_analysis
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_organic_chemistry
+		prerequisite = { 
+			focus = gws_focus_organic_chemistry
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_molecular_kinetic_theory
+		#icon
+		cost = 5
+		x = -3
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_chemical_discipline
+		prerequisite = { 
+			focus = gws_focus_chemical_discipline
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_physical_chemistry
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_molecular_kinetic_theory
+		prerequisite = { 
+			focus = gws_focus_molecular_kinetic_theory
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_stereochemistry
+		#icon
+		cost = 5
+		x = 2
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_molecular_kinetic_theory
+		prerequisite = { 
+			focus = gws_focus_molecular_kinetic_theory
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_quantum_chemistry
+		#icon
+		cost = 5
+		x = -2
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_molecular_kinetic_theory
+		prerequisite = { 
+			focus = gws_focus_molecular_kinetic_theory
+		}
+		mutually_exclusive = { 
+			focus = gws_focus_atomic_physics
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_particle_physics
+		#icon
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_atomic_physics
+		prerequisite = {
+			focus = gws_focus_atomic_physics
+			focus = gws_focus_quantum_chemistry
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_experiments_with_plasma
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_particle_physics
+		prerequisite = {
+			focus = gws_focus_particle_physics
+		}
+		completion_reward = {}
+	}
+	#biology
+	focus = {
+		id = gws_focus_biological_discipline
+		#icon
+		cost = 5
+		x = 17
+		y = 1
+		offset = {
+			trigger = {
+				has_completed_focus = gws_focus_magitron_initial
+			}
+			x = -4
+		}
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_expand_science_base_limits
+		prerequisite = { 
+			focus = gws_focus_expand_science_base_limits
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_common_biology
+		#icon
+		cost = 5
+		x = 2
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_biological_discipline
+		prerequisite = { 
+			focus = gws_focus_biological_discipline
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_taxonomy
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_common_biology
+		prerequisite = { 
+			focus = gws_focus_common_biology
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_microbiology
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_biological_discipline
+		prerequisite = { 
+			focus = gws_focus_biological_discipline
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_medicine
+		#icon
+		cost = 5
+		x = -2
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_biological_discipline
+		prerequisite = { 
+			focus = gws_focus_biological_discipline
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_biochemistry
+		#icon
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_medicine
+		prerequisite = { 
+			focus = gws_focus_organic_chemistry
+		}
+		prerequisite = { 
+			focus = gws_focus_medicine
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_bionics
+		#icon
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_medicine
+		prerequisite = { 
+			focus = gws_focus_organic_chemistry
+		}
+		prerequisite = { 
+			focus = gws_focus_medicine
+		}
+		completion_reward = {}
+	}
+	#magic (will be loaded when magitron will be initiated)
+	focus = {
+		id = gws_focus_magical_discipline
+		#icon
+		cost = 5
+		x = 21
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		allow_branch = {
+			has_completed_focus = gws_focus_magitron_initial
+		}
+		relative_position_id = gws_focus_expand_science_base_limits
+		prerequisite = { 
+			focus = gws_focus_expand_science_base_limits
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_magic_handlers
+		#icon
+		cost = 5
+		x = -3
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_magical_discipline
+		prerequisite = { 
+			focus = gws_focus_magical_discipline
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_magical_storages
+		#icon
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_magic_handlers
+		prerequisite = { 
+			focus = gws_focus_magic_handlers
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_antimagic
+		#icon
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_magical_storages
+		prerequisite = { 
+			focus = gws_focus_magical_storages
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_constructor_and_destructor
+		#icon
+		cost = 5
+		x = 3
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_magical_discipline
+		prerequisite = { 
+			focus = gws_focus_magical_discipline
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_algorithm_as_resource
+		#icon
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_constructor_and_destructor
+		prerequisite = { 
+			focus = gws_focus_constructor_and_destructor
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_gate_overflow
+		#icon
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_algorithm_as_resource
+		prerequisite = { 
+			focus = gws_focus_algorithm_as_resource
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_hyperfunctions
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_magical_discipline
+		prerequisite = { 
+			focus = gws_focus_magical_discipline
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_space_hyperfunction
+		#icon
+		cost = 5
+		x = -2
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_hyperfunctions
+		prerequisite = { 
+			focus = gws_focus_hyperfunctions
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_time_hyperfunction
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_hyperfunctions
+		prerequisite = { 
+			focus = gws_focus_hyperfunctions
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_information_hyperfunction
+		#icon
+		cost = 5
+		x = 2
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_hyperfunctions
+		prerequisite = { 
+			focus = gws_focus_hyperfunctions
+		}
+		completion_reward = {}
+	}
+	#scientific community
+	focus = {
+		id = gws_focus_initiatives_for_joint_research
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_noxar_research_institute
+		prerequisite = { 
+			focus = gws_focus_noxar_research_institute
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_international_educational_program
+		#icon
+		cost = 5
+		x = -2
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_initiatives_for_joint_research
+		prerequisite = { 
+			focus = gws_focus_initiatives_for_joint_research
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_student_exchange
+		#icon
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_international_educational_program
+		prerequisite = { 
+			focus = gws_focus_international_educational_program
+		}
+		mutually_exclusive = { 
+			focus = gws_focus_strengthen_global_scientific_center
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_strengthen_global_scientific_center
+		#icon
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_international_educational_program
+		prerequisite = { 
+			focus = gws_focus_international_educational_program
+		}
+		mutually_exclusive = { 
+			focus = gws_focus_student_exchange 
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_secured_reseaches
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_strengthen_global_scientific_center
+		prerequisite = { 
+			focus = gws_focus_strengthen_global_scientific_center
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_basic_scientific_agreements
+		#icon
+		cost = 5
+		x = 2
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_initiatives_for_joint_research
+		prerequisite = { 
+			focus = gws_focus_initiatives_for_joint_research
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_invite_scientists
+		#icon
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_basic_scientific_agreements
+		prerequisite = { 
+			focus = gws_focus_basic_scientific_agreements
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_improve_technology_sharing
+		#icon
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_invite_scientists
+		prerequisite = { 
+			focus = gws_focus_invite_scientists
+		}
+		prerequisite = { 
+			focus = gws_focus_student_exchange
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_international_scientific_projects
+		#icon
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_basic_scientific_agreements
+		prerequisite = { 
+			focus = gws_focus_basic_scientific_agreements
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_global_academy_of_sciences
+		#icon
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_international_scientific_projects
+		prerequisite = { 
+			focus = gws_focus_international_scientific_projects
+		}
+		mutually_exclusive = { 
+			focus = gws_focus_regional_research_institutes
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_regional_research_institutes
+		#icon
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_international_scientific_projects
+		prerequisite = { 
+			focus = gws_focus_international_scientific_projects
+		}
+		mutually_exclusive = { 
+			focus = gws_focus_global_academy_of_sciences
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_olenial_region
+		#icon
+		cost = 5
+		x = -4
+		y = 2
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_international_scientific_projects
+		prerequisite = { 
+			focus = gws_focus_global_academy_of_sciences
+			focus = gws_focus_regional_research_institutes
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_hive_region
+		#icon
+		cost = 5
+		x = -2
+		y = 2
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_international_scientific_projects
+		prerequisite = { 
+			focus = gws_focus_global_academy_of_sciences
+			focus = gws_focus_regional_research_institutes
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_north_equus
+		#icon
+		cost = 5
+		x = 0
+		y = 2
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_international_scientific_projects
+		prerequisite = { 
+			focus = gws_focus_global_academy_of_sciences
+			focus = gws_focus_regional_research_institutes
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_equestrial_region
+		#icon
+		cost = 5
+		x = 2
+		y = 2
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_international_scientific_projects
+		prerequisite = { 
+			focus = gws_focus_global_academy_of_sciences
+			focus = gws_focus_regional_research_institutes
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_grifon_empire_region
+		#icon
+		cost = 5
+		x = 4
+		y = 2
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_international_scientific_projects
+		prerequisite = { 
+			focus = gws_focus_global_academy_of_sciences
+			focus = gws_focus_regional_research_institutes
+		}
+		completion_reward = {}
+	}
+	#MAGITRON
+	focus = {
+		id = gws_focus_magitron_initial
+		#icon
+		cost = 5
+		x = 7
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_great_projects
+		prerequisite = {
+			focus = gws_focus_great_projects
+		}
+		completion_reward = {
+			mark_focus_tree_layout_dirty = yes
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = huge_contruction_site
+					}
+				}
+				add_to_variable = {
+					gws_huge_contruction_cito = 5
+				}
+				add_to_variable = {
+					gws_huge_contruction_psbf = -0.02
+				}
+				add_to_variable = {
+					consumer_goods_expected_value = 0.05
+				}
+				add_to_variable = {
+					conscription_factor = -0.05
+				}
+			}
+			else = {
+				add_dynamic_modifier = {
+					modifier = huge_contruction_site
+				}
+			}
+		}
+	}
+	focus = {
+		id = gws_focus_central_dogma_digging
+		#icon
+		cost = 5
+		x = -2
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_magitron_initial
+		prerequisite = { 
+			focus = gws_focus_magitron_initial
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_giant_excavator
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_central_dogma_digging
+		prerequisite = { 
+			focus = gws_focus_central_dogma_digging
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_additional_metal_structures
+		#icon
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_giant_excavator
+		prerequisite = { 
+			focus = gws_focus_giant_excavator
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_strengthen_the_vault
+		#icon
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_giant_excavator
+		prerequisite = { 
+			focus = gws_focus_giant_excavator
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_energy_sector_digging
+		#icon
+		cost = 5
+		x = 4
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_magitron_initial
+		prerequisite = { 
+			focus = gws_focus_magitron_initial
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_large_machine_rooms
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_energy_sector_digging
+		prerequisite = { 
+			focus = gws_focus_energy_sector_digging
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_control_sector_digging
+		#icon
+		cost = 5
+		x = 2
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_magitron_initial
+		prerequisite = { 
+			focus = gws_focus_magitron_initial
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_computing_sector_digging
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_magitron_initial
+		prerequisite = { 
+			focus = gws_focus_magitron_initial
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_enchantment_cage
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_control_sector_digging
+		prerequisite = { 
+			focus = gws_focus_control_sector_digging
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_laying_communications
+		#icon
+		cost = 5
+		x = 0
+		y = 4
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_magitron_initial
+		prerequisite = { 
+			focus = gws_focus_enchantment_cage
+		}
+		prerequisite = {
+			focus = gws_focus_additional_metal_structures
+		}
+		prerequisite = {
+			focus = gws_focus_strengthen_the_vault
+		}
+		prerequisite = { 
+			focus = gws_focus_large_machine_rooms
+		}
+		prerequisite = { 
+			focus = gws_focus_computing_sector_digging
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_magic_generators
+		#icon
+		cost = 5
+		x = -2
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_laying_communications
+		prerequisite = { 
+			focus = gws_focus_laying_communications
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_magic_storages
+		#icon
+		cost = 5
+		x = -4
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_laying_communications
+		prerequisite = { 
+			focus = gws_focus_laying_communications
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_magic_conductors
+		#icon
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_magic_storages
+		prerequisite = {
+			focus = gws_focus_magic_generators
+			focus = gws_focus_magic_storages
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_cooling_vents
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_laying_communications
+		prerequisite = { 
+			focus = gws_focus_laying_communications
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_lines_centralisation
+		#icon
+		cost = 5
+		x = 2
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_laying_communications
+		prerequisite = { 
+			focus = gws_focus_laying_communications
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_supply_reserves
+		#icon
+		cost = 5
+		x = 4
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_laying_communications
+		prerequisite = { 
+			focus = gws_focus_laying_communications
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_power_control
+		#icon
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_lines_centralisation
+		prerequisite = { 
+			focus = gws_focus_lines_centralisation
+			focus = gws_focus_supply_reserves
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_coolant_control
+		#icon
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_cooling_vents
+		prerequisite = { 
+			focus = gws_focus_cooling_vents
+			focus = gws_focus_lines_centralisation
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_equipment_installation
+		#icon
+		cost = 5
+		x = 0
+		y = 3
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_laying_communications
+		prerequisite = { 
+			focus = gws_focus_magic_conductors
+		}
+		prerequisite = {
+			focus = gws_focus_coolant_control
+		}
+		prerequisite = {
+			focus = gws_focus_power_control
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_core_clock_designing
+		#icon
+		cost = 5
+		x = -8
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_equipment_installation
+		prerequisite = { 
+			focus = gws_focus_equipment_installation
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_octahedral_stabilitrons
+		#icon
+		cost = 5
+		x = 3
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_core_clock_designing
+		prerequisite = { 
+			focus = gws_focus_core_clock_designing
+		}
+		mutually_exclusive = {
+			focus = gws_focus_antioctahedral_stabilitrons
+			focus = gws_focus_cubic_stabilitrons
+			focus = gws_focus_hexagonal_stabilitrons
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_cubic_stabilitrons
+		#icon
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_core_clock_designing
+		prerequisite = { 
+			focus = gws_focus_core_clock_designing
+		}
+		mutually_exclusive = {
+			focus = gws_focus_octahedral_stabilitrons
+			focus = gws_focus_antioctahedral_stabilitrons
+			focus = gws_focus_hexagonal_stabilitrons
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_hexagonal_stabilitrons
+		#icon
+		cost = 5
+		x = -3
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_core_clock_designing
+		prerequisite = { 
+			focus = gws_focus_core_clock_designing
+		}
+		mutually_exclusive = {
+			focus = gws_focus_octahedral_stabilitrons
+			focus = gws_focus_antioctahedral_stabilitrons
+			focus = gws_focus_cubic_stabilitrons
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_antioctahedral_stabilitrons
+		#icon
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_core_clock_designing
+		prerequisite = { 
+			focus = gws_focus_core_clock_designing
+		}
+		mutually_exclusive = {
+			focus = gws_focus_octahedral_stabilitrons
+			focus = gws_focus_cubic_stabilitrons
+			focus = gws_focus_hexagonal_stabilitrons
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_magic_shield
+		#icon
+		cost = 5
+		x = 0
+		y = 2
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_core_clock_designing
+		prerequisite = { 
+			focus = gws_focus_octahedral_stabilitrons
+			focus = gws_focus_antioctahedral_stabilitrons
+			focus = gws_focus_cubic_stabilitrons
+			focus = gws_focus_hexagonal_stabilitrons
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_semiautomation
+		#icon
+		cost = 5
+		x = -2
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_equipment_installation
+		prerequisite = { 
+			focus = gws_focus_equipment_installation
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_direct_dependence
+		#icon
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_semiautomation
+		prerequisite = { 
+			focus = gws_focus_semiautomation
+		}
+		mutually_exclusive = {
+			focus = gws_focus_reverse_caution
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_reverse_caution
+		#icon
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_semiautomation
+		prerequisite = { 
+			focus = gws_focus_semiautomation
+		}
+		mutually_exclusive = {
+			focus = gws_focus_direct_dependence
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_main_control_room
+		#icon
+		cost = 5
+		x = 2
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_equipment_installation
+		prerequisite = { 
+			focus = gws_focus_equipment_installation
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_operational_delegate
+		#icon
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_main_control_room
+		prerequisite = { 
+			focus = gws_focus_main_control_room
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_status_panel
+		#icon
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_main_control_room
+		prerequisite = { 
+			focus = gws_focus_main_control_room
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_first_energy_block
+		#icon
+		cost = 5
+		x = 9
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_equipment_installation
+		prerequisite = { 
+			focus = gws_focus_equipment_installation
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_heat_exchangers
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_first_energy_block
+		prerequisite = { 
+			focus = gws_focus_first_energy_block
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_piston_generators
+		#icon
+		cost = 5
+		x = 2
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_first_energy_block
+		prerequisite = { 
+			focus = gws_focus_first_energy_block
+		}
+		mutually_exclusive = {
+			focus = gws_focus_turbine_generators
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_turbine_generators
+		#icon
+		cost = 5
+		x = 4
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_first_energy_block
+		prerequisite = { 
+			focus = gws_focus_first_energy_block
+		}
+		mutually_exclusive = {
+			focus = gws_focus_piston_generators
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_low_pressure_boilers
+		#icon
+		cost = 5
+		x = -2
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_first_energy_block
+		prerequisite = { 
+			focus = gws_focus_first_energy_block
+		}
+		mutually_exclusive = {
+			focus = gws_focus_high_pressure_boilers
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_high_pressure_boilers
+		#icon
+		cost = 5
+		x = -4
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_first_energy_block
+		prerequisite = { 
+			focus = gws_focus_first_energy_block
+		}
+		mutually_exclusive = {
+			focus = gws_focus_low_pressure_boilers
+		}
+		completion_reward = {}
+	}
+	#SILO
+	focus = {
+		id = gws_focus_silo_initial
+		#icon
+		cost = 5
+		x = -7
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_great_projects
+		prerequisite = { 
+			focus = gws_focus_great_projects
+		}
+		completion_reward = {}
+	}
+	#MAGITRON & SILO (common)
+	focus = {
+		id = gws_focus_import_alloys_for_durable_drills
+		#icon
+		cost = 5
+		x = -5
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_magitron_initial
+		prerequisite = { 
+			focus = gws_focus_magitron_initial
+			focus = gws_focus_silo_initial
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_central_shaft
+		#icon
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_import_alloys_for_durable_drills
+		prerequisite = { 
+			focus = gws_focus_import_alloys_for_durable_drills
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_auxiliary_channels
+		#icon
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_import_alloys_for_durable_drills
+		prerequisite = { 
+			focus = gws_focus_import_alloys_for_durable_drills
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_high_speed_elevators
+		#icon
+		cost = 5
+		x = -7
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_magitron_initial
+		prerequisite = { 
+			focus = gws_focus_magitron_initial
+			focus = gws_focus_silo_initial
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_ventilation_equipment
+		#icon
+		cost = 5
+		x = -9
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_magitron_initial
+		prerequisite = { 
+			focus = gws_focus_magitron_initial
+			focus = gws_focus_silo_initial
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_increase_in_blasting
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_ventilation_equipment
+		prerequisite = { 
+			focus = gws_focus_ventilation_equipment
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus gws_focus_ventilation_equipment"
+		}
+	}
+	#defence tree
+
+	#land development tree
+}

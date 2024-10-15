@@ -3,12 +3,35 @@ defined_text = {
 	name = ICE_all_inf_modifiers_title_sl
 	text = {
 		trigger = {
-			always = yes
+			check_variable = {
+				nightlands_grandplan_urban_movement = 0
+			}
+			check_variable = {
+				nightlands_grandplan_mountain_movement = 0
+			}
+			check_variable = {
+				nightlands_grandplan_hills_movement = 0
+			}
+			check_variable = {
+				nightlands_grandplan_forest_movement = 0
+			}
+			check_variable = {
+				nightlands_grandplan_jungle_movement = 0
+			}
+			check_variable = {
+				nightlands_grandplan_marsh_movement = 0
+			}
+			check_variable = {
+				nightlands_grandplan_plains_movement = 0
+			}
+			check_variable = {
+				nightlands_grandplan_desert_movement = 0
+			}
 		}
-		localization_key = "ICE_nightlands_grandplan_div_modifiers_title_tt"
+		localization_key = ""
 	}
 	text = {
-		localization_key = ""
+		localization_key = "ICE_nightlands_grandplan_div_modifiers_title_tt"
 	}
 }
 defined_text = {
