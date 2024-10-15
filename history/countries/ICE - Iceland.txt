@@ -30,6 +30,10 @@ recruit_character = ICE_windoo
 set_country_flag = no_sa_impact #turn off food mechanic
 set_oob = "982_ICE"
 add_manpower = 200000 #for building army
+add_equipment_to_stockpile = { #for building army and garrison supply
+	type = windigo_equipment
+	amount = 1600
+}
 #ICE freezing states mechanic
 set_variable = {
 	supercold_state_army_speed_factor = 0.05

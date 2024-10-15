@@ -1,0 +1,16 @@
+add_namespace = gesellwissens
+#change picture everywhere
+country_event = {
+	#magitron history
+	id = gesellwissens.1
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event gesellwissens.1"
+	}
+	title = gesellwissens.1.t
+	desc = gesellwissens.1.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		name = gesellwissens.1.a
+	}
+}

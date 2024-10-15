@@ -20,12 +20,28 @@ state = {
 		victory_points = { 11137 1 }
 		982.1.1 = {
 			owner = ICE
-			add_core_of = ICE
+			add_claim_by = ICE
 			add_core_of = NML
+			force_enable_resistance = ICE
+			start_resistance = yes
+			set_variable_to_random = {
+				var = random_value
+				min = 15
+				max = 40
+			}
+			set_compliance = random_value
+			set_variable_to_random = {
+				var = random_value
+				min = 15
+				max = 50
+			}
+			set_resistance = random_value
+			clear_variable = random_value
+			set_garrison_strength = 1
 		}
 		1002.1.1 = {
 			owner = NML
-			remove_core_of = ICE
+			remove_claim_by = ICE
 		}
 	}
 }
