@@ -1187,7 +1187,7 @@ focus_tree = {
 		completion_reward = {
 			mark_focus_tree_layout_dirty = yes
 			country_event = {
-				id = gesellwissens.1
+				id = magitron.1
 				days = 3
 			}
 			if = {
@@ -1212,6 +1212,10 @@ focus_tree = {
 				add_to_variable = {
 					gws_huge_contruction_cf = -0.05
 					tooltip = conscription_factor_tt
+				}
+				add_to_variable = {
+					gws_huge_contruction_csic = 0.03
+					tooltip = contruction_site_incident_chance_tt
 				}
 			}
 			else = {
@@ -1242,6 +1246,61 @@ focus_tree = {
 		}
 		completion_reward = {
 			activate_mission = central_dogma_digging
+			set_temp_variable = {
+				reduction = 1
+			}
+			if = {
+				limit = {
+					has_completed_focus = gws_focus_central_shaft
+				}
+				multiply_temp_variable = {
+					reduction = 0.8
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = gws_focus_auxiliary_channels
+				}
+				multiply_temp_variable = {
+					reduction = 0.8
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = gws_focus_high_speed_elevators
+				}
+				multiply_temp_variable = {
+					reduction = 0.75
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = gws_focus_increase_in_blasting
+				}
+				multiply_temp_variable = {
+					reduction = 0.95
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						reduction < 1
+					}
+				}
+				subtract_from_temp_variable = {
+					reduction = 1
+				}
+				custom_effect_tooltip = huge_contruction_mission_speeding_tt
+				multiply_temp_variable = {
+					reduction = 3600
+				}
+				hidden_effect = {
+					add_days_mission_timeout = {
+						mission = central_dogma_digging
+						days = reduction
+					}
+				}
+			}
 			custom_effect_tooltip = change_huge_contruction_site_tt
 			add_to_variable = {
 				gws_huge_contruction_cito = 5
@@ -1262,6 +1321,10 @@ focus_tree = {
 			add_to_variable = {
 				gws_huge_contruction_cf = -0.05
 				tooltip = conscription_factor_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_csic = 0.3
+				tooltip = contruction_site_incident_chance_tt
 			}
 		}
 		search_filters = {
@@ -1286,11 +1349,6 @@ focus_tree = {
 			chromium > 2
 			tungsten > 1
 		}
-		bypass = {
-			NOT = {
-				has_active_mission = central_dogma_digging
-			}
-		}
 		completion_reward = {
 			custom_effect_tooltip = change_huge_contruction_site_tt
 			add_to_variable = {
@@ -1312,6 +1370,10 @@ focus_tree = {
 			add_to_variable = {
 				gws_huge_contruction_cgf = 0.05
 				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_csic = -0.1
+				tooltip = contruction_site_incident_chance_tt
 			}
 			custom_effect_tooltip = huge_contruction_site_speeding_tt
 			set_temp_variable = {
@@ -1375,6 +1437,10 @@ focus_tree = {
 				gws_huge_contruction_cgf = 0.07
 				tooltip = consumer_goods_factor_tt
 			}
+			add_to_variable = {
+				gws_huge_contruction_csic = 0.05
+				tooltip = contruction_site_incident_chance_tt
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_GREAT_PROJECT
@@ -1420,6 +1486,10 @@ focus_tree = {
 				gws_huge_contruction_cgf = 0.1
 				tooltip = consumer_goods_factor_tt
 			}
+			add_to_variable = {
+				gws_huge_contruction_csic = 0.05
+				tooltip = contruction_site_incident_chance_tt
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_GREAT_PROJECT
@@ -1443,6 +1513,61 @@ focus_tree = {
 		}
 		completion_reward = {
 			activate_mission = energy_sector_digging
+			set_temp_variable = {
+				reduction = 1
+			}
+			if = {
+				limit = {
+					has_completed_focus = gws_focus_central_shaft
+				}
+				multiply_temp_variable = {
+					reduction = 0.95
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = gws_focus_auxiliary_channels
+				}
+				multiply_temp_variable = {
+					reduction = 0.75
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = gws_focus_high_speed_elevators
+				}
+				multiply_temp_variable = {
+					reduction = 0.85
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = gws_focus_increase_in_blasting
+				}
+				multiply_temp_variable = {
+					reduction = 0.95
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						reduction < 1
+					}
+				}
+				subtract_from_temp_variable = {
+					reduction = 1
+				}
+				custom_effect_tooltip = huge_contruction_mission_speeding_tt
+				multiply_temp_variable = {
+					reduction = 180
+				}
+				hidden_effect = {
+					add_days_mission_timeout = {
+						mission = energy_sector_digging
+						days = reduction
+					}
+				}
+			}
 			custom_effect_tooltip = change_huge_contruction_site_tt
 			add_to_variable = {
 				gws_huge_contruction_cito = 1
@@ -1463,6 +1588,10 @@ focus_tree = {
 			add_to_variable = {
 				gws_huge_contruction_cf = -0.02
 				tooltip = conscription_factor_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_csic = 0.1
+				tooltip = contruction_site_incident_chance_tt
 			}
 		}
 		search_filters = {
@@ -1487,13 +1616,109 @@ focus_tree = {
 				limit = {
 					has_active_mission = energy_sector_digging
 				}
+				set_temp_variable = {
+					mission_cost = 90
+				}
+				if = {
+					limit = {
+						has_completed_focus = gws_focus_central_shaft
+					}
+					multiply_temp_variable = {
+						mission_cost = 0.95
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = gws_focus_auxiliary_channels
+					}
+					multiply_temp_variable = {
+						mission_cost = 0.75
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = gws_focus_high_speed_elevators
+					}
+					multiply_temp_variable = {
+						mission_cost = 0.85
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = gws_focus_increase_in_blasting
+					}
+					multiply_temp_variable = {
+						mission_cost = 0.95
+					}
+				}
 				add_days_mission_timeout = {
 					mission = energy_sector_digging
-					days = 90
+					days = mission_cost
 				}
+				custom_effect_tooltip = change_huge_contruction_site_tt
 			}
 			else = {
 				activate_mission = energy_sector_enlargement
+				set_temp_variable = {
+					reduction = 1
+				}
+				if = {
+					limit = {
+						has_completed_focus = gws_focus_central_shaft
+					}
+					multiply_temp_variable = {
+						reduction = 0.95
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = gws_focus_auxiliary_channels
+					}
+					multiply_temp_variable = {
+						reduction = 0.75
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = gws_focus_high_speed_elevators
+					}
+					multiply_temp_variable = {
+						reduction = 0.85
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = gws_focus_increase_in_blasting
+					}
+					multiply_temp_variable = {
+						reduction = 0.95
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							reduction < 1
+						}
+					}
+					subtract_from_temp_variable = {
+						reduction = 1
+					}
+					custom_effect_tooltip = huge_contruction_mission_speeding_tt
+					multiply_temp_variable = {
+						reduction = 120
+					}
+					hidden_effect = {
+						add_days_mission_timeout = {
+							mission = energy_sector_enlargement
+							days = reduction
+						}
+					}
+				}
+				custom_effect_tooltip = change_huge_contruction_site_tt
+				add_to_variable = {
+					gws_huge_contruction_csic = 0.05
+					tooltip = contruction_site_incident_chance_tt
+				}
 			}
 			add_to_variable = {
 				gws_huge_contruction_cito = 1
@@ -1534,6 +1759,61 @@ focus_tree = {
 		}
 		completion_reward = {
 			activate_mission = control_sector_digging
+			set_temp_variable = {
+				reduction = 1
+			}
+			if = {
+				limit = {
+					has_completed_focus = gws_focus_central_shaft
+				}
+				multiply_temp_variable = {
+					reduction = 0.95
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = gws_focus_auxiliary_channels
+				}
+				multiply_temp_variable = {
+					reduction = 0.75
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = gws_focus_high_speed_elevators
+				}
+				multiply_temp_variable = {
+					reduction = 0.85
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = gws_focus_increase_in_blasting
+				}
+				multiply_temp_variable = {
+					reduction = 0.95
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						reduction < 1
+					}
+				}
+				subtract_from_temp_variable = {
+					reduction = 1
+				}
+				custom_effect_tooltip = huge_contruction_mission_speeding_tt
+				multiply_temp_variable = {
+					reduction = 120
+				}
+				hidden_effect = {
+					add_days_mission_timeout = {
+						mission = control_sector_digging
+						days = reduction
+					}
+				}
+			}
 			custom_effect_tooltip = change_huge_contruction_site_tt
 			add_to_variable = {
 				gws_huge_contruction_cito = 1
@@ -1554,6 +1834,10 @@ focus_tree = {
 			add_to_variable = {
 				gws_huge_contruction_cf = -0.02
 				tooltip = conscription_factor_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_csic = 0.1
+				tooltip = contruction_site_incident_chance_tt
 			}
 		}
 		search_filters = {
@@ -1578,6 +1862,61 @@ focus_tree = {
 		}
 		completion_reward = {
 			activate_mission = computing_sector_digging
+			set_temp_variable = {
+				reduction = 1
+			}
+			if = {
+				limit = {
+					has_completed_focus = gws_focus_central_shaft
+				}
+				multiply_temp_variable = {
+					reduction = 0.95
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = gws_focus_auxiliary_channels
+				}
+				multiply_temp_variable = {
+					reduction = 0.75
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = gws_focus_high_speed_elevators
+				}
+				multiply_temp_variable = {
+					reduction = 0.85
+				}
+			}
+			if = {
+				limit = {
+					has_completed_focus = gws_focus_increase_in_blasting
+				}
+				multiply_temp_variable = {
+					reduction = 0.95
+				}
+			}
+			if = {
+				limit = {
+					check_variable = {
+						reduction < 1
+					}
+				}
+				subtract_from_temp_variable = {
+					reduction = 1
+				}
+				custom_effect_tooltip = huge_contruction_mission_speeding_tt
+				multiply_temp_variable = {
+					reduction = 180
+				}
+				hidden_effect = {
+					add_days_mission_timeout = {
+						mission = computing_sector_digging
+						days = reduction
+					}
+				}
+			}
 			custom_effect_tooltip = change_huge_contruction_site_tt
 			add_to_variable = {
 				gws_huge_contruction_cito = 1
@@ -1598,6 +1937,10 @@ focus_tree = {
 			add_to_variable = {
 				gws_huge_contruction_cf = -0.05
 				tooltip = conscription_factor_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_csic = 0.1
+				tooltip = contruction_site_incident_chance_tt
 			}
 		}
 		search_filters = {
@@ -1635,15 +1978,110 @@ focus_tree = {
 				limit = {
 					has_active_mission = control_sector_digging
 				}
+				set_temp_variable = {
+					mission_cost = 90
+				}
+				if = {
+					limit = {
+						has_completed_focus = gws_focus_central_shaft
+					}
+					multiply_temp_variable = {
+						mission_cost = 0.95
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = gws_focus_auxiliary_channels
+					}
+					multiply_temp_variable = {
+						mission_cost = 0.75
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = gws_focus_high_speed_elevators
+					}
+					multiply_temp_variable = {
+						mission_cost = 0.85
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = gws_focus_increase_in_blasting
+					}
+					multiply_temp_variable = {
+						mission_cost = 0.95
+					}
+				}
 				add_days_mission_timeout = {
 					mission = control_sector_digging
-					days = 90
+					days = mission_cost
 				}
+				custom_effect_tooltip = change_huge_contruction_site_tt
 			}
 			else = {
 				activate_mission = control_sector_enforcement
+				set_temp_variable = {
+					reduction = 1
+				}
+				if = {
+					limit = {
+						has_completed_focus = gws_focus_central_shaft
+					}
+					multiply_temp_variable = {
+						reduction = 0.95
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = gws_focus_auxiliary_channels
+					}
+					multiply_temp_variable = {
+						reduction = 0.75
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = gws_focus_high_speed_elevators
+					}
+					multiply_temp_variable = {
+						reduction = 0.85
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = gws_focus_increase_in_blasting
+					}
+					multiply_temp_variable = {
+						reduction = 0.95
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							reduction < 1
+						}
+					}
+					subtract_from_temp_variable = {
+						reduction = 1
+					}
+					custom_effect_tooltip = huge_contruction_mission_speeding_tt
+					multiply_temp_variable = {
+						reduction = 60
+					}
+					hidden_effect = {
+						add_days_mission_timeout = {
+							mission = control_sector_enforcement
+							days = reduction
+						}
+					}
+				}
+				custom_effect_tooltip = change_huge_contruction_site_tt
+				add_to_variable = {
+					gws_huge_contruction_csic = 0.05
+					tooltip = contruction_site_incident_chance_tt
+				}
 			}
-			custom_effect_tooltip = change_huge_contruction_site_tt
 			add_to_variable = {
 				gws_huge_contruction_cito = 5
 				tooltip = civilian_intel_to_others_tt
@@ -1691,13 +2129,16 @@ focus_tree = {
 			focus = gws_focus_computing_sector_digging
 		}
 		available = {
-			NOT = {
-				has_active_mission = central_dogma_metal_structures
-				has_active_mission = central_dogma_strengthened_vault
-				has_active_mission = computing_sector_digging
-				has_active_mission = control_sector_enforcement
-				has_active_mission = energy_sector_digging
-				has_active_mission = energy_sector_enlargement
+			custom_trigger_tooltip = {
+				tooltip = has_finished_digging_magitron_missions_tt
+				NOT = {
+					has_active_mission = central_dogma_metal_structures
+					has_active_mission = central_dogma_strengthened_vault
+					has_active_mission = computing_sector_digging
+					has_active_mission = control_sector_enforcement
+					has_active_mission = energy_sector_digging
+					has_active_mission = energy_sector_enlargement
+				}
 			}
 		}
 		completion_reward = {
@@ -1713,6 +2154,10 @@ focus_tree = {
 			add_to_variable = {
 				gws_huge_contruction_cf = -0.02
 				tooltip = conscription_factor_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_csic = 0.02
+				tooltip = contruction_site_incident_chance_tt
 			}
 		}
 		search_filters = {
@@ -1732,7 +2177,17 @@ focus_tree = {
 		prerequisite = { 
 			focus = gws_focus_laying_communications
 		}
-		completion_reward = {}
+		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = gws_focus_magic_storages
+					NOT = {
+						has_completed_focus = gws_focus_magic_generators
+					}
+				}
+				custom_effect_tooltip = blocked_by_magic_conductors_tt
+			}
+		}
 		search_filters = {
 			FOCUS_FILTER_GREAT_PROJECT
 		}
@@ -1750,7 +2205,17 @@ focus_tree = {
 		prerequisite = { 
 			focus = gws_focus_laying_communications
 		}
-		completion_reward = {}
+		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = gws_focus_magic_generators
+					NOT = {
+						has_completed_focus = gws_focus_magic_storages
+					}
+				}
+				custom_effect_tooltip = blocked_by_magic_conductors_tt
+			}
+		}
 		search_filters = {
 			FOCUS_FILTER_GREAT_PROJECT
 		}
@@ -1769,7 +2234,12 @@ focus_tree = {
 			focus = gws_focus_magic_generators
 			focus = gws_focus_magic_storages
 		}
-		completion_reward = {}
+		completion_reward = {
+			hidden_effect = {
+				unlock_national_focus = gws_focus_magic_generators
+				unlock_national_focus = gws_focus_magic_storages
+			}
+		}
 		search_filters = {
 			FOCUS_FILTER_GREAT_PROJECT
 		}
@@ -1787,7 +2257,17 @@ focus_tree = {
 		prerequisite = { 
 			focus = gws_focus_laying_communications
 		}
-		completion_reward = {}
+		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = gws_focus_lines_centralisation
+					NOT = {
+						has_completed_focus = gws_focus_cooling_vents
+					}
+				}
+				custom_effect_tooltip = blocked_by_coolant_control_tt
+			}
+		}
 		search_filters = {
 			FOCUS_FILTER_GREAT_PROJECT
 		}
@@ -1805,7 +2285,27 @@ focus_tree = {
 		prerequisite = { 
 			focus = gws_focus_laying_communications
 		}
-		completion_reward = {}
+		completion_reward = {
+			if = {
+				limit = {
+					NOT = {
+						has_completed_focus = gws_focus_lines_centralisation
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = gws_focus_cooling_vents
+					}
+					custom_effect_tooltip = blocked_by_power_control_tt
+				}
+				if = {
+					limit = {
+						has_completed_focus = gws_focus_supply_reserves
+					}
+					custom_effect_tooltip = blocked_by_coolant_control_tt
+				}
+			}
+		}
 		search_filters = {
 			FOCUS_FILTER_GREAT_PROJECT
 		}
@@ -1823,7 +2323,17 @@ focus_tree = {
 		prerequisite = { 
 			focus = gws_focus_laying_communications
 		}
-		completion_reward = {}
+		completion_reward = {
+			if = {
+				limit = {
+					has_completed_focus = gws_focus_lines_centralisation
+					NOT = {
+						has_completed_focus = gws_focus_cooling_vents
+					}
+				}
+				custom_effect_tooltip = blocked_by_power_control_tt
+			}
+		}
 		search_filters = {
 			FOCUS_FILTER_GREAT_PROJECT
 		}
@@ -1842,7 +2352,12 @@ focus_tree = {
 			focus = gws_focus_lines_centralisation
 			focus = gws_focus_supply_reserves
 		}
-		completion_reward = {}
+		completion_reward = {
+			hidden_effect = {
+				unlock_national_focus = gws_focus_supply_reserves
+				unlock_national_focus = gws_focus_lines_centralisation
+			}
+		}
 		search_filters = {
 			FOCUS_FILTER_GREAT_PROJECT
 		}
@@ -2386,6 +2901,10 @@ focus_tree = {
 				gws_huge_contruction_psbf = 0.025
 				tooltip = production_speed_buildings_factor_tt
 			}
+			add_to_variable = {
+				gws_huge_contruction_csic = 0.02
+				tooltip = contruction_site_incident_chance_tt
+			}
 			hidden_effect = {
 				if = {
 					limit = {
@@ -2570,6 +3089,10 @@ focus_tree = {
 			add_to_variable = {
 				gws_huge_contruction_psbf = 0.025
 				tooltip = production_speed_buildings_factor_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_csic = 0.03
+				tooltip = contruction_site_incident_chance_tt
 			}
 			hidden_effect = {
 				if = {
@@ -2757,6 +3280,10 @@ focus_tree = {
 				gws_huge_contruction_psbf = 0.08
 				tooltip = production_speed_buildings_factor_tt
 			}
+			add_to_variable = {
+				gws_huge_contruction_csic = 0.01
+				tooltip = contruction_site_incident_chance_tt
+			}
 			hidden_effect = {
 				if = {
 					limit = {
@@ -2900,7 +3427,13 @@ focus_tree = {
 			focus = gws_focus_magitron_initial
 			focus = gws_focus_silo_initial
 		}
-		completion_reward = {}
+		completion_reward = {
+			custom_effect_tooltip = change_huge_contruction_site_tt
+			add_to_variable = {
+				gws_huge_contruction_csic = -0.1
+				tooltip = contruction_site_incident_chance_tt
+			}
+		}
 		search_filters = {
 			FOCUS_FILTER_GREAT_PROJECT
 		}
@@ -2957,6 +3490,10 @@ focus_tree = {
 			add_to_variable = {
 				gws_huge_contruction_lrf = 0.1
 				tooltip = local_resources_factor_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_csic = 0.05
+				tooltip = contruction_site_incident_chance_tt
 			}
 			hidden_effect = {
 				if = {
@@ -3041,6 +3578,126 @@ focus_tree = {
 		}
 	}
 	#defence tree
-
+	focus = {
+		id = gws_focus_emergency_functioning_committee
+		#icon
+		cost = 5
+		x = 40
+		y = 8
+		ai_will_do = {
+			base = 200
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_fortification_innovations
+		#icon
+		cost = 5
+		x = -3
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_emergency_functioning_committee
+		prerequisite = { 
+			focus = gws_focus_emergency_functioning_committee
+		}
+		completion_reward = {}
+	}
+	focus = { #Zukunftshüter
+		id = gws_focus_zukunftshuter_academy
+		#icon
+		cost = 5
+		x = 3
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_emergency_functioning_committee
+		prerequisite = { 
+			focus = gws_focus_emergency_functioning_committee
+		}
+		completion_reward = {}
+	}
+	focus = {
+		id = gws_focus_redcon_system
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_fortification_innovations
+		prerequisite = { 
+			focus = gws_focus_fortification_innovations
+		}
+		prerequisite = { 
+			focus = gws_focus_zukunftshuter_academy
+		}
+		completion_reward = {
+			add_ideas = GWS_redcon_1
+		}
+	}
+	focus = {
+		id = gws_focus_recessed_carriage
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_redcon_system
+		prerequisite = { 
+			focus = gws_focus_redcon_system
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GWS_redcon_1
+				add_idea = GWS_redcon_2
+			}
+		}
+	}
+	focus = {
+		id = gws_focus_armored_caps_thickening
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_recessed_carriage
+		prerequisite = { 
+			focus = gws_focus_recessed_carriage
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GWS_redcon_2
+				add_idea = GWS_redcon_3
+			}
+		}
+	}
+	focus = {
+		id = gws_focus_super_large_caliber_howitzers
+		#icon
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = gws_focus_armored_caps_thickening
+		prerequisite = {
+			focus = gws_focus_armored_caps_thickening
+		}
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = GWS_redcon_3
+				add_idea = GWS_redcon_x
+			}
+		}
+	}
 	#land development tree
 }

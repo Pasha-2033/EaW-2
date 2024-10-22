@@ -29,3 +29,38 @@ transfer_hooftagon_from_PREV = {
 	}
 	clear_array = PREV.hooftagon
 }
+#finifing magitrong digging phase
+finish_magitron_digging_phase = {
+	if = {
+		limit = {
+			check_variable = {
+				magitron_building_phase > 3
+			}
+		}
+		country_event = {
+			id = magitron.2
+		}
+	}
+	else = {
+		add_to_variable = {
+			magitron_building_phase = 1
+		}
+	}
+}
+finish_magitron_communication_phase = {
+	if = {
+		limit = {
+			check_variable = {
+				magitron_building_phase > 3
+			}
+		}
+		country_event = {
+			id = magitron.3
+		}
+	}
+	else = {
+		add_to_variable = {
+			magitron_building_phase = 1
+		}
+	}
+}

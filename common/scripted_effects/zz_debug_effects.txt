@@ -334,3 +334,123 @@ d_rbop = {
 		id = EQS_prince_blueblood_vs_twilight
 	}
 }
+d_cdd = {
+	set_temp_variable = {
+		reduction = days_mission_timeout@central_dogma_digging
+	}
+	subtract_from_temp_variable = {
+		reduction = 1
+	}
+	multiply_temp_variable = {
+		reduction = -1
+	}
+	add_days_mission_timeout = {
+		mission = central_dogma_digging
+		days = reduction
+	}
+}
+d_cdms = {
+	set_temp_variable = {
+		reduction = days_mission_timeout@central_dogma_metal_structures
+	}
+	subtract_from_temp_variable = {
+		reduction = 1
+	}
+	multiply_temp_variable = {
+		reduction = -1
+	}
+	add_days_mission_timeout = {
+		mission = central_dogma_metal_structures
+		days = reduction
+	}
+}
+d_cdsv = {
+	set_temp_variable = {
+		reduction = days_mission_timeout@central_dogma_strengthened_vault
+	}
+	subtract_from_temp_variable = {
+		reduction = 1
+	}
+	multiply_temp_variable = {
+		reduction = -1
+	}
+	add_days_mission_timeout = {
+		mission = central_dogma_strengthened_vault
+		days = reduction
+	}
+}
+d_esd = {
+	set_temp_variable = {
+		reduction = days_mission_timeout@energy_sector_digging
+	}
+	subtract_from_temp_variable = {
+		reduction = 1
+	}
+	multiply_temp_variable = {
+		reduction = -1
+	}
+	add_days_mission_timeout = {
+		mission = energy_sector_digging
+		days = reduction
+	}
+}
+d_ese = {
+	set_temp_variable = {
+		reduction = days_mission_timeout@energy_sector_enlargement
+	}
+	subtract_from_temp_variable = {
+		reduction = 1
+	}
+	multiply_temp_variable = {
+		reduction = -1
+	}
+	add_days_mission_timeout = {
+		mission = energy_sector_enlargement
+		days = reduction
+	}
+}
+d_csd = {
+	set_temp_variable = {
+		reduction = days_mission_timeout@control_sector_digging
+	}
+	subtract_from_temp_variable = {
+		reduction = 1
+	}
+	multiply_temp_variable = {
+		reduction = -1
+	}
+	add_days_mission_timeout = {
+		mission = control_sector_digging
+		days = reduction
+	}
+}
+d_cse = {
+	set_temp_variable = {
+		reduction = days_mission_timeout@control_sector_enforcement
+	}
+	subtract_from_temp_variable = {
+		reduction = 1
+	}
+	multiply_temp_variable = {
+		reduction = -1
+	}
+	add_days_mission_timeout = {
+		mission = control_sector_enforcement
+		days = reduction
+	}
+}
+d_csdd = {
+	set_temp_variable = {
+		reduction = days_mission_timeout@computing_sector_digging
+	}
+	subtract_from_temp_variable = {
+		reduction = 1
+	}
+	multiply_temp_variable = {
+		reduction = -1
+	}
+	add_days_mission_timeout = {
+		mission = computing_sector_digging
+		days = reduction
+	}
+}

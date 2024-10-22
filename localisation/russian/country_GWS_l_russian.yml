@@ -31,10 +31,21 @@ gws_focus_enchantment_cage: "Чарозащитная клетка"
 gws_focus_enchantment_cage_desc: "Это аналог поляризованного корпуса догмы будет спасать критическое оборудование от воздействий любой магии."
 gws_focus_laying_communications: "Прокладка коммуникаций"
 gws_focus_laying_communications_desc: "Закончив отделку всех туннелей, шахт и полостей, мы можем заняться коммуникациями - нервами и сосудами нашей машины!"
+
+
+
+
+gws_focus_magic_conductors: "Магические проводники"
+gws_focus_power_control: "Подстанции"
+gws_focus_coolant_control: "Контроль охлаждения"
 #huge_contruction_site modifiers and tooltips
 huge_contruction_site: "Великая стройка"
+contruction_site_incident_chance: "Шанс проишествий на стройке"
 add_huge_contruction_site_tt: "Будет добавлена §Y$huge_contruction_site$§!, что дает:\n$MODIFIER_CIVILIAN_INTEL_TO_OTHERS$: §R+5.0%§!\n$MODIFIER_PRODUCTION_SPEED_BUILDINGS_FACTOR$: §R-2.00%§!\n$MODIFIER_CONSUMER_GOODS_EXPECTED_VALUE$: §Y+5.0%§!\n$MODIFIER_CONSCRIPTION_TOTAL_FACTOR$: §R-5%§!"
 change_huge_contruction_site_tt: "§Y$huge_contruction_site$§! изменится на:"
+blocked_by_magic_conductors_tt: "§RЭтот фокус будет пропущен при выполнении фокуса §Y$gws_focus_magic_conductors$§!!§!"
+blocked_by_power_control_tt: "§RЭтот фокус будет пропущен при выполнении фокуса §Y$gws_focus_power_control$§!!§!"
+blocked_by_coolant_control_tt: "§RЭтот фокус будет пропущен при выполнении фокуса §Y$gws_focus_coolant_control$§!!§!"
 huge_contruction_site_speeding_tt: "Мы предпримем меры, что существенно ускорят §Yвеликую стройку§!:"
 central_dogma_digging_speeding_tt: " §Y$central_dogma_digging$§!: оставшееся время $RIGHT|-=%0$"
 central_dogma_strengthened_vault_speeding_tt: " §Y$central_dogma_strengthened_vault$§!: оставшееся время $RIGHT|-=%0$"
@@ -44,9 +55,12 @@ energy_sector_digging_speeding_tt: " §Y$energy_sector_digging$§!: оставш
 energy_sector_enlargement_speeding_tt: " §Y$energy_sector_enlargement$§!: оставшееся время $RIGHT|-=%0$"
 control_sector_digging_speeding_tt: " §Y$control_sector_digging$§!: оставшееся время $RIGHT|-=%0$"
 control_sector_enforcement_speeding_tt: " §Y$control_sector_enforcement$§!: оставшееся время $RIGHT|-=%0$"
+contruction_site_incident_chance_tt: " $contruction_site_incident_chance$: $RIGHT|-=%0$"
 digging_allows_wall_constructing_tt: "Этапы рытья позволяют заниматься работой со стенками"
+huge_contruction_mission_speeding_tt: "Полученные бонусы изменят время на [?reduction|-=%0]."
+has_finished_digging_magitron_missions_tt: "Строительные работы секторов и догмы завершены"
 #events
-gesellwissens.1.t: "Где первые две?"
-gesellwissens.1.d: "В ходе исследований вяснилось, что магия имеет свое базовое состояние, котрое \"специализируется\" и используется, например в заклинаниях. Магия в таком состоянии была названа нуль-магией. Она таит в себе огромный потенциал. Будучи ничем, она может стать всем.\n\nMAGITRON - это серия машин, способных оперировать нуль-магией. Всего их было построено две.\n\nПервая, экспериментальная, могла выполнять простейшие операции по типу перемещения предметов и при том, теми, кто сами не обладали магией для этого. Именно на ней был получен первый эрот искусственной любви. Ее мощностей не хватает для наших задач...\n\nВторая оказась нежизнеспособной и взорвалась при перегрузке. Разрушения оказались колоссальными, магический пожар распорстранялся, охватывая гектар за гектаром."
-gesellwissens.1.a: "Ошибки учтены, приступаем!"
+magitron.1.t: "Где первые две?"
+magitron.1.d: "В ходе исследований вяснилось, что магия имеет свое базовое состояние, котрое \"специализируется\" и используется, например в заклинаниях. Магия в таком состоянии была названа нуль-магией. Она таит в себе огромный потенциал. Будучи ничем, она может стать всем.\n\nMAGITRON - это серия машин, способных оперировать нуль-магией. Всего их было построено две.\n\nПервая, экспериментальная, могла выполнять простейшие операции по типу перемещения предметов и при том, теми, кто сами не обладали магией для этого. Именно на ней был получен первый эрот искусственной любви. Ее мощностей не хватает для наших задач...\n\nВторая оказась нежизнеспособной и взорвалась при перегрузке. Разрушения оказались колоссальными, магический пожар распорстранялся, охватывая гектар за гектаром."
+magitron.1.a: "Ошибки учтены, приступаем!"
 ###"MAGITRON - это серия машин, способных оперировать нуль-магией. Всего их было построено две. Первая, экспериментальная, могла выполнять простейшие операции по типу перемещения предметов и при том, теми, кто сами не обладали магией для этого. Именно на ней был получен первый эрот искусственной любви. Ее мощностей не хватает для наших задач...Вторая оказась нежизнеспособной и взорвалась при перегрузке..."
