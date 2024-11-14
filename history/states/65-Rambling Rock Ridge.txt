@@ -2,24 +2,38 @@ state = {
 	id = 65
 	name = "STATE_65"
 	provinces = {
-		651 669 771 3493 3549 3671 3772 3976 6195 6547 6644 6973 9478 9492 9507 11596 11631 11726
+		651 
+		669 
+		771 
+		3493 
+		3549 
+		3671 
+		3772 
+		3976 
+		6195 
+		6547 
+		6644 
+		6973 
+		9478 
+		9492 
+		9507 
+		11596 
+		11631 
+		11726
 	}
-	manpower=15600
-	state_category=pastoral
-	buildings_max_level_factor=1.00
-
-	history={
-		982.1.1 = {
-			owner = EQS
-			add_core_of = EQS
-			add_claim_by = ICE
+	manpower = 15600
+	state_category = pastoral
+	buildings_max_level_factor = 1
+	history = {
+		owner = EQS
+		add_core_of = EQS
+		add_claim_by = ICE
+		buildings = {
+			infrastructure = 1
 		}
 		1002.1.1 = {
 			remove_claim_by = ICE
 		}
 		1050.1.1 = {}
-		buildings = {
-			infrastructure = 1
-		}
 	}
 }

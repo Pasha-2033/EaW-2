@@ -199,6 +199,25 @@ calc_surplus_appropriation_min_value = {
 		sa_min_value = temp_sa_min_value
 	}
 }
+d_csav = {
+	calc_surplus_appropriation_average_value = yes
+}
+calc_surplus_appropriation_average_value = {
+	set_variable = {
+		sa_average_value = surplus_appropriation_real_values^0
+	}
+	for_loop_effect = {
+		start = 1
+		end = surplus_appropriation_real_values^num
+		value = i
+		add_to_variable = {
+			sa_average_value = surplus_appropriation_real_values^i
+		}
+	}
+	divide_variable = {
+		sa_average_value = surplus_appropriation_real_values^num
+	}
+}
 sa_tick_effects = {
 	if = {
 		limit = {
@@ -222,6 +241,7 @@ sa_tick_effects = {
 		}
 		calc_surplus_appropriation_real_values = yes
 		calc_surplus_appropriation_min_value = yes
+		calc_surplus_appropriation_average_value = yes
 		for_each_loop = {
 			array = surplus_appropriation_real_values
 			index = i
@@ -293,6 +313,7 @@ add_to_food_storage = {
 		}
 		calc_surplus_appropriation_real_values = yes
 		calc_surplus_appropriation_min_value = yes
+		calc_surplus_appropriation_average_value = yes
 		for_each_loop = {
 			array = surplus_appropriation_real_values
 			index = i

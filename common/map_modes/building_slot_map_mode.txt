@@ -5,10 +5,7 @@ scripted_map_modes = {
             color = {
 				FROM = {
 					set_temp_variable = {
-						slots = common_builded_slots
-					}
-					add_to_temp_variable = {
-						slots = common_empty_slots
+						slots = common_all_slots
 					}
 					if = {
 						limit = {
@@ -17,7 +14,7 @@ scripted_map_modes = {
 							}
 						}
 						divide_temp_variable = {
-							slots = 25
+							slots = 35
 						}
 						#sqrt from x/y, where x < y
 						set_temp_variable = { temp = slots }

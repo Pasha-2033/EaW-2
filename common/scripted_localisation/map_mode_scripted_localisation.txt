@@ -1,0 +1,543 @@
+#get tooltip by state category
+defined_text = {
+	name = get_state_building_potential
+	text = {
+		trigger = {
+			has_state_category = megalopolis
+		}
+		localization_key = "megalopolis_building_potential"
+	}
+	text = {
+		trigger = {
+			has_state_category = metropolis
+		}
+		localization_key = "metropolis_building_potential"
+	}
+	text = {
+		trigger = {
+			has_state_category = large_city
+		}
+		localization_key = "large_city_building_potential"
+	}
+	text = {
+		trigger = {
+			has_state_category = city
+		}
+		localization_key = "city_building_potential"
+	}
+	text = {
+		trigger = {
+			has_state_category = large_town
+		}
+		localization_key = "large_town_building_potential"
+	}
+	text = {
+		trigger = {
+			has_state_category = town
+		}
+		localization_key = "town_building_potential"
+	}
+	text = {
+		trigger = {
+			has_state_category = rural
+		}
+		localization_key = "rural_building_potential"
+	}
+	text = {
+		trigger = {
+			has_state_category = small_island
+		}
+		localization_key = "small_island_building_potential"
+	}
+	text = {
+		trigger = {
+			has_state_category = pastoral
+		}
+		localization_key = "pastoral_building_potential"
+	}
+	text = {
+		trigger = {
+			has_state_category = tiny_island
+		}
+		localization_key = "tiny_island_building_potential"
+	}
+	text = {
+		trigger = {
+			has_state_category = enclave
+		}
+		localization_key = "enclave_building_potential"
+	}
+	text = {
+		trigger = {
+			has_state_category = wasteland
+		}
+		localization_key = "wasteland_building_potential"
+	}
+	text = {
+		localization_key = "unclassified_building_potential"
+	}
+}
+defined_text = {
+	name = get_state_building_potential_from_category
+	text = {
+		trigger = {
+			has_state_category = megalopolis
+		}
+		localization_key = "12"
+	}
+	text = {
+		trigger = {
+			has_state_category = metropolis
+		}
+		localization_key = "10"
+	}
+	text = {
+		trigger = {
+			has_state_category = large_city
+		}
+		localization_key = "8"
+	}
+	text = {
+		trigger = {
+			has_state_category = city
+		}
+		localization_key = "6"
+	}
+	text = {
+		trigger = {
+			has_state_category = large_town
+		}
+		localization_key = "5"
+	}
+	text = {
+		trigger = {
+			has_state_category = town
+		}
+		localization_key = "4"
+	}
+	text = {
+		trigger = {
+			has_state_category = rural
+		}
+		localization_key = "2"
+	}
+	text = {
+		trigger = {
+			has_state_category = small_island
+		}
+		localization_key = "1"
+	}
+	text = {
+		trigger = {
+			has_state_category = pastoral
+		}
+		localization_key = "1"
+	}
+	text = {
+		trigger = {
+			has_state_category = tiny_island
+		}
+		localization_key = "0"
+	}
+	text = {
+		trigger = {
+			has_state_category = enclave
+		}
+		localization_key = "0"
+	}
+	text = {
+		trigger = {
+			has_state_category = wasteland
+		}
+		localization_key = "0"
+	}
+	text = {
+		localization_key = "?"
+	}
+}
+#state race
+defined_text = {
+	name = get_state_race
+	text = {
+		trigger = {
+			check_variable = {
+				state_race = token:changeling_race
+			}
+		}
+		localization_key = "changeling_race"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				state_race = token:pony_race
+			}
+		}
+		localization_key = "pony_race"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				state_race = token:deer_race
+			}
+		}
+		localization_key = "deer_race"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				state_race = token:griffon_race
+			}
+		}
+		localization_key = "griffon_race"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				state_race = token:hippogriff_race
+			}
+		}
+		localization_key = "hippogriff_race"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				state_race = token:diamond_dog_race
+			}
+		}
+		localization_key = "diamond_dog_race"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				state_race = token:minotaur_race
+			}
+		}
+		localization_key = "minotaur_race"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				state_race = token:penguin_race
+			}
+		}
+		localization_key = "penguin_race"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				state_race = token:dragon_race
+			}
+		}
+		localization_key = "dragon_race"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				state_race = token:undead_race
+			}
+		}
+		localization_key = "undead_race"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				state_race = token:yak_race
+			}
+		}
+		localization_key = "yak_race"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				state_race = token:bear_race
+			}
+		}
+		localization_key = "bear_race"
+	}
+	text = {
+		localization_key = "generic_race"
+	}
+}
+defined_text = {
+	name = get_state_race_desc
+	text = {
+		trigger = {
+			check_variable = {
+				state_race = token:changeling_race
+			}
+		}
+		localization_key = "changeling_race_desc"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				state_race = token:pony_race
+			}
+		}
+		localization_key = "pony_race_desc"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				state_race = token:deer_race
+			}
+		}
+		localization_key = "deer_race_desc"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				state_race = token:griffon_race
+			}
+		}
+		localization_key = "griffon_race_desc"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				state_race = token:hippogriff_race
+			}
+		}
+		localization_key = "hippogriff_race_desc"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				state_race = token:diamond_dog_race
+			}
+		}
+		localization_key = "diamond_dog_race_desc"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				state_race = token:minotaur_race
+			}
+		}
+		localization_key = "minotaur_race_desc"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				state_race = token:penguin_race
+			}
+		}
+		localization_key = "penguin_race_desc"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				state_race = token:dragon_race
+			}
+		}
+		localization_key = "dragon_race_desc"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				state_race = token:undead_race
+			}
+		}
+		localization_key = "undead_race_desc"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				state_race = token:yak_race
+			}
+		}
+		localization_key = "yak_race_desc"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				state_race = token:bear_race
+			}
+		}
+		localization_key = "bear_race_desc"
+	}
+	text = {
+		localization_key = "generic_race_desc"
+	}
+}
+#color surpluss appropriation map mode tooltip values
+defined_text = {
+	name = get_colored_average_value
+	text = {
+		trigger = {
+			has_country_flag = no_sa_impact
+		}
+		localization_key = "---"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				sa_average_value > 1.5
+			}
+		}
+		localization_key = "[?FROM.controller:sa_average_value|%0B]"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				sa_average_value > 0.8
+			}
+		}
+		localization_key = "[?FROM.controller:sa_average_value|%0G]"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				sa_average_value > 0.4
+			}
+		}
+		localization_key = "[?FROM.controller:sa_average_value|%0Y]"
+	}
+	text = {
+		localization_key = "[?FROM.controller:sa_average_value|%0R]"
+	}
+}
+defined_text = {
+	name = get_colored_min_value_indicator
+	text = {
+		trigger = {
+			has_country_flag = no_sa_impact
+		}
+		localization_key = "---"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				sa_min_value > 1.5
+			}
+		}
+		localization_key = "[?FROM.controller:sa_min_value|%0B]"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				sa_average_value > 0.8
+			}
+		}
+		localization_key = "[?FROM.controller:sa_average_value|%0G]"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				sa_min_value > 0.4
+			}
+		}
+		localization_key = "[?FROM.controller:sa_min_value|%0Y]"
+	}
+	text = {
+		localization_key = "[?FROM.controller:sa_min_value|%0R]"
+	}
+}
+defined_text = {
+	name = get_colored_sa_real_value_0
+	text = {
+		trigger = {
+			has_country_flag = no_sa_impact
+		}
+		localization_key = "---"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				surplus_appropriation_real_values^0 > 1.5
+			}
+		}
+		localization_key = "[?FROM.controller:surplus_appropriation_real_values^0|%0B]"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				surplus_appropriation_real_values^0 > 0.8
+			}
+		}
+		localization_key = "[?FROM.controller:surplus_appropriation_real_values^0|%0G]"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				surplus_appropriation_real_values^0 > 0.4
+			}
+		}
+		localization_key = "[?FROM.controller:surplus_appropriation_real_values^0|%0Y]"
+	}
+	text = {
+		localization_key = "[?FROM.controller:surplus_appropriation_real_values^0|%0R]"
+	}
+}
+defined_text = {
+	name = get_colored_sa_real_value_1
+	text = {
+		trigger = {
+			has_country_flag = no_sa_impact
+		}
+		localization_key = "---"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				surplus_appropriation_real_values^1 > 1.5
+			}
+		}
+		localization_key = "[?FROM.controller:surplus_appropriation_real_values^1|%0B]"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				surplus_appropriation_real_values^1 > 0.8
+			}
+		}
+		localization_key = "[?FROM.controller:surplus_appropriation_real_values^1|%0G]"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				surplus_appropriation_real_values^1 > 0.4
+			}
+		}
+		localization_key = "[?FROM.controller:surplus_appropriation_real_values^1|%0Y]"
+	}
+	text = {
+		localization_key = "[?FROM.controller:surplus_appropriation_real_values^1|%0R]"
+	}
+}
+defined_text = {
+	name = get_colored_sa_real_value_2
+	text = {
+		trigger = {
+			has_country_flag = no_sa_impact
+		}
+		localization_key = "---"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				surplus_appropriation_real_values^2 > 1.5
+			}
+		}
+		localization_key = "[?FROM.controller:surplus_appropriation_real_values^2|%0B]"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				surplus_appropriation_real_values^2 > 0.8
+			}
+		}
+		localization_key = "[?FROM.controller:surplus_appropriation_real_values^2|%0G]"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				surplus_appropriation_real_values^2 > 0.4
+			}
+		}
+		localization_key = "[?FROM.controller:surplus_appropriation_real_values^2|%0Y]"
+	}
+	text = {
+		localization_key = "[?FROM.controller:surplus_appropriation_real_values^2|%0R]"
+	}
+}

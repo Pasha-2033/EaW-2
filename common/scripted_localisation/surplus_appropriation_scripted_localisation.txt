@@ -1,10 +1,10 @@
 #min value indicator (on topbar)
 defined_text = {
-	name = "min_value_indicator"
+	name = min_value_indicator
 	text = {
 		trigger = {
 			check_variable = {
-				sa_min_value > 1.499
+				sa_min_value > 1.5
 			}
 		}
 		localization_key = "min_value_indicator_green"
@@ -12,18 +12,18 @@ defined_text = {
 	text = {
 		trigger = {
 			check_variable = {
-				sa_min_value < 0.5
+				sa_min_value > 0.4
 			}
 		}
-		localization_key = "min_value_indicator_red"
+		localization_key = "min_value_indicator_normal"
 	}
 	text = {
-		localization_key = "min_value_indicator_normal"
+		localization_key = "min_value_indicator_red"
 	}
 }
 #food modifier desc
 defined_text = {
-	name = "civil_food_modifier_values"
+	name = civil_food_modifier_values
 	text = {
 		trigger = {
 			check_variable = {
@@ -37,7 +37,7 @@ defined_text = {
 	}
 }
 defined_text = {
-	name = "facilities_food_modifier_values"
+	name = facilities_food_modifier_values
 	text = {
 		trigger = {
 			check_variable = {
@@ -51,7 +51,7 @@ defined_text = {
 	}
 }
 defined_text = {
-	name = "army_food_modifier_values"
+	name = army_food_modifier_values
 	text = {
 		trigger = {
 			check_variable = {
@@ -65,7 +65,7 @@ defined_text = {
 	}
 }
 defined_text = {
-	name = "change_harvest_failure_food_scripted_localisation"
+	name = change_harvest_failure_food_scripted_localisation
 	text = {
 		trigger = {
 			check_variable = {
@@ -79,7 +79,7 @@ defined_text = {
 	}
 }
 defined_text = {
-	name = "change_harvest_failure_supply_scripted_localisation"
+	name = change_harvest_failure_supply_scripted_localisation
 	text = {
 		trigger = {
 			check_variable = {

@@ -1,5 +1,5 @@
 scripted_map_modes = {
-	economic_index_map_mode = {
+	economy_index_map_mode = {
 		top = {
             type = country
 			color = {
@@ -167,8 +167,12 @@ scripted_map_modes = {
 					}
 					add_to_temp_variable = { temp = 0.45 }
 				}
-				set_temp_variable = { red = temp }
-				set_temp_variable = { green = temp }
+				#set_temp_variable = { red = temp }
+				#set_temp_variable = { green = temp }
+
+				set_temp_variable = { red = FROM.modifier@economy_index }
+				set_temp_variable = { green = FROM.modifier@economy_index }
+
 				set_temp_variable = { blue = 0 }
 				set_temp_variable = { alpha = 0.7 }
 			}

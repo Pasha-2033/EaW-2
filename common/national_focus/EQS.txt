@@ -802,6 +802,25 @@ focus_tree = {
 				custom_effect_tooltip = if_they_accept
 				event_option_tooltip = equestria.10.b
 			}
+			add_power_balance_modifier = {
+				id = EQS_prince_blueblood_vs_twilight
+				modifier = EQS_PGT_white_peace
+			}
+			if = {
+				limit = {
+					has_completed_focus = eqs_focus_unicorn_censorship
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = -0.025
+				}
+			}
+			else = {
+				add_popularity = {
+					ideology = fascism
+					popularity = -0.05
+				}
+			}
 		}
 	}
 	focus = {
@@ -830,6 +849,25 @@ focus_tree = {
 				custom_effect_tooltip = if_they_accept
 				event_option_tooltip = equestria.10.a
 			}
+			add_power_balance_modifier = {
+				id = EQS_prince_blueblood_vs_twilight
+				modifier = EQS_EPT_white_peace
+			}
+			if = {
+				limit = {
+					has_completed_focus = eqs_focus_unicorn_censorship
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = -0.025
+				}
+			}
+			else = {
+				add_popularity = {
+					ideology = fascism
+					popularity = -0.05
+				}
+			}
 		}
 	}
 	focus = {
@@ -842,10 +880,7 @@ focus_tree = {
 			base = 200
 		}
 		available = {
-			NOT = {
-				has_war_with = EPT
-				has_war_with = PGT
-			}
+			has_capitulated = no
 		}
 		relative_position_id = eqs_focus_foreign_policy
 		prerequisite = {
@@ -872,7 +907,6 @@ focus_tree = {
 			base = 200
 		}
 		available = {
-			has_civil_war = no
 			controls_state = 3
 		}
 		relative_position_id = eqs_focus_central_equus_defence_district
@@ -1717,12 +1751,6 @@ focus_tree = {
 		}
 		continue_if_invalid = yes
 		cancel_if_invalid = no
-		cancel = {
-			NOT = {
-				controls_state = 67
-			}
-		}
-		cancelable = no
 		select_effect = {
 			every_owned_state = {
 				limit = {

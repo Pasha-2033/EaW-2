@@ -1,24 +1,30 @@
-state={
-	id=120
-	name="STATE_120"
-
-	provinces={
-		536 584 628 3674 3684 3835 6673 6691 6720 9613 11411
+state = {
+	id = 120
+	name = "STATE_120"
+	provinces = {
+		536 
+		584 
+		628 
+		3674 
+		3684 
+		3835 
+		6673 
+		6691 
+		6720 
+		9613 
+		11411
 	}
-
-	manpower=29900
+	manpower = 29900
 	state_category = pastoral
-	buildings_max_level_factor=1.00
-
-	history={
-		982.1.1 = {
-			owner = ICE
-			add_core_of = ICE
-			add_core_of = EQS
-		}
+	buildings_max_level_factor = 1
+	history = {
+		owner = ICE
+		add_core_of = ICE
+		add_core_of = EQS
 		1002.1.1 = {
 			owner = EQS
 			remove_core_of = ICE
 		}
+		1050.1.1 = {}
 	}
 }

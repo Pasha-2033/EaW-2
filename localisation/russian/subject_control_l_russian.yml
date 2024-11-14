@@ -9,10 +9,10 @@ economy_cost_display_index_value: "Цена уровня:\n[economy_law_cost]Н�
 power_concentration_cost_display_index_value: "Цена уровня:\n[power_concentration_law_cost]"
 
 mobilization_law_both: "$mobilization_law_political_cost$\n$mobilization_law_command_power_cost$"
-mobilization_law_political_cost: "£pol_power_icon §Y[?FROM.mobilization_law_pp_cost_factor]§!"
-mobilization_law_command_power_cost: "£command_power §Y[?FROM.mobilization_law_cp_cost_factor]§!"
-trade_law_pp_cost: "£pol_power_icon §Y[?FROM.trade_pp_cost_factor]§!"
-economy_law_pp_cost: "£pol_power_icon §Y[?FROM.trade_pp_cost_factor]§!"
+mobilization_law_political_cost: "£pol_power_icon [?FROM.mobilization_law_pp_cost_factor|Y]"
+mobilization_law_command_power_cost: "£command_power §Y[?FROM.mobilization_law_cp_cost_factor|Y]"
+trade_law_pp_cost: "£pol_power_icon [?FROM.trade_pp_cost_factor|Y]"
+economy_law_pp_cost: "£pol_power_icon [?FROM.trade_pp_cost_factor|Y]"
 
 power_concentration_law_pp_cost: "£pol_power_icon [?FROM.power_concentration_pp_cost_factor]"
 

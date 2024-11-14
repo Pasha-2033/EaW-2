@@ -1850,6 +1850,9 @@ technologies = {
 			leads_to_tech = super_heavy_nuclear_reactor
 			research_cost_coeff = 1
 		}
+		sub_technologies = {
+			super_heavy_nuclear_reactor
+		}
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.5
@@ -1859,7 +1862,7 @@ technologies = {
 			name = mtgnavalfolder
 			position = {  
 				x = 0 
-				y = 41 
+				y = 42 
 			}
 		}	
 		ai_will_do = {
@@ -1882,13 +1885,6 @@ technologies = {
 		xp_research_bonus = 1.5
 		research_cost = 1.25
 		start_year = 1026	
-		folder = {
-			name = mtgnavalfolder
-			position = {  
-				x = 0 
-				y = 43
-			}
-		}	
 		ai_will_do = {
 			base = 1
 		}		
@@ -2264,6 +2260,9 @@ technologies = {
 		dependencies = {
 			nuke_naval = 1
 		}
+		sub_technologies = {
+			supercarrier_nuclear_reactor
+		}
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.5
@@ -2273,7 +2272,7 @@ technologies = {
 			name = mtgnavalfolder
 			position = {  
 				x = 0 
-				y = 41 
+				y = 42 
 			}
 		}
 		ai_will_do = {
@@ -2296,13 +2295,6 @@ technologies = {
 		xp_research_bonus = 1.5
 		research_cost = 1.25
 		start_year = 1026
-		folder = {
-			name = mtgnavalfolder
-			position = {  
-				x = 0 
-				y = 43 
-			}
-		}
 		ai_will_do = {
 			base = 1
 		}

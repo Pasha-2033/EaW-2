@@ -462,259 +462,367 @@ init_sa_army_mod_recruitable_value = {
 	add_to_array = { global.sa_army_mod_recruitable_value = 0.12	} #180%
 	add_to_array = { global.sa_army_mod_recruitable_value = 0.15	} #200%
 }
-init_state_culture = {
+d_isr = {
+	init_state_race = yes
+}
+init_state_race = {
 	#DO NOT USE FOR_LOOP_EFFECT OR OTHER!
 	#THIS ORGANISATION ALLOWS DIRECT CONTROL!
 	#CAN BE CHANGED TO ARRAY ITERATION FOR RELEASE!
-	#common
-	1	= { set_variable = { state_culture = token:pony_race		} }
-	2	= { set_variable = { state_culture = token:pony_race		} }
-	3	= { set_variable = { state_culture = token:pony_race		} }
-	4	= { set_variable = { state_culture = token:pony_race		} }
-	5	= { set_variable = { state_culture = token:pony_race		} }
-	6	= { set_variable = { state_culture = token:dragon_race		} }
-	7	= { set_variable = { state_culture = token:dragon_race		} }
-	8	= { set_variable = { state_culture = token:dragon_race		} }
-	9	= { set_variable = { state_culture = token:dragon_race		} }
-	10	= { set_variable = { state_culture = token:dragon_race		} }
+	1	= { set_variable = { state_race = token:pony_race		} }
+	2	= { set_variable = { state_race = token:pony_race		} }
+	3	= { set_variable = { state_race = token:pony_race		} }
+	4	= { set_variable = { state_race = token:pony_race		} }
+	5	= { set_variable = { state_race = token:pony_race		} }
+	6	= { set_variable = { state_race = token:dragon_race		} }
+	7	= { set_variable = { state_race = token:dragon_race		} }
+	8	= { set_variable = { state_race = token:dragon_race		} }
+	9	= { set_variable = { state_race = token:dragon_race		} }
+	10	= { set_variable = { state_race = token:dragon_race		} }
+	11	= { set_variable = { state_race = token:yak_race		} }
+	12	= { set_variable = { state_race = token:pony_race		} }
+	13	= { set_variable = { state_race = token:pony_race		} }
+	14	= { set_variable = { state_race = token:pony_race		} }
+	15	= { set_variable = { state_race = token:pony_race		} }
+	16	= { set_variable = { state_race = token:pony_race		} }
+	17	= { set_variable = { state_race = token:dragon_race		} }
+	18	= { set_variable = { state_race = token:pony_race		} }
+	19	= { set_variable = { state_race = token:pony_race		} }
+	20	= { set_variable = { state_race = token:undead_race		} }
+	21	= { set_variable = { state_race = token:undead_race		} }
+	22	= { set_variable = { state_race = token:undead_race		} }
+	23	= { set_variable = { state_race = token:undead_race		} }
+	24	= { set_variable = { state_race = token:pony_race		} }
+	25	= { set_variable = { state_race = token:pony_race		} }
+	26	= { set_variable = { state_race = token:pony_race		} }
+	27	= { set_variable = { state_race = token:pony_race		} }
+	28	= { set_variable = { state_race = token:pony_race		} }
+	29	= { set_variable = { state_race = token:pony_race		} }
+	30	= { set_variable = { state_race = token:dragon_race		} }
+	31	= { set_variable = { state_race = token:undead_race		} }
+	32	= { set_variable = { state_race = token:pony_race		} }
+	33	= { set_variable = { state_race = token:pony_race		} }
+	34	= { set_variable = { state_race = token:pony_race		} }
+	35	= { set_variable = { state_race = token:undead_race		} }
+	36	= { set_variable = { state_race = token:pony_race		} }
+	37	= { set_variable = { state_race = token:dragon_race		} }
+	38	= { set_variable = { state_race = token:undead_race		} }
+	39	= { set_variable = { state_race = token:pony_race		} }
+	40	= { set_variable = { state_race = token:undead_race		} }
+	41	= { set_variable = { state_race = token:pony_race		} }
+	42	= { set_variable = { state_race = token:undead_race		} }
+	43	= { set_variable = { state_race = token:undead_race		} }
+	44	= { set_variable = { state_race = token:undead_race		} }
+	45	= { set_variable = { state_race = token:pony_race		} }
+	46	= { set_variable = { state_race = token:pony_race		} }
+	47	= { set_variable = { state_race = token:undead_race		} }
+	48	= { set_variable = { state_race = token:pony_race		} }
+	49	= { set_variable = { state_race = token:undead_race		} }
+	50	= { set_variable = { state_race = token:pony_race		} }
+	51	= { set_variable = { state_race = token:undead_race		} }
+	52	= { set_variable = { state_race = token:pony_race		} }
 
-	12	= { set_variable = { state_culture = token:pony_race		} }
+	54	= { set_variable = { state_race = token:undead_race		} }
+	55	= { set_variable = { state_race = token:pony_race		} }
+	56	= { set_variable = { state_race = token:undead_race		} }
+	57	= { set_variable = { state_race = token:pony_race		} }
+	58	= { set_variable = { state_race = token:pony_race		} }
+	59	= { set_variable = { state_race = token:pony_race		} }
+	60	= { set_variable = { state_race = token:pony_race		} }
+	61	= { set_variable = { state_race = token:pony_race		} }
+	62	= { set_variable = { state_race = token:bear_race		} }
+	63	= { set_variable = { state_race = token:undead_race		} }
+	64	= { set_variable = { state_race = token:pony_race		} }
+	65	= { set_variable = { state_race = token:pony_race		} }
+	66	= { set_variable = { state_race = token:pony_race		} }
+	67	= { set_variable = { state_race = token:pony_race		} }
+	68	= { set_variable = { state_race = token:pony_race		} }
+	69	= { set_variable = { state_race = token:deer_race		} }
+	70	= { set_variable = { state_race = token:pony_race		} }
+	71	= { set_variable = { state_race = token:undead_race		} }
+	72	= { set_variable = { state_race = token:pony_race		} }
+	73	= { set_variable = { state_race = token:pony_race		} }
+	74	= { set_variable = { state_race = token:pony_race		} }
+	75	= { set_variable = { state_race = token:pony_race		} }
+	76	= { set_variable = { state_race = token:deer_race		} }
 
-	14	= { set_variable = { state_culture = token:pony_race		} }
-	15	= { set_variable = { state_culture = token:pony_race		} }
-	16	= { set_variable = { state_culture = token:pony_race		} }
+	78	= { set_variable = { state_race = token:undead_race		} }
+	79	= { set_variable = { state_race = token:pony_race		} }
+	80	= { set_variable = { state_race = token:undead_race		} }
+	81	= { set_variable = { state_race = token:pony_race		} }
+	82	= { set_variable = { state_race = token:pony_race		} }
+	83	= { set_variable = { state_race = token:pony_race		} }
+	84	= { set_variable = { state_race = token:undead_race		} }
+	85	= { set_variable = { state_race = token:undead_race		} }
+	86	= { set_variable = { state_race = token:pony_race		} }
+	87	= { set_variable = { state_race = token:undead_race		} }
+	88	= { set_variable = { state_race = token:pony_race		} }
+	89	= { set_variable = { state_race = token:undead_race		} }
+	90	= { set_variable = { state_race = token:undead_race		} }
+	91	= { set_variable = { state_race = token:undead_race		} }
+	92	= { set_variable = { state_race = token:undead_race		} }
+	93	= { set_variable = { state_race = token:undead_race		} }
+	94	= { set_variable = { state_race = token:undead_race		} }
+	95	= { set_variable = { state_race = token:undead_race		} }
+	96	= { set_variable = { state_race = token:pony_race		} }
+	97	= { set_variable = { state_race = token:undead_race		} }
 
-	19	= { set_variable = { state_culture = token:pony_race		} }
+	99	= { set_variable = { state_race = token:undead_race		} }
+	100	= { set_variable = { state_race = token:pony_race		} }
+	101	= { set_variable = { state_race = token:undead_race		} }
+	102	= { set_variable = { state_race = token:undead_race		} }
+	103	= { set_variable = { state_race = token:pony_race		} }
+	104	= { set_variable = { state_race = token:pony_race		} }
+	105	= { set_variable = { state_race = token:undead_race		} }
+	106	= { set_variable = { state_race = token:pony_race		} }
+	107	= { set_variable = { state_race = token:pony_race		} }
+	108	= { set_variable = { state_race = token:pony_race		} }
+	109	= { set_variable = { state_race = token:pony_race		} }
+	110	= { set_variable = { state_race = token:pony_race		} }
+	111	= { set_variable = { state_race = token:undead_race		} }
+	112	= { set_variable = { state_race = token:undead_race		} }
+	113	= { set_variable = { state_race = token:undead_race		} }
+	114	= { set_variable = { state_race = token:undead_race		} }
+	115	= { set_variable = { state_race = token:undead_race		} }
+	116	= { set_variable = { state_race = token:undead_race		} }
+	117	= { set_variable = { state_race = token:undead_race		} }
+	118	= { set_variable = { state_race = token:undead_race		} }
+	119	= { set_variable = { state_race = token:undead_race		} }
+	120	= { set_variable = { state_race = token:undead_race		} }
+	121	= { set_variable = { state_race = token:undead_race		} }
+	122	= { set_variable = { state_race = token:undead_race		} }
+	123	= { set_variable = { state_race = token:undead_race		} }
+	124	= { set_variable = { state_race = token:undead_race		} }
+	125	= { set_variable = { state_race = token:undead_race		} }
+	126	= { set_variable = { state_race = token:undead_race		} }
+	127	= { set_variable = { state_race = token:undead_race		} }
+	128	= { set_variable = { state_race = token:undead_race		} }
+	129	= { set_variable = { state_race = token:undead_race		} }
+	130	= { set_variable = { state_race = token:undead_race		} }
+	131	= { set_variable = { state_race = token:pony_race		} }
+	132	= { set_variable = { state_race = token:undead_race		} }
+	133	= { set_variable = { state_race = token:undead_race		} }
+	134	= { set_variable = { state_race = token:pony_race		} }
+	135	= { set_variable = { state_race = token:pony_race		} }
+	136	= { set_variable = { state_race = token:pony_race		} }
+	137	= { set_variable = { state_race = token:pony_race		} }
+	138	= { set_variable = { state_race = token:pony_race		} }
 
-	24	= { set_variable = { state_culture = token:pony_race		} }
-	25	= { set_variable = { state_culture = token:pony_race		} }
-	26	= { set_variable = { state_culture = token:pony_race		} }
+	153	= { set_variable = { state_race = token:pony_race		} }
+	154	= { set_variable = { state_race = token:undead_race		} }
+	155	= { set_variable = { state_race = token:undead_race		} }
+	156	= { set_variable = { state_race = token:pony_race		} }
+	157	= { set_variable = { state_race = token:undead_race		} }
+	158	= { set_variable = { state_race = token:undead_race		} }
+	159	= { set_variable = { state_race = token:undead_race		} }
+	160	= { set_variable = { state_race = token:pony_race		} }
+	161	= { set_variable = { state_race = token:pony_race		} }
+	162	= { set_variable = { state_race = token:pony_race		} }
+	163	= { set_variable = { state_race = token:pony_race		} }
+	164	= { set_variable = { state_race = token:pony_race		} }
+	165	= { set_variable = { state_race = token:pony_race		} }
+	166	= { set_variable = { state_race = token:pony_race		} }
+	167	= { set_variable = { state_race = token:undead_race		} }
+	168	= { set_variable = { state_race = token:pony_race		} }
+	169	= { set_variable = { state_race = token:undead_race		} }
+	170	= { set_variable = { state_race = token:undead_race		} }
+	171	= { set_variable = { state_race = token:undead_race		} }
+	172	= { set_variable = { state_race = token:pony_race		} }
+	173	= { set_variable = { state_race = token:undead_race		} }
+	174	= { set_variable = { state_race = token:undead_race		} }
+	175	= { set_variable = { state_race = token:undead_race		} }
+	176	= { set_variable = { state_race = token:undead_race		} }
+	177	= { set_variable = { state_race = token:undead_race		} }
+	178	= { set_variable = { state_race = token:undead_race		} }
+	179	= { set_variable = { state_race = token:undead_race		} }
+	180	= { set_variable = { state_race = token:undead_race		} }
+	181	= { set_variable = { state_race = token:undead_race		} }
+	182	= { set_variable = { state_race = token:undead_race		} }
+	183	= { set_variable = { state_race = token:undead_race		} }
+	184	= { set_variable = { state_race = token:undead_race		} }
+	185	= { set_variable = { state_race = token:pony_race		} }
+	186	= { set_variable = { state_race = token:undead_race		} }
+	187	= { set_variable = { state_race = token:undead_race		} }
+	188	= { set_variable = { state_race = token:undead_race		} }
+	189	= { set_variable = { state_race = token:deer_race		} }
+	190	= { set_variable = { state_race = token:deer_race		} }
+	191	= { set_variable = { state_race = token:deer_race		} }
+	192	= { set_variable = { state_race = token:deer_race		} }
+	193	= { set_variable = { state_race = token:deer_race		} }
+	194	= { set_variable = { state_race = token:deer_race		} }
+	195	= { set_variable = { state_race = token:deer_race		} }
+	196	= { set_variable = { state_race = token:deer_race		} }
+	197	= { set_variable = { state_race = token:deer_race		} }
+	198	= { set_variable = { state_race = token:deer_race		} }
+	199	= { set_variable = { state_race = token:deer_race		} }
+	200	= { set_variable = { state_race = token:deer_race		} }
+	201	= { set_variable = { state_race = token:deer_race		} }
+	202	= { set_variable = { state_race = token:deer_race		} }
+	203	= { set_variable = { state_race = token:deer_race		} }
+	204	= { set_variable = { state_race = token:deer_race		} }
+	205	= { set_variable = { state_race = token:deer_race		} }
+	206	= { set_variable = { state_race = token:deer_race		} }
+	207	= { set_variable = { state_race = token:deer_race		} }
+	208	= { set_variable = { state_race = token:deer_race		} }
+	209	= { set_variable = { state_race = token:deer_race		} }
+	210	= { set_variable = { state_race = token:deer_race		} }
+	211	= { set_variable = { state_race = token:deer_race		} }
+	212	= { set_variable = { state_race = token:deer_race		} }
+	213	= { set_variable = { state_race = token:deer_race		} }
+	214	= { set_variable = { state_race = token:deer_race		} }
+	215	= { set_variable = { state_race = token:deer_race		} }
+	216	= { set_variable = { state_race = token:deer_race		} }
+	217	= { set_variable = { state_race = token:deer_race		} }
+	218	= { set_variable = { state_race = token:deer_race		} }
+	219	= { set_variable = { state_race = token:deer_race		} }
+	220	= { set_variable = { state_race = token:deer_race		} }
+	221	= { set_variable = { state_race = token:pony_race		} }
+	222	= { set_variable = { state_race = token:pony_race		} }
+	223	= { set_variable = { state_race = token:undead_race		} }
+	224	= { set_variable = { state_race = token:deer_race		} }
+	225	= { set_variable = { state_race = token:pony_race		} }
+	226	= { set_variable = { state_race = token:undead_race		} }
+	227	= { set_variable = { state_race = token:undead_race		} }
+	228	= { set_variable = { state_race = token:undead_race		} }
+	229	= { set_variable = { state_race = token:undead_race		} }
+	230	= { set_variable = { state_race = token:undead_race		} }
+	231	= { set_variable = { state_race = token:undead_race		} }
+	232	= { set_variable = { state_race = token:undead_race		} }
+	233	= { set_variable = { state_race = token:pony_race		} }
+	234	= { set_variable = { state_race = token:pony_race		} }
+	235	= { set_variable = { state_race = token:pony_race		} }
 
-	29	= { set_variable = { state_culture = token:pony_race		} }
+	237	= { set_variable = { state_race = token:pony_race		} }
+	238	= { set_variable = { state_race = token:penguin_race	} }
+	239	= { set_variable = { state_race = token:griffon_race	} }
+	240	= { set_variable = { state_race = token:pony_race		} }
+	241	= { set_variable = { state_race = token:pony_race		} }
+	242	= { set_variable = { state_race = token:griffon_race	} }
+	243	= { set_variable = { state_race = token:griffon_race	} }
+	244	= { set_variable = { state_race = token:penguin_race	} }
+	245	= { set_variable = { state_race = token:penguin_race	} }
+	246	= { set_variable = { state_race = token:changeling_race	} }
+	247	= { set_variable = { state_race = token:changeling_race	} }
+	248	= { set_variable = { state_race = token:changeling_race	} }
+	249	= { set_variable = { state_race = token:changeling_race	} }
+	250	= { set_variable = { state_race = token:changeling_race	} }
+	251	= { set_variable = { state_race = token:changeling_race	} }
+	252	= { set_variable = { state_race = token:changeling_race	} }
+	253	= { set_variable = { state_race = token:yak_race		} }
+	254	= { set_variable = { state_race = token:yak_race		} }
+	255	= { set_variable = { state_race = token:yak_race		} }
+	256	= { set_variable = { state_race = token:yak_race		} }
+	257	= { set_variable = { state_race = token:yak_race		} }
+	258	= { set_variable = { state_race = token:changeling_race	} }
+	259	= { set_variable = { state_race = token:changeling_race	} }
+	260	= { set_variable = { state_race = token:changeling_race	} }
+	261	= { set_variable = { state_race = token:changeling_race	} }
+	262	= { set_variable = { state_race = token:changeling_race	} }
+	263	= { set_variable = { state_race = token:bear_race		} }
+	264	= { set_variable = { state_race = token:changeling_race	} }
+	265	= { set_variable = { state_race = token:bear_race		} }
+	266	= { set_variable = { state_race = token:penguin_race	} }
+	267	= { set_variable = { state_race = token:yak_race		} }
+	268	= { set_variable = { state_race = token:yak_race		} }
+	269	= { set_variable = { state_race = token:yak_race		} }
+	270	= { set_variable = { state_race = token:yak_race		} }
+	271	= { set_variable = { state_race = token:bear_race		} }
+	272	= { set_variable = { state_race = token:bear_race		} }
+	273	= { set_variable = { state_race = token:yak_race		} }
+	274	= { set_variable = { state_race = token:yak_race		} }
+	275	= { set_variable = { state_race = token:yak_race		} }
+	276	= { set_variable = { state_race = token:yak_race		} }
+	277	= { set_variable = { state_race = token:bear_race		} }
+	278	= { set_variable = { state_race = token:bear_race		} }
+	279	= { set_variable = { state_race = token:penguin_race	} }
+	280	= { set_variable = { state_race = token:yak_race		} }
+	281	= { set_variable = { state_race = token:bear_race		} }
+	282	= { set_variable = { state_race = token:bear_race		} }
+	283	= { set_variable = { state_race = token:bear_race		} }
+	284	= { set_variable = { state_race = token:penguin_race	} }
+	285	= { set_variable = { state_race = token:penguin_race	} }
+	286	= { set_variable = { state_race = token:bear_race		} }
+	287	= { set_variable = { state_race = token:penguin_race	} }
+	288	= { set_variable = { state_race = token:penguin_race	} }
+	289	= { set_variable = { state_race = token:bear_race		} }
+	290	= { set_variable = { state_race = token:bear_race		} }
+	291	= { set_variable = { state_race = token:changeling_race	} }
+	292	= { set_variable = { state_race = token:deer_race		} }
+	293	= { set_variable = { state_race = token:deer_race		} }
+	294	= { set_variable = { state_race = token:deer_race		} }
+	295	= { set_variable = { state_race = token:deer_race		} }
+	296	= { set_variable = { state_race = token:deer_race		} }
+	297	= { set_variable = { state_race = token:deer_race		} }
+	298	= { set_variable = { state_race = token:deer_race		} }
+	299	= { set_variable = { state_race = token:deer_race		} }
+	300	= { set_variable = { state_race = token:deer_race		} }
+	301	= { set_variable = { state_race = token:deer_race		} }
+	302	= { set_variable = { state_race = token:changeling_race	} }
+	303	= { set_variable = { state_race = token:changeling_race	} }
+	304	= { set_variable = { state_race = token:changeling_race	} }
+	305	= { set_variable = { state_race = token:changeling_race	} }
+	306	= { set_variable = { state_race = token:changeling_race	} }
+	307	= { set_variable = { state_race = token:changeling_race	} }
+	308	= { set_variable = { state_race = token:changeling_race	} }
+	309	= { set_variable = { state_race = token:changeling_race	} }
+	310	= { set_variable = { state_race = token:changeling_race	} }
+	311	= { set_variable = { state_race = token:changeling_race	} }
+	312	= { set_variable = { state_race = token:changeling_race	} }
+	313	= { set_variable = { state_race = token:changeling_race	} }
+	314	= { set_variable = { state_race = token:changeling_race	} }
+	315	= { set_variable = { state_race = token:changeling_race	} }
+	316	= { set_variable = { state_race = token:changeling_race	} }
+	317	= { set_variable = { state_race = token:yak_race		} }
 
-	33	= { set_variable = { state_culture = token:pony_race		} }
-	34	= { set_variable = { state_culture = token:pony_race		} }
+	319	= { set_variable = { state_race = token:changeling_race	} }
+	320	= { set_variable = { state_race = token:changeling_race	} }
+	321	= { set_variable = { state_race = token:changeling_race	} }
+	322	= { set_variable = { state_race = token:changeling_race	} }
+	323	= { set_variable = { state_race = token:changeling_race	} }
 
-	39	= { set_variable = { state_culture = token:pony_race		} }
+	325	= { set_variable = { state_race = token:penguin_race	} }
+	326	= { set_variable = { state_race = token:pony_race		} }
+	327	= { set_variable = { state_race = token:undead_race		} }
+	328	= { set_variable = { state_race = token:dragon_race		} }
 
-	41	= { set_variable = { state_culture = token:pony_race		} }
+	330	= { set_variable = { state_race = token:deer_race		} }
+	331	= { set_variable = { state_race = token:deer_race		} }
+	332	= { set_variable = { state_race = token:pony_race		} }
+	333	= { set_variable = { state_race = token:pony_race		} }
+	334	= { set_variable = { state_race = token:pony_race		} }
+	335	= { set_variable = { state_race = token:bear_race		} }
+	336	= { set_variable = { state_race = token:pony_race		} }
+	337	= { set_variable = { state_race = token:pony_race		} }
+	338	= { set_variable = { state_race = token:pony_race		} }
 
-	43	= { set_variable = { state_culture = token:pony_race		} }
+	340	= { set_variable = { state_race = token:yak_race		} }
+	341	= { set_variable = { state_race = token:yak_race		} }
+	342	= { set_variable = { state_race = token:bear_race		} }
 
-	45	= { set_variable = { state_culture = token:pony_race		} }
-	46	= { set_variable = { state_culture = token:pony_race		} }
-	47	= { set_variable = { state_culture = token:pony_race		} }
-	48	= { set_variable = { state_culture = token:pony_race		} }
-	49	= { set_variable = { state_culture = token:pony_race		} }
-	50	= { set_variable = { state_culture = token:pony_race		} }
-	51	= { set_variable = { state_culture = token:pony_race		} }
-	52	= { set_variable = { state_culture = token:pony_race		} }
+	346	= { set_variable = { state_race = token:yak_race		} }
+	347	= { set_variable = { state_race = token:yak_race		} }
+	348	= { set_variable = { state_race = token:pony_race		} }
+	349	= { set_variable = { state_race = token:undead_race		} }
+	350	= { set_variable = { state_race = token:pony_race		} }
+	351	= { set_variable = { state_race = token:pony_race		} }
+	352	= { set_variable = { state_race = token:pony_race		} }
+	353	= { set_variable = { state_race = token:pony_race		} }
 
-	57	= { set_variable = { state_culture = token:pony_race		} }
+	360	= { set_variable = { state_race = token:pony_race		} }
+	361	= { set_variable = { state_race = token:pony_race		} }
+	362	= { set_variable = { state_race = token:pony_race		} }
+	363	= { set_variable = { state_race = token:pony_race		} }
+	364	= { set_variable = { state_race = token:pony_race		} }
+	365	= { set_variable = { state_race = token:pony_race		} }
 
-	59	= { set_variable = { state_culture = token:pony_race		} }
+	525	= { set_variable = { state_race = token:pony_race		} }
 
-	62	= { set_variable = { state_culture = token:bear_race		} }
+	653	= { set_variable = { state_race = token:pony_race		} }
 
-	65	= { set_variable = { state_culture = token:pony_race		} }
-	66	= { set_variable = { state_culture = token:pony_race		} }
-	67	= { set_variable = { state_culture = token:pony_race		} }
-	68	= { set_variable = { state_culture = token:pony_race		} }
-	69	= { set_variable = { state_culture = token:deer_race		} }
-	70	= { set_variable = { state_culture = token:pony_race		} }
+	659	= { set_variable = { state_race = token:pony_race		} }
 
-	72	= { set_variable = { state_culture = token:pony_race		} }
-	73	= { set_variable = { state_culture = token:pony_race		} }
-	74	= { set_variable = { state_culture = token:pony_race		} }
+	661	= { set_variable = { state_race = token:pony_race		} }
+	662	= { set_variable = { state_race = token:pony_race		} }
 
-	76	= { set_variable = { state_culture = token:deer_race		} }
-
-	79	= { set_variable = { state_culture = token:pony_race		} }
-	80	= { set_variable = { state_culture = token:pony_race		} }
-
-	83	= { set_variable = { state_culture = token:pony_race		} }
-
-	86	= { set_variable = { state_culture = token:pony_race		} }
-
-	88	= { set_variable = { state_culture = token:pony_race		} }
-
-	91	= { set_variable = { state_culture = token:pony_race		} }
-	92	= { set_variable = { state_culture = token:pony_race		} }
-	93	= { set_variable = { state_culture = token:pony_race		} }
-
-	96	= { set_variable = { state_culture = token:pony_race		} }
-
-	100	= { set_variable = { state_culture = token:pony_race		} }
-
-	103	= { set_variable = { state_culture = token:pony_race		} }
-	104	= { set_variable = { state_culture = token:pony_race		} }
-
-	106	= { set_variable = { state_culture = token:pony_race		} }
-	107	= { set_variable = { state_culture = token:pony_race		} }
-
-	109	= { set_variable = { state_culture = token:pony_race		} }
-
-	131	= { set_variable = { state_culture = token:pony_race		} }
-
-	134	= { set_variable = { state_culture = token:pony_race		} }
-	135	= { set_variable = { state_culture = token:pony_race		} }
-	136	= { set_variable = { state_culture = token:pony_race		} }
-	137	= { set_variable = { state_culture = token:pony_race		} }
-	138	= { set_variable = { state_culture = token:pony_race		} }
-
-	153	= { set_variable = { state_culture = token:pony_race		} }
-	156	= { set_variable = { state_culture = token:pony_race		} }
-
-	160	= { set_variable = { state_culture = token:pony_race		} }
-	161	= { set_variable = { state_culture = token:pony_race		} }
-	162	= { set_variable = { state_culture = token:pony_race		} }
-	163	= { set_variable = { state_culture = token:pony_race		} }
-	164	= { set_variable = { state_culture = token:pony_race		} }
-	165	= { set_variable = { state_culture = token:pony_race		} }
-	166	= { set_variable = { state_culture = token:pony_race		} }
-
-	168	= { set_variable = { state_culture = token:pony_race		} }
-
-	172	= { set_variable = { state_culture = token:pony_race		} }
-
-	189	= { set_variable = { state_culture = token:deer_race		} }
-	190	= { set_variable = { state_culture = token:deer_race		} }
-	191	= { set_variable = { state_culture = token:deer_race		} }
-	192	= { set_variable = { state_culture = token:deer_race		} }
-	193	= { set_variable = { state_culture = token:deer_race		} }
-	194	= { set_variable = { state_culture = token:deer_race		} }
-	195	= { set_variable = { state_culture = token:deer_race		} }
-	196	= { set_variable = { state_culture = token:deer_race		} }
-	197	= { set_variable = { state_culture = token:deer_race		} }
-	198	= { set_variable = { state_culture = token:deer_race		} }
-	199	= { set_variable = { state_culture = token:deer_race		} }
-	200	= { set_variable = { state_culture = token:deer_race		} }
-	201	= { set_variable = { state_culture = token:deer_race		} }
-	202	= { set_variable = { state_culture = token:deer_race		} }
-	203	= { set_variable = { state_culture = token:deer_race		} }
-	204	= { set_variable = { state_culture = token:deer_race		} }
-	205	= { set_variable = { state_culture = token:deer_race		} }
-	206	= { set_variable = { state_culture = token:deer_race		} }
-	207	= { set_variable = { state_culture = token:deer_race		} }
-	208	= { set_variable = { state_culture = token:deer_race		} }
-	209	= { set_variable = { state_culture = token:deer_race		} }
-	210	= { set_variable = { state_culture = token:deer_race		} }
-	211	= { set_variable = { state_culture = token:deer_race		} }
-	212	= { set_variable = { state_culture = token:deer_race		} }
-	213	= { set_variable = { state_culture = token:deer_race		} }
-	214	= { set_variable = { state_culture = token:deer_race		} }
-	215	= { set_variable = { state_culture = token:deer_race		} }
-	216	= { set_variable = { state_culture = token:deer_race		} }
-	217	= { set_variable = { state_culture = token:deer_race		} }
-	218	= { set_variable = { state_culture = token:deer_race		} }
-	219	= { set_variable = { state_culture = token:deer_race		} }
-	220	= { set_variable = { state_culture = token:deer_race		} }
-	221	= { set_variable = { state_culture = token:pony_race		} }
-
-	224	= { set_variable = { state_culture = token:deer_race		} }
-	225	= { set_variable = { state_culture = token:pony_race		} }
-
-	233	= { set_variable = { state_culture = token:pony_race		} }
-	234	= { set_variable = { state_culture = token:pony_race		} }
-	235	= { set_variable = { state_culture = token:pony_race		} }
-
-	237	= { set_variable = { state_culture = token:pony_race		} }
-
-	240	= { set_variable = { state_culture = token:pony_race		} }
-	241	= { set_variable = { state_culture = token:pony_race		} }
-
-	246	= { set_variable = { state_culture = token:changeling_race	} }
-	247	= { set_variable = { state_culture = token:changeling_race	} }
-	248	= { set_variable = { state_culture = token:changeling_race	} }
-	249	= { set_variable = { state_culture = token:changeling_race	} }
-	250	= { set_variable = { state_culture = token:changeling_race	} }
-	251	= { set_variable = { state_culture = token:changeling_race	} }
-	252	= { set_variable = { state_culture = token:changeling_race	} }
-
-	258	= { set_variable = { state_culture = token:changeling_race	} }
-	259	= { set_variable = { state_culture = token:changeling_race	} }
-	260	= { set_variable = { state_culture = token:changeling_race	} }
-	261	= { set_variable = { state_culture = token:changeling_race	} }
-	262	= { set_variable = { state_culture = token:changeling_race	} }
-	263	= { set_variable = { state_culture = token:bear_race		} }
-	264	= { set_variable = { state_culture = token:changeling_race	} }
-	265	= { set_variable = { state_culture = token:bear_race		} }
-	266	= { set_variable = { state_culture = token:penguin_race		} }
-
-	272	= { set_variable = { state_culture = token:bear_race		} }
-
-	282	= { set_variable = { state_culture = token:bear_race		} }
-	283	= { set_variable = { state_culture = token:bear_race		} }
-	284	= { set_variable = { state_culture = token:penguin_race		} }
-	285	= { set_variable = { state_culture = token:penguin_race		} }
-
-	287	= { set_variable = { state_culture = token:penguin_race		} }
-	288	= { set_variable = { state_culture = token:penguin_race		} }
-	289	= { set_variable = { state_culture = token:bear_race		} }
-	290	= { set_variable = { state_culture = token:bear_race		} }
-	291	= { set_variable = { state_culture = token:changeling_race	} }
-	292	= { set_variable = { state_culture = token:deer_race		} }
-	293	= { set_variable = { state_culture = token:deer_race		} }
-	294	= { set_variable = { state_culture = token:deer_race		} }
-	295	= { set_variable = { state_culture = token:deer_race		} }
-	296	= { set_variable = { state_culture = token:deer_race		} }
-	297	= { set_variable = { state_culture = token:deer_race		} }
-	298	= { set_variable = { state_culture = token:deer_race		} }
-	299	= { set_variable = { state_culture = token:deer_race		} }
-	300	= { set_variable = { state_culture = token:deer_race		} }
-	301	= { set_variable = { state_culture = token:deer_race		} }
-	302	= { set_variable = { state_culture = token:changeling_race	} }
-	303	= { set_variable = { state_culture = token:changeling_race	} }
-	304	= { set_variable = { state_culture = token:changeling_race	} }
-	305	= { set_variable = { state_culture = token:changeling_race	} }
-	306	= { set_variable = { state_culture = token:changeling_race	} }
-	307	= { set_variable = { state_culture = token:changeling_race	} }
-	308	= { set_variable = { state_culture = token:changeling_race	} }
-	309	= { set_variable = { state_culture = token:changeling_race	} }
-	310	= { set_variable = { state_culture = token:changeling_race	} }
-	311	= { set_variable = { state_culture = token:changeling_race	} }
-	312	= { set_variable = { state_culture = token:changeling_race	} }
-	313	= { set_variable = { state_culture = token:changeling_race	} }
-	314	= { set_variable = { state_culture = token:changeling_race	} }
-	315	= { set_variable = { state_culture = token:changeling_race	} }
-	316	= { set_variable = { state_culture = token:changeling_race	} }
-
-	319	= { set_variable = { state_culture = token:changeling_race	} }
-	320	= { set_variable = { state_culture = token:changeling_race	} }
-	321	= { set_variable = { state_culture = token:changeling_race	} }
-	322	= { set_variable = { state_culture = token:changeling_race	} }
-	323	= { set_variable = { state_culture = token:changeling_race	} }
-
-	325	= { set_variable = { state_culture = token:penguin_race		} }
-	326	= { set_variable = { state_culture = token:pony_race		} }
-
-	330	= { set_variable = { state_culture = token:deer_race		} }
-	331	= { set_variable = { state_culture = token:deer_race		} }
-	332	= { set_variable = { state_culture = token:pony_race		} }
-	333	= { set_variable = { state_culture = token:pony_race		} }
-	334	= { set_variable = { state_culture = token:pony_race		} }
-
-	351	= { set_variable = { state_culture = token:pony_race		} }
-	352	= { set_variable = { state_culture = token:pony_race		} }
-
-	360	= { set_variable = { state_culture = token:pony_race		} }
-
-	362	= { set_variable = { state_culture = token:pony_race		} }
-
-	364	= { set_variable = { state_culture = token:pony_race		} }
-	365	= { set_variable = { state_culture = token:pony_race		} }
-
-	525	= { set_variable = { state_culture = token:pony_race		} }
-
-	653	= { set_variable = { state_culture = token:pony_race		} }
-
-	659	= { set_variable = { state_culture = token:pony_race		} }
-
-	661	= { set_variable = { state_culture = token:pony_race		} }
-	662	= { set_variable = { state_culture = token:pony_race		} }
-
-	678	= { set_variable = { state_culture = token:pony_race		} }
-	#982 scenario speciality
-	#1002 scenario speciality
-	#1050 scenario speciality
+	678	= { set_variable = { state_race = token:pony_race		} }
 }

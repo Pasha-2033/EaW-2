@@ -4,6 +4,18 @@ buildings = {
 	#    if provincial = yes, then show_on_map = X is amount per each province
 	#    if provincial = no, then show_on_map = X is amount per state
 
+	construction_site = {
+		base_cost = 1500
+		per_level_extra_cost = 500
+		icon_frame = 19
+		max_level = 20 # This is the max unlock level
+		damage_factor = -1	#its not really a building
+		value = 1
+		infrastructure_construction_effect = yes
+
+		show_modifier = yes
+		local_building_slots = 1
+	}
 
 	infrastructure = {
 		base_cost = 6000

@@ -1,24 +1,31 @@
-state={
-	id=110
-	name="STATE_110"
-
-	provinces={
-		809 874 875 877 920 977 7153 7945 8668 9881 10009 10094
+state = {
+	id = 110
+	name = "STATE_110"
+	provinces = {
+		809 
+		874 
+		875 
+		877 
+		920 
+		977 
+		7153 
+		7945 
+		8668 
+		9881 
+		10009 
+		10094
 	}
-
-	manpower=674200
+	manpower = 674200
 	state_category = town
-	buildings_max_level_factor=1.00
-
-	history={
-		982.1.1 = {
-			owner = EQS
-			add_core_of = EQS
-			add_claim_by = ICE
-		}
+	buildings_max_level_factor = 1
+	history = {
+		victory_points = { 874 5 }
+		owner = EQS
+		add_core_of = EQS
+		add_claim_by = ICE
 		1002.1.1 = {
 			remove_claim_by = ICE
 		}
-		victory_points = { 874 5 }
+		1050.1.1 = {}
 	}
 }

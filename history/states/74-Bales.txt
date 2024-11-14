@@ -1,33 +1,38 @@
-state={
-	id=74
-	name="STATE_74"
-
-	provinces={
-		115 168 3162 3183 6118 6207 9132 9154 11116 11118 11386 13276 13277 13278
+state = {
+	id = 74
+	name = "STATE_74"
+	provinces = {
+		115 
+		168 
+		3162 
+		3183 
+		6118 
+		6207 
+		9132 
+		9154 
+		11116 
+		11118 
+		11386 
+		13276 
+		13277 
+		13278
 	}
-	
-	manpower=1109000
-	state_category=city
-	buildings_max_level_factor=1.00
-
-	history={
-		982.1.1 = {
-			owner = EQS
-			add_core_of = EQS
-			add_claim_by = ICE
-			buildings = {
-				infrastructure = 1
-				industrial_complex = 1
-				arms_factory = 1
-			}
+	manpower = 1109000
+	state_category = city
+	buildings_max_level_factor = 1
+	history = {
+		victory_points = { 3162 20 }
+		owner = EQS
+		add_core_of = EQS
+		add_claim_by = ICE
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			arms_factory = 1
 		}
 		1002.1.1 = {
 			remove_claim_by = ICE
 		}
 		1050.1.1 = {}
-
-		victory_points = { 3162 20 }
-
-		
 	}
 }

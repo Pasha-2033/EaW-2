@@ -1,0 +1,97 @@
+scripted_map_modes = {
+	science_index_map_mode = {
+		top = {
+            type = country
+            color = {
+				#if = {
+				#	limit = {
+				#		FROM = {
+				#			has_idea = proper_science_base
+				#		}
+				#	}
+				#	set_temp_variable = { red = 0.2 }
+				#	set_temp_variable = { green = 0.9 }
+				#	set_temp_variable = { blue = 0.9 }
+				#}
+				#else_if = {
+				#	limit = {
+				#		FROM = {
+				#			has_idea = big_science_base
+				#		}
+				#	}
+				#	set_temp_variable = { red = 0.3 }
+				#	set_temp_variable = { green = 0.4 }
+				#	set_temp_variable = { blue = 0.7 }
+				#}
+				#else_if = {
+				#	limit = {
+				#		FROM = {
+				#			has_idea = better_science_base
+				#		}
+				#	}
+				#	set_temp_variable = { red = 0.6 }
+				#	set_temp_variable = { green = 0.4 }
+				#	set_temp_variable = { blue = 0.2 }
+				#}
+				#else_if = {
+				#	limit = {
+				#		FROM = {
+				#			has_idea = poor_science_base
+				#		}
+				#	}
+				#	set_temp_variable = { red = 0.4 }
+				#	set_temp_variable = { green = 0.1 }
+				#	set_temp_variable = { blue = 0.1 }
+				#}
+				#else = {
+				#	set_temp_variable = { red = 0.000 }
+				#	set_temp_variable = { green = 0.000 }
+				#	set_temp_variable = { blue = 0.000 }
+				#}
+				#set_temp_variable = { alpha = 0.7 }
+
+
+				#set_temp_variable = { red = 0.4 }
+				#set_temp_variable = { green = 0.1 }
+				#set_temp_variable = { blue = 0.1 }
+
+				#set_temp_variable = { red = 0 }
+				#set_temp_variable = { green = 0.9 }
+				#set_temp_variable = { blue = 0.9 }
+
+
+
+				set_temp_variable = { 
+					red = FROM.modifier@science_index 
+				}
+				multiply_temp_variable = {
+					red = -0.4
+				}
+				add_to_temp_variable = {
+					red = 0.4
+				}
+				set_temp_variable = { 
+					green = FROM.modifier@science_index 
+				}
+				multiply_temp_variable = {
+					green = 0.8
+				}
+				add_to_temp_variable = {
+					green = 0.1
+				}
+				set_temp_variable = {
+					blue = green
+				}
+				set_temp_variable = { 
+					alpha = 1 #0.7 
+				}
+            }
+        }
+		bottom = {
+			type = none
+		}
+        far_text = country
+        near_text = none
+		update_daily = yes
+    }
+}

@@ -13,34 +13,21 @@ state = {
 	}
 	manpower = 9250087
 	state_category = megalopolis
-	buildings_max_level_factor = 2.00
+	buildings_max_level_factor = 2
 	history = {
 		victory_points = { 11045 50 }
-		982.1.1 = {
-			owner = VES
-			add_core_of = VES
-			buildings = {
-				infrastructure = 1
-				industrial_complex = 5
-				arms_factory = 3
-				
-				air_base = 10
-				synthetic_refinery = 1
-			}
+		owner = VES
+		add_core_of = VES
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 5
+			arms_factory = 3	
+			air_base = 1
 		}
-		1002.1.1 = {
-			owner = VES
-			add_core_of = VES
-			buildings = {
-				infrastructure = 1
-				industrial_complex = 5
-				arms_factory = 3
-				air_base = 1
-				synthetic_refinery = 1
-			}
-		}
+		1002.1.1 = {}
 	}
 	resources = {
 		food = 100
+		rubber = 3
 	}
 }

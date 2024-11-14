@@ -1,28 +1,33 @@
-state={
-	id=133
-	name="STATE_133"
-
-	provinces={
-		302 328 457 558 3554 3580 6344 6373 9247 9518 9542 11244 11526
+state = {
+	id = 133
+	name = "STATE_133"
+	provinces = {
+		302 
+		328 
+		457 
+		558 
+		3554 
+		3580 
+		6344 
+		6373 
+		9247 
+		9518 
+		9542 
+		11244 
+		11526
 	}
-
-	manpower=100880
+	manpower = 100880
 	state_category = rural
-	buildings_max_level_factor=1.00
-
-	history={
-		982.1.1 = {
-			owner = ICE
-			add_core_of = ICE
-			add_core_of = EQS
-		}
+	buildings_max_level_factor = 1
+	history = {
+		victory_points = { 457 1 }
+		owner = ICE
+		add_core_of = ICE
+		add_core_of = EQS
 		1002.1.1 = {
 			owner = EQS
 			remove_core_of = ICE
 		}
-		#owner = EQS
-		#add_core_of = EQS
-
-		victory_points = { 457 1 }
+		1050.1.1 = {}
 	}
 }

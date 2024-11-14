@@ -19,9 +19,6 @@ calculate_all_states_building_slots = {
 }
 calculate_state_building_slots = {
 	set_variable = {
-		common_builded_slots = 0
-	}
-	add_to_variable = {
 		common_builded_slots = arms_factory_level
 	}
 	add_to_variable = {
@@ -47,7 +44,7 @@ calculate_state_building_slots = {
 	}
 	for_loop_effect = {
 		start = 1
-		end = 31
+		end = 36
 		value = i
 		if = {
 			limit = {
@@ -69,5 +66,11 @@ calculate_state_building_slots = {
 				break = 1
 			}
 		}
+	}
+	set_variable = {
+		common_all_slots = common_builded_slots
+	}
+	add_to_variable = {
+		common_all_slots = common_empty_slots
 	}
 }

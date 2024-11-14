@@ -2033,11 +2033,25 @@ technologies = {
 	}
 
 	#####################################
-
+	#basic construction_site limit (at start, at any condition, see country setup)
+	construction_site_base_limit = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_building = {
+			building = construction_site
+			level = 5
+		}
+	}
 	###------> Old Manufacturing <><> <><> <><> <><> <><>
 	construction1 = {
 		production_speed_buildings_factor = 0.10
 		industry_repair_factor = 0.10
+		enable_building = {
+			building = construction_site
+			level = 6
+		}
 		dependencies = {
 			infantry_weapons_0 = 1
 		}
@@ -2173,6 +2187,10 @@ technologies = {
 	construction2 = {
 		production_speed_buildings_factor = 0.10
 		industry_repair_factor = 0.10
+		enable_building = {
+			building = construction_site
+			level = 7
+		}
 		path = {
 			leads_to_tech = construction3
 			research_cost_coeff = 1
@@ -2313,6 +2331,10 @@ technologies = {
 	construction3 = {
 		production_speed_buildings_factor = 0.10
 		industry_repair_factor = 0.10
+		enable_building = {
+			building = construction_site
+			level = 8
+		}
 		path = {
 			leads_to_tech = construction4
 			research_cost_coeff = 1
@@ -2463,7 +2485,10 @@ technologies = {
 
 		production_speed_buildings_factor = 0.10
 		industry_repair_factor = 0.10
-
+		enable_building = {
+			building = construction_site
+			level = 9
+		}
 		path = {
 			leads_to_tech = construction5
 			research_cost_coeff = 1
@@ -2609,7 +2634,10 @@ technologies = {
 
 		production_speed_buildings_factor = 0.10
 		industry_repair_factor = 0.10
-
+		enable_building = {
+			building = construction_site
+			level = 10
+		}
 		path = {
 			leads_to_tech = excavation5
 			research_cost_coeff = 1
@@ -2759,7 +2787,10 @@ technologies = {
 
 		production_speed_buildings_factor = 0.05
 		industry_repair_factor = 0.05
-
+		enable_building = {
+			building = construction_site
+			level = 11
+		}
 		path = {
 			leads_to_tech = excavation_a
 			research_cost_coeff = 1
@@ -2842,7 +2873,10 @@ technologies = {
 
 		production_speed_buildings_factor = 0.05
 		industry_repair_factor = 0.05
-
+		enable_building = {
+			building = construction_site
+			level = 12
+		}
 		path = {
 			leads_to_tech = excavation_b
 			research_cost_coeff = 1
@@ -2924,7 +2958,10 @@ technologies = {
 
 		production_speed_buildings_factor = 0.03
 		industry_repair_factor = 0.03
-
+		enable_building = {
+			building = construction_site
+			level = 13
+		}
 		path = {
 			leads_to_tech = excavation_c
 			research_cost_coeff = 1
@@ -3006,7 +3043,10 @@ technologies = {
 
 		production_speed_buildings_factor = 0.02
 		industry_repair_factor = 0.02
-
+		enable_building = {
+			building = construction_site
+			level = 14
+		}
 		path = {
 			leads_to_tech = excavation_d
 			research_cost_coeff = 1

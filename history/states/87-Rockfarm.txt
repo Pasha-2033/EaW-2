@@ -1,26 +1,28 @@
-state={
-	id=87
-	name="STATE_87"
-
-	provinces={
-		14 3094 6151 9103 9174 9204 11029 13210
+state = {
+	id = 87
+	name = "STATE_87"
+	provinces = {
+		14 
+		3094 
+		6151 
+		9103 
+		9174 
+		9204 
+		11029 
+		13210
 	}
-
-	manpower=16900
+	manpower = 16900
 	state_category = pastoral
-	buildings_max_level_factor=1.00
-
-	history={
-		982.1.1 = {
-			owner = ICE
-			add_core_of = ICE
-			add_core_of = EQS
-		}
+	buildings_max_level_factor = 1
+	history = {
+		victory_points = { 11029 1 }
+		owner = ICE
+		add_core_of = ICE
+		add_core_of = EQS
 		1002.1.1 = {
 			owner = EQS
 			remove_core_of = ICE
 		}
 		1050.1.1 = {}
-		victory_points = { 11029 1 }
 	}
 }

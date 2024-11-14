@@ -21,7 +21,9 @@ focus_tree = {
 		ai_will_do = {
 			base = 200
 		}
-		completion_reward = {}
+		completion_reward = {
+			increase_lack_of_scientists_idea = yes
+		}
 	}
 	focus = {
 		id = gws_focus_great_projects
@@ -2177,6 +2179,11 @@ focus_tree = {
 		prerequisite = { 
 			focus = gws_focus_laying_communications
 		}
+		available = {
+			steel > 9
+			crystals > 9
+			num_of_civilian_factories_available_for_projects > 3
+		}
 		completion_reward = {
 			if = {
 				limit = {
@@ -2186,6 +2193,58 @@ focus_tree = {
 					}
 				}
 				custom_effect_tooltip = blocked_by_magic_conductors_tt
+			}
+			activate_mission = magic_generators
+			if = {
+				limit = {
+					has_completed_focus = gws_focus_high_speed_elevators
+				}
+				set_temp_variable = {
+					reduction = -0.1
+				}
+				custom_effect_tooltip = huge_contruction_mission_speeding_tt
+				multiply_temp_variable = {
+					reduction = 240
+				}
+				hidden_effect = {
+					add_days_mission_timeout = {
+						mission = magic_generators
+						days = reduction
+					}
+				}
+			}
+			custom_effect_tooltip = change_huge_contruction_site_tt
+			add_to_variable = {
+				gws_huge_contruction_cito = 8
+				tooltip = civilian_intel_to_others_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_crccr = 10
+				tooltip = country_resource_cost_crystals_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_crcs = 10
+				tooltip = country_resource_cost_steel_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_cfu = 4
+				tooltip = civilian_factory_use_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_psbf = -0.1
+				tooltip = production_speed_buildings_factor_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_cgf = 0.075
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_cf = -0.05
+				tooltip = conscription_factor_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_csic = 0.20
+				tooltip = contruction_site_incident_chance_tt
 			}
 		}
 		search_filters = {
@@ -2205,6 +2264,11 @@ focus_tree = {
 		prerequisite = { 
 			focus = gws_focus_laying_communications
 		}
+		available = {
+			steel > 4
+			crystals > 19
+			num_of_civilian_factories_available_for_projects > 3
+		}
 		completion_reward = {
 			if = {
 				limit = {
@@ -2214,6 +2278,58 @@ focus_tree = {
 					}
 				}
 				custom_effect_tooltip = blocked_by_magic_conductors_tt
+			}
+			activate_mission = magic_storages
+			if = {
+				limit = {
+					has_completed_focus = gws_focus_high_speed_elevators
+				}
+				set_temp_variable = {
+					reduction = -0.1
+				}
+				custom_effect_tooltip = huge_contruction_mission_speeding_tt
+				multiply_temp_variable = {
+					reduction = 240
+				}
+				hidden_effect = {
+					add_days_mission_timeout = {
+						mission = magic_storages
+						days = reduction
+					}
+				}
+			}
+			custom_effect_tooltip = change_huge_contruction_site_tt
+			add_to_variable = {
+				gws_huge_contruction_cito = 8
+				tooltip = civilian_intel_to_others_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_crccr = 20
+				tooltip = country_resource_cost_crystals_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_crcs = 5
+				tooltip = country_resource_cost_steel_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_cfu = 4
+				tooltip = civilian_factory_use_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_psbf = -0.1
+				tooltip = production_speed_buildings_factor_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_cgf = 0.075
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_cf = -0.05
+				tooltip = conscription_factor_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_csic = 0.15
+				tooltip = contruction_site_incident_chance_tt
 			}
 		}
 		search_filters = {
@@ -2234,10 +2350,63 @@ focus_tree = {
 			focus = gws_focus_magic_generators
 			focus = gws_focus_magic_storages
 		}
+		available = {
+			crystals > 4
+			aluminium > 4
+			num_of_civilian_factories_available_for_projects > 0
+		}
 		completion_reward = {
 			hidden_effect = {
 				unlock_national_focus = gws_focus_magic_generators
 				unlock_national_focus = gws_focus_magic_storages
+			}
+			activate_mission = magic_conductors
+			if = {
+				limit = {
+					has_completed_focus = gws_focus_high_speed_elevators
+				}
+				set_temp_variable = {
+					reduction = -0.1
+				}
+				custom_effect_tooltip = huge_contruction_mission_speeding_tt
+				multiply_temp_variable = {
+					reduction = 100
+				}
+				hidden_effect = {
+					add_days_mission_timeout = {
+						mission = magic_conductors
+						days = reduction
+					}
+				}
+			}
+			custom_effect_tooltip = change_huge_contruction_site_tt
+			add_to_variable = {
+				gws_huge_contruction_cito = 6
+				tooltip = civilian_intel_to_others_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_crccr = 5
+				tooltip = country_resource_cost_crystals_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_crca = 5
+				tooltip = country_resource_cost_aluminium_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_cfu = 1
+				tooltip = civilian_factory_use_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_psbf = -0.075
+				tooltip = production_speed_buildings_factor_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_cgf = 0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_csic = 0.05
+				tooltip = contruction_site_incident_chance_tt
 			}
 		}
 		search_filters = {
@@ -3271,6 +3440,14 @@ focus_tree = {
 				reduction = -0.15
 				tooltip = control_sector_enforcement_speeding_tt
 			}
+			set_temp_variable = {
+				reduction = -0.1
+				tooltip = laying_communications_speeding_tt
+			}
+			set_temp_variable = {
+				reduction = -0.1
+				tooltip = equipment_installation_speeding_tt
+			}
 			custom_effect_tooltip = change_huge_contruction_site_tt
 			add_to_variable = {
 				gws_huge_contruction_lrf = 0.03
@@ -3283,6 +3460,10 @@ focus_tree = {
 			add_to_variable = {
 				gws_huge_contruction_csic = 0.01
 				tooltip = contruction_site_incident_chance_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_bfgf = -0.1
+				tooltip = base_fuel_gain_factor_tt
 			}
 			hidden_effect = {
 				if = {
@@ -3494,6 +3675,18 @@ focus_tree = {
 			add_to_variable = {
 				gws_huge_contruction_csic = 0.05
 				tooltip = contruction_site_incident_chance_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_bfgf = -0.15
+				tooltip = base_fuel_gain_factor_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_ccctmf = 0.05
+				tooltip = conversion_cost_civ_to_mil_factor_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_ccmtcf = -0.05
+				tooltip = conversion_cost_mil_to_civ_factor_tt
 			}
 			hidden_effect = {
 				if = {

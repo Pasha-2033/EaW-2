@@ -80,6 +80,16 @@ if = { #982 scenario script
 	set_oob = "982_EQS"
 	set_stability = 0.4
 	set_war_support = 0.69
+
+	declare_war_on = {
+		target = EPT
+		type = annex_everything
+	}
+	declare_war_on = {
+		target = PGT
+		type = annex_everything
+	}
+	
 	else_if = { #1002 scenario script
 		limit = {
 			has_start_date < 1050.1.1

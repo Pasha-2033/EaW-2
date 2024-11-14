@@ -1,9 +1,6 @@
 huge_contruction_site_decisions = {
 	#magitron: digging
 	central_dogma_digging = {
-		allowed = {
-			original_tag = GWS
-		}
 		available = {
 			hidden_trigger = {
 				always = no
@@ -67,9 +64,6 @@ huge_contruction_site_decisions = {
 		}
 	}
 	central_dogma_metal_structures = {
-		allowed = {
-			original_tag = GWS
-		}
 		available = {
 			hidden_trigger = {
 				always = no
@@ -104,9 +98,6 @@ huge_contruction_site_decisions = {
 		}
 	}
 	central_dogma_strengthened_vault = {
-		allowed = {
-			original_tag = GWS
-		}
 		available = {
 			hidden_trigger = {
 				always = no
@@ -141,9 +132,6 @@ huge_contruction_site_decisions = {
 		}
 	}
 	energy_sector_digging = {
-		allowed = {
-			original_tag = GWS
-		}
 		available = {
 			hidden_trigger = {
 				always = no
@@ -190,9 +178,6 @@ huge_contruction_site_decisions = {
 		}
 	}
 	energy_sector_enlargement = {
-		allowed = {
-			original_tag = GWS
-		}
 		available = {
 			hidden_trigger = {
 				always = no
@@ -223,9 +208,6 @@ huge_contruction_site_decisions = {
 		}
 	}
 	control_sector_digging = {
-		allowed = {
-			original_tag = GWS
-		}
 		available = {
 			hidden_trigger = {
 				always = no
@@ -276,9 +258,6 @@ huge_contruction_site_decisions = {
 		}
 	}
 	control_sector_enforcement = {
-		allowed = {
-			original_tag = GWS
-		}
 		available = {
 			hidden_trigger = {
 				always = no
@@ -317,9 +296,6 @@ huge_contruction_site_decisions = {
 		}
 	}
 	computing_sector_digging = {
-		allowed = {
-			original_tag = GWS
-		}
 		available = {
 			hidden_trigger = {
 				always = no
@@ -350,13 +326,64 @@ huge_contruction_site_decisions = {
 		}
 	}
 	#magitron: laying communications
+	magic_generators = {
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		activation = {
+			#always = no
+		}
+		days_mission_timeout = 240
+		is_good = yes
+		fire_only_once = yes
+		selectable_mission = no
+		timeout_effect = {
 
+		}
+	}
+	magic_storages = {
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		activation = {
+			#always = no
+		}
+		days_mission_timeout = 240
+		is_good = yes
+		fire_only_once = yes
+		selectable_mission = no
+		timeout_effect = {
 
+		}
+	}
 	
 
 
 
-	magic_conductors
+
+
+
+	magic_conductors = {
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		activation = {
+			#always = no
+		}
+		days_mission_timeout = 100
+		is_good = yes
+		fire_only_once = yes
+		selectable_mission = no
+		timeout_effect = {
+
+		}
+	}
 	coolant_control
 	power_control
 

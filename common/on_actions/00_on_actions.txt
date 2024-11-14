@@ -98,6 +98,19 @@ on_actions = {
 			set_global_flag = first_nuke_dropped
 			#to do events (race won/lost/wasn`t partisipation)
 			FROM = {
+				#construction sites are not really buildings - they ignore damage
+				set_temp_variable = {
+					building_level = building_level@construction_site
+				}
+				remove_building = {
+					type = construction_site
+					level = building_level
+				}
+				set_building_level = {
+					type = construction_site
+					level = building_level
+					instant_build = yes
+				}
 				#anti_nuke_bunker can`t be registered as damaged, because it`s can be easily damaged by one nuke (which isn`t true)
 				random_list = {
 					100 = {

@@ -298,12 +298,10 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOT = {
-					PGT = {
-						has_defensive_war_with = EQS
-					}
-					FROM = {
-						tag = PGT
+				FROM = {
+					tag = EQS
+					NOT = {
+						has_war_with = PGT
 					}
 				}
 			}
@@ -332,12 +330,10 @@ country_event = {
 		}
 		if = {
 			limit = {
-				NOT = {
-					EPT = {
-						has_defensive_war_with = EQS
-					}
-					FROM = {
-						tag = EPT
+				FROM = {
+					tag = EQS
+					NOT = {
+						has_war_with = EPT
 					}
 				}
 			}
@@ -368,6 +364,20 @@ country_event = {
 					days = 7
 					random_days = 3
 				}
+				if = {
+					limit = {
+						NOT = {
+							tag = EQS
+						}
+					}
+					EQS = {
+						country_event = {
+							id = equestria.11
+							days = 7
+							random_days = 3
+						}
+					}
+				}
 			}
 		}
 		ai_chance = {
@@ -388,6 +398,36 @@ country_event = {
 	option = {
 		#fuck!
 		name = equestria.11.a
+		trigger = {
+			tag = EQS
+		}
+		if = {
+			limit = {
+				FROM = {
+					tag = PGT
+				}
+			}
+			remove_power_balance_modifier = {
+				id = EQS_prince_blueblood_vs_twilight
+				modifier = EQS_PGT_white_peace
+			}
+		}
+		else = {
+			remove_power_balance_modifier = {
+				id = EQS_prince_blueblood_vs_twilight
+				modifier = EQS_EPT_white_peace
+			}
+		}
+		add_war_support = 0.05
+	}
+	option = {
+		#we can understand them...
+		trigger = {
+			NOT = {
+				tag = EQS
+			}
+		}
+		#to do: add opinion modifier from FROM to THIS
 	}
 }
 country_event = {

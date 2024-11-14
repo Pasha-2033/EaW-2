@@ -1,28 +1,20 @@
-state={
-	id=69
-	name="STATE_69"
-
-	provinces={
-		547 3431 6591 6596 7005 
+state = {
+	id = 69
+	name = "STATE_69"
+	provinces = {
+		547 
+		3431 
+		6591 
+		6596 
+		7005 
 	}
-
-	manpower=1100260
-	state_category=city
-	buildings_max_level_factor=1.00
-
-	history={
-		982.1.1 = {
-			owner = BR3
-			add_core_of = BR3
-		}
-		1002.1.1 = {
-			owner = OLE
-			add_core_of = OLE
-			remove_core_of = BR3
-		}
-		1050.1.1 = {}
+	manpower = 1100260
+	state_category = city
+	buildings_max_level_factor = 1
+	history = {
 		victory_points = { 3431 20 }
-
+		owner = BR3
+		add_core_of = BR3
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
@@ -32,5 +24,11 @@ state={
 				naval_base = 1
 			}
 		}
+		1002.1.1 = {
+			owner = OLE
+			add_core_of = OLE
+			remove_core_of = BR3
+		}
+		1050.1.1 = {}
 	}
 }

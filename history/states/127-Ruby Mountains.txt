@@ -1,29 +1,27 @@
-state={
-	id=127
-	name="STATE_127"
-
-	provinces={
-		979 10685 11874 12276 12456 13162
+state = {
+	id = 127
+	name = "STATE_127"
+	provinces = {
+		979 
+		10685 
+		11874 
+		12276
+		12456 
+		13162
 	}
-
-	manpower=13001
-	state_category=wasteland
-	buildings_max_level_factor=1.00
-
-	history={
-		#owner = EQS
-		#add_core_of = EQS
-		982.1.1 = {
-			owner = ICE
-			add_core_of = ICE
-			add_core_of = EQS
-		}
+	manpower = 13001
+	state_category = wasteland
+	buildings_max_level_factor = 1
+	history = {
+		owner = ICE
+		add_core_of = ICE
+		add_core_of = EQS
 		1002.1.1 = {
 			owner = EQS
 			remove_core_of = ICE
 		}
+		1050.1.1 = {}
 	}
-
 	resources = {
 		crystals = 3
 	}
