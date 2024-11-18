@@ -82,18 +82,12 @@ adjacency_rule =
 	
 	required_provinces = { 1560 12368 }
 	is_disabled = {
-		290 = {
-			OR = {
-				has_global_flag = canal_schneeschpark_isnt_built
-				has_dynamic_modifier = {
-					modifier = canal_schneeschpark_damaged_modifier
-				}
-				controller = {
-					is_embargoing = ROOT
-				}
-			}
+		OR = {
+			has_global_flag = SUEZ_CANAL_BLOCKED
+			has_country_flag = SUEZ_CANAL_BLOCKED_FOR_COUNTRY
+			has_country_flag = SUEZ_SANCTIONS_FLAG
 		}
-		tooltip = "canal_schneeschpark_blocked_tt"
+		tooltip = suez_blocked_tt
 	}
 	icon = 12368
 	offset = { 2 0 0 }

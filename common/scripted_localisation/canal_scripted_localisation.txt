@@ -1,0 +1,22 @@
+defined_text = {
+	name = canal_schneeschpark_blocked_tt
+	text = {
+		trigger = {
+			has_global_flag = canal_schneeschpark_isnt_built
+		}
+		localization_key = "canal_schneeschpark_isnt_built_tt"
+	}
+	text = {
+		trigger = {
+			290 = {
+				has_dynamic_modifier = {
+					modifier = canal_schneeschpark_damaged_modifier
+				}
+			}
+		}
+		localization_key = "canal_schneeschpark_damaged_tt"
+	}
+	text = {
+		localization_key = "canal_schneeschpark_closed_tt"
+	}
+}

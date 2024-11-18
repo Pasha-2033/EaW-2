@@ -459,3 +459,17 @@ d_tt = {
 		transfer_state = 67
 	}
 }
+d_cd = {
+	if = {
+		limit = {
+			has_global_flag = canal_schneeschpark_isnt_built
+		}
+		clr_global_flag = canal_schneeschpark_isnt_built
+	}
+	else = {
+		set_global_flag = canal_schneeschpark_isnt_built
+	}
+}
+d_se = {
+	send_embargo = FROM
+}
