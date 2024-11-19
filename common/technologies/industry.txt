@@ -856,7 +856,6 @@ technologies = {
 				num_of_naval_factories > 30
 			}
 		}
-		
 	}
 
 	fuel_refining2 = {
@@ -1094,6 +1093,14 @@ technologies = {
 
 		ai_research_weights = {
 			oil = -2.0
+		}
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = {
+					init_synthetic_refineries = 1
+					popup = no
+				}
+			}
 		}
 	}
 
@@ -3512,6 +3519,97 @@ technologies = {
 	}
 
 	###------> X <><> <><> <><> <><> <><>
+
+	#metallurgy tree
+	basics_of_metallurgy = {
+		research_cost = 2
+		folder = {
+			name = industry_folder
+			position = { 
+				x = 0 
+				y = 0
+			}
+		}
+		ai_will_do = {
+			base = 4
+		}
+		categories = {
+			industry
+		}
+		enable_building = {
+			building = aluminium_plant
+			level = 1
+		}
+		enable_building = {
+			building = steel_plant
+			level = 2
+		}
+		enable_building = {
+			building = tungsten_plant
+			level = 1
+		}
+		enable_building = {
+			building = chromium_plant
+			level = 1
+		}
+		on_research_complete = {
+			hidden_effect = {
+				add_to_array = {
+					array = resource_activity_array
+					value = 20
+				}
+				add_to_array = {
+					array = resource_activity_array
+					value = 21
+				}
+				add_to_array = {
+					array = resource_activity_array
+					value = 22
+				}
+				add_to_array = {
+					array = resource_activity_array
+					value = 23
+				}
+				set_technology = {
+					init_metallurgy = 1
+					popup = no
+				}
+			}
+		}
+	}
+
+	#technical tech :)
+	init_metallurgy = {
+		#2+ RESEARCH WILL BREAK RESOURCE ACTIVITY GUI!
+		#EXISTS ONLY FOR HIDING MODIFIERS!
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		aluminium_plant_bauxite_consumption = 5
+		steel_plant_iron_consumption = 5
+		tungsten_plant_scheelitis_consumption = 5
+		chromium_plant_chromite_consumption = 5
+		aluminium_plant_aluminium_outcome = 5
+		steel_plant_steel_outcome = 5
+		tungsten_plant_tungsten_outcome = 5
+		chromium_plant_chromium_outcome = 5
+		on_research_complete = {
+			force_update_dynamic_modifier = yes
+		}
+	}
+	init_synthetic_refineries = {
+		#2+ RESEARCH WILL BREAK RESOURCE ACTIVITY GUI!
+		#EXISTS ONLY FOR HIDING MODIFIERS!
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		synthetic_refinery_fuel_outcome = 2
+		on_research_complete = {
+			force_update_dynamic_modifier = yes
+		}
+	}
 
 }
 

@@ -31,6 +31,71 @@ buildings = {
 		max_fuel_building = 1.5 #k
 	}
 
+	aluminium_plant = {
+		icon_frame = 20
+		level_cap = {
+			state_max = 20
+			shares_slots = yes
+		}
+		base_cost = 100
+		infrastructure_construction_effect = yes
+
+		show_modifier = yes
+		country_modifiers = {
+			modifiers = {
+				aluminium_plant_num = 1
+			}
+		}
+	}
+	steel_plant = {
+		icon_frame = 21
+		level_cap = {
+			state_max = 20
+			shares_slots = yes
+		}
+		base_cost = 100
+		infrastructure_construction_effect = yes
+
+		show_modifier = yes
+		country_modifiers = {
+			modifiers = {
+				steel_plant_num = 1
+			}
+		}
+	}
+	tungsten_plant = {
+		icon_frame = 22
+		level_cap = {
+			state_max = 20
+			shares_slots = yes
+		}
+		base_cost = 100
+		infrastructure_construction_effect = yes
+
+		show_modifier = yes
+		country_modifiers = {
+			modifiers = {
+				tungsten_plant_num = 1
+			}
+		}
+	}
+	chromium_plant = {
+		icon_frame = 23
+		level_cap = {
+			state_max = 20
+			shares_slots = yes
+		}
+		base_cost = 100
+		infrastructure_construction_effect = yes
+
+		show_modifier = yes
+		country_modifiers = {
+			modifiers = {
+				chromium_plant_num = 1
+			}
+		}
+	}
+
 	arms_factory = {
 		icon_frame = 2
 		level_cap = {
@@ -238,14 +303,12 @@ buildings = {
 		base_cost = 14500
 		infrastructure_construction_effect = yes
 		value = 5
-		
-		refinery = yes
-		local_resources_rubber = 3 # May use local_resources_ + any resource name
 
 		show_modifier = yes
 		country_modifiers = {
 			modifiers = {
-				fuel_gain_from_states = 2.0 #per hour
+				synthetic_refinery_num = 1
+				max_fuel_building = 1 #k
 			}
 		}
 
@@ -307,7 +370,9 @@ buildings = {
 		show_on_map = 1
 	}
 	mega_gun_emplacement = {
-		dlc_allowed = { has_dlc = Gotterdammerung }
+		dlc_allowed = { 
+			has_dlc = Gotterdammerung 
+		}
 		#hide_if_missing_tech = yes
 		show_on_map = 1
 		base_cost = 20000

@@ -1,0 +1,145 @@
+aluminium_plant_total_bauxite_consumption = {
+	base = 0
+	modifier = {
+		add = modifier@aluminium_plant_bauxite_consumption
+	}
+	modifier = {
+		factor = modifier@aluminium_plant_num
+	}
+}
+aluminium_plant_total_aluminium_outcome = {
+	base = 0
+	modifier = {
+		add = modifier@aluminium_plant_aluminium_outcome
+	}
+	modifier = {
+		factor = modifier@aluminium_plant_num
+	}
+	#make resource penalty (to do)
+	#modifier = {
+	#	crystals < 0
+	#	add = resource@crystals
+	#}
+	modifier = {
+		factor = -1
+	}
+}
+steel_plant_total_iron_consumption = {
+	base = 0
+	modifier = {
+		add = modifier@steel_plant_iron_consumption
+	}
+	modifier = {
+		factor = modifier@steel_plant_num
+	}
+}
+steel_plant_total_steel_outcome = {
+	base = 0
+	modifier = {
+		add = modifier@steel_plant_steel_outcome
+	}
+	modifier = {
+		factor = modifier@steel_plant_num
+	}
+	#make resource penalty (to do)
+	#modifier = {
+	#	crystals < 0
+	#	add = resource@crystals
+	#}
+	modifier = {
+		factor = -1
+	}
+}
+tungsten_plant_total_scheelitis_consumption = {
+	base = 0
+	modifier = {
+		add = modifier@tungsten_plant_scheelitis_consumption
+	}
+	modifier = {
+		factor = modifier@tungsten_plant_num
+	}
+}
+tungsten_plant_total_tungsten_outcome = {
+	base = 0
+	modifier = {
+		add = modifier@tungsten_plant_tungsten_outcome
+	}
+	modifier = {
+		factor = modifier@tungsten_plant_num
+	}
+	#make resource penalty (to do)
+	#modifier = {
+	#	crystals < 0
+	#	add = resource@crystals
+	#}
+	modifier = {
+		factor = -1
+	}
+}
+chromium_plant_total_chromite_consumption = {
+	base = 0
+	modifier = {
+		add = modifier@chromium_plant_chromite_consumption
+	}
+	modifier = {
+		factor = modifier@chromium_plant_num
+	}
+}
+chromium_plant_total_chromium_outcome = {
+	base = 0
+	modifier = {
+		add = modifier@chromium_plant_chromium_outcome
+	}
+	modifier = {
+		factor = modifier@chromium_plant_num
+	}
+	#make resource penalty (to do)
+	#modifier = {
+	#	crystals < 0
+	#	add = resource@crystals
+	#}
+	modifier = {
+		factor = -1
+	}
+}
+
+synthetic_refinery_total_oil_consumption = {
+	base = 0
+	modifier = {
+		add = modifier@synthetic_refinery_oil_consumption
+	}
+	modifier = {
+		factor = modifier@synthetic_refinery_num
+	}
+}
+synthetic_refinery_total_rubber_outcome = {
+	base = 0
+	modifier = {
+		add = modifier@synthetic_refinery_rubber_outcome
+	}
+	modifier = {
+		factor = modifier@synthetic_refinery_num
+	}
+	#make resource penalty (to do)
+	#modifier = {
+	#	crystals < 0
+	#	add = resource@crystals
+	#}
+	modifier = {
+		factor = -1
+	}
+}
+synthetic_refinery_total_fuel_outcome = {
+	base = 0
+	modifier = {
+		add = modifier@synthetic_refinery_fuel_outcome
+	}
+	modifier = {
+		factor = modifier@synthetic_refinery_num
+	}
+	#make resource penalty (to do)
+	#modifier = {
+	#	crystals < 0
+	#	add = resource@crystals
+	#}
+}

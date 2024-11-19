@@ -1,0 +1,40 @@
+scripted_gui = {
+	resource_activity = {
+		context_type = player_context
+		parent_window_name = "possible_shared_constructions"
+		window_name = "resource_activity_container"
+		visible = {
+			is_ai = no
+		}
+		dynamic_lists = {
+			resource_activity_grid = {
+				array = resource_activity_array
+				change_scope = no
+				entry_container = "resource_activity_building_container"
+				value = v
+			}
+		}
+		triggers = {
+			synthetic_refinery_frame_visible = {
+				has_tech = synth_oil_experiments
+			}
+			synthetic_refinery_icon_visible = {
+				has_tech = synth_oil_experiments
+			}
+			synthetic_refinery_consumption_visible = {
+				has_tech = synth_oil_experiments
+			}
+			synthetic_refinery_rubber_outcome_visible = {
+				has_tech = synth_oil_experiments
+			}
+			synthetic_refinery_fuel_outcome_visible = {
+				has_tech = synth_oil_experiments
+			}
+		}
+		properties = {
+			building_icon = {
+				frame = v
+			}
+		}
+	}
+}

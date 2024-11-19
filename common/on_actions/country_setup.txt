@@ -353,7 +353,34 @@ on_actions = {
 				#set technologies
 				set_technology = {
 					construction_site_base_limit = 1
+					#basics_of_metallurgy = 1
 					popup = no
+				}
+				#set building tooltips
+				if = {
+					limit = {
+						has_tech = basics_of_metallurgy
+					}
+					add_to_array = {
+						array = resource_activity_array
+						value = 20
+					}
+					add_to_array = {
+						array = resource_activity_array
+						value = 21
+					}
+					add_to_array = {
+						array = resource_activity_array
+						value = 22
+					}
+					add_to_array = {
+						array = resource_activity_array
+						value = 23
+					}
+				}
+				#set economy modifiers
+				add_dynamic_modifier = {
+					modifier = resource_activity_modifier
 				}
 			}
 		}
