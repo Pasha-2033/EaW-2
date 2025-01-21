@@ -52,8 +52,8 @@ guiTypes = {
 		containerWindowType = {
 			name = "materiel"
 			position = { x = 0 y = 47 }
-			size = { width = 550 height = -98 }
-			margin = { top = 33 bottom = 123}
+			size = { width = 550 height = 757 }
+			margin = { top = 33 bottom = 103}
 			verticalScrollbar = "right_vertical_slider"
 			
 			background = {
@@ -160,7 +160,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "fuel_info"
-			position = { x = 0 y = -210 }
+			position = { x = 0 y = -300 }
 			size = { width = 546 height = 103 }
 			verticalScrollbar = "right_vertical_slider"
 			Orientation = LOWER_LEFT
@@ -170,7 +170,13 @@ guiTypes = {
 			iconType ={
 				name ="trade_filter_bg"
 				spriteType = "GFX_trade_filter_bg"
-				position = { x= 20 y = 0 }
+				position = { x= 0 y = 0 }
+				Orientation = "UPPER_LEFT"
+			}
+			iconType ={
+				name ="trade_filter_bg_2"
+				spriteType = "GFX_trade_filter_bg"
+				position = { x= 0 y = 100 }
 				Orientation = "UPPER_LEFT"
 			}
 			
@@ -448,11 +454,11 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "production_win_bottom"
-			position = { x = 1 y = -98 }
+			position = { x = 1 y = -198 }
 			size = { width = 546 height = 98 }
 			verticalScrollbar = "right_vertical_slider"
 			Orientation = LOWER_LEFT
-			
+			clipping = no
 			background = {
 				name = "Background"
 				spriteType ="GFX_logistics_win_bottom"
@@ -462,7 +468,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "military_factories"
-			position = { x = 20 y = -94 }
+			position = { x = 107 y = -174 }
 			size = { width = 130 height = 70 }
 			Orientation = lower_left
 
@@ -501,7 +507,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "naval_factories"
-			position = { x = 170 y = -94 }
+			position = { x = 308 y = -174 }
 			size = { width = 130 height = 70 }
 			Orientation = lower_left
 
@@ -540,9 +546,9 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "resources"
-			position = { x = -235 y = -94 }
+			position = { x = 68 y = -94 }
 			size = { width = 200 height = 150 }
-			Orientation = lower_right
+			Orientation = lower_left
 
 			iconType = {
 				name ="logistics_overview_resources_bg"
@@ -552,11 +558,10 @@ guiTypes = {
 			
 			gridBoxType = {
 				name = "resources_grid"
-				position = { x = 0 y = 0 }
+				position = { x = 4 y = 0 }
 				size = { width = 100% height = 100% }
 				slotsize = { width = 50 height = 30 }
-				max_slots = { x = 4 y = 2 }
-				add_horizontal = no
+				max_slots = { x = 8 y = 2 }
 				format = "UPPER_LEFT"
 			}
 		}
@@ -1446,6 +1451,12 @@ guiTypes = {
 		background = {
 			name = "Background"
 			spriteType ="GFX_fuel_logisctics_graph_entry_bg"
+		}
+
+		buttonType = {
+			name = "icon_checkbox"
+			position = { x=7 y=7 }	
+			spriteType = "GFX_fuel_logisctics_graph_entry_color"
 		}
 
 		iconType = {

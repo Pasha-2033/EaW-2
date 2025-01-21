@@ -678,7 +678,7 @@ joint_focus = {
 						any_owned_state = {
 							is_controlled_by = PREV
 							has_resources_amount = {
-								resource = aluminium
+								resource = bauxite
 								amount > 0
 							}
 						}
@@ -686,7 +686,7 @@ joint_focus = {
 					random_owned_controlled_state = {
 						limit = {
 							has_resources_amount = {
-								resource = aluminium
+								resource = bauxite
 								amount > 0
 							}
 						}
@@ -697,7 +697,7 @@ joint_focus = {
 							instant_build = yes
 						}
 						add_resource = {
-							type = aluminium
+							type = bauxite
 							amount = 4
 						}
 					}
@@ -711,7 +711,7 @@ joint_focus = {
 							instant_build = yes
 						}
 						add_resource = {
-							type = aluminium
+							type = bauxite
 							amount = 4
 						}
 					}
@@ -886,12 +886,12 @@ joint_focus = {
 				infrastructure > 1
 			}
 			add_resource = {
-				type = steel
+				type = iron
 				amount = 3
 				state = THIS
 			}
 			add_resource = {
-				type = aluminium
+				type = bauxite
 				amount = 1
 				state = THIS
 			}
@@ -1106,7 +1106,7 @@ joint_focus = {
 					}
 					var:temp_state = {
 						add_resource = {
-							type = steel
+							type = iron
 							amount = 5
 							state = THIS
 						}
@@ -1134,7 +1134,7 @@ joint_focus = {
 						instant_build = yes
 					}
 					add_resource = {
-						type = steel
+						type = iron
 						amount = 2
 						state = THIS
 					}

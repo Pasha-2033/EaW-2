@@ -15,12 +15,21 @@ state = {
 		add_core_of = DRG
 		buildings = {
 			industrial_complex = 1
+			steel_plant = 1
+			13071 = {
+				landmark_ozarsky_geyser = {
+					allowed = {
+						has_dlc = "Gotterdammerung"
+					}
+					level = 1
+				}
+			}
 		}
 		1002.1.1 = {}
 		1050.1.1 = {}
 	}
 	resources = {
-		steel = 2
+		iron = 2
 		crystals = 3
 	}
 }

@@ -20,10 +20,16 @@ chromium_plant_chromium_outcome: "Выход хрома на производс�
 synthetic_refinery_rubber_outcome: "Выход резины на производство"
 synthetic_refinery_fuel_outcome: "Выход топлива на производство"
 
+aluminium_plant_penalty_reduction: "Снижение штрафа за нехватку ресурса $PRODUCTION_MATERIALS_BAUXITE$"
+steel_plant_penalty_reduction: "Снижение штрафа за нехватку ресурса $PRODUCTION_MATERIALS_IRON$"
+tungsten_plant_penalty_reduction: "Снижение штрафа за нехватку ресурса $PRODUCTION_MATERIALS_SCHEELITIS$"
+chromium_plant_penalty_reduction: "Снижение штрафа за нехватку ресурса $PRODUCTION_MATERIALS_CHROMITE$"
+synthetic_refinery_penalty_reduction: "Снижение штрафа за нехватку ресурса $PRODUCTION_MATERIALS_OIL$"
+
 aluminium_plant_consumption_tt: "£resources_strip|11 [?modifier@aluminium_plant_bauxite_consumption]"
 steel_plant_consumption_tt: "£resources_strip|5 [?modifier@steel_plant_iron_consumption]"
-tungsten_plant_consumption_tt: "£resources_strip|12 [?modifier@steel_plant_iron_consumption]"
-chromium_plant_consumption_tt: "£resources_strip|10 [?modifier@steel_plant_iron_consumption]"
+tungsten_plant_consumption_tt: "£resources_strip|12 [?modifier@tungsten_plant_scheelitis_consumption]"
+chromium_plant_consumption_tt: "£resources_strip|10 [?modifier@chromium_plant_chromite_consumption]"
 synthetic_refinery_consumption_tt: "£resources_strip|1 [?modifier@synthetic_refinery_oil_consumption]"
 
 aluminium_plant_outcome_tt: "£resources_strip|2 [?modifier@aluminium_plant_aluminium_outcome]"

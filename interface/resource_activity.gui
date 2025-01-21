@@ -2,13 +2,14 @@ guiTypes = {
 	containerWindowType = {
 		name = "resource_activity_container"
 		size = { 
-			width = 270 
+			width = 440
 			height = 273
 		}
 		position = { 
-			x = 257
-			y = 45
+			x = -434
+			y = -273
 		}
+		orientation = LOWER_LEFT
 		background = {
 			name = "background"
 			quadTextureSprite = "GFX_tiled_window2_1b_border"
@@ -134,6 +135,57 @@ guiTypes = {
 			maxHeight = 20
 			fixedsize = yes
 			format = center
+		}
+
+		buttonType = {
+			name = "sub_10"
+			position = {
+				x = 226 
+				y = 17
+			}
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_close
+		}
+		buttonType = {
+			name = "sub_5"
+			position = {
+				x = 257
+				y = 17
+			}
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_close
+		}
+		instantTextBoxType = {
+			name = "effectiveness"
+			position = { x = 290 y = 24 }
+			font = "hoi_20b"
+			text = "[?plant_max_power^i|%0]"
+			maxWidth = 51
+			maxHeight = 20
+			fixedsize = yes
+			format = center
+		}
+		buttonType = {
+			name = "add_5"
+			position = {
+				x = 341
+				y = 17
+			}
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_close
+		}
+		buttonType = {
+			name = "add_10"
+			position = {
+				x = 373
+				y = 17
+			}
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_close
 		}
 	}
 }

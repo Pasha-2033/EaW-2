@@ -46,6 +46,14 @@ if = { #982 scenario script
 		OLE_high_nobles_influence
 		OLE_gossips_and_intrigues
 	}
+	if = {
+		limit = {
+			NOT = {
+				has_dlc = "Gotterdammerung"
+			}
+		}
+		add_ideas = OLE_hjordland_lighthouse
+	}
 	set_stability = 0.4
 	set_war_support = 0.35
 	country_event = { 

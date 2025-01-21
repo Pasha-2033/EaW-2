@@ -353,32 +353,29 @@ on_actions = {
 				#set technologies
 				set_technology = {
 					construction_site_base_limit = 1
-					#basics_of_metallurgy = 1
 					popup = no
 				}
-				#set building tooltips
+				#set building tooltips and mechanics
 				if = {
 					limit = {
 						has_tech = basics_of_metallurgy
 					}
-					add_to_array = {
-						array = resource_activity_array
-						value = 20
+					#history tech does not research other
+					set_technology = {
+						init_metallurgy = 1
+						popup = no
 					}
-					add_to_array = {
-						array = resource_activity_array
-						value = 21
+				}
+				if = {
+					limit = {
+						has_tech = synth_oil_experiments
 					}
-					add_to_array = {
-						array = resource_activity_array
-						value = 22
-					}
-					add_to_array = {
-						array = resource_activity_array
-						value = 23
+					set_variable = {
+						synthetic_refinery_max_power = 1
 					}
 				}
 				#set economy modifiers
+				calc_all_resources = yes
 				add_dynamic_modifier = {
 					modifier = resource_activity_modifier
 				}

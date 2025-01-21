@@ -1,3 +1,253 @@
+#aluminium_plant_total_bauxite_consumption = {
+#	base = 0
+#	modifier = {
+#		add = modifier@aluminium_plant_bauxite_consumption
+#	}
+#	modifier = {
+#		factor = modifier@aluminium_plant_num
+#	}
+#	modifier = {
+#		factor = plant_max_power^0
+#	}
+#}
+#aluminium_plant_total_aluminium_outcome = {
+#	base = 0
+#	modifier = {
+#		#outcome * clamp((resource + consumption(cost)) / consumption(cost), min = 0, max = 1)
+#		#outcome
+#		set_temp_variable = {
+#			outcome = modifier@aluminium_plant_aluminium_outcome
+#		}
+#		multiply_temp_variable = {
+#			outcome = modifier@aluminium_plant_num
+#		}
+#		multiply_temp_variable = {
+#			outcome = plant_max_power^0
+#		}
+#		#(resource + consumption(cost)) / consumption(cost) & clamp
+#		set_temp_variable = {
+#			consumption = resource@bauxite
+#		}
+#		add_to_temp_variable = {
+#			consumption = mtth:aluminium_plant_total_bauxite_consumption
+#		}
+#		divide_temp_variable = {
+#			consumption = mtth:aluminium_plant_total_bauxite_consumption
+#		}
+#		clamp_temp_variable = {
+#			var = consumption
+#			min = 0
+#			max = 1
+#		}
+#		#outcome * %(effectiveness)
+#		multiply_temp_variable = {
+#			outcome = consumption
+#		}
+#		add = outcome
+#	}
+#	modifier = {
+#		factor = -1
+#	}
+#}
+#steel_plant_total_iron_consumption = {
+#	base = 0
+#	modifier = {
+#		add = modifier@steel_plant_iron_consumption
+#	}
+#	modifier = {
+#		factor = modifier@steel_plant_num
+#	}
+#	modifier = {
+#		factor = plant_max_power^1
+#	}
+#}
+#steel_plant_total_steel_outcome = {
+#	base = 0
+#	modifier = {
+#		#outcome * clamp((resource + consumption(cost)) / consumption(cost), min = 0, max = 1)
+#		#outcome
+#		set_temp_variable = {
+#			outcome = modifier@steel_plant_steel_outcome
+#		}
+#		multiply_temp_variable = {
+#			outcome = modifier@steel_plant_num
+#		}
+#		multiply_temp_variable = {
+#			outcome = plant_max_power^1
+#		}
+#		#(resource + consumption(cost)) / consumption(cost) & clamp
+#		set_temp_variable = {
+#			consumption = resource@iron
+#		}
+#		add_to_temp_variable = {
+#			consumption = mtth:steel_plant_total_iron_consumption
+#		}
+#		divide_temp_variable = {
+#			consumption = mtth:steel_plant_total_iron_consumption
+#		}
+#		clamp_temp_variable = {
+#			var = consumption
+#			min = 0
+#			max = 1
+#		}
+#		#outcome * %(effectiveness)
+#		multiply_temp_variable = {
+#			outcome = consumption
+#		}
+#		add = outcome
+#	}
+#	modifier = {
+#		factor = -1
+#	}
+#}
+#tungsten_plant_total_scheelitis_consumption = {
+#	base = 0
+#	modifier = {
+#		add = modifier@tungsten_plant_scheelitis_consumption
+#	}
+#	modifier = {
+#		factor = modifier@tungsten_plant_num
+#	}
+#	modifier = {
+#		factor = plant_max_power^2
+#	}
+#}
+#tungsten_plant_total_tungsten_outcome = {
+#	base = 0
+#	modifier = {
+#		#outcome * clamp((resource + consumption(cost)) / consumption(cost), min = 0, max = 1)
+#		#outcome
+#		set_temp_variable = {
+#			outcome = modifier@tungsten_plant_tungsten_outcome
+#		}
+#		multiply_temp_variable = {
+#			outcome = modifier@tungsten_plant_num
+#		}
+#		multiply_temp_variable = {
+#			outcome = plant_max_power^2
+#		}
+#		#(resource + consumption(cost)) / consumption(cost) & clamp
+#		set_temp_variable = {
+#			consumption = resource@scheelitis
+#		}
+#		add_to_temp_variable = {
+#			consumption = mtth:tungsten_plant_total_scheelitis_consumption
+#		}
+#		divide_temp_variable = {
+#			consumption = mtth:tungsten_plant_total_scheelitis_consumption
+#		}
+#		clamp_temp_variable = {
+#			var = consumption
+#			min = 0
+#			max = 1
+#		}
+#		#outcome * %(effectiveness)
+#		multiply_temp_variable = {
+#			outcome = consumption
+#		}
+#		add = outcome
+#	}
+#	modifier = {
+#		factor = -1
+#	}
+#}
+#chromium_plant_total_chromite_consumption = {
+#	base = 0
+#	modifier = {
+#		add = modifier@chromium_plant_chromite_consumption
+#	}
+#	modifier = {
+#		factor = modifier@chromium_plant_num
+#	}
+#	modifier = {
+#		factor = plant_max_power^3
+#	}
+#}
+#chromium_plant_total_chromium_outcome = {
+#	base = 0
+#	modifier = {
+#		#outcome * clamp((resource + consumption(cost)) / consumption(cost), min = 0, max = 1)
+#		#outcome
+#		set_temp_variable = {
+#			outcome = modifier@chromium_plant_chromium_outcome
+#		}
+#		multiply_temp_variable = {
+#			outcome = modifier@chromium_plant_num
+#		}
+#		multiply_temp_variable = {
+#			outcome = plant_max_power^3
+#		}
+#		#(resource + consumption(cost)) / consumption(cost) & clamp
+#		set_temp_variable = {
+#			consumption = resource@chromite
+#		}
+#		add_to_temp_variable = {
+#			consumption = mtth:chromium_plant_total_chromite_consumption
+#		}
+#		divide_temp_variable = {
+#			consumption = mtth:chromium_plant_total_chromite_consumption
+#		}
+#		clamp_temp_variable = {
+#			var = consumption
+#			min = 0
+#			max = 1
+#		}
+#		#outcome * %(effectiveness)
+#		multiply_temp_variable = {
+#			outcome = consumption
+#		}
+#		add = outcome
+#	}
+#	modifier = {
+#		factor = -1
+#	}
+#}
+
+#synthetic_refinery_total_oil_consumption = {
+#	base = 0
+#	modifier = {
+#		add = modifier@synthetic_refinery_oil_consumption
+#	}
+#	modifier = {
+#		factor = modifier@synthetic_refinery_num
+#	}
+#	modifier = {
+#		factor = synthetic_refinery_max_power
+#	}
+#}
+#synthetic_refinery_total_rubber_outcome = {
+#	base = 0
+#	modifier = {
+#		add = modifier@synthetic_refinery_rubber_outcome
+#	}
+#	modifier = {
+#		factor = modifier@synthetic_refinery_num
+#	}
+#	#make resource penalty (to do)
+#	#modifier = {
+#	#	crystals < 0
+#	#	add = resource@crystals
+#	#}
+#	modifier = {
+#		factor = -1
+#	}
+#}
+#synthetic_refinery_total_fuel_outcome = {
+#	base = 0
+#	modifier = {
+#		add = modifier@synthetic_refinery_fuel_outcome
+#	}
+#	modifier = {
+#		factor = modifier@synthetic_refinery_num
+#	}
+#	#make resource penalty (to do)
+#	#modifier = {
+#	#	crystals < 0
+#	#	add = resource@crystals
+#	#}
+#}
+
+
 aluminium_plant_total_bauxite_consumption = {
 	base = 0
 	modifier = {
@@ -5,6 +255,9 @@ aluminium_plant_total_bauxite_consumption = {
 	}
 	modifier = {
 		factor = modifier@aluminium_plant_num
+	}
+	modifier = {
+		factor = plant_max_power^0
 	}
 }
 aluminium_plant_total_aluminium_outcome = {
@@ -15,15 +268,11 @@ aluminium_plant_total_aluminium_outcome = {
 	modifier = {
 		factor = modifier@aluminium_plant_num
 	}
-	#make resource penalty (to do)
-	#modifier = {
-	#	crystals < 0
-	#	add = resource@crystals
-	#}
 	modifier = {
-		factor = -1
+		factor = plant_max_power^0
 	}
 }
+
 steel_plant_total_iron_consumption = {
 	base = 0
 	modifier = {
@@ -31,6 +280,9 @@ steel_plant_total_iron_consumption = {
 	}
 	modifier = {
 		factor = modifier@steel_plant_num
+	}
+	modifier = {
+		factor = plant_max_power^1
 	}
 }
 steel_plant_total_steel_outcome = {
@@ -41,15 +293,11 @@ steel_plant_total_steel_outcome = {
 	modifier = {
 		factor = modifier@steel_plant_num
 	}
-	#make resource penalty (to do)
-	#modifier = {
-	#	crystals < 0
-	#	add = resource@crystals
-	#}
 	modifier = {
-		factor = -1
+		factor = plant_max_power^1
 	}
 }
+
 tungsten_plant_total_scheelitis_consumption = {
 	base = 0
 	modifier = {
@@ -57,6 +305,9 @@ tungsten_plant_total_scheelitis_consumption = {
 	}
 	modifier = {
 		factor = modifier@tungsten_plant_num
+	}
+	modifier = {
+		factor = plant_max_power^2
 	}
 }
 tungsten_plant_total_tungsten_outcome = {
@@ -67,15 +318,11 @@ tungsten_plant_total_tungsten_outcome = {
 	modifier = {
 		factor = modifier@tungsten_plant_num
 	}
-	#make resource penalty (to do)
-	#modifier = {
-	#	crystals < 0
-	#	add = resource@crystals
-	#}
 	modifier = {
-		factor = -1
+		factor = plant_max_power^2
 	}
 }
+
 chromium_plant_total_chromite_consumption = {
 	base = 0
 	modifier = {
@@ -83,6 +330,9 @@ chromium_plant_total_chromite_consumption = {
 	}
 	modifier = {
 		factor = modifier@chromium_plant_num
+	}
+	modifier = {
+		factor = plant_max_power^3
 	}
 }
 chromium_plant_total_chromium_outcome = {
@@ -93,13 +343,8 @@ chromium_plant_total_chromium_outcome = {
 	modifier = {
 		factor = modifier@chromium_plant_num
 	}
-	#make resource penalty (to do)
-	#modifier = {
-	#	crystals < 0
-	#	add = resource@crystals
-	#}
 	modifier = {
-		factor = -1
+		factor = plant_max_power^3
 	}
 }
 
@@ -111,6 +356,9 @@ synthetic_refinery_total_oil_consumption = {
 	modifier = {
 		factor = modifier@synthetic_refinery_num
 	}
+	modifier = {
+		factor = synthetic_refinery_max_power
+	}
 }
 synthetic_refinery_total_rubber_outcome = {
 	base = 0
@@ -120,13 +368,8 @@ synthetic_refinery_total_rubber_outcome = {
 	modifier = {
 		factor = modifier@synthetic_refinery_num
 	}
-	#make resource penalty (to do)
-	#modifier = {
-	#	crystals < 0
-	#	add = resource@crystals
-	#}
 	modifier = {
-		factor = -1
+		factor = synthetic_refinery_max_power
 	}
 }
 synthetic_refinery_total_fuel_outcome = {
@@ -137,9 +380,7 @@ synthetic_refinery_total_fuel_outcome = {
 	modifier = {
 		factor = modifier@synthetic_refinery_num
 	}
-	#make resource penalty (to do)
-	#modifier = {
-	#	crystals < 0
-	#	add = resource@crystals
-	#}
+	modifier = {
+		factor = synthetic_refinery_max_power
+	}
 }

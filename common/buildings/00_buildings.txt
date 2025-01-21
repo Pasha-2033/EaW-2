@@ -36,6 +36,7 @@ buildings = {
 		level_cap = {
 			state_max = 20
 			shares_slots = yes
+			group_by = metal_plants
 		}
 		base_cost = 100
 		infrastructure_construction_effect = yes
@@ -52,6 +53,7 @@ buildings = {
 		level_cap = {
 			state_max = 20
 			shares_slots = yes
+			group_by = metal_plants
 		}
 		base_cost = 100
 		infrastructure_construction_effect = yes
@@ -68,6 +70,7 @@ buildings = {
 		level_cap = {
 			state_max = 20
 			shares_slots = yes
+			group_by = metal_plants
 		}
 		base_cost = 100
 		infrastructure_construction_effect = yes
@@ -84,6 +87,7 @@ buildings = {
 		level_cap = {
 			state_max = 20
 			shares_slots = yes
+			group_by = metal_plants
 		}
 		base_cost = 100
 		infrastructure_construction_effect = yes
@@ -93,6 +97,47 @@ buildings = {
 			modifiers = {
 				chromium_plant_num = 1
 			}
+		}
+	}
+	ore_preparation = {
+		icon_frame = 25
+		level_cap = {
+			state_max = 1
+			shares_slots = yes
+		}
+		base_cost = 7200
+		infrastructure_construction_effect = yes
+		value = 8
+
+		
+		#show_on_map = 6
+		#military_production = 1
+
+		show_modifier = yes
+		state_modifiers = {
+			local_resources = 0.1
+		}
+	}
+	recruiting_station = {
+		icon_frame = 24
+		level_cap = {
+			state_max = 1
+			shares_slots = yes
+		}
+		base_cost = 7200
+		infrastructure_construction_effect = yes
+		value = 8
+		disabled_in_dmz = yes
+
+		
+		#show_on_map = 6
+		#military_production = 1
+
+		show_modifier = yes
+		state_modifiers = {
+			mobilization_speed = 0.1
+			local_manpower = 0.1
+			local_non_core_manpower = 0.1
 		}
 	}
 
@@ -259,6 +304,32 @@ buildings = {
 		hide_if_missing_tech = yes
 	}
 
+	stronghold_network = {
+		dlc_allowed = { has_dlc = Gotterdammerung }
+		show_on_map = 1
+		has_destroyed_mesh = yes
+		base_cost = 20000
+		disabled_in_dmz = yes
+		icon_frame = 32
+		value = 1
+		infrastructure_construction_effect = yes
+		level_cap = {
+			state_max = 1
+			shares_slots = yes
+		}
+		hide_if_missing_tech = yes
+		show_modifier = yes
+		state_modifiers = {
+			local_supplies_for_controller = 0.1
+			state_bunker_max_level_terrain_limit = 2
+			state_coastal_bunker_max_level_terrain_limit = 2
+			enemy_attrition = 0.1
+			state_production_speed_bunker_factor = 0.1
+			state_production_speed_coastal_bunker_factor = 0.1
+			state_production_speed_anti_nuke_bunker = 0.1
+		}		
+	}
+
 	dockyard = {
 		icon_frame = 4
 		level_cap = {
@@ -377,7 +448,7 @@ buildings = {
 		show_on_map = 1
 		base_cost = 20000
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 24
+		icon_frame = 33
 		value = 1
 		disabled_in_dmz = yes
 		infrastructure_construction_effect = yes
@@ -403,14 +474,45 @@ buildings = {
 		value = 10
 
 		nuclear_reactor = yes
+		show_modifier = yes
 		country_modifiers = {
 			modifiers = {
-				nuclear_production = 1
+				nuclear_production_factor = 1
 				#nuclear_production_factor = 3
 				#sp_nuclear_bomb_speed_factor = 0.05
 				#sp_thermo_nuclear_bomb_speed_factor = 0.05
 				#thermonuclear_production_factor = 2
-				thermonuclear_production = 1
+				thermonuclear_production_factor = 0.1
+			}
+		}
+
+		#country_resource_cost_crystals = 12
+
+		spawn_point = nuclear_reactor_spawn
+		
+		show_on_map = 1
+	}
+	thermonuclear_reactor = {
+		icon_frame = 36
+		level_cap = {
+			state_max = 1
+			shares_slots = yes
+			group_by = reactors
+		}
+		base_cost = 30000
+		infrastructure_construction_effect = yes
+		value = 10
+
+		nuclear_reactor = yes
+		show_modifier = yes
+		country_modifiers = {
+			modifiers = {
+				nuclear_production_factor = 0.1
+				#nuclear_production_factor = 3
+				#sp_nuclear_bomb_speed_factor = 0.05
+				#sp_thermo_nuclear_bomb_speed_factor = 0.05
+				#thermonuclear_production_factor = 2
+				thermonuclear_production_factor = 1
 			}
 		}
 
@@ -429,7 +531,7 @@ buildings = {
 		base_cost = 12000
 		per_controlled_building_extra_cost = 5000
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 19
+		icon_frame = 28
 		value = 1
 		spawn_point = special_project_facility_spawn 
 		specialization = { specialization_land }
@@ -451,7 +553,7 @@ buildings = {
 		base_cost = 12000
 		per_controlled_building_extra_cost = 5000
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 18
+		icon_frame = 27
 		value = 1
 		spawn_point = naval_base_spawn 
 		specialization = { specialization_naval }
@@ -474,7 +576,7 @@ buildings = {
 		base_cost = 12000
 		per_controlled_building_extra_cost = 5000
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 17
+		icon_frame = 26
 		value = 1
 		spawn_point = special_project_facility_spawn 
 		specialization = { specialization_air}
@@ -496,7 +598,7 @@ buildings = {
 		base_cost = 15000
 		per_controlled_building_extra_cost = 5000
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 20
+		icon_frame = 29
 		value = 1
 		spawn_point = special_project_facility_spawn
 		specialization = { specialization_nuclear }
@@ -528,7 +630,7 @@ buildings = {
 		base_cost = 15000
 		per_controlled_building_extra_cost = 5000
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 20
+		icon_frame = 30
 		value = 1
 		spawn_point = special_project_facility_spawn
 		specialization = { specialization_magic }
@@ -537,18 +639,7 @@ buildings = {
 		tags = { facility }
 		disabled_in_dmz = yes
 		only_display_if_exists = yes
-		special_icon = GFX_specialization_nuclear
-		#state_damage_modifier = { conscription_exemptions_granted }
-		#construction_speed_factor = {
-		#	trigger = {
-		#		OR = {
-		#			state = 56
-		#			state = 59
-		#			state = 64
-		#		}
-		#	}
-		#	factor = 10
-		#}
+		special_icon = GFX_specialization_magic
 		level_cap = {
 			province_max = 1
 			state_max = 1
@@ -561,11 +652,10 @@ buildings = {
 		show_on_map = 1
 		base_cost = 20000
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 26
+		icon_frame = 35
 		value = 5
 		tags = { dam_building }
 		spawn_point = dam_spawn
-		damage_factor = -1
 		is_buildable = no
 		need_detection = yes
 		detecting_intel_type = civilian 
@@ -587,11 +677,10 @@ buildings = {
 		show_on_map = 1
 		base_cost = 20000
 		damage_factor = 0 # This building can't be damaged by regular strat bombing
-		icon_frame = 26
+		icon_frame = 35
 		value = 5
 		tags = { dam_building }
 		spawn_point = dam_spawn
-		damage_factor = -1
 		is_buildable = no
 		need_detection = yes
 		detecting_intel_type = civilian 

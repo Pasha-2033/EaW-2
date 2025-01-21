@@ -1,7 +1,7 @@
 scripted_gui = {
 	resource_activity = {
 		context_type = player_context
-		parent_window_name = "possible_shared_constructions"
+		parent_window_name = "possible_constructions"
 		window_name = "resource_activity_container"
 		visible = {
 			is_ai = no
@@ -12,6 +12,7 @@ scripted_gui = {
 				change_scope = no
 				entry_container = "resource_activity_building_container"
 				value = v
+				index = i
 			}
 		}
 		triggers = {
@@ -29,6 +30,48 @@ scripted_gui = {
 			}
 			synthetic_refinery_fuel_outcome_visible = {
 				has_tech = synth_oil_experiments
+			}
+			sub_10_click_enabled = {
+				check_variable = {
+					plant_max_power^i > 0.099
+				}
+			}
+			sub_5_click_enabled = {
+				check_variable = {
+					plant_max_power^i > 0.049
+				}
+			}
+			add_5_click_enabled = {
+				check_variable = {
+					plant_max_power^i < 0.951
+				}
+			}
+			add_10_click_enabled = {
+				check_variable = {
+					plant_max_power^i < 0.901
+				}
+			}
+		}
+		effects = {
+			sub_10_click = {
+				subtract_from_variable = {
+					plant_max_power^i = 0.1
+				}
+			}
+			sub_5_click = {
+				subtract_from_variable = {
+					plant_max_power^i = 0.05
+				}
+			}
+			add_5_click = {
+				add_to_variable = {
+					plant_max_power^i = 0.05
+				}
+			}
+			add_10_click = {
+				add_to_variable = {
+					plant_max_power^i = 0.1
+				}
 			}
 		}
 		properties = {

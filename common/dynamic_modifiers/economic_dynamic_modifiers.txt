@@ -11,21 +11,21 @@ resource_activity_modifier = {
 	enable = { 
 		always = yes 
 	}
-	country_resource_cost_aluminium = mtth:aluminium_plant_total_aluminium_outcome
-	country_resource_cost_bauxite = mtth:aluminium_plant_total_bauxite_consumption
+	country_resource_cost_aluminium = resource_outcome^0
+	country_resource_cost_bauxite = resource_consumption^0
 
-	country_resource_cost_steel = mtth:steel_plant_total_steel_outcome
-	country_resource_cost_iron = mtth:steel_plant_total_iron_consumption
+	country_resource_cost_steel = resource_outcome^1
+	country_resource_cost_iron = resource_consumption^1
 	
-	country_resource_cost_tungsten = mtth:tungsten_plant_total_tungsten_outcome
-	country_resource_cost_scheelitis = mtth:tungsten_plant_total_scheelitis_consumption
+	country_resource_cost_tungsten = resource_outcome^2
+	country_resource_cost_scheelitis = resource_consumption^2
 
-	country_resource_cost_chromium = mtth:chromium_plant_total_chromium_outcome
-	country_resource_cost_chromite = mtth:chromium_plant_total_chromite_consumption
+	country_resource_cost_chromium = resource_outcome^3
+	country_resource_cost_chromite = resource_consumption^3
 
-	country_resource_cost_oil = mtth:synthetic_refinery_total_oil_consumption
-	country_resource_cost_rubber = mtth:synthetic_refinery_total_rubber_outcome
-	base_fuel_gain = mtth:synthetic_refinery_total_fuel_outcome
+	country_resource_cost_rubber = rubber_outcome
+	base_fuel_gain = fuel_outcome
+	country_resource_cost_oil = synthetic_refinery_consumption
 }
 #NOTE: CLAMP VARIABLES, DO NOT ALLOW VARS BE POSITIVE, REMOVE IF NO NEGATIVE MODIFIER LEFT
 #please use harvest_failure_update scripted effect for proper functioning

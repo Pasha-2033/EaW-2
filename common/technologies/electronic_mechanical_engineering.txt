@@ -1924,9 +1924,10 @@ technologies = {
 	#antiradiation protection
 	radiation_isolation_methods = {
 		path = {
-			leads_to_tech = nuclear_shelters
+			leads_to_tech = nuclear_shelters_0
 			research_cost_coeff = 1
 		}
+		is_special_project_tech = yes
 		start_year = 1011
 		research_cost = 5
 		folder = {
@@ -1945,7 +1946,11 @@ technologies = {
 		}
 		categories = {}
 	}
-	nuclear_shelters = {
+	nuclear_shelters_0 = {
+		path = {
+			leads_to_tech = nuclear_shelters_1
+			research_cost_coeff = 1
+		}
 		is_special_project_tech = yes
 		start_year = 1011
 		research_cost = 5
@@ -1962,6 +1967,98 @@ technologies = {
 		enable_building = {
 			building = anti_nuke_bunker
 			level = 5
+		}
+		categories = {}
+	}
+	nuclear_shelters_1 = {
+		path = {
+			leads_to_tech = nuclear_shelters_2
+			research_cost_coeff = 1
+		}
+		is_special_project_tech = yes
+		start_year = 1011
+		research_cost = 5
+		folder = {
+			name = electronics_folder
+			position = {
+				x = -1
+				y = 8
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+		enable_building = {
+			building = anti_nuke_bunker
+			level = 5
+		}
+		categories = {}
+	}
+	nuclear_shelters_2 = {
+		path = {
+			leads_to_tech = nuclear_shelters_3
+			research_cost_coeff = 1
+		}
+		is_special_project_tech = yes
+		start_year = 1011
+		research_cost = 5
+		folder = {
+			name = electronics_folder
+			position = {
+				x = -1
+				y = 10
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+		enable_building = {
+			building = anti_nuke_bunker
+			level = 10
+		}
+		categories = {}
+	}
+	nuclear_shelters_3 = {
+		path = {
+			leads_to_tech = nuclear_shelters_4
+			research_cost_coeff = 1
+		}
+		is_special_project_tech = yes
+		start_year = 1011
+		research_cost = 5
+		folder = {
+			name = electronics_folder
+			position = {
+				x = -1
+				y = 10
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+		enable_building = {
+			building = anti_nuke_bunker
+			level = 15
+		}
+		categories = {}
+	}
+	nuclear_shelters_4 = {
+		is_special_project_tech = yes
+		start_year = 1011
+		research_cost = 5
+		folder = {
+			name = electronics_folder
+			position = {
+				x = -1
+				y = 10
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+		enable_building = {
+			building = anti_nuke_bunker
+			level = 20
 		}
 		categories = {}
 	}

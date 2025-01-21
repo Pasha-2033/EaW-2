@@ -1,0 +1,195 @@
+calc_resource_aluminium = {
+	#restore resource value
+	set_variable = {
+		resource_plant_efficiency^0 = resource@bauxite
+	}
+	add_to_variable = {
+		resource_plant_efficiency^0 = resource_consumption^0
+	}
+	#consumtion
+	set_variable = {
+		resource_consumption^0 = mtth:aluminium_plant_total_bauxite_consumption
+	}
+	#effeciency
+	divide_variable = {
+		resource_plant_efficiency^0 = resource_consumption^0
+	}
+	add_to_variable = {
+		resource_plant_efficiency^0 = modifier@aluminium_plant_penalty_reduction
+	}
+	clamp_variable = {
+		var = resource_plant_efficiency^0
+		min = 0
+		max = 1
+	}
+	#outcome
+	set_variable = {
+		resource_outcome^0 = mtth:aluminium_plant_total_aluminium_outcome
+	}
+	multiply_variable = {
+		resource_outcome^0 = resource_plant_efficiency^0
+	}
+	multiply_variable = {
+		resource_outcome^0 = -1
+	}
+}
+calc_resource_steel = {
+	#restore resource value
+	set_variable = {
+		resource_plant_efficiency^1 = resource@iron
+	}
+	add_to_variable = {
+		resource_plant_efficiency^1 = resource_consumption^1
+	}
+	#consumtion
+	set_variable = {
+		resource_consumption^1 = mtth:steel_plant_total_iron_consumption
+	}
+	#effeciency
+	divide_variable = {
+		resource_plant_efficiency^1 = resource_consumption^1
+	}
+	add_to_variable = {
+		resource_plant_efficiency^1 = modifier@steel_plant_penalty_reduction
+	}
+	clamp_variable = {
+		var = resource_plant_efficiency^1
+		min = 0
+		max = 1
+	}
+	#outcome
+	set_variable = {
+		resource_outcome^1 = mtth:steel_plant_total_steel_outcome
+	}
+	multiply_variable = {
+		resource_outcome^1 = resource_plant_efficiency^1
+	}
+	multiply_variable = {
+		resource_outcome^1 = -1
+	}
+}
+calc_resource_tungsten = {
+	#restore resource value
+	set_variable = {
+		resource_plant_efficiency^2 = resource@scheelitis
+	}
+	add_to_variable = {
+		resource_plant_efficiency^2 = resource_consumption^2
+	}
+	#consumtion
+	set_variable = {
+		resource_consumption^2 = mtth:tungsten_plant_total_scheelitis_consumption
+	}
+	#effeciency
+	divide_variable = {
+		resource_plant_efficiency^2 = resource_consumption^2
+	}
+	add_to_variable = {
+		resource_plant_efficiency^2 = modifier@tungsten_plant_penalty_reduction
+	}
+	clamp_variable = {
+		var = resource_plant_efficiency^2
+		min = 0
+		max = 1
+	}
+	#outcome
+	set_variable = {
+		resource_outcome^2 = mtth:tungsten_plant_total_tungsten_outcome
+	}
+	multiply_variable = {
+		resource_outcome^2 = resource_plant_efficiency^2
+	}
+	multiply_variable = {
+		resource_outcome^2 = -1
+	}
+}
+calc_resource_chromium = {
+	#restore resource value
+	set_variable = {
+		resource_plant_efficiency^3 = resource@chromite
+	}
+	add_to_variable = {
+		resource_plant_efficiency^3 = resource_consumption^3
+	}
+	#consumtion
+	set_variable = {
+		resource_consumption^3 = mtth:chromium_plant_total_chromite_consumption
+	}
+	#effeciency
+	divide_variable = {
+		resource_plant_efficiency^3 = resource_consumption^3
+	}
+	add_to_variable = {
+		resource_plant_efficiency^3 = modifier@chromium_plant_penalty_reduction
+	}
+	clamp_variable = {
+		var = resource_plant_efficiency^3
+		min = 0
+		max = 1
+	}
+	#outcome
+	set_variable = {
+		resource_outcome^3 = mtth:chromium_plant_total_chromium_outcome
+	}
+	multiply_variable = {
+		resource_outcome^3 = resource_plant_efficiency^3
+	}
+	multiply_variable = {
+		resource_outcome^3 = -1
+	}
+}
+
+
+calc_resource_synthetic = {
+	#restore resource value
+	set_variable = {
+		synthetic_refinery_efficiency = resource@oil
+	}
+	add_to_variable = {
+		synthetic_refinery_efficiency = synthetic_refinery_consumption
+	}
+	#consumtion
+	set_variable = {
+		synthetic_refinery_consumption = mtth:synthetic_refinery_total_oil_consumption
+	}
+	#effeciency
+	divide_variable = {
+		synthetic_refinery_efficiency = synthetic_refinery_consumption
+	}
+	add_to_variable = {
+		synthetic_refinery_efficiency = modifier@synthetic_refinery_penalty_reduction
+	}
+	clamp_variable = {
+		var = synthetic_refinery_efficiency
+		min = 0
+		max = 1
+	}
+	#outcome
+	set_variable = {
+		fuel_outcome = mtth:synthetic_refinery_total_fuel_outcome
+	}
+	set_variable = {
+		rubber_outcome = mtth:synthetic_refinery_total_rubber_outcome
+	}
+	multiply_variable = {
+		fuel_outcome = synthetic_refinery_efficiency
+	}
+	multiply_variable = {
+		rubber_outcome = synthetic_refinery_efficiency
+	}
+	multiply_variable = {
+		fuel_outcome = -1
+	}
+	multiply_variable = {
+		rubber_outcome = -1
+	}
+}
+
+
+calc_all_resources = {
+	calc_resource_aluminium = yes
+	calc_resource_steel = yes
+	calc_resource_tungsten = yes
+	calc_resource_chromium = yes
+	calc_resource_synthetic = yes
+}
