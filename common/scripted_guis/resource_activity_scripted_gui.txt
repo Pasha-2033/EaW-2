@@ -4,7 +4,9 @@ scripted_gui = {
 		parent_window_name = "possible_constructions"
 		window_name = "resource_activity_container"
 		visible = {
-			is_ai = no
+			check_variable = {
+				resource_activity_gui_frame = 0
+			}
 		}
 		dynamic_lists = {
 			resource_activity_grid = {
@@ -51,6 +53,29 @@ scripted_gui = {
 					plant_max_power^i < 0.901
 				}
 			}
+			synthetic_refinery_sub_10_click_enabled = {
+				check_variable = {
+					synthetic_refinery_max_power > 0.099
+				}
+			}
+			synthetic_refinery_sub_5_click_enabled = {
+				check_variable = {
+					synthetic_refinery_max_power > 0.049
+				}
+			}
+			synthetic_refinery_add_5_click_enabled = {
+				check_variable = {
+					synthetic_refinery_max_power < 0.951
+				}
+			}
+			synthetic_refinery_add_10_click_enabled = {
+				check_variable = {
+					synthetic_refinery_max_power < 0.901
+				}
+			}
+			switch_click_visible = {
+				#to do
+			}
 		}
 		effects = {
 			sub_10_click = {
@@ -73,10 +98,52 @@ scripted_gui = {
 					plant_max_power^i = 0.1
 				}
 			}
+			synthetic_refinery_sub_10_click = {
+				subtract_from_variable = {
+					synthetic_refinery_max_power = 0.1
+				}
+			}
+			synthetic_refinery_sub_5_click = {
+				subtract_from_variable = {
+					synthetic_refinery_max_power = 0.05
+				}
+			}
+			synthetic_refinery_add_5_click = {
+				add_to_variable = {
+					synthetic_refinery_max_power = 0.05
+				}
+			}
+			synthetic_refinery_add_10_click = {
+				add_to_variable = {
+					synthetic_refinery_max_power = 0.1
+				}
+			}
+			switch_click = {
+				set_variable = {
+					resource_activity_gui_frame = 1
+				}
+			}
 		}
 		properties = {
 			building_icon = {
 				frame = v
+			}
+		}
+	}
+	nuclear_resource_activity = {
+		context_type = player_context
+		parent_window_name = "possible_constructions"
+		window_name = "nuclear_resource_activity_container"
+		visible = {
+			check_variable = {
+				resource_activity_gui_frame = 1
+			}
+		}
+		effects = {
+			switch_click = {
+				set_variable = {
+					resource_activity_gui_frame = 0
+				}
 			}
 		}
 	}

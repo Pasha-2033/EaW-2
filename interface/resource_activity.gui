@@ -2,7 +2,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "resource_activity_container"
 		size = { 
-			width = 440
+			width = 700
 			height = 273
 		}
 		position = { 
@@ -88,6 +88,66 @@ guiTypes = {
 				format = center
 				pdx_tooltip_delayed = "synthetic_refinery_fuel_outcome_desc"
 			}
+			buttonType = {
+				name = "synthetic_refinery_sub_10"
+				position = {
+					x = 226 
+					y = 17
+				}
+				quadTextureSprite ="GFX_closebutton"
+				buttonFont = "hoi_16mbs"
+				clicksound = click_close
+			}
+			buttonType = {
+				name = "synthetic_refinery_sub_5"
+				position = {
+					x = 257
+					y = 17
+				}
+				quadTextureSprite ="GFX_closebutton"
+				buttonFont = "hoi_16mbs"
+				clicksound = click_close
+			}
+			instantTextBoxType = {
+				name = "synthetic_refinery_effectiveness"
+				position = { x = 290 y = 24 }
+				font = "hoi_20b"
+				text = "[?synthetic_refinery_max_power|%0]"
+				maxWidth = 51
+				maxHeight = 20
+				fixedsize = yes
+				format = center
+			}
+			buttonType = {
+				name = "synthetic_refinery_add_5"
+				position = {
+					x = 341
+					y = 17
+				}
+				quadTextureSprite ="GFX_closebutton"
+				buttonFont = "hoi_16mbs"
+				clicksound = click_close
+			}
+			buttonType = {
+				name = "synthetic_refinery_add_10"
+				position = {
+					x = 373
+					y = 17
+				}
+				quadTextureSprite ="GFX_closebutton"
+				buttonFont = "hoi_16mbs"
+				clicksound = click_close
+			}
+		}
+		buttonType = {
+			name = "switch"
+			position = {
+				x = 645 
+				y = 11
+			}
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_close
 		}
 	}
 	containerWindowType = {
@@ -182,6 +242,36 @@ guiTypes = {
 			position = {
 				x = 373
 				y = 17
+			}
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_close
+		}
+	}
+	containerWindowType = {
+		name = "nuclear_resource_activity_container"
+		size = { 
+			width = 700
+			height = 273
+		}
+		position = { 
+			x = -434
+			y = -273
+		}
+		orientation = LOWER_LEFT
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tiled_window2_1b_border"
+		}
+
+
+
+
+		buttonType = {
+			name = "switch"
+			position = {
+				x = 645 
+				y = 11
 			}
 			quadTextureSprite ="GFX_closebutton"
 			buttonFont = "hoi_16mbs"

@@ -7,21 +7,19 @@ state={
 	}
 
 	manpower=3300667
-	state_category = megalopolis
-	buildings_max_level_factor=1.00
-
-	history={
-		982.1.1 = {
-			owner = ELN
-			add_core_of = ELN
-			set_demilitarized_zone = yes
-		}
+	state_category = wasteland
+	buildings_max_level_factor=1
+	history = {
+		victory_points = { 489 40 }
+		owner = ELN
+		add_core_of = ELN
+		set_demilitarized_zone = yes
 		1002.1.1 = {
 			owner = CRY
 			add_core_of = CRY
 			remove_core_of = ELN
 			set_demilitarized_zone = no
+			set_state_category = megalopolis
 		}
-		victory_points = { 489 40 }
 	}
 }

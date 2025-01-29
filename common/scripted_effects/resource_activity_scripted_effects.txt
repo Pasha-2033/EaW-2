@@ -6,31 +6,53 @@ calc_resource_aluminium = {
 	add_to_variable = {
 		resource_plant_efficiency^0 = resource_consumption^0
 	}
+	#impact (important to call before mtth!)
+	set_variable = {
+		aluminium_plant_total_impact = modifier@aluminium_plant_num
+	}
+	multiply_variable = {
+		aluminium_plant_total_impact = plant_max_power^0
+	}
 	#consumtion
 	set_variable = {
 		resource_consumption^0 = mtth:aluminium_plant_total_bauxite_consumption
 	}
-	#effeciency
-	divide_variable = {
-		resource_plant_efficiency^0 = resource_consumption^0
+	if = {
+		limit = {
+			check_variable = {
+				resource_consumption^0 > 0
+			}
+		}
+		#effeciency
+		divide_variable = {
+			resource_plant_efficiency^0 = resource_consumption^0
+		}
+		add_to_variable = {
+			resource_plant_efficiency^0 = modifier@aluminium_plant_penalty_reduction
+		}
+		clamp_variable = {
+			var = resource_plant_efficiency^0
+			min = 0
+			max = 1
+		}
+		#outcome
+		set_variable = {
+			resource_outcome^0 = mtth:aluminium_plant_total_aluminium_outcome
+		}
+		multiply_variable = {
+			resource_outcome^0 = resource_plant_efficiency^0
+		}
+		multiply_variable = {
+			resource_outcome^0 = -1
+		}
 	}
-	add_to_variable = {
-		resource_plant_efficiency^0 = modifier@aluminium_plant_penalty_reduction
-	}
-	clamp_variable = {
-		var = resource_plant_efficiency^0
-		min = 0
-		max = 1
-	}
-	#outcome
-	set_variable = {
-		resource_outcome^0 = mtth:aluminium_plant_total_aluminium_outcome
-	}
-	multiply_variable = {
-		resource_outcome^0 = resource_plant_efficiency^0
-	}
-	multiply_variable = {
-		resource_outcome^0 = -1
+	else = {
+		set_variable = {
+			resource_plant_efficiency^0 = 1
+		}
+		set_variable = {
+			resource_outcome^0 = 0
+		}
 	}
 }
 calc_resource_steel = {
@@ -41,31 +63,53 @@ calc_resource_steel = {
 	add_to_variable = {
 		resource_plant_efficiency^1 = resource_consumption^1
 	}
+	#impact (important to call before mtth!)
+	set_variable = {
+		steel_plant_total_impact = modifier@steel_plant_num
+	}
+	multiply_variable = {
+		steel_plant_total_impact = plant_max_power^1
+	}
 	#consumtion
 	set_variable = {
 		resource_consumption^1 = mtth:steel_plant_total_iron_consumption
 	}
-	#effeciency
-	divide_variable = {
-		resource_plant_efficiency^1 = resource_consumption^1
+	if = {
+		limit = {
+			check_variable = {
+				resource_consumption^1 > 0
+			}
+		}
+		#effeciency
+		divide_variable = {
+			resource_plant_efficiency^1 = resource_consumption^1
+		}
+		add_to_variable = {
+			resource_plant_efficiency^1 = modifier@steel_plant_penalty_reduction
+		}
+		clamp_variable = {
+			var = resource_plant_efficiency^1
+			min = 0
+			max = 1
+		}
+		#outcome
+		set_variable = {
+			resource_outcome^1 = mtth:steel_plant_total_steel_outcome
+		}
+		multiply_variable = {
+			resource_outcome^1 = resource_plant_efficiency^1
+		}
+		multiply_variable = {
+			resource_outcome^1 = -1
+		}
 	}
-	add_to_variable = {
-		resource_plant_efficiency^1 = modifier@steel_plant_penalty_reduction
-	}
-	clamp_variable = {
-		var = resource_plant_efficiency^1
-		min = 0
-		max = 1
-	}
-	#outcome
-	set_variable = {
-		resource_outcome^1 = mtth:steel_plant_total_steel_outcome
-	}
-	multiply_variable = {
-		resource_outcome^1 = resource_plant_efficiency^1
-	}
-	multiply_variable = {
-		resource_outcome^1 = -1
+	else = {
+		set_variable = {
+			resource_plant_efficiency^1 = 1
+		}
+		set_variable = {
+			resource_outcome^1 = 0
+		}
 	}
 }
 calc_resource_tungsten = {
@@ -76,31 +120,53 @@ calc_resource_tungsten = {
 	add_to_variable = {
 		resource_plant_efficiency^2 = resource_consumption^2
 	}
+	#impact (important to call before mtth!)
+	set_variable = {
+		tungsten_plant_total_impact = modifier@tungsten_plant_num
+	}
+	multiply_variable = {
+		tungsten_plant_total_impact = plant_max_power^2
+	}
 	#consumtion
 	set_variable = {
 		resource_consumption^2 = mtth:tungsten_plant_total_scheelitis_consumption
 	}
-	#effeciency
-	divide_variable = {
-		resource_plant_efficiency^2 = resource_consumption^2
+	if = {
+		limit = {
+			check_variable = {
+				resource_consumption^2 > 0
+			}
+		}
+		#effeciency
+		divide_variable = {
+			resource_plant_efficiency^2 = resource_consumption^2
+		}
+		add_to_variable = {
+			resource_plant_efficiency^2 = modifier@tungsten_plant_penalty_reduction
+		}
+		clamp_variable = {
+			var = resource_plant_efficiency^2
+			min = 0
+			max = 1
+		}
+		#outcome
+		set_variable = {
+			resource_outcome^2 = mtth:tungsten_plant_total_tungsten_outcome
+		}
+		multiply_variable = {
+			resource_outcome^2 = resource_plant_efficiency^2
+		}
+		multiply_variable = {
+			resource_outcome^2 = -1
+		}
 	}
-	add_to_variable = {
-		resource_plant_efficiency^2 = modifier@tungsten_plant_penalty_reduction
-	}
-	clamp_variable = {
-		var = resource_plant_efficiency^2
-		min = 0
-		max = 1
-	}
-	#outcome
-	set_variable = {
-		resource_outcome^2 = mtth:tungsten_plant_total_tungsten_outcome
-	}
-	multiply_variable = {
-		resource_outcome^2 = resource_plant_efficiency^2
-	}
-	multiply_variable = {
-		resource_outcome^2 = -1
+	else = {
+		set_variable = {
+			resource_plant_efficiency^2 = 1
+		}
+		set_variable = {
+			resource_outcome^2 = 0
+		}
 	}
 }
 calc_resource_chromium = {
@@ -111,31 +177,53 @@ calc_resource_chromium = {
 	add_to_variable = {
 		resource_plant_efficiency^3 = resource_consumption^3
 	}
+	#impact (important to call before mtth!)
+	set_variable = {
+		chromium_plant_total_impact = modifier@chromium_plant_num
+	}
+	multiply_variable = {
+		chromium_plant_total_impact = plant_max_power^3
+	}
 	#consumtion
 	set_variable = {
 		resource_consumption^3 = mtth:chromium_plant_total_chromite_consumption
 	}
-	#effeciency
-	divide_variable = {
-		resource_plant_efficiency^3 = resource_consumption^3
+	if = {
+		limit = {
+			check_variable = {
+				resource_consumption^3 > 0
+			}
+		}
+		#effeciency
+		divide_variable = {
+			resource_plant_efficiency^3 = resource_consumption^3
+		}
+		add_to_variable = {
+			resource_plant_efficiency^3 = modifier@chromium_plant_penalty_reduction
+		}
+		clamp_variable = {
+			var = resource_plant_efficiency^3
+			min = 0
+			max = 1
+		}
+		#outcome
+		set_variable = {
+			resource_outcome^3 = mtth:chromium_plant_total_chromium_outcome
+		}
+		multiply_variable = {
+			resource_outcome^3 = resource_plant_efficiency^3
+		}
+		multiply_variable = {
+			resource_outcome^3 = -1
+		}
 	}
-	add_to_variable = {
-		resource_plant_efficiency^3 = modifier@chromium_plant_penalty_reduction
-	}
-	clamp_variable = {
-		var = resource_plant_efficiency^3
-		min = 0
-		max = 1
-	}
-	#outcome
-	set_variable = {
-		resource_outcome^3 = mtth:chromium_plant_total_chromium_outcome
-	}
-	multiply_variable = {
-		resource_outcome^3 = resource_plant_efficiency^3
-	}
-	multiply_variable = {
-		resource_outcome^3 = -1
+	else = {
+		set_variable = {
+			resource_plant_efficiency^3 = 1
+		}
+		set_variable = {
+			resource_outcome^3 = 0
+		}
 	}
 }
 
@@ -148,43 +236,74 @@ calc_resource_synthetic = {
 	add_to_variable = {
 		synthetic_refinery_efficiency = synthetic_refinery_consumption
 	}
+	#impact (important to call before mtth!)
+	set_variable = {
+		synthetic_refinery_total_impact = modifier@synthetic_refinery_num
+	}
+	multiply_variable = {
+		synthetic_refinery_total_impact = synthetic_refinery_max_power
+	}
 	#consumtion
 	set_variable = {
 		synthetic_refinery_consumption = mtth:synthetic_refinery_total_oil_consumption
 	}
-	#effeciency
-	divide_variable = {
-		synthetic_refinery_efficiency = synthetic_refinery_consumption
+	if = {
+		limit = {
+			check_variable = {
+				synthetic_refinery_consumption > 0
+			}
+		}
+		#effeciency
+		divide_variable = {
+			synthetic_refinery_efficiency = synthetic_refinery_consumption
+		}
+		add_to_variable = {
+			synthetic_refinery_efficiency = modifier@synthetic_refinery_penalty_reduction
+		}
+		clamp_variable = {
+			var = synthetic_refinery_efficiency
+			min = 0
+			max = 1
+		}
+		#outcome
+		set_variable = {
+			fuel_outcome = mtth:synthetic_refinery_total_fuel_outcome
+		}
+		set_variable = {
+			rubber_outcome = mtth:synthetic_refinery_total_rubber_outcome
+		}
+		multiply_variable = {
+			fuel_outcome = synthetic_refinery_efficiency
+		}
+		multiply_variable = {
+			rubber_outcome = synthetic_refinery_efficiency
+		}
+		multiply_variable = {
+			rubber_outcome = -1
+		}
 	}
-	add_to_variable = {
-		synthetic_refinery_efficiency = modifier@synthetic_refinery_penalty_reduction
-	}
-	clamp_variable = {
-		var = synthetic_refinery_efficiency
-		min = 0
-		max = 1
-	}
-	#outcome
-	set_variable = {
-		fuel_outcome = mtth:synthetic_refinery_total_fuel_outcome
-	}
-	set_variable = {
-		rubber_outcome = mtth:synthetic_refinery_total_rubber_outcome
-	}
-	multiply_variable = {
-		fuel_outcome = synthetic_refinery_efficiency
-	}
-	multiply_variable = {
-		rubber_outcome = synthetic_refinery_efficiency
-	}
-	multiply_variable = {
-		fuel_outcome = -1
-	}
-	multiply_variable = {
-		rubber_outcome = -1
+	else = {
+		set_variable = {
+			synthetic_refinery_efficiency = 1
+		}
+		set_variable = {
+			fuel_outcome = 0
+		}
+		set_variable = {
+			rubber_outcome = 0
+		}
 	}
 }
 
+calc_resource_nuclear_fuel = {
+	#impact (important to call before mtth!)
+	set_variable = {
+		nuclear_reactor_total_impact = modifier@nuclear_reactor_num
+	}
+	multiply_variable = {
+		nuclear_reactor_total_impact = nuclear_plant_max_power^0 #alwas will be first at grid list
+	}
+}
 
 calc_all_resources = {
 	calc_resource_aluminium = yes
@@ -192,4 +311,13 @@ calc_all_resources = {
 	calc_resource_tungsten = yes
 	calc_resource_chromium = yes
 	calc_resource_synthetic = yes
+	calc_resource_nuclear_fuel = yes
 }
+
+#ceil(x / 5 + 1) * 5, for example: 62% efficiency / 5 = 12.4; ceil(12.4 + 1) = 14; 14 * 5 = 70% target (and it will try to grow
+#IS THIS FORMULA REALLY GOOD?!
+#ai_behavior_resource_aluminium
+#ai_behavior_resource_steel
+#ai_behavior_resource_tungsten
+#ai_behavior_resource_chromium
+#ai_behavior_resource_synthetic

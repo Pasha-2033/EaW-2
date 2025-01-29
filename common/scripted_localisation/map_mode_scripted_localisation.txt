@@ -375,7 +375,7 @@ defined_text = {
 				sa_average_value > 1.5
 			}
 		}
-		localization_key = "[?FROM.controller:sa_average_value|%0B]"
+		localization_key = "blue_sa_average_value"
 	}
 	text = {
 		trigger = {
@@ -383,7 +383,7 @@ defined_text = {
 				sa_average_value > 0.8
 			}
 		}
-		localization_key = "[?FROM.controller:sa_average_value|%0G]"
+		localization_key = "green_sa_average_value"
 	}
 	text = {
 		trigger = {
@@ -391,10 +391,10 @@ defined_text = {
 				sa_average_value > 0.4
 			}
 		}
-		localization_key = "[?FROM.controller:sa_average_value|%0Y]"
+		localization_key = "yellow_sa_average_value"
 	}
 	text = {
-		localization_key = "[?FROM.controller:sa_average_value|%0R]"
+		localization_key = "red_sa_average_value"
 	}
 }
 defined_text = {
@@ -411,7 +411,7 @@ defined_text = {
 				sa_min_value > 1.5
 			}
 		}
-		localization_key = "[?FROM.controller:sa_min_value|%0B]"
+		localization_key = "blue_colored_min_value_indicator"
 	}
 	text = {
 		trigger = {
@@ -419,7 +419,7 @@ defined_text = {
 				sa_average_value > 0.8
 			}
 		}
-		localization_key = "[?FROM.controller:sa_average_value|%0G]"
+		localization_key = "green_colored_min_value_indicator"
 	}
 	text = {
 		trigger = {
@@ -427,10 +427,10 @@ defined_text = {
 				sa_min_value > 0.4
 			}
 		}
-		localization_key = "[?FROM.controller:sa_min_value|%0Y]"
+		localization_key = "yellow_colored_min_value_indicator"
 	}
 	text = {
-		localization_key = "[?FROM.controller:sa_min_value|%0R]"
+		localization_key = "red_colored_min_value_indicator"
 	}
 }
 defined_text = {
@@ -447,7 +447,7 @@ defined_text = {
 				surplus_appropriation_real_values^0 > 1.5
 			}
 		}
-		localization_key = "[?FROM.controller:surplus_appropriation_real_values^0|%0B]"
+		localization_key = "blue_colored_sa_real_value_0"
 	}
 	text = {
 		trigger = {
@@ -455,7 +455,7 @@ defined_text = {
 				surplus_appropriation_real_values^0 > 0.8
 			}
 		}
-		localization_key = "[?FROM.controller:surplus_appropriation_real_values^0|%0G]"
+		localization_key = "green_colored_sa_real_value_0"
 	}
 	text = {
 		trigger = {
@@ -463,10 +463,10 @@ defined_text = {
 				surplus_appropriation_real_values^0 > 0.4
 			}
 		}
-		localization_key = "[?FROM.controller:surplus_appropriation_real_values^0|%0Y]"
+		localization_key = "yellow_colored_sa_real_value_0"
 	}
 	text = {
-		localization_key = "[?FROM.controller:surplus_appropriation_real_values^0|%0R]"
+		localization_key = "red_colored_sa_real_value_0"
 	}
 }
 defined_text = {
@@ -483,7 +483,7 @@ defined_text = {
 				surplus_appropriation_real_values^1 > 1.5
 			}
 		}
-		localization_key = "[?FROM.controller:surplus_appropriation_real_values^1|%0B]"
+		localization_key = "blue_colored_sa_real_value_1"
 	}
 	text = {
 		trigger = {
@@ -491,7 +491,7 @@ defined_text = {
 				surplus_appropriation_real_values^1 > 0.8
 			}
 		}
-		localization_key = "[?FROM.controller:surplus_appropriation_real_values^1|%0G]"
+		localization_key = "green_colored_sa_real_value_1"
 	}
 	text = {
 		trigger = {
@@ -499,10 +499,10 @@ defined_text = {
 				surplus_appropriation_real_values^1 > 0.4
 			}
 		}
-		localization_key = "[?FROM.controller:surplus_appropriation_real_values^1|%0Y]"
+		localization_key = "yellow_colored_sa_real_value_1"
 	}
 	text = {
-		localization_key = "[?FROM.controller:surplus_appropriation_real_values^1|%0R]"
+		localization_key = "red_colored_sa_real_value_1"
 	}
 }
 defined_text = {
@@ -519,7 +519,7 @@ defined_text = {
 				surplus_appropriation_real_values^2 > 1.5
 			}
 		}
-		localization_key = "[?FROM.controller:surplus_appropriation_real_values^2|%0B]"
+		localization_key = "blue_colored_sa_real_value_2"
 	}
 	text = {
 		trigger = {
@@ -527,7 +527,7 @@ defined_text = {
 				surplus_appropriation_real_values^2 > 0.8
 			}
 		}
-		localization_key = "[?FROM.controller:surplus_appropriation_real_values^2|%0G]"
+		localization_key = "green_colored_sa_real_value_2"
 	}
 	text = {
 		trigger = {
@@ -535,9 +535,9 @@ defined_text = {
 				surplus_appropriation_real_values^2 > 0.4
 			}
 		}
-		localization_key = "[?FROM.controller:surplus_appropriation_real_values^2|%0Y]"
+		localization_key = "yellow_colored_sa_real_value_2"
 	}
 	text = {
-		localization_key = "[?FROM.controller:surplus_appropriation_real_values^2|%0R]"
+		localization_key = "red_colored_sa_real_value_2"
 	}
 }

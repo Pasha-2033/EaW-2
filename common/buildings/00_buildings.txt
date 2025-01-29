@@ -28,7 +28,11 @@ buildings = {
 
 		infrastructure = yes
 		show_modifier = yes
-		max_fuel_building = 1.5 #k
+		country_modifiers = {
+			modifiers = {
+				max_fuel_building = 1.5 #k
+			}
+		}
 	}
 
 	aluminium_plant = {
@@ -36,7 +40,6 @@ buildings = {
 		level_cap = {
 			state_max = 20
 			shares_slots = yes
-			group_by = metal_plants
 		}
 		base_cost = 100
 		infrastructure_construction_effect = yes
@@ -53,7 +56,6 @@ buildings = {
 		level_cap = {
 			state_max = 20
 			shares_slots = yes
-			group_by = metal_plants
 		}
 		base_cost = 100
 		infrastructure_construction_effect = yes
@@ -70,7 +72,6 @@ buildings = {
 		level_cap = {
 			state_max = 20
 			shares_slots = yes
-			group_by = metal_plants
 		}
 		base_cost = 100
 		infrastructure_construction_effect = yes
@@ -87,7 +88,6 @@ buildings = {
 		level_cap = {
 			state_max = 20
 			shares_slots = yes
-			group_by = metal_plants
 		}
 		base_cost = 100
 		infrastructure_construction_effect = yes
@@ -297,7 +297,9 @@ buildings = {
 		damage_factor = 0 #too deep to be easily damaged (FOR NUKE ONLY!)
 
 		show_modifier = yes #just for tooltip of custom modifier
-		nuke_defence_factor = 0.04
+		state_modifiers = {
+			nuke_defence_factor = 0.04
+		}
 
 		show_on_map = 1
 
@@ -462,12 +464,58 @@ buildings = {
 		#Building utilizes equipment "explosive_ammo_equipment" as ammunition for the air mission barrage
 	}
 
-	nuclear_reactor = {
+	nuclear_reactor = { #enrichment for nukes (high energy neutrons)
+		icon_frame = 13 #to do
+		level_cap = {
+			state_max = 1
+			shares_slots = yes
+			#group_by = reactors
+		}
+		base_cost = 30000
+		infrastructure_construction_effect = yes
+		value = 10
+
+		nuclear_reactor = yes
+		show_modifier = yes
+		country_modifiers = {
+			modifiers = {
+				nuclear_reactor_num = 1
+			}
+		}
+
+		#spawn_point = nuclear_reactor_spawn
+		
+		show_on_map = 1
+	}
+	nuclear_reactor_heavy_water = { #enrichment for nukes (low energy neutrons)
+		icon_frame = 13 #to do
+		level_cap = {
+			state_max = 1
+			shares_slots = yes
+			#group_by = reactors
+		}
+		base_cost = 30000
+		infrastructure_construction_effect = yes
+		value = 10
+
+		nuclear_reactor = yes
+		show_modifier = yes
+		country_modifiers = {
+			modifiers = {
+				nuclear_reactor_heavy_water_num = 1
+			}
+		}
+
+		#spawn_point = nuclear_reactor_spawn
+		
+		show_on_map = 1
+	}
+	nuclear_reactor_exploratory = { #enrichment for thermonuclear_reactor fuel
 		icon_frame = 13
 		level_cap = {
 			state_max = 1
 			shares_slots = yes
-			group_by = reactors
+			#group_by = reactors
 		}
 		base_cost = 30000
 		infrastructure_construction_effect = yes
@@ -477,27 +525,47 @@ buildings = {
 		show_modifier = yes
 		country_modifiers = {
 			modifiers = {
-				nuclear_production_factor = 1
-				#nuclear_production_factor = 3
-				#sp_nuclear_bomb_speed_factor = 0.05
-				#sp_thermo_nuclear_bomb_speed_factor = 0.05
-				#thermonuclear_production_factor = 2
-				thermonuclear_production_factor = 0.1
+				nuclear_reactor_exploratory_num = 1
+			}
+		}
+
+		#spawn_point = nuclear_reactor_spawn
+		
+		show_on_map = 1
+	}
+	thermonuclear_reactor = { #enrichment for thermonukes
+		icon_frame = 37
+		level_cap = {
+			state_max = 1
+			shares_slots = yes
+			#group_by = reactors
+			
+		}
+		base_cost = 30000
+		infrastructure_construction_effect = yes
+		value = 10
+
+		nuclear_reactor = yes
+		show_modifier = yes
+		country_modifiers = {
+			modifiers = {
+				thermonuclear_reactor_num = 1
 			}
 		}
 
 		#country_resource_cost_crystals = 12
 
-		spawn_point = nuclear_reactor_spawn
+		#spawn_point = nuclear_reactor_spawn
 		
 		show_on_map = 1
 	}
-	thermonuclear_reactor = {
+	
+	commercial_reactor = { #thermonuclear/nuclear id doesn`t really matter, it use VERY FEW fuel to count
 		icon_frame = 36
 		level_cap = {
 			state_max = 1
 			shares_slots = yes
-			group_by = reactors
+			#group_by = reactors
 		}
 		base_cost = 30000
 		infrastructure_construction_effect = yes
@@ -505,20 +573,13 @@ buildings = {
 
 		nuclear_reactor = yes
 		show_modifier = yes
-		country_modifiers = {
-			modifiers = {
-				nuclear_production_factor = 0.1
-				#nuclear_production_factor = 3
-				#sp_nuclear_bomb_speed_factor = 0.05
-				#sp_thermo_nuclear_bomb_speed_factor = 0.05
-				#thermonuclear_production_factor = 2
-				thermonuclear_production_factor = 1
-			}
+		state_modifiers = {
+			
 		}
 
 		#country_resource_cost_crystals = 12
 
-		spawn_point = nuclear_reactor_spawn
+		#spawn_point = nuclear_reactor_spawn
 		
 		show_on_map = 1
 	}
@@ -699,10 +760,10 @@ buildings = {
 	}
 }
 spawn_points = {
-	nuclear_reactor_spawn = {
-		type = state
-		max = 1
-	}
+	#nuclear_reactor_spawn = {
+	#	type = state
+	#	max = 1
+	#}
 
 	special_project_facility_spawn = {
 		type = province
