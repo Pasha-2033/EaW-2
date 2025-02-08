@@ -375,9 +375,11 @@ on_actions = {
 					}
 				}
 				#set economy modifiers
-				calc_all_resources = yes
 				add_dynamic_modifier = {
 					modifier = resource_activity_modifier
+				}
+				add_dynamic_modifier = {
+					modifier = nuclear_resource_activity_modifier
 				}
 			}
 		}

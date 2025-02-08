@@ -295,23 +295,285 @@ calc_resource_synthetic = {
 	}
 }
 
-calc_resource_nuclear_fuel = {
+
+calc_primary_reactor = {
+	#restore resource value
+	set_variable = {
+		reactor_primary_efficiency = resource@nuclear_fuel_primary
+	}
+	add_to_variable = {
+		reactor_primary_efficiency = primary_fuel_reactor_consumption
+	}
 	#impact (important to call before mtth!)
 	set_variable = {
-		nuclear_reactor_total_impact = modifier@nuclear_reactor_num
+		reactor_common_total_impact = modifier@nuclear_reactor_num
 	}
-	multiply_variable = {
-		nuclear_reactor_total_impact = nuclear_plant_max_power^0 #alwas will be first at grid list
+	#multiply_variable = {
+	#	reactor_common_total_impact = reactor_common_max_power
+	#}
+	set_variable = {
+		reactor_exploratory_total_impact = modifier@nuclear_reactor_exploratory_num
+	}
+	#multiply_variable = {
+	#	reactor_exploratory_total_impact = reactor_exploratory_max_power
+	#}
+	#consumtion
+	set_variable = {
+		primary_fuel_reactor_consumption = mtth:reactor_common_total_consumtion
+	}
+	add_to_variable = {
+		primary_fuel_reactor_consumption = mtth:reactor_exploratory_total_consumtion
+	}
+	if = {
+		limit = {
+			check_variable = {
+				primary_fuel_reactor_consumption > 0
+			}
+		}
+		#effeciency
+		divide_variable = {
+			reactor_primary_efficiency = primary_fuel_reactor_consumption
+		}
+		set_variable = {
+			#for own penalty reduction
+			reactor_exploratory_primary_efficiency = reactor_primary_efficiency
+		}
+		add_to_variable = {
+			reactor_primary_efficiency = modifier@nuclear_reactor_penalty_reduction
+		}
+		add_to_variable = {
+			reactor_exploratory_primary_efficiency = modifier@nuclear_reactor_exploratory_penalty_reduction
+		}
+		clamp_variable = {
+			var = reactor_primary_efficiency
+			min = 0
+			max = 1
+		}
+		clamp_variable = {
+			var = reactor_exploratory_primary_efficiency
+			min = 0
+			max = 1
+		}
+		#outcome
+		set_variable = {
+			#set because +(-x), cost subtracts
+			nuclear_fuel_primary_reactor = primary_fuel_reactor_consumption
+		}
+		set_variable = {
+			nuclear_fuel_secondary_reactor = mtth:nuclear_reactor_total_fuel_secondary_outcome
+		}
+		set_variable = {
+			common_thermonuclear_fuel_reactor = mtth:nuclear_reactor_total_fuel_thermonuclear_outcome
+		}
+		set_variable = {
+			thermonuclear_fuel_reactor = mtth:nuclear_reactor_exploratory_total_fuel_thermonuclear_outcome
+		}
+		set_variable = {
+			nuclear_production_factor_outcome = mtth:nuclear_reactor_total_nuke_outcome
+		}
+		set_variable = {
+			thermonuclear_production_factor_outcome = mtth:nuclear_reactor_total_thermonuke_outcome
+		}
+		multiply_variable = {
+			common_thermonuclear_fuel_reactor = reactor_primary_efficiency
+		}
+		multiply_variable = {
+			nuclear_fuel_secondary_reactor = reactor_primary_efficiency
+		}
+		multiply_variable = {
+			thermonuclear_fuel_reactor = reactor_exploratory_primary_efficiency
+		}
+		multiply_variable = {
+			nuclear_production_factor_outcome = reactor_primary_efficiency
+		}
+		multiply_variable = {
+			thermonuclear_production_factor_outcome = reactor_primary_efficiency
+		}
+		add_to_variable = {
+			thermonuclear_fuel_reactor = common_thermonuclear_fuel_reactor
+		}
+		multiply_variable = {
+			nuclear_fuel_secondary_reactor = -1
+		}
+		multiply_variable = {
+			thermonuclear_fuel_reactor = -1
+		}
+	}
+	else = {
+		#fuel
+		set_variable = {
+			nuclear_fuel_primary_reactor = 0
+		}
+		set_variable = {
+			nuclear_fuel_secondary_reactor = 0
+		}
+		set_variable = {
+			thermonuclear_fuel_reactor = 0
+		}
+		#bomb production
+		set_variable = {
+			nuclear_production_factor_outcome = 0
+		}
+		set_variable = {
+			thermonuclear_production_factor_outcome = 0
+		}
 	}
 }
 
+
+#stable (below)
+calc_secondary_reactor = {
+	#restore resource value
+	set_variable = {
+		reactor_heavy_water_efficiency = resource@nuclear_fuel_secondary
+	}
+	add_to_variable = {
+		reactor_heavy_water_efficiency = secondary_fuel_reactor_consumption
+	}
+	#impact (important to call before mtth!)
+	set_variable = {
+		reactor_heavy_water_total_impact = modifier@nuclear_reactor_heavy_water_num
+	}
+	#multiply_variable = {
+	#	reactor_heavy_water_total_impact = reactor_heavy_water_max_power
+	#}
+	#consumtion
+	set_variable = {
+		secondary_fuel_reactor_consumption = mtth:secondary_fuel_reactor_total_consumption
+	}
+	if = {
+		limit = {
+			check_variable = {
+				secondary_fuel_reactor_consumption > 0
+			}
+		}
+		#effeciency
+		divide_variable = {
+			reactor_heavy_water_efficiency = secondary_fuel_reactor_consumption
+		}
+		add_to_variable = {
+			reactor_heavy_water_efficiency = modifier@nuclear_reactor_heavy_water_penalty_reduction
+		}
+		clamp_variable = {
+			var = reactor_heavy_water_efficiency
+			min = 0
+			max = 1
+		}
+		#outcome
+		add_to_variable = {
+			#add because +(-x), cost subtracts
+			nuclear_fuel_secondary_reactor = secondary_fuel_reactor_consumption
+		}
+		set_variable = {
+			secondary_nuke = mtth:secondary_total_nuke
+		}
+		set_variable = {
+			secondary_thermonuke = mtth:secondary_total_thermonuke
+		}
+		set_variable = {
+			primary_fuel = mtth:total_primary_fuel
+		}
+		multiply_variable = {
+			secondary_nuke = reactor_heavy_water_efficiency
+		}
+		multiply_variable = {
+			secondary_thermonuke = reactor_heavy_water_efficiency
+		}
+		multiply_variable = {
+			primary_fuel = reactor_heavy_water_efficiency
+		}
+		add_to_variable = {
+			nuclear_production_factor_outcome = secondary_nuke
+		}
+		add_to_variable = {
+			thermonuclear_production_factor_outcome = secondary_thermonuke
+		}
+		subtract_from_variable = {
+			#sub because -(-x), cost subtracts
+			nuclear_fuel_primary_reactor = primary_fuel
+		}
+	}
+	else = {
+		set_variable = {
+			reactor_heavy_water_efficiency = 1
+		}
+	}
+}
+
+
+calc_thermonuclear_reactor = {
+	#restore resource value
+	set_variable = {
+		thermonuclear_reactor_efficiency = resource@thermonuclear_fuel
+	}
+	add_to_variable = {
+		thermonuclear_reactor_efficiency = thermonuclear_fuel_reactor_consumption
+	}
+	#impact (important to call before mtth!)
+	set_variable = {
+		thermonuclear_reactor_total_impact = modifier@thermonuclear_reactor_num
+	}
+	#multiply_variable = {
+	#	thermonuclear_reactor_total_impact = thermonuclear_reactor_max_power
+	#}
+	#consumtion
+	set_variable = {
+		thermonuclear_fuel_reactor_consumption = mtth:thermonuclear_reactor_total_fuel_consumption
+	}
+	if = {
+		limit = {
+			check_variable = {
+				thermonuclear_fuel_reactor_consumption > 0
+			}
+		}
+		#effeciency
+		divide_variable = {
+			thermonuclear_reactor_efficiency = thermonuclear_fuel_reactor_consumption
+		}
+		add_to_variable = {
+			thermonuclear_reactor_efficiency = modifier@thermonuclear_reactor_penalty_reduction
+		}
+		clamp_variable = {
+			var = thermonuclear_reactor_efficiency
+			min = 0
+			max = 1
+		}
+		#outcome
+		add_to_variable = {
+			#add because +(-x), cost subtracts
+			thermonuclear_fuel_reactor = thermonuclear_fuel_reactor_consumption
+		}
+		set_variable = {
+			thermonuclear_thermonuke = mtth:thermonuclear_reactor_total_thermonuke_outcome
+		}
+		multiply_variable = {
+			thermonuclear_thermonuke = thermonuclear_reactor_efficiency
+		}
+		add_to_variable = {
+			thermonuclear_production_factor_outcome = thermonuclear_thermonuke
+		}
+	}
+	else = {
+		set_variable = {
+			thermonuclear_reactor_efficiency = 1
+		}
+	}
+}
+
+
 calc_all_resources = {
+	#NOTE: in any order
 	calc_resource_aluminium = yes
 	calc_resource_steel = yes
 	calc_resource_tungsten = yes
 	calc_resource_chromium = yes
 	calc_resource_synthetic = yes
-	calc_resource_nuclear_fuel = yes
+}
+calc_all_nuclear_resources = {
+	#NOTE: order is important!
+	calc_primary_reactor = yes
+	calc_secondary_reactor = yes
+	calc_thermonuclear_reactor = yes
 }
 
 #ceil(x / 5 + 1) * 5, for example: 62% efficiency / 5 = 12.4; ceil(12.4 + 1) = 14; 14 * 5 = 70% target (and it will try to grow

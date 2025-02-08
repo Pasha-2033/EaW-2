@@ -465,13 +465,13 @@ buildings = {
 	}
 
 	nuclear_reactor = { #enrichment for nukes (high energy neutrons)
-		icon_frame = 13 #to do
+		icon_frame = 38
 		level_cap = {
 			state_max = 1
 			shares_slots = yes
 			#group_by = reactors
 		}
-		base_cost = 30000
+		base_cost = 3
 		infrastructure_construction_effect = yes
 		value = 10
 
@@ -488,13 +488,13 @@ buildings = {
 		show_on_map = 1
 	}
 	nuclear_reactor_heavy_water = { #enrichment for nukes (low energy neutrons)
-		icon_frame = 13 #to do
+		icon_frame = 39
 		level_cap = {
 			state_max = 1
 			shares_slots = yes
 			#group_by = reactors
 		}
-		base_cost = 30000
+		base_cost = 3
 		infrastructure_construction_effect = yes
 		value = 10
 
@@ -517,7 +517,7 @@ buildings = {
 			shares_slots = yes
 			#group_by = reactors
 		}
-		base_cost = 30000
+		base_cost = 3
 		infrastructure_construction_effect = yes
 		value = 10
 
@@ -526,6 +526,8 @@ buildings = {
 		country_modifiers = {
 			modifiers = {
 				nuclear_reactor_exploratory_num = 1
+				research_speed_factor = 1
+				#to do: spead up special projects
 			}
 		}
 
@@ -541,7 +543,7 @@ buildings = {
 			#group_by = reactors
 			
 		}
-		base_cost = 30000
+		base_cost = 3
 		infrastructure_construction_effect = yes
 		value = 10
 
@@ -571,7 +573,6 @@ buildings = {
 		infrastructure_construction_effect = yes
 		value = 10
 
-		nuclear_reactor = yes
 		show_modifier = yes
 		state_modifiers = {
 			

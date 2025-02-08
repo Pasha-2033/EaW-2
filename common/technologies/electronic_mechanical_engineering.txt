@@ -15,7 +15,17 @@ technologies = {
 			}
 		}
 		on_research_complete = {
-			add_ideas = steam_control_systems_idea
+			add_equipment_bonus = {
+				#name = loc
+				bonus = {
+					ship_hull_frigate_0 = {
+						naval_speed = 0.1
+					}
+					ship_hull_frigate_1 = {
+						naval_speed = 0.1
+					}
+				}
+			}
 		}
 	}
 	high_pressure_steam_systems = {
@@ -33,7 +43,17 @@ technologies = {
 			}
 		}
 		on_research_complete = {
-			add_ideas = high_pressure_steam_systems_idea
+			add_equipment_bonus = {
+				#name = loc
+				bonus = {
+					ship_hull_frigate_0 = {
+						naval_speed = 0.1
+					}
+					ship_hull_frigate_1 = {
+						naval_speed = 0.1
+					}
+				}
+			}
 		}
 	}
 	overloaded_cores = {
@@ -1536,13 +1556,17 @@ technologies = {
 	atomic_research = {
 
 		research_speed_factor = 0.04
+		enable_building = {
+			building = anti_nuke_bunker
+			level = 1
+		}
 
 		path = {
 			leads_to_tech = nuclear_reactor
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = radiation_isolation_methods
+			leads_to_tech = nuclear_shelters_0
 			research_cost_coeff = 1
 		}
 
@@ -1922,30 +1946,6 @@ technologies = {
 
 	}
 	#antiradiation protection
-	radiation_isolation_methods = {
-		path = {
-			leads_to_tech = nuclear_shelters_0
-			research_cost_coeff = 1
-		}
-		is_special_project_tech = yes
-		start_year = 1011
-		research_cost = 5
-		folder = {
-			name = electronics_folder
-			position = {
-				x = -1
-				y = 4
-			}
-		}
-		ai_will_do = {
-			base = 1
-		}
-		enable_building = {
-			building = anti_nuke_bunker
-			level = 1
-		}
-		categories = {}
-	}
 	nuclear_shelters_0 = {
 		path = {
 			leads_to_tech = nuclear_shelters_1
@@ -1958,7 +1958,7 @@ technologies = {
 			name = electronics_folder
 			position = {
 				x = -1
-				y = 6
+				y = 4
 			}
 		}
 		ai_will_do = {
@@ -1982,7 +1982,7 @@ technologies = {
 			name = electronics_folder
 			position = {
 				x = -1
-				y = 8
+				y = 6
 			}
 		}
 		ai_will_do = {
@@ -1990,7 +1990,7 @@ technologies = {
 		}
 		enable_building = {
 			building = anti_nuke_bunker
-			level = 5
+			level = 10
 		}
 		categories = {}
 	}
@@ -2006,31 +2006,7 @@ technologies = {
 			name = electronics_folder
 			position = {
 				x = -1
-				y = 10
-			}
-		}
-		ai_will_do = {
-			base = 1
-		}
-		enable_building = {
-			building = anti_nuke_bunker
-			level = 10
-		}
-		categories = {}
-	}
-	nuclear_shelters_3 = {
-		path = {
-			leads_to_tech = nuclear_shelters_4
-			research_cost_coeff = 1
-		}
-		is_special_project_tech = yes
-		start_year = 1011
-		research_cost = 5
-		folder = {
-			name = electronics_folder
-			position = {
-				x = -1
-				y = 10
+				y = 8
 			}
 		}
 		ai_will_do = {
@@ -2042,7 +2018,7 @@ technologies = {
 		}
 		categories = {}
 	}
-	nuclear_shelters_4 = {
+	nuclear_shelters_3 = {
 		is_special_project_tech = yes
 		start_year = 1011
 		research_cost = 5
