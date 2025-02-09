@@ -125,7 +125,7 @@ technologies = {
 			max_organisation = 5
 		}
 		dependencies = {
-			magical_weapons = 1
+			magical_weapons_0 = 1
 		}
 		on_research_complete = {
 			custom_effect_tooltip = ME_KNIGHTS_TOOLTIP
@@ -232,7 +232,7 @@ technologies = {
 				factor = 2
 			}
 			modifier = {
-				NOT = { has_tech = magical_weapons }
+				NOT = { has_tech = magical_weapons_0 }
 				factor = 0
 			}
 		}
@@ -276,7 +276,7 @@ technologies = {
 			breakthrough = 0.05
 		}
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 		path = {
 			leads_to_tech = tech_knights_a
@@ -457,7 +457,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 		research_cost = 1.5
 		start_year = 1007
@@ -749,7 +749,7 @@ technologies = {
 			custom_effect_tooltip = percentage_increase_notice
 		}
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 		path = {
 			leads_to_tech = tech_griffon_army_def_a
@@ -989,7 +989,7 @@ technologies = {
 			recon = 1
 		}
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 		path = {
 			leads_to_tech = tech_griffon_army_atk_a
@@ -1025,7 +1025,7 @@ technologies = {
 	#Leap of faith
 	tech_griffon_army_atk_a = {
 
-		air_paradrop_attack_factor = 0.15
+		paradrop_organization_factor = 0.15
 
 		path = {
 			leads_to_tech = tech_griffon_army_atk_b
@@ -1098,12 +1098,6 @@ technologies = {
 	#Outriders
 	tech_griffon_army_atk_c = {
 
-		category_motmech = {
-			max_organisation = 3
-			soft_attack = 0.05
-			hard_attack = 0.05
-		}
-
 		research_cost = 1.5
 		start_year = 1007
 		folder = {
@@ -1135,7 +1129,7 @@ technologies = {
 
 		dependencies = {
 			griffon_race = 1
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 		production_speed_air_base_factor = 0.15
 		production_speed_naval_base_factor = 0.15
@@ -1363,8 +1357,8 @@ technologies = {
 	#Fighting pilots
 	tech_griffon_air3 = {
 
-		air_interception_attack_factor = 0.1
-		air_air_superiority_attack_factor = 0.1
+		air_intercept_efficiency = 0.1
+		air_superiority_efficiency = 0.1
 
 		path = {
 			leads_to_tech = tech_griffon_air4

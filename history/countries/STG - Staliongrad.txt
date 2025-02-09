@@ -1,35 +1,51 @@
 capital = 153
-set_popularities = {
-	fascism = 2
-	radicalism = 3
-	neutrality = 1
-	communism = 88
-	socialism = 6
-}
-set_politics = {
-	ruling_party = communism
-	last_election = "953.10.10"
-	election_frequency = 36
-	elections_allowed = no
-}
-recruit_character = STG_982_stalion
-recruit_character = STG_982_martov
-add_ideas = {
-	pony_race
-}
-982.1.1 = {
-	set_country_flag = default_982_focus_tree
-	set_variable = {
-		UG_ARG_1 = 0.334
+set_convoys = 0
+if = { #982 scenario script
+	limit = {
+		has_start_date < 1002.1.1
 	}
-	set_variable = {
-		UG_ARG_9 = 0.1
+	if = {
+		limit = {
+			OR = {
+				has_dlc = "Together for Victory"
+				has_dlc = "Man the Guns"
+			}
+		}
+		set_autonomy = {
+			target = SLV
+			autonomous_state = autonomy_personal_union
+		}
+		else = {
+			puppet = SLV
+		}
 	}
-	set_variable = {
-		UG_ARG_16 = 0
+	create_faction = socialist_front
+	add_to_faction = SLV
+	set_research_slots = 1
+	set_technology = {
+		#industry
+		basics_of_metallurgy = 1
+		steel_plant_upgrade_0 = 1
 	}
-	set_variable = {
-		UG_ARG_17 = 0
+	set_popularities = {
+		fascism = 2
+		radicalism = 3
+		neutrality = 1
+		communism = 88
+		socialism = 6
 	}
-	generate_units_982 = yes
+	set_politics = {
+		ruling_party = communism
+		last_election = "953.10.10"
+		election_frequency = 36
+		elections_allowed = no
+	}
+	recruit_character = STG_stalion
+	recruit_character = STG_martov
+	recruit_character = STG_kropotkin
+	add_ideas = {
+		pony_race
+		pre_industrial_society
+		STG_WOP_frozen_civil_war
+	}
 }

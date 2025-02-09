@@ -1,34 +1,44 @@
-state={
-	id=76
-	name="STATE_76"
-
-	provinces={
-		3712 3715 3775 3906 3917 4417 7345 7433 9864 10174 10320 11567
+state = {
+	id = 76
+	name = "STATE_76"
+	provinces = {
+		3712 
+		3715 
+		3775 
+		3906 
+		3917 
+		4417 
+		7345 
+		7433 
+		9864 
+		10174 
+		10320 
+		11567
 	}
-
-	manpower=2744900
+	manpower = 2744900
 	state_category = large_city
-	buildings_max_level_factor=1.00
-
-	history={
+	buildings_max_level_factor = 1
+	history = {
 		victory_points = { 11567 30 }
-		982.1.1 = {
-			owner = OLE
-			add_core_of = OLE
-			buildings = {
-				infrastructure = 1
-				industrial_complex = 3
-				arms_factory = 1
-				dockyard = 1
-				11567 = {
-					naval_base = 1
+		owner = OLE
+		add_core_of = OLE
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 3
+			arms_factory = 1
+			dockyard = 1
+			steel_plant = 1
+			11567 = {
+				naval_base = 1
+				landmark_hjordland_lighthouse = {
+					allowed = {
+						has_dlc = "Gotterdammerung"
+					}
+					level = 1
 				}
 			}
 		}
-		1007.1.1 = {
-			owner = OLE
-			add_core_of = OLE
-		}
+		1002.1.1 = {}
 		1050.1.1 = {}
 	}
 	resources = {

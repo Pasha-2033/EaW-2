@@ -1,0 +1,166 @@
+ideas = {
+	country = {
+		GWS_redcon_1 = {
+			allowed = {
+				original_tag = GWS
+			}
+			allowed_civil_war = {
+				#has character - evil mind
+			}
+			modifier = {
+				production_speed_bunker_factor = -0.1
+				production_speed_coastal_bunker_factor = -0.1
+				repair_speed_bunker_factor = 0.1
+				repair_speed_coastal_bunker_factor = 0.1
+				land_bunker_effectiveness_factor = 0.05
+				coastal_bunker_effectiveness_factor = 0.05
+				industry_air_damage_factor = -0.02
+				supply_node_range = -0.05
+				experience_gain_artillery_training_factor = -0.2
+				experience_gain_rocket_artillery_training_factor = -0.2
+				experience_gain_anti_air_combat_factor = -0.2
+				#to do for super heavy support
+				experience_gain_artillery_brigade_training_factor = -0.2
+				experience_gain_rocket_artillery_brigade_training_factor = -0.2
+				experience_gain_anti_air_brigade_training_factor = -0.2
+				#to do for super heavy batalion
+				custom_modifier_tooltip = redcon_1_fort_bonuses_tt
+			}
+			equipment_bonus = {
+				anti_air_equipment = {
+					instant = yes
+					air_attack = 0.03
+				}
+			}
+			on_add = {
+				#to do (add bonuses to forts for artillery, super heavy and AA)
+			}
+			on_remove = {
+				#to do (remove bonuses to forts for artillery, super heavy and AA)
+			}
+		}
+		GWS_redcon_2 = {
+			allowed = {
+				original_tag = GWS
+			}
+			allowed_civil_war = {
+				#has character - evil mind
+			}
+			modifier = {
+				production_speed_bunker_factor = -0.2
+				production_speed_coastal_bunker_factor = -0.2
+				repair_speed_bunker_factor = 0.3
+				repair_speed_coastal_bunker_factor = 0.3
+				land_bunker_effectiveness_factor = 0.1
+				coastal_bunker_effectiveness_factor = 0.1
+				industry_air_damage_factor = -0.04
+				supply_node_range = -0.1
+				army_leader_start_defense_level = 1
+				experience_gain_artillery_training_factor = -0.4
+				experience_gain_rocket_artillery_training_factor = -0.4
+				experience_gain_anti_air_combat_factor = -0.4
+				#to do for super heavy support
+				experience_gain_artillery_brigade_training_factor = -0.4
+				experience_gain_rocket_artillery_brigade_training_factor = -0.4
+				experience_gain_anti_air_brigade_training_factor = -0.4
+				#to do for super heavy batalion
+				custom_modifier_tooltip = redcon_2_fort_bonuses_tt
+			}
+			equipment_bonus = {
+				anti_air_equipment = {
+					instant = yes
+					air_attack = 0.06
+				}
+			}
+			on_add = {
+				#to do (add bonuses to forts for artillery, super heavy and AA)
+			}
+			on_remove = {
+				#to do (remove bonuses to forts for artillery, super heavy and AA)
+			}
+		}
+		GWS_redcon_3 = {
+			allowed = {
+				original_tag = GWS
+			}
+			allowed_civil_war = {
+				#has character - evil mind
+			}
+			modifier = {
+				production_speed_bunker_factor = -0.3
+				production_speed_coastal_bunker_factor = -0.3
+				repair_speed_bunker_factor = 0.5
+				repair_speed_coastal_bunker_factor = 0.5
+				land_bunker_effectiveness_factor = 0.15
+				coastal_bunker_effectiveness_factor = 0.15
+				industry_air_damage_factor = -0.06
+				supply_node_range = -0.15
+				army_leader_start_defense_level = 1
+				experience_gain_artillery_training_factor = -0.6
+				experience_gain_rocket_artillery_training_factor = -0.6
+				experience_gain_anti_air_combat_factor = -0.6
+				#to do for super heavy support
+				experience_gain_artillery_brigade_training_factor = -0.6
+				experience_gain_rocket_artillery_brigade_training_factor = -0.6
+				experience_gain_anti_air_brigade_training_factor = -0.6
+				#to do for super heavy batalion
+				custom_modifier_tooltip = redcon_3_fort_bonuses_tt
+			}
+			equipment_bonus = {
+				anti_air_equipment = {
+					instant = yes
+					air_attack = 0.1
+				}
+			}
+			on_add = {
+				#to do (add bonuses to forts for artillery, super heavy and AA)
+			}
+			on_remove = {
+				#to do (remove bonuses to forts for artillery, super heavy and AA)
+			}
+		}
+		GWS_redcon_x = {
+			allowed = {
+				original_tag = GWS
+			}
+			allowed_civil_war = {
+				#has character - evil mind
+			}
+			modifier = {
+				production_speed_bunker_factor = -0.3
+				production_speed_coastal_bunker_factor = -0.3
+				repair_speed_bunker_factor = 0.65
+				repair_speed_coastal_bunker_factor = 0.65
+				land_bunker_effectiveness_factor = 0.25
+				coastal_bunker_effectiveness_factor = 0.25
+				industry_air_damage_factor = -0.1
+				supply_node_range = -0.15
+				army_leader_start_defense_level = 2
+				experience_gain_artillery_training_factor = -0.8
+				experience_gain_rocket_artillery_training_factor = -0.8
+				experience_gain_anti_air_combat_factor = -0.8
+				#to do for super heavy support
+				experience_gain_artillery_brigade_training_factor = -0.8
+				experience_gain_rocket_artillery_brigade_training_factor = -0.8
+				experience_gain_anti_air_brigade_training_factor = -0.8
+				#to do for super heavy batalion
+				static_anti_air_damage_factor = 0.05
+				static_anti_air_hit_chance_factor = 0.1
+				custom_modifier_tooltip = redcon_x_fort_bonuses_tt
+			}
+			equipment_bonus = {
+				anti_air_equipment = {
+					instant = yes
+					air_attack = 0.15
+				}
+				#to do super heavy artillery
+			}
+			on_add = {
+				#to do (add bonuses to forts for artillery, super heavy and AA)
+			}
+			on_remove = {
+				#to do (remove bonuses to forts for artillery, super heavy and AA)
+			}
+		}
+	}
+}

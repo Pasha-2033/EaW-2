@@ -1,0 +1,219 @@
+@landmark_repair_speed_factor = 0.15
+
+buildings = {
+
+	# show_on_map:
+	#    if it is provincial building, then show_on_map = X is amount per each province
+	#    if it is state building, then show_on_map = X is amount per state
+	#
+	# province_max:
+	# if province_max is set, then building is provincial
+	#
+	## Modifiers:
+	## country_modifiers - accept only country modifiers
+	## state_modifiers - accept only state modifiers
+	## enable_for_controllers - Country modifiers will apply only if the controller of province/state is in the list, or if the list is empty
+	## Example:
+	#
+	# building = {
+	# 	country_modifiers = {
+	#      enable_for_controllers { GER ENG } # Here you can list countries which can accept the country modifiers of this building
+	# 		modifiers = {
+	#           #Here you can add country modifiers
+	#			political_power_factor = 2.0
+	#       }
+	#   }
+	#   
+	#   state_modifiers = {
+	#       #Here you can add state modifiers
+	#   	local_building_slots_factor = 2
+	#   }
+	# }
+	#   disable_grow_animation = yes # Disables the grow animation for the building, default = no
+	#   missing_tech_loc = <bindable localization> # See script concept bindable localization
+	#   repair_speed_factor = 0.5 # Optional. Factor for how fast the building is repaired (default = 1.0)
+
+
+	landmark_camelot = {
+		dlc_allowed = { 
+			has_dlc = Gotterdammerung 
+		}
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 31
+		value = 5
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = @landmark_repair_speed_factor
+		only_display_if_exists = yes
+		special_icon = GFX_big_ben_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		show_modifier = yes
+		country_modifiers = {
+			enable_for_controllers = { 
+				EQS 
+				EPT 
+				PGT
+			}
+			modifiers = {
+				political_power_factor = 0.03 # England has a lot of pp sinks, so this is simply a small helpful bump on the way
+			}
+		}
+	}
+
+	
+	landmark_noxar_institute = {
+		dlc_allowed = { 
+			has_dlc = Gotterdammerung 
+		}
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 31
+		value = 5
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = @landmark_repair_speed_factor
+		only_display_if_exists = yes
+		special_icon = GFX_big_ben_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		show_modifier = yes
+		country_modifiers = {
+			enable_for_controllers = { 
+				GWS
+				VES
+				DIS
+				SOR
+				LIK
+				VRA
+			}
+			modifiers = {
+				research_speed_factor = 0.05
+			}
+		}
+	}
+
+	landmark_ilytskaya_mine = {
+		dlc_allowed = { 
+			has_dlc = Gotterdammerung 
+		}
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 31
+		value = 5
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = @landmark_repair_speed_factor
+		only_display_if_exists = yes
+		special_icon = GFX_big_ben_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		show_modifier = yes
+		country_modifiers = {
+			enable_for_controllers = { 
+				MET
+			}
+			modifiers = {
+				local_resources_factor = 0.05
+			}
+		}
+		state_modifiers = {
+			local_resources = 0.1
+		}
+	}
+
+	landmark_ozarsky_geyser = {
+		dlc_allowed = { 
+			has_dlc = Gotterdammerung 
+		}
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 31
+		value = 5
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = @landmark_repair_speed_factor
+		only_display_if_exists = yes
+		special_icon = GFX_big_ben_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		show_modifier = yes
+		country_modifiers = {
+			enable_for_controllers = { 
+				DRG
+			}
+			modifiers = {
+				
+			}
+		}
+	}
+	landmark_hjordland_lighthouse = {
+		dlc_allowed = { 
+			has_dlc = Gotterdammerung 
+		}
+		show_on_map = 1
+		base_cost = 20000
+		damage_factor = 0 # This building can't be damaged by regular strat bombing
+		icon_frame = 31
+		value = 5
+		
+		is_buildable = no
+		disable_grow_animation = yes
+		spawn_point = landmark_spawn
+		repair_speed_factor = @landmark_repair_speed_factor
+		only_display_if_exists = yes
+		special_icon = GFX_big_ben_icon_small
+		level_cap = {
+			province_max = 1
+		}
+		always_shown = yes
+		show_modifier = yes
+		country_modifiers = {
+			enable_for_controllers = { 
+				OLE
+				OLR
+				BR0
+				BR2
+				BR3
+				BR4
+				BR5
+				CB0
+				CB1
+				CB2
+			}
+			modifiers = {
+				
+			}
+		}
+	}
+
+}
+
+spawn_points = {
+	landmark_spawn = {
+		type = province
+		max = 1
+		disable_auto_nudging = yes
+	}
+}

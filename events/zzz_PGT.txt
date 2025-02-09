@@ -19,6 +19,12 @@ country_event = {
 	option = {
 		#fire her until it`s too late!
 		name = pegas_tribe.1.b
+		trigger = {
+			NOT = {
+				has_government = harmony
+				has_completed_focus = pgt_focus_allow_harmonists_to_perform
+			}
+		}
 		deactivate_advisor = PGT_fluttershy
 		ai_chance = {
 			base = 1
@@ -45,6 +51,12 @@ country_event = {
 	option = {
 		#fire her until it`s too late!
 		name = pegas_tribe.2.b
+		trigger = {
+			NOT = {
+				has_government = harmony
+				has_completed_focus = pgt_focus_allow_harmonists_to_perform
+			}
+		}
 		deactivate_advisor = PGT_rainbowdash
 		ai_chance = {
 			base = 1
@@ -71,8 +83,14 @@ country_event = {
 				ideology = PREV
 				popularity = 0.025
 			}
+			hidden_effect = {
+				country_event = {
+					id = pegas_tribe.5
+					days = 7
+					random_days = 3
+				}
+			}
 		}
-		#todo reparations
 		ai_chance = {
 			base = 1
 		}
@@ -112,7 +130,7 @@ country_event = {
 	}
 }
 country_event = {
-	#farmers can provide compromise (to do)
+	#CRY/STG accepts to give military access
 	id = pegas_tribe.5
 	immediate = {
 		log = "[GetDateText]: [Root.GetName]: event pegas_tribe.5"
@@ -121,22 +139,163 @@ country_event = {
 	desc = pegas_tribe.5.d
 	picture = GFX_event_swarm #(to do) change
 	is_triggered_only = yes
-	option = { #we will help in recovery
+	option = { #great!
 		name = pegas_tribe.5.a
+	}
+}
+country_event = {
+	#farmers can provide compromise (to do)
+	id = pegas_tribe.6
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event pegas_tribe.6"
+	}
+	title = pegas_tribe.6.t
+	desc = pegas_tribe.6.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = { #we will help in recovery
+		name = pegas_tribe.6.a
 		ai_chance = {
 			base = 1
 		}
 	}
 	option = { #we can`t afford this, let`s negotiate
-		name = pegas_tribe.5.b
+		name = pegas_tribe.6.b
 		ai_chance = {
 			base = 1
 		}
 	}
 	option = { #fuck you!
-		name = pegas_tribe.5.c
+		name = pegas_tribe.6.c
 		ai_chance = {
 			base = 1
 		}
+	}
+}
+country_event = {
+	#we ask for aid (towards OLE/VES/DIS/VRA/SOR/LIK)
+	id = pegas_tribe.7
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event pegas_tribe.7"
+	}
+	title = pegas_tribe.7.t
+	desc = pegas_tribe.7.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = { #we will send aid
+		name = pegas_tribe.7.a
+		add_ideas = PGT_selling_food
+		FROM = {
+			add_to_variable = {
+				var = pgt_food_stamps_fg
+				value = 20
+				tooltip = add_pgt_food_stamps_fg_20_tt
+			}
+			hidden_effect = {
+				country_event = {
+					id = pegas_tribe.9
+					days = 7
+					random_days = 3
+				}
+				calc_surplus_appropriation_real_values = yes
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #we can`t afford this
+		name = pegas_tribe.7.b
+		hidden_effect = {
+			FROM = {
+				country_event = {
+					id = pegas_tribe.8
+					days = 7
+					random_days = 3
+				}
+			}
+		}
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {
+	#OLE/VES/DIS/VRA/SOR/LIK refuses send aid
+	id = pegas_tribe.8
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event pegas_tribe.8"
+	}
+	title = pegas_tribe.8.t
+	desc = pegas_tribe.8.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = { #we need this help, try again
+		name = pegas_tribe.8.a
+		trigger = {
+			has_political_power > 24
+		}
+		FROM = {
+			country_event = {
+				id = pegas_tribe.7
+				days = 14
+				random_days = 10
+			}
+		}
+		add_political_power = -25
+		ai_chance = {
+			base = 1
+		}
+	}
+	option = { #we are fucked
+		name = pegas_tribe.8.b
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {
+	#OLE/VES/DIS/VRA/SOR/LIK accepts send aid
+	id = pegas_tribe.9
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event pegas_tribe.9"
+	}
+	title = pegas_tribe.9.t
+	desc = pegas_tribe.9.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = { #great!
+		name = pegas_tribe.9.a
+		ai_chance = {
+			base = 1
+		}
+	}
+}
+country_event = {
+	#activate PGT_farmers_ask_support_from_EPT mission as farmers actions
+	id = pegas_tribe.10
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event pegas_tribe.10"
+	}
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		activate_mission = PGT_farmers_ask_support_from_EPT
+		set_country_flag = support_from_EPT
+	}
+}
+country_event = {
+	#activate PGT_farmers_ask_support_from_OLE mission as farmers actions
+	id = pegas_tribe.11
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event pegas_tribe.11"
+	}
+	hidden = yes
+	is_triggered_only = yes
+	fire_only_once = yes
+	option = {
+		activate_mission = PGT_farmers_ask_support_from_OLE
+		set_country_flag = support_from_OLE
 	}
 }

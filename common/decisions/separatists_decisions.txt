@@ -12,10 +12,11 @@ PGT_farmrs_rebelion  = {
 		activation = {
 			always = no
 		}
-		days_mission_timeout = 0
+		days_mission_timeout = 180
 		is_good = no 
-		fire_only_once = yes                        
+		fire_only_once = yes
 		selectable_mission = no
+		priority = 999
 		complete_effect = {
 			remove_ideas = PGT_farmer_riot
 			clear_variable = farmer_influence
@@ -23,6 +24,7 @@ PGT_farmrs_rebelion  = {
 				#end all missions - they have failed
 				remove_mission = PGT_farmers_ask_support_from_EPT
 				remove_mission = PGT_farmers_ask_support_from_OLE
+				remove_mission = PGT_farmer_preparations
 			}
 		}
 		timeout_effect = {
@@ -30,6 +32,7 @@ PGT_farmrs_rebelion  = {
 				#end all missions - time has come, there is no more underground activities
 				remove_mission = PGT_farmers_ask_support_from_EPT
 				remove_mission = PGT_farmers_ask_support_from_OLE
+				remove_mission = PGT_farmer_preparations
 			}
 			clamp_variable = {
 				var = farmer_influence
@@ -38,7 +41,7 @@ PGT_farmrs_rebelion  = {
 			start_civil_war = {
 				ideology = harmony
 				size = farmer_influence
-				
+				#to do
 				ICE = {
 					declare_war_on = {
 						target = PREV
@@ -73,6 +76,12 @@ PGT_farmrs_rebelion  = {
 				tooltip = sub_farmer_influence_3_tt
 			}
 			add_stability = -0.02
+			if = {
+				limit = {
+					has_government = militarism
+				}
+				add_war_support = -0.02
+			}
 		}
 	}
 	PGT_plunder_caches = {
@@ -88,7 +97,10 @@ PGT_farmrs_rebelion  = {
 				value = 0.05
 				tooltip = sub_farmer_influence_5_tt
 			}
-
+			add_equipment_to_stockpile = {
+				type = infantry_equipment
+				amount = 25
+			}
 		}
 	}
 	PGT_political_isolation = {
@@ -102,6 +114,7 @@ PGT_farmrs_rebelion  = {
 		modifier = {
 			improve_relations_maintain_cost_factor = 0.1
 			opinion_gain_monthly_factor = -0.25
+			political_power_factor = -0.2
 		}
 		complete_effect = {
 			subtract_from_variable = {
@@ -109,7 +122,37 @@ PGT_farmrs_rebelion  = {
 				value = 0.05
 				tooltip = sub_farmer_influence_5_tt
 			}
-
+		}
+	}
+	PGT_arrest_farmers_leaders = {
+		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
+		allowed = { 
+			original_tag = PGT
+		}
+		available = {
+			custom_trigger_tooltip = {
+				tooltip = farmer_influence_more_than_15_tt
+				check_variable = {
+					farmer_influence > 0.15
+				}
+			}
+		}
+		cost = 75
+		fire_only_once = yes
+		complete_effect = {
+			subtract_from_variable = {
+				var = farmer_influence
+				value = 0.075
+				tooltip = sub_farmer_influence_7.5_tt
+			}
+			add_days_mission_timeout = {
+				mission = PGT_mission_farmrs_rebelion_incoming
+    			days = 30
+			}
+			add_days_mission_timeout = {
+				mission = PGT_farmer_preparations
+    			days = 10
+			}
 		}
 	}
 	PGT_cutoff_bridges_with_EPT = {
@@ -118,15 +161,27 @@ PGT_farmrs_rebelion  = {
 			original_tag = PGT
 		}
 		available = {
-			has_active_mission = PGT_farmers_ask_support_from_EPT
+			has_country_flag = {
+				flag = support_from_EPT
+				days < 30
+			}
 		}
 		visible = {
-			#has_active_mission = PGT_farmers_ask_support_from_EPT
+			has_active_mission = PGT_farmers_ask_support_from_EPT
 		}
+		cancel_if_not_visible = yes
 		days_remove = 20
 		fire_only_once = yes
+		modifier = {
+			political_power_factor = -0.75
+			improve_relations_maintain_cost_factor = 0.25
+		}
 		complete_effect = {
 			remove_mission = PGT_farmers_ask_support_from_EPT
+			EPT = {
+				boycott_by_PREV = yes
+			}
+			clr_country_flag = support_from_EPT
 		}
 	}
 	PGT_cutoff_bridges_with_OLE = {
@@ -135,15 +190,27 @@ PGT_farmrs_rebelion  = {
 			original_tag = PGT
 		}
 		available = {
-			has_active_mission = PGT_farmers_ask_support_from_OLE
+			has_country_flag = {
+				flag = support_from_OLE
+				days < 30
+			}
 		}
 		visible = {
-			#has_active_mission = PGT_farmers_ask_support_from_OLE
+			has_active_mission = PGT_farmers_ask_support_from_OLE
 		}
+		cancel_if_not_visible = yes
 		days_remove = 20
 		fire_only_once = yes
+		modifier = {
+			political_power_factor = -0.75
+			improve_relations_maintain_cost_factor = 0.25
+		}
 		complete_effect = {
 			remove_mission = PGT_farmers_ask_support_from_OLE
+			OLE = {
+				boycott_by_PREV = yes
+			}
+			clr_country_flag = support_from_OLE
 		}
 	}
 	#farmers` actions
@@ -164,6 +231,7 @@ PGT_farmrs_rebelion  = {
 		is_good = no 
 		fire_only_once = yes
 		selectable_mission = no
+		priority = 997
 		timeout_effect = {
 			add_to_variable = {
 				var = farmer_influence
@@ -194,6 +262,7 @@ PGT_farmrs_rebelion  = {
 		is_good = no 
 		fire_only_once = yes
 		selectable_mission = no
+		priority = 997
 		timeout_effect = {
 			add_to_variable = {
 				var = farmer_influence
@@ -205,6 +274,30 @@ PGT_farmrs_rebelion  = {
 				popularity = 0.075
 			}
 			set_country_flag = farmers_under_OLE
+		}
+	}
+	PGT_farmer_preparations = {
+		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
+		allowed = { 
+			original_tag = PGT
+		}
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		activation = {
+			has_idea = PGT_farmer_riot
+		}
+		days_mission_timeout = 10
+		selectable_mission = no
+		priority = 998
+		timeout_effect = {
+			add_to_variable = {
+				var = farmer_influence
+				value = 0.05
+				tooltip = add_farmer_influence_5_tt
+			}
 		}
 	}
 }

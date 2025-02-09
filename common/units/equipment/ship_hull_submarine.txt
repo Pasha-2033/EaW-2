@@ -91,8 +91,7 @@ equipments = {
 		
 		manpower = 200
 	}
-
-	ship_hull_submarine_1 = {
+	ship_hull_submarine_0 = {
 		year = 993
 
 		archetype = ship_hull_submarine
@@ -100,7 +99,14 @@ equipments = {
 		
 		module_slots = inherit
 	}
+	ship_hull_submarine_1 = {
+		year = 993
 
+		archetype = ship_hull_submarine
+		priority = 2500
+		parent = ship_hull_submarine_0
+		module_slots = inherit
+	}
 	ship_hull_submarine_2 = {
 		year = 1007
 
@@ -500,7 +506,7 @@ equipments = {
 		manpower = 300				
 	}	
 	
-	ship_hull_missile_submarine_1 = {
+	ship_hull_missile_submarine_0 = {
 		year = 1023
 
 		archetype = ship_hull_submarine
@@ -988,9 +994,9 @@ equipments = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_2
 			fixed_ship_engine_slot = sub_ship_engine_2
 			fixed_ship_fire_control_system_slot = ship_torpedo_data_computer_1
-			front_1_custom_slot = ship_extra_fuel_tank
+			front_1_custom_slot = ship_extra_fuel_tank_0
 			mid_1_custom_slot = empty
-			rear_1_custom_slot = ship_extra_fuel_tank
+			rear_1_custom_slot = ship_extra_fuel_tank_0
 		}
 		lg_armor_piercing = 0
 		lg_attack = 0

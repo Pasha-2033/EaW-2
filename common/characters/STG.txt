@@ -1,6 +1,6 @@
 characters = {
-	STG_982_stalion = {
-		name = STG_982_stalion
+	STG_stalion = {
+		name = STG_stalion
 		portraits = {
 			#to do
 			civilian = {
@@ -13,13 +13,13 @@ characters = {
 		country_leader = {
 			desc = "POLITICS_STALION_DESC"
 			ideology = stalionism
-			traits = {}
-			expire = "1965.1.1.1"
-			id = -1
+			traits = {
+				father_or_revolution
+			}
 		}
 	}
-	STG_982_martov = {
-		name = STG_982_martov
+	STG_martov = {
+		name = STG_martov
 		portraits = {
 			#to do
 			civilian = {
@@ -33,8 +33,23 @@ characters = {
 			desc = "POLITICS_MARTOV_DESC"
 			ideology = democratic_socialism
 			traits = {}
-			expire = "1965.1.1.1"
-			id = -1
+		}
+	}
+	STG_kropotkin = {
+		name = STG_kropotkin
+		portraits = {
+			#to do
+			civilian = {
+				large = "GFX_portrait_marshal_unknown"
+			}
+			army = {
+				large = "GFX_portrait_marshal_unknown"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_KROPOTKIN_DESC"
+			ideology = individual_anarchism
+			traits = {}
 		}
 	}
 }

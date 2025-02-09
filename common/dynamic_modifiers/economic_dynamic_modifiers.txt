@@ -7,6 +7,37 @@ reserve_fund_modifier = {
 	}
 	political_power_gain = 1
 }
+resource_activity_modifier = {
+	enable = { 
+		always = yes 
+	}
+	country_resource_cost_aluminium = resource_outcome^0
+	country_resource_cost_bauxite = resource_consumption^0
+
+	country_resource_cost_steel = resource_outcome^1
+	country_resource_cost_iron = resource_consumption^1
+	
+	country_resource_cost_tungsten = resource_outcome^2
+	country_resource_cost_scheelitis = resource_consumption^2
+
+	country_resource_cost_chromium = resource_outcome^3
+	country_resource_cost_chromite = resource_consumption^3
+
+	country_resource_cost_rubber = rubber_outcome
+	base_fuel_gain = fuel_outcome
+	country_resource_cost_oil = synthetic_refinery_consumption
+}
+nuclear_resource_activity_modifier = {
+	enable = { 
+		always = yes
+	}
+	country_resource_cost_nuclear_fuel_primary = nuclear_fuel_primary_reactor
+	country_resource_cost_nuclear_fuel_secondary = nuclear_fuel_secondary_reactor
+	country_resource_cost_thermonuclear_fuel = thermonuclear_fuel_reactor
+
+	nuclear_production_factor = nuclear_production_factor_outcome
+	thermonuclear_production_factor = thermonuclear_production_factor_outcome
+}
 #NOTE: CLAMP VARIABLES, DO NOT ALLOW VARS BE POSITIVE, REMOVE IF NO NEGATIVE MODIFIER LEFT
 #please use harvest_failure_update scripted effect for proper functioning
 harvest_failure_modifier = {

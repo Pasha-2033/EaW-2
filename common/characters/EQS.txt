@@ -1,22 +1,20 @@
 characters = {
-	#982 scenario
-	EQS_982_celestia = {
-		name = EQS_982_celestia
+	#country leaders
+	EQS_celestia = {
+		name = EQS_celestia
 		portraits = {
 			civilian = {
 				large = "GFX_portrait_marshal_unknown" #to do
 			}
 		}
 		country_leader = {
-			desc = "POLITICS_982_CELESTIA_DESC"
+			desc = "POLITICS_CELESTIA_DESC"
 			ideology = harmonic_magocracy
 			traits = {}
-			expire = "1965.1.1.1"
-			id = 1000
 		}
 	}
-	EQS_982_twilight = {
-		name = EQS_982_twilight
+	EQS_twilight = {
+		name = EQS_twilight
 		portraits = {
 			civilian = {
 				large = "GFX_portrait_marshal_unknown" #to do
@@ -24,15 +22,13 @@ characters = {
 			}
 		}
 		country_leader = {
-			desc = "POLITICS_982_TWILIGHT_DESC"
+			desc = "POLITICS_TWILIGHT_DESC"
 			ideology = harmonic_magocracy
 			traits = {}
-			expire = "1965.1.1.1"
-			id = 1000
 		}
 		advisor = {
 			slot = political_advisor
-			idea_token = EQS_982_twilight
+			idea_token = EQS_twilight
 			traits = {
 				HE_magic
 			}
@@ -47,8 +43,9 @@ characters = {
 			}
 		}
 	}
-	EQS_982_rarity = {
-		name = EQS_982_rarity
+	#advisors
+	EQS_rarity = {
+		name = EQS_rarity
 		portraits = {
 			civilian = {
 				small = "GFX_idea_unknown_advisor" #to do
@@ -56,7 +53,7 @@ characters = {
 		}
 		advisor = {
 			slot = political_advisor
-			idea_token = EQS_982_rarity
+			idea_token = EQS_rarity
 			traits = {
 				fashion_designer
 			}
@@ -71,8 +68,8 @@ characters = {
 			}
 		}
 	}
-	EQS_982_prince_blueblood = {
-		name = EQS_982_prince_blueblood
+	EQS_prince_blueblood = {
+		name = EQS_prince_blueblood
 		portraits = {
 			civilian = {
 				large = "GFX_portrait_marshal_unknown" #to do
@@ -85,8 +82,6 @@ characters = {
 			traits = {
 				unicorn_superiority
 			}
-			expire = "1965.1.1.1"
-			id = -1
 		}
 	}
 }

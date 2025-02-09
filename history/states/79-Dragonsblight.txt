@@ -1,34 +1,29 @@
-state={
-	id=79
-	name="STATE_79"
-
-	provinces={
-		379 1145 4131 4146 7166 8035 10779 10875
+state = {
+	id = 79
+	name = "STATE_79"
+	provinces = {
+		379 
+		1145 
+		4131 
+		4146 
+		7166 
+		8035 
+		10779 
+		10875
 	}
-
-	manpower=81427
+	manpower = 81427
 	state_category = pastoral
-	buildings_max_level_factor=1.00
-
-	history={
-		#owner = EQS
-		#add_core_of = EQS
-		982.1.1 = {
-			owner = EPT
-			add_core_of = EPT
-			add_core_of = EQS
-			add_claim_by = ICE
-		}
-		1007.1.1 = {
-			#removing 982 cores and claims#
+	buildings_max_level_factor = 1
+	history = {
+		owner = EPT
+		add_core_of = EPT
+		add_core_of = EQS
+		add_claim_by = ICE
+		1002.1.1 = {
+			owner = EQS
 			remove_core_of = EPT
 			remove_claim_by = ICE
-			###############################
-			owner = EQS
 		}
 		1050.1.1 = {}
-	}
-	resources = {
-		oil = 6
 	}
 }

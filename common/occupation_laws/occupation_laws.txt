@@ -392,8 +392,8 @@ military_governor_occupation = {
 		base = 0
 		
 		#modifier = {
-			#set_temp_variable = { num_factory = building_level@arms_factory }
-			#add_to_temp_variable = { num_factory = building_level@industrial_complex }
+			#set_temp_variable = { num_factory = arms_factory_level }
+			#add_to_temp_variable = { num_factory = industrial_complex_level }
 			#check_variable = { num_factory < 1 }
 			
 			#add = 50

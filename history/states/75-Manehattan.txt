@@ -1,47 +1,58 @@
-state={
-	id=75
-	name="STATE_75"
-
-	provinces={
-		758 799 970 980 3037 3744 3761 3798 3861 4135 6734 6764 6818 6955 9686 9689 9719 9787 11692 11707 11710 11768 11805
+state = {
+	id = 75
+	name = "STATE_75"
+	provinces = {
+		758 
+		799 
+		970 
+		980 
+		3037 
+		3744 
+		3761 
+		3798 
+		3861 
+		4135 
+		6734 
+		6764 
+		6818 
+		6955 
+		9686 
+		9689 
+		9719 
+		9787 
+		11692 
+		11707 
+		11710 
+		11768 
+		11805
 	}
-
-	manpower=4734800
+	manpower = 4734800
 	state_category = megalopolis
-	buildings_max_level_factor=2.00
-
-	history={
-		#owner = EQS
-		#add_core_of = EQS
-		982.1.1 = {
-			owner = EQS
-			add_core_of = EQS
-			add_claim_by = ICE
-			buildings = {
-				infrastructure = 1
-				industrial_complex = 1
-				arms_factory = 1
-				air_base = 1
-				dockyard = 1
-				
-				11710 = {
-					naval_base = 1
-				}
-			}
-		}
-		1007.1.1 = {
-			owner = EQS
-			add_core_of = EQS
-		}
-		1050.1.1 = {}
+	buildings_max_level_factor = 2
+	history = {
 		victory_points = { 758 30 }
 		victory_points = { 11710 3 }
 		victory_points = { 6734 2 }
-
-		
+		owner = EQS
+		add_core_of = EQS
+		add_claim_by = ICE
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			arms_factory = 1
+			dockyard = 1
+			steel_plant = 1
+			11710 = {
+				naval_base = 1
+			}
+		}
+		1002.1.1 = {
+			remove_claim_by = ICE
+		}
+		1050.1.1 = {}
 	}
 	resources = {
 		food = 50
-		steel = 2
+		iron = 2
 	}
 }

@@ -513,7 +513,7 @@ subject_trade_0_available = {
 	}
 	else_if = {
 		limit = {
-			has_idea = uncontrolled_exports
+			has_idea = export_focus
 		}
 		NOT = {
 			check_variable = {
@@ -527,7 +527,7 @@ subject_trade_0_available = {
 		}
 		if = {
 			limit = {
-				has_idea = export_focus
+				has_idea = limited_exports
 			}
 			multiply_temp_variable = {
 				pp_cost = 2
@@ -535,7 +535,7 @@ subject_trade_0_available = {
 		}
 		else_if = {
 			limit = {
-				has_idea = limited_exports
+				has_idea = closed_economy
 			}
 			multiply_temp_variable = {
 				pp_cost = 3
@@ -543,7 +543,7 @@ subject_trade_0_available = {
 		}
 		else_if = {
 			limit = {
-				has_idea = closed_economy
+				has_idea = limited_imports
 			}
 			multiply_temp_variable = {
 				pp_cost = 4
@@ -551,23 +551,15 @@ subject_trade_0_available = {
 		}
 		else_if = {
 			limit = {
-				has_idea = limited_imports
+				has_idea = import_focus
 			}
 			multiply_temp_variable = {
 				pp_cost = 5
 			}
 		}
-		else_if = {
-			limit = {
-				has_idea = import_focus
-			}
-			multiply_temp_variable = {
-				pp_cost = 6
-			}
-		}
 		else = {
 			multiply_temp_variable = {
-				pp_cost = 7
+				pp_cost = 6
 			}
 		}
 		NOT = {
@@ -578,76 +570,6 @@ subject_trade_0_available = {
 	}
 }
 subject_trade_1_available = {
-	if = {
-		limit = {
-			check_variable = {
-				overlord:num_of_available_civilian_factories < trade_acf_cost_factor
-			}
-		}
-		always = no
-	}
-	else_if = {
-		limit = {
-			OR = {
-				has_idea = free_trade
-				has_idea = export_focus
-			}
-		}
-		NOT = {
-			check_variable = {
-				overlord:political_power < trade_pp_cost_factor
-			}
-		}
-	}
-	else = {
-		set_temp_variable = {
-			pp_cost = trade_pp_cost_factor
-		}
-		if = {
-			limit = {
-				has_idea = limited_exports
-			}
-			multiply_temp_variable = {
-				pp_cost = 2
-			}
-		}
-		else_if = {
-			limit = {
-				has_idea = closed_economy
-			}
-			multiply_temp_variable = {
-				pp_cost = 3
-			}
-		}
-		else_if = {
-			limit = {
-				has_idea = limited_imports
-			}
-			multiply_temp_variable = {
-				pp_cost = 4
-			}
-		}
-		else_if = {
-			limit = {
-				has_idea = import_focus
-			}
-			multiply_temp_variable = {
-				pp_cost = 5
-			}
-		}
-		else = {
-			multiply_temp_variable = {
-				pp_cost = 6
-			}
-		}
-		NOT = {
-			check_variable = {
-				overlord:political_power < pp_cost
-			}
-		}
-	}
-}
-subject_trade_2_available = {
 	if = {
 		limit = {
 			check_variable = {
@@ -675,10 +597,7 @@ subject_trade_2_available = {
 		}
 		if = {
 			limit = {
-				OR = {
-					has_idea = free_trade
-					has_idea = closed_economy
-				}
+				has_idea = closed_economy
 			}
 			multiply_temp_variable = {
 				pp_cost = 2
@@ -712,7 +631,7 @@ subject_trade_2_available = {
 		}
 	}
 }
-subject_trade_3_available = {
+subject_trade_2_available = {
 	if = {
 		limit = {
 			check_variable = {
@@ -751,10 +670,7 @@ subject_trade_3_available = {
 		}
 		else_if = {
 			limit = {
-				OR = {
-					has_idea = free_trade
-					has_idea = import_focus
-				}
+				has_idea = import_focus
 			}
 			multiply_temp_variable = {
 				pp_cost = 3
@@ -772,7 +688,7 @@ subject_trade_3_available = {
 		}
 	}
 }
-subject_trade_4_available = {
+subject_trade_3_available = {
 	if = {
 		limit = {
 			check_variable = {
@@ -800,14 +716,6 @@ subject_trade_4_available = {
 		}
 		if = {
 			limit = {
-				has_idea = free_trade
-			}
-			multiply_temp_variable = {
-				pp_cost = 4
-			}
-		}
-		else_if = {
-			limit = {
 				OR = {
 					has_idea = uncontrolled_exports
 					has_idea = uncontrolled_imports
@@ -829,7 +737,7 @@ subject_trade_4_available = {
 		}
 	}
 }
-subject_trade_5_available = {
+subject_trade_4_available = {
 	if = {
 		limit = {
 			check_variable = {
@@ -857,14 +765,6 @@ subject_trade_5_available = {
 		}
 		if = {
 			limit = {
-				has_idea = free_trade
-			}
-			multiply_temp_variable = {
-				pp_cost = 5
-			}
-		}
-		else_if = {
-			limit = {
 				has_idea = uncontrolled_exports
 			}
 			multiply_temp_variable = {
@@ -891,7 +791,7 @@ subject_trade_5_available = {
 		}
 	}
 }
-subject_trade_6_available = {
+subject_trade_5_available = {
 	if = {
 		limit = {
 			check_variable = {
@@ -918,14 +818,6 @@ subject_trade_6_available = {
 			pp_cost = trade_pp_cost_factor
 		}
 		if = {
-			limit = {
-				has_idea = free_trade
-			}
-			multiply_temp_variable = {
-				pp_cost = 6
-			}
-		}
-		else_if = {
 			limit = {
 				has_idea = uncontrolled_exports
 			}
@@ -961,7 +853,7 @@ subject_trade_6_available = {
 		}
 	}
 }
-subject_trade_7_available = {
+subject_trade_6_available = {
 	if = {
 		limit = {
 			check_variable = {
@@ -985,14 +877,6 @@ subject_trade_7_available = {
 			pp_cost = trade_pp_cost_factor
 		}
 		if = {
-			limit = {
-				has_idea = free_trade
-			}
-			multiply_temp_variable = {
-				pp_cost = 7
-			}
-		}
-		else_if = {
 			limit = {
 				has_idea = uncontrolled_exports
 			}

@@ -67,7 +67,8 @@ Allows to create async threads, that can be synchronised through static values.
 Allows to spawn country units on_start_up without oob file (witch contains division location).
 
 # OOP has been finaly defined!
-See more in history/general.
+OOP abstraction is generated character. It can store some data and be accessed by name/predefined token. This creates new fields (data or even methods) that are not static and lead to inheritance without meta_effect/meta_trigger for complicated naming rules.  
+NOTE: history/general now doesn`t represent OOP due to optimisation and simplification.
 
 # Mod code documentation
 Very important notes added to .doc files and files that starts from "00_".

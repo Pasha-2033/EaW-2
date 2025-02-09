@@ -37,6 +37,11 @@ country_event = {
 	option = {
 		#fire her until it`s too late!
 		name = earth_pony_tribe.2.a
+		trigger = {
+			NOT = {
+				has_government = harmony
+			}
+		}
 		deactivate_advisor = EPT_applejack
 		ai_chance = {
 			base = 100
@@ -63,6 +68,11 @@ country_event = {
 	option = {
 		#fire her until it`s too late!
 		name = earth_pony_tribe.3.b
+		trigger = {
+			NOT = {
+				has_government = harmony
+			}
+		}
 		deactivate_advisor = EPT_pinkypie
 		ai_chance = {
 			base = 100

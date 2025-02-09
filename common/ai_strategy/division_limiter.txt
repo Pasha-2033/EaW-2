@@ -18,6 +18,7 @@ max_ammount_division_limiter = {
 			num_divisions > max_divisions
 		}
 	}
+	abort_when_not_enabled = yes
 	ai_strategy = {} 
 }
 population_division_limiter = {
@@ -31,6 +32,7 @@ population_division_limiter = {
 		always = yes
 		#write trigger
 	}
+	abort_when_not_enabled = yes
 	ai_strategy = {}
 }
 manpower_division_limiter = {
@@ -44,6 +46,7 @@ manpower_division_limiter = {
 		always = yes
 		#write trigger
 	}
+	abort_when_not_enabled = yes
 	ai_strategy = {}
 }
 #paratrooper_limit = {}

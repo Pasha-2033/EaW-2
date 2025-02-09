@@ -1,0 +1,4390 @@
+technologies = {
+	#basic weapon for frigate_hull_1 (can be improved and replaced with light batery
+	basic_battery_0 = {
+		bunker_max_level_terrain_limit = 1
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.5
+		research_cost = 1
+		start_year = 983
+		dependencies = {
+			pre_gw_artillery = 1
+		}
+		path = {
+			leads_to_tech = light_battery_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = medium_battery_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = heavy_battery_0
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = {
+			ship_basic_battery_0
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 0 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	#light hull weapons
+	light_battery_0 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 986
+		path = {
+			leads_to_tech = light_battery_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = light_shell_0
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = { 
+			ship_light_battery_0
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = {
+				x = -2 
+				y = 6 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_light_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	light_shell_0 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1.5
+		start_year = 986
+		destroyer = {
+			lg_attack = 0.05
+		}
+		light_cruiser = {
+			lg_attack = 0.05
+		}
+		heavy_cruiser = {
+			lg_attack = 0.05
+		}
+		battleship = {
+			lg_attack = 0.05
+		}
+		battle_cruiser = {
+			lg_attack = 0.05
+		}
+		carrier = {
+			lg_attack = 0.05
+		}
+		monitor = {
+			lg_attack = 0.05
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -3 
+				y = 9
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+		categories = {
+			cat_naval_tech
+			cat_naval_shells
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	light_battery_1 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 989
+		path = {
+			leads_to_tech = light_battery_2
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = light_shell_1
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = { 
+			ship_light_battery_1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -2 
+				y = 12
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_light_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	light_shell_1 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1.5
+		start_year = 989
+		destroyer = {
+			lg_armor_piercing = 0.05
+		}
+		light_cruiser = {
+			lg_armor_piercing = 0.05
+		}
+		heavy_cruiser = {
+			lg_armor_piercing = 0.05
+		}
+		battleship = {
+			lg_armor_piercing = 0.05
+		}
+		battle_cruiser = {
+			lg_armor_piercing = 0.05
+		}
+		carrier = {
+			lg_armor_piercing = 0.05
+		}
+		monitor = {
+			lg_armor_piercing = 0.05
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -3 
+				y = 15 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_shells
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	light_battery_2 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 993
+		enable_equipment_modules = { 
+			ship_light_battery_2
+		}
+		path = {
+			leads_to_tech = light_battery_3
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = universal_light_battery_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = light_shell_2
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -2 
+				y = 18 
+			}
+		}	
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_light_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	light_shell_2 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1.5
+		start_year = 993
+		destroyer = {
+			lg_armor_piercing = 0.05
+		}
+		light_cruiser = {
+			lg_armor_piercing = 0.05
+		}
+		heavy_cruiser = {
+			lg_armor_piercing = 0.05
+		}
+		battleship = {
+			lg_armor_piercing = 0.05
+		}
+		battle_cruiser = {
+			lg_armor_piercing = 0.05
+		}
+		carrier = {
+			lg_armor_piercing = 0.05
+		}
+		monitor = {
+			lg_armor_piercing = 0.05
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -3 
+				y = 21 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_shells
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	light_battery_3 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 997
+		enable_equipment_modules = { 
+			ship_light_battery_3
+		}
+		path = {
+			leads_to_tech = light_battery_4
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = light_shell_3
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -2 
+				y = 24 
+			}
+		}	
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_light_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	light_shell_3 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1.5
+		start_year = 997
+		destroyer = {
+			lg_armor_piercing = 0.05
+		}
+		light_cruiser = {
+			lg_armor_piercing = 0.05
+		}
+		heavy_cruiser = {
+			lg_armor_piercing = 0.05
+		}
+		battleship = {
+			lg_armor_piercing = 0.05
+		}
+		battle_cruiser = {
+			lg_armor_piercing = 0.05
+		}
+		carrier = {
+			lg_armor_piercing = 0.05
+		}
+		monitor = {
+			lg_armor_piercing = 0.05
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -3 
+				y = 27 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_shells
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	light_battery_4 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 1002
+		enable_equipment_modules = { 
+			ship_light_battery_4
+		}
+		path = {
+			leads_to_tech = light_missile_battery_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = light_shell_4
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -2 
+				y = 30 
+			}
+		}	
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_light_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	light_shell_4 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1.5
+		start_year = 1002
+		destroyer = {
+			lg_armor_piercing = 0.05
+		}
+		light_cruiser = {
+			lg_armor_piercing = 0.05
+		}
+		heavy_cruiser = {
+			lg_armor_piercing = 0.05
+		}
+		battleship = {
+			lg_armor_piercing = 0.05
+		}
+		battle_cruiser = {
+			lg_armor_piercing = 0.05
+		}
+		carrier = {
+			lg_armor_piercing = 0.05
+		}
+		monitor = {
+			lg_armor_piercing = 0.05
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -3 
+				y = 33 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_shells
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	light_missile_battery_0 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 1006
+		enable_equipment_modules = {
+			ship_light_missle_battery_0
+		}
+		dependencies = {
+			improved_rocket_engines = 1
+		}
+		path = {
+			leads_to_tech = light_missile_battery_1
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -2 
+				y = 36 
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_rocket_weapons
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_light_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval
+			specialization_air
+		}
+	}
+	light_missile_battery_1 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 1011
+		enable_equipment_modules = {
+			ship_light_missle_battery_1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -2 
+				y = 42 
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_rocket_weapons
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_light_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval
+			specialization_air
+		}
+	}
+	universal_light_battery_0 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 997
+		enable_equipment_modules = { 
+			ship_universal_light_battery_0
+		}
+		path = {
+			leads_to_tech = universal_light_shell_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = universal_light_battery_1
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -4
+				y = 24 
+			}
+		}	
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_universal_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	universal_light_shell_0 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 997
+		frigate = {
+			anti_air_attack = 0.08
+		}
+		destroyer = {
+			anti_air_attack = 0.03
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -5
+				y = 27 
+			}
+		}	
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_shells
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	universal_light_battery_1 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 1002
+		enable_equipment_modules = { 
+			ship_universal_light_battery_1
+		}
+		path = {
+			leads_to_tech = universal_light_shell_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = universal_light_missile_battery_0
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -4
+				y = 30
+			}
+		}	
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_universal_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	universal_light_shell_1 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 1002
+		frigate = {
+			anti_air_attack = 0.08
+		}
+		destroyer = {
+			anti_air_attack = 0.03
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -5
+				y = 33 
+			}
+		}	
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_shells
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	universal_light_missile_battery_0 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 1006
+		enable_equipment_modules = {
+			ship_universal_light_missle_battery_0
+		}
+		path = {
+			leads_to_tech = universal_light_missile_battery_1
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -4
+				y = 36 
+			}
+		}	
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_rocket_weapons
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_universal_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval
+			specialization_air
+		}
+	}
+	universal_light_missile_battery_1 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 1011
+		enable_equipment_modules = {
+			ship_universal_light_missle_battery_1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -4
+				y = 42 
+			}
+		}	
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_rocket_weapons
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_universal_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval
+			specialization_air
+		}
+	}
+	#medium hull weapons
+	medium_battery_0 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 986
+		path = {
+			leads_to_tech = medium_battery_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = medium_shell_0
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = { 
+			ship_heavy_medium_battery_0
+			ship_light_medium_battery_0
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 6 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_medium_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	medium_shell_0 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1.5
+		start_year = 986
+		light_cruiser = {
+			lg_attack = 0.05
+		}
+		heavy_cruiser = {
+			hg_attack = 0.05
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -1 
+				y = 9 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_shells
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	medium_battery_1 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 989
+		path = {
+			leads_to_tech = medium_battery_2
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = medium_shell_1
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = { 
+			ship_heavy_medium_battery_1
+			ship_light_medium_battery_1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 12 
+			}
+		}	
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_medium_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	medium_shell_1 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1.5
+		start_year = 989
+		light_cruiser = {
+			lg_armor_piercing = 0.05
+		}
+		heavy_cruiser = {
+			hg_attack = 0.05
+			hg_armor_piercing = 0.05
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -1
+				y = 15 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_shells
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	medium_battery_2 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 993
+		path = {
+			leads_to_tech = medium_battery_3
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = medium_shell_2
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = { 
+			ship_heavy_medium_battery_2
+			ship_light_medium_battery_2
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 18 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_medium_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	medium_shell_2 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1.5
+		start_year = 993
+		light_cruiser = {
+			lg_armor_piercing = 0.05
+		}
+		heavy_cruiser = {
+			hg_attack = 0.05
+			hg_armor_piercing = 0.05
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -1
+				y = 21
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_shells
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	medium_battery_3 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 997
+		enable_equipment_modules = { 
+			ship_heavy_medium_battery_3
+			ship_light_medium_battery_3
+		}
+		path = {
+			leads_to_tech = medium_battery_4
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = medium_shell_3
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 24 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_medium_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	medium_shell_3 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1.5
+		start_year = 997
+		light_cruiser = {
+			lg_armor_piercing = 0.05
+		}
+		heavy_cruiser = {
+			hg_attack = 0.05
+			hg_armor_piercing = 0.05
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -1
+				y = 27
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_shells
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	medium_battery_4 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 1002
+		enable_equipment_modules = { 
+			ship_light_medium_battery_4
+			ship_heavy_medium_battery_4
+		}
+		path = {
+			leads_to_tech = medium_missile_battery_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = universal_medium_battery_0
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 30
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_medium_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	universal_medium_battery_0 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 1002
+		enable_equipment_modules = { 
+			ship_universal_medium_battery_0
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -1 
+				y = 33 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_universal_artillery
+			cat_naval_medium_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	medium_missile_battery_0 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 1006
+		enable_equipment_modules = {
+			ship_light_medium_missle_battery_0
+			ship_heavy_medium_missle_battery_0
+		}
+		dependencies = {
+			improved_rocket_engines = 1
+		}
+		path = {
+			leads_to_tech = medium_missile_battery_1
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 36 
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_rocket_weapons
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_medium_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval
+			specialization_air
+		}
+	}
+	medium_missile_battery_1 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 1011
+		enable_equipment_modules = {
+			ship_light_medium_missle_battery_1
+			ship_heavy_medium_missle_battery_1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 42 
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_rocket_weapons
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_medium_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval
+			specialization_air
+		}
+	}
+	#heavy hull weapons
+	heavy_battery_0 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 986
+		path = {
+			leads_to_tech = heavy_battery_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = heavy_shell_0
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = { 
+			ship_heavy_battery_0
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 2 
+				y = 6 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_heavy_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	heavy_shell_0 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1.5
+		start_year = 986
+		battleship = {
+			hg_attack = 0.05
+		}
+		battle_cruiser = {
+			hg_attack = 0.05
+		}
+		monitor = {
+			hg_attack = 0.05
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 1 
+				y = 9 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_shells
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	heavy_battery_1 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 989
+		path = {
+			leads_to_tech = heavy_battery_2
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = heavy_shell_1
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = { 
+			ship_heavy_battery_1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 2 
+				y = 12 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_heavy_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	heavy_shell_1 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1.5
+		start_year = 989
+		battleship = {
+			hg_attack = 0.05
+			hg_armor_piercing = 0.05
+		}
+		battle_cruiser = {
+			hg_attack = 0.05
+			hg_armor_piercing = 0.05
+		}
+		monitor = {
+			hg_attack = 0.05
+			hg_armor_piercing = 0.05
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 1 
+				y = 15 
+			}
+		}		
+		ai_will_do = {
+			factor = 1
+		}		
+		categories = {
+			cat_naval_tech
+			cat_naval_shells
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	heavy_battery_2 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 993
+		enable_equipment_modules = { 
+			ship_heavy_battery_2
+		}
+		path = {
+			leads_to_tech = heavy_battery_3
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = super_heavy_battery_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = heavy_shell_2
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 2 
+				y = 18 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_heavy_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	heavy_shell_2 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1.5
+		start_year = 993
+		battleship = {
+			hg_attack = 0.05
+			hg_armor_piercing = 0.05
+		}
+		battle_cruiser = {
+			hg_attack = 0.05
+			hg_armor_piercing = 0.05
+		}
+		monitor = {
+			hg_attack = 0.05
+			hg_armor_piercing = 0.05
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 1 
+				y = 21 
+			}
+		}		
+		ai_will_do = {
+			factor = 1
+		}		
+		categories = {
+			cat_naval_tech
+			cat_naval_shells
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	heavy_battery_3 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 997
+		enable_equipment_modules = { 
+			ship_heavy_battery_3
+		}
+		path = {
+			leads_to_tech = heavy_battery_4
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = heavy_shell_3
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 2 
+				y = 24 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_heavy_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	heavy_shell_3 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1.5
+		start_year = 997
+		battleship = {
+			hg_attack = 0.05
+			hg_armor_piercing = 0.05
+		}
+		battle_cruiser = {
+			hg_attack = 0.05
+			hg_armor_piercing = 0.05
+		}
+		monitor = {
+			hg_attack = 0.05
+			hg_armor_piercing = 0.05
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 1 
+				y = 27 
+			}
+		}		
+		ai_will_do = {
+			factor = 1
+		}		
+		categories = {
+			cat_naval_tech
+			cat_naval_shells
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	heavy_battery_4 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 1002
+		enable_equipment_modules = { 
+			ship_heavy_battery_4
+		}
+		path = {
+			leads_to_tech = heavy_missile_battery_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = heavy_shell_4
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 2 
+				y = 30 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_heavy_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	heavy_shell_4 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1.5
+		start_year = 1002
+		battleship = {
+			hg_attack = 0.05
+			hg_armor_piercing = 0.05
+		}
+		battle_cruiser = {
+			hg_attack = 0.05
+			hg_armor_piercing = 0.05
+		}
+		monitor = {
+			hg_attack = 0.05
+			hg_armor_piercing = 0.05
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 1 
+				y = 33 
+			}
+		}		
+		ai_will_do = {
+			factor = 1
+		}		
+		categories = {
+			cat_naval_tech
+			cat_naval_shells
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	heavy_missile_battery_0 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 1006
+		enable_equipment_modules = {
+			ship_heavy_missle_battery_0
+		}
+		dependencies = {
+			improved_rocket_engines = 1
+		}
+		path = {
+			leads_to_tech = heavy_missile_battery_1
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 2 
+				y = 36 
+			}
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+		}
+		categories = {
+			cat_rocket_weapons
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_heavy_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval
+			specialization_air
+		}
+	}
+	heavy_missile_battery_1 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 1011
+		enable_equipment_modules = {
+			ship_heavy_missle_battery_1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 2 
+				y = 42 
+			}
+		}
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				factor = 2
+				is_major = yes
+			}
+	
+		}
+		categories = {
+			cat_rocket_weapons
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_heavy_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval
+			specialization_air
+		}
+	}
+	#super heavy hull weapons
+	super_heavy_battery_0 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 997
+		enable_equipment_modules = { 
+			ship_super_heavy_battery_0
+		}
+		path = {
+			leads_to_tech = super_heavy_battery_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = super_heavy_shell_0
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 4 
+				y = 24 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}		
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_super_heavy_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	super_heavy_shell_0 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1.5
+		start_year = 997
+		battleship = {
+			hg_attack = 0.05
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 3
+				y = 27
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+		categories = {
+			cat_naval_tech
+			cat_naval_shells
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	super_heavy_battery_1 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 1002
+		enable_equipment_modules = { 
+			ship_super_heavy_battery_1
+		}
+		path = {
+			leads_to_tech = super_heavy_shell_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = super_heavy_energy_battery_0
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 4 
+				y = 30 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}		
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_super_heavy_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	super_heavy_shell_1 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1.5
+		start_year = 1002
+		battleship = {
+			hg_attack = 0.05
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 3 
+				y = 33
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+		categories = {
+			cat_naval_tech
+			cat_naval_shells
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	super_heavy_energy_battery_0 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 1006
+		enable_equipment_modules = { 
+			ship_super_heavy_energy_battery_0
+		}
+		path = {
+			leads_to_tech = super_heavy_energy_battery_1
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 4 
+				y = 36 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}		
+		categories = {
+			cat_energy_weapons
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_super_heavy_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	super_heavy_energy_battery_1 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 1011
+		enable_equipment_modules = { 
+			ship_super_heavy_energy_battery_1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 4 
+				y = 42 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}		
+		categories = {
+			cat_energy_weapons
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_artillery
+			cat_naval_super_heavy_artillery
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	#secondary
+	secondary_battery_0 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 0.8
+		start_year = 983
+		path = {
+			leads_to_tech = secondary_battery_1
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = { 
+			ship_secondaries_0
+		}
+		dependencies = {
+			pre_gw_artillery = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 0 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_secondaries
+			cat_naval_common_secondary
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	secondary_battery_1 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 0.8
+		start_year = 986
+		path = {
+			leads_to_tech = secondary_battery_2
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = { 
+			ship_secondaries_1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 6 
+			}
+		}
+		ai_will_do = {
+			factor = 5
+			modifier = {
+				OR = {
+					has_tech = cruiser_hull_1 
+					has_tech = heavy_hull_1
+				}
+				factor = 5
+			}
+		}	
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_secondaries
+			cat_naval_common_secondary
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	secondary_battery_2 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 0.8
+		start_year = 989
+		path = {
+			leads_to_tech = universal_secondary_battery_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = secondary_battery_3
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = { 
+			ship_secondaries_2
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 12 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_secondaries
+			cat_naval_common_secondary
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	secondary_battery_3 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 0.8
+		start_year = 993
+		enable_equipment_modules = { 
+			ship_secondaries_3
+		}
+		path = {
+			leads_to_tech = secondary_battery_4
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 1 
+				y = 18 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_secondaries
+			cat_naval_universal_secondary
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	secondary_battery_4 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 0.8
+		start_year = 997
+		enable_equipment_modules = {
+			ship_secondaries_4 
+		}
+		path = {
+			leads_to_tech = secondary_battery_5
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 1 
+				y = 24 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_secondaries
+			cat_naval_universal_secondary
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	secondary_battery_5 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 0.8
+		start_year = 1002
+		enable_equipment_modules = { 
+			ship_secondaries_5
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 1 
+				y = 30 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_secondaries
+			cat_naval_universal_secondary
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	universal_secondary_battery_0 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 0.8
+		start_year = 993
+		enable_equipment_modules = { 
+			ship_universal_secondaries_0
+		}
+		path = {
+			leads_to_tech = universal_secondary_battery_1
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -1 
+				y = 18 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_secondaries
+			cat_naval_universal_secondary
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	universal_secondary_battery_1 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 0.8
+		start_year = 997
+		enable_equipment_modules = { 
+			ship_universal_secondaries_1
+		}
+		path = {
+			leads_to_tech = universal_secondary_battery_2
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -1 
+				y = 24 
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_secondaries
+			cat_naval_universal_secondary
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	universal_secondary_battery_2 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 0.8
+		start_year = 1002
+		enable_equipment_modules = { 
+			ship_universal_secondaries_2
+		}
+		path = {
+			leads_to_tech = universal_secondary_missile_battery_0
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -1 
+				y = 30 
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_secondaries
+			cat_naval_universal_secondary
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	universal_secondary_missile_battery_0 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 0.8
+		start_year = 1006
+		enable_equipment_modules = {
+			ship_universal_missle_secondaries_0
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -1 
+				y = 36 
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_rocket_weapons
+			cat_naval_tech
+			cat_ship_module
+			cat_naval_secondaries
+			cat_naval_universal_secondary
+		}
+		special_project_specialization = { 
+			specialization_naval
+			specialization_air
+		}
+	}
+	#torpedo launchers
+	torpedo_launcher_0 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 2
+		start_year = 986
+		path = {
+			leads_to_tech = torpedo_charge_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = torpedo_launcher_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = torpedo_detonator_0
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = { 
+			ship_torpedo_0
+		}	
+		dependencies = {
+			internal_combustion_engine = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 0
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}	
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_torpedo_armament
+			cat_torpedo_launcher
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	torpedo_launcher_1 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1.5
+		start_year = 989
+		path = {
+			leads_to_tech = torpedo_launcher_2
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = { 
+			ship_torpedo_1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 6
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_torpedo_armament
+			cat_torpedo_launcher
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	torpedo_launcher_2 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1.5
+		start_year = 993
+		path = {
+			leads_to_tech = torpedo_launcher_3
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = { 
+			ship_torpedo_2
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 12 
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_torpedo_armament
+			cat_torpedo_launcher
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	torpedo_launcher_3 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1.5
+		start_year = 997
+		enable_equipment_modules = { 
+			ship_torpedo_3
+		}
+		path = {
+			leads_to_tech = torpedo_launcher_4
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 18
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_torpedo_armament
+			cat_torpedo_launcher
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	torpedo_launcher_4 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1.5
+		start_year = 1002
+		enable_equipment_modules = { 
+			ship_torpedo_4
+		}
+		path = {
+			leads_to_tech = torpedo_launcher_5
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 24 
+			}
+		}	
+		ai_will_do = {
+			factor = 2
+			modifier = {
+				is_major = yes
+				factor = 1.5
+			}
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_torpedo_armament
+			cat_torpedo_launcher
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	torpedo_launcher_5 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1.5
+		start_year = 1006
+		enable_equipment_modules = { 
+			ship_torpedo_5
+		}
+		path = {
+			leads_to_tech = torpedo_launcher_6
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 30 
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_torpedo_armament
+			cat_torpedo_launcher
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	torpedo_launcher_6 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1.5
+		start_year = 1011
+		enable_equipment_modules = { 
+			ship_torpedo_6
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 36 
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_naval_tech
+			cat_ship_module
+			cat_torpedo_armament
+			cat_torpedo_launcher
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	#torpedo charges
+	torpedo_charge_0 = {
+		path = {
+			leads_to_tech = torpedo_charge_1
+			research_cost_coeff = 1
+		}
+		dependencies = {
+			trinitrophenol = 1
+		}
+		destroyer = {
+			torpedo_attack = 0.2
+		}
+		submarine = {
+			torpedo_attack = 0.2
+		}
+		light_cruiser = {
+			torpedo_attack = 0.2
+		}
+		heavy_cruiser = {
+			torpedo_attack = 0.2
+		}
+		start_year = 989
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -2 
+				y = 6 
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_naval_tech
+			cat_torpedo_armament
+			cat_torpedo_construction
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	torpedo_charge_1 = {
+		destroyer = {
+			torpedo_attack = 0.2
+		}
+		submarine = {
+			torpedo_attack = 0.2
+		}
+		light_cruiser = {
+			torpedo_attack = 0.2
+		}
+		heavy_cruiser = {
+			torpedo_attack = 0.2
+		}
+		dependencies = {
+			nitroglycerine = 1
+		}
+		start_year = 997
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -2 
+				y = 18 
+			}
+		}
+		path = {
+			leads_to_tech = torpedo_charge_2
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_naval_tech
+			cat_torpedo_armament
+			cat_torpedo_construction
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	torpedo_charge_2 = {
+		destroyer = {
+			torpedo_attack = 0.2
+		}
+		submarine = {
+			torpedo_attack = 0.2
+		}
+		light_cruiser = {
+			torpedo_attack = 0.2
+		}
+		heavy_cruiser = {
+			torpedo_attack = 0.2
+		}
+		dependencies = {
+			trotyl = 1
+		}
+		start_year = 1006
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -2 
+				y = 30 
+			}
+		}
+		path = {
+			research_cost_coeff = 1
+			leads_to_tech = nuclear_torpedo_charge
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_naval_tech
+			cat_torpedo_armament
+			cat_torpedo_construction
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	nuclear_torpedo_charge = {
+		destroyer = {
+			torpedo_attack = 0.2
+		}
+		submarine = {
+			torpedo_attack = 0.2
+		}
+		light_cruiser = {
+			torpedo_attack = 0.2
+		}
+		heavy_cruiser = {
+			torpedo_attack = 0.2
+		}
+		dependencies = {
+			nukes = 1
+		}
+		start_year = 1018
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -2 
+				y = 42 
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_naval_tech
+			cat_torpedo_armament
+			cat_torpedo_construction
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	#torpedo engine common constuction
+	torpedo_detonator_0 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 2.5
+		start_year = 989
+		path = {
+			leads_to_tech = torpedo_control_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = torpedo_engine_0
+			research_cost_coeff = 1
+		}
+		dependencies = {
+			magnetism_phenomenon = 1
+		}
+		destroyer = {
+			torpedo_attack = 0.05
+		}
+		submarine = {
+			torpedo_attack = 0.05
+		}
+		light_cruiser = {
+			torpedo_attack = 0.05
+		}
+		heavy_cruiser = {
+			torpedo_attack = 0.05
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 2 
+				y = 6 
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_naval_tech
+			cat_torpedo_armament
+			cat_torpedo_construction
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	torpedo_engine_0 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 2.5
+		start_year = 989
+		naval_torpedo_reveal_chance_factor = -0.25
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 1 
+				y = 9 
+			}
+		}
+		dependencies = {
+			direct_current = 1
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_naval_tech
+			cat_torpedo_armament
+			cat_torpedo_construction
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	torpedo_control_0 = {		
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 2.5
+		path = {
+			leads_to_tech = torpedo_control_1
+			research_cost_coeff = 1
+		}
+		start_year = 993
+		naval_torpedo_hit_chance_factor = 0.05
+		naval_torpedo_screen_penetration_factor = 0.05
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 2 
+				y = 12 
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_naval_tech
+			cat_torpedo_armament
+			cat_torpedo_construction
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+ 	torpedo_control_1 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 2.5
+		path = {
+			leads_to_tech = torpedo_control_2
+			research_cost_coeff = 1
+		}
+		start_year = 997
+		naval_torpedo_hit_chance_factor = 0.05
+		naval_torpedo_screen_penetration_factor = 0.05
+		folder = {
+			name = mtgnavalsupportfolder
+			position = {
+				x = 2
+				y = 18
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}	
+		categories = {
+			cat_naval_tech
+			cat_torpedo_armament
+			cat_torpedo_construction
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	torpedo_control_2 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 2.5
+		path = {
+			leads_to_tech = torpedo_propeller_0
+			research_cost_coeff = 1
+		}
+		start_year = 1002
+		naval_torpedo_hit_chance_factor = 0.05
+		naval_torpedo_screen_penetration_factor = 0.05
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 2 
+				y = 24 
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_naval_tech
+			cat_torpedo_armament
+			cat_torpedo_construction
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	torpedo_propeller_0 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 2.5
+		start_year = 1002
+		naval_torpedo_reveal_chance_factor = -0.15
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 1
+				y = 27 
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_naval_tech
+			cat_torpedo_armament
+			cat_torpedo_construction
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	#transport
+	mtg_convoy_0 = {
+		transport_capacity = -0.5
+		naval_invasion_capacity = 10
+		path = {
+			leads_to_tech = mtg_convoy_1 
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 983
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 0 
+			}
+		}	
+		ai_will_do = {
+			factor = 1
+		}	
+		categories = {
+			cat_naval_tech
+			cat_naval_transport
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	mtg_convoy_1 = {
+		invasion_preparation = -0.5
+		amphibious_invasion_defence = 0.15
+		naval_invasion_capacity = 40
+		path = {
+			leads_to_tech = mtg_convoy_2 
+			research_cost_coeff = 1
+		}
+		enable_equipments = {
+			floating_harbor_equipment_1
+		}
+		force_use_small_tech_layout = yes
+		show_equipment_icon = yes	
+		research_cost = 2
+		start_year = 986
+		dependencies = {
+			destroyer_hull_0 = 1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 6 
+			}
+		}	
+		ai_will_do = {
+			factor = 2	
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_transport
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	mtg_convoy_2 = {
+		amphibious_invasion = 0.25
+		amphibious_invasion_defence = 0.5
+		naval_invasion_capacity = 100
+		path = {
+			leads_to_tech = mtg_convoy_3
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = replenishment_0
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 12 
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_transport
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	mtg_convoy_3 = {
+		invasion_preparation = -0.25
+		amphibious_invasion = 0.3
+		naval_invasion_capacity = 125
+		path = {
+			leads_to_tech = mtg_convoy_4
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 993
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 18 
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_transport
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	mtg_convoy_4 = {
+		amphibious_invasion = 0.4
+		amphibious_invasion_defence = 0.6
+		naval_invasion_capacity = 150
+		research_cost = 2
+		start_year = 997
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 24 
+			}
+		}
+		path = {
+			leads_to_tech = mtg_convoy_5
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_transport
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	mtg_convoy_5 = {
+		amphibious_invasion = 0.4
+		amphibious_invasion_defence = 0.6
+		naval_invasion_capacity = 150
+		research_cost = 2
+		start_year = 1002
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 30 
+			}
+		}
+		path = {
+			leads_to_tech = mtg_convoy_6
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_transport
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	mtg_convoy_6 = {
+		amphibious_invasion = 0.4
+		amphibious_invasion_defence = 0.6
+		naval_invasion_capacity = 150
+		research_cost = 2
+		start_year = 1006
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 36
+			}
+		}
+		path = {
+			leads_to_tech = mtg_convoy_7
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_transport
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	mtg_convoy_7 = {
+		amphibious_invasion = 0.4
+		amphibious_invasion_defence = 0.6
+		naval_invasion_capacity = 150
+		research_cost = 2
+		start_year = 1011
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 42
+			}
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_transport
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	#replenishment
+	replenishment_0 = {
+		allow_branch = {
+			has_dlc = "Gotterdammerung"
+		}
+		allow = {
+	 		ROOT = {
+				is_special_project_completed = sp:sp_naval_underway_replenishment
+			}
+		}
+		underway_replenishment_range = 0.25
+		underway_replenishment_convoy_cost = -0.2
+		xp_research_type = navy
+		xp_boost_cost = 75
+		xp_research_bonus = 1.75
+		research_cost = 2.0
+		start_year = 990
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 2 
+				y = 14 
+			}
+		}
+		#folder if has no mtg, but has wuw (to do)
+		#folder = {
+		#	name = naval_folder
+		#	position = { x = 1 y = 17 }
+		#}	
+		force_use_small_tech_layout = yes
+		is_special_project_tech = yes
+		categories = {
+			cat_naval_tech
+			cat_naval_transport
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	#staff improvement
+	cabin_expansion_0 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		path = {
+			leads_to_tech = cabin_expansion_1
+			research_cost_coeff = 1
+		}
+		research_cost = 2.5
+		start_year = 983
+		navy_org_factor = 0.05
+		naval_morale_factor = -0.02
+		naval_coordination = -0.02
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0
+				y = 0 
+			}
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_improvements
+			cat_cabin_expansion
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	cabin_expansion_1 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 2.5
+		start_year = 989
+		navy_org_factor = 0.05
+		naval_morale_factor = -0.02
+		naval_coordination = -0.02
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0
+				y = 12 
+			}
+		}
+		path = {
+			leads_to_tech = cabin_expansion_2
+			research_cost_coeff = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_improvements
+			cat_cabin_expansion
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	cabin_expansion_2 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 2.5
+		start_year = 997
+		navy_org_factor = 0.05
+		naval_morale_factor = -0.02
+		naval_coordination = -0.02
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0
+				y = 24
+			}
+		}
+		path = {
+			leads_to_tech = cabin_expansion_3
+			research_cost_coeff = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_improvements
+			cat_cabin_expansion
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	cabin_expansion_3 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 2.5
+		start_year = 1006
+		navy_org_factor = 0.05
+		naval_morale_factor = -0.02
+		naval_coordination = -0.02
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0
+				y = 36
+			}
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_improvements
+			cat_cabin_expansion
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	#smoke generator
+	smoke_generator_0 = {
+		naval_retreat_speed = 0.2	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 0.75
+		start_year = 983
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 0 
+			}
+		}
+		path = {
+			leads_to_tech = smoke_generator_1
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			factor = 8
+			
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_improvements
+			cat_smoke_generator
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	smoke_generator_1 = {
+		naval_retreat_speed = 0.2
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 0.75
+		start_year = 989
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 12
+			}
+		}
+		path = {
+			leads_to_tech = smoke_generator_2
+			research_cost_coeff = 1
+		}
+		dependencies = {
+			trinitrophenol = 1
+		}
+		ai_will_do = {
+			factor = 8	
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_improvements
+			cat_smoke_generator
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	smoke_generator_2 = {
+		naval_retreat_speed = 0.2
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 0.75
+		start_year = 997
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 24
+			}
+		}
+		path = {
+			leads_to_tech = smoke_generator_3
+			research_cost_coeff = 1
+		}
+		dependencies = {
+			nitroglycerine = 1
+		}
+		ai_will_do = {
+			factor = 8
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_improvements
+			cat_smoke_generator
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	smoke_generator_3 = {
+		naval_retreat_speed = 0.2
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 0.75
+		start_year = 1006
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 36
+			}
+		}
+		dependencies = {
+			nitroglycerine = 1
+		}
+		ai_will_do = {
+			factor = 8
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_improvements
+			cat_smoke_generator
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	#damage controll
+	damage_control_0 = {	
+		research_cost = 2.5
+		path = {
+			leads_to_tech = damage_control_1
+			research_cost_coeff = 1
+		}
+		critical_receive_chance = -0.1
+		naval_critical_effect_factor = -0.1
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		start_year = 983
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 0 
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}	
+		categories = {
+			cat_naval_tech
+			cat_naval_improvements
+			cat_damage_control
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	damage_control_1 = {
+		research_cost = 2.5
+		path = {
+			leads_to_tech = damage_control_2
+			research_cost_coeff = 1
+		}
+		critical_receive_chance = -0.1
+		naval_critical_effect_factor = -0.1
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		start_year = 986
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 6 
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_improvements
+			cat_damage_control
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	damage_control_2 = {
+		research_cost = 2.5
+		critical_receive_chance = -0.1
+		naval_critical_effect_factor = -0.1
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		start_year = 989
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 12 
+			}
+		}
+		path = {
+			leads_to_tech = damage_control_3
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			factor = 3
+		}	
+		categories = {
+			cat_naval_tech
+			cat_naval_improvements
+			cat_damage_control
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	damage_control_3 = {
+		research_cost = 2.5
+		critical_receive_chance = -0.1
+		naval_critical_effect_factor = -0.1
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		start_year = 993
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 18 
+			}
+		}
+		path = {
+			leads_to_tech = damage_control_4
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			factor = 3
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_improvements
+			cat_damage_control
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	damage_control_4 = {
+		research_cost = 2.5
+		critical_receive_chance = -0.1
+		naval_critical_effect_factor = -0.1
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		start_year = 997
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 24 
+			}
+		}
+		path = {
+			leads_to_tech = damage_control_5
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			factor = 3
+		}	
+		categories = {
+			cat_naval_tech
+			cat_naval_improvements
+			cat_damage_control
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	damage_control_5 = {
+		research_cost = 2.5
+		critical_receive_chance = -0.1
+		naval_critical_effect_factor = -0.1
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		start_year = 1002
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 30 
+			}
+		}
+		path = {
+			leads_to_tech = damage_control_6
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			factor = 3
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_improvements
+			cat_damage_control
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	damage_control_6 = {
+		research_cost = 2.5
+		critical_receive_chance = -0.1
+		naval_critical_effect_factor = -0.1
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		start_year = 1006
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 36 
+			}
+		}
+		path = {
+			leads_to_tech = damage_control_7
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			factor = 3
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_improvements
+			cat_damage_control
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	damage_control_7 = {
+		research_cost = 2.5
+		critical_receive_chance = -0.1
+		naval_critical_effect_factor = -0.1
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		start_year = 1011
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 42 
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_improvements
+			cat_damage_control
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	#fire controll
+	fire_control_methods_0 = {	
+		research_cost = 2.5
+		path = {
+			leads_to_tech = fire_control_methods_1
+			research_cost_coeff = 1
+		}
+		battleship = {
+			lg_attack = 0.05
+			hg_attack = 0.05
+		}
+		battle_cruiser = {
+			lg_attack = 0.05
+			hg_attack = 0.05
+		}
+		monitor = {
+			lg_attack = 0.05
+			hg_attack = 0.05
+		}
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		start_year = 986
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 0 
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_improvements
+			cat_fire_control_methods
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	fire_control_methods_1 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 2.5
+		path = {
+			leads_to_tech = fire_control_methods_2
+			research_cost_coeff = 1
+		}
+		battleship = {
+			lg_attack = 0.1
+			hg_attack = 0.1
+		}
+		battle_cruiser = {
+			lg_attack = 0.1
+			hg_attack = 0.1
+		}
+		monitor = {
+			lg_attack = 0.1
+			hg_attack = 0.1
+		}
+		heavy_cruiser = {
+			lg_attack = 0.05
+			hg_attack = 0.05
+		}
+		start_year = 989
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 6 
+			}
+		}	
+		ai_will_do = {
+			factor = 3
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_improvements
+			cat_fire_control_methods
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	fire_control_methods_2 = {
+		research_cost = 2.5
+		battleship = {
+			lg_attack = 0.15
+			hg_attack = 0.15
+		}
+		battle_cruiser = {
+			lg_attack = 0.15
+			hg_attack = 0.15
+		}
+		monitor = {
+			lg_attack = 0.15
+			hg_attack = 0.15
+		}
+		heavy_cruiser = {
+			lg_attack = 0.1
+			hg_attack = 0.1
+		}
+		light_cruiser = {
+			lg_attack = 0.1
+			hg_attack = 0.1
+		}
+		destroyer = {
+			lg_attack = 0.05
+			hg_attack = 0.05
+		}
+		submarine = {
+			lg_attack = 0.05
+			hg_attack = 0.05
+		}
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		start_year = 993
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 12 
+			}
+		}
+		path = {
+			leads_to_tech = fire_control_methods_3
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			factor = 3
+			modifier = {
+				has_war = yes
+				factor = 2
+			}
+			modifier = {
+				is_major = yes
+				factor = 1.5
+			}
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_improvements
+			cat_fire_control_methods
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	fire_control_methods_3 = {
+		research_cost = 2.5
+		battleship = {
+			lg_attack = 0.15
+			hg_attack = 0.15
+		}
+		battle_cruiser = {
+			lg_attack = 0.15
+			hg_attack = 0.15
+		}
+		monitor = {
+			lg_attack = 0.15
+			hg_attack = 0.15
+		}
+		heavy_cruiser = {
+			lg_attack = 0.1
+			hg_attack = 0.1
+		}
+		light_cruiser = {
+			lg_attack = 0.1
+			hg_attack = 0.1
+		}
+		destroyer = {
+			lg_attack = 0.05
+			hg_attack = 0.05
+		}
+		submarine = {
+			lg_attack = 0.05
+			hg_attack = 0.05
+		}
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		start_year = 997
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 18 
+			}
+		}
+		path = {
+			leads_to_tech = fire_control_methods_4
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			factor = 3
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_improvements
+			cat_fire_control_methods
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	fire_control_methods_4 = {
+		research_cost = 2.5
+		battleship = {
+			lg_attack = 0.15
+			hg_attack = 0.15
+		}
+		battle_cruiser = {
+			lg_attack = 0.15
+			hg_attack = 0.15
+		}
+		monitor = {
+			lg_attack = 0.15
+			hg_attack = 0.15
+		}
+		heavy_cruiser = {
+			lg_attack = 0.1
+			hg_attack = 0.1
+		}
+		light_cruiser = {
+			lg_attack = 0.1
+			hg_attack = 0.1
+		}
+		destroyer = {
+			lg_attack = 0.05
+			hg_attack = 0.05
+		}
+		submarine = {
+			lg_attack = 0.05
+			hg_attack = 0.05
+		}
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		start_year = 1002
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 24 
+			}
+		}
+		path = {
+			leads_to_tech = fire_control_methods_5
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			factor = 3
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_improvements
+			cat_fire_control_methods
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	fire_control_methods_5 = {
+		research_cost = 2.5
+		battleship = {
+			lg_attack = 0.15
+			hg_attack = 0.15
+		}
+		battle_cruiser = {
+			lg_attack = 0.15
+			hg_attack = 0.15
+		}
+		monitor = {
+			lg_attack = 0.15
+			hg_attack = 0.15
+		}
+		heavy_cruiser = {
+			lg_attack = 0.1
+			hg_attack = 0.1
+		}
+		light_cruiser = {
+			lg_attack = 0.1
+			hg_attack = 0.1
+		}
+		destroyer = {
+			lg_attack = 0.05
+			hg_attack = 0.05
+		}
+		submarine = {
+			lg_attack = 0.05
+			hg_attack = 0.05
+		}
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		start_year = 1006
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 30 
+			}
+		}
+		path = {
+			leads_to_tech = fire_control_methods_6
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			factor = 3
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_improvements
+			cat_fire_control_methods
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	fire_control_methods_6 = {
+		research_cost = 2.5
+		battleship = {
+			lg_attack = 0.15
+			hg_attack = 0.15
+		}
+		battle_cruiser = {
+			lg_attack = 0.15
+			hg_attack = 0.15
+		}
+		monitor = {
+			lg_attack = 0.15
+			hg_attack = 0.15
+		}
+		heavy_cruiser = {
+			lg_attack = 0.1
+			hg_attack = 0.1
+		}
+		light_cruiser = {
+			lg_attack = 0.1
+			hg_attack = 0.1
+		}
+		destroyer = {
+			lg_attack = 0.05
+			hg_attack = 0.05
+		}
+		submarine = {
+			lg_attack = 0.05
+			hg_attack = 0.05
+		}
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		start_year = 1011
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 36 
+			}
+		}
+		path = {
+			leads_to_tech = fire_control_methods_7
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			factor = 3
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_improvements
+			cat_fire_control_methods
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	fire_control_methods_7 = {
+		research_cost = 2.5
+		battleship = {
+			lg_attack = 0.15
+			hg_attack = 0.15
+		}
+		battle_cruiser = {
+			lg_attack = 0.15
+			hg_attack = 0.15
+		}
+		monitor = {
+			lg_attack = 0.15
+			hg_attack = 0.15
+		}
+		heavy_cruiser = {
+			lg_attack = 0.1
+			hg_attack = 0.1
+		}
+		light_cruiser = {
+			lg_attack = 0.1
+			hg_attack = 0.1
+		}
+		destroyer = {
+			lg_attack = 0.05
+			hg_attack = 0.05
+		}
+		submarine = {
+			lg_attack = 0.05
+			hg_attack = 0.05
+		}
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		start_year = 1018
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 42 
+			}
+		}
+		ai_will_do = {
+			factor = 3
+		}
+		categories = {
+			cat_naval_tech
+			cat_naval_improvements
+			cat_fire_control_methods
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	#mines
+	naval_mine_0 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 2
+		start_year = 986
+		path = {
+			leads_to_tech = naval_mine_1
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = { 
+			ship_mine_layer_0
+		}
+		enable_equipment_modules = { 
+			ship_mine_sweeper_0
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 0 
+			}
+		}
+		ai_will_do = {
+			factor = 1.5
+		}
+		categories = {
+			cat_naval_tech
+			cat_mine_tech
+			cat_mine_improvement
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	naval_mine_1 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 2
+		start_year = 989
+		path = {
+			leads_to_tech = naval_mine_2 
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = submarine_mine_laying_0
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = { 
+			ship_mine_layer_1
+		}
+		enable_equipment_modules = { 
+			ship_mine_sweeper_1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 6 
+			}
+		}	
+		ai_will_do = {
+			factor = 1.5
+		}
+		categories = {
+			cat_naval_tech
+			cat_mine_tech
+			cat_mine_improvement
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	naval_mine_2 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 2
+		start_year = 993
+		path = {
+			leads_to_tech = naval_mine_3
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = mine_avoiding_0
+			research_cost_coeff = 1
+		}
+		naval_mines_damage_factor = 0.2 # more boom for the boom box
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 12 
+			}
+		}
+		ai_will_do = {
+			factor = 1.5
+		}	
+		categories = {
+			cat_naval_tech
+			cat_mine_tech
+			cat_mine_improvement
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	mine_avoiding_0 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 993
+		naval_mines_effect_reduction = 0.5
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 1 
+				y = 15 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_mine_tech
+			cat_mine_avoiding
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	naval_mine_3 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 2
+		start_year = 997
+		path = {
+			leads_to_tech = naval_mine_4 
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = airdrop_mines_0
+			research_cost_coeff = 1
+		}
+		naval_mines_damage_factor = 0.2 # more boom for the boom box
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 18 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_mine_tech
+			cat_mine_improvement
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}	
+	airdrop_mines_0 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 2
+		start_year = 997
+		category_nav_bomber = { 
+			mines_planting = 0.05 
+		}
+		category_tac_bomber = { 
+			mines_planting = 0.08 
+		}
+		category_strat_bomber = { 
+			mines_planting = 0.13 
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 1 
+				y = 21 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_mine_tech
+			cat_mine_improvement
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	naval_mine_4 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 2
+		start_year = 1002
+		path = {
+			leads_to_tech = airsweep_mines_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = naval_mine_5
+			research_cost_coeff = 1
+		}
+		naval_mines_damage_factor = 0.2 # more boom for the boom box
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 24 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_mine_tech
+			cat_mine_improvement
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	airsweep_mines_0 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 2
+		start_year = 1002
+		category_nav_bomber = { 
+			mines_sweeping = 0.1 
+		}
+		category_tac_bomber = { 
+			mines_sweeping = 0.15 
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 1 
+				y = 27 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_mine_tech
+			cat_mine_avoiding
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	naval_mine_5 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 2
+		start_year = 1006
+		path = {
+			leads_to_tech = mine_avoiding_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = airdrop_mines_1
+			research_cost_coeff = 1
+		}
+		naval_mines_damage_factor = 0.2 # more boom for the boom box
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 30 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+		categories = {
+			cat_naval_tech
+			cat_mine_tech
+			cat_mine_improvement
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	mine_avoiding_1 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 1
+		start_year = 1006
+		naval_mines_effect_reduction = 0.25
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 1 
+				y = 33 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}	
+		categories = {
+			cat_naval_tech
+			cat_mine_tech
+			cat_mine_avoiding
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	airdrop_mines_1 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 3
+		start_year = 1011
+		category_cas = { 
+			mines_planting = 0.05
+			mines_sweeping = 0.1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 0 
+				y = 36 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_naval_tech
+			cat_mine_tech
+			cat_mine_improvement
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	submarine_mine_laying_0 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 2
+		start_year = 989
+		path = {
+			leads_to_tech = submarine_mine_laying_1
+			research_cost_coeff = 1
+		}
+		enable_equipment_modules = { 
+			ship_mine_layer_sub
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 2 
+				y = 6 
+			}
+		}
+		ai_will_do = {
+			factor = 1.5
+		}
+		categories = {
+			cat_naval_tech
+			cat_mine_tech
+			cat_mine_improvement
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	submarine_mine_laying_1 = {
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 2
+		start_year = 997
+		path = {
+			leads_to_tech = submarine_mine_laying_2
+			research_cost_coeff = 1
+		}
+		submarine = {
+			mines_planting = 0.2
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 2 
+				y = 18 
+			}
+		}	
+		ai_will_do = {
+			factor = 2.5
+		}
+		categories = {
+			cat_naval_tech
+			cat_mine_tech
+			cat_mine_improvement
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	submarine_mine_laying_2 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 2
+		start_year = 1006
+		submarine = {
+			mines_planting = 0.2
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 2 
+				y = 30 
+			}
+		}
+		path = {
+			leads_to_tech = submarine_mine_laying_3
+			research_cost_coeff = 1
+		}
+		ai_will_do = {
+			factor = 2.5
+		}
+		categories = {
+			cat_naval_tech
+			cat_mine_tech
+			cat_mine_improvement
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	submarine_mine_laying_3 = {	
+		xp_research_type = navy
+		xp_boost_cost = 50
+		xp_research_bonus = 1.50
+		research_cost = 2
+		start_year = 1018
+		submarine = {
+			mines_planting = 0.2
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 2 
+				y = 42 
+			}
+		}
+		ai_will_do = {
+			factor = 2.5
+		}
+		categories = {
+			cat_naval_tech
+			cat_mine_tech
+			cat_mine_improvement
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+}

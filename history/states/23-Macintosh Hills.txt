@@ -17,19 +17,15 @@ state = {
 		11184
 	}
 	state_category = pastoral
-	buildings_max_level_factor = 1.00
+	buildings_max_level_factor = 1
 	manpower = 132700
 	history = {
-		#owner = EQS
-		#add_core_of = EQS
-		982.1.1 = {			
-			owner = ICE
-			add_core_of = ICE
-			add_core_of = EQS
-		}
-		1007.1.1 = {
+		owner = ICE
+		add_core_of = ICE
+		add_core_of = EQS
+		1002.1.1 = {
 			owner = EQS
-			add_core_of = EQS
+			remove_core_of = ICE
 		}
 		1050.1.1 = {}
 	}

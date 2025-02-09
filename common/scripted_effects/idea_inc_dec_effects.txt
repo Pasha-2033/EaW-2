@@ -94,6 +94,110 @@ decrease_mobilization_law_idea = {
 		}
 	}
 }
+#Trade law (will avoid closed economy)
+increase_trade_law_idea = {
+	if = {
+		limit = {
+			has_idea = export_focus
+		}
+		swap_ideas = {
+			remove_idea = export_focus
+			add_idea = uncontrolled_exports
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = limited_exports
+		}
+		swap_ideas = {
+			remove_idea = limited_exports
+			add_idea = export_focus
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = limited_imports
+		}
+		swap_ideas = {
+			remove_idea = limited_imports
+			add_idea = limited_exports
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = import_focus
+		}
+		swap_ideas = {
+			remove_idea = import_focus
+			add_idea = limited_imports
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = uncontrolled_imports
+		}
+		swap_ideas = {
+			remove_idea = uncontrolled_imports
+			add_idea = import_focus
+		}
+	}
+}
+decrease_trade_law_idea = {
+	if = {
+		limit = {
+			has_idea = uncontrolled_exports
+		}
+		swap_ideas = {
+			remove_idea = uncontrolled_exports
+			add_idea = export_focus
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = export_focus
+		}
+		swap_ideas = {
+			remove_idea = export_focus
+			add_idea = limited_exports
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = export_focus
+		}
+		swap_ideas = {
+			remove_idea = export_focus
+			add_idea = limited_exports
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = limited_exports
+		}
+		swap_ideas = {
+			remove_idea = limited_exports
+			add_idea = limited_imports
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = limited_imports
+		}
+		swap_ideas = {
+			remove_idea = limited_imports
+			add_idea = import_focus
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = import_focus
+		}
+		swap_ideas = {
+			remove_idea = import_focus
+			add_idea = uncontrolled_imports
+		}
+	}
+}
 #Society
 increase_society_development_idea = {
 	if = {
@@ -598,6 +702,83 @@ decrease_power_concentration_idea = {
 		}
 	}
 }
+#Lack of scientists
+increase_lack_of_scientists_idea = {
+	if = {
+		limit = {
+			has_idea = lack_of_scientists
+		}
+		swap_ideas = {
+			remove_idea = lack_of_scientists
+			add_idea = lack_of_scientists1
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = lack_of_scientists1
+		}
+		swap_ideas = {
+			remove_idea = lack_of_scientists1
+			add_idea = lack_of_scientists2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = lack_of_scientists2
+		}
+		swap_ideas = {
+			remove_idea = lack_of_scientists2
+			add_idea = lack_of_scientists3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = lack_of_scientists3
+		}
+		swap_ideas = {
+			remove_idea = lack_of_scientists3
+			add_idea = no_lack_of_scientists
+		}
+	}
+}
+decrease_lack_of_scientists_idea = {
+	if = {
+		limit = {
+			has_idea = no_lack_of_scientists
+		}
+		swap_ideas = {
+			remove_idea = no_lack_of_scientists
+			add_idea = lack_of_scientists3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = lack_of_scientists3
+		}
+		swap_ideas = {
+			remove_idea = lack_of_scientists3
+			add_idea = lack_of_scientists2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = lack_of_scientists2
+		}
+		swap_ideas = {
+			remove_idea = lack_of_scientists2
+			add_idea = lack_of_scientists1
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = lack_of_scientists1
+		}
+		swap_ideas = {
+			remove_idea = lack_of_scientists1
+			add_idea = lack_of_scientists
+		}
+	}
+}
 #Poverty
 increase_poverty_level_idea = {
 	if = {
@@ -997,3 +1178,81 @@ remove_holy_spirits_effect = {}
 remove_technocracy_spirits_effect = {}
 remove_anarchism_spirits_effect = {}
 remove_militarism_spirits_effect = {}
+
+#CRY_sombra_curse_remnants (see in common/ideas/zzz_CRY.txt)
+increase_sombra_curse_idea = {
+	if = {
+		limit = {
+			has_idea = CRY_sombra_curse_remnants_3
+		}
+		swap_ideas = {
+			remove_idea = CRY_sombra_curse_remnants_3
+			add_idea = CRY_sombra_curse_remnants_4
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CRY_sombra_curse_remnants_2
+		}
+		swap_ideas = {
+			remove_idea = CRY_sombra_curse_remnants_2
+			add_idea = CRY_sombra_curse_remnants_3
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CRY_sombra_curse_remnants_1
+		}
+		swap_ideas = {
+			remove_idea = CRY_sombra_curse_remnants_1
+			add_idea = CRY_sombra_curse_remnants_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CRY_sombra_curse_remnants_0
+		}
+		swap_ideas = {
+			remove_idea = CRY_sombra_curse_remnants_0
+			add_idea = CRY_sombra_curse_remnants_1
+		}
+	}
+}
+decrease_sombra_curse_idea = {
+	if = {
+		limit = {
+			has_idea = CRY_sombra_curse_remnants_1
+		}
+		swap_ideas = {
+			remove_idea = CRY_sombra_curse_remnants_1
+			add_idea = CRY_sombra_curse_remnants_0
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CRY_sombra_curse_remnants_2
+		}
+		swap_ideas = {
+			remove_idea = CRY_sombra_curse_remnants_2
+			add_idea = CRY_sombra_curse_remnants_1
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CRY_sombra_curse_remnants_3
+		}
+		swap_ideas = {
+			remove_idea = CRY_sombra_curse_remnants_3
+			add_idea = CRY_sombra_curse_remnants_2
+		}
+	}
+	else_if = {
+		limit = {
+			has_idea = CRY_sombra_curse_remnants_4
+		}
+		swap_ideas = {
+			remove_idea = CRY_sombra_curse_remnants_4
+			add_idea = CRY_sombra_curse_remnants_3
+		}
+	}
+}

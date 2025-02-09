@@ -278,3 +278,48 @@ integration_occupation = {
 		base = 9000
 	}
 }
+
+
+
+love_extraction = {
+	icon = 15
+	gui_order = 1
+	sound_effect = "Martial_Law_Interface_Brutally_Oppressive_Occupation_Unique_FAS"
+	visible = {
+		has_idea = changeling_race
+	}
+	state_modifier = {		
+		resistance_target 				= -0.3
+		resistance_growth				= 0.1
+		resistance_decay				= -0.1
+		resistance_damage_to_garrison 	= 1
+		required_garrison_factor 		= 1
+		compliance_gain 				= -0.15
+
+		attrition_for_controller = -0.05
+		non_core_manpower = -0.1
+		local_supplies_for_controller = 0.1
+
+		disable_strategic_redeployment_for_controller = 1 #is realy bad?
+
+		temporary_state_resource_food = 1
+	}
+	suppressed_state_modifier = {
+		resistance_target 				= -0.4
+		resistance_damage_to_garrison 	= 1
+		required_garrison_factor 		= 0.8
+		compliance_gain 				= -0.1
+
+		attrition_for_controller = -0.075
+		non_core_manpower = -0.05
+		local_supplies_for_controller = 0.15
+
+		local_factories 				= 0.1
+		local_resources 				= 0.1
+
+		temporary_state_resource_food = 2
+	}
+	ai_will_do = {
+		base = 5000
+	}
+}

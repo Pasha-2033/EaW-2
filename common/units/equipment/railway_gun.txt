@@ -11,26 +11,41 @@ equipments = {
 		interface_category = interface_category_land
 		
 		active = yes
-
-		#Misc Abilities
-		reliability = 0.8
-		maximum_speed = 5
-
-		#Offensive Abilities
-		railway_gun_attack = 25
 		
 		manpower = 1000
 	}
 
-	railway_gun_equipment_1 = {
+	railway_gun_equipment_0 = {
 		year = 1003
 
 		archetype = railway_gun_equipment
 		priority = 50
 		visual_level = 0
 		active = no
-
-		build_cost_ic = 800.0
+		#Misc Abilities
+		reliability = 0.5
+		maximum_speed = 4
+		#Offensive Abilities
+		railway_gun_attack = 25
+		build_cost_ic = 800
+		resources = {
+			steel = 4
+			tungsten = 2
+			chromium = 2
+		}		
+	}
+	railway_gun_equipment_1 = {
+		year = 1003
+		archetype = railway_gun_equipment
+		priority = 50
+		visual_level = 0
+		active = no
+		#Misc Abilities
+		reliability = 0.6
+		maximum_speed = 5
+		#Offensive Abilities
+		railway_gun_attack = 25
+		build_cost_ic = 850
 		resources = {
 			steel = 4
 			tungsten = 2

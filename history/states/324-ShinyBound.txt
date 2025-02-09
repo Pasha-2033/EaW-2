@@ -7,20 +7,19 @@ state={
 	}
 
 	manpower=692120
-	state_category=town
+	state_category= wasteland
 	buildings_max_level_factor=1.00
 
 	history={
-		982.1.1 = {
-			owner = ELN
-			add_core_of = ELN
-			set_demilitarized_zone = yes
-		}
-		1007.1.1 = {
+		owner = ELN
+		add_core_of = ELN
+		set_demilitarized_zone = yes
+		1002.1.1 = {
 			owner = CRY
 			add_core_of = CRY
 			remove_core_of = ELN
 			set_demilitarized_zone = no
+			set_state_category = town
 		}
 		victory_points = { 9236 10 }
 

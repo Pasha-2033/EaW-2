@@ -20,20 +20,17 @@ state = {
 		13097
 	}
 	state_category = rural
-	buildings_max_level_factor = 1.0
+	buildings_max_level_factor = 1
 	manpower = 99970
-	history = {
-		#owner = EQS
-		#add_core_of = EQS
-		982.1.1 = {			
-			owner = PGT
-			add_core_of = PGT
-			add_core_of = EQS
-			add_claim_by = ICE
-		}
-		1007.1.1 = {
+	history = {		
+		owner = PGT
+		add_core_of = PGT
+		add_core_of = EQS
+		add_claim_by = ICE
+		1002.1.1 = {
 			owner = EQS
 			remove_core_of = PGT
+			remove_claim_by = ICE
 		}
 		1050.1.1 = {}	
 	}

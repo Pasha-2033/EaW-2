@@ -15,91 +15,101 @@
 
 #Race triggers, not all gefined
 is_same_race_as_PREV = {
-	OR = {
-		AND = {
-			has_idea = pony_race
-			PREV = {
+	custom_trigger_tooltip = {
+		tooltip = is_same_race_as_PREV_tt
+		OR = {
+			AND = {
 				has_idea = pony_race
+				PREV = {
+					has_idea = pony_race
+				}
 			}
-		}
-		AND = {
-			has_idea = changeling_race
-			PREV = {
+			AND = {
 				has_idea = changeling_race
+				PREV = {
+					has_idea = changeling_race
+				}
 			}
-		}
-		AND = {
-			has_idea = deer_race
-			PREV = {
+			AND = {
 				has_idea = deer_race
+				PREV = {
+					has_idea = deer_race
+				}
 			}
-		}
-		AND = {
-			has_idea = griffon_race
-			PREV = {
+			AND = {
 				has_idea = griffon_race
+				PREV = {
+					has_idea = griffon_race
+				}
 			}
-		}
-		AND = {
-			has_idea = diamond_dog_race
-			PREV = {
+			AND = {
 				has_idea = diamond_dog_race
+				PREV = {
+					has_idea = diamond_dog_race
+				}
 			}
-		}
-		AND = {
-			has_idea = deer_race
-			PREV = {
+			AND = {
 				has_idea = deer_race
+				PREV = {
+					has_idea = deer_race
+				}
 			}
-		}
-		AND = {
-			has_idea = dragon_race
-			PREV = {
+			AND = {
 				has_idea = dragon_race
+				PREV = {
+					has_idea = dragon_race
+				}
 			}
-		}
-		AND = {
-			has_idea = hippogriff_race
-			PREV = {
+			AND = {
 				has_idea = hippogriff_race
+				PREV = {
+					has_idea = hippogriff_race
+				}
 			}
-		}
-		AND = {
-			has_idea = minotaur_race
-			PREV = {
+			AND = {
 				has_idea = minotaur_race
+				PREV = {
+					has_idea = minotaur_race
+				}
 			}
-		}
-		AND = {
-			has_idea = bear_race
-			PREV = {
+			AND = {
 				has_idea = bear_race
+				PREV = {
+					has_idea = bear_race
+				}
 			}
-		}
-		AND = {
-			has_idea = yak_race
-			PREV = {
+			AND = {
 				has_idea = yak_race
+				PREV = {
+					has_idea = yak_race
+				}
 			}
-		}
-		AND = {
-			has_idea = undead_race
-			PREV = {
+			AND = {
 				has_idea = undead_race
+				PREV = {
+					has_idea = undead_race
+				}
 			}
-		}
-		AND = {
-			has_idea = generic_race
-			PREV = {
+			AND = {
 				has_idea = generic_race
+				PREV = {
+					has_idea = generic_race
+				}
 			}
-		}
-		AND = {
-			has_idea = multi_race
-			PREV = {
+			AND = {
 				has_idea = multi_race
+				PREV = {
+					has_idea = multi_race
+				}
 			}
 		}
+	}
+}
+is_not_same_race_as_PREV = {
+	#for tooltip purposes
+	custom_trigger_tooltip = {
+		tooltip = is_not_same_race_as_PREV_tt
+		is_same_race_as_PREV = no
 	}
 }
 is_incompatible_races = {

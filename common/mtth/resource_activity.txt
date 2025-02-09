@@ -1,0 +1,232 @@
+aluminium_plant_total_bauxite_consumption = {
+	base = 0
+	modifier = {
+		add = modifier@aluminium_plant_bauxite_consumption
+	}
+	modifier = {
+		factor = aluminium_plant_total_impact
+	}
+}
+aluminium_plant_total_aluminium_outcome = {
+	base = 0
+	modifier = {
+		add = modifier@aluminium_plant_aluminium_outcome
+	}
+	modifier = {
+		factor = aluminium_plant_total_impact
+	}
+}
+
+steel_plant_total_iron_consumption = {
+	base = 0
+	modifier = {
+		add = modifier@steel_plant_iron_consumption
+	}
+	modifier = {
+		factor = steel_plant_total_impact
+	}
+}
+steel_plant_total_steel_outcome = {
+	base = 0
+	modifier = {
+		add = modifier@steel_plant_steel_outcome
+	}
+	modifier = {
+		factor = steel_plant_total_impact
+	}
+}
+
+tungsten_plant_total_scheelitis_consumption = {
+	base = 0
+	modifier = {
+		add = modifier@tungsten_plant_scheelitis_consumption
+	}
+	modifier = {
+		factor = tungsten_plant_total_impact
+	}
+}
+tungsten_plant_total_tungsten_outcome = {
+	base = 0
+	modifier = {
+		add = modifier@tungsten_plant_tungsten_outcome
+	}
+	modifier = {
+		factor = tungsten_plant_total_impact
+	}
+}
+
+chromium_plant_total_chromite_consumption = {
+	base = 0
+	modifier = {
+		add = modifier@chromium_plant_chromite_consumption
+	}
+	modifier = {
+		factor = chromium_plant_total_impact
+	}
+}
+chromium_plant_total_chromium_outcome = {
+	base = 0
+	modifier = {
+		add = modifier@chromium_plant_chromium_outcome
+	}
+	modifier = {
+		factor = chromium_plant_total_impact
+	}
+}
+
+synthetic_refinery_total_oil_consumption = {
+	base = 0
+	modifier = {
+		add = modifier@synthetic_refinery_oil_consumption
+	}
+	modifier = {
+		factor = synthetic_refinery_total_impact
+	}
+}
+synthetic_refinery_total_rubber_outcome = {
+	base = 0
+	modifier = {
+		add = modifier@synthetic_refinery_rubber_outcome
+	}
+	modifier = {
+		factor = synthetic_refinery_total_impact
+	}
+}
+synthetic_refinery_total_fuel_outcome = {
+	base = 0
+	modifier = {
+		add = modifier@synthetic_refinery_fuel_outcome
+	}
+	modifier = {
+		factor = synthetic_refinery_total_impact
+	}
+}
+
+
+
+
+reactor_common_total_consumtion = {
+	base = 0
+	modifier = {
+		add = modifier@nuclear_reactor_fuel_primary_consumption
+	}
+	modifier = {
+		factor = reactor_common_total_impact
+	}
+}
+nuclear_reactor_total_fuel_secondary_outcome = {
+	base = 0
+	modifier = {
+		add = modifier@nuclear_reactor_fuel_secondary_outcome
+	}
+	modifier = {
+		factor = reactor_common_total_impact
+	}
+}
+nuclear_reactor_total_fuel_thermonuclear_outcome = {
+	base = 0
+	modifier = {
+		add = modifier@nuclear_reactor_fuel_thermonuclear_outcome
+	}
+	modifier = {
+		factor = reactor_common_total_impact
+	}
+}
+nuclear_reactor_total_nuke_outcome = {
+	base = 0
+	modifier = {
+		add = modifier@nuclear_reactor_nuke_outcome
+	}
+	modifier = {
+		factor = reactor_common_total_impact
+	}
+}
+nuclear_reactor_total_thermonuke_outcome = {
+	base = 0
+	modifier = {
+		add = modifier@nuclear_reactor_thermonuke_outcome
+	}
+	modifier = {
+		factor = reactor_common_total_impact
+	}
+}
+
+
+reactor_exploratory_total_consumtion = {
+	base = 0
+	modifier = {
+		add = modifier@nuclear_reactor_exploratory_fuel_primary_consumption
+	}
+	modifier = {
+		factor = reactor_exploratory_total_impact
+	}
+}
+nuclear_reactor_exploratory_total_fuel_thermonuclear_outcome = {
+	base = 0
+	modifier = {
+		add = modifier@nuclear_reactor_exploratory_fuel_thermonuclear_outcome
+	}
+	modifier = {
+		factor = reactor_exploratory_total_impact
+	}
+}
+
+
+
+secondary_fuel_reactor_total_consumption = {
+	base = 0
+	modifier = {
+		add = modifier@nuclear_reactor_heavy_water_fuel_secondary_consumption
+	}
+	modifier = {
+		factor = reactor_heavy_water_total_impact
+	}
+}
+secondary_total_nuke = {
+	base = 0
+	modifier = {
+		add = modifier@nuclear_reactor_heavy_water_nuke_outcome
+	}
+	modifier = {
+		factor = reactor_heavy_water_total_impact
+	}
+}
+secondary_total_thermonuke = {
+	base = 0
+	modifier = {
+		add = modifier@nuclear_reactor_heavy_water_thermonuke_outcome
+	}
+	modifier = {
+		factor = reactor_heavy_water_total_impact
+	}
+}
+total_primary_fuel = {
+	base = 0
+	modifier = {
+		add = modifier@nuclear_reactor_heavy_water_fuel_primary_outcome
+	}
+	modifier = {
+		factor = reactor_heavy_water_total_impact
+	}
+}
+
+
+
+thermonuclear_reactor_total_fuel_consumption = {
+	base = 0
+	modifier = {
+		add = modifier@thermonuclear_reactor_fuel_consumption
+	}
+	modifier = {
+		factor = thermonuclear_reactor_total_impact
+	}
+}
+thermonuclear_reactor_total_thermonuke_outcome = {
+	base = 0
+	modifier = {
+		add = modifier@thermonuclear_reactor_thermonuke_outcome
+	}
+	modifier = {
+		factor = thermonuclear_reactor_total_impact
+	}
+}

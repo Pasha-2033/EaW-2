@@ -22,6 +22,7 @@ NDefines.NCountry.FEMALE_UNIT_LEADER_BASE_CHANCE = {
     1.0, -- operatives
 }
 NDefines.NCountry.BASE_RESEARCH_SLOTS = 0
+NDefines.NCountry.BASE_FUEL_GAIN = 0
 
 NDefines.NResistance.GARRISON_MANPOWER_LOST_BY_ATTACK = 0.01 	-- Ratio of manpower lost by garrison at each attack on garrison (this number will be reduced by the hardness of garrison template)
 
@@ -34,10 +35,13 @@ NDefines.NMilitary.UNIT_EXP_LEVELS = {0.02,	0.04,	0.06,	0.08,	0.1,	0.14,	0.18,	0
 NDefines.NMilitary.EXPERIENCE_COMBAT_FACTOR = 0.05
 NDefines.NMilitary.ARMY_EXP_BASE_LEVEL = 5
 NDefines.NMilitary.MIN_DIVISION_BRIGADE_HEIGHT = 2	-- vanila is 4, make doctrines more valuable
+NDefines.NMilitary.BASE_NIGHT_ATTACK_PENALTY = -0.8
+NDefines.NMilitary.NUKE_MAX_DAMAGE_PERCENT = 0.3 -- vanila is 0.9
 
 NDefines.NNavy.SHORE_BOMBARDMENT_CAP = 0.3 -- Vanilla is 0.25
 NDefines.NNavy.SCREENS_TO_CAPITAL_RATIO = 3.0 -- Vanilla is 4.0, mostly AI stuff
 
+NDefines.NAir.CARRIER_SIZE_STAT_INCREMENT = 1 -- Vanilla is 10
 NDefines.NAir.NAVAL_COMBAT_EXTERNAL_PLANES_JOIN_RATIO = 0.03 	-- Max planes that can join a combat comparing to the total strength of the ships, vanilla is 0.05
 
 NDefines.NAI.RESEARCH_LAND_DOCTRINE_NEED_GAIN_FACTOR = 0.12 -- Multiplies value based on relative military industry size / country size.
@@ -92,6 +96,6 @@ NDefines.NSupply.CAPITAL_ADDED_PENALTY_PER_PROVINCE = 1.0 -- added penalty as we
 
 NDefines.NTechnology.MIN_RESEARCH_SPEED = 0.001 -- Defines research speed, can't go below this value (default is 0.1)
 
-NDefines.NBuildings.MAX_SHARED_SLOTS = 30
+NDefines.NBuildings.MAX_SHARED_SLOTS = 35
 
 --NDefines.NFrontend.CAMERA_MIN_HEIGHT = 1 --if need a detailed model view

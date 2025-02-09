@@ -347,7 +347,7 @@ ideas = {
 	trade_laws = {
 		law = yes
 		use_list_view = yes
-		free_trade = {			
+		uncontrolled_exports = {
 			available = {
 				NOT = {
 					has_country_flag = trade_laws_blocked
@@ -360,37 +360,15 @@ ideas = {
 					has_idea = collectivized_society
 				}
 			}
-			cost = 150
 			removal_cost = -1
 			modifier = {
 				min_export = 0.8
 				industrial_capacity_factory = 0.15
 				industrial_capacity_dockyard = 0.15
 				production_speed_buildings_factor = 0.15
-				research_speed_factor = 0.10
 				trade_opinion_factor = 0.3
 				civilian_intel_to_others = 40.0
 				navy_intel_to_others = 20.0
-			}
-			cancel_if_invalid = no
-		}
-		uncontrolled_exports = {
-			available = {
-				NOT = {
-					has_country_flag = trade_laws_blocked
-					has_idea = deep_isolation
-					has_idea = primitive_economy
-					has_idea = outlaw_economy
-					has_idea = tot_militarisation
-				}
-			}
-			removal_cost = -1
-			modifier = {
-				min_export = 0.25
-				consumer_goods_factor = 0.05
-				civilian_intel_to_others = 40.0
-				navy_intel_to_others = 40.0
-				agency_upgrade_time = 0.15
 			}
 			cancel_if_invalid = no
 		}
@@ -410,7 +388,6 @@ ideas = {
 				industrial_capacity_factory = 0.1
 				industrial_capacity_dockyard = 0.1
 				production_speed_buildings_factor = 0.1
-				research_speed_factor = 0.05
 				civilian_intel_to_others = 20.0
 				navy_intel_to_others = 10.0
 			}
@@ -427,7 +404,6 @@ ideas = {
 				industrial_capacity_factory = 0.05
 				industrial_capacity_dockyard = 0.05
 				production_speed_buildings_factor = 0.05
-				research_speed_factor = 0.01
 				trade_opinion_factor = -0.30
 				civilian_intel_to_others = 10.0
 				navy_intel_to_others = 5
@@ -476,6 +452,10 @@ ideas = {
 			on_add = {
 				###################################???
 				custom_effect_tooltip = closed_economy_TT
+			}
+			rule = {
+				can_access_market = no
+				desc = can_not_access_market_closed_economy
 			}
 			cancel_if_invalid = no
 			ai_will_do = {
@@ -961,12 +941,19 @@ ideas = {
 				industry_repair_factor = 0.05
 				local_resources_factor = 0.1
 				industry_air_damage_factor = 0.1
+				hidden_modifier = {
+					science_index = 0.24
+				}
 			}
 		}
 		modern_society = {
 			cost = -1
 			removal_cost = -1
-			modifier = {}
+			modifier = {
+				hidden_modifier = {
+					science_index = 0.225
+				}
+			}
 		}
 		outdated_industry1 = {
 			allowed_civil_war = {
@@ -981,9 +968,12 @@ ideas = {
 				industrial_capacity_dockyard = -0.05
 				production_speed_buildings_factor = -0.05
 				industry_repair_factor = -0.05
-				research_speed_factor = -0.05
+				research_speed_factor = -0.02
 				local_resources_factor = -0.05
 				supply_consumption_factor = -0.05
+				hidden_modifier = {
+					science_index = 0.21
+				}
 			}
 		}
 		outdated_industry = {
@@ -994,9 +984,12 @@ ideas = {
 				industrial_capacity_dockyard = -0.1
 				production_speed_buildings_factor = -0.1
 				industry_repair_factor = -0.1
-				research_speed_factor = -0.10
+				research_speed_factor = -0.04
 				local_resources_factor = -0.1
 				supply_consumption_factor = -0.1
+				hidden_modifier = {
+					science_index = 0.195
+				}
 			}
 		}
 		pre_industrial_society3 = {
@@ -1013,11 +1006,14 @@ ideas = {
 				industrial_capacity_dockyard = -0.125
 				production_speed_buildings_factor = -0.125
 				industry_repair_factor = -0.125
-				research_speed_factor = -0.125
+				research_speed_factor = -0.05
 				MONTHLY_POPULATION = -0.025
 				local_resources_factor = -0.125
 				industry_air_damage_factor = -0.05
 				supply_consumption_factor = -0.15
+				hidden_modifier = {
+					science_index = 0.18
+				}
 			}
 		}
 		pre_industrial_society2 = {
@@ -1034,11 +1030,14 @@ ideas = {
 				industrial_capacity_dockyard = -0.15
 				production_speed_buildings_factor = -0.15
 				industry_repair_factor = -0.15
-				research_speed_factor = -0.15
+				research_speed_factor = -0.06
 				MONTHLY_POPULATION = -0.05
 				local_resources_factor = -0.15
 				industry_air_damage_factor = -0.1
 				supply_consumption_factor = -0.2
+				hidden_modifier = {
+					science_index = 0.165
+				}
 			}
 		}
 		pre_industrial_society1 = {
@@ -1055,11 +1054,14 @@ ideas = {
 				industrial_capacity_dockyard = -0.175
 				production_speed_buildings_factor = -0.175
 				industry_repair_factor = -0.175
-				research_speed_factor = -0.175
+				research_speed_factor = -0.07
 				MONTHLY_POPULATION = -0.075
 				local_resources_factor = -0.175
 				industry_air_damage_factor = -0.15
 				supply_consumption_factor = -0.25
+				hidden_modifier = {
+					science_index = 0.15
+				}
 			}
 		}
 		pre_industrial_society = {
@@ -1071,11 +1073,14 @@ ideas = {
 				industrial_capacity_dockyard = -0.2
 				production_speed_buildings_factor = -0.2
 				industry_repair_factor = -0.2
-				research_speed_factor = -0.2
+				research_speed_factor = -0.08
 				MONTHLY_POPULATION = -0.1
 				local_resources_factor = -0.2
 				industry_air_damage_factor = -0.2
 				supply_consumption_factor = -0.3
+				hidden_modifier = {
+					science_index = 0.135
+				}
 			}
 		}
 		agrarian_society5 = {
@@ -1092,12 +1097,15 @@ ideas = {
 				industrial_capacity_dockyard = -0.25
 				production_speed_buildings_factor = -0.25
 				industry_repair_factor = -0.25
-				research_speed_factor = -0.25
+				research_speed_factor = -0.1
 				MONTHLY_POPULATION = -0.125
 				local_resources_factor = -0.25
 				industry_air_damage_factor = -0.25
 				max_fuel_factor = -0.02
 				supply_consumption_factor = -0.35
+				hidden_modifier = {
+					science_index = 0.12
+				}
 			}
 		}
 		agrarian_society4 = {
@@ -1114,12 +1122,15 @@ ideas = {
 				industrial_capacity_dockyard = -0.3
 				production_speed_buildings_factor = -0.3
 				industry_repair_factor = -0.3
-				research_speed_factor = -0.3
+				research_speed_factor = -0.12
 				MONTHLY_POPULATION = -0.15
 				local_resources_factor = -0.3
 				industry_air_damage_factor = -0.3
 				max_fuel_factor = -0.03
 				supply_consumption_factor = -0.4
+				hidden_modifier = {
+					science_index = 0.105
+				}
 			}
 		}
 		agrarian_society3 = {
@@ -1136,12 +1147,15 @@ ideas = {
 				industrial_capacity_dockyard = -0.35
 				production_speed_buildings_factor = -0.35
 				industry_repair_factor = -0.35
-				research_speed_factor = -0.35
+				research_speed_factor = -0.14
 				MONTHLY_POPULATION = -0.175
 				local_resources_factor = -0.35
 				industry_air_damage_factor = -0.35
 				max_fuel_factor = -0.05
 				supply_consumption_factor = -0.45
+				hidden_modifier = {
+					science_index = 0.09
+				}
 			}
 		}
 		agrarian_society2 = {
@@ -1158,12 +1172,15 @@ ideas = {
 				industrial_capacity_dockyard = -0.40
 				production_speed_buildings_factor = -0.40
 				industry_repair_factor = -0.40
-				research_speed_factor = -0.40
+				research_speed_factor = -0.16
 				MONTHLY_POPULATION = -0.2
 				local_resources_factor = -0.4
 				industry_air_damage_factor = -0.4
 				max_fuel_factor = -0.1
 				supply_consumption_factor = -0.5
+				hidden_modifier = {
+					science_index = 0.075
+				}
 			}
 		}
 		agrarian_society = {
@@ -1175,12 +1192,15 @@ ideas = {
 				industrial_capacity_dockyard = -0.45
 				production_speed_buildings_factor = -0.45
 				industry_repair_factor = -0.45
-				research_speed_factor = -0.45
+				research_speed_factor = -0.18
 				MONTHLY_POPULATION = -0.225
 				local_resources_factor = -0.45
 				industry_air_damage_factor = -0.45
 				max_fuel_factor = -0.15
 				supply_consumption_factor = -0.55
+				hidden_modifier = {
+					science_index = 0.06
+				}
 			}
 		}
 		tribal_society3 = {
@@ -1202,12 +1222,15 @@ ideas = {
 				industrial_capacity_dockyard = -0.55
 				production_speed_buildings_factor = -0.55
 				industry_repair_factor = -0.55
-				research_speed_factor = -0.55
+				research_speed_factor = -0.22
 				MONTHLY_POPULATION = -0.3
 				local_resources_factor = -0.55
 				industry_air_damage_factor = -0.55
 				max_fuel_factor = -0.25
 				supply_consumption_factor = -0.65
+				hidden_modifier = {
+					science_index = 0.045
+				}
 			}
 		}
 		tribal_society2 = {
@@ -1229,12 +1252,15 @@ ideas = {
 				industrial_capacity_dockyard = -0.60
 				production_speed_buildings_factor = -0.60
 				industry_repair_factor = -0.6
-				research_speed_factor = -0.6
+				research_speed_factor = -0.24
 				MONTHLY_POPULATION = -0.35
 				local_resources_factor = -0.6
 				industry_air_damage_factor = -0.6
 				max_fuel_factor = -0.3
 				supply_consumption_factor = -0.7
+				hidden_modifier = {
+					science_index = 0.03
+				}
 			}
 		}
 		tribal_society1 = {
@@ -1256,12 +1282,15 @@ ideas = {
 				industrial_capacity_dockyard = -0.65
 				production_speed_buildings_factor = -0.65
 				industry_repair_factor = -0.65
-				research_speed_factor = -0.65
+				research_speed_factor = -0.26
 				MONTHLY_POPULATION = -0.4
 				local_resources_factor = -0.65
 				industry_air_damage_factor = -0.65
 				max_fuel_factor = -0.35
 				supply_consumption_factor = -0.75
+				hidden_modifier = {
+					science_index = 0.015
+				}
 			}
 		}
 		tribal_society = {		
@@ -1279,7 +1308,7 @@ ideas = {
 				industrial_capacity_dockyard = -0.70
 				production_speed_buildings_factor = -0.70
 				industry_repair_factor = -0.7
-				research_speed_factor = -0.7
+				research_speed_factor = -0.28
 				MONTHLY_POPULATION = -0.45
 				local_resources_factor = -0.7
 				industry_air_damage_factor = -0.7
@@ -1300,7 +1329,7 @@ ideas = {
 				industrial_capacity_dockyard = -0.50
 				production_speed_buildings_factor = -0.50
 				industry_repair_factor = -0.5
-				research_speed_factor = -0.7
+				research_speed_factor = -0.28
 				MONTHLY_POPULATION = -0.3
 				local_resources_factor = -0.5
 				industry_air_damage_factor = -0.7
@@ -1329,7 +1358,7 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.10
 				production_speed_buildings_factor = -0.65
 				industry_repair_factor = -0.65
-				research_speed_factor = -8
+				research_speed_factor = -10
 				political_power_cost = 0.2
 				drift_defence_factor = 1
 				MONTHLY_POPULATION = -0.3
@@ -1502,7 +1531,11 @@ ideas = {
 				always = yes
 			}
 			removal_cost = -1
-			modifier = {}
+			modifier = {
+				hidden_modifier = {
+					science_index = 0.24
+				}
+			}
 		}
 		lack_of_scientists3 = {
 			cost = 0
@@ -1513,7 +1546,10 @@ ideas = {
 			modifier = {
 				production_speed_buildings_factor = -0.05
 				industry_repair_factor = -0.05
-				research_speed_factor = -0.15
+				research_speed_factor = -0.06
+				hidden_modifier = {
+					science_index = 0.18
+				}
 			}
 		}
 		lack_of_scientists2 = {
@@ -1525,7 +1561,10 @@ ideas = {
 			modifier = {
 				production_speed_buildings_factor = -0.10
 				industry_repair_factor = -0.1
-				research_speed_factor = -0.30
+				research_speed_factor = -0.12
+				hidden_modifier = {
+					science_index = 0.12
+				}
 			}
 		}
 		lack_of_scientists1 = {
@@ -1537,7 +1576,10 @@ ideas = {
 			modifier = {
 				production_speed_buildings_factor = -0.15
 				industry_repair_factor = -0.15
-				research_speed_factor = -0.45
+				research_speed_factor = -0.18
+				hidden_modifier = {
+					science_index = 0.06
+				}
 			}
 		}
 		lack_of_scientists = {
@@ -1549,7 +1591,7 @@ ideas = {
 			modifier = {
 				production_speed_buildings_factor = -0.2
 				industry_repair_factor = -0.2
-				research_speed_factor = -0.6
+				research_speed_factor = -0.24
 			}
 		}
 		education_socialist = {
@@ -1557,7 +1599,7 @@ ideas = {
 			picture = old_lack_of_scientists
 			removal_cost = -1
 			modifier = {
-				research_speed_factor = -0.3
+				research_speed_factor = -0.12
 			}
 		}
 	}
@@ -1574,7 +1616,11 @@ ideas = {
 				always = yes
 			}
 			removal_cost = -1
-			modifier = {}
+			modifier = {
+				hidden_modifier = {
+					science_index = 0.06
+				}
+			}
 			cancel_if_invalid = no
 		}
 		poverty5 = {
@@ -1592,6 +1638,9 @@ ideas = {
 				production_speed_buildings_factor = -0.05
 				industry_repair_factor = -0.05
 				consumer_goods_factor = 0.04
+				hidden_modifier = {
+					science_index = 0.05
+				}
 			}
 			cancel_if_invalid = no
 		}
@@ -1610,7 +1659,10 @@ ideas = {
 				production_speed_buildings_factor = -0.10
 				industry_repair_factor = -0.1
 				consumer_goods_factor = 0.07
-				research_speed_factor = -0.025
+				research_speed_factor = -0.01
+				hidden_modifier = {
+					science_index = 0.04
+				}
 			}
 			cancel_if_invalid = no
 		}
@@ -1629,7 +1681,10 @@ ideas = {
 				production_speed_buildings_factor = -0.15
 				industry_repair_factor = -0.15
 				consumer_goods_factor = 0.10
-				research_speed_factor = -0.05
+				research_speed_factor = -0.02
+				hidden_modifier = {
+					science_index = 0.03
+				}
 			}
 			cancel_if_invalid = no
 		}
@@ -1657,7 +1712,10 @@ ideas = {
 				production_speed_buildings_factor = -0.16
 				industry_repair_factor = -0.16
 				consumer_goods_factor = 0.11
-				research_speed_factor = -0.075
+				research_speed_factor = -0.03
+				hidden_modifier = {
+					science_index = 0.02
+				}
 			}
 			cancel_if_invalid = no
 		}
@@ -1676,7 +1734,10 @@ ideas = {
 				production_speed_buildings_factor = -0.18
 				industry_repair_factor = -0.18
 				consumer_goods_factor = 0.13
-				research_speed_factor = -0.1
+				research_speed_factor = -0.04
+				hidden_modifier = {
+					science_index = 0.01
+				}
 			}
 			cancel_if_invalid = no
 		}
@@ -1693,7 +1754,7 @@ ideas = {
 				industry_repair_factor = -0.2
 				consumer_goods_factor = 0.15
 				conscription = -0.009
-				research_speed_factor = -0.15
+				research_speed_factor = -0.06
 			}
 		}
 	}
@@ -1719,6 +1780,12 @@ ideas = {
 						popup = no
 					}
 				}
+			}
+			modifier = {
+				civilian_intel_to_others = -10
+				army_intel_to_others = -5
+				navy_intel_to_others = -5
+				airforce_intel_to_others = -5
 			}
 			removal_cost = -1
 			default = yes
@@ -1819,6 +1886,15 @@ ideas = {
 					}
 				}
 			}
+			modifier = {
+				food_gain_factor = 0.075
+				modifier_army_sub_unit_magical_infantry_attack_factor = 0.05
+				modifier_army_sub_unit_magical_infantry_defence_factor = 0.05
+				modifier_army_sub_unit_magical_motorized_attack_factor = 0.05
+				modifier_army_sub_unit_magical_motorized_defence_factor = 0.05
+				modifier_army_sub_unit_magical_mechanized_attack_factor = 0.05
+				modifier_army_sub_unit_magical_mechanized_defence_factor = 0.05
+			}
 			cost = 250
 			removal_cost = -1
 			cancel_if_invalid = no
@@ -1845,6 +1921,18 @@ ideas = {
 						popup = no
 					}
 				}
+			}
+			modifier = {
+				monthly_population = 0.1
+				army_strength_factor = -0.075
+				operative_slot = 2
+				own_operative_capture_chance_factor = -0.1
+				own_operative_detection_chance_factor = -0.05
+				intel_from_combat_factor = 0.05
+				root_out_resistance_effectiveness_factor = 0.05
+				intel_network_gain_factor = 0.1
+				operation_risk = -0.1
+				agency_upgrade_time = -0.1
 			}
 			cost = 250
 			removal_cost = -1
@@ -2037,6 +2125,12 @@ ideas = {
 				}
 			}
 			cost = 250
+			modifier = {
+				monthly_population = -0.25
+				army_strength_factor = 0.1
+				offence = 0.05
+				defence = 0.05
+			}
 			removal_cost = -1
 			cancel_if_invalid = no
 			ai_will_do = {
@@ -2112,11 +2206,14 @@ ideas = {
 			cost = 200
 			removal_cost = -1
 			modifier = {
-				research_speed_factor = 0.25
+				research_speed_factor = 0.1
 				land_doctrine_cost_factor = -0.25
 				air_doctrine_cost_factor = -0.25
 				naval_doctrine_cost_factor = -0.25
 				political_power_gain = 0.5
+				hidden_modifier = {
+					science_index = 0.46
+				}
 			}
 			ai_will_do = {
 				factor = 160
@@ -2150,8 +2247,11 @@ ideas = {
 			cost = 200
 			removal_cost = -1
 			modifier = {
-				research_speed_factor = 0.1
+				research_speed_factor = 0.04
 				political_power_gain = 0.1
+				hidden_modifier = {
+					science_index = 0.345
+				}
 			}
 			ai_will_do = {
 				factor = 80
@@ -2188,11 +2288,14 @@ ideas = {
 			cost = 200
 			removal_cost = -1
 			modifier = {
-				research_speed_factor = -0.2
+				research_speed_factor = -0.08
 				land_doctrine_cost_factor = 0.2
 				air_doctrine_cost_factor = 0.2
 				naval_doctrine_cost_factor = 0.2
 				political_power_gain = 0.2
+				hidden_modifier = {
+					science_index = 0.23
+				}
 			}
 			ai_will_do = {
 				factor = 40
@@ -2229,11 +2332,14 @@ ideas = {
 			cost = 200
 			removal_cost = -1
 			modifier = {
-				research_speed_factor = -0.5
+				research_speed_factor = -0.2
 				land_doctrine_cost_factor = 0.5
 				air_doctrine_cost_factor = 0.5
 				naval_doctrine_cost_factor = 0.5
 				political_power_gain = 0.75
+				hidden_modifier = {
+					science_index = 0.115
+				}
 			}
 			ai_will_do = {
 				factor = 20
@@ -2267,7 +2373,7 @@ ideas = {
 			cost = 200
 			removal_cost = -1
 			modifier = {
-				research_speed_factor = -0.8
+				research_speed_factor = -0.32
 				land_doctrine_cost_factor = 0.8
 				air_doctrine_cost_factor = 0.8
 				naval_doctrine_cost_factor = 0.8
@@ -2293,18 +2399,149 @@ ideas = {
 		use_list_view = yes
 		only_goods = {
 			picture = LEC_vlow_reserves
+			cost = 300
+			modifier = {
+				trade_opinion_factor = -0.1
+				economy_cost_factor = 0.2
+				food_gain_factor = 0.1
+				facilities_consumption_factor = -0.1
+				local_resources_factor = 0.2
+				production_speed_buildings_factor = -0.05
+			}
+			on_add = {
+				if = {
+					limit = {
+						has_idea = bitsy
+					}
+					swap_ideas = {
+						remove_idea = bitsy
+						add_idea = no_valuta
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = metalony
+					}
+					swap_ideas = {
+						remove_idea = metalony
+						add_idea = no_valuta
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = race_based_valuta
+					}
+					swap_ideas = {
+						remove_idea = race_based_valuta
+						add_idea = no_valuta
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = stone_coins
+					}
+					swap_ideas = {
+						remove_idea = stone_coins
+						add_idea = no_valuta
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = copper_coins
+					}
+					swap_ideas = {
+						remove_idea = copper_coins
+						add_idea = no_valuta
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = silver_coins
+					}
+					swap_ideas = {
+						remove_idea = silver_coins
+						add_idea = no_valuta
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = gold_coins
+					}
+					swap_ideas = {
+						remove_idea = gold_coins
+						add_idea = no_valuta
+					}
+				}
+				else_if = {
+					limit = {
+						has_idea = gold_coins
+					}
+					swap_ideas = {
+						remove_idea = international_valuta
+						add_idea = no_valuta
+					}
+				}
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_idea = no_valuta
+					}
+					swap_ideas = {
+						remove_idea = no_valuta
+						add_idea = race_based_valuta
+					}
+				}
+			}
 		}
 		low_barter_focus = {
 			picture = LEC_low_reserves
+			modifier = {
+				trade_opinion_factor = -0.05
+				economy_cost_factor = 0.1
+				food_gain_factor = 0.05
+				facilities_consumption_factor = -0.05
+				local_resources_factor = 0.1
+				production_speed_buildings_factor = -0.025
+			}
 		}
 		medium_barter_focus = {
 			picture = LEC_medium_reserves
 		}
 		high_barter_focus = {
 			picture = LEC_high_reserves
+			modifier = {
+				transport_capacity = -0.05
+				trade_opinion_factor = 0.05
+				trade_laws_cost_factor = -0.05
+				economy_cost_factor = -0.05
+				facilities_consumption_factor = 0.1
+				local_resources_factor = -0.05
+				production_speed_buildings_factor = 0.05
+			}
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.05
+				}
+			}
 		}
 		only_money = {
 			picture = LEC_staggering_reserves
+			modifier = {
+				transport_capacity = -0.1
+				trade_opinion_factor = 0.1
+				trade_laws_cost_factor = -0.1
+				economy_cost_factor = -0.1
+				food_gain_factor = -0.05
+				facilities_consumption_factor = 0.2
+				local_resources_factor = -0.1
+				production_speed_buildings_factor = 0.1
+			}
+			equipment_bonus = {
+				convoy = {
+					build_cost_ic = -0.1
+				}
+			}
 		}
 	}
 	inflation = {
@@ -2320,19 +2557,79 @@ ideas = {
 	valuta = {
 		law = yes
 		use_list_view = yes
-		bitsy = {}
-		metalony = {}
-		race_based_valuta = {}
+		bitsy = {
+			available = {
+				NOT = {
+					has_idea = only_goods
+				}
+			}
+			targeted_modifier = {
+				tag = GRE
+				extra_trade_to_target_factor = 0.1
+				trade_cost_for_target_factor = -0.1
+				license_purchase_cost_factor = -0.1
+			}
+		}
+		metalony = {
+			available = {
+				NOT = {
+					has_idea = only_goods
+				}
+			}
+			targeted_modifier = {
+				tag = MET
+				extra_trade_to_target_factor = 0.1
+				trade_cost_for_target_factor = -0.1
+				license_purchase_cost_factor = -0.1
+			}
+		}
+		race_based_valuta = {
+			available = {
+				NOT = {
+					has_idea = only_goods
+				}
+			}
+		}
 		no_valuta = {
 			available = {
 				has_idea = only_goods
 			}
 		}
-		stone_coins = {}
-		copper_coins = {}
-		silver_coins = {}
-		gold_coins = {}
-		international_valuta = {}
+		stone_coins = {
+			available = {
+				NOT = {
+					has_idea = only_goods
+				}
+			}
+		}
+		copper_coins = {
+			available = {
+				NOT = {
+					has_idea = only_goods
+				}
+			}
+		}
+		silver_coins = {
+			available = {
+				NOT = {
+					has_idea = only_goods
+				}
+			}
+		}
+		gold_coins = {
+			available = {
+				NOT = {
+					has_idea = only_goods
+				}
+			}
+		}
+		international_valuta = {
+			available = {
+				NOT = {
+					has_idea = only_goods
+				}
+			}
+		}
 	}
 	country = { 
 		feudalism = { #poverty, move to unigue ideas

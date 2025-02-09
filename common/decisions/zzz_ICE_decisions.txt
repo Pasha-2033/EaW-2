@@ -30,10 +30,10 @@ ice_equipment_manpower_collecting = {
 			FROM = {
 				OR = {
 					check_variable = {
-						building_level@arms_factory > 0
+						arms_factory_level > 0
 					}
 					check_variable = {
-						building_level@industrial_complex > 0
+						industrial_complex_level > 0
 					}
 					check_variable = {
 						building_level@agrarian_complex > 0
@@ -44,50 +44,14 @@ ice_equipment_manpower_collecting = {
 		days_re_enable = destroy_buildings_cooldown
 		cost = 10 #destroy_buildings_cost
 		complete_effect = {
-			FROM = {
-				#"if" isn`t good, but for tooltip - we should leave them (remove text like "remove 0 building")
-				if = {
-					limit = {
-						check_variable = {
-							building_level@arms_factory > 0
-						}
-					}
-					remove_building = {
-						type = arms_factory
-						level = building_level@arms_factory
-					}
-				}
-				if = {
-					limit = {
-						check_variable = {
-							building_level@agrarian_complex > 0
-						}
-					}
-					remove_building = {
-						type = agrarian_complex
-						level = building_level@agrarian_complex
-					}
-				}
-				if = {
-					limit = {
-						check_variable = {
-							building_level@industrial_complex > 0
-						}
-					}
-					remove_building = {
-						type = industrial_complex
-						level = building_level@industrial_complex
-					}
-				}
-			}
 			set_temp_variable = {
-				mil_eq_factor = FROM.building_level@arms_factory
+				mil_eq_factor = FROM.arms_factory_level
 			}
 			set_temp_variable = {
 				agr_eq_factor = FROM.building_level@agrarian_complex
 			}
 			set_temp_variable = {
-				civ_eq_factor = FROM.building_level@industrial_complex
+				civ_eq_factor = FROM.industrial_complex_level
 			}
 			multiply_temp_variable = {
 				mil_eq_factor = 250
@@ -107,6 +71,42 @@ ice_equipment_manpower_collecting = {
 			add_equipment_to_stockpile = {
 				type = windigo_equipment
 				amount = mil_eq_factor
+			}
+			FROM = {
+				#"if" isn`t good, but for tooltip - we should leave them (remove text like "remove 0 building")
+				if = {
+					limit = {
+						check_variable = {
+							arms_factory_level > 0
+						}
+					}
+					remove_building = {
+						type = arms_factory
+						level = arms_factory_level
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							building_level@agrarian_complex > 0
+						}
+					}
+					remove_building = {
+						type = agrarian_complex
+						level = building_level@agrarian_complex
+					}
+				}
+				if = {
+					limit = {
+						check_variable = {
+							industrial_complex_level > 0
+						}
+					}
+					remove_building = {
+						type = industrial_complex
+						level = industrial_complex_level
+					}
+				}
 			}
 		}
 	}

@@ -41,49 +41,42 @@ on_actions = {
 		effect = {
 			if = {
 				limit = {
-					ROOT = {
-						has_war_with = FROM
-					}
+					has_war_with = FROM
 					OR = {
 						FROM = {
 							tag = ICE
 						}
-						ROOT = {
-							tag = ICE
-						}
+						tag = ICE
 					}
 				}
-				FROM = {
+				FROM.FROM = {
 					if = {
 						limit = {
-							FROM = {
-								has_dynamic_modifier = {
-									modifier = ICE_supercold_state
-								}
-							}
-							tag = ICE
-						}
-						FROM = {
-							remove_dynamic_modifier = {
+							has_dynamic_modifier = {
 								modifier = ICE_supercold_state
 							}
+							PREV = {
+								tag = ICE
+							}
+							
+						}
+						remove_dynamic_modifier = {
+							modifier = ICE_supercold_state
 						}
 					}
-					FROM = {
-						if = {
-							limit = {
-								has_dynamic_modifier = {
-									modifier = ICE_warm_cold_state
-								}
-							}
-							remove_dynamic_modifier = {
+					if = {
+						limit = {
+							has_dynamic_modifier = {
 								modifier = ICE_warm_cold_state
 							}
 						}
-						else = {
-							add_dynamic_modifier = {
-								modifier = ICE_warm_cold_state
-							}
+						remove_dynamic_modifier = {
+							modifier = ICE_warm_cold_state
+						}
+					}
+					else = {
+						add_dynamic_modifier = {
+							modifier = ICE_warm_cold_state
 						}
 					}
 				}

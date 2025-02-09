@@ -1,0 +1,281 @@
+guiTypes = {
+	containerWindowType = {
+		name = "resource_activity_container"
+		size = { 
+			width = 700
+			height = 273
+		}
+		position = { 
+			x = -434
+			y = -273
+		}
+		orientation = LOWER_LEFT
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tiled_window2_1b_border"
+		}
+		#uses 4 slots, otherwise need resize
+		gridBoxType = {
+			name = "resource_activity_grid"
+			position = {
+				x = 10
+				y = 10
+			}
+			slotsize = {
+				width = 227
+				height = 46
+			}
+			format = "UPPER_LEFT"
+			add_horizontal = no
+		}
+		containerWindowType = {
+			name = "resource_activity_synthetic_refinery_container"
+			size = { 
+				width = 227 
+				height = 46
+			}
+			position = { 
+				x = 10
+				y = 196
+			}
+			iconType = {
+				name = "synthetic_refinery_frame"
+				spriteType = "GFX_resource_activity_synthetic_resource_frame"
+				position = { 
+					x = 60
+					y = 17
+				}
+			}
+			iconType = {
+				name = "synthetic_refinery_icon"
+				spriteType = "GFX_buildings_strip"
+				position = { 
+					x = 10
+					y = 10
+				}
+				frame = 10
+			}
+			instantTextBoxType = {
+				name = "synthetic_refinery_consumption"
+				position = { x = 62 y = 24 }
+				font = "hoi_20b"
+				text = "synthetic_refinery_consumption_tt"
+				maxWidth = 46
+				maxHeight = 20
+				fixedsize = yes
+				format = center
+				pdx_tooltip_delayed = "synthetic_refinery_consumption_desc"
+			}
+			instantTextBoxType = {
+				name = "synthetic_refinery_rubber_outcome"
+				position = { x = 133 y = 24 }
+				font = "hoi_20b"
+				text = "synthetic_refinery_rubber_outcome_tt"
+				maxWidth = 46
+				maxHeight = 20
+				fixedsize = yes
+				format = center
+				pdx_tooltip_delayed = "synthetic_refinery_rubber_outcome_desc"
+			}
+			instantTextBoxType = {
+				name = "synthetic_refinery_fuel_outcome"
+				position = { x = 180 y = 24 }
+				font = "hoi_20b"
+				text = "synthetic_refinery_fuel_outcome_tt"
+				maxWidth = 46
+				maxHeight = 20
+				fixedsize = yes
+				format = center
+				pdx_tooltip_delayed = "synthetic_refinery_fuel_outcome_desc"
+			}
+			buttonType = {
+				name = "synthetic_refinery_sub_10"
+				position = {
+					x = 226 
+					y = 17
+				}
+				quadTextureSprite ="GFX_closebutton"
+				buttonFont = "hoi_16mbs"
+				clicksound = click_close
+			}
+			buttonType = {
+				name = "synthetic_refinery_sub_5"
+				position = {
+					x = 257
+					y = 17
+				}
+				quadTextureSprite ="GFX_closebutton"
+				buttonFont = "hoi_16mbs"
+				clicksound = click_close
+			}
+			instantTextBoxType = {
+				name = "synthetic_refinery_effectiveness"
+				position = { x = 290 y = 24 }
+				font = "hoi_20b"
+				text = "[?synthetic_refinery_max_power|%0]"
+				maxWidth = 51
+				maxHeight = 20
+				fixedsize = yes
+				format = center
+			}
+			buttonType = {
+				name = "synthetic_refinery_add_5"
+				position = {
+					x = 341
+					y = 17
+				}
+				quadTextureSprite ="GFX_closebutton"
+				buttonFont = "hoi_16mbs"
+				clicksound = click_close
+			}
+			buttonType = {
+				name = "synthetic_refinery_add_10"
+				position = {
+					x = 373
+					y = 17
+				}
+				quadTextureSprite ="GFX_closebutton"
+				buttonFont = "hoi_16mbs"
+				clicksound = click_close
+			}
+		}
+		buttonType = {
+			name = "switch"
+			position = {
+				x = 645 
+				y = 11
+			}
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_close
+		}
+	}
+	containerWindowType = {
+		name = "resource_activity_building_container"
+		size = { 
+			width = 227 
+			height = 46
+		}
+		position = { 
+			x = 0
+			y = 2
+		}
+		iconType = {
+			name = "resource_frame"
+			spriteType = "GFX_resource_activity_resource_frame"
+			position = { 
+				x = 60
+				y = 17
+			}
+		}
+		iconType = {
+			name = "building_icon"
+			spriteType = "GFX_buildings_strip"
+			position = { 
+				x = 10
+				y = 10
+			}
+		}
+		instantTextBoxType = {
+			name = "building_consumption"
+			position = { x = 62 y = 24 }
+			font = "hoi_20b"
+			text = "[building_consumption_text]"
+			maxWidth = 68
+			maxHeight = 20
+			fixedsize = yes
+			format = center
+		}
+		instantTextBoxType = {
+			name = "building_outcome"
+			position = { x = 157 y = 24 }
+			font = "hoi_20b"
+			text = "[building_outcome_text]"
+			maxWidth = 68
+			maxHeight = 20
+			fixedsize = yes
+			format = center
+		}
+
+		buttonType = {
+			name = "sub_10"
+			position = {
+				x = 226 
+				y = 17
+			}
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_close
+		}
+		buttonType = {
+			name = "sub_5"
+			position = {
+				x = 257
+				y = 17
+			}
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_close
+		}
+		instantTextBoxType = {
+			name = "effectiveness"
+			position = { x = 290 y = 24 }
+			font = "hoi_20b"
+			text = "[?plant_max_power^i|%0]"
+			maxWidth = 51
+			maxHeight = 20
+			fixedsize = yes
+			format = center
+		}
+		buttonType = {
+			name = "add_5"
+			position = {
+				x = 341
+				y = 17
+			}
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_close
+		}
+		buttonType = {
+			name = "add_10"
+			position = {
+				x = 373
+				y = 17
+			}
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_close
+		}
+	}
+	containerWindowType = {
+		name = "nuclear_resource_activity_container"
+		size = { 
+			width = 700
+			height = 273
+		}
+		position = { 
+			x = -434
+			y = -273
+		}
+		orientation = LOWER_LEFT
+		background = {
+			name = "background"
+			quadTextureSprite = "GFX_tiled_window2_1b_border"
+		}
+
+
+
+
+		buttonType = {
+			name = "switch"
+			position = {
+				x = 645 
+				y = 11
+			}
+			quadTextureSprite ="GFX_closebutton"
+			buttonFont = "hoi_16mbs"
+			clicksound = click_close
+		}
+	}
+}

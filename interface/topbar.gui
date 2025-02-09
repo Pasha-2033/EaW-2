@@ -507,38 +507,6 @@ guiTypes = {
 			alwaystransparent = yes
 		}	
 		
-		iconType ={
-			name ="nuke_text_bg"
-			spriteType = "GFX_generic_box_smallest"
-			position = { x=-475 y=5 }
-			orientation = "UPPER_RIGHT"
-		}
-		
-		iconType ={
-			name ="nuke_icon"
-			spriteType = "GFX_topbar_nuke"
-			position = { 
-				x = -475 
-				y = 8 
-			}
-			orientation = "UPPER_RIGHT"
-			scale = 0.8
-		}
-		
-		instantTextBoxType = {
-			name ="nuke_count"
-			position = { 
-				x = -453 
-				y = 8
-			}
-			font = "hoi_18mbs"
-			format = center
-			maxWidth = 44
-			maxHeight = 24
-			fixedsize = yes
-			orientation = "UPPER_RIGHT"
-		}	
-		
 		
 		containerWindowType = {
 			name = "time_control_window"

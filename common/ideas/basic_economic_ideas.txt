@@ -59,6 +59,16 @@ ideas = {
 			}
 		}
 		#экономический подьем
+		rail_industry = {
+			picture = clockwerk_economy			#to do (change)
+			modifier = {
+				production_speed_supply_node_factor = 0.05
+				production_speed_rail_way_factor = 0.1
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
 		economy_forms_stable_structure = {
 			picture = clockwerk_economy			#to do (change)
 			modifier = {
@@ -131,6 +141,36 @@ ideas = {
 				production_factory_max_efficiency_factor = -0.1
 				line_change_production_efficiency_factor = -0.1
 				production_speed_buildings_factor = -0.05
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+		#нацдухи от альянса
+		economic_integration = {
+			picture = clockwerk_economy			#to do (change)
+			modifier = {
+				autonomy_gain_trade_factor = 0.1
+				overlord_trade_cost_factor = -0.2
+				production_speed_industrial_complex_factor = 0.075
+				production_speed_infrastructure_factor = 0.1
+				production_speed_rail_way_factor = 0.1
+				production_speed_arms_factory_factor = 0.05
+				production_speed_supply_node_factor = 0.1
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+		}
+		export_building_materials = {
+			picture = clockwerk_economy			#to do (change)
+			modifier = {
+				trade_opinion_factor = 0.2
+				extra_trade_to_overlord_factor = 0.1
+				overlord_trade_cost_factor = -0.05
+				production_speed_industrial_complex_factor = 0.15
+				production_speed_buildings_factor = -0.1
+				local_resources_factor = 0.2
 			}
 			allowed_civil_war = {
 				always = yes

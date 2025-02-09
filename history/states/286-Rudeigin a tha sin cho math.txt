@@ -9,20 +9,24 @@ state={
 	manpower=255271
 	state_category = rural
 	buildings_max_level_factor=1.00
-
-	history={
-		#owner = GRF
-		#add_core_of = GRF
-		982.1.1 = {
-			owner = MET
-			add_core_of = MET
-		}
-
+	history = {
+		owner = MET
+		add_core_of = MET
 		victory_points = { 9531 5 }
-
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
+			9531 = {
+				landmark_ilytskaya_mine = {
+					allowed = {
+						has_dlc = "Gotterdammerung"
+					}
+					level = 1
+				}
+			}
 		}
+	}
+	resources = {
+		unobtanium = 2
 	}
 }

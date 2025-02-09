@@ -162,8 +162,9 @@ init_surplus_appropriation = {
 				}
 			}
 		}
-		calc_surplus_appropriation_min_value = yes
 		calc_surplus_appropriation_real_values = yes #make real values for 1st week (prev code is for 0 week and for min value)
+		calc_surplus_appropriation_min_value = yes
+		calc_surplus_appropriation_average_value = yes
 		for_each_loop = {
 			array = surplus_appropriation_real_values
 			index = i

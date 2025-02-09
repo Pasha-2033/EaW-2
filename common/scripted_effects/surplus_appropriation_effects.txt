@@ -99,6 +99,10 @@ calc_surplus_appropriation_real_values = {
 	add_to_variable = {
 		food_storage_change = modifier@food_gain
 	}
+	#save value for first if statement
+	set_temp_variable = {
+		food_vs_consumtion = food_storage_change
+	}
 	subtract_from_variable = {
 		food_storage_change = sa_consumtion_sum
 	}
@@ -114,37 +118,62 @@ calc_surplus_appropriation_real_values = {
 				negative_food_storage_change > food_storage_value
 			}
 		}
-		set_temp_variable = {
-			food_vs_consumtion = food_storage_value
-		}
-		divide_temp_variable = {
-			food_vs_consumtion = negative_food_storage_change
-		}
-		for_each_loop = {
-			array = consumers
-			index = i
-			if = {
-				limit = {
-					check_variable = {
-						raw_consumers^i > 0
-					}
+		if = {
+			limit = {
+				check_variable = {
+					food_vs_consumtion < 0
 				}
+			}
+			set_temp_variable = {
+				food_vs_consumtion = modifier@food_gain
+			}
+			add_to_temp_variable = {
+				food_vs_consumtion = food_storage_value
+			}
+			divide_temp_variable = {
+				food_vs_consumtion = negative_food_storage_change
+			}
+			for_each_loop = {
+				array = consumers
+				index = i
 				set_variable = {
-					surplus_appropriation_real_values^i = surplus_appropriation_weights^i
-				}
-				multiply_variable = {
 					surplus_appropriation_real_values^i = food_vs_consumtion
 				}
+				clamp_variable = {
+					var = surplus_appropriation_real_values^i
+					min = 0
+					max = surplus_appropriation_weights^i
+				}
 			}
-			else = {
+		}
+		else = {
+			add_to_temp_variable = {
+				food_vs_consumtion = food_storage_value
+			}
+			divide_temp_variable = {
+				food_vs_consumtion = sa_consumtion_sum
+			}
+			for_each_loop = {
+				array = consumers
+				index = i
 				set_variable = {
 					surplus_appropriation_real_values^i = surplus_appropriation_weights^i
 				}
-			}
-			clamp_variable = {
-				var = surplus_appropriation_real_values^i
-				min = 0
-				max = 2
+				if = {
+					limit = {
+						check_variable = {
+							raw_consumers^i > 0
+						}
+					}
+					multiply_variable = {
+						surplus_appropriation_real_values^i = food_vs_consumtion
+					}
+				}
+				clamp_variable = {
+					var = surplus_appropriation_real_values^i
+					min = 0
+					max = 2
+				}
 			}
 		}
 	}
@@ -158,7 +187,7 @@ calc_surplus_appropriation_real_values = {
 			}
 		}
 	}
-	d_update_sa_gui = yes
+	update_sa_gui = yes
 }
 calc_surplus_appropriation_min_value = {
 	find_lowest_in_array = {
@@ -168,6 +197,25 @@ calc_surplus_appropriation_min_value = {
 	#find_lowest_in_array value stores temp variable - set to non temp variable
 	set_variable = {
 		sa_min_value = temp_sa_min_value
+	}
+}
+d_csav = {
+	calc_surplus_appropriation_average_value = yes
+}
+calc_surplus_appropriation_average_value = {
+	set_variable = {
+		sa_average_value = surplus_appropriation_real_values^0
+	}
+	for_loop_effect = {
+		start = 1
+		end = surplus_appropriation_real_values^num
+		value = i
+		add_to_variable = {
+			sa_average_value = surplus_appropriation_real_values^i
+		}
+	}
+	divide_variable = {
+		sa_average_value = surplus_appropriation_real_values^num
 	}
 }
 sa_tick_effects = {
@@ -193,6 +241,7 @@ sa_tick_effects = {
 		}
 		calc_surplus_appropriation_real_values = yes
 		calc_surplus_appropriation_min_value = yes
+		calc_surplus_appropriation_average_value = yes
 		for_each_loop = {
 			array = surplus_appropriation_real_values
 			index = i
@@ -208,7 +257,7 @@ sa_tick_effects = {
 		}
 	}
 }
-d_update_sa_gui = { #d_ added for debug issues
+update_sa_gui = {
 	update_sa_slider_x_pos = yes
 	update_sa_progressbar_frame = yes
 }
@@ -264,6 +313,7 @@ add_to_food_storage = {
 		}
 		calc_surplus_appropriation_real_values = yes
 		calc_surplus_appropriation_min_value = yes
+		calc_surplus_appropriation_average_value = yes
 		for_each_loop = {
 			array = surplus_appropriation_real_values
 			index = i

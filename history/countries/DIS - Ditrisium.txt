@@ -1,18 +1,11 @@
 capital = 252
-
-set_country_flag = queens_tower_flag
-
-set_research_slots = 2
-starting_train_buffer = 2
-
+set_research_slots = 1
 set_technology = {
 	tech_jager = 1
 	tech_rg = 1
-	melee_weapons = 1 #temp
+	melee_weapons_0 = 1 #temp
 }
-
 set_oob = "982_DIS"
-
 set_politics = {
 	ruling_party = fascism
 	last_election = "953.11.9"
@@ -26,15 +19,58 @@ set_popularities = {
 	neutrality = 5
 	technocracy = 12
 }
-
 add_ideas = {
 	changeling_race
 	limited_exports
 }
 set_stability = 0.6
-
+if = { #982 scenario script - make plan unfinished
+	limit = {
+		has_start_date < 1002.1.1
+	}
+	#make DIS_lemenns_plan unfinished
+	set_variable = {
+		lemenns_plan_cgf = 0.05
+	}
+	set_variable = {
+		lemenns_plan_psbf = 0.025
+	}
+	set_variable = {
+		lemenns_plan_psif = 0.05
+	}
+	else = { #other scenario script
+		#make DIS_lemenns_plan unfinished
+		
+	}
+}
+add_dynamic_modifier = {
+	modifier = DIS_lemenns_plan
+}
 recruit_character = DIS_queen_helvia
-
+recruit_character = DIS_ellert
+recruit_character = DIS_lemenn
+recruit_character = DIS_krieger
+recruit_character = DIS_shmidt
+recruit_character = DIS_fisher
 set_rule = {
 	can_generate_female_aces = yes
+}
+#equipment variants
+if = {
+	limit = {
+		has_dlc = "Man the Guns"
+	}
+	set_technology = {
+		frigate_hull_0 = 1
+	}
+	create_equipment_variant = {
+		name = "Aufsässig Class"
+		type = ship_hull_frigate_0
+		#name_group (to do)
+		upgrades = {
+			early_frigate_movement_upgrade = 3
+			early_frigate_reliability_upgrade = 1
+		}
+	}
+	set_naval_oob = "982_DIS_naval_MTG"
 }

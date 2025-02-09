@@ -154,70 +154,58 @@ abs = {
 }
 sqrt_2 = {
 	#argument for sqrt_2(x): x -> global.math_args^0
+	#NOTE: sqrt can consume negative numbers, but will return x/2
 	base = 0
 	modifier = {
+		set_temp_variable = { r = global.math_args^0 }
+		divide_temp_variable = { r = 2 }
+		#cycle 1
 		if = {
 			limit = {
-				NOT = {
-					check_variable = {
-						global.math_args^0 < 0
-					}
+				check_variable = {
+					r > 0
 				}
 			}
 			set_temp_variable = { temp = global.math_args^0 }
-			divide_temp_variable = { temp = 2 }
-			set_temp_variable = { r = temp }
-			#cycle 1
-			if = {
-				limit = {
-					check_variable = {
-						r > 0
-					}
-				}
-				set_temp_variable = { temp = global.math_args^0 }
-				divide_temp_variable = { temp = r }
-				add_to_temp_variable = { r = temp }
-				divide_temp_variable = { r = 2 }
-			}
-			#cycle 2
-			if = {
-				limit = {
-					check_variable = {
-						r > 0
-					}
-				}
-				set_temp_variable = { temp = global.math_args^0 }
-				divide_temp_variable = { temp = r }
-				add_to_temp_variable = { r = temp }
-				divide_temp_variable = { r = 2 }
-			}
-			#cycle 3
-			if = {
-				limit = {
-					check_variable = {
-						r > 0
-					}
-				}
-				set_temp_variable = { temp = global.math_args^0 }
-				divide_temp_variable = { temp = r }
-				add_to_temp_variable = { r = temp }
-				divide_temp_variable = { r = 2 }
-			}
-			#cycle 4
-			if = {
-				limit = {
-					check_variable = {
-						r > 0
-					}
-				}
-				set_temp_variable = { temp = global.math_args^0 }
-				divide_temp_variable = { temp = r }
-				add_to_temp_variable = { r = temp }
-				divide_temp_variable = { r = 2 }
-			}
+			divide_temp_variable = { temp = r }
+			add_to_temp_variable = { r = temp }
+			divide_temp_variable = { r = 2 }
 		}
-		else = {
-			set_temp_variable = { r = -1 }
+		#cycle 2
+		if = {
+			limit = {
+				check_variable = {
+					r > 0
+				}
+			}
+			set_temp_variable = { temp = global.math_args^0 }
+			divide_temp_variable = { temp = r }
+			add_to_temp_variable = { r = temp }
+			divide_temp_variable = { r = 2 }
+		}
+		#cycle 3
+		if = {
+			limit = {
+				check_variable = {
+					r > 0
+				}
+			}
+			set_temp_variable = { temp = global.math_args^0 }
+			divide_temp_variable = { temp = r }
+			add_to_temp_variable = { r = temp }
+			divide_temp_variable = { r = 2 }
+		}
+		#cycle 4
+		if = {
+			limit = {
+				check_variable = {
+					r > 0
+				}
+			}
+			set_temp_variable = { temp = global.math_args^0 }
+			divide_temp_variable = { temp = r }
+			add_to_temp_variable = { r = temp }
+			divide_temp_variable = { r = 2 }
 		}
 		add = r
 	}

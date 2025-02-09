@@ -2,7 +2,7 @@ technologies = {
 	basic_machine_tools = {
 		production_factory_max_efficiency_factor = 0.1
 		dependencies = {
-			melee_weapons1 = 1
+			melee_weapons_1 = 1
 		}
 		path = {
 			leads_to_tech = improved_machine_tools
@@ -37,7 +37,7 @@ technologies = {
 	#Machine tools branch
 	improved_machine_tools = {
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 		production_factory_max_efficiency_factor = 0.1
 		path = {
@@ -270,7 +270,7 @@ technologies = {
 		global_building_slots_factor = 0.20
 		
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 		path = {
 			leads_to_tech = concentrated_industry2
@@ -485,7 +485,7 @@ technologies = {
 		industry_air_damage_factor = -0.15
 		global_building_slots_factor = 0.2
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 		path = {
 			leads_to_tech = dispersed_industry2
@@ -701,13 +701,14 @@ technologies = {
 	fuel_silos = {
 
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 
 		enable_building = {
 			building = fuel_silo
 			level = 3
 		}
+		base_fuel_gain = 2
 				
 		path = {
 			leads_to_tech = synth_oil_experiments 
@@ -856,7 +857,6 @@ technologies = {
 				num_of_naval_factories > 30
 			}
 		}
-		
 	}
 
 	fuel_refining2 = {
@@ -1052,7 +1052,7 @@ technologies = {
 		}
 
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 
 		path = {
@@ -1094,6 +1094,17 @@ technologies = {
 
 		ai_research_weights = {
 			oil = -2.0
+		}
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = {
+					init_synthetic_refineries = 1
+					popup = no
+				}
+				set_variable = {
+					synthetic_refinery_max_power = 1
+				}
+			}
 		}
 	}
 
@@ -1280,12 +1291,10 @@ technologies = {
 
 	#####################################
 	rubber_processing = {
-
+		synthetic_refinery_rubber_outcome = 1
 		on_research_complete = {
-			modify_building_resources = {
-				building = synthetic_refinery
-				resource = rubber
-				amount = 1
+			hidden_effect = {
+				force_update_dynamic_modifier = yes
 			}
 		}
 
@@ -2033,13 +2042,27 @@ technologies = {
 	}
 
 	#####################################
-
+	#basic construction_site limit (at start, at any condition, see country setup)
+	construction_site_base_limit = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_building = {
+			building = construction_site
+			level = 5
+		}
+	}
 	###------> Old Manufacturing <><> <><> <><> <><> <><>
 	construction1 = {
 		production_speed_buildings_factor = 0.10
 		industry_repair_factor = 0.10
+		enable_building = {
+			building = construction_site
+			level = 6
+		}
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 		path = {
 			leads_to_tech = construction2
@@ -2173,6 +2196,10 @@ technologies = {
 	construction2 = {
 		production_speed_buildings_factor = 0.10
 		industry_repair_factor = 0.10
+		enable_building = {
+			building = construction_site
+			level = 7
+		}
 		path = {
 			leads_to_tech = construction3
 			research_cost_coeff = 1
@@ -2313,6 +2340,10 @@ technologies = {
 	construction3 = {
 		production_speed_buildings_factor = 0.10
 		industry_repair_factor = 0.10
+		enable_building = {
+			building = construction_site
+			level = 8
+		}
 		path = {
 			leads_to_tech = construction4
 			research_cost_coeff = 1
@@ -2463,7 +2494,10 @@ technologies = {
 
 		production_speed_buildings_factor = 0.10
 		industry_repair_factor = 0.10
-
+		enable_building = {
+			building = construction_site
+			level = 9
+		}
 		path = {
 			leads_to_tech = construction5
 			research_cost_coeff = 1
@@ -2609,7 +2643,10 @@ technologies = {
 
 		production_speed_buildings_factor = 0.10
 		industry_repair_factor = 0.10
-
+		enable_building = {
+			building = construction_site
+			level = 10
+		}
 		path = {
 			leads_to_tech = excavation5
 			research_cost_coeff = 1
@@ -2759,7 +2796,10 @@ technologies = {
 
 		production_speed_buildings_factor = 0.05
 		industry_repair_factor = 0.05
-
+		enable_building = {
+			building = construction_site
+			level = 11
+		}
 		path = {
 			leads_to_tech = excavation_a
 			research_cost_coeff = 1
@@ -2842,7 +2882,10 @@ technologies = {
 
 		production_speed_buildings_factor = 0.05
 		industry_repair_factor = 0.05
-
+		enable_building = {
+			building = construction_site
+			level = 12
+		}
 		path = {
 			leads_to_tech = excavation_b
 			research_cost_coeff = 1
@@ -2924,7 +2967,10 @@ technologies = {
 
 		production_speed_buildings_factor = 0.03
 		industry_repair_factor = 0.03
-
+		enable_building = {
+			building = construction_site
+			level = 13
+		}
 		path = {
 			leads_to_tech = excavation_c
 			research_cost_coeff = 1
@@ -3006,7 +3052,10 @@ technologies = {
 
 		production_speed_buildings_factor = 0.02
 		industry_repair_factor = 0.02
-
+		enable_building = {
+			building = construction_site
+			level = 14
+		}
 		path = {
 			leads_to_tech = excavation_d
 			research_cost_coeff = 1
@@ -3472,6 +3521,463 @@ technologies = {
 	}
 
 	###------> X <><> <><> <><> <><> <><>
+
+	#metallurgy tree
+	basics_of_metallurgy = {
+		path = {
+			leads_to_tech = aluminium_plant_upgrade_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = steel_plant_upgrade_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = tungsten_plant_upgrade_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = chromium_plant_upgrade_0
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		folder = {
+			name = industry_folder
+			position = { 
+				x = 0 
+				y = 0
+			}
+		}
+		ai_will_do = {
+			base = 4
+		}
+		categories = {
+			industry
+		}
+		enable_building = {
+			building = aluminium_plant
+			level = 1
+		}
+		enable_building = {
+			building = steel_plant
+			level = 2
+		}
+		enable_building = {
+			building = tungsten_plant
+			level = 1
+		}
+		enable_building = {
+			building = chromium_plant
+			level = 1
+		}
+		enable_building = {
+			building = ore_preparation
+			level = 1
+		}
+		on_research_complete = {
+			hidden_effect = {
+				set_technology = {
+					init_metallurgy = 1
+					popup = no
+				}
+			}
+		}
+	}
+	steel_plant_upgrade_0 = {
+		enable_building = {
+			building = steel_plant
+			level = 3
+		}
+		steel_plant_iron_consumption = 1
+		steel_plant_steel_outcome = 1
+		steel_plant_penalty_reduction = 0.05
+		path = {
+			leads_to_tech = steel_plant_upgrade_1
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		folder = {
+			name = industry_folder
+			position = { 
+				x = -3 
+				y = 2
+			}
+		}
+		ai_will_do = {
+			base = 4
+		}
+		categories = {
+			industry
+		}
+	}
+	steel_plant_upgrade_1 = {
+		steel_plant_steel_outcome = 1
+		path = {
+			leads_to_tech = steel_plant_upgrade_2
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		folder = {
+			name = industry_folder
+			position = { 
+				x = -3 
+				y = 4
+			}
+		}
+		ai_will_do = {
+			base = 4
+		}
+		categories = {
+			industry
+		}
+	}
+	steel_plant_upgrade_2 = {
+		enable_building = {
+			building = steel_plant
+			level = 4
+		}
+		steel_plant_iron_consumption = 1
+		steel_plant_steel_outcome = 1
+		path = {
+			leads_to_tech = steel_plant_upgrade_3
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		folder = {
+			name = industry_folder
+			position = { 
+				x = -3 
+				y = 6
+			}
+		}
+		ai_will_do = {
+			base = 4
+		}
+		categories = {
+			industry
+		}
+	}
+	steel_plant_upgrade_3 = {
+		steel_plant_iron_consumption = 1
+		steel_plant_steel_outcome = 2
+		path = {
+			leads_to_tech = steel_plant_upgrade_4
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		folder = {
+			name = industry_folder
+			position = { 
+				x = -3 
+				y = 8
+			}
+		}
+		ai_will_do = {
+			base = 4
+		}
+		categories = {
+			industry
+		}
+	}
+	steel_plant_upgrade_4 = {
+		steel_plant_iron_consumption = 1
+		steel_plant_steel_outcome = 1
+		path = {
+			leads_to_tech = steel_plant_upgrade_5
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		folder = {
+			name = industry_folder
+			position = { 
+				x = -3 
+				y = 10
+			}
+		}
+		ai_will_do = {
+			base = 4
+		}
+		categories = {
+			industry
+		}
+	}
+	steel_plant_upgrade_5 = {
+		enable_building = {
+			building = steel_plant
+			level = 5
+		}
+		production_cost_steel_plant_factor = -0.1
+		#path = {
+		#	leads_to_tech = steel_plant_upgrade_3
+		#	research_cost_coeff = 1
+		#}
+		research_cost = 2
+		folder = {
+			name = industry_folder
+			position = { 
+				x = -3 
+				y = 12
+			}
+		}
+		ai_will_do = {
+			base = 4
+		}
+		categories = {
+			industry
+		}
+	}
+	aluminium_plant_upgrade_0 = {
+		aluminium_plant_bauxite_consumption = 1
+		aluminium_plant_aluminium_outcome = 1
+		aluminium_plant_penalty_reduction = 0.05
+		path = {
+			leads_to_tech = aluminium_plant_upgrade_1
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		folder = {
+			name = industry_folder
+			position = { 
+				x = -1 
+				y = 2
+			}
+		}
+		ai_will_do = {
+			base = 4
+		}
+		categories = {
+			industry
+		}
+	}
+	aluminium_plant_upgrade_1 = {
+		enable_building = {
+			building = aluminium_plant
+			level = 2
+		}
+		aluminium_plant_aluminium_outcome = 3
+		production_cost_aluminium_plant_factor = 0.05
+		allow = {
+			has_tech = magnetism_phenomenon
+		}
+		path = {
+			leads_to_tech = aluminium_plant_upgrade_2
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		folder = {
+			name = industry_folder
+			position = { 
+				x = -1 
+				y = 4
+			}
+		}
+		ai_will_do = {
+			base = 4
+		}
+		categories = {
+			industry
+		}
+	}
+	aluminium_plant_upgrade_2 = {
+		enable_building = {
+			building = aluminium_plant
+			level = 3
+		}
+		aluminium_plant_bauxite_consumption = 1
+		aluminium_plant_aluminium_outcome = 3
+		production_cost_aluminium_plant_factor = 0.05
+		allow = {
+			has_tech = direct_current
+		}
+		research_cost = 2
+		folder = {
+			name = industry_folder
+			position = { 
+				x = -1 
+				y = 6
+			}
+		}
+		ai_will_do = {
+			base = 4
+		}
+		categories = {
+			industry
+		}
+	}
+	tungsten_plant_upgrade_0 = {
+		tungsten_plant_scheelitis_consumption = 1
+		tungsten_plant_tungsten_outcome = 1
+		tungsten_plant_penalty_reduction = 0.05
+		path = {
+			leads_to_tech = tungsten_plant_upgrade_1
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		folder = {
+			name = industry_folder
+			position = { 
+				x = 1 
+				y = 2
+			}
+		}
+		ai_will_do = {
+			base = 4
+		}
+		categories = {
+			industry
+		}
+	}
+	tungsten_plant_upgrade_1 = {
+		enable_building = {
+			building = tungsten_plant
+			level = 2
+		}
+		tungsten_plant_tungsten_outcome = 1
+		path = {
+			leads_to_tech = tungsten_plant_upgrade_2
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		folder = {
+			name = industry_folder
+			position = { 
+				x = 1 
+				y = 4
+			}
+		}
+		ai_will_do = {
+			base = 4
+		}
+		categories = {
+			industry
+		}
+	}
+	tungsten_plant_upgrade_2 = {
+		tungsten_plant_tungsten_outcome = 2
+		path = {
+			leads_to_tech = tungsten_plant_upgrade_3
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		folder = {
+			name = industry_folder
+			position = { 
+				x = 1 
+				y = 6
+			}
+		}
+		ai_will_do = {
+			base = 4
+		}
+		categories = {
+			industry
+		}
+	}
+	tungsten_plant_upgrade_3 = {
+		enable_building = {
+			building = tungsten_plant
+			level = 3
+		}
+		production_cost_tungsten_plant_factor = -0.05
+		research_cost = 2
+		folder = {
+			name = industry_folder
+			position = { 
+				x = 1 
+				y = 8
+			}
+		}
+		ai_will_do = {
+			base = 4
+		}
+		categories = {
+			industry
+		}
+	}
+	chromium_plant_upgrade_0 = {
+		chromium_plant_chromium_outcome = 1
+		chromium_plant_penalty_reduction = 0.05
+		research_cost = 2
+		folder = {
+			name = industry_folder
+			position = { 
+				x = 3 
+				y = 2
+			}
+		}
+		ai_will_do = {
+			base = 4
+		}
+		categories = {
+			industry
+		}
+	}
+
+	#technical tech :)
+	init_metallurgy = {
+		#2+ RESEARCH WILL BREAK RESOURCE ACTIVITY GUI!
+		#EXISTS ONLY FOR HIDING MODIFIERS!
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		aluminium_plant_bauxite_consumption = 5
+		steel_plant_iron_consumption = 5
+		tungsten_plant_scheelitis_consumption = 3
+		chromium_plant_chromite_consumption = 3
+		aluminium_plant_aluminium_outcome = 1
+		steel_plant_steel_outcome = 4
+		tungsten_plant_tungsten_outcome = 1
+		chromium_plant_chromium_outcome = 1
+		on_research_complete = {
+			force_update_dynamic_modifier = yes
+			add_to_array = {
+				array = resource_activity_array
+				value = 20
+			}
+			add_to_array = {
+				array = resource_activity_array
+				value = 21
+			}
+			add_to_array = {
+				array = resource_activity_array
+				value = 22
+			}
+			add_to_array = {
+				array = resource_activity_array
+				value = 23
+			}
+			resize_array = {
+				array = plant_max_power
+				value = 1
+				size = 4
+			}
+			resize_array = {
+				array = resource_consumption
+				value = 0
+				size = 4
+			}
+			resize_array = {
+				resource_plant_efficiency = 4
+			}
+			resize_array = {
+				resource_outcome = 4
+			}
+		}
+	}
+	init_synthetic_refineries = {
+		#2+ RESEARCH WILL BREAK RESOURCE ACTIVITY GUI!
+		#EXISTS ONLY FOR HIDING MODIFIERS!
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		synthetic_refinery_oil_consumption = 1
+		synthetic_refinery_fuel_outcome = 2
+		on_research_complete = {
+			force_update_dynamic_modifier = yes
+		}
+	}
 
 }
 

@@ -44,5 +44,24 @@ ideas = {
 				army_speed_factor = -0.15
 			}
 		}
+		OLE_hjordland_lighthouse = {
+			allowed = {
+				original_tag = OLE
+				NOT = {
+					has_dlc = "Gotterdammerung"
+				}
+			}
+			allowed_civil_war = {
+				OR = {
+					controls_state = 76
+					tag = OLE
+				}
+			}
+			modifier = {
+				production_speed_dockyard_factor = 0.05
+				production_speed_naval_base_factor = 0.05
+				production_speed_naval_facility_factor = 0.05
+			}
+		}
 	}
 }

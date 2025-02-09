@@ -1,3 +1,77 @@
 ﻿l_russian:
-#surplus_appropriation_map_mode_tooltip: ""
-#surplus_appropriation_map_mode_tooltip_delayed: ""
+#names and desc
+
+MAPMODE_BUILDING_SLOT_MAP_MODE_NAME: "Стройячейки"
+MAPMODE_BUILDING_SLOT_MAP_MODE: "Режим карты: §Hстроительные ячейки§!"
+MAPMODE_BUILDING_SLOT_MAP_MODE_DESCRIPTION: "Показывает строительный потенциал региона."
+#MAPMODE_CULTURE_MAP_MODE_NAME: "Народы и культура"
+#MAPMODE_CULTURE_MAP_MODE: "Режим карты: §Hнароды и культура§!"
+#MAPMODE_CULTURE_MAP_MODE_DESCRIPTION: "Показывает преобладающую культуру и народ(?) в регионе."
+MAPMODE_ECONOMY_INDEX_MAP_MODE_NAME: "Экономика"
+MAPMODE_ECONOMY_INDEX_MAP_MODE: "Режим карты: §Hэкономический индекс§!"
+MAPMODE_ECONOMY_INDEX_MAP_MODE_DESCRIPTION: "Показывает экономический потенциал страны."
+
+MAPMODE_SCIENCE_INDEX_MAP_MODE_NAME: "Наука"
+MAPMODE_SCIENCE_INDEX_MAP_MODE: "Режим карты: §Hнаучный индекс§!"
+MAPMODE_SCIENCE_INDEX_MAP_MODE_DESCRIPTION: "Показывает научный потенциал страны."
+
+MAPMODE_SPECIES_MAP_MODE_NAME: "Раса"
+MAPMODE_SPECIES_MAP_MODE: "Режим карты: §Hпреобладающая раса§!"
+MAPMODE_SPECIES_MAP_MODE_DESCRIPTION: "Показывает преобладающую расу в регионе"
+MAPMODE_SURPLUS_APPROPRIATION_MAP_MODE_NAME: "Продразверска"
+MAPMODE_SURPLUS_APPROPRIATION_MAP_MODE: "Режим карты: §Hпродразверска§!"
+MAPMODE_SURPLUS_APPROPRIATION_MAP_MODE_DESCRIPTION: "Показывает среднюю обеспеченность страны продуктами питания."
+#map tooltips
+building_slot_map_mode_tooltip: "Строительный потенциал региона: [?FROM:common_all_slots|0Y]\nОт категории региона: §Y[FROM.get_state_building_potential_from_category]§!\nОт стройплощадок: [?FROM:building_level@construction_site|0Y]"
+building_slot_map_mode_tooltip_delayed: "[FROM.get_state_building_potential]"
+
+economy_index_map_mode_tooltip: "Экономический индекс: [?FROM.controller:modifier@economy_index|3Y]"
+
+
+science_index_map_mode_tooltip: "Научный индекс: [?FROM.controller:modifier@science_index|3Y]"
+
+
+species_map_mode_tooltip: "Раса: [FROM.get_state_race]"
+species_map_mode_tooltip_delayed: "[FROM.get_state_race_desc]"
+surplus_appropriation_map_mode_tooltip: "Средняя обеспеченность: [FROM.controller.get_colored_average_value]\nМинимальная обеспеченнось: [FROM.controller.get_colored_min_value_indicator]"
+surplus_appropriation_map_mode_tooltip_delayed: "Армейский достаток: [FROM.controller.get_colored_sa_real_value_0]\nПроизводственный достаток: [FROM.controller.get_colored_sa_real_value_1]\nГражданский достаток: [FROM.controller.get_colored_sa_real_value_2]"
+#map specific tooltips
+#
+blue_sa_average_value: "[?FROM.controller:sa_average_value|%0B]"
+green_sa_average_value: "[?FROM.controller:sa_average_value|%0G]"
+yellow_sa_average_value: "[?FROM.controller:sa_average_value|%0Y]"
+red_sa_average_value: "[?FROM.controller:sa_average_value|%0R]"
+
+blue_colored_min_value_indicator: "[?FROM.controller:sa_min_value|%0B]"
+green_colored_min_value_indicator: "[?FROM.controller:sa_min_value|%0G]"
+yellow_colored_min_value_indicator: "[?FROM.controller:sa_min_value|%0Y]"
+red_colored_min_value_indicator: "[?FROM.controller:sa_min_value|%0R]"
+
+blue_colored_sa_real_value_0: "[?FROM.controller:surplus_appropriation_real_values^0|%0B]"
+green_colored_sa_real_value_0: "[?FROM.controller:surplus_appropriation_real_values^0|%0G]"
+yellow_colored_sa_real_value_0: "[?FROM.controller:surplus_appropriation_real_values^0|%0Y]"
+red_colored_sa_real_value_0: "[?FROM.controller:surplus_appropriation_real_values^0|%0R]"
+
+blue_colored_sa_real_value_1: "[?FROM.controller:surplus_appropriation_real_values^1|%0B]"
+green_colored_sa_real_value_1: "[?FROM.controller:surplus_appropriation_real_values^1|%0G]"
+yellow_colored_sa_real_value_1: "[?FROM.controller:surplus_appropriation_real_values^1|%0Y]"
+red_colored_sa_real_value_1: "[?FROM.controller:surplus_appropriation_real_values^1|%0R]"
+
+blue_colored_sa_real_value_2: "[?FROM.controller:surplus_appropriation_real_values^2|%0B]"
+green_colored_sa_real_value_2: "[?FROM.controller:surplus_appropriation_real_values^2|%0G]"
+yellow_colored_sa_real_value_2: "[?FROM.controller:surplus_appropriation_real_values^2|%0Y]"
+red_colored_sa_real_value_2: "[?FROM.controller:surplus_appropriation_real_values^2|%0R]"
+#
+megalopolis_building_potential: "§Y$megalopolis$§!: регион из себя представляет один большой город. Несмотря на наивысочайший уровень урбанизации, застройка неоднородна и обходит некоторые территории, например, болота или высокие горы.\n\nСкорость ремонта: §G+20.00%§!\n\n§Y$infrastructure$§!, §Y$arms_factory$§!, §Y$industrial_complex$§!, §Y$dockyard$§!, §Y$synthetic_refinery$§!, §Y$fuel_silo$§!, §Y$air_base$§!, §Y$supply_node$§!, §Y$rail_way$§!, §Y$naval_base$§!, §Y$anti_air_building$§!, §Y$radar_station$§!, §Y$nuclear_reactor$§! — скорость строительства: §G+10.00%§!\n$modifier_state_production_speed_anti_nuke_bunker_factor$: §G+15.00%§!\n$modifier_state_production_speed_agrarian_complex_factor$: §R-20.00%§!"
+metropolis_building_potential: "§Y$metropolis$§!: самый крупный город настолько сильно разрастается, что уже поглащает соседние поменьше. Инфраструктура претерпевает изменения, чтобы эффективно объединять населенные пункты.\n\nСкорость ремонта: §G+15.00%§!\n\n§Y$infrastructure$§!, §Y$arms_factory$§!, §Y$industrial_complex$§!, §Y$dockyard$§! — скорость строительства: §G+7.50%§!\n§Y$fuel_silo$§!, §Y$synthetic_refinery$§!, §Y$air_base$§!, §Y$supply_node$§!, §Y$rail_way$§!, §Y$naval_base$§!, §Y$anti_air_building$§!, §Y$radar_station$§!, §Y$nuclear_reactor$§!: §G+5.00%§!\n$modifier_state_production_speed_anti_nuke_bunker_factor$: §G+10.00%§!\n$modifier_state_production_speed_agrarian_complex_factor$: §R-10.00%§!"
+large_city_building_potential: "§Y$large_city$§!: города составают основу населенных пунктов. Начинает выстраиваться сложная транспортная система.\n\nСкорость ремонта: §G+10.00%§!\n\n§Y$infrastructure$§!, §Y$arms_factory$§!, §Y$industrial_complex$§!, §Y$dockyard$§!, §Y$anti_nuke_bunker$§! — скорость строительства: §G+5.00%§!\n§Y$synthetic_refinery$§!, §Y$fuel_silo$§! — скорость строительства: §G+3.00%§!\n$modifier_state_production_speed_agrarian_complex_factor$: §R-5.00%§!"
+city_building_potential: "§Y$city$§!: города встречаются гораздо чаще сел. Индустриализация оказывает значительное влияние на урбанизацию.\n\nСкорость ремонта: §G+5.00%§!\n\n§Y$arms_factory$§!, §Y$industrial_complex$§!, §Y$dockyard$§! — скорость строительства: §G+2.00%§!"
+large_town_building_potential: "§Y$large_town$§!: содержит небольшие городки, несмотря на то, что села все еще составляют значительную долю населенных пунктов.\n\n§Y$arms_factory$§!, §Y$industrial_complex$§!, §Y$dockyard$§! — скорость строительства: §R-2.00%§!\n§Y$synthetic_refinery$§!, §Y$fuel_silo$§! — скорость строительства: §R-5.00%§! \n$modifier_state_production_speed_agrarian_complex_factor$: §G+5.00%§!"
+town_building_potential: "§Y$town$§!: села и деревни довольно часто встречаются в этом регионе. Уже имеет признаки урбанизации - села городского типа.\n\nСкорость ремонта: §R-2.00%§!\n\n§Y$arms_factory$§!, §Y$industrial_complex$§!, §Y$dockyard$§! — скорость строительства: §R-6.00%§!\n§Y$synthetic_refinery$§!, §Y$fuel_silo$§! — скорость строительства: §R-10.00%§!\n$modifier_state_production_speed_agrarian_complex_factor$: §G+15.00%§!"
+rural_building_potential: "§Y$rural$§!: села и деревни довольно часто встречаются в этом регионе. Содержит множество плодородных земель, что поспособствовали сельскому хозяйству.\n\nСкорость ремонта: §R-4.00%§!\n\n§Y$arms_factory$§!, §Y$industrial_complex$§!, §Y$dockyard$§! — скорость строительства: §R-10.00%§!\n§Y$synthetic_refinery$§!, §Y$fuel_silo$§! — скорость строительства: §R-15.00%§!\n$modifier_state_production_speed_agrarian_complex_factor$: §G+10.00%§!"
+small_island_building_potential: "§Y$small_island$§!: как правило редко заселенный регион. Но уже оснащенный местными портами.\n\nСкорость ремонта: §R-5.00%§!\n\n$modifier_state_production_speed_infrastructure_factor$: §R-5.00%§!\n§Y$arms_factory$§!, §Y$industrial_complex$§! — скорость строительства: §R-15.00%§!\n$modifier_state_production_speed_dockyard_factor$: §G+5.00%§!\n$modifier_state_production_speed_naval_base_factor$: §G+10.00%§!\n§Y$synthetic_refinery$§!, §Y$fuel_silo$§! — скорость строительства: §R-25.00%§!\n$modifier_state_production_speed_agrarian_complex_factor$: §R-5.00%§!"
+pastoral_building_potential: "§Y$pastoral$§!: как правило редко заселенный регион. Содержит множество плодородных земель, что поспособствовали сельскому хозяйству.\n\nСкорость ремонта: §R-6.00%§!\n\n$modifier_state_production_speed_infrastructure_factor$: §R-5.00%§!\n§Y$arms_factory$§!, §Y$industrial_complex$§!, §Y$dockyard$§! — скорость строительства: §R-14.00%§!\n§Y$synthetic_refinery$§!, §Y$fuel_silo$§! — скорость строительства: §R-20.00%§!\n$modifier_state_production_speed_agrarian_complex_factor$: §G+5.00%§!"
+tiny_island_building_potential: "§Y$tiny_island$§!: как правило редко заселенный регион. Благодаря своей географии может приобрести ключевое значение, что в будущем существенно ускорит его развитие.\n\nСкорость ремонта: §R-8.00%§!\n\n$modifier_state_production_speed_infrastructure_factor$: §R-5.00%§!\n§Y$arms_factory$§!, §Y$industrial_complex$§! — скорость строительства: §R-20.00%§!\n$modifier_state_production_speed_naval_base_factor$: §G+5.00%§!\n§Y$synthetic_refinery$§!, §Y$fuel_silo$§! — скорость строительства: §R-30.00%§!\n$modifier_state_production_speed_agrarian_complex_factor$: §R-10.00%§!"
+enclave_building_potential: "§Y$enclave$§!: регион значительное время существует в окружении другого государства. Это часто вызывает зависимость от иностранной торговли.\n\nСкорость ремонта: §R-15.00%§!\n\nСкорость строительства:§R-15.00%§!\n\n$MODIFIER_STATE_RESOURCES_FACTOR$: §R-10.00%§!"
+wasteland_building_potential: "§Y$wasteland$§!: как правило редко заселенный регион. Даже деревня - это редкость.\n\nСкорость ремонта: §R-10.00%§!\n\n$modifier_state_production_speed_infrastructure_factor$: §R-10.00%§!\n§Y$arms_factory$§!, §Y$industrial_complex$§!, §Y$dockyard$§! — скорость строительства: §R-20.00%§!\n§Y$synthetic_refinery$§!, §Y$fuel_silo$§! — скорость строительства: §R-30.00%§!"
+unclassified_building_potential: "§RМы не смогли определить тип региона!§!"

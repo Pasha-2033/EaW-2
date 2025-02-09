@@ -1,35 +1,58 @@
+#common group
 sub_unit_categories = {
-	category_tanks
-	category_light_infantry
-	category_front_line
-	category_heavy_infantry
-	category_all_infantry
-	category_special_forces
-	category_nav_bomber
-	category_tac_bomber
-	category_strat_bomber
-	category_magical
-	category_support_battalions
-	category_all_armor
 	category_army
-	category_line_artillery
-	category_artillery
-	category_fighter
-	category_heavy_fighter
-	category_cas
-	category_all_planes
-	category_all_artillery
+	category_front_line
+	category_magical #???
+
 	category_all_at
 	category_all_aa
-	category_mechanical
-	category_scout_plane
-	category_recon
-	category_armored_car
-	category_engineer
+}
+#infantry
+sub_unit_categories = {
+	category_all_infantry
+	
+	category_light_infantry
 	category_magical_infantry
-	category_motmech
+	category_motorized_infantry
+	category_mechanized_infantry
+	category_motmech_infantry
+
+	category_special_forces
 
 	category_marines
 	category_mountaineers
 	category_paratroopers
+}
+#support
+sub_unit_categories = {
+	category_support_battalions
+
+	category_recon
+	category_engineer
+}
+#artillery
+sub_unit_categories = {
+	category_all_artillery
+
+	category_line_artillery
+	category_magic_artillery
+}
+#armor
+sub_unit_categories = {
+	category_all_armor
+
+	category_tanks
+	category_armored_car
+}
+#planes
+sub_unit_categories = {
+	category_all_planes
+
+	category_scout_plane
+	category_nav_bomber
+	category_tac_bomber
+	category_strat_bomber
+	category_fighter
+	category_heavy_fighter
+	category_cas
 }

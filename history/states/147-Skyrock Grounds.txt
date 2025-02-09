@@ -1,26 +1,22 @@
-state={
-	id=147
-	name="STATE_147"
-
+state = {
+	id = 147
+	name = "STATE_147"
 	provinces={
 		149 3151 3496 9249 13299 
 	}
-
-	manpower=286800
-	state_category=rural
-	buildings_max_level_factor=1.00
-
-	history={
-		982.1.1 = {
-			owner = ELN
-			add_core_of = ELN
-			set_demilitarized_zone = yes
-		}
-		1007.1.1 = {
+	manpower = 286800
+	state_category = wasteland
+	buildings_max_level_factor = 1
+	history = {
+		owner = ELN
+		add_core_of = ELN
+		set_demilitarized_zone = yes
+		1002.1.1 = {
 			owner = CRY
 			add_core_of = CRY
 			remove_core_of = ELN
 			set_demilitarized_zone = no
+			set_state_category = rural
 		}
 	}
 }

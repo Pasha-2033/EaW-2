@@ -27,7 +27,7 @@ technologies = {
 	tech_support = {
 
 		dependencies = {
-			melee_weapons1 = 1
+			melee_weapons_1 = 1
 		}
 
 		enable_equipments = {
@@ -971,7 +971,7 @@ technologies = {
 		}
 
 		dependencies = {
-			motorised_infantry = 1
+			motorised_infantry_0 = 1
 		}
 		allow_branch = { 
 			NOT = { 
@@ -1160,7 +1160,7 @@ technologies = {
 		}
 
 		dependencies = {
-			motorised_infantry = 1
+			motorised_infantry_0 = 1
 		}
 
 		research_cost = 2
@@ -1357,7 +1357,7 @@ technologies = {
 
 		dependencies = {
 			radio = 1
-			motorised_infantry = 1
+			motorised_infantry_0 = 1
 		}
 
 		research_cost = 2
@@ -2472,7 +2472,7 @@ technologies = {
 
 	basic_train = {
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 		enable_equipments = {
 			train_equipment_1
@@ -2527,41 +2527,6 @@ technologies = {
 		}
 	}
 
-	railway_gun = {
-		enable_equipments = {
-			railway_gun_equipment_1
-		}
-
-		research_cost = 1.5
-		start_year = 1007
-		folder = {
-			name = support_folder
-			position = { x = 4 y = 3 }
-		}
-		
-		categories = {
-			train_tech
-			artillery
-		}
-		
-		ai_will_do = {
-			factor = 1
-			
-			modifier = {
-				is_major = yes
-				factor = 2
-			}
-
-			modifier = {
-				OR = {
-					TAG = CHN
-					TAG = STG
-				}
-				factor = 1.5
-			}
-		}
-	}
-
 	wartime_train = {
 		enable_equipments = {
 			train_equipment_2
@@ -2601,7 +2566,7 @@ technologies = {
 			}
 		}
 	}
-
+	#armored train
 	armored_train = {
 		enable_equipments = {
 			train_equipment_3
@@ -2610,14 +2575,8 @@ technologies = {
 		allow_branch = {
 			has_dlc = "No Step Back"
 		}
-
 		path = {
-			leads_to_tech = railway_gun
-			research_cost_coeff = 1
-		}
-
-		path = {
-			leads_to_tech = armored_train_2
+			leads_to_tech = armored_train_1
 			research_cost_coeff = 1
 		}
 		
@@ -2634,76 +2593,77 @@ technologies = {
 		
 		ai_will_do = {
 			factor = 1
-			
-			modifier = {
-				has_war = yes
-				factor = 20
-			}
-			modifier = {
-				tag = CHN
-				factor = 5
-			}
-			modifier = {
-				factor = 1.2
-				date > "1007.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1008.1.1"
-			}
-			
-			modifier = {
-				factor = 1.2
-				date > "1009.1.1"
-			}
 		}
 	}
-
-#	armored_train_2 = {
-#		enable_equipments = {
-#			train_equipment_4
-#		}
-#
-#		
-#		research_cost = 1.5
-#		start_year = 1018
-#		folder = {
-#			name = support_folder
-#			position = { x = 2 y = @1018 }
-#		}
-#		
-#		categories = {
-#			train_tech
-#		}
-#		
-#		ai_will_do = {
-#			factor = 1
-#			
-#			modifier = {
-#				has_war = yes
-#				factor = 20
-#			}
-#			modifier = {
-#				tag = CHN
-#				factor = 5
-#			}
-#			modifier = {
-#				factor = 1.2
-#				date > "1019.1.1"
-#			}
-#			
-#			modifier = {
-#				factor = 1.2
-#				date > "1020.1.1"
-#			}
-#			
-#			modifier = {
-#				factor = 1.2
-#				date > "1021.1.1"
-#			}
-#		}
-#	}
+	armored_train_1 = {
+		enable_equipments = {
+			train_equipment_4
+		}
+		path = {
+			leads_to_tech = railway_gun_0
+			research_cost_coeff = 1
+		}
+		
+		research_cost = 1.5
+		start_year = 1018
+		folder = {
+			name = support_folder
+			position = { x = 2 y = 6 }
+		}
+		
+		categories = {
+			train_tech
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	#railgun tech branch
+	railway_gun_0 = {
+		enable_equipments = {
+			railway_gun_equipment_0
+		}
+		path = {
+			leads_to_tech = railway_gun_1
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = support_folder
+			position = { x = 4 y = 6 }
+		}
+		
+		categories = {
+			train_tech
+			artillery
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+	railway_gun_1 = {
+		enable_equipments = {
+			railway_gun_equipment_1
+		}
+		research_cost = 1.5
+		start_year = 1007
+		folder = {
+			name = support_folder
+			position = { x = 4 y = 9 }
+		}
+		
+		categories = {
+			train_tech
+			artillery
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
 	
 }
 

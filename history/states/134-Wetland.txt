@@ -1,27 +1,29 @@
-state={
-	id=134
-	name="STATE_134"
-
-	provinces={
-		101 3009 3095 3119 6138 6206 9178 11155
+state = {
+	id = 134
+	name = "STATE_134"
+	provinces = {
+		101 
+		3009 
+		3095 
+		3119 
+		6138 
+		6206 
+		9178 
+		11155
 	}
-
-	manpower=9945
+	manpower = 9945
 	state_category = wasteland
-	buildings_max_level_factor=1.00
-
-	history={
-		#owner = EQS
-		#add_core_of = EQS
-		982.1.1 = {
-			owner = PGT
-			add_core_of = PGT
-			add_core_of = EQS
-			add_claim_by = ICE
-		}
-		1007.1.1 = {
+	buildings_max_level_factor = 1
+	history = {
+		owner = PGT
+		add_core_of = PGT
+		add_core_of = EQS
+		add_claim_by = ICE
+		1002.1.1 = {
 			owner = EQS
 			remove_core_of = PGT
+			remove_claim_by = ICE
 		}
+		1050.1.1 = {}
 	}
 }

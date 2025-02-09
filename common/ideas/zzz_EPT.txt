@@ -44,9 +44,11 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
+			traits = {
+				anti_ICE_confrontation
+			}
 			cancel = {
 				NOT = {
-					has_war_with = ICE
 					controls_state = 15
 				}
 			}
@@ -163,10 +165,8 @@ ideas = {
 			allowed_civil_war = {
 				has_defensive_war_with = ICE
 			}
-			cancel = {
-				NOT = {
-					has_war_with = ICE
-				}
+			traits = {
+				anti_ICE_confrontation
 			}
 			modifier = {
 				surrender_limit = 0.1
@@ -178,6 +178,7 @@ ideas = {
 			}
 		}
 		EPT_full_evacuation_of_hoofington = {
+			picture = clockwerk_economy			#to do (change)
 			allowed = {
 				original_tag = EPT
 			}
@@ -192,6 +193,7 @@ ideas = {
 			}
 		}
 		EPT_partial_evacuation_of_hoofington = {
+			picture = clockwerk_economy			#to do (change)
 			allowed = {
 				original_tag = EPT
 			}

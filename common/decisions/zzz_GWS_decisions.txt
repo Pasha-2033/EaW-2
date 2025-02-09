@@ -1,0 +1,391 @@
+huge_contruction_site_decisions = {
+	#magitron: digging
+	central_dogma_digging = {
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		activation = {
+			always = no
+		}
+		days_mission_timeout = 3600
+		is_good = yes
+		fire_only_once = yes
+		selectable_mission = no
+		timeout_effect = {
+			custom_effect_tooltip = change_huge_contruction_site_tt
+			if = {
+				limit = {
+					has_completed_focus = gws_focus_giant_excavator
+				}
+				add_to_variable = {
+					gws_huge_contruction_crcs = -8
+					tooltip = country_resource_cost_steel_tt
+				}
+				add_to_variable = {
+					gws_huge_contruction_crcch = -3
+					tooltip = country_resource_cost_chromium_tt
+				}
+				add_to_variable = {
+					gws_huge_contruction_crct = -2
+					tooltip = country_resource_cost_tungsten_tt
+				}
+				add_to_variable = {
+					gws_huge_contruction_cito = -8
+					tooltip = civilian_intel_to_others_tt
+				}
+				add_to_variable = {
+					gws_huge_contruction_cgf = -0.05
+					tooltip = consumer_goods_factor_tt
+				}
+				add_to_variable = {
+					gws_huge_contruction_csic = -0.2
+					tooltip = contruction_site_incident_chance_tt
+				}
+			}
+			else = {
+				hidden_effect = {
+					unlock_national_focus = gws_focus_giant_excavator
+				}
+				add_to_variable = {
+					gws_huge_contruction_cito = -5
+					tooltip = civilian_intel_to_others_tt
+				}
+				add_to_variable = {
+					gws_huge_contruction_csic = -0.3
+					tooltip = contruction_site_incident_chance_tt
+				}
+			}
+			add_to_variable = {
+				gws_huge_contruction_psbf = 0.08
+				tooltip = production_speed_buildings_factor_tt
+			}
+		}
+	}
+	central_dogma_metal_structures = {
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		activation = {
+			always = no
+		}
+		days_mission_timeout = 180
+		is_good = yes
+		fire_only_once = yes
+		selectable_mission = no
+		timeout_effect = {
+			finish_magitron_digging_phase = yes
+			custom_effect_tooltip = change_huge_contruction_site_tt
+			add_to_variable = {
+				gws_huge_contruction_crcs = -10
+				tooltip = country_resource_cost_steel_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_cito = -1
+				tooltip = civilian_intel_to_others_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_cgf = -0.04
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_csic = -0.05
+				tooltip = contruction_site_incident_chance_tt
+			}
+		}
+	}
+	central_dogma_strengthened_vault = {
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		activation = {
+			always = no
+		}
+		days_mission_timeout = 180
+		is_good = yes
+		fire_only_once = yes
+		selectable_mission = no
+		timeout_effect = {
+			finish_magitron_digging_phase = yes
+			custom_effect_tooltip = change_huge_contruction_site_tt
+			add_to_variable = {
+				gws_huge_contruction_cito = -8
+				tooltip = civilian_intel_to_others_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_crccr = -50
+				tooltip = country_resource_cost_crystals_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_cgf = -0.06
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_csic = -0.05
+				tooltip = contruction_site_incident_chance_tt
+			}
+		}
+	}
+	energy_sector_digging = {
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		activation = {
+			always = no
+		}
+		days_mission_timeout = 180
+		is_good = yes
+		fire_only_once = yes
+		selectable_mission = no
+		timeout_effect = {
+			if = {
+				limit = {
+					has_completed_focus = gws_focus_large_machine_rooms
+				}
+				finish_magitron_digging_phase = yes
+				custom_effect_tooltip = change_huge_contruction_site_tt
+				add_to_variable = {
+					gws_huge_contruction_cito = -2
+					tooltip = civilian_intel_to_others_tt
+				}
+				add_to_variable = {
+					gws_huge_contruction_psbf = 0.04
+					tooltip = production_speed_buildings_factor_tt
+				}
+			}
+			else = {
+				custom_effect_tooltip = change_huge_contruction_site_tt
+				add_to_variable = {
+					gws_huge_contruction_cito = -1
+					tooltip = civilian_intel_to_others_tt
+				}
+				add_to_variable = {
+					gws_huge_contruction_psbf = 0.01
+					tooltip = production_speed_buildings_factor_tt
+				}
+			}
+			add_to_variable = {
+				gws_huge_contruction_csic = -0.1
+				tooltip = contruction_site_incident_chance_tt
+			}
+		}
+	}
+	energy_sector_enlargement = {
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		activation = {
+			always = no
+		}
+		days_mission_timeout = 180
+		is_good = yes
+		fire_only_once = yes
+		selectable_mission = no
+		timeout_effect = {
+			finish_magitron_digging_phase = yes
+			custom_effect_tooltip = change_huge_contruction_site_tt
+			add_to_variable = {
+				gws_huge_contruction_cito = -1
+				tooltip = civilian_intel_to_others_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_psbf = 0.03
+				tooltip = production_speed_buildings_factor_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_csic = -0.05
+				tooltip = contruction_site_incident_chance_tt
+			}
+		}
+	}
+	control_sector_digging = {
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		activation = {
+			always = no
+		}
+		days_mission_timeout = 120
+		is_good = yes
+		fire_only_once = yes
+		selectable_mission = no
+		timeout_effect = {
+			if = {
+				limit = {
+					has_completed_focus = gws_focus_enchantment_cage
+				}
+				finish_magitron_digging_phase = yes
+				custom_effect_tooltip = change_huge_contruction_site_tt
+				add_to_variable = {
+					gws_huge_contruction_cgf = -0.06
+					tooltip = consumer_goods_factor_tt
+				}
+				add_to_variable = {
+					gws_huge_contruction_crccr = -10
+					tooltip = country_resource_cost_crystals_tt
+				}
+				add_to_variable = {
+					gws_huge_contruction_crcs = -6
+					tooltip = country_resource_cost_steel_tt
+				}
+			}
+			else  ={
+				custom_effect_tooltip = change_huge_contruction_site_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_cito = -1
+				tooltip = civilian_intel_to_others_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_psbf = 0.01
+				tooltip = production_speed_buildings_factor_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_csic = -0.1
+				tooltip = contruction_site_incident_chance_tt
+			}
+		}
+	}
+	control_sector_enforcement = {
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		activation = {
+			always = no
+		}
+		days_mission_timeout = 60
+		is_good = yes
+		fire_only_once = yes
+		selectable_mission = no
+		timeout_effect = {
+			finish_magitron_digging_phase = yes
+			custom_effect_tooltip = change_huge_contruction_site_tt
+			add_to_variable = {
+				gws_huge_contruction_cito = -5
+				tooltip = civilian_intel_to_others_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_crccr = -10
+				tooltip = country_resource_cost_crystals_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_crcs = -6
+				tooltip = country_resource_cost_steel_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_cgf = -0.06
+				tooltip = consumer_goods_factor_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_csic = -0.05
+				tooltip = contruction_site_incident_chance_tt
+			}
+		}
+	}
+	computing_sector_digging = {
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		activation = {
+			always = no
+		}
+		days_mission_timeout = 180
+		is_good = yes
+		fire_only_once = yes
+		selectable_mission = no
+		timeout_effect = {
+			finish_magitron_digging_phase = yes
+			custom_effect_tooltip = change_huge_contruction_site_tt
+			add_to_variable = {
+				gws_huge_contruction_cito = -1
+				tooltip = civilian_intel_to_others_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_psbf = 0.03
+				tooltip = production_speed_buildings_factor_tt
+			}
+			add_to_variable = {
+				gws_huge_contruction_csic = -0.1
+				tooltip = contruction_site_incident_chance_tt
+			}
+		}
+	}
+	#magitron: laying communications
+	magic_generators = {
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		activation = {
+			#always = no
+		}
+		days_mission_timeout = 240
+		is_good = yes
+		fire_only_once = yes
+		selectable_mission = no
+		timeout_effect = {
+
+		}
+	}
+	magic_storages = {
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		activation = {
+			#always = no
+		}
+		days_mission_timeout = 240
+		is_good = yes
+		fire_only_once = yes
+		selectable_mission = no
+		timeout_effect = {
+
+		}
+	}
+	
+
+
+
+
+
+
+	magic_conductors = {
+		available = {
+			hidden_trigger = {
+				always = no
+			}
+		}
+		activation = {
+			#always = no
+		}
+		days_mission_timeout = 100
+		is_good = yes
+		fire_only_once = yes
+		selectable_mission = no
+		timeout_effect = {
+
+		}
+	}
+	coolant_control
+	power_control
+
+	#magitron: equipment installation
+}

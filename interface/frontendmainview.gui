@@ -1,6 +1,119 @@
 #fetched to PDX standart v1.6
 guiTypes = {
 	containerWindowType = {
+		name = "owned_dlc_item"
+		size = {
+			width = 50
+			height = 50
+		}	
+		buttonType = {
+			position = {
+				x = -230
+				y = 0
+			}
+			name = "dlc_button"
+			spriteType = "GFX_frontend_banner_dlc018"
+		}
+		iconType = {
+			name = "glowup"
+			position = {
+				x = -50
+				y = -21
+			}
+			spriteType = "GFX_spirit_glow"
+			scale = 0.8
+		}
+		buttonType = {
+			name = "owned_tick"
+			spriteType = "GFX_BPT_area_defense_setting_tick"
+			position = {
+				x = -6 
+				y = 1
+			}
+			Orientation = center_left
+			scale = 0.56
+			alwaysTransparent = yes
+		}
+		buttonType = {
+			name = "enabled_tick"
+			spriteType = "GFX_general_check"
+			position = { 
+				x = 28 
+				y = 24 
+			}
+			Orientation = center_left
+			alwaysTransparent = yes
+		}
+	}
+	containerWindowType = {
+		name = "unowned_dlc_item"
+		size = { 
+			width = 50 
+			height = 50 
+		}
+		buttonType = {
+			position = { 
+				x = -230 
+				y = 0 
+			}
+			name = "dlc_button"
+			spriteType = "GFX_frontend_banner_dlc018"
+		}
+		buttonType = {
+			name = "owned_tick"
+			spriteType = "GFX_BPT_area_defense_setting_tick"
+			position = { 
+				x = -6 
+				y = 1 
+			}
+			Orientation = center_left
+			scale = 0.56
+			alwaysTransparent = yes
+		}
+		buttonType = {
+			name = "enabled_tick"
+			spriteType = "GFX_general_check"
+			position = { 
+				x = 28 
+				y = 24 
+			}
+			Orientation = center_left
+			alwaysTransparent = yes
+		}	
+	}
+	### MAIN MENU PANEL (DLC Ownership) 
+	containerWindowType = {
+		name = "mainmenu_dlc_ownership"
+		position = { 
+			x = 5 
+			y =0 
+		}
+		size = { 
+			width = 370 
+			height = 528
+		}
+		Orientation = lower_left
+		origo = lower_left
+		gridBoxType = {
+			name = "potential_dlc_list"
+			position = { 
+				x = 0 
+				y = 0
+			}
+			size = { 
+				width = 50 
+				height = 300 
+			}
+			slotsize = {
+				width = 50 
+				height = 51
+			}
+			max_slots_vertical = 1
+			format = "RIGHT"
+		}
+		
+	}
+	containerWindowType = {
 		name = "frontend_background"
 		position = { 
 			x = 0 
@@ -85,7 +198,7 @@ guiTypes = {
 	}
 	### MAIN MENU PANEL (upperright)
 	containerWindowType = {
-		name ="mainmenu_panel_upperright"
+		name = "mainmenu_panel_upperright"
 		position = { 
 			x = 0 
 			y = -1 
@@ -113,27 +226,29 @@ guiTypes = {
 		iconType = {
 			name = "frontend_dev_logo"
 			spriteType = "GFX_frontend_dev_logo"
-			position = { x= 15 y = 15 }
+			position = { 
+				x = 15 
+				y = 15 
+			}
 		}
 		iconType = {
 			name = "pdx_int_logo"
 			spriteType = "GFX_pdx_int_logo"
-			position = { x = 135 y = 15 }
+			position = { 
+				x = 135 
+				y = 15 
+			}
 		}		
 	}		
 	### SINGLE PLAYER MENU
 	containerWindowType = {
 		name = "mainmenu_single_player"
-		position = {
-			x = 30
-			y = -30
-		}
 		size = {
 			width = 320
 			height = 230
 		}
-		orientation = LOWER_LEFT
-		origo = LOWER_LEFT		
+		orientation = CENTER
+		origo = CENTER
 		background = {
 			name = "background"		
 			quadTextureSprite = "GFX_tiled_window"
@@ -244,16 +359,12 @@ guiTypes = {
 	### MAIN MENU PANEL (bottom)
 	containerWindowType = {
 		name = "mainmenu_panel_bottom"
-		position = {
-			x = 30
-			y = -30
-		}
 		size = {
 			width = 320
 			height = 435
 		}
-		orientation = LOWER_LEFT
-		origo = LOWER_LEFT	
+		orientation = CENTER
+		origo = CENTER
 		positionType = {
 			name = "subscription_size"
 			position = {
@@ -289,11 +400,10 @@ guiTypes = {
 			clicksound = click_default
 			oversound = ui_menu_over
 		}
-		@warn_icon_x = 280
 		iconType = {
 			name = "single_player_button_warn"
 			position = {
-				x = @warn_icon_x
+				x = 280
 				y = 22
 			}
 			spriteType = "GFX_missing_dlc_warning_sign"
@@ -307,7 +417,8 @@ guiTypes = {
 			textureFile = ""
 			font = "hoi_18b"
 			borderSize = {
-				x = 0 y = 0
+				x = 0 
+				y = 0
 			}
 			text = "ALPHA"	
 			format = centre
@@ -460,35 +571,31 @@ guiTypes = {
 	
 	containerWindowType = {
 		name = "mainmenu_social_buttons"
-		position = {
-			x = 0
-			y = 0
-		}	
 		size = {
 			width = 240
 			height = 45
 		}
-		orientation = LOWER_LEFT	
-		origo = LOWER_LEFT	
+		orientation = CENTER
+		origo = CENTER
 		positionType = {
 			name = "position_without_social_gui"
 			position = {
-				x = 70
-				y = -75
+				x = 0
+				y = 150
 			}
 		}
 		positionType = {
 			name = "subscription_position"
 			position = {
-				x = 70
-				y = -75
+				x = 0
+				y = 150
 			}
 		}
 		positionType = {
 			name = "subscription_position_without_social_gui"
 			position = {
-				x = 70
-				y = -75
+				x = 0
+				y = 150
 			}
 		}	
 		containerWindowType = {

@@ -127,12 +127,21 @@ equipments = {
 		
 		manpower = 600
 	}
-
+	ship_hull_cruiser_0 = {
+		year = 993
+		visual_level = 0
+		archetype = ship_hull_cruiser
+		priority = 1900
+		
+		
+		module_slots = inherit
+	}
 	ship_hull_cruiser_1 = {
 		year = 993
 		visual_level = 0
 		archetype = ship_hull_cruiser
 		priority = 1900
+		parent = ship_hull_cruiser_0
 		
 		
 		module_slots = inherit
@@ -531,7 +540,7 @@ equipments = {
 		}
 		module_slots = inherit
 		default_modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_battery_slot = ship_light_medium_battery_0
 			fixed_ship_anti_air_slot = ship_anti_air_1
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = ship_sonar_1
@@ -539,7 +548,7 @@ equipments = {
 			fixed_ship_secondaries_slot = ship_secondaries_1
 			fixed_ship_armor_slot = ship_armor_cruiser_1
 			mid_1_custom_slot = ship_torpedo_1
-			mid_2_custom_slot = ship_light_medium_battery_1
+			mid_2_custom_slot = ship_light_medium_battery_0
 			rear_1_custom_slot = ship_depth_charge_1
 		}
 		lg_armor_piercing = 0
@@ -619,16 +628,16 @@ equipments = {
 			}
 		}
 		default_modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_2
+			fixed_ship_battery_slot = ship_light_medium_battery_1
 			fixed_ship_anti_air_slot = ship_anti_air_2
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
 			fixed_ship_radar_slot = ship_sonar_2
 			fixed_ship_engine_slot = cruiser_ship_engine_2
 			fixed_ship_secondaries_slot = ship_secondaries_2
 			fixed_ship_armor_slot = ship_armor_cruiser_2
-			front_1_custom_slot = ship_light_medium_battery_2
+			front_1_custom_slot = ship_light_medium_battery_1
 			mid_1_custom_slot = ship_torpedo_2
-			mid_2_custom_slot = ship_light_medium_battery_2
+			mid_2_custom_slot = ship_light_medium_battery_1
 			rear_1_custom_slot = ship_depth_charge_2
 		}
 		lg_armor_piercing = 0
@@ -731,17 +740,17 @@ equipments = {
 			}
 		}
 		default_modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_3
+			fixed_ship_battery_slot = ship_light_medium_battery_2
 			fixed_ship_anti_air_slot = ship_anti_air_3
 			fixed_ship_fire_control_system_slot = ship_sonar_3
 			fixed_ship_radar_slot = ship_radar_3
 			fixed_ship_engine_slot = cruiser_ship_engine_3
-			fixed_ship_secondaries_slot = dp_ship_secondaries
+			fixed_ship_secondaries_slot = ship_universal_secondaries_0
 			fixed_ship_armor_slot = ship_armor_cruiser_3
-			front_1_custom_slot = ship_light_medium_battery_3
+			front_1_custom_slot = ship_light_medium_battery_2
 			mid_1_custom_slot = ship_torpedo_3
-			mid_2_custom_slot = ship_light_medium_battery_3
-			rear_1_custom_slot = ship_light_medium_battery_3
+			mid_2_custom_slot = ship_light_medium_battery_2
+			rear_1_custom_slot = ship_light_medium_battery_2
 			rear_2_custom_slot = ship_depth_charge_3
 		}
 		lg_armor_piercing = 0
@@ -834,17 +843,17 @@ equipments = {
 			rear_2_custom_slot = rear_1_custom_slot
 		}
 		default_modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_4
+			fixed_ship_battery_slot = ship_light_medium_battery_3
 			fixed_ship_anti_air_slot = ship_anti_air_4
 			fixed_ship_fire_control_system_slot = ship_sonar_4
 			fixed_ship_radar_slot = ship_radar_4
 			fixed_ship_engine_slot = cruiser_ship_engine_4
-			fixed_ship_secondaries_slot = dp_ship_secondaries_2
+			fixed_ship_secondaries_slot = ship_universal_secondaries_1
 			fixed_ship_armor_slot = ship_armor_cruiser_4
-			front_1_custom_slot = ship_light_medium_battery_4
+			front_1_custom_slot = ship_light_medium_battery_3
 			mid_1_custom_slot = ship_torpedo_4
-			mid_2_custom_slot = ship_light_medium_battery_4
-			rear_1_custom_slot = ship_light_medium_battery_4
+			mid_2_custom_slot = ship_light_medium_battery_3
+			rear_1_custom_slot = ship_light_medium_battery_3
 			rear_2_custom_slot = ship_depth_charge_4
 		}
 		lg_armor_piercing = 0
@@ -938,17 +947,17 @@ equipments = {
 			rear_2_custom_slot = rear_1_custom_slot
 		}
 		default_modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_4
+			fixed_ship_battery_slot = ship_light_medium_battery_3
 			fixed_ship_anti_air_slot = ship_anti_air_5
 			fixed_ship_fire_control_system_slot = ship_sonar_5
 			fixed_ship_radar_slot = ship_radar_5
 			fixed_ship_engine_slot = cruiser_ship_engine_5
-			fixed_ship_secondaries_slot = dp_ship_secondaries_2
+			fixed_ship_secondaries_slot = ship_universal_secondaries_1
 			fixed_ship_armor_slot = ship_armor_cruiser_5
-			front_1_custom_slot = ship_light_ASM_battery_1
+			front_1_custom_slot = ship_light_missle_battery_0
 			mid_1_custom_slot = ship_torpedo_5
-			mid_2_custom_slot = ship_light_ASM_battery_1
-			rear_1_custom_slot = ship_light_ASM_battery_1
+			mid_2_custom_slot = ship_light_missle_battery_0
+			rear_1_custom_slot = ship_light_missle_battery_0
 			rear_2_custom_slot = ship_depth_charge_5
 		}
 		lg_armor_piercing = 0
@@ -1040,17 +1049,17 @@ equipments = {
 			rear_2_custom_slot = rear_1_custom_slot
 		}
 		default_modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_4
+			fixed_ship_battery_slot = ship_light_medium_battery_3
 			fixed_ship_anti_air_slot = ship_anti_air_6
 			fixed_ship_fire_control_system_slot = ship_sonar_6
 			fixed_ship_radar_slot = ship_radar_6
 			fixed_ship_engine_slot = cruiser_ship_engine_6
-			fixed_ship_secondaries_slot = dp_ship_secondaries_2
+			fixed_ship_secondaries_slot = ship_universal_secondaries_1
 			fixed_ship_armor_slot = ship_armor_cruiser_6
-			front_1_custom_slot = ship_light_ASM_battery_2
+			front_1_custom_slot = ship_light_missle_battery_1
 			mid_1_custom_slot = ship_torpedo_6
-			mid_2_custom_slot = ship_light_ASM_battery_2
-			rear_1_custom_slot = ship_light_ASM_battery_2
+			mid_2_custom_slot = ship_light_missle_battery_1
+			rear_1_custom_slot = ship_light_missle_battery_1
 			rear_2_custom_slot = ship_depth_charge_6
 		}
 		lg_armor_piercing = 0
@@ -1150,16 +1159,16 @@ equipments = {
 			}
 		}
 		default_modules = {
-			fixed_ship_battery_slot = ship_medium_battery_1
+			fixed_ship_battery_slot = ship_heavy_medium_battery_0
 			fixed_ship_anti_air_slot = ship_anti_air_1
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = ship_sonar_1
 			fixed_ship_engine_slot = cruiser_ship_engine_1
 			fixed_ship_secondaries_slot = ship_secondaries_1
 			fixed_ship_armor_slot = ship_armor_cruiser_1
-			mid_1_custom_slot = ship_light_medium_battery_1
+			mid_1_custom_slot = ship_light_medium_battery_0
 			mid_2_custom_slot = ship_airplane_launcher_1
-			rear_1_custom_slot = ship_medium_battery_1
+			rear_1_custom_slot = ship_heavy_medium_battery_0
 		}
 		lg_armor_piercing = 0
 		lg_attack = 0
@@ -1251,17 +1260,17 @@ equipments = {
 			}
 		}
 		default_modules = {
-			fixed_ship_battery_slot = ship_medium_battery_2
+			fixed_ship_battery_slot = ship_heavy_medium_battery_1
 			fixed_ship_anti_air_slot = ship_anti_air_2
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_1
 			fixed_ship_radar_slot = ship_sonar_2
 			fixed_ship_engine_slot = cruiser_ship_engine_2
 			fixed_ship_secondaries_slot = ship_secondaries_2
 			fixed_ship_armor_slot = ship_armor_cruiser_2
-			front_1_custom_slot = ship_light_medium_battery_2
-			mid_1_custom_slot = ship_medium_battery_2
+			front_1_custom_slot = ship_light_medium_battery_1
+			mid_1_custom_slot = ship_heavy_medium_battery_1
 			mid_2_custom_slot = ship_airplane_launcher_2
-			rear_1_custom_slot = ship_medium_battery_2
+			rear_1_custom_slot = ship_heavy_medium_battery_1
 		}
 		hg_armor_piercing = 0
 		hg_attack = 0
@@ -1362,18 +1371,18 @@ equipments = {
 			}
 		}
 		default_modules = {
-			fixed_ship_battery_slot = ship_medium_battery_3
+			fixed_ship_battery_slot = ship_heavy_medium_battery_2
 			fixed_ship_anti_air_slot = ship_anti_air_3
 			fixed_ship_fire_control_system_slot = ship_sonar_3
 			fixed_ship_radar_slot = ship_radar_3
 			fixed_ship_engine_slot = cruiser_ship_engine_3
-			fixed_ship_secondaries_slot = dp_ship_secondaries
+			fixed_ship_secondaries_slot = ship_universal_secondaries_0
 			fixed_ship_armor_slot = ship_armor_cruiser_3
-			front_1_custom_slot = ship_light_medium_battery_3
-			mid_1_custom_slot = ship_medium_battery_3
+			front_1_custom_slot = ship_light_medium_battery_2
+			mid_1_custom_slot = ship_heavy_medium_battery_2
 			mid_2_custom_slot = ship_airplane_launcher_3
-			rear_1_custom_slot = ship_medium_battery_3
-			rear_2_custom_slot = ship_medium_battery_3
+			rear_1_custom_slot = ship_heavy_medium_battery_2
+			rear_2_custom_slot = ship_heavy_medium_battery_2
 		}
 		hg_armor_piercing = 0
 		hg_attack = 0
@@ -1463,18 +1472,18 @@ equipments = {
 			rear_2_custom_slot = rear_1_custom_slot
 		}
 		default_modules = {
-			fixed_ship_battery_slot = ship_medium_battery_4
+			fixed_ship_battery_slot = ship_heavy_medium_battery_3
 			fixed_ship_anti_air_slot = ship_anti_air_4
 			fixed_ship_fire_control_system_slot = ship_sonar_4
 			fixed_ship_radar_slot = ship_radar_4
 			fixed_ship_engine_slot = cruiser_ship_engine_4
-			fixed_ship_secondaries_slot = dp_ship_secondaries_2
+			fixed_ship_secondaries_slot = ship_universal_secondaries_1
 			fixed_ship_armor_slot = ship_armor_cruiser_4
-			front_1_custom_slot = ship_light_medium_battery_4
-			mid_1_custom_slot = ship_medium_battery_4
+			front_1_custom_slot = ship_light_medium_battery_3
+			mid_1_custom_slot = ship_heavy_medium_battery_3
 			mid_2_custom_slot = ship_airplane_launcher_4
-			rear_1_custom_slot = ship_medium_battery_4
-			rear_2_custom_slot = ship_medium_battery_4
+			rear_1_custom_slot = ship_heavy_medium_battery_3
+			rear_2_custom_slot = ship_heavy_medium_battery_3
 		}
 		hg_armor_piercing = 0
 		hg_attack = 0
@@ -1564,18 +1573,18 @@ equipments = {
 			rear_2_custom_slot = rear_1_custom_slot
 		}
 		default_modules = {
-			fixed_ship_battery_slot = ship_medium_battery_4
+			fixed_ship_battery_slot = ship_heavy_medium_battery_3
 			fixed_ship_anti_air_slot = ship_anti_air_5
 			fixed_ship_fire_control_system_slot = ship_sonar_5
 			fixed_ship_radar_slot = ship_radar_5
 			fixed_ship_engine_slot = cruiser_ship_engine_5
-			fixed_ship_secondaries_slot = dp_ship_secondaries_2
+			fixed_ship_secondaries_slot = ship_universal_secondaries_1
 			fixed_ship_armor_slot = ship_armor_cruiser_5
-			front_1_custom_slot = ship_medium_ASM_battery_1
-			mid_1_custom_slot = ship_medium_ASM_battery_1
+			front_1_custom_slot = ship_light_medium_missle_battery_0
+			mid_1_custom_slot = ship_light_medium_missle_battery_0
 			mid_2_custom_slot = ship_airplane_launcher_5
-			rear_1_custom_slot = ship_medium_ASM_battery_1
-			rear_2_custom_slot = ship_medium_ASM_battery_1
+			rear_1_custom_slot = ship_light_medium_missle_battery_0
+			rear_2_custom_slot = ship_light_medium_missle_battery_0
 		}
 		hg_armor_piercing = 0
 		hg_attack = 0
@@ -1664,18 +1673,18 @@ equipments = {
 			rear_2_custom_slot = rear_1_custom_slot
 		}
 		default_modules = {
-			fixed_ship_battery_slot = ship_medium_battery_4
+			fixed_ship_battery_slot = ship_heavy_medium_battery_3
 			fixed_ship_anti_air_slot = ship_anti_air_6
 			fixed_ship_fire_control_system_slot = ship_sonar_6
 			fixed_ship_radar_slot = ship_radar_6
 			fixed_ship_engine_slot = cruiser_ship_engine_6
-			fixed_ship_secondaries_slot = dp_ship_secondaries_2
+			fixed_ship_secondaries_slot = ship_universal_secondaries_1
 			fixed_ship_armor_slot = ship_armor_cruiser_6
-			front_1_custom_slot = ship_medium_ASM_battery_2
-			mid_1_custom_slot = ship_medium_ASM_battery_2
+			front_1_custom_slot = ship_light_medium_missle_battery_1
+			mid_1_custom_slot = ship_light_medium_missle_battery_1
 			mid_2_custom_slot = ship_airplane_launcher_6
-			rear_1_custom_slot = ship_medium_ASM_battery_2
-			rear_2_custom_slot = ship_medium_ASM_battery_2
+			rear_1_custom_slot = ship_light_medium_missle_battery_1
+			rear_2_custom_slot = ship_light_medium_missle_battery_1
 		}
 		hg_armor_piercing = 0
 		hg_attack = 0
@@ -1801,12 +1810,12 @@ equipments = {
 			}
 		}
 		default_modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_3
+			fixed_ship_battery_slot = ship_light_medium_battery_2
 			fixed_ship_anti_air_slot = ship_anti_air_3
 			fixed_ship_fire_control_system_slot = ship_torpedo_data_computer_3
 			fixed_ship_radar_slot = ship_radar_3
 			fixed_ship_engine_slot = cruiser_ship_engine_3
-			fixed_ship_secondaries_slot = dp_ship_secondaries
+			fixed_ship_secondaries_slot = ship_universal_secondaries_0
 			fixed_ship_armor_slot = ship_armor_cruiser_3
 			front_1_custom_slot = ship_anti_air_3
 			mid_1_custom_slot = ship_torpedo_3
@@ -1995,7 +2004,7 @@ equipments = {
 			front_1_custom_slot = ship_anti_air_1
 			mid_1_custom_slot = ship_airplane_launcher_1
 			mid_2_custom_slot = ship_secondaries_1
-			rear_1_custom_slot = ship_medium_battery_1
+			rear_1_custom_slot = ship_heavy_medium_battery_0
 		}
 	}
 
@@ -2050,7 +2059,7 @@ equipments = {
 			}
 		}
 		default_modules = {
-			fixed_ship_battery_slot = ship_light_medium_battery_1
+			fixed_ship_battery_slot = ship_light_medium_battery_0
 			fixed_ship_anti_air_slot = ship_anti_air_1
 			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
 			fixed_ship_radar_slot = empty

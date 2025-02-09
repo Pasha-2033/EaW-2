@@ -79,10 +79,8 @@ ideas = {
 			allowed_civil_war = {
 				has_government = fascism
 			}
-			cancel = {
-				NOT = {
-					has_war_with = ICE
-				}
+			traits = {
+				anti_ICE_confrontation
 			}
 			targeted_modifier = {
 				tag = ICE
@@ -104,10 +102,8 @@ ideas = {
 			allowed_civil_war = {
 				has_government = fascism
 			}
-			cancel = {
-				NOT = {
-					has_war_with = ICE
-				}
+			traits = {
+				anti_ICE_confrontation
 			}
 			modifier = {
 				offence = 0.1
@@ -126,10 +122,8 @@ ideas = {
 			allowed_civil_war = {
 				has_government = fascism
 			}
-			cancel = {
-				NOT = {
-					has_war_with = ICE
-				}
+			traits = {
+				anti_ICE_confrontation
 			}
 			modifier = {
 				army_morale_factor = -0.1
@@ -147,10 +141,8 @@ ideas = {
 			allowed_civil_war = {
 				has_government = fascism
 			}
-			cancel = {
-				NOT = {
-					has_war_with = ICE
-				}
+			traits = {
+				anti_ICE_confrontation
 			}
 			modifier = {
 				assign_army_leader_cp_cost = 10
@@ -243,9 +235,11 @@ ideas = {
 			allowed_civil_war = {
 				always = no
 			}
+			traits = {
+				anti_ICE_confrontation
+			}
 			cancel = {
 				NOT = {
-					has_war_with = ICE
 					controls_state = 3
 				}
 			}
@@ -322,8 +316,182 @@ ideas = {
 				calc_surplus_appropriation_real_values = yes
 			}
 		}
+		EQS_spa_islands_payment = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				always = yes
+			}
+			modifier = {
+				food_gain = 25
+				production_speed_buildings_factor = 0.05
+				consumer_goods_factor = -0.1
+			}
+		}
+		EQS_civilians_digging_trenches = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				has_government = harmony
+			}
+			modifier = {
+				mobilization_speed = -0.15
+				production_speed_bunker_factor = 0.15
+				production_speed_coastal_bunker_factor = 0.15
+				land_bunker_effectiveness_factor = 0.1
+				coastal_bunker_effectiveness_factor = 0.05
+				repair_speed_bunker_factor = 0.2
+				repair_speed_coastal_bunker_factor = 0.05
+			}
+		}
+		EQS_parallel_import = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				tag = EQS
+			}
+			cancel = {
+				has_war_with = NML
+			}
+			modifier = {
+				food_gain = 25
+				consumer_goods_factor = 0.1
+			}
+			targeted_modifier = {
+				tag = NML
+				extra_trade_to_target_factor = 0.1
+				trade_cost_for_target_factor = -0.1
+			}
+		}
+		EQS_self_sufficiency = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				tag = EQS
+			}
+			modifier = {
+				food_gain = 20
+				food_gain_factor = 0.1
+				repair_speed_agrarian_complex_factor = 0.1
+				production_speed_agrarian_complex_factor = 0.1
+			}
+		}
+		EQS_executions_for_theft = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				tag = EQS
+			}
+			modifier = {
+				stability_weekly = -0.01
+				war_support_weekly = -0.005
+				civil_consumption_factor = -0.15
+				facilities_consumption_factor = -0.15
+				army_consumption_factor = -0.05
+				local_resources_factor = 0.1
+			}
+		}
+		EQS_national_revision = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				tag = EQS
+			}
+			modifier = {
+				consumer_goods_factor = -0.05
+				civil_consumption_factor = -0.05
+				facilities_consumption_factor = -0.05
+				army_consumption_factor = -0.05
+				local_resources_factor = 0.05
+			}
+		}
+		EQS_food_import = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				tag = EQS
+			}
+			modifier = {
+				food_gain = 50
+				consumer_goods_factor = 0.15
+			}
+		}
+		EQS_food_export_civil = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				tag = EQS
+			}
+			cancel = {
+				has_war_with = EQS
+			}
+			modifier = {
+				food_gain = -50
+				consumer_goods_factor = -0.1
+				production_speed_industrial_complex_factor = 0.1
+				production_speed_agrarian_complex_factor = 0.1
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_war_with = EQS
+						has_idea = EQS_food_import
+					}
+					EQS = {
+						remove_ideas = EQS_food_import
+					}
+				}
+			}
+		}
+		EQS_food_export_military = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = EQS
+			}
+			allowed_civil_war = {
+				tag = EQS
+			}
+			cancel = {
+				has_war_with = EQS
+			}
+			modifier = {
+				food_gain = -50
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_start_efficiency_factor = 0.05
+				production_speed_arms_factory_factor = 0.1
+			}
+			on_remove = {
+				if = {
+					limit = {
+						has_war_with = EQS
+						has_idea = EQS_food_import
+					}
+					EQS = {
+						remove_ideas = EQS_food_import
+					}
+				}
+			}
+		}
 		EQS_harmony_vs_fascism_civil_war_preparations = {
 			#just for tooltip and triggers
+			picture = clockwerk_economy			#to do (change)
 			allowed = {
 				original_tag = EQS
 			}

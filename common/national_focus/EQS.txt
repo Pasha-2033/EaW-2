@@ -1,4 +1,4 @@
-#!gfx:interface\zzz_EQS.gfx
+#!gfx:interface/zzz_EQS.gfx
 #982 scenario
 #Windigo time focuses (stage 1)
 focus_tree = {
@@ -9,7 +9,7 @@ focus_tree = {
 			add = 100
 			tag = EQS
 			#982 scenario only!
-			has_start_date < 1007.1.1
+			has_start_date < 1002.1.1
 		}
 	}
 	default = no
@@ -22,7 +22,7 @@ focus_tree = {
 		id = eqs_focus_harmony_isnot_lost
 		icon = GFX_goal_eqs_focus_harmony_isnot_lost
 		cost = 5
-		x = 10
+		x = 16
 		y = 0
 		ai_will_do = {
 			base = 200
@@ -64,11 +64,12 @@ focus_tree = {
 			add_war_support = -0.05
 		}
 	}
+	#twilight branch
 	focus = {
 		id = eqs_focus_twilight_initiative
 		icon = GFX_goal_eqs_focus_twilight_initiative
 		cost = 5
-		x = -6
+		x = -12
 		y = 1
 		ai_will_do = {
 			base = 200
@@ -82,7 +83,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_twilight_initiative"
-			activate_advisor = EQS_982_twilight
+			activate_advisor = EQS_twilight
+			set_can_be_fired_in_advisor_role = {
+				character = EQS_twilight
+				value = no
+			}
 			set_power_balance = {
 				id = EQS_prince_blueblood_vs_twilight
 				set_default = yes
@@ -303,7 +308,7 @@ focus_tree = {
 			set_politics = {
 				ruling_party = harmony
 			}
-			promote_character = EQS_982_twilight
+			promote_character = EQS_twilight
 			set_temp_variable = {
 				ds = party_popularity@fascism
 			}
@@ -504,11 +509,12 @@ focus_tree = {
 			}
 		}
 	}
+	#twilight branch
 	focus = {
 		id = eqs_focus_prince_blueblood_speaches
 		icon = GFX_goal_eqs_focus_prince_blueblood_speaches
 		cost = 5
-		x = 7
+		x = 12
 		y = 1
 		ai_will_do = {
 			base = 200
@@ -796,6 +802,25 @@ focus_tree = {
 				custom_effect_tooltip = if_they_accept
 				event_option_tooltip = equestria.10.b
 			}
+			add_power_balance_modifier = {
+				id = EQS_prince_blueblood_vs_twilight
+				modifier = EQS_PGT_white_peace
+			}
+			if = {
+				limit = {
+					has_completed_focus = eqs_focus_unicorn_censorship
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = -0.025
+				}
+			}
+			else = {
+				add_popularity = {
+					ideology = fascism
+					popularity = -0.05
+				}
+			}
 		}
 	}
 	focus = {
@@ -824,6 +849,25 @@ focus_tree = {
 				custom_effect_tooltip = if_they_accept
 				event_option_tooltip = equestria.10.a
 			}
+			add_power_balance_modifier = {
+				id = EQS_prince_blueblood_vs_twilight
+				modifier = EQS_EPT_white_peace
+			}
+			if = {
+				limit = {
+					has_completed_focus = eqs_focus_unicorn_censorship
+				}
+				add_popularity = {
+					ideology = fascism
+					popularity = -0.025
+				}
+			}
+			else = {
+				add_popularity = {
+					ideology = fascism
+					popularity = -0.05
+				}
+			}
 		}
 	}
 	focus = {
@@ -836,10 +880,7 @@ focus_tree = {
 			base = 200
 		}
 		available = {
-			NOT = {
-				has_war_with = EPT
-				has_war_with = PGT
-			}
+			has_capitulated = no
 		}
 		relative_position_id = eqs_focus_foreign_policy
 		prerequisite = {
@@ -866,7 +907,6 @@ focus_tree = {
 			base = 200
 		}
 		available = {
-			has_civil_war = no
 			controls_state = 3
 		}
 		relative_position_id = eqs_focus_central_equus_defence_district
@@ -1199,6 +1239,780 @@ focus_tree = {
 			custom_effect_tooltip = upgrade_to_lower_positions_tt
 		}
 	}
+	#surplus branch
+	focus = {
+		id = eqs_focus_harvest_failure_question
+		icon = GFX_goal_generic_changeling
+		cost = 1
+		x = 0
+		y = 2
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_friendship_flashbacks
+		prerequisite = {
+			focus = eqs_focus_twilight_initiative
+			focus = eqs_focus_prince_blueblood_speaches
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_import_food_from_STG"
+			set_temp_variable = {
+				delta_food_storage = 400
+			}
+			add_to_food_storage = yes
+		}
+		search_filters = {
+			FOCUS_FILTER_SURPLUS_APPROPRIATION
+		}
+	}
+	focus = {
+		id = eqs_focus_import_food_from_STG
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_harvest_failure_question
+		prerequisite = {
+			focus = eqs_focus_harvest_failure_question
+		}
+		available = {
+			STG = {
+				exists = yes
+			}
+			NOT = {
+				has_war_with = STG
+			}
+		}
+		mutually_exclusive = {
+			focus = eqs_focus_import_food_from_WOP
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_import_food_from_STG"
+			if = {
+				limit = {
+					has_completed_focus = eqs_focus_prince_blueblood_speaches
+				}
+				custom_effect_tooltip = they_will_likely_deny_tt
+			}
+			STG = {
+				country_event = {
+					id = equestria.17
+					days = 3
+					random_days = 2
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_SURPLUS_APPROPRIATION
+		}
+	}
+	focus = {
+		id = eqs_focus_import_food_from_WOP
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 1
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_harvest_failure_question
+		prerequisite = {
+			focus = eqs_focus_harvest_failure_question
+		}
+		mutually_exclusive = {
+			focus = eqs_focus_import_food_from_STG
+		}
+		available = {
+			WOP = {
+				exists = yes
+			}
+			NOT = {
+				has_war_with = WOP
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_import_food_from_WOP"
+			if = {
+				limit = {
+					has_completed_focus = eqs_focus_twilight_initiative
+				}
+				custom_effect_tooltip = they_will_likely_deny_tt
+			}
+			WOP = {
+				country_event = {
+					id = equestria.17
+					days = 3
+					random_days = 2
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_SURPLUS_APPROPRIATION
+		}
+	}
+	focus = {
+		id = eqs_focus_parallel_import
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_import_food_from_WOP
+		prerequisite = {
+			focus = eqs_focus_import_food_from_WOP
+		}
+		available = {
+			NML = {
+				exists = yes
+				is_subject_of = ROOT
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_parallel_import"
+			NML = {
+				add_timed_idea = {
+					idea = NML_parallel_import
+					days = 360
+				}
+				increase_trade_law_idea = yes
+			}
+			add_timed_idea = {
+				idea = EQS_parallel_import
+				days = 360
+			}
+			set_temp_variable = {
+				food_import = NML.resource@food
+			}
+			divide_temp_variable = {
+				food_import = 2
+			}
+			meta_effect = {
+				text = {
+					create_import = {
+						resource = food
+						amount = [N]
+						exporter = NML
+					}
+				}
+				N = "[?food_import]"
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_SURPLUS_APPROPRIATION
+		}
+	}
+	focus = {
+		id = eqs_focus_executions_for_theft
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_parallel_import
+		prerequisite = {
+			focus = eqs_focus_parallel_import
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_executions_for_theft"
+			add_timed_idea = {
+				idea = EQS_executions_for_theft
+				days = 180
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_SURPLUS_APPROPRIATION
+		}
+	}
+	focus = {
+		id = eqs_focus_self_sufficiency
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_import_food_from_STG
+		prerequisite = {
+			focus = eqs_focus_import_food_from_STG
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_self_sufficiency"
+			add_timed_idea = {
+				idea = EQS_self_sufficiency
+				days = 180
+			}
+			NML = {
+				if = {
+					limit = {
+						is_subject_of = ROOT
+					}
+					add_timed_idea = {
+						idea = NML_self_sufficiency
+						days = 180
+					}
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_SURPLUS_APPROPRIATION
+		}
+	}
+	focus = {
+		id = eqs_focus_national_revision
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_self_sufficiency
+		prerequisite = {
+			focus = eqs_focus_self_sufficiency
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_national_revision"
+			add_timed_idea = {
+				idea = EQS_national_revision
+				days = 180
+			}
+			if = {
+				limit = {
+					controls_state = 108
+				}
+				108 = {
+					add_extra_state_shared_building_slots = 1
+					add_building_construction = {
+						type = agrarian_complex
+						level = 1
+						instant_build = yes
+					}
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_SURPLUS_APPROPRIATION
+		}
+	}
+	focus = {
+		id = eqs_focus_extend_import
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 4
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_harvest_failure_question
+		prerequisite = {
+			focus = eqs_focus_national_revision
+			focus = eqs_focus_executions_for_theft
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_nation_revision"
+			decrease_trade_law_idea = yes
+			if = {
+				limit = {
+					has_idea = uncontrolled_imports
+				}
+				add_political_power = 75
+			}
+		}
+	}
+	#economic branch
+	focus = {
+		id = eqs_focus_fillydelphia_militarisation
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 3
+		y = 2
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_friendship_flashbacks
+		prerequisite = {
+			focus = eqs_focus_prince_blueblood_speaches
+		}
+		available = {
+			controls_state = 12
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_fillydelphia_militarisation"
+			12 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 1
+					province = 950
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus = {
+		id = eqs_focus_iron_for_weapons
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_fillydelphia_militarisation
+		prerequisite = {
+			focus = eqs_focus_fillydelphia_militarisation
+		}
+		available = {
+			OR = {
+				controls_state = 12
+				controls_state = 13
+				controls_state = 67
+				controls_state = 75
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_iron_for_weapons"
+			every_controlled_state = {
+				limit = {
+					OR = {
+						state = 12
+						state = 13
+						state = 67
+						state = 75
+					}
+				}
+				random_select_amount = 4
+				add_resource = {
+					type = iron
+					amount = 2
+				}
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_trottingem_military_conglomerate
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_iron_for_weapons
+		prerequisite = {
+			focus = eqs_focus_iron_for_weapons
+		}
+		available = {
+			controls_state = 67
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_trottingem_military_conglomerate"
+			67 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 2
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = bunker
+					level = 2
+					province = 11361
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus = {
+		id = eqs_focus_new_manehattan_manufactures
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_trottingem_military_conglomerate
+		prerequisite = {
+			focus = eqs_focus_trottingem_military_conglomerate
+		}
+		available = {
+			controls_state = 67
+			NML = {
+				controls_state = 362
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_new_manehattan_manufactures"
+			362 = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			NML = {
+				if = {
+					limit = {
+						is_subject_of = ROOT
+					}
+					add_autonomy_score = {
+						value = -300
+					}
+				}
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_sell_spa_islands_to_DRG
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = -5
+		y = 2
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_friendship_flashbacks
+		prerequisite = {
+			focus = eqs_focus_twilight_initiative
+		}
+		available = {
+			has_full_control_of_state = 4
+			DRG = {
+				exists = yes
+				NOT = {
+					has_war_with = ROOT
+				}
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_sell_spa_islands_to_DRG"
+			DRG = {
+				country_event = {
+					id = equestria.14
+				}
+			}
+		}
+	}
+	focus = {
+		id = eqs_focus_evacuate_continental_industry_to_trottingem
+		icon = GFX_goal_generic_changeling
+		cost = 15
+		x = -3
+		y = 2
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_friendship_flashbacks
+		prerequisite = {
+			focus = eqs_focus_twilight_initiative
+		}
+		available = {
+			controls_state = 67
+			any_owned_state = {
+				is_coastal = no
+				is_controlled_by = ROOT
+			}
+		}
+		continue_if_invalid = yes
+		cancel_if_invalid = no
+		select_effect = {
+			every_owned_state = {
+				limit = {
+					is_coastal = no
+					is_controlled_by = ROOT
+				}
+				add_to_array = {
+					ROOT.states_for_evacuation = THIS
+				}
+				set_variable = {
+					state_bl_af = arms_factory_level
+				}
+				set_variable = {
+					state_bl_ic = industrial_complex_level
+				}
+				remove_building = {
+					type = arms_factory
+					level = arms_factory_level
+				}
+				remove_building = {
+					type = industrial_complex
+					level = industrial_complex_level
+				}
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_evacuate_continental_industry_to_trottingem"
+			#Tooltip purposes (Select Effect)
+			custom_effect_tooltip = focus_select_effect_tt
+			custom_effect_tooltip = evacuate_continental_industry_to_trottingem_select_effect_tt
+			#(Complete Effect)
+			custom_effect_tooltip = focus_complete_effect_tt
+			custom_effect_tooltip = evacuate_continental_industry_to_trottingem_complete_effect_tt
+			hidden_effect = {
+				set_temp_variable = {
+					damaged_af_level = 0
+				}
+				set_temp_variable = {
+					damaged_ic_level = 0
+				}
+				set_temp_variable = {
+					total_af_level = 0
+				}
+				set_temp_variable = {
+					total_ic_level = 0
+				}
+				for_each_scope_loop = {
+					array = states_for_evacuation
+					add_to_temp_variable = {
+						total_af_level = state_bl_af
+					}
+					add_to_temp_variable = {
+						total_ic_level = state_bl_ic
+					}
+					if = {
+						limit = {
+							NOT = {
+								is_controlled_by = ROOT
+							}
+						}
+						add_to_temp_variable = {
+							damaged_af_level = state_bl_af
+						}
+						add_to_temp_variable = {
+							damaged_ic_level = state_bl_ic
+						}
+					}
+					clear_variable = state_bl_af
+					clear_variable = state_bl_ic
+				}
+				set_temp_variable = {
+					essbs = total_af_level
+				}
+				add_to_temp_variable = {
+					essbs = total_ic_level
+				}
+				set_temp_variable = {
+					damage_factor = random
+				}
+				clamp_temp_variable = {
+					var = damage_factor
+					min = 0.25
+				}
+				multiply_temp_variable = {
+					state_bl_af = damage_factor
+				}
+				multiply_temp_variable = {
+					state_bl_ic = damage_factor
+				}
+				67 = {
+					add_extra_state_shared_building_slots = essbs
+					add_building_construction = {
+						type = arms_factory
+						level = total_af_level
+						instant_build = yes
+					}
+					add_building_construction = {
+						type = industrial_complex
+						level = total_ic_level
+						instant_build = yes
+					}
+					#damage_building does not accept variable, only static value
+					meta_effect = {
+						text = {
+							damage_building = {
+								type = arms_factory
+								damage = [N_AF]
+							}
+							damage_building = {
+								type = industrial_complex
+								damage = [N_IC]
+							}
+						}
+						N_AF = "[?damaged_af_level]"
+						N_IC = "[?damaged_ic_level]"
+					}
+				}
+				clear_array = states_for_evacuation
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus = {
+		id = eqs_focus_involve_civilians_digging_trenches
+		icon = GFX_goal_generic_changeling
+		cost = 5
+		x = 0
+		y = 1
+		ai_will_do = {
+			base = 200
+		}
+		relative_position_id = eqs_focus_evacuate_continental_industry_to_trottingem
+		prerequisite = {
+			focus = eqs_focus_evacuate_continental_industry_to_trottingem
+		}
+		available = {
+			has_completed_focus = eqs_focus_pegas_harmony
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_involve_civilians_digging_trenches"
+			add_ideas = EQS_civilians_digging_trenches
+			if = {
+				limit = {
+					controls_province = 950
+				}
+				12 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = 950
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_province = 758
+				}
+				75 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = 758
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_province = 963
+				}
+				28 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = 963
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_province = 11672
+				}
+				68 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = 11672
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_province = 9741
+				}
+				2 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = 9741
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_province = 3162
+				}
+				74 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = 3162
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_province = 11100
+				}
+				104 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = 11100
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_province = 6023
+				}
+				103 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = 6023
+						instant_build = yes
+					}
+				}
+			}
+			if = {
+				limit = {
+					controls_province = 3887
+				}
+				109 = {
+					add_building_construction = {
+						type = bunker
+						level = 1
+						province = 3887
+						instant_build = yes
+					}
+				}
+			}
+		}
+	}
 }
 #After war with windigo (stage 2)
 #civil war preparations branch (shared)
@@ -1220,61 +2034,61 @@ shared_focus = {
 	}
 }
 #Fascist tree
-focus_tree = {
-	id = eqs_focus_tree_fascism_consolidation
-	country = {
-		#only by load_focus_tree!
-		base = 0
-	}
-	default = no
-	continuous_focus_position = {
-		x = 1800
-		y = 1250
-	}
-	focus = {
-		id = eqs_focus_defeating_windigo
-		icon = GFX_goal_generic_changeling
-		cost = 5
-		x = 10
-		y = 0
-		ai_will_do = {
-			base = 200
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_defeating_windigo"
-			#to do event (national holiday)
-		}
-	}
-	shared_focus = eqs_focus_civi_war_preparations
-	#necessary respite branch
-
-	#no time for caution branch
-}
+#focus_tree = {
+#	id = eqs_focus_tree_fascism_consolidation
+#	country = {
+#		#only by load_focus_tree!
+#		base = 0
+#	}
+#	default = no
+#	continuous_focus_position = {
+#		x = 1800
+#		y = 1250
+#	}
+#	focus = {
+#		id = eqs_focus_defeating_windigo
+#		icon = GFX_goal_generic_changeling
+#		cost = 5
+#		x = 10
+#		y = 0
+#		ai_will_do = {
+#			base = 200
+#		}
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_defeating_windigo"
+#			#to do event (national holiday)
+#		}
+#	}
+#	shared_focus = eqs_focus_civi_war_preparations
+#	#necessary respite branch
+#
+#	#no time for caution branch
+#}
 #harmonist tree
-focus_tree = {
-	id = eqs_focus_tree_harmony_consolidation
-	country = {
-		#only by load_focus_tree!
-		base = 0
-	}
-	default = no
-	continuous_focus_position = {
-		x = 1800
-		y = 1250
-	}
-	focus = {
-		id = eqs_focus_we_can_be_friends_again
-		icon = GFX_goal_generic_changeling
-		cost = 5
-		x = 10
-		y = 0
-		ai_will_do = {
-			base = 200
-		}
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_we_can_be_friends_again"
-			#to do event (national holiday)
-		}
-	}
-	shared_focus = eqs_focus_civi_war_preparations
-}
+#focus_tree = {
+#	id = eqs_focus_tree_harmony_consolidation
+#	country = {
+#		#only by load_focus_tree!
+#		base = 0
+#	}
+#	default = no
+#	continuous_focus_position = {
+#		x = 1800
+#		y = 1250
+#	}
+#	focus = {
+#		id = eqs_focus_we_can_be_friends_again
+#		icon = GFX_goal_generic_changeling
+#		cost = 5
+#		x = 10
+#		y = 0
+#		ai_will_do = {
+#			base = 200
+#		}
+#		completion_reward = {
+#			log = "[GetDateText]: [Root.GetName]: Focus eqs_focus_we_can_be_friends_again"
+#			#to do event (national holiday)
+#		}
+#	}
+#	shared_focus = eqs_focus_civi_war_preparations
+#}

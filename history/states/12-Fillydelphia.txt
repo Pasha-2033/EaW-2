@@ -16,32 +16,25 @@ state = {
 		12083
 	}
 	state_category = large_city
-	buildings_max_level_factor = 1.0
+	buildings_max_level_factor = 1
 	manpower = 2537200
 	history = {
-		#owner = EQS
-		#add_core_of = EQS
 		victory_points = {950 30}
-		982.1.1 = {
-			owner = EQS
-			add_core_of = EPT
-			add_core_of = EQS
-			add_claim_by = ICE
-			buildings = {
-				infrastructure = 1
-				industrial_complex = 1
-				arms_factory = 1
-				dockyard = 1
-				950 = {
-					naval_base = 1
-				}
+		owner = EQS
+		add_core_of = EQS
+		add_claim_by = ICE
+		buildings = {
+			infrastructure = 1
+			industrial_complex = 1
+			arms_factory = 1
+			dockyard = 1
+			steel_plant = 1
+			950 = {
+				naval_base = 1
 			}
 		}
-		1007.1.1 = {
-			#removing 982 cores and claims#
-			remove_core_of = EPT
+		1002.1.1 = {
 			remove_claim_by = ICE
-			###############################
 		}
 		1050.1.1 = {}
 	}

@@ -1,7 +1,65 @@
 # Do not change tags in here without changing every other reference to them.
 # If adding new technology, make sure they are uniquely named.
 
-
+#naval folders (all)
+technology_categories = {
+	#common
+	cat_naval_tech
+	#common (hull/module/armor)
+	cat_ship_hull
+	cat_ship_module
+	cat_ship_armor
+	cat_naval_transport
+	#hulls
+	cat_frigate_tech
+	cat_destroyer_tech
+	cat_cruiser_tech
+	cat_linear_ship_tech			#batleships and batlecruisers
+	cat_superbatleship_tech
+	cat_carrier_tech
+	cat_supercarrier_tech
+	cat_submarine_tech
+	cat_missile_submarine_tech
+	#hull specific modules
+	cat_depth_charges_module
+	cat_sonar_module
+	cat_airplane_launcher_module
+	cat_cruiser_armor
+	cat_linear_ship_armor
+	cat_carrier_armor
+	cat_carrier_deck_module
+	cat_snorkel_module
+	cat_naval_universal_artillery
+	cat_naval_light_artillery
+	cat_naval_medium_artillery
+	cat_naval_heavy_artillery
+	cat_naval_super_heavy_artillery
+	cat_naval_common_secondary
+	cat_naval_universal_secondary
+	cat_torpedo_launcher
+	cat_cabin_expansion
+	cat_smoke_generator
+	cat_damage_control
+	cat_fire_control_methods
+	cat_mine_improvement
+	cat_mine_avoiding
+	#module groups
+	cat_anti_sub_modules			#depth charges and sonar
+	cat_cruiser_modules				#airplane launcher and cruiser armor
+	cat_carrier_modules				#carrier deck and carrier armor
+	cat_naval_artillery				#all batteries (except for secondaries)
+	cat_naval_secondaries			#all secondaries
+	cat_torpedo_armament			#all torpedo related
+	cat_torpedo_construction		#torpedo construction (except for launchers)
+	cat_naval_improvements			#cabin expansion, smoke generator, damage control, fire control methods
+	cat_mine_tech					#all mine related
+	cat_naval_shells				#all shels
+}
+#to do (few folders)
+technology_categories = {
+	cat_energy_weapons
+	cat_rocket_weapons
+}
 #indusry folder
 technology_categories = {
 	#production and factory management
@@ -29,7 +87,7 @@ technology_categories = {
 	cat_mechanized_equipment
 	naval_equipment
 	rocketry
-	nuclear
+	nuclear	#save (to do)
 	industry
 	electronics
 	land_doctrine
@@ -99,7 +157,6 @@ technology_categories = {
 	naval_minesweeping
 	naval_minelaying
 	naval_weaponry
-	naval_artillery
 	torpedo_tech
 	naval_training
 	naval_ammunition
@@ -274,6 +331,12 @@ technology_folders = {
 		ledger = navy
 	}
 	mtgnavalfolder = {
+		available = {
+			has_dlc = "Man the Guns"
+		}
+		ledger = navy
+	}
+	mtgnavalsupportfolder = {
 		available = {
 			has_dlc = "Man the Guns"
 		}

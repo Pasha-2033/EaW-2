@@ -1,26 +1,34 @@
-state={
-	id=63
-	name="STATE_63"
-
-	provinces={
-		629 3621 3754 3910 6536 6648 6862 9732 9794 9838 9904 11465 11751 11846 11882 11889
+state = {
+	id = 63
+	name = "STATE_63"
+	provinces = {
+		629 
+		3621 
+		3754 
+		3910 
+		6536 
+		6648 
+		6862 
+		9732 
+		9794 
+		9838 
+		9904 
+		11465 
+		11751 
+		11846 
+		11882 
+		11889
 	}
-
-	manpower=45110
-	state_category=pastoral
-	buildings_max_level_factor=1.00
-
-	history={
-		#owner = EQS
-		#add_core_of = EQS
-		982.1.1 = {
-			owner = ICE
-			add_core_of = ICE
-			add_core_of = EQS
-		}
-		1007.1.1 = {
+	manpower = 45110
+	state_category = pastoral
+	buildings_max_level_factor = 1
+	history = {
+		owner = ICE
+		add_core_of = ICE
+		add_core_of = EQS
+		1002.1.1 = {
 			owner = EQS
-			add_core_of = EQS
+			remove_core_of = ICE
 		}
 		1050.1.1 = {}
 	}

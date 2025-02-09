@@ -25,18 +25,14 @@ state = {
 		12685
 	}
 	state_category = pastoral
-	buildings_max_level_factor = 1.0
+	buildings_max_level_factor = 1
 	manpower = 34900
 	history = {
-		#owner = EQS
-		#add_core_of = EQS
-		982.1.1 = {
-			owner = PGT
-			add_core_of = PGT
-			add_core_of = EQS
-			add_claim_by = ICE
-		}
-		1007.1.1 = {
+		owner = PGT
+		add_core_of = PGT
+		add_core_of = EQS
+		add_claim_by = ICE
+		1002.1.1 = {
 			owner = EQS
 			remove_core_of = PGT
 			remove_claim_by = ICE
@@ -44,8 +40,8 @@ state = {
 		1050.1.1 = {}
 	}
 	resources = {
-		steel = 4
-		tungsten = 2
-		chromium = 3
+		iron = 4
+		scheelitis = 2
+		chromite = 3
 	}
 }

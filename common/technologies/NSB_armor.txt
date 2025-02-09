@@ -69,7 +69,7 @@ technologies = {
 			heavy_armor
 		}
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 		on_research_complete_limit = {
 			NOT = {	has_template_containing_unit = light_armor }
@@ -80,14 +80,14 @@ technologies = {
 			hidden_effect = {
 				if = {
 					limit = {
-						has_tech = motorised_infantry
+						has_tech = motorised_infantry_0
 					}
 
 					load_oob = "unlock_tanks_mot"
 				}
 				if = {
 					limit = {
-						NOT = { has_tech = motorised_infantry }
+						NOT = { has_tech = motorised_infantry_0 }
 					}
 
 					load_oob = "unlock_tanks"
@@ -170,14 +170,14 @@ technologies = {
 			hidden_effect = {
 				if = {
 					limit = {
-						has_tech = motorised_infantry
+						has_tech = motorised_infantry_0
 					}
 
 					load_oob = "unlock_tanks_mot"
 				}
 				if = {
 					limit = {
-						NOT = { has_tech = motorised_infantry }
+						NOT = { has_tech = motorised_infantry_0 }
 					}
 
 					load_oob = "unlock_tanks"
@@ -575,13 +575,13 @@ technologies = {
 			hidden_effect = {
 				if = {
 					limit = {
-						has_tech = motorised_infantry
+						has_tech = motorised_infantry_0
 					}
 					load_oob = "unlock_med_tanks_mot"
 				}
 				if = {
 					limit = {
-						NOT = { has_tech = motorised_infantry }
+						NOT = { has_tech = motorised_infantry_0 }
 					}
 					load_oob = "unlock_tanks"
 				}
@@ -908,14 +908,14 @@ technologies = {
 			hidden_effect = {
 				if = {
 					limit = {
-						has_tech = motorised_infantry
+						has_tech = motorised_infantry_0
 					}
 
 					load_oob = "unlock_tanks_mot"
 				}
 				if = {
 					limit = {
-						NOT = { has_tech = motorised_infantry }
+						NOT = { has_tech = motorised_infantry_0 }
 					}
 
 					load_oob = "unlock_tanks"
@@ -1274,7 +1274,7 @@ technologies = {
 			tank_welded_armor
 		}
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 
 		path = {
@@ -1493,7 +1493,7 @@ technologies = {
 			custom_effect_tooltip = engine_tech_1_tt
 		}
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 		show_effect_as_desc = yes
 		research_cost = 1

@@ -12,7 +12,7 @@ technologies = {
 		}
 
 		dependencies = {
-			infantry_weapons = 1
+			infantry_weapons_0 = 1
 		}
 
 		on_research_complete_limit = {
@@ -24,14 +24,14 @@ technologies = {
 			hidden_effect = {
 				if = {
 					limit = {
-						has_tech = motorised_infantry
+						has_tech = motorised_infantry_0
 					}
 
 					load_oob = "unlock_tanks_mot"
 				}
 				if = {
 					limit = {
-						NOT = { has_tech = motorised_infantry }
+						NOT = { has_tech = motorised_infantry_0 }
 					}
 
 					load_oob = "unlock_tanks"
@@ -110,14 +110,14 @@ technologies = {
 			hidden_effect = {
 				if = {
 					limit = {
-						has_tech = motorised_infantry
+						has_tech = motorised_infantry_0
 					}
 
 					load_oob = "unlock_tanks_mot"
 				}
 				if = {
 					limit = {
-						NOT = { has_tech = motorised_infantry }
+						NOT = { has_tech = motorised_infantry_0 }
 					}
 
 					load_oob = "unlock_tanks"
@@ -464,7 +464,7 @@ technologies = {
 
 		on_research_complete_limit = {
 			is_ai = yes
-			has_tech = amphibious_mechanized_infantry
+			has_tech = amphibious_mechanized_infantry_0
 		}
 		on_research_complete = {
 			hidden_effect = {
@@ -720,7 +720,7 @@ technologies = {
 
 			modifier = {
 				factor = 0
-				NOT = { has_tech = motorised_infantry }
+				NOT = { has_tech = motorised_infantry_0 }
 			}
 
 			modifier = {
@@ -1271,7 +1271,7 @@ technologies = {
 			hidden_effect = {
 				army_experience = -30
 				if = {
-					limit = { has_tech = mechanised_infantry }
+					limit = { has_tech = mechanised_infantry_0 }
 					load_oob = "unlock_modern_tanks_mech"
 					else = {
 						load_oob = "unlock_modern_tanks_mot"
@@ -1285,7 +1285,7 @@ technologies = {
 
 			modifier = {
 				factor = 0
-				NOT = { has_tech = motorised_infantry }
+				NOT = { has_tech = motorised_infantry_0 }
 			}
 
 			modifier = {
@@ -1442,14 +1442,14 @@ technologies = {
 					}
 					if = {
 						limit = {
-							has_tech = motorised_infantry
+							has_tech = motorised_infantry_0
 						}
 
 						load_oob = "unlock_tanks_mot"
 					}
 					if = {
 						limit = {
-							NOT = { has_tech = motorised_infantry }
+							NOT = { has_tech = motorised_infantry_0 }
 						}
 
 						load_oob = "unlock_tanks"

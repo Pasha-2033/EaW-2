@@ -40,7 +40,9 @@ focus_tree = {
 			}
 			#to do add event
 		}
-		search_filters = {}
+		search_filters = {
+			FOCUS_FILTER_MANPOWER
+		}
 	}
 	focus = {
 		id = ice_focus_extraction_of_hatred
@@ -50,13 +52,11 @@ focus_tree = {
 			factor = 200
 		}
 		available = {
-			#EQS = {
-			#	NOT = {
-			#		has_completed_focus = eqs_focus_friendship_is_magic
-			#	}
-			#}
-			#todo temp
-			always = no
+			EQS = {
+				NOT = {
+					has_completed_focus = eqs_focus_friendship_is_magic
+				}
+			}
 		}
 		x = 2
 		y = 1
@@ -69,9 +69,12 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_extraction_of_hatred"
-			custom_effect_tooltip = this_is_a_draf_branch
+			add_ideas = ICE_hatred_extraction
 		}
-		search_filters = {}
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+			FOCUS_FILTER_WAR_SUPPORT
+		}
 	}
 	focus = {
 		id = ice_focus_deadly_expansion
@@ -100,7 +103,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_deadly_expansion"
 			add_ideas = ICE_deadly_expansion
 		}
-		search_filters = {}
+		search_filters = {
+			FOCUS_FILTER_STABILITY
+			FOCUS_FILTER_WAR_SUPPORT
+		}
 	}
 	focus = {
 		id = ice_focus_spirit_appearance
@@ -124,8 +130,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_spirit_appearance"
+			add_ideas = ICE_spirit_appearance_0
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_fast_batles
@@ -152,8 +158,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_fast_batles"
+			swap_ideas = {
+				remove_idea = ICE_spirit_appearance_0
+				add_idea = ICE_spirit_appearance_1
+			}
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_high_frezingpower
@@ -180,11 +189,54 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_high_frezingpower"
+			capital_scope = {
+				create_unit = {
+					division = "division_name = { is_name_ordered = yes } division_template = \"Windigo spirits\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+					owner = ROOT
+					count = 3
+				}
+				EPT = {
+					every_owned_state = {
+						limit = {
+							is_controlled_by = EPT
+						}
+						random_select_amount = 2
+						create_unit = {
+							division = "division_name = { is_name_ordered = yes } division_template = \"Windigo spirits\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				PGT = {
+					every_owned_state = {
+						limit = {
+							is_controlled_by = PGT
+						}
+						random_select_amount = 2
+						create_unit = {
+							division = "division_name = { is_name_ordered = yes } division_template = \"Windigo spirits\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+				EQS = {
+					every_owned_state = {
+						limit = {
+							is_controlled_by = EQS
+						}
+						random_select_amount = 2
+						create_unit = {
+							division = "division_name = { is_name_ordered = yes } division_template = \"Windigo spirits\" start_experience_factor = 0.5 start_equipment_factor = 1 start_manpower_factor = 1"
+							owner = ROOT
+							allow_spawning_on_enemy_provs = yes
+						}
+					}
+				}
+			}
 		}
-		search_filters = {}
 	}
-
-
 	focus = {
 		id = ice_focus_new_high_command
 		icon = GFX_goal_ice_focus_generic
@@ -213,6 +265,8 @@ focus_tree = {
 				traits = {
 					undead_race_trait
 					adaptable
+					winter_specialist
+					winter_expert
 				}
 				skill = 3
 				attack_skill = 4
@@ -224,6 +278,8 @@ focus_tree = {
 				character = ICE_valar_morgulis
 				traits = {
 					undead_race_trait
+					winter_specialist
+					winter_expert
 				}
 				skill = 1
 				attack_skill = 3
@@ -235,6 +291,8 @@ focus_tree = {
 				traits = {
 					undead_race_trait
 					commando
+					winter_specialist
+					winter_expert
 				}
 				skill = 2
 				attack_skill = 2
@@ -249,10 +307,10 @@ focus_tree = {
 				random_days = 2
 			}
 		}
-		search_filters = {}
+		search_filters = {
+			FOCUS_FILTER_MILITARY_CHARACTER
+		}
 	}
-
-
 	focus = {
 		id = ice_focus_spirit_transformations
 		icon = GFX_goal_ice_focus_generic
@@ -288,7 +346,6 @@ focus_tree = {
 				}
 			}
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_convertion_other_to_spirits
@@ -312,9 +369,22 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_convertion_other_to_spirits"
-			custom_effect_tooltip = this_is_a_draf_branch
+			if = {
+				limit = {
+					has_intelligence_agency = no
+				}
+				create_intelligence_agency = {
+					name = "Winter is near"
+					icon = GFX_intelligence_agency_logo_generic_2
+				}
+			}
+			else = {
+				army_experience = 5
+				navy_experience = 1
+				air_experience = 1
+			}
+			add_ideas = ICE_convertion_other_to_spirits
 		}
-		search_filters = {}
 	}
 	#nightlands grand plan - organisation and speed
 	focus = {
@@ -342,7 +412,6 @@ focus_tree = {
 			custom_effect_tooltip = add_ICE_nightlands_grandplan_tt
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_battle_column_organisation
@@ -359,14 +428,13 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_battle_column_organisation"
-			subtract_from_variable = {
-				var = nightlands_grandplan_olwm
-				value = 0.05
-				tooltip = sub_ICE_nightlands_grandplan_olwm_5_tt
+			custom_effect_tooltip = change_ICE_nightlands_grandplan_tt
+			add_to_variable = {
+				nightlands_grandplan_olwm = -0.05
+				tooltip = org_loss_when_moving_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_parallel_movement
@@ -383,14 +451,13 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_parallel_movement"
-			subtract_from_variable = {
-				var = nightlands_grandplan_olwm
-				value = 0.05
-				tooltip = sub_ICE_nightlands_grandplan_olwm_5_tt
+			custom_effect_tooltip = change_ICE_nightlands_grandplan_tt
+			add_to_variable = {
+				nightlands_grandplan_olwm = -0.05
+				tooltip = org_loss_when_moving_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_march_throws
@@ -407,17 +474,17 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_march_throws"
-			subtract_from_variable = {
-				var = nightlands_grandplan_olwm
-				value = 0.1
-				tooltip = subadd_ICE_nightlands_grandplan_olwm_10_asf_5_tt
+			custom_effect_tooltip = change_ICE_nightlands_grandplan_tt
+			add_to_variable = {
+				nightlands_grandplan_olwm = -0.1
+				tooltip = org_loss_when_moving_tt
 			}
 			add_to_variable = {
 				nightlands_grandplan_asf = 0.05
+				tooltip = army_speed_factor_tt
 			}
 			end_of_nightlands_subbranch = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_combat_subgroups
@@ -437,17 +504,17 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_combat_subgroups"
+			custom_effect_tooltip = change_ICE_nightlands_grandplan_tt
 			add_to_variable = {
-				var = nightlands_grandplan_aof
-				value = 0.05
-				tooltip = addadd_ICE_nightlands_grandplan_aof_5_aor_10_tt
+				nightlands_grandplan_aof = 0.05
+				tooltip = army_org_factor_tt
 			}
 			add_to_variable = {
 				nightlands_grandplan_aor = 0.1
+				tooltip = army_org_regain_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_single_coordinated_strike
@@ -467,14 +534,13 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_single_coordinated_strike"
+			custom_effect_tooltip = change_ICE_nightlands_grandplan_tt
 			add_to_variable = {
-				var = nightlands_grandplan_ollof
-				value = -0.25
-				tooltip = sub_ICE_nightlands_grandplan_ollof_25_tt
+				nightlands_grandplan_ollof = -0.25
+				tooltip = org_loss_at_low_org_factor_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_division_hard_core
@@ -494,14 +560,13 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_division_hard_core"
+			custom_effect_tooltip = change_ICE_nightlands_grandplan_tt
 			add_to_variable = {
-				var = nightlands_grandplan_aof
-				value = 0.05
-				tooltip = add_ICE_nightlands_grandplan_aof_5_tt
+				nightlands_grandplan_aof = 0.05
+				tooltip = army_org_factor_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_division_hard_front
@@ -521,14 +586,13 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_division_hard_front"
+			custom_effect_tooltip = change_ICE_nightlands_grandplan_tt
 			add_to_variable = {
-				var = nightlands_grandplan_aor
-				value = 0.05
-				tooltip = add_ICE_nightlands_grandplan_aor_5_tt
+				nightlands_grandplan_aor = 0.05
+				tooltip = army_org_regain_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_extra_reserves
@@ -546,14 +610,13 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_extra_reserves"
+			custom_effect_tooltip = change_ICE_nightlands_grandplan_tt
 			add_to_variable = {
-				var = nightlands_grandplan_amf
-				value = 0.15
-				tooltip = add_ICE_nightlands_grandplan_amf_15_tt
+				nightlands_grandplan_amf = 0.15
+				tooltip = army_morale_factor_tt
 			}
 			end_of_nightlands_subbranch = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_new_ambush_tactics
@@ -570,14 +633,13 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_new_ambush_tactics"
+			custom_effect_tooltip = change_ICE_nightlands_grandplan_tt
 			add_to_variable = {
-				var = nightlands_grandplan_aof
-				value = 0.05
-				tooltip = add_ICE_nightlands_grandplan_aof_5_tt
+				nightlands_grandplan_aof = 0.05
+				tooltip = army_org_factor_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_small_recon_groups
@@ -594,14 +656,13 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_small_recon_groups"
+			custom_effect_tooltip = change_ICE_nightlands_grandplan_tt
 			add_to_variable = {
-				var = nightlands_grandplan_ollof
-				value = -0.1
-				tooltip = sub_ICE_nightlands_grandplan_ollof_10_tt
+				nightlands_grandplan_ollof = -0.1
+				tooltip = org_loss_at_low_org_factor_tt
 			}
 			end_of_nightlands_subbranch = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_udaptable_army
@@ -618,14 +679,13 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_udaptable_army"
+			custom_effect_tooltip = change_ICE_nightlands_grandplan_tt
 			add_to_variable = {
-				var = nightlands_grandplan_tpr
-				value = 0.1
-				tooltip = add_ICE_nightlands_grandplan_trp_10_tt
+				nightlands_grandplan_tpr = 0.1
+				tooltip = terrain_penalty_reduction_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_movement_in_cities
@@ -648,14 +708,13 @@ focus_tree = {
 					popup = no
 				}
 			}
+			custom_effect_tooltip = change_ICE_nightlands_grandplan_tt
 			add_to_variable = {
-				var = nightlands_grandplan_urban_movement
-				value = 0.05
-				tooltip = add_ICE_nightlands_grandplan_urban_movement_5_tt
+				nightlands_grandplan_urban_movement = 0.05
+				tooltip = unit_modifier_all_inf_urban_movement_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_movement_in_mountains
@@ -678,14 +737,13 @@ focus_tree = {
 					popup = no
 				}
 			}
+			custom_effect_tooltip = change_ICE_nightlands_grandplan_tt
 			add_to_variable = {
-				var = nightlands_grandplan_mountain_movement
-				value = 0.15
-				tooltip = add_ICE_nightlands_grandplan_mountain_movement_15_tt
+				nightlands_grandplan_mountain_movement = 0.15
+				tooltip = unit_modifier_all_inf_mountain_movement_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_movement_in_hills
@@ -708,14 +766,13 @@ focus_tree = {
 					popup = no
 				}
 			}
+			custom_effect_tooltip = change_ICE_nightlands_grandplan_tt
 			add_to_variable = {
-				var = nightlands_grandplan_hills_movement
-				value = 0.1
-				tooltip = add_ICE_nightlands_grandplan_hills_movement_10_tt
+				nightlands_grandplan_hills_movement = 0.1
+				tooltip = unit_modifier_all_inf_hills_movement_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_movement_in_forests
@@ -738,14 +795,13 @@ focus_tree = {
 					popup = no
 				}
 			}
+			custom_effect_tooltip = change_ICE_nightlands_grandplan_tt
 			add_to_variable = {
-				var = nightlands_grandplan_forest_movement
-				value = 0.1
-				tooltip = add_ICE_nightlands_grandplan_forest_movement_10_tt
+				nightlands_grandplan_forest_movement = 0.1
+				tooltip = unit_modifier_all_inf_forest_movement_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_movement_in_jungle
@@ -768,14 +824,13 @@ focus_tree = {
 					popup = no
 				}
 			}
+			custom_effect_tooltip = change_ICE_nightlands_grandplan_tt
 			add_to_variable = {
-				var = nightlands_grandplan_jungle_movement
-				value = 0.1
-				tooltip = add_ICE_nightlands_grandplan_jungle_movement_10_tt
+				nightlands_grandplan_jungle_movement = 0.1
+				tooltip = unit_modifier_all_inf_jungle_movement_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_movement_in_swamp
@@ -798,14 +853,13 @@ focus_tree = {
 					popup = no
 				}
 			}
+			custom_effect_tooltip = change_ICE_nightlands_grandplan_tt
 			add_to_variable = {
-				var = nightlands_grandplan_marsh_movement
-				value = 0.1
-				tooltip = add_ICE_nightlands_grandplan_marsh_movement_10_tt
+				nightlands_grandplan_marsh_movement = 0.1
+				tooltip = unit_modifier_all_inf_marsh_movement_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_movement_in_plains
@@ -828,14 +882,13 @@ focus_tree = {
 					popup = no
 				}
 			}
+			custom_effect_tooltip = change_ICE_nightlands_grandplan_tt
 			add_to_variable = {
-				var = nightlands_grandplan_plains_movement
-				value = 0.1
-				tooltip = add_ICE_nightlands_grandplan_plains_movement_10_tt
+				nightlands_grandplan_plains_movement = 0.1
+				tooltip = unit_modifier_all_inf_plains_movement_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_movement_in_deserts
@@ -858,14 +911,13 @@ focus_tree = {
 					popup = no
 				}
 			}
+			custom_effect_tooltip = change_ICE_nightlands_grandplan_tt
 			add_to_variable = {
-				var = nightlands_grandplan_desert_movement
-				value = 0.05
-				tooltip = add_ICE_nightlands_grandplan_desert_movement_5_tt
+				nightlands_grandplan_desert_movement = 0.05
+				tooltip = unit_modifier_all_inf_desert_movement_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_heat_resistance
@@ -903,14 +955,13 @@ focus_tree = {
 		y = 2
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: heat_resistance"
+			custom_effect_tooltip = change_ICE_nightlands_grandplan_tt
 			add_to_variable = {
-				var = nightlands_grandplan_ahcgf
-				value = 0.1
-				tooltip = add_ICE_nightlands_grandplan_ahcgf_10_tt
+				nightlands_grandplan_ahcgf = 0.1
+				tooltip = acclimatization_hot_climate_gain_factor_tt
 			}
 			end_of_nightlands_subbranch = yes
 		}
-		search_filters = {}
 	}
 	#valar_morgulis grand plan - manpower and attack
 	#to do(not finished)
@@ -939,7 +990,6 @@ focus_tree = {
 			custom_effect_tooltip = add_ICE_valar_morgulis_grandplan_tt
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_continuous_attack
@@ -959,17 +1009,17 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_continuous_attack"
+			custom_effect_tooltip = change_ICE_valar_morgulis_grandplan_tt
 			add_to_variable = {
-				var = valar_morgulis_grandplan_aaf
-				value = 0.15
-				tooltip = addsub_ICE_valar_morgulis_grandplan_aaf_15_aasf_20_tt
+				valar_morgulis_grandplan_aaf = 0.15
+				tooltip = army_attack_factor_tt
 			}
-			subtract_from_variable = {
-				valar_morgulis_grandplan_aasf = 0.2
+			add_to_variable = {
+				valar_morgulis_grandplan_aasf = -0.2
+				tooltip = army_attack_speed_factor_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_increase_wave_attack
@@ -989,14 +1039,13 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_increase_wave_attack"
+			custom_effect_tooltip = change_ICE_valar_morgulis_grandplan_tt
 			add_to_variable = {
-				var = valar_morgulis_grandplan_aaf
-				value = 0.1
-				tooltip = add_ICE_valar_morgulis_grandplan_aaf_10_tt
+				valar_morgulis_grandplan_aaf = 0.1
+				tooltip = army_attack_factor_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_reconnaissance_in_force
@@ -1013,14 +1062,13 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_increase_wave_attack"
+			custom_effect_tooltip = change_ICE_valar_morgulis_grandplan_tt
 			add_to_variable = {
-				var = valar_morgulis_grandplan_aasf
-				value = 0.05
-				tooltip = add_ICE_valar_morgulis_grandplan_aasf_5_tt
+				valar_morgulis_grandplan_aasf = 0.05
+				tooltip = army_attack_speed_factor_tt
 			}
 			end_of_valar_subbranch = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_massive_assaults
@@ -1037,20 +1085,21 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_massive_assaults"
+			custom_effect_tooltip = change_ICE_valar_morgulis_grandplan_tt
 			add_to_variable = {
-				var = valar_morgulis_grandplan_bf
-				value = 0.05
-				tooltip = addsubsub_ICE_valar_morgulis_grandplan_bf_5_aof_5_aor_5_tt
+				valar_morgulis_grandplan_bf = 0.05
+				tooltip = breakthrough_factor_tt
 			}
-			subtract_from_variable = {
-				valar_morgulis_grandplan_aof = 0.05
+			add_to_variable = {
+				valar_morgulis_grandplan_aof = -0.05
+				tooltip = army_org_factor_tt
 			}
-			subtract_from_variable = {
-				valar_morgulis_grandplan_aor = 0.05
+			add_to_variable = {
+				valar_morgulis_grandplan_aor = -0.05
+				tooltip = army_org_regain_tt
 			}
 			end_of_valar_subbranch = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_attack_tactics
@@ -1067,14 +1116,13 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_attack_tactics"
+			custom_effect_tooltip = change_ICE_valar_morgulis_grandplan_tt
 			add_to_variable = {
-				var = valar_morgulis_grandplan_bf
-				value = 0.1
-				tooltip = add_ICE_valar_morgulis_grandplan_bf_10_tt
+				valar_morgulis_grandplan_bf = 0.1
+				tooltip = breakthrough_factor_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_attack_of_the_wounded
@@ -1091,14 +1139,13 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_attack_of_the_wounded"
+			custom_effect_tooltip = change_ICE_valar_morgulis_grandplan_tt
 			add_to_variable = {
-				var = valar_morgulis_grandplan_asf
-				value = 0.1
-				tooltip = add_ICE_valar_morgulis_grandplan_asf_10_tt
+				valar_morgulis_grandplan_asf = 0.1
+				tooltip = army_strength_factor_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_undiminished_morality
@@ -1115,14 +1162,13 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_undiminished_morality"
+			custom_effect_tooltip = change_ICE_valar_morgulis_grandplan_tt
 			add_to_variable = {
-				var = valar_morgulis_grandplan_amf
-				value = 0.25
-				tooltip = add_ICE_valar_morgulis_grandplan_amf_25_tt
+				valar_morgulis_grandplan_amf = 0.25
+				tooltip = army_morale_factor_tt
 			}
 			end_of_valar_subbranch = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_manpower_management
@@ -1142,7 +1188,6 @@ focus_tree = {
 			add_manpower = 25000
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_improve_coordination_of_mobilization
@@ -1159,14 +1204,13 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_improve_coordination_of_mobilization"
+			custom_effect_tooltip = change_ICE_valar_morgulis_grandplan_tt
 			add_to_variable = {
-				var = valar_morgulis_grandplan_ms
-				value = 0.25
-				tooltip = add_ICE_valar_morgulis_grandplan_ms_25_tt
+				valar_morgulis_grandplan_ms = 0.25
+				tooltip = mobilization_speed_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_direct_recruit_transportation_to_army
@@ -1183,14 +1227,13 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_direct_recruit_transportation_to_army"
+			custom_effect_tooltip = change_ICE_valar_morgulis_grandplan_tt
 			add_to_variable = {
-				var = valar_morgulis_grandplan_ms
-				value = 0.15
-				tooltip = add_ICE_valar_morgulis_grandplan_ms_15_tt
+				valar_morgulis_grandplan_ms = 0.15
+				tooltip = mobilization_speed_tt
 			}
 			end_of_valar_subbranch = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_resurrection
@@ -1208,13 +1251,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_resurrection"
 			subtract_from_variable = {
-				var = resurrect_fallen_cost
-				value = 50
-				tooltip = decrease_resurrect_fallen_cost_50_tt
+				resurrect_fallen_cost = 50
+				tooltip = decrease_resurrect_fallen_cost_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_recovery_teams
@@ -1232,13 +1273,11 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_recovery_teams"
 			add_to_variable = {
-				var = resurrect_fallen_efficiency
-				value = 0.05
-				tooltip = increase_resurrect_fallen_efficiency_5_tt
+				resurrect_fallen_efficiency = 0.05
+				tooltip = increase_resurrect_fallen_efficiency_tt
 			}
 			end_of_valar_subbranch = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_lower_entry_rules_for_recruits
@@ -1258,7 +1297,6 @@ focus_tree = {
 			increase_mobilization_law_idea = yes
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_army_without_civilians
@@ -1334,7 +1372,6 @@ focus_tree = {
 			}
 			end_of_valar_subbranch = yes
 		}
-		search_filters = {}
 	}
 	#windoo grand plan - equipment and defence
 	focus = {
@@ -1362,7 +1399,6 @@ focus_tree = {
 			custom_effect_tooltip = add_ICE_windoo_grandplan_tt
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_equipment_improvement
@@ -1381,11 +1417,10 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_equipment_improvement"
 			multiply_variable = {
 				open_tomb_eq_ammont = 3
-				tooltip = mul_ICE_windoo_grandland_otea_3_tt
+				tooltip = multiply_open_tomb_efficiency_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_equipment_standarts
@@ -1404,14 +1439,14 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_equipment_standarts"
 			subtract_from_variable = {
 				open_tomb_cooldown = 5
-				tooltip = submul_ICE_windoo_grandland_otc_5_otea_2_tt
+				tooltip = decrease_open_tomb_cooldown_tt
 			}
 			multiply_variable = {
 				open_tomb_eq_ammont = 2
+				tooltip = multiply_open_tomb_efficiency_tt
 			}
 			end_of_windoo_subbranch = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_consolidate_occupied_states
@@ -1428,16 +1463,17 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_consolidate_occupied_states"
-			subtract_from_variable = {
-				windoo_grandplan_rt = 0.15
-				tooltip = subsub_ICE_windoo_grandland_rt_15_rgf_10_tt
+			custom_effect_tooltip = change_ICE_windoo_grandplan_tt
+			add_to_variable = {
+				windoo_grandplan_rt = -0.15
+				tooltip = resistance_target_tt
 			}
-			subtract_from_variable = {
-				windoo_grandplan_rgf = 0.1
+			add_to_variable = {
+				windoo_grandplan_rgf = -0.1
+				tooltip = required_garrison_factor_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_fallback_patterns
@@ -1454,13 +1490,13 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_fallback_patterns"
+			custom_effect_tooltip = change_ICE_windoo_grandplan_tt
 			add_to_variable = {
 				windoo_grandplan_adf = 0.1
-				tooltip = add_ICE_windoo_grandland_adf_10_tt
+				tooltip = army_defence_factor_tt
 			}
 			end_of_windoo_subbranch = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_supply_management
@@ -1477,13 +1513,13 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_supply_management"
+			custom_effect_tooltip = change_ICE_windoo_grandplan_tt
 			add_to_variable = {
 				windoo_grandplan_snr = 0.5
-				tooltip = add_ICE_windoo_grandland_snr_50_tt
+				tooltip = supply_node_range_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_destroy_buildings_for_equipment
@@ -1503,7 +1539,6 @@ focus_tree = {
 			custom_effect_tooltip = unlock_destroy_buildings_decision_tt #decision is targered, so instance localisation is wrong, tooltip required
 			end_of_windoo_subbranch = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_power_of_distaction
@@ -1520,16 +1555,17 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_power_of_distaction"
+			custom_effect_tooltip = change_ICE_windoo_grandplan_tt
 			add_to_variable = {
 				windoo_grandplan_mps = 0.1
-				tooltip = addadd_ICE_windoo_grandland_mps_10_ps_10_tt
+				tooltip = max_planning_factor_tt
 			}
 			add_to_variable = {
 				windoo_grandplan_ps = 0.1
+				tooltip = planning_speed_factor_tt
 			}
 			inspection_in_windigo_army = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_attack_is_defence_too
@@ -1546,13 +1582,13 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_attack_is_defence_toon"
+			custom_effect_tooltip = change_ICE_windoo_grandplan_tt
 			add_to_variable = {
 				windoo_grandplan_cb = 0.1
-				tooltip = add_ICE_windoo_grandland_cb_10_tt
+				tooltip = coordination_bonus_tt
 			}
 			end_of_windoo_subbranch = yes
 		}
-		search_filters = {}
 	}
 	focus = {
 		id = ice_focus_rotation_prototype
@@ -1569,12 +1605,12 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_rotation_prototype"
-			subtract_from_variable = {
-				windoo_grandplan_pp = 0.1
-				tooltip = sub_ICE_windoo_grandplan_pp_10_tt
+			custom_effect_tooltip = change_ICE_windoo_grandplan_tt
+			add_to_variable = {
+				windoo_grandplan_pp = -0.1
+				tooltip = pocket_penalty_tt
 			}
 			end_of_windoo_subbranch = yes
 		}
-		search_filters = {}
 	}
 }

@@ -5,14 +5,14 @@ defined_text = {
 	name = state_lore_title
 	text = {
 		trigger = {
-			date < 1007.1.1
+			date < 1002.1.1
 		}
 		localization_key = state_lore_title_evil_mind
 	}
 	text = {
 		trigger = {
 			NOT = {
-				date < 1007.1.1
+				date < 1002.1.1
 			}
 			date < 1050.1.1
 		}
@@ -35,7 +35,7 @@ defined_text = {
 	text = {
 		#evil mind is alive (982 scenario)
 		trigger = {
-			date < 1007.1.1
+			date < 1002.1.1
 			evil_mind_alive = yes
 		}
 		localization_key = state_lore_date_current
@@ -43,12 +43,12 @@ defined_text = {
 	text = {
 		#evil mind is dead (982 scenario)
 		trigger = {
-			date < 1007.1.1
+			date < 1002.1.1
 		}
 		localization_key = state_lore_date_last_evil_mind_date
 	}
 	text = {
-		#1007 scenario
+		#1002 scenario
 		trigger = {
 			date > 982.1.1
 			date < 1050.1.1

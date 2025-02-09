@@ -4,4 +4,26 @@ opinion_modifiers = {
 		decay = 1
 		years = 3
 	}
+	boycotted_by_us = {
+		value = -50
+		decay = 2
+		months = 25
+	}
+	boycotted_by_us_trade = {
+		trade = yes
+		value = -50
+		decay = 2
+		months = 25
+	}
+	we_boycotted_them = {
+		value = -25
+		decay = 1
+		months = 25
+	}
+	we_boycotted_them_trade = {
+		trade = yes
+		value = -25
+		decay = 1
+		months = 25
+	}
 }

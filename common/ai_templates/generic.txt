@@ -99,7 +99,6 @@ medium_armor_generic = {
 		JUN
 		CES
 		NMS
-		CHN
 		CCN
 		WAT
 		FIR
@@ -209,7 +208,7 @@ medium_armor_generic = {
 			factor = 3
 			modifier = {
 				factor = 0
-				NOT = { has_tech = mechanised_infantry }
+				NOT = { has_tech = mechanised_infantry_0 }
 			}
 			modifier = {
 				factor = 0
@@ -221,7 +220,7 @@ medium_armor_generic = {
 			factor = 1
 			modifier = {
 				factor = 0
-				NOT = { has_tech = mechanised_infantry }
+				NOT = { has_tech = mechanised_infantry_0 }
 			}
 		}
 
@@ -403,7 +402,6 @@ modern_armor_generic = {
 		JUN
 		CES
 		NMS
-		CHN
 		CCN
 		WAT
 		FIR
@@ -431,7 +429,7 @@ modern_armor_generic = {
 			NOT = {
 				has_tech = main_battle_tank
 				has_tech = main_battle_tank_chassis
-				has_tech = mechanised_infantry
+				has_tech = mechanised_infantry_0
 			}
 		}
 	}
@@ -498,7 +496,7 @@ modern_armor_generic = {
 				NOT = {
 					has_tech = main_battle_tank
 					has_tech = main_battle_tank_chassis
-					has_tech = mechanised_infantry
+					has_tech = mechanised_infantry_0
 				}
 			}
 		}
@@ -751,7 +749,7 @@ suppression_generic = {
 
 			modifier = {
 				factor = 0
-				NOT = { has_tech = armored_car1 }
+				NOT = { has_tech = armored_car_0 }
 			}
 
 			modifier = {
@@ -775,7 +773,7 @@ suppression_generic = {
 
 			modifier = {
 				factor = 0
-				NOT = { has_tech = armored_car1 }
+				NOT = { has_tech = armored_car_0 }
 			}
 
 			modifier = {
@@ -864,7 +862,6 @@ infantry_generic = {
 		JUN
 		CES
 		NMS
-		CHN
 		DED
 		CCN
 		WAT
@@ -1218,7 +1215,6 @@ magical_infantry_generic = {
 		JUN
 		CES
 		NMS
-		CHN
 		CCN
 		WAT
 		FIR
@@ -1308,7 +1304,6 @@ mountaineers_generic = {
 		JUN
 		CES
 		NMS
-		CHN
 		CCN
 		WAT
 		FIR
@@ -1438,7 +1433,6 @@ marines_generic = {
 		JUN
 		CES
 		NMS
-		CHN
 		CCN
 		WAT
 		FIR
@@ -1561,7 +1555,7 @@ marines_generic = {
 				factor = 0
 				NOT = {
 					has_tech = amphibious_tank
-					has_tech = amphibious_mechanized_infantry
+					has_tech = amphibious_mechanized_infantry_0
 				}
 			}
 			modifier = {
@@ -1659,7 +1653,6 @@ paratrooper_generic = {
 		JUN
 		CES
 		NMS
-		CHN
 		CCN
 		WAT
 		FIR

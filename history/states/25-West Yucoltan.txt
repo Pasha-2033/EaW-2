@@ -16,23 +16,17 @@ state = {
 		13074
 	}
 	state_category = pastoral
-	buildings_max_level_factor = 1.0
+	buildings_max_level_factor = 1
 	manpower = 119500
 	history = {
-		#owner = EQS
-		#add_core_of = EQS
-		982.1.1 = {			
-			owner = EPT
-			add_core_of = EPT
-			add_core_of = EQS
-			add_claim_by = ICE
-		}
-		1007.1.1 = {
-			#removing 982 cores and claims#
+		owner = EPT
+		add_core_of = EPT
+		add_core_of = EQS
+		add_claim_by = ICE
+		1002.1.1 = {
+			owner = EQS
 			remove_core_of = EPT
 			remove_claim_by = ICE
-			###############################
-			owner = EQS
 		}
 		1050.1.1 = {}
 	}

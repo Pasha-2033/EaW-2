@@ -1,27 +1,37 @@
-state={
-	id=135
-	name="STATE_135"
-
-	provinces={
-		61 201 785 895 3936 6125 9147 9791 9930 11208 11774 11867 13292 13293 13294 13295
+state = {
+	id = 135
+	name = "STATE_135"
+	provinces = {
+		61 
+		201 
+		785 
+		895 
+		3936 
+		6125 
+		9147 
+		9791 
+		9930 
+		11208 
+		11774 
+		11867 
+		13292 
+		13293 
+		13294 
+		13295
 	}
-
-	manpower=44200
-	state_category=pastoral
-	buildings_max_level_factor=1.00
-
-	history={
-		#owner = EQS
-		#add_core_of = EQS
-		982.1.1 = {
-			owner = PGT
-			add_core_of = PGT
-			add_core_of = EQS
-			add_claim_by = ICE
-		}
-		1007.1.1 = {
+	manpower = 44200
+	state_category = pastoral
+	buildings_max_level_factor = 1
+	history = {
+		owner = PGT
+		add_core_of = PGT
+		add_core_of = EQS
+		add_claim_by = ICE
+		1002.1.1 = {
 			owner = EQS
 			remove_core_of = PGT
+			remove_claim_by = ICE
 		}
+		1050.1.1 = {}
 	}
 }

@@ -1,34 +1,42 @@
-state={
-	id=94
-	name="STATE_94"
-
-	provinces={
-		375 3367 3645 3694 3696 6441 6679 6682 6697 9456 9640 9656 10194 11481 11644 11659 13010
+state = {
+	id = 94
+	name = "STATE_94"
+	provinces = {
+		375 
+		3367 
+		3645 
+		3694 
+		3696 
+		6441 
+		6679 
+		6682 
+		6697 
+		9456 
+		9640 
+		9656 
+		10194 
+		11481 
+		11644 
+		11659 
+		13010
 	}
-
-	manpower=98800
-	state_category=pastoral
-	buildings_max_level_factor=1.00
-
-	history={
-		#owner = EQS
-		#add_core_of = EQS
-		982.1.1 = {
-			owner = ICE
-			add_core_of = ICE
-			add_core_of = EQS
-		}
-		1007.1.1 = {
-			owner = EQS
-			add_core_of = EQS
-		}
-		1050.1.1 = {}
+	manpower = 98800
+	state_category = pastoral
+	buildings_max_level_factor = 1
+	history = {
 		victory_points = { 3645 2 }
-
+		owner = ICE
+		add_core_of = ICE
+		add_core_of = EQS
 		buildings = {
 			3645 = {
 				naval_base = 1
 			}
 		}
+		1002.1.1 = {
+			owner = EQS
+			remove_core_of = ICE
+		}
+		1050.1.1 = {}
 	}
 }

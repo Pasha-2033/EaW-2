@@ -11,18 +11,35 @@ on_actions = {
 						tag = ICE
 					}
 				}
-				#remove every core of ICE
+				#remove every core of ICE and achievement possibility
 				ICE = {
 					every_core_state = {
 						remove_core_of = ICE
 					}
+					clr_country_flag = can_get_winter_is_coming_achievement
 				}
-				#remove every claims of ICE
+				#remove every anti ICE idea
+				every_country = {
+					remove_ideas_with_trait = anti_ICE_confrontation
+				}
+				#remove every claims of ICE and temperature instability
 				every_state = {
-					limit = {
-						is_claimed_by = ICE
+					if = {
+						limit = {
+							is_claimed_by = ICE
+						}
+						remove_claim_by = ICE
 					}
-					remove_claim_by = ICE
+					if = {
+						limit = {
+							has_dynamic_modifier = {
+								modifier = ICE_warm_cold_state
+							}
+						}
+						remove_dynamic_modifier = {
+							modifier = ICE_warm_cold_state
+						}
+					}
 				}
 				PGT = {
 					#remove every passage from PGT that granted by focuses
@@ -50,7 +67,7 @@ on_actions = {
 							days = 20
 						}
 						country_event = {
-							id = pegas_tribe.5
+							id = pegas_tribe.6
 						}
 					}
 				}
@@ -160,6 +177,61 @@ on_actions = {
 					}
 					remove_power_balance = {
 						id = EQS_prince_blueblood_vs_twilight
+					}
+				}
+				#to do, declare civil war STG to WOP
+			}
+			#EQS capitultation
+			else_if = {
+				limit = {
+					ROOT = {
+						tag = EQS
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							tag = ICE
+						}
+					}
+					ICE = {
+						set_country_flag = capitulated_EQS
+					}
+				}
+			}
+			#EPT capitultation
+			else_if = {
+				limit = {
+					ROOT = {
+						tag = EPT
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							tag = ICE
+						}
+					}
+					ICE = {
+						set_country_flag = capitulated_EPT
+					}
+				}
+			}
+			#PGT capitultation
+			else_if = {
+				limit = {
+					ROOT = {
+						tag = PGT
+					}
+				}
+				if = {
+					limit = {
+						FROM = {
+							tag = ICE
+						}
+					}
+					ICE = {
+						set_country_flag = capitulated_PGT
 					}
 				}
 			}

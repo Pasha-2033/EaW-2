@@ -1,0 +1,278 @@
+#WARNING! Untested, still looks like a draft
+#Armor piercing, for destroying tanks
+ap_low_requirements = {
+	enable = {
+		any_enemy_country = {
+			has_army_size = {
+				size > 5
+				type = armor
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {  # Potentially move into a "specialization" strategy
+		type = equipment_production_surplus_management
+		id = anti_tank_equipment
+		value = 10
+	}
+}
+ap_high_requirements = {
+	enable = {
+		any_enemy_country = {
+			OR = {
+				has_army_size = {
+					size > 10
+					type = armor
+				}
+				any_country_division = {
+					division_has_battalion_in_template = medium_armor
+					NOT = {
+						division_has_majority_template = medium_armor
+					}
+				}
+				any_country_division = {
+					division_has_battalion_in_template = heavy_armor
+					NOT = {
+						division_has_majority_template = heavy_armor
+					}
+				}
+				any_country_division = {
+					division_has_battalion_in_template = super_heavy_armor
+					NOT = {
+						division_has_majority_template = super_heavy_armor
+					}
+				}
+			}
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {  # Potentially move into a "specialization" strategy
+		type = equipment_production_surplus_management
+		id = anti_tank_equipment
+		value = 10
+	}
+	ai_strategy = {
+		type = role_ratio
+		id = anti_tank_brigade
+		value = 30
+	}
+}
+#Railway gun for bunker destruction
+railway_gun_low_requirements = {
+	allowed = {
+		has_dlc = "No Step Back"
+	}
+	enable = {
+		has_tech = railway_gun_0
+		num_of_military_factories > 24
+		has_railway_level = {
+			state = capital
+			level = 1
+		}
+		any_enemy_country = {
+			any_state = {
+				any_neighbor_state = {
+					is_controlled_by = ROOT
+				}
+				any_province_building_level = {
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+					building = bunker
+					level > 2
+				}
+			}
+		}
+	}
+	abort = {
+		OR = {
+			#railguns is only war measure for generic strategy
+			has_war = no
+			#we can`t afford this anymore
+			num_of_military_factories < 25
+		}
+	}
+	#ratio will make percentage, so 0.02 * 50 = 1, it`s normal have 1 railgun for 50 divisions with good production
+	ai_strategy = {
+		type = railway_gun_divisions_ratio
+		value = 5
+	}
+}
+railway_gun_high_requirements = {
+	allowed = {
+		has_dlc = "No Step Back"
+	}
+	#according nearly same trigger as in railway_gun_low_requirements, it will add, but not override ai behavior
+	enable = {
+		has_tech = railway_gun_0
+		num_of_military_factories > 39
+		has_railway_level = {
+			state = capital
+			level = 1
+		}
+		any_enemy_country = {
+			any_state = {
+				any_neighbor_state = {
+					is_controlled_by = ROOT
+				}
+				any_province_building_level = {
+					province = {
+						all_provinces = yes
+						limit_to_border = yes
+					}
+					building = bunker
+					level > 5
+				}
+			}
+		}
+	}
+	abort = {
+		OR = {
+			#railguns is only war measure for generic strategy
+			has_war = no
+			#we can`t afford this anymore
+			num_of_military_factories < 40
+		}
+	}
+	#ratio will make percentage, so (0.02 + 0.02) * 50 = 2, it`s normal have 1 railgun for 25 divisions with good production againt a lot of bunkers
+	ai_strategy = {
+		type = railway_gun_divisions_ratio
+		value = 2
+	}
+}
+#Air related production
+switch_planes_to_aa_equipment = {
+	enable = {
+		num_of_military_factories < 20
+		has_tech = antiair1
+	}
+	abort = {
+		num_of_military_factories > 19
+	}
+	ai_strategy = {
+		type = air_factory_balance
+		value = -100
+	}
+	ai_strategy = {
+		type = equipment_production_factor
+		id = anti_air
+		value = 10
+	}
+	#don't sell stuff that we need for the war
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = anti_air
+		value = 200
+	}
+}
+stop_planes_production_that_will_be_shot_down = {
+	enable = {
+		check_variable = {
+			num_deployed_planes > 0 #prevent from fighter_ratio / num_deployed_planes, where num_deployed_planes = 0
+		}
+		set_temp_variable = {
+			fighter_ratio = num_deployed_planes_with_type@fighter
+		}
+		divide_temp_variable = {
+			fighter_ratio = num_deployed_planes
+		}
+		check_variable = {
+			fighter_ratio < 0.2
+		}
+	}
+	abort_when_not_enabled = yes
+	ai_strategy = {
+		type = unit_ratio
+		id = fighter
+		value = 100
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = cas
+		value = -100
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = tactical_bomber
+		value = -100
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = strategic_bomber
+		value = -100
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = naval_bomber
+		value = -100
+	}
+	#don't sell stuff that we need for the war
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = fighter
+		value = 100
+	}
+	ai_strategy = {
+		type = equipment_market_for_sale_threshold
+		id = anti_air
+		value = 100
+	}
+	#buy stuff we need for the war
+	ai_strategy = {
+		type = equipment_market_buying_threshold
+		id = fighter
+		value = 50
+	}
+	ai_strategy = {
+		type = equipment_market_buying_threshold
+		id = anti_air
+		value = 50
+	}
+}
+#Armor production
+increase_armor_thickness = {
+	enable = {
+		num_of_military_factories > 19
+		any_enemy_country = {
+			num_divisions > 0 #prevent from ap_ratio / num_divisions, where num_divisions = 0
+			set_temp_variable = {
+				ap_ratio = num_battalions_with_type@anti_tank_brigade
+			}
+			divide_temp_variable = {
+				ap_ratio = num_divisions
+			}
+			check_variable = {
+				ap_ratio > 0.2
+			}
+		}
+	}
+	abort = {
+		OR = {
+			#thick armor is only war measure for generic strategy
+			has_war = no
+			#we can`t afford this anymore
+			num_of_military_factories < 20
+		}
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = light_armor
+		value = -50
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = medium_armor
+		value = 10
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = heavy_armor
+		value = 40
+	}
+	ai_strategy = {
+		type = unit_ratio
+		id = super_heavy_armor
+		value = 20
+	}
+}
