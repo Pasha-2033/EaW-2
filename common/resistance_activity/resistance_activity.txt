@@ -25,6 +25,267 @@
 #	alert_text = loc
 #}
 
+#buildings
+sabotage_infrastructure = {
+	available = {
+		non_damaged_building_level = {
+			building = infrastructure
+			level > 0
+		}
+	}
+
+	weight = {
+		base = 1
+		modifier = {
+			has_variable = targeted_sabotage_infrastructure
+			check_variable = { targeted_sabotage_infrastructure > 0 }
+
+			add = 4
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_variable = targeted_sabotage_infrastructure
+				check_variable = { targeted_sabotage_infrastructure > 0 }
+			}
+			damage_building = {
+				type = infrastructure
+				damage = 1.0
+			}
+			subtract_from_variable = { var = targeted_sabotage_infrastructure value = 1 }
+		}
+		else = {
+			damage_building = {
+				type = infrastructure
+				damage = 0.5
+			}
+		}		
+	}
+
+	alert_text = building_is_sabotaged
+}
+sabotage_aluminium_plant = {
+	available = {
+		non_damaged_building_level = {
+			building = aluminium_plant
+			level > 0
+		}
+	}
+
+	weight = {
+		base = 1
+		modifier = {
+			has_variable = targeted_sabotage_industry
+			check_variable = { targeted_sabotage_industry > 0 }
+
+			add = 4
+		}
+		modifier = {
+			occupation_law = harsh_quotas_occupation
+			add = -0.25
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_variable = targeted_sabotage_industry
+				check_variable = { targeted_sabotage_industry > 0 }
+			}
+			damage_building = {
+				type = aluminium_plant
+				damage = 0.75
+			}
+			subtract_from_variable = { var = targeted_sabotage_industry value = 1 }
+		}
+		else = {
+			damage_building = {
+				type = aluminium_plant
+				damage = 0.5
+			}
+		}		
+	}
+
+	alert_text = building_is_sabotaged
+}
+sabotage_steel_plant = {
+	available = {
+		non_damaged_building_level = {
+			building = steel_plant
+			level > 0
+		}
+	}
+
+	weight = {
+		base = 1
+		modifier = {
+			has_variable = targeted_sabotage_industry
+			check_variable = { targeted_sabotage_industry > 0 }
+
+			add = 4
+		}
+		modifier = {
+			occupation_law = harsh_quotas_occupation
+			add = -0.25
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_variable = targeted_sabotage_industry
+				check_variable = { targeted_sabotage_industry > 0 }
+			}
+			damage_building = {
+				type = steel_plant
+				damage = 0.75
+			}
+			subtract_from_variable = { var = targeted_sabotage_industry value = 1 }
+		}
+		else = {
+			damage_building = {
+				type = steel_plant
+				damage = 0.5
+			}
+		}		
+	}
+
+	alert_text = building_is_sabotaged
+}
+sabotage_tungsten_plant = {
+	available = {
+		non_damaged_building_level = {
+			building = tungsten_plant
+			level > 0
+		}
+	}
+
+	weight = {
+		base = 1
+		modifier = {
+			has_variable = targeted_sabotage_industry
+			check_variable = { targeted_sabotage_industry > 0 }
+
+			add = 4
+		}
+		modifier = {
+			occupation_law = harsh_quotas_occupation
+			add = -0.25
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_variable = targeted_sabotage_industry
+				check_variable = { targeted_sabotage_industry > 0 }
+			}
+			damage_building = {
+				type = tungsten_plant
+				damage = 0.75
+			}
+			subtract_from_variable = { var = targeted_sabotage_industry value = 1 }
+		}
+		else = {
+			damage_building = {
+				type = tungsten_plant
+				damage = 0.5
+			}
+		}		
+	}
+
+	alert_text = building_is_sabotaged
+}
+sabotage_chromium_plant = {
+	available = {
+		non_damaged_building_level = {
+			building = chromium_plant
+			level > 0
+		}
+	}
+
+	weight = {
+		base = 1
+		modifier = {
+			has_variable = targeted_sabotage_industry
+			check_variable = { targeted_sabotage_industry > 0 }
+
+			add = 4
+		}
+		modifier = {
+			occupation_law = harsh_quotas_occupation
+			add = -0.25
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_variable = targeted_sabotage_industry
+				check_variable = { targeted_sabotage_industry > 0 }
+			}
+			damage_building = {
+				type = chromium_plant
+				damage = 0.75
+			}
+			subtract_from_variable = { var = targeted_sabotage_industry value = 1 }
+		}
+		else = {
+			damage_building = {
+				type = chromium_plant
+				damage = 0.5
+			}
+		}		
+	}
+
+	alert_text = building_is_sabotaged
+}
+sabotage_ore_preparation = {
+	available = {
+		non_damaged_building_level = {
+			building = ore_preparation
+			level > 0
+		}
+	}
+
+	weight = {
+		base = 1
+		modifier = {
+			has_variable = targeted_sabotage_industry
+			check_variable = { targeted_sabotage_industry > 0 }
+
+			add = 4
+		}
+		modifier = {
+			occupation_law = harsh_quotas_occupation
+			add = -0.25
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_variable = targeted_sabotage_industry
+				check_variable = { targeted_sabotage_industry > 0 }
+			}
+			damage_building = {
+				type = ore_preparation
+				damage = 0.75
+			}
+			subtract_from_variable = { var = targeted_sabotage_industry value = 1 }
+		}
+		else = {
+			damage_building = {
+				type = ore_preparation
+				damage = 0.5
+			}
+		}		
+	}
+
+	alert_text = building_is_sabotaged
+}
 sabotage_arms_factory = {
 	available = {
 		non_damaged_building_level = {
@@ -69,48 +330,6 @@ sabotage_arms_factory = {
 
 	alert_text = building_is_sabotaged
 }
-
-sabotage_infrastructure = {
-	available = {
-		non_damaged_building_level = {
-			building = infrastructure
-			level > 0
-		}
-	}
-
-	weight = {
-		base = 1
-		modifier = {
-			has_variable = targeted_sabotage_infrastructure
-			check_variable = { targeted_sabotage_infrastructure > 0 }
-
-			add = 4
-		}
-	}
-
-	effect = {
-		if = {
-			limit = {
-				has_variable = targeted_sabotage_infrastructure
-				check_variable = { targeted_sabotage_infrastructure > 0 }
-			}
-			damage_building = {
-				type = infrastructure
-				damage = 1.0
-			}
-			subtract_from_variable = { var = targeted_sabotage_infrastructure value = 1 }
-		}
-		else = {
-			damage_building = {
-				type = infrastructure
-				damage = 0.5
-			}
-		}		
-	}
-
-	alert_text = building_is_sabotaged
-}
-
 sabotage_industrial_complex = {
 	available = {
 		non_damaged_building_level = {
@@ -155,7 +374,50 @@ sabotage_industrial_complex = {
 
 	alert_text = building_is_sabotaged
 }
+sabotage_agrarian_complex = {
+	available = {
+		non_damaged_building_level = {
+			building = agrarian_complex
+			level > 0
+		}
+	}
 
+	weight = {
+		base = 1
+		modifier = {
+			has_variable = targeted_sabotage_industry
+			check_variable = { targeted_sabotage_industry > 0 }
+
+			add = 4
+		}
+		modifier = {
+			occupation_law = harsh_quotas_occupation
+			add = -0.25
+		}
+	}
+
+	effect = {
+		if = {
+			limit = {
+				has_variable = targeted_sabotage_industry
+				check_variable = { targeted_sabotage_industry > 0 }
+			}
+			damage_building = {
+				type = agrarian_complex
+				damage = 0.5
+			}
+			subtract_from_variable = { var = targeted_sabotage_industry value = 1 }
+		}
+		else = {
+			damage_building = {
+				type = agrarian_complex
+				damage = 0.25
+			}
+		}
+	}
+
+	alert_text = building_is_sabotaged
+}
 sabotage_air_base = {
 	available = {
 		non_damaged_building_level = {
@@ -177,7 +439,6 @@ sabotage_air_base = {
 
 	alert_text = building_is_sabotaged
 }
-
 sabotage_dockyard = {
 	available = {
 		non_damaged_building_level = {
@@ -199,7 +460,6 @@ sabotage_dockyard = {
 
 	alert_text = building_is_sabotaged
 }
-
 sabotage_anti_air_building = {
 	available = {
 		non_damaged_building_level = {
@@ -221,8 +481,6 @@ sabotage_anti_air_building = {
 
 	alert_text = building_is_sabotaged
 }
-
-
 sabotage_synthetic_refinery = {
 	available = {
 		non_damaged_building_level = {
@@ -244,8 +502,6 @@ sabotage_synthetic_refinery = {
 
 	alert_text = building_is_sabotaged
 }
-
-
 sabotage_fuel_silo = {
 	available = {
 		non_damaged_building_level = {
@@ -267,8 +523,6 @@ sabotage_fuel_silo = {
 
 	alert_text = building_is_sabotaged
 }
-
-
 sabotage_radar_station = {
 	available = {
 		non_damaged_building_level = {
@@ -290,7 +544,6 @@ sabotage_radar_station = {
 
 	alert_text = building_is_sabotaged
 }
-
 sabotage_rocket_site = {
 	available = {
 		non_damaged_building_level = {
@@ -312,11 +565,10 @@ sabotage_rocket_site = {
 	
 	alert_text = building_is_sabotaged
 }
-
-sabotage_nuclear_reactor = {
+sabotage_mega_gun_emplacement = {
 	available = {
 		non_damaged_building_level = {
-			building = nuclear_reactor
+			building = mega_gun_emplacement
 			level > 0
 		}
 	}
@@ -327,14 +579,383 @@ sabotage_nuclear_reactor = {
 
 	effect = {
 		damage_building = {
-			type = nuclear_reactor
-			damage = 0.15
+			type = mega_gun_emplacement
+			damage = 0.25
 		}
 	}
 	
 	alert_text = building_is_sabotaged
 }
+sabotage_nuclear_reactor = {
+	available = {
+		non_damaged_building_level = {
+			building = nuclear_reactor
+			level > 0
+		}
+	}
+	weight = {
+		base = 1
+	}
+	effect = {
+		damage_building = {
+			type = nuclear_reactor
+			damage = 0.15
+		}
+		random_list = {
+			90 = {
+				#nothing bad happened
+			}
+			10 = {
+				#core meltdown!
+				add_dynamic_modifier = {
+					modifier = core_meltdown
+					days = 30
+				}
+			}
+		}
+	}
+	
+	alert_text = reactor_is_sabotaged
+}
+sabotage_nuclear_reactor_heavy_water = {
+	available = {
+		non_damaged_building_level = {
+			building = nuclear_reactor_heavy_water
+			level > 0
+		}
+	}
+	weight = {
+		base = 1
+	}
+	effect = {
+		damage_building = {
+			type = nuclear_reactor_heavy_water
+			damage = 0.15
+		}
+		random_list = {
+			80 = {
+				#nothing bad happened
+			}
+			20 = {
+				#core meltdown!
+				add_dynamic_modifier = {
+					modifier = core_meltdown
+					days = 30
+				}
+			}
+		}
+	}
+	
+	alert_text = reactor_is_sabotaged
+}
+sabotage_nuclear_reactor_exploratory = {
+	available = {
+		non_damaged_building_level = {
+			building = nuclear_reactor_exploratory
+			level > 0
+		}
+	}
+	weight = {
+		base = 1
+	}
+	effect = {
+		damage_building = {
+			type = nuclear_reactor_exploratory
+			damage = 0.15
+		}
+		random_list = {
+			95 = {
+				#nothing bad happened
+			}
+			5 = {
+				#core meltdown!
+				add_dynamic_modifier = {
+					modifier = core_meltdown
+					days = 30
+				}
+			}
+		}
+	}
+	
+	alert_text = reactor_is_sabotaged
+}
+sabotage_thermonuclear_reactor = {
+	available = {
+		non_damaged_building_level = {
+			building = thermonuclear_reactor
+			level > 0
+		}
+	}
+	weight = {
+		base = 1
+	}
+	effect = {
+		damage_building = {
+			type = thermonuclear_reactor
+			damage = 0.15
+		}
+		#thermonuclear reactor don`t have meltdown consequences
+	}
+	
+	alert_text = reactor_is_sabotaged
+}
+sabotage_commercial_reactor = {
+	available = {
+		non_damaged_building_level = {
+			building = commercial_reactor
+			level > 0
+		}
+	}
+	weight = {
+		base = 1
+	}
+	effect = {
+		damage_building = {
+			type = commercial_reactor
+			damage = 0.15
+		}
+		random_list = {
+			95 = {
+				#nothing bad happened
+			}
+			5 = {
+				#core meltdown!
+				add_dynamic_modifier = {
+					modifier = core_meltdown
+					days = 30
+				}
+			}
+		}
+	}
+	
+	alert_text = reactor_is_sabotaged
+}
 
+#resources
+sabotage_bauxite = {
+	available = {
+		has_resources_amount = {
+			resource = bauxite
+			amount > 0
+			delivered = yes
+		}
+	}
+
+	weight = {
+		base = 1
+		modifier = {
+			has_variable = targeted_sabotage_resources
+			check_variable = { targeted_sabotage_resources > 0 }
+			add = 4
+		}
+		modifier = {
+			occupation_law = forced_labor_occupation
+			add = -0.25
+		}
+		modifier = {
+			occupation_law = extractive_regime
+			add = -0.25
+		}
+	}
+
+	effect = {
+		clear_sabotaged_resources_if_necesary = yes
+		add_to_variable = { sabotaged_bauxite = -12 }
+		set_temp_variable = { duration = 180 }
+		if = {
+			limit = {
+				OR = {
+					occupation_law = forced_labor_occupation
+					occupation_law = extractive_regime
+				}
+			}
+			multiply_temp_variable = { duration = 0.75 }
+		}
+		if = {
+			limit = {
+				has_variable = targeted_sabotage_resources
+				check_variable = { targeted_sabotage_resources > 0 }
+			}
+
+			add_to_variable = { sabotaged_bauxite = -8 }
+			subtract_from_variable = { var = targeted_sabotage_resources value = 1 }
+		}
+		add_dynamic_modifier = {
+			modifier = sabotaged_resources
+			days = duration
+		}
+	}
+
+	alert_text = resource_is_sabotaged
+}
+sabotage_iron = {
+	available = {
+		has_resources_amount = {
+			resource = iron
+			amount > 0
+			delivered = yes
+		}
+	}
+
+	weight = {
+		base = 1
+		modifier = {
+			has_variable = targeted_sabotage_resources
+			check_variable = { targeted_sabotage_resources > 0 }
+			add = 4
+		}
+		modifier = {
+			occupation_law = forced_labor_occupation
+			add = -0.25
+		}
+		modifier = {
+			occupation_law = extractive_regime
+			add = -0.25
+		}
+	}
+
+	effect = {
+		clear_sabotaged_resources_if_necesary = yes
+		add_to_variable = { sabotaged_iron = -12 }
+		set_temp_variable = { duration = 180 }
+		if = {
+			limit = {
+				OR = {
+					occupation_law = forced_labor_occupation
+					occupation_law = extractive_regime
+				}
+			}
+			multiply_temp_variable = { duration = 0.75 }
+		}
+		if = {
+			limit = {
+				has_variable = targeted_sabotage_resources
+				check_variable = { targeted_sabotage_resources > 0 }
+			}
+
+			add_to_variable = { sabotaged_iron = -8 }
+			subtract_from_variable = { var = targeted_sabotage_resources value = 1 }
+		}
+		add_dynamic_modifier = {
+			modifier = sabotaged_resources
+			days = duration
+		}
+	}
+
+	alert_text = resource_is_sabotaged
+}
+sabotage_scheelitis = {
+	available = {
+		has_resources_amount = {
+			resource = scheelitis
+			amount > 0
+			delivered = yes
+		}
+	}
+
+	weight = {
+		base = 1
+		modifier = {
+			has_variable = targeted_sabotage_resources
+			check_variable = { targeted_sabotage_resources > 0 }
+			add = 4
+		}
+		modifier = {
+			occupation_law = forced_labor_occupation
+			add = -0.25
+		}
+		modifier = {
+			occupation_law = extractive_regime
+			add = -0.25
+		}
+	}
+
+	effect = {
+		clear_sabotaged_resources_if_necesary = yes
+		add_to_variable = { sabotaged_scheelitis = -12 }
+		set_temp_variable = { duration = 180 }
+		if = {
+			limit = {
+				OR = {
+					occupation_law = forced_labor_occupation
+					occupation_law = extractive_regime
+				}
+			}
+			multiply_temp_variable = { duration = 0.75 }
+		}
+		if = {
+			limit = {
+				has_variable = targeted_sabotage_resources
+				check_variable = { targeted_sabotage_resources > 0 }
+			}
+
+			add_to_variable = { sabotaged_scheelitis = -8 }
+			subtract_from_variable = { var = targeted_sabotage_resources value = 1 }
+		}
+		add_dynamic_modifier = {
+			modifier = sabotaged_resources
+			days = duration
+		}
+	}
+
+	alert_text = resource_is_sabotaged
+}
+sabotage_chromite = {
+	available = {
+		has_resources_amount = {
+			resource = chromite
+			amount > 0
+			delivered = yes
+		}
+	}
+
+	weight = {
+		base = 1
+		modifier = {
+			has_variable = targeted_sabotage_resources
+			check_variable = { targeted_sabotage_resources > 0 }
+			add = 4
+		}
+		modifier = {
+			occupation_law = forced_labor_occupation
+			add = -0.25
+		}
+		modifier = {
+			occupation_law = extractive_regime
+			add = -0.25
+		}
+	}
+
+	effect = {
+		clear_sabotaged_resources_if_necesary = yes
+		add_to_variable = { sabotaged_chromite = -12 }
+		set_temp_variable = { duration = 180 }
+		if = {
+			limit = {
+				OR = {
+					occupation_law = forced_labor_occupation
+					occupation_law = extractive_regime
+				}
+			}
+			multiply_temp_variable = { duration = 0.75 }
+		}
+		if = {
+			limit = {
+				has_variable = targeted_sabotage_resources
+				check_variable = { targeted_sabotage_resources > 0 }
+			}
+
+			add_to_variable = { sabotaged_chromite = -8 }
+			subtract_from_variable = { var = targeted_sabotage_resources value = 1 }
+		}
+		add_dynamic_modifier = {
+			modifier = sabotaged_resources
+			days = duration
+		}
+	}
+
+	alert_text = resource_is_sabotaged
+}
 sabotage_oil = {
 	available = {
 		has_resources_amount = {
@@ -391,183 +1012,10 @@ sabotage_oil = {
 
 	alert_text = resource_is_sabotaged
 }
-
-sabotage_aluminium = {
+sabotage_crystals = {
 	available = {
 		has_resources_amount = {
-			resource = aluminium
-			amount > 0
-			delivered = yes
-		}
-	}
-
-	weight = {
-		base = 1
-		modifier = {
-			has_variable = targeted_sabotage_resources
-			check_variable = { targeted_sabotage_resources > 0 }
-			add = 4
-		}
-		modifier = {
-			occupation_law = forced_labor_occupation
-			add = -0.25
-		}
-		modifier = {
-			occupation_law = extractive_regime
-			add = -0.25
-		}
-	}
-
-	effect = {
-		clear_sabotaged_resources_if_necesary = yes
-		add_to_variable = { sabotaged_aluminium = -12 }
-		set_temp_variable = { duration = 180 }
-		if = {
-			limit = {
-				OR = {
-					occupation_law = forced_labor_occupation
-					occupation_law = extractive_regime
-				}
-			}
-			multiply_temp_variable = { duration = 0.75 }
-		}
-		if = {
-			limit = {
-				has_variable = targeted_sabotage_resources
-				check_variable = { targeted_sabotage_resources > 0 }
-			}
-
-			add_to_variable = { sabotaged_aluminium = -8 }
-			subtract_from_variable = { var = targeted_sabotage_resources value = 1 }
-		}
-		add_dynamic_modifier = {
-			modifier = sabotaged_resources
-			days = duration
-		}
-	}
-
-	alert_text = resource_is_sabotaged
-}
-
-sabotage_rubber = {
-	available = {
-		has_resources_amount = {
-			resource = rubber
-			amount > 0
-			delivered = yes
-		}
-	}
-
-	weight = {
-		base = 1
-		modifier = {
-			has_variable = targeted_sabotage_resources
-			check_variable = { targeted_sabotage_resources > 0 }
-			add = 4
-		}
-		modifier = {
-			occupation_law = forced_labor_occupation
-			add = -0.25
-		}
-		modifier = {
-			occupation_law = extractive_regime
-			add = -0.25
-		}
-	}
-
-	effect = {
-		clear_sabotaged_resources_if_necesary = yes
-		add_to_variable = { sabotaged_rubber = -12 }
-		set_temp_variable = { duration = 180 }
-		if = {
-			limit = {
-				OR = {
-					occupation_law = forced_labor_occupation
-					occupation_law = extractive_regime
-				}
-			}
-			multiply_temp_variable = { duration = 0.75 }
-		}
-		if = {
-			limit = {
-				has_variable = targeted_sabotage_resources
-				check_variable = { targeted_sabotage_resources > 0 }
-			}
-
-			add_to_variable = { sabotaged_rubber = -8 }
-			subtract_from_variable = { var = targeted_sabotage_resources value = 1 }
-		}
-		add_dynamic_modifier = {
-			modifier = sabotaged_resources
-			days = duration
-		}
-	}
-
-	alert_text = resource_is_sabotaged
-}
-
-sabotage_tungsten = {
-	available = {
-		has_resources_amount = {
-			resource = tungsten
-			amount > 0
-			delivered = yes
-		}
-	}
-
-	weight = {
-		base = 1
-		modifier = {
-			has_variable = targeted_sabotage_resources
-			check_variable = { targeted_sabotage_resources > 0 }
-			add = 4
-		}
-		modifier = {
-			occupation_law = forced_labor_occupation
-			add = -0.25
-		}
-		modifier = {
-			occupation_law = extractive_regime
-			add = -0.25
-		}
-	}
-
-	effect = {
-		clear_sabotaged_resources_if_necesary = yes
-		add_to_variable = { sabotaged_tungsten = -12 }
-		set_temp_variable = { duration = 180 }
-		if = {
-			limit = {
-				OR = {
-					occupation_law = forced_labor_occupation
-					occupation_law = extractive_regime
-				}
-			}
-			multiply_temp_variable = { duration = 0.75 }
-		}
-		if = {
-			limit = {
-				has_variable = targeted_sabotage_resources
-				check_variable = { targeted_sabotage_resources > 0 }
-			}
-
-			add_to_variable = { sabotaged_tungsten = -8 }
-			subtract_from_variable = { var = targeted_sabotage_resources value = 1 }
-		}
-		add_dynamic_modifier = {
-			modifier = sabotaged_resources
-			days = duration
-		}
-	}
-
-	alert_text = resource_is_sabotaged
-}
-
-
-sabotage_steel = {
-	available = {
-		has_resources_amount = {
-			resource = steel
+			resource = crystals
 			amount > 0
 			delivered = yes
 		}
@@ -592,7 +1040,7 @@ sabotage_steel = {
 
 	effect = {
 		clear_sabotaged_resources_if_necesary = yes
-		add_to_variable = { sabotaged_steel = -12 }
+		add_to_variable = { sabotaged_crystals = -12 }
 		set_temp_variable = { duration = 180 }
 		if = {
 			limit = {
@@ -609,7 +1057,7 @@ sabotage_steel = {
 				check_variable = { targeted_sabotage_resources > 0 }
 			}
 
-			add_to_variable = { sabotaged_steel = -8 }
+			add_to_variable = { sabotaged_crystals = -8 }
 			subtract_from_variable = { var = targeted_sabotage_resources value = 1 }
 		}
 		add_dynamic_modifier = {
@@ -620,11 +1068,10 @@ sabotage_steel = {
 
 	alert_text = resource_is_sabotaged
 }
-
-sabotage_chromium = {
+sabotage_nuclear_fuel_primary = {
 	available = {
 		has_resources_amount = {
-			resource = chromium
+			resource = nuclear_fuel_primary
 			amount > 0
 			delivered = yes
 		}
@@ -649,7 +1096,7 @@ sabotage_chromium = {
 
 	effect = {
 		clear_sabotaged_resources_if_necesary = yes
-		add_to_variable = { sabotaged_chromium = -12 }
+		add_to_variable = { sabotaged_nuclear_fuel_primary = -12 }
 		set_temp_variable = { duration = 180 }
 		if = {
 			limit = {
@@ -666,7 +1113,175 @@ sabotage_chromium = {
 				check_variable = { targeted_sabotage_resources > 0 }
 			}
 
-			add_to_variable = { sabotaged_chromium = -8 }
+			add_to_variable = { sabotaged_nuclear_fuel_primary = -8 }
+			subtract_from_variable = { var = targeted_sabotage_resources value = 1 }
+		}
+		add_dynamic_modifier = {
+			modifier = sabotaged_resources
+			days = duration
+		}
+	}
+
+	alert_text = resource_is_sabotaged
+}
+sabotage_nuclear_fuel_secondary = {
+	available = {
+		has_resources_amount = {
+			resource = nuclear_fuel_secondary
+			amount > 0
+			delivered = yes
+		}
+	}
+
+	weight = {
+		base = 0.5
+		modifier = {
+			has_variable = targeted_sabotage_resources
+			check_variable = { targeted_sabotage_resources > 0 }
+			add = 4
+		}
+		modifier = {
+			occupation_law = forced_labor_occupation
+			add = -0.25
+		}
+		modifier = {
+			occupation_law = extractive_regime
+			add = -0.25
+		}
+	}
+
+	effect = {
+		clear_sabotaged_resources_if_necesary = yes
+		add_to_variable = { sabotaged_nuclear_fuel_secondary = -12 }
+		set_temp_variable = { duration = 180 }
+		if = {
+			limit = {
+				OR = {
+					occupation_law = forced_labor_occupation
+					occupation_law = extractive_regime
+				}
+			}
+			multiply_temp_variable = { duration = 0.75 }
+		}
+		if = {
+			limit = {
+				has_variable = targeted_sabotage_resources
+				check_variable = { targeted_sabotage_resources > 0 }
+			}
+
+			add_to_variable = { sabotaged_nuclear_fuel_secondary = -8 }
+			subtract_from_variable = { var = targeted_sabotage_resources value = 1 }
+		}
+		add_dynamic_modifier = {
+			modifier = sabotaged_resources
+			days = duration
+		}
+	}
+
+	alert_text = resource_is_sabotaged
+}
+sabotage_thermonuclear_fuel = {
+	available = {
+		has_resources_amount = {
+			resource = thermonuclear_fuel
+			amount > 0
+			delivered = yes
+		}
+	}
+
+	weight = {
+		base = 0.5
+		modifier = {
+			has_variable = targeted_sabotage_resources
+			check_variable = { targeted_sabotage_resources > 0 }
+			add = 4
+		}
+		modifier = {
+			occupation_law = forced_labor_occupation
+			add = -0.25
+		}
+		modifier = {
+			occupation_law = extractive_regime
+			add = -0.25
+		}
+	}
+
+	effect = {
+		clear_sabotaged_resources_if_necesary = yes
+		add_to_variable = { sabotaged_thermonuclear_fuel = -12 }
+		set_temp_variable = { duration = 180 }
+		if = {
+			limit = {
+				OR = {
+					occupation_law = forced_labor_occupation
+					occupation_law = extractive_regime
+				}
+			}
+			multiply_temp_variable = { duration = 0.75 }
+		}
+		if = {
+			limit = {
+				has_variable = targeted_sabotage_resources
+				check_variable = { targeted_sabotage_resources > 0 }
+			}
+
+			add_to_variable = { sabotaged_thermonuclear_fuel = -8 }
+			subtract_from_variable = { var = targeted_sabotage_resources value = 1 }
+		}
+		add_dynamic_modifier = {
+			modifier = sabotaged_resources
+			days = duration
+		}
+	}
+
+	alert_text = resource_is_sabotaged
+}
+sabotage_unobtanium = {
+	available = {
+		has_resources_amount = {
+			resource = unobtanium
+			amount > 0
+			delivered = yes
+		}
+	}
+
+	weight = {
+		base = 0.5
+		modifier = {
+			has_variable = targeted_sabotage_resources
+			check_variable = { targeted_sabotage_resources > 0 }
+			add = 4
+		}
+		modifier = {
+			occupation_law = forced_labor_occupation
+			add = -0.25
+		}
+		modifier = {
+			occupation_law = extractive_regime
+			add = -0.25
+		}
+	}
+
+	effect = {
+		clear_sabotaged_resources_if_necesary = yes
+		add_to_variable = { sabotaged_unobtanium = -12 }
+		set_temp_variable = { duration = 180 }
+		if = {
+			limit = {
+				OR = {
+					occupation_law = forced_labor_occupation
+					occupation_law = extractive_regime
+				}
+			}
+			multiply_temp_variable = { duration = 0.75 }
+		}
+		if = {
+			limit = {
+				has_variable = targeted_sabotage_resources
+				check_variable = { targeted_sabotage_resources > 0 }
+			}
+
+			add_to_variable = { sabotaged_unobtanium = -8 }
 			subtract_from_variable = { var = targeted_sabotage_resources value = 1 }
 		}
 		add_dynamic_modifier = {

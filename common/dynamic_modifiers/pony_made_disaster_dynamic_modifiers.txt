@@ -1,0 +1,21 @@
+core_meltdown = {
+	enable = {
+		always = yes
+	}
+	icon = GFX_modifiers_sabotaged_resource #change (to do)
+	army_speed_factor_for_controller = -0.25
+	attrition_for_controller = 0.1
+	disable_strategic_redeployment = 1
+	local_factories = -1
+	state_resources_factor = -0.75
+	local_manpower = -1
+	local_non_core_manpower = -1
+	local_supplies = -0.25
+	#repair this shit!!!
+	state_repair_speed_nuclear_reactor_factor = 0.1
+	state_repair_speed_nuclear_reactor_heavy_water_factor = 0.1
+	state_repair_speed_nuclear_reactor_exploratory_factor = 0.1
+	state_repair_speed_commercial_reactor_factor = 0.1
+	#don`t do this shit again
+	local_factory_sabotage = -0.25
+}
