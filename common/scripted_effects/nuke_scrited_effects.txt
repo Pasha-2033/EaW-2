@@ -134,6 +134,18 @@ blocked_nuclear_damage = {
 		instant_build = yes
 	}
 	set_temp_variable = {
+		building_level = building_level@stronghold_network
+	}
+	remove_building = {
+		type = stronghold_network
+		level = building_level
+	}
+	set_building_level = {
+		type = stronghold_network
+		level = building_level
+		instant_build = yes
+	}
+	set_temp_variable = {
 		building_level = building_level@dockyard
 	}
 	remove_building = {
@@ -206,6 +218,18 @@ blocked_nuclear_damage = {
 		instant_build = yes
 	}
 	set_temp_variable = {
+		building_level = building_level@mega_gun_emplacement
+	}
+	remove_building = {
+		type = mega_gun_emplacement
+		level = building_level
+	}
+	set_building_level = {
+		type = mega_gun_emplacement
+		level = building_level
+		instant_build = yes
+	}
+	set_temp_variable = {
 		building_level = building_level@nuclear_reactor
 	}
 	remove_building = {
@@ -214,6 +238,54 @@ blocked_nuclear_damage = {
 	}
 	set_building_level = {
 		type = nuclear_reactor
+		level = building_level
+		instant_build = yes
+	}
+	set_temp_variable = {
+		building_level = building_level@nuclear_reactor_heavy_water
+	}
+	remove_building = {
+		type = nuclear_reactor_heavy_water
+		level = building_level
+	}
+	set_building_level = {
+		type = nuclear_reactor_heavy_water
+		level = building_level
+		instant_build = yes
+	}
+	set_temp_variable = {
+		building_level = building_level@nuclear_reactor_exploratory
+	}
+	remove_building = {
+		type = nuclear_reactor_exploratory
+		level = building_level
+	}
+	set_building_level = {
+		type = nuclear_reactor_exploratory
+		level = building_level
+		instant_build = yes
+	}
+	set_temp_variable = {
+		building_level = building_level@thermonuclear_reactor
+	}
+	remove_building = {
+		type = thermonuclear_reactor
+		level = building_level
+	}
+	set_building_level = {
+		type = thermonuclear_reactor
+		level = building_level
+		instant_build = yes
+	}
+	set_temp_variable = {
+		building_level = building_level@commercial_reactor
+	}
+	remove_building = {
+		type = commercial_reactor
+		level = building_level
+	}
+	set_building_level = {
+		type = commercial_reactor
 		level = building_level
 		instant_build = yes
 	}
