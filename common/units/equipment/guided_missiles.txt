@@ -4,12 +4,11 @@ equipments = {
 
 	guided_missile_equipment = {
 		year = 1007
-		can_be_produced = {
-			NOT = {
-			}
+		allow_mission_type = {
+			strategic_bomber
 		}
 		is_archetype = yes
-		is_buildable = no
+		is_buildable = yes
 		can_license = no
 		type = missile
 		group_by = type
@@ -33,6 +32,13 @@ equipments = {
 			tungsten = 3
 		}
 		fuel_consumption = 0
+
+		upgrades = {
+			missile_engine_upgrade
+			missile_fuel_upgrade
+			missile_warhead_upgrade
+			missile_control_upgrade
+		}
 	}
 
 	#V-1s
@@ -40,7 +46,7 @@ equipments = {
 		year = 1015
 
 		archetype = guided_missile_equipment
-		is_buildable = no
+		is_buildable = yes
 		one_use_only = yes
 		sprite = missile_default
 
@@ -59,7 +65,7 @@ equipments = {
 
 		archetype = guided_missile_equipment
 		parent = guided_missile_equipment_1
-		is_buildable = no
+		is_buildable = yes
 		one_use_only = yes
 		sprite = missile_default
 
@@ -75,7 +81,7 @@ equipments = {
 
 		archetype = guided_missile_equipment
 		parent = guided_missile_equipment_2
-		is_buildable = no
+		is_buildable = yes
 		one_use_only = yes
 		sprite = missile_default
 
@@ -94,7 +100,7 @@ equipments = {
 
 		archetype = guided_missile_equipment
 		parent = guided_missile_equipment_3
-		is_buildable = no
+		is_buildable = yes
 		one_use_only = yes
 		sprite = missile_default
 
@@ -113,7 +119,7 @@ equipments = {
 
 		archetype = guided_missile_equipment
 		parent = guided_missile_equipment_4
-		is_buildable = no
+		is_buildable = yes
 		one_use_only = yes
 		sprite = missile_default
 

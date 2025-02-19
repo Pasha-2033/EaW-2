@@ -29,10 +29,6 @@ technologies = {
 		}
 	}
 	high_pressure_steam_systems = {
-		path = {
-			leads_to_tech = overloaded_cores
-			research_cost_coeff = 1
-		}
 		research_cost = 1
 		start_year = 983
 		folder = {
@@ -56,14 +52,15 @@ technologies = {
 			}
 		}
 	}
-	overloaded_cores = {
+	#special technologies (rockets)
+	reactivity_phenomenon = {
 		research_cost = 1
-		start_year = 987
+		start_year = 990
 		folder = {
 			name = electronics_folder
 			position = { 
 				x = 0 
-				y = 8 
+				y = 0
 			}
 		}
 	}
@@ -80,6 +77,17 @@ technologies = {
 			position = { 
 				x = 0 
 				y = 0 
+			}
+		}
+	}
+	overloaded_cores = {
+		research_cost = 1
+		start_year = 987
+		folder = {
+			name = electronics_folder
+			position = { 
+				x = 0 
+				y = 8 
 			}
 		}
 	}
@@ -206,7 +214,23 @@ technologies = {
 			}
 		}
 	}
-	#special technologies (electricity)
+	#special technologies (magic)
+	magic_induction_phenomenon = {
+		enable_building = {
+			building = magic_facility
+			level = 1
+		}
+		research_cost = 1
+		start_year = 980
+		folder = {
+			name = electronics_folder
+			position = { 
+				x = 0 
+				y = 0 
+			}
+		}
+	}
+	#special technologies (alloys)
 	high_alloy_steel = {
 		path = {
 			leads_to_tech = polyphase_alloys
@@ -1534,6 +1558,61 @@ technologies = {
 			factor = 1
 		}
 	}
+
+	#rockets(guided missile)
+	guided_missile_tech_initial = {
+		research_cost = 1.5
+		start_year = 1022
+		allow = {
+			#getting by special projects
+			always = no
+		}
+		categories = {}
+	}
+	
+
+
+	#rockets(ballistic missile)
+	ballistic_missile_tech_initial = {
+		research_cost = 1.5
+		start_year = 1022
+		allow = {
+			#getting by special projects
+			always = no
+		}
+		categories = {}
+	}
+
+	#rockets(sam missile)
+	sam_missile_tech_initial = {
+		research_cost = 1.5
+		start_year = 1022
+		allow = {
+			#getting by special projects
+			always = no
+		}
+		categories = {}
+	}
+
+
+
+	#rockets(nuclear missile)
+	nuclear_missile_tech_initial = {
+		research_cost = 1.5
+		start_year = 1022
+		allow = {
+			#getting by special projects
+			always = no
+		}
+		categories = {}
+	}
+
+
+
+
+
+
+
 	radioactivity_activity = {
 		research_cost = 1.5
 		start_year = 1022

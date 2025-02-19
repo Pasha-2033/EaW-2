@@ -447,6 +447,9 @@ technologies = {
 		}
 	}
 	magical_weapons_0 = {
+		allow = {
+			has_tech = magic_induction_phenomenon
+		}
 		enable_equipments = {
 			magical_equipment_0
 		}
@@ -624,6 +627,9 @@ technologies = {
 		}
 	}
 	magical_weapons_1 = {
+		allow = {
+			has_tech = magical_weapons_0
+		}
 		enable_equipments = {
 			magical_equipment_1
 		}
@@ -804,6 +810,9 @@ technologies = {
 		}
 	}
 	magical_weapons_2 = {
+		allow = {
+			has_tech = magical_weapons_1
+		}
 		enable_equipments = {
 			magical_equipment_2
 		}
@@ -813,9 +822,6 @@ technologies = {
 		path = {
 			leads_to_tech = improved_infantry_weapons_3
 			research_cost_coeff = 1
-		}
-		dependencies = {
-			magical_weapons_1 = 1
 		}
 		research_cost = 1.5
 		start_year = 1005
@@ -958,6 +964,9 @@ technologies = {
 		}
 	}
 	magical_weapons_3 = {
+		allow = {
+			has_tech = magical_weapons_2
+		}
 		enable_equipments = {
 			magical_equipment_3
 		}

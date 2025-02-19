@@ -308,7 +308,7 @@ buildings = {
 	}
 
 	stronghold_network = {
-		dlc_allowed = { has_dlc = Gotterdammerung }
+		dlc_allowed = { has_dlc = "Gotterdammerung" }
 		show_on_map = 1
 		has_destroyed_mesh = yes
 		base_cost = 20000
@@ -445,7 +445,7 @@ buildings = {
 	}
 	mega_gun_emplacement = {
 		dlc_allowed = { 
-			has_dlc = Gotterdammerung 
+			has_dlc = "Gotterdammerung" 
 		}
 		#hide_if_missing_tech = yes
 		show_on_map = 1
@@ -606,8 +606,8 @@ buildings = {
 		only_display_if_exists = yes
 		special_icon = GFX_specialization_land
 		level_cap = {
-			province_max = 2
-			state_max = 2
+			province_max = 1
+			state_max = 1
 			group_by = special_project_facility
 		}
 	}

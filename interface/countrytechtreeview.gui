@@ -4258,13 +4258,13 @@ guiTypes = {
 			}
 			containerWindowType = {
 				name = "wonderweapon_year"
-				position = { x = 1625 y=40 }
+				position = { x = 1825 y=40 }
 				size = { width = 130 height = 100% }
 				orientation = upper_left
 
 				instantTextBoxType = {
 					name = "wonderweapon_year_1011"
-					position = { x = 0 y = 260 }
+					position = { x = 0 y = 140 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -4277,7 +4277,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "wonderweapon_year_1014"
-					position = { x = 0 y = 380 }
+					position = { x = 0 y = 260 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -4290,7 +4290,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "wonderweapon_year_1015"
-					position = { x = 0 y = 500 }
+					position = { x = 0 y = 380 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -4303,7 +4303,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "wonderweapon_year_1016"
-					position = { x = 0 y = 620 }
+					position = { x = 0 y = 500 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -4316,7 +4316,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "wonderweapon_year_1017"
-					position = { x = 0 y = 740 }
+					position = { x = 0 y = 620 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -4328,7 +4328,7 @@ guiTypes = {
 				}
 				instantTextBoxType = {
 					name = "wonderweapon_year_1020"
-					position = { x = 0 y = 860 }
+					position = { x = 0 y = 740 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -4341,7 +4341,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "wonderweapon_year_1023"
-					position = { x = 0 y = 980 }
+					position = { x = 0 y = 860 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -4354,7 +4354,7 @@ guiTypes = {
 
 				instantTextBoxType = {
 					name = "wonderweapon_year_1026"
-					position = { x = 0 y = 1100 }
+					position = { x = 0 y = 980 }
 					textureFile = ""
 					font = "hoi_36header"
 					borderSize = {x = 0 y = 4}
@@ -4369,7 +4369,7 @@ guiTypes = {
 
 			containerWindowType = {
 				name = "engineering_year"
-				position = { x=1000 y=40 }
+				position = { x=1100 y=40 }
 				size = { width = 130 height = 100% }
 				orientation = upper_left
 
@@ -4574,6 +4574,23 @@ guiTypes = {
 				Orientation = "UPPER_LEFT"
 			}
 			instantTextBoxType = {
+				name = "fort_tech_subtitle"
+				position = {
+					x = 650
+					y = 100
+				}
+				font = "hoi_22tech"
+				borderSize = {
+					x = 0
+					y = 4
+				}
+				text = "TITLE_FORT_TECH_SUBTITLE"
+				maxWidth = 400
+				maxHeight = 122
+				format = center
+				Orientation = "UPPER_LEFT"
+			}
+			instantTextBoxType = {
 				name = "electronic_eng_subtitle"
 				position = { x = 1295 y = 100 }
 				font = "hoi_22tech"
@@ -4614,6 +4631,22 @@ guiTypes = {
 				position = {
 					x = 150
 					y = 172
+				}
+				size = {
+					width = 72
+					height = 500
+				}
+				slotsize = {
+					width = 60
+					height = 60
+				}
+				format = "UP"
+			}
+			gridBoxType = {
+				name = "reactivity_phenomenon_tree"
+				position = {
+					x = 150
+					y = 772
 				}
 				size = {
 					width = 72
@@ -4674,6 +4707,22 @@ guiTypes = {
 				format = "UP"
 			}
 			gridBoxType = {
+				name = "magic_induction_phenomenon_tree"
+				position = {
+					x = 550
+					y = 172
+				}
+				size = {
+					width = 72
+					height = 500
+				}
+				slotsize = {
+					width = 60
+					height = 60
+				}
+				format = "UP"
+			}
+			gridBoxType = {
 				name = "high_alloy_steel_tree"
 				position = {
 					x = 550
@@ -4715,7 +4764,7 @@ guiTypes = {
 
 			gridboxtype = {
 				name = "experimental_rockets_tree"
-				position = { x=1950 y=412 }
+				position = { x=1970 y=412 } #1730
 				size = { width = 480 height = 650 }
 				slotsize = { width=60 height= 60 }
 				format = "UP"
@@ -4723,7 +4772,7 @@ guiTypes = {
 			#bunkers
 			gridboxtype = {
 				name = "basic_fortification_tech_tree"
-				position = { x=1255 y=172 }
+				position = { x=450 y=172 } #870
 				size = { width = 680 height = 500 }
 				slotsize = { width=60 height= 60 }
 				format = "UP"
@@ -4731,7 +4780,7 @@ guiTypes = {
 			}
 			gridboxtype = {
 				name = "radioactivity_activity_tree"
-				position = { x=1655 y=292 }
+				position = { x=1690 y=292 }
 				size = { width = 680 height = 500 }
 				slotsize = { width=60 height= 60 }
 				format = "UP"
