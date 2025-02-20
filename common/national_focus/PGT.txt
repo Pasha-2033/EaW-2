@@ -297,8 +297,8 @@ focus_tree = {
 				add_ideas = PGT_army_reorganisation_in_proccess
 			}
 			#(Complete Effect)
-			custom_effect_tooltip = focus_complete_effect_tt
-			hidden_effect = {
+			custom_override_tooltip = {
+				tooltip = focus_complete_effect_tt
 				remove_ideas = PGT_army_reorganisation_in_proccess
 			}
 			add_timed_idea = {
@@ -516,20 +516,20 @@ focus_tree = {
 				limit = {
 					has_government = militarism
 				}
+				custom_override_tooltip = {
+					tooltip = new_officers_more_experienced_in_militaristic_pgt_tt
+					PGT_soarin = {
+						add_unit_leader_trait = winter_specialist
+					}
+					PGT_mistyfly = {
+						add_unit_leader_trait = winter_specialist
+					}
+					PGT_spitfire = {
+						add_unit_leader_trait = winter_specialist
+						add_unit_leader_trait = expert_delegator
+					}
+				}
 			}
-			hidden_effect = {
-				PGT_soarin = {
-					add_unit_leader_trait = winter_specialist
-				}
-				PGT_mistyfly = {
-					add_unit_leader_trait = winter_specialist
-				}
-				PGT_spitfire = {
-					add_unit_leader_trait = winter_specialist
-					add_unit_leader_trait = expert_delegator
-				}
-			}
-			custom_effect_tooltip = new_officers_more_experienced_in_militaristic_pgt_tt
 		}
 		search_filters = {
 			FOCUS_FILTER_MILITARY_CHARACTER
@@ -925,12 +925,12 @@ focus_tree = {
 				custom_effect_tooltip = add_civil_to_food_stamps_tt
 			}
 			else = {
-				hidden_effect = {
+				custom_override_tooltip = {
+					tooltip = add_food_stamps_civil_tt
 					add_dynamic_modifier = {
 						modifier = PGT_food_stamps
 					}
 				}
-				custom_effect_tooltip = add_food_stamps_civil_tt
 			}
 			add_to_variable = {
 				pgt_food_stamps_sf = 0.05
@@ -1281,12 +1281,12 @@ focus_tree = {
 				custom_effect_tooltip = add_militiary_to_food_stamps_tt
 			}
 			else = {
-				hidden_effect = {
+				custom_override_tooltip = {
+					tooltip = add_food_stamps_militiary_tt
 					add_dynamic_modifier = {
 						modifier = PGT_food_stamps
 					}
 				}
-				custom_effect_tooltip = add_food_stamps_militiary_tt
 			}
 			subtract_from_variable = {
 				pgt_food_stamps_sf = 0.05
@@ -1298,7 +1298,7 @@ focus_tree = {
 				pgt_food_stamps_acf = 0.15
 			}
 			set_temp_variable = {
-				delta_food_storage = 100
+				delta_food_storage = -100
 			}
 			add_to_food_storage = yes
 		}
@@ -1541,7 +1541,7 @@ focus_tree = {
 					random_days = 30
 				}
 			}
-			set_Temp_variable = {
+			set_temp_variable = {
 				t_farmer_influence = party_popularity@harmony
 			}
 			clamp_temp_variable = {
@@ -2805,12 +2805,12 @@ focus_tree = {
 				custom_effect_tooltip = add_common_to_food_stamps_tt
 			}
 			else = {
-				hidden_effect = {
+				custom_override_tooltip = {
+					tooltip = add_food_stamps_common_tt
 					add_dynamic_modifier = {
 						modifier = PGT_food_stamps
 					}
 				}
-				custom_effect_tooltip = add_food_stamps_common_tt
 			}
 			subtract_from_variable = {
 				pgt_food_stamps_ccf = 0.05

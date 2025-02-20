@@ -1292,11 +1292,11 @@ focus_tree = {
 				subtract_from_temp_variable = {
 					reduction = 1
 				}
-				custom_effect_tooltip = huge_contruction_mission_speeding_tt
-				multiply_temp_variable = {
-					reduction = 3600
-				}
-				hidden_effect = {
+				custom_override_tooltip = {
+					tooltip = huge_contruction_mission_speeding_tt
+					multiply_temp_variable = {
+						reduction = 3600
+					}
 					add_days_mission_timeout = {
 						mission = central_dogma_digging
 						days = reduction
@@ -1383,11 +1383,8 @@ focus_tree = {
 				tooltip = central_dogma_digging_speeding_tt
 			}
 			hidden_effect = {
-				set_temp_variable = {
-					reduction = days_mission_timeout@central_dogma_digging
-				}
 				multiply_temp_variable = {
-					reduction = -0.75
+					reduction = days_mission_timeout@central_dogma_digging
 				}
 				add_days_mission_timeout = {
 					mission = central_dogma_digging
@@ -1559,11 +1556,11 @@ focus_tree = {
 				subtract_from_temp_variable = {
 					reduction = 1
 				}
-				custom_effect_tooltip = huge_contruction_mission_speeding_tt
-				multiply_temp_variable = {
-					reduction = 180
-				}
-				hidden_effect = {
+				custom_override_tooltip = {
+					tooltip = huge_contruction_mission_speeding_tt
+					multiply_temp_variable = {
+						reduction = 180
+					}
 					add_days_mission_timeout = {
 						mission = energy_sector_digging
 						days = reduction
@@ -1705,11 +1702,11 @@ focus_tree = {
 					subtract_from_temp_variable = {
 						reduction = 1
 					}
-					custom_effect_tooltip = huge_contruction_mission_speeding_tt
-					multiply_temp_variable = {
-						reduction = 120
-					}
-					hidden_effect = {
+					custom_override_tooltip = {
+						tooltip = huge_contruction_mission_speeding_tt
+						multiply_temp_variable = {
+							reduction = 120
+						}
 						add_days_mission_timeout = {
 							mission = energy_sector_enlargement
 							days = reduction
@@ -1805,11 +1802,11 @@ focus_tree = {
 				subtract_from_temp_variable = {
 					reduction = 1
 				}
-				custom_effect_tooltip = huge_contruction_mission_speeding_tt
-				multiply_temp_variable = {
-					reduction = 120
-				}
-				hidden_effect = {
+				custom_override_tooltip = {
+					tooltip = huge_contruction_mission_speeding_tt
+					multiply_temp_variable = {
+						reduction = 120
+					}
 					add_days_mission_timeout = {
 						mission = control_sector_digging
 						days = reduction
@@ -1908,11 +1905,11 @@ focus_tree = {
 				subtract_from_temp_variable = {
 					reduction = 1
 				}
-				custom_effect_tooltip = huge_contruction_mission_speeding_tt
-				multiply_temp_variable = {
-					reduction = 180
-				}
-				hidden_effect = {
+				custom_override_tooltip = {
+					tooltip = huge_contruction_mission_speeding_tt
+					multiply_temp_variable = {
+						reduction = 180
+					}
 					add_days_mission_timeout = {
 						mission = computing_sector_digging
 						days = reduction
@@ -2067,11 +2064,11 @@ focus_tree = {
 					subtract_from_temp_variable = {
 						reduction = 1
 					}
-					custom_effect_tooltip = huge_contruction_mission_speeding_tt
-					multiply_temp_variable = {
-						reduction = 60
-					}
-					hidden_effect = {
+					custom_override_tooltip = {
+						tooltip = huge_contruction_mission_speeding_tt
+						multiply_temp_variable = {
+							reduction = 60
+						}
 						add_days_mission_timeout = {
 							mission = control_sector_enforcement
 							days = reduction
@@ -2202,11 +2199,11 @@ focus_tree = {
 				set_temp_variable = {
 					reduction = -0.1
 				}
-				custom_effect_tooltip = huge_contruction_mission_speeding_tt
-				multiply_temp_variable = {
-					reduction = 240
-				}
-				hidden_effect = {
+				custom_override_tooltip = {
+					tooltip = huge_contruction_mission_speeding_tt
+					multiply_temp_variable = {
+						reduction = 240
+					}
 					add_days_mission_timeout = {
 						mission = magic_generators
 						days = reduction
@@ -2287,11 +2284,11 @@ focus_tree = {
 				set_temp_variable = {
 					reduction = -0.1
 				}
-				custom_effect_tooltip = huge_contruction_mission_speeding_tt
-				multiply_temp_variable = {
-					reduction = 240
-				}
-				hidden_effect = {
+				custom_override_tooltip = {
+					tooltip = huge_contruction_mission_speeding_tt
+					multiply_temp_variable = {
+						reduction = 240
+					}
 					add_days_mission_timeout = {
 						mission = magic_storages
 						days = reduction
@@ -2368,11 +2365,11 @@ focus_tree = {
 				set_temp_variable = {
 					reduction = -0.1
 				}
-				custom_effect_tooltip = huge_contruction_mission_speeding_tt
-				multiply_temp_variable = {
-					reduction = 100
-				}
-				hidden_effect = {
+				custom_override_tooltip = {
+					tooltip = huge_contruction_mission_speeding_tt
+					multiply_temp_variable = {
+						reduction = 100
+					}
 					add_days_mission_timeout = {
 						mission = magic_conductors
 						days = reduction

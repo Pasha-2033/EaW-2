@@ -1226,7 +1226,8 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_emergency_hq_hooftagon"
-			hidden_effect = {
+			custom_override_tooltip = {
+				tooltip = found_hooftagon_tt
 				add_dynamic_modifier = {
 					modifier = great_project_hooftagon_HQ
 				}
@@ -1256,7 +1257,6 @@ focus_tree = {
 					hooftagon^61 = 0.05
 				}
 			}
-			custom_effect_tooltip = found_hooftagon_tt
 			if = {
 				limit = {
 					has_power_balance = {

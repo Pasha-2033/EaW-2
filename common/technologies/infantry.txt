@@ -466,7 +466,8 @@ technologies = {
 						has_template_containing_unit = magical_infantry
 					}
 				}
-				hidden_effect = {
+				custom_override_tooltip = {
+					tooltip = UNLOCK_DIVISION_TEMPLATE
 					if = {
 						limit = {
 							original_tag = EQS
@@ -478,7 +479,6 @@ technologies = {
 						load_oob = "unlock_magical_infantry"
 					}
 				}
-				custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
 			}
 			custom_effect_tooltip = ME_POLICE_TOOLTIP
 		}
@@ -1632,7 +1632,8 @@ technologies = {
 			motorized_equipment_0
 		}
 		on_research_complete = {
-			hidden_effect = {
+			custom_override_tooltip = {
+				tooltip = UNLOCK_DIVISION_TEMPLATE
 				if = {
 					limit = {
 						NOT = {
@@ -1649,7 +1650,6 @@ technologies = {
 					load_oob = "unlock_tanks_mot"
 				}
 			}
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
 		}
 		path = {
 			leads_to_tech = motorised_infantry_1
@@ -2449,10 +2449,10 @@ technologies = {
 						has_template_containing_unit = paratrooper
 					}
 				}
-				hidden_effect = {
+				custom_override_tooltip = {
+					tooltip = UNLOCK_DIVISION_TEMPLATE
 					load_oob = "unlock_paratroopers"
 				}
-				custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
 			}
 		}
 		categories = {
@@ -2634,10 +2634,10 @@ technologies = {
 						has_template_containing_unit = marine
 					}
 				}
-				hidden_effect = {
+				custom_override_tooltip = {
+					tooltip = UNLOCK_DIVISION_TEMPLATE
 					load_oob = "unlock_marines"
 				}
-				custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
 			}
 		}
 		path = {
@@ -2816,10 +2816,10 @@ technologies = {
 						has_template_containing_unit = mountaineers
 					}
 				}
-				hidden_effect = {
+				custom_override_tooltip = {
+					tooltip = UNLOCK_DIVISION_TEMPLATE
 					load_oob = "unlock_mountineers"
 				}
-				custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
 			}
 
 		}

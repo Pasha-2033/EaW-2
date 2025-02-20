@@ -404,12 +404,12 @@ focus_tree = {
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_nightlands_grandplan"
-			hidden_effect = {
+			custom_override_tooltip = {
+				tooltip = add_ICE_nightlands_grandplan_tt
 				add_dynamic_modifier = {
 					modifier = ICE_nightlands_grandplan
 				}
 			}
-			custom_effect_tooltip = add_ICE_nightlands_grandplan_tt
 			inspection_in_windigo_army = yes
 		}
 	}
@@ -982,12 +982,12 @@ focus_tree = {
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_valar_morgulis_grandplan"
-			hidden_effect = {
+			custom_override_tooltip = {
+				tooltip = add_ICE_valar_morgulis_grandplan_tt
 				add_dynamic_modifier = {
 					modifier = ICE_valar_morgulis_grandplan
 				}
 			}
-			custom_effect_tooltip = add_ICE_valar_morgulis_grandplan_tt
 			inspection_in_windigo_army = yes
 		}
 	}
@@ -1391,12 +1391,12 @@ focus_tree = {
 		y = 0
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: ice_focus_windoo_grandplan"
-			hidden_effect = {
+			custom_override_tooltip = {
+				tooltip = add_ICE_windoo_grandplan_tt
 				add_dynamic_modifier = {
 					modifier = ICE_windoo_grandplan
 				}
 			}
-			custom_effect_tooltip = add_ICE_windoo_grandplan_tt
 			inspection_in_windigo_army = yes
 		}
 	}

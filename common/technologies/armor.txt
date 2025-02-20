@@ -21,7 +21,8 @@ technologies = {
 			NOT = {	has_template_containing_unit = medium_armor }
 		}
 		on_research_complete = {
-			hidden_effect = {
+			custom_override_tooltip = {
+				tooltip = UNLOCK_DIVISION_TEMPLATE
 				if = {
 					limit = {
 						has_tech = motorised_infantry_0
@@ -41,8 +42,6 @@ technologies = {
 					army_experience = 75
 				}
 			}
-
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
 		}
 
 		path = {
@@ -107,7 +106,8 @@ technologies = {
 			NOT = {	has_template_containing_unit = medium_armor }
 		}
 		on_research_complete = {
-			hidden_effect = {
+			custom_override_tooltip = {
+				tooltip = UNLOCK_DIVISION_TEMPLATE
 				if = {
 					limit = {
 						has_tech = motorised_infantry_0
@@ -123,8 +123,6 @@ technologies = {
 					load_oob = "unlock_tanks"
 				}
 			}
-			
-			custom_effect_tooltip = UNLOCK_DIVISION_TEMPLATE
 		}
 
 		path = {

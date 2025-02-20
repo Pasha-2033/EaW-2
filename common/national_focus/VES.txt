@@ -493,8 +493,8 @@ focus_tree = {
 		y = 6
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ves_focus_unite_nation_around_science"
-			custom_effect_tooltip = upgrade_science_base_2x_tt
-			hidden_effect = {
+			custom_override_tooltip = {
+				tooltip = upgrade_science_base_2x_tt
 				increase_science_base_idea = yes
 				increase_science_base_idea = yes
 			}

@@ -1122,7 +1122,8 @@ focus_tree = {
 				ideology = fascism
 				popularity = -0.05
 			}
-			hidden_effect = {
+			custom_override_tooltip = {
+				tooltip = add_dynamic_modifier_EQS_accept_harmonists_tt
 				add_to_variable = {
 					accept_harmonists_war_support_weekly_factor = 0.02
 				}
@@ -1136,7 +1137,6 @@ focus_tree = {
 					modifier = EQS_accept_harmonists
 				}
 			}
-			custom_effect_tooltip = add_dynamic_modifier_EQS_accept_harmonists_tt
 			country_event = {
 				id = equestria.1
 				days = 3
