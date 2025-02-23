@@ -3569,8 +3569,22 @@ equipment_modules = {
 		dismantle_cost_ic = 1000
 	}
 	#sonar
+	ship_sonar_experimental = {
+		category = ship_sonar
+		gfx = ship_sonar_1 #to do
+		sfx = sfx_ui_sd_module_sonar
+		add_stats = {
+			sub_detection = 3
+			build_cost_ic = 30
+		}
+		can_convert_from = {
+			module_category = ship_sonar
+			convert_cost_ic = 15
+		}
+	}
 	ship_sonar_0 = {
 		category = ship_sonar
+		parent = ship_sonar_experimental
 		gfx = ship_sonar_1 #to do
 		sfx = sfx_ui_sd_module_sonar
 		add_stats = {

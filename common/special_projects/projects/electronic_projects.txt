@@ -11,8 +11,6 @@ sp_air_radar = {
 		specialization_air = 1
 	}
 
-	project_tags = sp_tag_radar
-
 	available = { 
 		FROM = { has_tech = electronic_mechanical_engineering }
 	}
@@ -84,13 +82,95 @@ sp_air_radar = {
 }
 
 
-#sp_sonar = {
-#	icon = GFX_sp_nuclear_radar
-#	specialization = specialization_naval
-#	allowed = {
-#		has_dlc = "Man the Guns"
-#	}
-#	project_tags = {
-#		sp_tag_electronic
-#	}
-#}
+sp_sonar_prototyping = {
+	icon = GFX_sp_nuclear_radar
+	specialization = specialization_naval
+	project_tags = {
+		sp_tag_electronic
+	}
+	prototype_time = sp_time.prototype.medium
+	complexity = sp_complexity.medium
+	breakthrough_cost = {
+		specialization_air = 1
+	}
+	available = {
+		FROM = {
+			has_tech = electronic_mechanical_engineering
+		}
+	}
+	visible = {
+		FROM = {
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				OR = {
+					has_tech = frigate_hull_0
+					has_tech = cruiser_hull_0
+				}
+			}
+			else = {
+				
+			}
+		}
+	}
+	resource_cost = {
+		resources = { 
+			steel = 6
+			aluminium = 6
+		}
+	}
+	ai_will_do = {
+		base = 1
+		modifier = {
+			add = 2
+			date > 990.1.1
+		}
+		modifier = {
+			factor = 3
+			ROOT = {
+				is_major = yes 
+			}
+		}
+		modifier = {
+			factor = 5
+			ROOT = {
+				has_tech = frigate_hull_2
+			}
+		}
+	}
+	project_output = {
+		country_effects = {
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				custom_effect_tooltip = tech_effect|sonar_0
+			}
+			else = {
+				
+			}
+		}
+		enable_equipment_modules = {
+			limit = {
+				has_dlc = "Man the Guns"
+			}
+			ship_sonar_experimental
+		}
+	}
+	generic_prototype_rewards = {
+		sp_naval_generic_reward_scientist_xp_1
+		sp_naval_generic_reward_scientist_xp_2
+		sp_naval_generic_reward_scientist_xp_3
+		sp_naval_generic_reward_navy_xp_1
+		sp_naval_generic_reward_navy_xp_2
+		sp_naval_generic_reward_navy_xp_3
+		sp_naval_generic_reward_major_progress_1
+		sp_naval_generic_reward_major_progress_2
+		sp_naval_generic_reward_major_progress_3
+		sp_naval_generic_reward_test_failure_1
+		sp_naval_generic_reward_test_failure_2
+		sp_naval_generic_reward_test_failure_3
+	}
+}
+
