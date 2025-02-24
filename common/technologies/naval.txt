@@ -163,7 +163,7 @@ technologies = {
 
 		folder = {
 			name = naval_folder
-			position = { x = -1 y = @993 }
+			position = { x = 0 y = @993 }
 		}
 
 		ai_will_do = {
@@ -187,10 +187,6 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		path = {
-			leads_to_tech = basic_heavy_cruiser
-			research_cost_coeff = 0.75
-		}
 
 		research_cost = 2
 
@@ -198,7 +194,7 @@ technologies = {
 
 		folder = {
 			name = naval_folder
-			position = { x = -1 y = @1007 }
+			position = { x = 0 y = @1007 }
 		}
 
 		ai_will_do = {
@@ -223,10 +219,6 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		path = {
-			leads_to_tech = improved_heavy_cruiser
-			research_cost_coeff = 0.75
-		}
 
 		research_cost = 2
 
@@ -234,7 +226,7 @@ technologies = {
 
 		folder = {
 			name = naval_folder
-			position = { x = -1 y = @1011 }
+			position = { x = 0 y = @1011 }
 		}
 
 		ai_will_do = {
@@ -256,10 +248,7 @@ technologies = {
 			light_cruiser_4
 		}
 
-		path = {
-			leads_to_tech = advanced_heavy_cruiser
-			research_cost_coeff = 0.75
-		}
+
 		path = {
 			leads_to_tech = semi_modern_light_cruiser
 			research_cost_coeff = 1
@@ -271,7 +260,66 @@ technologies = {
 
 		folder = {
 			name = naval_folder
-			position = { x = -1 y = @1015 }
+			position = { x = 0 y = @1015 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+		}
+
+		categories = {
+			naval_equipment
+			cl_tech
+		}
+	}
+	semi_modern_light_cruiser = {
+
+		enable_equipments = {
+			light_cruiser_5
+		}
+
+
+		path = {
+			leads_to_tech = modern_light_cruiser
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+
+		start_year = 1019
+
+		folder = {
+			name = naval_folder
+			position = { x = 0 y = @1019 }
+		}
+
+		ai_will_do = {
+			factor = 1
+
+		}
+
+		categories = {
+			naval_equipment
+			cl_tech
+		}
+	}
+
+	modern_light_cruiser = {
+
+		enable_equipments = {
+			light_cruiser_6
+		}
+
+
+
+		research_cost = 2
+
+		start_year = 1023
+
+		folder = {
+			name = naval_folder
+			position = { x = 0 y = @1023 }
 		}
 
 		ai_will_do = {
@@ -308,7 +356,7 @@ technologies = {
 
 		folder = {
 			name = naval_folder
-			position = { x = 1 y = @993 }
+			position = { x = 0 y = @993 }
 		}
 
 		ai_will_do = {
@@ -332,10 +380,6 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		path = {
-			leads_to_tech = basic_light_cruiser
-			research_cost_coeff = 0.75
-		}
 
 		research_cost = 2
 
@@ -343,7 +387,7 @@ technologies = {
 
 		folder = {
 			name = naval_folder
-			position = { x = 1 y = @1007 }
+			position = { x = 0 y = @1007 }
 		}
 
 		ai_will_do = {
@@ -367,10 +411,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		path = {
-			leads_to_tech = improved_light_cruiser
-			research_cost_coeff = 0.75
-		}
+
 
 		research_cost = 2
 
@@ -378,7 +419,7 @@ technologies = {
 
 		folder = {
 			name = naval_folder
-			position = { x = 1 y = @1011 }
+			position = { x = 0 y = @1011 }
 		}
 
 		ai_will_do = {
@@ -399,10 +440,7 @@ technologies = {
 			heavy_cruiser_4
 		}
 
-		path = {
-			leads_to_tech = advanced_light_cruiser
-			research_cost_coeff = 0.75
-		}
+
 		path = {
 			leads_to_tech = semi_modern_heavy_cruiser
 			research_cost_coeff = 1
@@ -414,7 +452,65 @@ technologies = {
 
 		folder = {
 			name = naval_folder
-			position = { x = 1 y = @1015 }
+			position = { x = 0 y = @1015 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		categories = {
+			naval_equipment
+			ca_tech
+		}
+	}
+
+	semi_modern_heavy_cruiser = {
+
+		enable_equipments = {
+			heavy_cruiser_5
+		}
+
+
+		path = {
+			leads_to_tech = modern_heavy_cruiser
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+
+		start_year = 1019
+
+		folder = {
+			name = naval_folder
+			position = { x = 0 y = @1019 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		categories = {
+			naval_equipment
+			ca_tech
+		}
+	}
+	
+	modern_heavy_cruiser = {
+
+		enable_equipments = {
+			heavy_cruiser_6
+		}
+
+
+
+		research_cost = 2
+
+		start_year = 1023
+
+		folder = {
+			name = naval_folder
+			position = { x = 0 y = @1023 }
 		}
 
 		ai_will_do = {
@@ -472,13 +568,10 @@ technologies = {
 		}
 
 		path = {
-			leads_to_tech = improved_battleship
-			research_cost_coeff = 0.75
-		}
-		path = {
 			leads_to_tech = improved_battlecruiser
 			research_cost_coeff = 1
 		}
+		
 
 		research_cost = 2
 
@@ -522,7 +615,7 @@ technologies = {
 
 		folder = {
 			name = naval_folder
-			position = { x = 1 y = @993 }
+			position = { x = 0 y = @993 }
 		}
 
 		ai_will_do = {
@@ -545,10 +638,9 @@ technologies = {
 			leads_to_tech = improved_battleship
 			research_cost_coeff = 1
 		}
-
 		path = {
 			leads_to_tech = heavy_battleship
-			research_cost_coeff = 0.75
+			research_cost_coeff = 1
 		}
 
 		research_cost = 2
@@ -556,7 +648,7 @@ technologies = {
 
 		folder = {
 			name = naval_folder
-			position = { x = 1 y = @1007 }
+			position = { x = 0 y = @1007 }
 		}
 
 		ai_will_do = {
@@ -579,17 +671,13 @@ technologies = {
 			leads_to_tech = advanced_battleship
 			research_cost_coeff = 1
 		}
-		path = {
-			leads_to_tech = basic_battlecruiser
-			research_cost_coeff = 0.75
-		}
 
 		research_cost = 2
 		start_year = 1011
 
 		folder = {
 			name = naval_folder
-			position = { x = 1 y = @1011 }
+			position = { x = 0 y = @1011 }
 		}
 
 		ai_will_do = {
@@ -610,10 +698,7 @@ technologies = {
 			battleship_4
 		}
 
-		path = {
-			leads_to_tech = heavy_battleship2
-			research_cost_coeff = 0.75
-		}
+
 		path = {
 			leads_to_tech = semi_modern_battleship
 			research_cost_coeff = 1
@@ -624,7 +709,7 @@ technologies = {
 
 		folder = {
 			name = naval_folder
-			position = { x = 1 y = @1015 }
+			position = { x = 0 y = @1015 }
 		}
 
 		ai_will_do = {
@@ -649,13 +734,13 @@ technologies = {
 			leads_to_tech = heavy_battleship2
 			research_cost_coeff = 1
 		}
-
+		is_special_project_tech = yes
 		research_cost = 2
 		start_year = 1007
 
 		folder = {
 			name = naval_folder
-			position = { x = 3 y = @1007 }
+			position = { x = 2 y = @1011 }
 		}
 
 		ai_will_do = {
@@ -668,7 +753,7 @@ technologies = {
 		}
 	}
 
-	###------> Old Heavy Battleship (1015) <><> <><> <><> <><> <><>
+
 
 	heavy_battleship2 = {
 
@@ -684,9 +769,34 @@ technologies = {
 			leads_to_tech = heavy_battleship3
 			research_cost_coeff = 1
 		}
+		is_special_project_tech = yes
 		folder = {
 			name = naval_folder
-			position = { x = 3 y = @1015 }
+			position = { x = 2 y = @1015 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		categories = {
+			naval_equipment
+			shbb_tech
+		}
+	}
+	heavy_battleship3 = {
+		
+		enable_equipments = {
+			SH_battleship_3
+		}
+
+		research_cost = 2
+
+		start_year = 1023
+		is_special_project_tech = yes
+		folder = {
+			name = naval_folder
+			position = { x = 2 y = @1019 }
 		}
 
 		ai_will_do = {
@@ -838,10 +948,7 @@ technologies = {
 			leads_to_tech = basic_carrier
 			research_cost_coeff = 1
 		}
-		path = {
-			leads_to_tech = early_light_carrier
-			research_cost_coeff = 0.75
-		}
+
 
 		research_cost = 1.5
 
@@ -874,9 +981,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		path = {
-			research_cost_coeff = 0.75
-		}
+
 
 		research_cost = 2
 		start_year = 1007
@@ -1184,135 +1289,8 @@ technologies = {
 
 	###------> New Cruisers (1019) (1023) <><> <><> <><> <><> <><>
 
-	semi_modern_light_cruiser = {
-
-		enable_equipments = {
-			light_cruiser_5
-		}
-
-		path = {
-			leads_to_tech = semi_modern_heavy_cruiser
-			research_cost_coeff = 0.75
-		}
-		path = {
-			leads_to_tech = modern_light_cruiser
-			research_cost_coeff = 1
-		}
-
-		research_cost = 2
-
-		start_year = 1019
-
-		folder = {
-			name = naval_folder
-			position = { x = -1 y = @1019 }
-		}
-
-		ai_will_do = {
-			factor = 1
-
-		}
-
-		categories = {
-			naval_equipment
-			cl_tech
-		}
-	}
-
-	modern_light_cruiser = {
-
-		enable_equipments = {
-			light_cruiser_6
-		}
-
-		path = {
-			leads_to_tech = modern_heavy_cruiser
-			research_cost_coeff = 0.75
-		}
-
-		research_cost = 2
-
-		start_year = 1023
-
-		folder = {
-			name = naval_folder
-			position = { x = -1 y = @1023 }
-		}
-
-		ai_will_do = {
-			factor = 1
-
-		}
-
-		categories = {
-			naval_equipment
-			cl_tech
-		}
-	}
 	
-	semi_modern_heavy_cruiser = {
-
-		enable_equipments = {
-			heavy_cruiser_5
-		}
-
-		path = {
-			leads_to_tech = semi_modern_light_cruiser
-			research_cost_coeff = 0.75
-		}
-		path = {
-			leads_to_tech = modern_heavy_cruiser
-			research_cost_coeff = 1
-		}
-
-		research_cost = 2
-
-		start_year = 1019
-
-		folder = {
-			name = naval_folder
-			position = { x = 1 y = @1019 }
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		categories = {
-			naval_equipment
-			ca_tech
-		}
-	}
 	
-	modern_heavy_cruiser = {
-
-		enable_equipments = {
-			heavy_cruiser_6
-		}
-
-		path = {
-			leads_to_tech = modern_light_cruiser
-			research_cost_coeff = 0.75
-		}
-
-		research_cost = 2
-
-		start_year = 1023
-
-		folder = {
-			name = naval_folder
-			position = { x = 1 y = @1023 }
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		categories = {
-			naval_equipment
-			ca_tech
-		}
-	}
 
 	###------> X <><> <><> <><> <><> <><>
 
@@ -1323,10 +1301,6 @@ technologies = {
 			battle_cruiser_3
 		}
 
-		path = {
-			leads_to_tech = semi_modern_battleship
-			research_cost_coeff = 0.75
-		}
 
 		research_cost = 2
 
@@ -1358,17 +1332,14 @@ technologies = {
 			leads_to_tech = modern_battleship
 			research_cost_coeff = 1
 		}
-		path = {
-			leads_to_tech = improved_battlecruiser
-			research_cost_coeff = 0.75
-		}
+
 
 		research_cost = 2
 		start_year = 1019
 
 		folder = {
 			name = naval_folder
-			position = { x = 1 y = @1019 }
+			position = { x = 0 y = @1019 }
 		}
 
 		ai_will_do = {
@@ -1388,14 +1359,10 @@ technologies = {
 
 		research_cost = 2
 		start_year = 1023
-		path = {
-			leads_to_tech = heavy_battleship3
-			research_cost_coeff = 0.75
-		}
 
 		folder = {
 			name = naval_folder
-			position = { x = 1 y = @1023 }
+			position = { x = 0 y = @1023 }
 		}
 
 		ai_will_do = {
@@ -1405,30 +1372,6 @@ technologies = {
 		categories = {
 			naval_equipment
 			bb_tech
-		}
-	}
-	heavy_battleship3 = {
-		
-		enable_equipments = {
-			SH_battleship_3
-		}
-
-		research_cost = 2
-
-		start_year = 1023
-
-		folder = {
-			name = naval_folder
-			position = { x = 3 y = @1023 }
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		categories = {
-			naval_equipment
-			shbb_tech
 		}
 	}
 
