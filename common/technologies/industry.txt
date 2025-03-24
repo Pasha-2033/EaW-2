@@ -1096,14 +1096,8 @@ technologies = {
 			oil = -2.0
 		}
 		on_research_complete = {
-			hidden_effect = {
-				set_technology = {
-					init_synthetic_refineries = 1
-					popup = no
-				}
-				set_variable = {
-					synthetic_refinery_max_power = 1
-				}
+			set_variable = {
+				synthetic_refinery_max_power = 1
 			}
 		}
 	}
@@ -3575,11 +3569,37 @@ technologies = {
 			level = 1
 		}
 		on_research_complete = {
-			hidden_effect = {
-				set_technology = {
-					init_metallurgy = 1
-					popup = no
-				}
+			add_to_array = {
+				array = resource_activity_array
+				value = 20
+			}
+			add_to_array = {
+				array = resource_activity_array
+				value = 21
+			}
+			add_to_array = {
+				array = resource_activity_array
+				value = 22
+			}
+			add_to_array = {
+				array = resource_activity_array
+				value = 23
+			}
+			resize_array = {
+				array = plant_max_power
+				value = 1
+				size = 4
+			}
+			resize_array = {
+				array = resource_consumption
+				value = 0
+				size = 4
+			}
+			resize_array = {
+				resource_plant_efficiency = 4
+			}
+			resize_array = {
+				resource_outcome = 4
 			}
 		}
 	}
@@ -3929,44 +3949,8 @@ technologies = {
 		steel_plant_steel_outcome = 4
 		tungsten_plant_tungsten_outcome = 1
 		chromium_plant_chromium_outcome = 1
-		on_research_complete = {
-			force_update_dynamic_modifier = yes
-			add_to_array = {
-				array = resource_activity_array
-				value = 20
-			}
-			add_to_array = {
-				array = resource_activity_array
-				value = 21
-			}
-			add_to_array = {
-				array = resource_activity_array
-				value = 22
-			}
-			add_to_array = {
-				array = resource_activity_array
-				value = 23
-			}
-			resize_array = {
-				array = plant_max_power
-				value = 1
-				size = 4
-			}
-			resize_array = {
-				array = resource_consumption
-				value = 0
-				size = 4
-			}
-			resize_array = {
-				resource_plant_efficiency = 4
-			}
-			resize_array = {
-				resource_outcome = 4
-			}
-		}
 	}
 	init_synthetic_refineries = {
-		#2+ RESEARCH WILL BREAK RESOURCE ACTIVITY GUI!
 		#EXISTS ONLY FOR HIDING MODIFIERS!
 		research_cost = 1
 		allow = {
@@ -3974,11 +3958,28 @@ technologies = {
 		}
 		synthetic_refinery_oil_consumption = 1
 		synthetic_refinery_fuel_outcome = 2
-		on_research_complete = {
-			force_update_dynamic_modifier = yes
-		}
 	}
+	init_nuclear_cycle = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		nuclear_reactor_fuel_primary_consumption = 6
+		nuclear_reactor_fuel_secondary_outcome = 3
+		nuclear_reactor_fuel_thermonuclear_outcome = 1
+		nuclear_reactor_nuke_outcome = 2
+		nuclear_reactor_thermonuke_outcome = 0.5
 
+		nuclear_reactor_heavy_water_fuel_secondary_consumption = 4
+		nuclear_reactor_heavy_water_fuel_primary_outcome = 2
+		nuclear_reactor_heavy_water_fuel_thermonuclear_outcome = 1
+		nuclear_reactor_heavy_water_nuke_outcome = 1.5
+		nuclear_reactor_heavy_water_thermonuke_outcome = 0.75
+		
+		nuclear_reactor_exploratory_fuel_primary_consumption = 3
+		nuclear_reactor_exploratory_fuel_thermonuclear_outcome = 3
+
+		thermonuclear_reactor_fuel_consumption = 10
+		thermonuclear_reactor_thermonuke_outcome = 7.5
+	}
 }
-
-#####---------------------------------------------------------------------> End
