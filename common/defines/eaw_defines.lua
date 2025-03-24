@@ -8,7 +8,7 @@ NDefines.NDiplomacy.MAX_OPINION_VALUE = 200							-- Max opinion value cap.
 NDefines.NDiplomacy.MIN_OPINION_VALUE = -200						-- Min opinion value cap.
 NDefines.NDiplomacy.VOLUNTEERS_DIVISIONS_REQUIRED = 1               -- min division amount to be able send volunteers (we want realism - if we have any - we can send them)
 
-NDefines.NCountry.POPULATION_YEARLY_GROWTH_BASE = 0.03,			-- (vanilla is 0.015) basic population growth per year, used for monthly manpower gain
+NDefines.NCountry.POPULATION_YEARLY_GROWTH_BASE = 0.03			-- (vanilla is 0.015) basic population growth per year, used for monthly manpower gain
 NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.1					-- Max ammount of special forces battalions is total number of non-special forces battalions multiplied by this and modified by a country modifier
 NDefines.NCountry.SPECIAL_FORCES_CAP_MIN = 32					-- You can have a minimum of this many special forces battalions, regardless of the number of non-special forces battalions you have, this can also be modified by a country modifier
 NDefines.NCountry.MAJOR_MIN_FACTORIES = 25 --default 35		-- need at least these many factories to become a major
