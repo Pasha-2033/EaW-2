@@ -28,6 +28,12 @@ NDefines.NCountry.BASE_FUEL_GAIN = 0
 NDefines.NResistance.GARRISON_MANPOWER_LOST_BY_ATTACK = 0.01 	-- Ratio of manpower lost by garrison at each attack on garrison (this number will be reduced by the hardness of garrison template)
 
 NDefines.NProduction.BASE_FACTORY_SPEED_NAV = 3.5 -- vanilla is 2.5
+NDefines.NProduction.MAX_EQUIPMENT_RESOURCES_NEED = 6 --vanila is 3
+NDefines.NProduction.DEFAULT_MAX_NAV_FACTORIES_PER_LINE = 12 --vanila is 10
+NDefines.NProduction.FLOATING_HARBOR_MAX_NAV_FACTORIES_PER_LINE = 6 --vanila is 5
+NDefines.NProduction.CONVOY_MAX_NAV_FACTORIES_PER_LINE = 18 --vanila is 15
+NDefines.NProduction.CAPITAL_SHIP_MAX_NAV_FACTORIES_PER_LINE = 6 --vanila is 5
+NDefines.NProduction.RAILWAY_GUN_MAX_MIL_FACTORIES_PER_LINE = 6 --vanila is 5
 
 NDefines.NMilitary.PLAN_EXECUTE_CAREFUL_MAX_FORT = 4
 NDefines.NMilitary.TRAINING_MAX_LEVEL = 10
