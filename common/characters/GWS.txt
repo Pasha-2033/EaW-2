@@ -1,0 +1,102 @@
+characters = {
+	GWS_evil_mind = {
+		name = GWS_evil_mind
+		portraits = {
+			civilian = {
+				large = "GFX_portrait_marshal_unknown"
+				#small
+			}
+			army = {
+				large = "GFX_portrait_marshal_unknown"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_EVIL_MIND_DESC"
+			ideology = sour
+			traits = {
+				warmonger
+				experimental_genius
+			}
+		}
+		field_marshal = {
+			traits = {
+				changeling_race_trait
+
+				organisational_leader
+				inspirational_leader
+				expert_delegator
+				aggressive_assaulter
+				unyielding_defender
+				fast_planner
+				defensive_doctrine
+				offensive_doctrine
+				logistics_wizard
+
+				skilled_staffer
+				adaptable
+
+				organizer
+				skirmisher
+				trickster
+				expert_improviser
+				trait_engineer
+
+				brilliant_strategist
+				inflexible_strategist
+				thorough_planner
+				bearer_of_artillery
+
+				infantry_leader
+				commando
+				panzer_leader
+				panzer_expert
+				combined_arms_expert
+				desert_fox
+				swamp_fox
+				trait_mountaineer
+				hill_fighter
+				jungle_rat
+				ranger
+				urban_assault_specialist
+				fortress_buster
+			}
+			skill = 8
+			attack_skill = 8
+			defense_skill = 8
+			planning_skill = 5
+			logistics_skill = 5
+			desc = "FIELD_MARSHAL_EVIL_MIND_DESC"
+		}
+		advisor = {
+			slot = theorist
+			idea_token = GWS_evil_mind
+			ledger = army
+			cost = 150
+			allowed = {
+				original_tag = VES
+			}
+			available = {
+				NOT = {
+					has_country_leader = {
+						character = GWS_evil_mind
+						ruling_only = yes
+					}
+				}
+			}
+			traits = {
+				blitzkrieg_theorist
+				#add race research speed
+				#add common research speed
+			}
+		}
+		scientist = {
+			traits = { 
+				scientist_trait_nuclear_specialist 
+				scientist_trait_fast_learner 
+			}
+			skills = {
+				specialization_nuclear = 2
+			}
+		}
+	}
+}

@@ -21,7 +21,7 @@ country_event = {
 	option = {
 		#support him
 		name = ves_changelings.1.a
-		activate_advisor = VES_evil_mind
+		activate_advisor = GWS_evil_mind
 		mark_focus_tree_layout_dirty = yes
 		every_country = {
 			limit = {
@@ -53,7 +53,7 @@ country_event = {
 				}
 			}
 			ROOT = {
-				VES_evil_mind = {
+				GWS_evil_mind = {
 					set_nationality = PREV.PREV
 				}
 			}
@@ -68,7 +68,7 @@ country_event = {
 	option = {
 		#kill evil mind
 		name = ves_changelings.1.c
-		retire_character = VES_evil_mind
+		retire_character = GWS_evil_mind
 		every_country = {
 			limit = {
 				has_country_flag = evil_mind_expeled

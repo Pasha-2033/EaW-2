@@ -1298,7 +1298,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "production_equipment_window_military"
 		position = { x=-356 y=78}
-		show_position = { x=600 y =78 }
+		show_position = { x=610 y =78 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
 		animation_time = 300
@@ -1312,7 +1312,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "equipments"
-			position = { x=0 y=85 }
+			position = { x=0 y=125 }
 			size = { width=100%% height=100%% }
 			verticalScrollbar = "right_vertical_slider"
 			vertical_scroll_step = 41
@@ -1398,7 +1398,7 @@ guiTypes = {
 		containerWindowType = {
 			name = "resources"
 			position = {
-				x = 10
+				x = 5
 				y = 50
 			}
 			size = {
@@ -1413,43 +1413,22 @@ guiTypes = {
 				}
 				quadTextureSprite = "GFX_generic_bg2"
 			}
-			#Oil
+			#Aluminium
 			iconType = {
-				name = "oil_icon"
+				name = "aluminium_icon"
 				position = {
 					x = 0
 					y = 2
 				}
 				spriteType = "GFX_resources_strip"
-				frame = 1
-				#pdx_tooltip = "PRODUCTION_MATERIALS_OIL"
+				frame = 2
+				#pdx_tooltip = "PRODUCTION_MATERIALS_ALUMINIUM"
 			}
 			buttonType = {
-				name = "oil_checkbox"
-				position = {
-					x = 22
-					y = 1
-				}
-				quadTextureSprite = "GFX_generic_checkbox"
-				Orientation = "UPPER_LEFT"
-				clicksound = click_checkbox
-			}
-			#Rubber
-			iconType = {
-				name = "rubber_icon"
-				position = {
-					x = 58
-					y = 2
-				}
-				spriteType = "GFX_resources_strip"
-				frame = 3
-				#pdx_tooltip = "PRODUCTION_MATERIALS_RUBBER"
-			}
-			buttonType = {
-				name = "rubber_checkbox"
-				position = {
-					x = 80
-					y = 1
+				name = "aluminium_checkbox"
+				position = { 
+					x = 27 
+					y = 1 
 				}
 				quadTextureSprite = "GFX_generic_checkbox"
 				Orientation = "UPPER_LEFT"
@@ -1459,39 +1438,18 @@ guiTypes = {
 			iconType = {
 				name = "steel_icon"
 				position = { 
-					x = 113
+					x = 60
 					y = 2
 				}
 				spriteType = "GFX_resources_strip"
-				frame = 5
+				frame = 9
 				#pdx_tooltip = "PRODUCTION_MATERIALS_STEEL"
 			}
 			buttonType = {
 				name = "steel_checkbox"
 				position = {
-					x = 138
+					x = 87
 					y = 1
-				}
-				quadTextureSprite = "GFX_generic_checkbox"
-				Orientation = "UPPER_LEFT"
-				clicksound = click_checkbox
-			}
-			#Aluminium
-			iconType = {
-				name = "aluminium_icon"
-				position = {
-					x = 173
-					y = 1
-				}
-				spriteType = "GFX_resources_strip"
-				frame = 2
-				#pdx_tooltip = "PRODUCTION_MATERIALS_ALUMINIUM"
-			}
-			buttonType = {
-				name = "aluminium_checkbox"
-				position = { 
-					x = 195 
-					y = 1 
 				}
 				quadTextureSprite = "GFX_generic_checkbox"
 				Orientation = "UPPER_LEFT"
@@ -1501,7 +1459,7 @@ guiTypes = {
 			iconType = {
 				name = "tungsten_icon"
 				position = { 
-					x = 229 
+					x = 120
 					y = 2
 				}
 				spriteType = "GFX_resources_strip"
@@ -1511,7 +1469,7 @@ guiTypes = {
 			buttonType = {
 				name = "tungsten_checkbox"
 				position = { 
-					x = 253 
+					x = 147
 					y = 1 
 				}
 				quadTextureSprite = "GFX_generic_checkbox"
@@ -1522,7 +1480,7 @@ guiTypes = {
 			iconType = {
 				name = "chromium_icon"
 				position = { 
-					x = 287 
+					x = 180
 					y = 2 
 				}
 				spriteType = "GFX_resources_strip"
@@ -1532,8 +1490,134 @@ guiTypes = {
 			buttonType = {
 				name = "chromium_checkbox"
 				position = { 
-					x = 311 
+					x = 207
 					y = 1 
+				}
+				quadTextureSprite = "GFX_generic_checkbox"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_checkbox
+			}
+			#Bauxite
+			iconType = {
+				name = "bauxite_icon"
+				position = { 
+					x = 240
+					y = 2 
+				}
+				spriteType = "GFX_resources_strip"
+				frame = 11
+				#pdx_tooltip = "PRODUCTION_MATERIALS_BAUXITE"
+			}
+			buttonType = {
+				name = "bauxite_checkbox"
+				position = { 
+					x = 267
+					y = 1 
+				}
+				quadTextureSprite = "GFX_generic_checkbox"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_checkbox
+			}
+			#Iron
+			iconType = {
+				name = "iron_icon"
+				position = { 
+					x = 300
+					y = 2 
+				}
+				spriteType = "GFX_resources_strip"
+				frame = 5
+				#pdx_tooltip = "PRODUCTION_MATERIALS_IRON"
+			}
+			buttonType = {
+				name = "iron_checkbox"
+				position = { 
+					x = 327
+					y = 1 
+				}
+				quadTextureSprite = "GFX_generic_checkbox"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_checkbox
+			}
+			#Scheelitis
+			iconType = {
+				name = "scheelitis_icon"
+				position = { 
+					x = 360
+					y = 2 
+				}
+				spriteType = "GFX_resources_strip"
+				frame = 12
+				#pdx_tooltip = "PRODUCTION_MATERIALS_SCHEELITIS"
+			}
+			buttonType = {
+				name = "scheelitis_checkbox"
+				position = { 
+					x = 387
+					y = 1 
+				}
+				quadTextureSprite = "GFX_generic_checkbox"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_checkbox
+			}
+			#Chromite
+			iconType = {
+				name = "chromite_icon"
+				position = { 
+					x = 420
+					y = 2 
+				}
+				spriteType = "GFX_resources_strip"
+				frame = 10
+				#pdx_tooltip = "PRODUCTION_MATERIALS_CHROMITE"
+			}
+			buttonType = {
+				name = "chromite_checkbox"
+				position = { 
+					x = 447
+					y = 1 
+				}
+				quadTextureSprite = "GFX_generic_checkbox"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_checkbox
+			}
+			#Oil
+			iconType = {
+				name = "oil_icon"
+				position = {
+					x = 0
+					y = 35
+				}
+				spriteType = "GFX_resources_strip"
+				frame = 1
+				#pdx_tooltip = "PRODUCTION_MATERIALS_OIL"
+			}
+			buttonType = {
+				name = "oil_checkbox"
+				position = {
+					x = 27
+					y = 34
+				}
+				quadTextureSprite = "GFX_generic_checkbox"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_checkbox
+			}
+			#Rubber
+			iconType = {
+				name = "rubber_icon"
+				position = {
+					x = 60
+					y = 35
+				}
+				spriteType = "GFX_resources_strip"
+				frame = 3
+				#pdx_tooltip = "PRODUCTION_MATERIALS_RUBBER"
+			}
+			buttonType = {
+				name = "rubber_checkbox"
+				position = {
+					x = 87
+					y = 34
 				}
 				quadTextureSprite = "GFX_generic_checkbox"
 				Orientation = "UPPER_LEFT"
@@ -1543,23 +1627,128 @@ guiTypes = {
 			iconType = {
 				name = "crystals_icon"
 				position = { 
-					x = 345 
-					y = 2
+					x = 120 
+					y = 35
 				}
 				spriteType = "GFX_resources_strip"
 				frame = 7
-				#pdx_tooltip = "PRODUCTION_MATERIALS_CHROMIUM"
+				#pdx_tooltip = "PRODUCTION_MATERIALS_CRYSTALS"
 			}
 			buttonType = {
 				name = "crystals_checkbox"
 				position = { 
-					x = 367 
-					y = 1 
+					x = 147 
+					y = 34
 				}
 				quadTextureSprite = "GFX_generic_checkbox"
 				Orientation = "UPPER_LEFT"
 				clicksound = click_checkbox
-			}   			  
+			}  
+			#Food
+			iconType = {
+				name = "food_icon"
+				position = { 
+					x = 180 
+					y = 35
+				}
+				spriteType = "GFX_resources_strip"
+				frame = 8
+				#pdx_tooltip = "PRODUCTION_MATERIALS_FOOD"
+			}
+			buttonType = {
+				name = "food_checkbox"
+				position = { 
+					x = 207 
+					y = 34
+				}
+				quadTextureSprite = "GFX_generic_checkbox"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_checkbox
+			}
+			#Nuclear fuel primary
+			iconType = {
+				name = "nuclear_fuel_primary_icon"
+				position = { 
+					x = 240 
+					y = 35
+				}
+				spriteType = "GFX_resources_strip"
+				frame = 13
+				#pdx_tooltip = "PRODUCTION_MATERIALS_NUCLEAR_FUEL_PRIMARY"
+			}
+			buttonType = {
+				name = "nuclear_fuel_primary_checkbox"
+				position = { 
+					x = 267 
+					y = 34
+				}
+				quadTextureSprite = "GFX_generic_checkbox"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_checkbox
+			}
+			#Nuclear fuel secondary
+			iconType = {
+				name = "nuclear_fuel_secondary_icon"
+				position = { 
+					x = 300 
+					y = 35
+				}
+				spriteType = "GFX_resources_strip"
+				frame = 14
+				#pdx_tooltip = "PRODUCTION_MATERIALS_NUCLEAR_FUEL_SECONDARY"
+			}
+			buttonType = {
+				name = "nuclear_fuel_secondary_checkbox"
+				position = { 
+					x = 327 
+					y = 34
+				}
+				quadTextureSprite = "GFX_generic_checkbox"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_checkbox
+			}
+			#Thermonuclear fuel
+			iconType = {
+				name = "thermonuclear_fuel_icon"
+				position = { 
+					x = 360 
+					y = 35
+				}
+				spriteType = "GFX_resources_strip"
+				frame = 15
+				#pdx_tooltip = "PRODUCTION_MATERIALS_THERMONUCLEAR_FUEL"
+			}
+			buttonType = {
+				name = "thermonuclear_fuel_checkbox"
+				position = { 
+					x = 387 
+					y = 34
+				}
+				quadTextureSprite = "GFX_generic_checkbox"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_checkbox
+			}
+			#Unobtanium
+			iconType = {
+				name = "unobtanium_icon"
+				position = { 
+					x = 420 
+					y = 35
+				}
+				spriteType = "GFX_resources_strip"
+				frame = 16
+				#pdx_tooltip = "PRODUCTION_MATERIALS_UNOBTANIUM"
+			}
+			buttonType = {
+				name = "unobtanium_checkbox"
+				position = { 
+					x = 447 
+					y = 34
+				}
+				quadTextureSprite = "GFX_generic_checkbox"
+				Orientation = "UPPER_LEFT"
+				clicksound = click_checkbox
+			}		  
 		}
 	
 		buttonType = {
@@ -1577,7 +1766,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "production_equipment_window"
 		position = { x=-356 y=78}
-		show_position = { x=600 y =78 }
+		show_position = { x=610 y =78 }
 		show_animation_type = decelerated
 		hide_animation_type = accelerated
 		animation_time = 300
@@ -1634,7 +1823,7 @@ guiTypes = {
 			iconType = {
 				name ="MIO_icon"
 				spriteType = "GFX_industrial_manufacturer_icon"
-				position = { x= 5 y = 3 }
+				position = { x= 7 y = 7 }
 				Orientation = "UPPER_LEFT"
 			}
 		
@@ -4630,7 +4819,7 @@ guiTypes = {
 
 		gridBoxType = {
 			name = "resources_grid"
-			position = { x = 370 y = 10 }
+			position = { x = 346 y = 8 }
 			size = { width = 48 height = 150 }
 			slotsize = { width = 35 height = 23 }
 			max_slots_vertical = 6
