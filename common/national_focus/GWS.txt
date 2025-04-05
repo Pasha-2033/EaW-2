@@ -1219,6 +1219,10 @@ focus_tree = {
 					gws_huge_contruction_csic = 0.03
 					tooltip = contruction_site_incident_chance_tt
 				}
+				add_to_variable = {
+					gws_huge_contruction_rtcbpf = 1
+					tooltip = resource_trade_cost_bonus_per_factory_tt
+				}
 			}
 			else = {
 				add_dynamic_modifier = {
@@ -2973,6 +2977,10 @@ focus_tree = {
 				add_to_variable = {
 					gws_huge_contruction_cf = -0.05
 					tooltip = conscription_factor_tt
+				}
+				add_to_variable = {
+					gws_huge_contruction_rtcbpf = 1
+					tooltip = resource_trade_cost_bonus_per_factory_tt
 				}
 			}
 			else = {

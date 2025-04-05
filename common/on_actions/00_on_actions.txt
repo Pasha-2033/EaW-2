@@ -322,45 +322,6 @@ on_actions = {
 	#FROM is war target
 	on_declare_war = {
 		effect = {
-			FROM = { set_country_flag = had_war }
-			ROOT = { set_country_flag = had_war }
-			#If prepared by siphoning equipment, receive equipment back
-			if = {
-				limit = {
-					FROM = {
-						has_civil_war = yes
-						has_country_flag = siphoned_equipment_stockpiles_for_civil_war
-					}
-					has_civil_war = yes
-				}
-				FROM = {
-					clr_country_flag = siphoned_equipment_stockpiles_for_civil_war
-					add_equipment_to_stockpile = {
-						type = infantry_equipment
-						amount = 1000
-					}
-				}
-			}
-
-			#If prepared with surprise attack plan, get bonus
-			if = {
-				limit = {
-					FROM = {
-						original_tag = ROOT
-						#has_civil_war = yes
-						has_country_flag = formulated_surprise_attack_plan_for_civil_war
-					}
-					#has_civil_war = yes
-				}
-				FROM = {
-					clr_country_flag = formulated_surprise_attack_plan_for_civil_war
-					add_timed_idea = {
-						idea = civil_war_surprise_attack_plan
-						days = 30
-					}
-				}
-			}
-
 		}
 	}
 

@@ -34,6 +34,10 @@ set_variable = {
 set_variable = {
 	gws_huge_contruction_cf = -0.05
 }
+set_variable = {
+	gws_huge_contruction_rtcbpf = 1
+	tooltip = resource_trade_cost_bonus_per_factory_tt
+}
 if = { #982 scenario script
 	limit = {
 		has_start_date < 1002.1.1
