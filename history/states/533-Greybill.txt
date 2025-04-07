@@ -1,27 +1,33 @@
-state={
-	id=533
-	name="STATE_533"
-
-	provinces={
-		1842 4290 7545 7674 7748 7871 9659 10577 10590 12569 
+state = {
+	id = 533
+	name = "STATE_533"
+	provinces = {
+		1842
+		4290
+		7545
+		7674
+		7748
+		7871
+		9659
+		10577
+		10590
+		12569
 	}
-
-	manpower=345768
-	state_category=rural
-	buildings_max_level_factor=1.00
-
-	history={
+	manpower = 345768
+	state_category = rural
+	buildings_max_level_factor = 1
+	history = {
 		982.1.1 = {
 			owner = GRE
 			add_core_of = GRE
 		}
-
-		victory_points = { 7748 3 }
-
+		victory_points = {
+			7748
+			3
+		}
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
-
 			10590 = {
 				bunker = 2
 			}

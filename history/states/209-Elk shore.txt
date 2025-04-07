@@ -1,30 +1,31 @@
-state={
-	id=209
-	name="STATE_209"
-
-	provinces={
-		715 718 3806 7289 9675 10381 11662 13158 
+state = {
+	id = 209
+	name = "STATE_209"
+	provinces = {
+		715
+		718
+		3806
+		7289
+		9675
+		10381
+		11662
+		13158
 	}
-
-	manpower=167637
-	state_category=rural
-	buildings_max_level_factor=1.00
-
-	history={
-		#owner = OLE
-		#add_core_of = OLE
-		982.1.1 = {
-			owner = OLE
-			add_core_of = OLE
+	manpower = 167637
+	state_category = rural
+	buildings_max_level_factor = 1
+	history = {
+		victory_points = {
+			715 3
+		}
+		owner = OLE
+		add_core_of = OLE
+		buildings = {
+			arms_factory = 1
 		}
 		1002.1.1 = {
 			owner = OLE
 			add_core_of = OLE
-		}
-		victory_points = { 715 3 }
-
-		buildings = {
-			arms_factory = 1
 		}
 	}
 }

@@ -1,25 +1,21 @@
-state={
-	id=155
-	name="STATE_155"
-
-	provinces={
-		151 3054 3083 6074 6168 6170
+state = {
+	id = 155
+	name = "STATE_155"
+	provinces = {
+		151
+		3054
+		3083
+		6074
+		6168
+		6170
 	}
-
-	manpower=7722
+	manpower = 7722
 	state_category = wasteland
-	buildings_max_level_factor=1.00
-
-	history={
-		#owner = EQS
-		#add_core_of = EQS
-		#add_core_of = STG
-		982.1.1 = {
-			owner = ICE
-			add_core_of = ICE
-			add_core_of = EQS
-			#add_core_of = STG #???
-		}
+	buildings_max_level_factor = 1
+	history = {
+		owner = ICE
+		add_core_of = ICE
+		add_core_of = EQS
 		1002.1.1 = {
 			owner = EQS
 			remove_core_of = ICE

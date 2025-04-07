@@ -1,15 +1,12 @@
-state={
-	id=667
-	name="STATE_667"
-
-	provinces={
+state = {
+	id = 667
+	name = "STATE_667"
+	provinces = {
 		10266
 	}
-
-	manpower=45677
+	manpower = 45677
 	state_category = small_island
-	buildings_max_level_factor=1.00
-
+	buildings_max_level_factor = 1
 	history = {
 		#owner = MIT
 		#add_core_of = MIT
@@ -17,9 +14,10 @@ state={
 			owner = ELN
 			add_core_of = ELN
 		}
-
-		victory_points = { 10266 1 }
-
+		victory_points = {
+			10266
+			1
+		}
 		buildings = {
 			10266 = {
 				naval_base = 1

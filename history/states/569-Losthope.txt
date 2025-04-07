@@ -1,15 +1,22 @@
-state={
-	id=569
-	name="STATE_569"
-
-	provinces={
-		1136 4074 4142 7048 7631 7659 10424 10451 10507 12300 12432
+state = {
+	id = 569
+	name = "STATE_569"
+	provinces = {
+		1136
+		4074
+		4142
+		7048
+		7631
+		7659
+		10424
+		10451
+		10507
+		12300
+		12432
 	}
-
-	manpower=456708
+	manpower = 456708
 	state_category = town
-	buildings_max_level_factor=1.00
-
+	buildings_max_level_factor = 1
 	history = {
 		#owner = FBK
 		#add_core_of = FBK
@@ -17,13 +24,13 @@ state={
 			owner = ELN
 			add_core_of = ELN
 		}
-
-		victory_points = { 4074 5 }
-
+		victory_points = {
+			4074
+			5
+		}
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
-
 			4074 = {
 				naval_base = 1
 			}

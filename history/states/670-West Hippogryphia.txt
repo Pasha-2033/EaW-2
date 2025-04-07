@@ -2,24 +2,24 @@ state = {
 	id = 670
 	name = "STATE_670"
 	provinces = {
-		2174 
-		5179 
-		5188 
-		5230 
-		8211 
-		8217 
-		8225 
-		8240 
-		9099 
-		10987 
-		10996 
-		12930 
-		12994 
+		2174
+		5179
+		5188
+		5230
+		8211
+		8217
+		8225
+		8240
+		9099
+		10987
+		10996
+		12930
+		12994
 		13086
 	}
 	manpower = 1947099
 	state_category = city
-	buildings_max_level_factor = 1.00
+	buildings_max_level_factor = 1
 	history = {
 		#owner = NCH
 		#add_core_of = NCH
@@ -27,7 +27,10 @@ state = {
 			owner = GRC
 			add_core_of = GRC
 		}
-		victory_points = { 5188 20 }
+		victory_points = {
+			5188
+			20
+		}
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 2

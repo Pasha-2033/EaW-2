@@ -1,31 +1,26 @@
-state={
-	id=381
-	name="STATE_381"
-
-	provinces={
+state = {
+	id = 381
+	name = "STATE_381"
+	provinces = {
 		12882
 	}
-
-	manpower=4004005
+	manpower = 4004005
 	state_category = megalopolis
-	buildings_max_level_factor=1.00
-
-	history={
+	buildings_max_level_factor = 1
+	history = {
 		982.1.1 = {
 			owner = GRE
 			add_core_of = GRE
 		}
-
-		victory_points = { 12882 50 }
-
+		victory_points = {
+			12882
+			50
+		}
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 5
 			arms_factory = 3
 			dockyard = 2
-			
-			
-
 			12882 = {
 				naval_base = 1
 			}

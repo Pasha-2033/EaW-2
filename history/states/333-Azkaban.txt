@@ -6,26 +6,20 @@ state = {
 		9176
 	}
 	state_category = small_island
-	buildings_max_level_factor = 1.0
+	buildings_max_level_factor = 1
 	manpower = 3900
 	history = {
-		#owner = STG
-		#add_core_of = STG
-		#add_claim_by = EQS
-		982.1.1 = {
-			owner = STG
-			add_core_of = STG
-			add_claim_by = WOP
-			buildings = {
-				infrastructure = 1
-				9176 = {
-					naval_base = 1
-				}
+		owner = STG
+		add_core_of = STG
+		add_claim_by = WOP
+		buildings = {
+			infrastructure = 1
+			9176 = {
+				naval_base = 1
 			}
 		}
 		1002.1.1 = {
-			owner = STG
-			add_core_of = STG
+			remove_claim_by = WOP
 		}
 		1050.1.1 = {}
 	}

@@ -1,25 +1,30 @@
-state={
-	id=296
-	name="STATE_296"
-
-	provinces={
-		706 822 3824 3847 3894 12477 13265 13266 13267 
+state = {
+	id = 296
+	name = "STATE_296"
+	provinces = {
+		706
+		822
+		3824
+		3847
+		3894
+		12477
+		13265
+		13266
+		13267
 	}
-
-	manpower=72100
-	state_category=pastoral
-	buildings_max_level_factor=1.00
-
-	history={
-		982.1.1 = {
-			owner = BR4
-			add_core_of = BR4
+	manpower = 72100
+	state_category = pastoral
+	buildings_max_level_factor = 1
+	history = {
+		victory_points = {
+			12477 1
 		}
+		owner = BR4
+		add_core_of = BR4
 		1002.1.1 = {
 			owner = OLE
 			add_core_of = OLE
 			remove_core_of = BR4
 		}
-		victory_points = { 12477 1 }
 	}
 }

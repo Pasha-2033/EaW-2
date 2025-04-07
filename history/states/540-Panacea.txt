@@ -1,24 +1,38 @@
-state={
-	id=540
-	name="STATE_540"
-
-	provinces={
-		1915 2055 3972 4955 7092 7160 7981 8064 9773 9987 10894 12301 12875 12893
+state = {
+	id = 540
+	name = "STATE_540"
+	provinces = {
+		1915
+		2055
+		3972
+		4955
+		7092
+		7160
+		7981
+		8064
+		9773
+		9987
+		10894
+		12301
+		12875
+		12893
 	}
-
-	manpower=515607
+	manpower = 515607
 	state_category = rural
-	buildings_max_level_factor=1.00
-
+	buildings_max_level_factor = 1
 	history = {
 		982.1.1 = {
 			owner = GRE
 			add_core_of = GRE
 		}
-
-		victory_points = { 9773 5 }
-		victory_points = { 10894 3 }
-
+		victory_points = {
+			9773
+			5
+		}
+		victory_points = {
+			10894
+			3
+		}
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1

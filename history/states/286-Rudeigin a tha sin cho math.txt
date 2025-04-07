@@ -1,18 +1,27 @@
-state={
-	id=286
-	name="STATE_286"
-
-	provinces={
-		1785 3187 3508 6169 6530 9082 9531 10715 11062 11083
+state = {
+	id = 286
+	name = "STATE_286"
+	provinces = {
+		1785
+		3187
+		3508
+		6169
+		6530
+		9082
+		9531
+		10715
+		11062
+		11083
 	}
-
-	manpower=255271
+	manpower = 255271
 	state_category = rural
-	buildings_max_level_factor=1.00
+	buildings_max_level_factor = 1
 	history = {
+		victory_points = {
+			9531 5
+		}
 		owner = MET
-		add_core_of = MET
-		victory_points = { 9531 5 }
+		add_core_of = MET	
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1

@@ -1,32 +1,31 @@
-state={
-	id=352
-	name="STATE_352"
-
-	provinces={
-		405 495 564 6535 9509 11388 11431
+state = {
+	id = 352
+	name = "STATE_352"
+	provinces = {
+		405
+		495
+		564
+		6535
+		9509
+		11388
+		11431
 	}
-
-	manpower=175400
+	manpower = 175400
 	state_category = rural
-	buildings_max_level_factor=1.00
-
-	history={
-		#owner = EQS
-		#add_core_of = EQS
-		982.1.1 = {
-			owner = EPT
-			add_core_of = EPT
-			add_core_of = EQS
-			add_claim_by = ICE
+	buildings_max_level_factor = 1
+	history = {
+		victory_points = {
+			405 5
 		}
+		owner = EPT
+		add_core_of = EPT
+		add_core_of = EQS
+		add_claim_by = ICE
 		1002.1.1 = {
-			#removing 982 cores and claims#
+			owner = EQS
 			remove_core_of = EPT
 			remove_claim_by = ICE
-			###############################
-			owner = EQS
 		}
-		victory_points = { 405 5 }
 	}
 	resources = {
 		food = 9

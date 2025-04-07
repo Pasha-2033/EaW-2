@@ -1,15 +1,20 @@
-state={
-	id=626
-	name="STATE_626"
-
-	provinces={
-		1538 1637 7497 8120 10358 10471 12035 12307 12480
+state = {
+	id = 626
+	name = "STATE_626"
+	provinces = {
+		1538
+		1637
+		7497
+		8120
+		10358
+		10471
+		12035
+		12307
+		12480
 	}
-
-	manpower=177860
+	manpower = 177860
 	state_category = rural
-	buildings_max_level_factor=1.00
-
+	buildings_max_level_factor = 1
 	history = {
 		#owner = BAR
 		#add_core_of = BAR
@@ -18,13 +23,13 @@ state={
 			owner = ELN
 			add_core_of = ELN
 		}
-
-		victory_points = { 12307 3 }
-
+		victory_points = {
+			12307
+			3
+		}
 		buildings = {
 			infrastructure = 1
 			industrial_complex = 1
-
 			12307 = {
 				bunker = 2
 			}

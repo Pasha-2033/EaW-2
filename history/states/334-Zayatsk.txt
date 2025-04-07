@@ -11,25 +11,21 @@ state = {
 		13016
 	}
 	state_category = rural
-	buildings_max_level_factor = 1.0
+	buildings_max_level_factor = 1
 	manpower = 251580
 	history = {
-		#owner = STG
-		#add_core_of = STG
-		#add_claim_by = EQS
-		victory_points = {2082 5}
-		982.1.1 = {
-			owner = STG
-			add_core_of = STG
-			add_claim_by = WOP
-			buildings = {
-				industrial_complex = 1
-				aluminium_plant = 1
-			}
+		victory_points = {
+			2082 5
+		}
+		owner = STG
+		add_core_of = STG
+		add_claim_by = WOP
+		buildings = {
+			industrial_complex = 1
+			aluminium_plant = 1
 		}
 		1002.1.1 = {
-			owner = STG
-			add_core_of = STG
+			remove_claim_by = WOP
 		}
 		1050.1.1 = {}
 	}

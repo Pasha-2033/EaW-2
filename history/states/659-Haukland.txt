@@ -2,17 +2,17 @@ state = {
 	id = 659
 	name = "STATE_659"
 	provinces = {
-		7463 
-		7327 
-		12181 
-		12280 
-		9059 
-		9165 
+		7463
+		7327
+		12181
+		12280
+		9059
+		9165
 		10138
 	}
 	manpower = 395600
 	state_category = large_town
-	buildings_max_level_factor = 1.00
+	buildings_max_level_factor = 1
 	history = {
 		982.1.1 = {
 			owner = NML
@@ -24,7 +24,10 @@ state = {
 			add_core_of = NML
 			remove_claim_by = ICE
 		}
-		victory_points = { 7463 15 }
+		victory_points = {
+			7463
+			15
+		}
 		buildings = {
 			industrial_complex = 2
 			arms_factory = 1

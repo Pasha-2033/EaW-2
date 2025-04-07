@@ -1,29 +1,20 @@
-state={
-	id=221
-	name="STATE_221"
-
-	provinces={
+state = {
+	id = 221
+	name = "STATE_221"
+	provinces = {
 		177
 	}
-
-	manpower=1748
+	manpower = 1748
 	state_category = small_island
-	buildings_max_level_factor=1.00
-
-	history={
-		#owner = EQS
-		#add_core_of = EQS
-		982.1.1 = {
-			owner = EPT
-			add_core_of = EPT
-			add_core_of = EQS
-			add_claim_by = ICE
-		}
+	buildings_max_level_factor = 1
+	history = {
+		owner = EPT
+		add_core_of = EPT
+		add_core_of = EQS
+		add_claim_by = ICE
 		1002.1.1 = {
-			#removing 982 cores and claims#
 			remove_core_of = EPT
 			remove_claim_by = ICE
-			###############################
 			owner = EQS
 		}
 	}
