@@ -21,6 +21,9 @@ MAPMODE_SPECIES_MAP_MODE_DESCRIPTION: "Показывает преобладаю
 MAPMODE_SURPLUS_APPROPRIATION_MAP_MODE_NAME: "Продразверска"
 MAPMODE_SURPLUS_APPROPRIATION_MAP_MODE: "Режим карты: §Hпродразверска§!"
 MAPMODE_SURPLUS_APPROPRIATION_MAP_MODE_DESCRIPTION: "Показывает среднюю обеспеченность страны продуктами питания."
+MAPMODE_INDUSTRY_MAP_MODE_NAME: "Промышленность"
+MAPMODE_INDUSTRY_MAP_MODE: "Режим карты: §HПромышленность§!"
+MAPMODE_INDUSTRY_MAP_MODE_DESCRIPTION: "Показывает распределение типов промышленности в стране и регионах. §YТребует 75% и выше гражданских разведданных!§!"
 #map tooltips
 building_slot_map_mode_tooltip: "Строительный потенциал региона: [?FROM:common_all_slots|0Y]\nОт категории региона: §Y[FROM.get_state_building_potential_from_category]§!\nОт стройплощадок: [?FROM:building_level@construction_site|0Y]"
 building_slot_map_mode_tooltip_delayed: "[FROM.get_state_building_potential]"
@@ -35,6 +38,8 @@ species_map_mode_tooltip: "Раса: [FROM.get_state_race]"
 species_map_mode_tooltip_delayed: "[FROM.get_state_race_desc]"
 surplus_appropriation_map_mode_tooltip: "Средняя обеспеченность: [FROM.controller.get_colored_average_value]\nМинимальная обеспеченнось: [FROM.controller.get_colored_min_value_indicator]"
 surplus_appropriation_map_mode_tooltip_delayed: "Армейский достаток: [FROM.controller.get_colored_sa_real_value_0]\nПроизводственный достаток: [FROM.controller.get_colored_sa_real_value_1]\nГражданский достаток: [FROM.controller.get_colored_sa_real_value_2]"
+industry_map_mode_tooltip: "[get_industry_value]"
+industry_map_mode_tooltip_delayed: "[get_industry_desc]"
 #map specific tooltips
 #surplus appropriation
 blue_sa_average_value: "[?FROM.controller:sa_average_value|%0B]"
@@ -75,3 +80,7 @@ tiny_island_building_potential: "§Y$tiny_island$§!: как правило ре
 enclave_building_potential: "§Y$enclave$§!: регион значительное время существует в окружении другого государства. Это часто вызывает зависимость от иностранной торговли.\n\nСкорость ремонта: §R-15.00%§!\n\nСкорость строительства:§R-15.00%§!\n\n$MODIFIER_STATE_RESOURCES_FACTOR$: §R-10.00%§!"
 wasteland_building_potential: "§Y$wasteland$§!: как правило редко заселенный регион. Даже деревня - это редкость.\n\nСкорость ремонта: §R-10.00%§!\n\n$modifier_state_production_speed_infrastructure_factor$: §R-10.00%§!\n§Y$aluminium_plant$§!, §Y$steel_plant$§!, §Y$tungsten_plant$§!, §Y$chromium_plant$§!, §Y$ore_preparation$§!, §Y$arms_factory$§!, §Y$industrial_complex$§!, §Y$dockyard$§! — скорость строительства: §R-20.00%§!\n§Y$synthetic_refinery$§!, §Y$fuel_silo$§! — скорость строительства: §R-30.00%§!"
 unclassified_building_potential: "§RМы не смогли определить тип региона!§!"
+#industry
+industry_value_tt: "Построек [?plants_in_state|Y0]"
+industry_desc_tt: "§Y$aluminium_plant$§!: [?FROM.building_level@aluminium_plant]\n§Y$steel_plant$§!: [?FROM.building_level@steel_plant]\n§Y$tungsten_plant$§!: [?FROM.building_level@tungsten_plant]\n§Y$chromium_plant$§!: [?FROM.building_level@chromium_plant]"
+not_enough_intel_tt: "Недостаточно разведданных!"

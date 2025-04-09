@@ -26,10 +26,7 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							OR = {
-								has_idea = JER_education_socialist
-								has_idea = lack_of_scientists2
-							}
+							has_idea = lack_of_scientists2
 						}
 					}
 					set_temp_variable = { red = 0.6 }
@@ -56,20 +53,6 @@ scripted_map_modes = {
 					set_temp_variable = { green = 0.1 }
 					set_temp_variable = { blue = 0.1 }
 				}
-
-				#Unique Literacy
-
-				else_if = {
-					limit = {
-						FROM = {
-							has_idea = FLO_illiteracy_virtue
-						}
-					}
-					set_temp_variable = { red = 0.4 }
-					set_temp_variable = { green = 0.1 }
-					set_temp_variable = { blue = 0.4 }
-				}
-
 				else = {
 					set_temp_variable = { red = 1 }
 					set_temp_variable = { green = 1 }

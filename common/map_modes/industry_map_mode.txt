@@ -1,0 +1,166 @@
+scripted_map_modes = {
+	industry_map_mode = {
+		top = {
+            type = state
+            color = {
+				if = {
+					limit = {
+						OR = {
+							is_ally_with = FROM.owner
+							intel_level_over = {
+								target = FROM.owner
+								civilian_intel > 0.75
+							}
+						}
+					}
+					#aluminium plant
+					set_temp_variable = {
+						red = 0.957
+					}
+					set_temp_variable = {
+						green = 0.4
+					}
+					set_temp_variable = {
+						blue = 0.258
+					}
+					multiply_temp_variable = {
+						red = FROM.building_level@aluminium_plant
+					}
+					multiply_temp_variable = {
+						green = FROM.building_level@aluminium_plant
+					}
+					multiply_temp_variable = {
+						blue = FROM.building_level@aluminium_plant
+					}
+					set_temp_variable = {
+						count = FROM.building_level@aluminium_plant
+					}
+					#steel plant
+					set_temp_variable = {
+						t_red = 0.258
+					}
+					set_temp_variable = {
+						t_green = 0.957
+					}
+					set_temp_variable = {
+						t_blue = 0.41
+					}
+					multiply_temp_variable = {
+						t_red = FROM.building_level@steel_plant
+					}
+					multiply_temp_variable = {
+						t_green = FROM.building_level@steel_plant
+					}
+					multiply_temp_variable = {
+						t_blue = FROM.building_level@steel_plant
+					}
+					add_to_temp_variable = {
+						red = t_red
+					}
+					add_to_temp_variable = {
+						green = t_green
+					}
+					add_to_temp_variable = {
+						blue = t_blue
+					}
+					add_to_temp_variable = {
+						count = FROM.building_level@steel_plant
+					}
+					#tungsten_plant plant
+					set_temp_variable = {
+						t_red = 0.851
+					}
+					set_temp_variable = {
+						t_green = 0.258
+					}
+					set_temp_variable = {
+						t_blue = 0.957
+					}
+					multiply_temp_variable = {
+						t_red = FROM.building_level@tungsten_plant
+					}
+					multiply_temp_variable = {
+						t_green = FROM.building_level@tungsten_plant
+					}
+					multiply_temp_variable = {
+						t_blue = FROM.building_level@tungsten_plant
+					}
+					add_to_temp_variable = {
+						red = t_red
+					}
+					add_to_temp_variable = {
+						green = t_green
+					}
+					add_to_temp_variable = {
+						blue = t_blue
+					}
+					add_to_temp_variable = {
+						count = FROM.building_level@tungsten_plant
+					}
+					#chromium plant
+					set_temp_variable = {
+						t_red = 0
+					}
+					set_temp_variable = {
+						t_green = 0.113
+					}
+					set_temp_variable = {
+						t_blue = 0.758
+					}
+					multiply_temp_variable = {
+						t_red = FROM.building_level@chromium_plant
+					}
+					multiply_temp_variable = {
+						t_green = FROM.building_level@chromium_plant
+					}
+					multiply_temp_variable = {
+						t_blue = FROM.building_level@chromium_plant
+					}
+					add_to_temp_variable = {
+						red = t_red
+					}
+					add_to_temp_variable = {
+						green = t_green
+					}
+					add_to_temp_variable = {
+						blue = t_blue
+					}
+					add_to_temp_variable = {
+						count = FROM.building_level@chromium_plant
+					}
+					#results
+					if = {
+						limit = {
+							check_variable = {
+								count = 0
+							}
+						}
+						set_temp_variable = { alpha = 0 }
+					}
+					else = {
+						divide_temp_variable = {
+							red = count
+						}
+						divide_temp_variable = {
+							green = count
+						}
+						divide_temp_variable = {
+							blue = count
+						}
+						set_temp_variable = { alpha = 1 }
+					}
+				}
+				else = {
+					set_temp_variable = { alpha = 0 }
+				}
+				set_temp_variable = { thickness = 0.8 }
+                set_temp_variable = { highlighted = 0 }
+            }
+        }
+		bottom = {
+			type = none
+		}
+        far_text = country
+        near_text = state
+    }
+}

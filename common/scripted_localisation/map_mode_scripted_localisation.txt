@@ -541,3 +541,55 @@ defined_text = {
 		localization_key = "red_colored_sa_real_value_2"
 	}
 }
+defined_text = {
+	name = get_industry_value
+	text = {
+		trigger = {
+			ROOT = {
+				OR = {
+					is_ally_with = FROM.owner
+					intel_level_over = {
+						target = FROM.owner
+						civilian_intel > 0.75
+					}
+				}
+			}
+			set_temp_variable = {
+				plants_in_state = FROM.building_level@aluminium_plant
+			}
+			add_to_temp_variable = {
+				plants_in_state = FROM.building_level@steel_plant
+			}
+			add_to_temp_variable = {
+				plants_in_state = FROM.building_level@tungsten_plant
+			}
+			add_to_temp_variable = {
+				plants_in_state = FROM.building_level@chromium_plant
+			}
+		}
+		localization_key = "industry_value_tt"
+	}
+	text = {
+		localization_key = "not_enough_intel_tt"
+	}
+}
+defined_text = {
+	name = get_industry_desc
+	text = {
+		trigger = {
+			ROOT = {
+				OR = {
+					is_ally_with = FROM.owner
+					intel_level_over = {
+						target = FROM.owner
+						civilian_intel > 0.75
+					}
+				}
+			}
+		}
+		localization_key = "industry_desc_tt"
+	}
+	text = {
+		localization_key = ""
+	}
+}
