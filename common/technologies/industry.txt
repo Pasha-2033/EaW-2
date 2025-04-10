@@ -2048,26 +2048,23 @@ technologies = {
 		}
 	}
 	###------> Old Manufacturing <><> <><> <><> <><> <><>
-	construction1 = {
+	construction_0 = {
 		production_speed_buildings_factor = 0.10
 		industry_repair_factor = 0.10
 		enable_building = {
 			building = construction_site
 			level = 6
 		}
-		dependencies = {
-			infantry_weapons_0 = 1
-		}
 		path = {
-			leads_to_tech = construction2
+			leads_to_tech = construction_1
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = excavation1
+			leads_to_tech = excavation_0
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = roads1
+			leads_to_tech = roads_0
 			research_cost_coeff = 1
 		}
 		research_cost = 2
@@ -2090,7 +2087,7 @@ technologies = {
 			}
 		}
 	}
-	roads1 = {
+	roads_0 = {
 		research_cost = 2
 		start_year = 982
 		#enable_building = {
@@ -2103,7 +2100,7 @@ technologies = {
 			construction_tech
 		}
 		path = {
-			leads_to_tech = rails1
+			leads_to_tech = rails_0
 			research_cost_coeff = 1
 		}
 		folder = {
@@ -2121,13 +2118,12 @@ technologies = {
 			}
 		}
 	}
-	rails1 = {
+	rails_0 = {
 		research_cost = 2
 		start_year = 982
 		categories = {
 			cat_rail_way_construction
 			cat_infrastructure
-			construction_tech
 		}
 		folder = {
 			name = industry_folder
@@ -2144,7 +2140,7 @@ technologies = {
 			}
 		}
 	}
-	excavation1 = {
+	excavation_0 = {
 		local_resources_factor = 0.10
 		path = {
 			research_cost_coeff = 1
@@ -2187,7 +2183,7 @@ technologies = {
 			}
 		}
 	}
-	construction2 = {
+	construction_1 = {
 		production_speed_buildings_factor = 0.10
 		industry_repair_factor = 0.10
 		enable_building = {
@@ -2195,15 +2191,15 @@ technologies = {
 			level = 7
 		}
 		path = {
-			leads_to_tech = construction3
+			leads_to_tech = construction_2
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = excavation2
+			leads_to_tech = excavation_1
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = roads2
+			leads_to_tech = roads_1
 			research_cost_coeff = 1
 		}
 		research_cost = 2
@@ -2226,7 +2222,7 @@ technologies = {
 			}
 		}
 	}
-	roads2 = {
+	roads_1 = {
 		research_cost = 2
 		start_year = 963
 		#enable_building = {
@@ -2239,7 +2235,7 @@ technologies = {
 			construction_tech
 		}
 		path = {
-			leads_to_tech = rails2
+			leads_to_tech = rails_1
 			research_cost_coeff = 1
 		}
 		folder = {
@@ -2257,7 +2253,7 @@ technologies = {
 			}
 		}
 	}
-	rails2 = {
+	rails_1 = {
 		research_cost = 2
 		start_year = 963
 		categories = {
@@ -2280,7 +2276,7 @@ technologies = {
 			}
 		}
 	}
-	excavation2 = {
+	excavation_1 = {
 
 		local_resources_factor = 0.10
 
@@ -2331,7 +2327,7 @@ technologies = {
 		}
 	}
 
-	construction3 = {
+	construction_2 = {
 		production_speed_buildings_factor = 0.10
 		industry_repair_factor = 0.10
 		enable_building = {
@@ -2339,15 +2335,15 @@ technologies = {
 			level = 8
 		}
 		path = {
-			leads_to_tech = construction4
+			leads_to_tech = construction_3
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = excavation3
+			leads_to_tech = excavation_2
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = roads3
+			leads_to_tech = roads_2
 			research_cost_coeff = 1
 		}
 		research_cost = 2
@@ -2378,20 +2374,16 @@ technologies = {
 			}
 		}
 	}
-	roads3 = {
+	roads_2 = {
 		research_cost = 2
 		start_year = 964
-		#enable_building = {
-		#	building = infrastructure
-		#	level = 3
-		#}
 		categories = {
 			cat_road_construction
 			cat_infrastructure
 			construction_tech
 		}
 		path = {
-			leads_to_tech = rails3
+			leads_to_tech = rails_2
 			research_cost_coeff = 1
 		}
 		folder = {
@@ -2409,7 +2401,7 @@ technologies = {
 			}
 		}
 	}
-	rails3 = {
+	rails_2 = {
 		research_cost = 2
 		start_year = 964
 		categories = {
@@ -2433,7 +2425,7 @@ technologies = {
 		}
 	}
 
-	excavation3 = {
+	excavation_2 = {
 
 		local_resources_factor = 0.10
 
@@ -2484,7 +2476,7 @@ technologies = {
 		}
 	}
 
-	construction4 = {
+	construction_3 = {
 
 		production_speed_buildings_factor = 0.10
 		industry_repair_factor = 0.10
@@ -2493,15 +2485,15 @@ technologies = {
 			level = 9
 		}
 		path = {
-			leads_to_tech = construction5
+			leads_to_tech = construction_4
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = excavation4
+			leads_to_tech = excavation_3
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = roads4
+			leads_to_tech = roads_3
 			research_cost_coeff = 1
 		}
 		research_cost = 2
@@ -2526,7 +2518,7 @@ technologies = {
 			}
 		}
 	}
-	roads4 = {
+	roads_3 = {
 		research_cost = 2
 		start_year = 964
 		#enable_building = {
@@ -2539,7 +2531,7 @@ technologies = {
 			construction_tech
 		}
 		path = {
-			leads_to_tech = rails4
+			leads_to_tech = rails_3
 			research_cost_coeff = 1
 		}
 		folder = {
@@ -2557,7 +2549,7 @@ technologies = {
 			}
 		}
 	}
-	rails4 = {
+	rails_3 = {
 		research_cost = 2
 		start_year = 964
 		categories = {
@@ -2580,7 +2572,7 @@ technologies = {
 			}
 		}
 	}
-	excavation4 = {
+	excavation_3 = {
 
 		local_resources_factor = 0.10
 
@@ -2633,7 +2625,7 @@ technologies = {
 
 	###------> Old Construction <><> <><> <><> <><> <><>
 
-	construction5 = {
+	construction_4 = {
 
 		production_speed_buildings_factor = 0.10
 		industry_repair_factor = 0.10
@@ -2642,16 +2634,16 @@ technologies = {
 			level = 10
 		}
 		path = {
-			leads_to_tech = excavation5
+			leads_to_tech = excavation_4
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = roads5
+			leads_to_tech = roads_4
 			research_cost_coeff = 1
 		}
 
 		path = {
-			leads_to_tech = construction_a
+			leads_to_tech = construction_5
 			research_cost_coeff = 1
 		}
 		research_cost = 2
@@ -2676,7 +2668,7 @@ technologies = {
 			}
 		}
 	}
-	roads5 = {
+	roads_4 = {
 		research_cost = 2
 		start_year = 964
 		#enable_building = {
@@ -2689,7 +2681,7 @@ technologies = {
 			construction_tech
 		}
 		path = {
-			leads_to_tech = rails5
+			leads_to_tech = rails_4
 			research_cost_coeff = 1
 		}
 		folder = {
@@ -2707,7 +2699,7 @@ technologies = {
 			}
 		}
 	}
-	rails5 = {
+	rails_4 = {
 		research_cost = 2
 		start_year = 964
 		categories = {
@@ -2732,7 +2724,7 @@ technologies = {
 	}
 	###------> X <><> <><> <><> <><> <><>
 
-	excavation5 = {
+	excavation_4 = {
 
 		local_resources_factor = 0.10
 
@@ -2786,7 +2778,7 @@ technologies = {
 
 	###------> New Construction <><> <><> <><> <><> <><>
 
-	construction_a = {
+	construction_5 = {
 
 		production_speed_buildings_factor = 0.05
 		industry_repair_factor = 0.05
@@ -2795,12 +2787,12 @@ technologies = {
 			level = 11
 		}
 		path = {
-			leads_to_tech = excavation_a
+			leads_to_tech = excavation_5
 			research_cost_coeff = 1
 		}
 
 		path = {
-			leads_to_tech = construction_b
+			leads_to_tech = construction_6
 			research_cost_coeff = 1
 		}
 
@@ -2823,7 +2815,7 @@ technologies = {
 	}
 
 
-	excavation_a = {
+	excavation_5 = {
 
 		local_resources_factor = 0.05
 
@@ -2872,7 +2864,7 @@ technologies = {
 		}
 	}
 
-	construction_b = {
+	construction_6 = {
 
 		production_speed_buildings_factor = 0.05
 		industry_repair_factor = 0.05
@@ -2881,12 +2873,12 @@ technologies = {
 			level = 12
 		}
 		path = {
-			leads_to_tech = excavation_b
+			leads_to_tech = excavation_6
 			research_cost_coeff = 1
 		}
 
 		path = {
-			leads_to_tech = construction_c
+			leads_to_tech = construction_7
 			research_cost_coeff = 1
 		}
 
@@ -2908,7 +2900,7 @@ technologies = {
 		}
 	}
 
-	excavation_b = {
+	excavation_6 = {
 
 		local_resources_factor = 0.05
 
@@ -2957,7 +2949,7 @@ technologies = {
 		}
 	}
 
-	construction_c = {
+	construction_7 = {
 
 		production_speed_buildings_factor = 0.03
 		industry_repair_factor = 0.03
@@ -2966,12 +2958,12 @@ technologies = {
 			level = 13
 		}
 		path = {
-			leads_to_tech = excavation_c
+			leads_to_tech = excavation_7
 			research_cost_coeff = 1
 		}
 
 		path = {
-			leads_to_tech = construction_d
+			leads_to_tech = construction_8
 			research_cost_coeff = 1
 		}
 
@@ -2993,7 +2985,7 @@ technologies = {
 		}
 	}
 
-	excavation_c = {
+	excavation_7 = {
 
 		local_resources_factor = 0.03
 
@@ -3042,7 +3034,7 @@ technologies = {
 		}
 	}
 
-	construction_d = {
+	construction_8 = {
 
 		production_speed_buildings_factor = 0.02
 		industry_repair_factor = 0.02
@@ -3051,7 +3043,7 @@ technologies = {
 			level = 14
 		}
 		path = {
-			leads_to_tech = excavation_d
+			leads_to_tech = excavation_8
 			research_cost_coeff = 1
 		}
 
@@ -3073,7 +3065,7 @@ technologies = {
 		}
 	}
 
-	excavation_d = {
+	excavation_8 = {
 
 		local_resources_factor = 0.02
 

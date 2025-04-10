@@ -118,19 +118,6 @@ focus_tree = {
 	}
 	#economic branch
 	focus = {
-		id = stg_focus_gold_mines
-		icon = GFX_focus_usa_reestablish_the_gold_standard
-		cost = 1
-		ai_will_do = {
-			factor = 200
-		}
-		x = 24
-		y = 0
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_gold_mines"
-		}
-	}
-	focus = {
 		id = stg_focus_first_five_year_plan
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		cost = 1
@@ -408,11 +395,11 @@ focus_tree = {
 		id = stg_focus_infrastructure_in_starlight_village
 		icon = GFX_focus_usa_reestablish_the_gold_standard
 		cost = 1
-		relative_position_id = stg_focus_railroad_zayatsk_staliongrad
+		relative_position_id = stg_focus_SLV_improvement
 		x = 0
 		y = 1
 		prerequisite = {
-			focus = stg_focus_railroad_zayatsk_staliongrad
+			focus = stg_focus_SLV_improvement
 		}
 		available = {
 			controls_state = 57
@@ -446,6 +433,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = stg_focus_infrastructure_in_zlatocvet
+		}
+		mutually_exclusive = {
+			focus = stg_focus_military_industry_effort
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_civil_industry_effort"
@@ -483,6 +473,9 @@ focus_tree = {
 		}
 		prerequisite = {
 			focus = stg_focus_infrastructure_in_zlatocvet
+		}
+		mutually_exclusive = {
+			focus = stg_focus_civil_industry_effort
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_military_industry_effort"
