@@ -28,11 +28,10 @@ if = { #982 scenario script
 		steel_plant_upgrade_0 = 1
 	}
 	set_popularities = {
-		fascism = 2
-		radicalism = 3
-		neutrality = 1
-		communism = 88
-		socialism = 6
+		communism = 73
+		socialism = 10
+		anarchism = 12
+		radicalism = 5
 	}
 	set_politics = {
 		ruling_party = communism
@@ -43,6 +42,9 @@ if = { #982 scenario script
 	recruit_character = STG_stalion
 	recruit_character = STG_martov
 	recruit_character = STG_kropotkin
+
+	activate_advisor = STG_kropotkin
+	activate_advisor = STG_martov
 	add_ideas = {
 		pony_race
 		pre_industrial_society

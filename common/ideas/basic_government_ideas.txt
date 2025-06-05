@@ -1803,57 +1803,11 @@ ideas = {
 				can_have_multi_race = yes
 			}
 			on_add = {
-				if = {
-					limit = {
-						NOT = {
-							has_tech = pony_race
-						}
-					}
+				hidden_effect = {
 					set_technology = {
 						pony_race = 1
-						popup = no
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_tech = changeling_race
-						}
-					}
-					set_technology = {
 						changeling_race = 1
-						popup = no
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_tech = deer_race
-						}
-					}
-					set_technology = {
-						deer_race = 1
-						popup = no
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_tech = griffon_race
-						}
-					}
-					set_technology = {
 						griffon_race = 1
-						popup = no
-					}
-				}
-				if = {
-					limit = {
-						NOT = {
-							has_tech = diamond_dog_race
-						}
-					}
-					set_technology = {
 						diamond_dog_race = 1
 						popup = no
 					}
@@ -1874,12 +1828,7 @@ ideas = {
 				is_pony_mylti = yes
 			}
 			on_add = {
-				if = {
-					limit = {
-						NOT = {
-							has_tech = pony_race
-						}
-					}
+				hidden_effect = {
 					set_technology = {
 						pony_race = 1
 						popup = no
@@ -1894,6 +1843,8 @@ ideas = {
 				modifier_army_sub_unit_magical_motorized_defence_factor = 0.05
 				modifier_army_sub_unit_magical_mechanized_attack_factor = 0.05
 				modifier_army_sub_unit_magical_mechanized_defence_factor = 0.05
+				intel_network_gain_factor = -0.3
+				custom_modifier_tooltip = pony_race_tech_bonus_tt
 			}
 			cost = 250
 			removal_cost = -1
@@ -1910,12 +1861,7 @@ ideas = {
 				is_changeling_mylti = yes
 			}
 			on_add = {
-				if = {
-					limit = {
-						NOT = {
-							has_tech = changeling_race
-						}
-					}
+				hidden_effect = {
 					set_technology = {
 						changeling_race = 1
 						popup = no
@@ -1933,6 +1879,7 @@ ideas = {
 				intel_network_gain_factor = 0.1
 				operation_risk = -0.1
 				agency_upgrade_time = -0.1
+				custom_modifier_tooltip = changeling_race_tech_bonus_tt
 			}
 			cost = 250
 			removal_cost = -1
@@ -1948,18 +1895,14 @@ ideas = {
 			visible = {
 				is_deer_mylti = yes
 			}
-			on_add = {
-				if = {
-					limit = {
-						NOT = {
-							has_tech = deer_race
-						}
-					}
-					set_technology = {
-						deer_race = 1
-						popup = no
-					}
-				}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_factory_efficiency_gain_factor = 0.05
+				production_factory_max_efficiency_factor = 0.05
+				production_factory_start_efficiency_factor = 0.1
+				production_lack_of_resource_penalty_factor = -0.075
+				convoy_retreat_speed = 0.1
+				intel_network_gain_factor = -0.3
 			}
 			cost = 250
 			removal_cost = -1
@@ -1982,17 +1925,19 @@ ideas = {
 				}
 			}
 			on_add = {
-				if = {
-					limit = {
-						NOT = {
-							has_tech = griffon_race
-						}
-					}
+				hidden_effect = {
 					set_technology = {
 						griffon_race = 1
 						popup = no
 					}
 				}
+			}
+			modifier = {
+				war_support_factor = 0.075
+				weekly_casualties_war_support = 0.2
+				weekly_convoys_war_support = 0.2
+				intel_network_gain_factor = -0.3
+				custom_modifier_tooltip = griffon_race_tech_bonus_tt
 			}
 			cost = 250
 			removal_cost = -1
@@ -2036,17 +1981,20 @@ ideas = {
 				}
 			}
 			on_add = {
-				if = {
-					limit = {
-						NOT = {
-							has_tech = diamond_dog_race
-						}
-					}
+				hidden_effect = {
 					set_technology = {
 						diamond_dog_race = 1
 						popup = no
 					}
 				}
+			}
+			modifier = {
+				land_bunker_effectiveness_factor = 0.25
+				coastal_bunker_effectiveness_factor = 0.25
+				bunker_max_level_terrain_limit = 1
+				coastal_bunker_max_level_terrain_limit = 1
+				intel_network_gain_factor = -0.3
+				custom_modifier_tooltip = diamond_dog_race_tech_bonus_tt
 			}
 			cost = 250
 			removal_cost = -1
@@ -2070,12 +2018,7 @@ ideas = {
 				}
 			}
 			on_add = {
-				if = {
-					limit = {
-						NOT = {
-							has_tech = minotaur_race
-						}
-					}
+				hidden_effect = {
 					set_technology = {
 						minotaur_race = 1
 						popup = no

@@ -17,14 +17,14 @@ technologies = {
 			always = no
 		}
 		recon = {
-			maximum_speed = 0.3
+			maximum_speed = 1
+		}
+		infiltrator_company = {
+			recon = 0.5
 		}
 	}
 	#jager tree
 	tech_jager = {
-		dependencies = {
-			changeling_race = 1
-		}
 		enable_subunits = {
 			jager
 		}
@@ -151,9 +151,6 @@ technologies = {
 		}
 		enable_subunits = {
 			royal_guard
-		}
-		dependencies = {
-			changeling_race = 1
 		}
 		path = {
 			leads_to_tech = tech_rg2
@@ -367,9 +364,6 @@ technologies = {
 	}
 	#A tree
 	tech_changeling_a = {
-		dependencies = {
-			changeling_race = 1
-		}
 		industrial_capacity_factory = 0.1
 		industrial_capacity_dockyard = 0.1
 		path = {
@@ -463,9 +457,6 @@ technologies = {
 	}
 	#B tree
 	tech_changeling_b = {
-		dependencies = {
-			changeling_race = 1
-		}
 		weekly_manpower = 250
 		path = {
 			leads_to_tech = tech_changeling_b2
@@ -562,9 +553,6 @@ technologies = {
 	}
 	#C tree
 	tech_changeling_c = {
-		dependencies = {
-			changeling_race = 1
-		}
 		category_magical_infantry = {
 			breakthrough = 0.1
 			soft_attack = 0.06
@@ -668,7 +656,6 @@ technologies = {
 	tech_infiltrators = {
 
 		dependencies = {
-			changeling_race = 1
 			tech_support = 1
 		}
 

@@ -22,10 +22,10 @@
 technologies = {
 
 	diamond_dog_race = {
-
 		research_cost = 1
-		intel_network_gain_factor = -0.3
-
+		ironpaws = {
+			max_organisation = 5
+		}
 		allow = {
 			always = no
 		}
@@ -35,7 +35,6 @@ technologies = {
 	tech_ironpaws = {
 
 		dependencies = {
-			diamond_dog_race = 1
 			tech_support = 1
 		}
 
@@ -264,9 +263,7 @@ technologies = {
 	#Mining
 	tech_diamond_dog_misc = {
 
-		dependencies = {
-			diamond_dog_race = 1
-		}
+
 
 		local_resources_factor = 0.15
 
@@ -484,9 +481,7 @@ technologies = {
 	#Mountain Home
 	tech_diamond_dog_army = {
 
-		dependencies = {
-			diamond_dog_race = 1
-		}
+
 		on_research_complete = { custom_effect_tooltip = ME_MOUNTAIN_HOME_TOOLTIP }
 		category_light_infantry = {
 			hills = {

@@ -32,17 +32,10 @@
 @step_9 = 1000
 @step_10 = 1007
 technologies = {
-	deer_race = {
-		research_cost = 1
-		intel_network_gain_factor = -0.3
-		allow = {
-			always = no
-		}
-	}
 	#Spirit-aided Geology
 	tech_deer_misc = {
-		dependencies = {
-			deer_race = 1
+		allow = {
+			has_idea = deer_race
 		}
 		local_resources_factor = 0.1
 		path = {
@@ -232,8 +225,8 @@ technologies = {
 	}
 	#New Shipbuilding Methods
 	tech_deer_naval = {
-		dependencies = {
-			deer_race = 1
+		allow = {
+			has_idea = deer_race
 		}
 		industrial_capacity_dockyard = 0.1
 		path = {
@@ -456,8 +449,8 @@ technologies = {
 	}
 	#Glimpses of the future
 	tech_deer_seer = {
-		dependencies = {
-			deer_race = 1
+		allow = {
+			has_idea = deer_race
 		}
 		recon_factor = 0.1
 		planning_speed = 0.1
@@ -764,8 +757,8 @@ technologies = {
 	}
 	#Winter equipment
 	tech_deer_army = {
-		dependencies = {
-			deer_race = 1
+		allow = {
+			has_idea = deer_race
 		}
 		winter_attrition_factor = -0.15
 		category_front_line = {

@@ -29,10 +29,32 @@ characters = {
 				large = "GFX_portrait_marshal_unknown"
 			}
 		}
+		allowed_civil_war = {
+			has_government = socialism
+		}
 		country_leader = {
 			desc = "POLITICS_MARTOV_DESC"
 			ideology = democratic_socialism
 			traits = {}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = STG_martov
+			can_be_fired = no
+			allowed = {
+				original_tag = STG
+			}
+			available = {
+				NOT = {
+					has_country_leader = {
+						character = STG_martov
+						ruling_only = yes
+					}
+				}
+			}
+			traits = {
+				socialist_writer
+			}
 		}
 	}
 	STG_kropotkin = {
@@ -46,10 +68,32 @@ characters = {
 				large = "GFX_portrait_marshal_unknown"
 			}
 		}
+		allowed_civil_war = {
+			has_government = anarchism
+		}
 		country_leader = {
 			desc = "POLITICS_KROPOTKIN_DESC"
 			ideology = individual_anarchism
 			traits = {}
+		}
+		advisor = {
+			slot = political_advisor
+			idea_token = STG_kropotkin
+			can_be_fired = no
+			allowed = {
+				original_tag = STG
+			}
+			available = {
+				NOT = {
+					has_country_leader = {
+						character = STG_kropotkin
+						ruling_only = yes
+					}
+				}
+			}
+			traits = {
+				communal_anarchist
+			}
 		}
 	}
 }
