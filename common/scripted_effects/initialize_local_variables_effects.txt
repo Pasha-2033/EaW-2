@@ -45,6 +45,9 @@ init_surplus_appropriation = {
 	add_dynamic_modifier = {
 		modifier = surplus_appropriation_army_modifier
 	}
+	add_dynamic_modifier = {
+		modifier = surplus_appropriation_economy_modifier
+	}
 	#prevent initial negative storage
 	if = {
 		limit = {

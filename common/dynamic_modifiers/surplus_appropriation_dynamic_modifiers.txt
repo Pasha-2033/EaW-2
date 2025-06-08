@@ -28,3 +28,9 @@ surplus_appropriation_army_modifier = {
 	mobilization_speed = global.sa_army_mod_mobilization_value^surplus_appropriation_mod_values^2
 	conscription_factor = global.sa_army_mod_recruitable_value^surplus_appropriation_mod_values^2
 }
+surplus_appropriation_economy_modifier = {
+	enable = {
+		always = yes
+	}
+	country_resource_cost_food = sa_consumtion_sum
+}

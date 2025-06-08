@@ -46,28 +46,20 @@ calc_surplus_appropriation_real_values = {
 		set_variable = {
 			super_raw_consumers^i = consumers^i
 		}
+		clamp_variable = {
+			var = consumers^i
+			min = 0
+		}
 	}
 	#applying modifiers#
 	multiply_variable = {
 		consumers^0 = mtth:civil_consumption_factor
 	}
-	clamp_variable = {
-		var = consumers^0
-		min = 0
-	}
 	multiply_variable = {
 		consumers^1 = mtth:facilities_consumption_factor
 	}
-	clamp_variable = {
-		var = consumers^1
-		min = 0
-	}
 	multiply_variable = {
 		consumers^2 = mtth:army_consumption_factor
-	}
-	clamp_variable = {
-		var = consumers^2
-		min = 0
 	}
 	#calc total consumtion
 	for_each_loop = {
@@ -80,6 +72,9 @@ calc_surplus_appropriation_real_values = {
 	#calc resource appropriation
 	set_variable = {
 		food_storage_change = resource@food
+	}
+	add_to_variable = {
+		food_storage_change = sa_consumtion_sum
 	}
 	if = {
 		limit = {
