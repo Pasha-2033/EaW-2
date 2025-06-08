@@ -85,3 +85,35 @@ unit_leader_event = {
 		}
 	}
 }
+#inflation decreased poverty (low idea lvl)
+country_event = {
+	id = generic_event.3
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event generic_event.3"
+	}
+	title = generic_event.3.t
+	desc = generic_event.3.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#fuck!
+		name = generic_event.3.a
+		decrease_poverty_level_idea = yes
+	}
+}
+#inflation decreased poverty (low political power)
+country_event = {
+	id = generic_event.4
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event generic_event.4"
+	}
+	title = generic_event.4.t
+	desc = generic_event.4.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#fuck!
+		name = generic_event.4.a
+		add_political_power = -100
+	}
+}

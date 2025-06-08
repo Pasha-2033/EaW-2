@@ -1,0 +1,93 @@
+add_namespace = worker_opposition
+country_event = {
+	#STG offers unation
+	id = worker_opposition.1
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event worker_opposition.1"
+	}
+	title = worker_opposition.1.t
+	desc = worker_opposition.1.d
+	picture = GFX_event_swarm
+	is_triggered_only = yes
+	option = {
+		#we agree
+		name = worker_opposition.1.a
+		trigger = {
+			exists = yes
+		}
+		WOP = {
+			change_tag_from = FROM
+		}
+		custom_override_tooltip = {
+			tooltip = cores_and_state_control_will_be_transfered_tt
+			FROM = {
+				every_core_state = {
+					add_core_of = WOP
+				}
+				every_owned_state = {
+					transfer_state_to = WOP
+				}
+				every_controlled_state = {
+					set_state_controller_to = WOP
+				}
+			}
+		}
+		custom_override_tooltip = {
+			tooltip = wars_will_be_shared_tt
+			FROM = {
+				every_enemy_country = {
+					if = {
+						limit = {
+							has_offensive_war_with = FROM
+						}
+						declare_war_on = {
+							target = ROOT
+						}
+					}
+					else = {
+						ROOT = {
+							declare_war_on = {
+								target = PREV
+							}
+						}
+					}
+					remove_wargoal = {
+						type = all
+						target = FROM
+					}
+				}
+			}
+		}
+		SLV = {
+			if = {
+				limit = {
+					OR = {
+						has_dlc = "Together for Victory"
+						has_dlc = "Man the Guns"
+					}
+				}
+				set_autonomy = {
+					target = SLV
+					autonomous_state = autonomy_personal_union
+				}
+				else = {
+					puppet = SLV
+				}
+			}
+		}
+		every_country = {
+			limit = {
+				has_idea = STG_WOP_frozen_civil_war
+			}
+			remove_ideas = STG_WOP_frozen_civil_war
+		}
+	}
+	option = {
+		#we disagree
+		name = worker_opposition.1.b
+		FROM = {
+			set_country_flag = WOP_refused_unation
+			mark_focus_tree_layout_dirty = yes
+		}
+	}
+}

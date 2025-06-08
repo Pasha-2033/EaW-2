@@ -1,3 +1,4 @@
+#!gfx:interface/eaw_goals.gfx
 focus_tree = {
 	id = stg_focus_tree_revolutional
 	country = {
@@ -16,17 +17,59 @@ focus_tree = {
 	focus = {
 		id = stg_focus_ignition_of_revolution_flame
 		icon = GFX_goal_generic_workers_democracy
-		cost = 1
+		cost = 5
 		mutually_exclusive = {
 			focus = stg_focus_forgotten_past
+		}
+		allow_branch = {
+			OR = {
+				NOT = {
+					has_completed_focus = stg_focus_forgotten_past
+				}
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = SHOW
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 200
 		}
-		x = 7
+		x = 11
 		y = 0
+		offset = {
+			x = -8
+			trigger = {
+				has_completed_focus = stg_focus_fraction_kropotkin_loyalty
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+		offset = {
+			x = -8
+			trigger = {
+				has_completed_focus = stg_focus_fraction_martov_loyalty
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+		offset = {
+			x = -6
+			trigger = {
+				has_completed_focus = stg_focus_fraction_stalion_loyalty
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_ignition_of_revolution_flame"
+			mark_focus_tree_layout_dirty = yes
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -35,7 +78,7 @@ focus_tree = {
 	focus = {
 		id = stg_focus_fraction_kropotkin_loyalty
 		icon = GFX_goal_generic_workers_democracy
-		cost = 1
+		cost = 7.2
 		prerequisite = {
 			focus = stg_focus_ignition_of_revolution_flame
 		}
@@ -43,14 +86,44 @@ focus_tree = {
 			focus = stg_focus_fraction_martov_loyalty
 			focus = stg_focus_fraction_stalion_loyalty
 		}
+		allow_branch = {
+			OR = {
+				NOT = {
+					has_completed_focus = stg_focus_fraction_martov_loyalty
+					has_completed_focus = stg_focus_fraction_stalion_loyalty
+					has_completed_focus = stg_focus_forgotten_past
+				}
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = SHOW
+				}
+			}
+		}
 		ai_will_do = {
 			factor = 200
 		}
 		relative_position_id = stg_focus_ignition_of_revolution_flame
-		x = -4
+		x = -8
 		y = 1
+		offset = {
+			x = 8
+			trigger = {
+				has_completed_focus = stg_focus_fraction_kropotkin_loyalty
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_fraction_kropotkin_loyalty"
+			mark_focus_tree_layout_dirty = yes
+			set_power_balance = {
+				id = STG_party_fragmentation_bop
+				set_value = -0.333
+				left_side = party_opposition
+				right_side = kropotkin_anarchists
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -59,7 +132,7 @@ focus_tree = {
 	focus = {
 		id = stg_focus_fraction_martov_loyalty
 		icon = GFX_goal_generic_workers_democracy
-		cost = 1
+		cost = 7.2
 		prerequisite = {
 			focus = stg_focus_ignition_of_revolution_flame
 		}
@@ -70,11 +143,31 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
+		allow_branch = {
+			OR = {
+				NOT = {
+					has_completed_focus = stg_focus_fraction_kropotkin_loyalty
+					has_completed_focus = stg_focus_fraction_stalion_loyalty
+					has_completed_focus = stg_focus_forgotten_past
+				}
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = SHOW
+				}
+			}
+		}
 		relative_position_id = stg_focus_ignition_of_revolution_flame
 		x = 0
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_fraction_martov_loyalty"
+			mark_focus_tree_layout_dirty = yes
+			set_power_balance = {
+				id = STG_party_fragmentation_bop
+				set_value = -0.333
+				left_side = party_opposition
+				right_side = martov_socialists
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -83,7 +176,7 @@ focus_tree = {
 	focus = {
 		id = stg_focus_fraction_stalion_loyalty
 		icon = GFX_goal_generic_workers_democracy
-		cost = 1
+		cost = 7.2
 		prerequisite = {
 			focus = stg_focus_ignition_of_revolution_flame
 		}
@@ -94,11 +187,41 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
+		allow_branch = {
+			OR = {
+				NOT = {
+					has_completed_focus = stg_focus_fraction_kropotkin_loyalty
+					has_completed_focus = stg_focus_fraction_martov_loyalty
+					has_completed_focus = stg_focus_forgotten_past
+				}
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = SHOW
+				}
+			}
+		}
+		offset = {
+			x = -8
+			trigger = {
+				has_completed_focus = stg_focus_fraction_stalion_loyalty
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
 		relative_position_id = stg_focus_ignition_of_revolution_flame
-		x = 4
+		x = 8
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_fraction_stalion_loyalty"
+			mark_focus_tree_layout_dirty = yes
+			set_power_balance = {
+				id = STG_party_fragmentation_bop
+				set_value = 0
+				left_side = party_opposition
+				right_side = stalion_communists
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -108,7 +231,7 @@ focus_tree = {
 	focus = {
 		id = stg_focus_commune_autonomy
 		icon = GFX_goal_generic_workers_democracy
-		cost = 1
+		cost = 10
 		prerequisite = {
 			focus = stg_focus_fraction_kropotkin_loyalty
 		}
@@ -128,7 +251,7 @@ focus_tree = {
 	focus = {
 		id = stg_focus_full_responsibilities_distribution
 		icon = GFX_goal_generic_workers_democracy
-		cost = 1
+		cost = 15
 		prerequisite = {
 			focus = stg_focus_commune_autonomy
 		}
@@ -145,13 +268,10 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 	}
-
-
-
 	focus = {
-		id = stg_focus_appeal_olenian_anarchists
+		id = stg_focus_appeal_OLR
 		icon = GFX_goal_generic_workers_democracy
-		cost = 1
+		cost = 5
 		prerequisite = {
 			focus = stg_focus_fraction_kropotkin_loyalty
 		}
@@ -167,19 +287,16 @@ focus_tree = {
 		x = -3
 		y = 1
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_commune_autonomy"
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_appeal_OLR"
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
 		}
 	}
-
-
-
 	focus = {
 		id = stg_focus_suppress_socialist_opposition
 		icon = GFX_goal_generic_workers_democracy
-		cost = 1
+		cost = 10
 		prerequisite = {
 			focus = stg_focus_fraction_kropotkin_loyalty
 		}
@@ -199,7 +316,7 @@ focus_tree = {
 	focus = {
 		id = stg_focus_assassination_attempt_on_stalion
 		icon = GFX_goal_generic_workers_democracy
-		cost = 1
+		cost = 5
 		prerequisite = {
 			focus = stg_focus_suppress_socialist_opposition
 		}
@@ -220,7 +337,7 @@ focus_tree = {
 	focus = {
 		id = stg_focus_form_nkvd
 		icon = GFX_goal_generic_workers_democracy
-		cost = 1
+		cost = 5
 		prerequisite = {
 			focus = stg_focus_fraction_stalion_loyalty
 		}
@@ -240,7 +357,7 @@ focus_tree = {
 	focus = {
 		id = stg_focus_infiltrate_opposition
 		icon = GFX_goal_generic_workers_democracy
-		cost = 1
+		cost = 5
 		prerequisite = {
 			focus = stg_focus_form_nkvd
 		}
@@ -279,7 +396,7 @@ focus_tree = {
 	focus = {
 		id = stg_focus_form_gulags
 		icon = GFX_goal_generic_workers_democracy
-		cost = 1
+		cost = 5
 		prerequisite = {
 			focus = stg_focus_infiltrate_opposition
 		}
@@ -307,7 +424,7 @@ focus_tree = {
 			factor = 200
 		}
 		relative_position_id = stg_focus_form_gulags
-		x = 0
+		x = -1
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_one_way_ticket"
@@ -317,9 +434,29 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = stg_focus_azkaban_prison
+		icon = GFX_goal_generic_workers_democracy
+		cost = 10
+		prerequisite = {
+			focus = stg_focus_form_gulags
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_form_gulags
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_azkaban_prison"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
 		id = stg_focus_collectivization
 		icon = GFX_goal_generic_workers_democracy
-		cost = 1
+		cost = 10
 		prerequisite = {
 			focus = stg_focus_fraction_stalion_loyalty
 		}
@@ -339,7 +476,7 @@ focus_tree = {
 	focus = {
 		id = stg_focus_benefits_redistribution
 		icon = GFX_goal_generic_workers_democracy
-		cost = 1
+		cost = 12
 		prerequisite = {
 			focus = stg_focus_collectivization
 		}
@@ -359,7 +496,7 @@ focus_tree = {
 	focus = {
 		id = stg_focus_discipline_centralization
 		icon = GFX_goal_generic_workers_democracy
-		cost = 1
+		cost = 10
 		prerequisite = {
 			focus = stg_focus_fraction_stalion_loyalty
 		}
@@ -376,12 +513,31 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 	}
-
+	focus = {
+		id = stg_focus_stalion_the_leader
+		icon = GFX_goal_generic_workers_democracy
+		cost = 15
+		prerequisite = {
+			focus = stg_focus_discipline_centralization
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_discipline_centralization
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_stalion_the_leader"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
 	#Martov
 	focus = {
 		id = stg_focus_word_publicity
 		icon = GFX_goal_generic_workers_democracy
-		cost = 1
+		cost = 5
 		prerequisite = {
 			focus = stg_focus_fraction_martov_loyalty
 		}
@@ -401,7 +557,7 @@ focus_tree = {
 	focus = {
 		id = stg_focus_every_vote_counts
 		icon = GFX_goal_generic_workers_democracy
-		cost = 1
+		cost = 5
 		prerequisite = {
 			focus = stg_focus_word_publicity
 		}
@@ -421,7 +577,7 @@ focus_tree = {
 	focus = {
 		id = stg_focus_government_for_people
 		icon = GFX_goal_generic_workers_democracy
-		cost = 1
+		cost = 10
 		prerequisite = {
 			focus = stg_focus_word_publicity
 		}
@@ -438,25 +594,676 @@ focus_tree = {
 			FOCUS_FILTER_POLITICAL
 		}
 	}
-
-
-
-
-
 	focus = {
-		id = stg_focus_forgotten_past
-		icon = GFX_focus_generic_monarchy_1
-		cost = 1
-		mutually_exclusive = {
-			focus = stg_focus_ignition_of_revolution_flame
+		id = stg_focus_first_constitution
+		icon = GFX_goal_generic_workers_democracy
+		cost = 10
+		prerequisite = {
+			focus = stg_focus_government_for_people
 		}
 		ai_will_do = {
 			factor = 200
 		}
-		x = 15
+		relative_position_id = stg_focus_government_for_people
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_first_constitution"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = stg_focus_between_two_ideologies
+		icon = GFX_goal_generic_workers_democracy
+		cost = 6
+		prerequisite = {
+			focus = stg_focus_fraction_martov_loyalty
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_fraction_martov_loyalty
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_between_two_ideologies"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = stg_focus_greatest_mixture
+		icon = GFX_goal_generic_workers_democracy
+		cost = 7.2
+		prerequisite = {
+			focus = stg_focus_between_two_ideologies
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_between_two_ideologies
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_greatest_mixture"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = stg_focus_initial_social_campains
+		icon = GFX_goal_generic_workers_democracy
+		cost = 10
+		prerequisite = {
+			focus = stg_focus_greatest_mixture
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_greatest_mixture
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_initial_social_campains"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = stg_focus_fair_legal_system
+		icon = GFX_goal_generic_workers_democracy
+		cost = 10
+		prerequisite = {
+			focus = stg_focus_first_constitution
+		}
+		prerequisite = {
+			focus = stg_focus_initial_social_campains
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_fraction_martov_loyalty
+		x = 0
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_fair_legal_system"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	#common political branches
+	focus = {
+		id = stg_focus_powerfull_propaganda
+		icon = GFX_goal_generic_workers_democracy
+		cost = 5
+		prerequisite = {
+			focus = stg_focus_fraction_kropotkin_loyalty
+			focus = stg_focus_fraction_martov_loyalty
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_ignition_of_revolution_flame
+		x = -4
+		y = 2
+		offset = {
+			x = 8
+			trigger = {
+				has_completed_focus = stg_focus_fraction_kropotkin_loyalty
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_powerfull_propaganda"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = stg_focus_workers_for_factories
+		icon = GFX_goal_generic_workers_democracy
+		cost = 5
+		prerequisite = {
+			focus = stg_focus_powerfull_propaganda
+		}
+		mutually_exclusive = {
+			focus = stg_focus_factories_for_workers
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_powerfull_propaganda
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_workers_for_factories"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = stg_focus_new_jobs
+		icon = GFX_goal_generic_workers_democracy
+		cost = 5
+		prerequisite = {
+			focus = stg_focus_workers_for_factories
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_workers_for_factories
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_new_jobs"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus = {
+		id = stg_focus_factories_for_workers
+		icon = GFX_goal_generic_workers_democracy
+		cost = 5
+		prerequisite = {
+			focus = stg_focus_powerfull_propaganda
+		}
+		mutually_exclusive = {
+			focus = stg_focus_workers_for_factories
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_powerfull_propaganda
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_factories_for_workers"
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = industrial_complex
+					level = 2
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus = {
+		id = stg_focus_improve_working_condition
+		icon = GFX_goal_generic_workers_democracy
+		cost = 5
+		prerequisite = {
+			focus = stg_focus_factories_for_workers
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_factories_for_workers
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_improve_working_condition"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus = {
+		id = stg_focus_new_shifts
+		icon = GFX_goal_generic_workers_democracy
+		cost = 5
+		prerequisite = {
+			focus = stg_focus_improve_working_condition
+			focus = stg_focus_new_jobs
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_powerfull_propaganda
+		x = 0
+		y = 3
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_new_shifts"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus = {
+		id = stg_focus_political_correctness
+		icon = GFX_goal_generic_workers_democracy
+		cost = 5
+		prerequisite = {
+			focus = stg_focus_fraction_stalion_loyalty
+			focus = stg_focus_fraction_martov_loyalty
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_ignition_of_revolution_flame
+		x = 4
+		y = 2
+		offset = {
+			x = -8
+			trigger = {
+				has_completed_focus = stg_focus_fraction_stalion_loyalty
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_powerfull_propaganda"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = stg_focus_conscription_laws
+		icon = GFX_goal_generic_workers_democracy
+		cost = 5
+		prerequisite = {
+			focus = stg_focus_political_correctness
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_political_correctness
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_conscription_laws"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_MANPOWER
+		}
+	}
+	focus = {
+		id = stg_focus_rkka
+		icon = GFX_goal_generic_workers_democracy
+		cost = 10
+		prerequisite = {
+			focus = stg_focus_political_correctness
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_political_correctness
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_rkka"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = stg_focus_forgotten_past
+		icon = GFX_focus_generic_monarchy_1
+		cost = 10
+		mutually_exclusive = {
+			focus = stg_focus_ignition_of_revolution_flame
+		}
+		allow_branch = {
+			OR = {
+				NOT = {
+					has_completed_focus = stg_focus_ignition_of_revolution_flame
+				}
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = SHOW
+				}
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		x = 26
 		y = 0
+		offset = {
+			x = -24
+			trigger = {
+				has_completed_focus = stg_focus_forgotten_past
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_forgotten_past"
+			mark_focus_tree_layout_dirty = yes
+			set_power_balance = {
+				id = STG_party_fragmentation_bop
+				set_value = -0.333
+				left_side = party_opposition
+				right_side = white_council
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = stg_focus_restore_aristocracy
+		icon = GFX_focus_generic_monarchy_1
+		cost = 5
+		prerequisite = {
+			focus = stg_focus_forgotten_past
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_forgotten_past
+		x = 2
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_restore_aristocracy"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = stg_focus_reinstate_white_generals
+		icon = GFX_focus_generic_monarchy_1
+		cost = 5
+		prerequisite = {
+			focus = stg_focus_forgotten_past
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_forgotten_past
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_reinstate_white_generals"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = stg_focus_black_hundreds_march
+		icon = GFX_focus_generic_monarchy_1
+		cost = 10
+		prerequisite = {
+			focus = stg_focus_reinstate_white_generals
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_reinstate_white_generals
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_reinstate_white_generals"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = stg_focus_white_guard_formation
+		icon = GFX_focus_generic_monarchy_1
+		cost = 10
+		prerequisite = {
+			focus = stg_focus_black_hundreds_march
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_black_hundreds_march
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_white_guard_formation"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = stg_focus_imperial_prerogative
+		icon = GFX_focus_generic_monarchy_1
+		cost = 10
+		prerequisite = {
+			focus = stg_focus_reinstate_white_generals
+		}
+		prerequisite = {
+			focus = stg_focus_restore_aristocracy
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_reinstate_white_generals
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_imperial_prerogative"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = stg_focus_ask_for_help_MET
+		icon = GFX_focus_generic_monarchy_1
+		cost = 5
+		prerequisite = {
+			focus = stg_focus_imperial_prerogative
+		}
+		available = {
+			MET = {
+				exists = yes
+				is_subject = no
+			}
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_imperial_prerogative
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_ask_for_help_MET"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = stg_focus_concessions_to_workers
+		icon = GFX_focus_generic_monarchy_1
+		cost = 5
+		prerequisite = {
+			focus = stg_focus_forgotten_past
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_forgotten_past
+		x = -2
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_concessions_to_workers"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = stg_focus_junta_unation
+		icon = GFX_focus_generic_monarchy_1
+		cost = 1
+		prerequisite = {
+			focus = stg_focus_ask_for_help_MET
+			focus = stg_focus_white_guard_formation
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			NOT = {
+				has_war_with = WOP
+			}
+		}
+		relative_position_id = stg_focus_forgotten_past
+		x = 0
+		y = 4
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_junta_unation"
+			if = {
+				limit = {
+					WOP = {
+						exists = yes
+					}
+				}
+				WOP = {
+					country_event = {
+						id = worker_opposition.1
+						days = 1
+					}
+					custom_effect_tooltip = if_they_accept
+					event_option_tooltip = worker_opposition.1.a
+				}
+			}
+			else = {
+				set_politics = {
+					ruling_party = neutrality
+					elections_allowed = no
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = stg_focus_place_under_sun
+		icon = GFX_focus_generic_monarchy_1
+		cost = 5
+		prerequisite = {
+			focus = stg_focus_junta_unation
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			NOT = {
+				has_war_with = WOP
+			}
+		}
+		allow_branch = {
+			has_country_flag = WOP_refused_unation
+		}
+		relative_position_id = stg_focus_junta_unation
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_place_under_sun"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = stg_focus_dont_forget_SLV
+		icon = GFX_focus_generic_monarchy_1
+		cost = 5
+		prerequisite = {
+			focus = stg_focus_place_under_sun
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			NOT = {
+				has_war_with = WOP
+			}
+		}
+		relative_position_id = stg_focus_place_under_sun
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_dont_forget_SLV"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = stg_focus_they_will_know_our_wrath
+		icon = GFX_focus_generic_monarchy_1
+		cost = 10
+		prerequisite = {
+			focus = stg_focus_junta_unation
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			NOT = {
+				has_war_with = WOP
+			}
+		}
+		allow_branch = {
+			has_country_flag = WOP_refused_unation
+		}
+		relative_position_id = stg_focus_junta_unation
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_they_will_know_our_wrath"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = stg_focus_east_diplomacy
+		icon = GFX_focus_generic_monarchy_1
+		cost = 10
+		prerequisite = {
+			focus = stg_focus_they_will_know_our_wrath
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		available = {
+			NOT = {
+				has_war_with = WOP
+			}
+		}
+		relative_position_id = stg_focus_they_will_know_our_wrath
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_east_diplomacy"
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -470,10 +1277,50 @@ focus_tree = {
 		ai_will_do = {
 			factor = 200
 		}
-		x = 29
+		x = 33
 		y = 0
+		#shift for ignition of revolution flame
+		offset = {
+			x = -6
+			trigger = {
+				has_completed_focus = stg_focus_ignition_of_revolution_flame
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+		#extra shift
+		offset = {
+			x = -14
+			trigger = {
+				OR = {
+					has_completed_focus = stg_focus_fraction_kropotkin_loyalty
+					has_completed_focus = stg_focus_fraction_martov_loyalty
+					has_completed_focus = stg_focus_fraction_stalion_loyalty
+				}
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+		#shift for forgotten past
+		offset = {
+			x = -24
+			trigger = {
+				has_completed_focus = stg_focus_forgotten_past
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_first_five_year_plan"
+			add_dynamic_modifier = {
+				modifier = STG_five_year_plan
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
@@ -482,7 +1329,7 @@ focus_tree = {
 	focus = {
 		id = stg_focus_railroad_marks_staliongrad
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			factor = 200
 		}
@@ -520,6 +1367,11 @@ focus_tree = {
 				idea = STG_railroad_constructioning
 				days = 30
 			}
+			custom_effect_tooltip = change_five_year_plan_tt
+			add_to_variable = {
+				stg_five_year_plan_psrwf = 0.025
+				tooltip = production_speed_rail_way_factor_tt
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
@@ -528,7 +1380,7 @@ focus_tree = {
 	focus = {
 		id = stg_focus_railroad_hoovbeat_staliongrad
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			factor = 200
 		}
@@ -567,6 +1419,11 @@ focus_tree = {
 				idea = STG_railroad_constructioning
 				days = 30
 			}
+			custom_effect_tooltip = change_five_year_plan_tt
+			add_to_variable = {
+				stg_five_year_plan_psrwf = 0.025
+				tooltip = production_speed_rail_way_factor_tt
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
@@ -575,7 +1432,7 @@ focus_tree = {
 	focus = {
 		id = stg_focus_railroad_zlatocvet_staliongrad
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			factor = 200
 		}
@@ -604,6 +1461,11 @@ focus_tree = {
 				idea = STG_railroad_constructioning
 				days = 30
 			}
+			custom_effect_tooltip = change_five_year_plan_tt
+			add_to_variable = {
+				stg_five_year_plan_psrwf = 0.025
+				tooltip = production_speed_rail_way_factor_tt
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
@@ -612,7 +1474,7 @@ focus_tree = {
 	focus = {
 		id = stg_focus_railroad_zayatsk_staliongrad
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		cost = 1
+		cost = 5
 		ai_will_do = {
 			factor = 200
 		}
@@ -651,6 +1513,11 @@ focus_tree = {
 				idea = STG_railroad_constructioning
 				days = 30
 			}
+			custom_effect_tooltip = change_five_year_plan_tt
+			add_to_variable = {
+				stg_five_year_plan_psrwf = 0.025
+				tooltip = production_speed_rail_way_factor_tt
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
@@ -659,7 +1526,7 @@ focus_tree = {
 	focus = {
 		id = stg_focus_infrastructure_in_staliongrad
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		cost = 1
+		cost = 5
 		relative_position_id = stg_focus_railroad_marks_staliongrad
 		x = 0
 		y = 1
@@ -678,6 +1545,11 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = change_five_year_plan_tt
+			add_to_variable = {
+				stg_five_year_plan_psif = 0.015
+				tooltip = production_speed_infrastructure_factor_tt
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
@@ -686,7 +1558,7 @@ focus_tree = {
 	focus = {
 		id = stg_focus_infrastructure_in_marks
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		cost = 1
+		cost = 5
 		relative_position_id = stg_focus_railroad_hoovbeat_staliongrad
 		x = 0
 		y = 1
@@ -705,6 +1577,11 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = change_five_year_plan_tt
+			add_to_variable = {
+				stg_five_year_plan_psif = 0.015
+				tooltip = production_speed_infrastructure_factor_tt
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
@@ -713,7 +1590,7 @@ focus_tree = {
 	focus = {
 		id = stg_focus_infrastructure_in_zlatocvet
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		cost = 1
+		cost = 5
 		relative_position_id = stg_focus_railroad_zlatocvet_staliongrad
 		x = 0
 		y = 1
@@ -732,6 +1609,11 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = change_five_year_plan_tt
+			add_to_variable = {
+				stg_five_year_plan_psif = 0.015
+				tooltip = production_speed_infrastructure_factor_tt
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
@@ -740,7 +1622,7 @@ focus_tree = {
 	focus = {
 		id = stg_focus_infrastructure_in_zayatsk
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		cost = 1
+		cost = 5
 		relative_position_id = stg_focus_railroad_zayatsk_staliongrad
 		x = 0
 		y = 1
@@ -759,6 +1641,11 @@ focus_tree = {
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = change_five_year_plan_tt
+			add_to_variable = {
+				stg_five_year_plan_psif = 0.015
+				tooltip = production_speed_infrastructure_factor_tt
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_INDUSTRY
@@ -767,7 +1654,7 @@ focus_tree = {
 	focus = {
 		id = stg_focus_civil_industry_effort
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		cost = 1
+		cost = 5
 		relative_position_id = stg_focus_first_five_year_plan
 		x = -2
 		y = 3
@@ -810,7 +1697,7 @@ focus_tree = {
 	focus = {
 		id = stg_focus_military_industry_effort
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		cost = 1
+		cost = 5
 		relative_position_id = stg_focus_first_five_year_plan
 		x = 2
 		y = 3
@@ -850,14 +1737,338 @@ focus_tree = {
 			FOCUS_FILTER_INDUSTRY
 		}
 	}
+	focus = {
+		id = stg_focus_defense_industry
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 5
+		relative_position_id = stg_focus_military_industry_effort
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = stg_focus_military_industry_effort
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_defense_industry"
+			every_owned_state = {
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = change_five_year_plan_tt
+			add_to_variable = {
+				stg_five_year_plan_ccctmf = -0.05
+				tooltip = conversion_cost_civ_to_mil_factor_tt
+			}
+			add_to_variable = {
+				stg_five_year_plan_icd = 0.05
+				tooltip = industrial_capacity_dockyard_tt
+			}
+			add_to_variable = {
+				stg_five_year_plan_icf = 0.05
+				tooltip = industrial_capacity_factory_tt
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus = {
+		id = stg_focus_essential_goods_provision
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 5
+		relative_position_id = stg_focus_civil_industry_effort
+		x = -2
+		y = 1
+		prerequisite = {
+			focus = stg_focus_civil_industry_effort
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_essential_goods_provision"
+			every_owned_state = {
+				random_select_amount = 2
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = change_five_year_plan_tt
+			add_to_variable = {
+				consumer_goods_factor = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus = {
+		id = stg_focus_ilyich_factories
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 10
+		relative_position_id = stg_focus_civil_industry_effort
+		x = 2
+		y = 1
+		prerequisite = {
+			focus = stg_focus_civil_industry_effort
+			focus = stg_focus_military_industry_effort
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_ilyich_factories"
+			capital_scope = {
+				add_extra_state_shared_building_slots = 2
+				add_building_construction = {
+					type = arms_factory
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus = {
+		id = stg_focus_zayatsk_aluminium_shafts
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 5
+		relative_position_id = stg_focus_military_industry_effort
+		x = 0
+		y = 1
+		prerequisite = {
+			focus = stg_focus_military_industry_effort
+			focus = stg_focus_civil_industry_effort
+		}
+		available = {
+			controls_state = 334
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_zayatsk_aluminium_shafts"
+			334 = {
+				add_resource = {
+					type = bauxite
+					amount = 8
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus = {
+		id = stg_focus_zayatsk_ore_preparations
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 5
+		relative_position_id = stg_focus_zayatsk_aluminium_shafts
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = stg_focus_zayatsk_aluminium_shafts
+		}
+		available = {
+			controls_state = 334
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_zayatsk_ore_preparations"
+			334 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = ore_preparation
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = change_five_year_plan_tt
+			add_to_variable = {
+				stg_five_year_plan_lrf = 0.05
+				tooltip = local_resources_factor_tt
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus = {
+		id = stg_focus_zayatsk_aluminium_plants
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 5
+		relative_position_id = stg_focus_zayatsk_aluminium_shafts
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = stg_focus_zayatsk_aluminium_shafts
+		}
+		available = {
+			controls_state = 334
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_zayatsk_aluminium_plants"
+			334 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = aluminium_plant
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus = {
+		id = stg_focus_sovenok_iron_shafts
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 5
+		relative_position_id = stg_focus_military_industry_effort
+		x = -4
+		y = 1
+		prerequisite = {
+			focus = stg_focus_military_industry_effort
+			focus = stg_focus_civil_industry_effort
+		}
+		available = {
+			controls_state = 240
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_zayatsk_iron_shafts"
+			240 = {
+				add_resource = {
+					type = iron
+					amount = 18
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus = {
+		id = stg_focus_sovenok_ore_preparations
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 5
+		relative_position_id = stg_focus_sovenok_iron_shafts
+		x = 1
+		y = 1
+		prerequisite = {
+			focus = stg_focus_sovenok_iron_shafts
+		}
+		available = {
+			controls_state = 240
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_sovenok_ore_preparations"
+			240 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = ore_preparation
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = change_five_year_plan_tt
+			add_to_variable = {
+				stg_five_year_plan_lrf = 0.05
+				tooltip = local_resources_factor_tt
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus = {
+		id = stg_focus_sovenok_steel_plants
+		icon = GFX_focus_usa_reestablish_the_gold_standard
+		cost = 5
+		relative_position_id = stg_focus_sovenok_iron_shafts
+		x = -1
+		y = 1
+		prerequisite = {
+			focus = stg_focus_sovenok_iron_shafts
+		}
+		available = {
+			controls_state = 240
+		}
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_sovenok_steel_plants"
+			240 = {
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = steel_plant
+					level = 1
+					instant_build = yes
+				}
+				add_building_construction = {
+					type = industrial_complex
+					level = 1
+					instant_build = yes
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
 
 
 	focus = {
 		id = stg_focus_SLV_improvement
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		cost = 1
-		x = 34
+		cost = 5
+		x = 38
 		y = 0
+		#shift for ignition of revolution flame
+		offset = {
+			x = -6
+			trigger = {
+				has_completed_focus = stg_focus_ignition_of_revolution_flame
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+		#extra shift
+		offset = {
+			x = -14
+			trigger = {
+				OR = {
+					has_completed_focus = stg_focus_fraction_kropotkin_loyalty
+					has_completed_focus = stg_focus_fraction_martov_loyalty
+					has_completed_focus = stg_focus_fraction_stalion_loyalty
+				}
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
+		#shift for forgotten past
+		offset = {
+			x = -24
+			trigger = {
+				has_completed_focus = stg_focus_forgotten_past
+				has_game_rule = {
+					rule = obsolete_focus_branches_visibility
+					option = HIDE
+				}
+			}
+		}
 		available = {
 			has_subject = SLV
 			SLV = {
@@ -877,7 +2088,7 @@ focus_tree = {
 	focus = {
 		id = stg_focus_infrastructure_in_SLV
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		cost = 1
+		cost = 5
 		relative_position_id = stg_focus_SLV_improvement
 		x = 0
 		y = 1
@@ -909,7 +2120,7 @@ focus_tree = {
 	focus = {
 		id = stg_focus_steel_plant_in_SLV
 		icon = GFX_focus_usa_reestablish_the_gold_standard
-		cost = 1
+		cost = 10
 		relative_position_id = stg_focus_infrastructure_in_SLV
 		x = 0
 		y = 1

@@ -1609,13 +1609,6 @@ ideas = {
 		no_poverty = {
 			cost = 50
 			level = 7
-			available = {
-				#to do
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			modifier = {
 				hidden_modifier = {
 					science_index = 0.06
@@ -1626,13 +1619,6 @@ ideas = {
 		poverty5 = {
 			cost = 50
 			level = 6
-			available = {
-				#to do
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			modifier = {
 				MONTHLY_POPULATION = -0.04
 				production_speed_buildings_factor = -0.05
@@ -1647,13 +1633,6 @@ ideas = {
 		poverty4 = {
 			cost = 50
 			level = 5
-			available = {
-				#to do
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			modifier = {
 				MONTHLY_POPULATION = -0.07
 				production_speed_buildings_factor = -0.10
@@ -1669,13 +1648,6 @@ ideas = {
 		poverty3 = {
 			cost = 50
 			level = 4
-			available = {
-				#to do
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			modifier = {
 				MONTHLY_POPULATION = -0.12
 				production_speed_buildings_factor = -0.15
@@ -1692,21 +1664,6 @@ ideas = {
 			cost = 50
 			level = 3
 			picture = poverty_generic
-			available = {
-				OR = {
-					NOT = {
-						OR = {
-							has_idea = poverty1
-							has_idea = poverty
-						}
-					}
-					has_country_flag = available_poverty2
-				}
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			modifier = {
 				MONTHLY_POPULATION = -0.13
 				production_speed_buildings_factor = -0.16
@@ -1722,13 +1679,6 @@ ideas = {
 		poverty1 = {
 			cost = 50
 			level = 2
-			available = {
-				#to do	
-			}
-			allowed_civil_war = {
-				always = yes
-			}
-			removal_cost = -1
 			modifier = {
 				MONTHLY_POPULATION = -0.14
 				production_speed_buildings_factor = -0.18
@@ -1744,9 +1694,6 @@ ideas = {
 		poverty = {
 			cost = 50
 			level = 1
-			allowed_civil_war = {
-				always = yes
-			}
 			removal_cost = -1
 			modifier = {
 				MONTHLY_POPULATION = -0.15
@@ -2490,12 +2437,62 @@ ideas = {
 	inflation = {
 		law = yes
 		use_list_view = yes
-		uninflation = {}
-		no_inflation = {}
-		low_inflation = {}
-		medium_inflation = {}
-		high_inflation = {}
-		hyperinflation = {}
+		uninflation = {
+			modifier = {
+				poverty_level_idea_cost_factor = -0.5
+				trade_opinion_factor = -0.1
+				economy_cost_factor = 0.1
+				production_speed_buildings_factor = -0.1
+			}
+		}
+		no_inflation = {
+			default = yes
+			modifier = {
+				inflation_poverty_risk = 0.05
+			}
+		}
+		low_inflation = {
+			modifier = {
+				inflation_poverty_risk = 0.07
+				trade_opinion_factor = 0.05
+				society_development_idea_cost_factor = -0.01
+				economy_cost_factor = -0.01
+				production_speed_buildings_factor = 0.025
+			}
+		}
+		medium_inflation = {
+			modifier = {
+				inflation_poverty_risk = 0.1
+				trade_opinion_factor = 0.1
+				valuta_cost_factor = 0.05
+				monatisation_cost_factor = 0.05
+				society_development_idea_cost_factor = -0.03
+				economy_cost_factor = -0.03
+				production_speed_buildings_factor = 0.05
+			}
+		}
+		high_inflation = {
+			modifier = {
+				inflation_poverty_risk = 0.14
+				trade_opinion_factor = 0.2
+				valuta_cost_factor = 0.1
+				monatisation_cost_factor = 0.1
+				society_development_idea_cost_factor = -0.05
+				economy_cost_factor = -0.05
+				production_speed_buildings_factor = 0.075
+			}
+		}
+		hyperinflation = {
+			modifier = {
+				inflation_poverty_risk = 0.2
+				trade_opinion_factor = 0.25
+				valuta_cost_factor = 0.1
+				monatisation_cost_factor = 0.1
+				society_development_idea_cost_factor = -0.07
+				economy_cost_factor = -0.07
+				production_speed_buildings_factor = 0.1
+			}
+		}
 	}
 	valuta = {
 		law = yes

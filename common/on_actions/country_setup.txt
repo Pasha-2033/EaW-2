@@ -190,22 +190,6 @@ on_actions = {
 							add_ideas = medium_barter_focus
 						}
 					}
-					#inflation idea
-					if = {
-						limit = {
-							has_inflation = no
-						}
-						if = {
-							limit = {
-								#982 year
-								has_start_date < 1002.1.1
-							}
-							add_ideas = no_inflation
-						}
-						else = {
-							add_ideas = medium_inflation
-						}					
-					}
 					#valuta
 					if = {
 						limit = {

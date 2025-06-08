@@ -131,13 +131,14 @@ ideas = {
 			}
 			modifier = {
 				stability_factor = -0.1
+				trade_opinion_factor = 0.25
+				consumer_goods_factor = 0.1
 			}
 		}
 		STG_railroad_constructioning = {
 			picture = clockwerk_economy			#to do (change)
 			allowed = {
 				original_tag = STG
-				original_tag = WOP
 			}
 			allowed_civil_war = {
 				always = no
@@ -146,6 +147,42 @@ ideas = {
 				repair_speed_rail_way_factor = 0.2
 				production_speed_rail_way_factor = 0.1
 				production_speed_supply_node_factor = 0.1
+			}
+		}
+		STG_party_fragmentation = {
+			picture = SOV_factionalism_modifier
+			allowed = {
+				original_tag = STG
+			}
+			allowed_civil_war = {
+				always = no
+			}
+			modifier = {
+				mobilization_laws_cost_factor = 0.1
+				trade_laws_cost_factor = 0.1
+				economy_cost_factor = 0.1
+				political_advisor_cost_factor = 0.25
+				army_chief_cost_factor = 0.15
+				navy_chief_cost_factor = 0.15
+				air_chief_cost_factor = 0.15
+				high_command_cost_factor = 0.15
+				monatisation_cost_factor = 0.25
+				inflation_cost_factor = 0.25
+				valuta_cost_factor = 1
+				unit_leader_as_advisor_cp_cost_factor = 1
+			}
+		}
+		STG_ore_consumer = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = STG
+			}
+			targeted_modifier = {
+				tag = MET
+				extra_trade_to_target_factor = 0.25
+			}
+			modifier = {
+				resource_trade_cost_bonus_per_factory = 1
 			}
 		}
 	}

@@ -1,5 +1,21 @@
 capital = 153
 set_convoys = 0
+#initial values for STG_five_year_plan
+set_variable = {
+	stg_five_year_plan_cgf = 0.1
+}
+set_variable = {
+	stg_five_year_plan_ccctmf = -0.05
+}
+set_variable = {
+	stg_five_year_plan_ccmtcf = -0.05
+}
+set_variable = {
+	stg_five_year_plan_pscsf = 0.05
+}
+set_variable = {
+	stg_five_year_plan_ifrf = 0.05
+}
 if = { #982 scenario script
 	limit = {
 		has_start_date < 1002.1.1
@@ -46,8 +62,14 @@ if = { #982 scenario script
 	activate_advisor = STG_kropotkin
 	activate_advisor = STG_martov
 	add_ideas = {
+		partial_economic_mobilisation
+		poverty2
 		pony_race
 		pre_industrial_society
+		medium_inflation
+		silver_coins
 		STG_WOP_frozen_civil_war
+		STG_party_fragmentation
+		STG_ore_consumer
 	}
 }

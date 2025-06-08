@@ -1,0 +1,17 @@
+ideas = {
+	country = {
+		MET_ore_producer = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = MET
+			}
+			targeted_modifier = {
+				tag = STG
+				extra_trade_to_target_factor = 0.25
+			}
+			modifier = {
+				local_resources_factor = 0.1
+			}
+		}
+	}
+}
