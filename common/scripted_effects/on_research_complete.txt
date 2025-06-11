@@ -1,0 +1,52 @@
+setup_country_tech_bonuses = {
+	if = {
+		limit = {
+			has_tech = agrarian_complex_expantion_8
+		}
+		modify_building_resources = {
+			building = agrarian_complex
+			resource = food
+			amount = 5
+		}
+	}
+	else_if = {
+		limit = {
+			has_tech = agrarian_complex_expantion_6
+		}
+		modify_building_resources = {
+			building = agrarian_complex
+			resource = food
+			amount = 4
+		}
+	}
+	else_if = {
+		limit = {
+			has_tech = agrarian_complex_expantion_4
+		}
+		modify_building_resources = {
+			building = agrarian_complex
+			resource = food
+			amount = 3
+		}
+	}
+	else_if = {
+		limit = {
+			has_tech = agrarian_complex_expantion_2
+		}
+		modify_building_resources = {
+			building = agrarian_complex
+			resource = food
+			amount = 2
+		}
+	}
+	else_if = {
+		limit = {
+			has_tech = agrarian_complex_expantion_0
+		}
+		modify_building_resources = {
+			building = agrarian_complex
+			resource = food
+			amount = 1
+		}
+	}
+}

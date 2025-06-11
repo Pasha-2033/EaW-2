@@ -3774,18 +3774,6 @@ guiTypes = {
 						Orientation = "UPPER_LEFT"
 					}
 
-					#				instantTextBoxType = {
-						#					name = "industry_year3"
-						#					position = { x = 0 y = 280 }
-						#					textureFile = ""
-						#					font = "hoi_36header"
-						#					borderSize = {x = 0 y = 4}
-						#					text = "1006"
-						#					maxWidth = 130
-						#					maxHeight = 32
-						#					format = left
-						#					Orientation = "UPPER_LEFT"
-						#				}
 
 					instantTextBoxType = {
 						name = "industry_year4"
@@ -3900,7 +3888,7 @@ guiTypes = {
 				containerWindowType = {
 					name = "industry_year_right"
 					position = { 
-						x = 40 
+						x = 340 
 						y = 40
 					}
 					size = { 
@@ -3922,18 +3910,6 @@ guiTypes = {
 						Orientation = "UPPER_LEFT"
 					}
 
-					#				instantTextBoxType = {
-						#					name = "industry_year3"
-						#					position = { x = 0 y = 280 }
-						#					textureFile = ""
-						#					font = "hoi_36header"
-						#					borderSize = {x = 0 y = 4}
-						#					text = "1006"
-						#					maxWidth = 130
-						#					maxHeight = 32
-						#					format = left
-						#					Orientation = "UPPER_LEFT"
-						#				}
 
 					instantTextBoxType = {
 						name = "industry_year4"
@@ -4085,10 +4061,21 @@ guiTypes = {
 				format = center
 				orientation = UPPER_LEFT
 			}
+			instantTextBoxType = {
+				name = "industry_subtitle_food"
+				position = { x = 1963 y = 115  }
+				font = "hoi_22tech"
+				borderSize = {x = 0 y = 4}
+				text = "INDUSTRY_TITLE_FOOD"
+				maxWidth = 150
+				maxHeight = 62
+				format = center
+				orientation = UPPER_LEFT
+			}
 
 			instantTextBoxType = {
 				name = "industry_subtitle_synthetic_oil"
-				position = { x = 2035 y = 115  }
+				position = { x = 2335 y = 115  }
 				font = "hoi_22tech"
 				borderSize = {x = 0 y = 4}
 				text = "INDUSTRY_TITLE_OIL"
@@ -4125,9 +4112,17 @@ guiTypes = {
 				format = "UP"
 			}
 
+			gridBoxType = {
+				name = "agrarian_complex_expantion_0_tree"
+				position = { x = 1780 y = 172 }
+				size = { width = 520 height = 800 }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
+
 			gridboxtype = {
 				name = "fuel_silos_tree"
-				position = { x = 2005 y = 172 }
+				position = { x = 2310 y = 172 }
 				size = { width =70 height = 800 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"

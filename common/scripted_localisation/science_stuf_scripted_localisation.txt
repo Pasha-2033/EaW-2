@@ -1,0 +1,17 @@
+defined_text = {
+	name = "aluminium_full_studied"
+	text = {
+		trigger = {
+			GWS = {
+				OR = {
+					has_completed_focus = gws_focus_inorganic_chemistry
+					has_completed_focus = gws_focus_materials_science
+				}
+			}
+		}
+		localization_key = "aluminium_full_studied_tt"
+	}
+	text = {
+		localization_key = ""
+	}
+}

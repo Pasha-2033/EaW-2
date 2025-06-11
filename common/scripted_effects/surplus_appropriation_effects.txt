@@ -21,6 +21,18 @@ calc_surplus_appropriation_real_values = {
 	set_variable = {
 		raw_consumers^1 = num_of_controlled_factories
 	}
+	add_to_variable = {
+		raw_consumers^1 = modifier@steel_plant_num
+	}
+	add_to_variable = {
+		raw_consumers^1 = modifier@aluminium_plant_num
+	}
+	add_to_variable = {
+		raw_consumers^1 = modifier@tungsten_plant_num
+	}
+	add_to_variable = {
+		raw_consumers^1 = modifier@chromium_plant_num
+	}
 	set_variable = {
 		raw_consumers^2 = max_available_manpower_k
 	}
@@ -72,9 +84,6 @@ calc_surplus_appropriation_real_values = {
 	#calc resource appropriation
 	set_variable = {
 		food_storage_change = resource@food
-	}
-	add_to_variable = {
-		food_storage_change = sa_consumtion_sum
 	}
 	if = {
 		limit = {

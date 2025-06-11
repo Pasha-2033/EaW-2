@@ -366,11 +366,14 @@ on_actions = {
 				}
 				set_technology = {
 					construction_site_base_limit = 1
+					agrarian_complex_base_limit = 1
 					init_metallurgy = 1
 					init_synthetic_refineries = 1
 					init_nuclear_cycle = 1
 					popup = no
 				}
+				#set on_research_complete
+				setup_country_tech_bonuses = yes
 				#set economy modifiers
 				add_dynamic_modifier = {
 					modifier = resource_activity_modifier
