@@ -2438,6 +2438,7 @@ ideas = {
 		law = yes
 		use_list_view = yes
 		uninflation = {
+			level = 1
 			modifier = {
 				poverty_level_idea_cost_factor = -0.5
 				trade_opinion_factor = -0.1
@@ -2446,12 +2447,14 @@ ideas = {
 			}
 		}
 		no_inflation = {
+			level = 2
 			default = yes
 			modifier = {
 				inflation_poverty_risk = 0.05
 			}
 		}
 		low_inflation = {
+			level = 3
 			modifier = {
 				inflation_poverty_risk = 0.07
 				trade_opinion_factor = 0.05
@@ -2461,6 +2464,7 @@ ideas = {
 			}
 		}
 		medium_inflation = {
+			level = 4
 			modifier = {
 				inflation_poverty_risk = 0.1
 				trade_opinion_factor = 0.1
@@ -2472,6 +2476,7 @@ ideas = {
 			}
 		}
 		high_inflation = {
+			level = 5
 			modifier = {
 				inflation_poverty_risk = 0.14
 				trade_opinion_factor = 0.2
@@ -2483,6 +2488,7 @@ ideas = {
 			}
 		}
 		hyperinflation = {
+			level = 6
 			modifier = {
 				inflation_poverty_risk = 0.2
 				trade_opinion_factor = 0.25

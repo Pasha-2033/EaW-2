@@ -1,0 +1,172 @@
+sp_ore_preparation = {
+	specialization = specialization_industry
+	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
+	project_tags = sp_tag_metallurgy
+	ai_will_do = {
+		base = 1
+	}
+	available = {
+		FROM = {
+			has_tech = basics_of_metallurgy
+		}
+	}
+	breakthrough_cost = {
+		specialization_industry = 1
+	}
+	prototype_time = sp_time.prototype.short
+	complexity = sp_complexity.small
+	project_output = {
+		country_effects = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = UNLOCK_BUILDING
+					BUILDING = ore_preparation
+				}
+				set_technology = {
+					sp_tech_ore_preparation = 1
+					popup = no
+				}	
+			}	
+		}
+		facility_state_effects = {
+			add_extra_state_shared_building_slots = 1
+			add_building_construction = {
+				type = ore_preparation
+				level = 1
+				instant_build = yes
+			}
+		}
+	}
+	generic_prototype_rewards = {
+		sp_industry_generic_reward_scientist_xp_1
+		sp_industry_generic_reward_scientist_xp_2
+		sp_industry_generic_reward_scientist_xp_3
+	}
+}
+sp_rubber_processing = {
+	specialization = specialization_industry
+	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
+	project_tags = sp_tag_synthetic
+	ai_will_do = {
+		base = 1
+	}
+	available = {
+		FROM = {
+			has_tech = synth_oil_experiments
+		}
+	}
+	breakthrough_cost = {
+		specialization_industry = 1
+	}
+	prototype_time = sp_time.prototype.short
+	complexity = sp_complexity.small
+	project_output = {
+		country_effects = {
+			custom_override_tooltip = {
+				tooltip = unlock_rubber_processing_tt
+				set_technology = {
+					sp_tech_rubber_processing = 1
+					popup = no
+				}	
+			}
+		}
+	}
+	generic_prototype_rewards = {
+		sp_industry_generic_reward_scientist_xp_1
+		sp_industry_generic_reward_scientist_xp_2
+		sp_industry_generic_reward_scientist_xp_3
+	}
+}
+sp_saltpeter_for_plants = {
+	specialization = specialization_industry
+	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
+	project_tags = sp_tag_food
+	ai_will_do = {
+		base = 1
+	}
+	available = {
+		FROM = {
+			
+		}
+	}
+	breakthrough_cost = {
+		specialization_industry = 0
+	}
+	prototype_time = sp_time.prototype.short
+	complexity = sp_complexity.small
+	project_output = {
+		country_effects = {
+			if = {
+				limit = {
+					has_country_flag = selected_ammonium_nitrate
+				}
+				modify_building_resources = {
+					building = agrarian_complex
+					resource = food
+					amount = 3
+				}
+				#make building slighter expensive
+				custom_override_tooltip = {
+					tooltip = agrarian_complex_little_more_expensive_tt
+					set_technology = {
+						sp_tech_agrarian_complex_more_complex = 1
+						popup = no
+					}
+				}
+			}
+			else = {
+				modify_building_resources = {
+					building = agrarian_complex
+					resource = food
+					amount = 1
+				}
+			}
+		}
+	}
+	unique_prototype_rewards = {
+		sp_saltpeter_type = {
+			fire_only_once = yes
+
+			threshold = { 
+				min = 25
+				max = 45
+			}
+
+			weight = {
+				base = 1000.0
+			}
+
+			option = {
+				token = sp_potassium_nitrate
+				iteration_output = {
+					country_effects = {
+						custom_effect_tooltip = select_potassium_nitrate_tt
+					}
+				}
+			}
+			option = {
+				token = sp_ammonium_nitrate
+				iteration_output = {
+					country_effects = {
+						custom_effect_tooltip = select_ammonium_nitrate_tt
+						set_country_flag = selected_ammonium_nitrate
+					}
+				}
+			}
+		}
+	}
+	generic_prototype_rewards = {
+		sp_industry_generic_reward_scientist_xp_1
+		sp_industry_generic_reward_scientist_xp_2
+		sp_industry_generic_reward_scientist_xp_3
+		sp_industry_generic_reward_major_progress_1
+		sp_industry_generic_reward_major_progress_2
+		sp_industry_generic_reward_major_progress_3
+		sp_industry_generic_reward_test_failure_1
+		sp_industry_generic_reward_test_failure_2
+		sp_industry_generic_reward_test_failure_3
+		sp_industry_generic_reward_food_tech_1
+		sp_industry_generic_reward_food_tech_2
+		sp_industry_generic_reward_food_tech_3
+	}
+}

@@ -1,0 +1,28 @@
+technologies = {
+	#init folder dependencies
+	sp_tech_ore_preparation = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_building = {
+			building = ore_preparation
+			level = 1
+		}
+	}
+	sp_tech_rubber_processing = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		synthetic_refinery_rubber_outcome = 1
+	}
+	sp_tech_agrarian_complex_more_complex = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		production_cost_agrarian_complex_factor = 0.05
+		repair_speed_agrarian_complex_factor = -0.1
+	}
+}

@@ -2,7 +2,7 @@ guiTypes = {
 	containerWindowType = {
 		name = "facilities_view"
 		position = { x=0 y=0 }
-		size = { width=550 height=-5 }
+		size = { width=550 height=-1 }
 
 
 		background = {
@@ -73,7 +73,8 @@ guiTypes = {
 				# contains specialization_item
 				name = "specialization_item_list"
 				position = { x = 0 y = 33 }
-				size = {x=524 y=148}
+				size = {x=524 y=222}
+				slotsize = { width = 35 height = 20 }
 				scrollbartype = "standardlistbox_slider"
 			}
 		}
@@ -137,7 +138,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "program_list_window"
-			position = { x = 0 y=235 }
+			position = { x = 0 y=310 }
 			size = { width=550 height=-14 }
 
 			background = {
@@ -486,9 +487,9 @@ guiTypes = {
 		
 		instantTextboxType = {
 			name = "specialization"
-			position = { x = 70 y = 10 }
+			position = { x = 65 y = 10 }
 			font = "hoi_16mbs"
-			maxWidth = 100
+			maxWidth = 105
 			maxHeight = 30
 			format = left
 			alwaystransparent = yes
