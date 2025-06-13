@@ -57,6 +57,10 @@ spriteTypes = {
 	}
 	#ITEM RESEARCHED
 	spriteType = {
+		name = "GFX_technology_industry_folder_small_researched_item_bg"
+		textureFile = "gfx//interface//techtree//tech_landdoctrine_researched_item_bg.dds"
+	}
+	spriteType = {
 		name = "GFX_technology_generic_folder_researched_item_bg"
 		textureFile = "gfx/interface/techtree/tech_doctrine_researched_item_bg.dds"
 	}
@@ -81,6 +85,17 @@ spriteTypes = {
 		textureFile = "gfx/interface/techtree/tech_doctrine_researched_item_bg.dds"
 	}
 	#ITEM RESEARCHING
+	frameAnimatedSpriteType = {
+		name = "GFX_technology_industry_folder_small_currently_researching_item_bg"
+		texturefile = "gfx//interface//techtree//tech_doctrine_researching_anim_strip.dds"
+		noOfFrames = 9
+		loadType = "INGAME"
+		transparencecheck = yes
+		animation_rate_fps = 15
+		looping = yes
+		play_on_show = yes
+		pause_on_loop = 0.0
+	}
 	frameAnimatedSpriteType = {
 		name = "GFX_technology_generic_folder_currently_researching_item_bg"
 		texturefile = "gfx/interface/techtree/tech_doctrine_researching_anim_strip.dds"
@@ -149,6 +164,10 @@ spriteTypes = {
 	}
 	#ITEM AVAILABLE
 	spriteType = {
+		name = "GFX_technology_industry_folder_small_available_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_available_item_bg.dds"
+	}
+	spriteType = {
 		name = "GFX_technology_generic_folder_available_item_bg"
 		textureFile = "gfx/interface/techtree/tech_doctrine_available_item_bg.dds"
 	}
@@ -173,6 +192,10 @@ spriteTypes = {
 		textureFile = "gfx/interface/techtree/tech_doctrine_available_item_bg.dds"
 	}
 	#ITEM UNAVAILABLE
+	spriteType = {
+		name = "GFX_technology_industry_folder_small_unavailable_item_bg"
+		textureFile = "gfx//interface//techtree//tech_doctrine_unavailable_item_bg.dds"
+	}	
 	spriteType = {
 		name = "GFX_technology_generic_folder_unavailable_item_bg"
 		textureFile = "gfx/interface/techtree/tech_doctrine_unavailable_item_bg.dds"

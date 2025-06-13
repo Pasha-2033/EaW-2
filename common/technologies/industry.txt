@@ -3885,6 +3885,7 @@ technologies = {
 		}
 	}
 	steel_plant_upgrade_1 = {
+		steel_plant_iron_consumption = 1
 		steel_plant_steel_outcome = 1
 		path = {
 			leads_to_tech = steel_plant_upgrade_2
@@ -3965,6 +3966,12 @@ technologies = {
 	steel_plant_upgrade_4 = {
 		steel_plant_iron_consumption = 1
 		steel_plant_steel_outcome = 1
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_converter_production
+			}
+		}
 		path = {
 			leads_to_tech = steel_plant_upgrade_5
 			research_cost_coeff = 1
@@ -3993,10 +4000,12 @@ technologies = {
 			level = 5
 		}
 		production_cost_steel_plant_factor = -0.1
-		#path = {
-		#	leads_to_tech = steel_plant_upgrade_3
-		#	research_cost_coeff = 1
-		#}
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_reduction_with_hydrogen
+			}
+		}
 		research_cost = 2
 		folder = {
 			name = industry_folder
@@ -4016,7 +4025,7 @@ technologies = {
 		}
 	}
 	aluminium_plant_upgrade_0 = {
-		aluminium_plant_bauxite_consumption = 1
+		aluminium_plant_bauxite_consumption = 2
 		aluminium_plant_aluminium_outcome = 1
 		aluminium_plant_penalty_reduction = 0.05
 		path = {
@@ -4046,7 +4055,8 @@ technologies = {
 			building = aluminium_plant
 			level = 2
 		}
-		aluminium_plant_aluminium_outcome = 3
+		aluminium_plant_bauxite_consumption = 1
+		aluminium_plant_aluminium_outcome = 1
 		production_cost_aluminium_plant_factor = 0.05
 		allow = {
 			has_tech = magnetism_phenomenon
@@ -4079,10 +4089,14 @@ technologies = {
 			level = 3
 		}
 		aluminium_plant_bauxite_consumption = 1
-		aluminium_plant_aluminium_outcome = 3
+		aluminium_plant_aluminium_outcome = 1
 		production_cost_aluminium_plant_factor = 0.05
 		allow = {
 			has_tech = direct_current
+		}
+		path = {
+			leads_to_tech = aluminium_plant_upgrade_3
+			research_cost_coeff = 1
 		}
 		research_cost = 2
 		folder = {
@@ -4090,6 +4104,88 @@ technologies = {
 			position = { 
 				x = -1 
 				y = 6
+			}
+		}
+		ai_will_do = {
+			base = 4
+		}
+		categories = {
+			industry
+		}
+		special_project_specialization = { 
+			specialization_industry
+		}
+	}
+	aluminium_plant_upgrade_3 = {
+		aluminium_plant_bauxite_consumption = 1
+		aluminium_plant_aluminium_outcome = 1
+		production_cost_aluminium_plant_factor = -0.05
+		research_cost = 2
+		path = {
+			leads_to_tech = aluminium_plant_upgrade_4
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = industry_folder
+			position = { 
+				x = -1 
+				y = 8
+			}
+		}
+		ai_will_do = {
+			base = 4
+		}
+		categories = {
+			industry
+		}
+		special_project_specialization = { 
+			specialization_industry
+		}
+	}
+	aluminium_plant_upgrade_4 = {
+		enable_building = {
+			building = aluminium_plant
+			level = 4
+		}
+		aluminium_plant_bauxite_consumption = 2
+		aluminium_plant_aluminium_outcome = 1
+		production_cost_aluminium_plant_factor = 0.05
+		research_cost = 2
+		path = {
+			leads_to_tech = aluminium_plant_upgrade_5
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = industry_folder
+			position = { 
+				x = -1 
+				y = 10
+			}
+		}
+		ai_will_do = {
+			base = 4
+		}
+		categories = {
+			industry
+		}
+		special_project_specialization = { 
+			specialization_industry
+		}
+	}
+	aluminium_plant_upgrade_5 = {
+		enable_building = {
+			building = aluminium_plant
+			level = 5
+		}
+		aluminium_plant_bauxite_consumption = 1
+		aluminium_plant_aluminium_outcome = 1
+		production_cost_aluminium_plant_factor = 0.1
+		research_cost = 2
+		folder = {
+			name = industry_folder
+			position = { 
+				x = -1 
+				y = 12
 			}
 		}
 		ai_will_do = {
@@ -4157,7 +4253,8 @@ technologies = {
 		}
 	}
 	tungsten_plant_upgrade_2 = {
-		tungsten_plant_tungsten_outcome = 2
+		tungsten_plant_scheelitis_consumption = 1
+		tungsten_plant_tungsten_outcome = 1
 		path = {
 			leads_to_tech = tungsten_plant_upgrade_3
 			research_cost_coeff = 1
@@ -4187,6 +4284,10 @@ technologies = {
 		}
 		production_cost_tungsten_plant_factor = -0.05
 		research_cost = 2
+		path = {
+			leads_to_tech = tungsten_plant_upgrade_4
+			research_cost_coeff = 1
+		}
 		folder = {
 			name = industry_folder
 			position = { 
@@ -4204,7 +4305,204 @@ technologies = {
 			specialization_industry
 		}
 	}
+	tungsten_plant_upgrade_4 = {
+		enable_building = {
+			building = tungsten_plant
+			level = 4
+		}
+		tungsten_plant_scheelitis_consumption = 1
+		tungsten_plant_tungsten_outcome = 1
+		research_cost = 2
+		path = {
+			leads_to_tech = tungsten_plant_upgrade_5
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = industry_folder
+			position = { 
+				x = 1 
+				y = 10
+			}
+		}
+		ai_will_do = {
+			base = 4
+		}
+		categories = {
+			industry
+		}
+		special_project_specialization = { 
+			specialization_industry
+		}
+	}
+	tungsten_plant_upgrade_5 = {
+		enable_building = {
+			building = tungsten_plant
+			level = 5
+		}
+		tungsten_plant_scheelitis_consumption = 1
+		tungsten_plant_tungsten_outcome = 1
+		research_cost = 2
+		folder = {
+			name = industry_folder
+			position = { 
+				x = 1 
+				y = 12
+			}
+		}
+		ai_will_do = {
+			base = 4
+		}
+		categories = {
+			industry
+		}
+		special_project_specialization = { 
+			specialization_industry
+		}
+	}
 	chromium_plant_upgrade_0 = {
+		chromium_plant_chromite_consumption = 1
+		chromium_plant_chromium_outcome = 1
+		chromium_plant_penalty_reduction = 0.05
+		research_cost = 2
+		path = {
+			leads_to_tech = chromium_plant_upgrade_1
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = industry_folder
+			position = { 
+				x = 3 
+				y = 2
+			}
+		}
+		ai_will_do = {
+			base = 4
+		}
+		categories = {
+			industry
+		}
+		special_project_specialization = { 
+			specialization_industry
+		}
+	}
+	chromium_plant_upgrade_1 = {
+		enable_building = {
+			building = chromium_plant
+			level = 2
+		}
+		chromium_plant_chromite_consumption = 1
+		chromium_plant_chromium_outcome = 1
+		chromium_plant_penalty_reduction = 0.05
+		research_cost = 2
+		path = {
+			leads_to_tech = chromium_plant_upgrade_2
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = industry_folder
+			position = { 
+				x = 3 
+				y = 4
+			}
+		}
+		ai_will_do = {
+			base = 4
+		}
+		categories = {
+			industry
+		}
+		special_project_specialization = { 
+			specialization_industry
+		}
+	}
+	chromium_plant_upgrade_2 = {
+		enable_building = {
+			building = chromium_plant
+			level = 3
+		}
+		chromium_plant_chromite_consumption = 1
+		chromium_plant_chromium_outcome = 1
+		chromium_plant_penalty_reduction = 0.05
+		research_cost = 2
+		path = {
+			leads_to_tech = chromium_plant_upgrade_3
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = industry_folder
+			position = { 
+				x = 3 
+				y = 6
+			}
+		}
+		ai_will_do = {
+			base = 4
+		}
+		categories = {
+			industry
+		}
+		special_project_specialization = { 
+			specialization_industry
+		}
+	}
+	chromium_plant_upgrade_3 = {
+		chromium_plant_chromite_consumption = 1
+		chromium_plant_chromium_outcome = 1
+		chromium_plant_penalty_reduction = 0.05
+		research_cost = 2
+		path = {
+			leads_to_tech = chromium_plant_upgrade_4
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = industry_folder
+			position = { 
+				x = 3 
+				y = 8
+			}
+		}
+		ai_will_do = {
+			base = 4
+		}
+		categories = {
+			industry
+		}
+		special_project_specialization = { 
+			specialization_industry
+		}
+	}
+	chromium_plant_upgrade_4 = {
+		chromium_plant_chromite_consumption = 1
+		chromium_plant_chromium_outcome = 1
+		chromium_plant_penalty_reduction = 0.05
+		research_cost = 2
+		path = {
+			leads_to_tech = chromium_plant_upgrade_5
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = industry_folder
+			position = { 
+				x = 3 
+				y = 10
+			}
+		}
+		ai_will_do = {
+			base = 4
+		}
+		categories = {
+			industry
+		}
+		special_project_specialization = { 
+			specialization_industry
+		}
+	}
+	chromium_plant_upgrade_5 = {
+		enable_building = {
+			building = chromium_plant
+			level = 5
+		}
+		chromium_plant_chromite_consumption = 1
 		chromium_plant_chromium_outcome = 1
 		chromium_plant_penalty_reduction = 0.05
 		research_cost = 2
@@ -4212,7 +4510,7 @@ technologies = {
 			name = industry_folder
 			position = { 
 				x = 3 
-				y = 2
+				y = 12
 			}
 		}
 		ai_will_do = {

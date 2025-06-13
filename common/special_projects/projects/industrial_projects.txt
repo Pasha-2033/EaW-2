@@ -18,10 +18,7 @@ sp_ore_preparation = {
 	project_output = {
 		country_effects = {
 			custom_override_tooltip = {
-				tooltip = {
-					localization_key = UNLOCK_BUILDING
-					BUILDING = ore_preparation
-				}
+				tooltip = tech_effect|sp_tech_ore_preparation
 				set_technology = {
 					sp_tech_ore_preparation = 1
 					popup = no
@@ -90,7 +87,7 @@ sp_saltpeter_for_plants = {
 		}
 	}
 	breakthrough_cost = {
-		specialization_industry = 0
+		specialization_industry = 1
 	}
 	prototype_time = sp_time.prototype.short
 	complexity = sp_complexity.small
@@ -168,5 +165,73 @@ sp_saltpeter_for_plants = {
 		sp_industry_generic_reward_food_tech_1
 		sp_industry_generic_reward_food_tech_2
 		sp_industry_generic_reward_food_tech_3
+	}
+}
+sp_converter_production = {
+	specialization = specialization_industry
+	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
+	project_tags = sp_tag_metallurgy
+	ai_will_do = {
+		base = 1
+	}
+	available = {
+		FROM = {
+			has_tech = steel_plant_upgrade_4
+		}
+	}
+	breakthrough_cost = {
+		specialization_industry = 1
+	}
+	prototype_time = sp_time.prototype.short
+	complexity = sp_complexity.small
+	project_output = {
+		country_effects = {
+			custom_override_tooltip = {
+				tooltip = tech_effect|sp_tech_converter_production
+				set_technology = {
+					sp_tech_converter_production = 1
+					popup = no
+				}
+			}
+		}
+	}
+	generic_prototype_rewards = {
+		sp_industry_generic_reward_scientist_xp_1
+		sp_industry_generic_reward_scientist_xp_2
+		sp_industry_generic_reward_scientist_xp_3
+	}
+}
+sp_reduction_with_hydrogen = {
+	specialization = specialization_industry
+	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
+	project_tags = sp_tag_metallurgy
+	ai_will_do = {
+		base = 1
+	}
+	available = {
+		FROM = {
+			has_tech = steel_plant_upgrade_5
+		}
+	}
+	breakthrough_cost = {
+		specialization_industry = 1
+	}
+	prototype_time = sp_time.prototype.short
+	complexity = sp_complexity.small
+	project_output = {
+		country_effects = {
+			custom_override_tooltip = {
+				tooltip = tech_effect|sp_tech_reduction_with_hydrogen
+				set_technology = {
+					sp_tech_reduction_with_hydrogen = 1
+					popup = no
+				}
+			}
+		}
+	}
+	generic_prototype_rewards = {
+		sp_industry_generic_reward_scientist_xp_1
+		sp_industry_generic_reward_scientist_xp_2
+		sp_industry_generic_reward_scientist_xp_3
 	}
 }
