@@ -48,3 +48,22 @@ EPT_full_fledged_bureaucracy = {
 EPT_directive_private_property = {
 	power_balance_daily = -0.003
 }
+#STG_party_fragmentation_bop
+STG_white_council_activity = {
+	power_balance_daily = 0.003
+}
+STG_kropotkin_activity = {
+	#if kropotkin in opposition
+	power_balance_daily = -0.002
+}
+STG_martov_activity = {
+	#if martov in opposition
+	power_balance_daily = -0.002
+}
+STG_martov_activity = {
+	#if kropotkin in opposition
+	power_balance_daily = -0.003
+}
+STG_nkvd_activity = {
+	power_balance_daily = 0.01
+}

@@ -171,6 +171,11 @@ ideas = {
 				valuta_cost_factor = 1
 				unit_leader_as_advisor_cp_cost_factor = 1
 			}
+			targeted_modifier = {
+				tag = WOP
+				attack_bonus_against = -0.05
+    			defense_bonus_against = -0.1
+			}
 		}
 		STG_ore_consumer = {
 			picture = clockwerk_economy			#to do (change)
@@ -183,6 +188,42 @@ ideas = {
 			}
 			modifier = {
 				resource_trade_cost_bonus_per_factory = 1
+			}
+		}
+		STG_azkaban_prison = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = STG
+			}
+			modifier = {
+				stability_factor = -0.075
+				trade_opinion_factor = -0.05
+				drift_defence_factor = 0.05
+			}
+		}
+		STG_stalion_the_leader = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = STG
+			}
+			targeted_modifier = {
+				tag = WOP
+				attack_bonus_against = 0.1
+    			defense_bonus_against = 0.05
+				breakthrough_bonus_against = 0.1
+			}
+		}
+		STG_nep = {
+			picture = clockwerk_economy			#to do (change)
+			allowed = {
+				original_tag = STG
+			}
+			modifier = {
+				production_speed_buildings_factor = 0.05
+				production_factory_start_efficiency_factor = 0.1
+				line_change_production_efficiency_factor = 0.1
+				production_factory_max_efficiency_factor = 0.25
+				production_factory_efficiency_gain_factor = 0.15
 			}
 		}
 	}

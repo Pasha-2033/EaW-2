@@ -16,6 +16,49 @@ set_variable = {
 set_variable = {
 	stg_five_year_plan_ifrf = 0.05
 }
+#initial values for STG_nkvd
+set_variable = {
+	stg_nkvd_ppg = -0.3
+}
+set_variable = {
+	stg_nkvd_ddf = 0.05
+}
+set_variable = {
+	stg_nkvd_rgf = -0.1
+}
+#initial values for STG_rkka
+set_variable = {
+	stg_rkka_acaf = 0.05
+}
+set_variable = {
+	stg_rkka_acdf = 0.05
+}
+set_variable = {
+	stg_rkka_tpr = 0.05
+}
+#initial values for STG_gulags
+set_variable = {
+	stg_gulag_ppg = -0.3
+}
+set_variable = {
+	stg_gulag_sf = -0.05
+}
+set_variable = {
+	stg_gulag_ifrf = 0.1
+}
+set_variable = {
+	stg_gulag_irf = 0.05
+}
+set_variable = {
+	stg_gulag_psbf = 0.05
+}
+set_variable = {
+	stg_gulag_cgf = -0.1
+}
+#initial values for STG_politburo
+set_variable = {
+	stg_politburo_ppf = 0.05
+}
 if = { #982 scenario script
 	limit = {
 		has_start_date < 1002.1.1
@@ -59,6 +102,9 @@ if = { #982 scenario script
 	recruit_character = STG_stalion
 	recruit_character = STG_martov
 	recruit_character = STG_kropotkin
+
+	recruit_character = STG_pshenitsyn
+	recruit_character = STG_makhno
 	
 	recruit_character = STG_ilyitch
 
@@ -75,7 +121,21 @@ if = { #982 scenario script
 		STG_party_fragmentation
 		STG_ore_consumer
 	}
+	add_timed_idea = {
+		idea = STG_nep
+		days = 180
+	}
 	complete_special_project = {
 		project = sp:sp_ore_preparation
+	}
+	set_power_balance = {
+		id = STG_party_fragmentation_bop
+		left_side = party_opposition
+		right_side = white_council
+		set_value = -0.333
+	}
+	add_power_balance_modifier = {
+		id = STG_party_fragmentation_bop
+		modifier = STG_white_council_activity
 	}
 }

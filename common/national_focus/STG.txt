@@ -70,6 +70,13 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_ignition_of_revolution_flame"
 			mark_focus_tree_layout_dirty = yes
+			remove_power_balance_modifier = {
+				id = STG_party_fragmentation_bop
+				modifier = STG_white_council_activity
+			}
+			add_dynamic_modifier = {
+				modifier = STG_politburo
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -118,11 +125,36 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_fraction_kropotkin_loyalty"
 			mark_focus_tree_layout_dirty = yes
-			set_power_balance = {
+			set_temp_variable = {
+				STG_bop_value = -1
+			}
+			add_to_temp_variable = {
+				STG_bop_value = party_popularity@anarchism
+			}
+			#set_value of set_power_balance doesn`t accept vars
+			meta_effect = {
+				text = {
+					set_power_balance = {
+						id = STG_party_fragmentation_bop
+						left_side = party_opposition
+						right_side = kropotkin_anarchists
+						set_value = [BOP]
+					}
+				}
+				BOP = "[?STG_bop_value]"
+			}
+			add_power_balance_modifier = {
 				id = STG_party_fragmentation_bop
-				set_value = -0.333
-				left_side = party_opposition
-				right_side = kropotkin_anarchists
+				modifier = STG_martov_activity
+			}
+			add_power_balance_modifier = {
+				id = STG_party_fragmentation_bop
+				modifier = STG_stalion_activity
+			}
+			custom_effect_tooltip = change_politburo_tt
+			set_variable = {
+				stg_politburo_ad = 0.05
+				tooltip = anarchism_drift_tt
 			}
 		}
 		search_filters = {
@@ -162,11 +194,36 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_fraction_martov_loyalty"
 			mark_focus_tree_layout_dirty = yes
-			set_power_balance = {
+			set_temp_variable = {
+				STG_bop_value = -1
+			}
+			add_to_temp_variable = {
+				STG_bop_value = party_popularity@socialism
+			}
+			#set_value of set_power_balance doesn`t accept vars
+			meta_effect = {
+				text = {
+					set_power_balance = {
+						id = STG_party_fragmentation_bop
+						left_side = party_opposition
+						right_side = martov_socialists
+						set_value = [BOP]
+					}
+				}
+				BOP = "[?STG_bop_value]"
+			}
+			add_power_balance_modifier = {
 				id = STG_party_fragmentation_bop
-				set_value = -0.333
-				left_side = party_opposition
-				right_side = martov_socialists
+				modifier = STG_kropotkin_activity
+			}
+			add_power_balance_modifier = {
+				id = STG_party_fragmentation_bop
+				modifier = STG_stalion_activity
+			}
+			custom_effect_tooltip = change_politburo_tt
+			set_variable = {
+				stg_politburo_sd = 0.05
+				tooltip = socialism_drift_tt
 			}
 		}
 		search_filters = {
@@ -216,11 +273,36 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_fraction_stalion_loyalty"
 			mark_focus_tree_layout_dirty = yes
-			set_power_balance = {
+			set_temp_variable = {
+				STG_bop_value = -1
+			}
+			add_to_temp_variable = {
+				STG_bop_value = party_popularity@communism
+			}
+			#set_value of set_power_balance doesn`t accept vars
+			meta_effect = {
+				text = {
+					set_power_balance = {
+						id = STG_party_fragmentation_bop
+						left_side = party_opposition
+						right_side = stalion_communists
+						set_value = [BOP]
+					}
+				}
+				BOP = "[?STG_bop_value]"
+			}
+			add_power_balance_modifier = {
 				id = STG_party_fragmentation_bop
-				set_value = 0
-				left_side = party_opposition
-				right_side = stalion_communists
+				modifier = STG_kropotkin_activity
+			}
+			add_power_balance_modifier = {
+				id = STG_party_fragmentation_bop
+				modifier = STG_martov_activity
+			}
+			custom_effect_tooltip = change_politburo_tt
+			set_variable = {
+				stg_politburo_cd = 0.05
+				tooltip = communism_drift_tt
 			}
 		}
 		search_filters = {
@@ -269,6 +351,46 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = stg_focus_consumer_culture
+		icon = GFX_goal_generic_workers_democracy
+		cost = 15
+		prerequisite = {
+			focus = stg_focus_full_responsibilities_distribution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_full_responsibilities_distribution
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_consumer_culture"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = stg_focus_horizontal_of_factories
+		icon = GFX_goal_generic_workers_democracy
+		cost = 15
+		prerequisite = {
+			focus = stg_focus_consumer_culture
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_consumer_culture
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_horizontal_of_factories"
+		}
+		search_filters = {
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	focus = {
 		id = stg_focus_appeal_OLR
 		icon = GFX_goal_generic_workers_democracy
 		cost = 5
@@ -314,7 +436,7 @@ focus_tree = {
 		}
 	}
 	focus = {
-		id = stg_focus_assassination_attempt_on_stalion
+		id = stg_focus_communist_reports_falsification
 		icon = GFX_goal_generic_workers_democracy
 		cost = 5
 		prerequisite = {
@@ -324,6 +446,26 @@ focus_tree = {
 			factor = 200
 		}
 		relative_position_id = stg_focus_suppress_socialist_opposition
+		x = 0 
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_communist_reports_falsification"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
+		id = stg_focus_assassination_attempt_on_stalion
+		icon = GFX_goal_generic_workers_democracy
+		cost = 5
+		prerequisite = {
+			focus = stg_focus_communist_reports_falsification
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_communist_reports_falsification
 		x = 0 
 		y = 1
 		completion_reward = {
@@ -349,6 +491,21 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_form_nkvd"
+			add_dynamic_modifier = {
+				modifier = STG_nkvd
+			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = STG_party_fragmentation_bop
+					}
+				}
+				add_power_balance_value = {
+					id = STG_party_fragmentation_bop
+					value = 0.05
+					tooltip_side = stalion_communists
+				}
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -369,24 +526,33 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_infiltrate_opposition"
+			custom_effect_tooltip = change_nkvd_tt
+			add_to_variable = {
+				stg_nkvd_aut = -0.1
+				tooltip = agency_upgrade_time_tt
+			}
 			if = {
 				limit = {
-					NOT = {
-						has_intelligence_agency = yes
+					has_intelligence_agency = yes
+				}
+				if = {
+					limit = {
+						has_power_balance = {
+							id = STG_party_fragmentation_bop
+						}
+					}
+					add_power_balance_value = {
+						id = STG_party_fragmentation_bop
+						value = 0.05
+						tooltip_side = stalion_communists
 					}
 				}
-				create_intelligence_agency = {
-					name = "Main Intelligence Directorate"
-					icon = GFX_intelligence_agency_logo_agency
-				}
 			}
-			create_operative_leader = {
-				name = "Nikolay Smygov (Kinzhal)"
-				GFX = GFX_Portrait_nikolay_kuznetsov
-				traits = { operative_infiltrator }
-				bypass_recruitment = no
-				available_to_spy_master = yes
-				nationalities = { STG }
+			else = {
+				create_intelligence_agency = {
+					name = "GRU"
+					icon = GFX_intelligence_agency_logo_agency #TODO
+				}
 			}
 		}
 		search_filters = {
@@ -408,6 +574,21 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_form_gulags"
+			add_dynamic_modifier = {
+				modifier = STG_gulags
+			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = STG_party_fragmentation_bop
+					}
+				}
+				add_power_balance_value = {
+					id = STG_party_fragmentation_bop
+					value = 0.05
+					tooltip_side = stalion_communists
+				}
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -428,6 +609,43 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_one_way_ticket"
+			custom_effect_tooltip = change_gulag_tt
+			add_to_variable = {
+				stg_gulag_ppg = -0.01
+				tooltip = political_power_gain_tt
+			}
+			add_to_variable = {
+				stg_gulag_sf = -0.1
+				tooltip = stability_factor_tt
+			}
+			add_to_variable = {
+				stg_gulag_ifrf = 0.1
+				tooltip = industry_free_repair_factor_tt
+			}
+			add_to_variable = {
+				stg_gulag_irf = 0.05
+				tooltip = industry_repair_factor_tt
+			}
+			add_to_variable = {
+				stg_gulag_psbf = 0.05
+				tooltip = production_speed_buildings_factor_tt
+			}
+			add_to_variable = {
+				stg_gulag_cgf = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = STG_party_fragmentation_bop
+					}
+				}
+				add_power_balance_value = {
+					id = STG_party_fragmentation_bop
+					value = 0.05
+					tooltip_side = stalion_communists
+				}
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -440,6 +658,9 @@ focus_tree = {
 		prerequisite = {
 			focus = stg_focus_form_gulags
 		}
+		available = {
+			controls_state = 333
+		}
 		ai_will_do = {
 			factor = 200
 		}
@@ -448,6 +669,32 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_azkaban_prison"
+			add_ideas = STG_azkaban_prison
+			if = {
+				limit = {
+					has_power_balance = {
+						id = STG_party_fragmentation_bop
+					}
+				}
+				add_power_balance_value = {
+					id = STG_party_fragmentation_bop
+					value = 0.075
+					tooltip_side = stalion_communists
+				}
+			}
+			add_popularity = {
+				ideology = anarchism
+				popularity = -0.05
+			}
+			add_popularity = {
+				ideology = socialism
+				popularity = -0.05
+			}
+			custom_override_tooltip = {
+				tooltip = put_in_jail_main_opposition_tt
+				retire_ideology_leader = socialism
+				retire_ideology_leader = anarchism
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -455,7 +702,7 @@ focus_tree = {
 	}
 	focus = {
 		id = stg_focus_collectivization
-		icon = GFX_goal_generic_workers_democracy
+		icon = GFX_focus_prc_agrarian_socialism
 		cost = 10
 		prerequisite = {
 			focus = stg_focus_fraction_stalion_loyalty
@@ -466,11 +713,40 @@ focus_tree = {
 		relative_position_id = stg_focus_fraction_stalion_loyalty
 		x = 1
 		y = 1
+		available = {
+			has_completed_focus = stg_focus_first_five_year_plan
+		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_collectivization"
+			custom_effect_tooltip = change_five_year_plan_tt
+			add_to_variable = {
+				stg_five_year_plan_lrf = 0.05
+				tooltip = local_resources_factor_tt
+			}
+			add_to_variable = {
+				stg_five_year_plan_psacf = 0.05
+				tooltip = production_speed_agrarian_complex_factor_tt
+			}
+			add_to_variable = {
+				stg_five_year_plan_cgf = -0.05
+				tooltip = consumer_goods_factor_tt
+			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = STG_party_fragmentation_bop
+					}
+				}
+				add_power_balance_value = {
+					id = STG_party_fragmentation_bop
+					value = 0.05
+					tooltip_side = stalion_communists
+				}
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_INDUSTRY
 		}
 	}
 	focus = {
@@ -488,11 +764,87 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_benefits_redistribution"
+			custom_effect_tooltip = change_five_year_plan_tt
+			add_to_variable = {
+				stg_five_year_plan_gbsf = 0.05
+				tooltip = global_building_slots_factor_tt
+			}
+			add_to_variable = {
+				stg_five_year_plan_psapf = 0.05
+				tooltip = production_speed_aluminium_plant_factor_tt
+			}
+			add_to_variable = {
+				stg_five_year_plan_psspf = 0.05
+				tooltip = production_speed_steel_plant_factor_tt
+			}
+			add_to_variable = {
+				stg_five_year_plan_pstpf = 0.05
+				tooltip = production_speed_tungsten_plant_factor_tt
+			}
+			add_to_variable = {
+				stg_five_year_plan_pscpf = 0.05
+				tooltip = production_speed_chromium_plant_factor_tt
+			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = STG_party_fragmentation_bop
+					}
+				}
+				add_power_balance_value = {
+					id = STG_party_fragmentation_bop
+					value = 0.05
+					tooltip_side = stalion_communists
+				}
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_INDUSTRY
 		}
 	}
+	focus = {
+		id = stg_focus_new_collective_farms
+		icon = GFX_goal_generic_workers_democracy
+		cost = 12
+		prerequisite = {
+			focus = stg_focus_benefits_redistribution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_benefits_redistribution
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_new_collective_farms"
+			every_owned_state = {
+				random_select_amount = 3
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = agrarian_complex
+					level = 1
+				}
+			}
+			if = {
+				limit = {
+					has_power_balance = {
+						id = STG_party_fragmentation_bop
+					}
+				}
+				add_power_balance_value = {
+					id = STG_party_fragmentation_bop
+					value = 0.05
+					tooltip_side = stalion_communists
+				}
+			}
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_INDUSTRY
+		}
+	}
+	
 	focus = {
 		id = stg_focus_discipline_centralization
 		icon = GFX_goal_generic_workers_democracy
@@ -508,6 +860,41 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_discipline_centralization"
+			if = {
+				limit = {
+					has_power_balance = {
+						id = STG_party_fragmentation_bop
+					}
+				}
+				add_power_balance_value = {
+					id = STG_party_fragmentation_bop
+					value = 0.05
+					tooltip_side = stalion_communists
+				}
+			}
+			custom_effect_tooltip = change_politburo_tt
+			add_to_variable = {
+				stg_politburo_ppf = 0.05
+				tooltip = political_power_factor_tt
+			}
+			if = {
+				limit = {
+					has_dynamic_modifier = {
+						modifier = STG_rkka
+					}
+				}
+				custom_effect_tooltip = change_rkka_tt
+				add_to_variable = {
+					stg_rkka_sfc = 0.075
+					tooltip = special_forces_cap_tt
+				}
+			}
+			else = {
+				custom_effect_tooltip = form_rkka_extra_bonuses_tt
+				add_to_variable = {
+					stg_rkka_sfc = 0.075
+				}
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -528,6 +915,24 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_stalion_the_leader"
+			if = {
+				limit = {
+					has_power_balance = {
+						id = STG_party_fragmentation_bop
+					}
+				}
+				add_power_balance_value = {
+					id = STG_party_fragmentation_bop
+					value = 0.05
+					tooltip_side = stalion_communists
+				}
+			}
+			custom_effect_tooltip = change_politburo_tt
+			add_to_variable = {
+				stg_politburo_ppf = 0.05
+				tooltip = political_power_factor_tt
+			}
+			add_ideas = STG_stalion_the_leader
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -675,20 +1080,39 @@ focus_tree = {
 		}
 	}
 	focus = {
+		id = stg_focus_intellects_collection
+		icon = GFX_goal_generic_workers_democracy
+		cost = 10
+		prerequisite = {
+			focus = stg_focus_initial_social_campains
+			focus = stg_focus_first_constitution
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_initial_social_campains
+		x = 0
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_intellects_collection"
+		}
+		search_filters = {
+			FOCUS_FILTER_POLITICAL
+		}
+	}
+	focus = {
 		id = stg_focus_fair_legal_system
 		icon = GFX_goal_generic_workers_democracy
 		cost = 10
 		prerequisite = {
-			focus = stg_focus_first_constitution
-		}
-		prerequisite = {
 			focus = stg_focus_initial_social_campains
+			focus = stg_focus_first_constitution
 		}
 		ai_will_do = {
 			factor = 200
 		}
 		relative_position_id = stg_focus_fraction_martov_loyalty
-		x = 0
+		x = -1
 		y = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_fair_legal_system"
@@ -873,31 +1297,55 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_powerfull_propaganda"
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_political_correctness"
+			if = {
+				limit = {
+					has_power_balance = {
+						id = STG_party_fragmentation_bop
+					}
+				}
+				if = {
+					limit = {
+						has_completed_focus = stg_focus_fraction_martov_loyalty
+					}
+					add_power_balance_value = {
+						id = STG_party_fragmentation_bop
+						value = 0.05
+						tooltip_side = martov_socialists
+					}
+				}
+				else_if = {
+					limit = {
+						has_completed_focus = stg_focus_fraction_stalion_loyalty
+					}
+					add_power_balance_value = {
+						id = STG_party_fragmentation_bop
+						value = 0.05
+						tooltip_side = stalion_communists
+					}
+				}
+			}
+			add_political_power = 50
+			custom_effect_tooltip = change_politburo_tt
+			add_to_variable = {
+				stg_politburo_pacf = -0.1
+				tooltip = political_advisor_cost_factor_tt
+			}
+			add_to_variable = {
+				stg_politburo_ecf = -0.05
+				tooltip = economy_cost_factor_tt
+			}
+			add_to_variable = {
+				stg_politburo_tlcf = -0.05
+				tooltip = trade_laws_cost_factor_tt
+			}
+			add_to_variable = {
+				stg_politburo_mlcf = -0.05
+				tooltip = mobilization_laws_cost_factor_tt
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
-		}
-	}
-	focus = {
-		id = stg_focus_conscription_laws
-		icon = GFX_goal_generic_workers_democracy
-		cost = 5
-		prerequisite = {
-			focus = stg_focus_political_correctness
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		relative_position_id = stg_focus_political_correctness
-		x = 1
-		y = 1
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_conscription_laws"
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-			FOCUS_FILTER_MANPOWER
 		}
 	}
 	focus = {
@@ -911,13 +1359,68 @@ focus_tree = {
 			factor = 200
 		}
 		relative_position_id = stg_focus_political_correctness
-		x = -1
+		x = 0
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_rkka"
+			add_dynamic_modifier = {
+				modifier = STG_rkka
+			}
+		}
+	}
+	focus = {
+		id = stg_focus_conscription_laws
+		icon = GFX_goal_generic_workers_democracy
+		cost = 5
+		prerequisite = {
+			focus = stg_focus_rkka
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_rkka
+		x = -1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_conscription_laws"
+			custom_effect_tooltip = change_rkka_tt
+			add_to_variable = {
+				stg_rkka_cf = 0.05
+				tooltip = conscription_factor_tt
+			}
+			add_to_variable = {
+				stg_rkka_ms = 0.15
+				tooltip = mobilization_speed_tt
+			}
 		}
 		search_filters = {
-			FOCUS_FILTER_POLITICAL
+			FOCUS_FILTER_MANPOWER
+		}
+	}
+	focus = {
+		id = stg_focus_political_commissars
+		icon = GFX_goal_generic_workers_democracy
+		cost = 10
+		prerequisite = {
+			focus = stg_focus_rkka
+		}
+		ai_will_do = {
+			factor = 200
+		}
+		relative_position_id = stg_focus_rkka
+		x = 1
+		y = 1
+		completion_reward = {
+			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_political_commissars"
+			custom_effect_tooltip = change_rkka_tt
+			add_to_variable = {
+				stg_rkka_asf = 0.05
+				tooltip = army_speed_factor_tt
+			}
+			add_to_temp_variable = {
+				stg_rkka_pp = -0.075
+				tooltip = pocket_penalty_tt
+			}
 		}
 	}
 	focus = {
@@ -956,11 +1459,17 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_forgotten_past"
 			mark_focus_tree_layout_dirty = yes
-			set_power_balance = {
+			add_power_balance_modifier = {
 				id = STG_party_fragmentation_bop
-				set_value = -0.333
-				left_side = party_opposition
-				right_side = white_council
+				modifier = STG_kropotkin_activity
+			}
+			add_power_balance_modifier = {
+				id = STG_party_fragmentation_bop
+				modifier = STG_martov_activity
+			}
+			add_power_balance_modifier = {
+				id = STG_party_fragmentation_bop
+				modifier = STG_stalion_activity
 			}
 		}
 		search_filters = {
@@ -1137,133 +1646,6 @@ focus_tree = {
 		y = 4
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_junta_unation"
-			if = {
-				limit = {
-					WOP = {
-						exists = yes
-					}
-				}
-				WOP = {
-					country_event = {
-						id = worker_opposition.1
-						days = 1
-					}
-					custom_effect_tooltip = if_they_accept
-					event_option_tooltip = worker_opposition.1.a
-				}
-			}
-			else = {
-				set_politics = {
-					ruling_party = neutrality
-					elections_allowed = no
-				}
-			}
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-	}
-	focus = {
-		id = stg_focus_place_under_sun
-		icon = GFX_focus_generic_monarchy_1
-		cost = 5
-		prerequisite = {
-			focus = stg_focus_junta_unation
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		available = {
-			NOT = {
-				has_war_with = WOP
-			}
-		}
-		allow_branch = {
-			has_country_flag = WOP_refused_unation
-		}
-		relative_position_id = stg_focus_junta_unation
-		x = -1
-		y = 1
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_place_under_sun"
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-	}
-	focus = {
-		id = stg_focus_dont_forget_SLV
-		icon = GFX_focus_generic_monarchy_1
-		cost = 5
-		prerequisite = {
-			focus = stg_focus_place_under_sun
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		available = {
-			NOT = {
-				has_war_with = WOP
-			}
-		}
-		relative_position_id = stg_focus_place_under_sun
-		x = 0
-		y = 1
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_dont_forget_SLV"
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-	}
-	focus = {
-		id = stg_focus_they_will_know_our_wrath
-		icon = GFX_focus_generic_monarchy_1
-		cost = 10
-		prerequisite = {
-			focus = stg_focus_junta_unation
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		available = {
-			NOT = {
-				has_war_with = WOP
-			}
-		}
-		allow_branch = {
-			has_country_flag = WOP_refused_unation
-		}
-		relative_position_id = stg_focus_junta_unation
-		x = 1
-		y = 1
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_they_will_know_our_wrath"
-		}
-		search_filters = {
-			FOCUS_FILTER_POLITICAL
-		}
-	}
-	focus = {
-		id = stg_focus_east_diplomacy
-		icon = GFX_focus_generic_monarchy_1
-		cost = 10
-		prerequisite = {
-			focus = stg_focus_they_will_know_our_wrath
-		}
-		ai_will_do = {
-			factor = 200
-		}
-		available = {
-			NOT = {
-				has_war_with = WOP
-			}
-		}
-		relative_position_id = stg_focus_they_will_know_our_wrath
-		x = 0
-		y = 1
-		completion_reward = {
-			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_east_diplomacy"
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL

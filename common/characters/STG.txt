@@ -11,6 +11,9 @@ characters = {
 				large = "GFX_portrait_marshal_unknown"
 			}
 		}
+		allowed_civil_war = {
+			has_government = communism
+		}
 		country_leader = {
 			desc = "POLITICS_STALION_DESC"
 			ideology = stalionism
@@ -45,14 +48,6 @@ characters = {
 			allowed = {
 				original_tag = STG
 			}
-			available = {
-				NOT = {
-					has_country_leader = {
-						character = STG_martov
-						ruling_only = yes
-					}
-				}
-			}
 			traits = {
 				socialist_writer
 			}
@@ -84,17 +79,43 @@ characters = {
 			allowed = {
 				original_tag = STG
 			}
-			available = {
-				NOT = {
-					has_country_leader = {
-						character = STG_kropotkin
-						ruling_only = yes
-					}
-				}
-			}
 			traits = {
 				communal_anarchist
 			}
+		}
+	}
+	STG_pshenitsyn = {
+		name = STG_pshenitsyn
+		portraits = {
+			#to do
+			civilian = {
+				large = "GFX_portrait_marshal_unknown"
+			}
+			army = {
+				large = "GFX_portrait_marshal_unknown"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_PSHENITSYN_DESC"
+			ideology = socialist_anarchism
+			traits = {}
+		}
+	}
+	STG_makhno = {
+		name = STG_makhno
+		portraits = {
+			#to do
+			civilian = {
+				large = "GFX_portrait_marshal_unknown"
+			}
+			army = {
+				large = "GFX_portrait_marshal_unknown"
+			}
+		}
+		country_leader = {
+			desc = "POLITICS_MAKHNO_DESC"
+			ideology = individual_anarchism
+			traits = {}
 		}
 	}
 	#scientists

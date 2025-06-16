@@ -1,18 +1,12 @@
 STG_party_fragmentation_bop = {
 	initial_value = 0
-	left_side = twilight_harmonists
-	right_side = prince_blueblood_fascists
-	decision_category = EQS_prince_blueblood_vs_twilight_decisions
+	left_side = party_opposition
+	right_side = white_council
+	decision_category = STG_party_fragmentation_decisions
 	range = {
 		id = equal_fragmentation
 		min = -0.1
 		max = 0.1
-		modifier = {
-			stability_weekly = 0.01
-			war_support_weekly = 0.01
-			political_power_factor = -0.25
-			custom_modifier_tooltip = "[fascism_vs_harmony_equal_tt]"
-		}
 	}
 	side = {
 		id = kropotkin_anarchists
@@ -21,106 +15,208 @@ STG_party_fragmentation_bop = {
 			id = low_kropotkin_support
 			min = -0.36
 			max = -0.1
-			modifier = {}
+			modifier = {
+				anarchism_acceptance = 5
+				political_power_factor = 0.05
+				stability_factor = 0.033
+			}
 		}
 		range = {
 			id = medium_kropotkin_support
 			min = -0.63
 			max = -0.36
-			modifier = {}
+			modifier = {
+				anarchism_drift = 0.05
+				anarchism_acceptance = 10
+				political_power_factor = 0.1
+				stability_factor = 0.066
+			}
 		}
 		range = {
-			id = large_harmonic_support
+			id = large_kropotkin_support
 			min = -0.9
 			max = -0.63
-			modifier = {}
+			modifier = {
+				anarchism_drift = 0.1
+				anarchism_acceptance = 15
+				political_power_factor = 0.15
+				stability_factor = 0.1
+			}
 		}
 		range = {
-			id = total_harmonic_support
+			id = total_kropotkin_support
 			min = -1
 			max = -0.9
-			modifier = {}
+			on_activate = {
+				remove_ideas = STG_party_fragmentation
+				remove_power_balance = {
+					id = STG_party_fragmentation_bop
+				}
+				hidden_effect = {
+					#advisor can`t be leader at same time
+					remove_advisor_role = {
+						character = STG_kropotkin
+						slot = political_advisor
+					}
+				}
+				remove_advisor_role = {
+					character = STG_martov
+					slot = political_advisor
+				}
+				set_politics = {
+					ruling_party = anarchism
+					elections_allowed = no
+				}
+			}
 		}
 	}
 	side = {
 		id = martov_socialists
 		icon = GFX_idea_generic_degauss_ship_hulls
 		range = {
-			id = low_fascist_support
+			id = low_martov_support
 			min = 0.1
 			max = 0.36
-			modifier = {}
+			modifier = {
+				socialism_acceptance = 5
+				political_power_factor = 0.05
+				stability_factor = 0.033
+			}
 		}
 		range = {
-			id = medium_fascist_support
+			id = medium_martov_support
 			min = 0.36
 			max = 0.63
-			modifier = {}
+			modifier = {
+				socialism_drift = 0.05
+				socialism_acceptance = 10
+				political_power_factor = 0.1
+				stability_factor = 0.066
+			}
 		}
 		range = {
-			id = large_fascist_support
+			id = large_martov_support
 			min = 0.63
 			max = 0.9
-			modifier = {}
+			modifier = {
+				socialism_drift = 0.1
+				socialism_acceptance = 15
+				political_power_factor = 0.15
+				stability_factor = 0.1
+			}
 		}
 		range = {
-			id = total_fascist_support
+			id = total_martov_support
 			min = 0.9
 			max = 1
-			modifier = {}
+			on_activate = {
+				remove_ideas = STG_party_fragmentation
+				remove_power_balance = {
+					id = STG_party_fragmentation_bop
+				}
+				hidden_effect = {
+					#advisor can`t be leader at same time
+					remove_advisor_role = {
+						character = STG_martov
+						slot = political_advisor
+					}
+				}
+				remove_advisor_role = {
+					character = STG_kropotkin
+					slot = political_advisor
+				}
+				set_politics = {
+					ruling_party = socialism
+					elections_allowed = no
+				}
+			}
 		}
 	}
 	side = {
 		id = stalion_communists
 		icon = GFX_idea_generic_degauss_ship_hulls
 		range = {
-			id = low_fascist_support
+			id = low_stalion_support
 			min = 0.1
 			max = 0.36
-			modifier = {}
+			modifier = {
+				communism_acceptance = 5
+				political_power_factor = 0.05
+				stability_factor = 0.033
+			}
 		}
 		range = {
-			id = medium_fascist_support
+			id = medium_stalion_support
 			min = 0.36
 			max = 0.63
-			modifier = {}
+			modifier = {
+				communism_drift = 0.05
+				communism_acceptance = 10
+				political_power_factor = 0.1
+				stability_factor = 0.066
+			}
 		}
 		range = {
-			id = large_fascist_support
+			id = large_stalion_support
 			min = 0.63
 			max = 0.9
-			modifier = {}
+			modifier = {
+				communism_drift = 0.1
+				communism_acceptance = 15
+				political_power_factor = 0.15
+				stability_factor = 0.1
+			}
 		}
 		range = {
-			id = total_fascist_support
+			id = total_stalion_support
 			min = 0.9
 			max = 1
-			modifier = {}
+			on_activate = {
+				remove_ideas = STG_party_fragmentation
+				remove_power_balance = {
+					id = STG_party_fragmentation_bop
+				}
+				if = {
+					limit = {
+						NOT = {
+							has_completed_focus = stg_focus_azkaban_prison
+						}
+					}
+					remove_advisor_role = {
+						character = STG_martov
+						slot = political_advisor
+					}
+					remove_advisor_role = {
+						character = STG_kropotkin
+						slot = political_advisor
+					}
+				}
+			}
 		}
 	}
 	side = {
 		id = white_council
 		icon = GFX_idea_generic_degauss_ship_hulls
 		range = {
-			id = low_fascist_support
+			id = low_white_council_support
 			min = 0.1
 			max = 0.36
 			modifier = {}
 		}
 		range = {
-			id = medium_fascist_support
+			id = medium_white_council_support
 			min = 0.36
 			max = 0.63
 			modifier = {}
 		}
 		range = {
-			id = large_fascist_support
+			id = large_white_council_support
 			min = 0.63
 			max = 0.9
 			modifier = {}
 		}
 		range = {
-			id = total_fascist_support
+			id = total_white_council_support
 			min = 0.9
 			max = 1
 			modifier = {}
@@ -152,6 +248,20 @@ STG_party_fragmentation_bop = {
 			min = -1
 			max = -0.9
 			modifier = {}
+			on_activate = {
+				#set_power_balance_gfx = {
+				#	id = STG_party_fragmentation_bop
+				#	side = party_opposition
+				#	gfx = GFX_bop_ITA_mussolini_improved_side
+				#}
+			}
+			on_deactivate = {
+				#set_power_balance_gfx = {
+				#	id = STG_party_fragmentation_bop
+				#	side = party_opposition
+				#	gfx = GFX_bop_ITA_mussolini_improved_side
+				#}
+			}
 		}
 	}
 }

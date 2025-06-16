@@ -29,3 +29,56 @@ STG_five_year_plan = {
 	production_oil_factor = stg_five_year_plan_pof
 	local_resources_factor = stg_five_year_plan_lrf
 }
+STG_nkvd = {
+	icon = GFX_idea_clockwerk_economy			#to do (change)
+	enable = {
+		always = yes
+	}
+	political_power_gain = stg_nkvd_ppg
+	drift_defence_factor = stg_nkvd_ddf
+	required_garrison_factor = stg_nkvd_rgf
+}
+STG_rkka = {
+	icon = GFX_idea_clockwerk_economy			#to do (change)
+	enable = {
+		always = yes
+	}
+	conscription_factor = stg_rkka_cf
+	mobilization_speed = stg_rkka_ms
+	army_core_attack_factor = stg_rkka_acaf
+	army_core_defence_factor = stg_rkka_acdf
+	army_speed_factor = stg_rkka_asf
+	pocket_penalty = stg_rkka_pp
+	terrain_penalty_reduction = stg_rkka_tpr
+	special_forces_cap = stg_rkka_sfc
+}
+STG_gulags = {
+	icon = GFX_idea_clockwerk_economy			#to do (change)
+	enable = {
+		always = yes
+	}
+	political_power_gain = stg_gulag_ppg
+	stability_factor = stg_gulag_sf
+	industry_free_repair_factor = stg_gulag_ifrf
+	industry_repair_factor = stg_gulag_irf
+	production_speed_buildings_factor = stg_gulag_psbf
+	consumer_goods_factor = stg_gulag_cgf
+}
+STG_politburo = {
+	icon = GFX_idea_clockwerk_economy			#to do (change)
+	enable = {
+		always = yes
+	}
+	political_power_factor = stg_politburo_ppf
+	communism_drift = stg_politburo_cd
+	socialism_drift = stg_politburo_sd
+	anarchism_drift = stg_politburo_ad
+	defensive_war_stability_factor = stg_politburo_dwsf
+	mobilization_speed = stg_politburo_ms
+	economy_cost_factor = stg_politburo_ecf
+	trade_laws_cost_factor = stg_politburo_tlcf
+	mobilization_laws_cost_factor = stg_politburo_mlcf
+	political_advisor_cost_factor = stg_politburo_pacf
+	opinion_gain_monthly_same_ideology_factor = stg_politburo_ogmsif
+	consumer_goods_factor = stg_politburo_cgf
+}
