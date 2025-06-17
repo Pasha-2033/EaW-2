@@ -424,6 +424,19 @@ on_actions = {
 		effect = {
 			generate_militarist_advisor = yes
 			generate_race_trait = yes
+			if = {
+				#EQS 
+				limit = {
+					FROM = {
+						has_power_balance = {
+							id = EQS_prince_blueblood_vs_twilight
+						}
+					}
+				}
+				add_to_array = {
+					FROM.apolitical_unit_leader = THIS
+				}
+			}
 		}
 	}
 	#ROOT - unit leader, FROM - unit, owner - country
