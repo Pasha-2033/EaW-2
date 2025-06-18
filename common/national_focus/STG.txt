@@ -430,6 +430,24 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_suppress_socialist_opposition"
+			add_popularity = {
+				ideology = socialism
+				popularity = -0.1
+			}
+			add_power_balance_value = {
+				id = STG_party_fragmentation_bop
+				value = 0.05
+				tooltip_side = kropotkin_anarchists
+			}
+			remove_advisor_role = {
+				character = STG_martov
+				slot = political_advisor
+			}
+			STG_martov = {
+				set_can_be_fired_in_advisor_role = {
+					value = yes
+				}
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -470,6 +488,51 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_assassination_attempt_on_stalion"
+			set_temp_variable = {
+				nothing = party_popularity@anarchism
+			}
+			multiply_temp_variable = {
+				nothing = 4
+			}
+			add_to_temp_variable = {
+				nothing = 1
+			}
+			random_list = {
+				60 = {
+					modifier = {
+						factor = nothing
+					}
+					kill_ideology_leader = communism
+					add_power_balance_value = {
+						id = STG_party_fragmentation_bop
+						value = 0.1
+						tooltip_side = kropotkin_anarchists
+					}
+				}
+				50 = {
+					modifier = {
+						factor = nothing
+					}
+					retire_ideology_leader = communism
+					add_power_balance_value = {
+						id = STG_party_fragmentation_bop
+						value = 0.05
+						tooltip_side = kropotkin_anarchists
+					}
+				}
+				50 = {
+					add_political_power = -50
+					add_popularity = {
+						ideology = anarchism
+						popularity = -0.1
+					}
+					add_power_balance_value = {
+						id = STG_party_fragmentation_bop
+						value = -0.05
+						tooltip_side = party_opposition
+					}
+				}
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -954,6 +1017,11 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_word_publicity"
+			add_stability = 0.1
+			add_power_balance_value = {
+				id = STG_party_fragmentation_bop
+				value = 0.1
+			}
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -974,6 +1042,15 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_every_vote_counts"
+			add_power_balance_value = {
+				id = STG_party_fragmentation_bop
+				value = 0.1
+			}
+			add_popularity = {
+				ideology = socialism
+				popularity = 0.1
+			}
+			add_political_power = 50
 		}
 		search_filters = {
 			FOCUS_FILTER_POLITICAL
@@ -984,12 +1061,12 @@ focus_tree = {
 		icon = GFX_goal_generic_workers_democracy
 		cost = 10
 		prerequisite = {
-			focus = stg_focus_word_publicity
+			focus = stg_focus_every_vote_counts
 		}
 		ai_will_do = {
 			factor = 200
 		}
-		relative_position_id = stg_focus_word_publicity
+		relative_position_id = stg_focus_every_vote_counts
 		x = 0
 		y = 1
 		completion_reward = {
@@ -1084,13 +1161,12 @@ focus_tree = {
 		icon = GFX_goal_generic_workers_democracy
 		cost = 10
 		prerequisite = {
-			focus = stg_focus_initial_social_campains
 			focus = stg_focus_first_constitution
 		}
 		ai_will_do = {
 			factor = 200
 		}
-		relative_position_id = stg_focus_initial_social_campains
+		relative_position_id = stg_focus_first_constitution
 		x = 0
 		y = 1
 		completion_reward = {
@@ -1112,8 +1188,8 @@ focus_tree = {
 			factor = 200
 		}
 		relative_position_id = stg_focus_fraction_martov_loyalty
-		x = -1
-		y = 4
+		x = 1
+		y = 5
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_fair_legal_system"
 		}
