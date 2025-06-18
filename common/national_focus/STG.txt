@@ -74,8 +74,11 @@ focus_tree = {
 				id = STG_party_fragmentation_bop
 				modifier = STG_white_council_activity
 			}
-			add_dynamic_modifier = {
-				modifier = STG_politburo
+			custom_override_tooltip = {
+				tooltip = add_politburo_tt
+				add_dynamic_modifier = {
+					modifier = STG_politburo
+				}
 			}
 		}
 		search_filters = {
@@ -554,8 +557,11 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_form_nkvd"
-			add_dynamic_modifier = {
-				modifier = STG_nkvd
+			custom_override_tooltip = {
+				tooltip = add_nkvd_tt
+				add_dynamic_modifier = {
+					modifier = STG_nkvd
+				}
 			}
 			if = {
 				limit = {
@@ -1439,8 +1445,11 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_rkka"
-			add_dynamic_modifier = {
-				modifier = STG_rkka
+			custom_override_tooltip = {
+				tooltip = add_rkka_tt
+				add_dynamic_modifier = {
+					modifier = STG_rkka
+				}
 			}
 		}
 	}
@@ -1776,8 +1785,11 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_first_five_year_plan"
-			add_dynamic_modifier = {
-				modifier = STG_five_year_plan
+			custom_override_tooltip = {
+				tooltip = add_five_year_plan_tt
+				add_dynamic_modifier = {
+					modifier = STG_five_year_plan
+				}
 			}
 		}
 		search_filters = {
