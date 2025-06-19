@@ -24,6 +24,7 @@ NDefines.NCountry.FEMALE_UNIT_LEADER_BASE_CHANCE = {
 }
 NDefines.NCountry.BASE_RESEARCH_SLOTS = 0
 NDefines.NCountry.BASE_FUEL_GAIN = 0
+NDefines.NCountry.BASE_FUEL_GAIN_PER_OIL = 1 --vanila is 2
 
 NDefines.NResistance.GARRISON_MANPOWER_LOST_BY_ATTACK = 0.01 	-- Ratio of manpower lost by garrison at each attack on garrison (this number will be reduced by the hardness of garrison template)
 

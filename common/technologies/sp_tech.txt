@@ -39,4 +39,49 @@ technologies = {
 		}
 		steel_plant_steel_outcome = 2
 	}
+	sp_tech_oil_cracking = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		synthetic_refinery_oil_consumption = 1
+		synthetic_refinery_fuel_outcome = 1
+		synthetic_refinery_rubber_outcome = 1
+	}
+	sp_tech_oil_aromatization = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		synthetic_refinery_fuel_outcome = 2
+	}
+	sp_tech_gas_liquefaction = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		synthetic_refinery_oil_consumption = -1
+	}
+	sp_tech_aluminum_refining = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		production_cost_aluminium_plant_factor = 0.1
+		aluminium_plant_aluminium_outcome = 2
+	}
+	sp_tech_tungsten_sintering = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		tungsten_plant_tungsten_outcome = 2
+	}
+	sp_tech_chromium_coking = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		chromium_plant_chromium_outcome = 2
+	}
 }

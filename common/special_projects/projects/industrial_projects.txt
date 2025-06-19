@@ -81,11 +81,6 @@ sp_saltpeter_for_plants = {
 	ai_will_do = {
 		base = 1
 	}
-	available = {
-		FROM = {
-			
-		}
-	}
 	breakthrough_cost = {
 		specialization_industry = 1
 	}
@@ -224,6 +219,210 @@ sp_reduction_with_hydrogen = {
 				tooltip = tech_effect|sp_tech_reduction_with_hydrogen
 				set_technology = {
 					sp_tech_reduction_with_hydrogen = 1
+					popup = no
+				}
+			}
+		}
+	}
+	generic_prototype_rewards = {
+		sp_industry_generic_reward_scientist_xp_1
+		sp_industry_generic_reward_scientist_xp_2
+		sp_industry_generic_reward_scientist_xp_3
+	}
+}
+sp_oil_cracking = {
+	specialization = specialization_industry
+	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
+	project_tags = sp_tag_synthetic
+	ai_will_do = {
+		base = 1
+	}
+	available = {
+		FROM = {
+			has_tech = synth_oil_experiments
+		}
+	}
+	breakthrough_cost = {
+		specialization_industry = 1
+	}
+	prototype_time = sp_time.prototype.short
+	complexity = sp_complexity.small
+	project_output = {
+		country_effects = {
+			custom_override_tooltip = {
+				tooltip = tech_effect|sp_tech_oil_cracking
+				set_technology = {
+					sp_tech_oil_cracking = 1
+					popup = no
+				}
+			}
+		}
+	}
+	generic_prototype_rewards = {
+		sp_industry_generic_reward_scientist_xp_1
+		sp_industry_generic_reward_scientist_xp_2
+		sp_industry_generic_reward_scientist_xp_3
+	}
+}
+sp_oil_aromatization = {
+	specialization = specialization_industry
+	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
+	project_tags = sp_tag_synthetic
+	ai_will_do = {
+		base = 1
+	}
+	available = {
+		FROM = {
+			has_tech = synth_oil_experiments
+		}
+	}
+	breakthrough_cost = {
+		specialization_industry = 1
+	}
+	prototype_time = sp_time.prototype.short
+	complexity = sp_complexity.small
+	project_output = {
+		country_effects = {
+			custom_override_tooltip = {
+				tooltip = tech_effect|sp_tech_oil_aromatization
+				set_technology = {
+					sp_tech_oil_aromatization = 1
+					popup = no
+				}
+			}
+		}
+	}
+	generic_prototype_rewards = {
+		sp_industry_generic_reward_scientist_xp_1
+		sp_industry_generic_reward_scientist_xp_2
+		sp_industry_generic_reward_scientist_xp_3
+	}
+}
+sp_gas_liquefaction = {
+	specialization = specialization_industry
+	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
+	project_tags = sp_tag_synthetic
+	ai_will_do = {
+		base = 1
+	}
+	available = {
+		FROM = {
+			has_tech = synth_oil_experiments
+		}
+	}
+	breakthrough_cost = {
+		specialization_industry = 1
+	}
+	prototype_time = sp_time.prototype.short
+	complexity = sp_complexity.small
+	project_output = {
+		country_effects = {
+			custom_override_tooltip = {
+				tooltip = tech_effect|sp_tech_gas_liquefaction
+				set_technology = {
+					sp_tech_gas_liquefaction = 1
+					popup = no
+				}
+			}
+		}
+	}
+	generic_prototype_rewards = {
+		sp_industry_generic_reward_scientist_xp_1
+		sp_industry_generic_reward_scientist_xp_2
+		sp_industry_generic_reward_scientist_xp_3
+	}
+}
+sp_aluminum_refining = {
+	specialization = specialization_industry
+	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
+	project_tags = sp_tag_metallurgy
+	ai_will_do = {
+		base = 1
+	}
+	available = {
+		FROM = {
+			has_tech = aluminium_plant_upgrade_2
+		}
+	}
+	breakthrough_cost = {
+		specialization_industry = 1
+	}
+	prototype_time = sp_time.prototype.short
+	complexity = sp_complexity.small
+	project_output = {
+		country_effects = {
+			custom_override_tooltip = {
+				tooltip = tech_effect|sp_tech_aluminum_refining
+				set_technology = {
+					sp_tech_aluminum_refining = 1
+					popup = no
+				}
+			}
+		}
+	}
+	generic_prototype_rewards = {
+		sp_industry_generic_reward_scientist_xp_1
+		sp_industry_generic_reward_scientist_xp_2
+		sp_industry_generic_reward_scientist_xp_3
+	}
+}
+sp_tungsten_sintering = {
+	specialization = specialization_industry
+	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
+	project_tags = sp_tag_metallurgy
+	ai_will_do = {
+		base = 1
+	}
+	available = {
+		FROM = {
+			has_tech = tungsten_plant_upgrade_2
+		}
+	}
+	breakthrough_cost = {
+		specialization_industry = 1
+	}
+	prototype_time = sp_time.prototype.short
+	complexity = sp_complexity.small
+	project_output = {
+		country_effects = {
+			custom_override_tooltip = {
+				tooltip = tech_effect|sp_tech_tungsten_sintering
+				set_technology = {
+					sp_tech_tungsten_sintering = 1
+					popup = no
+				}
+			}
+		}
+	}
+	generic_prototype_rewards = {
+		sp_industry_generic_reward_scientist_xp_1
+		sp_industry_generic_reward_scientist_xp_2
+		sp_industry_generic_reward_scientist_xp_3
+	}
+}
+sp_chromium_coking = {
+	specialization = specialization_industry
+	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
+	project_tags = sp_tag_metallurgy
+	ai_will_do = {
+		base = 1
+	}
+	available = {
+		FROM = {
+			has_tech = tungsten_plant_upgrade_2
+		}
+	}
+	breakthrough_cost = {
+		specialization_industry = 1
+	}
+	prototype_time = sp_time.prototype.short
+	complexity = sp_complexity.small
+	project_output = {
+		country_effects = {
+			custom_override_tooltip = {
+				tooltip = tech_effect|sp_tech_chromium_coking
+				set_technology = {
+					sp_tech_chromium_coking = 1
 					popup = no
 				}
 			}
