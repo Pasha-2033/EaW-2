@@ -48,7 +48,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
-		start_year = 963
+		start_year = 986
 		folder = {
 			name = industry_folder
 			position = {
@@ -78,7 +78,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
-		start_year = 964
+		start_year = 990
 		folder = {
 			name = industry_folder
 			position = {
@@ -112,7 +112,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
-		start_year = 964
+		start_year = 992
 
 		folder = {
 			name = industry_folder
@@ -144,7 +144,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2.5
-		start_year = 1014
+		start_year = 995
 		XOR = {
 			machine_tools_4_b
 		}
@@ -182,7 +182,7 @@ technologies = {
 		}
 
 		research_cost = 2.5
-		start_year = 1014
+		start_year = 999
 
 		XOR = {
 			machine_tools_4_a
@@ -222,7 +222,7 @@ technologies = {
 		}
 
 		research_cost = 2.5
-		start_year = 1016
+		start_year = 995
 
 		folder = {
 			name = industry_folder
@@ -253,7 +253,7 @@ technologies = {
 		}
 
 		research_cost = 2.5
-		start_year = 1016
+		start_year = 999
 
 		folder = {
 			name = industry_folder
@@ -283,7 +283,7 @@ technologies = {
 		}
 
 		research_cost = 2.5
-		start_year = 1019
+		start_year = 1003
 
 		folder = {
 			name = industry_folder
@@ -313,7 +313,7 @@ technologies = {
 		}
 
 		research_cost = 2.5
-		start_year = 1022
+		start_year = 1005
 
 		folder = {
 			name = industry_folder
@@ -339,7 +339,7 @@ technologies = {
 
 
 		research_cost = 2.5
-		start_year = 1025
+		start_year = 1008
 
 		folder = {
 			name = industry_folder
@@ -370,7 +370,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
-		start_year = 963
+		start_year = 986
 		folder = {
 			name = industry_folder
 			position = {
@@ -397,7 +397,7 @@ technologies = {
 	equipment_conversion_1 = {
 		equipment_conversion_speed = 0.40
 		research_cost = 2
-		start_year = 1010
+		start_year = 990
 		folder = {
 			name = industry_folder
 			position = { 
@@ -432,16 +432,13 @@ technologies = {
 		industrial_capacity_dockyard = 0.1
 		global_building_slots_factor = 0.20
 		
-		dependencies = {
-			infantry_weapons_0 = 1
-		}
 		path = {
 			leads_to_tech = concentrated_industry_1
 			research_cost_coeff = 1
 		}
 
 		research_cost = 2
-
+		start_year = 986
 		XOR = {
 			dispersed_industry_0
 		}
@@ -483,7 +480,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1008
+		start_year = 990
 
 		folder = {
 			name = industry_folder
@@ -523,7 +520,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1010
+		start_year = 992
 
 		folder = {
 			name = industry_folder
@@ -562,7 +559,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1012
+		start_year = 995
 
 		folder = {
 			name = industry_folder
@@ -601,7 +598,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1014
+		start_year = 999
 
 		folder = {
 			name = industry_folder
@@ -645,7 +642,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1016
+		start_year = 1003
 
 		folder = {
 			name = industry_folder
@@ -657,8 +654,8 @@ technologies = {
 		}
 
 		categories = {
-			industry
-			concentrated_industry_category
+			cat_industry
+			cat_concentrated_industry
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -679,7 +676,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1019
+		start_year = 1005
 
 		folder = {
 			name = industry_folder
@@ -691,8 +688,8 @@ technologies = {
 		}
 
 		categories = {
-			industry
-			concentrated_industry_category
+			cat_industry
+			cat_concentrated_industry
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -713,7 +710,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1022
+		start_year = 1008
 
 		folder = {
 			name = industry_folder
@@ -725,8 +722,8 @@ technologies = {
 		}
 
 		categories = {
-			industry
-			concentrated_industry_category
+			cat_industry
+			cat_concentrated_industry
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -742,7 +739,7 @@ technologies = {
 		industrial_capacity_dockyard = 0.02
 		global_building_slots_factor = 0.05
 		research_cost = 2
-		start_year = 1025
+		start_year = 1010
 
 		folder = {
 			name = industry_folder
@@ -754,8 +751,8 @@ technologies = {
 		}
 
 		categories = {
-			industry
-			concentrated_industry_category
+			cat_industry
+			cat_concentrated_industry
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -773,16 +770,13 @@ technologies = {
 		production_factory_start_efficiency_factor = 0.05
 		industry_air_damage_factor = -0.15
 		global_building_slots_factor = 0.2
-		dependencies = {
-			infantry_weapons_0 = 1
-		}
 		path = {
 			leads_to_tech = dispersed_industry_1
 			research_cost_coeff = 1
 		}
 
 		research_cost = 2
-
+		start_year = 986
 		XOR = {
 			concentrated_industry_0
 		}
@@ -829,7 +823,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1008
+		start_year = 990
 
 		folder = {
 			name = industry_folder
@@ -871,7 +865,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1010
+		start_year = 992
 
 		folder = {
 			name = industry_folder
@@ -913,7 +907,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1012
+		start_year = 995
 
 		folder = {
 			name = industry_folder
@@ -955,7 +949,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1014
+		start_year = 999
 
 		folder = {
 			name = industry_folder
@@ -998,7 +992,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1016
+		start_year = 1003
 
 		folder = {
 			name = industry_folder
@@ -1010,8 +1004,8 @@ technologies = {
 		}
 
 		categories = {
-			industry
-			dispersed_industry_category
+			cat_industry
+			cat_dispersed_industry
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -1035,7 +1029,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1019
+		start_year = 1005
 
 		folder = {
 			name = industry_folder
@@ -1047,8 +1041,8 @@ technologies = {
 		}
 
 		categories = {
-			industry
-			dispersed_industry_category
+			cat_industry
+			cat_dispersed_industry
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -1072,7 +1066,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1022
+		start_year = 1008
 
 		folder = {
 			name = industry_folder
@@ -1084,8 +1078,8 @@ technologies = {
 		}
 
 		categories = {
-			industry
-			dispersed_industry_category
+			cat_industry
+			cat_dispersed_industry
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -1104,7 +1098,7 @@ technologies = {
 		industry_air_damage_factor = -0.02
 		global_building_slots_factor = 0.05
 		research_cost = 2
-		start_year = 1025
+		start_year = 1010
 
 		folder = {
 			name = industry_folder
@@ -1116,8 +1110,8 @@ technologies = {
 		}
 
 		categories = {
-			industry
-			dispersed_industry_category
+			cat_industry
+			cat_dispersed_industry
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -1142,7 +1136,7 @@ technologies = {
 		}
 		
 		research_cost = 1
-		start_year = 1007
+		start_year = 986
 		folder = {
 			name = industry_folder
 			position = { x = 1 y = 0 }
@@ -1150,7 +1144,7 @@ technologies = {
 		
 		categories = {
 			cat_industry
-			cat_synth_resources
+			cat_fuel
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -1234,7 +1228,7 @@ technologies = {
 		}
 		
 		research_cost = 3
-		start_year = 1007
+		start_year = 990
 		folder = {
 			name = industry_folder
 			position = { x = 3 y = 2 }
@@ -1242,7 +1236,7 @@ technologies = {
 		
 		categories = {
 			cat_industry
-			cat_synth_resources
+			cat_fuel
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -1296,7 +1290,7 @@ technologies = {
 		}
 		
 		research_cost = 3
-		start_year = 1008
+		start_year = 992
 		folder = {
 			name = industry_folder
 			position = { x = 3 y = 4 }
@@ -1304,7 +1298,7 @@ technologies = {
 		
 		categories = {
 			cat_industry
-			cat_synth_resources
+			cat_fuel
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -1349,7 +1343,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 3
-		start_year = 1010
+		start_year = 995
 		folder = {
 			name = industry_folder
 			position = { x = 3 y = 6 }
@@ -1357,7 +1351,7 @@ technologies = {
 		
 		categories = {
 			cat_industry
-			cat_synth_resources
+			cat_fuel
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -1394,7 +1388,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 3
-		start_year = 1012
+		start_year = 999
 		folder = {
 			name = industry_folder
 			position = { x = 3 y = 8 }
@@ -1402,7 +1396,7 @@ technologies = {
 		
 		categories = {
 			cat_industry
-			cat_synth_resources
+			cat_fuel
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -1440,7 +1434,7 @@ technologies = {
 		}
 		
 		research_cost = 3
-		start_year = 1014
+		start_year = 1003
 		folder = {
 			name = industry_folder
 			position = { x = 3 y = 10 }
@@ -1448,7 +1442,7 @@ technologies = {
 		
 		categories = {
 			cat_industry
-			cat_synth_resources
+			cat_fuel
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -1485,7 +1479,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 3
-		start_year = 1016
+		start_year = 1005
 		folder = {
 			name = industry_folder
 			position = { x = 3 y = 12 }
@@ -1493,7 +1487,7 @@ technologies = {
 		
 		categories = {
 			cat_industry
-			cat_synth_resources
+			cat_fuel
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -1531,7 +1525,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 3
-		start_year = 1019
+		start_year = 1008
 		folder = {
 			name = industry_folder
 			position = { x = 3 y = 14 }
@@ -1539,7 +1533,7 @@ technologies = {
 		
 		categories = {
 			cat_industry
-			cat_synth_resources
+			cat_fuel
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -1577,7 +1571,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 3
-		start_year = 1022
+		start_year = 1010
 		folder = {
 			name = industry_folder
 			position = { x = 3 y = 16 }
@@ -1585,7 +1579,7 @@ technologies = {
 		
 		categories = {
 			cat_industry
-			cat_synth_resources
+			cat_fuel
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -1618,7 +1612,7 @@ technologies = {
 		fuel_gain_factor = 0.04
 
 		research_cost = 3
-		start_year = 1025
+		start_year = 1005
 		folder = {
 			name = industry_folder
 			position = { x = 3 y = 18 }
@@ -1626,7 +1620,7 @@ technologies = {
 		
 		categories = {
 			cat_industry
-			cat_synth_resources
+			cat_fuel
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -1662,10 +1656,6 @@ technologies = {
 			level = 3
 		}
 
-		dependencies = {
-			infantry_weapons_0 = 1
-		}
-
 		path = {
 			leads_to_tech = oil_processing_0
 			research_cost_coeff = 1
@@ -1676,7 +1666,7 @@ technologies = {
 		}
 
 		research_cost = 3
-		start_year = 1007
+		start_year = 990
 		folder = {
 			name = industry_folder
 			position = { x = 0 y = 2 }
@@ -1684,7 +1674,7 @@ technologies = {
 
 		categories = {
 			cat_industry
-			cat_synth_resources
+			cat_fuel
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -1733,9 +1723,8 @@ technologies = {
 	}
 
 	oil_processing_0 = {
-		synthetic_refinery_oil_consumption = 1
 		synthetic_refinery_fuel_outcome = 1
-		start_year = 1008
+		start_year = 992
 		path = {
 			leads_to_tech = oil_processing_1
 			research_cost_coeff = 1
@@ -1749,7 +1738,7 @@ technologies = {
 
 		categories = {
 			cat_industry
-			cat_synth_resources
+			cat_fuel
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -1774,8 +1763,6 @@ technologies = {
 		ai_research_weights = {
 			oil = -2.0
 		}
-
-		show_effect_as_desc = yes
 	}
 
 	oil_processing_1 = {
@@ -1789,7 +1776,7 @@ technologies = {
 		}
 
 		research_cost = 1.5
-		start_year = 1010
+		start_year = 995
 
 		folder = {
 			name = industry_folder
@@ -1798,7 +1785,7 @@ technologies = {
 
 		categories = {
 			cat_industry
-			cat_synth_resources
+			cat_fuel
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -1823,8 +1810,6 @@ technologies = {
 		ai_research_weights = {
 			oil = -2.0
 		}
-
-		show_effect_as_desc = yes
 	}
 
 	oil_processing_2 = {
@@ -1838,7 +1823,7 @@ technologies = {
 		}
 
 		research_cost = 1.5
-		start_year = 1012
+		start_year = 999
 
 		folder = {
 			name = industry_folder
@@ -1847,7 +1832,7 @@ technologies = {
 
 		categories = {
 			cat_industry
-			cat_synth_resources
+			cat_fuel
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -1872,13 +1857,9 @@ technologies = {
 		ai_research_weights = {
 			rubber = -2.0
 		}
-
-		show_effect_as_desc = yes
 	}
 
 	oil_processing_3 = {
-
-		synthetic_refinery_oil_consumption = 1
 		synthetic_refinery_fuel_outcome = 1
 
 		path = {
@@ -1887,7 +1868,7 @@ technologies = {
 		}
 
 		research_cost = 1.5
-		start_year = 1014
+		start_year = 1003
 
 		folder = {
 			name = industry_folder
@@ -1896,7 +1877,7 @@ technologies = {
 
 		categories = {
 			cat_industry
-			cat_synth_resources
+			cat_fuel
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -1921,8 +1902,6 @@ technologies = {
 		ai_research_weights = {
 			oil = -2.0
 		}
-
-		show_effect_as_desc = yes
 	}
 	
 	oil_processing_4 = {
@@ -1936,7 +1915,7 @@ technologies = {
 		}
 
 		research_cost = 1.5
-		start_year = 1016
+		start_year = 1005
 
 		folder = {
 			name = industry_folder
@@ -1945,7 +1924,7 @@ technologies = {
 
 		categories = {
 			cat_industry
-			cat_synth_resources
+			cat_fuel
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -1970,13 +1949,9 @@ technologies = {
 		ai_research_weights = {
 			oil = -2.0
 		}
-
-		show_effect_as_desc = yes
 	}
 
 	oil_processing_5 = {
-
-		synthetic_refinery_oil_consumption = 1
 		synthetic_refinery_fuel_outcome = 1
 
 		path = {
@@ -1985,7 +1960,7 @@ technologies = {
 		}
 
 		research_cost = 1.5
-		start_year = 1019
+		start_year = 1008
 
 		folder = {
 			name = industry_folder
@@ -1994,7 +1969,7 @@ technologies = {
 
 		categories = {
 			cat_industry
-			cat_synth_resources
+			cat_fuel
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -2019,8 +1994,6 @@ technologies = {
 		ai_research_weights = {
 			oil = -2.0
 		}
-
-		show_effect_as_desc = yes
 	}
 
 	oil_processing_6 = {
@@ -2034,7 +2007,7 @@ technologies = {
 		}
 
 		research_cost = 1.5
-		start_year = 1022
+		start_year = 1010
 
 		folder = {
 			name = industry_folder
@@ -2043,7 +2016,7 @@ technologies = {
 
 		categories = {
 			cat_industry
-			cat_synth_resources
+			cat_fuel
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -2068,18 +2041,14 @@ technologies = {
 		ai_research_weights = {
 			oil = -2.0
 		}
-
-		show_effect_as_desc = yes
 	}
 
 	
 	oil_processing_7 = {
-
-		synthetic_refinery_oil_consumption = 1
 		synthetic_refinery_fuel_outcome = 1
 
 		research_cost = 1.5
-		start_year = 1025
+		start_year = 1015
 
 		folder = {
 			name = industry_folder
@@ -2088,7 +2057,7 @@ technologies = {
 
 		categories = {
 			cat_industry
-			cat_synth_resources
+			cat_fuel
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -2113,8 +2082,6 @@ technologies = {
 		ai_research_weights = {
 			oil = -2.0
 		}
-
-		show_effect_as_desc = yes
 	}
 
 	#####################################
@@ -2135,7 +2102,7 @@ technologies = {
 			is_special_project_completed = sp:sp_rubber_processing
 		}
 		research_cost = 1.5
-		start_year = 1008
+		start_year = 992
 
 		folder = {
 			name = industry_folder
@@ -2169,8 +2136,6 @@ technologies = {
 		ai_research_weights = {
 			rubber = -2.0
 		}
-
-		show_effect_as_desc = yes
 	}
 
 	rubber_processing_1 = {
@@ -2188,7 +2153,7 @@ technologies = {
 		}
 
 		research_cost = 1.5
-		start_year = 1010
+		start_year = 995
 
 		folder = {
 			name = industry_folder
@@ -2241,7 +2206,7 @@ technologies = {
 		}
 
 		research_cost = 1.5
-		start_year = 1012
+		start_year = 999
 
 		folder = {
 			name = industry_folder
@@ -2275,8 +2240,6 @@ technologies = {
 		ai_research_weights = {
 			rubber = -2.0
 		}
-
-		show_effect_as_desc = yes
 	}
 
 	rubber_processing_3 = {
@@ -2294,7 +2257,7 @@ technologies = {
 		}
 
 		research_cost = 1.5
-		start_year = 1014
+		start_year = 1003
 
 		folder = {
 			name = industry_folder
@@ -2328,8 +2291,6 @@ technologies = {
 		ai_research_weights = {
 			rubber = -2.0
 		}
-
-		show_effect_as_desc = yes
 	}
 
 	rubber_processing_4 = {
@@ -2347,7 +2308,7 @@ technologies = {
 		}
 
 		research_cost = 1.5
-		start_year = 1016
+		start_year = 1005
 
 		folder = {
 			name = industry_folder
@@ -2381,8 +2342,6 @@ technologies = {
 		ai_research_weights = {
 			rubber = -2.0
 		}
-
-		show_effect_as_desc = yes
 	}
 
 	rubber_processing_5 = {
@@ -2400,7 +2359,7 @@ technologies = {
 		}
 
 		research_cost = 1.5
-		start_year = 1019
+		start_year = 1008
 
 		folder = {
 			name = industry_folder
@@ -2453,7 +2412,7 @@ technologies = {
 		}
 
 		research_cost = 1.5
-		start_year = 1022
+		start_year = 1010
 
 		folder = {
 			name = industry_folder
@@ -2487,8 +2446,6 @@ technologies = {
 		ai_research_weights = {
 			rubber = -2.0
 		}
-
-		show_effect_as_desc = yes
 	}
 	
 	rubber_processing_7 = {
@@ -2501,7 +2458,7 @@ technologies = {
 		}
 		is_special_project_tech = yes
 		research_cost = 1.5
-		start_year = 1025
+		start_year = 1015
 
 		folder = {
 			name = industry_folder
@@ -2535,8 +2492,6 @@ technologies = {
 		ai_research_weights = {
 			rubber = -2.0
 		}
-
-		show_effect_as_desc = yes
 	}
 
 	#####################################
@@ -2623,7 +2578,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
-		start_year = 1008
+		start_year = 986
 		categories = {
 			cat_industry
 			cat_construction
@@ -2670,7 +2625,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
-		start_year = 1010
+		start_year = 990
 		categories = {
 			cat_industry
 			cat_construction
@@ -2725,7 +2680,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
-		start_year = 1012
+		start_year = 992
 
 		categories = {
 			cat_industry
@@ -2773,7 +2728,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
-		start_year = 1014
+		start_year = 995
 
 		categories = {
 			cat_industry
@@ -2812,7 +2767,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
-		start_year = 1016
+		start_year = 999
 
 		categories = {
 			cat_industry
@@ -2845,7 +2800,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
-		start_year = 1019
+		start_year = 1003
 		categories = {
 			cat_industry
 			cat_construction
@@ -2877,7 +2832,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
-		start_year = 1022
+		start_year = 1005
 
 		categories = {
 			cat_industry
@@ -2909,7 +2864,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1025
+		start_year = 1008
 
 		categories = {
 			cat_industry
@@ -2939,6 +2894,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
+		start_year = 982
 		categories = {
 			cat_industry
 			cat_resources
@@ -2989,7 +2945,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1008
+		start_year = 986
 
 		categories = {
 			cat_industry
@@ -3041,7 +2997,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1010
+		start_year = 990
 
 		categories = {
 			cat_industry
@@ -3093,7 +3049,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1012
+		start_year = 992
 
 		categories = {
 			cat_industry
@@ -3145,7 +3101,7 @@ technologies = {
 		}
 
 		research_cost = 2
-		start_year = 1014
+		start_year = 995
 
 		categories = {
 			cat_industry
@@ -3194,7 +3150,7 @@ technologies = {
 		local_resources_factor = 0.05
 
 		research_cost = 2
-		start_year = 1016
+		start_year = 999
 
 		categories = {
 			cat_industry
@@ -3244,7 +3200,7 @@ technologies = {
 		local_resources_factor = 0.05
 
 		research_cost = 2
-		start_year = 1019
+		start_year = 1003
 
 		categories = {
 			cat_industry
@@ -3294,7 +3250,7 @@ technologies = {
 		local_resources_factor = 0.03
 
 		research_cost = 2
-		start_year = 1022
+		start_year = 1005
 
 		categories = {
 			cat_industry
@@ -3344,7 +3300,7 @@ technologies = {
 		local_resources_factor = 0.02
 
 		research_cost = 2
-		start_year = 1025
+		start_year = 1008
 
 		categories = {
 			cat_industry
@@ -3422,7 +3378,7 @@ technologies = {
 	}
 	roads_1 = {
 		research_cost = 2
-		start_year = 963
+		start_year = 986
 		#enable_building = {
 		#	building = infrastructure
 		#	level = 2
@@ -3452,7 +3408,7 @@ technologies = {
 	}
 	roads_2 = {
 		research_cost = 2
-		start_year = 964
+		start_year = 990
 		categories = {
 			cat_construction
 			cat_infrastructure
@@ -3478,7 +3434,7 @@ technologies = {
 	}
 	roads_3 = {
 		research_cost = 2
-		start_year = 964
+		start_year = 992
 		#enable_building = {
 		#	building = infrastructure
 		#	level = 4
@@ -3508,7 +3464,7 @@ technologies = {
 	}
 	roads_4 = {
 		research_cost = 2
-		start_year = 964
+		start_year = 995
 		#enable_building = {
 		#	building = infrastructure
 		#	level = 5
@@ -3564,7 +3520,7 @@ technologies = {
 	}
 	rails_1 = {
 		research_cost = 2
-		start_year = 963
+		start_year = 986
 		categories = {
 			cat_construction
 			cat_infrastructure
@@ -3590,7 +3546,7 @@ technologies = {
 	}
 	rails_2 = {
 		research_cost = 2
-		start_year = 964
+		start_year = 990
 		categories = {
 			cat_construction
 			cat_infrastructure
@@ -3616,7 +3572,7 @@ technologies = {
 	}
 	rails_3 = {
 		research_cost = 2
-		start_year = 964
+		start_year = 992
 		categories = {
 			cat_construction
 			cat_infrastructure
@@ -3642,7 +3598,7 @@ technologies = {
 	}
 	rails_4 = {
 		research_cost = 2
-		start_year = 964
+		start_year = 995
 		categories = {
 			cat_construction
 			cat_infrastructure
@@ -3686,6 +3642,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
+		start_year = 982
 		folder = {
 			name = industry_folder
 			position = { 
@@ -3697,7 +3654,12 @@ technologies = {
 			base = 4
 		}
 		categories = {
-			industry
+			cat_industry
+			cat_metallurgy
+			cat_steel_production
+			cat_aluminium_production
+			cat_tungsten_production
+			cat_chromium_production
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -3770,6 +3732,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
+		start_year = 986
 		folder = {
 			name = industry_folder
 			position = { 
@@ -3781,7 +3744,9 @@ technologies = {
 			base = 4
 		}
 		categories = {
-			industry
+			cat_industry
+			cat_metallurgy
+			cat_steel_production
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -3795,6 +3760,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
+		start_year = 990
 		folder = {
 			name = industry_folder
 			position = { 
@@ -3806,7 +3772,9 @@ technologies = {
 			base = 4
 		}
 		categories = {
-			industry
+			cat_industry
+			cat_metallurgy
+			cat_steel_production
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -3824,6 +3792,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
+		start_year = 992
 		folder = {
 			name = industry_folder
 			position = { 
@@ -3835,7 +3804,9 @@ technologies = {
 			base = 4
 		}
 		categories = {
-			industry
+			cat_industry
+			cat_metallurgy
+			cat_steel_production
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -3849,6 +3820,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
+		start_year = 995
 		folder = {
 			name = industry_folder
 			position = { 
@@ -3860,7 +3832,9 @@ technologies = {
 			base = 4
 		}
 		categories = {
-			industry
+			cat_industry
+			cat_metallurgy
+			cat_steel_production
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -3880,6 +3854,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
+		start_year = 999
 		folder = {
 			name = industry_folder
 			position = { 
@@ -3891,7 +3866,9 @@ technologies = {
 			base = 4
 		}
 		categories = {
-			industry
+			cat_industry
+			cat_metallurgy
+			cat_steel_production
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -3910,6 +3887,7 @@ technologies = {
 			}
 		}
 		research_cost = 2
+		start_year = 1003
 		folder = {
 			name = industry_folder
 			position = { 
@@ -3921,7 +3899,9 @@ technologies = {
 			base = 4
 		}
 		categories = {
-			industry
+			cat_industry
+			cat_metallurgy
+			cat_steel_production
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -3936,6 +3916,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
+		start_year = 986
 		folder = {
 			name = industry_folder
 			position = { 
@@ -3947,7 +3928,9 @@ technologies = {
 			base = 4
 		}
 		categories = {
-			industry
+			cat_industry
+			cat_metallurgy
+			cat_aluminium_production
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -3969,6 +3952,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
+		start_year = 990
 		folder = {
 			name = industry_folder
 			position = { 
@@ -3980,7 +3964,9 @@ technologies = {
 			base = 4
 		}
 		categories = {
-			industry
+			cat_industry
+			cat_metallurgy
+			cat_aluminium_production
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -4002,6 +3988,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
+		start_year = 992
 		folder = {
 			name = industry_folder
 			position = { 
@@ -4013,7 +4000,9 @@ technologies = {
 			base = 4
 		}
 		categories = {
-			industry
+			cat_industry
+			cat_metallurgy
+			cat_aluminium_production
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -4030,6 +4019,7 @@ technologies = {
 		aluminium_plant_aluminium_outcome = 1
 		production_cost_aluminium_plant_factor = -0.05
 		research_cost = 2
+		start_year = 995
 		path = {
 			leads_to_tech = aluminium_plant_upgrade_4
 			research_cost_coeff = 1
@@ -4045,7 +4035,9 @@ technologies = {
 			base = 4
 		}
 		categories = {
-			industry
+			cat_industry
+			cat_metallurgy
+			cat_aluminium_production
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -4060,6 +4052,7 @@ technologies = {
 		aluminium_plant_aluminium_outcome = 1
 		production_cost_aluminium_plant_factor = 0.05
 		research_cost = 2
+		start_year = 999
 		path = {
 			leads_to_tech = aluminium_plant_upgrade_5
 			research_cost_coeff = 1
@@ -4075,7 +4068,9 @@ technologies = {
 			base = 4
 		}
 		categories = {
-			industry
+			cat_industry
+			cat_metallurgy
+			cat_aluminium_production
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -4090,6 +4085,7 @@ technologies = {
 		aluminium_plant_aluminium_outcome = 1
 		production_cost_aluminium_plant_factor = 0.1
 		research_cost = 2
+		start_year = 1003
 		folder = {
 			name = industry_folder
 			position = { 
@@ -4101,7 +4097,9 @@ technologies = {
 			base = 4
 		}
 		categories = {
-			industry
+			cat_industry
+			cat_metallurgy
+			cat_aluminium_production
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -4116,6 +4114,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
+		start_year = 986
 		folder = {
 			name = industry_folder
 			position = { 
@@ -4127,7 +4126,9 @@ technologies = {
 			base = 4
 		}
 		categories = {
-			industry
+			cat_industry
+			cat_metallurgy
+			cat_tungsten_production
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -4144,6 +4145,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
+		start_year = 990
 		folder = {
 			name = industry_folder
 			position = { 
@@ -4155,7 +4157,9 @@ technologies = {
 			base = 4
 		}
 		categories = {
-			industry
+			cat_industry
+			cat_metallurgy
+			cat_tungsten_production
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -4169,6 +4173,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2
+		start_year = 992
 		folder = {
 			name = industry_folder
 			position = { 
@@ -4180,7 +4185,9 @@ technologies = {
 			base = 4
 		}
 		categories = {
-			industry
+			cat_industry
+			cat_metallurgy
+			cat_tungsten_production
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -4199,6 +4206,7 @@ technologies = {
 		}
 		production_cost_tungsten_plant_factor = -0.05
 		research_cost = 2
+		start_year = 995
 		path = {
 			leads_to_tech = tungsten_plant_upgrade_4
 			research_cost_coeff = 1
@@ -4214,7 +4222,9 @@ technologies = {
 			base = 4
 		}
 		categories = {
-			industry
+			cat_industry
+			cat_metallurgy
+			cat_tungsten_production
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -4228,6 +4238,7 @@ technologies = {
 		tungsten_plant_scheelitis_consumption = 1
 		tungsten_plant_tungsten_outcome = 1
 		research_cost = 2
+		start_year = 999
 		path = {
 			leads_to_tech = tungsten_plant_upgrade_5
 			research_cost_coeff = 1
@@ -4243,7 +4254,9 @@ technologies = {
 			base = 4
 		}
 		categories = {
-			industry
+			cat_industry
+			cat_metallurgy
+			cat_tungsten_production
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -4257,6 +4270,7 @@ technologies = {
 		tungsten_plant_scheelitis_consumption = 1
 		tungsten_plant_tungsten_outcome = 1
 		research_cost = 2
+		start_year = 1003
 		folder = {
 			name = industry_folder
 			position = { 
@@ -4268,7 +4282,9 @@ technologies = {
 			base = 4
 		}
 		categories = {
-			industry
+			cat_industry
+			cat_metallurgy
+			cat_tungsten_production
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -4279,6 +4295,7 @@ technologies = {
 		chromium_plant_chromium_outcome = 1
 		chromium_plant_penalty_reduction = 0.05
 		research_cost = 2
+		start_year = 986
 		path = {
 			leads_to_tech = chromium_plant_upgrade_1
 			research_cost_coeff = 1
@@ -4294,7 +4311,9 @@ technologies = {
 			base = 4
 		}
 		categories = {
-			industry
+			cat_industry
+			cat_metallurgy
+			cat_chromium_production
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -4309,6 +4328,7 @@ technologies = {
 		chromium_plant_chromium_outcome = 1
 		chromium_plant_penalty_reduction = 0.05
 		research_cost = 2
+		start_year = 990
 		path = {
 			leads_to_tech = chromium_plant_upgrade_2
 			research_cost_coeff = 1
@@ -4324,7 +4344,9 @@ technologies = {
 			base = 4
 		}
 		categories = {
-			industry
+			cat_industry
+			cat_metallurgy
+			cat_chromium_production
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -4339,6 +4361,7 @@ technologies = {
 		chromium_plant_chromium_outcome = 1
 		chromium_plant_penalty_reduction = 0.05
 		research_cost = 2
+		start_year = 992
 		path = {
 			leads_to_tech = chromium_plant_upgrade_3
 			research_cost_coeff = 1
@@ -4354,7 +4377,9 @@ technologies = {
 			base = 4
 		}
 		categories = {
-			industry
+			cat_industry
+			cat_metallurgy
+			cat_chromium_production
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -4371,6 +4396,7 @@ technologies = {
 		chromium_plant_chromium_outcome = 1
 		chromium_plant_penalty_reduction = 0.05
 		research_cost = 2
+		start_year = 995
 		path = {
 			leads_to_tech = chromium_plant_upgrade_4
 			research_cost_coeff = 1
@@ -4386,7 +4412,9 @@ technologies = {
 			base = 4
 		}
 		categories = {
-			industry
+			cat_industry
+			cat_metallurgy
+			cat_chromium_production
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -4397,6 +4425,7 @@ technologies = {
 		chromium_plant_chromium_outcome = 1
 		chromium_plant_penalty_reduction = 0.05
 		research_cost = 2
+		start_year = 999
 		path = {
 			leads_to_tech = chromium_plant_upgrade_5
 			research_cost_coeff = 1
@@ -4412,7 +4441,9 @@ technologies = {
 			base = 4
 		}
 		categories = {
-			industry
+			cat_industry
+			cat_metallurgy
+			cat_chromium_production
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -4427,6 +4458,7 @@ technologies = {
 		chromium_plant_chromium_outcome = 1
 		chromium_plant_penalty_reduction = 0.05
 		research_cost = 2
+		start_year = 1003
 		folder = {
 			name = industry_folder
 			position = { 
@@ -4438,7 +4470,9 @@ technologies = {
 			base = 4
 		}
 		categories = {
-			industry
+			cat_industry
+			cat_metallurgy
+			cat_chromium_production
 		}
 		special_project_specialization = { 
 			specialization_industry
@@ -4478,6 +4512,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1
+		start_year = 982
 		folder = {
 			name = industry_folder
 			position = { 
@@ -4504,6 +4539,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1
+		start_year = 986
 		folder = {
 			name = industry_folder
 			position = { 
@@ -4538,6 +4574,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1
+		start_year = 990
 		folder = {
 			name = industry_folder
 			position = { 
@@ -4564,6 +4601,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1
+		start_year = 992
 		folder = {
 			name = industry_folder
 			position = { 
@@ -4598,6 +4636,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1
+		start_year = 995
 		folder = {
 			name = industry_folder
 			position = { 
@@ -4624,6 +4663,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1
+		start_year = 999
 		folder = {
 			name = industry_folder
 			position = { 
@@ -4658,6 +4698,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1
+		start_year = 1003
 		folder = {
 			name = industry_folder
 			position = { 
@@ -4684,6 +4725,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1
+		start_year = 1005
 		folder = {
 			name = industry_folder
 			position = { 
@@ -4718,6 +4760,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1
+		start_year = 1008
 		folder = {
 			name = industry_folder
 			position = { 
@@ -4740,6 +4783,7 @@ technologies = {
 			level = 20
 		}
 		research_cost = 1
+		start_year = 1010
 		folder = {
 			name = industry_folder
 			position = { 
@@ -4766,6 +4810,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1
+		start_year = 986
 		folder = {
 			name = industry_folder
 			position = { 
@@ -4790,6 +4835,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1
+		start_year = 990
 		folder = {
 			name = industry_folder
 			position = { 
@@ -4814,6 +4860,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1
+		start_year = 992
 		folder = {
 			name = industry_folder
 			position = { 
@@ -4837,6 +4884,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1
+		start_year = 995
 		folder = {
 			name = industry_folder
 			position = { 
@@ -4861,6 +4909,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1
+		start_year = 999
 		folder = {
 			name = industry_folder
 			position = { 
@@ -4884,6 +4933,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1
+		start_year = 1003
 		folder = {
 			name = industry_folder
 			position = { 
@@ -4909,6 +4959,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1
+		start_year = 1005
 		folder = {
 			name = industry_folder
 			position = { 
@@ -4932,6 +4983,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 1
+		start_year = 1008
 		folder = {
 			name = industry_folder
 			position = { 
@@ -4954,6 +5006,7 @@ technologies = {
 		facilities_consumption_factor = -0.025
 		army_consumption_factor = -0.025
 		research_cost = 1
+		start_year = 1010
 		folder = {
 			name = industry_folder
 			position = { 
