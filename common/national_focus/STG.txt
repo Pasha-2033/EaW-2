@@ -1024,9 +1024,17 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_word_publicity"
 			add_stability = 0.1
-			add_power_balance_value = {
-				id = STG_party_fragmentation_bop
-				value = 0.1
+			if = {
+				limit = {
+					has_power_balance = {
+						id = STG_party_fragmentation_bop
+					}
+				}
+				add_power_balance_value = {
+					id = STG_party_fragmentation_bop
+					value = 0.1
+					tooltip_side = martov_socialists
+				}
 			}
 		}
 		search_filters = {
@@ -1048,9 +1056,17 @@ focus_tree = {
 		y = 1
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_every_vote_counts"
-			add_power_balance_value = {
-				id = STG_party_fragmentation_bop
-				value = 0.1
+			if = {
+				limit = {
+					has_power_balance = {
+						id = STG_party_fragmentation_bop
+					}
+				}
+				add_power_balance_value = {
+					id = STG_party_fragmentation_bop
+					value = 0.1
+					tooltip_side = martov_socialists
+				}
 			}
 			add_popularity = {
 				ideology = socialism
