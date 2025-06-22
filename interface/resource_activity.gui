@@ -98,6 +98,7 @@ guiTypes = {
 				quadTextureSprite ="GFX_closebutton"
 				buttonFont = "hoi_16mbs"
 				clicksound = click_close
+				pdx_tooltip_delayed = "sub_10_tt"
 			}
 			buttonType = {
 				name = "synthetic_refinery_sub_5"
@@ -108,6 +109,7 @@ guiTypes = {
 				quadTextureSprite ="GFX_closebutton"
 				buttonFont = "hoi_16mbs"
 				clicksound = click_close
+				pdx_tooltip_delayed = "sub_5_tt"
 			}
 			instantTextBoxType = {
 				name = "synthetic_refinery_effectiveness"
@@ -118,6 +120,7 @@ guiTypes = {
 				maxHeight = 20
 				fixedsize = yes
 				format = center
+				pdx_tooltip_delayed = "effectiveness_tt"
 			}
 			buttonType = {
 				name = "synthetic_refinery_add_5"
@@ -128,6 +131,7 @@ guiTypes = {
 				quadTextureSprite ="GFX_closebutton"
 				buttonFont = "hoi_16mbs"
 				clicksound = click_close
+				pdx_tooltip_delayed = "add_5_tt"
 			}
 			buttonType = {
 				name = "synthetic_refinery_add_10"
@@ -138,6 +142,7 @@ guiTypes = {
 				quadTextureSprite ="GFX_closebutton"
 				buttonFont = "hoi_16mbs"
 				clicksound = click_close
+				pdx_tooltip_delayed = "add_10_tt"
 			}
 		}
 		buttonType = {
@@ -149,6 +154,15 @@ guiTypes = {
 			quadTextureSprite ="GFX_closebutton"
 			buttonFont = "hoi_16mbs"
 			clicksound = click_close
+		}
+		buttonType = {
+			name = "info_button"
+			position = { x = -55 y = 50 }
+			quadTextureSprite = "GFX_info"
+			buttonFont = "Main_14_black"
+			Orientation = "UPPER_RIGHT"
+			clicksound = click_close
+			pdx_tooltip = "find_info_in_encyclopedia"
 		}
 	}
 	containerWindowType = {
@@ -210,6 +224,7 @@ guiTypes = {
 			quadTextureSprite ="GFX_closebutton"
 			buttonFont = "hoi_16mbs"
 			clicksound = click_close
+			pdx_tooltip_delayed = "sub_10_tt"
 		}
 		buttonType = {
 			name = "sub_5"
@@ -220,6 +235,7 @@ guiTypes = {
 			quadTextureSprite ="GFX_closebutton"
 			buttonFont = "hoi_16mbs"
 			clicksound = click_close
+			pdx_tooltip_delayed = "sub_5_tt"
 		}
 		instantTextBoxType = {
 			name = "effectiveness"
@@ -230,6 +246,7 @@ guiTypes = {
 			maxHeight = 20
 			fixedsize = yes
 			format = center
+			pdx_tooltip_delayed = "effectiveness_tt"
 		}
 		buttonType = {
 			name = "add_5"
@@ -240,6 +257,7 @@ guiTypes = {
 			quadTextureSprite ="GFX_closebutton"
 			buttonFont = "hoi_16mbs"
 			clicksound = click_close
+			pdx_tooltip_delayed = "add_5_tt"
 		}
 		buttonType = {
 			name = "add_10"
@@ -250,6 +268,7 @@ guiTypes = {
 			quadTextureSprite ="GFX_closebutton"
 			buttonFont = "hoi_16mbs"
 			clicksound = click_close
+			pdx_tooltip_delayed = "add_10_tt"
 		}
 	}
 	containerWindowType = {

@@ -162,6 +162,14 @@ defined_text = {
 		localization_key = global_mechanic_sc_name
 	}
 	text = {
+		trigger = {
+			check_variable = {
+				i = 3
+			}
+		}
+		localization_key = global_mechanic_industry_name
+	}
+	text = {
 		localization_key = global_mechanic_loc_error
 	}
 }
@@ -190,6 +198,14 @@ defined_text = {
 			}
 		}
 		localization_key = global_mechanic_sc_desc
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				selected_global_mechanic = 3
+			}
+		}
+		localization_key = global_mechanic_industry_desc
 	}
 	text = {
 		localization_key = global_mechanic_loc_error
