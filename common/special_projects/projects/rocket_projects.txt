@@ -40,7 +40,7 @@ sp_rockets_flying_bomb = {
 		}
 		modifier = {
 			factor = 0.5 # Play a bit safe until we have radar
-			ROOT = { NOT = { has_tech = radio_detection } }
+			ROOT = { NOT = { has_tech = radio_detection_0 } }
 		}
 	}
 
@@ -355,7 +355,7 @@ sp_rockets_ballistic_missile = {
 		}
 		modifier = {
 			factor = 0.5 # Play a bit safe until we have radar
-			ROOT = { NOT = { has_tech = radio_detection } }
+			ROOT = { NOT = { has_tech = radio_detection_0 } }
 		}
 	}
 	
@@ -483,8 +483,8 @@ sp_rockets_ballistic_missile = {
 					FROM = {	
 						NOT = {
 							AND = {
-								has_tech = radio
-								has_tech = mechanical_computing
+								has_tech = radio_0
+								has_tech = computer_0
 							}
 						}
 					}

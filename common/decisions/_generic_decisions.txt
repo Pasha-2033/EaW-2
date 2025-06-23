@@ -30,7 +30,6 @@ political_actions = {
         		NOT = {
 					is_in_faction_with = ROOT
 				}
-				has_tech = nuclear_reactor
 				any_owned_state = {
 					nuclear_reactor > 0
 				}
@@ -45,7 +44,6 @@ political_actions = {
         		NOT = {
 					is_in_faction_with = ROOT
 				}
-				has_tech = nuclear_reactor
 				any_owned_state = {
 					nuclear_reactor > 0
 				}
@@ -57,10 +55,6 @@ political_actions = {
 		}
 		ai_will_do = {
 			factor = 1
-			modifier = {
-				factor = 0
-				any_other_country = { has_tech = nukes }
-			}
 		}
 	}
 	improved_worker_conditions = {
