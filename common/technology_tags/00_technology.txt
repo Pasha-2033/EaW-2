@@ -59,13 +59,34 @@ technology_categories = {
 technology_categories = {
 	cat_energy_weapons
 	cat_rocket_weapons
+	cat_magic
 }
 #electronics folder
 technology_categories = {
+	#special tech
+	cat_special_tech
+	cat_st_alloy
+	cat_st_energy
+	cat_st_explosives
+	#electronics
+	cat_electronics
+	cat_computing_tech
+	cat_radar_tech
+	cat_radio_tech
+	#encryption/decryption_tech
+	cat_encryption_tech
+	cat_decryption_tech
+	#fire control systems (not in navy, because of computer dependency)
+	cat_fire_control
 	#fortifications
 	cat_fortification
 	cat_coastal_fortification
 	cat_land_fortification
+	#nuclear (reactors, bombs, etc)
+	cat_nuclear
+	cat_nuclear_reactor
+	cat_nuclear_bomb
+	cat_nuclear_shelter
 }
 #indusry folder
 technology_categories = {
@@ -94,6 +115,10 @@ technology_categories = {
 	cat_fuel
 	cat_synth_resources
 }
+
+
+
+
 technology_categories = {
 	light_air
 	medium_air

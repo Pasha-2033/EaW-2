@@ -30,6 +30,10 @@ technologies = {
 				}
 			}
 		}
+		categories = {
+			cat_special_tech
+			cat_st_energy
+		}
 	}
 	high_pressure_steam_systems = {
 		research_cost = 1
@@ -54,6 +58,10 @@ technologies = {
 				}
 			}
 		}
+		categories = {
+			cat_special_tech
+			cat_st_energy
+		}
 	}
 	#special technologies (rockets)
 	reactivity_phenomenon = {
@@ -65,6 +73,10 @@ technologies = {
 				x = 0 
 				y = 0
 			}
+		}
+		categories = {
+			cat_special_tech
+			cat_st_energy
 		}
 	}
 	#special technologies (engines)
@@ -82,6 +94,10 @@ technologies = {
 				y = 0 
 			}
 		}
+		categories = {
+			cat_special_tech
+			cat_st_energy
+		}
 	}
 	overloaded_cores = {
 		research_cost = 1
@@ -92,6 +108,10 @@ technologies = {
 				x = 0 
 				y = 8 
 			}
+		}
+		categories = {
+			cat_special_tech
+			cat_st_energy
 		}
 	}
 	#special technologies (explosive materials)
@@ -119,6 +139,10 @@ technologies = {
 		ai_will_do = {
 			base = 1
 		}
+		categories = {
+			cat_special_tech
+			cat_st_explosives
+		}
 	}
 	nitroglycerine = {
 		path = {
@@ -141,6 +165,10 @@ technologies = {
 				y = 14
 			}
 		}
+		categories = {
+			cat_special_tech
+			cat_st_explosives
+		}
 	}
 	trotyl = {
 		research_cost = 1
@@ -159,6 +187,10 @@ technologies = {
 				y = 26
 			}
 		}
+		categories = {
+			cat_special_tech
+			cat_st_explosives
+		}
 	}
 	#special technologies (electricity)
 	magnetism_phenomenon = {
@@ -175,6 +207,10 @@ technologies = {
 				y = 0 
 			}
 		}
+		categories = {
+			cat_special_tech
+			cat_st_energy
+		}
 	}
 	direct_current = {
 		path = {
@@ -189,6 +225,10 @@ technologies = {
 				x = 0 
 				y = 4 
 			}
+		}
+		categories = {
+			cat_special_tech
+			cat_st_energy
 		}
 	}
 	alternating_current = {
@@ -205,6 +245,10 @@ technologies = {
 				y = 8 
 			}
 		}
+		categories = {
+			cat_special_tech
+			cat_st_energy
+		}
 	}
 	high_voltage_systems = {
 		research_cost = 1
@@ -215,6 +259,10 @@ technologies = {
 				x = 0 
 				y = 10 
 			}
+		}
+		categories = {
+			cat_special_tech
+			cat_st_energy
 		}
 	}
 	#special technologies (magic)
@@ -232,6 +280,11 @@ technologies = {
 				y = 0 
 			}
 		}
+		categories = {
+			cat_special_tech
+			cat_st_energy
+			cat_magic
+		}
 	}
 	#special technologies (alloys)
 	high_alloy_steel = {
@@ -248,6 +301,10 @@ technologies = {
 				y = 0 
 			}
 		}
+		categories = {
+			cat_special_tech
+			cat_st_alloy
+		}
 	}
 	polyphase_alloys = {
 		path = {
@@ -262,6 +319,10 @@ technologies = {
 				x = 0 
 				y = 8
 			}
+		}
+		categories = {
+			cat_special_tech
+			cat_st_alloy
 		}
 	}
 	superhard_alloys = {
@@ -278,6 +339,10 @@ technologies = {
 				y = 10 
 			}
 		}
+		categories = {
+			cat_special_tech
+			cat_st_alloy
+		}
 	}
 	alloys_with_whisker_like_nanocrystals = {
 		research_cost = 1
@@ -288,6 +353,10 @@ technologies = {
 				x = 0 
 				y = 12 
 			}
+		}
+		categories = {
+			cat_special_tech
+			cat_st_alloy
 		}
 	}
 
@@ -325,7 +394,7 @@ technologies = {
 		}
 
 		research_cost = 1
-		start_year = 1007
+		start_year = 990
 
 		folder = {
 			name = electronics_folder
@@ -347,12 +416,13 @@ technologies = {
 		}
 
 		categories = {
-			electronics
+			cat_electronics
+			cat_computing_tech
 		}
 
 
 	}
-
+	#radio
 	radio_0 = {
 
 		# units with radios can more efficiently join combats when there is room
@@ -369,7 +439,7 @@ technologies = {
 		}
 
 		research_cost = 1.75
-
+		start_year = 992
 		folder = {
 			name = electronics_folder
 			position = { x = -2 y = 2 }
@@ -402,7 +472,8 @@ technologies = {
 		}
 
 		categories = {
-			electronics
+			cat_electronics
+			cat_radio_tech
 		}
 	}
 	radio_1 = {
@@ -417,7 +488,7 @@ technologies = {
 		}
 
 		research_cost = 1.75
-
+		start_year = 992
 		folder = {
 			name = electronics_folder
 			position = { x = -3 y = 4 }
@@ -450,7 +521,8 @@ technologies = {
 		}
 
 		categories = {
-			electronics
+			cat_electronics
+			cat_radio_tech
 		}
 	}
 	radio_2 = {
@@ -471,7 +543,7 @@ technologies = {
 		enable_equipment_modules = { 
 			tank_radio_1
 		}
-
+		start_year = 996
 		folder = {
 			name = support_folder
 			position = { x = 11 y = 9 } # x = 12 y = 0
@@ -482,11 +554,12 @@ technologies = {
 		}
 
 		categories = {
-			electronics
+			cat_electronics
+			cat_radio_tech
 		}
 	}
 
-	###------> Old RDF <><> <><> <><> <><> <><>
+	#radio detection
 
 	radio_detection_0 = {
 		is_special_project_tech = yes
@@ -501,7 +574,7 @@ technologies = {
 		}
 
 		research_cost = 1.75
-
+		start_year = 992
 		folder = {
 			name = electronics_folder
 			position = { x = -1 y = 4 }
@@ -512,8 +585,8 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			radar_tech
+			cat_electronics
+			cat_radar_tech
 		}
 	}
 	radio_detection_1 = {
@@ -528,7 +601,7 @@ technologies = {
 		static_anti_air_hit_chance_factor = 0.1
 
 		research_cost = 1.25
-		start_year = 1009
+		start_year = 994
 		enable_equipment_modules = { 
 			ship_radar_1
 			tank_radio_2
@@ -543,8 +616,8 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			radar_tech
+			cat_electronics
+			cat_radar_tech
 		}
 
 		enable_building = {
@@ -572,7 +645,7 @@ technologies = {
 		static_anti_air_hit_chance_factor = 0.1
 
 		research_cost = 1.25
-		start_year = 1010
+		start_year = 996
 
 		folder = {
 			name = electronics_folder
@@ -584,8 +657,8 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			radar_tech
+			cat_electronics
+			cat_radar_tech
 		}
 	}
 
@@ -610,7 +683,7 @@ technologies = {
 		}
 
 		research_cost = 1.25
-		start_year = 1011
+		start_year = 998
 
 		folder = {
 			name = electronics_folder
@@ -622,8 +695,8 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			radar_tech
+			cat_electronics
+			cat_radar_tech
 		}
 	}
 
@@ -645,7 +718,7 @@ technologies = {
 		}		
 
 		research_cost = 1.25
-		start_year = 1012
+		start_year = 1001
 
 		folder = {
 			name = electronics_folder
@@ -657,8 +730,8 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			radar_tech
+			cat_electronics
+			cat_radar_tech
 		}
 	}
 
@@ -682,7 +755,7 @@ technologies = {
 		static_anti_air_hit_chance_factor = 0.1
 
 		research_cost = 1.25
-		start_year = 1014
+		start_year = 1007
 
 		folder = {
 			name = electronics_folder
@@ -694,8 +767,8 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			radar_tech
+			cat_electronics
+			cat_radar_tech
 		}
 	}
 	radio_detection_6 = {
@@ -714,7 +787,7 @@ technologies = {
 		static_anti_air_hit_chance_factor = 0.1
 
 		research_cost = 1.5
-		start_year = 1016
+		start_year = 1014
 
 
 		folder = {
@@ -727,8 +800,8 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			radar_tech
+			cat_electronics
+			cat_radar_tech
 		}
 	}
 
@@ -767,8 +840,8 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			radar_tech
+			cat_electronics
+			cat_radar_tech
 		}
 	}
 
@@ -802,12 +875,12 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			radar_tech
+			cat_electronics
+			cat_radar_tech
 		}
 	}
 
-	###------> X <><> <><> <><> <><> <><>
+	#computers
 	computer_0 = {
 
 		# small boost to research speed
@@ -824,7 +897,7 @@ technologies = {
 		}
 
 		research_cost = 2.5
-
+		start_year = 992
 		folder = {
 			name = electronics_folder
 			position = { x = 3 y = 2 }
@@ -835,8 +908,8 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			computing_tech
+			cat_electronics
+			cat_computing_tech
 		}
 	}
 
@@ -870,7 +943,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2.5
-		start_year = 1009
+		start_year = 994
 
 		folder = {
 			name = electronics_folder
@@ -892,10 +965,8 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			encryption_tech
-			decryption_tech
-			computing_tech
+			cat_electronics
+			cat_computing_tech
 		}
 	}
 
@@ -931,7 +1002,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		research_cost = 2.5
-		start_year = 1011
+		start_year = 998
 
 		folder = {
 			name = electronics_folder
@@ -943,10 +1014,8 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			encryption_tech
-			decryption_tech
-			computing_tech
+			cat_electronics
+			cat_computing_tech
 		}
 	}
 
@@ -980,7 +1049,7 @@ technologies = {
 		}
 
 		research_cost = 2.5
-		start_year = 1013
+		start_year = 1004
 
 		folder = {
 			name = electronics_folder
@@ -1002,10 +1071,8 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			encryption_tech
-			decryption_tech
-			computing_tech
+			cat_electronics
+			cat_computing_tech
 		}
 	}
 	computer_4 = {
@@ -1043,7 +1110,7 @@ technologies = {
 		}
 
 		research_cost = 2.5
-		start_year = 1015
+		start_year = 1010
 
 		folder = {
 			name = electronics_folder
@@ -1055,10 +1122,8 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			encryption_tech
-			decryption_tech
-			computing_tech
+			cat_electronics
+			cat_computing_tech
 		}
 	}
 
@@ -1112,10 +1177,8 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			encryption_tech
-			decryption_tech
-			computing_tech
+			cat_electronics
+			cat_computing_tech
 		}
 	}
 
@@ -1163,10 +1226,8 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			encryption_tech
-			decryption_tech
-			computing_tech
+			cat_electronics
+			cat_computing_tech
 		}
 	}
 
@@ -1192,10 +1253,8 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			encryption_tech
-			decryption_tech
-			computing_tech
+			cat_electronics
+			cat_computing_tech
 		}
 	}
 
@@ -1209,7 +1268,7 @@ technologies = {
 			NOT = { has_dlc = "La Resistance" }
 		}
 		research_cost = 1
-		start_year = 1009
+		start_year = 994
 
 		folder = {
 			name = electronics_folder
@@ -1229,8 +1288,7 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			encryption_tech
+			cat_encryption_tech
 		}
 	}
 
@@ -1242,7 +1300,7 @@ technologies = {
 			NOT = { has_dlc = "La Resistance" }
 		}
 		research_cost = 1
-		start_year = 1011
+		start_year = 998
 
 		folder = {
 			name = electronics_folder
@@ -1262,8 +1320,7 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			encryption_tech
+			cat_encryption_tech
 		}
 	}
 
@@ -1275,7 +1332,7 @@ technologies = {
 			NOT = { has_dlc = "La Resistance" }
 		}
 		research_cost = 1
-		start_year = 1013
+		start_year = 1004
 
 		folder = {
 			name = electronics_folder
@@ -1295,8 +1352,7 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			encryption_tech
+			cat_encryption_tech
 		}
 	}
 	encryption_3 = {
@@ -1307,7 +1363,7 @@ technologies = {
 			NOT = { has_dlc = "La Resistance" }
 		}
 		research_cost = 1
-		start_year = 1015
+		start_year = 1010
 
 		folder = {
 			name = electronics_folder
@@ -1319,8 +1375,7 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			encryption_tech
+			cat_encryption_tech
 		}
 	}
 	encryption_4 = {
@@ -1343,8 +1398,7 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			encryption_tech
+			cat_encryption_tech
 		}
 	}
 	encryption_5 = {
@@ -1367,8 +1421,7 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			encryption_tech
+			cat_encryption_tech
 		}
 	}
 	#encryption LaR
@@ -1380,7 +1433,7 @@ technologies = {
 			has_dlc = "La Resistance"
 		}
 		research_cost = 1.5
-		start_year = 1009
+		start_year = 994
 	
 		folder = {
 			name = electronics_folder
@@ -1400,8 +1453,7 @@ technologies = {
 		}
 	
 		categories = {
-			electronics
-			encryption_tech
+			cat_encryption_tech
 		}
 	}
 	
@@ -1413,7 +1465,7 @@ technologies = {
 			has_dlc = "La Resistance"
 		}
 		research_cost = 1.5
-		start_year = 1011
+		start_year = 998
 	
 		folder = {
 			name = electronics_folder
@@ -1433,8 +1485,7 @@ technologies = {
 		}
 	
 		categories = {
-			electronics
-			encryption_tech
+			cat_encryption_tech
 		}
 	}
 	
@@ -1446,7 +1497,7 @@ technologies = {
 			has_dlc = "La Resistance"
 		}
 		research_cost = 1.5
-		start_year = 1013
+		start_year = 1004
 	
 		folder = {
 			name = electronics_folder
@@ -1466,8 +1517,7 @@ technologies = {
 		}
 	
 		categories = {
-			electronics
-			encryption_tech
+			cat_encryption_tech
 		}
 	}
 	encryption_3_lar = {
@@ -1478,7 +1528,7 @@ technologies = {
 			has_dlc = "La Resistance"
 		}
 		research_cost = 1.5
-		start_year = 1015
+		start_year = 1010
 	
 		folder = {
 			name = electronics_folder
@@ -1490,8 +1540,7 @@ technologies = {
 		}
 	
 		categories = {
-			electronics
-			encryption_tech
+			cat_encryption_tech
 		}
 	}
 	encryption_4_lar = {
@@ -1514,8 +1563,7 @@ technologies = {
 		}
 	
 		categories = {
-			electronics
-			encryption_tech
+			cat_encryption_tech
 		}
 	}
 	encryption_5_lar = {
@@ -1538,8 +1586,7 @@ technologies = {
 		}
 	
 		categories = {
-			electronics
-			encryption_tech
+			cat_encryption_tech
 		}
 	}
 	#decryption
@@ -1551,7 +1598,7 @@ technologies = {
 			NOT = { has_dlc = "La Resistance" }
 		}
 		research_cost = 1.5
-		start_year = 1009
+		start_year = 994
 
 		folder = {
 			name = electronics_folder
@@ -1571,8 +1618,7 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			decryption_tech
+			cat_decryption_tech
 		}
 	}
 
@@ -1584,7 +1630,7 @@ technologies = {
 			NOT = { has_dlc = "La Resistance" }
 		}
 		research_cost = 1.5
-		start_year = 1011
+		start_year = 998
 
 		folder = {
 			name = electronics_folder
@@ -1604,8 +1650,7 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			decryption_tech
+			cat_decryption_tech
 		}
 	}
 
@@ -1617,7 +1662,7 @@ technologies = {
 			NOT = { has_dlc = "La Resistance" }
 		}
 		research_cost = 1.5
-		start_year = 1013
+		start_year = 1004
 
 		folder = {
 			name = electronics_folder
@@ -1637,8 +1682,7 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			decryption_tech
+			cat_decryption_tech
 		}
 	}
 	decryption_3 = {
@@ -1649,7 +1693,7 @@ technologies = {
 			NOT = { has_dlc = "La Resistance" }
 		}
 		research_cost = 1.5
-		start_year = 1015
+		start_year = 1010
 
 		folder = {
 			name = electronics_folder
@@ -1661,8 +1705,7 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			decryption_tech
+			cat_decryption_tech
 		}
 	}
 
@@ -1686,8 +1729,7 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			decryption_tech
+			cat_decryption_tech
 		}
 	}
 
@@ -1712,8 +1754,7 @@ technologies = {
 		}
 
 		categories = {
-			electronics
-			decryption_tech
+			cat_decryption_tech
 		}
 	}
 	#decryption LaR
@@ -1725,7 +1766,7 @@ technologies = {
 			has_dlc = "La Resistance"
 		}
 		research_cost = 1
-		start_year = 1009
+		start_year = 994
 	
 		folder = {
 			name = electronics_folder
@@ -1749,8 +1790,7 @@ technologies = {
 		}
 	
 		categories = {
-			electronics
-			decryption_tech
+			cat_decryption_tech
 		}
 	}
 	
@@ -1762,7 +1802,7 @@ technologies = {
 			has_dlc = "La Resistance"
 		}
 		research_cost = 1
-		start_year = 1011
+		start_year = 998
 	
 		folder = {
 			name = electronics_folder
@@ -1786,8 +1826,7 @@ technologies = {
 		}
 	
 		categories = {
-			electronics
-			decryption_tech
+			cat_decryption_tech
 		}
 	}
 	
@@ -1799,7 +1838,7 @@ technologies = {
 			has_dlc = "La Resistance"
 		}
 		research_cost = 1
-		start_year = 1013
+		start_year = 1004
 	
 		folder = {
 			name = electronics_folder
@@ -1823,8 +1862,7 @@ technologies = {
 		}
 	
 		categories = {
-			electronics
-			decryption_tech
+			cat_decryption_tech
 		}
 	}
 	
@@ -1838,7 +1876,7 @@ technologies = {
 			has_dlc = "La Resistance"
 		}
 		research_cost = 1
-		start_year = 1015
+		start_year = 1010
 	
 		folder = {
 			name = electronics_folder
@@ -1854,8 +1892,7 @@ technologies = {
 		}
 	
 		categories = {
-			electronics
-			decryption_tech
+			cat_decryption_tech
 		}
 	}
 	
@@ -1885,8 +1922,7 @@ technologies = {
 		}
 	
 		categories = {
-			electronics
-			decryption_tech
+			cat_decryption_tech
 		}
 	}
 	
@@ -1916,8 +1952,7 @@ technologies = {
 		}
 	
 		categories = {
-			electronics
-			decryption_tech
+			cat_decryption_tech
 		}
 	}
 	#fire control system
@@ -1931,12 +1966,7 @@ technologies = {
 			ship_fire_control_system_1
 			ship_torpedo_data_computer_1
 		}
-		
-		dependencies = {
-			infantry_weapons_0 = 1
-		}
-
-		start_year = 1007
+		start_year = 992
 
 		research_cost = 1
 		
@@ -1961,10 +1991,10 @@ technologies = {
 		}
 		
 		categories = {
-			electronics
-			computing_tech
-			naval_equipment
-			fire_control
+			cat_naval_tech
+			cat_ship_module
+			cat_fire_control
+			cat_computing_tech
 		}
 	}
 
@@ -1974,7 +2004,7 @@ technologies = {
 			ship_fire_control_system_2
 			ship_torpedo_data_computer_2
 		}
-		start_year = 1009
+		start_year = 996
 		research_cost = 1
 		allow_branch = {
 			has_dlc = "Man the Guns"
@@ -2000,10 +2030,10 @@ technologies = {
 		}
 		
 		categories = {
-			electronics
-			computing_tech
-			naval_equipment
-			fire_control
+			cat_naval_tech
+			cat_ship_module
+			cat_fire_control
+			cat_computing_tech
 		}
 	}
 
@@ -2018,7 +2048,7 @@ technologies = {
 		}
 		
 		research_cost = 1
-		start_year = 1011
+		start_year = 1001
 		folder = {
 			name = electronics_folder
 			position = { x = 1 y = 12 }
@@ -2034,10 +2064,10 @@ technologies = {
 		}
 		
 		categories = {
-			electronics
-			computing_tech
-			naval_equipment
-			fire_control
+			cat_naval_tech
+			cat_ship_module
+			cat_fire_control
+			cat_computing_tech
 		}
 	}
 
@@ -2052,7 +2082,7 @@ technologies = {
 		}
 
 		research_cost = 1
-		start_year = 1013
+		start_year = 1007
 		folder = {
 			name = electronics_folder
 			position = { x = 1 y = 16 }
@@ -2068,10 +2098,10 @@ technologies = {
 		}
 		
 		categories = {
-			electronics
-			computing_tech
-			naval_equipment
-			fire_control
+			cat_naval_tech
+			cat_ship_module
+			cat_fire_control
+			cat_computing_tech
 		}
 	}
 
@@ -2086,7 +2116,7 @@ technologies = {
 		}
 
 		research_cost = 1
-		start_year = 1015
+		start_year = 1014
 		folder = {
 			name = electronics_folder
 			position = { x = 1 y = 20 }
@@ -2102,10 +2132,10 @@ technologies = {
 		}
 		
 		categories = {
-			electronics
-			computing_tech
-			naval_equipment
-			fire_control
+			cat_naval_tech
+			cat_ship_module
+			cat_fire_control
+			cat_computing_tech
 		}
 	}
 
@@ -2120,7 +2150,7 @@ technologies = {
 		}
 
 		research_cost = 1
-		start_year = 1018
+		start_year = 1020
 		folder = {
 			name = electronics_folder
 			position = { x = 1 y = 24 }
@@ -2136,10 +2166,10 @@ technologies = {
 		}
 		
 		categories = {
-			electronics
-			computing_tech
-			naval_equipment
-			fire_control
+			cat_naval_tech
+			cat_ship_module
+			cat_fire_control
+			cat_computing_tech
 		}
 	}
 	#todo
@@ -2349,6 +2379,99 @@ technologies = {
 			rocketry
 		}
 	}
+	semi_modern_rocket_engines = {
+
+		show_equipment_icon = yes
+
+		enable_equipments = {
+			rocket_interceptor_equipment_4
+			guided_missile_equipment_4
+		}
+
+		rocket_artillery = {
+			soft_attack = 0.05
+		}
+
+		rocket_artillery_brigade = {
+			soft_attack = 0.05
+		}
+		mot_rocket_artillery_brigade = {
+			soft_attack = 0.05
+		}
+		motorized_rocket_brigade = {
+			soft_attack = 0.05
+		}
+		static_anti_air_hit_chance_factor = 0.1
+		static_anti_air_damage_factor = 0.1
+		navy_anti_air_attack_factor = 0.10
+
+		path = {
+			leads_to_tech = modern_rocket_engines
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1023
+
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 10 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		categories = {
+			rocketry
+		}
+	}
+
+	modern_rocket_engines = {
+
+		show_equipment_icon = yes
+
+		# can build ICBMs!
+
+		enable_equipments = {
+			rocket_interceptor_equipment_5
+			guided_missile_equipment_5
+		}
+
+		rocket_artillery = {
+			soft_attack = 0.05
+		}
+
+		rocket_artillery_brigade = {
+			soft_attack = 0.05
+		}
+		mot_rocket_artillery_brigade = {
+			soft_attack = 0.05
+		}
+		motorized_rocket_brigade = {
+			soft_attack = 0.05
+		}
+
+		static_anti_air_hit_chance_factor = 0.1
+		static_anti_air_damage_factor = 0.1
+		navy_anti_air_attack_factor = 0.10
+
+		research_cost = 1.5
+		start_year = 1026
+
+		folder = {
+			name = electronics_folder
+			position = { x = 0 y = 12 }
+		}
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		categories = {
+			rocketry
+		}
+	}
 
 	###------> X <><> <><> <><> <><> <><>
 
@@ -2489,7 +2612,7 @@ technologies = {
 
 	radioactivity_activity = {
 		research_cost = 1.5
-		start_year = 1022
+		start_year = 1011
 		folder = {
 			name = electronics_folder
 			position = {
@@ -2504,13 +2627,20 @@ technologies = {
 		ai_will_do = {
 			base = 0
 		}
-		categories = {}
+		categories = {
+			cat_special_tech
+			cat_nuclear
+		}
 	}
 	atomic_research = {
 
 		research_speed_factor = 0.04
 		enable_building = {
 			building = anti_nuke_bunker
+			level = 1
+		}
+		enable_building = {
+			building = nuclear_facility
 			level = 1
 		}
 
@@ -2527,7 +2657,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		start_year = 1011
+		start_year = 1014
 		research_cost = 5
 
 		folder = {
@@ -2543,9 +2673,14 @@ technologies = {
 		}
 
 		categories = {
-			nuclear
+			cat_nuclear
 		}
-
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_nuclear_reactor_exploratory
+			}
+		}
 
 	}
 	#reactor init tech
@@ -2604,7 +2739,7 @@ technologies = {
 		is_special_project_tech = yes
 		# can build reactors
 
-		start_year = 1014
+		start_year = 1015
 		research_cost = 5
 
 		folder = {
@@ -2629,7 +2764,8 @@ technologies = {
 		}
 
 		categories = {
-			nuclear
+			cat_nuclear
+			cat_nuclear_bomb
 		}
 	}
 
@@ -2662,7 +2798,8 @@ technologies = {
 		nuclear_production = 1
 
 		categories = {
-			nuclear
+			cat_nuclear
+			cat_nuclear_bomb
 		}
 	}
 
@@ -2700,7 +2837,8 @@ technologies = {
 		}
 
 		categories = {
-			nuclear
+			cat_nuclear
+			cat_nuclear_bomb
 		}
 		show_effect_as_desc = yes
 	}
@@ -2740,7 +2878,8 @@ technologies = {
 		}
 
 		categories = {
-			nuclear
+			cat_nuclear
+			cat_nuclear_bomb
 		}
 		show_effect_as_desc = yes
 	}
@@ -2776,7 +2915,8 @@ technologies = {
 		}
 		
 		categories = {
-			nuclear
+			cat_nuclear
+			cat_nuclear_bomb
 		}
 		show_effect_as_desc = yes
 	}
@@ -2957,7 +3097,10 @@ technologies = {
 		ai_will_do = {
 			base = 1
 		}
-		categories = {}
+		categories = {
+			cat_nuclear
+			cat_nuclear_reactor
+		}
 	}
 	nuclear_reactor_improvements_1 = {
 		is_special_project_tech = yes
@@ -2977,7 +3120,10 @@ technologies = {
 		ai_will_do = {
 			base = 1
 		}
-		categories = {}
+		categories = {
+			cat_nuclear
+			cat_nuclear_reactor
+		}
 	}
 	nuclear_reactor_improvements_2 = {
 		is_special_project_tech = yes
@@ -2993,13 +3139,20 @@ technologies = {
 		ai_will_do = {
 			base = 1
 		}
-		categories = {}
+		categories = {
+			cat_nuclear
+			cat_nuclear_reactor
+		}
 	}
 	#thermonuclear reactor improvements
 	thermonuclear_reactor_improvements_0 = {
 		is_special_project_tech = yes
 		start_year = 1011
 		research_cost = 5
+		path = {
+			leads_to_tech = thermonuclear_reactor_improvements_1
+			research_cost_coeff = 1
+		}
 		folder = {
 			name = electronics_folder
 			position = {
@@ -3011,7 +3164,30 @@ technologies = {
 			base = 1
 		}
 
-		categories = {}
+		categories = {
+			cat_nuclear
+			cat_nuclear_reactor
+		}
+	}
+	thermonuclear_reactor_improvements_1 = {
+		is_special_project_tech = yes
+		start_year = 1011
+		research_cost = 5
+		folder = {
+			name = electronics_folder
+			position = {
+				x = 1
+				y = 10
+			}
+		}
+		ai_will_do = {
+			base = 1
+		}
+
+		categories = {
+			cat_nuclear
+			cat_nuclear_reactor
+		}
 	}
 	#antiradiation protection
 	nuclear_shelters_0 = {
@@ -3036,7 +3212,10 @@ technologies = {
 			building = anti_nuke_bunker
 			level = 5
 		}
-		categories = {}
+		categories = {
+			cat_nuclear
+			cat_nuclear_shelter
+		}
 	}
 	nuclear_shelters_1 = {
 		path = {
@@ -3060,7 +3239,10 @@ technologies = {
 			building = anti_nuke_bunker
 			level = 10
 		}
-		categories = {}
+		categories = {
+			cat_nuclear
+			cat_nuclear_shelter
+		}
 	}
 	nuclear_shelters_2 = {
 		path = {
@@ -3084,7 +3266,10 @@ technologies = {
 			building = anti_nuke_bunker
 			level = 15
 		}
-		categories = {}
+		categories = {
+			cat_nuclear
+			cat_nuclear_shelter
+		}
 	}
 	nuclear_shelters_3 = {
 		is_special_project_tech = yes
@@ -3104,145 +3289,9 @@ technologies = {
 			building = anti_nuke_bunker
 			level = 20
 		}
-		categories = {}
-	}
-
-	
-
-	
-
-	###------> New Computers <><> <><> <><> <><> <><>
-
-	
-
-
-
-	###------> New Codes <><> <><> <><> <><> <><>
-
-	
-
-	
-
-
-	###------> X <><> <><> <><> <><> <><>
-
-	###------> New Rocket Engines <><> <><> <><> <><> <><>
-
-	semi_modern_rocket_engines = {
-
-		show_equipment_icon = yes
-
-		enable_equipments = {
-			rocket_interceptor_equipment_4
-			guided_missile_equipment_4
-		}
-
-		rocket_artillery = {
-			soft_attack = 0.05
-		}
-
-		rocket_artillery_brigade = {
-			soft_attack = 0.05
-		}
-		mot_rocket_artillery_brigade = {
-			soft_attack = 0.05
-		}
-		motorized_rocket_brigade = {
-			soft_attack = 0.05
-		}
-		static_anti_air_hit_chance_factor = 0.1
-		static_anti_air_damage_factor = 0.1
-		navy_anti_air_attack_factor = 0.10
-
-		path = {
-			leads_to_tech = modern_rocket_engines
-			research_cost_coeff = 1
-		}
-
-		research_cost = 1.5
-		start_year = 1023
-
-		folder = {
-			name = electronics_folder
-			position = { x = 0 y = 10 }
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
 		categories = {
-			rocketry
+			cat_nuclear
+			cat_nuclear_shelter
 		}
 	}
-
-	modern_rocket_engines = {
-
-		show_equipment_icon = yes
-
-		# can build ICBMs!
-
-		enable_equipments = {
-			rocket_interceptor_equipment_5
-			guided_missile_equipment_5
-		}
-
-		rocket_artillery = {
-			soft_attack = 0.05
-		}
-
-		rocket_artillery_brigade = {
-			soft_attack = 0.05
-		}
-		mot_rocket_artillery_brigade = {
-			soft_attack = 0.05
-		}
-		motorized_rocket_brigade = {
-			soft_attack = 0.05
-		}
-
-		static_anti_air_hit_chance_factor = 0.1
-		static_anti_air_damage_factor = 0.1
-		navy_anti_air_attack_factor = 0.10
-
-		research_cost = 1.5
-		start_year = 1026
-
-		folder = {
-			name = electronics_folder
-			position = { x = 0 y = 12 }
-		}
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		categories = {
-			rocketry
-		}
-	}
-
-	###------> X <><> <><> <><> <><> <><>
-
-	lar_decryption_bonus_tech = {
-				
-		research_cost = 1.5 #Carrier Variant
-		start_year = 1007
-
-		# only from focus!!! #####
-		allow = {
-			always = no
-		}
-		decryption_power = 10
-
-		
-		ai_will_do = {
-			factor = 0
-		}
-		################
-	}
-
-	
-	
-	
 }
