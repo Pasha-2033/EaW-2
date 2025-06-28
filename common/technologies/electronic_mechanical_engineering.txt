@@ -2734,6 +2734,21 @@ technologies = {
 			level = 1
 		}
 	}
+	#bombs
+	allow_nuclear_bomb = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		nuclear_production = 1
+	}
+	allow_thermonuclear_bomb = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		thermonuclear_production = 1
+	}
 	#nuclear production and bombs
 	atomic_bomb_0 = {
 		is_special_project_tech = yes

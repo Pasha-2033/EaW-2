@@ -314,7 +314,10 @@ sp_nuclear_bomb = {
 			add_nuclear_bombs = 1
 			custom_effect_tooltip = sp_nuclear_bomb_tt
 			hidden_effect = {
-
+				set_technology = {
+					allow_nuclear_bomb = 1
+					popup = no
+				}
 			}
 		}
 
@@ -530,7 +533,7 @@ sp_thermo_nuclear_bomb = {
 			custom_effect_tooltip = sp_thermo_nuclear_bomb_tt
 			hidden_effect = {
 				set_technology = {
-					thermonuclear_bombs = 1
+					allow_thermonuclear_bomb = 1
 					popup = no
 				}
 			}
