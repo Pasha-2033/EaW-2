@@ -1,23 +1,14 @@
 @base_reward_weight = 2 #Base Reward weight value
 @reward_weight_factor_theme = 0.25 # Applied to factor - Used to reduce chances of repeating the same reward theme within the same project (ie. Failure 1 & Failure 2)
-
-
-
+@scientist_max_lvl = 5
+@scientist_lvl_border = 4 #should be = scientist_max_lvl - 1
 #Low Scientist XP gain
 sp_industry_generic_reward_scientist_xp_1 = {
-
-	fire_only_once = yes
-
+	fire_only_once = no
 	threshold = {
 		min = 0
 		max = 100
 	}
-
-	# ROOT is the project
-	# FROM is the Country
-	# var:facility_state is the State where the facility is (ensured to be set in this case)
-	# var:facility_province_id is the province ID where the facility is (ensured to be set in this case)
-	# var:scientist is the Scientist (ensured to be set in this case)
 	weight = {
 		base = @base_reward_weight
 		modifier = {
@@ -28,48 +19,42 @@ sp_industry_generic_reward_scientist_xp_1 = {
 			factor = 0
 			var:scientist = {
 				has_scientist_level = {
-					level > 4
+					level > @scientist_lvl_border
 					specialization = specialization_industry
 				}
 			}
 		}
 	}
-	
 	option = {
 		token = sp_industry_generic_reward_option_scientist_xp
-		
 		iteration_output = {
 			scientist_effects = {
 				if = {
 					limit = {
-						
+						has_scientist_level = {
+							level < @scientist_max_lvl
+							specialization = specialization_industry
+						}
 					}
 					add_scientist_xp = {
 						experience = constant:sp_scientist_xp_gain.low
 						specialization = specialization_industry
 					}
 				}
-				FROM = { set_project_flag = sp_industry_generic_reward_scientist_xp_flag }
+				FROM = { 
+					set_project_flag = sp_industry_generic_reward_scientist_xp_flag 
+				}
 			}
 		}
 	}
 }
-
 #Medium Scientist XP gain
 sp_industry_generic_reward_scientist_xp_2 = {
-
-	fire_only_once = yes
-
+	fire_only_once = no
 	threshold = {
 		min = 0
 		max = 100
 	}
-
-	# ROOT is the project
-	# FROM is the Country
-	# var:facility_state is the State where the facility is (ensured to be set in this case)
-	# var:facility_province_id is the province ID where the facility is (ensured to be set in this case)
-	# var:scientist is the Scientist (ensured to be set in this case)
 	weight = {
 		base = @base_reward_weight
 		modifier = {
@@ -80,22 +65,20 @@ sp_industry_generic_reward_scientist_xp_2 = {
 			factor = 0
 			var:scientist = {
 				has_scientist_level = {
-					level > 4
+					level > @scientist_lvl_border
 					specialization = specialization_industry
 				}
 			}
 		}
 	}
-	
 	option = {
 		token = sp_industry_generic_reward_option_scientist_xp
-		
 		iteration_output = {
 			scientist_effects = {
 				if = {
 					limit = {
 						has_scientist_level = {
-							level < 5
+							level < @scientist_max_lvl
 							specialization = specialization_industry
 						}
 					}
@@ -104,27 +87,20 @@ sp_industry_generic_reward_scientist_xp_2 = {
 						specialization = specialization_industry
 					}
 				}
-				FROM = { set_project_flag = sp_industry_generic_reward_scientist_xp_flag }
+				FROM = { 
+					set_project_flag = sp_industry_generic_reward_scientist_xp_flag 
+				}
 			}
 		}
 	}
 }
-
 #High Scientist XP gain
 sp_industry_generic_reward_scientist_xp_3 = {
-
-	fire_only_once = yes
-
+	fire_only_once = no
 	threshold = {
 		min = 0
 		max = 100
 	}
-
-	# ROOT is the project
-	# FROM is the Country
-	# var:facility_state is the State where the facility is (ensured to be set in this case)
-	# var:facility_province_id is the province ID where the facility is (ensured to be set in this case)
-	# var:scientist is the Scientist (ensured to be set in this case)
 	weight = {
 		base = @base_reward_weight
 		modifier = {
@@ -135,22 +111,20 @@ sp_industry_generic_reward_scientist_xp_3 = {
 			factor = 0
 			var:scientist = {
 				has_scientist_level = {
-					level > 4
+					level > @scientist_lvl_border
 					specialization = specialization_industry
 				}
 			}
 		}
 	}
-	
 	option = {
 		token = sp_industry_generic_reward_option_scientist_xp
-		
 		iteration_output = {
 			scientist_effects = {
 				if = {
 					limit = {
 						has_scientist_level = {
-							level < 5
+							level < @scientist_max_lvl
 							specialization = specialization_industry
 						}
 					}
@@ -159,9 +133,10 @@ sp_industry_generic_reward_scientist_xp_3 = {
 						specialization = specialization_industry
 					}
 				}
-				FROM = { set_project_flag = sp_industry_generic_reward_scientist_xp_flag }
+				FROM = { 
+					set_project_flag = sp_industry_generic_reward_scientist_xp_flag 
+				}
 			}
-
 			country_effects = {
 				add_breakthrough_progress = {
 					specialization = specialization_industry
@@ -173,18 +148,11 @@ sp_industry_generic_reward_scientist_xp_3 = {
 }
 #Low Extra Progress
 sp_industry_generic_reward_major_progress_1 = {
-	fire_only_once = yes
-
+	fire_only_once = no
 	threshold = {
 		min = 0
 		max = 100
 	}
-	
-	# ROOT is the project
-	# FROM is the Country
-	# var:facility_state is the State where the facility is (ensured to be set in this case)
-	# var:facility_province_id is the province ID where the facility is (ensured to be set in this case)
-	# var:scientist is the Scientist (ensured to be set in this case)
 	weight = {
 		base = @base_reward_weight
 		modifier = {
@@ -192,24 +160,20 @@ sp_industry_generic_reward_major_progress_1 = {
 			has_project_flag = sp_industry_generic_reward_major_progress_flag
 		}
 	}
-	
 	option = {
 		token = sp_industry_generic_reward_option_major_breakthrough
-		
 		iteration_output = {
 			country_effects = {
 				FROM = {
 					add_project_progress_ratio = constant:sp_progress.gain.low				
-					
 					set_project_flag = sp_industry_generic_reward_major_progress_flag
 				}
 			}
-
 			scientist_effects = {
 				if = {
 					limit = {
 						has_scientist_level = {
-							level < 5
+							level < @scientist_max_lvl
 							specialization = specialization_industry
 						}
 					}
@@ -222,21 +186,13 @@ sp_industry_generic_reward_major_progress_1 = {
 		}
 	}
 }
-
 #Medium Extra Progress
 sp_industry_generic_reward_major_progress_2 = {
-	fire_only_once = yes
-
+	fire_only_once = no
 	threshold = {
 		min = 0
 		max = 100
 	}
-	
-	# ROOT is the project
-	# FROM is the Country
-	# var:facility_state is the State where the facility is (ensured to be set in this case)
-	# var:facility_province_id is the province ID where the facility is (ensured to be set in this case)
-	# var:scientist is the Scientist (ensured to be set in this case)
 	weight = {
 		base = @base_reward_weight
 		modifier = {
@@ -244,24 +200,20 @@ sp_industry_generic_reward_major_progress_2 = {
 			has_project_flag = sp_industry_generic_reward_major_progress_flag
 		}
 	}
-	
 	option = {
 		token = sp_industry_generic_reward_option_major_breakthrough
-		
 		iteration_output = {
 			country_effects = {
 				FROM = {
-					add_project_progress_ratio = constant:sp_progress.gain.medium				
-					
+					add_project_progress_ratio = constant:sp_progress.gain.medium
 					set_project_flag = sp_industry_generic_reward_major_progress_flag
 				}
 			}
-
 			scientist_effects = {
 				if = {
 					limit = {
 						has_scientist_level = {
-							level < 5
+							level < @scientist_max_lvl
 							specialization = specialization_industry
 						}
 					}
@@ -274,21 +226,13 @@ sp_industry_generic_reward_major_progress_2 = {
 		}
 	}
 }
-
 #High Extra Progress
 sp_industry_generic_reward_major_progress_3 = {
-	fire_only_once = yes
-
+	fire_only_once = no
 	threshold = {
 		min = 0
 		max = 100
 	}
-	
-	# ROOT is the project
-	# FROM is the Country
-	# var:facility_state is the State where the facility is (ensured to be set in this case)
-	# var:facility_province_id is the province ID where the facility is (ensured to be set in this case)
-	# var:scientist is the Scientist (ensured to be set in this case)
 	weight = {
 		base = @base_reward_weight
 		modifier = {
@@ -296,29 +240,24 @@ sp_industry_generic_reward_major_progress_3 = {
 			has_project_flag = sp_industry_generic_reward_major_progress_flag
 		}
 	}
-	
 	option = {
 		token = sp_industry_generic_reward_option_major_breakthrough
-		
 		iteration_output = {
 			country_effects = {
 				FROM = {
 					add_project_progress_ratio = constant:sp_progress.gain.high				
-					
 					set_project_flag = sp_industry_generic_reward_major_progress_flag
 				}
-
 				add_breakthrough_progress = {
 					specialization = specialization_industry
 					value = sp_breakthrough_progress.medium
 				}
 			}
-
 			scientist_effects = {
 				if = {
 					limit = {
 						has_scientist_level = {
-							level < 5
+							level < @scientist_max_lvl
 							specialization = specialization_industry
 						}
 					}
@@ -331,21 +270,13 @@ sp_industry_generic_reward_major_progress_3 = {
 		}
 	}
 }
-
 #Low Progress Loss
 sp_industry_generic_reward_test_failure_1 = {
-	fire_only_once = yes
-	
+	fire_only_once = no
 	threshold = {
 		min = 15 #Loss is 5
 		max = 100
 	}
-	
-	# ROOT is the project
-	# FROM is the Country
-	# var:facility_state is the State where the facility is (ensured to be set in this case)
-	# var:facility_province_id is the province ID where the facility is (ensured to be set in this case)
-	# var:scientist is the Scientist (ensured to be set in this case)
 	weight = {
 		base = @base_reward_weight
 		modifier = {
@@ -353,24 +284,20 @@ sp_industry_generic_reward_test_failure_1 = {
 			has_project_flag = sp_industry_generic_reward_test_failure_flag
 		}
 	}
-	
 	option = {
 		token = sp_industry_generic_reward_option_test_failure
-		
 		iteration_output = {
 			country_effects = { 
 				FROM = {
 					add_project_progress_ratio = constant:sp_progress.loss.low
-
 					set_project_flag = sp_industry_generic_reward_test_failure_flag
 				}
 			}
-
 			scientist_effects = {
 				if = {
 					limit = {
 						has_scientist_level = {
-							level < 5
+							level < @scientist_max_lvl
 							specialization = specialization_industry
 						}
 					}
@@ -383,21 +310,13 @@ sp_industry_generic_reward_test_failure_1 = {
 		}
 	}
 }
-
 #Medium Progress Loss
 sp_industry_generic_reward_test_failure_2 = {
-	fire_only_once = yes
-	
+	fire_only_once = no
 	threshold = {
 		min = 30 #Loss is 10
 		max = 100
 	}
-	
-	# ROOT is the project
-	# FROM is the Country
-	# var:facility_state is the State where the facility is (ensured to be set in this case)
-	# var:facility_province_id is the province ID where the facility is (ensured to be set in this case)
-	# var:scientist is the Scientist (ensured to be set in this case)
 	weight = {
 		base = @base_reward_weight
 		modifier = {
@@ -405,24 +324,20 @@ sp_industry_generic_reward_test_failure_2 = {
 			has_project_flag = sp_industry_generic_reward_test_failure_flag
 		}
 	}
-	
 	option = {
 		token = sp_industry_generic_reward_option_test_failure
-		
 		iteration_output = {
 			country_effects = { 
 				FROM = {
 					add_project_progress_ratio = constant:sp_progress.loss.medium
-
 					set_project_flag = sp_industry_generic_reward_test_failure_flag
 				}
 			}
-
 			scientist_effects = {
 				if = {
 					limit = {
 						has_scientist_level = {
-							level < 5
+							level < @scientist_max_lvl
 							specialization = specialization_industry
 						}
 					}
@@ -435,21 +350,13 @@ sp_industry_generic_reward_test_failure_2 = {
 		}
 	}
 }
-
 #High Progress Loss
 sp_industry_generic_reward_test_failure_3 = {
-	fire_only_once = yes
-	
+	fire_only_once = no
 	threshold = {
 		min = 50 #Loss is 15
 		max = 100
 	}
-	
-	# ROOT is the project
-	# FROM is the Country
-	# var:facility_state is the State where the facility is (ensured to be set in this case)
-	# var:facility_province_id is the province ID where the facility is (ensured to be set in this case)
-	# var:scientist is the Scientist (ensured to be set in this case)
 	weight = {
 		base = @base_reward_weight
 		modifier = {
@@ -457,29 +364,24 @@ sp_industry_generic_reward_test_failure_3 = {
 			has_project_flag = sp_industry_generic_reward_test_failure_flag
 		}
 	}
-	
 	option = {
 		token = sp_industry_generic_reward_option_test_failure
-		
 		iteration_output = {
 			country_effects = { 
 				FROM = {
 					add_project_progress_ratio = constant:sp_progress.loss.high
-
 					set_project_flag = sp_industry_generic_reward_test_failure_flag
 				}
-
 				add_breakthrough_progress = {
 					specialization = specialization_industry
 					value = sp_breakthrough_progress.medium
 				}
 			}
-
 			scientist_effects = {
 				if = {
 					limit = {
 						has_scientist_level = {
-							level < 5
+							level < @scientist_max_lvl
 							specialization = specialization_industry
 						}
 					}
@@ -492,22 +394,14 @@ sp_industry_generic_reward_test_failure_3 = {
 		}
 	}
 }
-
 #food tech bonuses
 #Low Tech Bonus
 sp_industry_generic_reward_food_tech_1 = {
-	fire_only_once = yes
-	
+	fire_only_once = no
 	threshold = {
 		min = 0
 		max = 100
 	}
-
-	# ROOT is the project
-	# FROM is the Country
-	# var:facility_state is the State where the facility is (ensured to be set in this case)
-	# var:facility_province_id is the province ID where the facility is (ensured to be set in this case)
-	# var:scientist is the Scientist (ensured to be set in this case)
 	weight = {
 		base = @base_reward_weight
 		modifier = {
@@ -515,10 +409,8 @@ sp_industry_generic_reward_food_tech_1 = {
 			has_project_flag = sp_industry_generic_reward_food_production_tech_flag
 		}
 	}
-	
 	option = {
 		token = sp_industry_generic_reward_option_food_production_tech
-		
 		iteration_output = {
 			country_effects = { 
 				add_tech_bonus = {
@@ -527,27 +419,20 @@ sp_industry_generic_reward_food_tech_1 = {
 					uses = 1
 					category = cat_food_production
 				}
-
-				FROM = { set_project_flag = sp_industry_generic_reward_food_production_tech_flag }
+				FROM = { 
+					set_project_flag = sp_industry_generic_reward_food_production_tech_flag 
+				}
 			}
 		}
 	}
 }
-
 #Medium Tech Bonus
 sp_industry_generic_reward_food_tech_2 = {
-	fire_only_once = yes
-	
+	fire_only_once = no
 	threshold = {
 		min = 0
 		max = 100
 	}
-
-	# ROOT is the project
-	# FROM is the Country
-	# var:facility_state is the State where the facility is (ensured to be set in this case)
-	# var:facility_province_id is the province ID where the facility is (ensured to be set in this case)
-	# var:scientist is the Scientist (ensured to be set in this case)
 	weight = {
 		base = @base_reward_weight
 		modifier = {
@@ -555,10 +440,8 @@ sp_industry_generic_reward_food_tech_2 = {
 			has_project_flag = sp_industry_generic_reward_food_production_tech_flag
 		}
 	}
-	
 	option = {
 		token = sp_industry_generic_reward_option_food_production_tech
-		
 		iteration_output = {
 			country_effects = { 
 				add_tech_bonus = {
@@ -567,27 +450,20 @@ sp_industry_generic_reward_food_tech_2 = {
 					uses = 1
 					category = cat_food_production
 				}
-
-				FROM = { set_project_flag = sp_industry_generic_reward_food_production_tech_flag }
+				FROM = { 
+					set_project_flag = sp_industry_generic_reward_food_production_tech_flag 
+				}
 			}
 		}
 	}
 }
-
 #High Tech Bonus
 sp_industry_generic_reward_food_tech_3 = {
-	fire_only_once = yes
-	
+	fire_only_once = no
 	threshold = {
 		min = 0
 		max = 100
 	}
-
-	# ROOT is the project
-	# FROM is the Country
-	# var:facility_state is the State where the facility is (ensured to be set in this case)
-	# var:facility_province_id is the province ID where the facility is (ensured to be set in this case)
-	# var:scientist is the Scientist (ensured to be set in this case)
 	weight = {
 		base = @base_reward_weight
 		modifier = {
@@ -595,10 +471,8 @@ sp_industry_generic_reward_food_tech_3 = {
 			has_project_flag = sp_industry_generic_reward_food_production_tech_flag
 		}
 	}
-	
 	option = {
 		token = sp_industry_generic_reward_option_food_production_tech
-		
 		iteration_output = {
 			country_effects = { 
 				add_tech_bonus = {
@@ -607,33 +481,25 @@ sp_industry_generic_reward_food_tech_3 = {
 					uses = 1
 					category = cat_food_production
 				}
-
 				add_breakthrough_progress = {
 					specialization = specialization_industry
 					value = sp_breakthrough_progress.medium
 				}
-
-				FROM = { set_project_flag = sp_industry_generic_reward_food_production_tech_flag }
+				FROM = { 
+					set_project_flag = sp_industry_generic_reward_food_production_tech_flag 
+				}
 			}
 		}
 	}
 }
-
 #metallurgy tech bonuses
 #Low Tech Bonus
 sp_industry_generic_reward_metallurgy_tech_1 = {
-	fire_only_once = yes
-	
+	fire_only_once = no
 	threshold = {
 		min = 0
 		max = 100
 	}
-
-	# ROOT is the project
-	# FROM is the Country
-	# var:facility_state is the State where the facility is (ensured to be set in this case)
-	# var:facility_province_id is the province ID where the facility is (ensured to be set in this case)
-	# var:scientist is the Scientist (ensured to be set in this case)
 	weight = {
 		base = @base_reward_weight
 		modifier = {
@@ -641,10 +507,8 @@ sp_industry_generic_reward_metallurgy_tech_1 = {
 			has_project_flag = sp_industry_generic_reward_metallurgy_tech_flag
 		}
 	}
-	
 	option = {
 		token = sp_industry_generic_reward_option_metallurgy_tech
-		
 		iteration_output = {
 			country_effects = { 
 				add_tech_bonus = {
@@ -653,27 +517,20 @@ sp_industry_generic_reward_metallurgy_tech_1 = {
 					uses = 1
 					category = cat_metallurgy
 				}
-
-				FROM = { set_project_flag = sp_industry_generic_reward_metallurgy_tech_flag }
+				FROM = { 
+					set_project_flag = sp_industry_generic_reward_metallurgy_tech_flag 
+				}
 			}
 		}
 	}
 }
-
 #Medium Tech Bonus
 sp_industry_generic_reward_metallurgy_tech_2 = {
-	fire_only_once = yes
-	
+	fire_only_once = no
 	threshold = {
 		min = 0
 		max = 100
 	}
-
-	# ROOT is the project
-	# FROM is the Country
-	# var:facility_state is the State where the facility is (ensured to be set in this case)
-	# var:facility_province_id is the province ID where the facility is (ensured to be set in this case)
-	# var:scientist is the Scientist (ensured to be set in this case)
 	weight = {
 		base = @base_reward_weight
 		modifier = {
@@ -681,10 +538,8 @@ sp_industry_generic_reward_metallurgy_tech_2 = {
 			has_project_flag = sp_industry_generic_reward_metallurgy_tech_flag
 		}
 	}
-	
 	option = {
-		token = sp_industry_generic_reward_option_metallurgy_tech
-		
+		token = sp_industry_generic_reward_option_metallurgy_tech	
 		iteration_output = {
 			country_effects = { 
 				add_tech_bonus = {
@@ -693,27 +548,20 @@ sp_industry_generic_reward_metallurgy_tech_2 = {
 					uses = 1
 					category = cat_metallurgy
 				}
-
-				FROM = { set_project_flag = sp_industry_generic_reward_metallurgy_tech_flag }
+				FROM = { 
+					set_project_flag = sp_industry_generic_reward_metallurgy_tech_flag 
+				}
 			}
 		}
 	}
 }
-
 #High Tech Bonus
 sp_industry_generic_reward_metallurgy_tech_3 = {
-	fire_only_once = yes
-	
+	fire_only_once = no
 	threshold = {
 		min = 0
 		max = 100
 	}
-
-	# ROOT is the project
-	# FROM is the Country
-	# var:facility_state is the State where the facility is (ensured to be set in this case)
-	# var:facility_province_id is the province ID where the facility is (ensured to be set in this case)
-	# var:scientist is the Scientist (ensured to be set in this case)
 	weight = {
 		base = @base_reward_weight
 		modifier = {
@@ -721,10 +569,8 @@ sp_industry_generic_reward_metallurgy_tech_3 = {
 			has_project_flag = sp_industry_generic_reward_metallurgy_tech_flag
 		}
 	}
-	
 	option = {
 		token = sp_industry_generic_reward_option_metallurgy_tech
-		
 		iteration_output = {
 			country_effects = { 
 				add_tech_bonus = {
@@ -733,33 +579,25 @@ sp_industry_generic_reward_metallurgy_tech_3 = {
 					uses = 1
 					category = cat_metallurgy
 				}
-
 				add_breakthrough_progress = {
 					specialization = specialization_industry
 					value = sp_breakthrough_progress.medium
 				}
-
-				FROM = { set_project_flag = sp_industry_generic_reward_metallurgy_tech_flag }
+				FROM = { 
+					set_project_flag = sp_industry_generic_reward_metallurgy_tech_flag 
+				}
 			}
 		}
 	}
 }
-
 #rubber tech bonuses
 #Low Tech Bonus
 sp_industry_generic_reward_synthetic_tech_1 = {
-	fire_only_once = yes
-	
+	fire_only_once = no
 	threshold = {
 		min = 0
 		max = 100
 	}
-
-	# ROOT is the project
-	# FROM is the Country
-	# var:facility_state is the State where the facility is (ensured to be set in this case)
-	# var:facility_province_id is the province ID where the facility is (ensured to be set in this case)
-	# var:scientist is the Scientist (ensured to be set in this case)
 	weight = {
 		base = @base_reward_weight
 		modifier = {
@@ -767,10 +605,8 @@ sp_industry_generic_reward_synthetic_tech_1 = {
 			has_project_flag = sp_industry_generic_reward_synthetic_tech_flag
 		}
 	}
-	
 	option = {
 		token = sp_industry_generic_reward_option_synthetic_tech
-		
 		iteration_output = {
 			country_effects = { 
 				add_tech_bonus = {
@@ -779,27 +615,20 @@ sp_industry_generic_reward_synthetic_tech_1 = {
 					uses = 1
 					category = cat_synth_resources
 				}
-
-				FROM = { set_project_flag = sp_industry_generic_reward_synthetic_tech_flag }
+				FROM = { 
+					set_project_flag = sp_industry_generic_reward_synthetic_tech_flag 
+				}
 			}
 		}
 	}
 }
-
 #Medium Tech Bonus
 sp_industry_generic_reward_synthetic_tech_2 = {
-	fire_only_once = yes
-	
+	fire_only_once = no
 	threshold = {
 		min = 0
 		max = 100
 	}
-
-	# ROOT is the project
-	# FROM is the Country
-	# var:facility_state is the State where the facility is (ensured to be set in this case)
-	# var:facility_province_id is the province ID where the facility is (ensured to be set in this case)
-	# var:scientist is the Scientist (ensured to be set in this case)
 	weight = {
 		base = @base_reward_weight
 		modifier = {
@@ -807,10 +636,8 @@ sp_industry_generic_reward_synthetic_tech_2 = {
 			has_project_flag = sp_industry_generic_reward_synthetic_tech_flag
 		}
 	}
-	
 	option = {
 		token = sp_industry_generic_reward_option_synthetic_tech
-		
 		iteration_output = {
 			country_effects = { 
 				add_tech_bonus = {
@@ -819,27 +646,20 @@ sp_industry_generic_reward_synthetic_tech_2 = {
 					uses = 1
 					category = cat_synth_resources
 				}
-
-				FROM = { set_project_flag = sp_industry_generic_reward_synthetic_tech_flag }
+				FROM = { 
+					set_project_flag = sp_industry_generic_reward_synthetic_tech_flag 
+				}
 			}
 		}
 	}
 }
-
 #High Tech Bonus
 sp_industry_generic_reward_synthetic_tech_3 = {
-	fire_only_once = yes
-	
+	fire_only_once = no
 	threshold = {
 		min = 0
 		max = 100
 	}
-
-	# ROOT is the project
-	# FROM is the Country
-	# var:facility_state is the State where the facility is (ensured to be set in this case)
-	# var:facility_province_id is the province ID where the facility is (ensured to be set in this case)
-	# var:scientist is the Scientist (ensured to be set in this case)
 	weight = {
 		base = @base_reward_weight
 		modifier = {
@@ -847,10 +667,8 @@ sp_industry_generic_reward_synthetic_tech_3 = {
 			has_project_flag = sp_industry_generic_reward_synthetic_tech_flag
 		}
 	}
-	
 	option = {
 		token = sp_industry_generic_reward_option_synthetic_tech
-		
 		iteration_output = {
 			country_effects = { 
 				add_tech_bonus = {
@@ -859,34 +677,25 @@ sp_industry_generic_reward_synthetic_tech_3 = {
 					uses = 1
 					category = cat_synth_resources
 				}
-
 				add_breakthrough_progress = {
 					specialization = specialization_industry
 					value = sp_breakthrough_progress.medium
 				}
-
-				FROM = { set_project_flag = sp_industry_generic_reward_synthetic_tech_flag }
+				FROM = { 
+					set_project_flag = sp_industry_generic_reward_synthetic_tech_flag 
+				}
 			}
 		}
 	}
 }
-
-
 #rubber tech bonuses
 #Low Tech Bonus
 sp_industry_generic_reward_fuel_tech_1 = {
-	fire_only_once = yes
-	
+	fire_only_once = no
 	threshold = {
 		min = 0
 		max = 100
 	}
-
-	# ROOT is the project
-	# FROM is the Country
-	# var:facility_state is the State where the facility is (ensured to be set in this case)
-	# var:facility_province_id is the province ID where the facility is (ensured to be set in this case)
-	# var:scientist is the Scientist (ensured to be set in this case)
 	weight = {
 		base = @base_reward_weight
 		modifier = {
@@ -894,10 +703,8 @@ sp_industry_generic_reward_fuel_tech_1 = {
 			has_project_flag = sp_industry_generic_reward_fuel_tech_flag
 		}
 	}
-	
 	option = {
 		token = sp_industry_generic_reward_option_fuel_tech
-		
 		iteration_output = {
 			country_effects = { 
 				add_tech_bonus = {
@@ -906,27 +713,20 @@ sp_industry_generic_reward_fuel_tech_1 = {
 					uses = 1
 					category = cat_fuel
 				}
-
-				FROM = { set_project_flag = sp_industry_generic_reward_fuel_tech_flag }
+				FROM = { 
+					set_project_flag = sp_industry_generic_reward_fuel_tech_flag 
+				}
 			}
 		}
 	}
 }
-
 #Medium Tech Bonus
 sp_industry_generic_reward_fuel_tech_2 = {
-	fire_only_once = yes
-	
+	fire_only_once = no
 	threshold = {
 		min = 0
 		max = 100
 	}
-
-	# ROOT is the project
-	# FROM is the Country
-	# var:facility_state is the State where the facility is (ensured to be set in this case)
-	# var:facility_province_id is the province ID where the facility is (ensured to be set in this case)
-	# var:scientist is the Scientist (ensured to be set in this case)
 	weight = {
 		base = @base_reward_weight
 		modifier = {
@@ -934,10 +734,8 @@ sp_industry_generic_reward_fuel_tech_2 = {
 			has_project_flag = sp_industry_generic_reward_fuel_tech_flag
 		}
 	}
-	
 	option = {
 		token = sp_industry_generic_reward_option_fuel_tech
-		
 		iteration_output = {
 			country_effects = { 
 				add_tech_bonus = {
@@ -946,27 +744,20 @@ sp_industry_generic_reward_fuel_tech_2 = {
 					uses = 1
 					category = cat_fuel
 				}
-
-				FROM = { set_project_flag = sp_industry_generic_reward_fuel_tech_flag }
+				FROM = { 
+					set_project_flag = sp_industry_generic_reward_fuel_tech_flag 
+				}
 			}
 		}
 	}
 }
-
 #High Tech Bonus
 sp_industry_generic_reward_fuel_tech_3 = {
-	fire_only_once = yes
-	
+	fire_only_once = no
 	threshold = {
 		min = 0
 		max = 100
 	}
-
-	# ROOT is the project
-	# FROM is the Country
-	# var:facility_state is the State where the facility is (ensured to be set in this case)
-	# var:facility_province_id is the province ID where the facility is (ensured to be set in this case)
-	# var:scientist is the Scientist (ensured to be set in this case)
 	weight = {
 		base = @base_reward_weight
 		modifier = {
@@ -974,10 +765,8 @@ sp_industry_generic_reward_fuel_tech_3 = {
 			has_project_flag = sp_industry_generic_reward_fuel_tech_flag
 		}
 	}
-	
 	option = {
 		token = sp_industry_generic_reward_option_fuel_tech
-		
 		iteration_output = {
 			country_effects = { 
 				add_tech_bonus = {
@@ -986,13 +775,74 @@ sp_industry_generic_reward_fuel_tech_3 = {
 					uses = 1
 					category = cat_fuel
 				}
-
 				add_breakthrough_progress = {
 					specialization = specialization_industry
 					value = sp_breakthrough_progress.medium
 				}
-
-				FROM = { set_project_flag = sp_industry_generic_reward_fuel_tech_flag }
+				FROM = { 
+					set_project_flag = sp_industry_generic_reward_fuel_tech_flag 
+				}
+			}
+		}
+	}
+}
+#Political interference
+sp_industry_major_political_interference = {
+	fire_only_once = yes
+	threshold = { 
+		min = 15
+		max = 85
+	}
+	weight = {
+		base = 0.25
+		modifier = {
+			factor = 4
+			FROM = {
+				OR = { 
+					has_government = communism
+					has_government = socialism
+					has_government = radicalism
+				}
+			}
+		}
+	}
+	option = {
+		token = sp_industry_major_political_interference_option_keep
+		iteration_output = {
+			country_effects = {
+				add_political_power = -50
+				FROM = { 
+					add_project_progress_ratio = constant:sp_progress.loss.medium
+				}
+			}
+			scientist_effects = {
+				if = {
+					limit = {
+						has_scientist_level = {
+							level < @scientist_max_lvl
+							specialization = specialization_industry
+						}
+					}
+					add_scientist_xp = {
+						experience = constant:sp_scientist_xp_gain.medium
+						specialization = specialization_industry
+					}
+				}
+			}
+		}
+	}
+	option = {
+		token = sp_industry_major_political_interference_option_fire
+		iteration_output = {
+			country_effects = {
+				add_political_power = 50
+				FROM = { 
+					add_project_progress_ratio = constant:sp_progress.loss.low	
+				}
+			}
+			scientist_effects = {
+				#scientist doen`t die! role & traits must be saved!
+				ban_scientist = yes 
 			}
 		}
 	}

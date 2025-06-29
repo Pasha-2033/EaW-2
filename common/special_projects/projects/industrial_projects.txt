@@ -5,6 +5,11 @@ sp_ore_preparation = {
 	ai_will_do = {
 		base = 1
 	}
+	allowed = {
+		NOT = {
+			original_tag = ELN
+		}
+	}
 	available = {
 		FROM = {
 			has_tech = basics_of_metallurgy
@@ -47,6 +52,7 @@ sp_ore_preparation = {
 		sp_industry_generic_reward_metallurgy_tech_1
 		sp_industry_generic_reward_metallurgy_tech_2
 		sp_industry_generic_reward_metallurgy_tech_3
+		sp_industry_major_political_interference
 	}
 }
 sp_rubber_processing = {
@@ -55,6 +61,11 @@ sp_rubber_processing = {
 	project_tags = sp_tag_synthetic
 	ai_will_do = {
 		base = 1
+	}
+	allowed = {
+		NOT = {
+			original_tag = ELN
+		}
 	}
 	available = {
 		FROM = {
@@ -90,6 +101,7 @@ sp_rubber_processing = {
 		sp_industry_generic_reward_synthetic_tech_1
 		sp_industry_generic_reward_synthetic_tech_2
 		sp_industry_generic_reward_synthetic_tech_3
+		sp_industry_major_political_interference
 	}
 }
 sp_saltpeter_for_plants = {
@@ -98,6 +110,11 @@ sp_saltpeter_for_plants = {
 	project_tags = sp_tag_food
 	ai_will_do = {
 		base = 1
+	}
+	allowed = {
+		NOT = {
+			original_tag = ELN
+		}
 	}
 	breakthrough_cost = {
 		specialization_industry = 1
@@ -136,16 +153,13 @@ sp_saltpeter_for_plants = {
 	unique_prototype_rewards = {
 		sp_saltpeter_type = {
 			fire_only_once = yes
-
 			threshold = { 
 				min = 25
 				max = 45
 			}
-
 			weight = {
 				base = 1000.0
 			}
-
 			option = {
 				token = sp_potassium_nitrate
 				iteration_output = {
@@ -178,6 +192,7 @@ sp_saltpeter_for_plants = {
 		sp_industry_generic_reward_food_tech_1
 		sp_industry_generic_reward_food_tech_2
 		sp_industry_generic_reward_food_tech_3
+		sp_industry_major_political_interference
 	}
 }
 sp_converter_production = {
@@ -186,6 +201,11 @@ sp_converter_production = {
 	project_tags = sp_tag_metallurgy
 	ai_will_do = {
 		base = 1
+	}
+	allowed = {
+		NOT = {
+			original_tag = ELN
+		}
 	}
 	available = {
 		FROM = {
@@ -221,6 +241,7 @@ sp_converter_production = {
 		sp_industry_generic_reward_metallurgy_tech_1
 		sp_industry_generic_reward_metallurgy_tech_2
 		sp_industry_generic_reward_metallurgy_tech_3
+		sp_industry_major_political_interference
 	}
 }
 sp_reduction_with_hydrogen = {
@@ -229,6 +250,11 @@ sp_reduction_with_hydrogen = {
 	project_tags = sp_tag_metallurgy
 	ai_will_do = {
 		base = 1
+	}
+	allowed = {
+		NOT = {
+			original_tag = ELN
+		}
 	}
 	available = {
 		FROM = {
@@ -264,6 +290,7 @@ sp_reduction_with_hydrogen = {
 		sp_industry_generic_reward_metallurgy_tech_1
 		sp_industry_generic_reward_metallurgy_tech_2
 		sp_industry_generic_reward_metallurgy_tech_3
+		sp_industry_major_political_interference
 	}
 }
 sp_oil_cracking = {
@@ -272,6 +299,11 @@ sp_oil_cracking = {
 	project_tags = sp_tag_synthetic
 	ai_will_do = {
 		base = 1
+	}
+	allowed = {
+		NOT = {
+			original_tag = ELN
+		}
 	}
 	available = {
 		FROM = {
@@ -307,6 +339,7 @@ sp_oil_cracking = {
 		sp_industry_generic_reward_fuel_tech_1
 		sp_industry_generic_reward_fuel_tech_2
 		sp_industry_generic_reward_fuel_tech_3
+		sp_industry_major_political_interference
 	}
 }
 sp_oil_aromatization = {
@@ -315,6 +348,11 @@ sp_oil_aromatization = {
 	project_tags = sp_tag_synthetic
 	ai_will_do = {
 		base = 1
+	}
+	allowed = {
+		NOT = {
+			original_tag = ELN
+		}
 	}
 	available = {
 		FROM = {
@@ -350,6 +388,7 @@ sp_oil_aromatization = {
 		sp_industry_generic_reward_fuel_tech_1
 		sp_industry_generic_reward_fuel_tech_2
 		sp_industry_generic_reward_fuel_tech_3
+		sp_industry_major_political_interference
 	}
 }
 sp_gas_liquefaction = {
@@ -358,6 +397,11 @@ sp_gas_liquefaction = {
 	project_tags = sp_tag_synthetic
 	ai_will_do = {
 		base = 1
+	}
+	allowed = {
+		NOT = {
+			original_tag = ELN
+		}
 	}
 	available = {
 		FROM = {
@@ -396,6 +440,7 @@ sp_gas_liquefaction = {
 		sp_industry_generic_reward_synthetic_tech_1
 		sp_industry_generic_reward_synthetic_tech_2
 		sp_industry_generic_reward_synthetic_tech_3
+		sp_industry_major_political_interference
 	}
 }
 sp_aluminum_refining = {
@@ -404,6 +449,11 @@ sp_aluminum_refining = {
 	project_tags = sp_tag_metallurgy
 	ai_will_do = {
 		base = 1
+	}
+	allowed = {
+		NOT = {
+			original_tag = ELN
+		}
 	}
 	available = {
 		FROM = {
@@ -439,6 +489,7 @@ sp_aluminum_refining = {
 		sp_industry_generic_reward_metallurgy_tech_1
 		sp_industry_generic_reward_metallurgy_tech_2
 		sp_industry_generic_reward_metallurgy_tech_3
+		sp_industry_major_political_interference
 	}
 }
 sp_tungsten_sintering = {
@@ -447,6 +498,11 @@ sp_tungsten_sintering = {
 	project_tags = sp_tag_metallurgy
 	ai_will_do = {
 		base = 1
+	}
+	allowed = {
+		NOT = {
+			original_tag = ELN
+		}
 	}
 	available = {
 		FROM = {
@@ -482,6 +538,7 @@ sp_tungsten_sintering = {
 		sp_industry_generic_reward_metallurgy_tech_1
 		sp_industry_generic_reward_metallurgy_tech_2
 		sp_industry_generic_reward_metallurgy_tech_3
+		sp_industry_major_political_interference
 	}
 }
 sp_chromium_coking = {
@@ -490,6 +547,11 @@ sp_chromium_coking = {
 	project_tags = sp_tag_metallurgy
 	ai_will_do = {
 		base = 1
+	}
+	allowed = {
+		NOT = {
+			original_tag = ELN
+		}
 	}
 	available = {
 		FROM = {
@@ -525,5 +587,6 @@ sp_chromium_coking = {
 		sp_industry_generic_reward_metallurgy_tech_1
 		sp_industry_generic_reward_metallurgy_tech_2
 		sp_industry_generic_reward_metallurgy_tech_3
+		sp_industry_major_political_interference
 	}
 }

@@ -1,3 +1,7 @@
+@base_reward_weight = 2 #Base Reward weight value
+@reward_weight_factor_theme = 0.25 # Applied to factor - Used to reduce chances of repeating the same reward theme within the same project (ie. Failure 1 & Failure 2)
+@scientist_max_lvl = 5
+@scientist_lvl_border = 4 #should be = scientist_max_lvl - 1
 # sp_nuclear_scientist_xp_generic_reward
 # sp_nuclear_minor_progress_generic_reward
 # sp_nuclear_generic_electronics_tech_reward
@@ -6,6 +10,1033 @@
 
 # sp_nuclear_reactor_radioactive_leak_stabilized_reward
 # sp_nuclear_reactor_minor_explosion_reward
+
+#Low Scientist XP gain
+sp_nuclear_generic_reward_scientist_xp_1 = {
+	fire_only_once = no
+	threshold = {
+		min = 0
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_nuclear_generic_reward_scientist_xp_flag
+		}
+		modifier = {
+			factor = 0
+			var:scientist = {
+				has_scientist_level = {
+					level > @scientist_lvl_border
+					specialization = specialization_nuclear
+				}
+			}
+		}
+	}
+	option = {
+		token = sp_nuclear_generic_reward_option_scientist_xp
+		iteration_output = {
+			scientist_effects = {
+				if = {
+					limit = {
+						has_scientist_level = {
+							level < @scientist_max_lvl
+							specialization = specialization_nuclear
+						}
+					}
+					add_scientist_xp = {
+						experience = constant:sp_scientist_xp_gain.low
+						specialization = specialization_nuclear
+					}
+				}
+				FROM = {
+					set_project_flag = sp_nuclear_generic_reward_scientist_xp_flag 
+				}
+			}
+		}
+	}
+}
+#Medium Scientist XP gain
+sp_nuclear_generic_reward_scientist_xp_2 = {
+	fire_only_once = no
+	threshold = {
+		min = 0
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_nuclear_generic_reward_scientist_xp_flag
+		}
+		modifier = {
+			factor = 0
+			var:scientist = {
+				has_scientist_level = {
+					level > @scientist_lvl_border
+					specialization = specialization_nuclear
+				}
+			}
+		}
+	}
+	option = {
+		token = sp_nuclear_generic_reward_option_scientist_xp
+		iteration_output = {
+			scientist_effects = {
+				if = {
+					limit = {
+						has_scientist_level = {
+							level < @scientist_max_lvl
+							specialization = specialization_nuclear
+						}
+					}
+					add_scientist_xp = {
+						experience = constant:sp_scientist_xp_gain.medium
+						specialization = specialization_nuclear
+					}
+				}
+				FROM = {
+					set_project_flag = sp_nuclear_generic_reward_scientist_xp_flag 
+				}
+			}
+		}
+	}
+}
+#High Scientist XP gain
+sp_nuclear_generic_reward_scientist_xp_3 = {
+	fire_only_once = no
+	threshold = {
+		min = 0
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_nuclear_generic_reward_scientist_xp_flag
+		}
+		modifier = {
+			factor = 0
+			var:scientist = {
+				has_scientist_level = {
+					level > @scientist_lvl_border
+					specialization = specialization_nuclear
+				}
+			}
+		}
+	}
+	option = {
+		token = sp_nuclear_generic_reward_option_scientist_xp
+		iteration_output = {
+			scientist_effects = {
+				if = {
+					limit = {
+						has_scientist_level = {
+							level < @scientist_max_lvl
+							specialization = specialization_nuclear
+						}
+					}
+					add_scientist_xp = {
+						experience = constant:sp_scientist_xp_gain.high
+						specialization = specialization_nuclear
+					}
+				}
+				FROM = {
+					set_project_flag = sp_nuclear_generic_reward_scientist_xp_flag 
+				}
+			}
+		}
+	}
+}
+#Low Extra Progress
+sp_nuclear_generic_reward_major_progress_1 = {
+	fire_only_once = no
+	threshold = {
+		min = 0
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_nuclear_generic_reward_major_progress_flag
+		}
+	}
+	option = {
+		token = sp_nuclear_generic_reward_option_major_breakthrough
+		iteration_output = {
+			country_effects = {
+				FROM = {
+					add_project_progress_ratio = constant:sp_progress.gain.low				
+					set_project_flag = sp_nuclear_generic_reward_major_progress_flag
+				}
+			}
+			scientist_effects = {
+				if = {
+					limit = {
+						has_scientist_level = {
+							level < @scientist_max_lvl
+							specialization = specialization_nuclear
+						}
+					}
+					add_scientist_xp = {
+						experience = constant:sp_scientist_xp_gain.low
+						specialization = specialization_nuclear
+					}
+				}
+			}
+		}
+	}
+}
+#Medium Extra Progress
+sp_nuclear_generic_reward_major_progress_2 = {
+	fire_only_once = no
+	threshold = {
+		min = 0
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_nuclear_generic_reward_major_progress_flag
+		}
+	}
+	option = {
+		token = sp_nuclear_generic_reward_option_major_breakthrough
+		iteration_output = {
+			country_effects = {
+				FROM = {
+					add_project_progress_ratio = constant:sp_progress.gain.medium
+					set_project_flag = sp_nuclear_generic_reward_major_progress_flag
+				}
+			}
+			scientist_effects = {
+				if = {
+					limit = {
+						has_scientist_level = {
+							level < @scientist_max_lvl
+							specialization = specialization_nuclear
+						}
+					}
+					add_scientist_xp = {
+						experience = constant:sp_scientist_xp_gain.low
+						specialization = specialization_nuclear
+					}
+				}
+			}
+		}
+	}
+}
+#High Extra Progress
+sp_nuclear_generic_reward_major_progress_3 = {
+	fire_only_once = no
+	threshold = {
+		min = 0
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_nuclear_generic_reward_major_progress_flag
+		}
+	}
+	option = {
+		token = sp_nuclear_generic_reward_option_major_breakthrough
+		iteration_output = {
+			country_effects = {
+				FROM = {
+					add_project_progress_ratio = constant:sp_progress.gain.high
+					set_project_flag = sp_nuclear_generic_reward_major_progress_flag
+				}
+			}
+			scientist_effects = {
+				if = {
+					limit = {
+						has_scientist_level = {
+							level < @scientist_max_lvl
+							specialization = specialization_nuclear
+						}
+					}
+					add_scientist_xp = {
+						experience = constant:sp_scientist_xp_gain.low
+						specialization = specialization_nuclear
+					}
+				}
+			}
+		}
+	}
+}
+#Low Progress Loss
+sp_nuclear_generic_reward_test_failure_1 = {
+	fire_only_once = no
+	threshold = {
+		min = 15 #Loss is 5
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_nuclear_generic_reward_test_failure_flag
+		}
+	}
+	option = {
+		token = sp_nuclear_generic_reward_option_test_failure
+		iteration_output = {
+			country_effects = { 
+				FROM = {
+					add_project_progress_ratio = constant:sp_progress.loss.low
+					set_project_flag = sp_nuclear_generic_reward_test_failure_flag
+				}
+			}
+			scientist_effects = {
+				if = {
+					limit = {
+						has_scientist_level = {
+							level < @scientist_max_lvl
+							specialization = specialization_nuclear
+						}
+					}
+					add_scientist_xp = {
+						experience = constant:sp_scientist_xp_gain.low
+						specialization = specialization_nuclear
+					}
+				}
+			}
+		}
+	}
+}
+#Medium Progress Loss
+sp_nuclear_generic_reward_test_failure_2 = {
+	fire_only_once = no
+	threshold = {
+		min = 15 #Loss is 5
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_nuclear_generic_reward_test_failure_flag
+		}
+	}
+	option = {
+		token = sp_nuclear_generic_reward_option_test_failure
+		iteration_output = {
+			country_effects = { 
+				FROM = {
+					add_project_progress_ratio = constant:sp_progress.loss.medium
+					set_project_flag = sp_nuclear_generic_reward_test_failure_flag
+				}
+			}
+			scientist_effects = {
+				if = {
+					limit = {
+						has_scientist_level = {
+							level < @scientist_max_lvl
+							specialization = specialization_nuclear
+						}
+					}
+					add_scientist_xp = {
+						experience = constant:sp_scientist_xp_gain.low
+						specialization = specialization_nuclear
+					}
+				}
+			}
+		}
+	}
+}
+#High Progress Loss
+sp_nuclear_generic_reward_test_failure_3 = {
+	fire_only_once = no
+	threshold = {
+		min = 15 #Loss is 5
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_nuclear_generic_reward_test_failure_flag
+		}
+	}
+	option = {
+		token = sp_nuclear_generic_reward_option_test_failure
+		iteration_output = {
+			country_effects = { 
+				FROM = {
+					add_project_progress_ratio = constant:sp_progress.loss.high
+					set_project_flag = sp_nuclear_generic_reward_test_failure_flag
+				}
+			}
+			scientist_effects = {
+				if = {
+					limit = {
+						has_scientist_level = {
+							level < @scientist_max_lvl
+							specialization = specialization_nuclear
+						}
+					}
+					add_scientist_xp = {
+						experience = constant:sp_scientist_xp_gain.low
+						specialization = specialization_nuclear
+					}
+				}
+			}
+		}
+	}
+}
+#nuclear (reactor) tech
+#Low Tech Bonus
+sp_nuclear_generic_reward_reactor_tech_1 = {
+	fire_only_once = no
+	threshold = {
+		min = 0
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_nuclear_generic_reward_reactor_tech_flag
+		}
+	}
+	option = {
+		token = sp_nuclear_generic_reward_option_reactor_tech
+		iteration_output = {
+			country_effects = {
+				random_list = {
+					5 = {
+						add_tech_bonus = {
+							name = sp_nuclear_generic_reward_option_reactor_bonus_name
+							bonus = 0.1
+							uses = 1
+							category = cat_nuclear
+						}
+					}
+					10 = {
+						add_tech_bonus = {
+							name = sp_nuclear_generic_reward_option_reactor_bonus_name
+							bonus = 0.1
+							uses = 1
+							category = cat_nuclear_bomb
+						}
+					}
+					20 = {
+						add_tech_bonus = {
+							name = sp_nuclear_generic_reward_option_reactor_bonus_name
+							bonus = 0.1
+							uses = 1
+							category = cat_nuclear_shelter
+						}
+					}
+					65 = {
+						add_tech_bonus = {
+							name = sp_nuclear_generic_reward_option_reactor_bonus_name
+							bonus = 0.1
+							uses = 1
+							category = cat_nuclear_reactor
+						}
+					}
+				}
+				FROM = { 
+					set_project_flag = sp_nuclear_generic_reward_reactor_tech_flag 
+				}
+			}
+		}
+	}
+}
+#Medium Tech Bonus
+sp_nuclear_generic_reward_reactor_tech_2 = {
+	fire_only_once = no
+	threshold = {
+		min = 0
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_nuclear_generic_reward_reactor_tech_flag
+		}
+	}
+	option = {
+		token = sp_nuclear_generic_reward_option_reactor_tech
+		iteration_output = {
+			country_effects = {
+				random_list = {
+					10 = {
+						add_tech_bonus = {
+							name = sp_nuclear_generic_reward_option_reactor_bonus_name
+							bonus = 0.2
+							uses = 1
+							category = cat_nuclear
+						}
+					}
+					10 = {
+						add_tech_bonus = {
+							name = sp_nuclear_generic_reward_option_reactor_bonus_name
+							bonus = 0.2
+							uses = 1
+							category = cat_nuclear_bomb
+						}
+					}
+					20 = {
+						add_tech_bonus = {
+							name = sp_nuclear_generic_reward_option_reactor_bonus_name
+							bonus = 0.2
+							uses = 1
+							category = cat_nuclear_shelter
+						}
+					}
+					60 = {
+						add_tech_bonus = {
+							name = sp_nuclear_generic_reward_option_reactor_bonus_name
+							bonus = 0.2
+							uses = 1
+							category = cat_nuclear_reactor
+						}
+					}
+				}
+				FROM = { 
+					set_project_flag = sp_nuclear_generic_reward_reactor_tech_flag 
+				}
+			}
+		}
+	}
+}
+#High Tech Bonus
+sp_nuclear_generic_reward_reactor_tech_3 = {
+	fire_only_once = no
+	threshold = {
+		min = 0
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_nuclear_generic_reward_reactor_tech_flag
+		}
+	}
+	option = {
+		token = sp_nuclear_generic_reward_option_reactor_tech
+		iteration_output = {
+			country_effects = {
+				random_list = {
+					20 = {
+						add_tech_bonus = {
+							name = sp_nuclear_generic_reward_option_reactor_bonus_name
+							bonus = 0.3
+							uses = 1
+							category = cat_nuclear
+						}
+					}
+					10 = {
+						add_tech_bonus = {
+							name = sp_nuclear_generic_reward_option_reactor_bonus_name
+							bonus = 0.3
+							uses = 1
+							category = cat_nuclear_bomb
+						}
+					}
+					10 = {
+						add_tech_bonus = {
+							name = sp_nuclear_generic_reward_option_reactor_bonus_name
+							bonus = 0.3
+							uses = 1
+							category = cat_nuclear_shelter
+						}
+					}
+					60 = {
+						add_tech_bonus = {
+							name = sp_nuclear_generic_reward_option_reactor_bonus_name
+							bonus = 0.4
+							uses = 1
+							category = cat_nuclear_reactor
+						}
+					}
+				}
+				FROM = { 
+					set_project_flag = sp_nuclear_generic_reward_reactor_tech_flag 
+				}
+			}
+		}
+	}
+}
+#nuclear (bomb) tech
+#Low Tech Bonus
+sp_nuclear_generic_reward_bomb_tech_1 = {
+	fire_only_once = no
+	threshold = {
+		min = 0
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_nuclear_generic_reward_bomb_tech_flag
+		}
+	}
+	option = {
+		token = sp_nuclear_generic_reward_option_bomb_tech
+		iteration_output = {
+			country_effects = {
+				random_list = {
+					10 = {
+						add_tech_bonus = {
+							name = sp_nuclear_generic_reward_option_bomb_bonus_name
+							bonus = 0.1
+							uses = 1
+							category = cat_nuclear
+						}
+					}
+					90 = {
+						add_tech_bonus = {
+							name = sp_nuclear_generic_reward_option_bomb_bonus_name
+							bonus = 0.1
+							uses = 1
+							category = cat_nuclear_bomb
+						}
+					}
+				}
+				FROM = { 
+					set_project_flag = sp_nuclear_generic_reward_bomb_tech_flag
+				}
+			}
+		}
+	}
+}
+#Medium Tech Bonus
+sp_nuclear_generic_reward_bomb_tech_2 = {
+	fire_only_once = no
+	threshold = {
+		min = 0
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_nuclear_generic_reward_bomb_tech_flag
+		}
+	}
+	option = {
+		token = sp_nuclear_generic_reward_option_bomb_tech
+		iteration_output = {
+			country_effects = {
+				random_list = {
+					20 = {
+						add_tech_bonus = {
+							name = sp_nuclear_generic_reward_option_bomb_bonus_name
+							bonus = 0.2
+							uses = 1
+							category = cat_nuclear
+						}
+					}
+					80 = {
+						add_tech_bonus = {
+							name = sp_nuclear_generic_reward_option_bomb_bonus_name
+							bonus = 0.2
+							uses = 1
+							category = cat_nuclear_bomb
+						}
+					}
+				}
+				FROM = { 
+					set_project_flag = sp_nuclear_generic_reward_bomb_tech_flag
+				}
+			}
+		}
+	}
+}
+#High Tech Bonus
+sp_nuclear_generic_reward_bomb_tech_3 = {
+	fire_only_once = no
+	threshold = {
+		min = 0
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_nuclear_generic_reward_bomb_tech_flag
+		}
+	}
+	option = {
+		token = sp_nuclear_generic_reward_option_bomb_tech
+		iteration_output = {
+			country_effects = {
+				random_list = {
+					30 = {
+						add_tech_bonus = {
+							name = sp_nuclear_generic_reward_option_bomb_bonus_name
+							bonus = 0.3
+							uses = 1
+							category = cat_nuclear
+						}
+					}
+					70 = {
+						add_tech_bonus = {
+							name = sp_nuclear_generic_reward_option_bomb_bonus_name
+							bonus = 0.3
+							uses = 1
+							category = cat_nuclear_bomb
+						}
+					}
+				}
+				FROM = { 
+					set_project_flag = sp_nuclear_generic_reward_bomb_tech_flag
+				}
+			}
+		}
+	}
+}
+#anti nuke bunker
+#Low Tech Bonus
+sp_nuclear_generic_reward_bunker_tech_1 = {
+	fire_only_once = no
+	threshold = {
+		min = 0
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_nuclear_generic_reward_bunker_tech_flag
+		}
+	}
+	option = {
+		token = sp_nuclear_generic_reward_option_bunker_tech
+		iteration_output = {
+			country_effects = {
+				random_list = {
+					10 = {
+						add_tech_bonus = {
+							name = sp_nuclear_generic_reward_option_bunker_bonus_name
+							bonus = 0.1
+							uses = 1
+							category = cat_nuclear
+						}
+					}
+					90 = {
+						add_tech_bonus = {
+							name = sp_nuclear_generic_reward_option_bunker_bonus_name
+							bonus = 0.1
+							uses = 1
+							category = cat_nuclear_shelter
+						}
+					}
+				}
+				FROM = { 
+					set_project_flag = sp_nuclear_generic_reward_bunker_tech_flag
+				}
+			}
+		}
+	}
+}
+#Medium Tech Bonus
+sp_nuclear_generic_reward_bunker_tech_2 = {
+	fire_only_once = no
+	threshold = {
+		min = 0
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_nuclear_generic_reward_bunker_tech_flag
+		}
+	}
+	option = {
+		token = sp_nuclear_generic_reward_option_bunker_tech
+		iteration_output = {
+			country_effects = {
+				random_list = {
+					20 = {
+						add_tech_bonus = {
+							name = sp_nuclear_generic_reward_option_bunker_bonus_name
+							bonus = 0.2
+							uses = 1
+							category = cat_nuclear
+						}
+					}
+					80 = {
+						add_tech_bonus = {
+							name = sp_nuclear_generic_reward_option_bunker_bonus_name
+							bonus = 0.2
+							uses = 1
+							category = cat_nuclear_shelter
+						}
+					}
+				}
+				FROM = { 
+					set_project_flag = sp_nuclear_generic_reward_bunker_tech_flag
+				}
+			}
+		}
+	}
+}
+#High Tech Bonus
+sp_nuclear_generic_reward_bunker_tech_3 = {
+	fire_only_once = no
+	threshold = {
+		min = 0
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_nuclear_generic_reward_bunker_tech_flag
+		}
+	}
+	option = {
+		token = sp_nuclear_generic_reward_option_bunker_tech
+		iteration_output = {
+			country_effects = {
+				random_list = {
+					30 = {
+						add_tech_bonus = {
+							name = sp_nuclear_generic_reward_option_bunker_bonus_name
+							bonus = 0.3
+							uses = 1
+							category = cat_nuclear
+						}
+					}
+					70 = {
+						add_tech_bonus = {
+							name = sp_nuclear_generic_reward_option_bunker_bonus_name
+							bonus = 0.3
+							uses = 1
+							category = cat_nuclear_shelter
+						}
+					}
+				}
+				FROM = { 
+					set_project_flag = sp_nuclear_generic_reward_bunker_tech_flag
+				}
+			}
+		}
+	}
+}
+#Political interference
+sp_nuclear_major_political_interference = {
+	fire_only_once = yes
+	threshold = { 
+		min = 15
+		max = 85
+	}
+	weight = {
+		base = 0.25
+		modifier = {
+			factor = 4
+			FROM = {
+				OR = { 
+					has_government = communism
+					has_government = fascism
+					has_government = radicalism
+					has_government = militarism
+				}
+			}
+		}
+	}
+	option = {
+		token = sp_nuclear_major_political_interference_option_keep
+		iteration_output = {
+			country_effects = {
+				add_political_power = -50
+				FROM = { 
+					add_project_progress_ratio = constant:sp_progress.loss.medium
+				}
+			}
+			scientist_effects = {
+				if = {
+					limit = {
+						has_scientist_level = {
+							level < @scientist_max_lvl
+							specialization = specialization_nuclear
+						}
+					}
+					add_scientist_xp = {
+						experience = constant:sp_scientist_xp_gain.medium
+						specialization = specialization_nuclear
+					}
+				}
+			}
+		}
+	}
+	option = {
+		token = sp_industry_major_political_interference_option_fire
+		iteration_output = {
+			country_effects = {
+				add_political_power = 50
+				FROM = { 
+					add_project_progress_ratio = constant:sp_progress.loss.low	
+				}
+			}
+			scientist_effects = {
+				#scientist doen`t die! role & traits must be saved!
+				ban_scientist = yes 
+			}
+		}
+	}
+}
+#reactor accidents
+sp_nuclear_reactor_meltdown = {
+	fire_only_once = no
+	threshold = {
+		min = 0
+		max = 100
+	}
+	weight = {
+		base = 1
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_nuclear_generic_reward_meltdown_flag
+		}
+	}
+	option = {
+		token = sp_nuclear_reactor_meltdown_option
+		iteration_output = {
+			country_effects = {
+				FROM = {
+					set_project_flag = sp_nuclear_generic_reward_meltdown_flag
+				}
+			}
+			facility_state_effects = { 
+				damage_building = {
+					tags = facility
+					damage = 0.5
+					province = var:facility_province_id
+				}
+			}
+			scientist_effects = {
+				random_list = {
+					#what doesn't kill you makes you stronger
+					90 = {
+						add_scientist_xp = {
+							experience = constant:sp_scientist_xp_gain.low
+							specialization = specialization_nuclear
+						}
+					}
+					#meltdown is serious problem, scientist can die
+					10 = {
+						owner = {
+							retire_character = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+}
+sp_nuclear_reactor_radiation_leak = {
+	fire_only_once = no
+	threshold = {
+		min = 0
+		max = 100
+	}
+	weight = {
+		base = 1
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_nuclear_generic_reward_radiation_leak_flag
+		}
+	}
+	option = {
+		token = sp_nuclear_reactor_radiation_leak_option
+		iteration_output = {
+			country_effects = {
+				FROM = {
+					set_project_flag = sp_nuclear_generic_reward_radiation_leak_flag
+				}
+			}
+			facility_state_effects = { 
+				damage_building = {
+					tags = facility
+					damage = 0.1
+					province = var:facility_province_id
+				}
+			}
+			scientist_effects = {
+				random_list = {
+					#what doesn't kill you makes you stronger
+					95 = {
+						add_scientist_xp = {
+							experience = constant:sp_scientist_xp_gain.low
+							specialization = specialization_nuclear
+						}
+					}
+					#radiation leak is serious problem, scientist can die
+					5 = {
+						owner = {
+							retire_character = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+}
+sp_nuclear_reactor_explosion = {
+	fire_only_once = no
+	threshold = {
+		min = 0
+		max = 100
+	}
+	weight = {
+		base = 1
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_nuclear_generic_reward_explosion_flag
+		}
+	}
+	option = {
+		token = sp_nuclear_reactor_explosion_option
+		iteration_output = {
+			country_effects = {
+				FROM = {
+					set_project_flag = sp_nuclear_generic_reward_explosion_flag
+				}
+			}
+			facility_state_effects = { 
+				damage_building = {
+					tags = facility
+					damage = 0.75
+					province = var:facility_province_id
+				}
+			}
+			scientist_effects = {
+				random_list = {
+					#what doesn't kill you makes you stronger
+					80 = {
+						add_scientist_xp = {
+							experience = constant:sp_scientist_xp_gain.low
+							specialization = specialization_nuclear
+						}
+					}
+					#explosion is serious problem, scientist can die
+					20 = {
+						owner = {
+							retire_character = PREV
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+
+
 
 sp_nuclear_generic_industry_tech_reward = {
 	fire_only_once = no
