@@ -88,8 +88,8 @@ scripted_gui = {
 					synthetic_refinery_max_power < 0.901
 				}
 			}
-			switch_click_visible = {
-				#to do
+			switch_visible = {
+				is_special_project_completed = sp:sp_nuclear_reactor_exploratory
 			}
 		}
 		effects = {
@@ -167,6 +167,47 @@ scripted_gui = {
 				set_variable = {
 					resource_activity_gui_frame = 0
 				}
+			}
+			info_button_click = {
+				set_variable = {
+					encyclopedia_tab = 3
+				}
+				set_variable = {
+					selected_global_mechanic = 4
+				}
+			}
+		}
+	}
+	nuclear_reactor_stats = {
+		context_type = player_context
+		window_name = "nuclear_reactor_stats"
+		parent_window_name = "possible_constructions"
+		visible = {
+			is_special_project_completed = sp:sp_nuclear_reactor
+			check_variable = {
+				resource_activity_gui_frame = 1
+			}
+		}
+	}
+	nuclear_reactor_heavy_water_stats = {
+		context_type = player_context
+		window_name = "nuclear_reactor_heavy_water_stats"
+		parent_window_name = "possible_constructions"
+		visible = {
+			is_special_project_completed = sp:sp_nuclear_reactor_heavy_water
+			check_variable = {
+				resource_activity_gui_frame = 1
+			}
+		}
+	}
+	thermonuclear_reactor_stats = {
+		context_type = player_context
+		window_name = "thermonuclear_reactor_stats"
+		parent_window_name = "possible_constructions"
+		visible = {
+			is_special_project_completed = sp:sp_thermonuclear_reactor
+			check_variable = {
+				resource_activity_gui_frame = 1
 			}
 		}
 	}
