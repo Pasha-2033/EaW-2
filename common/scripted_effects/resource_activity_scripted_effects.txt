@@ -473,6 +473,12 @@ calc_secondary_reactor = {
 		set_variable = {
 			primary_fuel = mtth:total_primary_fuel
 		}
+		set_variable = {
+			heavy_water_fuel_thermonuclear_outcome = mtth:heavy_water_fuel_thermonuclear_total_outcome
+		}
+		multiply_variable = {
+			heavy_water_fuel_thermonuclear_outcome = reactor_heavy_water_efficiency
+		}
 		multiply_variable = {
 			secondary_nuke = reactor_heavy_water_efficiency
 		}
@@ -491,6 +497,10 @@ calc_secondary_reactor = {
 		subtract_from_variable = {
 			#sub because -(-x), cost subtracts
 			nuclear_fuel_primary_reactor = primary_fuel
+		}
+		subtract_from_variable = {
+			#sub because -(-x), cost subtracts
+			thermonuclear_fuel_reactor = heavy_water_fuel_thermonuclear_outcome
 		}
 	}
 	else = {

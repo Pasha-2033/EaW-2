@@ -2418,7 +2418,7 @@ technologies = {
 		}
 	}
 	#paratroopers
-	paratroopers = {
+	tech_paratroopers_0 = {
 		dependencies = {
 			infantry_weapons_0 = 1
 			tech_support = 1
@@ -2427,7 +2427,7 @@ technologies = {
 			paratrooper
 		}
 		path = {
-			leads_to_tech = paratroopers2
+			leads_to_tech = tech_paratroopers_1
 			research_cost_coeff = 1
 		}
 		research_cost = 2
@@ -2464,13 +2464,13 @@ technologies = {
 			}
 		}
 	}
-	paratroopers2 = {
+	tech_paratroopers_1 = {
 		paratrooper = {
 			max_organisation = 5
 			soft_attack = 0.05
 		}
 		path = {
-			leads_to_tech = paratroopers3
+			leads_to_tech = tech_paratroopers_2
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
@@ -2494,12 +2494,12 @@ technologies = {
 			}
 		}
 	}
-	paratroopers3 = {
+	tech_paratroopers_2 = {
 		paratrooper = {
 			max_organisation = 5
 		}
 		path = {
-			leads_to_tech = paratroopers_a
+			leads_to_tech = tech_paratroopers_3
 			research_cost_coeff = 1
 		}
 		research_cost = 2.0
@@ -2519,14 +2519,14 @@ technologies = {
 			factor = 0.5
 		}
 	}
-	paratroopers_a = {
+	tech_paratroopers_3 = {
 
 		paratrooper = {
 			max_organisation = 5
 		}
 
 		path = {
-			leads_to_tech = paratroopers_b
+			leads_to_tech = tech_paratroopers_4
 			research_cost_coeff = 1
 		}
 
@@ -2551,14 +2551,14 @@ technologies = {
 		}
 	}
 
-	paratroopers_b = {
+	tech_paratroopers_4 = {
 
 		paratrooper = {
 			max_organisation = 5
 		}
 
 		path = {
-			leads_to_tech = paratroopers_c
+			leads_to_tech = tech_paratroopers_5
 			research_cost_coeff = 1
 		}
 
@@ -2586,7 +2586,7 @@ technologies = {
 		}
 	}
 
-	paratroopers_c = {
+	tech_paratroopers_5 = {
 
 		paratrooper = {
 			max_organisation = 5
@@ -2616,7 +2616,7 @@ technologies = {
 		}
 	}
 	#marines
-	marines = {
+	tech_marines_0 = {
 		dependencies = {
 			melee_weapons_1 = 1
 			tech_support = 1
@@ -2638,7 +2638,7 @@ technologies = {
 			}
 		}
 		path = {
-			leads_to_tech = marines2
+			leads_to_tech = tech_marines_1
 			research_cost_coeff = 1
 		}
 		research_cost = 2
@@ -2658,13 +2658,13 @@ technologies = {
 			factor = 1
 		}
 	}
-	marines2 = {
+	tech_marines_1 = {
 		marine = {
 			max_organisation = 5
 			soft_attack = 0.05
 		}
 		path = {
-			leads_to_tech = marines3
+			leads_to_tech = tech_marines_2
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
@@ -2685,12 +2685,12 @@ technologies = {
 			factor = 1
 		}
 	}
-	marines3 = {
+	tech_marines_2 = {
 		marine = {
 			max_organisation = 5
 		}
 		path = {
-			leads_to_tech = marines_a
+			leads_to_tech = tech_marines_3
 			research_cost_coeff = 1
 		}
 		research_cost = 2.0
@@ -2707,14 +2707,14 @@ technologies = {
 			factor = 1
 		}
 	}
-	marines_a = {
+	tech_marines_3 = {
 
 		marine = {
 			max_organisation = 5
 		}
 
 		path = {
-			leads_to_tech = marines_b
+			leads_to_tech = tech_marines_4
 			research_cost_coeff = 1
 		}
 
@@ -2739,14 +2739,14 @@ technologies = {
 		}
 	}
 
-	marines_b = {
+	tech_marines_4 = {
 
 		marine = {
 			max_organisation = 5
 		}
 
 		path = {
-			leads_to_tech = marines_c
+			leads_to_tech = tech_marines_5
 			research_cost_coeff = 1
 		}
 
@@ -2771,7 +2771,7 @@ technologies = {
 		}
 	}
 
-	marines_c = {
+	tech_marines_5 = {
 
 		marine = {
 			max_organisation = 5
@@ -2798,7 +2798,7 @@ technologies = {
 		}
 	}
 	#mountaineers
-	tech_mountaineers = {
+	tech_mountaineers_0 = {
 		dependencies = {
 			melee_weapons_1 = 1
 			tech_support = 1
@@ -2821,7 +2821,7 @@ technologies = {
 
 		}
 		path = {
-			leads_to_tech = tech_mountaineers2
+			leads_to_tech = tech_mountaineers_1
 			research_cost_coeff = 1
 		}
 		research_cost = 2
@@ -2839,13 +2839,13 @@ technologies = {
 			factor = 1.2
 		}
 	}
-	tech_mountaineers2 = {
+	tech_mountaineers_1 = {
 		mountaineers = {
 			max_organisation = 5
 			soft_attack = 0.05
 		}
 		path = {
-			leads_to_tech = tech_mountaineers3
+			leads_to_tech = tech_mountaineers_2
 			research_cost_coeff = 1
 		}
 		research_cost = 1.5
@@ -2863,12 +2863,12 @@ technologies = {
 			factor = 1.2
 		}
 	}
-	tech_mountaineers3 = {
+	tech_mountaineers_2 = {
 		mountaineers = {
 			max_organisation = 5
 		}
 		path = {
-			leads_to_tech = mountaineers_a
+			leads_to_tech = tech_mountaineers_3
 			research_cost_coeff = 1
 		}
 		research_cost = 2.0
@@ -2886,7 +2886,7 @@ technologies = {
 			factor = 1.2
 		}
 	}
-	mountaineers_a = {
+	tech_mountaineers_3 = {
 
 		mountaineers = {
 			max_organisation = 5
@@ -2894,7 +2894,7 @@ technologies = {
 
 		path = {
 
-			leads_to_tech = mountaineers_b
+			leads_to_tech = tech_mountaineers_4
 			research_cost_coeff = 1
 		}
 
@@ -2920,14 +2920,14 @@ technologies = {
 		}
 	}
 
-	mountaineers_b = {
+	tech_mountaineers_4 = {
 
 		mountaineers = {
 			max_organisation = 5
 		}
 
 		path = {
-			leads_to_tech = mountaineers_c
+			leads_to_tech = tech_mountaineers_5
 			research_cost_coeff = 1
 		}
 
@@ -2953,7 +2953,7 @@ technologies = {
 		}
 	}
 
-	mountaineers_c = {
+	tech_mountaineers_5 = {
 
 		mountaineers = {
 			max_organisation = 5
@@ -2986,8 +2986,12 @@ technologies = {
 			acclimatization_hot_climate_gain_factor = 0.05
 			acclimatization_cold_climate_gain_factor = 0.05
 		}
-		dependencies = {
-			infantry_weapons_0 = 1
+		allow = {
+			OR = {
+				has_tech = tech_paratroopers_0
+				has_tech = tech_marines_0
+				has_tech = tech_mountaineers_0
+			}
 		}
 		path = {
 			leads_to_tech = advanced_special_forces

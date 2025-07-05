@@ -211,6 +211,9 @@ technologies = {
 			cat_special_tech
 			cat_st_energy
 		}
+		special_project_specialization = { 
+			specialization_nuclear
+		}
 	}
 	direct_current = {
 		path = {
@@ -229,6 +232,9 @@ technologies = {
 		categories = {
 			cat_special_tech
 			cat_st_energy
+		}
+		special_project_specialization = { 
+			specialization_nuclear
 		}
 	}
 	alternating_current = {
@@ -249,6 +255,9 @@ technologies = {
 			cat_special_tech
 			cat_st_energy
 		}
+		special_project_specialization = { 
+			specialization_nuclear
+		}
 	}
 	high_voltage_systems = {
 		research_cost = 1
@@ -263,6 +272,9 @@ technologies = {
 		categories = {
 			cat_special_tech
 			cat_st_energy
+		}
+		special_project_specialization = { 
+			specialization_nuclear
 		}
 	}
 	#special technologies (magic)
@@ -284,6 +296,9 @@ technologies = {
 			cat_special_tech
 			cat_st_energy
 			cat_magic
+		}
+		special_project_specialization = { 
+			specialization_magic
 		}
 	}
 	#special technologies (alloys)
@@ -2729,6 +2744,12 @@ technologies = {
 		is_special_project_tech = yes
 		start_year = 1015
 		research_cost = 5
+		nuke_charge_power_factor = 0.1
+		nuclear_reactor_nuke_outcome = 0.1
+		nuclear_reactor_thermonuke_outcome = 0.05
+		nuclear_reactor_heavy_water_nuke_outcome = 0.05
+		nuclear_reactor_heavy_water_thermonuke_outcome = 0.1
+		thermonuclear_reactor_thermonuke_outcome = 0.5
 		folder = {
 			name = electronics_folder
 			position = {
@@ -2759,6 +2780,13 @@ technologies = {
 		is_special_project_tech = yes
 		start_year = 1016
 		research_cost = 5
+		nuke_charge_power_factor = 0.05
+		nuke_anb_destruction_factor = 0.05
+		nuclear_reactor_nuke_outcome = 0.1
+		nuclear_reactor_thermonuke_outcome = 0.05
+		nuclear_reactor_heavy_water_nuke_outcome = 0.05
+		nuclear_reactor_heavy_water_thermonuke_outcome = 0.1
+		thermonuclear_reactor_thermonuke_outcome = 0.5
 		folder = {
 			name = electronics_folder
 			position = {
@@ -2785,8 +2813,13 @@ technologies = {
 		is_special_project_tech = yes
 		start_year = 1017
 		research_cost = 5
-		research_speed_factor = 0.02
-		nuclear_production_factor = 0.05
+		nuke_charge_power_factor = 0.1
+		nuke_anb_destruction_factor = 0.05
+		nuclear_reactor_nuke_outcome = 0.1
+		nuclear_reactor_thermonuke_outcome = 0.05
+		nuclear_reactor_heavy_water_nuke_outcome = 0.05
+		nuclear_reactor_heavy_water_thermonuke_outcome = 0.1
+		thermonuclear_reactor_thermonuke_outcome = 0.5
 		folder = {
 			name = electronics_folder
 			position = {
@@ -2813,9 +2846,13 @@ technologies = {
 		is_special_project_tech = yes
 		start_year = 1023
 		research_cost = 5
-		research_speed_factor = 0.05
-		nuke_charge_power_factor = 0.1
-		nuclear_production_factor = 0.05
+		nuke_charge_power_factor = 0.15
+		nuke_anb_destruction_factor = 0.1
+		nuclear_reactor_nuke_outcome = 0.1
+		nuclear_reactor_thermonuke_outcome = 0.05
+		nuclear_reactor_heavy_water_nuke_outcome = 0.05
+		nuclear_reactor_heavy_water_thermonuke_outcome = 0.1
+		thermonuclear_reactor_thermonuke_outcome = 0.5
 		folder = {
 			name = electronics_folder
 			position = {
@@ -2842,10 +2879,13 @@ technologies = {
 		is_special_project_tech = yes
 		start_year = 1026
 		research_cost = 7
-		research_speed_factor = 0.04
-		nuke_charge_power_factor = 0.1
+		nuke_charge_power_factor = 0.2
 		nuke_anb_destruction_factor = 0.1
-		nuclear_production_factor = 0.05
+		nuclear_reactor_nuke_outcome = 0.1
+		nuclear_reactor_thermonuke_outcome = 0.05
+		nuclear_reactor_heavy_water_nuke_outcome = 0.05
+		nuclear_reactor_heavy_water_thermonuke_outcome = 0.1
+		thermonuclear_reactor_thermonuke_outcome = 0.5
 		folder = {
 			name = electronics_folder
 			position = {
@@ -2992,6 +3032,10 @@ technologies = {
 		is_special_project_tech = yes
 		start_year = 1011
 		research_cost = 5
+		production_speed_nuclear_reactor_factor = 0.05
+		production_speed_nuclear_reactor_heavy_water_factor = 0.05
+		nuclear_reactor_penalty_reduction = 0.05
+		nuclear_reactor_heavy_water_penalty_reduction = 0.05
 		folder = {
 			name = electronics_folder
 			position = {
@@ -3022,6 +3066,8 @@ technologies = {
 		is_special_project_tech = yes
 		start_year = 1011
 		research_cost = 5
+		nuclear_reactor_fuel_secondary_outcome = 1
+		nuclear_reactor_heavy_water_fuel_secondary_consumption = -1
 		folder = {
 			name = electronics_folder
 			position = {
@@ -3048,6 +3094,8 @@ technologies = {
 		is_special_project_tech = yes
 		start_year = 1011
 		research_cost = 5
+		nuclear_reactor_heavy_water_fuel_primary_outcome = 1
+		nuclear_reactor_fuel_primary_consumption = -1
 		folder = {
 			name = electronics_folder
 			position = {
@@ -3071,6 +3119,8 @@ technologies = {
 		is_special_project_tech = yes
 		start_year = 1011
 		research_cost = 5
+		production_speed_nuclear_reactor_exploratory_factor = 0.15
+		production_speed_thermonuclear_reactor_factor = 0.05
 		path = {
 			leads_to_tech = thermonuclear_reactor_improvements_1
 			research_cost_coeff = 1
@@ -3097,6 +3147,8 @@ technologies = {
 		is_special_project_tech = yes
 		start_year = 1011
 		research_cost = 5
+		nuclear_reactor_exploratory_fuel_primary_consumption = -1
+		thermonuclear_reactor_fuel_consumption = -1
 		folder = {
 			name = electronics_folder
 			position = {

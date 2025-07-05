@@ -462,7 +462,7 @@ guiTypes = {
 		orientation = LOWER_LEFT
 		iconType = {
 			name = "resource_frame"
-			spriteType = "GFX_resource_activity_nuclear_resource_frame_3"
+			spriteType = "GFX_resource_activity_nuclear_resource_frame_4"
 			position = { 
 				x = 70
 				y = 30
@@ -483,7 +483,7 @@ guiTypes = {
 			spriteType = "GFX_topbar_nuke"
 			scale = 0.65
 			position = {
-				x = 190
+				x = 240
 				y = 37
 			}
 		}
@@ -492,7 +492,7 @@ guiTypes = {
 			spriteType = "GFX_thermonuke"
 			scale = 0.65
 			position = {
-				x = 240
+				x = 290
 				y = 37
 			}
 		}
@@ -519,8 +519,19 @@ guiTypes = {
 			pdx_tooltip_delayed = "nuclear_reactor_heavy_water_nuclear_fuel_primary_outcome_desc"
 		}
 		instantTextBoxType = {
+			name = "nuclear_reactor_heavy_water_thermonuclear_fuel_outcome"
+			position = { x = 187 y = 34 }
+			font = "hoi_20b"
+			text = "nuclear_reactor_heavy_water_fuel_thermonuclear_outcome_tt"
+			maxWidth = 46
+			maxHeight = 20
+			fixedsize = yes
+			format = center
+			pdx_tooltip_delayed = "nuclear_reactor_heavy_water_fuel_thermonuclear_outcome_desc"
+		}
+		instantTextBoxType = {
 			name = "nuclear_reactor_heavy_water_nuke_outcome"
-			position = { x = 195 y = 34 }
+			position = { x = 245 y = 34 }
 			font = "hoi_20b"
 			text = "nuclear_reactor_heavy_water_nuke_outcome_outcome_tt"
 			maxWidth = 46
@@ -531,7 +542,7 @@ guiTypes = {
 		}
 		instantTextBoxType = {
 			name = "nuclear_reactor_heavy_water_thermonuke_outcome"
-			position = { x = 247 y = 34 }
+			position = { x = 297 y = 34 }
 			font = "hoi_20b"
 			text = "nuclear_reactor_heavy_water_thermonuke_outcome_outcome_tt"
 			maxWidth = 46
