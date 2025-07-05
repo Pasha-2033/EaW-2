@@ -31,10 +31,6 @@ sp_rockets_flying_bomb = {
 	ai_will_do = {
 		base = 1
 		modifier = {
-			factor = 3
-			ROOT = { tag = GER }
-		}
-		modifier = {
 			factor = 0.5
 			ROOT = { is_major = no }
 		}
@@ -317,7 +313,7 @@ sp_rockets_flying_bomb = {
 
 
 # Ballistic Missiles - The V2 programme
-sp_rockets_ballistic_missile = {
+sp_rockets_short_range_ballistic_missile = {
 	specialization = specialization_air 
 	breakthrough_cost = {
 		specialization_air = 3
@@ -346,10 +342,6 @@ sp_rockets_ballistic_missile = {
 	ai_will_do = {
 		base = 1
 		modifier = {
-			factor = 2
-			ROOT = { tag = GER }
-		}
-		modifier = {
 			factor = 0.5
 			ROOT = { is_major = no }
 		}
@@ -362,6 +354,12 @@ sp_rockets_ballistic_missile = {
 	prototype_time = sp_time.prototype.medium
 
 	project_output = {
+		country_effects = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_rockets_medium_range_ballistic_missile
+			}
+		}
 		enable_equipments = {
 			limit = {
 				has_dlc = "Gotterdammerung"
@@ -445,10 +443,6 @@ sp_rockets_ballistic_missile = {
 
 			weight = {
 				base = 10
-				modifier = {
-					factor = 10
-					FROM = { original_tag = GER }
-				}
 			}
 
 			option = {
@@ -543,7 +537,7 @@ sp_rockets_medium_range_ballistic_missile = {
 	}
 
 	special_project_parent = {
-		sp_rockets_ballistic_missile
+		sp_rockets_short_range_ballistic_missile
 	}
 
 	available = { 
@@ -557,6 +551,12 @@ sp_rockets_medium_range_ballistic_missile = {
 	prototype_time = sp_time.prototype.medium	
 
 	project_output = {
+		country_effects = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_rockets_long_range_ballistic_missile
+			}
+		}
 		enable_equipments = {
 			limit = {
 				has_dlc = "Gotterdammerung"
@@ -734,12 +734,6 @@ sp_rockets_long_range_ballistic_missile = {
 
 			weight = {
 				base = 50
-				modifier = {
-					factor = 2
-					FROM = {
-						original_tag = USA
-					}
-				}
 			}
 
 			option = {
@@ -763,10 +757,6 @@ sp_rockets_long_range_ballistic_missile = {
 
 			weight = {
 				base = 10
-				modifier = {
-					factor = 100
-					FROM = { original_tag = SOV }
-				}
 			}
 
 			option = {
@@ -849,7 +839,7 @@ sp_rockets_ground_to_air_missile = {
 	}
 
 	special_project_parent = {
-		sp_rockets_ballistic_missile
+		sp_rockets_short_range_ballistic_missile
 	}
 
 	available = { 
@@ -1044,10 +1034,6 @@ sp_rocket_interceptor = {
 	ai_will_do = {
 		base = 1
 		modifier = {
-			factor = 3
-			ROOT = { tag = GER }
-		}
-		modifier = {
 			factor = 0.5
 			ROOT = { is_major = no }
 		}
@@ -1059,11 +1045,11 @@ sp_rocket_interceptor = {
 		country_effects = {
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_TECH
-				TECH = improved_rocket_engines	
+				TECH = rocket_engine_1
 			}
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_TECH
-				TECH = advanced_rocket_engines	
+				TECH = rocket_engine_2
 			}
 			if = {
 				limit = { has_dlc = "By Blood Alone" }

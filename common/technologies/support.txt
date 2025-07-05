@@ -2317,9 +2317,6 @@ technologies = {
 			leads_to_tech = scout_helicopter2
 			research_cost_coeff = 1
 		}
-		dependencies = {
-			experimental_helicopter = 1
-		}
 
 		research_cost = 2
 		start_year = 1019
@@ -2383,7 +2380,6 @@ technologies = {
 		dependencies = {
 			tech_logistics_company = 1
 			tech_field_hospital = 1
-			experimental_helicopter = 1
 		}
 		on_research_complete = {
 			custom_effect_tooltip = HELICOPTER_HOSPITAL_LOGISTICS_TOOLTIP

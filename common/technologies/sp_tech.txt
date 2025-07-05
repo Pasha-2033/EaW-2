@@ -84,4 +84,81 @@ technologies = {
 		}
 		chromium_plant_chromium_outcome = 2
 	}
+	#reactor init tech
+	allow_nuclear_reactor = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_building = {
+			building = nuclear_reactor
+			level = 1
+		}
+	}
+	allow_nuclear_reactor_heavy_water = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_building = {
+			building = nuclear_reactor_heavy_water
+			level = 1
+		}
+	}
+	allow_nuclear_reactor_exploratory = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_building = {
+			building = nuclear_reactor_exploratory
+			level = 1
+		}
+	}
+	allow_thermonuclear_reactor = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_building = {
+			building = thermonuclear_reactor
+			level = 1
+		}
+	}
+	allow_commercial_reactor = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_building = {
+			building = commercial_reactor
+			level = 1
+		}
+	}
+	#bombs
+	allow_nuclear_bomb = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		nuclear_production = 1
+	}
+	allow_thermonuclear_bomb = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		thermonuclear_production = 1
+	}
+	#anti nuke bunker
+	sp_tech_anti_nuke_bunker = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_building = {
+			building = anti_nuke_bunker
+			level = 1
+		}
+	}
 }

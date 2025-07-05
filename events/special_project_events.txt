@@ -1,0 +1,61 @@
+add_namespace = special_project_event
+#nuclear reactor meltdown (scientist death)
+country_event = {
+	id = special_project_event.1
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event special_project_event.1"
+	}
+	title = special_project_event.1.t
+	desc = special_project_event.1.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#FUCK!!!
+		name = special_project_event.1.a
+	}
+}
+#nuclear reactor radiation leak (scientist death)
+country_event = {
+	id = special_project_event.2
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event special_project_event.2"
+	}
+	title = special_project_event.2.t
+	desc = special_project_event.2.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#FUCK!!!
+		name = special_project_event.2.a
+	}
+}
+# nuclear reactor explosion (scientist death)
+country_event = {
+	id = special_project_event.3
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event special_project_event.3"
+	}
+	title = special_project_event.3.t
+	desc = special_project_event.3.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#FUCK!!!
+		name = special_project_event.3.a
+	}
+}
+#nuclear bomb critical mass (scientist death)
+country_event = {
+	id = special_project_event.4
+	immediate = {
+		log = "[GetDateText]: [Root.GetName]: event special_project_event.4"
+	}
+	title = special_project_event.4.t
+	desc = special_project_event.4.d
+	picture = GFX_event_swarm #(to do) change
+	is_triggered_only = yes
+	option = {
+		#FUCK!!!
+		name = special_project_event.4.a
+	}
+}
