@@ -400,7 +400,7 @@ sp_air_intercontinental_bomber = {
 				limit = { 
 					has_dlc = "By Blood Alone"
 				}
-				has_tech = improved_large_airframe
+				has_tech = large_airframe_2
 			}
 			else = {
 				has_tech = strategic_bomber2
@@ -618,7 +618,7 @@ sp_air_mothership_aircraft = {
 				has_dlc = "By Blood Alone"
 			}
 			FROM = {
-				has_tech = improved_large_airframe
+				has_tech = large_airframe_2
 			}
 		}
 		else = {
@@ -803,10 +803,10 @@ sp_air_jet_engine = {
 		FROM = {
 			if = {
 				limit = { has_dlc = "By Blood Alone" }
-				has_tech = engines_2
+				has_tech = engines_1
 				OR = {
-					has_tech = improved_small_airframe
-					has_tech = improved_medium_airframe
+					has_tech = small_airframe_2
+					has_tech = medium_airframe_2
 				}
 			}
 			else = {
@@ -1083,10 +1083,10 @@ sp_air_axial_jet_engine = {
 		FROM = {
 			if = {
 				limit = { has_dlc = "By Blood Alone" }
-				has_tech = engines_3
+				has_tech = engines_2
 				OR = {
-					has_tech = advanced_small_airframe
-					has_tech = advanced_medium_airframe
+					has_tech = small_airframe_3
+					has_tech = medium_airframe_3
 				}
 			}
 			else = {
@@ -1120,15 +1120,15 @@ sp_air_axial_jet_engine = {
 				limit = { has_dlc = "By Blood Alone" }
 				custom_effect_tooltip = {
 					localization_key = SP_UNLOCK_TECH
-					TECH = modern_small_airframe
+					TECH = small_airframe_4
 				}
 				custom_effect_tooltip = {
 					localization_key = SP_UNLOCK_TECH
-					TECH = modern_medium_airframe
+					TECH = medium_airframe_4
 				}
 				custom_effect_tooltip = {
 					localization_key = SP_UNLOCK_TECH
-					TECH = modern_large_airframe
+					TECH = large_airframe_4
 				}
 						
 				add_design_template_bonus = {

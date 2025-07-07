@@ -234,4 +234,25 @@ sub_units = {
 		land_air_wing_size = 100
 		carrier_air_wing_size = 10
 	}
+	mothership = {
+		sprite = mothership
+		priority = 6
+		active = yes
+		type = fighter
+		need = { mothership_equipment = 1 }
+		categories = { category_fighter }
+		land_air_wing_size = 10
+		mega_carrier_air_wing_size = 10
+	}
+
+	strat_bomber_intercontinental = {
+		sprite = strat_bomber_intercontinental
+		priority = 3
+		active = yes
+		type = strategic_bomber
+		need = { strat_bomber_intercontinental_equipment = 1 }
+		categories = { category_strat_bomber }
+		land_air_wing_size = 100
+		mega_carrier_air_wing_size = 5
+	}
 }
