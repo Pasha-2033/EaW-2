@@ -63,22 +63,6 @@ technologies = {
 			cat_st_energy
 		}
 	}
-	#special technologies (rockets)
-	reactivity_phenomenon = {
-		research_cost = 1
-		start_year = 990
-		folder = {
-			name = electronics_folder
-			position = { 
-				x = 0 
-				y = 0
-			}
-		}
-		categories = {
-			cat_special_tech
-			cat_st_energy
-		}
-	}
 	#special technologies (engines)
 	internal_combustion_engine = {
 		path = {
@@ -449,6 +433,7 @@ technologies = {
 		}
 		enable_equipment_modules = { 
 			tank_radio_1
+			radio_navigation_0
 		}
 		folder = {
 			name = support_folder
@@ -470,6 +455,9 @@ technologies = {
 	}
 	radio_1 = {
 		# units with radios can more efficiently join combats when there is room
+		enable_equipment_modules = { 
+			radio_navigation_1
+		}
 		land_reinforce_rate = 0.05
 		coordination_bonus = 0.04
 		path = {
@@ -549,6 +537,7 @@ technologies = {
 		}
 		enable_equipment_modules = { 
 			tank_radio_1
+			radio_navigation_1
 		}
 		start_year = 998
 		ai_will_do = {
@@ -746,6 +735,10 @@ technologies = {
 			building = radar_station
 			level = 1
 		}
+		enable_equipment_modules = {
+			air_ground_radar_0
+			air_air_radar_0
+		}
 		coordination_bonus = 0.01
 		path = {
 			leads_to_tech = radio_detection_1
@@ -820,6 +813,8 @@ technologies = {
 		coordination_bonus = 0.01
 		enable_equipment_modules = { 
 			ship_radar_2
+			air_ground_radar_1
+			air_air_radar_1
 		}
 		path = {
 			leads_to_tech = radio_detection_3
@@ -1099,6 +1094,9 @@ technologies = {
 	computer_1 = {
 		# small boost to research speed
 		research_speed_factor = 0.05
+		enable_equipment_modules = { 
+			bomb_sights_0
+		}
 		path = {
 			leads_to_tech = computer_2
 			research_cost_coeff = 1
@@ -1195,6 +1193,9 @@ technologies = {
 	}
 	computer_3 = {
 		# small boost to research speed
+		enable_equipment_modules = { 
+			bomb_sights_1
+		}
 		research_speed_factor = 0.08
 		path = {
 			leads_to_tech = encryption_2
@@ -2124,6 +2125,25 @@ technologies = {
 		}
 	}
 	#rockets
+	reactivity_phenomenon = {
+		research_cost = 1
+		start_year = 990
+		path = {
+			leads_to_tech = experimental_rockets
+			research_cost_coeff = 1
+		}
+		folder = {
+			name = electronics_folder
+			position = { 
+				x = 0 
+				y = 0
+			}
+		}
+		categories = {
+			cat_special_tech
+			cat_st_energy
+		}
+	}
 	experimental_rockets = {
 		enable_building = {
 			building = rocket_site
@@ -2148,6 +2168,10 @@ technologies = {
 			}
 		}
 		path = {
+			leads_to_tech = rocket_engine_0_bba
+			research_cost_coeff = 1
+		}
+		path = {
 			leads_to_tech = rocket_engine_0
 			research_cost_coeff = 1
 		}
@@ -2165,7 +2189,7 @@ technologies = {
 			name = electronics_folder
 			position = { 
 				x = 0 
-				y = 0 
+				y = 2 
 			}
 		}
 		ai_will_do = {
@@ -2178,13 +2202,248 @@ technologies = {
 			specialization_air
 		}
 	}
-	rocket_engine_0 = {
+	#rocket engine "By Blood Alone"
+	rocket_engine_0_bba = {
+		allow_branch = {
+			has_dlc = "By Blood Alone"
+		}
 		show_equipment_icon = yes
 		is_special_project_tech = yes
-		# can build v1s/rocket planes
+		#starts with 1 because of rocket engine sp
+		enable_equipment_modules = {
+			rocket_engine_1
+		}
+		category_all_rockets = {
+			air_range = 0.25
+		}
+		rocket_artillery = {
+			soft_attack = 0.05
+		}
+		rocket_artillery_brigade = {
+			soft_attack = 0.05
+		}
+		mot_rocket_artillery_brigade = {
+			soft_attack = 0.05
+		}
+		motorized_rocket_brigade = {
+			soft_attack = 0.05
+		}
+		path = {
+			leads_to_tech = rocket_engine_1_bba
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 1015
+		folder = {
+			name = electronics_folder
+			position = { 
+				x = -2
+				y = 2
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_rocketry
+		}
+		special_project_specialization = { 
+			specialization_air
+		}
+	}
+	rocket_engine_1_bba = {
+		is_special_project_tech = yes
+		show_equipment_icon = yes
+		enable_equipment_modules = {
+			rocket_engine_2
+		}
+		category_all_rockets = {
+			air_range = 0.25
+		}
+		rocket_artillery = {
+			soft_attack = 0.05
+		}
+		rocket_artillery_brigade = {
+			soft_attack = 0.05
+		}
+		mot_rocket_artillery_brigade = {
+			soft_attack = 0.05
+		}
+		motorized_rocket_brigade = {
+			soft_attack = 0.05
+		}
+		path = {
+			leads_to_tech = rocket_engine_2_bba
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 1016
+		folder = {
+			name = electronics_folder
+			position = { 
+				x = -2
+				y = 4
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_rocketry
+		}
+		special_project_specialization = { 
+			specialization_air
+		}
+	}
+	rocket_engine_2_bba = {
+		is_special_project_tech = yes
+		show_equipment_icon = yes
+		enable_equipment_modules = {
+			rocket_engine_3
+		}
+		category_all_rockets = {
+			air_range = 0.25
+		}
+		rocket_artillery = {
+			soft_attack = 0.05
+		}
+		rocket_artillery_brigade = {
+			soft_attack = 0.05
+		}
+		mot_rocket_artillery_brigade = {
+			soft_attack = 0.05
+		}
+		motorized_rocket_brigade = {
+			soft_attack = 0.05
+		}
+		path = {
+			leads_to_tech = rocket_engine_3_bba
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 1017
+		folder = {
+			name = electronics_folder
+			position = { 
+				x = -2
+				y = 6 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_rocketry
+		}
+		special_project_specialization = { 
+			specialization_air
+		}
+	}
+	rocket_engine_3_bba = {
+		is_special_project_tech = yes
+		show_equipment_icon = yes
+		enable_equipment_modules = {
+			rocket_engine_4
+		}
+		category_all_rockets = {
+			air_range = 0.25
+		}
+		rocket_artillery = {
+			soft_attack = 0.05
+		}
+		rocket_artillery_brigade = {
+			soft_attack = 0.05
+		}
+		mot_rocket_artillery_brigade = {
+			soft_attack = 0.05
+		}
+		motorized_rocket_brigade = {
+			soft_attack = 0.05
+		}
+		static_anti_air_hit_chance_factor = 0.1
+		static_anti_air_damage_factor = 0.1
+		navy_anti_air_attack_factor = 0.10
+		path = {
+			leads_to_tech = rocket_engine_4_bba
+			research_cost_coeff = 1
+		}
+		research_cost = 1.5
+		start_year = 1023
+		folder = {
+			name = electronics_folder
+			position = { 
+				x = -2 
+				y = 10 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_rocketry
+		}
+		special_project_specialization = { 
+			specialization_air
+		}
+	}
+	rocket_engine_4_bba = {
+		is_special_project_tech = yes
+		show_equipment_icon = yes
+		enable_equipment_modules = {
+			rocket_engine_5
+		}
+		category_all_rockets = {
+			air_range = 0.25
+		}
+		rocket_artillery = {
+			soft_attack = 0.05
+		}
+		rocket_artillery_brigade = {
+			soft_attack = 0.05
+		}
+		mot_rocket_artillery_brigade = {
+			soft_attack = 0.05
+		}
+		motorized_rocket_brigade = {
+			soft_attack = 0.05
+		}
+		static_anti_air_hit_chance_factor = 0.1
+		static_anti_air_damage_factor = 0.1
+		navy_anti_air_attack_factor = 0.10
+		research_cost = 1.5
+		start_year = 1026
+		folder = {
+			name = electronics_folder
+			position = { 
+				x = -2 
+				y = 12 
+			}
+		}
+		ai_will_do = {
+			factor = 1
+		}
+		categories = {
+			cat_rocketry
+		}
+		special_project_specialization = { 
+			specialization_air
+		}
+	}
+	#rocket engine
+	rocket_engine_0 = {
+		allow_branch = {
+			NOT = {
+				has_dlc = "By Blood Alone"
+			}
+		}
+		show_equipment_icon = yes
+		is_special_project_tech = yes
+		#starts with 1 because of rocket engine sp
 		enable_equipments = {
 			rocket_interceptor_equipment_1
-			guided_missile_equipment_1
+		}
+		category_all_rockets = {
+			air_range = 0.25
 		}
 		rocket_artillery = {
 			soft_attack = 0.05
@@ -2207,8 +2466,8 @@ technologies = {
 		folder = {
 			name = electronics_folder
 			position = { 
-				x = -2 
-				y = 2 
+				x = -2
+				y = 2
 			}
 		}
 		ai_will_do = {
@@ -2226,7 +2485,9 @@ technologies = {
 		show_equipment_icon = yes
 		enable_equipments = {
 			rocket_interceptor_equipment_2
-			guided_missile_equipment_2
+		}
+		category_all_rockets = {
+			air_range = 0.25
 		}
 		rocket_artillery = {
 			soft_attack = 0.05
@@ -2249,8 +2510,8 @@ technologies = {
 		folder = {
 			name = electronics_folder
 			position = { 
-				x = -2 
-				y = 4 
+				x = -2
+				y = 4
 			}
 		}
 		ai_will_do = {
@@ -2268,7 +2529,9 @@ technologies = {
 		show_equipment_icon = yes
 		enable_equipments = {
 			rocket_interceptor_equipment_3
-			guided_missile_equipment_3
+		}
+		category_all_rockets = {
+			air_range = 0.25
 		}
 		rocket_artillery = {
 			soft_attack = 0.05
@@ -2291,7 +2554,7 @@ technologies = {
 		folder = {
 			name = electronics_folder
 			position = { 
-				x = -2 
+				x = -2
 				y = 6 
 			}
 		}
@@ -2310,7 +2573,9 @@ technologies = {
 		show_equipment_icon = yes
 		enable_equipments = {
 			rocket_interceptor_equipment_4
-			guided_missile_equipment_4
+		}
+		category_all_rockets = {
+			air_range = 0.25
 		}
 		rocket_artillery = {
 			soft_attack = 0.05
@@ -2355,7 +2620,9 @@ technologies = {
 		show_equipment_icon = yes
 		enable_equipments = {
 			rocket_interceptor_equipment_5
-			guided_missile_equipment_5
+		}
+		category_all_rockets = {
+			air_range = 0.25
 		}
 		rocket_artillery = {
 			soft_attack = 0.05
@@ -2396,8 +2663,12 @@ technologies = {
 		is_special_project_tech = yes
 		show_equipment_icon = yes
 		enable_equipments = {
-			rocket_interceptor_equipment_5
-			guided_missile_equipment_5
+			#starts with 1 because of sp
+			guided_missile_equipment_1
+		}
+		enable_equipment_modules = {
+			guided_anti_ship_missile_0
+			rocket_propelled_bombs_0
 		}
 		rocket_artillery = {
 			soft_attack = 0.05
@@ -2440,9 +2711,12 @@ technologies = {
 	flying_bomb_1 = {
 		is_special_project_tech = yes
 		show_equipment_icon = yes
+		enable_equipment_modules = {
+			guided_anti_ship_missile_1
+			rocket_propelled_bombs_1
+		}
 		enable_equipments = {
-			rocket_interceptor_equipment_5
-			guided_missile_equipment_5
+			guided_missile_equipment_2
 		}
 		rocket_artillery = {
 			soft_attack = 0.05
@@ -2486,8 +2760,7 @@ technologies = {
 		is_special_project_tech = yes
 		show_equipment_icon = yes
 		enable_equipments = {
-			rocket_interceptor_equipment_5
-			guided_missile_equipment_5
+			guided_missile_equipment_3
 		}
 		rocket_artillery = {
 			soft_attack = 0.05
@@ -2531,8 +2804,7 @@ technologies = {
 		is_special_project_tech = yes
 		show_equipment_icon = yes
 		enable_equipments = {
-			rocket_interceptor_equipment_5
-			guided_missile_equipment_5
+			guided_missile_equipment_4
 		}
 		rocket_artillery = {
 			soft_attack = 0.05
@@ -2559,7 +2831,7 @@ technologies = {
 			name = electronics_folder
 			position = { 
 				x = 2 
-				y = 8 
+				y = 10
 			}
 		}
 		ai_will_do = {
@@ -2576,7 +2848,6 @@ technologies = {
 		is_special_project_tech = yes
 		show_equipment_icon = yes
 		enable_equipments = {
-			rocket_interceptor_equipment_5
 			guided_missile_equipment_5
 		}
 		rocket_artillery = {
@@ -2614,23 +2885,30 @@ technologies = {
 			specialization_air
 		}
 	}
+	#jet engines
 	jet_engines = {
 		is_special_project_tech = yes
 		folder = {
 			name = electronics_folder
 			position = { 
 				x = 0 
-				y = 2 
+				y = 4
 			}
+		}
+		path = {
+			leads_to_tech = jet_engines_1
+			research_cost_coeff = 1
 		}
 		start_year = 1015
 		research_cost = 2
 		enable_equipment_modules = {
 			tank_gas_turbine_engine
-		}
-		desc = "JET_ENGINES_SPECIAL"
-		on_research_complete = {
-			custom_effect_tooltip = JET_ENGINES_RESEARCHED
+			#starts with 1 because of sp
+			jet_engine_1_1x
+			jet_engine_1_2x
+			jet_engine_1_3x
+			jet_engine_1_4x
+			jet_engine_1_6x
 		}
 		ai_will_do = {
 			factor = 2

@@ -469,7 +469,7 @@ technologies = {
 			ship_light_missle_battery_0
 		}
 		dependencies = {
-			rocket_engine_1 = 1
+			rocket_engine_0 = 1
 		}
 		path = {
 			leads_to_tech = light_missile_battery_1
@@ -1087,7 +1087,7 @@ technologies = {
 			ship_heavy_medium_missle_battery_0
 		}
 		dependencies = {
-			rocket_engine_1 = 1
+			rocket_engine_0 = 1
 		}
 		path = {
 			leads_to_tech = medium_missile_battery_1
@@ -1526,7 +1526,7 @@ technologies = {
 			ship_heavy_missle_battery_0
 		}
 		dependencies = {
-			rocket_engine_1 = 1
+			rocket_engine_0 = 1
 		}
 		path = {
 			leads_to_tech = heavy_missile_battery_1
@@ -4089,6 +4089,9 @@ technologies = {
 		xp_research_bonus = 1.50
 		research_cost = 2
 		start_year = 997
+		enable_equipment_modules = {
+			airdropped_mines
+		}
 		category_nav_bomber = { 
 			mines_planting = 0.05 
 		}
@@ -4156,6 +4159,9 @@ technologies = {
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
 		research_cost = 2
+		enable_equipment_modules = {
+			demining_coil
+		}
 		start_year = 1002
 		category_nav_bomber = { 
 			mines_sweeping = 0.1 

@@ -40,12 +40,28 @@ equipments = {
 			missile_control_upgrade
 		}
 	}
+	guided_missile_equipment_0 = {
+		year = 1015
 
+		archetype = guided_missile_equipment
+		is_buildable = yes
+		one_use_only = yes
+		sprite = missile_default
+
+		air_range = 500
+		maximum_speed = 640
+		air_agility = 10
+		air_defence = 5
+		air_bombing = 300
+
+		# build_cost_ic = 36
+	}
 	#V-1s
 	guided_missile_equipment_1 = {
 		year = 1015
 
 		archetype = guided_missile_equipment
+		parent = guided_missile_equipment_0
 		is_buildable = yes
 		one_use_only = yes
 		sprite = missile_default

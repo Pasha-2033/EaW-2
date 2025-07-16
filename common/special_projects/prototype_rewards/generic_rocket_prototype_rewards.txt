@@ -1,68 +1,576 @@
-#"Good"
-sp_rockets_scientist_xp_generic_reward = {
+@base_reward_weight = 2 #Base Reward weight value
+@reward_weight_factor_theme = 0.25 # Applied to factor - Used to reduce chances of repeating the same reward theme within the same project (ie. Failure 1 & Failure 2)
+@scientist_max_lvl = 5
+@scientist_lvl_border = 4 #should be = scientist_max_lvl - 1
+
+#Low Scientist XP gain
+sp_rocket_generic_reward_scientist_xp_1 = {
 	fire_only_once = no
-	
-	threshold = { 
+	threshold = {
 		min = 0
 		max = 100
 	}
-	
 	weight = {
-		base = 1
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_rocket_generic_reward_scientist_xp_flag
+		}
+		modifier = {
+			factor = 0
+			var:scientist = {
+				has_scientist_level = {
+					level > @scientist_lvl_border
+					specialization = specialization_air
+				}
+			}
+		}
 	}
-	
 	option = {
-		token = sp_rockets_scientist_xp_generic_reward_option
-				
+		token = sp_rocket_generic_reward_option_scientist_xp
 		iteration_output = {
 			scientist_effects = {
-				add_scientist_xp = {
-					experience = constant:sp_scientist_xp_gain.very_high
-					specialization = specialization_air 
+				if = {
+					limit = {
+						has_scientist_level = {
+							level < @scientist_max_lvl
+							specialization = specialization_air
+						}
+					}
+					add_scientist_xp = {
+						experience = constant:sp_scientist_xp_gain.low
+						specialization = specialization_air
+					}
+				}
+				FROM = {
+					set_project_flag = sp_rocket_generic_reward_scientist_xp_flag
 				}
 			}
 		}
 	}
 }
-
-sp_rockets_generic_major_breakthrough_reward = {
+#Medium Scientist XP gain
+sp_rocket_generic_reward_scientist_xp_2 = {
 	fire_only_once = no
-	
-	threshold = { 
+	threshold = {
 		min = 0
 		max = 100
 	}
-	
 	weight = {
-		base = 1
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_rocket_generic_reward_scientist_xp_flag
+		}
+		modifier = {
+			factor = 0
+			var:scientist = {
+				has_scientist_level = {
+					level > @scientist_lvl_border
+					specialization = specialization_air
+				}
+			}
+		}
 	}
-	
 	option = {
-		token = sp_rockets_generic_major_breakthrough_reward_option
-				
+		token = sp_rocket_generic_reward_option_scientist_xp
 		iteration_output = {
-			country_effects = {
-				FROM = { add_project_progress_ratio = constant:sp_progress.gain.medium }
+			scientist_effects = {
+				if = {
+					limit = {
+						has_scientist_level = {
+							level < @scientist_max_lvl
+							specialization = specialization_air
+						}
+					}
+					add_scientist_xp = {
+						experience = constant:sp_scientist_xp_gain.medium
+						specialization = specialization_air
+					}
+				}
+				FROM = {
+					set_project_flag = sp_rocket_generic_reward_scientist_xp_flag 
+				}
 			}
 		}
 	}
 }
-
-sp_rockets_generic_avionics_advancements_reward = {
+#High Scientist XP gain
+sp_rocket_generic_reward_scientist_xp_3 = {
 	fire_only_once = no
-	
+	threshold = {
+		min = 0
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_rocket_generic_reward_scientist_xp_flag
+		}
+		modifier = {
+			factor = 0
+			var:scientist = {
+				has_scientist_level = {
+					level > @scientist_lvl_border
+					specialization = specialization_air
+				}
+			}
+		}
+	}
+	option = {
+		token = sp_rocket_generic_reward_option_scientist_xp
+		iteration_output = {
+			scientist_effects = {
+				if = {
+					limit = {
+						has_scientist_level = {
+							level < @scientist_max_lvl
+							specialization = specialization_air
+						}
+					}
+					add_scientist_xp = {
+						experience = constant:sp_scientist_xp_gain.high
+						specialization = specialization_air
+					}
+				}
+				FROM = {
+					set_project_flag = sp_rocket_generic_reward_scientist_xp_flag 
+				}
+			}
+		}
+	}
+}
+#Low Extra Progress
+sp_rocket_generic_reward_major_progress_1 = {
+	fire_only_once = no
+	threshold = {
+		min = 0
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_rocket_generic_reward_major_progress_flag
+		}
+	}
+	option = {
+		token = sp_rocket_generic_reward_option_major_breakthrough
+		iteration_output = {
+			country_effects = {
+				FROM = {
+					add_project_progress_ratio = constant:sp_progress.gain.low				
+					set_project_flag = sp_rocket_generic_reward_major_progress_flag
+				}
+			}
+			scientist_effects = {
+				if = {
+					limit = {
+						has_scientist_level = {
+							level < @scientist_max_lvl
+							specialization = specialization_air
+						}
+					}
+					add_scientist_xp = {
+						experience = constant:sp_scientist_xp_gain.low
+						specialization = specialization_air
+					}
+				}
+			}
+		}
+	}
+}
+#Medium Extra Progress
+sp_rocket_generic_reward_major_progress_2 = {
+	fire_only_once = no
+	threshold = {
+		min = 0
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_rocket_generic_reward_major_progress_flag
+		}
+	}
+	option = {
+		token = sp_rocket_generic_reward_option_major_breakthrough
+		iteration_output = {
+			country_effects = {
+				FROM = {
+					add_project_progress_ratio = constant:sp_progress.gain.medium
+					set_project_flag = sp_rocket_generic_reward_major_progress_flag
+				}
+			}
+			scientist_effects = {
+				if = {
+					limit = {
+						has_scientist_level = {
+							level < @scientist_max_lvl
+							specialization = specialization_air
+						}
+					}
+					add_scientist_xp = {
+						experience = constant:sp_scientist_xp_gain.low
+						specialization = specialization_air
+					}
+				}
+			}
+		}
+	}
+}
+#High Extra Progress
+sp_rocket_generic_reward_major_progress_3 = {
+	fire_only_once = no
+	threshold = {
+		min = 0
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_rocket_generic_reward_major_progress_flag
+		}
+	}
+	option = {
+		token = sp_rocket_generic_reward_option_major_breakthrough
+		iteration_output = {
+			country_effects = {
+				FROM = {
+					add_project_progress_ratio = constant:sp_progress.gain.high
+					set_project_flag = sp_rocket_generic_reward_major_progress_flag
+				}
+			}
+			scientist_effects = {
+				if = {
+					limit = {
+						has_scientist_level = {
+							level < @scientist_max_lvl
+							specialization = specialization_air
+						}
+					}
+					add_scientist_xp = {
+						experience = constant:sp_scientist_xp_gain.low
+						specialization = specialization_air
+					}
+				}
+			}
+		}
+	}
+}
+#Low Progress Loss
+sp_rocket_generic_reward_test_failure_1 = {
+	fire_only_once = no
+	threshold = {
+		min = 15 #Loss is 5
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_rocket_generic_reward_test_failure_flag
+		}
+	}
+	option = {
+		token = sp_rocket_generic_reward_option_test_failure
+		iteration_output = {
+			country_effects = { 
+				FROM = {
+					add_project_progress_ratio = constant:sp_progress.loss.low
+					set_project_flag = sp_rocket_generic_reward_test_failure_flag
+				}
+			}
+			scientist_effects = {
+				if = {
+					limit = {
+						has_scientist_level = {
+							level < @scientist_max_lvl
+							specialization = specialization_air
+						}
+					}
+					add_scientist_xp = {
+						experience = constant:sp_scientist_xp_gain.low
+						specialization = specialization_air
+					}
+				}
+			}
+		}
+	}
+}
+#Medium Progress Loss
+sp_rocket_generic_reward_test_failure_2 = {
+	fire_only_once = no
+	threshold = {
+		min = 15 #Loss is 5
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_rocket_generic_reward_test_failure_flag
+		}
+	}
+	option = {
+		token = sp_rocket_generic_reward_option_test_failure
+		iteration_output = {
+			country_effects = { 
+				FROM = {
+					add_project_progress_ratio = constant:sp_progress.loss.medium
+					set_project_flag = sp_rocket_generic_reward_test_failure_flag
+				}
+			}
+			scientist_effects = {
+				if = {
+					limit = {
+						has_scientist_level = {
+							level < @scientist_max_lvl
+							specialization = specialization_air
+						}
+					}
+					add_scientist_xp = {
+						experience = constant:sp_scientist_xp_gain.low
+						specialization = specialization_air
+					}
+				}
+			}
+		}
+	}
+}
+#High Progress Loss
+sp_rocket_generic_reward_test_failure_3 = {
+	fire_only_once = no
+	threshold = {
+		min = 15 #Loss is 5
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_rocket_generic_reward_test_failure_flag
+		}
+	}
+	option = {
+		token = sp_rocket_generic_reward_option_test_failure
+		iteration_output = {
+			country_effects = { 
+				FROM = {
+					add_project_progress_ratio = constant:sp_progress.loss.high
+					set_project_flag = sp_rocket_generic_reward_test_failure_flag
+				}
+			}
+			scientist_effects = {
+				if = {
+					limit = {
+						has_scientist_level = {
+							level < @scientist_max_lvl
+							specialization = specialization_air
+						}
+					}
+					add_scientist_xp = {
+						experience = constant:sp_scientist_xp_gain.low
+						specialization = specialization_air
+					}
+				}
+			}
+		}
+	}
+}
+#engines (rocket) tech
+#Low Tech Bonus
+sp_rocket_generic_reward_engines_tech_1 = {
+	fire_only_once = no
+	threshold = {
+		min = 0
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_rocket_generic_reward_engines_tech_flag
+		}
+	}
+	option = {
+		token = sp_rocket_generic_reward_option_engines_tech
+		iteration_output = {
+			country_effects = {
+				random_list = {
+					5 = {
+						add_tech_bonus = {
+							name = sp_rocket_generic_reward_option_engines_bonus_name
+							bonus = 0.1
+							uses = 1
+							category = cat_rocketry
+						}
+					}
+					10 = {
+						add_tech_bonus = {
+							name = sp_rocket_generic_reward_option_engines_bonus_name
+							bonus = 0.1
+							uses = 1
+							category = cat_rocketry
+						}
+					}
+					20 = {
+						add_tech_bonus = {
+							name = sp_rocket_generic_reward_option_engines_bonus_name
+							bonus = 0.1
+							uses = 1
+							category = cat_rocketry
+						}
+					}
+					65 = {
+						add_tech_bonus = {
+							name = sp_rocket_generic_reward_option_engines_bonus_name
+							bonus = 0.1
+							uses = 1
+							category = cat_rocketry
+						}
+					}
+				}
+				FROM = { 
+					set_project_flag = sp_rocket_generic_reward_engines_tech_flag 
+				}
+			}
+		}
+	}
+}
+#Medium Tech Bonus
+sp_rocket_generic_reward_engines_tech_2 = {
+	fire_only_once = no
+	threshold = {
+		min = 0
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_rocket_generic_reward_engines_tech_flag
+		}
+	}
+	option = {
+		token = sp_rocket_generic_reward_option_engines_tech
+		iteration_output = {
+			country_effects = {
+				random_list = {
+					10 = {
+						add_tech_bonus = {
+							name = sp_rocket_generic_reward_option_engines_bonus_name
+							bonus = 0.2
+							uses = 1
+							category = cat_rocketry
+						}
+					}
+					10 = {
+						add_tech_bonus = {
+							name = sp_rocket_generic_reward_option_engines_bonus_name
+							bonus = 0.2
+							uses = 1
+							category = cat_rocketry
+						}
+					}
+					20 = {
+						add_tech_bonus = {
+							name = sp_rocket_generic_reward_option_engines_bonus_name
+							bonus = 0.2
+							uses = 1
+							category = cat_rocketry
+						}
+					}
+					60 = {
+						add_tech_bonus = {
+							name = sp_rocket_generic_reward_option_engines_bonus_name
+							bonus = 0.2
+							uses = 1
+							category = cat_rocketry
+						}
+					}
+				}
+				FROM = { 
+					set_project_flag = sp_rocket_generic_reward_engines_tech_flag 
+				}
+			}
+		}
+	}
+}
+#High Tech Bonus
+sp_rocket_generic_reward_engines_tech_3 = {
+	fire_only_once = no
+	threshold = {
+		min = 0
+		max = 100
+	}
+	weight = {
+		base = @base_reward_weight
+		modifier = {
+			factor = @reward_weight_factor_theme
+			has_project_flag = sp_rocket_generic_reward_engines_tech_flag
+		}
+	}
+	option = {
+		token = sp_rocket_generic_reward_option_engines_tech
+		iteration_output = {
+			country_effects = {
+				random_list = {
+					20 = {
+						add_tech_bonus = {
+							name = sp_rocket_generic_reward_option_engines_bonus_name
+							bonus = 0.3
+							uses = 1
+							category = cat_rocketry
+						}
+					}
+					10 = {
+						add_tech_bonus = {
+							name = sp_rocket_generic_reward_option_engines_bonus_name
+							bonus = 0.3
+							uses = 1
+							category = cat_rocketry
+						}
+					}
+					10 = {
+						add_tech_bonus = {
+							name = sp_rocket_generic_reward_option_engines_bonus_name
+							bonus = 0.3
+							uses = 1
+							category = cat_rocketry
+						}
+					}
+					60 = {
+						add_tech_bonus = {
+							name = sp_rocket_generic_reward_option_engines_bonus_name
+							bonus = 0.4
+							uses = 1
+							category = cat_rocketry
+						}
+					}
+				}
+				FROM = { 
+					set_project_flag = sp_rocket_generic_reward_engines_tech_flag 
+				}
+			}
+		}
+	}
+}
+#avionics advancements
+sp_rocket_generic_avionics_advancements = {
+	fire_only_once = no
 	threshold = { 
 		min = 0
 		max = 100
 	}
-	
 	weight = {
 		base = 1
 	}
-	
 	option = {
-		token =sp_rockets_generic_avionics_advancements_reward_option
-				
+		token = sp_rocket_generic_avionics_advancements_option		
 		iteration_output = {
 			country_effects = {
 				air_experience = 25
@@ -70,62 +578,81 @@ sp_rockets_generic_avionics_advancements_reward = {
 		}
 	}
 }
-
-# "Bad"
-sp_rockets_political_interference_generic_reward = {
+#Political interference
+sp_rocket_generic_political_interference = {
 	fire_only_once = no
-	
 	threshold = { 
 		min = 0
 		max = 70
 	}
-	
 	weight = {
-		base = 0.5
+		base = 0.25
+		modifier = {
+			factor = 4
+			FROM = {
+				OR = { 
+					has_government = communism
+					has_government = fascism
+					has_government = radicalism
+					has_government = militarism
+				}
+			}
+		}
 	}
-	
 	option = {
-		token = sp_rockets_minor_progress_generic_reward_option
-				
+		token = sp_rocket_major_political_interference_option_keep
 		iteration_output = {
 			country_effects = {
-				FROM = { add_project_progress_ratio = constant:sp_progress.loss.low }
+				add_political_power = -50
+				FROM = { 
+					add_project_progress_ratio = constant:sp_progress.loss.medium
+				}
+			}
+			scientist_effects = {
+				if = {
+					limit = {
+						has_scientist_level = {
+							level < @scientist_max_lvl
+							specialization = specialization_air
+						}
+					}
+					add_scientist_xp = {
+						experience = constant:sp_scientist_xp_gain.medium
+						specialization = specialization_air
+					}
+				}
+			}
+		}
+	}
+	option = {
+		token = sp_rocket_major_political_interference_option_fire
+		iteration_output = {
+			country_effects = {
+				add_political_power = 50
+				FROM = { 
+					add_project_progress_ratio = constant:sp_progress.loss.low	
+				}
+			}
+			scientist_effects = {
+				#scientist doen`t die! role & traits must be saved!
+				ban_scientist = yes 
 			}
 		}
 	}
 }
-
-sp_rockets_onsite_explosion_generic_reward = {
+#rocket accidents
+sp_rockets_generic_onsite_explosion = {
 	fire_only_once = no
-	
 	threshold = { 
 		min = 0
 		max = 70
 	}
-	
 	weight = {
-		base = 0.5
-		modifier = {
-			factor = 100
-			FROM = {
-				has_country_flag = refused_to_replace_relay_flag
-			}
-		}
-		modifier = {
-			factor = 30
-			FROM = { 
-				has_country_flag = no_new_rocket_facility_built
-			}
-		}
+		base = 1
 	}
-	
 	option = {
-		token = sp_rockets_onsite_explosion_generic_reward_option
-				
+		token = sp_rocket_generic_onsite_explosion_reward_option	
 		iteration_output = {
-			country_effects = {
-				clr_country_flag = refused_to_replace_relay_flag
-			}
 			facility_state_effects = {
 				damage_building = {
 					tags = facility
