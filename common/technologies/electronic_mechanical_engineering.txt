@@ -2207,6 +2207,13 @@ technologies = {
 		allow_branch = {
 			has_dlc = "By Blood Alone"
 		}
+		allow = {
+			OR = {
+				is_special_project_completed = sp:sp_rockets_short_range_ballistic_missile
+				is_special_project_completed = sp:sp_rockets_flying_bomb
+				is_special_project_completed = sp:sp_rocket_interceptor
+			}	
+		}
 		show_equipment_icon = yes
 		is_special_project_tech = yes
 		#starts with 1 because of rocket engine sp
@@ -2436,6 +2443,13 @@ technologies = {
 				has_dlc = "By Blood Alone"
 			}
 		}
+		allow = {
+			OR = {
+				is_special_project_completed = sp:sp_rockets_short_range_ballistic_missile
+				is_special_project_completed = sp:sp_rockets_flying_bomb
+				is_special_project_completed = sp:sp_rocket_interceptor
+			}	
+		}
 		show_equipment_icon = yes
 		is_special_project_tech = yes
 		#starts with 1 because of rocket engine sp
@@ -2662,6 +2676,9 @@ technologies = {
 	flying_bomb_0 = {
 		is_special_project_tech = yes
 		show_equipment_icon = yes
+		allow = {
+			is_special_project_completed = sp:sp_rockets_flying_bomb
+		}
 		enable_equipments = {
 			#starts with 1 because of sp
 			guided_missile_equipment_1
@@ -2887,6 +2904,9 @@ technologies = {
 	}
 	#jet engines
 	jet_engines = {
+		allow = {
+			is_special_project_completed = sp:sp_air_jet_engine
+		}
 		is_special_project_tech = yes
 		folder = {
 			name = electronics_folder
@@ -2902,13 +2922,45 @@ technologies = {
 		start_year = 1015
 		research_cost = 2
 		enable_equipment_modules = {
+			limit = {
+				has_dlc = "No Step Back"
+			}
 			tank_gas_turbine_engine
-			#starts with 1 because of sp
+		}
+		enable_equipment_modules = {
+			limit = {
+				has_dlc = "By Blood Alone"
+			}
 			jet_engine_1_1x
 			jet_engine_1_2x
 			jet_engine_1_3x
 			jet_engine_1_4x
 			jet_engine_1_6x
+		}
+		show_effect_as_desc = yes
+		on_research_complete = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "No Step Back"
+						has_dlc = "By Blood Alone"
+					}
+				}
+				add_equipment_bonus = {
+					name = jet_engine_bonuses_tt
+					bonus = {
+						small_plane_airframe = {
+							air_agility = 0.05
+						}
+						medium_plane_airframe = {
+							air_agility = 0.1
+						}
+						large_plane_airframe = {
+							air_agility = 0.15
+						}
+					}
+				}
+			}
 		}
 		ai_will_do = {
 			factor = 2
