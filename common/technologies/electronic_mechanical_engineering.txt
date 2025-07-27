@@ -2176,7 +2176,15 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		path = {
-			leads_to_tech = jet_engines
+			leads_to_tech = jet_engines_bba
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = jet_engines_nsb
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = jet_engines_nsb_bba
 			research_cost_coeff = 1
 		}
 		path = {
@@ -2903,7 +2911,14 @@ technologies = {
 		}
 	}
 	#jet engines
-	jet_engines = {
+	jet_engines_bba = {
+		allow_branch = {
+			has_dlc = "By Blood Alone"
+			NOT = {
+				has_dlc = "No Step Back"
+			}
+			
+		}
 		allow = {
 			is_special_project_completed = sp:sp_air_jet_engine
 		}
@@ -2915,52 +2930,97 @@ technologies = {
 				y = 4
 			}
 		}
-		path = {
-			leads_to_tech = jet_engines_1
-			research_cost_coeff = 1
-		}
 		start_year = 1015
 		research_cost = 2
 		enable_equipment_modules = {
-			limit = {
-				has_dlc = "No Step Back"
-			}
 			tank_gas_turbine_engine
 		}
 		enable_equipment_modules = {
-			limit = {
-				has_dlc = "By Blood Alone"
-			}
 			jet_engine_1_1x
 			jet_engine_1_2x
 			jet_engine_1_3x
 			jet_engine_1_4x
 			jet_engine_1_6x
 		}
-		show_effect_as_desc = yes
-		on_research_complete = {
-			if = {
-				limit = {
-					NOT = {
-						has_dlc = "No Step Back"
-						has_dlc = "By Blood Alone"
-					}
-				}
-				add_equipment_bonus = {
-					name = jet_engine_bonuses_tt
-					bonus = {
-						small_plane_airframe = {
-							air_agility = 0.05
-						}
-						medium_plane_airframe = {
-							air_agility = 0.1
-						}
-						large_plane_airframe = {
-							air_agility = 0.15
-						}
-					}
-				}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_rocketry
+			cat_jet
+		}
+		special_project_specialization = { 
+			specialization_air
+		}
+	}
+	jet_engines_nsb = {
+		allow_branch = {
+			NOT = {
+				has_dlc = "By Blood Alone"
 			}
+			has_dlc = "No Step Back"
+		}
+		allow = {
+			is_special_project_completed = sp:sp_air_jet_engine
+		}
+		is_special_project_tech = yes
+		folder = {
+			name = electronics_folder
+			position = { 
+				x = 0 
+				y = 4
+			}
+		}
+		start_year = 1015
+		research_cost = 2
+		enable_equipment_modules = {
+			tank_gas_turbine_engine
+		}
+		enable_equipment_modules = {
+			jet_engine_1_1x
+			jet_engine_1_2x
+			jet_engine_1_3x
+			jet_engine_1_4x
+			jet_engine_1_6x
+		}
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			cat_rocketry
+			cat_jet
+		}
+		special_project_specialization = { 
+			specialization_air
+		}
+	}
+	jet_engines_nsb_bba = {
+		allow_branch = {
+			has_dlc = "By Blood Alone"
+			has_dlc = "No Step Back"
+		}
+		allow = {
+			is_special_project_completed = sp:sp_air_jet_engine
+		}
+		is_special_project_tech = yes
+		folder = {
+			name = electronics_folder
+			position = { 
+				x = 0 
+				y = 4
+			}
+		}
+		start_year = 1015
+		research_cost = 2
+		enable_equipment_modules = {
+			tank_gas_turbine_engine
+		}
+		enable_equipment_modules = {
+			jet_engine_1_1x
+			jet_engine_1_2x
+			jet_engine_1_3x
+			jet_engine_1_4x
+			jet_engine_1_6x
 		}
 		ai_will_do = {
 			factor = 2

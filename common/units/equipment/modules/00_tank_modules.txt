@@ -2086,4 +2086,19 @@ equipment_modules = {
 			air_attack = 0.1
 		}
 	}
+	#Land Cruiser modules
+	lc_helipad = {
+		abbreviation = "hel"
+		category = lc_aerial_deployment
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			recon = 8
+			defense = 1
+			air_attack = 2
+			build_cost_ic = 4
+			fuel_consumption = 1
+		}
+		xp_cost = 1
+	}
 }
