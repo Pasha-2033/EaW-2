@@ -1,0 +1,111 @@
+sp_magic_engine = {
+	specialization = specialization_magic
+	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
+	project_tags = sp_tag_magic
+	ai_will_do = {
+		base = 1
+	}
+	#special_project_parent = {
+	#	sp_air_jet_engine
+	#}
+	allowed = {
+		NOT = {
+			original_tag = ELN
+		}
+	}
+	breakthrough_cost = {
+		specialization_magic = 1
+	}
+	prototype_time = sp_time.prototype.short
+	complexity = sp_complexity.small
+	project_output = {
+		country_effects = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "By Blood Alone"
+					}
+				}
+				add_equipment_bonus = {
+					bonus = {
+						small_plane_airframe = {
+							maximum_speed = 0.1
+							instant = yes
+						}
+						cv_small_plane_airframe = {
+							maximum_speed = 0.1
+							instant = yes
+						}
+						medium_plane_airframe = {
+							maximum_speed = 0.05
+							thrust = 0.05
+							instant = yes
+						}
+						large_plane_airframe = {
+							thrust = 0.1
+							instant = yes
+						}
+						mothership_equipment = {
+							maximum_speed = 0.05
+							instant = yes
+						}
+						strat_bomber_intercontinental_equipment = {
+							maximum_speed = 0.05
+							instant = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+				add_equipment_bonus = {
+					bonus = {
+						light_tank_chassis = {
+							maximum_speed = 0.1
+							instant = yes
+						}
+						medium_tank_chassis = {
+							maximum_speed = 0.075
+							instant = yes
+						}
+						heavy_tank_chassis = {
+							maximum_speed = 0.05
+							instant = yes
+						}
+						super_heavy_tank_chassis = {
+							maximum_speed = 0.05
+							instant = yes
+						}
+					}
+				}
+			}
+		}
+		enable_equipment_modules = {	
+			limit = {
+				has_dlc = "By Blood Alone"
+			}
+			plane_magic_engine
+		}
+		enable_equipment_modules = {	
+			limit = {
+				has_dlc = "No Step Back"
+			}
+			tank_magic_engine
+		}
+	}
+	generic_prototype_rewards = {
+		sp_magic_generic_reward_scientist_xp_1
+		sp_magic_generic_reward_scientist_xp_2
+		sp_magic_generic_reward_scientist_xp_3
+		sp_magic_generic_reward_major_progress_1
+		sp_magic_generic_reward_major_progress_2
+		sp_magic_generic_reward_major_progress_3
+		sp_magic_generic_reward_test_failure_1
+		sp_magic_generic_reward_test_failure_2
+		sp_magic_generic_reward_test_failure_3
+	}
+}
