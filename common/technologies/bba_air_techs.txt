@@ -244,6 +244,9 @@ technologies = {
 			small_plane_airframe_4
 			cv_small_plane_airframe_4
 		}
+		allow = {
+			is_special_project_completed = sp:sp_air_jet_engine
+		}
 		path = {
 			leads_to_tech = small_airframe_5
 			research_cost_coeff = 1
@@ -497,6 +500,9 @@ technologies = {
 		enable_equipments = {
 			medium_plane_airframe_3
 		}
+		allow = {
+			is_special_project_completed = sp:sp_air_jet_engine
+		}
 		path = {
 			leads_to_tech = medium_airframe_4
 			research_cost_coeff = 1
@@ -713,7 +719,9 @@ technologies = {
 		enable_equipments = {
 			large_plane_airframe_3
 		}
-		
+		allow = {
+			is_special_project_completed = sp:sp_air_jet_engine
+		}
 		path = {
 			leads_to_tech = large_airframe_4
 			research_cost_coeff = 1
@@ -916,6 +924,9 @@ technologies = {
 			leads_to_tech = mothership_jet_interceptors_1
 			research_cost_coeff = 1
 		}
+		allow = {
+			is_special_project_completed = sp:sp_air_jet_engine
+		}
 		is_special_project_tech = yes
 		research_cost = 2
 		folder = {
@@ -994,7 +1005,6 @@ technologies = {
 	#bombs
 	bombs_0 = {
 		enable_equipment_modules = {
-			bomb_locks_0
 			small_bomb_bay_0
 			medium_bomb_bay_0
 			large_bomb_bay_0
@@ -1030,7 +1040,6 @@ technologies = {
 	}
 	bombs_1 = {
 		enable_equipment_modules = {
-			bomb_locks_1
 			small_bomb_bay_1
 			medium_bomb_bay_1
 			large_bomb_bay_1
@@ -1062,7 +1071,6 @@ technologies = {
 	}
 	bombs_2 = {
 		enable_equipment_modules = {
-			bomb_locks_2
 			small_bomb_bay_2
 			medium_bomb_bay_2
 			large_bomb_bay_2
@@ -1211,7 +1219,8 @@ technologies = {
 	#heavy bombs
 	heavy_bombs_0 = {
 		enable_equipment_modules = {
-
+			medium_heavy_bomb_bay_0
+			large_heavy_bomb_bay_0
 		}
 		path = {
 			leads_to_tech = heavy_bombs_1
@@ -1240,7 +1249,8 @@ technologies = {
 	}
 	heavy_bombs_1 = {
 		enable_equipment_modules = {
-
+			medium_heavy_bomb_bay_1
+			large_heavy_bomb_bay_1
 		}
 		path = {
 			leads_to_tech = heavy_bombs_2
@@ -1269,7 +1279,8 @@ technologies = {
 	}
 	heavy_bombs_2 = {
 		enable_equipment_modules = {
-
+			medium_heavy_bomb_bay_2
+			large_heavy_bomb_bay_2
 		}
 		research_cost = 1
 		start_year = 1922
@@ -1295,40 +1306,12 @@ technologies = {
 	#naval bombs
 	naval_bombs_0 = {
 		enable_equipment_modules = {
-			heavy_bomb_locks_0
+			small_naval_bomb_bay_0
+			medium_naval_bomb_bay_0
+			large_naval_bomb_bay_0
 		}
 		path = {
 			leads_to_tech = naval_bombs_1
-			research_cost_coeff = 1
-		}
-		research_cost = 1
-		start_year = 1922
-
-		folder = {
-			name = bba_air_techs_folder
-			position = { 
-				x = 4 
-				y = 2 
-			}
-		}
-		categories = {
-			cat_air_equipment
-			cat_air_modules
-			cat_air_naval_bombs
-		}
-		ai_will_do = {
-			factor = 1
-		}
-		special_project_specialization = { 
-			specialization_air 
-		}
-	}
-	naval_bombs_1 = {
-		enable_equipment_modules = {
-			heavy_bomb_locks_1
-		}
-		path = {
-			leads_to_tech = naval_bombs_2
 			research_cost_coeff = 1
 		}
 		research_cost = 1
@@ -1346,6 +1329,38 @@ technologies = {
 			cat_air_modules
 			cat_air_naval_bombs
 		}
+		ai_will_do = {
+			factor = 1
+		}
+		special_project_specialization = { 
+			specialization_air 
+		}
+	}
+	naval_bombs_1 = {
+		enable_equipment_modules = {
+			small_naval_bomb_bay_1
+			medium_naval_bomb_bay_1
+			large_naval_bomb_bay_1
+		}
+		path = {
+			leads_to_tech = naval_bombs_2
+			research_cost_coeff = 1
+		}
+		research_cost = 1
+		start_year = 1922
+
+		folder = {
+			name = bba_air_techs_folder
+			position = { 
+				x = 4 
+				y = 8
+			}
+		}
+		categories = {
+			cat_air_equipment
+			cat_air_modules
+			cat_air_naval_bombs
+		}
 		
 		ai_will_do = {
 			factor = 1
@@ -1356,7 +1371,9 @@ technologies = {
 	}
 	naval_bombs_2 = {
 		enable_equipment_modules = {
-			
+			small_naval_bomb_bay_2
+			medium_naval_bomb_bay_2
+			large_naval_bomb_bay_2
 		}
 		path = {
 			leads_to_tech = naval_bombs_3
@@ -1369,7 +1386,7 @@ technologies = {
 			name = bba_air_techs_folder
 			position = { 
 				x = 4 
-				y = 8 
+				y = 12
 			}
 		}
 		categories = {
@@ -1387,11 +1404,9 @@ technologies = {
 	}
 	naval_bombs_3 = {
 		enable_equipment_modules = {
-			
-		}
-		path = {
-			leads_to_tech = naval_bombs_4
-			research_cost_coeff = 1
+			small_naval_bomb_bay_3
+			medium_naval_bomb_bay_3
+			large_naval_bomb_bay_3
 		}
 		research_cost = 1
 		start_year = 1922
@@ -1400,34 +1415,7 @@ technologies = {
 			name = bba_air_techs_folder
 			position = { 
 				x = 4 
-				y = 12 
-			}
-		}
-		categories = {
-			cat_air_equipment
-			cat_air_modules
-			cat_air_naval_bombs
-		}
-		
-		ai_will_do = {
-			factor = 1
-		}
-		special_project_specialization = { 
-			specialization_air 
-		}
-	}
-	naval_bombs_4 = {
-		enable_equipment_modules = {
-			
-		}
-		research_cost = 1
-		start_year = 1922
-
-		folder = {
-			name = bba_air_techs_folder
-			position = { 
-				x = 4 
-				y = 16 
+				y = 16
 			}
 		}
 		categories = {
@@ -1533,7 +1521,7 @@ technologies = {
 	}
 	air_torpedoe_3 = {
 		enable_equipment_modules = {
-			torpedo_mounting_2
+			torpedo_mounting_3
 		}	
 		research_cost = 1
 		start_year = 1944
@@ -1562,7 +1550,7 @@ technologies = {
 	}
 	air_torpedoe_4 = {
 		enable_equipment_modules = {
-			torpedo_mounting_2
+			torpedo_mounting_4
 		}	
 		research_cost = 1
 		start_year = 1944
@@ -1692,7 +1680,10 @@ technologies = {
 	}
 	aa_lmg_2 = {
 		enable_equipment_modules = {
-
+			light_mg_2x_2
+			light_mg_4x_2
+			lmg_defense_turret_2
+			lmg_defense_turret_2x_2
 		}
 		research_cost = 1
 		start_year = 1922
@@ -1721,7 +1712,10 @@ technologies = {
 	}
 	aa_lmg_3 = {
 		enable_equipment_modules = {
-
+			light_mg_2x_3
+			light_mg_4x_3
+			lmg_defense_turret_3
+			lmg_defense_turret_2x_3
 		}
 		research_cost = 1
 		start_year = 1922
@@ -1750,7 +1744,10 @@ technologies = {
 	}
 	aa_lmg_4 = {
 		enable_equipment_modules = {
-
+			light_mg_2x_4
+			light_mg_4x_4
+			lmg_defense_turret_4
+			lmg_defense_turret_2x_4
 		}
 		research_cost = 1
 		start_year = 1922
@@ -1840,7 +1837,10 @@ technologies = {
 	}
 	aa_hmg_2 = {
 		enable_equipment_modules = {
-
+			heavy_mg_2x_2
+			heavy_mg_4x_2
+			hmg_defense_turret_2
+			hmg_defense_turret_2x_2
 		}
 		path = {
 			leads_to_tech = aa_hmg_3
@@ -1869,7 +1869,10 @@ technologies = {
 	}
 	aa_hmg_3 = {
 		enable_equipment_modules = {
-
+			heavy_mg_2x_3
+			heavy_mg_4x_3
+			hmg_defense_turret_3
+			hmg_defense_turret_2x_3
 		}
 		research_cost = 1
 		start_year = 1939
@@ -1959,10 +1962,10 @@ technologies = {
 	}
 	aa_cannon_2 = {
 		enable_equipment_modules = {
-			aircraft_cannon_1_1x
-			aircraft_cannon_1_2x
-			cannon_defense_turret_1
-			cannon_defense_turret_2x_1
+			aircraft_cannon_2_1x
+			aircraft_cannon_2_2x
+			cannon_defense_turret_2
+			cannon_defense_turret_2x_2
 		}
 		research_cost = 1.5
 		start_year = 1943
@@ -1991,10 +1994,10 @@ technologies = {
 	}
 	aa_cannon_3 = {
 		enable_equipment_modules = {
-			aircraft_cannon_1_1x
-			aircraft_cannon_1_2x
-			cannon_defense_turret_1
-			cannon_defense_turret_2x_1
+			aircraft_cannon_3_1x
+			aircraft_cannon_3_2x
+			cannon_defense_turret_3
+			cannon_defense_turret_2x_3
 		}
 		research_cost = 1.5
 		start_year = 1943
@@ -2086,7 +2089,12 @@ technologies = {
 	}
 	survivability_studies_2 = {
 		enable_equipment_modules = {
-
+			self_sealing_fuel_tanks_small_2
+			self_sealing_fuel_tanks_medium_2
+			self_sealing_fuel_tanks_large_2
+			armor_plate_small_2
+			armor_plate_medium_2
+			armor_plate_large_2
 		}
 		path = {
 			leads_to_tech = survivability_studies_3
@@ -2114,7 +2122,12 @@ technologies = {
 	}
 	survivability_studies_3 = {
 		enable_equipment_modules = {
-
+			self_sealing_fuel_tanks_small_3
+			self_sealing_fuel_tanks_medium_3
+			self_sealing_fuel_tanks_large_3
+			armor_plate_small_3
+			armor_plate_medium_3
+			armor_plate_large_3
 		}
 		path = {
 			leads_to_tech = survivability_studies_3
@@ -2317,7 +2330,11 @@ technologies = {
 	}
 	engines_5 = {
 		enable_equipment_modules = {
-
+			engine_5_1x
+			engine_5_2x
+			engine_5_3x
+			engine_5_4x
+			engine_5_6x	
 		}
 		path = {
 			leads_to_tech = sp_centrifugal_jet_tech
@@ -2350,7 +2367,11 @@ technologies = {
 	}
 	engines_6 = {
 		enable_equipment_modules = {
-
+			engine_6_1x
+			engine_6_2x
+			engine_6_3x
+			engine_6_4x
+			engine_6_6x	
 		}
 		path = {
 			leads_to_tech = engines_7
@@ -2379,7 +2400,11 @@ technologies = {
 	}
 	engines_7 = {
 		enable_equipment_modules = {
-
+			engine_7_1x
+			engine_7_2x
+			engine_7_3x
+			engine_7_4x
+			engine_7_6x	
 		}
 		path = {
 			leads_to_tech = engines_8
@@ -2408,7 +2433,11 @@ technologies = {
 	}
 	engines_8 = {
 		enable_equipment_modules = {
-
+			engine_8_1x
+			engine_8_2x
+			engine_8_3x
+			engine_8_4x
+			engine_8_6x	
 		}
 		path = {
 			leads_to_tech = engines_9
@@ -2437,7 +2466,11 @@ technologies = {
 	}
 	engines_9 = {
 		enable_equipment_modules = {
-
+			engine_9_1x
+			engine_9_2x
+			engine_9_3x
+			engine_9_4x
+			engine_9_6x	
 		}
 		research_cost = 1.5
 		start_year = 1944
@@ -2632,7 +2665,13 @@ technologies = {
 	}
 	aircraft_construction_2 = {
 		enable_equipment_modules = {
-
+			dive_brakes_small_2
+			floats_2
+			non_strategic_materials_small_2
+			non_strategic_materials_medium_2
+			non_strategic_materials_large_2
+			flying_boat_medium_2
+			flying_boat_large_2
 		}
 		research_cost = 1
 		start_year = 1936
