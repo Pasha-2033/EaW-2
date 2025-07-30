@@ -1947,6 +1947,174 @@ equipment_modules = {
 		}
 		dismantle_cost_ic = 3.5
 	}
+	small_bomb_bay_3 = {
+		abbreviation = "sbb"
+		category = cas_weapon
+		sfx = sfx_ui_sd_module_turret
+		parent = small_bomb_bay_2
+		add_equipment_type = { cas tactical_bomber }
+
+		add_stats = {
+			build_cost_ic = 3
+			air_agility = -15
+			weight = 5
+		}
+		xp_cost = 2
+		allow_mission_type = {
+			cas
+			attack_logistics
+			port_strike
+		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+			}
+			add_stats = {
+				air_ground_attack = 8
+				weight = 0
+			}
+		}
+		mission_type_stats = {
+			limit = {
+				port_strike
+			}
+			add_stats = {
+				naval_strike_attack = 2
+				weight = 0
+			}
+			add_average_stats = {
+				naval_strike_targetting = 4
+			}
+		}
+		dismantle_cost_ic = 3.5
+	}
+	small_bomb_bay_4 = {
+		abbreviation = "sbb"
+		category = cas_weapon
+		sfx = sfx_ui_sd_module_turret
+		parent = small_bomb_bay_3
+		add_equipment_type = { cas tactical_bomber }
+
+		add_stats = {
+			build_cost_ic = 3
+			air_agility = -15
+			weight = 5
+		}
+		xp_cost = 2
+		allow_mission_type = {
+			cas
+			attack_logistics
+			port_strike
+		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+			}
+			add_stats = {
+				air_ground_attack = 8
+				weight = 0
+			}
+		}
+		mission_type_stats = {
+			limit = {
+				port_strike
+			}
+			add_stats = {
+				naval_strike_attack = 2
+				weight = 0
+			}
+			add_average_stats = {
+				naval_strike_targetting = 4
+			}
+		}
+		dismantle_cost_ic = 3.5
+	}
+	small_bomb_bay_5 = {
+		abbreviation = "sbb"
+		category = cas_weapon
+		sfx = sfx_ui_sd_module_turret
+		parent = small_bomb_bay_4
+		add_equipment_type = { cas tactical_bomber }
+
+		add_stats = {
+			build_cost_ic = 3
+			air_agility = -15
+			weight = 5
+		}
+		xp_cost = 2
+		allow_mission_type = {
+			cas
+			attack_logistics
+			port_strike
+		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+			}
+			add_stats = {
+				air_ground_attack = 8
+				weight = 0
+			}
+		}
+		mission_type_stats = {
+			limit = {
+				port_strike
+			}
+			add_stats = {
+				naval_strike_attack = 2
+				weight = 0
+			}
+			add_average_stats = {
+				naval_strike_targetting = 4
+			}
+		}
+		dismantle_cost_ic = 3.5
+	}
+	small_bomb_bay_6 = {
+		abbreviation = "sbb"
+		category = cas_weapon
+		sfx = sfx_ui_sd_module_turret
+		parent = small_bomb_bay_5
+		add_equipment_type = { cas tactical_bomber }
+
+		add_stats = {
+			build_cost_ic = 3
+			air_agility = -15
+			weight = 5
+		}
+		xp_cost = 2
+		allow_mission_type = {
+			cas
+			attack_logistics
+			port_strike
+		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+			}
+			add_stats = {
+				air_ground_attack = 8
+				weight = 0
+			}
+		}
+		mission_type_stats = {
+			limit = {
+				port_strike
+			}
+			add_stats = {
+				naval_strike_attack = 2
+				weight = 0
+			}
+			add_average_stats = {
+				naval_strike_targetting = 4
+			}
+		}
+		dismantle_cost_ic = 3.5
+	}
 	#medium bomb bay
 	medium_bomb_bay_0 = {
 		abbreviation = "mbb"
@@ -2068,6 +2236,166 @@ equipment_modules = {
 		}
 		dismantle_cost_ic = 7
 	}
+	medium_bomb_bay_3 = {
+		abbreviation = "mbb"
+		category = tac_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = { cas tactical_bomber }
+		parent = medium_bomb_bay_2
+		add_stats = {
+			build_cost_ic = 6
+			air_agility = -5
+			weight = 6
+		}
+		xp_cost = 2
+		allow_mission_type = {
+			cas
+			attack_logistics
+			strategic_bomber
+			port_strike
+		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+				port_strike
+			}
+			add_stats = {
+				air_ground_attack = 3
+				weight = 0
+			}
+		}
+		mission_type_stats = {
+			limit = {
+				strategic_bomber
+			}
+			add_stats = {
+				air_bombing = 6
+				weight = 0
+			}
+		}
+		dismantle_cost_ic = 7
+	}
+	medium_bomb_bay_4 = {
+		abbreviation = "mbb"
+		category = tac_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = { cas tactical_bomber }
+		parent = medium_bomb_bay_3
+		add_stats = {
+			build_cost_ic = 6
+			air_agility = -5
+			weight = 6
+		}
+		xp_cost = 2
+		allow_mission_type = {
+			cas
+			attack_logistics
+			strategic_bomber
+			port_strike
+		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+				port_strike
+			}
+			add_stats = {
+				air_ground_attack = 3
+				weight = 0
+			}
+		}
+		mission_type_stats = {
+			limit = {
+				strategic_bomber
+			}
+			add_stats = {
+				air_bombing = 6
+				weight = 0
+			}
+		}
+		dismantle_cost_ic = 7
+	}
+	medium_bomb_bay_5 = {
+		abbreviation = "mbb"
+		category = tac_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = { cas tactical_bomber }
+		parent = medium_bomb_bay_4
+		add_stats = {
+			build_cost_ic = 6
+			air_agility = -5
+			weight = 6
+		}
+		xp_cost = 2
+		allow_mission_type = {
+			cas
+			attack_logistics
+			strategic_bomber
+			port_strike
+		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+				port_strike
+			}
+			add_stats = {
+				air_ground_attack = 3
+				weight = 0
+			}
+		}
+		mission_type_stats = {
+			limit = {
+				strategic_bomber
+			}
+			add_stats = {
+				air_bombing = 6
+				weight = 0
+			}
+		}
+		dismantle_cost_ic = 7
+	}
+	medium_bomb_bay_6 = {
+		abbreviation = "mbb"
+		category = tac_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = { cas tactical_bomber }
+		parent = medium_bomb_bay_5
+		add_stats = {
+			build_cost_ic = 6
+			air_agility = -5
+			weight = 6
+		}
+		xp_cost = 2
+		allow_mission_type = {
+			cas
+			attack_logistics
+			strategic_bomber
+			port_strike
+		}
+		mission_type_stats = {
+			limit = {
+				cas
+				attack_logistics
+				port_strike
+			}
+			add_stats = {
+				air_ground_attack = 3
+				weight = 0
+			}
+		}
+		mission_type_stats = {
+			limit = {
+				strategic_bomber
+			}
+			add_stats = {
+				air_bombing = 6
+				weight = 0
+			}
+		}
+		dismantle_cost_ic = 7
+	}
 	#large bomb bay
 	large_bomb_bay_0 = {
 		abbreviation = "lbb"
@@ -2148,6 +2476,154 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		add_equipment_type = strategic_bomber
 		parent = large_bomb_bay_1
+
+		add_stats = {
+			build_cost_ic = 9
+			air_agility = -10
+			weight = 10
+		}
+		xp_cost = 2
+		allow_mission_type = {
+			strategic_bomber
+			port_strike
+		}
+		mission_type_stats = {
+			limit = {
+				strategic_bomber
+			}
+			add_stats = {
+				air_bombing = 15
+				weight = 0
+			}
+		}
+		mission_type_stats = {
+			limit = {
+				port_strike
+			}
+			add_stats = {
+				naval_strike_attack = 2
+				weight = 0
+			}
+		}
+		dismantle_cost_ic = 12
+	}
+	large_bomb_bay_3 = {
+		abbreviation = "lbb"
+		category = strat_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = strategic_bomber
+		parent = large_bomb_bay_2
+
+		add_stats = {
+			build_cost_ic = 9
+			air_agility = -10
+			weight = 10
+		}
+		xp_cost = 2
+		allow_mission_type = {
+			strategic_bomber
+			port_strike
+		}
+		mission_type_stats = {
+			limit = {
+				strategic_bomber
+			}
+			add_stats = {
+				air_bombing = 15
+				weight = 0
+			}
+		}
+		mission_type_stats = {
+			limit = {
+				port_strike
+			}
+			add_stats = {
+				naval_strike_attack = 2
+				weight = 0
+			}
+		}
+		dismantle_cost_ic = 12
+	}
+	large_bomb_bay_4 = {
+		abbreviation = "lbb"
+		category = strat_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = strategic_bomber
+		parent = large_bomb_bay_3
+
+		add_stats = {
+			build_cost_ic = 9
+			air_agility = -10
+			weight = 10
+		}
+		xp_cost = 2
+		allow_mission_type = {
+			strategic_bomber
+			port_strike
+		}
+		mission_type_stats = {
+			limit = {
+				strategic_bomber
+			}
+			add_stats = {
+				air_bombing = 15
+				weight = 0
+			}
+		}
+		mission_type_stats = {
+			limit = {
+				port_strike
+			}
+			add_stats = {
+				naval_strike_attack = 2
+				weight = 0
+			}
+		}
+		dismantle_cost_ic = 12
+	}
+	large_bomb_bay_5 = {
+		abbreviation = "lbb"
+		category = strat_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = strategic_bomber
+		parent = large_bomb_bay_4
+
+		add_stats = {
+			build_cost_ic = 9
+			air_agility = -10
+			weight = 10
+		}
+		xp_cost = 2
+		allow_mission_type = {
+			strategic_bomber
+			port_strike
+		}
+		mission_type_stats = {
+			limit = {
+				strategic_bomber
+			}
+			add_stats = {
+				air_bombing = 15
+				weight = 0
+			}
+		}
+		mission_type_stats = {
+			limit = {
+				port_strike
+			}
+			add_stats = {
+				naval_strike_attack = 2
+				weight = 0
+			}
+		}
+		dismantle_cost_ic = 12
+	}
+	large_bomb_bay_6 = {
+		abbreviation = "lbb"
+		category = strat_weapon
+		sfx = sfx_ui_sd_module_turret
+		add_equipment_type = strategic_bomber
+		parent = large_bomb_bay_5
 
 		add_stats = {
 			build_cost_ic = 9
