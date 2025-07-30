@@ -535,13 +535,6 @@ generic_light_tank_anti_air = {
 
 	priority = {
 		factor = 50
-		modifier = {
-			NOT = { has_tech = fighter2 } #we should probably do something about that air superiority...
-			any_enemy_country = {
-				has_tech = fighter2
-			}
-			factor = 3
-		}
 	}
 	light_tank_anti_air_1 = {
 		priority = {
@@ -1252,13 +1245,6 @@ generic_medium_tank_anti_air = {
 
 	priority = {
 		factor = 50
-		modifier = {
-			NOT = { has_tech = fighter2 } #we should probably do something about that air superiority...
-			any_enemy_country = {
-				has_tech = fighter2
-			}
-			factor = 3
-		}
 	}
 	medium_tank_anti_air_1 = {
 		priority = {
@@ -1972,13 +1958,6 @@ generic_heavy_tank_anti_air = {
 
 	priority = {
 		factor = 5
-		modifier = {
-			NOT = { has_tech = fighter2 } #we should probably do something about that air superiority...
-			any_enemy_country = {
-				has_tech = fighter2
-			}
-			factor = 3
-		}
 	}
 	heavy_tank_anti_air_1 = {
 		priority = {

@@ -573,10 +573,6 @@ leader_traits = {
 		new_commander_weight = {
 			factor = 0.5
 			modifier = {
-				factor = 0
-				owner = { NOT = { has_tech = early_fighter } }
-			}
-			modifier = {
 				factor = 2
 				owner = { has_air_experience > 100 }
 			}

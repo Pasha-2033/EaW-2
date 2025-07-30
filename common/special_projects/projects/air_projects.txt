@@ -26,15 +26,10 @@ sp_air_bouncing_bomb = {
 			limit = {
 				has_dlc = "By Blood Alone"
 			}
-			FROM = {
-				has_tech = heavy_bombs
-			}
+			#TODO
 		}
 		else = {
-			OR = {
-				FROM = { has_tech = tactical_bomber2 }
-				FROM = { has_tech = strategic_bomber2 }
-			}
+			#TODO
 		}
 	}
 
@@ -203,14 +198,10 @@ sp_air_earthshaker_bomb = {
 	available = { 
 		if = {
 			limit = { has_dlc = "By Blood Alone" }
-			FROM = {
-				has_tech = heavy_bombs
-			}
+			#TODO
 		}
 		else = {
-			FROM = {
-				has_tech = strategic_bomber2
-			}
+			#TODO
 		}
 	}
 
@@ -400,10 +391,10 @@ sp_air_intercontinental_bomber = {
 				limit = { 
 					has_dlc = "By Blood Alone"
 				}
-				has_tech = large_airframe_2
+				#TODO
 			}
 			else = {
-				has_tech = strategic_bomber2
+				#TODO
 			}
 		}
 	}
@@ -622,9 +613,7 @@ sp_air_mothership_aircraft = {
 			}
 		}
 		else = {
-			FROM = { 
-				has_tech = strategic_bomber2
-			}
+			#TODO
 		}
 	}
 
@@ -810,10 +799,7 @@ sp_air_jet_engine = {
 				}
 			}
 			else = {
-				OR = {
-					has_tech = fighter2
-					has_tech = tactical_bomber2
-				}
+				#TODO
 			}	
 		}
 	}
@@ -1090,10 +1076,7 @@ sp_air_axial_jet_engine = {
 				}
 			}
 			else = {
-				OR = {
-					has_tech = jet_fighter1
-					has_tech = jet_tactical_bomber1
-				}
+				#TODO
 			}	
 		}
 	}
