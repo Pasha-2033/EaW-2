@@ -10,9 +10,16 @@ duplicate_archetypes = {
 		type = cas
 		picture = archetype_CAS_equipment
 		variant_name = {
+			small_plane_cas_airframe_0 = CAS_equipment_0
 			small_plane_cas_airframe_1 = CAS_equipment_1
 			small_plane_cas_airframe_2 = CAS_equipment_2
 			small_plane_cas_airframe_3 = CAS_equipment_3
+			small_plane_cas_airframe_4 = CAS_equipment_4
+			small_plane_cas_airframe_5 = CAS_equipment_5
+			small_plane_cas_airframe_6 = CAS_equipment_6
+			small_plane_cas_airframe_7 = CAS_equipment_7
+			small_plane_cas_airframe_8 = CAS_equipment_8
+			small_plane_cas_airframe_9 = CAS_equipment_9
 		}
 		air_map_icon_frame = 2
 		interface_overview_category_index = 0
@@ -24,9 +31,16 @@ duplicate_archetypes = {
 		ai_type = cv_cas
 		picture = archetype_CAS_equipment
 		variant_name = {
+			cv_small_plane_cas_airframe_0 = cv_CAS_equipment_0
 			cv_small_plane_cas_airframe_1 = cv_CAS_equipment_1
-			cv_small_plane_cas_airframe_2 = cv_CAS_equipment_3
-			cv_small_plane_cas_airframe_3 = cv_CAS_equipment_2
+			cv_small_plane_cas_airframe_2 = cv_CAS_equipment_2
+			cv_small_plane_cas_airframe_3 = cv_CAS_equipment_3
+			cv_small_plane_cas_airframe_4 = cv_CAS_equipment_4
+			cv_small_plane_cas_airframe_5 = cv_CAS_equipment_5
+			cv_small_plane_cas_airframe_6 = cv_CAS_equipment_6
+			cv_small_plane_cas_airframe_7 = cv_CAS_equipment_7
+			cv_small_plane_cas_airframe_8 = cv_CAS_equipment_8
+			cv_small_plane_cas_airframe_9 = cv_CAS_equipment_9
 		}
 		air_map_icon_frame = 17
 		interface_overview_category_index = 0
@@ -37,9 +51,15 @@ duplicate_archetypes = {
 		type = naval_bomber
 		picture = archetype_heavy_fighter_equipment
 		variant_name = {
+			small_plane_naval_bomber_airframe_0 = nav_bomber_equipment_0
 			small_plane_naval_bomber_airframe_1 = nav_bomber_equipment_1
 			small_plane_naval_bomber_airframe_2 = nav_bomber_equipment_2
 			small_plane_naval_bomber_airframe_3 = nav_bomber_equipment_3
+			small_plane_naval_bomber_airframe_4 = nav_bomber_equipment_4
+			small_plane_naval_bomber_airframe_5 = nav_bomber_equipment_5
+			small_plane_naval_bomber_airframe_6 = nav_bomber_equipment_6
+			small_plane_naval_bomber_airframe_7 = nav_bomber_equipment_7
+			small_plane_naval_bomber_airframe_8 = nav_bomber_equipment_8
 		}
 		air_map_icon_frame = 3
 		interface_overview_category_index = 2
@@ -51,9 +71,15 @@ duplicate_archetypes = {
 		ai_type = cv_naval_bomber
 		picture = archetype_heavy_fighter_equipment
 		variant_name = {
+			cv_small_plane_naval_bomber_airframe_0 = cv_nav_bomber_equipment_0
 			cv_small_plane_naval_bomber_airframe_1 = cv_nav_bomber_equipment_1
 			cv_small_plane_naval_bomber_airframe_2 = cv_nav_bomber_equipment_2
 			cv_small_plane_naval_bomber_airframe_3 = cv_nav_bomber_equipment_3
+			cv_small_plane_naval_bomber_airframe_4 = cv_nav_bomber_equipment_4
+			cv_small_plane_naval_bomber_airframe_5 = cv_nav_bomber_equipment_5
+			cv_small_plane_naval_bomber_airframe_6 = cv_nav_bomber_equipment_6
+			cv_small_plane_naval_bomber_airframe_7 = cv_nav_bomber_equipment_7
+			cv_small_plane_naval_bomber_airframe_8 = cv_nav_bomber_equipment_8
 		}
 		air_map_icon_frame = 18
 		interface_overview_category_index = 2
@@ -77,6 +103,9 @@ duplicate_archetypes = {
 		type = suicide
 		ai_type = cv_suicide
 		picture = archetype_rocket_interceptor_equipment
+		variant_name = {
+			cv_small_plane_suicide_airframe_0 = cv_rocket_suicide_equipment_0
+		}
 		air_map_icon_frame = 19
 		interface_overview_category_index = -1 # Do not include these in the intel or airforce overview.
 		forbid_mission_type = training
@@ -89,13 +118,19 @@ duplicate_archetypes = {
 		type = fighter
 		ai_type = heavy_fighter
 		for_each = {
-			air_superiority = { set = 1.25 }
+			air_superiority = { 
+				set = 1.25 
+			}
 		}
 		sprite = light_plane
 		variant_name = {
+			medium_plane_fighter_airframe_0 = heavy_fighter_equipment_0
 			medium_plane_fighter_airframe_1 = heavy_fighter_equipment_1
 			medium_plane_fighter_airframe_2 = heavy_fighter_equipment_2
 			medium_plane_fighter_airframe_3 = heavy_fighter_equipment_3
+			medium_plane_fighter_airframe_4 = heavy_fighter_equipment_4
+			medium_plane_fighter_airframe_5 = heavy_fighter_equipment_5
+			medium_plane_fighter_airframe_6 = heavy_fighter_equipment_6
 		}
 		air_map_icon_frame = 8
 		interface_overview_category_index = 3
@@ -105,7 +140,9 @@ duplicate_archetypes = {
 		archetype = medium_plane_airframe
 		type = scout_plane
 		for_each = {
-			air_superiority = { set = 0 }
+			air_superiority = { 
+				set = 0 
+			}
 		}
 		sprite = scout_plane
 		variant_name = {
@@ -130,7 +167,7 @@ duplicate_archetypes = {
 equipments = {
 	#fighter
 	fighter_equipment_0 = {
-		year = 1933
+		year = 984
 
 		archetype = small_plane_airframe
 		priority = 5
@@ -180,7 +217,7 @@ equipments = {
 
 	}
 	fighter_equipment_1 = {
-		year = 1936
+		year = 988
 
 		archetype = small_plane_airframe
 		parent = fighter_equipment_0
@@ -210,7 +247,7 @@ equipments = {
 		fuel_consumption = 0.21
 	}
 	fighter_equipment_2 = {
-		year = 1940
+		year = 992
 
 		archetype = small_plane_airframe
 		parent = fighter_equipment_1
@@ -240,7 +277,7 @@ equipments = {
 		fuel_consumption = 0.21
 	}
 	fighter_equipment_3 = {
-		year = 1944
+		year = 996
 
 		archetype = small_plane_airframe
 		parent = fighter_equipment_2
@@ -270,7 +307,7 @@ equipments = {
 		fuel_consumption = 0.21
 	}
 	fighter_equipment_4 = {
-		year = 1944
+		year = 1000
 
 		archetype = small_plane_airframe
 		parent = fighter_equipment_3
@@ -300,7 +337,7 @@ equipments = {
 		fuel_consumption = 0.21
 	}
 	fighter_equipment_5 = {
-		year = 1944
+		year = 1004
 
 		archetype = small_plane_airframe
 		parent = fighter_equipment_4
@@ -330,7 +367,7 @@ equipments = {
 		fuel_consumption = 0.21
 	}
 	fighter_equipment_6 = {
-		year = 1944
+		year = 1008
 
 		archetype = small_plane_airframe
 		parent = fighter_equipment_5
@@ -360,7 +397,7 @@ equipments = {
 		fuel_consumption = 0.21
 	}
 	fighter_equipment_7 = {
-		year = 1944
+		year = 1012
 
 		archetype = small_plane_airframe
 		parent = fighter_equipment_6
@@ -390,7 +427,7 @@ equipments = {
 		fuel_consumption = 0.21
 	}
 	fighter_equipment_8 = {
-		year = 1944
+		year = 1016
 
 		archetype = small_plane_airframe
 		parent = fighter_equipment_7
@@ -420,7 +457,7 @@ equipments = {
 		fuel_consumption = 0.21
 	}
 	fighter_equipment_9 = {
-		year = 1944
+		year = 1020
 
 		archetype = small_plane_airframe
 		parent = fighter_equipment_8
@@ -451,7 +488,7 @@ equipments = {
 	}
 	#cv fighter
 	cv_fighter_equipment_0 = {
-		year = 1933
+		year = 984
 
 		archetype = cv_small_plane_airframe
 		carrier_capable = yes
@@ -498,7 +535,7 @@ equipments = {
 		fuel_consumption = 0.21
 	}
 	cv_fighter_equipment_1 = {
-		year = 1936
+		year = 988
 
 		archetype = cv_small_plane_airframe
 		parent = cv_fighter_equipment_0
@@ -529,7 +566,7 @@ equipments = {
 		fuel_consumption = 0.21
 	}
 	cv_fighter_equipment_2 = {
-		year = 1940
+		year = 992
 
 		archetype = cv_small_plane_airframe
 		parent = cv_fighter_equipment_1
@@ -559,7 +596,7 @@ equipments = {
 		fuel_consumption = 0.21
 	}
 	cv_fighter_equipment_3 = {
-		year = 1944
+		year = 996
 
 		archetype = cv_small_plane_airframe
 		parent = cv_fighter_equipment_2
@@ -590,7 +627,7 @@ equipments = {
 		fuel_consumption = 0.21
 	}
 	cv_fighter_equipment_4 = {
-		year = 1944
+		year = 1000
 
 		archetype = cv_small_plane_airframe
 		parent = cv_fighter_equipment_3
@@ -621,7 +658,7 @@ equipments = {
 		fuel_consumption = 0.21
 	}
 	cv_fighter_equipment_5 = {
-		year = 1944
+		year = 1004
 
 		archetype = cv_small_plane_airframe
 		parent = cv_fighter_equipment_4
@@ -652,7 +689,7 @@ equipments = {
 		fuel_consumption = 0.21
 	}
 	cv_fighter_equipment_6 = {
-		year = 1944
+		year = 1008
 
 		archetype = cv_small_plane_airframe
 		parent = cv_fighter_equipment_5
@@ -683,7 +720,7 @@ equipments = {
 		fuel_consumption = 0.21
 	}
 	cv_fighter_equipment_7 = {
-		year = 1944
+		year = 1012
 
 		archetype = cv_small_plane_airframe
 		parent = cv_fighter_equipment_6
@@ -714,7 +751,7 @@ equipments = {
 		fuel_consumption = 0.21
 	}
 	cv_fighter_equipment_8 = {
-		year = 1944
+		year = 1016
 
 		archetype = cv_small_plane_airframe
 		parent = cv_fighter_equipment_7
@@ -745,7 +782,7 @@ equipments = {
 		fuel_consumption = 0.21
 	}
 	cv_fighter_equipment_9 = {
-		year = 1944
+		year = 1020
 
 		archetype = cv_small_plane_airframe
 		parent = cv_fighter_equipment_8
@@ -777,7 +814,7 @@ equipments = {
 	}
 	#heavy fighter
 	heavy_fighter_equipment_0 = {
-		year = 1936
+		year = 988
 
 		archetype = medium_plane_fighter_airframe
 		priority = 100
@@ -818,7 +855,7 @@ equipments = {
 		fuel_consumption = 0.26
 	}
 	heavy_fighter_equipment_1 = {
-		year = 1936
+		year = 992
 
 		archetype = medium_plane_fighter_airframe
 		priority = 100
@@ -839,12 +876,6 @@ equipments = {
 		naval_strike_targetting = 6
 		surface_detection = 5
 		sub_detection = 5
-		upgrades = {
-			plane_gun_upgrade
-			plane_range_upgrade
-			plane_engine_upgrade
-			plane_reliability_upgrade
-		}
 
 		build_cost_ic = 28
 		resources = {
@@ -859,7 +890,7 @@ equipments = {
 		fuel_consumption = 0.26
 	}
 	heavy_fighter_equipment_2 = {
-		year = 1940
+		year = 996
 
 		archetype = medium_plane_fighter_airframe
 		parent = heavy_fighter_equipment_1
@@ -887,7 +918,7 @@ equipments = {
 		fuel_consumption = 0.26
 	}
 	heavy_fighter_equipment_3 = {
-		year = 1944
+		year = 1000
 
 		archetype = medium_plane_fighter_airframe
 		parent = heavy_fighter_equipment_2
@@ -915,7 +946,7 @@ equipments = {
 		fuel_consumption = 0.26
 	}
 	heavy_fighter_equipment_4 = {
-		year = 1944
+		year = 1004
 
 		archetype = medium_plane_fighter_airframe
 		parent = heavy_fighter_equipment_3
@@ -943,7 +974,7 @@ equipments = {
 		fuel_consumption = 0.26
 	}
 	heavy_fighter_equipment_5 = {
-		year = 1944
+		year = 1012
 
 		archetype = medium_plane_fighter_airframe
 		parent = heavy_fighter_equipment_4
@@ -971,7 +1002,7 @@ equipments = {
 		fuel_consumption = 0.26
 	}
 	heavy_fighter_equipment_6 = {
-		year = 1944
+		year = 1020
 
 		archetype = medium_plane_fighter_airframe
 		parent = heavy_fighter_equipment_5
@@ -1000,7 +1031,7 @@ equipments = {
 	}
 	#CAS
 	CAS_equipment_0 = {
-		year = 1936
+		year = 984
 
 		archetype = small_plane_cas_airframe
 		priority = 40
@@ -1043,7 +1074,7 @@ equipments = {
 		fuel_consumption = 0.26
 	}
 	CAS_equipment_1 = {
-		year = 1936
+		year = 988
 
 		archetype = small_plane_cas_airframe
 		priority = 40
@@ -1086,7 +1117,7 @@ equipments = {
 		fuel_consumption = 0.26
 	}
 	CAS_equipment_2 = {
-		year = 1940
+		year = 992
 
 		archetype = small_plane_cas_airframe
 		parent = CAS_equipment_1
@@ -1116,7 +1147,7 @@ equipments = {
 		fuel_consumption = 0.26
 	}
 	CAS_equipment_3 = {
-		year = 1944
+		year = 996
 
 		archetype = small_plane_cas_airframe
 		parent = CAS_equipment_2
@@ -1146,7 +1177,7 @@ equipments = {
 		fuel_consumption = 0.26
 	}
 	CAS_equipment_4 = {
-		year = 1944
+		year = 1000
 
 		archetype = small_plane_cas_airframe
 		parent = CAS_equipment_3
@@ -1176,7 +1207,7 @@ equipments = {
 		fuel_consumption = 0.26
 	}
 	CAS_equipment_5 = {
-		year = 1944
+		year = 1004
 
 		archetype = small_plane_cas_airframe
 		parent = CAS_equipment_4
@@ -1206,7 +1237,7 @@ equipments = {
 		fuel_consumption = 0.26
 	}
 	CAS_equipment_6 = {
-		year = 1944
+		year = 1008
 
 		archetype = small_plane_cas_airframe
 		parent = CAS_equipment_5
@@ -1236,7 +1267,7 @@ equipments = {
 		fuel_consumption = 0.26
 	}
 	CAS_equipment_7 = {
-		year = 1944
+		year = 1012
 
 		archetype = small_plane_cas_airframe
 		parent = CAS_equipment_6
@@ -1266,7 +1297,7 @@ equipments = {
 		fuel_consumption = 0.26
 	}
 	CAS_equipment_8 = {
-		year = 1944
+		year = 1016
 
 		archetype = small_plane_cas_airframe
 		parent = CAS_equipment_7
@@ -1296,7 +1327,7 @@ equipments = {
 		fuel_consumption = 0.26
 	}
 	CAS_equipment_9 = {
-		year = 1944
+		year = 1020
 
 		archetype = small_plane_cas_airframe
 		parent = CAS_equipment_8
@@ -1327,8 +1358,8 @@ equipments = {
 	}
 	#cv CAS
 	cv_CAS_equipment_0 = {
-		year = 1936
-		archetype = cv_small_plane_airframe
+		year = 984
+		archetype = cv_small_plane_cas_airframe
 		carrier_capable = yes
 		priority = 40
 		allow_mission_type = {
@@ -1337,14 +1368,12 @@ equipments = {
 			port_strike
 			attack_logistics
 		}
-
 		upgrades = {
 			plane_cas_upgrade
 			plane_range_upgrade
 			plane_engine_upgrade
 			plane_reliability_upgrade
 		}
-
 		air_range = 700
 		maximum_speed = 390 
 		air_agility = 35
@@ -1362,15 +1391,14 @@ equipments = {
 			aluminium = 2
 			rubber = 1
 		}
-
 		air_superiority = 1
 		reliability = 0.8
 		manpower = 20
 		fuel_consumption = 0.26
 	}
 	cv_CAS_equipment_1 = {
-		year = 1936
-		archetype = cv_small_plane_airframe
+		year = 988
+		archetype = cv_small_plane_cas_airframe
 		carrier_capable = yes
 		priority = 40
 		parent = cv_CAS_equipment_0
@@ -1399,9 +1427,9 @@ equipments = {
 		fuel_consumption = 0.26
 	}
 	cv_CAS_equipment_2 = {
-		year = 1940
+		year = 992
 		carrier_capable = yes
-		archetype = cv_small_plane_airframe
+		archetype = cv_small_plane_cas_airframe
 		parent = cv_CAS_equipment_1
 		priority = 40
 
@@ -1429,9 +1457,9 @@ equipments = {
 		fuel_consumption = 0.26
 	}
 	cv_CAS_equipment_3 = {
-		year = 1944
+		year = 996
 		carrier_capable = yes
-		archetype = cv_small_plane_airframe
+		archetype = cv_small_plane_cas_airframe
 		parent = cv_CAS_equipment_2
 		priority = 40
 
@@ -1459,9 +1487,9 @@ equipments = {
 		fuel_consumption = 0.26
 	}
 	cv_CAS_equipment_4 = {
-		year = 1944
+		year = 1000
 		carrier_capable = yes
-		archetype = cv_small_plane_airframe
+		archetype = cv_small_plane_cas_airframe
 		parent = cv_CAS_equipment_3
 		priority = 40
 
@@ -1489,9 +1517,9 @@ equipments = {
 		fuel_consumption = 0.26
 	}
 	cv_CAS_equipment_5 = {
-		year = 1944
+		year = 1004
 		carrier_capable = yes
-		archetype = cv_small_plane_airframe
+		archetype = cv_small_plane_cas_airframe
 		parent = cv_CAS_equipment_4
 		priority = 40
 
@@ -1519,9 +1547,9 @@ equipments = {
 		fuel_consumption = 0.26
 	}
 	cv_CAS_equipment_6 = {
-		year = 1944
+		year = 1008
 		carrier_capable = yes
-		archetype = cv_small_plane_airframe
+		archetype = cv_small_plane_cas_airframe
 		parent = cv_CAS_equipment_5
 		priority = 40
 
@@ -1549,9 +1577,9 @@ equipments = {
 		fuel_consumption = 0.26
 	}
 	cv_CAS_equipment_7 = {
-		year = 1944
+		year = 1012
 		carrier_capable = yes
-		archetype = cv_small_plane_airframe
+		archetype = cv_small_plane_cas_airframe
 		parent = cv_CAS_equipment_6
 		priority = 40
 
@@ -1579,9 +1607,9 @@ equipments = {
 		fuel_consumption = 0.26
 	}
 	cv_CAS_equipment_8 = {
-		year = 1944
+		year = 1016
 		carrier_capable = yes
-		archetype = cv_small_plane_airframe
+		archetype = cv_small_plane_cas_airframe
 		parent = cv_CAS_equipment_7
 		priority = 40
 
@@ -1609,8 +1637,8 @@ equipments = {
 		fuel_consumption = 0.26
 	}
 	cv_CAS_equipment_9 = {
-		year = 1944
-		archetype = cv_small_plane_airframe
+		year = 1020
+		archetype = cv_small_plane_cas_airframe
 		carrier_capable = yes
 		parent = cv_CAS_equipment_8
 		priority = 40
@@ -1640,7 +1668,7 @@ equipments = {
 	}
 	#naval bomber
 	nav_bomber_equipment_0 = {
-		year = 1936
+		year = 988
 
 		archetype = small_plane_naval_bomber_airframe
 		priority = 60
@@ -1684,7 +1712,7 @@ equipments = {
 		fuel_consumption = 0.28
 	}
 	nav_bomber_equipment_1 = {
-		year = 1936
+		year = 992
 
 		archetype = small_plane_naval_bomber_airframe
 		priority = 60
@@ -1728,7 +1756,7 @@ equipments = {
 		fuel_consumption = 0.28
 	}
 	nav_bomber_equipment_2 = {
-		year = 1940
+		year = 996
 
 		archetype = small_plane_naval_bomber_airframe
 		parent = nav_bomber_equipment_1
@@ -1757,7 +1785,7 @@ equipments = {
 		fuel_consumption = 0.28
 	}
 	nav_bomber_equipment_3 = {
-		year = 1944
+		year = 1000
 
 		archetype = small_plane_naval_bomber_airframe
 		parent = nav_bomber_equipment_2
@@ -1786,7 +1814,7 @@ equipments = {
 		fuel_consumption = 0.28
 	}
 	nav_bomber_equipment_4 = {
-		year = 1944
+		year = 1004
 
 		archetype = small_plane_naval_bomber_airframe
 		parent = nav_bomber_equipment_3
@@ -1815,7 +1843,7 @@ equipments = {
 		fuel_consumption = 0.28
 	}
 	nav_bomber_equipment_5 = {
-		year = 1944
+		year = 1008
 
 		archetype = small_plane_naval_bomber_airframe
 		parent = nav_bomber_equipment_4
@@ -1844,7 +1872,7 @@ equipments = {
 		fuel_consumption = 0.28
 	}
 	nav_bomber_equipment_6 = {
-		year = 1944
+		year = 1012
 
 		archetype = small_plane_naval_bomber_airframe
 		parent = nav_bomber_equipment_5
@@ -1873,7 +1901,7 @@ equipments = {
 		fuel_consumption = 0.28
 	}
 	nav_bomber_equipment_7 = {
-		year = 1944
+		year = 1016
 
 		archetype = small_plane_naval_bomber_airframe
 		parent = nav_bomber_equipment_6
@@ -1902,7 +1930,7 @@ equipments = {
 		fuel_consumption = 0.28
 	}
 	nav_bomber_equipment_8 = {
-		year = 1944
+		year = 1020
 
 		archetype = small_plane_naval_bomber_airframe
 		parent = nav_bomber_equipment_7
@@ -1932,9 +1960,9 @@ equipments = {
 	}
 	#cv naval bomber
 	cv_nav_bomber_equipment_0 = {
-		year = 1936
+		year = 988
 
-		archetype = cv_small_plane_airframe
+		archetype = cv_small_plane_naval_bomber_airframe
 		carrier_capable = yes
 		priority = 70
 
@@ -1979,9 +2007,9 @@ equipments = {
 		fuel_consumption = 0.28
 	}
 	cv_nav_bomber_equipment_1 = {
-		year = 1940
+		year = 992
 
-		archetype = cv_small_plane_airframe
+		archetype = cv_small_plane_naval_bomber_airframe
 		parent = cv_nav_bomber_equipment_0
 		carrier_capable = yes
 		priority = 70
@@ -2007,9 +2035,9 @@ equipments = {
 		fuel_consumption = 0.28
 	}
 	cv_nav_bomber_equipment_2 = {
-		year = 1944
+		year = 996
 
-		archetype = cv_small_plane_airframe
+		archetype = cv_small_plane_naval_bomber_airframe
 		parent = cv_nav_bomber_equipment_1
 		carrier_capable = yes
 		priority = 70
@@ -2035,9 +2063,9 @@ equipments = {
 		fuel_consumption = 0.28
 	}
 	cv_nav_bomber_equipment_3 = {
-		year = 1944
+		year = 1000
 
-		archetype = cv_small_plane_airframe
+		archetype = cv_small_plane_naval_bomber_airframe
 		parent = cv_nav_bomber_equipment_2
 		carrier_capable = yes
 		priority = 70
@@ -2063,9 +2091,9 @@ equipments = {
 		fuel_consumption = 0.28
 	}
 	cv_nav_bomber_equipment_4 = {
-		year = 1944
+		year = 1004
 
-		archetype = cv_small_plane_airframe
+		archetype = cv_small_plane_naval_bomber_airframe
 		parent = cv_nav_bomber_equipment_3
 		carrier_capable = yes
 		priority = 70
@@ -2091,9 +2119,9 @@ equipments = {
 		fuel_consumption = 0.28
 	}
 	cv_nav_bomber_equipment_5 = {
-		year = 1944
+		year = 1008
 
-		archetype = cv_small_plane_airframe
+		archetype = cv_small_plane_naval_bomber_airframe
 		parent = cv_nav_bomber_equipment_4
 		carrier_capable = yes
 		priority = 70
@@ -2119,9 +2147,9 @@ equipments = {
 		fuel_consumption = 0.28
 	}
 	cv_nav_bomber_equipment_6 = {
-		year = 1944
+		year = 1012
 
-		archetype = cv_small_plane_airframe
+		archetype = cv_small_plane_naval_bomber_airframe
 		parent = cv_nav_bomber_equipment_5
 		carrier_capable = yes
 		priority = 70
@@ -2147,9 +2175,9 @@ equipments = {
 		fuel_consumption = 0.28
 	}
 	cv_nav_bomber_equipment_7 = {
-		year = 1944
+		year = 1016
 
-		archetype = cv_small_plane_airframe
+		archetype = cv_small_plane_naval_bomber_airframe
 		parent = cv_nav_bomber_equipment_6
 		carrier_capable = yes
 		priority = 70
@@ -2175,9 +2203,9 @@ equipments = {
 		fuel_consumption = 0.28
 	}
 	cv_nav_bomber_equipment_8 = {
-		year = 1944
+		year = 1020
 
-		archetype = cv_small_plane_airframe
+		archetype = cv_small_plane_naval_bomber_airframe
 		parent = cv_nav_bomber_equipment_7
 		carrier_capable = yes
 		priority = 70
@@ -2204,7 +2232,7 @@ equipments = {
 	}
 	#tactical bomber
 	tac_bomber_equipment_0 = {
-		year = 1933
+		year = 984
 
 		archetype = medium_plane_airframe
 		priority = 105
@@ -2252,7 +2280,7 @@ equipments = {
 		fuel_consumption = 0.36
 	}
 	tac_bomber_equipment_1 = {
-		year = 1936
+		year = 988
 
 		archetype = medium_plane_airframe
 		parent = tac_bomber_equipment_0
@@ -2283,7 +2311,7 @@ equipments = {
 		fuel_consumption = 0.36
 	}
 	tac_bomber_equipment_2 = {
-		year = 1940
+		year = 992
 
 		archetype = medium_plane_airframe
 		parent = tac_bomber_equipment_1
@@ -2314,7 +2342,7 @@ equipments = {
 		fuel_consumption = 0.36
 	}
 	tac_bomber_equipment_3 = {
-		year = 1944
+		year = 1000
 
 		archetype = medium_plane_airframe
 		parent = tac_bomber_equipment_2
@@ -2345,7 +2373,7 @@ equipments = {
 		fuel_consumption = 0.36
 	}
 	tac_bomber_equipment_4 = {
-		year = 1944
+		year = 1008
 
 		archetype = medium_plane_airframe
 		parent = tac_bomber_equipment_3
@@ -2376,7 +2404,7 @@ equipments = {
 		fuel_consumption = 0.36
 	}
 	tac_bomber_equipment_5 = {
-		year = 1944
+		year = 1016
 
 		archetype = medium_plane_airframe
 		parent = tac_bomber_equipment_4
@@ -2407,7 +2435,7 @@ equipments = {
 		fuel_consumption = 0.36
 	}
 	tac_bomber_equipment_6 = {
-		year = 1944
+		year = 1020
 
 		archetype = medium_plane_airframe
 		parent = tac_bomber_equipment_5
@@ -2439,7 +2467,7 @@ equipments = {
 	}
 	#strategic bomber
 	strat_bomber_equipment_0 = {
-		year = 1936
+		year = 988
 
 		archetype = large_plane_airframe
 		priority = 140
@@ -2482,7 +2510,7 @@ equipments = {
 		fuel_consumption = 0.8
 	}
 	strat_bomber_equipment_1 = {
-		year = 1936
+		year = 992
 
 		archetype = large_plane_airframe
 		priority = 140
@@ -2526,7 +2554,7 @@ equipments = {
 		fuel_consumption = 0.8
 	}
 	strat_bomber_equipment_2 = {
-		year = 1940
+		year = 1000
 
 		archetype = large_plane_airframe
 		parent = strat_bomber_equipment_1
@@ -2555,7 +2583,7 @@ equipments = {
 		fuel_consumption = 0.8
 	}
 	strat_bomber_equipment_3 = {
-		year = 1944
+		year = 1008
 
 		archetype = large_plane_airframe
 		parent = strat_bomber_equipment_2
@@ -2584,7 +2612,7 @@ equipments = {
 		fuel_consumption = 0.8
 	}
 	strat_bomber_equipment_4 = {
-		year = 1944
+		year = 1016
 
 		archetype = large_plane_airframe
 		parent = strat_bomber_equipment_3
@@ -2613,7 +2641,7 @@ equipments = {
 		fuel_consumption = 0.8
 	}
 	strat_bomber_equipment_5 = {
-		year = 1944
+		year = 1020
 
 		archetype = large_plane_airframe
 		parent = strat_bomber_equipment_4
@@ -2643,7 +2671,7 @@ equipments = {
 	}
 	#scout planes
 	scout_plane_equipment_0 = {
-		year = 1936
+		year = 984
 
 		archetype = medium_plane_scout_plane_airframe
 		priority = 100
@@ -2675,7 +2703,7 @@ equipments = {
 		fuel_consumption = 0.26
 	}
 	scout_plane_equipment_1 = {
-		year = 1940
+		year = 996
 
 		archetype = medium_plane_scout_plane_airframe
 		parent = scout_plane_equipment_0
@@ -2703,8 +2731,6 @@ equipments = {
 	}
 	#suicide
 	rocket_suicide_equipment_0 = {
-		year = 1944
-
 		archetype = small_plane_suicide_airframe
 		priority = 90
 
@@ -2734,8 +2760,6 @@ equipments = {
 		air_superiority = 1
 	}
 	cv_rocket_suicide_equipment_0 = {
-		year = 1944
-
 		archetype = cv_small_plane_suicide_airframe
 		priority = 90
 
