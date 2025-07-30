@@ -820,7 +820,9 @@ technologies = {
 				y = 0 
 			}
 		}
-		
+		sub_technologies = {
+			cv_CAS_0
+		}
 
 		
 		categories = {
@@ -859,7 +861,9 @@ technologies = {
 				y = 2 
 			}
 		}
-		
+		sub_technologies = {
+			cv_CAS_1
+		}
 		
 		categories = {
 			light_air
@@ -897,7 +901,9 @@ technologies = {
 				y = 4 
 			}
 		}
-		
+		sub_technologies = {
+			cv_CAS_2
+		}
 
 		
 		categories = {
@@ -935,6 +941,9 @@ technologies = {
 				x = 0 
 				y = 6 
 			}
+		}
+		sub_technologies = {
+			cv_CAS_3
 		}
 		
 
@@ -975,7 +984,9 @@ technologies = {
 				y = 8 
 			}
 		}
-		
+		sub_technologies = {
+			cv_CAS_4
+		}
 
 		
 		categories = {
@@ -1011,7 +1022,9 @@ technologies = {
 				y = 10 
 			}
 		}
-		
+		sub_technologies = {
+			cv_CAS_5
+		}
 
 		
 		categories = {
@@ -1050,7 +1063,9 @@ technologies = {
 				y = 12 
 			}
 		}
-		
+		sub_technologies = {
+			cv_CAS_6
+		}
 
 		
 		categories = {
@@ -1086,7 +1101,9 @@ technologies = {
 				y = 14 
 			}
 		}
-		
+		sub_technologies = {
+			cv_CAS_7
+		}
 
 		
 		categories = {
@@ -1122,7 +1139,9 @@ technologies = {
 				y = 16 
 			}
 		}
-		
+		sub_technologies = {
+			cv_CAS_8
+		}
 		
 		categories = {
 			light_air
@@ -1160,6 +1179,36 @@ technologies = {
 				y = 18 
 			}
 		}
+		sub_technologies = {
+			cv_CAS_9
+		}
+		categories = {
+			light_air
+			cas_bomber
+			air_equipment
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+
+
+		}
+		special_project_specialization = { 
+			specialization_air 
+		}
+	}
+	#cv CAS
+	cv_CAS_0 = {
+		enable_equipments = {
+			cv_CAS_equipment_0
+		}
+		research_cost = 2
+		start_year = 984
+
+
+		
+
 		
 		categories = {
 			light_air
@@ -1172,6 +1221,253 @@ technologies = {
 			
 
 
+		}
+		special_project_specialization = { 
+			specialization_air 
+		}
+	}
+	cv_CAS_1 = {
+		enable_equipments = {
+			cv_CAS_equipment_1
+		}
+	
+
+		
+		research_cost = 2
+		start_year = 988
+
+
+		
+		
+		categories = {
+			light_air
+			cas_bomber
+			air_equipment
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+
+
+		}
+		special_project_specialization = { 
+			specialization_air 
+		}
+	}
+	cv_CAS_2 = {
+		enable_equipments = {
+			cv_CAS_equipment_2
+		}
+	
+
+		
+		research_cost = 2
+		start_year = 992
+
+
+		
+
+		
+		categories = {
+			light_air
+			cas_bomber
+			air_equipment
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+
+
+		}
+		special_project_specialization = { 
+			specialization_air 
+		}
+	}
+	cv_CAS_3 = {
+		enable_equipments = {
+			cv_CAS_equipment_3
+		}
+	
+
+		
+		research_cost = 2
+		start_year = 996
+
+
+		
+
+		
+		categories = {
+			light_air
+			cas_bomber
+			air_equipment
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+
+
+		}
+		special_project_specialization = { 
+			specialization_air 
+		}
+	}
+	cv_CAS_4 = {
+		enable_equipments = {
+			cv_CAS_equipment_4
+		}
+	
+
+		
+		research_cost = 2
+		start_year = 1000
+
+
+		
+
+		
+		categories = {
+			light_air
+			cas_bomber
+			air_equipment
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		special_project_specialization = { 
+			specialization_air 
+		}
+	}
+	cv_CAS_5 = {
+		enable_equipments = {
+			cv_CAS_equipment_5
+		}
+	
+
+		
+		research_cost = 2
+		start_year = 1004
+
+
+		
+
+		
+		categories = {
+			light_air
+			cas_bomber
+			air_equipment
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+
+
+		}
+		special_project_specialization = { 
+			specialization_air 
+		}
+	}
+	cv_CAS_6 = {
+		enable_equipments = {
+			cv_CAS_equipment_6
+		}
+	
+
+		
+		research_cost = 2
+		start_year = 1008
+
+
+		
+
+		
+		categories = {
+			light_air
+			cas_bomber
+			air_equipment
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		special_project_specialization = { 
+			specialization_air 
+		}
+	}
+	cv_CAS_7 = {
+		enable_equipments = {
+			cv_CAS_equipment_7
+		}
+	
+
+		
+		research_cost = 2
+		start_year = 1012
+
+		
+
+		
+		categories = {
+			light_air
+			cas_bomber
+			air_equipment
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+		special_project_specialization = { 
+			specialization_air 
+		}
+	}
+	cv_CAS_8 = {
+		enable_equipments = {
+			cv_CAS_equipment_8
+		}
+		
+		research_cost = 2
+		start_year = 1016
+
+
+		
+		
+		categories = {
+			light_air
+			cas_bomber
+			air_equipment
+		}
+		
+		ai_will_do = {
+			factor = 1
+			
+
+
+		}
+		special_project_specialization = { 
+			specialization_air 
+		}
+	}
+	cv_CAS_9 = {
+		enable_equipments = {
+			cv_CAS_equipment_9
+		}
+		
+		research_cost = 2
+		start_year = 1020
+		
+		categories = {
+			light_air
+			cas_bomber
+			air_equipment
+		}
+		
+		ai_will_do = {
+			factor = 1
 		}
 		special_project_specialization = { 
 			specialization_air 
