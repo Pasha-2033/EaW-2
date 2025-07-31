@@ -4790,7 +4790,7 @@ guiTypes = {
 		iconType = {
 			name = "creator_flag"
 			quadTextureSprite ="GFX_flag_small"
-			position = { x = 342 y = 25 }
+			position = { x = 32 y = 39 }
 		}
 		
 		iconType = {
@@ -4818,7 +4818,7 @@ guiTypes = {
 		iconType = {
 			name ="equipment_designer"
 			spriteType = "GFX_tech_idea_bg"
-			position = { x = 15 y = 34 }
+			position = { x = 55 y = 34 }
 			scale = 0.5
 			alwaystransparent = yes
 		}
@@ -4826,7 +4826,7 @@ guiTypes = {
 		iconType = {
 			name ="equipment_designer_can_upgrade"
 			spriteType = "GFX_refitting"
-			position = { x = 42 y = 42 }
+			position = { x = 15 y = 41 }
 			scale = 1
 			pdx_tooltip = "INDUSTRIAL_ORG_TOOLTIP_UPGRADE_ALREADY_ASSIGNED_MIO_DELAYED"
 		}
@@ -4834,14 +4834,14 @@ guiTypes = {
 		iconType = {
 			name ="sub_tech"
 			spriteType = "GFX_land_equipment_role_icons"
-			position = { x=300 y=40 }
+			position = { x=300 y=27 }
 			frame = 1
 			alwaystransparent = yes
 		}
 
 		iconType = {
 			name = "carrier_fighter_icon"
-			position = { x = 310 y = 55 }
+			position = { x = 313 y = 30 }
 			spriteType = "GFX_airwing_carrier_icon"
 			alwaystransparent = yes
 		}
@@ -4905,21 +4905,18 @@ guiTypes = {
 			format = left
 			alwaystransparent = yes
 		}
-
-		iconType = {
-			name ="design_invalid"
-			spriteType = "GFX_design_not_valid"
-			position = { x = 341 y = 52 }
-			alwaystransparent = yes
-		}
-
 		iconType = {
 			name ="blueprint_icon"
 			spriteType = "GFX_blueprint"
 			position = { x = 311 y = 52 }
 			alwaystransparent = yes
 		}
-
+		iconType = {
+			name ="design_invalid"
+			spriteType = "GFX_design_not_valid"
+			position = { x = 311 y = 52 }
+			alwaystransparent = yes
+		}
 	}
 
 	containerWindowType = {
