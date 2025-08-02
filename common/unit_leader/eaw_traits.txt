@@ -427,12 +427,7 @@ leader_traits = {
 		}
 
 		allowed = {
-			FROM = {
-				OR = {
-					tag = NLR
-					tag = NMS
-				}
-			}
+			always = no
 		}
 
 		modifier = {
@@ -1690,10 +1685,7 @@ leader_traits = {
 		
 		allowed = {
 			FROM = {
-				tag = NCH
-				tag = CHN
-				tag = CCN
-				tag = MAN
+				#country
 			}
 		}
 

@@ -122,19 +122,6 @@ music = {
 
 	chance = {
 		factor = 1
-
-		modifier = {
-			factor = 1
-			has_war = no
-		}
-		modifier = {
-			factor = 2
-			OR = {
-				tag = NLR
-				tag = NMS
-			}
-			has_war = no
-		}
 	}
 }
 music = {
@@ -142,22 +129,8 @@ music = {
 
 	chance = {
 		factor = 1
-
 		modifier = {
-			factor = 3
-			OR = {
-				is_EQS_SOL = yes
-				has_war_with = event_target:solar_empire
-				AND = {
-					tag = EQS
-					has_war_with = NLR
-				}
-				tag = CES
-				has_war_with = CES
-			}
-		}
-		modifier = {
-			factor = 1
+			factor = 5
 			tag = EQS
 		}
 	}
@@ -167,16 +140,6 @@ music = {
 
 	chance = {
 		factor = 1
-
-		modifier = {
-			factor = 2
-			OR = {
-				tag = NLR
-				tag = NMS
-				has_war_with = NLR
-				has_war_with = NMS
-			}
-		}
 	}
 }
 music = {
@@ -348,19 +311,12 @@ music = {
 		}
 	}
 }
-###NLR
 ###Luna peace
 music = {
 	song = "The_Stars_will_aid_her_escape"
 
 	chance = {
 		factor = 1
-
-		modifier = {
-			factor = 2.1
-			original_tag = NLR
-			has_war = no
-		}
 	}
 }
 
@@ -378,13 +334,6 @@ music = {
 					original_tag = STG
 					has_government = fascism
 				} 
-				AND = {
-					original_tag = BAL
-					has_country_leader = {
-						character = BAL_lavender_berry
-						ruling_only = yes
-					}
-				}
 			}
 		}
 		modifier = {
@@ -392,16 +341,6 @@ music = {
 			AND = {
 				original_tag = STG
 				has_government = fascism
-			}
-		}
-		modifier = {
-			factor = 3
-			AND = {
-				original_tag = BAL
-				has_country_leader = {
-					character = BAL_lavender_berry
-					ruling_only = yes
-				}
 			}
 		}
 	}
@@ -419,10 +358,7 @@ music = {
 		}
 		modifier = {
 			factor = 2
-			OR = {
-				original_tag = STG
-				original_tag = STL
-			}
+			original_tag = STG
 		}
 	}
 }

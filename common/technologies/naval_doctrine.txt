@@ -71,13 +71,6 @@ technologies = {
 				factor = 10
 				has_tech_bonus = { category = cat_fleet_in_being }
 			}
-			modifier = {
-				factor = 0
-				OR = {
-					original_tag = BAL
-					original_tag = CES
-				}
-			}
 		}
 		
 		ai_research_weights = {
@@ -933,12 +926,7 @@ technologies = {
 			}
 			modifier = {
 				factor = 0
-				OR = {
-					original_tag = NLR
-					original_tag = OLE
-					tag = event_target:solar_empire
-					original_tag = TRD
-				}
+				original_tag = OLE
 			}
 		}
 		
@@ -1775,24 +1763,8 @@ technologies = {
 				has_tech_bonus = { category = cat_base_strike }
 			}
 			modifier = {
-				factor = 6
-				original_tag = NIM
-			}
-			modifier = {
 				factor = 0
-				OR = {
-					original_tag = NMS
-					original_tag = BAL
-					original_tag = GFF
-					original_tag = JUN
-					original_tag = JER
-					original_tag = PNG
-					original_tag = CES
-					original_tag = FBK
-					original_tag = NTR
-					original_tag = FIR
-					original_tag = GRY
-				}
+				original_tag = PNG
 			}
 			modifier = {
 				has_navy_experience > 120

@@ -29,7 +29,7 @@ leader_traits = {
 		}
 		experience_gain_army = 0.12
 
-		command_cap = @tier3
+		command_cap_increase = @tier3
 	}
 
 	pca_leader = {
@@ -41,7 +41,7 @@ leader_traits = {
 		army_morale_factor = -0.05
 		experience_gain_army = 0.09
 		
-		command_cap = @tier2
+		command_cap_increase = @tier2
 	}
 
 	fortification_armchair_general = {
@@ -54,22 +54,6 @@ leader_traits = {
 		ai_will_do = {
 			factor = 1
 		}	
-	}
-
-	SCS_agribaron = {
-		random = no
-
-		ai_will_do = {
-			factor = 1
-		}
-	}
-
-	SCS_royalist_trait = {
-		random = no
-
-		ai_will_do = {
-			factor = 1
-		}
 	}
 
 	grand_admiral = {
@@ -1246,7 +1230,7 @@ leader_traits = {
 		out_of_supply_factor = -0.10
 		experience_gain_army = 0.09
 
-		command_cap = @tier2
+		command_cap_increase = @tier2
 
 		ai_will_do = {
 			factor = 1
@@ -1674,7 +1658,7 @@ leader_traits = {
 		army_artillery_defence_factor = 0.1
 		experience_gain_army = 0.1
 		
-		command_cap = @tier3
+		command_cap_increase = @tier3
 
 		ai_will_do = {
 			factor = 1
@@ -1739,7 +1723,7 @@ leader_traits = {
 		training_time_army_factor = -0.1
 		conscription_factor = 0.1
 
-		command_cap = @tier3
+		command_cap_increase = @tier3
 	}
 	
 	syndicate_of_agriculture_trait = {
@@ -2352,36 +2336,6 @@ ai_focus_aggressive_factor = 1
 		}
 	}
 
-	BAL_mod = {
-		random = no
-		army_core_defence_factor = 0.1
-		production_speed_bunker_factor = 0.1
-		production_speed_coastal_bunker_factor = 0.1
-		production_speed_anti_air_building_factor = 0.1
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	BAL_moi = {
-		random = no
-		resistance_damage_to_garrison = -0.5
-		foreign_subversive_activites = -0.5
-		enemy_operative_detection_chance_factor = 0.15
-		stability_factor = 0.1
-		ai_will_do = {
-			factor = 1
-		}
-	}
-	
-	BAL_mol = {
-		random = no
-		production_factory_max_efficiency_factor = 0.1
-		line_change_production_efficiency_factor = 0.1
-		ai_will_do = {
-			factor = 1
-		}
-	}
 	
 	queen_helvia = {
 		random = no
@@ -2524,24 +2478,6 @@ ai_focus_aggressive_factor = 1
 		}
 	}
 
-	YAL_werkzeugkiste_manufacturer = {
-		random = no
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		equipment_bonus = {
-			anti_air = {
-				build_cost_ic = -0.1
-				instant = yes
-			}
-			anti_tank = {
-				build_cost_ic = -0.1
-				instant = yes
-			}
-		}
-	}
 
 	YAL_infantry_equipment_designer = { # Ground units get 9 more Morale
 		
@@ -3316,7 +3252,7 @@ ai_focus_aggressive_factor = 1
 		special_forces_training_time_factor = 0.2
 		experience_gain_army = 0.12
 
-		command_cap = @tier3
+		command_cap_increase = @tier3
 
 		ai_will_do = {
 			factor = 4
@@ -3330,7 +3266,7 @@ ai_focus_aggressive_factor = 1
 		army_defence_factor = 0.05
 		experience_gain_army = 0.09
 
-		command_cap = @tier2
+		command_cap_increase = @tier2
 
 		ai_will_do = {
 			factor = 2
@@ -3343,7 +3279,7 @@ ai_focus_aggressive_factor = 1
 		army_core_defence_factor = 0.075
 		experience_gain_army = 0.09
 
-		command_cap = @tier2
+		command_cap_increase = @tier2
 
 		ai_will_do = {
 			factor = 2
@@ -3355,7 +3291,7 @@ ai_focus_aggressive_factor = 1
 		special_forces_cap = 0.15
 		experience_gain_army = 0.09
 
-		command_cap = @tier2
+		command_cap_increase = @tier2
 
 		ai_will_do = {
 			factor = 2
@@ -3369,7 +3305,7 @@ ai_focus_aggressive_factor = 1
 		resistance_damage_to_garrison = -0.075
 		experience_gain_army = 0.09
 
-		command_cap = @tier2
+		command_cap_increase = @tier2
 
 		ai_will_do = {
 			factor = 2
@@ -3382,7 +3318,7 @@ ai_focus_aggressive_factor = 1
 		army_infantry_defence_factor = 0.05
 		experience_gain_army = 0.06
 
-		command_cap = @tier1
+		command_cap_increase = @tier1
 
 		ai_will_do = {
 			factor = 1
@@ -3395,7 +3331,7 @@ ai_focus_aggressive_factor = 1
 		special_forces_defence_factor = 0.15
 		experience_gain_army = 0.09
 
-		command_cap = @tier2
+		command_cap_increase = @tier2
 
 		ai_will_do = {
 			factor = 2
@@ -3489,14 +3425,6 @@ ai_focus_aggressive_factor = 1
 		}
 	}
 	
-	EQC_NLR_the_prophet_trait = {
-		random = no
-
-		justify_war_goal_time = -0.10
-		war_support_factor = 0.10
-		political_power_gain = 0.05
-		ai_focus_aggressive_factor = 0.30
-    }
 
 	drug_dealer = {
 		random = no
@@ -3580,22 +3508,6 @@ ai_focus_aggressive_factor = 1
 		fascism_acceptance = 30
 	}
 	
-	NLR_regent_of_the_southwest = {
-		random = no
-		political_power_factor = 0.15
-		stability_factor = 0.05
-		neutrality_drift = 0.01
-	}
-	
-	NLR_empress_of_equus_trait = {
-		random = no
-		political_power_factor = 0.10
-		stability_factor = 0.05
-		war_support_factor = 0.05
-		conscription = 0.005
-		justify_war_goal_time = -0.25
-		fascism_drift = 0.01
-  }
     
 	absolute_monarch = {
 		random = no

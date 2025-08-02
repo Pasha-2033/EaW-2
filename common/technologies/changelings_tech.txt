@@ -117,10 +117,6 @@ technologies = {
 				y = 6
 			}
 		}
-		path = {
-			leads_to_tech = tech_jager_rg_hive_command_center
-			research_cost_coeff = 1
-		}
 		categories = {
 			jager_tech
 			race_tech
@@ -196,10 +192,6 @@ technologies = {
 				y = 6
 			}
 		}
-		path = {
-			leads_to_tech = tech_jager_rg_hive_command_center
-			research_cost_coeff = 1
-		}
 		ai_will_do = {
 			base = 2
 			modifier = {
@@ -209,156 +201,6 @@ technologies = {
 			modifier = {
 				factor = 2
 				date > @step_4.1.1
-			}
-		}
-	}
-	#united_hive_command_center
-	tech_jager_rg_hive_command_center = {
-		on_research_complete = {}
-		research_cost = 1.5
-		start_year = @step_3
-		folder = {
-			name = changeling_folder
-			position = {
-				x = 4
-				y = 9
-			}
-		}
-		path = {
-			leads_to_tech = tech_jager_main
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = tech_rg_main
-			research_cost_coeff = 1
-		}
-		path = {
-			leads_to_tech = tech_jager_rg_combined
-			research_cost_coeff = 1
-		}
-		categories = {
-			jager_tech
-			race_tech
-			special_forces_tech
-		}
-		ai_will_do = {
-			base = 2
-			modifier = {
-				factor = 1.5
-				date > @step_4.1.1
-			}
-			modifier = {
-				factor = 2
-				date > @step_5.1.1
-			}
-		}
-	}
-	#jager/royal guard tree
-	tech_jager_main = {
-		jager = {
-			max_organisation = 5
-			breakthrough = 0.05
-		}
-		on_research_complete = {}
-		research_cost = 1.5
-		start_year = @step_4
-		folder = {
-			name = changeling_folder
-			position = {
-				x = 2
-				y = 12
-			}
-		}
-		XOR = {
-			tech_rg_main
-		}
-		categories = {
-			jager_tech
-			race_tech
-			special_forces_tech
-		}
-		ai_will_do = {
-			base = 2
-			modifier = {
-				factor = 1.5
-				date > @step_5.1.1
-			}
-			modifier = {
-				factor = 2
-				date > @step_6.1.1
-			}
-		}
-	}
-	tech_jager_rg_combined = {
-		jager = {
-			max_organisation = 5
-			marsh = {
-				attack = 0.05
-				movement = 0.05
-			}
-		}
-		on_research_complete = {}
-		research_cost = 1.5
-		start_year = @step_4
-		folder = {
-			name = changeling_folder
-			position = {
-				x = 4
-				y = 12
-			}
-		}
-		categories = {
-			jager_tech
-			race_tech
-			special_forces_tech
-		}
-		ai_will_do = {
-			base = 2
-			modifier = {
-				factor = 1.5
-				date > @step_5.1.1
-			}
-			modifier = {
-				factor = 2
-				date > @step_6.1.1
-			}
-		}
-	}
-	tech_rg_main = {
-		jager = {
-			max_organisation = 5
-			forest = {
-				attack = 0.05
-				defence = 0.05
-			}
-		}
-		research_cost = 1.5
-		start_year = @step_4
-		folder = {
-			name = changeling_folder
-			position = {
-				x = 6
-				y = 12
-			}
-		}
-		XOR = {
-			tech_jager_main
-		}
-		on_research_complete = {}
-		categories = {
-			jager_tech
-			race_tech
-			special_forces_tech
-		}
-		ai_will_do = {
-			base = 2
-			modifier = {
-				factor = 1.5
-				date > @step_5.1.1
-			}
-			modifier = {
-				factor = 2
-				date > @step_6.1.1
 			}
 		}
 	}

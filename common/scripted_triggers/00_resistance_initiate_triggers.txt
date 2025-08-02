@@ -36,81 +36,11 @@ should_not_activate_active_crypto_bonuses = {
 # can be specialized for states by using should_initiate_resistance_STATEID1_STATEID2 = { }
 # those will override default should_initiate_resistance
 should_initiate_resistance = {
-    #OR = {
-    #    check_variable = { core_countries^num > 0 } # have no cores
-    #    AND = {
-    #        has_state_flag = SPR_original_core
-    #        FROM = {
-    #        	original_tag = SPR
-    #        }
-    #        has_global_flag = scw_over
-    #    }
-    #}
 	impassable = no
     NOT = { is_core_of = FROM } # never for our cores
-    state_population > 0
-    if = {
-        limit = {
-			FROM = {
-				original_tag = ELF
-            }
-        }
-        FROM.FROM = {
-            NOT = {
-                original_tag = CRY
-                original_tag = EQS
-            } 
-        }
-    }
-    else_if = {
-        limit = {
-            FROM = {
-                has_war = yes
-                OR = {
-                    original_tag = EQS
-                    original_tag = NLR
-                }
-            }
-        }
-        FROM.FROM = {
-            NOT = {
-                original_tag = EQS
-                original_tag = NLR
-            }
-        }
-    }
-    else_if = {
-        limit = {
-            FROM = {
-                original_tag = CCN
-                has_government = democratic
-            }
-            FROM.FROM = {
-                original_tag = OLE
-            }
-        }
-		FROM = {
-			NOT = {
-				has_country_flag = ccn_ole_union_accepted
-			}
-		}
-	}
 }
 
-# Falcor
-should_initiate_resistance_530 = {
-	if = {
-        OR = {
-            has_dynamic_modifier = {
-                modifier = empowered_state_resistance
-            }
-            resistance > 1
-        }
-    }
-    else = {
-        should_initiate_resistance = yes
-    }
-}
+
 
 
 

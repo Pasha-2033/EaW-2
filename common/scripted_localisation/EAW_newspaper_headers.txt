@@ -12,38 +12,13 @@ defined_text = { # Country
 	name = GetNewspaperHeader
 	text = {
 		trigger = {
-			OR = {
-				original_tag = STG
-				AND = {
-					original_tag = BAL
-					has_country_leader = {
-						character = BAL_cricket_chafers
-						ruling_only = yes
-					}
-				}
-			}
+			original_tag = STG
 		}
 		localization_key = newspaper_header_1
 	}
 	text = {
 		trigger = {
-			OR = {
-				original_tag = EQS
-				original_tag = SCS
-				original_tag = LSP
-				original_tag = JUN
-				original_tag = CES
-				original_tag = VAN
-				AND = {
-					original_tag = BAL
-					NOT = {
-						has_country_leader = {
-							character = BAL_cricket_chafer
-							ruling_only = yes
-						} 
-					}
-				}
-			}
+			original_tag = EQS
 		}
 		localization_key = newspaper_header_2
 	}
@@ -57,7 +32,6 @@ defined_text = { # Country
 		trigger = {
 			OR = {
 				original_tag = YAK
-				original_tag = JAK
 			}
 		}
 		localization_key = newspaper_header_4
@@ -70,107 +44,79 @@ defined_text = { # Country
 	}
 	text = {
 		trigger = {
-			original_tag = LUS
+			always = no
 		}
 		localization_key = newspaper_header_6
 	}
 	text = {
 		trigger = {
-			is_griffon_empire_country = yes
+			always = no
 		}
 		localization_key = newspaper_header_7
 	}
 	text = {
 		trigger = {
-			OR = {
-				original_tag = NLR
-				original_tag = NMS
-				is_subject_of = NLR
-			}
+			always = no
 		}
 		localization_key = newspaper_header_8
 	}
 	text = {
 		trigger = {
-			OR = {
-				original_tag = OLE
-				original_tag = OLV
-			}
+			always = no
 		}
 		localization_key = newspaper_header_9
 	}
 	text = {
 		trigger = {
-			OR = {
-				is_original_riv_fed_country = yes
-				original_tag = LSC
-			}
-			NOT = {
-				original_tag = FRE
-				tag = NIM
-				original_tag = WIT
-			}
+			always = no
 		}
 		localization_key = newspaper_header_10
 	}
 	text = {
 		trigger = {
-			OR = {
-				is_jer_country = yes
-				original_tag = FLO
-				original_tag = POM
-				original_tag = JES
-			}
+			always = no
 		}
 		localization_key = newspaper_header_11
 	}
 	text = {
 		trigger = {
-			#to do
 			always = no
 		}
 		localization_key = newspaper_header_12
 	}
 	text = {
 		trigger = {
-			original_tag = EQC
+			always = no
 		}
 		localization_key = newspaper_header_13
 	}
 	text = {
 		trigger = {
-			original_tag = FAT
+			always = no
 		}
 		localization_key = newspaper_header_14
 	}
 	text = {
 		trigger = {
-			tag = GRW
+			always = no
 		}
 		localization_key = newspaper_header_15
 	}
 	text = {
 		trigger = {
-			tag = BRF
+			always = no
 		}
 		localization_key = newspaper_header_16
 	}
 	text = {
 		trigger = {
-			is_griffon_continent_griffon_country = yes
-			NOT = {
-				original_tag = SIC
-				original_tag = GRU
-			}
+			always = no
 		}
 		localization_key = newspaper_header_17
 	}
 	text = {
 		trigger = {
-			OR = {
-				original_tag = GFF
-				original_tag = GRF
-			}
+			always = no
 		}
 		localization_key = newspaper_header_18
 	}
@@ -195,14 +141,7 @@ defined_text = { # Country
 	}
 	text = {
 		trigger = {
-			OR = {
-				original_tag = FIR
-				original_tag = FBK
-				original_tag = WAT
-				original_tag = HLR
-				original_tag = NTR
-				original_tag = NCH
-			}
+			always = no
 		}
 		localization_key = newspaper_header_21
 	}

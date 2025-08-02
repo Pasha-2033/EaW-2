@@ -618,14 +618,14 @@ scripted_gui = {
 						#change trigger (if ideas are possible for subject and overlord)
 						always = no
 					}
-					else_if = {
-						limit = {
-							subject_trade_7_available = no
-						}
-						add_to_temp_variable = {
-							frame_1 = 2
-						}
-					}
+					#else_if = {
+					#	limit = {
+					#		subject_trade_7_available = no
+					#	}
+					#	add_to_temp_variable = {
+					#		frame_1 = 2
+					#	}
+					#}
 				}
 			}
 			subject_control_economy_button_click_enabled = {
