@@ -70,13 +70,16 @@ technology_categories = {
 	cat_light_air
 	cat_medium_air
 	cat_heavy_air
+	cat_cv_aircraft
 	#modules (common)
 	cat_air_modules
-	#modules
+	cat_air_explosive	#(bombs, heavy bombs, naval bombs, torpedoes)
+	#modules (explosive)
 	cat_air_bombs
+	cat_air_heavy_bombs
 	cat_air_naval_bombs
 	cat_air_torpedoes
-	cat_air_engine
+	cat_air_engine		#engines
 	#transport
 	cat_transport_planes
 	#fighters
@@ -87,6 +90,8 @@ technology_categories = {
 	cat_naval_bomber
 	cat_tactical_bomber
 	cat_strategic_bomber
+	#scout
+	cat_scout_plane
 	#special
 	cat_mothership
 }
@@ -246,7 +251,6 @@ technology_categories = {
 	naval_heavy_artillery
 	naval_armor
 	fire_control
-	cat_scout_plane
 	train_tech
 	cat_synth_rubber
 	cat_synth_oil
@@ -338,7 +342,6 @@ technology_categories = {
 	asw_tech
 	naval_minesweeping
 	naval_minelaying
-	cat_scout_plane
 	train_tech
 	cat_production
 	cat_synth_rubber

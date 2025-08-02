@@ -38,17 +38,15 @@ types = {
 
 		command_power = 25
 
-		allowed = {
-			has_dlc = "Gotterdammerung"
-		}
-
 		# Raid Type is visible
 		visible = {
 
 		}
 		# Specific Target is visible
 		show_target = {
-			NOT = { is_in_faction_with = FROM }
+			NOT = { 
+				is_in_faction_with = FROM 
+			}
 		}
 
 		# Can prepare
@@ -289,10 +287,6 @@ types = {
 		ai_will_do = {
 			base = 1
 		}
-
-		allowed = {
-			has_dlc = "Gotterdammerung"
-		}
 		# Raid Type is visible
 		visible = {
 
@@ -300,7 +294,9 @@ types = {
 
 		# Specific Target is visible
 		show_target = {
-			NOT = { is_in_faction_with = FROM }
+			NOT = { 
+				is_in_faction_with = FROM 
+			}
 		}
 
 		# Can prepare
@@ -530,14 +526,6 @@ types = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				factor = 3
-				original_tag = ENG # Just for historical reasons
-			}
-		}
-
-		allowed = {
-			has_dlc = "Gotterdammerung"
 		}
 		# Raid Type is visible
 		visible = {
@@ -553,7 +541,6 @@ types = {
 		# Can prepare
 		available = {
 			is_special_project_completed = sp:sp_air_bouncing_bomb
-
 		}
 
 		launchable = {
@@ -820,32 +807,6 @@ types = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				# Don't target anyone who is not a potential enemy
-				factor = 0
-				NOT = {
-					is_in_array = {
-						array = potential_and_current_enemies
-						value = FROM  # Target country
-					}
-				}
-			}
-			modifier = {
-				# Don't target anyone who is not a potential enemy
-				factor = 0.25
-				NOT = {
-					has_war_with = FROM
-				}
-			}
-			modifier = {
-				factor = 3 # Historical
-				original_tag = ENG
-				has_war_with = GER
-				FROM = {
-					original_tag = ROM
-					is_in_faction_with = GER
-				}
-			}
 		}
 
 		category = air_raids
@@ -1093,16 +1054,6 @@ types = {
 
 		ai_will_do = {
 		    base = 1
-		    modifier = {
-				# Don't target anyone who is not a potential enemy
-				factor = 0
-				NOT = {
-					is_in_array = {
-						array = potential_and_current_enemies
-						value = FROM  # Target country
-					}
-				}
-			}
 		}
 
 		category = air_raids
@@ -1120,7 +1071,9 @@ types = {
 		}
 		# Specific Target is visible
 		show_target = {
-			NOT = { is_in_faction_with = FROM }
+			NOT = { 
+				is_in_faction_with = FROM 
+			}
 		}
 
 		# Can prepare
@@ -1319,16 +1272,6 @@ types = {
 
 		ai_will_do = {
 			base = 1
-			modifier = {
-				# Don't target anyone who is not a potential enemy
-				factor = 0
-				NOT = {
-					is_in_array = {
-						array = potential_and_current_enemies
-						value = FROM  # Target country
-					}
-				}
-			}
 		}
 
 		category = air_raids
@@ -1540,5 +1483,5 @@ types = {
 
 
 
-# END OF TYPES
+
 }

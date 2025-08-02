@@ -850,6 +850,13 @@ technologies = {
 				y = 8 
 			}
 		}
+		folder = {
+			name = air_techs_folder
+			position = { 
+				x = 8
+				y = 8 
+			}
+		}
 		categories = {
 			cat_mothership
 		}
@@ -876,6 +883,13 @@ technologies = {
 				y = 11 
 			}
 		}
+		folder = {
+			name = air_techs_folder
+			position = { 
+				x = 8
+				y = 11 
+			}
+		}
 		categories = {
 			cat_mothership
 		}
@@ -896,6 +910,13 @@ technologies = {
 			position = { 
 				x = 5 
 				y = 14
+			}
+		}
+		folder = {
+			name = air_techs_folder
+			position = { 
+				x = 8
+				y = 14 
 			}
 		}
 		categories = {
@@ -920,6 +941,13 @@ technologies = {
 				y = 17
 			}
 		}
+		folder = {
+			name = air_techs_folder
+			position = { 
+				x = 8
+				y = 17 
+			}
+		}
 		categories = {
 			cat_mothership
 		}
@@ -936,6 +964,13 @@ technologies = {
 			position = { 
 				x = 5 
 				y = 20
+			}
+		}
+		folder = {
+			name = air_techs_folder
+			position = { 
+				x = 8
+				y = 20 
 			}
 		}
 		categories = {
@@ -964,6 +999,13 @@ technologies = {
 				y = 13
 			}
 		}
+		folder = {
+			name = air_techs_folder
+			position = { 
+				x = 6
+				y = 13
+			}
+		}
 		categories = {
 			cat_mothership
 		}
@@ -983,6 +1025,13 @@ technologies = {
 			name = bba_air_techs_folder
 			position = { 
 				x = 3 
+				y = 15
+			}
+		}
+		folder = {
+			name = air_techs_folder
+			position = { 
+				x = 6
 				y = 15
 			}
 		}
@@ -1008,6 +1057,13 @@ technologies = {
 				y = 17
 			}
 		}
+		folder = {
+			name = air_techs_folder
+			position = { 
+				x = 6
+				y = 17
+			}
+		}
 		categories = {
 			cat_mothership
 		}
@@ -1023,6 +1079,13 @@ technologies = {
 			name = bba_air_techs_folder
 			position = { 
 				x = 3 
+				y = 19
+			}
+		}
+		folder = {
+			name = air_techs_folder
+			position = { 
+				x = 6
 				y = 19
 			}
 		}
@@ -1387,7 +1450,12 @@ technologies = {
 		}
 		research_cost = 1
 		start_year = 1000
-
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_sp_air_bouncing_bomb
+			}
+		}
 		folder = {
 			name = bba_air_techs_folder
 			position = { 

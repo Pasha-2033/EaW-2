@@ -1083,6 +1083,112 @@ equipment_modules = {
 		}
 	}
 	#unlocked by SP
+	jet_engine_axial_1x = {
+		abbreviation = "j1"
+		category = plane_jet_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = jet_engine_1_1x
+
+		add_stats = {
+			maximum_speed = 900
+			thrust = 40
+			build_cost_ic = 19
+			fuel_consumption = 0.3
+		}
+
+		build_cost_resources = {
+			tungsten = 1
+		}
+
+		can_convert_from = {
+			module_category = plane_engine_type
+			convert_cost_ic = 5
+		}
+	}
+	jet_engine_axial_2x = {
+		abbreviation = "j2"
+		category = twin_plane_jet_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = jet_engine_1_2x
+
+		add_stats = {
+			maximum_speed = 880
+			thrust = 60
+			build_cost_ic = 38
+			fuel_consumption = 0.6
+		}
+
+		build_cost_resources = {
+			tungsten = 1
+		}
+
+		can_convert_from = {
+			module_category = plane_engine_type
+			convert_cost_ic = 10
+		}
+	}
+	jet_engine_axial_3x = {
+		abbreviation = "j3"
+		category = medium_plane_jet_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = jet_engine_1_3x
+
+		add_stats = {
+			maximum_speed = 880
+			thrust = 80
+			build_cost_ic = 57
+			fuel_consumption = 0.9
+		}
+		build_cost_resources = {
+			tungsten = 2
+		}
+
+		can_convert_from = {
+			module_category = medium_plane_engine_type
+			convert_cost_ic = 15
+		}
+	}
+	jet_engine_axial_4x = {
+		abbreviation = "j4"
+		category = quad_large_plane_jet_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = jet_engine_1_4x
+
+		add_stats = {
+			maximum_speed = 860
+			thrust = 100
+			build_cost_ic = 76
+			fuel_consumption = 1.2
+		}
+		build_cost_resources = {
+			tungsten = 2
+		}
+		can_convert_from = {
+			module_category = medium_plane_engine_type
+			convert_cost_ic = 20
+		}
+	}
+	jet_engine_axial_6x = {
+		abbreviation = "j6"
+		category = large_plane_jet_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = jet_engine_1_6x
+
+		add_stats = {
+			maximum_speed = 860
+			thrust = 120
+			build_cost_ic = 114
+			fuel_consumption = 1.8
+		}
+		build_cost_resources = {
+			tungsten = 3
+		}
+		can_convert_from = {
+			module_category = large_plane_engine_type
+			convert_cost_ic = 30
+		}
+	}
+	#unlocked by SP
 	rocket_engine_0 = { #rocket engines only come in sets of 1
 		abbreviation = "re1"
 		category = plane_rocket_engine_type

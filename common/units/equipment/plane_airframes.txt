@@ -1841,6 +1841,119 @@ equipments = {
 			}
 		}
 	}
+	small_plane_airframe_10 = { #unlock by sp
+		abbreviation = "afs4"
+		derived_variant_name = fighter_equipment_10
+		year = 1028
+
+		archetype = small_plane_airframe
+		parent = small_plane_airframe_9
+		priority = 5
+
+		air_range = 2000
+		maximum_speed = 0
+		air_agility = 85
+		air_defence = 18
+		weight = 7
+		naval_strike_attack = 1
+		naval_strike_targetting = 1
+		build_cost_ic = 12
+		resources = {
+			aluminium = 4
+			rubber = 1
+		}
+		module_slots = {
+			fixed_main_weapon_slot = {
+				required = yes
+				allowed_module_categories = {
+					fighter_weapon
+					cas_weapon
+					nav_bomber_weapon
+					kamikaze_bomber_weapon
+				}
+			}
+
+			fixed_auxiliary_weapon_slot_1 = { 
+				required = no
+				allowed_module_categories = {
+					recon_camera
+					fighter_weapon
+					cas_weapon
+					nav_bomber_weapon
+					mine_warfare_offense
+					kamikaze_bomber_weapon
+				}
+			}
+			fixed_auxiliary_weapon_slot_2 = { 
+				required = no
+				allowed_module_categories = {
+					recon_camera
+					fighter_weapon
+					cas_weapon
+					nav_bomber_weapon
+					mine_warfare_offense
+					kamikaze_bomber_weapon
+				}
+			}
+			fixed_auxiliary_weapon_slot_3 = { 
+				required = no
+				allowed_module_categories = {
+					recon_camera
+					fighter_weapon
+					cas_weapon
+					nav_bomber_weapon
+					mine_warfare_offense
+					kamikaze_bomber_weapon
+				}
+			}
+
+			engine_type_slot = {
+				required = yes
+				allowed_module_categories = {
+					plane_engine_type
+					twin_plane_engine_type
+					plane_jet_engine_type
+					twin_plane_jet_engine_type
+					plane_rocket_engine_type
+				}
+			}
+
+			special_type_slot_1 = {
+				required = no
+				allowed_module_categories = {
+					plane_special_module_small
+					plane_special_module_bomb_sights
+					plane_special_module_radio_navigation
+					plane_special_module_air_ground_radar
+					plane_special_module_air_air_radar
+					plane_special_module_defense_turret
+				}
+			}
+
+			special_type_slot_2 = {
+				required = no
+				allowed_module_categories = {
+					plane_special_module_small
+					plane_special_module_bomb_sights
+					plane_special_module_radio_navigation
+					plane_special_module_air_ground_radar
+					plane_special_module_air_air_radar
+					plane_special_module_defense_turret
+				}
+			}
+			special_type_slot_3 = {
+				required = no
+				allowed_module_categories = {
+					plane_special_module_small
+					plane_special_module_bomb_sights
+					plane_special_module_radio_navigation
+					plane_special_module_air_ground_radar
+					plane_special_module_air_air_radar
+					plane_special_module_defense_turret
+				}
+			}
+		}
+	}
 	#cv small plane airframe
 	cv_small_plane_airframe_0 = {
 		abbreviation = "afc0"

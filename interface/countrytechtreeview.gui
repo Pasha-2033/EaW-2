@@ -3044,7 +3044,7 @@ guiTypes = {
 				name = "techtree_stripes"
 				position = { x= 0 y= 0 }
 				size = {
-					width = 2400 height = 1700
+					width = 2560 height = 1700
 					min = { width=100%% height=100%% }
 				}
 				clipping = no
@@ -3066,7 +3066,7 @@ guiTypes = {
 			containerWindowType = {
 				name = "tiled_research_bg"
 				position = { x=90 y=930 }
-				size = { width = 1680 height = 600 }
+				size = { width = 1750 height = 650 }
 				clipping = no
 
 				background = {
@@ -3076,7 +3076,7 @@ guiTypes = {
 			}
 			containerWindowType = {
 				name = "airtech_year_right"
-				position = { x=2050 y=0 }
+				position = { x=2210 y=0 }
 				size = { width = 200 height = 100% }
 				orientation = upper_left
 
@@ -3563,7 +3563,7 @@ guiTypes = {
 
 			instantTextBoxType = {
 				name = "airtech_subtitle_scout"
-				position = { x = 2020 y = 40 }
+				position = { x = 2180 y = 40 }
 				textureFile = ""
 				font = "hoi_33"
 				borderSize = {x = 0 y = 4}
@@ -3597,21 +3597,21 @@ guiTypes = {
 			}
 			gridboxtype = {
 				name = "transport_plane_0_tree"
-				position = { x = 1740 y = 132 }
+				position = { x = 1900 y = 132 }
 				size = { width = 400 height = 1000 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "scout_plane_0_tree"
-				position = { x = 1980 y = 132 }
+				position = { x = 2140 y = 132 }
 				size = { width = 400 height = 1000 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
 			gridboxtype = {
 				name = "helicopter_airframe_0_tree"
-				position = { x = 1980 y = 1252 }
+				position = { x = 2140 y = 1252 }
 				size = { width = 400 height = 500 }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
@@ -7872,7 +7872,50 @@ guiTypes = {
 			spriteType = "GFX_design_team_icon"
 		}
 	}
+	containerWindowType = {
+		name = "techtree_air_techs_folder_small_item"
+		position = { x=0 y=0 }
+		size = { width = 72 height = 72 }
+		clipping = no
 
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_technology_unavailable_item_bg"
+		}
+		gridboxtype = {
+			# contains special_project_specialization
+			name = "special_project_specialization_list"
+		}
+
+		iconType = {
+			name = "Icon"
+			position = { x=3 y=3 }
+			spriteType = "GFX_technology_medium"
+			alwaystransparent = yes
+		}
+		iconType = {
+			name = "bonus_icon"
+			position = { x=3 y=-22 }
+			spriteType = "GFX_tech_bonus"
+		}
+		instantTextBoxType = {
+			name = "bonus"
+			position = { x = 17 y = -22 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 4 y = 4}
+			text = "lol boat"
+			maxWidth = 50
+			maxHeight = 20
+			format = right
+		}
+
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = { x=0 y=42 }
+			spriteType = "GFX_design_team_icon"
+		}
+	}
 	containerWindowType = {
 		name = "techtree_air_techs_folder_item"
 		position = { x=-60 y=0 }

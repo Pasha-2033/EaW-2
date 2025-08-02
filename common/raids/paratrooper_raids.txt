@@ -18,23 +18,6 @@ types = {
 
 		ai_will_do = {
 			base = 0.5 # Don't plan these unless you have nothing better to do
-			modifier = {
-				# Don't target anyone who is not a potential enemy
-				factor = 0
-				NOT = {
-					is_in_array = {
-						array = potential_and_current_enemies
-						value = FROM  # Target country
-					}
-				}
-			}
-			modifier = {
-				# Don't waste Fallschirmjägers on this, unless late in the war and it might help us winning
-				factor = 0
-				tag = GER
-				date < 1944.1.1
-				NOT = { surrender_progress > 0 }
-			}
 		}
 
 		command_power = 25 # command power allocation cost
