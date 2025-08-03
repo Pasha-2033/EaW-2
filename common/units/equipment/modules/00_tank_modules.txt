@@ -52,7 +52,7 @@ equipment_modules = {
 		}
 	}
 
-	tank_gas_turbine_engine = {
+	tank_gas_turbine_engine_0 = {
 		abbreviation = "tur"
 		category = tank_engine_type
 		sfx = sfx_ui_sd_module_engine
@@ -66,6 +66,39 @@ equipment_modules = {
 
 		multiply_stats = {
 			maximum_speed = 0.25
+		}
+	}
+	tank_gas_turbine_engine_1 = {
+		abbreviation = "tur"
+		category = tank_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = tank_gas_turbine_engine_0
+
+		add_stats = {
+			build_cost_ic = 3
+			fuel_consumption = 4
+			reliability = -0.1
+			maximum_speed = 0.5
+		}
+
+		multiply_stats = {
+			maximum_speed = 0.25
+		}
+	}
+
+	tank_axial_gas_turbine_engine = {
+		category = tank_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = tank_gas_turbine_engine_1
+		add_stats = {
+			build_cost_ic = 3
+			fuel_consumption = 4
+			reliability = -0.1
+			maximum_speed = 0.8
+		}
+
+		multiply_stats = {
+			maximum_speed = 0.5
 		}
 	}
 

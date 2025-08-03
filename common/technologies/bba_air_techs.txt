@@ -419,7 +419,12 @@ technologies = {
 				y = 20
 			}
 		}
-
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_air_supersonic_jet
+			}
+		}
 		ai_will_do = {
 			factor = 1
 		}
@@ -713,6 +718,16 @@ technologies = {
 		path = {
 			leads_to_tech = mothership_upgrade_0
 			research_cost_coeff = 1
+		}
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_air_intercontinental_bomber
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_air_mothership_aircraft
+			}
 		}
 		research_cost = 2
 		start_year = 1000
@@ -1358,6 +1373,17 @@ technologies = {
 			leads_to_tech = heavy_bombs_2
 			research_cost_coeff = 1
 		}
+		on_research_complete = {
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"	
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_air_earthshaker_bomb
+				}
+			}
+		}
 		research_cost = 1
 		start_year = 1004
 		folder = {
@@ -1453,7 +1479,7 @@ technologies = {
 		on_research_complete = {
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_PROJECT
-				PROJECT = sp_sp_air_bouncing_bomb
+				PROJECT = sp_air_bouncing_bomb
 			}
 		}
 		folder = {

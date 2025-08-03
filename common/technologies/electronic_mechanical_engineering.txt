@@ -2936,10 +2936,16 @@ technologies = {
 				y = 4
 			}
 		}
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_air_axial_jet_engine
+			}
+		}
 		start_year = 1015
 		research_cost = 2
 		enable_equipment_modules = {
-			tank_gas_turbine_engine
+			tank_gas_turbine_engine_1
 		}
 		enable_equipment_modules = {
 			jet_engine_1_1x
@@ -2979,8 +2985,14 @@ technologies = {
 		}
 		start_year = 1015
 		research_cost = 2
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_air_axial_jet_engine
+			}
+		}
 		enable_equipment_modules = {
-			tank_gas_turbine_engine
+			tank_gas_turbine_engine_1
 		}
 		enable_equipment_modules = {
 			jet_engine_1_1x
@@ -3019,7 +3031,13 @@ technologies = {
 		start_year = 1015
 		research_cost = 2
 		enable_equipment_modules = {
-			tank_gas_turbine_engine
+			tank_gas_turbine_engine_1
+		}
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_air_axial_jet_engine
+			}
 		}
 		enable_equipment_modules = {
 			jet_engine_1_1x

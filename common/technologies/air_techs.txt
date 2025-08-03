@@ -133,7 +133,12 @@ technologies = {
 			cat_light_air
 			cat_light_fighter
 		}
-		
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_air_jet_engine
+			}
+		}
 		sub_technologies = {
 			cv_fighter_3
 		}
@@ -344,7 +349,12 @@ technologies = {
 				y = 18 
 			}
 		}
-
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_air_supersonic_jet
+			}
+		}
 		categories = {
 			cat_air_equipment
 			cat_light_air
@@ -694,7 +704,12 @@ technologies = {
 			leads_to_tech = heavy_fighter_4
 			research_cost_coeff = 1
 		}
-		
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_air_jet_engine
+			}
+		}
 		research_cost = 2
 		start_year = 1000
 		folder = {
@@ -2160,7 +2175,17 @@ technologies = {
 			leads_to_tech = strategic_bomber_2
 			research_cost_coeff = 1
 		}
-
+		on_research_complete = {
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"	
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_air_earthshaker_bomb
+				}
+			}
+		}
 		research_cost = 2
 		start_year = 992
 		folder = {
@@ -2199,7 +2224,16 @@ technologies = {
 			leads_to_tech = mothership_upgrade_0
 			research_cost_coeff = 1
 		}
-
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_air_intercontinental_bomber
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_air_mothership_aircraft
+			}
+		}
 		research_cost = 2
 		start_year = 1000
 		folder = {
