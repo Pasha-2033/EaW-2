@@ -1,15 +1,11 @@
 technologies = {
 	#basic weapon for frigate_hull_1 (can be improved and replaced with light batery
 	basic_battery_0 = {
-		bunker_max_level_terrain_limit = 1
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.5
 		research_cost = 1
 		start_year = 983
-		dependencies = {
-			pre_gw_artillery = 1
-		}
 		path = {
 			leads_to_tech = light_battery_0
 			research_cost_coeff = 1
@@ -88,6 +84,9 @@ technologies = {
 		xp_research_bonus = 1.50
 		research_cost = 1.5
 		start_year = 986
+		frigate = {
+			lg_attack = 0.05
+		}
 		destroyer = {
 			lg_attack = 0.05
 		}
@@ -170,6 +169,9 @@ technologies = {
 		xp_research_bonus = 1.50
 		research_cost = 1.5
 		start_year = 989
+		frigate = {
+			lg_armor_piercing = 0.05
+		}
 		destroyer = {
 			lg_armor_piercing = 0.05
 		}
@@ -256,6 +258,9 @@ technologies = {
 		xp_research_bonus = 1.50
 		research_cost = 1.5
 		start_year = 993
+		frigate = {
+			lg_armor_piercing = 0.05
+		}
 		destroyer = {
 			lg_armor_piercing = 0.05
 		}
@@ -338,6 +343,9 @@ technologies = {
 		xp_research_bonus = 1.50
 		research_cost = 1.5
 		start_year = 997
+		frigate = {
+			lg_armor_piercing = 0.05
+		}
 		destroyer = {
 			lg_armor_piercing = 0.05
 		}
@@ -420,6 +428,9 @@ technologies = {
 		xp_research_bonus = 1.50
 		research_cost = 1.5
 		start_year = 1002
+		frigate = {
+			lg_armor_piercing = 0.05
+		}
 		destroyer = {
 			lg_armor_piercing = 0.05
 		}
@@ -468,8 +479,22 @@ technologies = {
 		enable_equipment_modules = {
 			ship_light_missle_battery_0
 		}
-		dependencies = {
-			rocket_engine_0 = 1
+		allow = {
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+				}
+				is_special_project_completed = sp:sp_rockets_short_range_ballistic_missile
+			}
+			else_if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				has_tech = rocket_engine_0_bba
+			}
+			else = {
+				has_tech = rocket_engine_0
+			}
 		}
 		path = {
 			leads_to_tech = light_missile_battery_1
@@ -672,6 +697,23 @@ technologies = {
 		start_year = 1006
 		enable_equipment_modules = {
 			ship_universal_light_missle_battery_0
+		}
+		allow = {
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+				}
+				is_special_project_completed = sp:sp_rockets_ground_to_air_missile
+			}
+			else_if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				has_tech = rocket_engine_0_bba
+			}
+			else = {
+				has_tech = rocket_engine_0
+			}
 		}
 		path = {
 			leads_to_tech = universal_light_missile_battery_1
@@ -1086,8 +1128,22 @@ technologies = {
 			ship_light_medium_missle_battery_0
 			ship_heavy_medium_missle_battery_0
 		}
-		dependencies = {
-			rocket_engine_0 = 1
+		allow = {
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+				}
+				is_special_project_completed = sp:sp_rockets_medium_range_ballistic_missile
+			}
+			else_if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				has_tech = rocket_engine_1_bba
+			}
+			else = {
+				has_tech = rocket_engine_1
+			}
 		}
 		path = {
 			leads_to_tech = medium_missile_battery_1
@@ -1525,8 +1581,22 @@ technologies = {
 		enable_equipment_modules = {
 			ship_heavy_missle_battery_0
 		}
-		dependencies = {
-			rocket_engine_0 = 1
+		allow = {
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+				}
+				is_special_project_completed = sp:sp_rockets_medium_range_ballistic_missile
+			}
+			else_if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				has_tech = rocket_engine_2_bba
+			}
+			else = {
+				has_tech = rocket_engine_2
+			}
 		}
 		path = {
 			leads_to_tech = heavy_missile_battery_1
@@ -1804,9 +1874,6 @@ technologies = {
 		}
 		enable_equipment_modules = { 
 			ship_secondaries_0
-		}
-		dependencies = {
-			pre_gw_artillery = 1
 		}
 		folder = {
 			name = mtgnavalsupportfolder
@@ -2109,6 +2176,23 @@ technologies = {
 			ship_universal_missle_secondaries_0
 		}
 		is_special_project_tech = yes
+		allow = {
+			if = {
+				limit = {
+					has_dlc = "Gotterdammerung"
+				}
+				is_special_project_completed = sp:sp_rockets_ground_to_air_missile
+			}
+			else_if = {
+				limit = {
+					has_dlc = "By Blood Alone"
+				}
+				has_tech = rocket_engine_0_bba
+			}
+			else = {
+				has_tech = rocket_engine_0
+			}
+		}
 		folder = {
 			name = mtgnavalsupportfolder
 			position = { 
@@ -2152,9 +2236,9 @@ technologies = {
 		}
 		enable_equipment_modules = { 
 			ship_torpedo_0
-		}	
-		dependencies = {
-			internal_combustion_engine = 1
+		}
+		allow = {
+			has_tech = internal_combustion_engine
 		}
 		folder = {
 			name = mtgnavalsupportfolder
@@ -2380,8 +2464,8 @@ technologies = {
 			leads_to_tech = torpedo_charge_1
 			research_cost_coeff = 1
 		}
-		dependencies = {
-			trinitrophenol = 1
+		allow = {
+			has_tech = trinitrophenol
 		}
 		destroyer = {
 			torpedo_attack = 0.2
@@ -2428,8 +2512,8 @@ technologies = {
 		heavy_cruiser = {
 			torpedo_attack = 0.2
 		}
-		dependencies = {
-			nitroglycerine = 1
+		allow = {
+			has_tech = nitroglycerine
 		}
 		start_year = 997
 		folder = {
@@ -2468,8 +2552,8 @@ technologies = {
 		heavy_cruiser = {
 			torpedo_attack = 0.2
 		}
-		dependencies = {
-			trotyl = 1
+		allow = {
+			has_tech = trotyl
 		}
 		start_year = 1006
 		folder = {
@@ -2496,6 +2580,7 @@ technologies = {
 		}
 	}
 	nuclear_torpedo_charge = {
+		is_special_project_tech = yes
 		destroyer = {
 			torpedo_attack = 0.2
 		}
@@ -2507,6 +2592,9 @@ technologies = {
 		}
 		heavy_cruiser = {
 			torpedo_attack = 0.2
+		}
+		allow = {
+			is_special_project_completed = sp:sp_naval_nuclear_torpedo
 		}
 		start_year = 1018
 		folder = {
@@ -2543,8 +2631,8 @@ technologies = {
 			leads_to_tech = torpedo_engine_0
 			research_cost_coeff = 1
 		}
-		dependencies = {
-			magnetism_phenomenon = 1
+		allow = {
+			has_tech = magnetism_phenomenon
 		}
 		destroyer = {
 			torpedo_attack = 0.05
@@ -2591,8 +2679,8 @@ technologies = {
 				y = 9 
 			}
 		}
-		dependencies = {
-			direct_current = 1
+		allow = {
+			has_tech = direct_current
 		}
 		ai_will_do = {
 			factor = 2
@@ -2768,8 +2856,16 @@ technologies = {
 		show_equipment_icon = yes	
 		research_cost = 2
 		start_year = 986
-		dependencies = {
-			destroyer_hull_0 = 1
+		allow = {
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				has_tech = ship_hull_light_0
+			}
+			else = {
+				has_tech = destroyer_hull_0
+			}
 		}
 		folder = {
 			name = mtgnavalsupportfolder
@@ -3159,8 +3255,8 @@ technologies = {
 			leads_to_tech = smoke_generator_2
 			research_cost_coeff = 1
 		}
-		dependencies = {
-			trinitrophenol = 1
+		allow = {
+			has_tech = trinitrophenol
 		}
 		ai_will_do = {
 			factor = 8	
@@ -3192,8 +3288,8 @@ technologies = {
 			leads_to_tech = smoke_generator_3
 			research_cost_coeff = 1
 		}
-		dependencies = {
-			nitroglycerine = 1
+		allow = {
+			has_tech = nitroglycerine
 		}
 		ai_will_do = {
 			factor = 8
@@ -3220,9 +3316,6 @@ technologies = {
 				x = 0 
 				y = 36
 			}
-		}
-		dependencies = {
-			nitroglycerine = 1
 		}
 		ai_will_do = {
 			factor = 8
@@ -3500,6 +3593,10 @@ technologies = {
 			lg_attack = 0.05
 			hg_attack = 0.05
 		}
+		heavy_cruiser = {
+			lg_attack = 0.05
+			hg_attack = 0.05
+		}
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
@@ -3586,18 +3683,6 @@ technologies = {
 			lg_attack = 0.1
 			hg_attack = 0.1
 		}
-		light_cruiser = {
-			lg_attack = 0.1
-			hg_attack = 0.1
-		}
-		destroyer = {
-			lg_attack = 0.05
-			hg_attack = 0.05
-		}
-		submarine = {
-			lg_attack = 0.05
-			hg_attack = 0.05
-		}
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
@@ -3651,18 +3736,6 @@ technologies = {
 			lg_attack = 0.1
 			hg_attack = 0.1
 		}
-		light_cruiser = {
-			lg_attack = 0.1
-			hg_attack = 0.1
-		}
-		destroyer = {
-			lg_attack = 0.05
-			hg_attack = 0.05
-		}
-		submarine = {
-			lg_attack = 0.05
-			hg_attack = 0.05
-		}
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
@@ -3707,18 +3780,6 @@ technologies = {
 		heavy_cruiser = {
 			lg_attack = 0.1
 			hg_attack = 0.1
-		}
-		light_cruiser = {
-			lg_attack = 0.1
-			hg_attack = 0.1
-		}
-		destroyer = {
-			lg_attack = 0.05
-			hg_attack = 0.05
-		}
-		submarine = {
-			lg_attack = 0.05
-			hg_attack = 0.05
 		}
 		xp_research_type = navy
 		xp_boost_cost = 50
@@ -3765,18 +3826,6 @@ technologies = {
 			lg_attack = 0.1
 			hg_attack = 0.1
 		}
-		light_cruiser = {
-			lg_attack = 0.1
-			hg_attack = 0.1
-		}
-		destroyer = {
-			lg_attack = 0.05
-			hg_attack = 0.05
-		}
-		submarine = {
-			lg_attack = 0.05
-			hg_attack = 0.05
-		}
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
@@ -3822,18 +3871,6 @@ technologies = {
 			lg_attack = 0.1
 			hg_attack = 0.1
 		}
-		light_cruiser = {
-			lg_attack = 0.1
-			hg_attack = 0.1
-		}
-		destroyer = {
-			lg_attack = 0.05
-			hg_attack = 0.05
-		}
-		submarine = {
-			lg_attack = 0.05
-			hg_attack = 0.05
-		}
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50
@@ -3878,18 +3915,6 @@ technologies = {
 		heavy_cruiser = {
 			lg_attack = 0.1
 			hg_attack = 0.1
-		}
-		light_cruiser = {
-			lg_attack = 0.1
-			hg_attack = 0.1
-		}
-		destroyer = {
-			lg_attack = 0.05
-			hg_attack = 0.05
-		}
-		submarine = {
-			lg_attack = 0.05
-			hg_attack = 0.05
 		}
 		xp_research_type = navy
 		xp_boost_cost = 50

@@ -2106,7 +2106,20 @@ guiTypes = {
 				#				size = { width = 1700 height = 1200 }
 				#
 				#			}
+			containerWindowType = {
+				name = "tiled_window_transparent_transparent"
+				position = { x= 0 y= 0 }
+				size = {
+					width=3800 height=1500
+					min = { width=100%% height=100%% }
+				}
+				clipping = no
 
+				background = {
+					name = "Background"
+					quadTextureSprite ="GFX_tiled_window_transparent_transparent"
+				}
+			}
 			iconType = {
 				name ="naval_techtree_bg"
 				spriteType = "GFX_naval_techtree_bg"
@@ -2363,23 +2376,15 @@ guiTypes = {
 
 			###------> Naval Window Resize <><> <><> <><> <><> <><>
 
-			containerWindowType = {
-				name = "tiled_window_transparent_transparent"
-				position = { x= 0 y= 0 }
-				size = {
-					width=3100 height=1500
-					min = { width=100%% height=100%% }
-				}
-				clipping = no
-
-				background = {
-					name = "Background"
-					quadTextureSprite ="GFX_tiled_window_transparent_transparent"
-				}
-			}
 
 			###------> X <><> <><> <><> <><> <><>
-
+			gridboxtype = {
+				name = "ship_frigate_0_tree"
+				position = { x = 150 y = 106} #106
+				size = { width = 100 height = 140 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
 			#gridboxtype = {
 			#	name = "early_destroyer_tree"
 			#	position = { x = 150 y = 110}
@@ -2388,8 +2393,8 @@ guiTypes = {
 			#	format = "LEFT"
 			#}
 			gridboxtype = {
-				name = "early_destroyer_tree"
-				position = { x = 150 y = 226}
+				name = "ship_destroyer_0_tree"
+				position = { x = 150 y = 176 }
 				size = { width = 100 height = 140 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
@@ -2397,49 +2402,56 @@ guiTypes = {
 
 
 			gridboxtype = {
-				name = "early_light_cruiser_tree"
+				name = "ship_light_cruiser_0_tree"
 				#position = { x = 150 y = 310 }
-				position = { x = 150 y = 342 }
+				position = { x = 990 y = 402 }
 				size = { width = 100 height = 140 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 
 			gridboxtype = {
-				name = "early_heavy_cruiser_tree"
-				position = { x = 150 y = 458 }
+				name = "ship_heavy_cruiser_0_tree"
+				position = { x = 990 y = 472 }
 				size = { width = 100 height = 140 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 
 			gridboxtype = {
-				name = "early_battlecruiser_tree"
-				position = { x = 150 y = 644 }
+				name = "ship_battlecruiser_0_tree"
+				position = { x = 1410 y = 698 }
 				size = { width = 100 height = 140 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 
 			gridboxtype = {
-				name = "early_battleship_tree"
-				position = { x = 150 y = 690 }
+				name = "ship_battleship_0_tree"
+				position = { x = 1410 y = 770 }
 				size = { width = 100 height = 140 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 
 			gridboxtype = {
-				name = "early_carrier_tree"
-				position = { x = 150 y = 815 }
+				name = "ship_carrier_0_tree"
+				position = { x = 1410 y = 1115 }
 				size = { width = 100 height = 140 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 
 			gridboxtype = {
-				name = "early_submarine_tree"
-				position = { x = 150 y = 1080 }
+				name = "ship_submarine_0_tree"
+				position = { x = 990 y = 1280 }
+				size = { width = 100 height = 140 }
+				slotsize = { width = 70 height = 70 }
+				format = "LEFT"
+			}
+			gridboxtype = {
+				name = "transport_0_tree"
+				position = { x = 150 y = 1406} #106
 				size = { width = 100 height = 140 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"

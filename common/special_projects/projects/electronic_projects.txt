@@ -10,7 +10,11 @@ sp_air_radar = {
 	breakthrough_cost = {
 		specialization_air = 1
 	}
-
+	allowed = {
+		NOT = {
+			original_tag = ELN
+		}
+	}
 	available = { 
 		FROM = { has_tech = electronic_mechanical_engineering }
 	}
@@ -24,14 +28,6 @@ sp_air_radar = {
 
 	ai_will_do = {
 		base = 1
-		modifier = {
-			factor = 3
-			ROOT = { is_major = yes }
-		}
-		modifier = {
-			factor = 2
-			date > 1940.1.1
-		}
 	}
 
 	
@@ -58,7 +54,6 @@ sp_air_radar = {
 
 		enable_equipment_modules = {
 			limit = {
-				has_dlc = "Gotterdammerung"
 				has_dlc = "No Step Back"
 			}
 			lc_radar
@@ -93,25 +88,24 @@ sp_sonar_prototyping = {
 	breakthrough_cost = {
 		specialization_air = 1
 	}
+	allowed = {
+		has_dlc = "Man the Guns"
+		NOT = {
+			original_tag = ELN
+		}
+	}
 	available = {
 		FROM = {
 			has_tech = electronic_mechanical_engineering
+			OR = {
+				has_tech = frigate_hull_0
+				has_tech = cruiser_hull_0
+			}
 		}
 	}
 	visible = {
 		FROM = {
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				OR = {
-					has_tech = frigate_hull_0
-					has_tech = cruiser_hull_0
-				}
-			}
-			else = {
-				
-			}
+			has_tech = electronic_mechanical_engineering
 		}
 	}
 	resource_cost = {
@@ -155,7 +149,7 @@ sp_sonar_prototyping = {
 			limit = {
 				has_dlc = "Man the Guns"
 			}
-			ship_sonar_experimental
+			ship_sonar_0
 		}
 	}
 	generic_prototype_rewards = {

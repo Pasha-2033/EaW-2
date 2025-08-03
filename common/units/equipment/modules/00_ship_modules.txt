@@ -3043,6 +3043,30 @@ equipment_modules = {
 			damaged_torpedoes
 		}
 	}
+	ship_torpedo_sub_nuclear = {
+		abbreviation = "sco"
+		category = ship_torpedo_sub
+		parent = ship_torpedo_sub_6
+		
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			torpedo_attack = 44
+			build_cost_ic = 520
+			naval_torpedo_hit_chance_factor = 0.05
+			reliability = -0.15
+		}
+
+		multiply_stats = {
+			naval_speed = -0.05	
+		}
+
+		can_convert_from = {
+			module_category = ship_torpedo_sub
+			convert_cost_ic = 240
+		}
+		critical_parts = { damaged_torpedoes }
+	}
 	#mine layer
 	ship_mine_layer_0 = {
 		category = ship_mine_layer
@@ -3569,22 +3593,8 @@ equipment_modules = {
 		dismantle_cost_ic = 1000
 	}
 	#sonar
-	ship_sonar_experimental = {
-		category = ship_sonar
-		gfx = ship_sonar_1 #to do
-		sfx = sfx_ui_sd_module_sonar
-		add_stats = {
-			sub_detection = 3
-			build_cost_ic = 30
-		}
-		can_convert_from = {
-			module_category = ship_sonar
-			convert_cost_ic = 15
-		}
-	}
 	ship_sonar_0 = {
 		category = ship_sonar
-		parent = ship_sonar_experimental
 		gfx = ship_sonar_1 #to do
 		sfx = sfx_ui_sd_module_sonar
 		add_stats = {
@@ -3681,6 +3691,24 @@ equipment_modules = {
 	ship_sonar_6 = {
 		category = ship_sonar
 		parent = ship_sonar_5
+		gfx = ship_sonar_6
+		sfx = sfx_ui_sd_module_sonar
+		add_stats = {
+			sub_detection = 32
+			build_cost_ic = 140
+		}
+		multiply_stats = {
+			sub_attack = 0.4
+			mines_sweeping = 0.4
+		}
+		can_convert_from = {
+			module_category = ship_sonar
+			convert_cost_ic = 25
+		}
+	}
+	ship_sonar_7 = {
+		category = ship_sonar
+		parent = ship_sonar_6
 		gfx = ship_sonar_6
 		sfx = sfx_ui_sd_module_sonar
 		add_stats = {

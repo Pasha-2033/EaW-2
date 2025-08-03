@@ -18,13 +18,7 @@ sp_naval_cruiser_submarine = {
 	
 	complexity = sp_complexity.medium
 	prototype_time = sp_time.prototype.medium 
-	allowed = {
-		#FREE PROJECT
-	}
 
-	special_project_parent = {
-		
-	}
 
 	available = { 
 		FROM = {
@@ -32,10 +26,10 @@ sp_naval_cruiser_submarine = {
 				limit = {
 					has_dlc = "Man the Guns"
 				}  
-				has_tech = early_ship_hull_submarine
+				has_tech = submarine_hull_1
 			}
 			else = {
-				has_tech = early_submarine
+				#TODO
 			}
 
 		}
@@ -60,7 +54,9 @@ sp_naval_cruiser_submarine = {
 		}
 		enable_equipments = {	
 			limit = {
-				not = { has_dlc = "Man the Guns" }
+				NOT = { 
+					has_dlc = "Man the Guns" 
+				}
 			}
 			cruiser_submarine
 		}
@@ -96,79 +92,7 @@ sp_naval_cruiser_submarine = {
 		sp_naval_generic_failure_torpedo_accident
 	}
 	
-	unique_prototype_rewards = {
 
-		sp_naval_cruiser_submarine_unique_reward_a = {
-			fire_only_once = yes
-
-			threshold = { 
-				min = 40
-				max = 90
-			}
-
-			weight = {
-				base = 100
-			}
-
-			option = {
-				token = sp_naval_cruiser_submarine_preference_a
-				
-				iteration_output = {
-					country_effects = { 
-						if = {
-							limit = {
-								NOT = {has_dlc = "Man the Guns"}
-							}
-							add_equipment_bonus = {
-								name = sp_cruiser_submarine_eq_bonus_range
-								bonus = {
-									cruiser_submarine = {
-										naval_range = 0.1
-									}
-								}
-							}
-						}
-					}
-
-					enable_equipment_modules = {
-						limit = {
-							has_dlc = "Man the Guns"
-						}
-						ship_extra_fuel_tank
-					}
-				}
-			}
-
-			option = {
-				token = sp_naval_cruiser_submarine_preference_b
-				
-				iteration_output = {
-					country_effects = { 
-						if = {
-							limit = {
-								NOT = {has_dlc = "Man the Guns"}
-							}
-							add_equipment_bonus = {
-								name = sp_cruiser_submarine_eq_bonus_raiding
-								bonus = {
-									cruiser_submarine = {
-										convoy_raiding_coordination = 0.1
-									}
-								}
-							}
-						}
-					}
-					
-					enable_equipment_modules = {
-						limit = {
-							has_dlc = "Man the Guns"
-						}
-						ship_light_battery_sub
-					}
-				}
-			}
-		}
-	}
 	
 }
 
@@ -266,90 +190,6 @@ sp_naval_fleet_submarine = {
 		sp_naval_generic_reward_test_failure_3
 		sp_naval_generic_failure_torpedo_accident
 	}
-
-	unique_prototype_rewards = {
-		sp_naval_fleet_submarine_unique_reward_a = {
-			fire_only_once = yes
-
-			threshold = { 
-				min = 40
-				max = 90
-			}
-
-			weight = {
-				base = 100
-			}
-
-			option = {
-				token = sp_naval_fleet_submarine_preference_a
-				
-				iteration_output = {
-					country_effects = {
-						if = {
-							limit = { has_dlc = "Man the Guns"}							
-						
-							add_equipment_bonus = {
-								name = sp_fleet_submarine_eq_bonus_attack
-								bonus = {
-									ship_hull_fleet_submarine = {
-										naval_speed = 0.05
-										torpedo_attack = 0.05
-										sub_visibility = -0.03										
-									}
-								}
-							}
-						}
-						else = {
-							add_equipment_bonus = {
-								name = sp_fleet_submarine_eq_bonus_attack
-								bonus = {
-									fleet_submarine = {
-										naval_speed = 0.05
-										torpedo_attack = 0.05
-										sub_visibility = -0.03										
-									}
-								}
-							}						
-						}
-					}
-				}
-			}
-
-			option = {
-				token = sp_naval_fleet_submarine_preference_b
-				
-				iteration_output = {
-					country_effects = {
-						if = {
-							limit = { has_dlc = "Man the Guns"}							
-							add_equipment_bonus = {
-								name = sp_fleet_submarine_eq_bonus_reliability
-								bonus = {
-									ship_hull_fleet_submarine = {
-										reliability = 0.05
-										max_strength = 0.05
-										naval_weather_penalty_factor = -0.1									
-									}
-								}
-							}
-						}
-						else = {
-							add_equipment_bonus = {
-								name = sp_fleet_submarine_eq_bonus_reliability
-								bonus = {
-									fleet_submarine = {
-										reliability = 0.05
-										max_strength = 0.05
-										naval_weather_penalty_factor = -0.1									
-									}
-								}
-							}						
-						}
-					}
-				}
-			}
-		}	
-	}
 	
 }
 
@@ -370,11 +210,15 @@ sp_naval_nuclear_submarine = {
 
 	special_project_parent = {
 		sp_naval_fleet_submarine
-		sp_nuclear_engines
 	}
 
 	available = { 
-		
+		FROM = {
+			OR = {
+				is_special_project_completed = sp:sp_nuclear_engines_primary
+				is_special_project_completed = sp:sp_nuclear_engines_secondary
+			}
+		}
 	}
 	
 	breakthrough_cost = {
@@ -390,19 +234,7 @@ sp_naval_nuclear_submarine = {
 	}
 
 	project_output = {
-		country_effects = {
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				add_design_template_bonus = {
-					name = sp_naval_nuclear_submarine_free_design
-					uses = 1
-					cost_factor = 1
-					equipment = ship_hull_nuclear_submarine
-				}
-			}
-		}
+
 		facility_state_effects = {
 			
 		}
@@ -437,103 +269,7 @@ sp_naval_nuclear_submarine = {
 		sp_naval_generic_failure_nuclear_accident
 	}
 
-	unique_prototype_rewards = {
-		sp_naval_nuclear_submarine_unique_reward_a = {
-			fire_only_once = yes
 
-			threshold = { 
-				min = 40
-				max = 90
-			}
-
-			weight = {
-				base = 100
-			}
-
-			option = {
-				token = sp_naval_nuclear_submarine_preference_a
-				
-				iteration_output = {
-					country_effects = {
-						if = {
-							limit = { has_dlc = "Man the Guns"}							
-							add_equipment_bonus = {
-								name = sp_nuclear_submarine_eq_bonus_ic_reduction
-								bonus = {
-									ship_hull_nuclear_submarine = {
-										build_cost_ic = -0.1
-										reliability = -0.05
-										sub_visibility = 0.1
-										naval_range = -0.1
-									}
-								}
-							}
-						}
-						else = {
-							add_equipment_bonus = {
-								name = sp_nuclear_submarine_eq_bonus_ic_reduction
-								bonus = {
-									nuclear_submarine = {
-										build_cost_ic = -0.1
-										reliability = -0.05
-										sub_visibility = 0.1
-										naval_range = -0.1
-									}
-								}
-							}						
-						}
-					}
-				}
-			}
-
-			option = {
-				token = sp_naval_nuclear_submarine_preference_b
-				
-				iteration_output = {
-					country_effects = { 
-
-					}
-					
-				}
-			}
-
-			option = {
-				token = sp_naval_nuclear_submarine_preference_c
-				
-				iteration_output = {
-					country_effects = {
-						if = {
-							limit = { has_dlc = "Man the Guns"}							
-							add_equipment_bonus = {
-								name = sp_nuclear_submarine_eq_bonus_quality
-								bonus = {
-									ship_hull_nuclear_submarine = {
-										build_cost_ic = 0.1
-										max_strength = 0.1
-										reliability = 0.05
-										sub_visibility = -0.05
-									}
-								}
-							}
-						}
-						else = {
-							add_equipment_bonus = {
-								name = sp_nuclear_submarine_eq_bonus_quality
-								bonus = {
-									nuclear_submarine = {
-										build_cost_ic = 0.1
-										max_strength = 0.1
-										reliability = 0.05
-										sub_visibility = -0.05
-									}
-								}
-							}						
-						}
-					}
-				}
-			}			
-		}	
-	}	
 }
 
 # Rocket Launching Submarine
@@ -560,7 +296,7 @@ sp_naval_rocket_launching_submarine = {
 
 	special_project_parent = {
 		sp_naval_fleet_submarine
-		sp_rockets_ballistic_missile
+		sp_rockets_medium_range_ballistic_missile
 	}
 
 	available = { 
@@ -610,121 +346,7 @@ sp_naval_rocket_launching_submarine = {
 		sp_naval_generic_reward_test_failure_3	
 	}
 
-	unique_prototype_rewards = {
-		sp_naval_rocket_launching_submarine_unique_reward_a = {
-			fire_only_once = yes
 
-			threshold = { 
-				min = 40
-				max = 90
-			}
-
-			weight = {
-				base = 100
-			}
-
-			option = {
-				token = sp_naval_rocket_launching_submarine_preference_a
-				
-				iteration_output = {
-					country_effects = {
-						if = {
-							limit = { has_dlc = "Man the Guns"}							
-								add_equipment_bonus = {
-									name = sp_rocket_submarine_eq_bonus_range_increase
-									bonus = {
-										ship_hull_fleet_submarine = {
-											naval_range = 0.1
-											sub_visibility = 0.05
-											build_cost_ic = 0.07
-										}
-									}
-								}
-							}
-						else = {
-							add_equipment_bonus = {
-								name = sp_rocket_submarine_eq_bonus_range_increase
-								bonus = {
-									rocket_submarine = {
-										naval_range = 0.15
-										sub_visibility = 0.05
-										build_cost_ic = 0.1
-									}
-								}
-							}						
-						}
-					}
-				}
-			}
-
-			option = {
-				token = sp_naval_rocket_launching_submarine_preference_b
-				
-				iteration_output = {
-					country_effects = {
-						if = {
-							limit = { has_dlc = "Man the Guns"}							
-								add_equipment_bonus = {
-									name = sp_rocket_submarine_eq_bonus_reliability
-									bonus = {
-										ship_hull_fleet_submarine = {
-											reliability = 0.03
-										}
-									}
-								}
-							}
-						else = {
-							add_equipment_bonus = {
-								name = sp_rocket_submarine_eq_bonus_reliability
-								bonus = {
-									rocket_submarine = {
-										reliability = 0.05
-									}
-								}
-							}						
-						}
-					}
-					
-					 
-
-				}
-			}
-
-			option = {
-				token = sp_naval_rocket_launching_submarine_preference_c
-				
-				iteration_output = {
-					country_effects = {
-						if = {
-							limit = { has_dlc = "Man the Guns"}							
-								add_equipment_bonus = {
-									name = sp_rocket_submarine_eq_bonus_stealth
-									bonus = {
-										ship_hull_fleet_submarine = {
-											sub_visibility = -0.05
-											naval_range = -0.05
-											build_cost_ic = 0.1
-										}
-									}
-								}
-							}
-						else = {
-							add_equipment_bonus = {
-								name = sp_rocket_submarine_eq_bonus_stealth
-								bonus = {
-									rocket_submarine = {
-										sub_visibility = -0.15
-										naval_range = -0.05
-										build_cost_ic = 0.1
-									}
-								}
-							}						
-						}
-					}
-				}
-			}			
-		}	
-	}
 
 }
 
@@ -805,99 +427,6 @@ sp_naval_nuclear_missile_submarine = {
 		sp_naval_generic_failure_nuclear_accident
 	}
 
-	unique_prototype_rewards = {
-		sp_naval_nuclear_missile_submarine_unique_reward_a = {
-			fire_only_once = yes
-
-			threshold = { 
-				min = 40
-				max = 90
-			}
-
-			weight = {
-				base = 100
-			}
-
-			option = {
-				token = sp_naval_nuclear_missile_submarine_preference_a
-				
-				iteration_output = {
-					country_effects = {
-						if = {
-							limit = { has_dlc = "Man the Guns"}							
-							add_equipment_bonus = {
-								name = sp_nuclear_missile_submarine_eq_bonus_stealth
-								bonus = {
-									ship_hull_nuclear_submarine = {
-										sub_visibility = -0.05
-										surface_detection = 0.02
-										build_cost_ic = 0.05
-									}
-								}
-							}
-						}
-						else = {
-							add_equipment_bonus = {
-								name = sp_nuclear_missile_submarine_eq_bonus_stealth
-								bonus = {
-									nuclear_missile_submarine = {
-										sub_visibility = -0.1
-										surface_detection = 0.05
-										build_cost_ic = 0.1
-									}
-								}
-							}						
-						}
-					}
-				}
-			}
-
-			option = {
-				token = sp_naval_nuclear_missile_submarine_preference_b
-				
-				iteration_output = {
-					country_effects = { 
-
-					}
-															 
-				}
-			}
-
-			option = {
-				token = sp_naval_nuclear_missile_submarine_preference_c
-				
-				iteration_output = {
-					country_effects = {
-						if = {
-							limit = { has_dlc = "Man the Guns"}							
-							add_equipment_bonus = {
-								name = sp_nuclear_missile_submarine_eq_bonus_strength
-								bonus = {
-									ship_hull_nuclear_submarine = {
-										max_strength = 0.02
-										naval_weather_penalty_factor = -0.2
-										build_cost_ic = 0.05
-									}
-								}
-							}
-						}
-						else = {
-							add_equipment_bonus = {
-								name = sp_nuclear_missile_submarine_eq_bonus_strength
-								bonus = {
-									nuclear_missile_submarine = {
-										max_strength = 0.05
-										naval_weather_penalty_factor = -0.2
-										build_cost_ic = 0.1
-									}
-								}
-							}						
-						}
-					}
-				}
-			}			
-		}	
-	}
 
 }
 
@@ -923,14 +452,13 @@ sp_naval_nuclear_torpedo = {
 	prototype_time = sp_time.prototype.long
 
 	allowed = {
-		AND = {
-			has_dlc= "Gotterdammerung"
-			has_dlc = "Man the Guns"
-		}
+		has_dlc = "Man the Guns"
 	}
 	
 	available = {
-		FROM = { has_tech = modern_ship_torpedo_launcher }
+		FROM = { 
+			has_tech = torpedo_launcher_6
+		}
 	}
 
 	special_project_parent = {
@@ -942,18 +470,6 @@ sp_naval_nuclear_torpedo = {
 	}
 
 	project_output = {
-		country_effects = {
-
-		}
-		facility_state_effects = {
-			
-		}
-		scientist_effects = {
-			
-		}
-		enable_equipments = {
-			
-		}
 		enable_equipment_modules = {
 			ship_torpedo_sub_nuclear
 		}
@@ -975,61 +491,6 @@ sp_naval_nuclear_torpedo = {
 		sp_naval_generic_reward_test_failure_3
 		sp_naval_generic_failure_nuclear_accident		
 	}
-
-	unique_prototype_rewards = {
-		sp_naval_nuclear_torpedo_unique_reward_a = {
-			fire_only_once = yes
-
-			threshold = { 
-				min = 40
-				max = 90
-			}
-
-			weight = {
-				base = 100
-			}
-
-			option = {
-				token = sp_naval_nuclear_torpedo_preference_a
-				
-				iteration_output = {
-					country_effects = {
-
-					}
-					
-					equipment_bonus = {
-						ship_hull_submarine = {
-							naval_torpedo_hit_chance_factor = 0.02
-							torpedo_attack = 0.1
-							reliability = -0.1 
-							instant = yes
-						}
-					}
-
-				}
-			}
-
-			option = {
-				token = sp_naval_nuclear_torpedo_preference_b
-				
-				iteration_output = {
-					country_effects = { 
-
-					}
-					equipment_bonus = {
-						ship_hull_submarine = {
-							reliability = 0.1
-							build_cost_ic = 0.1
-							instant = yes
-						}				
-
-					}					 
-
-				}
-			}
-		}	
-	}
-
 }
 
 #Midget Submarine
@@ -1054,7 +515,7 @@ sp_naval_midget_submarine = {
 				has_tech = early_ship_hull_submarine
 			}
 			else = {
-				has_tech = early_submarine
+				has_tech = ship_submarine_0
 			}
 
 		}
@@ -1086,81 +547,6 @@ sp_naval_midget_submarine = {
 			}
 			midget_submarine
 		}
-
-		country_effects = {
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				add_design_template_bonus = {
-					name = sp_naval_midget_submarine_free_design
-					uses = 1
-					cost_factor = 1
-					equipment = ship_hull_midget_submarine
-				}
-			}
-
-			if = { #Italian content from Midget Submarines focus moved here (focus now completes this SP)
-				limit = {
-					original_tag = ITA
-				}
-				if = {
-					limit = {
-						has_dlc = "Man the Guns"
-					}
-					create_equipment_variant = {
-						name = "CB Class"
-						type = ship_hull_midget_submarine
-						allow_without_tech = yes # Display tooltip as if we have the tech.
-						name_group = ITA_SS_HISTORICAL
-						parent_version = 0
-						allow_without_tech = yes # Display tooltip as if we have the tech.
-						mark_older_equipment_obsolete = yes
-						modules = {
-							fixed_ship_torpedo_slot = ship_torpedo_sub_2
-							fixed_ship_engine_slot = sub_ship_engine_2
-						}
-					}
-					add_equipment_production = {
-						equipment = {
-							type = ship_hull_midget_submarine
-							creator = "ITA"
-							version_name = "CB Class"
-						}
-						name = "Ammiraglio Millo"
-						requested_factories = 1
-						progress = 0.35
-						amount = 2
-					}
-				}
-				else = {
-					create_equipment_variant = {
-						name = "CB Class"
-						type = midget_submarine
-						allow_without_tech = yes # Display tooltip as if we have the tech.
-						name_group = ITA_SS_HISTORICAL
-						parent_version = 0
-						allow_without_tech = yes # Display tooltip as if we have the tech.
-						mark_older_equipment_obsolete = yes
-						upgrades = {
-							sub_torpedo_upgrade = 2
-							sub_engine_upgrade = 2
-						}
-					}
-					add_equipment_production = {
-						equipment = {
-							type = midget_submarine
-							creator = "ITA"
-							version_name = "CB Class"
-						}
-						name = "Ammiraglio Millo"
-						requested_factories = 1
-						progress = 0.35
-						amount = 2
-					}
-				}	
-			}
-		}
 	}
 
 	generic_prototype_rewards = {
@@ -1177,118 +563,6 @@ sp_naval_midget_submarine = {
 		sp_naval_generic_reward_test_failure_2
 		sp_naval_generic_reward_test_failure_3
 		sp_naval_generic_failure_torpedo_accident		
-	}
-
-	unique_prototype_rewards = {
-		sp_naval_midget_submarine_unique_reward_a = {
-			fire_only_once = yes
-
-			threshold = { 
-				min = 40
-				max = 90
-			}
-
-			weight = {
-				base = 100
-			}
-
-			option = {
-				token = sp_naval_midget_submarine_preference_a
-				
-				iteration_output = {
-					country_effects = {
-						if = {
-							limit = { has_dlc = "Man the Guns"}							
-						
-							add_equipment_bonus = {
-								name = sp_midget_submarine_eq_bonus_stealth
-								bonus = {
-									ship_hull_midget_submarine = {
-										naval_range = -0.2
-										sub_visibility = -0.1										
-									}
-								}
-							}
-						}
-						else = {
-							add_equipment_bonus = {
-								name = sp_midget_submarine_eq_bonus_stealth
-								bonus = {
-									midget_submarine = {
-										naval_range = -0.2
-										sub_visibility = -0.1									
-									}
-								}
-							}						
-						}
-					}
-				}
-			}
-
-			option = {
-				token = sp_naval_midget_submarine_preference_b
-				
-				iteration_output = {
-					country_effects = {
-						if = {
-							limit = { has_dlc = "Man the Guns"}							
-						
-							add_equipment_bonus = {
-								name = sp_midget_submarine_eq_bonus_reliability
-								bonus = {
-									ship_hull_midget_submarine = {
-										reliability = 0.1										
-									}
-								}
-							}
-						}
-						else = {
-							add_equipment_bonus = {
-								name = sp_midget_submarine_eq_bonus_reliability
-								bonus = {
-									midget_submarine = {
-										reliability	= 0.1									
-									}
-								}
-							}						
-						}
-					}
-				} 
-			}
-
-			option = {
-				token = sp_naval_midget_submarine_preference_c
-				
-				iteration_output = {
-					country_effects = {
-						if = {
-							limit = { has_dlc = "Man the Guns"}							
-						
-							add_equipment_bonus = {
-								name = sp_midget_submarine_eq_bonus_range
-								bonus = {
-									ship_hull_midget_submarine = {
-										naval_range = 0.2
-										sub_visibility = 0.1										
-									}
-								}
-							}
-						}
-						else = {
-							add_equipment_bonus = {
-								name = sp_midget_submarine_eq_bonus_range
-								bonus = {
-									midget_submarine = {
-										naval_range = 0.2
-										sub_visibility = 0.1										
-									}
-								}
-							}						
-						}
-					}
-				}
-			}
-		}		
 	}	
 }
 
@@ -1652,10 +926,10 @@ sp_naval_torpedo_cruiser = {
 				limit = {
 					has_dlc = "Man the Guns"
 				}  
-				has_tech = early_ship_hull_cruiser
+				has_tech = cruiser_hull_0
 			}
 			else = {
-				has_tech = early_light_cruiser
+				has_tech = ship_light_cruiser_0
 			}
 
 		}
@@ -1850,7 +1124,7 @@ sp_naval_super_heavy_battleship = {
 				
 			}
 			else = {
-				has_tech = early_battleship
+				has_tech = ship_battleship_0
 			}
 		}
 	}
@@ -3270,58 +2544,6 @@ sp_naval_proximity_fuze = {
 		sp_naval_generic_reward_test_failure_1
 		sp_naval_generic_reward_test_failure_2
 		sp_naval_generic_reward_test_failure_3			
-	}
-
-	unique_prototype_rewards = {
-		sp_naval_proximity_fuzes_unique_reward_a = {
-			fire_only_once = yes
-
-			threshold = { 
-				min = 40
-				max = 90
-			}
-
-			weight = {
-				base = 100
-			}
-
-			option = {
-				token = sp_naval_proximity_fuzes_preference_a
-				
-				iteration_output = {
-					country_effects = {
-
-					}
-
-					equipment_bonus = {
-						anti_air_equipment = {
-							build_cost_ic = -0.05
-							instant = yes
-						}
-
-					}
-
-				}
-			}
-
-			option = {
-				token = sp_naval_proximity_fuzes_preference_b
-				
-				iteration_output = {
-					country_effects = { 
-						
-					}
-					equipment_bonus = {			
-						anti_air_equipment = {
-							air_attack = 0.15
-							build_cost_ic = 0.05
-							instant = yes
-						}
-					}					 
-
-				}
-			}
-		}	
 	}	
 
 }

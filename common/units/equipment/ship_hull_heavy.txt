@@ -131,73 +131,7 @@ equipments = {
 
 	### No-MTG special snowflake hull
 	
-	pre_dreadnought_nomtg = {
-		year = 976
-		visual_tech_level_addition = 0
-		archetype = ship_hull_heavy
-		priority = 1500
-		visual_level = 0
-		module_slots = {
-			fixed_ship_battery_slot = inherit
-			fixed_ship_anti_air_slot = {
-				required = no
-				allowed_module_categories = { ship_anti_air }
-			}
-			fixed_ship_fire_control_system_slot = inherit
-			fixed_ship_radar_slot = inherit
-			fixed_ship_engine_slot = inherit
-			fixed_ship_secondaries_slot = inherit
-			fixed_ship_armor_slot = inherit
-			front_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_anti_air
-				}
-			}
-			mid_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_torpedo
-					ship_anti_air
-					ship_secondaries
-					ship_airplane_launcher
-				}
-			}
-			rear_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_anti_air
-					ship_airplane_launcher
-				}
-			}
-		}
 
-		default_modules = {
-			fixed_ship_battery_slot = ship_heavy_battery_1
-			fixed_ship_anti_air_slot = ship_anti_air_1
-			fixed_ship_fire_control_system_slot = ship_fire_control_system_0
-			fixed_ship_radar_slot = empty
-			fixed_ship_engine_slot = heavy_ship_engine_0
-			fixed_ship_secondaries_slot = ship_secondaries_1
-			fixed_ship_armor_slot = ship_armor_battleship_0
-			front_1_custom_slot = ship_anti_air_1
-			mid_1_custom_slot = ship_secondaries_1
-			rear_1_custom_slot = ship_airplane_launcher_1
-		}
-		naval_range = 2250
-		
-		max_strength = 300
-		naval_speed = 13
-		fuel_consumption = 67
-		reliability = 0.65
-		build_cost_ic = 3000
-		resources = {
-			steel = 3
-			chromium = 1
-		}
-
-		manpower = 3200
-	}
 
 
 
@@ -900,7 +834,6 @@ equipments = {
 		archetype = ship_hull_heavy
 		priority = 1500
 		visual_level = 0
-		parent = pre_dreadnought_nomtg
 		module_slots = {
 			fixed_ship_battery_slot = {
 				required = yes
