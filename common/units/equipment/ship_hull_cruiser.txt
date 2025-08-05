@@ -1718,7 +1718,7 @@ equipments = {
 		manpower = 1800
 	}
 	
-	###### SPECIAL JAP TECH FROM FOCUS ######	
+	#special project (no mtg): torpedo cruiser	
 
 	torpedo_cruiser = {
 		year = 1011
@@ -1858,7 +1858,7 @@ equipments = {
 
 
 
-	###special snowflake hulls
+	#special project (mtg): torpedo cruiser
 	ship_hull_torpedo_cruiser = {
 		year = 1011
 		visual_level = 0
@@ -1949,65 +1949,7 @@ equipments = {
 		
 		manpower = 960
 	}
-	ship_hull_cruiser_panzerschiff = {
-		year = 1007
-		visual_level = 0
-		archetype = ship_hull_cruiser
-		priority = 1850
-		manpower = 1800
-		build_cost_ic = 3500
-		naval_speed = 20
-		surface_visibility = 22
-		naval_range = 7500
-		max_strength = 220
-		resources = {
-			steel = 3
-		}
-		module_slots = {
-			fixed_ship_battery_slot = {
-				required = yes
-				allowed_module_categories = { ship_heavy_battery }
-			}
-			fixed_ship_anti_air_slot = inherit
-			fixed_ship_fire_control_system_slot = inherit
-			fixed_ship_radar_slot = inherit
-			fixed_ship_engine_slot = inherit
-			fixed_ship_secondaries_slot = inherit
-			fixed_ship_armor_slot = inherit
-			front_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_anti_air
-				}
-			}
-			
-			mid_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_anti_air
-					ship_secondaries
-					ship_airplane_launcher
-				}
-			}
-			mid_2_custom_slot = mid_1_custom_slot
-			rear_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_mine_layer
-					ship_anti_air
-					ship_airplane_launcher
-					ship_torpedo
-				}
-			}
-		}
 
-		default_modules = {
-			front_1_custom_slot = ship_anti_air_1
-			fixed_ship_battery_slot = ship_heavy_battery_1
-			fixed_ship_secondaries_slot = ship_secondaries_1
-			rear_1_custom_slot = ship_torpedo_1
-		}
-	}
 	ship_hull_cruiser_coastal_defense_ship = {
 		year = 1000
 		visual_level = 0
@@ -2063,96 +2005,6 @@ equipments = {
 					ship_torpedo
 					ship_medium_battery
 					ship_light_ASM_battery
-					ship_medium_ASM_battery
-				}
-			}
-		}
-
-		default_modules = {
-			front_1_custom_slot = empty
-			rear_1_custom_slot = empty
-			fixed_ship_battery_slot = empty
-			fixed_ship_secondaries_slot = empty
-		}
-	}
-
-#############################
-######Custom EAW Hulls#######
-#############################
-	ship_hull_grand_cruiser = {
-		year = 1007
-		visual_level = 1
-		archetype = ship_hull_cruiser
-		priority = 1900
-		parent = ship_hull_cruiser_coastal_defense_ship
-		naval_speed = 27
-		reliability = 0.85
-		manpower = 3200
-		build_cost_ic = 2900
-		naval_range = 3250
-		max_strength = 180
-		resources = {
-			steel = 2
-		}
-		module_slots = {
-			fixed_ship_battery_slot = {
-				required = yes
-				allowed_module_categories = { ship_heavy_battery }
-			}
-			fixed_ship_anti_air_slot = inherit
-			fixed_ship_fire_control_system_slot = inherit
-			fixed_ship_radar_slot = inherit
-			fixed_ship_engine_slot = inherit
-			fixed_ship_secondaries_slot = inherit
-			fixed_ship_armor_slot = {
-				required = yes
-				allowed_module_categories = {
-					ship_cruiser_armor
-					ship_cruiser_heavy_armor
-					}
-				}
-			front_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_anti_air
-					ship_secondaries
-					ship_heavy_battery
-					ship_heavy_ASM_battery
-				}
-			}
-			
-			mid_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_anti_air
-					ship_secondaries
-					ship_airplane_launcher
-					ship_medium_battery
-					ship_medium_ASM_battery
-					ship_torpedo
-				}
-			}
-			mid_2_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_anti_air
-					ship_secondaries
-					ship_airplane_launcher
-					ship_medium_battery
-					ship_medium_ASM_battery
-					ship_heavy_battery
-					ship_heavy_ASM_battery
-				}
-			}
-			rear_1_custom_slot = {
-				required = no
-				allowed_module_categories = {
-					ship_anti_air
-					ship_airplane_launcher
-					ship_torpedo
-					ship_heavy_battery
-					ship_heavy_ASM_battery
-					ship_medium_battery
 					ship_medium_ASM_battery
 				}
 			}

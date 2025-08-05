@@ -16,7 +16,9 @@ sp_air_radar = {
 		}
 	}
 	available = { 
-		FROM = { has_tech = electronic_mechanical_engineering }
+		FROM = { 
+			has_tech = electronic_mechanical_engineering 
+		}
 	}
 
 	resource_cost = {
@@ -41,8 +43,8 @@ sp_air_radar = {
 				}
 			}
 			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_TECH
-				TECH = cavity_magnatron	
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_proximity_fuze
 			}
 		}
 		facility_state_effects = {
@@ -104,9 +106,6 @@ sp_sonar_prototyping = {
 		}
 	}
 	visible = {
-		FROM = {
-			has_tech = electronic_mechanical_engineering
-		}
 	}
 	resource_cost = {
 		resources = { 

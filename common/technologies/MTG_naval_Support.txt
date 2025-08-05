@@ -2665,7 +2665,11 @@ technologies = {
 			specialization_naval 
 		}
 	}
-	torpedo_engine_0 = {	
+	torpedo_engine_0 = {
+		is_special_project_tech = yes
+		allow = {
+			is_special_project_completed = sp:sp_naval_aip_engine
+		}
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.50

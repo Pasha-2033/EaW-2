@@ -66,8 +66,8 @@ technologies = {
 		enable_equipment_modules = {
 			frigate_ship_engine_0
 		}
-		dependencies = {
-			internal_combustion_engine = 1
+		allow = {
+			has_tech = internal_combustion_engine
 		}
 		path = {
 			leads_to_tech = destroyer_hull_0 
@@ -496,8 +496,8 @@ technologies = {
 		xp_research_bonus = 1.5
 		research_cost = 1.5
 		start_year = 986
-		dependencies = {
-			trinitrophenol = 1
+		allow = {
+			has_tech = trinitrophenol
 		}
 		folder = {
 			name = mtgnavalfolder
@@ -746,8 +746,8 @@ technologies = {
 		}
 	}
 	depth_charges_7 = {
-		enable_equipment_modules = { 
-			ship_heli_hanger_0
+		enable_equipment_modules = {
+			ship_depth_charge_7 
 		}
 		on_research_complete = {
 			custom_effect_tooltip = heli_hanger_advice_tt
@@ -779,6 +779,9 @@ technologies = {
 	}
 	#sonar
 	sonar_0 = {
+		allow = {
+			is_special_project_completed = sp:sp_sonar_prototyping
+		}
 		enable_equipment_modules = {
 			#0 is unlocked by sp
 			ship_sonar_1
@@ -792,9 +795,6 @@ technologies = {
 		xp_boost_cost = 50
 		xp_research_bonus = 1.5
 		research_cost = 1.5
-		dependencies = {
-			electronic_mechanical_engineering = 1
-		}
 		start_year = 986
 		folder = {
 			name = mtgnavalfolder
@@ -1054,8 +1054,8 @@ technologies = {
 			ship_armor_cruiser_0
 			cruiser_ship_engine_0
 		}
-		dependencies = {
-			internal_combustion_engine = 1
+		allow = {
+			has_tech = internal_combustion_engine
 		}
 		path = {
 			leads_to_tech = cruiser_hull_1
@@ -1100,9 +1100,6 @@ technologies = {
 		path = {
 			leads_to_tech = cruiser_hull_2
 			research_cost_coeff = 1
-		}
-		dependencies = {
-			gw_artillery = 1
 		}
 		research_cost = 1.5
 		start_year = 989
@@ -1260,10 +1257,6 @@ technologies = {
 		enable_equipment_modules = { 
 			cruiser_ship_engine_6
 		}
-		path = {
-			leads_to_tech = cruiser_nuclear_reactor
-			research_cost_coeff = 1
-		}
 		research_cost = 1.5
 		start_year = 1011
 		folder = {
@@ -1280,33 +1273,6 @@ technologies = {
 			cat_naval_tech
 			cat_ship_hull
 			cat_cruiser_tech
-		}
-		special_project_specialization = { 
-			specialization_naval 
-		}
-	}
-	cruiser_nuclear_reactor = {
-		enable_equipment_modules = { 
-			cruiser_ship_engine_nuke
-		}
-		xp_research_type = navy
-		xp_boost_cost = 50
-		xp_research_bonus = 1.5
-		research_cost = 1.25
-		start_year = 1026
-		folder = {
-			name = mtgnavalfolder
-			position = {  
-				x = 0 
-				y = 48 
-			}
-		}
-		ai_will_do = {
-			base = 1
-		}
-		categories = {
-			cat_naval_tech
-			nuclear
 		}
 		special_project_specialization = { 
 			specialization_naval 
@@ -1330,9 +1296,6 @@ technologies = {
 		xp_research_bonus = 1.5
 		research_cost = 0.75
 		start_year = 986		
-		dependencies = {
-
-		}
 		folder = {
 			name = mtgnavalfolder
 			position = {  
@@ -1392,9 +1355,6 @@ technologies = {
 	airplane_launcher_3 = {
 		enable_equipment_modules = { 
 			ship_airplane_launcher_3
-		}
-		dependencies = {
-			radio_detection_0 = 1
 		}
 		path = {
 			leads_to_tech = airplane_launcher_4
@@ -1746,8 +1706,8 @@ technologies = {
 			leads_to_tech = heavy_armor_scheme_1
 			research_cost_coeff = 1
 		}
-		dependencies = {
-			internal_combustion_engine = 1
+		allow = {
+			has_tech = internal_combustion_engine
 		}
 		research_cost = 1.75
 		start_year = 989	
@@ -1806,12 +1766,13 @@ technologies = {
 		}
 	}
 	super_heavy_hull_0 = {
+		#starts with 1, because of sp
 		enable_equipments = {
-			ship_hull_super_heavy_0
+			ship_hull_super_heavy_1
 		}
 		enable_equipment_modules = { 
-			ship_armor_super_heavy_battleship_0
-			super_heavy_ship_engine_0
+			ship_armor_super_heavy_battleship_1
+			super_heavy_ship_engine_1
 		}
 		is_special_project_tech = yes
 		research_cost = 1.5
@@ -1932,14 +1893,14 @@ technologies = {
 	}
 	super_heavy_hull_1 = {
 		enable_equipments = {
-			ship_hull_super_heavy_1
+			ship_hull_super_heavy_2
 		}	
 		enable_equipment_modules = { 
-			ship_armor_super_heavy_battleship_1
-			super_heavy_ship_engine_1
+			ship_armor_super_heavy_battleship_2
+			super_heavy_ship_engine_2
 		}
-		dependencies = {
-			super_heavy_hull_0 = 1
+		allow = {
+			has_tech = super_heavy_hull_0
 		}
 		research_cost = 1.5
 		start_year = 1006	
@@ -1994,9 +1955,8 @@ technologies = {
 		enable_equipment_modules = { 
 			heavy_ship_engine_6
 		}
-		path = {
-			leads_to_tech = heavy_nuclear_reactor
-			research_cost_coeff = 1
+		sub_technologies = {
+			super_heavy_hull_2
 		}
 		research_cost = 1.5
 		start_year = 1018	
@@ -2019,58 +1979,26 @@ technologies = {
 			specialization_naval 
 		}
 	}
-	heavy_nuclear_reactor = {
-		enable_equipment_modules = { 
-			heavy_ship_engine_nuke
-		}
-		path = {
-			leads_to_tech = super_heavy_nuclear_reactor
-			research_cost_coeff = 1
-		}
-		sub_technologies = {
-			super_heavy_nuclear_reactor
-		}
-		xp_research_type = navy
-		xp_boost_cost = 50
-		xp_research_bonus = 1.5
-		research_cost = 1.25
-		start_year = 1026	
-		folder = {
-			name = mtgnavalfolder
-			position = {  
-				x = 0 
-				y = 42 
-			}
+	super_heavy_hull_2 = {
+		enable_equipments = {
+			ship_hull_super_heavy_3
 		}	
-		ai_will_do = {
-			base = 1
-		}		
-		categories = {
-			cat_naval_tech
-			nuclear
-		}
-		special_project_specialization = { 
-			specialization_naval 
-		}
-	}
-	super_heavy_nuclear_reactor = {
 		enable_equipment_modules = { 
-			super_heavy_ship_engine_nuke
+			ship_armor_super_heavy_battleship_3
+			super_heavy_ship_engine_3
 		}
-		dependencies = {
-			super_heavy_hull_0 = 1
+		allow = {
+			has_tech = super_heavy_hull_1
 		}
-		xp_research_type = navy
-		xp_boost_cost = 50
-		xp_research_bonus = 1.5
-		research_cost = 1.25
-		start_year = 1026	
+		research_cost = 1.5
+		start_year = 1006	
 		ai_will_do = {
 			base = 1
 		}		
 		categories = {
 			cat_naval_tech
-			nuclear
+			cat_ship_hull
+			cat_superbatleship_tech
 		}
 		special_project_specialization = { 
 			specialization_naval 
@@ -2217,8 +2145,8 @@ technologies = {
 			carrier_ship_engine_0
 			ship_deck_space_0
 		}
-		dependencies = {
-			internal_combustion_engine = 1
+		allow = {
+			has_tech = internal_combustion_engine
 		}
 		path = {
 			leads_to_tech = carrier_hull_1
@@ -2418,13 +2346,6 @@ technologies = {
 		enable_equipment_modules = { 
 			carrier_ship_engine_5
 		}
-		path = {
-			leads_to_tech = carrier_nuclear_reactor
-			research_cost_coeff = 1
-		}
-		sub_technologies = {
-			supercarrier_hull_0
-		}
 		research_cost = 1.5
 		start_year = 1018
 		folder = {
@@ -2446,81 +2367,6 @@ technologies = {
 			specialization_naval 
 		}
 	}
-	supercarrier_hull_0 = {
-		enable_equipments = {
-			ship_hull_supercarrier_0
-		}
-		enable_equipment_modules = {
-			supercarrier_ship_engine_0
-		}
-		research_cost = 1.5
-		start_year = 1018	
-		ai_will_do = {
-			base = 1
-		}	
-		categories = {
-			cat_naval_tech
-			cat_ship_hull
-			cat_supercarrier_tech
-		}
-	}
-	carrier_nuclear_reactor = {
-		enable_equipment_modules = { 
-			carrier_ship_engine_nuke
-		}
-		path = {
-			leads_to_tech = supercarrier_nuclear_reactor
-			research_cost_coeff = 1
-		}
-		sub_technologies = {
-			supercarrier_nuclear_reactor
-		}
-		xp_research_type = navy
-		xp_boost_cost = 50
-		xp_research_bonus = 1.5
-		research_cost = 1.25
-		start_year = 1026
-		folder = {
-			name = mtgnavalfolder
-			position = {  
-				x = 0 
-				y = 42 
-			}
-		}
-		ai_will_do = {
-			base = 1
-		}
-		categories = {
-			cat_naval_tech
-			nuclear
-		}
-		special_project_specialization = { 
-			specialization_naval 
-		}
-	}
-	supercarrier_nuclear_reactor = {
-		enable_equipment_modules = { 
-			supercarrier_ship_engine_nuke
-		}
-		dependencies = {
-			supercarrier_hull_0 = 1
-		}
-		xp_research_type = navy
-		xp_boost_cost = 50
-		xp_research_bonus = 1.5
-		research_cost = 1.25
-		start_year = 1026
-		ai_will_do = {
-			base = 1
-		}
-		categories = {
-			cat_naval_tech
-			nuclear
-		}
-		special_project_specialization = { 
-			specialization_naval 
-		}
-	}	
 	#deck space
 	#starts with _1 because _0 is opened by first carrier hull
 	carrier_deck_space_1 = {
@@ -2666,9 +2512,9 @@ technologies = {
 		}
 		research_cost = 1.5
 		start_year = 986	
-		dependencies = {
-			internal_combustion_engine = 1
-			torpedo_launcher_0 = 1
+		allow = {
+			has_tech = internal_combustion_engine
+			has_tech = torpedo_launcher_0
 		}
 		folder = {
 			name = mtgnavalfolder
@@ -2866,9 +2712,6 @@ technologies = {
 			ship_torpedo_sub_6
 			sub_ship_engine_6
 		}
-		sub_technologies = {
-			missile_submarine_hull_0
-		}
 		path = {
 			leads_to_tech = sub_nuclear_reactor
 			research_cost_coeff = 1
@@ -2892,21 +2735,6 @@ technologies = {
 		}
 		special_project_specialization = { 
 			specialization_naval 
-		}
-	}
-	missile_submarine_hull_0 = {
-		enable_equipments = {
-			ship_hull_missile_submarine_0
-		}
-		research_cost = 1.5
-		start_year = 1011	
-		ai_will_do = {
-			base = 1	
-		}	
-		categories = {
-			cat_naval_tech
-			cat_ship_hull
-			cat_missile_submarine_tech
 		}
 	}
 	sub_nuclear_reactor = {
@@ -3065,42 +2893,6 @@ technologies = {
 	
 	#Outdated (will be removed)
 	###Special snowflake hulls for special snowflake nations
-	panzerschiffe = {
-		enable_equipments = { 
-			ship_hull_cruiser_panzerschiff
-		}
-		research_cost = 1
-		start_year = 1007
-		#set at gamestart
-		allow = {
-			always = no
-		}
-	}
-	torpedo_cruiser_mtg = {
-		enable_equipments = { 
-			ship_hull_torpedo_cruiser
-		}
-		research_cost = 1
-		start_year = 1007
-		#set at gamestart
-		allow = {
-			always = no
-		}
-	}
-	carrier_cloud_tech_mtg = {
-		enable_equipments = {
-			ship_hull_cloud_carrier
-		}
-		enable_equipment_modules = { 
-			ship_deck_space_0
-		}
-		research_cost = 1
-		start_year = 950
-		#set at gamestart
-		allow = {
-			always = no
-		}
-	}
 	coastal_defense_ships = {
 		enable_equipments = { 
 			ship_hull_cruiser_coastal_defense_ship
@@ -3108,73 +2900,6 @@ technologies = {
 		research_cost = 1
 		start_year = 1007
 		#set at gamestart
-		allow = {
-			always = no
-		}
-	}
-	cruiser_submarines = {
-		enable_equipments = { 
-			ship_hull_cruiser_submarine
-		}
-		enable_equipment_modules = { 
-			ship_extra_fuel_tank_0
-		}
-		research_cost = 1
-		start_year = 1007
-		#set at gamestart
-		allow = {
-			always = no
-		}
-	}
-	advanced_cruiser_submarines = {
-		enable_equipments = { 
-			ship_hull_cruiser_submarine_2
-		}
-		enable_equipment_modules = {
-			ship_extra_fuel_tank_1
-		}
-		research_cost = 1
-		start_year = 1015
-		#set at gamestart
-		allow = {
-			always = no
-		}
-	}
-	basic_ship_hull_grand_cruiser = {
-		enable_equipments = {
-			ship_hull_grand_cruiser
-		}
-		enable_equipment_modules = {
-			ship_armor_cb_1
-		}
-		research_cost = 1
-		start_year = 950
-		allow = {
-			always = no
-		}
-	}
-	improved_ship_hull_grand_cruiser = {
-		enable_equipments = {
-			ship_hull_grand_cruiser2
-		}
-		enable_equipment_modules = {
-			ship_armor_cb_2
-		}
-		research_cost = 1
-		start_year = 950
-		allow = {
-			always = no
-		}
-	}
-	advanced_ship_hull_grand_cruiser = {
-		enable_equipments = {
-			ship_hull_grand_cruiser3
-		}
-		enable_equipment_modules = {
-			ship_armor_cb_3
-		}
-		research_cost = 1
-		start_year = 950
 		allow = {
 			always = no
 		}

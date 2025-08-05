@@ -161,4 +161,31 @@ technologies = {
 			level = 1
 		}
 	}
+	#roximity fuze
+	sp_tech_naval_proximity_fuze_tech = {
+		navy_anti_air_attack_factor = 0.25
+		research_cost = 1
+		allow = {
+			always = no
+		}
+	}
+	#nuclear torpedoes (no MTG)
+	sp_tech_nuclear_torpedoes = {
+		destroyer = {
+			torpedo_attack = 0.2
+		}
+		submarine = {
+			torpedo_attack = 0.2
+		}
+		light_cruiser = {
+			torpedo_attack = 0.2
+		}
+		heavy_cruiser = {
+			torpedo_attack = 0.2
+		}
+		research_cost = 1
+		allow = {
+			always = no
+		}
+	}
 }

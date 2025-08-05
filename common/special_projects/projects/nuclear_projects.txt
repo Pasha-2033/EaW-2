@@ -487,10 +487,16 @@ sp_nuclear_engines_primary = {
 		}
 
 		enable_equipment_modules = {
+			limit = {
+				has_dlc = "Man the Guns" 
+			}
 			#TODO: add modules
 			#sub_ship_nuclear_engine_1
-			#heavy_ship_nuclear_engine_1
-			#carrier_ship_nuclear_engine_1
+			cruiser_ship_engine_nuke_primary
+			heavy_ship_engine_nuke_primary
+			super_heavy_ship_engine_nuke_primary
+			carrier_ship_engine_nuke_primary
+			supercarrier_ship_engine_nuke_primary
 		}
 	}
 	
@@ -535,14 +541,17 @@ sp_nuclear_engines_secondary = {
 		sp_commercial_reactor
 	}
 	project_output = {
-		country_effects = {
-			
-		}
 		enable_equipment_modules = {
+			limit = {
+				has_dlc = "Man the Guns" 
+			}
 			#TODO: add modules
 			#sub_ship_nuclear_engine_1
-			#heavy_ship_nuclear_engine_1
-			#carrier_ship_nuclear_engine_1
+			cruiser_ship_engine_nuke_secondary
+			heavy_ship_engine_nuke_secondary
+			super_heavy_ship_engine_nuke_secondary
+			carrier_ship_engine_nuke_secondary
+			supercarrier_ship_engine_nuke_secondary
 		}
 	}
 	empty_reward_weight = {

@@ -605,6 +605,12 @@ sp_air_helicopter = {
 			}
 			lc_helipad #Module for Land Cruiser
 		}
+		enable_equipment_modules = {
+			limit = {
+				has_dlc = "Man the Guns"
+			}
+			ship_heli_hanger_0
+		}
 	}
 
 	generic_prototype_rewards = {
