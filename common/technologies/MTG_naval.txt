@@ -1054,6 +1054,12 @@ technologies = {
 			ship_armor_cruiser_0
 			cruiser_ship_engine_0
 		}
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_torpedo_cruiser
+			}
+		}
 		allow = {
 			has_tech = internal_combustion_engine
 		}
@@ -2511,6 +2517,12 @@ technologies = {
 			leads_to_tech = submarine_hull_1
 			research_cost_coeff = 1
 		}
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_anechoic_tiles
+			}
+		}
 		research_cost = 1.5
 		start_year = 986	
 		allow = {
@@ -2547,6 +2559,12 @@ technologies = {
 		path = {
 			leads_to_tech = submarine_hull_2
 			research_cost_coeff = 1
+		}
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_aip_engine
+			}
 		}
 		research_cost = 1.5
 		start_year = 989
@@ -2585,6 +2603,12 @@ technologies = {
 			leads_to_tech = submarine_snorkel_0
 			research_cost_coeff = 1
 		}
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_midget_submarine
+			}
+		}
 		research_cost = 2
 		start_year = 993	
 		folder = {
@@ -2619,6 +2643,16 @@ technologies = {
 		path = {
 			leads_to_tech = submarine_hull_4
 			research_cost_coeff = 1
+		}
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_cruiser_submarine
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_fleet_submarine
+			}
 		}
 		folder = {
 			name = mtgnavalfolder

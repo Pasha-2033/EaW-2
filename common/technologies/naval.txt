@@ -572,7 +572,12 @@ technologies = {
 			leads_to_tech = ship_light_cruiser_1
 			research_cost_coeff = 1
 		}
-
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_torpedo_cruiser
+			}
+		}
 		research_cost = 1.5
 
 		start_year = 993
@@ -1928,7 +1933,12 @@ technologies = {
 			leads_to_tech = ship_submarine_2
 			research_cost_coeff = 1
 		}
-
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_aip_engine
+			}
+		}
 		research_cost = 2
 		start_year = 1007
 
@@ -1961,7 +1971,12 @@ technologies = {
 			leads_to_tech = ship_submarine_3
 			research_cost_coeff = 1
 		}
-
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_midget_submarine
+			}
+		}
 		research_cost = 2
 
 		start_year = 1011
@@ -2004,7 +2019,16 @@ technologies = {
 			name = naval_folder
 			position = { x = 0 y = 18 }
 		}
-
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_cruiser_submarine
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_fleet_submarine
+			}
+		}
 		ai_will_do = {
 			factor = 1
 		}

@@ -31,7 +31,6 @@ sp_naval_cruiser_submarine = {
 			else = {
 				has_tech = ship_submarine_3
 			}
-
 		}
 	}
 
@@ -46,6 +45,12 @@ sp_naval_cruiser_submarine = {
 	}
 	
 	project_output = {
+		country_effects = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_fleet_submarine
+			}
+		}
 		enable_equipments = {	
 			limit = {
 				has_dlc = "Man the Guns"
@@ -105,11 +110,8 @@ sp_naval_fleet_submarine = {
 			else = {
 				has_tech = ship_submarine_3
 			}
-
 		}
 	}
-
-
 	special_project_parent = {
 		sp_naval_cruiser_submarine
 	}
@@ -119,17 +121,15 @@ sp_naval_fleet_submarine = {
 			chromium = 4
 		}
 	}
-
 	breakthrough_cost = {
 		specialization_naval = 1
 	}
-
 	project_output = {
-		facility_state_effects = {
-			
-		}
-		scientist_effects = {
-			
+		country_effects = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_rocket_launching_submarine
+			}
 		}
 		enable_equipments = {	
 			limit = {
@@ -205,6 +205,12 @@ sp_naval_nuclear_submarine = {
 	}
 
 	project_output = {
+		country_effects = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_nuclear_missile_submarine
+			}
+		}
 		enable_equipments = {
 			nuclear_submarine_0
 		}
@@ -260,6 +266,12 @@ sp_naval_rocket_launching_submarine = {
 		specialization_naval = 2
 	}
 	project_output = {
+		country_effects = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_nuclear_missile_submarine
+			}
+		}
 		enable_equipments = {
 			limit = { 
 				NOT = {
@@ -319,19 +331,11 @@ sp_naval_nuclear_missile_submarine = {
 	#TODO (crashes)
 	special_project_parent = {
 		sp_naval_rocket_launching_submarine
+		sp_nuclear_warheads
 	}
 
 	available = { 
-		FROM = {
-			if = {
-				limit = {
-					NOT = {
-						has_dlc = "Man the Guns"
-					}
-				}
-				is_special_project_completed = sp:sp_naval_nuclear_submarine
-			}
-		}
+		
 	}
 
 	breakthrough_cost = {
