@@ -4,9 +4,7 @@ sp_nuclear_reactor_exploratory = {
 	complexity = sp_complexity.large
 	project_tags = sp_tag_nuclear_power
 	allowed = {
-		NOT = {
-			original_tag = ELN
-		}
+		country_without_sp = no #"no" because we want to forbid, not just check
 	}
 	available = { 
 		FROM = { 
@@ -88,9 +86,7 @@ sp_nuclear_reactor = {
 		sp_nuclear_reactor_exploratory
 	}
 	allowed = {
-		NOT = {
-			original_tag = ELN
-		}
+		country_without_sp = no #"no" because we want to forbid, not just check
 	}
 	resource_cost = {
 		resources = {
@@ -165,9 +161,7 @@ sp_nuclear_reactor_heavy_water = {
 		sp_nuclear_reactor_exploratory
 	}
 	allowed = {
-		NOT = {
-			original_tag = ELN
-		}
+		country_without_sp = no #"no" because we want to forbid, not just check
 	}
 	resource_cost = {
 		resources = {
@@ -239,9 +233,7 @@ sp_thermonuclear_reactor = {
 	complexity = sp_complexity.large
 	project_tags = sp_tag_nuclear_power
 	allowed = {
-		NOT = {
-			original_tag = ELN
-		}
+		country_without_sp = no #"no" because we want to forbid, not just check
 	}
 	available = {
 		FROM = {
@@ -311,9 +303,7 @@ sp_commercial_reactor = {
 	complexity = sp_complexity.large
 	project_tags = sp_tag_nuclear_power
 	allowed = {
-		NOT = {
-			original_tag = ELN
-		}
+		country_without_sp = no #"no" because we want to forbid, not just check
 	}
 	special_project_parent = {
 		sp_nuclear_reactor_exploratory
@@ -388,9 +378,7 @@ sp_anti_nuke_bunker = {
 	complexity = sp_complexity.large
 	project_tags = sp_tag_nuclear_power
 	allowed = {
-		NOT = {
-			original_tag = ELN
-		}
+		country_without_sp = no #"no" because we want to forbid, not just check
 	}
 	available = { 
 		FROM = { 
@@ -473,9 +461,7 @@ sp_nuclear_engines_primary = {
 
 	
 	allowed = {
-		NOT = {
-			original_tag = ELN
-		}
+		country_without_sp = no #"no" because we want to forbid, not just check
 	}
 	special_project_parent = {
 		sp_commercial_reactor
@@ -536,9 +522,7 @@ sp_nuclear_engines_secondary = {
 		}
 	}
 	allowed = {
-		NOT = {
-			original_tag = ELN
-		}
+		country_without_sp = no #"no" because we want to forbid, not just check
 	}
 	special_project_parent = {
 		sp_commercial_reactor
@@ -596,9 +580,7 @@ sp_nuclear_bomb = {
 		}
 	}
 	allowed = {
-		NOT = {
-			original_tag = ELN
-		}
+		country_without_sp = no #"no" because we want to forbid, not just check
 	}
 	available = {
 		FROM = {
@@ -774,9 +756,7 @@ sp_thermo_nuclear_bomb = {
 		sp_nuclear_bomb
 	}
 	allowed = {
-		NOT = {
-			original_tag = ELN
-		}
+		country_without_sp = no #"no" because we want to forbid, not just check
 		has_dlc = "Gotterdammerung"
 	}
 	project_output = {
@@ -878,9 +858,7 @@ sp_nuclear_warheads = {
 		sp_rockets_medium_range_ballistic_missile
 	}
 	allowed = {
-		NOT = {
-			original_tag = ELN
-		}
+		country_without_sp = no #"no" because we want to forbid, not just check
 		has_dlc = "Gotterdammerung"
 	}
 	project_output = {

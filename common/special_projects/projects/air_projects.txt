@@ -15,9 +15,7 @@ sp_air_bouncing_bomb = {
 		sp_tag_bomb
 	}
 	allowed = {
-		NOT = {
-			original_tag = ELN
-		}
+		country_without_sp = no #"no" because we want to forbid, not just check
 	}
 	available = { 
 		# FROM is country 
@@ -82,9 +80,7 @@ sp_air_earthshaker_bomb = {
 
 	allowed = {
 		has_dlc = "Gotterdammerung"	
-		NOT = {
-			original_tag = ELN
-		}
+		country_without_sp = no #"no" because we want to forbid, not just check
 	}
 
 	available = {
@@ -157,9 +153,7 @@ sp_air_intercontinental_bomber = {
 	project_tags = sp_tag_aircraft
 
 	allowed = {
-		NOT = {
-			original_tag = ELN
-		}	
+		country_without_sp = no #"no" because we want to forbid, not just check	
 	}
 
 	available = { 
@@ -220,9 +214,7 @@ sp_air_mothership_aircraft = {
 
 	complexity = sp_complexity.medium 
 	allowed = {
-		NOT = {
-			original_tag = ELN
-		}
+		country_without_sp = no #"no" because we want to forbid, not just check
 	}
 	available = {
 		FROM = {
@@ -291,9 +283,7 @@ sp_air_jet_engine = {
 		sp_tag_jet
 	}
 	allowed = {
-		NOT = {
-			original_tag = ELN
-		}
+		country_without_sp = no #"no" because we want to forbid, not just check
 		OR = {
 			has_dlc = "By Blood Alone"
 			has_dlc = "No Step Back"
@@ -386,9 +376,7 @@ sp_air_axial_jet_engine = {
 			has_dlc = "By Blood Alone"
 			has_dlc = "No Step Back"
 		}
-		NOT = {
-			original_tag = ELN
-		}
+		country_without_sp = no #"no" because we want to forbid, not just check
 	}
 	available = { 
 		FROM = {
@@ -480,9 +468,7 @@ sp_air_supersonic_jet = {
 		sp_air_axial_jet_engine
 	}
 	allowed = {
-		NOT = {
-			original_tag = ELN
-		}
+		country_without_sp = no #"no" because we want to forbid, not just check
 	}
 	available = {
 		FROM = {
@@ -579,9 +565,7 @@ sp_air_helicopter = {
 		}
 	}
 	allowed = {
-		NOT = {
-			original_tag = ELN
-		}
+		country_without_sp = no #"no" because we want to forbid, not just check
 	}
 	available = {
 		FROM = {

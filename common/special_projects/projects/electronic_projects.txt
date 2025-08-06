@@ -11,9 +11,7 @@ sp_air_radar = {
 		specialization_air = 1
 	}
 	allowed = {
-		NOT = {
-			original_tag = ELN
-		}
+		country_without_sp = no #"no" because we want to forbid, not just check
 	}
 	available = { 
 		FROM = { 
@@ -92,9 +90,7 @@ sp_sonar_prototyping = {
 	}
 	allowed = {
 		has_dlc = "Man the Guns"
-		NOT = {
-			original_tag = ELN
-		}
+		country_without_sp = no #"no" because we want to forbid, not just check
 	}
 	available = {
 		FROM = {
