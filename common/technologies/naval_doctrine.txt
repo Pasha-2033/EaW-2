@@ -6,8 +6,16 @@ technologies = {
 		#Bonus org for BB/BC/CA
 		
 		
-		dependencies = {
-			infantry_weapons_0 = 1
+		on_research_complete = {
+			if = {
+				limit = {
+					country_without_sp = no #"no" because we want to forbid, not just check
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_naval_underway_replenishment
+				}
+			}
 		}
 		# EFFECT #############
 		battleship = {
@@ -1726,7 +1734,17 @@ technologies = {
 			leads_to_tech = carrier_primacy 
 			research_cost_coeff = 1
 		}
-
+		on_research_complete = {
+			if = {
+				limit = {
+					country_without_sp = no #"no" because we want to forbid, not just check
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_naval_underway_replenishment
+				}
+			}
+		}
 		path = {
 			leads_to_tech = submarine_operations_bs
 			research_cost_coeff = 1

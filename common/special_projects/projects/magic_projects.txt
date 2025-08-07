@@ -78,6 +78,42 @@ sp_magic_engine = {
 							maximum_speed = 0.05
 							instant = yes
 						}
+						#lc requires nsb
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "Man the Guns" 
+					}
+				}
+				add_equipment_bonus = {
+					bonus = {
+						ship_hull_frigate = {
+							naval_speed = 0.05
+							instant = yes
+						}
+						ship_hull_light = {
+							naval_speed = 0.05
+							instant = yes
+						}
+						ship_hull_cruiser = {
+							naval_speed = 0.05
+							instant = yes
+						}
+						ship_hull_heavy = {
+							naval_speed = 0.05
+							instant = yes
+						}
+						ship_hull_carrier = {
+							naval_speed = 0.05
+							instant = yes
+						}
+						ship_hull_submarine = {
+							naval_speed = 0.05
+							instant = yes
+						}
 					}
 				}
 			}
@@ -93,6 +129,19 @@ sp_magic_engine = {
 				has_dlc = "No Step Back"
 			}
 			tank_magic_engine
+		}
+		enable_equipment_modules = {	
+			limit = {
+				has_dlc = "Man the Guns" 
+			}
+			frigate_ship_magic_engine
+			light_ship_magic_engine
+			cruiser_ship_magic_engine
+			heavy_ship_magic_engine
+			super_heavy_ship_magic_engine
+			carrier_ship_magic_engine
+			supercarrier_ship_magic_engine
+			sub_ship_magic_engine
 		}
 	}
 	generic_prototype_rewards = {

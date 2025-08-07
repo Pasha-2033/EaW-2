@@ -103,19 +103,7 @@ sp_naval_fleet_submarine = {
 	complexity = sp_complexity.medium
 	prototype_time = sp_time.prototype.long
 
-	available = { 
-		FROM = {
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}  
-				has_tech = submarine_hull_3
-			}
-			else = {
-				has_tech = ship_submarine_3
-			}
-		}
-	}
+
 	special_project_parent = {
 		sp_naval_cruiser_submarine
 	}
@@ -131,7 +119,11 @@ sp_naval_fleet_submarine = {
 	project_output = {
 		country_effects = {
 			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
+				localization_key = SP_UNLOCK_PROJECT_WITH_EXTRA_PROJECT
+				EXTRA_PROJECT = {
+					localization_key = SP_UNLOCK_ONE_PROJECT
+					PROJECT = sp_rockets_medium_range_ballistic_missile
+				}
 				PROJECT = sp_naval_rocket_launching_submarine
 			}
 		}
@@ -198,7 +190,14 @@ sp_naval_nuclear_submarine = {
 	}
 	
 	breakthrough_cost = {
-		specialization_naval = 3
+		specialization_naval = {
+			base = 3
+			modifier = {
+				is_special_project_completed = sp:sp_nuclear_engines_primary
+				is_special_project_completed = sp:sp_nuclear_engines_secondary
+				add = -1
+			}
+		}
 	}
 
 	resource_cost = {
@@ -210,12 +209,6 @@ sp_naval_nuclear_submarine = {
 	}
 
 	project_output = {
-		country_effects = {
-			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
-				PROJECT = sp_naval_nuclear_missile_submarine
-			}
-		}
 		enable_equipments = {
 			nuclear_submarine_0
 		}
@@ -274,7 +267,11 @@ sp_naval_rocket_launching_submarine = {
 	project_output = {
 		country_effects = {
 			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
+				localization_key = SP_UNLOCK_PROJECT_WITH_EXTRA_PROJECT
+				EXTRA_PROJECT = {
+					localization_key = SP_UNLOCK_ONE_PROJECT
+					PROJECT = sp_nuclear_warheads
+				}
 				PROJECT = sp_naval_nuclear_missile_submarine
 			}
 		}
@@ -335,7 +332,6 @@ sp_naval_nuclear_missile_submarine = {
 		has_dlc = "Gotterdammerung"
 		country_without_sp = no #"no" because we want to forbid, not just check
 	}
-	#TODO (crashes)
 	special_project_parent = {
 		sp_naval_rocket_launching_submarine
 		sp_nuclear_warheads
@@ -418,7 +414,6 @@ sp_naval_nuclear_torpedo = {
 			has_tech = torpedo_launcher_6
 		}
 	}
-	#TODO (crashes)
 	special_project_parent = {
 		sp_nuclear_bomb
 	}
@@ -653,13 +648,20 @@ sp_naval_anechoic_tiles = {
 	}
 
 	allowed = {
-		has_dlc = "Man the Guns"
 		country_without_sp = no #"no" because we want to forbid, not just check
 	}
 	
 	available = { 
 		FROM = {
-			has_tech = submarine_hull_0
+			if = {
+				limit = {
+					has_dlc = "Man the Guns"
+				}
+				has_tech = submarine_hull_0
+			}
+			else = {
+				has_tech = ship_submarine_0
+			}
 		}
 	}
 	
@@ -678,7 +680,26 @@ sp_naval_anechoic_tiles = {
 	prototype_time = sp_time.prototype.medium 
 		
 	project_output = {
-		enable_equipment_modules = {		
+		country_effects = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "Man the Guns"
+					}
+				}
+				custom_override_tooltip = {
+					tooltip = tech_effect|sp_tech_anechoic_tiles
+					set_technology = {
+						sp_tech_anechoic_tiles = 1
+						popup = no
+					}
+				}
+			}
+		}
+		enable_equipment_modules = {
+			limit = {
+				has_dlc = "Man the Guns"
+			}		
 			ship_anechoic_tile	
 		}
 	}
@@ -1115,4 +1136,47 @@ sp_naval_proximity_fuze = {
 		sp_naval_generic_reward_test_failure_3			
 	}	
 
+}
+antitorpedo_bulkhead = {
+	specialization = specialization_naval
+	allowed = {
+		country_without_sp = no #"no" because we want to forbid, not just check
+	}
+	breakthrough_cost = {
+		specialization_naval = 1
+	}
+	complexity = sp_complexity.small
+	prototype_time = sp_time.prototype.medium
+	resource_cost = {
+		resources = { 
+			steel = 12
+			chromium = 4
+			tungsten = 12
+		}
+	}
+	project_output = {
+		country_effects = {
+			custom_override_tooltip = {
+				tooltip = tech_effect|sp_tech_antitorpedo_bulkhead
+				set_technology = {
+					sp_tech_antitorpedo_bulkhead = 1
+					popup = no
+				}
+			}
+		}
+	}
+	generic_prototype_rewards = {
+		sp_naval_generic_reward_scientist_xp_1
+		sp_naval_generic_reward_scientist_xp_2
+		sp_naval_generic_reward_scientist_xp_3
+		sp_naval_generic_reward_navy_xp_1
+		sp_naval_generic_reward_navy_xp_2
+		sp_naval_generic_reward_navy_xp_3
+		sp_naval_generic_reward_major_progress_1
+		sp_naval_generic_reward_major_progress_2
+		sp_naval_generic_reward_major_progress_3
+		sp_naval_generic_reward_test_failure_1
+		sp_naval_generic_reward_test_failure_2
+		sp_naval_generic_reward_test_failure_3			
+	}	
 }

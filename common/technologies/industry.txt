@@ -1703,21 +1703,26 @@ technologies = {
 			set_variable = {
 				synthetic_refinery_max_power = 1
 			}
-			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
-				PROJECT = sp_rubber_processing
-			}
-			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
-				PROJECT = sp_oil_cracking
-			}
-			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
-				PROJECT = sp_oil_aromatization
-			}
-			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
-				PROJECT = sp_gas_liquefaction
+			if = {
+				limit = {
+					country_without_sp = no #"no" because we want to forbid, not just check
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_rubber_processing
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_oil_cracking
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_oil_aromatization
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_gas_liquefaction
+				}
 			}
 		}
 	}
@@ -3713,9 +3718,14 @@ technologies = {
 			resize_array = {
 				resource_outcome = 4
 			}
-			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
-				PROJECT = sp_ore_preparation
+			if = {
+				limit = {
+					country_without_sp = no #"no" because we want to forbid, not just check
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_ore_preparation
+				}
 			}
 		}
 	}
@@ -3844,9 +3854,14 @@ technologies = {
 		steel_plant_iron_consumption = 1
 		steel_plant_steel_outcome = 1
 		on_research_complete = {
-			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
-				PROJECT = sp_converter_production
+			if = {
+				limit = {
+					country_without_sp = no #"no" because we want to forbid, not just check
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_converter_production
+				}
 			}
 		}
 		path = {
@@ -3881,9 +3896,14 @@ technologies = {
 		}
 		production_cost_steel_plant_factor = -0.1
 		on_research_complete = {
-			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
-				PROJECT = sp_reduction_with_hydrogen
+			if = {
+				limit = {
+					country_without_sp = no #"no" because we want to forbid, not just check
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_reduction_with_hydrogen
+				}
 			}
 		}
 		research_cost = 2
@@ -4008,9 +4028,14 @@ technologies = {
 			specialization_industry
 		}
 		on_research_complete = {
-			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
-				PROJECT = sp_aluminum_refining
+			if = {
+				limit = {
+					country_without_sp = no #"no" because we want to forbid, not just check
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_aluminum_refining
+				}
 			}
 		}
 	}
@@ -4193,9 +4218,14 @@ technologies = {
 			specialization_industry
 		}
 		on_research_complete = {
-			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
-				PROJECT = sp_tungsten_sintering
+			if = {
+				limit = {
+					country_without_sp = no #"no" because we want to forbid, not just check
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_tungsten_sintering
+				}
 			}
 		}
 	}
@@ -4385,9 +4415,14 @@ technologies = {
 			specialization_industry
 		}
 		on_research_complete = {
-			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
-				PROJECT = sp_chromium_coking
+			if = {
+				limit = {
+					country_without_sp = no #"no" because we want to forbid, not just check
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_chromium_coking
+				}
 			}
 		}
 	}

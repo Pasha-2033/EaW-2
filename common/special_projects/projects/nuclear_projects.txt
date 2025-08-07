@@ -480,12 +480,12 @@ sp_nuclear_engines_primary = {
 				has_dlc = "Man the Guns" 
 			}
 			#TODO: add modules
-			#sub_ship_nuclear_engine_1
 			cruiser_ship_engine_nuke_primary
 			heavy_ship_engine_nuke_primary
 			super_heavy_ship_engine_nuke_primary
 			carrier_ship_engine_nuke_primary
 			supercarrier_ship_engine_nuke_primary
+			sub_ship_engine_nuke_primary
 		}
 	}
 	
@@ -539,12 +539,12 @@ sp_nuclear_engines_secondary = {
 				has_dlc = "Man the Guns" 
 			}
 			#TODO: add modules
-			#sub_ship_nuclear_engine_1
 			cruiser_ship_engine_nuke_secondary
 			heavy_ship_engine_nuke_secondary
 			super_heavy_ship_engine_nuke_secondary
 			carrier_ship_engine_nuke_secondary
 			supercarrier_ship_engine_nuke_secondary
+			sub_ship_engine_nuke_secondary
 		}
 	}
 	empty_reward_weight = {
@@ -593,8 +593,8 @@ sp_nuclear_bomb = {
 	project_output = {
 		country_effects = {
 			add_nuclear_bombs = 1
-			custom_effect_tooltip = sp_nuclear_bomb_tt
-			hidden_effect = {
+			custom_override_tooltip = {
+				tooltip = sp_nuclear_bomb_tt
 				set_technology = {
 					allow_nuclear_bomb = 1
 					popup = no
@@ -864,7 +864,11 @@ sp_nuclear_warheads = {
 	project_output = {
 		country_effects = {
 			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
+				localization_key = SP_UNLOCK_PROJECT_WITH_EXTRA_PROJECT
+				EXTRA_PROJECT = {
+					localization_key = SP_UNLOCK_ONE_PROJECT
+					PROJECT = sp_naval_rocket_launching_submarine
+				}
 				PROJECT = sp_naval_nuclear_missile_submarine
 			}
 		}

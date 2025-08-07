@@ -1625,9 +1625,9 @@ technologies = {
 		enable_subunits = {
 			motorized
 		}
-		dependencies = {
-			infantry_weapons_0 = 1
-			internal_combustion_engine = 1
+		allow = {
+			has_tech = infantry_weapons_0
+			has_tech = internal_combustion_engine
 		}
 		enable_equipments = {
 			motorized_equipment_0

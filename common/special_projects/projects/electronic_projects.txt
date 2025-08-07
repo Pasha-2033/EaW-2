@@ -33,16 +33,13 @@ sp_air_radar = {
 	
 	project_output = {
 		country_effects = {
-			custom_override_tooltip = {	
-				tooltip = tech_effect|radio_detection_0
-				set_technology = {
-					radio_detection_0 = 1
-					popup = no
-				}
-			}
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_PROJECT
 				PROJECT = sp_naval_proximity_fuze
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_TECH
+				TECH = radio_detection_0
 			}
 		}
 		facility_state_effects = {
@@ -111,33 +108,12 @@ sp_sonar_prototyping = {
 	}
 	ai_will_do = {
 		base = 1
-		modifier = {
-			add = 2
-			date > 990.1.1
-		}
-		modifier = {
-			factor = 3
-			ROOT = {
-				is_major = yes 
-			}
-		}
-		modifier = {
-			factor = 5
-			ROOT = {
-				has_tech = frigate_hull_2
-			}
-		}
 	}
 	project_output = {
 		country_effects = {
-			if = {
-				limit = {
-					has_dlc = "Man the Guns"
-				}
-				custom_effect_tooltip = tech_effect|sonar_0
-			}
-			else = {
-				
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_TECH
+				TECH = sonar_0
 			}
 		}
 		enable_equipment_modules = {

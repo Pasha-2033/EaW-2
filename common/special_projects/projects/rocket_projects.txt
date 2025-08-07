@@ -41,7 +41,9 @@ sp_rockets_flying_bomb = {
 	}
 
 	complexity = sp_complexity.medium
-
+	allowed = {
+		country_without_sp = no #"no" because we want to forbid, not just check
+	}
 	available = { 
 		FROM = {
 			has_tech = experimental_rockets
@@ -129,6 +131,7 @@ sp_rockets_short_range_ballistic_missile = {
 	}
 	allowed = {
 		has_dlc = "Gotterdammerung"
+		country_without_sp = no #"no" because we want to forbid, not just check
 	}
 	ai_will_do = {
 		base = 1
@@ -206,6 +209,7 @@ sp_rockets_medium_range_ballistic_missile = {
 	}
 	allowed = {
 		has_dlc = "Gotterdammerung"
+		country_without_sp = no #"no" because we want to forbid, not just check
 	}
 	ai_will_do = {
 		base = 1
@@ -216,7 +220,11 @@ sp_rockets_medium_range_ballistic_missile = {
 	project_output = {
 		country_effects = {
 			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
+				localization_key = SP_UNLOCK_PROJECT_WITH_EXTRA_PROJECT
+				EXTRA_PROJECT = {
+					localization_key = SP_UNLOCK_ONE_PROJECT
+					PROJECT = sp_naval_fleet_submarine
+				}
 				PROJECT = sp_naval_rocket_launching_submarine
 			}
 			custom_effect_tooltip = {
@@ -272,6 +280,7 @@ sp_rockets_long_range_ballistic_missile = {
 	}
 	allowed = {
 		has_dlc = "Gotterdammerung"
+		country_without_sp = no #"no" because we want to forbid, not just check
 	}
 
 	special_project_parent = {
@@ -345,6 +354,7 @@ sp_rockets_ground_to_air_missile = {
 
 	allowed = {
 		has_dlc = "Gotterdammerung"
+		country_without_sp = no #"no" because we want to forbid, not just check
 	}
 
 	special_project_parent = {
@@ -415,7 +425,9 @@ sp_rocket_interceptor = {
 			has_tech = experimental_rockets
 		}
 	}
-
+	allowed = {
+		country_without_sp = no #"no" because we want to forbid, not just check
+	}
 	ai_will_do = {
 		base = 1
 		modifier = {

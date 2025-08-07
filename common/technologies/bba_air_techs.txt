@@ -420,9 +420,14 @@ technologies = {
 			}
 		}
 		on_research_complete = {
-			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
-				PROJECT = sp_air_supersonic_jet
+			if = {
+				limit = {
+					country_without_sp = no #"no" because we want to forbid, not just check
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_air_supersonic_jet
+				}
 			}
 		}
 		ai_will_do = {
@@ -720,13 +725,18 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		on_research_complete = {
-			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
-				PROJECT = sp_air_intercontinental_bomber
-			}
-			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
-				PROJECT = sp_air_mothership_aircraft
+			if = {
+				limit = {
+					country_without_sp = no #"no" because we want to forbid, not just check	
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_air_intercontinental_bomber
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_air_mothership_aircraft
+				}
 			}
 		}
 		research_cost = 2
@@ -1377,6 +1387,7 @@ technologies = {
 			if = {
 				limit = {
 					has_dlc = "Gotterdammerung"	
+					country_without_sp = no #"no" because we want to forbid, not just check
 				}
 				custom_effect_tooltip = {
 					localization_key = SP_UNLOCK_PROJECT
@@ -1477,9 +1488,14 @@ technologies = {
 		research_cost = 1
 		start_year = 1000
 		on_research_complete = {
-			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
-				PROJECT = sp_air_bouncing_bomb
+			if = {
+				limit = {
+					country_without_sp = no #"no" because we want to forbid, not just check
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_air_bouncing_bomb
+				}
 			}
 		}
 		folder = {
@@ -2406,6 +2422,28 @@ technologies = {
 		path = {
 			leads_to_tech = engines_4
 			research_cost_coeff = 1
+		}
+		on_research_complete = {
+			if = {
+				limit = {
+					country_without_sp = no #"no" because we want to forbid, not just check
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT_WITH_EXTRA_TECH
+					TECH = {
+						localization_key = SP_UNLOCK_OR_TECH
+						TECH_0 = {
+							localization_key = SP_UNLOCK_ONE_TECH
+							TECH = small_airframe_3
+						}
+						TECH_1 = {
+							localization_key = SP_UNLOCK_ONE_TECH
+							TECH = medium_airframe_2
+						}
+					}
+					PROJECT = sp_air_jet_engine
+				}
+			}
 		}
 		research_cost = 1.5
 		start_year = 996

@@ -2150,4 +2150,18 @@ equipment_modules = {
 		}
 		xp_cost = 1
 	}
+	lc_radar = {
+		abbreviation = "rdr"
+		category = lc_external_features
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 10 #Advanced Radio: 2.5
+		}
+		xp_cost = 1
+		multiply_stats = {
+			defense = 0.1 #Advanced Radio: 0.60
+			air_attack = 0.5
+		}
+	}
 }

@@ -805,6 +805,13 @@ sp_industry_major_political_interference = {
 				}
 			}
 		}
+		modifier = {
+			#prevent loosing country leader
+			var:scientist = {
+				can_be_country_leader = yes
+			}
+			factor = 0
+		}
 	}
 	option = {
 		token = sp_industry_major_political_interference_option_keep

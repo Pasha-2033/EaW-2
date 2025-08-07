@@ -573,9 +573,14 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		on_research_complete = {
-			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
-				PROJECT = sp_naval_torpedo_cruiser
+			if = {
+				limit = {
+					country_without_sp = no #"no" because we want to forbid, not just check
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_naval_torpedo_cruiser
+				}
 			}
 		}
 		research_cost = 1.5
@@ -1191,7 +1196,17 @@ technologies = {
 
 		research_cost = 2
 		start_year = 1007
-
+		on_research_complete = {
+			if = {
+				limit = {
+					country_without_sp = no #"no" because we want to forbid, not just check
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_naval_super_heavy_battleship
+				}
+			}
+		}
 		folder = {
 			name = naval_folder
 			position = { x = 1 y = 6 }
@@ -1349,9 +1364,12 @@ technologies = {
 	ship_sh_battleship_0 = {
 
 		enable_equipments = {
+			#starts with 1, because of sp
 			SH_battleship_1
 		}
-
+		allow = {
+			is_special_project_completed = sp:sp_naval_super_heavy_battleship
+		}
 		path = {
 			leads_to_tech = ship_sh_battleship_1
 			research_cost_coeff = 1
@@ -1874,7 +1892,17 @@ technologies = {
 			factor = 1
 
 		}
-
+		on_research_complete = {
+			if = {
+				limit = {
+					country_without_sp = no #"no" because we want to forbid, not just check
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_naval_modern_carrier
+				}
+			}
+		}
 		categories = {
 			naval_equipment
 			cv_tech
@@ -1899,7 +1927,17 @@ technologies = {
 			leads_to_tech = ship_submarine_1
 			research_cost_coeff = 1
 		}
-
+		on_research_complete = {
+			if = {
+				limit = {
+					country_without_sp = no #"no" because we want to forbid, not just check
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_naval_anechoic_tiles
+				}
+			}
+		}
 		research_cost = 1.5
 
 		start_year = 993
@@ -1934,9 +1972,14 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		on_research_complete = {
-			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
-				PROJECT = sp_naval_aip_engine
+			if = {
+				limit = {
+					country_without_sp = no #"no" because we want to forbid, not just check
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_naval_aip_engine
+				}
 			}
 		}
 		research_cost = 2
@@ -1972,9 +2015,14 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		on_research_complete = {
-			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
-				PROJECT = sp_naval_midget_submarine
+			if = {
+				limit = {
+					country_without_sp = no #"no" because we want to forbid, not just check
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_naval_midget_submarine
+				}
 			}
 		}
 		research_cost = 2
@@ -2020,13 +2068,18 @@ technologies = {
 			position = { x = 0 y = 18 }
 		}
 		on_research_complete = {
-			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
-				PROJECT = sp_naval_cruiser_submarine
-			}
-			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
-				PROJECT = sp_naval_fleet_submarine
+			if = {
+				limit = {
+					country_without_sp = no #"no" because we want to forbid, not just check
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_naval_cruiser_submarine
+				}
+				custom_effect_tooltip = {
+					localization_key = SP_UNLOCK_PROJECT
+					PROJECT = sp_naval_fleet_submarine
+				}
 			}
 		}
 		ai_will_do = {
