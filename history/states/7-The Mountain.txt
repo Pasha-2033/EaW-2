@@ -1,37 +1,38 @@
-state = {
-	id = 7
-	name = "STATE_7"
-	provinces = {
-		4199
-		10013
-		13071
-	}
-	state_category = rural
-	buildings_max_level_factor = 1
-	manpower = 132500
-	history = {
-		victory_points = {
-			13071 15
-		}
-		owner = DRG
-		add_core_of = DRG
-		buildings = {
-			industrial_complex = 1
-			steel_plant = 1
-			13071 = {
-				landmark_ozarsky_geyser = {
-					allowed = {
-						has_dlc = "Gotterdammerung"
-					}
-					level = 1
-				}
+state = { 
+	id = 7 
+	name = "STATE_7" 
+	manpower = 132500 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	
+	resources = { 
+		iron = 2 
+		crystals = 3 
+	} 
+	history = { 
+		owner = DRG 
+		
+		victory_points = { 8682 15 }
+		
+		buildings = { 
+			industrial_complex = 1 
+			steel_plant = 1 
+			8682 = {  landmark_ozarsky_geyser = { 
+ 	allowed = { has_dlc = "Gotterdammerung" }
+ 	level = 1 
+ }
 			}
 		}
-		1002.1.1 = {}
-		1050.1.1 = {}
+		
+		add_core_of = DRG 
+		
+		
+		1002.1.1 = { 
+		}
+		
+		1050.1.1 = { 
+		}
 	}
-	resources = {
-		iron = 2
-		crystals = 3
-	}
+	provinces = { 4199 8682 10013 }
 }

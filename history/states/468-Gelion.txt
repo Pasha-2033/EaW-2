@@ -1,33 +1,22 @@
-state = {
-	id = 468
-	name = "STATE_468"
-	provinces = {
-		4338
-		5051
-		7358
-		8047
-		8075
-		8252
-		10212
-		12186
-		12243
-		1225
-	}
-	manpower = 307668
-	state_category = rural
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			8047 5
+state = { 
+	id = 468 
+	name = "STATE_468" 
+	manpower = 307668 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = ELN 
+		
+		victory_points = { 8047 5 }
+		
+		buildings = { 
+			infrastructure = 1 
+			industrial_complex = 1 
+			8047 = { naval_base = 1 }
 		}
-		owner = ELN
-		add_core_of = ELN
-		buildings = {
-			infrastructure = 1
-			industrial_complex = 1
-			8047 = {
-				naval_base = 1
-			}
-		}
+		
+		add_core_of = ELN 
 	}
+	provinces = { 1225 2782 4338 4530 5051 7358 8047 8075 8252 10212 }
 }

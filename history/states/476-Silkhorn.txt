@@ -1,33 +1,18 @@
-state = {
-	id = 476
-	name = "STATE_476"
-	provinces = {
-		273
-		291
-		1258
-		1278
-		1305
-		3289
-		4283
-		4354
-		6285
-		7237
-		7300
-		9349
-		10226
-		12172
+state = { 
+	id = 476 
+	name = "STATE_476" 
+	manpower = 106507 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	
+	resources = { iron = 9 } 
+	history = { 
+		owner = GRE 
+		
+		victory_points = { 5437 2 }
+		
+		add_core_of = GRE 
 	}
-	manpower = 106507
-	state_category = pastoral
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			12172 2
-		}
-		owner = GRE
-		add_core_of = GRE		
-	}
-	resources = {
-		iron = 9
-	}
+	provinces = { 273 291 1258 1278 1305 3289 4283 4354 5437 6285 7237 7300 9349 10226 }
 }

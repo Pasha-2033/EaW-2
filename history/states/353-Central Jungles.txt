@@ -1,29 +1,24 @@
-state = {
-	id = 353
-	name = "STATE_353"
-	provinces = {
-		425
-		1111
-		1152
-		1207
-		6524
-		7173
-		13245
-		13246
-		13247
-	}
-	manpower = 43900
-	state_category = wasteland
-	buildings_max_level_factor = 1
-	history = {
-		owner = EPT
-		add_core_of = EPT
-		add_core_of = EQS
-		add_claim_by = ICE
-		1002.1.1 = {
-			owner = EQS
-			remove_core_of = EPT
-			remove_claim_by = ICE
+state = { 
+	id = 353 
+	name = "STATE_353" 
+	manpower = 43900 
+	
+	state_category = wasteland 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = EPT 
+		
+		add_core_of = EPT 
+		add_core_of = EQS 
+		add_claim_by = ICE 
+		
+		
+		1002.1.1 = { 
+			owner = EQS 
+			
+			remove_core_of = EPT 
+			remove_claim_by = ICE 
 		}
 	}
+	provinces = { 425 1111 1152 1207 5647 5672 5698 6524 7173 }
 }

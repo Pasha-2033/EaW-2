@@ -1,30 +1,30 @@
-state = {
-	id = 241
-	name = "STATE_241"
-	provinces = {
-		3082
-		6079
+state = { 
+	id = 241 
+	name = "STATE_241" 
+	manpower = 10790 
+	
+	state_category = enclave 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = EQS 
+		
+		victory_points = { 3082 1 }
+		
+		buildings = { 
+			infrastructure = 1 
+			3082 = { naval_base = 1 }
+		}
+		
+		add_core_of = EQS 
+		add_claim_by = ICE 
+		
+		
+		1002.1.1 = { 
+			owner = STG 
+			
+			add_core_of = STG 
+			remove_claim_by = ICE 
+		}
 	}
-	manpower = 10790
-	state_category = enclave
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			3082 1
-		}
-		owner = EQS
-		add_core_of = EQS
-		add_claim_by = ICE
-		buildings = {
-			infrastructure = 1
-			3082 = {
-				naval_base = 1
-			}
-		}
-		1002.1.1 = {
-			owner = STG
-			add_core_of = STG
-			remove_claim_by = ICE
-		}
-	}
+	provinces = { 3082 6079 }
 }

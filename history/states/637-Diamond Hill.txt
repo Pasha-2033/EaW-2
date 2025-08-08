@@ -1,36 +1,29 @@
-state = {
-	id = 637
-	name = "STATE_637"
-	provinces = {
-		1029
-		1076
-		1121
-		1158
-		7200
-		9956
-		11973
-		12055
-		13144
-	}
-	manpower = 1825219
-	state_category = city
-	buildings_max_level_factor = 1
-	history = {
+state = { 
+	id = 637 
+	name = "STATE_637" 
+	manpower = 1825219 
+	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	history = { 
+		
+		victory_points = { 12055 25 }
+		
+		buildings = { 
+			infrastructure = 1 
+			industrial_complex = 3 
+			arms_factory = 2 
+			air_base = 2 
+		}
+		
+		
 		#owner = DMT
 		#add_core_of = DMT
-		982.1.1 = {
-			owner = ELN
-			add_core_of = ELN
-		}
-		victory_points = {
-			12055
-			25
-		}
-		buildings = {
-			infrastructure = 1
-			industrial_complex = 3
-			arms_factory = 2
-			air_base = 2
+		982.1.1 = { 
+			owner = ELN 
+			
+			add_core_of = ELN 
 		}
 	}
+	provinces = { 1029 1076 1121 1158 2814 7200 9956 11973 12055 }
 }

@@ -1,31 +1,29 @@
-state = {
-	id = 382
-	name = "STATE_382"
-	provinces = {
-		4734
-		7274
-		10537
-	}
-	manpower = 3860700
-	state_category = metropolis
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			10537
-			40
+state = { 
+	id = 382 
+	name = "STATE_382" 
+	manpower = 3860700 
+	
+	state_category = metropolis 
+	buildings_max_level_factor = 1 
+	
+	resources = { 
+		food = 100 
+		iron = 4 
+		chromite = 1 
+	} 
+	history = { 
+		owner = GRE 
+		
+		victory_points = { 10537 40 }
+		
+		buildings = { 
+			infrastructure = 1 
+			industrial_complex = 5 
+			arms_factory = 5 
+			air_base = 1 
 		}
-		owner = GRE
-		add_core_of = GRE
-		buildings = {
-			infrastructure = 1
-			industrial_complex = 5
-			arms_factory = 5
-			air_base = 1
-		}
+		
+		add_core_of = GRE 
 	}
-	resources = {
-		food = 100
-		iron = 4
-		chromite = 1
-	}
+	provinces = { 4734 7274 10537 }
 }

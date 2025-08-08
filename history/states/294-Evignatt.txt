@@ -1,39 +1,24 @@
-state = {
-	id = 294
-	name = "STATE_294"
-	provinces = {
-		866
-		1127
-		1299
-		1480
-		1556
-		1572
-		4120
-		7063
-		7076
-		7136
-		8069
-		10489
-		12094
-		12325
-		12353
-		12381
-		12439
-		13073
-	}
-	manpower = 11700
-	state_category = wasteland
-	buildings_max_level_factor = 1
-	history = {
-		owner = BR2
-		add_core_of = BR2
-		1002.1.1 = {
-			owner = OLE
-			add_core_of = OLE
-			remove_core_of = BR2
+state = { 
+	id = 294 
+	name = "STATE_294" 
+	manpower = 11700 
+	
+	state_category = wasteland 
+	buildings_max_level_factor = 1 
+	
+	resources = { crystals = 4 } 
+	history = { 
+		owner = BR2 
+		
+		add_core_of = BR2 
+		
+		
+		1002.1.1 = { 
+			owner = OLE 
+			
+			add_core_of = OLE 
+			remove_core_of = BR2 
 		}
 	}
-	resources = {
-		crystals = 4
-	}
+	provinces = { 866 1127 1299 1480 1556 1572 4120 5393 5714 7063 7076 7136 8069 8237 8293 8345 8554 10489 }
 }

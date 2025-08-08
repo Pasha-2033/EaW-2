@@ -1,23 +1,24 @@
-state = {
-	id = 240
-	name = "STATE_240"
-	provinces = {
-		6330
-		6355
-		6386
-		9384
-	}
-	state_category = rural
-	buildings_max_level_factor = 1
-	manpower = 130550
-	history = {
-		victory_points = {
-			6355 3
+state = { 
+	id = 240 
+	name = "STATE_240" 
+	manpower = 130550 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = STG 
+		
+		victory_points = { 6355 3 }
+		
+		add_core_of = STG 
+		add_claim_by = WOP 
+		
+		
+		1002.1.1 = { 
 		}
-		owner = STG
-		add_core_of = STG
-		add_claim_by = WOP
-		1002.1.1 = {}
-		1050.1.1 = {}
+		
+		1050.1.1 = { 
+		}
 	}
+	provinces = { 6330 6355 6386 9384 }
 }

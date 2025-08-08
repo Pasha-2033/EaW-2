@@ -1,34 +1,30 @@
-state = {
-	id = 213
-	name = "STATE_213"
-	provinces = {
-		510
-		9540
-		9664
-		11555
-		12577
-	}
-	manpower = 117628
-	state_category = rural
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			11555 5
+state = { 
+	id = 213 
+	name = "STATE_213" 
+	manpower = 117628 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	
+	resources = { chromite = 3 } 
+	history = { 
+		owner = OLR 
+		
+		victory_points = { 11555 5 }
+		
+		buildings = { 
+			infrastructure = 1 
+			11555 = { naval_base = 1 }
 		}
-		owner = OLR
-		add_core_of = OLR
-		buildings = {
-			infrastructure = 1
-			11555 = {
-				naval_base = 1
-			}
-		}
-		1002.1.1 = {
-			owner = OLE
-			add_core_of = OLE
+		
+		add_core_of = OLR 
+		
+		
+		1002.1.1 = { 
+			owner = OLE 
+			
+			add_core_of = OLE 
 		}
 	}
-	resources = {
-		chromite = 3
-	}
+	provinces = { 510 5346 9540 9664 11555 }
 }

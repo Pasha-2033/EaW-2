@@ -1,34 +1,24 @@
-state = {
-	id = 300
-	name = "STATE_300"
-	provinces = {
-		1284
-		3697
-		4622
-		5059
-		6012
-		7118
-		9106
-		9886
-		9954
-		10437
-		10465
-		11680
-		12803
-	}
-	manpower = 41298
-	state_category = pastoral
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			7118 1
-		}
-		owner = CB2
-		add_core_of = CB2
-		1002.1.1 = {
-			owner = OLE
-			add_core_of = OLE
-			remove_core_of = CB2
+state = { 
+	id = 300 
+	name = "STATE_300" 
+	manpower = 41298 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = CB2 
+		
+		victory_points = { 7118 1 }
+		
+		add_core_of = CB2 
+		
+		
+		1002.1.1 = { 
+			owner = OLE 
+			
+			add_core_of = OLE 
+			remove_core_of = CB2 
 		}
 	}
+	provinces = { 1284 1951 3697 4622 5059 6012 7118 9106 9886 9954 10437 10465 11680 }
 }

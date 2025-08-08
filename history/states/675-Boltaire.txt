@@ -1,21 +1,22 @@
-state = {
-	id = 675
-	name = "STATE_675"
-	provinces = {
-		9845
-	}
-	manpower = 3560
-	state_category = tiny_island
-	buildings_max_level_factor = 1
-	history = {
-		982.1.1 = {
-			owner = NML
-			add_core_of = NML
+state = { 
+	id = 675 
+	name = "STATE_675" 
+	manpower = 3560 
+	
+	state_category = tiny_island 
+	buildings_max_level_factor = 1 
+	history = { 
+		
+		buildings = { 
+			9845 = { naval_base = 1 }
 		}
-		buildings = {
-			9845 = {
-				naval_base = 1
-			}
+		
+		
+		982.1.1 = { 
+			owner = NML 
+			
+			add_core_of = NML 
 		}
 	}
+	provinces = { 9845 }
 }

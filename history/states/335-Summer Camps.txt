@@ -1,26 +1,19 @@
-state = {
-	id = 335
-	name = "STATE_335"
-	provinces = {
-		73
-		175
-		3066
-		6089
-		6333
-		9050
-		11422
+state = { 
+	id = 335 
+	name = "STATE_335" 
+	manpower = 63700 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	
+	resources = { bauxite = 10 } 
+	history = { 
+		owner = NEM 
+		
+		buildings = { 
+			infrastructure = 1 }
+		
+		add_core_of = NEM 
 	}
-	manpower = 63700
-	state_category = pastoral
-	buildings_max_level_factor = 1
-	history = {
-		owner = NEM
-		add_core_of = NEM
-		buildings = {
-			infrastructure = 1
-		}
-	}
-	resources = {
-		bauxite = 10
-	}
+	provinces = { 73 175 3066 6089 6333 9050 11422 }
 }

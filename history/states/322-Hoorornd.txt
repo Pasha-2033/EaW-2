@@ -1,24 +1,22 @@
-state = {
-	id = 322
-	name = "STATE_322"
-	provinces = {
-		6971
-		7547
-		10824
-		13164
-	}
-	manpower = 560667
-	state_category = rural
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			13164 5
+state = { 
+	id = 322 
+	name = "STATE_322" 
+	manpower = 560667 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	
+	resources = { oil = 5 } 
+	history = { 
+		owner = VES 
+		
+		victory_points = { 1513 5 }
+		
+		add_core_of = VES 
+		
+		
+		1002.1.1 = { 
 		}
-		owner = VES
-		add_core_of = VES
-		1002.1.1 = {}
 	}
-	resources = {
-		oil = 5
-	}
+	provinces = { 1513 6971 7547 10824 }
 }

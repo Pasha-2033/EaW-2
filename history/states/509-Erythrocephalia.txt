@@ -1,48 +1,22 @@
-state = {
-	id = 509
-	name = "STATE_509"
-	provinces = {
-		887
-		916
-		997
-		1248
-		1374
-		1535
-		1548
-		1563
-		1567
-		3888
-		3913
-		3932
-		4539
-		4554
-		4596
-		4642
-		7190
-		7355
-		7663
-		9831
-		9866
-		9991
-		10033
-		12167
-		1577
+state = { 
+	id = 509 
+	name = "STATE_509" 
+	manpower = 574630 
+	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = ELN 
+		
+		victory_points = { 1248 3 }
+		victory_points = { 9991 5 }
+		
+		buildings = { 
+			infrastructure = 1 
+			industrial_complex = 2 
+		}
+		
+		add_core_of = ELN 
 	}
-	manpower = 574630
-	state_category = town
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			9991 5
-		}
-		victory_points = {
-			1248 3
-		}
-		owner = ELN
-		add_core_of = ELN
-		buildings = {
-			infrastructure = 1
-			industrial_complex = 2
-		}
-	}
+	provinces = { 887 916 997 1248 1374 1535 1548 1563 1567 1577 3888 3913 3932 4539 4554 4596 4642 5299 7190 7355 7663 9831 9866 9991 10033 }
 }

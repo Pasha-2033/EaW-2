@@ -1,25 +1,26 @@
-state = {
-	id = 8
-	name = "STATE_8"
-	provinces = {
-		7069
-		9833
-		9945
-		10113
-	}
-	state_category = pastoral
-	buildings_max_level_factor = 1
-	manpower = 43000
-	history = {
-		owner = DRG
-		add_core_of = DRG
-		buildings = {
-			dockyard = 1
-			10113 = {
-				naval_base = 1
-			}
+state = { 
+	id = 8 
+	name = "STATE_8" 
+	manpower = 43000 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = DRG 
+		
+		buildings = { 
+			dockyard = 1 
+			10113 = { naval_base = 1 }
 		}
-		1002.1.1 = {}
-		1050.1.1 = {}
+		
+		add_core_of = DRG 
+		
+		
+		1002.1.1 = { 
+		}
+		
+		1050.1.1 = { 
+		}
 	}
+	provinces = { 7069 9833 9945 10113 }
 }

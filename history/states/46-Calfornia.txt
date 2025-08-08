@@ -1,65 +1,36 @@
-state = {
-	id = 46
-	name = "STATE_46"
-	provinces = {
-		299
-		329
-		1160
-		1897
-		2064
-		3141
-		3229
-		3386
-		4191
-		5095
-		6084
-		6148
-		6164
-		6311
-		6397
-		7041
-		7081
-		7943
-		9393
-		10059
-		10078
-		10245
-		10749
-		10838
-		10907
-		11044
-		11160
-		11289
-		11380
-		12051
-		12343
-		12849
-		12888
+state = { 
+	id = 46 
+	name = "STATE_46" 
+	manpower = 1115100 
+	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = PGT 
+		
+		victory_points = { 2064 10 }
+		victory_points = { 6311 5 }
+		
+		buildings = { 
+			industrial_complex = 1 
+			arms_factory = 1 
+			dockyard = 1 
+		}
+		
+		add_core_of = PGT 
+		add_core_of = EQS 
+		add_claim_by = ICE 
+		
+		
+		1002.1.1 = { 
+			owner = EQS 
+			
+			remove_core_of = PGT 
+			remove_claim_by = ICE 
+		}
+		
+		1050.1.1 = { 
+		}
 	}
-	state_category = large_town
-	buildings_max_level_factor = 1
-	manpower = 1115100
-	history = {
-		victory_points = {
-			2064 10
-		}
-		victory_points = {
-			6311 5
-		}
-		owner = PGT
-		add_core_of = PGT
-		add_core_of = EQS
-		add_claim_by = ICE
-		buildings = {
-			industrial_complex = 1
-			arms_factory = 1
-			dockyard = 1
-		}
-		1002.1.1 = {
-			owner = EQS
-			remove_core_of = PGT
-			remove_claim_by = ICE
-		}
-		1050.1.1 = {}
-	}
+	provinces = { 299 329 1160 1897 2064 2595 2984 3141 3229 3386 4191 5095 5667 6084 6148 6164 6311 6397 7041 7081 7943 9393 10059 10078 10245 10749 10838 10907 11044 11160 11289 11380 12051 }
 }

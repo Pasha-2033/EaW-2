@@ -1,53 +1,44 @@
-state = {
-	id = 363
-	name = "STATE_363"
-	provinces = {
-		901
-		1955
-		2013
-		4968
-		7995
-		10106
-		10850
-		10882
-		11088
-		12316
-		12749
-	}
-	manpower = 176564
-	state_category = rural
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			10106 1
+state = { 
+	id = 363 
+	name = "STATE_363" 
+	manpower = 176564 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = ICE 
+		
+		victory_points = { 10106 1 }
+		
+		buildings = { 
+			10106 = { naval_base = 1 }
 		}
-		owner = ICE
-		add_claim_by = ICE
-		add_core_of = NML
-		buildings = {
-			10106 = {
-				naval_base = 1
-			}
+		
+		add_claim_by = ICE 
+		add_core_of = NML 
+		force_enable_resistance = ICE 
+		start_resistance = yes 
+		set_variable_to_random = { 
+			var = random_value 
+			min = 10 
+			max = 30 
 		}
-		force_enable_resistance = ICE
-		start_resistance = yes
-		set_variable_to_random = {
-			var = random_value
-			min = 10
-			max = 30
+		set_compliance = random_value 
+		set_variable_to_random = { 
+			var = random_value 
+			min = 25 
+			max = 60 
 		}
-		set_compliance = random_value
-		set_variable_to_random = {
-			var = random_value
-			min = 25
-			max = 60
-		}
-		set_resistance = random_value
-		clear_variable = random_value
-		set_garrison_strength = 1
-		1002.1.1 = {
-			owner = NML
-			remove_claim_by = ICE
+		set_resistance = random_value 
+		clear_variable = random_value 
+		set_garrison_strength = 1 
+		
+		
+		1002.1.1 = { 
+			owner = NML 
+			
+			remove_claim_by = ICE 
 		}
 	}
+	provinces = { 901 1955 2013 2114 4968 7995 8501 10106 10850 10882 11088 }
 }

@@ -1,28 +1,24 @@
-state = {
-	id = 264
-	name = "STATE_264"
-	provinces = {
-		1866
-		4664
-		4807
-		9450
-		10341
-		12357
-		12459
-	}
-	manpower = 1576
-	state_category = wasteland
-	buildings_max_level_factor = 1
-	history = {
-		owner = SOR
-		add_core_of = SOR
-		1002.1.1 = {
-			owner = VES
-			add_core_of = VES
-			controller = VES
+state = { 
+	id = 264 
+	name = "STATE_264" 
+	manpower = 1576 
+	
+	state_category = wasteland 
+	buildings_max_level_factor = 1 
+	
+	resources = { crystals = 3 } 
+	history = { 
+		owner = SOR 
+		
+		add_core_of = SOR 
+		
+		
+		1002.1.1 = { 
+			owner = VES 
+			controller = VES 
+			
+			add_core_of = VES 
 		}
 	}
-	resources = {
-		crystals = 3
-	}
+	provinces = { 1866 2645 4664 4807 9450 10341 10958 }
 }

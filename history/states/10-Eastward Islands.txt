@@ -1,21 +1,23 @@
-state = {
-	id = 10
-	name = "STATE_10"
-	provinces = {
-		1194
-		10070
-		11829
+state = { 
+	id = 10 
+	name = "STATE_10" 
+	manpower = 15750 
+	
+	state_category = small_island 
+	buildings_max_level_factor = 1 
+	
+	resources = { oil = 2 } 
+	history = { 
+		owner = DRG 
+		
+		add_core_of = DRG 
+		
+		
+		1002.1.1 = { 
+		}
+		
+		1050.1.1 = { 
+		}
 	}
-	state_category = small_island
-	buildings_max_level_factor = 1
-	manpower = 15750
-	history = {
-		owner = DRG
-		add_core_of = DRG
-		1002.1.1 = {}
-		1050.1.1 = {}
-	}
-	resources = {
-		oil = 2
-	}
+	provinces = { 1194 10070 11829 }
 }

@@ -1,31 +1,16 @@
-state = {
-	id = 256
-	name = "STATE_256"
-	provinces = {
-		287
-		471
-		3297
-		3362
-		6273
-		6299
-		6392
-		6400
-		6667
-		7660
-		9298
-		9312
-		10484
-		11204
-		11296
+state = { 
+	id = 256 
+	name = "STATE_256" 
+	manpower = 203118 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	
+	resources = { crystals = 2 } 
+	history = { 
+		owner = NEM 
+		
+		add_core_of = NEM 
 	}
-	manpower = 203118
-	state_category = pastoral
-	buildings_max_level_factor = 1
-	history = {
-		owner = NEM
-		add_core_of = NEM
-	}
-	resources = {
-		crystals = 2
-	}
+	provinces = { 287 471 3297 3362 6273 6299 6392 6400 6667 7660 9298 9312 10484 11204 11296 }
 }

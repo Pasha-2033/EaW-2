@@ -1,31 +1,27 @@
-state = {
-	id = 71
-	name = "STATE_71"
-	provinces = {
-		630
-		699
-		4507
-		6652
-		6716
-		7552
-		9771
-		9849
-		11657
-	}
-	manpower = 16
-	state_category = wasteland
-	buildings_max_level_factor = 1
-	history = {
-		owner = ICE
-		add_core_of = ICE
-		add_core_of = EQS
-		1002.1.1 = {
-			owner = EQS
-			remove_core_of = ICE
+state = { 
+	id = 71 
+	name = "STATE_71" 
+	manpower = 16 
+	
+	state_category = wasteland 
+	buildings_max_level_factor = 1 
+	
+	resources = { bauxite = 2 } 
+	history = { 
+		owner = ICE 
+		
+		add_core_of = ICE 
+		add_core_of = EQS 
+		
+		
+		1002.1.1 = { 
+			owner = EQS 
+			
+			remove_core_of = ICE 
 		}
-		1050.1.1 = {}
+		
+		1050.1.1 = { 
+		}
 	}
-	resources = {
-		bauxite = 2
-	}
+	provinces = { 630 699 4507 6652 6716 7552 9771 9849 11657 }
 }

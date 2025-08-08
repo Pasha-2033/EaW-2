@@ -1,43 +1,26 @@
-state = {
-	id = 258
-	name = "STATE_258"
-	provinces = {
-		30
-		86
-		749
-		880
-		3008
-		3026
-		3107
-		3153
-		6045
-		6087
-		6137
-		6179
-		9158
-		9162
-		9198
-		9223
-		11648
-		11654
-		11760
-	}
-	manpower = 692118
-	state_category = rural
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			9158 3
-		}
-		owner = VRA
-		add_core_of = VRA
-		1002.1.1 = {
-			owner = VES
-			add_core_of = VES
-			controller = VES
+state = { 
+	id = 258 
+	name = "STATE_258" 
+	manpower = 692118 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	
+	resources = { food = 20 } 
+	history = { 
+		owner = VRA 
+		
+		victory_points = { 9158 3 }
+		
+		add_core_of = VRA 
+		
+		
+		1002.1.1 = { 
+			owner = VES 
+			controller = VES 
+			
+			add_core_of = VES 
 		}
 	}
-	resources = {
-		food = 20
-	}
+	provinces = { 30 86 749 880 3008 3026 3107 3153 6045 6087 6137 6179 9158 9162 9198 9223 11648 11654 11760 }
 }

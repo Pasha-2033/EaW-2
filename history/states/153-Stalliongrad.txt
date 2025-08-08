@@ -1,39 +1,41 @@
-state = {
-	id = 153
-	name = "STATE_153"
-	provinces = {
-		488
-		6423
-		6507
-		9419
-		9433
-	}
-	state_category = metropolis
-	buildings_max_level_factor = 2
-	manpower = 3125100
-	history = {
-		victory_points = {
-			488 40
+state = { 
+	id = 153 
+	name = "STATE_153" 
+	manpower = 3125100 
+	
+	state_category = metropolis 
+	buildings_max_level_factor = 2 
+	
+	resources = { 
+		iron = 7 
+		scheelitis = 3 
+		food = 25 
+	} 
+	history = { 
+		owner = STG 
+		
+		victory_points = { 488 40 }
+		
+		buildings = { 
+			infrastructure = 1 
+			industrial_complex = 2 
+			arms_factory = 1 
+			steel_plant = 2 
+			ore_preparation = 1 
 		}
-		owner = STG
-		add_core_of = STG
-		add_claim_by = WOP
-		buildings = {
-			infrastructure = 1
-			industrial_complex = 2
-			arms_factory = 1
-			steel_plant = 2
-			ore_preparation = 1
+		
+		add_core_of = STG 
+		add_claim_by = WOP 
+		
+		
+		1002.1.1 = { 
+			owner = STG 
+			
+			add_core_of = STG 
 		}
-		1002.1.1 = {
-			owner = STG
-			add_core_of = STG
+		
+		1050.1.1 = { 
 		}
-		1050.1.1 = {}
 	}
-	resources = {
-		iron = 7
-		scheelitis = 3
-		food = 25
-	}
+	provinces = { 488 6423 6507 9419 9433 }
 }

@@ -1,29 +1,29 @@
-state = {
-	id = 661
-	name = "STATE_661"
-	provinces = {
-		10395
-		1479
-		10435
+state = { 
+	id = 661 
+	name = "STATE_661" 
+	manpower = 44567 
+	
+	state_category = small_island 
+	buildings_max_level_factor = 1 
+	history = { 
+		
+		victory_points = { 10395 1 }
+		
+		
+		982.1.1 = { 
+			owner = PGT 
+			
+			add_core_of = PGT 
+			add_core_of = EQS 
+			add_claim_by = ICE 
+		}
+		
+		1002.1.1 = { 
+			owner = EQS 
+			
+			remove_core_of = PGT 
+			remove_claim_by = ICE 
+		}
 	}
-	manpower = 44567
-	state_category = small_island
-	buildings_max_level_factor = 1
-	history = {
-		982.1.1 = {
-			owner = PGT
-			add_core_of = PGT
-			add_core_of = EQS
-			add_claim_by = ICE
-		}
-		1002.1.1 = {
-			owner = EQS
-			remove_core_of = PGT
-			remove_claim_by = ICE
-		}
-		victory_points = {
-			10395
-			1
-		}
-	}
+	provinces = { 10395 1479 10435 }
 }

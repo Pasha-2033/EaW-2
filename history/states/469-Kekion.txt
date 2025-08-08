@@ -1,26 +1,21 @@
-state = {
-	id = 469
-	name = "STATE_469"
-	provinces = {
-		2222
-		5226
-		10201
-		10325
-	}
-	manpower = 124505
-	state_category = small_island
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			10325 1
+state = { 
+	id = 469 
+	name = "STATE_469" 
+	manpower = 124505 
+	
+	state_category = small_island 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = ELN 
+		
+		victory_points = { 10325 1 }
+		
+		buildings = { 
+			infrastructure = 1 
+			10325 = { naval_base = 1 }
 		}
-		owner = ELN
-		add_core_of = ELN	
-		buildings = {
-			infrastructure = 1
-			10325 = {
-				naval_base = 1
-			}
-		}
+		
+		add_core_of = ELN 
 	}
+	provinces = { 2222 5226 10201 10325 }
 }

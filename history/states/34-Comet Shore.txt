@@ -1,33 +1,29 @@
-state = {
-	id = 34
-	name = "STATE_34"
-	provinces = {
-		656
-		3660
-		3662
-		6675
-		6678
-		9630
-		9633
-		11598
-		11638
-	}
-	state_category = rural
-	buildings_max_level_factor = 1
-	manpower = 152000
-	history = {
-		victory_points = {
-			9630 3
+state = { 
+	id = 34 
+	name = "STATE_34" 
+	manpower = 152000 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = EPT 
+		
+		victory_points = { 9630 3 }
+		
+		add_core_of = EPT 
+		add_core_of = EQS 
+		add_claim_by = ICE 
+		
+		
+		1002.1.1 = { 
+			owner = EQS 
+			
+			remove_core_of = EPT 
+			remove_claim_by = ICE 
 		}
-		owner = EPT
-		add_core_of = EPT
-		add_core_of = EQS
-		add_claim_by = ICE
-		1002.1.1 = {
-			owner = EQS
-			remove_core_of = EPT
-			remove_claim_by = ICE
+		
+		1050.1.1 = { 
 		}
-		1050.1.1 = {}
 	}
+	provinces = { 656 3660 3662 6675 6678 9630 9633 11598 11638 }
 }

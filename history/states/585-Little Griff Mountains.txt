@@ -1,44 +1,28 @@
-state = {
-	id = 585
-	name = "STATE_585"
-	provinces = {
-		1135
-		3481
-		4218
-		4296
-		4973
-		5016
-		6196
-		6486
-		6525
-		8042
-		8086
-		9455
-		10242
-		10656
-		11457
-		11472
-		12593
-		12636
-	}
-	manpower = 45609
-	state_category = pastoral
-	buildings_max_level_factor = 1
-	history = {
+state = { 
+	id = 585 
+	name = "STATE_585" 
+	manpower = 45609 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	
+	resources = { 
+		iron = 8 
+		crystals = 5 
+	} 
+	history = { 
+		
+		victory_points = { 6196 1 }
+		
+		
 		#owner = SRS
 		#add_core_of = SRS
 		#add_claim_by = NTR
-		982.1.1 = {
-			owner = GRE
-			add_core_of = GRE
-		}
-		victory_points = {
-			6196
-			1
+		982.1.1 = { 
+			owner = GRE 
+			
+			add_core_of = GRE 
 		}
 	}
-	resources = {
-		iron = 8
-		crystals = 5
-	}
+	provinces = { 1135 3481 4218 4296 4973 5016 5608 6196 6486 6525 7729 8042 8086 9455 10242 10656 11457 11472 }
 }

@@ -1,27 +1,17 @@
-state = {
-	id = 416
-	name = "STATE_416"
-	provinces = {
-		1247
-		1314
-		4254
-		4294
-		4376
-		7341
-		7370
-		7410
-		10253
-		12227
-		12254
+state = { 
+	id = 416 
+	name = "STATE_416" 
+	manpower = 200000 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = GRE 
+		
+		buildings = { 
+			infrastructure = 1 }
+		
+		add_core_of = GRE 
 	}
-	manpower = 200000
-	state_category = rural
-	buildings_max_level_factor = 1
-	history = {
-		owner = GRE
-		add_core_of = GRE
-		buildings = {
-			infrastructure = 1
-		}
-	}
+	provinces = { 1247 1314 1667 4254 4294 4376 5365 7341 7370 7410 10253 }
 }

@@ -1,26 +1,27 @@
-state = {
-	id = 323
-	name = "STATE_323"
-	provinces = {
-		4597
-		12501
+state = { 
+	id = 323 
+	name = "STATE_323" 
+	manpower = 1590087 
+	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = SOR 
+		
+		victory_points = { 5566 15 }
+		
+		buildings = { 
+			industrial_complex = 1 }
+		
+		add_core_of = SOR 
+		
+		
+		1002.1.1 = { 
+			owner = VES 
+			controller = VES 
+			
+			add_core_of = VES 
+		}
 	}
-	manpower = 1590087
-	state_category = large_town
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			12501 15
-		}
-		owner = SOR
-		add_core_of = SOR
-		buildings = {
-			industrial_complex = 1
-		}
-		1002.1.1 = {
-			owner = VES
-			add_core_of = VES
-			controller = VES
-		}
-	}
+	provinces = { 4597 5566 }
 }

@@ -1,42 +1,31 @@
-state = {
-	id = 305
-	name = "STATE_305"
-	provinces = {
-		602
-		777
-		4757
-		4784
-		4869
-		7794
-		7834
-		9740
-		9802
-		10621
-		10718
-		12346
-		12463
-		12701
-	}
-	manpower = 1600300
-	state_category = town
-	buildings_max_level_factor = 1.2
-	history = {
-		victory_points = {
-			12346 10
+state = { 
+	id = 305 
+	name = "STATE_305" 
+	manpower = 1600300 
+	
+	state_category = town 
+	buildings_max_level_factor = 1.2 
+	
+	resources = { oil = 4 } 
+	history = { 
+		owner = DIS 
+		
+		victory_points = { 5590 10 }
+		
+		buildings = { 
+			industrial_complex = 1 
+			dockyard = 1 
 		}
-		owner = DIS
-		add_core_of = DIS
-		buildings = {
-			industrial_complex = 1
-			dockyard = 1
-		}
-		1002.1.1 = {
-			owner = VES
-			add_core_of = VES
-			controller = VES
+		
+		add_core_of = DIS 
+		
+		
+		1002.1.1 = { 
+			owner = VES 
+			controller = VES 
+			
+			add_core_of = VES 
 		}
 	}
-	resources = {
-		oil = 4
-	}
+	provinces = { 602 777 2165 4757 4784 4869 5590 7794 7834 9740 9802 10288 10621 10718 }
 }

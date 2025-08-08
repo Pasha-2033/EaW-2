@@ -1,38 +1,29 @@
-state = {
-	id = 165
-	name = "STATE_165"
-	provinces = {
-		4787
-		6062
-		6205
-		6252
-		6304
-		6605
-		9075
-		9090
-		9161
-		9413
-		11161
-		11266
-		11504
-	}
-	state_category = rural
-	buildings_max_level_factor = 1
-	manpower = 426725
-	history = {
-		victory_points = {
-			11161 3
+state = { 
+	id = 165 
+	name = "STATE_165" 
+	manpower = 426725 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	
+	resources = { food = 40 } 
+	history = { 
+		owner = STG 
+		
+		victory_points = { 11161 3 }
+		
+		add_core_of = STG 
+		add_claim_by = WOP 
+		
+		
+		1002.1.1 = { 
+			owner = STG 
+			
+			add_core_of = STG 
 		}
-		owner = STG
-		add_core_of = STG
-		add_claim_by = WOP
-		1002.1.1 = {
-			owner = STG
-			add_core_of = STG
+		
+		1050.1.1 = { 
 		}
-		1050.1.1 = {}
 	}
-	resources = {
-		food = 40
-	}
+	provinces = { 4787 6062 6205 6252 6304 6605 9075 9090 9161 9413 11161 11266 11504 }
 }

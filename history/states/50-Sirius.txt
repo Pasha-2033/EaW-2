@@ -1,44 +1,35 @@
-state = {
-	id = 50
-	name = "STATE_50"
-	provinces = {
-		937
-		953
-		982
-		984
-		3922
-		3924
-		6799
-		6889
-		6957
-		9557
-		9572
-		11845
-	}
-	manpower = 159900
-	buildings_max_level_factor = 1
-	state_category = rural
-	history = {
-		victory_points = {
-			9572 3
+state = { 
+	id = 50 
+	name = "STATE_50" 
+	manpower = 159900 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	
+	resources = { bauxite = 3 } 
+	history = { 
+		owner = EPT 
+		
+		victory_points = { 9572 3 }
+		
+		buildings = { 
+			9572 = { naval_base = 1 }
 		}
-		owner = EPT
-		add_core_of = EPT
-		add_core_of = EQS
-		add_claim_by = ICE
-		buildings = {
-			9572 = {
-				naval_base = 1
-			}
+		
+		add_core_of = EPT 
+		add_core_of = EQS 
+		add_claim_by = ICE 
+		
+		
+		1002.1.1 = { 
+			owner = EQS 
+			
+			remove_core_of = EPT 
+			remove_claim_by = ICE 
 		}
-		1002.1.1 = {
-			owner = EQS
-			remove_core_of = EPT
-			remove_claim_by = ICE
+		
+		1050.1.1 = { 
 		}
-		1050.1.1 = {}
 	}
-	resources = {
-		bauxite = 3
-	}
+	provinces = { 937 953 982 984 3922 3924 6799 6889 6957 9557 9572 11845 }
 }

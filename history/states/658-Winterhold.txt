@@ -1,37 +1,30 @@
-state = {
-	id = 658
-	name = "STATE_658"
-	provinces = {
-		7673
-		10522
-		9215
-		12302
-		4652
-		8360
-	}
-	manpower = 175670
-	state_category = rural
-	buildings_max_level_factor = 3
-	history = {
+state = { 
+	id = 658 
+	name = "STATE_658" 
+	manpower = 175670 
+	
+	state_category = rural 
+	buildings_max_level_factor = 3 
+	
+	resources = { oil = 7 } 
+	history = { 
+		
+		victory_points = { 10522 5 }
+		
+		buildings = { 
+			infrastructure = 1 
+			industrial_complex = 1 
+			10522 = { naval_base = 1 }
+		}
+		
+		
 		#owner = HAU
 		#add_core_of = HAU
-		982.1.1 = {
-			owner = GRE
-			add_core_of = GRE
-		}
-		victory_points = {
-			10522
-			5
-		}
-		buildings = {
-			infrastructure = 1
-			industrial_complex = 1
-			10522 = {
-				naval_base = 1
-			}
+		982.1.1 = { 
+			owner = GRE 
+			
+			add_core_of = GRE 
 		}
 	}
-	resources = {
-		oil = 7
-	}
+	provinces = { 4652 5658 7673 8360 9215 10522 }
 }

@@ -1,36 +1,24 @@
-state = {
-	id = 320
-	name = "STATE_320"
-	provinces = {
-		1354
-		1987
-		4510
-		6183
-		6857
-		6974
-		7420
-		7464
-		9727
-		10340
-		10355
-		10615
-		11714
-		12568
-		12670
-	}
-	manpower = 161937
-	state_category = pastoral
-	buildings_max_level_factor = 1
-	history = {
-		owner = VES
-		add_core_of = VES
-		1002.1.1 = {
-			owner = VES
-			add_core_of = VES
-			controller = VES
+state = { 
+	id = 320 
+	name = "STATE_320" 
+	manpower = 161937 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	
+	resources = { iron = 3 } 
+	history = { 
+		owner = VES 
+		
+		add_core_of = VES 
+		
+		
+		1002.1.1 = { 
+			owner = VES 
+			controller = VES 
+			
+			add_core_of = VES 
 		}
 	}
-	resources = {
-		iron = 3
-	}
+	provinces = { 1354 1987 2788 4510 6183 6857 6974 7420 7464 7714 9727 10340 10355 10615 11714 }
 }

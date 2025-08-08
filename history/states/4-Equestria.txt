@@ -1,48 +1,35 @@
-state = {
-	id = 4
-	name = "STATE_4"
-	provinces = {
-		902
-		3838
-		4913
-		6891
-		9851
-		9863
-		10917
-		11673
-		11755
-		11773
-		11804
-		11824
-	}
-	state_category = rural
-	buildings_max_level_factor = 1
-	manpower = 46359
-	history = {
-		owner = EQS
-		add_core_of = EQS
-		add_claim_by = ICE
-		buildings = {
-			dockyard = 1
-			11755 = {
-				naval_base = 1
-			}
-			3838 = {
-				naval_base = 1
-			}
-			4913 = {
-				naval_base = 1
-			}
-			11804 = {
-				naval_base = 1
-			}
+state = { 
+	id = 4 
+	name = "STATE_4" 
+	manpower = 46359 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = EQS 
+		
+		buildings = { 
+			dockyard = 1  
+			3838 = { naval_base = 1 }
+			4913 = { naval_base = 1 }
+			11755 = { naval_base = 1 }
+			11804 = { naval_base = 1 }
 		}
-		1002.1.1 = {
-			owner = DRG
-			remove_core_of = EQS
-			add_core_of = DRG
-			remove_claim_by = ICE
+		
+		add_core_of = EQS 
+		add_claim_by = ICE 
+		
+		
+		1002.1.1 = { 
+			owner = DRG 
+			
+			remove_core_of = EQS 
+			add_core_of = DRG 
+			remove_claim_by = ICE 
 		}
-		1050.1.1 = {}
+		
+		1050.1.1 = { 
+		}
 	}
+	provinces = { 902 3838 4913 6891 9851 9863 10917 11673 11755 11773 11804 11824 }
 }

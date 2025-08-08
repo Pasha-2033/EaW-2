@@ -1,36 +1,28 @@
-state = {
-	id = 360
-	name = "STATE_360"
-	provinces = {
-		60
-		140
-		2057
-		3057
-		5027
-		5058
-		6017
-		11103
-		11168
-		11178
-	}
-	manpower = 95679
-	state_category = rural
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			11103 5
+state = { 
+	id = 360 
+	name = "STATE_360" 
+	manpower = 95679 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = NML 
+		
+		victory_points = { 11103 5 }
+		
+		buildings = { 
+			infrastructure = 1 
+			11103 = { naval_base = 1 }
 		}
-		owner = NML
-		add_claim_by = ICE
-		add_core_of = NML
-		buildings = {
-			infrastructure = 1
-			11103 = {
-				naval_base = 1
-			}
-		}
-		1002.1.1 = {
-			remove_claim_by = ICE
+		
+		add_claim_by = ICE 
+		add_core_of = NML 
+		
+		
+		1002.1.1 = { 
+			
+			remove_claim_by = ICE 
 		}
 	}
+	provinces = { 60 140 2057 3057 5027 5058 6017 11103 11168 11178 }
 }

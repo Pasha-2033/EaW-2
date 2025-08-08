@@ -1,40 +1,24 @@
-state = {
-	id = 357
-	name = "STATE_357"
-	provinces = {
-		18
-		1068
-		1600
-		1938
-		2004
-		3087
-		3168
-		3795
-		4073
-		6094
-		6382
-		6409
-		7994
-		9957
-		10031
-		10126
-		12372
+state = { 
+	id = 357 
+	name = "STATE_357" 
+	manpower = 103457 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	
+	resources = { 
+		crystals = 2 
+		iron = 4 
+	} 
+	history = { 
+		owner = GRE 
+		
+		victory_points = { 9957 1 }
+		
+		buildings = { 
+			infrastructure = 1 }
+		
+		add_core_of = GRE 
 	}
-	manpower = 103457
-	state_category = pastoral
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			9957 1
-		}
-		owner = GRE
-		add_core_of = GRE
-		buildings = {
-			infrastructure = 1
-		}
-	}
-	resources = {
-		crystals = 2
-		iron = 4
-	}
+	provinces = { 18 1068 1600 1938 2004 3087 3168 3795 4073 6094 6382 6409 7994 8932 9957 10031 10126 }
 }

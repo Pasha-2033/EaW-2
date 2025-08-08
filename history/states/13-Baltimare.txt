@@ -1,44 +1,36 @@
-state = {
-	id = 13
-	name = "STATE_13"
-	provinces = {
-		1346
-		3546
-		3560
-		3629
-		5291
-		6529
-		6537
-		6545
-		9505
-		9638
-		13011
-	}
-	state_category = large_city
-	buildings_max_level_factor = 1
-	manpower = 1262300
-	history = {
-		victory_points = {
-			13011 25
+state = { 
+	id = 13 
+	name = "STATE_13" 
+	manpower = 1262300 
+	
+	state_category = large_city 
+	buildings_max_level_factor = 1 
+	
+	resources = { food = 35 } 
+	history = { 
+		owner = EQS 
+		
+		victory_points = { 8424 25 }
+		
+		buildings = { 
+			infrastructure = 1 
+			arms_factory = 1 
+			industrial_complex = 1 
+			dockyard = 1 
+			8424 = { naval_base = 1 }
 		}
-		owner = EQS
-		add_core_of = EQS
-		add_claim_by = ICE
-		buildings = {
-			infrastructure = 1
-			arms_factory = 1
-			industrial_complex = 1
-			dockyard = 1
-			13011 = {
-				naval_base = 1
-			}
+		
+		add_core_of = EQS 
+		add_claim_by = ICE 
+		
+		
+		1002.1.1 = { 
+			
+			remove_claim_by = ICE 
 		}
-		1002.1.1 = {
-			remove_claim_by = ICE
+		
+		1050.1.1 = { 
 		}
-		1050.1.1 = {}
 	}
-	resources = {
-		food = 35
-	}
+	provinces = { 1346 3546 3560 3629 5291 6529 6537 6545 8424 9505 9638 }
 }

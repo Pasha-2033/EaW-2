@@ -1,40 +1,25 @@
-state = {
-	id = 238
-	name = "STATE_238"
-	provinces = {
-		1088
-		1164
-		1606
-		3255
-		3264
-		3942
-		4170
-		6171
-		6383
-		7140
-		9214
-		9390
-		9940
-		10087
-		12029
-		12058
-		13319
-		13320
-	}
-	manpower = 5937
-	state_category = wasteland
-	buildings_max_level_factor = 1
-	history = {
-		owner = MET
-		add_core_of = MET
-		buildings = {
-			infrastructure = 1
-			ore_preparation = 1
+state = { 
+	id = 238 
+	name = "STATE_238" 
+	manpower = 5937 
+	
+	state_category = wasteland 
+	buildings_max_level_factor = 1 
+	
+	resources = { 
+		crystals = 3 
+		iron = 28 
+		chromite = 9 
+	} 
+	history = { 
+		owner = MET 
+		
+		buildings = { 
+			infrastructure = 1 
+			ore_preparation = 1 
 		}
+		
+		add_core_of = MET 
 	}
-	resources = {
-		crystals = 3
-		iron = 28
-		chromite = 9
-	}
+	provinces = { 1088 1164 1606 2543 2567 3255 3264 3942 4170 6171 6383 7140 9214 9390 9940 10087 12029 12058 }
 }

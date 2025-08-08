@@ -1,47 +1,33 @@
-state = {
-	id = 18
-	name = "STATE_18"
-	provinces = {
-		856
-		1752
-		1870
-		3045
-		3719
-		3914
-		4759
-		4772
-		6188
-		6722
-		7877
-		9054
-		9362
-		9916
-		10709
-		11040
-		11147
-		11327
-		11390
-		12566
-		12685
-	}
-	state_category = pastoral
-	buildings_max_level_factor = 1
-	manpower = 34900
-	history = {
-		owner = PGT
-		add_core_of = PGT
-		add_core_of = EQS
-		add_claim_by = ICE
-		1002.1.1 = {
-			owner = EQS
-			remove_core_of = PGT
-			remove_claim_by = ICE
+state = { 
+	id = 18 
+	name = "STATE_18" 
+	manpower = 34900 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	
+	resources = { 
+		iron = 4 
+		scheelitis = 2 
+		chromite = 3 
+	} 
+	history = { 
+		owner = PGT 
+		
+		add_core_of = PGT 
+		add_core_of = EQS 
+		add_claim_by = ICE 
+		
+		
+		1002.1.1 = { 
+			owner = EQS 
+			
+			remove_core_of = PGT 
+			remove_claim_by = ICE 
 		}
-		1050.1.1 = {}
+		
+		1050.1.1 = { 
+		}
 	}
-	resources = {
-		iron = 4
-		scheelitis = 2
-		chromite = 3
-	}
+	provinces = { 856 1752 1870 3045 3719 3914 4759 4772 6188 6722 7877 8156 8503 9054 9362 9916 10709 11040 11147 11327 11390 }
 }

@@ -1,23 +1,16 @@
-state = {
-	id = 265
-	name = "STATE_265"
-	provinces = {
-		1769
-		4422
-		4875
-		7536
-		11571
-		12588
-		13161
+state = { 
+	id = 265 
+	name = "STATE_265" 
+	manpower = 497960 
+	
+	state_category = town 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = NEM 
+		
+		victory_points = { 7536 10 }
+		
+		add_core_of = NEM 
 	}
-	manpower = 497960
-	state_category = town
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			7536 10
-		}
-		owner = NEM
-		add_core_of = NEM
-	}
+	provinces = { 1769 2134 3619 4422 4875 7536 11571 }
 }

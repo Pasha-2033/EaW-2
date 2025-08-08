@@ -1,25 +1,16 @@
-state = {
-	id = 275
-	name = "STATE_275"
-	provinces = {
-		256
-		301
-		3135
-		3327
-		3391
-		6380
-		9280
-		9302
-		11282
+state = { 
+	id = 275 
+	name = "STATE_275" 
+	manpower = 230491 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = NEM 
+		
+		victory_points = { 3391 3 }
+		
+		add_core_of = NEM 
 	}
-	manpower = 230491
-	state_category = rural
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			3391 3
-		}
-		owner = NEM
-		add_core_of = NEM
-	}
+	provinces = { 256 301 3135 3327 3391 6380 9280 9302 11282 }
 }

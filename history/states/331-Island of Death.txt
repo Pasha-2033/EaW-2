@@ -1,19 +1,22 @@
-state = {
-	id = 331
-	name = "STATE_331"
-	provinces = {
-		10051
-	}
-	manpower = 1
-	state_category = tiny_island
-	buildings_max_level_factor = 1
-	history = {
-		owner = BR0
-		add_core_of = BR0
-		1002.1.1 = {
-			owner = OLE
-			add_core_of = OLE
-			remove_core_of = BR0
+state = { 
+	id = 331 
+	name = "STATE_331" 
+	manpower = 1 
+	
+	state_category = tiny_island 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = BR0 
+		
+		add_core_of = BR0 
+		
+		
+		1002.1.1 = { 
+			owner = OLE 
+			
+			add_core_of = OLE 
+			remove_core_of = BR0 
 		}
 	}
+	provinces = { 10051 }
 }

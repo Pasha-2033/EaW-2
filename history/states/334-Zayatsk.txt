@@ -1,36 +1,36 @@
-state = {
-	id = 334
-	name = "STATE_334"
-	provinces = {
-		2082
-		9374
-		9491
-		9519
-		13212
-		13014
-		13016
-	}
-	state_category = rural
-	buildings_max_level_factor = 1
-	manpower = 251580
-	history = {
-		victory_points = {
-			2082 5
+state = { 
+	id = 334 
+	name = "STATE_334" 
+	manpower = 251580 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	
+	resources = { 
+		bauxite = 5 
+		scheelitis = 2 
+	} 
+	history = { 
+		owner = STG 
+		
+		victory_points = { 2082 5 }
+		
+		buildings = { 
+			industrial_complex = 1 
+			aluminium_plant = 1 
 		}
-		owner = STG
-		add_core_of = STG
-		add_claim_by = WOP
-		buildings = {
-			industrial_complex = 1
-			aluminium_plant = 1
+		
+		add_core_of = STG 
+		add_claim_by = WOP 
+		
+		
+		1002.1.1 = { 
+			
+			remove_claim_by = WOP 
 		}
-		1002.1.1 = {
-			remove_claim_by = WOP
+		
+		1050.1.1 = { 
 		}
-		1050.1.1 = {}
 	}
-	resources = {
-		bauxite = 5
-		scheelitis = 2
-	}
+	provinces = { 2082 7937 8374 8853 9374 9491 9519 }
 }

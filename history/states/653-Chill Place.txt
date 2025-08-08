@@ -1,34 +1,30 @@
-state = {
-	id = 653
-	name = "STATE_653"
-	provinces = {
-		1593
-		1922
-		2026
-		5067
-		7296
-		8009
-		8074
-		10308
-		12324
-		12756
-		13024
-	}
-	state_category = pastoral
-	buildings_max_level_factor = 1
-	manpower = 76000
-	history = {
-		982.1.1 = {
-			owner = PGT
-			add_core_of = PGT
-			add_core_of = EQS
-			add_claim_by = ICE
+state = { 
+	id = 653 
+	name = "STATE_653" 
+	manpower = 76000 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	history = { 
+		
+		
+		982.1.1 = { 
+			owner = PGT 
+			
+			add_core_of = PGT 
+			add_core_of = EQS 
+			add_claim_by = ICE 
 		}
-		1002.1.1 = {
-			owner = EQS
-			remove_core_of = PGT
-			remove_claim_by = ICE
+		
+		1002.1.1 = { 
+			owner = EQS 
+			
+			remove_core_of = PGT 
+			remove_claim_by = ICE 
 		}
-		1050.1.1 = {}
+		
+		1050.1.1 = { 
+		}
 	}
+	provinces = { 1593 1922 2026 5067 7017 7296 7715 8009 8074 8346 10308 }
 }

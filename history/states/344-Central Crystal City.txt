@@ -1,25 +1,27 @@
-state = {
-	id = 344
-	name = "STATE_344"
-	provinces = {
-		489
-	}
-	manpower = 3300667
-	state_category = wasteland
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			489 40
+state = { 
+	id = 344 
+	name = "STATE_344" 
+	manpower = 3300667 
+	
+	state_category = wasteland 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = ELN 
+		
+		victory_points = { 489 40 }
+		
+		add_core_of = ELN 
+		set_demilitarized_zone = yes 
+		
+		
+		1002.1.1 = { 
+			owner = CRY 
+			
+			add_core_of = CRY 
+			remove_core_of = ELN 
+			set_demilitarized_zone = no 
+			set_state_category = megalopolis 
 		}
-		owner = ELN
-		add_core_of = ELN
-		set_demilitarized_zone = yes
-		1002.1.1 = {
-			owner = CRY
-			add_core_of = CRY
-			remove_core_of = ELN
-			set_demilitarized_zone = no
-			set_state_category = megalopolis
-		}
 	}
+	provinces = { 489 }
 }

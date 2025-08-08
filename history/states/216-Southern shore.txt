@@ -1,33 +1,26 @@
-state = {
-	id = 216
-	name = "STATE_216"
-	provinces = {
-		767
-		6505
-		6519
-		6771
-		9417
-		9430
-		9464
-		11649
-		11700
-	}
-	manpower = 330000
-	state_category = rural
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			767 5
-		}
-		owner = BR3
-		add_core_of = BR3
-		1002.1.1 = {
-			owner = OLE
-			add_core_of = OLE
-			remove_core_of = BR3
+state = { 
+	id = 216 
+	name = "STATE_216" 
+	manpower = 330000 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	
+	resources = { food = 20 } 
+	history = { 
+		owner = BR3 
+		
+		victory_points = { 767 5 }
+		
+		add_core_of = BR3 
+		
+		
+		1002.1.1 = { 
+			owner = OLE 
+			
+			add_core_of = OLE 
+			remove_core_of = BR3 
 		}
 	}
-	resources = {
-		food = 20
-	}
+	provinces = { 767 6505 6519 6771 9417 9430 9464 11649 11700 }
 }

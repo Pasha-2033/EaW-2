@@ -1,47 +1,26 @@
-state = {
-	id = 518
-	name = "STATE_518"
-	provinces = {
-		1157
-		1296
-		1366
-		1385
-		1417
-		4075
-		4119
-		4275
-		4336
-		4348
-		4392
-		7254
-		7295
-		10103
-		10158
-		10193
-		10267
-		10283
-		12048
-		12127
-		12197
-		12267
-		12292
-	}
-	manpower = 59484
-	state_category = wasteland
-	buildings_max_level_factor = 1
-	history = {
-		982.1.1 = {
-			owner = GRE
-			add_core_of = GRE
-		}
-		victory_points = {
-			1366
-			1
+state = { 
+	id = 518 
+	name = "STATE_518" 
+	manpower = 59484 
+	
+	state_category = wasteland 
+	buildings_max_level_factor = 1 
+	
+	resources = { 
+		iron = 3 
+		bauxite = 5 
+		crystals = 3 
+	} 
+	history = { 
+		
+		victory_points = { 1366 1 }
+		
+		
+		982.1.1 = { 
+			owner = GRE 
+			
+			add_core_of = GRE 
 		}
 	}
-	resources = {
-		iron = 3
-		bauxite = 5
-		crystals = 3
-	}
+	provinces = { 1157 1296 1366 1385 1417 3023 4075 4119 4275 4336 4348 4392 5843 7254 7295 8463 10103 10158 10193 10267 10283 10458 12048 }
 }

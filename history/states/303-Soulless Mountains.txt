@@ -1,41 +1,28 @@
-state = {
-	id = 303
-	name = "STATE_303"
-	provinces = {
-		3125
-		3994
-		4653
-		5090
-		6078
-		6198
-		7527
-		7643
-		9219
-		9967
-		10029
-		10394
-		11054
-		11144
-		11199
-	}
-	manpower = 705465
-	state_category = rural
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			11144 5
-		}
-		owner = LIK
-		add_core_of = LIK
-		buildings = {
-			tungsten_plant = 1
-		}
-		1002.1.1 = {
-			owner = VES
-			add_core_of = VES
+state = { 
+	id = 303 
+	name = "STATE_303" 
+	manpower = 705465 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	
+	resources = { scheelitis = 9 } 
+	history = { 
+		owner = LIK 
+		
+		victory_points = { 11144 5 }
+		
+		buildings = { 
+			tungsten_plant = 1 }
+		
+		add_core_of = LIK 
+		
+		
+		1002.1.1 = { 
+			owner = VES 
+			
+			add_core_of = VES 
 		}
 	}
-	resources = {
-		scheelitis = 9
-	}
+	provinces = { 3125 3994 4653 5090 6078 6198 7527 7643 9219 9967 10029 10394 11054 11144 11199 }
 }

@@ -1,44 +1,28 @@
-state = {
-	id = 302
-	name = "STATE_302"
-	provinces = {
-		132
-		492
-		638
-		968
-		4594
-		4756
-		7480
-		7640
-		9949
-		9996
-		10192
-		10352
-		10380
-		10407
-		10520
-		11942
-		12384
-		12470
-		12498
-		12735
-		12752
-	}
-	manpower = 32984
-	state_category = pastoral
-	buildings_max_level_factor = 1
-	history = {
+state = { 
+	id = 302 
+	name = "STATE_302" 
+	manpower = 32984 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	
+	resources = { 
+		chromite = 6 
+		iron = 4 
+		bauxite = 2 
+	} 
+	history = { 
 		#будет фокус остановить рейды оленей через отдачу этого региона (обьединенный улей против Королевства Оления)
-		owner = LIK
-		add_core_of = LIK
-		1002.1.1 = {
-			owner = OLE
-			add_core_of = OLE
+		owner = LIK 
+		
+		add_core_of = LIK 
+		
+		
+		1002.1.1 = { 
+			owner = OLE 
+			
+			add_core_of = OLE 
 		}
 	}
-	resources = {
-		chromite = 6
-		iron = 4
-		bauxite = 2
-	}
+	provinces = { 132 492 638 968 2494 4594 4756 5662 5739 7457 7480 7484 7640 9949 9996 10192 10352 10380 10407 10520 11942 }
 }

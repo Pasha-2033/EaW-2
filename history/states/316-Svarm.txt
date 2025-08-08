@@ -1,29 +1,27 @@
-state = {
-	id = 316
-	name = "STATE_316"
-	provinces = {
-		11167
-		11661
-		11690
-		11693
-	}
-	manpower = 2072308
-	state_category = large_town
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			11690
-			15
-		}
-		owner = VRA
-		add_core_of = VRA
-		buildings = {
-			industrial_complex = 1
-		}
-		1002.1.1 = {
-			owner = VES
-			add_core_of = VES
-			controller = VES
+state = { 
+	id = 316 
+	name = "STATE_316" 
+	manpower = 2072308 
+	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = VRA 
+		
+		victory_points = { 11690 15 }
+		
+		buildings = { 
+			industrial_complex = 1 }
+		
+		add_core_of = VRA 
+		
+		
+		1002.1.1 = { 
+			owner = VES 
+			controller = VES 
+			
+			add_core_of = VES 
 		}
 	}
+	provinces = { 11167 11661 11690 11693 }
 }

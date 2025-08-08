@@ -1,36 +1,32 @@
-state = {
-	id = 309
-	name = "STATE_309"
-	provinces = {
-		66
-		195
-		1338
-		3172
-		9119
-		9156
-		10247
-	}
-	manpower = 2346797
-	state_category = city
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			195 20
+state = { 
+	id = 309 
+	name = "STATE_309" 
+	manpower = 2346797 
+	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	
+	resources = { food = 60 } 
+	history = { 
+		owner = LIK 
+		
+		victory_points = { 195 20 }
+		
+		buildings = { 
+			infrastructure = 1 
+			industrial_complex = 2 
+			arms_factory = 1 
 		}
-		owner = LIK
-		add_core_of = LIK
-		buildings = {
-			infrastructure = 1
-			industrial_complex = 2
-			arms_factory = 1
-		}
-		1002.1.1 = {
-			owner = VES
-			add_core_of = VES
-			controller = VES
+		
+		add_core_of = LIK 
+		
+		
+		1002.1.1 = { 
+			owner = VES 
+			controller = VES 
+			
+			add_core_of = VES 
 		}
 	}
-	resources = {
-		food = 60
-	}
+	provinces = { 66 195 1338 3172 9119 9156 10247 }
 }

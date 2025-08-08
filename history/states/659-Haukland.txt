@@ -1,43 +1,37 @@
-state = {
-	id = 659
-	name = "STATE_659"
-	provinces = {
-		7463
-		7327
-		12181
-		12280
-		9059
-		9165
-		10138
-	}
-	manpower = 395600
-	state_category = large_town
-	buildings_max_level_factor = 1
-	history = {
-		982.1.1 = {
-			owner = NML
-			add_claim_by = ICE
-			add_core_of = NML
+state = { 
+	id = 659 
+	name = "STATE_659" 
+	manpower = 395600 
+	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	
+	resources = { oil = 2 } 
+	history = { 
+		
+		victory_points = { 7463 15 }
+		
+		buildings = { 
+			industrial_complex = 2 
+			arms_factory = 1 
+			dockyard = 1 
+			7463 = { naval_base = 1 }
 		}
-		1002.1.1 = {
-			owner = NML
-			add_core_of = NML
-			remove_claim_by = ICE
+		
+		
+		982.1.1 = { 
+			owner = NML 
+			
+			add_claim_by = ICE 
+			add_core_of = NML 
 		}
-		victory_points = {
-			7463
-			15
-		}
-		buildings = {
-			industrial_complex = 2
-			arms_factory = 1
-			dockyard = 1
-			7463 = {
-				naval_base = 1
-			}
+		
+		1002.1.1 = { 
+			owner = NML 
+			
+			add_core_of = NML 
+			remove_claim_by = ICE 
 		}
 	}
-	resources = {
-		oil = 2
-	}
+	provinces = { 3209 5491 7327 7463 9059 9165 10138 }
 }

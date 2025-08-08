@@ -1,39 +1,22 @@
-state = {
-	id = 400
-	name = "STATE_400"
-	provinces = {
-		1504
-		1697
-		1837
-		1971
-		3695
-		3753
-		4782
-		4842
-		7802
-		7863
-		10735
-		10866
-		10898
-		11629
-		12523
-		12792
+state = { 
+	id = 400 
+	name = "STATE_400" 
+	manpower = 567004 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = GRE 
+		
+		victory_points = { 10971 3 }
+		victory_points = { 11629 5 }
+		
+		buildings = { 
+			infrastructure = 1 
+			industrial_complex = 1 
+		}
+		
+		add_core_of = GRE 
 	}
-	manpower = 567004
-	state_category = rural
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			11629 5
-		}
-		victory_points = {
-			12523 3
-		}
-		owner = GRE
-		add_core_of = GRE
-		buildings = {
-			infrastructure = 1
-			industrial_complex = 1
-		}
-	}
+	provinces = { 1504 1697 1837 1971 3695 3753 4782 4842 5133 7802 7863 10735 10866 10898 10971 11629 }
 }

@@ -1,43 +1,35 @@
-state = {
-	id = 12
-	name = "STATE_12"
-	provinces = {
-		950
-		1178
-		1192
-		4065
-		6832
-		6896
-		9828
-		9891
-		10063
-		12038
-		12081
-		12083
+state = { 
+	id = 12 
+	name = "STATE_12" 
+	manpower = 2537200 
+	
+	state_category = large_city 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = EQS 
+		
+		victory_points = { 950 30 }
+		
+		buildings = { 
+			infrastructure = 1 
+			industrial_complex = 1 
+			arms_factory = 1 
+			dockyard = 1 
+			steel_plant = 1 
+			950 = { naval_base = 1 }
+		}
+		
+		add_core_of = EQS 
+		add_claim_by = ICE 
+		
+		
+		1002.1.1 = { 
+			
+			remove_claim_by = ICE 
+		}
+		
+		1050.1.1 = { 
+		}
 	}
-	state_category = large_city
-	buildings_max_level_factor = 1
-	manpower = 2537200
-	history = {
-		victory_points = {
-			950 30
-		}
-		owner = EQS
-		add_core_of = EQS
-		add_claim_by = ICE
-		buildings = {
-			infrastructure = 1
-			industrial_complex = 1
-			arms_factory = 1
-			dockyard = 1
-			steel_plant = 1
-			950 = {
-				naval_base = 1
-			}
-		}
-		1002.1.1 = {
-			remove_claim_by = ICE
-		}
-		1050.1.1 = {}
-	}
+	provinces = { 950 1178 1192 4065 6832 6896 9828 9891 10063 12038 12081 12083 }
 }

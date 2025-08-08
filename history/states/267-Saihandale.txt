@@ -1,31 +1,19 @@
-state = {
-	id = 267
-	name = "STATE_267"
-	provinces = {
-		1869
-		3269
-		3370
-		3383
-		6231
-		6253
-		6312
-		6374
-		9325
-		9360
-		11295
-		11641
+state = { 
+	id = 267 
+	name = "STATE_267" 
+	manpower = 885498 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = NEM 
+		
+		victory_points = { 6231 5 }
+		
+		buildings = { 
+			infrastructure = 1 }
+		
+		add_core_of = NEM 
 	}
-	manpower = 885498
-	state_category = rural
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			6231 5
-		}
-		owner = NEM
-		add_core_of = NEM
-		buildings = {
-			infrastructure = 1
-		}
-	}
+	provinces = { 1869 3269 3370 3383 6231 6253 6312 6374 9325 9360 11295 11641 }
 }

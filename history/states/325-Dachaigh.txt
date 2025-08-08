@@ -1,29 +1,22 @@
-state = {
-	id = 325
-	name = "STATE_325"
-	provinces = {
-		4305
-		12801
-		12929
-		13115
-		13215
-	}
-	manpower = 938700
-	state_category = city
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			13115 15
+state = { 
+	id = 325 
+	name = "STATE_325" 
+	manpower = 938700 
+	
+	state_category = city 
+	buildings_max_level_factor = 1 
+	
+	resources = { oil = 4 } 
+	history = { 
+		owner = NEM 
+		
+		victory_points = { 8744 15 }
+		
+		buildings = { 
+			8744 = { naval_base = 1 }
 		}
-		owner = NEM
-		add_core_of = NEM
-		buildings = {
-			13115 = {
-				naval_base = 1
-			}
-		}
+		
+		add_core_of = NEM 
 	}
-	resources = {
-		oil = 4
-	}
+	provinces = { 2115 4305 5570 5682 8744 }
 }

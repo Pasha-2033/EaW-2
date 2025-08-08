@@ -1,28 +1,17 @@
-state = {
-	id = 395
-	name = "STATE_395"
-	provinces = {
-		1275
-		4280
-		4321
-		4472
-		5032
-		7297
-		7340
-		7428
-		10799
-		11038
-		12114
-		12734
+state = { 
+	id = 395 
+	name = "STATE_395" 
+	manpower = 105608 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = ELN 
+		
+		buildings = { 
+			infrastructure = 1 }
+		
+		add_core_of = ELN 
 	}
-	manpower = 105608
-	state_category = pastoral
-	buildings_max_level_factor = 1
-	history = {
-		owner = ELN
-		add_core_of = ELN
-		buildings = {
-			infrastructure = 1
-		}
-	}
+	provinces = { 1275 2292 2507 4280 4321 4472 5032 7297 7340 7428 10799 11038 }
 }

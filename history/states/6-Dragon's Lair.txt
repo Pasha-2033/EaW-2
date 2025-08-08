@@ -1,28 +1,23 @@
-state = {
-	id = 6
-	name = "STATE_6"
-	provinces = {
-		724
-		1102
-		1619
-		4139
-		6921
-		9817
-		11675
-		11840
-		11843
-		12087
+state = { 
+	id = 6 
+	name = "STATE_6" 
+	manpower = 33000 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	
+	resources = { food = 15 } 
+	history = { 
+		owner = DRG 
+		
+		add_core_of = DRG 
+		
+		
+		1002.1.1 = { 
+		}
+		
+		1050.1.1 = { 
+		}
 	}
-	state_category = pastoral
-	buildings_max_level_factor = 1
-	manpower = 33000
-	history = {
-		owner = DRG
-		add_core_of = DRG
-		1002.1.1 = {}
-		1050.1.1 = {}
-	}
-	resources = {
-		food = 15
-	}
+	provinces = { 724 1102 1619 4139 6921 8441 9817 11675 11840 11843 }
 }

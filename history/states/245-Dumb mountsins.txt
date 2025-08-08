@@ -1,26 +1,19 @@
-state = {
-	id = 245
-	name = "STATE_245"
-	provinces = {
-		1056
-		1072
-		3101
-		6883
-		7513
-		7671
-		9370
-		12473
-		13338
+state = { 
+	id = 245 
+	name = "STATE_245" 
+	manpower = 1157 
+	
+	state_category = wasteland 
+	buildings_max_level_factor = 1 
+	
+	resources = { 
+		iron = 16 
+		bauxite = 8 
+	} 
+	history = { 
+		owner = MET 
+		
+		add_core_of = MET 
 	}
-	manpower = 1157
-	state_category = wasteland
-	buildings_max_level_factor = 1
-	history = {
-		owner = MET
-		add_core_of = MET
-	}
-	resources = {
-		iron = 16
-		bauxite = 8
-	}
+	provinces = { 1030 1056 1072 3101 5538 6883 7513 7671 9370 }
 }

@@ -1,42 +1,29 @@
-state = {
-	id = 104
-	name = "STATE_104"
-	provinces = {
-		21
-		102
-		3022
-		3093
-		3096
-		3111
-		3180
-		3254
-		3612
-		6114
-		6116
-		6204
-		6216
-		9216
-		11100
-		13269
-		13270
-		13271
+state = { 
+	id = 104 
+	name = "STATE_104" 
+	manpower = 156888 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = EQS 
+		
+		victory_points = { 11100 2 }
+		
+		buildings = { 
+			infrastructure = 1 }
+		
+		add_core_of = EQS 
+		add_claim_by = ICE 
+		
+		
+		1002.1.1 = { 
+			
+			remove_claim_by = ICE 
+		}
+		
+		1050.1.1 = { 
+		}
 	}
-	manpower = 156888
-	state_category = pastoral
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			11100 2
-		}
-		owner = EQS
-		add_core_of = EQS
-		add_claim_by = ICE
-		buildings = {
-			infrastructure = 1
-		}
-		1002.1.1 = {
-			remove_claim_by = ICE
-		}
-		1050.1.1 = {}
-	}
+	provinces = { 21 102 3022 3093 3096 3111 3180 3254 3612 5800 5826 5852 6114 6116 6204 6216 9216 11100 }
 }

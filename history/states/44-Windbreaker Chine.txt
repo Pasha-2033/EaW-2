@@ -1,34 +1,29 @@
-state = {
-	id = 44
-	name = "STATE_44"
-	provinces = {
-		1453
-		3730
-		3896
-		4535
-		6751
-		9780
-		9809
-		10449
-		12398
-	}
-	state_category = pastoral
-	buildings_max_level_factor = 1
-	manpower = 85838
-	history = {
-		victory_points = {
-			4535 1
+state = { 
+	id = 44 
+	name = "STATE_44" 
+	manpower = 85838 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	
+	resources = { iron = 5 } 
+	history = { 
+		owner = ICE 
+		
+		victory_points = { 4535 1 }
+		
+		add_core_of = ICE 
+		add_core_of = EQS 
+		
+		
+		1002.1.1 = { 
+			owner = EQS 
+			
+			remove_core_of = ICE 
 		}
-		owner = ICE
-		add_core_of = ICE
-		add_core_of = EQS
-		1002.1.1 = {
-			owner = EQS
-			remove_core_of = ICE
+		
+		1050.1.1 = { 
 		}
-		1050.1.1 = {}
 	}
-	resources = {
-		iron = 5
-	}
+	provinces = { 1453 3244 3730 3896 4535 6751 9780 9809 10449 }
 }

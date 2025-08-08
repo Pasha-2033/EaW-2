@@ -1,21 +1,16 @@
-state = {
-	id = 263
-	name = "STATE_263"
-	provinces = {
-		1560
-		7586
-		7797
-		9910
-		12418
+state = { 
+	id = 263 
+	name = "STATE_263" 
+	manpower = 40600 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	
+	resources = { oil = 5 } 
+	history = { 
+		owner = NEM 
+		
+		add_core_of = NEM 
 	}
-	manpower = 40600
-	state_category = pastoral
-	buildings_max_level_factor = 1
-	history = {
-		owner = NEM
-		add_core_of = NEM
-	}
-	resources = {
-		oil = 5
-	}
+	provinces = { 1560 4819 7586 7797 9910 }
 }

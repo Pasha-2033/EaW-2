@@ -1,50 +1,25 @@
-state = {
-	id = 42
-	name = "STATE_42"
-	provinces = {
-		637
-		713
-		716
-		793
-		818
-		3499
-		3535
-		3630
-		3636
-		3649
-		3665
-		3713
-		3731
-		3796
-		3819
-		6559
-		6714
-		6842
-		9428
-		9471
-		9560
-		9610
-		9612
-		9619
-		9769
-		11545
-		11588
-		11592
-		11605
-		11622
-		11639
-	}
-	state_category = wasteland
-	buildings_max_level_factor = 1
-	manpower = 8200
-	history = {
-		owner = ICE
-		add_core_of = ICE
-		add_core_of = EQS
-		1002.1.1 = {
-			owner = EQS
-			remove_core_of = ICE
+state = { 
+	id = 42 
+	name = "STATE_42" 
+	manpower = 8200 
+	
+	state_category = wasteland 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = ICE 
+		
+		add_core_of = ICE 
+		add_core_of = EQS 
+		
+		
+		1002.1.1 = { 
+			owner = EQS 
+			
+			remove_core_of = ICE 
 		}
-		1050.1.1 = {}
+		
+		1050.1.1 = { 
+		}
 	}
+	provinces = { 637 713 716 793 818 3499 3535 3630 3636 3649 3665 3713 3731 3796 3819 6559 6714 6842 9428 9471 9560 9610 9612 9619 9769 11545 11588 11592 11605 11622 11639 }
 }

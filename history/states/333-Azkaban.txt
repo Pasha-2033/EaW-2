@@ -1,26 +1,29 @@
-state = {
-	id = 333
-	name = "STATE_333"
-	provinces = {
-		6070
-		9176
-	}
-	state_category = small_island
-	buildings_max_level_factor = 1
-	manpower = 3900
-	history = {
-		owner = STG
-		add_core_of = STG
-		add_claim_by = WOP
-		buildings = {
-			infrastructure = 1
-			9176 = {
-				naval_base = 1
-			}
+state = { 
+	id = 333 
+	name = "STATE_333" 
+	manpower = 3900 
+	
+	state_category = small_island 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = STG 
+		
+		buildings = { 
+			infrastructure = 1 
+			9176 = { naval_base = 1 }
 		}
-		1002.1.1 = {
-			remove_claim_by = WOP
+		
+		add_core_of = STG 
+		add_claim_by = WOP 
+		
+		
+		1002.1.1 = { 
+			
+			remove_claim_by = WOP 
 		}
-		1050.1.1 = {}
+		
+		1050.1.1 = { 
+		}
 	}
+	provinces = { 6070 9176 }
 }

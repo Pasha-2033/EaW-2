@@ -1,27 +1,24 @@
-state = {
-	id = 326
-	name = "STATE_326"
-	provinces = {
-		6108
-		6144
-		6399
-		9129
-		9379
-		11105
-		11172
-	}
-	manpower = 103890
-	state_category = rural
-	buildings_max_level_factor = 1
-	history = {
-		owner = PGT
-		add_core_of = PGT
-		add_core_of = EQS
-		add_claim_by = ICE
-		1002.1.1 = {
-			owner = EQS
-			remove_core_of = PGT
-			remove_claim_by = ICE
+state = { 
+	id = 326 
+	name = "STATE_326" 
+	manpower = 103890 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = PGT 
+		
+		add_core_of = PGT 
+		add_core_of = EQS 
+		add_claim_by = ICE 
+		
+		
+		1002.1.1 = { 
+			owner = EQS 
+			
+			remove_core_of = PGT 
+			remove_claim_by = ICE 
 		}
 	}
+	provinces = { 6108 6144 6399 9129 9379 11105 11172 }
 }

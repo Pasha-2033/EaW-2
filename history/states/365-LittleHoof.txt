@@ -1,32 +1,28 @@
-state = {
-	id = 365
-	name = "STATE_365"
-	provinces = {
-		3916
-		5005
-		5098
-		6826
-		7953
-		10774
-		12773
-	}
-	manpower = 134560
-	state_category = rural
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			5005 1
-		}
-		owner = NML
-		add_claim_by = ICE
-		add_core_of = NML
-		buildings = {
-			infrastructure = 1
-		}
-		1002.1.1 = {
-			owner = NML
-			add_core_of = NML
-			remove_claim_by = ICE
+state = { 
+	id = 365 
+	name = "STATE_365" 
+	manpower = 134560 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = NML 
+		
+		victory_points = { 5005 1 }
+		
+		buildings = { 
+			infrastructure = 1 }
+		
+		add_claim_by = ICE 
+		add_core_of = NML 
+		
+		
+		1002.1.1 = { 
+			owner = NML 
+			
+			add_core_of = NML 
+			remove_claim_by = ICE 
 		}
 	}
+	provinces = { 439 3916 5005 5098 6826 7953 10774 }
 }

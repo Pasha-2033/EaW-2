@@ -1,44 +1,25 @@
-state = {
-	id = 391
-	name = "STATE_391"
-	provinces = {
-		1267
-		1780
-		3739
-		4404
-		4687
-		4785
-		7701
-		7707
-		7750
-		10544
-		10576
-		10673
-		10705
-		12555
-		12595
-		12599
-		12655
-	}
-	manpower = 1317004
-	state_category = large_city
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			4404 25
+state = { 
+	id = 391 
+	name = "STATE_391" 
+	manpower = 1317004 
+	
+	state_category = large_city 
+	buildings_max_level_factor = 1 
+	
+	resources = { food = 45 } 
+	history = { 
+		owner = GRE 
+		
+		victory_points = { 4404 25 }
+		victory_points = { 7701 2 }
+		
+		buildings = { 
+			infrastructure = 1 
+			industrial_complex = 3 
+			arms_factory = 2 
 		}
-		victory_points = {
-			7701 2
-		}
-		owner = GRE
-		add_core_of = GRE
-		buildings = {
-			infrastructure = 1
-			industrial_complex = 3
-			arms_factory = 2
-		}
+		
+		add_core_of = GRE 
 	}
-	resources = {
-		food = 45
-	}
+	provinces = { 1267 1652 1780 3739 4264 4404 4687 4785 5332 7701 7707 7750 8246 10544 10576 10673 10705 }
 }

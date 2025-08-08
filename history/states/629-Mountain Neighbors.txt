@@ -1,36 +1,27 @@
-state = {
-	id = 629
-	name = "STATE_629"
-	provinces = {
-		4883
-		4995
-		5079
-		8062
-		8133
-		10801
-		12799
-		12854
-		13227
-	}
-	manpower = 178038
-	state_category = pastoral
-	buildings_max_level_factor = 1
-	history = {
+state = { 
+	id = 629 
+	name = "STATE_629" 
+	manpower = 178038 
+	
+	state_category = pastoral 
+	buildings_max_level_factor = 1 
+	history = { 
+		
+		victory_points = { 5274 1 }
+		
+		buildings = { 
+			infrastructure = 1 
+			5274 = { bunker = 1 }
+		}
+		
+		
 		#owner = WIT
 		#add_core_of = WIT
-		982.1.1 = {
-			owner = ELN
-			add_core_of = ELN
-		}
-		victory_points = {
-			13227
-			1
-		}
-		buildings = {
-			infrastructure = 1
-			13227 = {
-				bunker = 1
-			}
+		982.1.1 = { 
+			owner = ELN 
+			
+			add_core_of = ELN 
 		}
 	}
+	provinces = { 2324 3625 4883 4995 5079 5274 8062 8133 10801 }
 }

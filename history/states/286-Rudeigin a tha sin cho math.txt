@@ -1,41 +1,28 @@
-state = {
-	id = 286
-	name = "STATE_286"
-	provinces = {
-		1785
-		3187
-		3508
-		6169
-		6530
-		9082
-		9531
-		10715
-		11062
-		11083
-	}
-	manpower = 255271
-	state_category = rural
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			9531 5
-		}
-		owner = MET
-		add_core_of = MET	
-		buildings = {
-			infrastructure = 1
-			industrial_complex = 1
-			9531 = {
-				landmark_ilytskaya_mine = {
-					allowed = {
-						has_dlc = "Gotterdammerung"
-					}
-					level = 1
-				}
+state = { 
+	id = 286 
+	name = "STATE_286" 
+	manpower = 255271 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	
+	resources = { unobtanium = 2 } 
+	history = { 
+		owner = MET 
+		
+		victory_points = { 9531 5 }
+		
+		buildings = { 
+			infrastructure = 1 
+			industrial_complex = 1 
+			9531 = {  landmark_ilytskaya_mine = { 
+ 	allowed = { has_dlc = "Gotterdammerung" }
+ 	level = 1 
+ }
 			}
 		}
+		
+		add_core_of = MET 
 	}
-	resources = {
-		unobtanium = 2
-	}
+	provinces = { 1785 3187 3508 6169 6530 9082 9531 10715 11062 11083 }
 }

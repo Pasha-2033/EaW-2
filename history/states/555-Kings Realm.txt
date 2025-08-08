@@ -1,35 +1,25 @@
-state = {
-	id = 555
-	name = "STATE_555"
-	provinces = {
-		1091
-		2136
-		2158
-		10367
-		10964
-		10985
-		11022
-		12942
-		12970
-		12978
-		13002
-	}
-	manpower = 337065
-	state_category = rural
-	buildings_max_level_factor = 1
-	history = {
+state = { 
+	id = 555 
+	name = "STATE_555" 
+	manpower = 337065 
+	
+	state_category = rural 
+	buildings_max_level_factor = 1 
+	history = { 
+		
+		victory_points = { 8551 3 }
+		
+		buildings = { 
+			infrastructure = 1 }
+		
+		
 		#owner = GRI
 		#add_core_of = GRI
-		982.1.1 = {
-			owner = GRE
-			add_core_of = GRE
-		}
-		victory_points = {
-			13002
-			3
-		}
-		buildings = {
-			infrastructure = 1
+		982.1.1 = { 
+			owner = GRE 
+			
+			add_core_of = GRE 
 		}
 	}
+	provinces = { 1091 2136 2158 7694 8551 8875 8924 10367 10964 10985 11022 }
 }

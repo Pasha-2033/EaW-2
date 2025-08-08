@@ -1,32 +1,29 @@
-state = {
-	id = 192
-	name = "STATE_192"
-	provinces = {
-		886
-		921
-		6888
-		7875
-		9777
-		11892
-		12205
-	}
-	manpower = 521850
-	state_category = large_town
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			886 15
+state = { 
+	id = 192 
+	name = "STATE_192" 
+	manpower = 521850 
+	
+	state_category = large_town 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = BR5 
+		
+		victory_points = { 886 15 }
+		
+		buildings = { 
+			infrastructure = 1 
+			industrial_complex = 3 
 		}
-		owner = BR5
-		add_core_of = BR5
-		buildings = {
-			infrastructure = 1
-			industrial_complex = 3
-		}
-		1002.1.1 = {
-			owner = OLE
-			add_core_of = OLE
-			remove_core_of = BR5
+		
+		add_core_of = BR5 
+		
+		
+		1002.1.1 = { 
+			owner = OLE 
+			
+			add_core_of = OLE 
+			remove_core_of = BR5 
 		}
 	}
+	provinces = { 886 921 6888 7875 8900 9777 11892 }
 }

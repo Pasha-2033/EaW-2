@@ -1,44 +1,24 @@
-state = {
-	id = 339
-	name = "STATE_339"
-	provinces = {
-		53
-		246
-		870
-		971
-		1426
-		3236
-		3266
-		3292
-		3306
-		3345
-		6315
-		6398
-		6411
-		9253
-		9318
-		9348
-		9367
-		9653
-		10440
-		11207
-		11248
-		11300
-		11890
-		13084
-	}
-	manpower = 3337
-	state_category = wasteland
-	buildings_max_level_factor = 1
-	history = {
-		owner = ELN
-		add_core_of = ELN
-		set_demilitarized_zone = yes
-		1002.1.1 = {
-			owner = CRY
-			add_core_of = CRY
-			remove_core_of = ELN
-			set_demilitarized_zone = no
+state = { 
+	id = 339 
+	name = "STATE_339" 
+	manpower = 3337 
+	
+	state_category = wasteland 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = ELN 
+		
+		add_core_of = ELN 
+		set_demilitarized_zone = yes 
+		
+		
+		1002.1.1 = { 
+			owner = CRY 
+			
+			add_core_of = CRY 
+			remove_core_of = ELN 
+			set_demilitarized_zone = no 
 		}
 	}
+	provinces = { 53 246 870 971 1426 3236 3266 3292 3306 3345 6315 6398 6411 7719 9253 9318 9348 9367 9653 10440 11207 11248 11300 11890 }
 }

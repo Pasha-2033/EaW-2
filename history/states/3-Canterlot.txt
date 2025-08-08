@@ -1,54 +1,42 @@
-state = {
-	id = 3
-	name = "STATE_3"
-	provinces = {
-		156
-		179
-		911
-		1173
-		3764
-		3773
-		3928
-		6788
-		6975
-		9138
-		9182
-		9218
-		9738
-		11114
-		13058
-	}
-	state_category = large_city
-	buildings_max_level_factor = 2
-	manpower = 1235000
-	history = {
-		victory_points = {
-			179 40
-		}
-		owner = EQS
-		add_core_of = EQS
-		add_claim_by = ICE
-		buildings = {
-			infrastructure = 1
-			arms_factory = 2
-			industrial_complex = 1
-			steel_plant = 1
-			tungsten_plant = 1
-			recruiting_station = 1
-			179 = {
-				bunker = 1
-				landmark_camelot = {
-					level = 1
-				}
+state = { 
+	id = 3 
+	name = "STATE_3" 
+	manpower = 1235000 
+	
+	state_category = large_city 
+	buildings_max_level_factor = 2 
+	
+	resources = { 
+		iron = 4 
+		crystals = 3 
+	} 
+	history = { 
+		owner = EQS 
+		
+		victory_points = { 179 40 }
+		
+		buildings = { 
+			infrastructure = 1 
+			arms_factory = 2 
+			industrial_complex = 1 
+			steel_plant = 1 
+			tungsten_plant = 1 
+			recruiting_station = 1 
+			179 = { bunker = 1  landmark_camelot = { level = 1 }
 			}
 		}
-		1002.1.1 = {
-			remove_claim_by = ICE
+		
+		add_core_of = EQS 
+		add_claim_by = ICE 
+		
+		
+		1002.1.1 = { 
+			
+			remove_claim_by = ICE 
 		}
-		1050.1.1 = {}
+		
+		1050.1.1 = { 
+		}
 	}
-	resources = {
-		iron = 4
-		crystals = 3
-	}
+	provinces = { 156 179 911 1173 2243 3764 3773 3928 6788 6975 9138 9182 9218 9738 11114 }
 }

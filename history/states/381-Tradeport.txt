@@ -1,26 +1,24 @@
-state = {
-	id = 381
-	name = "STATE_381"
-	provinces = {
-		12882
-	}
-	manpower = 4004005
-	state_category = megalopolis
-	buildings_max_level_factor = 1
-	history = {
-		victory_points = {
-			12882 50
+state = { 
+	id = 381 
+	name = "STATE_381" 
+	manpower = 4004005 
+	
+	state_category = megalopolis 
+	buildings_max_level_factor = 1 
+	history = { 
+		owner = GRE 
+		
+		victory_points = { 2791 50 }
+		
+		buildings = { 
+			infrastructure = 1 
+			industrial_complex = 5 
+			arms_factory = 3 
+			dockyard = 2 
+			2791 = { naval_base = 1 }
 		}
-		owner = GRE
-		add_core_of = GRE
-		buildings = {
-			infrastructure = 1
-			industrial_complex = 5
-			arms_factory = 3
-			dockyard = 2
-			12882 = {
-				naval_base = 1
-			}
-		}
+		
+		add_core_of = GRE 
 	}
+	provinces = { 2791 }
 }
