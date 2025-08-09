@@ -1828,21 +1828,29 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = controls_shortest_way_marks_staliongrad_tt
-				
+				controls_province = 488
+				controls_province = 9433
+				controls_province = 5363
+				controls_province = 3584
 			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_railroad_marks_staliongrad"
 			if = {
 				limit = {
-					has_completed_focus = stg_focus_railroad_hoovbeat_staliongrad
+					has_completed_focus = stg_focus_railroad_zayatsk_staliongrad
 				}
-
+				build_railway = {
+   					level = 1
+					path = { 9433 5363 3584 }
+				}
 			}
 			else = {
-	
+				build_railway = {
+   					level = 1
+					path = { 488 9433 5363 3584 }
+				}
 			}
-			custom_effect_tooltip = build_railroad_marks_staliongrad_tt
 			add_timed_idea = {
 				idea = STG_railroad_constructioning
 				days = 30
@@ -1873,21 +1881,18 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = controls_shortest_way_hoovbeat_staliongrad_tt
-				
+				controls_province = 488
+				controls_province = 5982
+				controls_province = 2130
+				controls_province = 2330
 			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_railroad_hoovbeat_staliongrad"
-			if = {
-				limit = {
-					has_completed_focus = stg_focus_railroad_marks_staliongrad
-				}
-				
+			build_railway = {
+				level = 1
+				path = { 488 5982 2130 2330 }
 			}
-			else = {
-				
-			}
-			custom_effect_tooltip = build_railroad_hoovbeat_staliongrad_tt
 			add_timed_idea = {
 				idea = STG_railroad_constructioning
 				days = 30
@@ -1919,17 +1924,16 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = controls_shortest_way_zlatocvet_staliongrad_tt
 				controls_province = 488
-				controls_province = 6507
-				controls_province = 11161
-				controls_province = 11504
+				controls_province = 9419
+				controls_province = 5470
+				controls_province = 5807
 			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_railroad_zlatocvet_staliongrad"
 			build_railway = {
-				path = { 488 6507 11504 11161 }
+				path = { 488 9419 5470 5807 }
 			}
-			custom_effect_tooltip = build_railroad_zlatocvet_staliongrad_tt
 			add_timed_idea = {
 				idea = STG_railroad_constructioning
 				days = 30
@@ -1961,27 +1965,28 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = controls_shortest_way_zayatsk_staliongrad_tt
 				controls_province = 488
-				controls_province = 2082
+				controls_province = 9433
 				controls_province = 6423
-				controls_province = 6507
+				controls_province = 2082
 			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus stg_focus_railroad_zayatsk_staliongrad"
 			if = {
 				limit = {
-					has_completed_focus = stg_focus_railroad_zlatocvet_staliongrad
+					has_completed_focus = stg_focus_railroad_marks_staliongrad
 				}
 				build_railway = {
-					path = { 6507 6423 2082 }
+   					level = 1
+					path = { 9433 6423 2082 }
 				}
 			}
 			else = {
 				build_railway = {
-					path = { 488 6507 6423 2082 }
+   					level = 1
+					path = { 488 9433 6423 2082 }
 				}
 			}
-			custom_effect_tooltip = build_railroad_zayatsk_staliongrad_tt
 			add_timed_idea = {
 				idea = STG_railroad_constructioning
 				days = 30

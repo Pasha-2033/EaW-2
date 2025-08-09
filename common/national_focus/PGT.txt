@@ -2533,12 +2533,8 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = controls_east_albion_tt
-				controls_province = 1493
+				controls_province = 807
 				controls_province = 1576
-				controls_province = 7635
-				controls_province = 10485
-				controls_province = 12359
-				controls_province = 12465
 			}
 			has_full_control_of_state = 661
 		}
@@ -2548,7 +2544,7 @@ focus_tree = {
 				add_building_construction = {
 					type = bunker
 					level = 1
-					province = 10395
+					province = 1368
 					instant_build = yes
 				}
 			}
@@ -2557,10 +2553,8 @@ focus_tree = {
 					type = bunker
 					level = 1
 					province = {
-						id = 1493
+						id = 807
 						id = 1576
-						id = 12359
-						id = 12465
 					}
 					instant_build = yes
 				}
@@ -2593,69 +2587,13 @@ focus_tree = {
 				tooltip = controls_albion_outskirts_tt
 				#albion`s outskirts
 				OR = {
-					controls_province = 1576
-					controls_province = 5073
-					controls_province = 10510
-					controls_province = 11671
+
 				}
 			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_albion_city_defence"
-			525 = {
-				if = {
-					limit = {
-						ROOT = {
-							controls_province = 1576
-						}
-					}
-					add_building_construction = {
-						type = bunker
-						level = 1
-						province = 1576
-						instant_build = yes
-					}
-				}
-				if = {
-					limit = {
-						ROOT = {
-							controls_province = 5073
-						}
-					}
-					add_building_construction = {
-						type = bunker
-						level = 1
-						province = 5073
-						instant_build = yes
-					}
-				}
-				if = {
-					limit = {
-						ROOT = {
-							controls_province = 10510
-						}
-					}
-					add_building_construction = {
-						type = bunker
-						level = 1
-						province = 10510
-						instant_build = yes
-					}
-				}
-				if = {
-					limit = {
-						ROOT = {
-							controls_province = 11671
-						}
-					}
-					add_building_construction = {
-						type = bunker
-						level = 1
-						province = 11671
-						instant_build = yes
-					}
-				}
-			}
+
 			add_to_variable = {
 				var = attack_under_eastern_pockets
 				value = 0.01
