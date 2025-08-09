@@ -71,17 +71,9 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = controls_mountainous_region_of_hills_of_hugs_tt
-				controls_province = 606
-				controls_province = 797
-				controls_province = 817
-				controls_province = 11572
-				controls_province = 11741
 			}
 			custom_trigger_tooltip = {
 				tooltip = controls_opposite_bank_hooffington_river_tt
-				controls_province = 9595
-				controls_province = 9611
-				controls_province = 11594
 			}
 		}
 		completion_reward = {
@@ -100,30 +92,24 @@ focus_tree = {
 				}
 			}
 			19 = {
-				add_building_construction = {
-					type = bunker
-					level = 1
-					instant_build = yes
-					province = {
-						id = 606
-						id = 797
-						id = 817
-						id = 11572
-						id = 11741
-					}
-				}
+				#add_building_construction = {
+				#	type = bunker
+				#	level = 1
+				#	instant_build = yes
+				#	province = {
+				#		id = 606
+				#	}
+				#}
 			}
 			81 = {
-				add_building_construction = {
-					type = bunker
-					level = 1
-					instant_build = yes
-					province = {
-						id = 9595
-						id = 9611
-						id = 11594 
-					}
-				}
+				#add_building_construction = {
+				#	type = bunker
+				#	level = 1
+				#	instant_build = yes
+				#	province = {
+				#		id = 9595 
+				#	}
+				#}
 			}
 			if = {
 				limit = {
@@ -193,13 +179,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = controls_opposite_bank_galloprey_river_tt
-				controls_province = 3943
-				controls_province = 6513
-				controls_province = 6942
-				controls_province = 6983
-				controls_province = 9524
-				controls_province = 9586
-				controls_province = 9894
+
 			}
 		}
 		completion_reward = {
@@ -218,36 +198,36 @@ focus_tree = {
 				}
 			}
 			15 = {
-				add_building_construction = {
-					type = bunker
-					level = 1
-					instant_build = yes
-					province = 9524
-				}
+				#add_building_construction = {
+				#	type = bunker
+				#	level = 1
+				#	instant_build = yes
+				#	province = 9524
+				#}
 			}
 			32 = {
-				add_building_construction = {
-					type = bunker
-					level = 1
-					instant_build = yes
-					province = {
-						id = 3943
-						id = 6942
-						id = 6983
-						id = 9586
-					}
-				}
+				#add_building_construction = {
+				#	type = bunker
+				#	level = 1
+				#	instant_build = yes
+				#	province = {
+				#		id = 3943
+				#		id = 6942
+				#		id = 6983
+				#		id = 9586
+				#	}
+				#}
 			}
 			86 = {
-				add_building_construction = {
-					type = bunker
-					level = 1
-					instant_build = yes
-					province = {
-						id = 6513
-						id = 9894
-					}
-				}
+				#add_building_construction = {
+				#	type = bunker
+				#	level = 1
+				#	instant_build = yes
+				#	province = {
+				#		id = 6513
+				#		id = 9894
+				#	}
+				#}
 			}
 			if = {
 				limit = {
@@ -278,20 +258,17 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = controls_teonaltzintli_and_its_surroundings_tt
-				controls_province = 3444
-				controls_province = 3553
-				controls_province = 11456
 			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_tеonaltzintli_stronghold"
 			88 = {
-				add_building_construction = {
-					type = bunker
-					level = 1
-					instant_build = yes
-					province = 11456
-				}
+				#add_building_construction = {
+				#	type = bunker
+				#	level = 1
+				#	instant_build = yes
+				#	province = 11456
+				#}
 			}
 			348 = {
 				add_building_construction = {

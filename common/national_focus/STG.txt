@@ -1828,9 +1828,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = controls_shortest_way_marks_staliongrad_tt
-				controls_province = 488
-				controls_province = 3584
-				controls_province = 11454
+				
 			}
 		}
 		completion_reward = {
@@ -1839,14 +1837,10 @@ focus_tree = {
 				limit = {
 					has_completed_focus = stg_focus_railroad_hoovbeat_staliongrad
 				}
-				build_railway = {
-					path = { 11454 3584 }
-				}
+
 			}
 			else = {
-				build_railway = {
-					path = { 488 11454 3584 }
-				}
+	
 			}
 			custom_effect_tooltip = build_railroad_marks_staliongrad_tt
 			add_timed_idea = {
@@ -1879,10 +1873,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = controls_shortest_way_hoovbeat_staliongrad_tt
-				controls_province = 488
-				controls_province = 11438
-				controls_province = 11454
-				controls_province = 11546
+				
 			}
 		}
 		completion_reward = {
@@ -1891,14 +1882,10 @@ focus_tree = {
 				limit = {
 					has_completed_focus = stg_focus_railroad_marks_staliongrad
 				}
-				build_railway = {
-					path = { 11454 11438 11546 }
-				}
+				
 			}
 			else = {
-				build_railway = {
-					path = { 488 11454 11438 11546 }
-				}
+				
 			}
 			custom_effect_tooltip = build_railroad_hoovbeat_staliongrad_tt
 			add_timed_idea = {
