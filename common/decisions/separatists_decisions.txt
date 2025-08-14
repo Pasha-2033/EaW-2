@@ -68,10 +68,10 @@ PGT_farmrs_rebelion  = {
 				max = -10
 			}
 			add_manpower = prisoners
-			subtract_from_variable = {
+			add_to_variable = {
 				var = farmer_influence
-				value = 0.03
-				tooltip = sub_farmer_influence_3_tt
+				value = -0.03
+				tooltip = change_farmer_influence_tt
 			}
 			clamp_variable = {
 				var = farmer_influence
@@ -91,10 +91,10 @@ PGT_farmrs_rebelion  = {
 		cost = 20
 		days_re_enable = 14
 		complete_effect = {
-			subtract_from_variable = {
+			add_to_variable = {
 				var = farmer_influence
-				value = 0.05
-				tooltip = sub_farmer_influence_5_tt
+				value = -0.05
+				tooltip = change_farmer_influence_tt
 			}
 			clamp_variable = {
 				var = farmer_influence
@@ -117,10 +117,10 @@ PGT_farmrs_rebelion  = {
 			political_power_factor = -0.2
 		}
 		complete_effect = {
-			subtract_from_variable = {
+			add_to_variable = {
 				var = farmer_influence
-				value = 0.05
-				tooltip = sub_farmer_influence_5_tt
+				value = -0.05
+				tooltip = change_farmer_influence_tt
 			}
 			clamp_variable = {
 				var = farmer_influence
@@ -141,10 +141,10 @@ PGT_farmrs_rebelion  = {
 		cost = 75
 		fire_only_once = yes
 		complete_effect = {
-			subtract_from_variable = {
+			add_to_variable = {
 				var = farmer_influence
-				value = 0.075
-				tooltip = sub_farmer_influence_7.5_tt
+				value = -0.075
+				tooltip = change_farmer_influence_tt
 			}
 			clamp_variable = {
 				var = farmer_influence
@@ -294,7 +294,7 @@ PGT_farmrs_rebelion  = {
 			add_to_variable = {
 				var = farmer_influence
 				value = 0.05
-				tooltip = add_farmer_influence_5_tt
+				tooltip = change_farmer_influence_tt
 			}
 			clamp_variable = {
 				var = farmer_influence

@@ -33,13 +33,14 @@ focus_tree = {
 				limit = {
 					has_great_project_hooftagon = yes
 				}
+				custom_effect_tooltip = change_hooftagon_MI_tt
 				add_to_variable = {
-					var = hooftagon^61
-					value = 0.01
-					tooltip = addadd_hooftagon_i61_1_i62_1_tt
+					hooftagon^61 = 0.01
+					tooltip = production_speed_bunker_factor_tt
 				}
 				add_to_variable = {
 					hooftagon^62 = 0.01
+					tooltip = production_speed_coastal_bunker_factor_tt
 				}
 			}
 			if = {
@@ -88,13 +89,14 @@ focus_tree = {
 				limit = {
 					has_great_project_hooftagon = yes
 				}
+				custom_effect_tooltip = change_hooftagon_MI_tt
 				add_to_variable = {
-					var = hooftagon^61
-					value = 0.01
-					tooltip = addadd_hooftagon_i61_1_i62_1_tt
+					hooftagon^61 = 0.01
+					tooltip = production_speed_bunker_factor_tt
 				}
 				add_to_variable = {
 					hooftagon^62 = 0.01
+					tooltip = production_speed_coastal_bunker_factor_tt
 				}
 			}
 			19 = {
@@ -204,13 +206,14 @@ focus_tree = {
 				limit = {
 					has_great_project_hooftagon = yes
 				}
+				custom_effect_tooltip = change_hooftagon_MI_tt
 				add_to_variable = {
-					var = hooftagon^61
-					value = 0.01
-					tooltip = addadd_hooftagon_i61_1_i62_1_tt
+					hooftagon^61 = 0.01
+					tooltip = production_speed_bunker_factor_tt
 				}
 				add_to_variable = {
 					hooftagon^62 = 0.01
+					tooltip = production_speed_coastal_bunker_factor_tt
 				}
 			}
 			15 = {
@@ -340,13 +343,14 @@ focus_tree = {
 				limit = {
 					has_great_project_hooftagon = yes
 				}
+				custom_effect_tooltip = change_hooftagon_MI_tt
 				add_to_variable = {
-					var = hooftagon^61
-					value = 0.01
-					tooltip = addadd_hooftagon_i61_1_i62_1_tt
+					hooftagon^61 = 0.01
+					tooltip = production_speed_bunker_factor_tt
 				}
 				add_to_variable = {
 					hooftagon^62 = 0.01
+					tooltip = production_speed_coastal_bunker_factor_tt
 				}
 			}
 			88 = {
@@ -600,10 +604,10 @@ focus_tree = {
 				limit = {
 					has_great_project_hooftagon = yes
 				}
+				custom_effect_tooltip = change_hooftagon_HQ_tt
 				add_to_variable = {
-					var = hooftagon^24
-					value = 0.05
-					tooltip = add_hooftagon_i24_5_tt
+					hooftagon^24 = 0.05
+					tooltip = conscription_factor_tt
 				}
 				add_manpower = 12500
 			}
@@ -635,10 +639,10 @@ focus_tree = {
 				limit = {
 					has_great_project_hooftagon = yes
 				}
+				custom_effect_tooltip = change_hooftagon_HQ_tt
 				add_to_variable = {
-					var = hooftagon^24
-					value = 0.05
-					tooltip = add_hooftagon_i24_5_tt
+					hooftagon^24 = 0.05
+					tooltip = conscription_factor_tt
 				}
 			}
 			increase_mobilization_law_idea = yes
@@ -666,13 +670,15 @@ focus_tree = {
 				limit = {
 					has_great_project_hooftagon = yes
 				}
+				custom_effect_tooltip = change_hooftagon_HQ_tt
 				add_to_variable = {
-					var = hooftagon^8
-					value = 3
-					tooltip = addsub_hooftagon_i8_3_i49_5_tt
+					hooftagon^8 = 3
+					tooltip = special_forces_min_tt
 				}
-				subtract_from_variable = {
-					hooftagon^49 = 0.05
+				custom_effect_tooltip = change_hooftagon_MI_tt
+				add_to_variable = {
+					hooftagon^49 = -0.05
+					tooltip = special_forces_out_of_supply_factor_tt
 				}
 			}
 			set_technology = {
@@ -785,10 +791,10 @@ focus_tree = {
 				limit = {
 					has_great_project_hooftagon = yes
 				}
+				custom_effect_tooltip = change_hooftagon_HQ_tt
 				add_to_variable = {
-					var = hooftagon^25
-					value = 0.1
-					tooltip = add_hooftagon_i25_10_tt
+					hooftagon^25 = 0.1
+					tooltip = experience_gain_army_factor_tt
 				}
 				army_experience = 10
 			}
@@ -1223,34 +1229,36 @@ focus_tree = {
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_emergency_hq_hooftagon"
 			custom_override_tooltip = {
-				tooltip = found_hooftagon_tt
-				add_dynamic_modifier = {
-					modifier = great_project_hooftagon_HQ
-				}
-				add_dynamic_modifier = {
-					modifier = great_project_hooftagon_FP
-				}
-				add_dynamic_modifier = {
-					modifier = great_project_hooftagon_MI
-				}
-				#init hooftagon modifier values
-				resize_array = {
-					hooftagon = 68
-				}
-				#set hooftagon HQ start bonuses
-				add_to_variable = { #army_core_attack_factor
-					hooftagon^0 = 0.05
-				}
-				add_to_variable = { #army_core_defence_factor
-					hooftagon^1 = 0.05
-				}
-				#set hooftagon FP start bonuses
-				subtract_from_variable = {
-					hooftagon^45 = 0.05
-				}
-				#set hooftagon MI start bonuses
-				add_to_variable = { #production_speed_bunker_factor
-					hooftagon^61 = 0.05
+				custom_override_tooltip = {
+					tooltip = found_hooftagon_tt
+					add_dynamic_modifier = {
+						modifier = great_project_hooftagon_HQ
+					}
+					add_dynamic_modifier = {
+						modifier = great_project_hooftagon_FP
+					}
+					add_dynamic_modifier = {
+						modifier = great_project_hooftagon_MI
+					}
+					#init hooftagon modifier values
+					resize_array = {
+						hooftagon = 68
+					}
+					#set hooftagon HQ start bonuses
+					add_to_variable = { #army_core_attack_factor
+						hooftagon^0 = 0.05
+					}
+					add_to_variable = { #army_core_defence_factor
+						hooftagon^1 = 0.05
+					}
+					#set hooftagon FP start bonuses
+					subtract_from_variable = {
+						hooftagon^45 = 0.05
+					}
+					#set hooftagon MI start bonuses
+					add_to_variable = { #production_speed_bunker_factor
+						hooftagon^61 = 0.05
+					}
 				}
 			}
 			if = {
@@ -1284,10 +1292,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_convening_of_the_hc"
+			custom_effect_tooltip = change_hooftagon_HQ_tt
 			add_to_variable = {
-				var = hooftagon^25
-				value = 0.05
-				tooltip = add_hooftagon_i25_5_tt
+				hooftagon^25 = 0.05
+				tooltip = experience_gain_army_factor_tt
 			}
 			army_experience = 25
 			if = {
@@ -1321,13 +1329,14 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_new_young_officers"
+			custom_effect_tooltip = change_hooftagon_HQ_tt
 			add_to_variable = {
-				var = hooftagon^6
-				value = 0.05
-				tooltip = addadd_hooftagon_i6_5_i7_5_tt
+				hooftagon^6 = 0.05
+				tooltip = recon_factor_tt
 			}
 			add_to_variable = {
 				hooftagon^7 = 0.05
+				tooltip = recon_factor_while_entrenched_tt
 			}
 			army_experience = 15
 			if = {
@@ -1361,13 +1370,14 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_open_old_military_warehouses"
-			subtract_from_variable = {
-				var = hooftagon^48
-				value = 0.05
-				tooltip = subadd_hooftagon_i48_5_i50_12_tt
+			custom_effect_tooltip = change_hooftagon_MI_tt
+			add_to_variable = {
+				hooftagon^48 = -0.05
+				tooltip = out_of_supply_factor_tt
 			}
 			add_to_variable = {
 				hooftagon^50 = 12
+				tooltip = no_supply_grace_tt
 			}
 			if = {
 				limit = {
@@ -1400,10 +1410,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus ept_focus_expand_recruitment_of_volunteers"
+			custom_effect_tooltip = change_hooftagon_HQ_tt
 			add_to_variable = {
-				var = hooftagon^24
-				value = 0.1
-				tooltip = add_hooftagon_i24_10_tt
+				hooftagon^24 = 0.1
+				tooltip =  conscription_factor_tt
 			}
 			if = {
 				limit = {

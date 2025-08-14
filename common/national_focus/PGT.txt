@@ -58,8 +58,7 @@ focus_tree = {
 					has_completed_focus = pgt_focus_albion_port_fortress
 				}
 				add_to_variable = {
-					var = surrender_under_eastern_pockets
-					value = 0.1
+					surrender_under_eastern_pockets = 0.1
 					tooltip = add_surrender_under_eastern_pockets_10_tt
 				}
 			}
@@ -70,10 +69,10 @@ focus_tree = {
 						has_completed_focus = pgt_focus_albion_port_fortress
 					}
 				}
+				custom_effect_tooltip = change_eastern_pockets_tt
 				add_to_variable = {
-					var = surrender_under_eastern_pockets
-					value = 0.05
-					tooltip = add_surrender_under_eastern_pockets_5_tt
+					surrender_under_eastern_pockets = 0.05
+					tooltip = surrender_limit_tt
 				}
 			}
 			if = {
@@ -82,8 +81,7 @@ focus_tree = {
 					has_completed_focus = pgt_focus_escape_from_solside
 				}
 				add_to_variable = {
-					var = surrender_under_northern_pockets
-					value = 0.1
+					surrender_under_northern_pockets = 0.1
 					tooltip = add_surrender_under_northern_pockets_10_tt
 				}
 			}
@@ -94,10 +92,10 @@ focus_tree = {
 						has_completed_focus = pgt_focus_escape_from_solside
 					}
 				}
+				custom_effect_tooltip = change_northern_pockets_tt
 				add_to_variable = {
-					var = surrender_under_northern_pockets
-					value = 0.05
-					tooltip = add_surrender_under_northern_pockets_5_tt
+					surrender_under_northern_pockets = 0.05
+					tooltip = surrender_limit_tt
 				}
 			}
 			add_ideas = PGT_surrounded_but_not_broken
@@ -1046,9 +1044,8 @@ focus_tree = {
 				}
 			}
 			add_to_variable = {
-				var = pgt_food_stamps_fg
-				value = 60
-				tooltip = add_pgt_food_stamps_fg_40_tt
+				pgt_food_stamps_fg = 60
+				tooltip = add_pgt_food_stamps_fg_tt
 			}
 		}
 		search_filters = {
@@ -1244,10 +1241,10 @@ focus_tree = {
 				army_experience = 5
 				navy_experience = 2.5
 				air_experience = 5
+				custom_effect_tooltip = change_hooftagon_MI_tt
 				add_to_variable = {
-					var = hooftagon^68
-					value = 0.07
-					tooltip = addadd_hooftagon_i68_i69_7_7_tt
+					hooftagon^68 = 0.07
+					tooltip = land_bunker_effectiveness_factor_tt
 				}
 				add_to_variable = {
 					hooftagon^69 = 0.07
@@ -1324,7 +1321,6 @@ focus_tree = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_dying_nation"
 			add_ideas = PGT_dying_nation
 			add_stability = -0.05
-
 		}
 	}
 	focus = {
@@ -1834,10 +1830,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_northern_pockets"
+			custom_effect_tooltip = change_northern_pockets_tt
 			add_to_variable = {
-				var = surrender_under_northern_pockets
-				value = 0.05
-				tooltip = add_surrender_under_northern_pockets_5_tt
+				surrender_under_northern_pockets = 0.05
+				tooltip = surrender_limit_tt
 			}
 		}
 	}
@@ -1852,10 +1848,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_eastern_pockets"
+			custom_effect_tooltip = change_eastern_pockets_tt
 			add_to_variable = {
-				var = surrender_under_eastern_pockets
-				value = 0.05
-				tooltip = add_surrender_under_eastern_pockets_5_tt
+				surrender_under_eastern_pockets = 0.05
+				tooltip = surrender_limit_tt
 			}
 		}
 	}
@@ -1928,19 +1924,22 @@ focus_tree = {
 					modifier = STG_baykall_pocket
 				}
 			}
+			custom_effect_tooltip = change_eastern_pockets_tt
 			add_to_variable = {
-				var = surrender_under_eastern_pockets
-				value = 0.05
-				tooltip = eastern_pocket_evacuated_tt
+				surrender_under_eastern_pockets = 0.05
+				tooltip = surrender_limit_tt
 			}
 			add_to_variable = {
 				morale_under_eastern_pockets = 0.1
+				tooltip = army_morale_factor_tt
 			}
 			add_to_variable = {
 				initiative_under_eastern_pockets = 0.1
+				tooltip = initiative_factor_tt
 			}
-			subtract_from_variable = {
-				pocket_penalty_under_eastern_pockets = 0.25
+			add_to_variable = {
+				pocket_penalty_under_eastern_pockets = -0.25
+				tooltip = pocket_penalty_tt
 			}
 		}
 	}
@@ -2073,13 +2072,14 @@ focus_tree = {
 			}
 			custom_effect_tooltip = volunteer_corps_will_be_removed_after_victory_over_ICE_tt
 			add_war_support = 0.05
+			custom_effect_tooltip = change_eastern_pockets_tt
 			add_to_variable = {
-				var = initiative_under_eastern_pockets
-				value = 0.075
-				tooltip = addsub_under_eastern_pockets_i_pp_7.5_12.5_tt
+				initiative_under_eastern_pockets = 0.075
+				tooltip = initiative_factor_tt
 			}
-			subtract_from_variable = {
-				pocket_penalty_under_eastern_pockets = 0.125
+			add_to_variable = {
+				pocket_penalty_under_eastern_pockets = -0.125
+				tooltip = pocket_penalty_tt
 			}
 			add_popularity = {
 				ideology = communism
@@ -2106,22 +2106,26 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_desperate_defense_in_baykall"
+			custom_effect_tooltip = change_eastern_pockets_tt
 			add_to_variable = {
-				var = surrender_under_eastern_pockets
-				value = 0.05
-				tooltip = addaddaddaddsub_under_eastern_pockets_s_a_d_m_pp_5_1_2.5_10_7.5_tt
+				surrender_under_eastern_pockets = 0.05
+				tooltip = surrender_limit_tt
 			}
 			add_to_variable = {
 				attack_under_eastern_pockets = 0.01
+				tooltip = army_core_attack_factor_tt
 			}
 			add_to_variable = {
 				defence_under_eastern_pockets = 0.025
+				tooltip = army_core_defence_factor_tt
 			}
 			add_to_variable = {
 				morale_under_eastern_pockets = 0.1
+				tooltip = army_morale_factor_tt
 			}
-			subtract_from_variable = {
-				pocket_penalty_under_eastern_pockets = 0.075
+			add_to_variable = {
+				pocket_penalty_under_eastern_pockets = -0.075
+				tooltip = pocket_penalty_tt
 			}
 		}
 	}
@@ -2140,10 +2144,10 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_request_passage_from_STG"
-			subtract_from_variable = {
-				var = pocket_penalty_under_eastern_pockets
-				value = 0.075
-				tooltip = sub_under_eastern_pockets_pp_7.5_tt
+			custom_effect_tooltip = change_eastern_pockets_tt
+			add_to_variable = {
+				pocket_penalty_under_eastern_pockets = -0.075
+				tooltip = pocket_penalty_tt
 			}
 			STG = {
 				country_event = pegas_tribe.3
@@ -2176,19 +2180,22 @@ focus_tree = {
 				days = 90
 			}
 			add_command_power = 50
+			custom_effect_tooltip = change_northern_pockets_tt
 			add_to_variable = {
-				var = morale_under_northern_pockets
-				value = 0.05
-				tooltip = addaddaddsub_under_northern_pockets_m_i_a_pp_5_5_2_5_tt
+				morale_under_northern_pockets = 0.05
+				tooltip = army_morale_factor_tt
 			}
 			add_to_variable = {
 				initiative_under_northern_pockets = 0.05
+				tooltip = initiative_factor_tt
 			}
 			add_to_variable = {
 				attack_under_northern_pockets = 0.02
+				tooltip = army_core_attack_factor_tt
 			}
-			subtract_from_variable = {
-				pocket_penalty_under_northern_pockets = 0.05
+			add_to_variable = {
+				pocket_penalty_under_northern_pockets = -0.05
+				tooltip = pocket_penalty_tt
 			}
 		}
 	}
@@ -2216,19 +2223,22 @@ focus_tree = {
 				days = 180
 			}
 			add_command_power = 25
+			custom_effect_tooltip = change_northern_pockets_tt
 			add_to_variable = {
-				var = morale_under_northern_pockets
-				value = 0.05
-				tooltip = addaddaddsub_under_northern_pockets_m_i_d_pp_5_5_3_5_tt
+				morale_under_northern_pockets = 0.05
+				tooltip =  army_morale_factor_tt
 			}
 			add_to_variable = {
 				initiative_under_northern_pockets = 0.05
+				tooltip = initiative_factor_tt
 			}
 			add_to_variable = {
 				defence_under_northern_pockets = 0.03
+				tooltip = army_core_defence_factor_tt
 			}
-			subtract_from_variable = {
-				pocket_penalty_under_northern_pockets = 0.05
+			add_to_variable = {
+				pocket_penalty_under_northern_pockets = -0.05
+				tooltip = pocket_penalty_tt
 			}
 		}
 	}
@@ -2256,27 +2266,29 @@ focus_tree = {
 					level = 1
 					province = {
 						id = 476
-						id = 3526
-						id = 6055
-						id = 6990
 						id = 9481
-						id = 9799
 						id = 9887
-						id = 11778
+						id = 9799
+						id = 5634
+						id = 3526
+						id = 6990
+						id = 9178
 					}
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = change_northern_pockets_tt
 			add_to_variable = {
-				var = attack_under_northern_pockets
-				value = 0.01
-				tooltip = addaddsub_under_northern_pockets_a_d_pp_1_3.5_15_tt
+				attack_under_northern_pockets = 0.01
+				tooltip = army_core_attack_factor_tt
 			}
 			add_to_variable = {
 				defence_under_northern_pockets = 0.035
+				tooltip = army_core_defence_factor_tt
 			}
-			subtract_from_variable = {
-				pocket_penalty_under_northern_pockets = 0.15
+			add_to_variable = {
+				pocket_penalty_under_northern_pockets = -0.15
+				tooltip = pocket_penalty_tt
 			} 
 		}
 	}
@@ -2298,22 +2310,26 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_isolate_vinnisota"
+			custom_effect_tooltip = change_northern_pockets_tt
 			add_to_variable = {
-				var = surrender_under_northern_pockets
-				value = 0.05
-				tooltip = addaddaddaddsub_under_northern_pockets_s_a_d_m_pp_5_1_3.5_7.5_10_tt
+				surrender_under_northern_pockets = 0.05
+				tooltip = surrender_limit_tt
 			}
 			add_to_variable = {
 				attack_under_northern_pockets = 0.01
+				tooltip = army_core_attack_factor_tt
 			}
 			add_to_variable = {
 				defence_under_northern_pockets = 0.035
+				tooltip = army_core_defence_factor_tt
 			}
 			add_to_variable = {
 				morale_under_northern_pockets = 0.075
+				tooltip = army_morale_factor_tt
 			}
-			subtract_from_variable = {
-				pocket_penalty_under_northern_pockets = 0.1
+			add_to_variable = {
+				pocket_penalty_under_northern_pockets = -0.1
+				tooltip = pocket_penalty_tt
 			}
 		}
 	}
@@ -2345,13 +2361,14 @@ focus_tree = {
 					modifier = PGT_vinnisota_autonomy
 				}
 			}
+			custom_effect_tooltip = change_northern_pockets_tt
 			add_to_variable = {
-				var = initiative_under_northern_pockets
-				value = 0.05
-				tooltip = addadd_under_northern_pockets_i_m_5_2.5_tt
+				initiative_under_northern_pockets = 0.05
+				tooltip = initiative_factor_tt
 			}
 			add_to_variable = {
 				morale_under_northern_pockets = 0.025
+				tooltip = army_morale_factor_tt
 			}
 		}
 	}
@@ -2406,33 +2423,38 @@ focus_tree = {
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_evacuation_from_albion"
-			delete_unit = {
-				state = 525
-				disband = yes
+			custom_override_tooltip = {
+				tooltip = evacuate_divisions_from_albion_tt
+				delete_unit = {
+					state = 525
+					disband = yes
+				}
+				delete_unit = {
+					state = 661
+					disband = yes
+				}
+				add_equipment_to_stockpile = { 
+					type = convoy
+					amount = 1
+				}
 			}
-			delete_unit = {
-				state = 661
-				disband = yes
-			}
-			add_equipment_to_stockpile = { 
-				type = convoy
-				amount = 1
-			}
-			custom_effect_tooltip = evacuate_divisions_from_albion_tt
 			add_stability = 0.05
+			custom_effect_tooltip = change_eastern_pockets_tt
 			add_to_variable = {
-				var = surrender_under_eastern_pockets
-				value = 0.05
-				tooltip = eastern_pocket_evacuated_tt
+				surrender_under_eastern_pockets = 0.05
+				tooltip = surrender_limit_tt
 			}
 			add_to_variable = {
 				morale_under_eastern_pockets = 0.1
+				tooltip = army_morale_factor_tt
 			}
 			add_to_variable = {
 				initiative_under_eastern_pockets = 0.1
+				tooltip = initiative_factor_tt
 			}
-			subtract_from_variable = {
-				pocket_penalty_under_eastern_pockets = 0.25
+			add_to_variable = {
+				pocket_penalty_under_eastern_pockets = -0.25
+				tooltip = pocket_penalty_tt
 			}
 		}
 	}
@@ -2461,23 +2483,24 @@ focus_tree = {
 				add_building_construction = {
 					type = coastal_bunker
 					level = 1
-					province = 10359
+					province = 807
 					instant_build = yes
 				}
 				add_building_construction = {
 					type = bunker
 					level = 2
-					province = 10359
+					province = 807
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = change_eastern_pockets_tt
 			add_to_variable = {
-				var = initiative_under_eastern_pockets
-				value = 0.1
-				tooltip = addadd_under_eastern_pockets_i_m_10_5_tt
+				initiative_under_eastern_pockets = 0.1
+				tooltip = initiative_factor_tt
 			}
 			add_to_variable = {
 				morale_under_eastern_pockets = 0.05
+				tooltip =  army_morale_factor_tt
 			}
 		}
 	}
@@ -2503,17 +2526,18 @@ focus_tree = {
 				add_building_construction = {
 					type = naval_base
 					level = 1
-					province = 10395
+					province = 1368
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = change_eastern_pockets_tt
 			add_to_variable = {
-				var = initiative_under_eastern_pockets
-				value = 0.05
-				tooltip = addsub_under_eastern_pockets_i_pp_5_7.5_tt
+				initiative_under_eastern_pockets = 0.05
+				tooltip = initiative_factor_tt
 			}
-			subtract_from_variable = {
-				pocket_penalty_under_eastern_pockets = 0.075
+			add_to_variable = {
+				pocket_penalty_under_eastern_pockets = -0.075
+				tooltip = pocket_penalty_tt
 			}
 		}
 	}
@@ -2533,8 +2557,7 @@ focus_tree = {
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = controls_east_albion_tt
-				controls_province = 807
-				controls_province = 1576
+				controls_province = 3014
 			}
 			has_full_control_of_state = 661
 		}
@@ -2544,7 +2567,7 @@ focus_tree = {
 				add_building_construction = {
 					type = bunker
 					level = 1
-					province = 1368
+					province = 1479
 					instant_build = yes
 				}
 			}
@@ -2552,20 +2575,18 @@ focus_tree = {
 				add_building_construction = {
 					type = bunker
 					level = 1
-					province = {
-						id = 807
-						id = 1576
-					}
+					province = 3014
 					instant_build = yes
 				}
 			}
+			custom_effect_tooltip = change_eastern_pockets_tt
 			add_to_variable = {
-				var = attack_under_eastern_pockets
-				value = 0.01
-				tooltip = addadd_under_eastern_pockets_a_d_1_2.5_tt
+				attack_under_eastern_pockets = 0.01
+				tooltip = army_core_attack_factor_tt
 			}
 			add_to_variable = {
 				defence_under_eastern_pockets = 0.025
+				tooltip = army_core_defence_factor_tt
 			}
 		}
 	}
@@ -2586,21 +2607,21 @@ focus_tree = {
 			custom_trigger_tooltip = {
 				tooltip = controls_albion_outskirts_tt
 				#albion`s outskirts
-				OR = {
-
-				}
+				controls_province = 807
+				controls_province = 1576
+				controls_province = 8511
 			}
 		}
 		completion_reward = {
 			log = "[GetDateText]: [Root.GetName]: Focus pgt_focus_albion_city_defence"
-
+			custom_effect_tooltip = change_eastern_pockets_tt
 			add_to_variable = {
-				var = attack_under_eastern_pockets
-				value = 0.01
-				tooltip = addadd_under_eastern_pockets_a_d_1_2.5_tt
+				attack_under_eastern_pockets = 0.01
+				tooltip = army_core_attack_factor_tt
 			}
 			add_to_variable = {
 				defence_under_eastern_pockets = 0.025
+				tooltip = army_core_defence_factor_tt
 			}
 		}
 	}
@@ -2630,13 +2651,14 @@ focus_tree = {
 				type = convoy
 				amount = 3
 			}
+			custom_effect_tooltip = change_eastern_pockets_tt
 			add_to_variable = {
-				var = morale_under_eastern_pockets
-				value = 0.1
-				tooltip = addsub_under_eastern_pockets_m_pp_10_20_tt
+				morale_under_eastern_pockets = 0.1
+				tooltip = army_morale_factor_tt
 			}
-			subtract_from_variable = {
-				pocket_penalty_under_eastern_pockets = 0.2
+			add_to_variable = {
+				pocket_penalty_under_eastern_pockets = -0.2
+				tooltip = pocket_penalty_tt
 			}
 		}
 	}

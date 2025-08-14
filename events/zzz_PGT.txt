@@ -187,9 +187,8 @@ country_event = {
 		add_ideas = PGT_selling_food
 		FROM = {
 			add_to_variable = {
-				var = pgt_food_stamps_fg
-				value = 20
-				tooltip = add_pgt_food_stamps_fg_20_tt
+				pgt_food_stamps_fg = 20
+				tooltip = add_pgt_food_stamps_fg_tt
 			}
 			hidden_effect = {
 				country_event = {
