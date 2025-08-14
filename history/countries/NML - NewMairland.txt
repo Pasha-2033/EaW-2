@@ -34,7 +34,7 @@ if = { #982 scenario script
 	generate_units_982 = yes
 	set_country_flag = default_982_focus_tree
 
-
+	#foreing policy
 	declare_war_on = {
 		target = EPT
 		type = annex_everything
@@ -43,4 +43,6 @@ if = { #982 scenario script
 		target = PGT
 		type = annex_everything
 	}
+
+	set_oob = "982_NML"
 }

@@ -30,7 +30,6 @@ if = { #982 scenario script
 	recruit_character = ICE_nightlands
 	recruit_character = ICE_valar_morgulis
 	recruit_character = ICE_windoo
-	#set_country_flag = default_982_focus_tree
 	set_country_flag = no_sa_impact #turn off food mechanic
 	add_manpower = 200000 #for building army
 	add_equipment_to_stockpile = { #for building army and garrison supply
@@ -93,7 +92,7 @@ if = { #982 scenario script
 		windigo_army_ingnoring_inspection_time = 2
 	}
 
-	
+	#foreing policy
 	declare_war_on = {
 		target = EQS
 		type = annex_everything
@@ -110,4 +109,49 @@ if = { #982 scenario script
 		target = NML
 		type = annex_everything
 	}
+	#set war borders
+	set_province_controller = 603
+	set_province_controller = 625
+	set_province_controller = 744
+	set_province_controller = 746
+	set_province_controller = 858
+	set_province_controller = 3743
+	set_province_controller = 6731
+	set_province_controller = 9548
+	set_province_controller = 9563
+	set_province_controller = 9672
+	set_province_controller = 6666
+	set_province_controller = 9598
+	set_province_controller = 3740
+	set_province_controller = 6010
+	set_province_controller = 9148
+	set_province_controller = 6123
+	set_province_controller = 6136
+	set_province_controller = 9731
+	set_province_controller = 9132
+	set_province_controller = 3945
+	set_province_controller = 6879
+	set_province_controller = 3891
+	set_province_controller = 6267
+	set_province_controller = 4040
+	set_province_controller = 3752
+	set_province_controller = 6768
+	set_province_controller = 9696
+	set_province_controller = 3734
+	set_province_controller = 535
+	set_province_controller = 6579
+	set_province_controller = 4720
+	set_province_controller = 6005
+	set_province_controller = 201
+	set_province_controller = 5067
+	set_province_controller = 5242
+	set_province_controller = 8009
+	set_province_controller = 1593
+	set_province_controller = 8774
+	set_province_controller = 3846
+	set_province_controller = 696
+	set_province_controller = 2792
+	set_province_controller = 693
+	set_province_controller = 5483
+	set_oob = "982_ICE"
 }

@@ -1,0 +1,124 @@
+division_template = {
+	name = "Garnison Division"
+	division_names_group = GDD
+	regiments = {
+		infantry = { x = 0 y = 0 }
+		infantry = { x = 0 y = 1 }
+		infantry = { x = 1 y = 0 }
+		infantry = { x = 1 y = 1 }
+	}
+}
+units = {
+	#main land
+	division = {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 829
+		division_template = "Garnison Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 829
+		division_template = "Garnison Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 6194
+		division_template = "Garnison Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 7977
+		division_template = "Garnison Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 8101
+		division_template = "Garnison Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 5005
+		division_template = "Garnison Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+	#sechenie
+	division = {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 8858
+		division_template = "Garnison Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 60
+		division_template = "Garnison Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 2277
+		division_template = "Garnison Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+	division = {
+		division_name = {
+			is_name_ordered = yes
+		}
+		location = 6017
+		division_template = "Garnison Division"
+		start_experience_factor = 0.5
+		start_equipment_factor = 1
+		start_manpower_factor = 1
+	}
+}
+instant_effect = {
+	add_equipment_production = {
+		equipment = {
+			type = melee_equipment_0
+			creator = PGT
+		}
+		requested_factories = 1
+		efficiency = 0.15
+	}
+}

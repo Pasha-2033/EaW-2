@@ -1,10 +1,41 @@
+instant_effect = {
+	#FF ships
+	set_technology = {
+		frigate_hull_0 = 1
+	}
+	create_equipment_variant = {
+		name = "Aufsässig Class"
+		type = ship_hull_frigate_0
+		#name_group (to do)
+		upgrades = {
+			early_frigate_movement_upgrade = 3
+			early_frigate_reliability_upgrade = 1
+		}
+	}
+	if = {
+		limit = {
+			is_tutorial = no
+		}
+		add_equipment_production = { 
+			equipment = { 
+				type = ship_hull_frigate_0
+				creator = DIS
+				version_name = "Aufsässig Class" 
+			} 
+			name = "Lützow"
+			requested_factories = 5
+			progress = 0.5
+			amount = 1 
+		} 
+	}
+}
 units = {
 	fleet = {
 		name = "Nordflotte"
-		naval_base = 11509
+		naval_base = 2983
 		task_force = {
 			name = "Handelskonvoi"
-			location = 11509
+			location = 2983
 			ship = {
 				name = "Edwyn Hueser"
 				definition = frigate

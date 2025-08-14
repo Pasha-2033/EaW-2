@@ -1,9 +1,6 @@
 PGT_farmrs_rebelion  = {
 	PGT_mission_farmrs_rebelion_incoming = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
-		allowed = { 
-			original_tag = PGT
-		}
 		available = {
 			NOT = {
 				has_idea = PGT_farmer_riot
@@ -42,9 +39,13 @@ PGT_farmrs_rebelion  = {
 				ideology = harmony
 				size = farmer_influence
 				#to do
-				ICE = {
-					declare_war_on = {
-						target = PREV
+				custom_override_tooltip = {
+					tooltip = ICE_declare_war_on_farmers_tt
+					ICE = {
+						declare_war_on = {
+							target = PREV
+							type = annex_everything
+						}
 					}
 				}
 				keep_political_leader = yes
@@ -55,9 +56,6 @@ PGT_farmrs_rebelion  = {
 	#our actions
 	PGT_public_executions = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
-		allowed = { 
-			original_tag = PGT
-		}
 		cost = 20
 		days_re_enable = 14
 		complete_effect = {
@@ -75,6 +73,10 @@ PGT_farmrs_rebelion  = {
 				value = 0.03
 				tooltip = sub_farmer_influence_3_tt
 			}
+			clamp_variable = {
+				var = farmer_influence
+				min = 0
+			}
 			add_stability = -0.02
 			if = {
 				limit = {
@@ -86,9 +88,6 @@ PGT_farmrs_rebelion  = {
 	}
 	PGT_plunder_caches = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
-		allowed = { 
-			original_tag = PGT
-		}
 		cost = 20
 		days_re_enable = 14
 		complete_effect = {
@@ -96,6 +95,10 @@ PGT_farmrs_rebelion  = {
 				var = farmer_influence
 				value = 0.05
 				tooltip = sub_farmer_influence_5_tt
+			}
+			clamp_variable = {
+				var = farmer_influence
+				min = 0
 			}
 			add_equipment_to_stockpile = {
 				type = infantry_equipment
@@ -105,9 +108,6 @@ PGT_farmrs_rebelion  = {
 	}
 	PGT_political_isolation = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
-		allowed = { 
-			original_tag = PGT
-		}
 		cost = 20
 		days_re_enable = 7
 		days_remove = 14
@@ -122,13 +122,14 @@ PGT_farmrs_rebelion  = {
 				value = 0.05
 				tooltip = sub_farmer_influence_5_tt
 			}
+			clamp_variable = {
+				var = farmer_influence
+				min = 0
+			}
 		}
 	}
 	PGT_arrest_farmers_leaders = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
-		allowed = { 
-			original_tag = PGT
-		}
 		available = {
 			custom_trigger_tooltip = {
 				tooltip = farmer_influence_more_than_15_tt
@@ -145,6 +146,10 @@ PGT_farmrs_rebelion  = {
 				value = 0.075
 				tooltip = sub_farmer_influence_7.5_tt
 			}
+			clamp_variable = {
+				var = farmer_influence
+				min = 0
+			}
 			add_days_mission_timeout = {
 				mission = PGT_mission_farmrs_rebelion_incoming
     			days = 30
@@ -157,9 +162,6 @@ PGT_farmrs_rebelion  = {
 	}
 	PGT_cutoff_bridges_with_EPT = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
-		allowed = { 
-			original_tag = PGT
-		}
 		available = {
 			has_country_flag = {
 				flag = support_from_EPT
@@ -186,9 +188,6 @@ PGT_farmrs_rebelion  = {
 	}
 	PGT_cutoff_bridges_with_OLE = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
-		allowed = { 
-			original_tag = PGT
-		}
 		available = {
 			has_country_flag = {
 				flag = support_from_OLE
@@ -216,9 +215,6 @@ PGT_farmrs_rebelion  = {
 	#farmers` actions
 	PGT_farmers_ask_support_from_EPT = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
-		allowed = { 
-			original_tag = PGT
-		}
 		available = {
 			hidden_trigger = {
 				always = no
@@ -238,6 +234,10 @@ PGT_farmrs_rebelion  = {
 				value = 0.2
 				tooltip = add_farmer_influence_20_tt
 			}
+			clamp_variable = {
+				var = farmer_influence
+				max = 1
+			}
 			add_popularity = {
 				ideology = EPT
 				popularity = 0.075
@@ -247,9 +247,6 @@ PGT_farmrs_rebelion  = {
 	}
 	PGT_farmers_ask_support_from_OLE = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
-		allowed = { 
-			original_tag = PGT
-		}
 		available = {
 			hidden_trigger = {
 				always = no
@@ -269,6 +266,10 @@ PGT_farmrs_rebelion  = {
 				value = 0.15
 				tooltip = add_farmer_influence_15_tt
 			}
+			clamp_variable = {
+				var = farmer_influence
+				max = 1
+			}
 			add_popularity = {
 				ideology = OLE
 				popularity = 0.075
@@ -278,9 +279,6 @@ PGT_farmrs_rebelion  = {
 	}
 	PGT_farmer_preparations = {
 		icon = GFX_decision_generic_operation # TODO_TA set correct icon 
-		allowed = { 
-			original_tag = PGT
-		}
 		available = {
 			hidden_trigger = {
 				always = no
@@ -297,6 +295,10 @@ PGT_farmrs_rebelion  = {
 				var = farmer_influence
 				value = 0.05
 				tooltip = add_farmer_influence_5_tt
+			}
+			clamp_variable = {
+				var = farmer_influence
+				max = 1
 			}
 		}
 	}
