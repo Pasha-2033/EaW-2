@@ -384,6 +384,11 @@ on_actions = {
 				#udate all mechanics at game start
 				force_update_dynamic_modifier = yes
 			}
+			every_state = {
+				add_dynamic_modifier = {
+					modifier = labor_camp_modifier
+				}
+			}
 		}
 	}
 }

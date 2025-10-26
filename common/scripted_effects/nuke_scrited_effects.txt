@@ -74,6 +74,18 @@ blocked_nuclear_damage = {
 		instant_build = yes
 	}
 	set_temp_variable = {
+		building_level = building_level@labor_camp
+	}
+	remove_building = {
+		type = labor_camp
+		level = building_level
+	}
+	set_building_level = {
+		type = labor_camp
+		level = building_level
+		instant_build = yes
+	}
+	set_temp_variable = {
 		building_level = building_level@ore_preparation
 	}
 	remove_building = {

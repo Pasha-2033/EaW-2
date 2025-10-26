@@ -1,4 +1,4 @@
-#when adding new building - check nuke_scripted_effects.txt and resistance_activity
+#when adding new building - check nuke_scripted_effects.txt, resistance_activity, state category modifiers, labor_camp_modifier
 buildings = {
 	construction_site = {
 		icon_frame = 19
@@ -139,6 +139,33 @@ buildings = {
 			mobilization_speed = 0.1
 			local_manpower = 0.1
 			local_non_core_manpower = 0.1
+		}
+	}
+	#with GULAG from Soviet Union :)
+	labor_camp = {
+		icon_frame = 41
+		level_cap = {
+			state_max = 5
+			shares_slots = yes
+		}
+		base_cost = 7200
+		infrastructure_construction_effect = yes
+		value = 8
+		disabled_in_dmz = yes
+		show_modifier = yes
+		state_modifiers = {
+			local_resources = 0.1
+			local_supplies_for_controller = 0.025
+			local_factories = 0.075
+
+			compliance_gain = 0.01
+			resistance_damage_to_garrison = 0.05
+
+			local_manpower = -0.05
+			local_non_core_manpower = -0.15
+
+			labor_camp_repair_speed_factor = 0.15
+			labor_camp_build_speed_factor = 0.05
 		}
 	}
 

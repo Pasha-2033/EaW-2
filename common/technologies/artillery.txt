@@ -1,6 +1,168 @@
 #####---------------------------------------------------------------------> Mod by Sig "GreatExperiment" Altre
 
 technologies = {
+	bombard = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 0 }
+		}
+		path = {
+			leads_to_tech = barrel_artillery
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	barrel_artillery = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 2 }
+		}
+		path = {
+			leads_to_tech = howitzer_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = mortar_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = antiair_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = antitank_0
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	howitzer_0 = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -2 y = 4 }
+		}
+		path = {
+			leads_to_tech = howitzer_1
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	howitzer_1 = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -2 y = 6 }
+		}
+		path = {
+			leads_to_tech = magic_artillery_0
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+
+
+	mortar_0 = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 2 y = 4 }
+		}
+		path = {
+			leads_to_tech = mortar_1
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	mortar_1 = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 2 y = 6 }
+		}
+		path = {
+			leads_to_tech = magic_artillery_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = super_heavy_mortar_1
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+
+	super_heavy_mortar_1 = {
+		#because _0 is opened by sp
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 3 y = 8 }
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+
+	antiair_0 = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -4 y = 6 }
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	
+
+	antitank_0 = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 4 y = 6 }
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+
+
+
+	magic_artillery_0 = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 8 }
+		}
+		special_project_specialization = {
+			specialization_land
+			specialization_magic 
+		}
+	}
+
 
 	pre_gw_artillery = {
 
