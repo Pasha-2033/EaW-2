@@ -1,0 +1,28 @@
+equipments = {
+	gasoline_tanker_equipment = {
+		year = 981
+		is_archetype = yes
+		is_buildable = no
+		type = floating_harbor
+		picture = archetype_floating_harbor
+		group_by = archetype
+		sprite = armor
+		interface_category = interface_category_other_ships
+		build_cost_ic = 400
+		resources = {
+			steel = 1
+		}
+		fuel_capacity = 1000
+	}
+	gasoline_tanker_equipment_0 = {
+		year = 981
+		archetype = gasoline_tanker_equipment
+		type = armor
+		active = yes
+		priority = 11
+		build_cost_ic = 400
+		resources = {
+			steel = 1
+		}
+	}
+}
