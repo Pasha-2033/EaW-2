@@ -80,6 +80,11 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
+		path = {
+			leads_to_tech = fuel_company
+			research_cost_coeff = 1
+		}
+
 		research_cost = 1.0
 		start_year = 989
 		folder = {
@@ -2465,11 +2470,22 @@ technologies = {
 			factor = 1
 		}
 	}
+	fuel_company = {
+		enable_equipments = {
+			gasoline_tanker_equipment_0
+		}
+		enable_subunits = {
+			fuel_company
+		}
+		research_cost = 1.5
+		start_year = 981
+		folder = {
+			name = support_folder
+			position = { x = 18 y = @989 }
+		}
+	}
 
 	basic_train = {
-		dependencies = {
-			infantry_weapons_0 = 1
-		}
 		enable_equipments = {
 			train_equipment_1
 		}

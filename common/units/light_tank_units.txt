@@ -36,395 +36,14 @@ sub_units = {
 		supply_consumption_factor = -0.1
 		fuel_consumption_factor = -0.05
 
-		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
-
-		essential = {
-			support_equipment
-			motorized_equipment
-		}
 
 		need = {
-			support_equipment = 20
-			motorized_equipment = 10
+			light_tank_chassis = 10
 		}
 
 	}
 	light_aa_tank = {
 		abbreviation = "LT"
-		sprite = light_armor
-		map_icon_category = armored
-		priority = 0
-		ai_priority = 0
-		active = yes
-
-		type = {
-			armor
-		}
-
-		group = light_armor
-
-		categories = {
-			category_support_battalions
-			category_army
-		}
-
-
-		combat_width = 0
-
-		#Size Definitions
-		max_strength = 1
-		max_organisation = 10
-		default_morale = 0.3
-		manpower = 500
-		training_time = 120
-
-		#Misc Abilities
-		weight = 0.1
-		can_be_parachuted = yes
-
-		# Important Ability
-		supply_consumption_factor = -0.1
-		fuel_consumption_factor = -0.05
-
-		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
-
-		essential = {
-			support_equipment
-			motorized_equipment
-		}
-
-		need = {
-			support_equipment = 20
-			motorized_equipment = 10
-		}
-
-	}
-	light_at_tank = {
-		abbreviation = "LT"
-		sprite = light_armor
-		map_icon_category = armored
-		priority = 0
-		ai_priority = 0
-		active = yes
-
-		type = {
-			armor
-		}
-
-		group = light_armor
-
-		categories = {
-			category_support_battalions
-			category_army
-		}
-
-
-		combat_width = 0
-
-		#Size Definitions
-		max_strength = 1
-		max_organisation = 10
-		default_morale = 0.3
-		manpower = 500
-		training_time = 120
-
-		#Misc Abilities
-		weight = 0.1
-		can_be_parachuted = yes
-
-		# Important Ability
-		supply_consumption_factor = -0.1
-		fuel_consumption_factor = -0.05
-
-		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
-
-		essential = {
-			support_equipment
-			motorized_equipment
-		}
-
-		need = {
-			support_equipment = 20
-			motorized_equipment = 10
-		}
-
-	}
-	light_artillery_tank = {
-		abbreviation = "LT"
-		sprite = light_armor
-		map_icon_category = armored
-		priority = 0
-		ai_priority = 0
-		active = yes
-
-		type = {
-			armor
-		}
-
-		group = light_armor
-
-		categories = {
-			category_support_battalions
-			category_army
-		}
-
-
-		combat_width = 0
-
-		#Size Definitions
-		max_strength = 1
-		max_organisation = 10
-		default_morale = 0.3
-		manpower = 500
-		training_time = 120
-
-		#Misc Abilities
-		weight = 0.1
-		can_be_parachuted = yes
-
-		# Important Ability
-		supply_consumption_factor = -0.1
-		fuel_consumption_factor = -0.05
-
-		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
-
-		essential = {
-			support_equipment
-			motorized_equipment
-		}
-
-		need = {
-			support_equipment = 20
-			motorized_equipment = 10
-		}
-
-	}
-	light_flame_tank = {
-		#support
-		abbreviation = "LT"
-		sprite = light_armor
-		map_icon_category = armored
-		priority = 0
-		ai_priority = 0
-		active = yes
-
-		type = {
-			armor
-		}
-
-		group = light_armor
-
-		categories = {
-			category_support_battalions
-			category_army
-		}
-
-
-		combat_width = 0
-
-		#Size Definitions
-		max_strength = 1
-		max_organisation = 10
-		default_morale = 0.3
-		manpower = 500
-		training_time = 120
-
-		#Misc Abilities
-		weight = 0.1
-		can_be_parachuted = yes
-
-		# Important Ability
-		supply_consumption_factor = -0.1
-		fuel_consumption_factor = -0.05
-
-		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
-
-		essential = {
-			support_equipment
-			motorized_equipment
-		}
-
-		need = {
-			support_equipment = 20
-			motorized_equipment = 10
-		}
-
-	}
-	light_amphibious_tank = {
-		abbreviation = "LAM"
-		sprite = amphibious_armor
-		map_icon_category = armored
-		priority = 2501
-		ai_priority = 2000
-		active = yes
-		special_forces = yes
-		marines = yes
-		type = {
-			armor
-			amphibious
-		}
-		
-		group = light_armor
-		
-		categories = {
-			category_tanks
-			category_front_line
-			category_all_armor
-			category_army
-		}
-
-
-		combat_width = 2
-
-		need = {
-			support_equipment = 20
-			motorized_equipment = 10
-		}
-		manpower = 500
-		max_organisation = 10
-		default_morale = 0.3
-		training_time = 180
-		max_strength = 2
-		weight = 1
-		supply_consumption = 0.2
-
-		forest = {
-			attack = -0.2
-			movement = -0.4
-		}
-		mountain = 	{
-			attack = -0.1
-		}
-		jungle = {
-			attack = -0.3
-			movement = -0.4
-		}
-		urban = {
-			attack = -0.4
-			defence = -0.1
-		}
-		marsh = {
-			attack = 0.3
-		}
-		river = {
-			attack = 0.4
-		}
-		amphibious = {
-			attack = 0.6
-		}	
-	}
-	light_airborne_tank = {
-		#support
-		abbreviation = "LAM"
-		sprite = amphibious_armor
-		map_icon_category = armored
-		priority = 2501
-		ai_priority = 2000
-		active = yes
-		special_forces = yes
-		marines = yes
-		type = {
-			armor
-			amphibious
-		}
-		
-		group = light_armor
-		
-		categories = {
-			category_tanks
-			category_front_line
-			category_all_armor
-			category_army
-		}
-
-
-		combat_width = 2
-
-		need = {
-			support_equipment = 20
-			motorized_equipment = 10
-		}
-		manpower = 500
-		max_organisation = 10
-		default_morale = 0.3
-		training_time = 180
-		max_strength = 2
-		weight = 1
-		supply_consumption = 0.2
-
-		forest = {
-			attack = -0.2
-			movement = -0.4
-		}
-		mountain = 	{
-			attack = -0.1
-		}
-		jungle = {
-			attack = -0.3
-			movement = -0.4
-		}
-		urban = {
-			attack = -0.4
-			defence = -0.1
-		}
-		marsh = {
-			attack = 0.3
-		}
-		river = {
-			attack = 0.4
-		}
-		amphibious = {
-			attack = 0.6
-		}	
-	}
-	light_magic_tank = {
-		abbreviation = "MLT"
-		sprite = light_armor
-		map_icon_category = armored
-		priority = 0
-		ai_priority = 0
-		active = yes
-
-		type = {
-			armor
-		}
-
-		group = light_armor
-
-		categories = {
-			category_support_battalions
-			category_army
-		}
-
-
-		combat_width = 0
-
-		#Size Definitions
-		max_strength = 1
-		max_organisation = 10
-		default_morale = 0.3
-		manpower = 500
-		training_time = 120
-
-		#Misc Abilities
-		weight = 0.1
-		can_be_parachuted = yes
-
-		# Important Ability
-		supply_consumption_factor = -0.1
-		fuel_consumption_factor = -0.05
-
-		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
-
-
-
-		need = {
-			light_magic_tank_chassis = 10
-		}
-
-	}
-	light_magic_aa_tank = {
-		abbreviation = "MLT"
 		sprite = light_armor
 		map_icon_category = armored
 		priority = 0
@@ -461,16 +80,14 @@ sub_units = {
 		supply_consumption_factor = -0.1
 		fuel_consumption_factor = -0.05
 
-		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
-
 
 		need = {
-			light_magic_aa_tank_chassis = 10
+			light_aa_tank_chassis = 10
 		}
 
 	}
-	light_magic_at_tank = {
-		abbreviation = "MLT"
+	light_at_tank = {
+		abbreviation = "LT"
 		sprite = light_armor
 		map_icon_category = armored
 		priority = 0
@@ -507,7 +124,354 @@ sub_units = {
 		supply_consumption_factor = -0.1
 		fuel_consumption_factor = -0.05
 
-		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
+
+		need = {
+			light_at_tank_chassis = 10
+		}
+
+	}
+	light_artillery_tank = {
+		abbreviation = "LAR"
+		sprite = light_armor
+		map_icon_category = armored
+		priority = 0
+		ai_priority = 0
+		active = yes
+
+		type = {
+			armor
+		}
+
+		group = light_armor
+
+		categories = {
+			category_support_battalions
+			category_army
+		}
+
+
+		combat_width = 0
+
+		#Size Definitions
+		max_strength = 1
+		max_organisation = 10
+		default_morale = 0.3
+		manpower = 500
+		training_time = 120
+
+		#Misc Abilities
+		weight = 0.1
+		can_be_parachuted = yes
+
+		# Important Ability
+		supply_consumption_factor = -0.1
+		fuel_consumption_factor = -0.05
+
+
+		need = {
+			light_artillery_tank_chassis = 10
+		}
+
+	}
+	light_flame_tank = {
+		#support
+		abbreviation = "LF"
+		sprite = light_armor
+		map_icon_category = armored
+		priority = 0
+		ai_priority = 0
+		active = yes
+
+		type = {
+			armor
+			flame
+			support
+		}
+
+		group = support
+
+		categories = {
+			category_support_battalions
+			category_army
+		}
+
+
+		combat_width = 0
+
+		#Size Definitions
+		max_strength = 1
+		max_organisation = 10
+		default_morale = 0.3
+		manpower = 500
+		training_time = 120
+
+		#Misc Abilities
+		weight = 0.1
+		can_be_parachuted = yes
+
+		# Important Ability
+		supply_consumption_factor = -0.1
+		fuel_consumption_factor = -0.05
+
+
+		need = {
+			light_flame_tank_chassis = 10
+		}
+
+	}
+	light_amphibious_tank = {
+		abbreviation = "LAM"
+		sprite = amphibious_armor
+		map_icon_category = armored
+		priority = 2501
+		ai_priority = 2000
+		active = yes
+		special_forces = yes
+		marines = yes
+		type = {
+			armor
+			amphibious
+		}
+		
+		group = light_armor
+		
+		categories = {
+			category_tanks
+			category_front_line
+			category_all_armor
+			category_army
+		}
+
+
+		combat_width = 2
+
+		need = {
+			light_amphibious_tank_chassis = 10
+		}
+		manpower = 500
+		max_organisation = 10
+		default_morale = 0.3
+		training_time = 180
+		max_strength = 2
+		weight = 1
+		supply_consumption = 0.2
+
+		forest = {
+			attack = -0.2
+			movement = -0.4
+		}
+		mountain = 	{
+			attack = -0.1
+		}
+		jungle = {
+			attack = -0.3
+			movement = -0.4
+		}
+		urban = {
+			attack = -0.4
+			defence = -0.1
+		}
+		marsh = {
+			attack = 0.3
+		}
+		river = {
+			attack = 0.4
+		}
+		amphibious = {
+			attack = 0.6
+		}	
+	}
+	light_airborne_tank = {
+		#support
+		abbreviation = "LAB"
+		sprite = amphibious_armor
+		map_icon_category = armored
+		priority = 2501
+		ai_priority = 2000
+		active = yes
+		special_forces = yes
+		marines = yes
+		type = {
+			armor
+			amphibious
+		}
+		
+		group = light_armor
+		
+		categories = {
+			category_tanks
+			category_front_line
+			category_all_armor
+			category_army
+		}
+
+
+		combat_width = 2
+
+		need = {
+			light_amphibious_tank_chassis = 10
+		}
+		manpower = 500
+		max_organisation = 10
+		default_morale = 0.3
+		training_time = 180
+		max_strength = 2
+		weight = 1
+		supply_consumption = 0.2
+
+		forest = {
+			attack = -0.2
+			movement = -0.4
+		}
+		mountain = 	{
+			attack = -0.1
+		}
+		jungle = {
+			attack = -0.3
+			movement = -0.4
+		}
+		urban = {
+			attack = -0.4
+			defence = -0.1
+		}
+		marsh = {
+			attack = 0.3
+		}
+		river = {
+			attack = 0.4
+		}
+		amphibious = {
+			attack = 0.6
+		}	
+	}
+	light_magic_tank = {
+		abbreviation = "LMT"
+		sprite = light_armor
+		map_icon_category = armored
+		priority = 0
+		ai_priority = 0
+		active = yes
+
+		type = {
+			armor
+		}
+
+		group = light_armor
+
+		categories = {
+			category_support_battalions
+			category_army
+		}
+
+
+		combat_width = 0
+
+		#Size Definitions
+		max_strength = 1
+		max_organisation = 10
+		default_morale = 0.3
+		manpower = 500
+		training_time = 120
+
+		#Misc Abilities
+		weight = 0.1
+		can_be_parachuted = yes
+
+		# Important Ability
+		supply_consumption_factor = -0.1
+		fuel_consumption_factor = -0.05
+
+
+
+
+		need = {
+			light_magic_tank_chassis = 10
+		}
+
+	}
+	light_magic_aa_tank = {
+		abbreviation = "LMAA"
+		sprite = light_armor
+		map_icon_category = armored
+		priority = 0
+		ai_priority = 0
+		active = yes
+
+		type = {
+			armor
+			anti_air
+		}
+
+		group = light_armor
+
+		categories = {
+			category_support_battalions
+			category_army
+		}
+
+
+		combat_width = 0
+
+		#Size Definitions
+		max_strength = 1
+		max_organisation = 10
+		default_morale = 0.3
+		manpower = 500
+		training_time = 120
+
+		#Misc Abilities
+		weight = 0.1
+		can_be_parachuted = yes
+
+		# Important Ability
+		supply_consumption_factor = -0.1
+		fuel_consumption_factor = -0.05
+
+
+
+		need = {
+			light_magic_aa_tank_chassis = 10
+		}
+
+	}
+	light_magic_at_tank = {
+		abbreviation = "LMAT"
+		sprite = light_armor
+		map_icon_category = armored
+		priority = 0
+		ai_priority = 0
+		active = yes
+
+		type = {
+			armor
+			anti_tank
+		}
+
+		group = light_armor
+
+		categories = {
+			category_support_battalions
+			category_army
+		}
+
+
+		combat_width = 0
+
+		#Size Definitions
+		max_strength = 1
+		max_organisation = 10
+		default_morale = 0.3
+		manpower = 500
+		training_time = 120
+
+		#Misc Abilities
+		weight = 0.1
+		can_be_parachuted = yes
+
+		# Important Ability
+		supply_consumption_factor = -0.1
+		fuel_consumption_factor = -0.05
+
 
 
 
@@ -517,7 +481,7 @@ sub_units = {
 
 	}
 	light_magic_artillery_tank = {
-		abbreviation = "LT"
+		abbreviation = "LMAR"
 		sprite = light_armor
 		map_icon_category = armored
 		priority = 0
@@ -548,13 +512,11 @@ sub_units = {
 
 		#Misc Abilities
 		weight = 0.1
-		can_be_parachuted = yes
 
 		# Important Ability
 		supply_consumption_factor = -0.1
 		fuel_consumption_factor = -0.05
 
-		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
 
 	
 
@@ -565,7 +527,7 @@ sub_units = {
 	}
 	light_magic_flame_tank = {
 		#support
-		abbreviation = "LT"
+		abbreviation = "LMF"
 		sprite = light_armor
 		map_icon_category = armored
 		priority = 0
@@ -575,9 +537,10 @@ sub_units = {
 		type = {
 			armor
 			flame
+			support
 		}
 
-		group = light_armor
+		group = support
 
 		categories = {
 			category_support_battalions
@@ -602,7 +565,6 @@ sub_units = {
 		supply_consumption_factor = -0.1
 		fuel_consumption_factor = -0.05
 
-		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
 
 
 
@@ -675,20 +637,19 @@ sub_units = {
 	}
 	light_magic_airborne_tank = {
 		#support
-		abbreviation = "LAM"
+		abbreviation = "LMAB"
 		sprite = amphibious_armor
 		map_icon_category = armored
 		priority = 2501
 		ai_priority = 2000
 		active = yes
-		special_forces = yes
 		marines = yes
 		type = {
 			armor
-			amphibious
+			support
 		}
 		
-		group = light_armor
+		group = support
 		
 		categories = {
 			category_tanks
