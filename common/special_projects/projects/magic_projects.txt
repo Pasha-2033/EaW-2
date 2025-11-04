@@ -1,4 +1,4 @@
-sp_magic_engine = {
+sp_magic_basic_engine = {
 	specialization = specialization_magic
 	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
 	project_tags = sp_tag_magic
@@ -62,6 +62,7 @@ sp_magic_engine = {
 				}
 				add_equipment_bonus = {
 					bonus = {
+						#tanks
 						light_tank_chassis = {
 							maximum_speed = 0.1
 							instant = yes
@@ -78,7 +79,28 @@ sp_magic_engine = {
 							maximum_speed = 0.05
 							instant = yes
 						}
-						#lc requires nsb
+						#magic tanks
+						light_magic_tank_chassis = {
+							maximum_speed = 0.15
+							instant = yes
+						}
+						medium_magic_tank_chassis = {
+							maximum_speed = 0.1
+							instant = yes
+						}
+						heavy_magic_tank_chassis = {
+							maximum_speed = 0.075
+							instant = yes
+						}
+						super_heavy_magic_tank_chassis = {
+							maximum_speed = 0.05
+							instant = yes
+						}
+						#land cruiser
+						land_cruiser_chassis = {
+							maximum_speed = 0.1
+							instant = yes
+						}
 					}
 				}
 			}
@@ -142,6 +164,187 @@ sp_magic_engine = {
 			carrier_ship_magic_engine
 			supercarrier_ship_magic_engine
 			sub_ship_magic_engine
+		}
+	}
+	generic_prototype_rewards = {
+		sp_magic_generic_reward_scientist_xp_1
+		sp_magic_generic_reward_scientist_xp_2
+		sp_magic_generic_reward_scientist_xp_3
+		sp_magic_generic_reward_major_progress_1
+		sp_magic_generic_reward_major_progress_2
+		sp_magic_generic_reward_major_progress_3
+		sp_magic_generic_reward_test_failure_1
+		sp_magic_generic_reward_test_failure_2
+		sp_magic_generic_reward_test_failure_3
+	}
+}
+#low level magic engine
+sp_magic_llm_engine = {
+	specialization = specialization_magic
+	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
+	project_tags = sp_tag_magic
+	ai_will_do = {
+		base = 1
+	}
+	special_project_parent = {
+		sp_magic_basic_engine
+	}
+	allowed = {
+		original_tag = GWS
+	}
+	breakthrough_cost = {
+		specialization_magic = 1
+	}
+	prototype_time = sp_time.prototype.short
+	complexity = sp_complexity.small
+	project_output = {
+		country_effects = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "By Blood Alone"
+					}
+				}
+				add_equipment_bonus = {
+					bonus = {
+						small_plane_airframe = {
+							maximum_speed = 0.1
+							instant = yes
+						}
+						cv_small_plane_airframe = {
+							maximum_speed = 0.1
+							instant = yes
+						}
+						medium_plane_airframe = {
+							maximum_speed = 0.05
+							thrust = 0.05
+							instant = yes
+						}
+						large_plane_airframe = {
+							thrust = 0.1
+							instant = yes
+						}
+						mothership_equipment = {
+							maximum_speed = 0.05
+							instant = yes
+						}
+						strat_bomber_intercontinental_equipment = {
+							maximum_speed = 0.05
+							instant = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+				add_equipment_bonus = {
+					bonus = {
+						#tanks
+						light_tank_chassis = {
+							maximum_speed = 0.1
+							instant = yes
+						}
+						medium_tank_chassis = {
+							maximum_speed = 0.075
+							instant = yes
+						}
+						heavy_tank_chassis = {
+							maximum_speed = 0.05
+							instant = yes
+						}
+						super_heavy_tank_chassis = {
+							maximum_speed = 0.05
+							instant = yes
+						}
+						#magic tanks
+						light_magic_tank_chassis = {
+							maximum_speed = 0.15
+							instant = yes
+						}
+						medium_magic_tank_chassis = {
+							maximum_speed = 0.1
+							instant = yes
+						}
+						heavy_magic_tank_chassis = {
+							maximum_speed = 0.075
+							instant = yes
+						}
+						super_heavy_magic_tank_chassis = {
+							maximum_speed = 0.05
+							instant = yes
+						}
+						#land cruiser
+						land_cruiser_chassis = {
+							maximum_speed = 0.1
+							instant = yes
+						}
+					}
+				}
+			}
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "Man the Guns" 
+					}
+				}
+				add_equipment_bonus = {
+					bonus = {
+						ship_hull_frigate = {
+							naval_speed = 0.05
+							instant = yes
+						}
+						ship_hull_light = {
+							naval_speed = 0.05
+							instant = yes
+						}
+						ship_hull_cruiser = {
+							naval_speed = 0.05
+							instant = yes
+						}
+						ship_hull_heavy = {
+							naval_speed = 0.05
+							instant = yes
+						}
+						ship_hull_carrier = {
+							naval_speed = 0.05
+							instant = yes
+						}
+						ship_hull_submarine = {
+							naval_speed = 0.05
+							instant = yes
+						}
+					}
+				}
+			}
+		}
+		enable_equipment_modules = {	
+			limit = {
+				has_dlc = "By Blood Alone"
+			}
+			plane_llm_engine
+		}
+		enable_equipment_modules = {	
+			limit = {
+				has_dlc = "No Step Back"
+			}
+			tank_llm_engine
+		}
+		enable_equipment_modules = {	
+			limit = {
+				has_dlc = "Man the Guns" 
+			}
+			frigate_ship_llm_engine
+			light_ship_llm_engine
+			cruiser_ship_llm_engine
+			heavy_ship_llm_engine
+			super_heavy_ship_llm_engine
+			carrier_ship_llm_engine
+			supercarrier_ship_llm_engine
+			sub_ship_llm_engine
 		}
 	}
 	generic_prototype_rewards = {

@@ -117,6 +117,21 @@ equipment_modules = {
 			maximum_speed = 0.5
 		}
 	}
+	tank_llm_engine = {
+		category = tank_engine_type
+		sfx = sfx_ui_sd_module_engine
+		parent = tank_magic_engine
+		add_stats = {
+			build_cost_ic = 3
+			fuel_consumption = 4
+			reliability = -0.1
+			maximum_speed = 0.8
+		}
+
+		multiply_stats = {
+			maximum_speed = 0.5
+		}
+	}
 
 	###Armor Types
 

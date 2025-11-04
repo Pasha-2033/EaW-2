@@ -1317,6 +1317,26 @@ equipment_modules = {
 		}
 		dismantle_cost_ic = 10
 	}
+	#low level magic engine
+	plane_llm_engine = {
+		abbreviation = "mex"
+		category = plane_magic_engine_type
+		parent = plane_magic_engine
+		sfx = sfx_ui_sd_module_engine
+		add_stats = {
+			maximum_speed = 1500
+			thrust = 80
+			build_cost_ic = 35
+		}
+		multiply_stats = {
+			air_range = -0.5
+		}
+		build_cost_resources = {
+			tungsten = 3
+			crystals = 4
+		}
+		dismantle_cost_ic = 10
+	}
 	#lmg lvl 0
 	light_mg_2x_0 = {
 		abbreviation = "lmg2"

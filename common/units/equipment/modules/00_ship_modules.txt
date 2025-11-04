@@ -1856,6 +1856,28 @@ equipment_modules = {
 			convert_cost_ic = 130
 		}
 	}
+	frigate_ship_llm_engine = {
+		category = frigate_ship_engine
+		parent = frigate_ship_magic_engine
+		sfx = sfx_ui_sd_module_engine
+		add_stats = {
+			naval_speed = 8
+			fuel_consumption = 8
+			build_cost_ic = 170
+		}
+		multiply_stats = {
+			naval_speed = 1
+			reliability = -0.2
+		}
+		can_convert_from = {
+			module_category = frigate_ship_engine
+			convert_cost_ic = 150
+		}
+		can_convert_from = {
+			module = frigate_ship_engine_4
+			convert_cost_ic = 130
+		}
+	}
 	#engine (destroyer hull)
 	light_ship_engine_0 = {
 		category = light_ship_engine
@@ -2009,6 +2031,28 @@ equipment_modules = {
 	light_ship_magic_engine = {
 		category = light_ship_engine
 		parent = light_ship_engine_6
+		sfx = sfx_ui_sd_module_engine
+		add_stats = {
+			naval_speed = 5
+			fuel_consumption = 10
+			build_cost_ic = 170
+		}
+		multiply_stats = {
+			naval_speed = 0.47
+			reliability = -0.2
+		}
+		can_convert_from = {
+			module_category = light_ship_engine
+			convert_cost_ic = 250
+		}
+		can_convert_from = {
+			module = light_ship_engine_5
+			convert_cost_ic = 230
+		}
+	}
+	light_ship_llm_engine = {
+		category = light_ship_engine
+		parent = light_ship_magic_engine
 		sfx = sfx_ui_sd_module_engine
 		add_stats = {
 			naval_speed = 5
@@ -2251,6 +2295,30 @@ equipment_modules = {
 			convert_cost_ic = 1200
 		}
 	}
+	sub_ship_llm_engine = {
+		category = sub_ship_engine
+		parent = sub_ship_magic_engine
+		sfx = sfx_ui_sd_module_engine
+		add_stats = {
+			naval_speed = 5
+			fuel_consumption = 3
+			build_cost_ic = 400
+			naval_range = 50000
+			surface_visibility = -1
+		}
+		multiply_stats = {
+			naval_speed = 0.3
+			reliability = -0.2
+			sub_visibility = -0.2
+		}
+		build_cost_resources = {
+			crystals = 1
+		}
+		can_convert_from = {
+			module_category = sub_ship_engine
+			convert_cost_ic = 1200
+		}
+	}
 	#aip submarine engine
 	ship_engine_sub_aip_0 = {
 		abbreviation = "sne"
@@ -2463,6 +2531,27 @@ equipment_modules = {
 	cruiser_ship_magic_engine = {
 		category = cruiser_ship_engine
 		parent = cruiser_ship_engine_6
+		sfx = sfx_ui_sd_module_engine
+		add_stats = {
+			naval_speed = 8
+			build_cost_ic = 1550
+			naval_range = 50000
+		}
+		multiply_stats = {
+			naval_speed = 0.5
+			reliability = -0.2
+		}
+		build_cost_resources = {
+			crystals = 2
+		}
+		can_convert_from = {
+			module_category = cruiser_ship_engine
+			convert_cost_ic = 5000
+		}
+	}
+	cruiser_ship_llm_engine = {
+		category = cruiser_ship_engine
+		parent = cruiser_ship_magic_engine
 		sfx = sfx_ui_sd_module_engine
 		add_stats = {
 			naval_speed = 8
@@ -2734,6 +2823,31 @@ equipment_modules = {
 			convert_cost_ic = 4800
 		}
 	}
+	heavy_ship_llm_engine = {
+		category = heavy_ship_engine
+		parent = heavy_ship_magic_engine
+		sfx = sfx_ui_sd_module_engine
+		add_stats = {
+			naval_speed = 14
+			build_cost_ic = 7000
+			naval_range = 50000
+		}
+		multiply_stats = {
+			naval_speed = 0.55
+			reliability = -0.2
+		}
+		build_cost_resources = {
+			crystals = 3
+		}
+		can_convert_from = {
+			module_category = heavy_ship_engine
+			convert_cost_ic = 10000
+		}
+		can_convert_from = {
+			module_category = super_heavy_ship_engine
+			convert_cost_ic = 4800
+		}
+	}
 	#engine (super heavy hull)
 	super_heavy_ship_engine_0 = {
 		category = super_heavy_ship_engine
@@ -2863,6 +2977,31 @@ equipment_modules = {
 	super_heavy_ship_magic_engine = {
 		category = super_heavy_ship_engine
 		parent = super_heavy_ship_engine_3
+		sfx = sfx_ui_sd_module_engine
+		add_stats = {
+			naval_speed = 14
+			build_cost_ic = 7000
+			naval_range = 50000
+		}
+		multiply_stats = {
+			naval_speed = 0.55
+			reliability = -0.2
+		}
+		build_cost_resources = {
+			crystals = 4
+		}
+		can_convert_from = {
+			module_category = heavy_ship_engine
+			convert_cost_ic = 10000
+		}
+		can_convert_from = {
+			module_category = super_heavy_ship_engine
+			convert_cost_ic = 4800
+		}
+	}
+	super_heavy_ship_llm_engine = {
+		category = super_heavy_ship_engine
+		parent = super_heavy_ship_magic_engine
 		sfx = sfx_ui_sd_module_engine
 		add_stats = {
 			naval_speed = 14
@@ -3076,6 +3215,27 @@ equipment_modules = {
 			convert_cost_ic = 5000
 		}
 	}
+	carrier_ship_llm_engine = {
+		category = carrier_ship_engine
+		parent = carrier_ship_magic_engine
+		sfx = sfx_ui_sd_module_engine
+		add_stats = {
+			naval_speed = 5
+			build_cost_ic = 1700
+			naval_range = 50000
+		}
+		multiply_stats = {
+			naval_speed = 0.55
+			reliability = -0.2
+		}
+		build_cost_resources = {
+			crystals = 2
+		}
+		can_convert_from = {
+			module_category = carrier_ship_engine
+			convert_cost_ic = 5000
+		}
+	}
 	#engine (supercarrier hull)
 	supercarrier_ship_engine_0 = {
 		category = supercarrier_ship_engine
@@ -3139,6 +3299,27 @@ equipment_modules = {
 	supercarrier_ship_magic_engine = {
 		category = supercarrier_ship_engine
 		parent = supercarrier_ship_engine_0
+		sfx = sfx_ui_sd_module_engine
+		add_stats = {
+			naval_speed = 5
+			build_cost_ic = 1700
+			naval_range = 50000
+		}
+		multiply_stats = {
+			naval_speed = 0.55
+			reliability = -0.2
+		}
+		build_cost_resources = {
+			crystals = 4
+		}
+		can_convert_from = {
+			module_category = carrier_ship_engine
+			convert_cost_ic = 5000
+		}
+	}
+	supercarrier_ship_llm_engine = {
+		category = supercarrier_ship_engine
+		parent = supercarrier_ship_magic_engine
 		sfx = sfx_ui_sd_module_engine
 		add_stats = {
 			naval_speed = 5
