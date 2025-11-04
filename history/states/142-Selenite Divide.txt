@@ -1,24 +1,20 @@
 state = { 
 	id = 142 
 	name = "STATE_142" 
-	manpower = 190840 
+	manpower = 0 
 	
 	state_category = wasteland 
 	buildings_max_level_factor = 1 
 	history = { 
-		owner = ELN 
+		owner = CRY 
+		add_core_of = CRY 
 		
 		victory_points = { 8558 2 }
-		
-		add_core_of = ELN 
 		set_demilitarized_zone = yes 
 		
 		
 		1002.1.1 = { 
-			owner = CRY 
-			
-			add_core_of = CRY 
-			remove_core_of = ELN 
+			add_manpower = 190840
 			set_demilitarized_zone = no 
 			set_state_category = rural 
 		}

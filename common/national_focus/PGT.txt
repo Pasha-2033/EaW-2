@@ -2380,7 +2380,9 @@ focus_tree = {
 		y = 1
 		allow_branch = {
 			CRY = {
-				exists = yes
+				NOT = {
+					has_cosmetic_tag = CRY_wasteland
+				}
 			}
 		}
 		relative_position_id = pgt_focus_vinnisota_autonomy

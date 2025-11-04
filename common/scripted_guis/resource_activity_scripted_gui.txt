@@ -91,6 +91,14 @@ scripted_gui = {
 			switch_visible = {
 				is_special_project_completed = sp:sp_nuclear_reactor_exploratory
 			}
+			info_button_visible = {
+				OR = {
+					has_tech = synth_oil_experiments
+					check_variable = {
+						resource_activity_array^num > 0
+					}
+				}
+			}
 		}
 		effects = {
 			sub_10_click = {

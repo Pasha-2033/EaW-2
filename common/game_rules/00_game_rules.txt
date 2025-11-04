@@ -867,22 +867,4 @@ obsolete_focus_branches_visibility = {
 		allow_achievements = yes
 	}
 }
-#tag settings
-plenty_tag_jump = {
-	name = PLENTY_PLAYERS_PER_TAG_JUMP
-	group = "TAG_RULES"
-	icon = "GFX_scorched_earth" #change
-	default = {
-		name = yes
-		text = "RULE_OPTION_ALLOWED"
-		desc = "RULE_OPTION_ALLOW_PLENTY_JUMPS_DESC"
-		allow_achievements = yes
-	}
-	option = {
-		name = no
-		text = "RULE_OPTION_BLOCKED"
-		desc = "RULE_OPTION_BLOCK_PLENTY_JUMPS_DESC"
-		allow_achievements = yes
-	}
-}
 #We could add stuff for political advisor visibility filters here too, in the future
