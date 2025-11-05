@@ -117,25 +117,32 @@ generate_race_trait = {
 }
 #use in character scope
 ban_scientist = {
-	random_state = {
-		limit = {
-			NOT = {
-				has_variable = banned_scientist_@PREV.owner
-			}
+	custom_override_tooltip = {
+		tooltip = {
+			localization_key = ban_scientist_tt
+			NAME = "[?THIS.GetName]"
 		}
-		#NOTE: owner is used like this, because it doesn`t support PREV.owner or PREV:owner 
-		PREV = {
-			owner = {
-				add_to_array = {
-					banned_scientists = PREV.PREV
-				}
-				set_variable = {
-					PREV.PREV.banned_scientist_@THIS = PREV
+		#we use state for scope because decisions are targeted only for countries/states
+		random_state = {
+			limit = {
+				NOT = {
+					has_variable = banned_scientist_@PREV.owner
 				}
 			}
+			#NOTE: owner is used like this, because it doesn`t support PREV.owner or PREV:owner 
+			PREV = {
+				owner = {
+					add_to_array = {
+						banned_scientists = PREV.PREV
+					}
+					set_variable = {
+						PREV.PREV.banned_scientist_@THIS = PREV
+					}
+				}
+			}
 		}
+		set_nationality = ELN
 	}
-	set_nationality = ELN
 }
 #use in unit leader scope
 #NOTE: use this only at game start - because it can`t regulate between sympathy, leadership and neutrality to ideology

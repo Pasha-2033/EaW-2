@@ -933,6 +933,7 @@ sp_nuclear_reactor_meltdown = {
 							experience = constant:sp_scientist_xp_gain.low
 							specialization = specialization_nuclear
 						}
+						injure_scientist_for_days = 50
 					}
 					#meltdown is serious problem, scientist can die
 					10 = {
@@ -990,6 +991,7 @@ sp_nuclear_reactor_radiation_leak = {
 							experience = constant:sp_scientist_xp_gain.low
 							specialization = specialization_nuclear
 						}
+						injure_scientist_for_days = 25
 					}
 					#radiation leak is serious problem, scientist can die
 					5 = {
@@ -1047,6 +1049,7 @@ sp_nuclear_reactor_explosion = {
 							experience = constant:sp_scientist_xp_gain.low
 							specialization = specialization_nuclear
 						}
+						injure_scientist_for_days = 75
 					}
 					#explosion is serious problem, scientist can die
 					20 = {
@@ -1076,7 +1079,7 @@ sp_nuclear_bomb_critical_mass = {
 		max = 100
 	}
 	weight = {
-		base = 0.25
+		base = 0.1
 	}
 	option = {
 		token = sp_nuclear_reactor_explosion_option
