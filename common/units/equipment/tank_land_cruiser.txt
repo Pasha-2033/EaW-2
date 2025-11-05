@@ -15,6 +15,12 @@ equipments = {
 		max_military_factories = 5
 
 		module_slots = {
+			lc_engine_slot = {
+				required = yes
+				allowed_module_categories = {
+					lc_engine_type
+				}
+			}
 			lc_main_armament_slot = {
 				required = yes
 				allowed_module_categories = {
@@ -26,6 +32,19 @@ equipments = {
 				required = no
 				allowed_module_categories = {
 					lc_secondary_armament
+				}
+			}
+
+			lc_engine_slot = {
+				required = yes
+				allowed_module_categories = {
+					lc_engine_type
+				}
+			}
+			lc_armor_slot = {
+				required = yes
+				allowed_module_categories = {
+					lc_engine_type
 				}
 			}
 
