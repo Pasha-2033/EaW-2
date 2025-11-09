@@ -4,19 +4,7 @@ equipments = {
 		is_archetype = yes
 		is_buildable = no
 		can_be_produced = {
-			if = {
-				limit = {
-					has_dlc = "Arms Against Tyranny"
-				}
-				NOT = {
-					has_idea = BUL_army_restrictions_aat
-				}
-			}
-			else = {
-				NOT = {
-					has_idea = BUL_army_restrictions
-				}
-			}
+
 		}
 		picture = archetype_heavy_tank_equipment
 		type = armor
@@ -26,77 +14,56 @@ equipments = {
 
 		module_slots = {
 
-			turret_type_slot = {
+			#custom slots
+			main_armament = {
 				required = yes
 				allowed_module_categories = {
-					tank_light_turret_type
-					tank_medium_turret_type
-					tank_heavy_turret_type
-				}
-			}
-			
-			main_armament_slot = {
-				required = yes
-				allowed_module_categories = {
-					tank_small_main_armament
+					tank_heavy_main_armament
 					tank_flamethrower
 				}
 			}
-
-			suspension_type_slot = {
+			turret_type = {
+				required = yes
+				allowed_module_categories = {
+					tank_heavy_turret_type
+				}
+			}
+			special_module_0 = {
+				required = no
+				allowed_module_categories = {
+					
+				}
+			}
+			special_module_1 = {
+				required = no
+				allowed_module_categories = {
+					
+				}
+			}
+			#fixed slots
+			fixed_suspension_type = {
 				required = yes
 				allowed_module_categories = {
 					tank_suspension_type
+					tank_non_tracked_suspension_type
 				}
 			}
-
-			armor_type_slot = {
+			fixed_armor_type = {
 				required = yes
 				allowed_module_categories = {
 					tank_armor_type
 				}
 			}
-
-			engine_type_slot = {
+			fixed_engine_type = {
 				required = yes
 				allowed_module_categories = {
 					tank_engine_type
 				}
 			}
-
-			special_type_slot_1 = {
-				required = no
+			fixed_ammunition_type = {
+				required = yes
 				allowed_module_categories = {
-					tank_special_module
-					tank_radio_module
-					tank_secondary_turret
-				}
-			}
-
-			special_type_slot_2 = {
-				required = no
-				allowed_module_categories = {
-					tank_special_module
-					tank_secondary_turret
-					tank_radio_module
-				}
-			}
-
-			special_type_slot_3 = {
-				required = no
-				allowed_module_categories = {
-					tank_special_module
-					tank_secondary_turret
-					tank_radio_module
-				}
-			}
-
-			special_type_slot_4 = {
-				required = no
-				allowed_module_categories = {
-					tank_special_module
-					tank_secondary_turret
-					tank_radio_module
+					tank_ammunition_type
 				}
 			}
 
