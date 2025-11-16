@@ -1,0 +1,225 @@
+equipment_modules = {
+	limit = {
+		has_dlc = "No Step Back" 
+	}
+	#turret type (light)
+	tank_light_uninhabited_tank_turret = {
+		abbreviation = "l1m"
+		category = tank_light_turret_type
+		sfx = sfx_ui_sd_module_turret
+	}
+	tank_light_one_man_tank_turret = {
+		abbreviation = "l1m"
+		category = tank_light_turret_type
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 0.5
+			breakthrough = 7
+		}
+		xp_cost = 2
+	}
+	tank_light_two_man_tank_turret = {
+		abbreviation = "l2m"
+		category = tank_light_turret_type
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 0.75
+			breakthrough = 10
+		}
+		xp_cost = 2
+	}
+	tank_light_three_man_tank_turret = {
+		abbreviation = "l3m"
+		category = tank_light_turret_type
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 1
+			maximum_speed = -0.25
+			breakthrough = 14
+		}
+		xp_cost = 2
+	}
+	tank_light_fixed_superstructure_turret = {
+		abbreviation = "lfs"
+		category = tank_light_turret_type
+		sfx = sfx_ui_sd_module_turret
+		forbid_equipment_type = anti_air
+		allowed_module_categories = {
+			main_armament = {
+				tank_medium_main_armament
+			}
+		}
+		#forbid_equipment_type_exact_match_for_category = {
+		#	tank_medium_main_armament = armor
+		#	tank_heavy_main_armament = armor
+		#	tank_super_heavy_main_armament = armor
+		#}
+		xp_cost = 2
+		add_stats = {
+			build_cost_ic = 0.75
+			reliability = 0.2
+			defense = 3
+		}
+		multiply_stats = {
+			breakthrough = -0.25
+		}
+	}
+	#turret type (medium)
+	tank_medium_uninhabited_tank_turret = {
+		abbreviation = "l1m"
+		category = tank_light_turret_type
+		sfx = sfx_ui_sd_module_turret
+	}
+	tank_medium_one_man_tank_turret = {
+		abbreviation = "m1m"
+		category = tank_medium_turret_type
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 1
+			breakthrough = 10
+		}
+		xp_cost = 2
+		multiply_stats = {	
+			hard_attack = -0.25
+			soft_attack = -0.25
+		}
+	}
+	tank_medium_two_man_tank_turret = {
+		abbreviation = "m2m"
+		category = tank_medium_turret_type
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 1.5
+			breakthrough = 16
+		}
+		xp_cost = 2
+		multiply_stats = {
+		}
+	}
+	tank_medium_three_man_tank_turret = {
+		abbreviation = "m3m"
+		category = tank_medium_turret_type
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 2
+			maximum_speed = -0.25
+			breakthrough = 20
+		}
+		xp_cost = 2
+	}
+	tank_medium_fixed_superstructure_turret = {
+		abbreviation = "mfs"
+		category = tank_medium_turret_type
+		sfx = sfx_ui_sd_module_turret
+		forbid_equipment_type = anti_air
+		allowed_module_categories = {
+			main_armament = {
+				tank_heavy_main_armament
+			}
+		}
+		#forbid_equipment_type_exact_match_for_category = {
+		#	tank_heavy_main_armament = armor
+		#	tank_super_heavy_main_armament = armor
+		#}
+		xp_cost = 2
+		add_stats = {
+			build_cost_ic = 1.5
+			reliability = 0.2
+			defense = 3
+		}
+		multiply_stats = {
+			breakthrough = -0.25
+		}
+	}
+	#turret type (heavy)
+	tank_heavy_two_man_tank_turret = {
+		abbreviation = "h2m"
+		category = tank_heavy_turret_type
+		sfx = sfx_ui_sd_module_turret
+		xp_cost = 2
+		add_stats = {
+			build_cost_ic = 5
+			breakthrough = 18
+		}
+	}
+	tank_heavy_three_man_tank_turret = {
+		abbreviation = "h3m"
+		category = tank_heavy_turret_type
+		sfx = sfx_ui_sd_module_turret
+		xp_cost = 2
+		add_stats = {
+			build_cost_ic = 5.5
+			maximum_speed = -0.25
+			breakthrough = 22
+		}
+	}
+	tank_heavy_fixed_superstructure_turret = {
+		abbreviation = "hfs"
+		category = tank_heavy_turret_type
+		sfx = sfx_ui_sd_module_turret
+		forbid_equipment_type = anti_air
+		allowed_module_categories = {
+			main_armament_slot = {
+				tank_super_heavy_main_armament
+			}
+		}
+		#forbid_equipment_type_exact_match_for_category = {
+		#	tank_super_heavy_main_armament = armor
+		#}
+		xp_cost = 2
+		add_stats = {
+			build_cost_ic = 5
+			reliability = 0.2
+			defense = 3
+		}
+		multiply_stats = {
+			breakthrough = -0.25
+		}
+	}
+	#turret type (super heavy)
+	tank_super_heavy_three_man_tank_turret = {
+		abbreviation = "s3m"
+		category = tank_super_heavy_turret_type
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 10
+			reliability = -0.1
+			maximum_speed = -0.2
+			breakthrough = 24
+		}
+		xp_cost = 2
+		multiply_stats = {
+			hard_attack = -0.1
+		}
+	}
+	tank_super_heavy_four_man_tank_turret = {
+		abbreviation = "s4m"
+		category = tank_super_heavy_turret_type
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 12
+			reliability = -0.25
+			maximum_speed = -0.5
+			breakthrough = 35
+		}
+		xp_cost = 2
+	}
+	tank_super_heavy_fixed_superstructure_turret = {
+		abbreviation = "hfs"
+		category = tank_heavy_turret_type
+		sfx = sfx_ui_sd_module_turret
+		forbid_equipment_type = anti_air
+		#forbid_equipment_type_exact_match_for_category = {
+		#	tank_super_heavy_main_armament = armor
+		#}
+		xp_cost = 2
+		add_stats = {
+			build_cost_ic = 5
+			reliability = 0.2
+			defense = 3
+		}
+		multiply_stats = {
+			breakthrough = -0.25
+		}
+	}
+}

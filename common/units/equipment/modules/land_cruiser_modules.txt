@@ -2,6 +2,199 @@ equipment_modules = {
 	limit = {
 		has_dlc = "No Step Back" 
 	}
+	#main armament
+	lc_heavy_naval_guns = {
+		abbreviation = "hng"
+		category = lc_main_armament
+		sfx = sfx_ui_sd_module_turret
+	}
+	lc_super_heavy_railway_gun = {
+		abbreviation = "hng"
+		category = lc_main_armament
+		sfx = sfx_ui_sd_module_turret
+	}
+	lc_high_impact_obliterator_cannon = {
+		abbreviation = "hng"
+		category = lc_main_armament
+		sfx = sfx_ui_sd_module_turret
+	}
+	lc_energetic_obliterator_cannon = {
+		abbreviation = "hng"
+		category = lc_main_armament
+		sfx = sfx_ui_sd_module_turret
+	}
+	lc_magic_obliterator_cannon = {
+		abbreviation = "hng"
+		category = lc_main_armament
+		sfx = sfx_ui_sd_module_turret
+	}
+	lc_railgun = {
+		abbreviation = "hng"
+		category = lc_main_armament
+		sfx = sfx_ui_sd_module_turret
+	}
+	lc_heavy_anti_air_platform = {
+		abbreviation = "hng"
+		category = lc_main_armament
+		sfx = sfx_ui_sd_module_turret
+	}
+	#secondary armament
+	lc_medium_naval_guns = {
+		abbreviation = "hng"
+		category = lc_secondary_armament
+		sfx = sfx_ui_sd_module_turret
+	}
+	lc_hull_mounted_railway_gun = {
+		abbreviation = "hng"
+		category = lc_secondary_armament
+		sfx = sfx_ui_sd_module_turret
+	}
+	lc_super_heavy_howitzer = {
+		abbreviation = "hng"
+		category = lc_secondary_armament
+		sfx = sfx_ui_sd_module_turret
+	}
+	lc_heavy_high_velocity_cannons = {
+		abbreviation = "hng"
+		category = lc_secondary_armament
+		sfx = sfx_ui_sd_module_turret
+	}
+	lc_heavy_anti_air_battery = {
+		abbreviation = "hng"
+		category = lc_secondary_armament
+		sfx = sfx_ui_sd_module_turret
+	}
+	#additional armament
+	lc_medium_cannon_turret = {
+		abbreviation = "hng"
+		category = lc_additional_armament
+		sfx = sfx_ui_sd_module_turret
+	}
+	lc_assault_gun = {
+		abbreviation = "hng"
+		category = lc_additional_armament
+		sfx = sfx_ui_sd_module_turret
+	}
+	lc_high_velocity_cannon_turret = {
+		abbreviation = "hng"
+		category = lc_additional_armament
+		sfx = sfx_ui_sd_module_turret
+	}
+	lc_light_anti_air_battery = {
+		abbreviation = "hng"
+		category = lc_additional_armament
+		sfx = sfx_ui_sd_module_turret
+	}
+	lc_flamethrower_turret = {
+		abbreviation = "hng"
+		category = lc_additional_armament
+		sfx = sfx_ui_sd_module_turret
+	}
+	lc_rocket_launcher = {
+		abbreviation = "hng"
+		category = lc_additional_armament
+		sfx = sfx_ui_sd_module_turret
+	}
+	#radio (special features)
+	lc_radio_0 = {
+		abbreviation = "hng"
+		category = lc_radio_module
+		sfx = sfx_ui_sd_module_turret
+	}
+	lc_command_center = {
+		abbreviation = "hng"
+		category = lc_radio_module
+		sfx = sfx_ui_sd_module_turret
+	}
+	#air related modules (special features)
+	lc_aircraft_catapult = {
+		abbreviation = "acc"
+		category = lc_aerial_deployment
+		sfx = sfx_ui_sd_module_turret
+	}
+	lc_helipad = {
+		abbreviation = "hel"
+		category = lc_aerial_deployment
+		sfx = sfx_ui_sd_module_turret
+	}
+	lc_drone_recon = {
+		abbreviation = "hel"
+		category = lc_aerial_deployment
+		sfx = sfx_ui_sd_module_turret
+	}
+	#structural (special features)
+	lc_armored_skirts = {
+		abbreviation = "hel"
+		category = lc_structural_features
+		sfx = sfx_ui_sd_module_turret
+	}
+	lc_bunker_emplacement = {
+		abbreviation = "bke"
+		category = lc_structural_features
+		sfx = sfx_ui_sd_module_turret
+	}
+	lc_super_heavy_bunker_emplacement = {
+		abbreviation = "bke"
+		category = lc_structural_features
+		sfx = sfx_ui_sd_module_turret
+	}
+	#electronics (special features)
+	lc_radar_0 = {
+		abbreviation = "rdr"
+		category = lc_external_features
+		sfx = sfx_ui_sd_module_turret
+	}
+	#improval (special features)
+	lc_smoke_generators = {
+		abbreviation = "smoker"
+		category = lc_external_features
+		sfx = sfx_ui_sd_module_turret
+	}
+
+	lc_obstacle_clearance_gear = {
+		abbreviation = "ocg"
+		category = lc_external_features
+		sfx = sfx_ui_sd_module_turret
+	}
+
+	lc_internal_fuel_tanks = {
+		abbreviation = "eft"
+		category = lc_structural_features
+		sfx = sfx_ui_sd_module_turret
+	}
+
+	lc_internal_ammunition_compartments = {
+		abbreviation = "extra"
+		category = lc_structural_features
+		sfx = sfx_ui_sd_module_turret
+	}
+	
+	lc_wet_ammunition_storage = {
+		abbreviation = "wets"
+		category = lc_structural_features
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			reliability = 0.15 #Wet Ammunition Storage: 0.15
+			build_cost_ic = 2 #Wet Ammunition Storage: 1
+		}
+		xp_cost = 1
+	}
+
+
+
+	lc_stabilizers = {
+		abbreviation = "stabs"
+		category = lc_structural_features
+		sfx = sfx_ui_sd_module_turret
+
+		add_stats = {
+			build_cost_ic = 3 #Stabilizer: 2
+			breakthrough = 6 #Stabilizer: 5
+		}
+		xp_cost = 1
+
+	}
 	#engine
 	lc_gasoline_engine = {
 		category = lc_engine_type

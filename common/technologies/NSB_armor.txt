@@ -17,6 +17,1672 @@ technologies = {
 	@1024 = 20
 	@1026 = 22
 
+	#chassis(common)
+	tankette = {
+		enable_subunits = {
+			light_tank
+		}
+		enable_equipments = {
+			#chassis
+			tankette
+		}
+		enable_equipment_modules = {
+			#weapons
+			tank_heavy_machine_gun
+			#turret
+			tank_light_fixed_superstructure_turret
+			#suspension
+			tank_blocked_suspension
+			#engines
+			tank_diesel_engine
+			tank_gasoline_engine
+			#armor
+			tank_riveted_armor
+			tank_cast_armor
+			tank_welded_armor
+			#ammunition
+			tank_AP_ammunition
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 12 y = 0 }
+		}
+		allow = {
+			has_tech = internal_combustion_engine
+		}
+		path = {
+			leads_to_tech = light_chassis_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = medium_chassis_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = nsb_engine_upgrade_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = nsb_armor_upgrade_0
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	#chassis(light)
+	light_chassis_0 = {
+		enable_subunits = {
+			light_magic_tank
+		}
+		enable_equipment_modules = {
+			#suspension
+			tank_candle_pendant
+			#turret
+			tank_light_one_man_tank_turret
+			tank_light_two_man_tank_turret
+		}
+		enable_equipments = {
+			light_tank_chassis_0
+			light_magic_tank_chassis_0
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 9 y = 2 }
+		}
+		path = {
+			leads_to_tech = light_chassis_1
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_chassis_1 = {
+		enable_equipment_modules = {
+			tank_light_three_man_tank_turret
+		}
+		enable_equipments = {
+			light_tank_chassis_1
+			light_magic_tank_chassis_1
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 9 y = 4 }
+		}
+		path = {
+			leads_to_tech = light_chassis_2
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_chassis_2 = {
+		enable_equipments = {
+			light_tank_chassis_2
+			light_magic_tank_chassis_2
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 9 y = 6 }
+		}
+		path = {
+			leads_to_tech = light_chassis_3
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_chassis_3 = {
+		enable_equipment_modules = {
+			tank_light_uninhabited_tank_turret
+		}
+		enable_equipments = {
+			light_tank_chassis_3
+			light_magic_tank_chassis_3
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 9 y = 8 }
+		}
+		path = {
+			leads_to_tech = light_chassis_4
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_chassis_4 = {
+		enable_equipments = {
+			light_tank_chassis_4
+			light_magic_tank_chassis_4
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 9 y = 10 }
+		}
+		path = {
+			leads_to_tech = light_chassis_5
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = swimming_device_0
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_chassis_5 = {
+		enable_equipments = {
+			light_tank_chassis_5
+			light_magic_tank_chassis_5
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 9 y = 12 }
+		}
+		path = {
+			leads_to_tech = light_chassis_6
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_chassis_6 = {
+		enable_equipments = {
+			light_tank_chassis_6
+			light_magic_tank_chassis_6
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 9 y = 14 }
+		}
+		path = {
+			leads_to_tech = light_chassis_7
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_chassis_7 = {
+		enable_equipments = {
+			light_tank_chassis_7
+			light_magic_tank_chassis_7
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 9 y = 16 }
+		}
+		path = {
+			leads_to_tech = light_chassis_8
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_chassis_8 = {
+		enable_equipments = {
+			light_tank_chassis_8
+			light_magic_tank_chassis_8
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 9 y = 18 }
+		}
+		path = {
+			leads_to_tech = light_chassis_9
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_chassis_9 = {
+		enable_equipments = {
+			light_tank_chassis_9
+			light_magic_tank_chassis_9
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 9 y = 20 }
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	#chassis(medium)
+	medium_chassis_0 = {
+		enable_subunits = {
+			medium_tank
+			medium_magic_tank
+		}
+		enable_equipment_modules = {
+			#turret
+			tank_medium_one_man_tank_turret
+			tank_medium_two_man_tank_turret
+			tank_medium_fixed_superstructure_turret
+			#suspension
+			tank_spring_suspension
+			tank_leaf_spring_suspension
+		}
+		enable_equipments = {
+			medium_tank_chassis_0
+			medium_magic_tank_chassis_0
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 12 y = 2 }
+		}
+		path = {
+			leads_to_tech = medium_chassis_1
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_chassis_1 = {
+		enable_equipment_modules = {
+			tank_medium_three_man_tank_turret
+		}
+		enable_equipments = {
+			medium_tank_chassis_1
+			medium_magic_tank_chassis_1
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 12 y = 4 }
+		}
+		path = {
+			leads_to_tech = heavy_chassis_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = medium_chassis_2
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_chassis_2 = {
+		enable_equipments = {
+			medium_tank_chassis_2
+			medium_magic_tank_chassis_2
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 12 y = 6 }
+		}
+		path = {
+			leads_to_tech = medium_chassis_3
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_chassis_3 = {
+		enable_equipment_modules = {
+			tank_medium_uninhabited_tank_turret
+		}
+		enable_equipments = {
+			medium_tank_chassis_3
+			medium_magic_tank_chassis_3
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 12 y = 8 }
+		}
+		path = {
+			leads_to_tech = medium_chassis_4
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_chassis_4 = {
+		enable_equipments = {
+			medium_tank_chassis_4
+			medium_magic_tank_chassis_4
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 12 y = 10 }
+		}
+		path = {
+			leads_to_tech = medium_chassis_5
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_chassis_5 = {
+		enable_equipments = {
+			medium_tank_chassis_5
+			medium_magic_tank_chassis_5
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 12 y = 12 }
+		}
+		path = {
+			leads_to_tech = medium_chassis_6
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_chassis_6 = {
+		enable_equipments = {
+			medium_tank_chassis_6
+			medium_magic_tank_chassis_6
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 12 y = 14 }
+		}
+		path = {
+			leads_to_tech = medium_chassis_7
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_chassis_7 = {
+		enable_equipments = {
+			medium_tank_chassis_7
+			medium_magic_tank_chassis_7
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 12 y = 16 }
+		}
+		path = {
+			leads_to_tech = medium_chassis_8
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_chassis_8 = {
+		enable_equipments = {
+			medium_tank_chassis_8
+			medium_magic_tank_chassis_8
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 12 y = 18 }
+		}
+		path = {
+			leads_to_tech = medium_chassis_9
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_chassis_9 = {
+		enable_equipments = {
+			medium_tank_chassis_9
+			medium_magic_tank_chassis_9
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 12 y = 20 }
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	#chassis(heavy)
+	heavy_chassis_0 = {
+		enable_subunits = {
+			heavy_tank
+			heavy_magic_tank
+		}
+		enable_equipment_modules = {
+			#turret
+			tank_heavy_two_man_tank_turret
+			tank_heavy_three_man_tank_turret
+			#suspension
+			tank_balance_beam_suspension
+		}
+		enable_equipments = {
+			heavy_tank_chassis_0
+			heavy_magic_tank_chassis_0
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 15 y = 6 }
+		}
+		path = {
+			leads_to_tech = heavy_chassis_1
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_chassis_1 = {
+		enable_equipment_modules = {
+			tank_heavy_fixed_superstructure_turret
+		}
+		enable_equipments = {
+			heavy_tank_chassis_0
+			heavy_magic_tank_chassis_0
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 15 y = 8 }
+		}
+		path = {
+			leads_to_tech = super_heavy_chassis_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = heavy_chassis_2
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_chassis_2 = {
+		enable_equipments = {
+			heavy_tank_chassis_2
+			heavy_magic_tank_chassis_2
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 15 y = 10 }
+		}
+		path = {
+			leads_to_tech = heavy_chassis_3
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_chassis_3 = {
+		enable_equipment_modules = {
+			tank_hydropneumatic_suspension
+		}
+		enable_equipments = {
+			heavy_tank_chassis_3
+			heavy_magic_tank_chassis_3
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 15 y = 12 }
+		}
+		path = {
+			leads_to_tech = heavy_chassis_4
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_chassis_4 = {
+		enable_equipments = {
+			heavy_tank_chassis_4
+			heavy_magic_tank_chassis_4
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 15 y = 14 }
+		}
+		path = {
+			leads_to_tech = heavy_chassis_5
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_chassis_5 = {
+		enable_equipments = {
+			heavy_tank_chassis_5
+			heavy_magic_tank_chassis_5
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 15 y = 16 }
+		}
+		path = {
+			leads_to_tech = heavy_chassis_6
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_chassis_6 = {
+		enable_equipments = {
+			heavy_tank_chassis_6
+			heavy_magic_tank_chassis_6
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 15 y = 18 }
+		}
+		path = {
+			leads_to_tech = heavy_chassis_6
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_chassis_7 = {
+		enable_equipments = {
+			heavy_tank_chassis_7
+			heavy_magic_tank_chassis_7
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 15 y = 20 }
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	#chassis(super heavy)
+	super_heavy_chassis_0 = {
+		enable_subunits = {
+			super_heavy_tank
+			super_heavy_magic_tank
+		}
+		enable_equipment_modules = {
+			tank_super_heavy_three_man_tank_turret
+			tank_super_heavy_four_man_tank_turret
+		}
+		enable_equipments = {
+			super_heavy_tank_chassis_0
+			super_heavy_magic_tank_chassis_0
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 18 y = 10 }
+		}
+		path = {
+			leads_to_tech = super_heavy_chassis_1
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_chassis_1 = {
+		enable_equipment_modules = {
+			tank_super_heavy_fixed_superstructure_turret
+		}
+		enable_equipments = {
+			super_heavy_tank_chassis_1
+			super_heavy_magic_tank_chassis_1
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 18 y = 12 }
+		}
+		path = {
+			leads_to_tech = land_cruiser_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = super_heavy_chassis_2
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_chassis_2 = {
+		enable_equipments = {
+			super_heavy_tank_chassis_2
+			super_heavy_magic_tank_chassis_2
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 18 y = 14 }
+		}
+		path = {
+			leads_to_tech = super_heavy_chassis_3
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_chassis_3 = {
+		enable_equipments = {
+			super_heavy_tank_chassis_3
+			super_heavy_magic_tank_chassis_3
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 18 y = 16 }
+		}
+		path = {
+			leads_to_tech = super_heavy_chassis_4
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_chassis_4 = {
+		enable_equipments = {
+			super_heavy_tank_chassis_4
+			super_heavy_magic_tank_chassis_4
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 18 y = 18 }
+		}
+		path = {
+			leads_to_tech = super_heavy_chassis_5
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_chassis_5 = {
+		enable_equipments = {
+			super_heavy_tank_chassis_5
+			super_heavy_magic_tank_chassis_5
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 18 y = 20 }
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	#chassis(land cruiser)
+	land_cruiser_1 = {
+		enable_equipments = {
+			land_cruiser_chassis_1
+		}
+		is_special_project_tech = yes
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 21 y = 14 }
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	#engines
+	nsb_engine_upgrade_0 = {
+		research_cost = 2
+		start_year = 989
+		allow = {
+			has_tech = overloaded_cores
+		}
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 0 y = 2 }
+		}
+		path = {
+			leads_to_tech = nsb_engine_upgrade_1
+			research_cost_coeff = 1
+		}
+		show_effect_as_desc = yes
+		on_research_complete = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = unlock_upgrade_tt
+					VALUE = 3
+					TYPE = engine_upgrade_tt
+				}
+			}
+		}
+		category_all_armor = {
+			maximum_speed = 0.05
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	nsb_engine_upgrade_1 = {
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 0 y = 4 }
+		}
+		path = {
+			leads_to_tech = nsb_engine_upgrade_2
+			research_cost_coeff = 1
+		}
+		show_effect_as_desc = yes
+		on_research_complete = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = unlock_upgrade_tt
+					VALUE = 6
+					TYPE = engine_upgrade_tt
+				}
+			}
+		}
+		category_all_armor = {
+			maximum_speed = 0.04
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	nsb_engine_upgrade_2 = {
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 0 y = 6 }
+		}
+		path = {
+			leads_to_tech = nsb_engine_upgrade_3
+			research_cost_coeff = 1
+		}
+		show_effect_as_desc = yes
+		on_research_complete = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = unlock_upgrade_tt
+					VALUE = 9
+					TYPE = engine_upgrade_tt
+				}
+			}
+		}
+		category_all_armor = {
+			maximum_speed = 0.03
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	nsb_engine_upgrade_3 = {
+		enable_equipment_modules = {
+			tank_petrol_electric_engine
+			lc_petrol_electric_engine
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 0 y = 8 }
+		}
+		path = {
+			leads_to_tech = nsb_engine_upgrade_4
+			research_cost_coeff = 1
+		}
+		show_effect_as_desc = yes
+		on_research_complete = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = unlock_upgrade_tt
+					VALUE = 12
+					TYPE = engine_upgrade_tt
+				}
+			}
+		}
+		category_all_armor = {
+			maximum_speed = 0.02
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	nsb_engine_upgrade_4 = {
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 0 y = 10 }
+		}
+		path = {
+			leads_to_tech = nsb_engine_upgrade_5
+			research_cost_coeff = 1
+		}
+		show_effect_as_desc = yes
+		on_research_complete = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = unlock_upgrade_tt
+					VALUE = 15
+					TYPE = engine_upgrade_tt
+				}
+			}
+		}
+		category_all_armor = {
+			maximum_speed = 0.01
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	nsb_engine_upgrade_5 = {
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 0 y = 12 }
+		}
+		path = {
+			leads_to_tech = nsb_engine_upgrade_6
+			research_cost_coeff = 1
+		}
+		show_effect_as_desc = yes
+		on_research_complete = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = unlock_upgrade_tt
+					VALUE = 18
+					TYPE = engine_upgrade_tt
+				}
+			}
+		}
+		category_all_armor = {
+			maximum_speed = 0.01
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	nsb_engine_upgrade_6 = {
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 0 y = 14 }
+		}
+		path = {
+			leads_to_tech = nsb_engine_upgrade_7
+			research_cost_coeff = 1
+		}
+		show_effect_as_desc = yes
+		on_research_complete = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = unlock_upgrade_tt
+					VALUE = 21
+					TYPE = engine_upgrade_tt
+				}
+			}
+		}
+		category_all_armor = {
+			maximum_speed = 0.01
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	nsb_engine_upgrade_7 = {
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 0 y = 16 }
+		}
+		path = {
+			leads_to_tech = nsb_engine_upgrade_8
+			research_cost_coeff = 1
+		}
+		show_effect_as_desc = yes
+		on_research_complete = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = unlock_upgrade_tt
+					VALUE = 24
+					TYPE = engine_upgrade_tt
+				}
+			}
+		}
+		category_all_armor = {
+			maximum_speed = 0.01
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	nsb_engine_upgrade_8 = {
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 0 y = 18 }
+		}
+		path = {
+			leads_to_tech = nsb_engine_upgrade_9
+			research_cost_coeff = 1
+		}
+		show_effect_as_desc = yes
+		on_research_complete = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = unlock_upgrade_tt
+					VALUE = 27
+					TYPE = engine_upgrade_tt
+				}
+			}
+		}
+		category_all_armor = {
+			maximum_speed = 0.01
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	nsb_engine_upgrade_9 = {
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 0 y = 20 }
+		}
+		path = {
+			leads_to_tech = nsb_engine_upgrade_10
+			research_cost_coeff = 1
+		}
+		show_effect_as_desc = yes
+		on_research_complete = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = unlock_upgrade_tt
+					VALUE = 30
+					TYPE = engine_upgrade_tt
+				}
+			}
+		}
+		category_all_armor = {
+			maximum_speed = 0.01
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	nsb_engine_upgrade_10 = {
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 0 y = 22 }
+		}
+		show_effect_as_desc = yes
+		on_research_complete = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = unlock_upgrade_tt
+					VALUE = 33
+					TYPE = engine_upgrade_tt
+				}
+			}
+		}
+		category_all_armor = {
+			maximum_speed = 0.01
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	#armor
+	nsb_armor_upgrade_0 = {
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 2 }
+		}
+		path = {
+			leads_to_tech = nsb_armor_upgrade_1
+			research_cost_coeff = 1
+		}
+		show_effect_as_desc = yes
+		on_research_complete = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = unlock_upgrade_tt
+					VALUE = 3
+					TYPE = armor_upgrade_tt
+				}
+			}
+		}
+		category_all_armor = {
+			armor_value = 0.01
+			hardness = 0.01
+			breakthrough = 0.01
+			defense = 0.01
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	nsb_armor_upgrade_1 = {
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 4 }
+		}
+		path = {
+			leads_to_tech = nsb_armor_upgrade_2
+			research_cost_coeff = 1
+		}
+		show_effect_as_desc = yes
+		on_research_complete = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = unlock_upgrade_tt
+					VALUE = 6
+					TYPE = armor_upgrade_tt
+				}
+			}
+		}
+		category_all_armor = {
+			armor_value = 0.01
+			hardness = 0.01
+			breakthrough = 0.01
+			defense = 0.01
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	nsb_armor_upgrade_2 = {
+		enable_equipment_modules = {
+			tank_magic_armor
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 6 }
+		}
+		path = {
+			leads_to_tech = nsb_armor_upgrade_3
+			research_cost_coeff = 1
+		}
+		show_effect_as_desc = yes
+		on_research_complete = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = unlock_upgrade_tt
+					VALUE = 9
+					TYPE = armor_upgrade_tt
+				}
+			}
+		}
+		category_all_armor = {
+			armor_value = 0.01
+			hardness = 0.01
+			breakthrough = 0.01
+			defense = 0.01
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	nsb_armor_upgrade_3 = {
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 8 }
+		}
+		path = {
+			leads_to_tech = nsb_armor_upgrade_4
+			research_cost_coeff = 1
+		}
+		show_effect_as_desc = yes
+		on_research_complete = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = unlock_upgrade_tt
+					VALUE = 12
+					TYPE = armor_upgrade_tt
+				}
+			}
+		}
+		category_all_armor = {
+			armor_value = 0.01
+			hardness = 0.01
+			breakthrough = 0.01
+			defense = 0.01
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	nsb_armor_upgrade_4 = {
+		enable_equipment_modules = {
+			tank_active_protection_armor
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 10 }
+		}
+		path = {
+			leads_to_tech = nsb_armor_upgrade_5
+			research_cost_coeff = 1
+		}
+		show_effect_as_desc = yes
+		on_research_complete = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = unlock_upgrade_tt
+					VALUE = 15
+					TYPE = armor_upgrade_tt
+				}
+			}
+		}
+		category_all_armor = {
+			armor_value = 0.01
+			hardness = 0.01
+			breakthrough = 0.01
+			defense = 0.01
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	nsb_armor_upgrade_5 = {
+		enable_equipment_modules = {
+			tank_composite_armor
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 12 }
+		}
+		path = {
+			leads_to_tech = nsb_armor_upgrade_6
+			research_cost_coeff = 1
+		}
+		show_effect_as_desc = yes
+		on_research_complete = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = unlock_upgrade_tt
+					VALUE = 18
+					TYPE = armor_upgrade_tt
+				}
+			}
+		}
+		category_all_armor = {
+			armor_value = 0.01
+			hardness = 0.01
+			breakthrough = 0.01
+			defense = 0.01
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	nsb_armor_upgrade_6 = {
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 14 }
+		}
+		path = {
+			leads_to_tech = nsb_armor_upgrade_7
+			research_cost_coeff = 1
+		}
+		show_effect_as_desc = yes
+		on_research_complete = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = unlock_upgrade_tt
+					VALUE = 21
+					TYPE = armor_upgrade_tt
+				}
+			}
+		}
+		category_all_armor = {
+			armor_value = 0.01
+			hardness = 0.01
+			breakthrough = 0.01
+			defense = 0.01
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	nsb_armor_upgrade_7 = {
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 16 }
+		}
+		path = {
+			leads_to_tech = nsb_armor_upgrade_8
+			research_cost_coeff = 1
+		}
+		show_effect_as_desc = yes
+		on_research_complete = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = unlock_upgrade_tt
+					VALUE = 24
+					TYPE = armor_upgrade_tt
+				}
+			}
+		}
+		category_all_armor = {
+			armor_value = 0.01
+			hardness = 0.01
+			breakthrough = 0.01
+			defense = 0.01
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	nsb_armor_upgrade_8 = {
+		enable_equipment_modules = {
+			tank_energetic_armor
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 18 }
+		}
+		path = {
+			leads_to_tech = nsb_armor_upgrade_9
+			research_cost_coeff = 1
+		}
+		show_effect_as_desc = yes
+		on_research_complete = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = unlock_upgrade_tt
+					VALUE = 27
+					TYPE = armor_upgrade_tt
+				}
+			}
+		}
+		category_all_armor = {
+			armor_value = 0.01
+			hardness = 0.01
+			breakthrough = 0.01
+			defense = 0.01
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	nsb_armor_upgrade_9 = {
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 20 }
+		}
+		path = {
+			leads_to_tech = nsb_armor_upgrade_10
+			research_cost_coeff = 1
+		}
+		show_effect_as_desc = yes
+		on_research_complete = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = unlock_upgrade_tt
+					VALUE = 30
+					TYPE = armor_upgrade_tt
+				}
+			}
+		}
+		category_all_armor = {
+			armor_value = 0.01
+			hardness = 0.01
+			breakthrough = 0.01
+			defense = 0.01
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	nsb_armor_upgrade_10 = {
+		enable_equipment_modules = {
+			tank_liquid_armor
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 2 y = 22 }
+		}
+		show_effect_as_desc = yes
+		on_research_complete = {
+			custom_override_tooltip = {
+				tooltip = {
+					localization_key = unlock_upgrade_tt
+					VALUE = 33
+					TYPE = armor_upgrade_tt
+				}
+			}
+		}
+		category_all_armor = {
+			armor_value = 0.01
+			hardness = 0.01
+			breakthrough = 0.01
+			defense = 0.01
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	#special modules(amphibious)
+	swimming_device_0 = {
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 6 y = 10 }
+		}
+		path = {
+			leads_to_tech = swimming_device_1
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land
+			specialization_naval 
+		}
+	}
+	swimming_device_1 = {
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 6 y = 12 }
+		}
+		path = {
+			leads_to_tech = floats_0
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land
+			specialization_naval 
+		}
+	}
+
+
+	
+	floats_0 = {
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 4 y = 12 }
+		}
+		light_amphibious_tank = {
+			river = {
+				movement = 0.05
+			}
+			amphibious = {
+				attack = 0.025
+				movement = 0.05
+				defence = 0.025
+			}
+		}
+		light_magic_amphibious_tank = {
+			river = {
+				movement = 0.05
+			}
+			amphibious = {
+				attack = 0.025
+				movement = 0.05
+				defence = 0.025
+			}
+		}
+		medium_amphibious_tank = {
+			river = {
+				movement = 0.05
+			}
+			amphibious = {
+				attack = 0.025
+				movement = 0.05
+				defence = 0.025
+			}
+		}
+		medium_magic_amphibious_tank = {
+			river = {
+				movement = 0.05
+			}
+			amphibious = {
+				attack = 0.025
+				movement = 0.05
+				defence = 0.025
+			}
+		}
+		heavy_amphibious_tank = {
+			river = {
+				movement = 0.05
+			}
+			amphibious = {
+				attack = 0.025
+				movement = 0.05
+				defence = 0.025
+			}
+		}
+		heavy_magic_amphibious_tank = {
+			river = {
+				movement = 0.05
+			}
+			amphibious = {
+				attack = 0.025
+				movement = 0.05
+				defence = 0.025
+			}
+		}
+		special_project_specialization = { 
+			specialization_land
+			specialization_naval 
+		}
+	}
+	#special modules(suspension)
+	wishbone_suspension = {
+		enable_equipment_modules = {
+			tank_semi_rigid_suspension
+			tank_multi_link_suspension
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 0 y = 0 }
+		}
+		path = {
+			leads_to_tech = half_track_suspensions
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land
+		}
+	}
+	half_track_suspensions = {
+		enable_equipment_modules = {
+			tank_trailing_arm_suspension
+			tank_chrysler_type_suspension
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 0 y = 2 }
+		}
+		special_project_specialization = { 
+			specialization_land
+		}
+	}
+	#special modules (ammunition types)
+	API_ammunition = {
+		enable_equipment_modules = {
+			tank_API_ammunition
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 0 y = 0 }
+		}
+		special_project_specialization = { 
+			specialization_land
+		}
+	}
+	land_HE_ammunition = {
+		enable_equipment_modules = {
+			tank_HE_ammunition
+			tank_HEAT_ammunition
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 0 y = 0 }
+		}
+		path = {
+			leads_to_tech = aa_HE_ammunition
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land
+		}
+	}
+	aa_HE_ammunition = {
+		enable_equipment_modules = {
+			tank_HE_AB_ammunition
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 0 y = 2 }
+		}
+		special_project_specialization = { 
+			specialization_land
+			specialization_air
+		}
+	}
+	FRAG_ammunition = {
+		enable_equipment_modules = {
+			tank_FRAG_ammunition
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = nsb_armour_folder
+			position = { x = 0 y = 0 }
+		}
+		special_project_specialization = { 
+			specialization_land
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+
 	### GERMAN TANK NAMES IN COMMENTS SO YOU CAN FIND STUFF MORE EASILY
 	gwtank_chassis = { #Leichttraktor
 
@@ -33,19 +1699,6 @@ technologies = {
 			light_tank_aa_chassis_0
 			medium_tank_aa_chassis_0
 			heavy_tank_aa_chassis_0
-
-
-
-			light_magic_tank_chassis_0
-			medium_magic_tank_chassis_0
-			heavy_magic_tank_chassis_0
-			super_heavy_magic_tank_chassis_0
-
-			light_magic_tank_chassis_1
-			light_magic_tank_chassis_2
-			light_magic_tank_chassis_3
-
-			land_cruiser_chassis_1
 		}
 		enable_equipment_modules = {
 			tank_torsion_bar_suspension
@@ -77,24 +1730,6 @@ technologies = {
 			smoke_launchers
 
 
-			tank_llm_engine
-
-			tank_AP_ammunition
-			tank_API_ammunition
-			tank_HE_ammunition
-			tank_HE_AB_ammunition
-			tank_HEAT_ammunition
-			tank_FRAG_ammunition
-
-
-			lc_gasoline_engine
-			lc_disel_engine
-			lc_petrol_electric_engine
-			lc_gas_turbine_engine
-			lc_engine_nuke_primary
-			lc_engine_nuke_secondary
-			lc_magic_engine
-			lc_llm_engine
 		}
 		enable_subunits = {
 			light_armor
