@@ -42,6 +42,21 @@ technologies = {
 			tank_welded_armor
 			#ammunition
 			tank_AP_ammunition
+
+			#temp (TODO)
+			tank_MAGIC_ammunition
+
+			#temp
+			auto_loader_0
+			gun_computer_0
+			easy_maintenance
+			oscillating_turret
+			smoke_launchers
+			stabilizer_0
+			sloped_armor
+			secondary_turret_hmg
+			secondary_turret_small_cannon
+			tank_radio_0
 		}
 		research_cost = 2
 		start_year = 989
@@ -637,7 +652,7 @@ technologies = {
 			position = { x = 15 y = 18 }
 		}
 		path = {
-			leads_to_tech = heavy_chassis_6
+			leads_to_tech = heavy_chassis_7
 			research_cost_coeff = 1
 		}
 		special_project_specialization = { 
@@ -1468,6 +1483,9 @@ technologies = {
 	}
 	#special modules(amphibious)
 	swimming_device_0 = {
+		enable_equipment_modules = {
+			amphibious_drive_0
+		}
 		research_cost = 2
 		start_year = 989
 		folder = {
@@ -1484,6 +1502,9 @@ technologies = {
 		}
 	}
 	swimming_device_1 = {
+		enable_equipment_modules = {
+			amphibious_drive_1
+		}
 		research_cost = 2
 		start_year = 989
 		folder = {

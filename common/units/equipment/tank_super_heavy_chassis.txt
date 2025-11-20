@@ -14,7 +14,7 @@ equipments = {
 			main_armament = {
 				required = yes
 				allowed_module_categories = {
-					tank_small_main_armament
+					tank_super_heavy_main_armament
 					tank_flamethrower
 				}
 			}
@@ -27,27 +27,45 @@ equipments = {
 			special_module_0 = {
 				required = no
 				allowed_module_categories = {
-
+					tank_radio_module
+					tank_amphibious_module
+					tank_special_module
+					tank_secondary_turret
+					tank_stabilizer_module
+					tank_auto_loader_module
+					tank_gun_computer_module
 				}
 			}
 			special_module_1 = {
 				required = no
 				allowed_module_categories = {
-
+					tank_radio_module
+					tank_amphibious_module
+					tank_special_module
+					tank_secondary_turret
+					tank_stabilizer_module
+					tank_auto_loader_module
+					tank_gun_computer_module
 				}
 			}
 			special_module_2 = {
 				required = no
 				allowed_module_categories = {
-
+					tank_radio_module
+					tank_amphibious_module
+					tank_special_module
+					tank_secondary_turret
+					tank_stabilizer_module
+					tank_auto_loader_module
+					tank_gun_computer_module
 				}
 			}
 			#fixed slots
 			fixed_suspension_type = {
 				required = yes
 				allowed_module_categories = {
-					tank_suspension_type
-					tank_non_tracked_suspension_type
+					tank_crawler_suspension
+					tank_wheel_suspension
 				}
 			}
 			fixed_armor_type = {
@@ -71,67 +89,53 @@ equipments = {
 
 		}
 		module_count_limit = {
-			module = sloped_armor
 			count < 2
-		}	
-		module_count_limit = {
 			category = tank_radio_module
+		}
+		module_count_limit = {
 			count < 2
+			category = tank_amphibious_module
 		}
 		module_count_limit = {
-			module = amphibious_drive
-			count < 1
+			count < 2
+			module = sloped_armor
 		}
 		module_count_limit = {
+			count < 2
+			category = tank_stabilizer_module
+		}
+		module_count_limit = {
+			count < 2
 			module = wet_ammo_storage
-			count < 2
 		}
-
 		module_count_limit = {
+			count < 2
 			module = squeezebore_adaptor
-			count < 2
 		}
-
 		module_count_limit = {
+			count < 2
 			module = armor_skirts
-			count < 2
 		}
-
 		module_count_limit = {
+			count < 2
 			module = dozer_blade
-			count < 2
-		}
-
-		module_count_limit = {
-			module = easy_maintenance
-			count < 2
 		}
 		module_count_limit = {
-			module = auto_loader
 			count < 2
+			category = tank_auto_loader_module
 		}
 		module_count_limit = {
+			count < 2
 			module = oscillating_turret
-			count < 2
 		}
 		module_count_limit = {
-			module = gun_computer
 			count < 2
+			module = easy_maintenance
 		}
+		#chassis related limit
 		module_count_limit = {
-			module = anti_tank_guided_missiles
-			count < 2
-		}
-		module_count_limit = {
-			module = surface_to_air_missiles
-			count < 2
-		}
-		default_modules = {
-			main_armament_slot = empty
-			turret_type_slot = tank_super_heavy_three_man_tank_turret
-			suspension_type_slot = tank_bogie_suspension
-			armor_type_slot = tank_riveted_armor
-			engine_type_slot = tank_gasoline_engine
+			count < 5
+			category = tank_secondary_turret
 		}
 
 		fuel_consumption = 0
@@ -159,6 +163,100 @@ equipments = {
 		upgrades = {
 			tank_nsb_engine_upgrade
 			tank_nsb_armor_upgrade
+		}
+	}
+	super_heavy_tank_chassis_1 = {
+		abbreviation = "sh0"
+		visual_level = 0
+		year = 1014
+		archetype = super_heavy_tank_chassis
+		priority = 2000
+		parent = super_heavy_tank_chassis_0
+		module_slots = inherit
+	}
+	super_heavy_tank_chassis_2 = {
+		abbreviation = "sh0"
+		visual_level = 0
+		year = 1014
+		archetype = super_heavy_tank_chassis
+		priority = 2000
+		parent = super_heavy_tank_chassis_1
+		module_slots = {
+			#custom slots
+			main_armament = inherit
+			turret_type = inherit
+			special_module_0 = inherit
+			special_module_1 = inherit
+			special_module_2 = inherit
+			special_module_3 = {
+				required = no
+				allowed_module_categories = {
+					tank_radio_module
+					tank_amphibious_module
+					tank_special_module
+					tank_secondary_turret
+					tank_stabilizer_module
+					tank_auto_loader_module
+					tank_gun_computer_module
+				}
+			}
+			#fixed slots
+			fixed_suspension_type = inherit
+			fixed_armor_type = inherit
+			fixed_engine_type = inherit
+			fixed_ammunition_type = inherit
+		}
+	}
+	super_heavy_tank_chassis_3 = {
+		abbreviation = "sh0"
+		visual_level = 0
+		year = 1014
+		archetype = super_heavy_tank_chassis
+		priority = 2000
+		parent = super_heavy_tank_chassis_2
+		module_slots = inherit
+	}
+	super_heavy_tank_chassis_4 = {
+		abbreviation = "sh0"
+		visual_level = 0
+		year = 1014
+		archetype = super_heavy_tank_chassis
+		priority = 2000
+		parent = super_heavy_tank_chassis_3
+		module_slots = inherit
+	}
+	super_heavy_tank_chassis_5 = {
+		abbreviation = "sh0"
+		visual_level = 0
+		year = 1014
+		archetype = super_heavy_tank_chassis
+		priority = 2000
+		parent = super_heavy_tank_chassis_4
+		module_slots = {
+			#custom slots
+			main_armament = inherit
+			turret_type = inherit
+			special_module_0 = inherit
+			special_module_1 = inherit
+			special_module_2 = inherit
+			special_module_3 = inherit
+			special_module_4 = {
+				required = no
+				allowed_module_categories = {
+					tank_radio_module
+					tank_amphibious_module
+					tank_special_module
+					tank_secondary_turret
+					tank_stabilizer_module
+					tank_auto_loader_module
+					tank_gun_computer_module
+				}
+			}
+			#fixed slots
+			fixed_suspension_type = inherit
+			fixed_armor_type = inherit
+			fixed_engine_type = inherit
+			fixed_ammunition_type = inherit
 		}
 	}
 }

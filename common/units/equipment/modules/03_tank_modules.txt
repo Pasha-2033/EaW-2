@@ -2,10 +2,9 @@ equipment_modules = {
 	limit = {
 		has_dlc = "No Step Back" 
 	}
-	###Special Modules
-
-
-	tank_radio_1 = {
+	#Special Modules
+	#radio
+	tank_radio_0 = {
 		abbreviation = "rad1"
 		category = tank_radio_module
 		sfx = sfx_ui_sd_module_turret
@@ -19,7 +18,21 @@ equipment_modules = {
 			breakthrough = 0.15
 		}
 	}
+	tank_radio_1 = {
+		abbreviation = "rad1"
+		category = tank_radio_module
+		sfx = sfx_ui_sd_module_turret
+		parent = tank_radio_0
 
+		add_stats = {
+			build_cost_ic = 0.5
+		}
+		xp_cost = 1
+		multiply_stats = {
+			defense = 0.25
+			breakthrough = 0.15
+		}
+	}
 	tank_radio_2 = {
 		abbreviation = "rad2"
 		category = tank_radio_module
@@ -35,7 +48,6 @@ equipment_modules = {
 			breakthrough = 0.30
 		}
 	}
-
 	tank_radio_3 = {
 		abbreviation = "rad3"
 		category = tank_radio_module
@@ -51,7 +63,6 @@ equipment_modules = {
 			breakthrough = 0.45
 		}
 	}
-
 	tank_radio_4 = {
 		abbreviation = "rad4"
 		category = tank_radio_module
@@ -67,7 +78,6 @@ equipment_modules = {
 			breakthrough = 0.60
 		}
 	}
-
 	tank_radio_5 = {
 		abbreviation = "rad5"
 		category = tank_radio_module
@@ -83,13 +93,13 @@ equipment_modules = {
 			breakthrough = 0.75
 		}
 	}
-
-	amphibious_drive = {
+	#amphibious drive
+	amphibious_drive_0 = {
 		abbreviation = "amph"
-		category = tank_special_module
+		category = tank_amphibious_module
 		sfx = sfx_ui_sd_module_turret
 		allow_equipment_type = amphibious
-		forbid_equipment_type_exact_match = armor
+		#forbid_equipment_type_exact_match = armor
 		forbid_equipment_type = anti_air
 		forbid_equipment_type = artillery
 		forbid_equipment_type = anti_tank
@@ -104,7 +114,28 @@ equipment_modules = {
 			build_cost_ic = 0.1
 		}
 	}
+	amphibious_drive_1 = {
+		abbreviation = "amph"
+		category = tank_amphibious_module
+		sfx = sfx_ui_sd_module_turret
+		parent = amphibious_drive_0
+		allow_equipment_type = amphibious
+		#forbid_equipment_type_exact_match = armor
+		forbid_equipment_type = anti_air
+		forbid_equipment_type = artillery
+		forbid_equipment_type = anti_tank
+		forbid_equipment_type = flame
 
+		add_stats = {
+			build_cost_ic = 2
+			reliability = -0.15
+		}
+		xp_cost = 1
+		multiply_stats = {
+			build_cost_ic = 0.1
+		}
+	}
+	#secondary turret
 	secondary_turret_hmg = {
 		abbreviation = "thmg"
 		category = tank_secondary_turret
@@ -121,7 +152,6 @@ equipment_modules = {
 		multiply_stats = {
 		}
 	}
-
 	secondary_turret_small_cannon = {
 		abbreviation = "tsc"
 		category = tank_secondary_turret
@@ -140,7 +170,7 @@ equipment_modules = {
 			armor_value  = -0.05
 		}
 	}
-
+	#armor
 	sloped_armor = {
 		abbreviation = "slop"
 		category = tank_special_module
@@ -154,10 +184,10 @@ equipment_modules = {
 			build_cost_ic = 0.01
 		}
 	}
-
-	stabilizer = {
+	#stabilizer
+	stabilizer_0 = {
 		abbreviation = "stab"
-		category = tank_special_module
+		category = tank_stabilizer_module
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
@@ -168,10 +198,10 @@ equipment_modules = {
 
 	}
 
-	stabilizer_2 = {
+	stabilizer_1 = {
 		abbreviation = "stab2"
-		category = tank_special_module
-		parent = stabilizer
+		category = tank_stabilizer_module
+		parent = stabilizer_0
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
@@ -181,7 +211,7 @@ equipment_modules = {
 		xp_cost = 1
 
 	}
-
+	#smoke launchers
 	smoke_launchers = {
 		abbreviation = "smok"
 		category = tank_special_module
@@ -197,7 +227,7 @@ equipment_modules = {
 
 		}
 	}
-
+	#ammo storage
 	extra_ammo_storage = {
 		abbreviation = "extra"
 		category = tank_special_module
@@ -274,10 +304,10 @@ equipment_modules = {
 			
 		}
 	}
-
-	auto_loader = {
+	#auto loader
+	auto_loader_0 = {
 		abbreviation = "auto"
-		category = tank_special_module
+		category = tank_auto_loader_module
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
@@ -288,35 +318,22 @@ equipment_modules = {
 		xp_cost = 1
 		
 	}
-
-	anti_tank_guided_missiles = {
-		abbreviation = "atgm"
-		category = tank_special_module
+	auto_loader_1 = {
+		abbreviation = "auto"
+		category = tank_auto_loader_module
 		sfx = sfx_ui_sd_module_turret
+		parent = auto_loader_0
 
 		add_stats = {
-			build_cost_ic = 5
-			hard_attack = 5
-			ap_attack = 50
-			reliability = -0.1
+			build_cost_ic = 2.5
+			breakthrough = 4
+			defense = 4
 		}
 		xp_cost = 1
 		
 	}
+	########
 
-	surface_to_air_missiles = {
-		abbreviation = "sam"
-		category = tank_special_module
-		sfx = sfx_ui_sd_module_turret
-
-		add_stats = {
-			build_cost_ic = 5
-			air_attack = 5
-			reliability = -0.1
-		}
-		xp_cost = 1
-
-	}
 
 	oscillating_turret = {
 		abbreviation = "osc"
@@ -349,26 +366,30 @@ equipment_modules = {
 			
 		}
 	}
-
-	additional_machine_guns = {
-		abbreviation = "mg"
-		category = tank_special_module
+	#gun computer
+	gun_computer_0 = {
+		abbreviation = "gc"
+		category = tank_gun_computer_module
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
-			soft_attack = 2
+			breakthrough = 2
 			defense = 2
-			build_cost_ic = 0.5
+			build_cost_ic = 1
 		}
 		xp_cost = 1
+
 		multiply_stats = {
-			
+			soft_attack = 0.1
+			hard_attack = 0.1
+			air_attack = 0.1
 		}
 	}
-	gun_computer = {
+	gun_computer_1 = {
 		abbreviation = "gc"
-		category = tank_special_module
+		category = tank_gun_computer_module
 		sfx = sfx_ui_sd_module_turret
+		parent = gun_computer_0
 
 		add_stats = {
 			breakthrough = 2

@@ -309,4 +309,16 @@ equipment_modules = {
 			build_cost_ic = 0.05
 		}
 	}
+	tank_MAGIC_ammunition = {
+		abbreviation = "htr"
+		category = tank_ammunition_type
+		sfx = sfx_ui_sd_module_sonar
+		multiply_stats = {
+			soft_attack = 0.15
+			build_cost_ic = 0.05
+		}
+		build_cost_resources = {
+			crystals = 1
+		}
+	}
 }
