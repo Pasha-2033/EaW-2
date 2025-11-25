@@ -1236,10 +1236,10 @@ sabotage_thermonuclear_fuel = {
 
 	alert_text = resource_is_sabotaged
 }
-sabotage_unobtanium = {
+sabotage_coal = {
 	available = {
 		has_resources_amount = {
-			resource = unobtanium
+			resource = coal
 			amount > 0
 			delivered = yes
 		}
@@ -1264,7 +1264,7 @@ sabotage_unobtanium = {
 
 	effect = {
 		clear_sabotaged_resources_if_necesary = yes
-		add_to_variable = { sabotaged_unobtanium = -12 }
+		add_to_variable = { sabotaged_coal = -12 }
 		set_temp_variable = { duration = 180 }
 		if = {
 			limit = {
@@ -1281,7 +1281,7 @@ sabotage_unobtanium = {
 				check_variable = { targeted_sabotage_resources > 0 }
 			}
 
-			add_to_variable = { sabotaged_unobtanium = -8 }
+			add_to_variable = { sabotaged_coal = -8 }
 			subtract_from_variable = { var = targeted_sabotage_resources value = 1 }
 		}
 		add_dynamic_modifier = {

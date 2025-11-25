@@ -510,6 +510,9 @@ buildings = {
 				nuclear_reactor_num = 1
 			}
 		}
+		state_modifiers = {
+			local_factory_energy_consumption = -0.1
+		}
 
 		#spawn_point = nuclear_reactor_spawn
 		hide_if_missing_tech = yes
@@ -532,6 +535,9 @@ buildings = {
 			modifiers = {
 				nuclear_reactor_heavy_water_num = 1
 			}
+		}
+		state_modifiers = {
+			local_factory_energy_consumption = -0.15
 		}
 
 		#spawn_point = nuclear_reactor_spawn
@@ -582,6 +588,9 @@ buildings = {
 				thermonuclear_reactor_num = 1
 			}
 		}
+		state_modifiers = {
+			local_factory_energy_consumption = -0.5
+		}
 
 		#country_resource_cost_crystals = 12
 
@@ -603,7 +612,7 @@ buildings = {
 
 		show_modifier = yes
 		state_modifiers = {
-			
+			local_factory_energy_consumption = -0.3
 		}
 
 		#country_resource_cost_crystals = 12
