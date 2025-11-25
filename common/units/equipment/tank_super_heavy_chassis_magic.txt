@@ -262,4 +262,39 @@ equipments = {
 			fixed_ammunition_type = inherit
 		}
 	}
+	super_heavy_magic_tank_chassis_6 = {
+		abbreviation = "sh0"
+		visual_level = 0
+		year = 1014
+		archetype = super_heavy_magic_tank_chassis
+		priority = 2000
+		parent = super_heavy_magic_tank_chassis_5
+		module_slots = {
+			#custom slots
+			main_armament = inherit
+			turret_type = inherit
+			special_module_0 = inherit
+			special_module_1 = inherit
+			special_module_2 = inherit
+			special_module_3 = inherit
+			special_module_4 = inherit
+			special_module_5 = {
+				required = no
+				allowed_module_categories = {
+					tank_radio_module
+					tank_amphibious_module
+					tank_special_module
+					tank_secondary_turret
+					tank_stabilizer_module
+					tank_auto_loader_module
+					tank_gun_computer_module
+				}
+			}
+			#fixed slots
+			fixed_suspension_type = inherit
+			fixed_armor_type = inherit
+			fixed_engine_type = inherit
+			fixed_ammunition_type = inherit
+		}
+	}
 }

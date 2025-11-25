@@ -372,4 +372,21 @@ equipments = {
 			steel = 1
 		}
 	}
+	medium_magic_tank_chassis_10 = {
+		abbreviation = "mt0"
+		derived_variant_name = medium_tank_equipment_0
+		visual_level = 0
+		year = 1922
+		archetype = medium_magic_tank_chassis
+		parent = medium_magic_tank_chassis_9
+		priority = 2000
+		module_slots = inherit
+		maximum_speed = 4
+		build_cost_ic = 3.5
+		reliability = 0.75
+		armor_value = 20
+		resources = {
+			steel = 1
+		}
+	}
 }
