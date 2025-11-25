@@ -282,6 +282,68 @@ sub_units = {
 			attack = 0.6
 		}	
 	}
+	light_rocket_tank = {
+		abbreviation = "LAM"
+		sprite = amphibious_armor
+		map_icon_category = armored
+		priority = 2501
+		ai_priority = 2000
+		active = yes
+		special_forces = yes
+		marines = yes
+		type = {
+			armor
+			amphibious
+		}
+		
+		group = light_armor
+		
+		categories = {
+			category_tanks
+			category_front_line
+			category_all_armor
+			category_army
+		}
+
+
+		combat_width = 2
+
+		need = {
+			light_rocket_tank_chassis = 10
+		}
+		manpower = 500
+		max_organisation = 10
+		default_morale = 0.3
+		training_time = 180
+		max_strength = 2
+		weight = 1
+		supply_consumption = 0.2
+
+		forest = {
+			attack = -0.2
+			movement = -0.4
+		}
+		mountain = 	{
+			attack = -0.1
+		}
+		jungle = {
+			attack = -0.3
+			movement = -0.4
+		}
+		urban = {
+			attack = -0.4
+			defence = -0.1
+		}
+		marsh = {
+			attack = 0.3
+		}
+		river = {
+			attack = 0.4
+		}
+		amphibious = {
+			attack = 0.6
+		}	
+	}
 	light_airborne_tank = {
 		#support
 		abbreviation = "LAB"
@@ -601,6 +663,68 @@ sub_units = {
 
 		need = {
 			light_magic_amphibious_tank_chassis = 10
+		}
+		manpower = 500
+		max_organisation = 10
+		default_morale = 0.3
+		training_time = 180
+		max_strength = 2
+		weight = 1
+		supply_consumption = 0.2
+
+		forest = {
+			attack = -0.2
+			movement = -0.4
+		}
+		mountain = 	{
+			attack = -0.1
+		}
+		jungle = {
+			attack = -0.3
+			movement = -0.4
+		}
+		urban = {
+			attack = -0.4
+			defence = -0.1
+		}
+		marsh = {
+			attack = 0.3
+		}
+		river = {
+			attack = 0.4
+		}
+		amphibious = {
+			attack = 0.6
+		}	
+	}
+	light_magic_rocket_tank = {
+		abbreviation = "LAM"
+		sprite = amphibious_armor
+		map_icon_category = armored
+		priority = 2501
+		ai_priority = 2000
+		active = yes
+		special_forces = yes
+		marines = yes
+		type = {
+			armor
+			amphibious
+		}
+		
+		group = light_armor
+		
+		categories = {
+			category_tanks
+			category_front_line
+			category_all_armor
+			category_army
+		}
+
+
+		combat_width = 2
+
+		need = {
+			light_magic_rocket_tank_chassis = 10
 		}
 		manpower = 500
 		max_organisation = 10

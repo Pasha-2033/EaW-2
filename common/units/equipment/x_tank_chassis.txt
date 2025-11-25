@@ -43,6 +43,14 @@ duplicate_archetypes = {
 			hardness = { set = 0.85 }
 		}
 	}
+	light_rocket_tank_chassis = {
+		archetype = light_tank_chassis
+		type = { armor rocket }
+		for_each = {
+			variant_name = { find_and_replace = { "chassis" "equipment" } }
+			hardness = { set = 0.85 }
+		}
+	}
 	#light magic
 	light_magic_aa_tank_chassis = {
 		archetype = light_magic_tank_chassis
@@ -79,6 +87,14 @@ duplicate_archetypes = {
 	light_magic_flame_tank_chassis = {
 		archetype = light_magic_tank_chassis
 		type = { armor flame }
+		for_each = {
+			variant_name = { find_and_replace = { "chassis" "equipment" } }
+			hardness = { set = 0.85 }
+		}
+	}
+	light_magic_rocket_tank_chassis = {
+		archetype = light_magic_tank_chassis
+		type = { armor rocket }
 		for_each = {
 			variant_name = { find_and_replace = { "chassis" "equipment" } }
 			hardness = { set = 0.85 }
@@ -126,9 +142,18 @@ duplicate_archetypes = {
 			variant_name = { find_and_replace = { "chassis" "equipment" } }
 		}
 	}
+
+	medium_rocket_tank_chassis = {
+		archetype = medium_tank_chassis
+		type = { armor rocket }
+		for_each = {
+			variant_name = { find_and_replace = { "chassis" "equipment" } }
+			hardness = { set = 0.85 }
+		}
+	}
 	#medium magic
 	medium_magic_aa_tank_chassis = {
-		archetype = medium_tank_chassis
+		archetype = medium_magic_tank_chassis
 		type = { armor anti_air }
 		for_each = {
 			variant_name = { find_and_replace = { "chassis" "equipment" } }
@@ -136,14 +161,14 @@ duplicate_archetypes = {
 		}
 	}
 	medium_magic_at_tank_chassis = {
-		archetype = medium_tank_chassis
+		archetype = medium_magic_tank_chassis
 		type = { armor anti_tank }
 		for_each = {
 			variant_name = { find_and_replace = { "chassis" "equipment" } }
 		}
 	}
 	medium_magic_artillery_tank_chassis = {
-		archetype = medium_tank_chassis
+		archetype = medium_magic_tank_chassis
 		type = { armor artillery }
 		for_each = {
 			variant_name = { find_and_replace = { "chassis" "equipment" } }
@@ -151,7 +176,7 @@ duplicate_archetypes = {
 		}
 	}
 	medium_magic_amphibious_tank_chassis = {
-		archetype = medium_tank_chassis
+		archetype = medium_magic_tank_chassis
 		type = { armor amphibious }
 		for_each = {
 			variant_name = { find_and_replace = { "chassis" "equipment" } }
@@ -159,10 +184,18 @@ duplicate_archetypes = {
 		}
 	}
 	medium_magic_flame_tank_chassis = {
-		archetype = medium_tank_chassis
+		archetype = medium_magic_tank_chassis
 		type = { armor flame }
 		for_each = {
 			variant_name = { find_and_replace = { "chassis" "equipment" } }
+		}
+	}
+	medium_magic_rocket_tank_chassis = {
+		archetype = medium_magic_tank_chassis
+		type = { armor rocket }
+		for_each = {
+			variant_name = { find_and_replace = { "chassis" "equipment" } }
+			hardness = { set = 0.85 }
 		}
 	}
 	#heavy
@@ -202,6 +235,14 @@ duplicate_archetypes = {
 			variant_name = { find_and_replace = { "chassis" "equipment" } }
 		}
 	}
+	heavy_rocket_tank_chassis = {
+		archetype = heavy_tank_chassis
+		type = { armor rocket }
+		for_each = {
+			variant_name = { find_and_replace = { "chassis" "equipment" } }
+			hardness = { set = 0.85 }
+		}
+	}
 	#heavy magic
 	heavy_magic_aa_tank_chassis = {
 		archetype = heavy_magic_tank_chassis
@@ -237,6 +278,14 @@ duplicate_archetypes = {
 		type = { armor flame }
 		for_each = {
 			variant_name = { find_and_replace = { "chassis" "equipment" } }
+		}
+	}
+	heavy_magic_rocket_tank_chassis = {
+		archetype = heavy_magic_tank_chassis
+		type = { armor rocket }
+		for_each = {
+			variant_name = { find_and_replace = { "chassis" "equipment" } }
+			hardness = { set = 0.85 }
 		}
 	}
 	#super heavy

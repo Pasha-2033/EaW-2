@@ -1,6 +1,7 @@
 name="Equestria at War 2"
 replace_path="common/ai_equipment"
 replace_path="common/ai_focuses"
+replace_path="common/ai_navy/goals"
 replace_path="common/ai_peace"
 replace_path="common/ai_strategy"
 replace_path="common/ai_strategy_plans"
