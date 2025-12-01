@@ -3,7 +3,7 @@ capital = 76
 set_convoys = 4
 if = { #982 scenario script
 	limit = {
-		has_start_date < 1002.1.1
+		has_first_scenario = yes
 	}
 	set_research_slots = 1
 	set_technology = {
@@ -63,7 +63,7 @@ if = { #982 scenario script
 	}
 	else_if = { #1002 scenario script
 		limit = {
-			has_start_date < 1050.1.1
+			has_first_scenario = yes
 		}
 		
 	}

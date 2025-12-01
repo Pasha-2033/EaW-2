@@ -1,0 +1,11 @@
+#use scenarion triggers instead of "has_start_date"
+has_first_scenario = {
+	has_start_date < 1002.1.1 #second scenarion begin
+}
+has_second_scenario = {
+	has_start_date > 982.1.1 #first scenarion begin
+	has_start_date < 1050.1.1 #third scenarion begin
+}
+has_third_scenario = {
+	has_start_date > 1002.1.1 #second scenarion begin
+}

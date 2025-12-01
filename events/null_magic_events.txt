@@ -176,21 +176,11 @@ country_event = {
 			}
 			344 = {
 				set_state_category = megalopolis
-				#3300667 is to big for 2^31/1000 and cause overflow with clamp -> will cause 0 state population
-				add_manpower = 825166
-				add_manpower = 825166
-				add_manpower = 825166
-				add_manpower = 825166
-				add_manpower = 3
+				add_manpower = 3300667
 			}
 			345 = {
 				set_state_category = metropolis
-				#4215333 is to big for 2^31/1000 and cause overflow with clamp -> will cause 0 state population
-				add_manpower = 1053833
-				add_manpower = 1053833
-				add_manpower = 1053833
-				add_manpower = 1053833
-				add_manpower = 1
+				add_manpower = 4215333 
 			}
 			#update focuses for countries that have dependency on CRY tag in allow_branch
 			PGT = {
