@@ -436,10 +436,17 @@ country_event = {
 	immediate = {
 		log = "[GetDateText]: [Root.GetName]: event equestria.12"
 		hidden_effect = {
+			set_temp_variable = {
+				unit_leader_transfer_chance = civil_war_power
+			}
+			set_temp_variable = {
+				operative_transfer_chance = civil_war_power
+			}
 			if = {
 				limit = {
 					has_completed_focus = eqs_focus_prince_blueblood_speaches
 				}
+				#TODO (set start_generic_civil_war/start_generic_civil_war_with_new_ideology)
 				start_civil_war = {
 					ideology = harmony
 					size = civil_war_power
@@ -458,6 +465,7 @@ country_event = {
 				}
 			}
 			else = {
+				#TODO (set start_generic_civil_war/start_generic_civil_war_with_new_ideology)
 				start_civil_war = {
 					ideology = fascism
 					size = civil_war_power

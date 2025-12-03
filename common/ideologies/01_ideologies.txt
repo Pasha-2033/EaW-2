@@ -4,6 +4,10 @@
 #    When adding a new subideology, please add an entry of the subideology in    #
 #	   common/scripted_localisation/ideology_info_scripted_localisation.txt  	 #
 ######======================================================================######
+#    When adding a new ideology, please add an ideology_token of the ideology in #
+#     			hidden_modifier (required by civil war effects                   #
+#			(common/scripted_effects/civil_war_scripted_effects.txt)			 #
+######======================================================================######
 #uniqe ideologies
 #обновить rules и modifiers для каждой идеологии, переопределить gfx
 ideologies = {
@@ -52,6 +56,9 @@ ideologies = {
 			army_intel_to_others = 30
 			navy_intel_to_others = 30
 			airforce_intel_to_others = 30
+			hidden_modifier = {
+				ideology_token = token:harmony
+			}
 		}
 		can_host_government_in_exile = no		
 		faction_modifiers = {}
@@ -103,7 +110,11 @@ ideologies = {
 		can_collaborate = yes
 		war_impact_on_world_tension = 0.25    #change
 		faction_impact_on_world_tension = 0.1 #change
-		modifiers = {}
+		modifiers = {
+			hidden_modifier = {
+				ideology_token = token:socialism
+			}
+		}
 		can_host_government_in_exile = no		
 		faction_modifiers = {}
 		can_be_boosted = yes
@@ -174,7 +185,11 @@ ideologies = {
 		can_collaborate = yes
 		war_impact_on_world_tension = 0.25    #change
 		faction_impact_on_world_tension = 0.1 #change
-		modifiers = {}
+		modifiers = {
+			hidden_modifier = {
+				ideology_token = token:radicalism
+			}
+		}
 		can_host_government_in_exile = no		
 		faction_modifiers = {}
 		can_be_boosted = yes
@@ -206,6 +221,9 @@ ideologies = {
 			army_intel_to_others = 20
 			navy_intel_to_others = 25
 			airforce_intel_to_others = 15
+			hidden_modifier = {
+				ideology_token = token:unholy
+			}
 		}
 		can_host_government_in_exile = no		
 		faction_modifiers = {}
@@ -244,6 +262,9 @@ ideologies = {
 			army_intel_to_others = 30
 			navy_intel_to_others = 20
 			airforce_intel_to_others = 20
+			hidden_modifier = {
+				ideology_token = token:holy
+			}
 		}
 		can_host_government_in_exile = no		
 		faction_modifiers = {}
@@ -287,6 +308,9 @@ ideologies = {
 			research_sharing_per_country_bonus_factor = 0.1
 			encryption_factor = 0.05
 			decryption_factor = 0.05
+			hidden_modifier = {
+				ideology_token = token:technocracy
+			}
 		}
 		can_host_government_in_exile = yes	
 		faction_modifiers = {}
@@ -325,6 +349,9 @@ ideologies = {
 			surrender_limit = 0.5
 			forced_surrender_limit = 0.95
 			max_surrender_limit_offset = 0.5
+			hidden_modifier = {
+				ideology_token = token:anarchism
+			}
 		}
 		can_host_government_in_exile = no	
 		faction_modifiers = {}
@@ -369,6 +396,9 @@ ideologies = {
 			army_core_defence_factor = 0.05
 			war_stability_factor = 0.1
 			army_consumption_factor = 0.05
+			hidden_modifier = {
+				ideology_token = token:militarism
+			}
 		}
 		can_host_government_in_exile = no	
 		faction_modifiers = {}

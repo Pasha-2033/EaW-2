@@ -1,0 +1,77 @@
+#THIS - is country scope where civil war will take place
+#temp vars (transfer): unit_leader_transfer_chance, operative_transfer_chance
+#temp vars (size): war_size, army_ratio, navy_ratio, air_ratio
+#temp vars (ideology): uprising_ideology
+start_generic_civil_war = {
+	meta_effect = {
+		text = {
+			start_civil_war = {
+				ideology = [I]
+				size = war_size?0.5
+				army_ratio = army_ratio?0.5
+				navy_ratio = navy_ratio?0.5
+				air_ratio = air_ratio?0.5
+				keep_unit_leaders_trigger = {
+					OR = {
+						can_be_country_leader = yes					#prevent country leader transfer - optional, but recommended
+						has_character_political_loyalty = yes		#keep loyal characters
+						has_trait = sympathizes_[I]_trait	#keep unloyal chacharcters - made for proper transfer script work
+					}
+				}
+				custom_override_tooltip = {
+					tooltip = cw_character_transfer
+					PREV = {
+						transfer_unit_leader_by_ideology_sympathy = yes
+						transfer_operative_by_ideology_sympathy = yes
+					}
+				}
+			}
+		}
+		I = "[?uprising_ideology.GetTokenKey]"
+	}
+}
+#temp vars (ideology): new_ideology
+#NOTE: you can use <country scope>.modifier@ideology_token as token for new_ideology
+start_generic_civil_war_with_new_ideology = {
+	meta_effect = {
+		text = {
+			start_civil_war = {
+				ideology = [I]
+				ruling_party = [N]
+				size = war_size?0.5
+				army_ratio = army_ratio?0.5
+				navy_ratio = navy_ratio?0.5
+				air_ratio = air_ratio?0.5
+				keep_unit_leaders_trigger = {
+					OR = {
+						can_be_country_leader = yes					#prevent country leader transfer - optional, but recommended
+						has_character_political_loyalty = yes		#keep loyal characters
+						has_trait = sympathizes_[I]_trait	#keep unloyal chacharcters - made for proper transfer script work
+					}
+				}
+				custom_override_tooltip = {
+					tooltip = cw_character_transfer
+					PREV = {
+						transfer_unit_leader_by_ideology_sympathy = yes
+						transfer_operative_by_ideology_sympathy = yes
+					}
+				}
+			}
+		}
+		I = "[?uprising_ideology.GetTokenKey]"
+		N = "[?new_ideology.GetTokenKey]"
+	}
+}
+#temp vars (size): war_size
+#set temp variables for same size
+same_civil_war_size = {
+	set_temp_variable = {
+		army_ratio = war_size
+	}
+	set_temp_variable = {
+		navy_ratio = war_size
+	}
+	set_temp_variable = {
+		air_ratio = war_size
+	}
+}

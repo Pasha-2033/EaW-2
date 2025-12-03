@@ -198,8 +198,7 @@ transfer_unit_leader_by_ideology_sympathy = {
 	every_unit_leader = {
 		limit = {
 			#country leader with unit leader role - another type of transfer
-			#it`s too complicated to de generic coded, default - all political leaders will be kept
-			can_be_country_leader = no
+			#it`s too complicated to do generic coded, default - all political leaders will be kept
 			meta_trigger = {
 				text = {
 					has_trait = sympathizes_[I]_trait
@@ -211,7 +210,7 @@ transfer_unit_leader_by_ideology_sympathy = {
 					has_character_political_loyalty = yes
 				}
 				check_variable = {
-					random > transfer_chance?0.5
+					random < unit_leader_transfer_chance?0.5
 				}
 			}
 		}
@@ -226,8 +225,7 @@ transfer_operative_by_ideology_sympathy = {
 	every_operative = {
 		limit = {
 			#country leader with operative role - another type of transfer
-			#it`s too complicated to de generic coded, default - all political leaders will be kept
-			can_be_country_leader = no
+			#it`s too complicated to do generic coded, default - all political leaders will be kept
 			meta_trigger = {
 				text = {
 					trait = sympathizes_[I]_trait
@@ -239,7 +237,7 @@ transfer_operative_by_ideology_sympathy = {
 					has_character_political_loyalty = yes
 				}
 				check_variable = {
-					random > transfer_chance?0.5
+					random < operative_transfer_chance?0.5
 				}
 			}
 		}
@@ -258,11 +256,11 @@ transfer_operative_by_ideology_sympathy = {
 #	}
 #	PREV = {
 #		set_temp_variable = {
-#			transfer_chance = 0.25							#defines chance of transfer if character loyal to both sides, optional, default is 0.5
+#			unit_leader_transfer_chance = 0.25							#defines chance of transfer if character loyal to both sides, optional, default is 0.5
 #		}
 #		transfer_unit_leader_by_ideology_sympathy = yes		#transfers character (if unloyal or loyal to both sides with chance "transfer_chance")
 #		set_temp_variable = {
-#			transfer_chance = 0.75							#defines chance of transfer if character loyal to both sides, optional, default is 0.5
+#			operative_transfer_chance = 0.75							#defines chance of transfer if character loyal to both sides, optional, default is 0.5
 #		}
 #		transfer_operative_by_ideology_sympathy = yes
 #	}

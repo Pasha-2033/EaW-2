@@ -31,25 +31,18 @@ PGT_farmrs_rebelion  = {
 				remove_mission = PGT_farmers_ask_support_from_OLE
 				remove_mission = PGT_farmer_preparations
 			}
-			clamp_variable = {
-				var = farmer_influence
+			set_temp_variable = {
+				war_size = farmer_influence
+			}
+			clamp_temp_variable = {
+				var = war_size
 				min = 0.1
 			}
-			start_civil_war = {
-				ideology = harmony
-				size = farmer_influence
-				#to do
-				custom_override_tooltip = {
-					tooltip = ICE_declare_war_on_farmers_tt
-					ICE = {
-						declare_war_on = {
-							target = PREV
-							type = annex_everything
-						}
-					}
-				}
-				keep_political_leader = yes
+			same_civil_war_size = yes
+			set_temp_variable = {
+				uprising_ideology = token:harmony
 			}
+			start_generic_civil_war = yes
 			clear_variable = farmer_influence
 		}
 	}

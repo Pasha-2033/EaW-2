@@ -1206,6 +1206,7 @@ operation_coup_government = { ### 7 1/70
 			}
 
 			# create different civil wars depending on ROOT ideology
+			#TODO (set start_generic_civil_war/start_generic_civil_war_with_new_ideology)
 			start_civil_war = {
 				capital = coup_civil_war_capital
 				size = civil_war_size
@@ -1250,7 +1251,7 @@ operation_coup_government = { ### 7 1/70
 			else = {
 				set_temp_variable = { civil_war_party = PREV.ROOT.current_party_ideology_group }
 			}
-
+			#TODO (set start_generic_civil_war/start_generic_civil_war_with_new_ideology)
 			start_civil_war = {
 				ideology = var:civil_war_party
 			}

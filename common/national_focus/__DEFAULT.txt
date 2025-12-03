@@ -3234,11 +3234,17 @@ focus_tree = {
 							}
 							factor = temp
 						}
-						start_civil_war = {
-							ideology = ROOT
-							ruling_party = anarchism
-							size = party_popularity@ruling_party
+						set_temp_variable = {
+							uprising_ideology = ROOT.modifier@ideology_token
 						}
+						set_temp_variable = {
+							new_ideology = token:anarchism
+						}
+						set_temp_variable = {
+							war_size = party_popularity@ruling_party
+						}
+						same_civil_war_size = yes
+						start_generic_civil_war_with_new_ideology = yes
 					}
 				}
 				add_ideas = anarchy
@@ -4105,11 +4111,17 @@ focus_tree = {
 				}
 			}
 			else = {
-				start_civil_war = {
-					ruling_party = militarism
-    				ideology = ROOT
-					size = party_popularity@militarism
+				set_temp_variable = {
+					uprising_ideology = modifier@ideology_token
 				}
+				set_temp_variable = {
+					new_ideology = token:militarism
+				}
+				set_temp_variable = {
+					war_size = party_popularity@militarism
+				}
+				same_civil_war_size = yes
+				start_generic_civil_war_with_new_ideology = yes
 			}
 		}
 	}

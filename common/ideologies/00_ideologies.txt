@@ -4,6 +4,10 @@
 #    When adding a new subideology, please add an entry of the subideology in    #
 #	   common/scripted_localisation/ideology_info_scripted_localisation.txt  	 #
 ######======================================================================######
+#    When adding a new ideology, please add an ideology_token of the ideology in #
+#     			hidden_modifier (required by civil war effects                   #
+#			(common/scripted_effects/civil_war_scripted_effects.txt)			 #
+######======================================================================######
 #basic ideologies
 #обновить rules и modifiers для каждой идеологии, переопределить gfx
 ideologies = {
@@ -37,6 +41,9 @@ ideologies = {
 		modifiers = {
 			#todo add intell
 			political_power_factor = 0.15
+			hidden_modifier = {
+				ideology_token = token:democratic
+			}
 		}
 		can_host_government_in_exile = yes
 		faction_modifiers = {}
@@ -82,6 +89,9 @@ ideologies = {
 		faction_impact_on_world_tension = 0.1 #change
 		modifiers = {
 			#todo add intell
+			hidden_modifier = {
+				ideology_token = token:communism
+			}
 		}
 		can_host_government_in_exile = no		
 		faction_modifiers = {}
@@ -130,6 +140,9 @@ ideologies = {
 			army_intel_to_others = 15
 			navy_intel_to_others = 15
 			airforce_intel_to_others = 10
+			hidden_modifier = {
+				ideology_token = token:fascism
+			}
 		}
 		can_host_government_in_exile = no
 		faction_modifiers = {}
@@ -194,6 +207,9 @@ ideologies = {
 			army_intel_to_others = 15
 			navy_intel_to_others = 15
 			airforce_intel_to_others = 20
+			hidden_modifier = {
+				ideology_token = token:neutrality
+			}
 		}
 		can_host_government_in_exile = yes
 		faction_modifiers = {}
@@ -201,7 +217,3 @@ ideologies = {
 		ai_neutral = yes
 	}
 }
-#authorian_corporatecratism = {
-#	can_be_randomly_selected = no
-#}
-#reactionary = {}
