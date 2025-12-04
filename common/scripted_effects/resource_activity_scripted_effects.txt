@@ -1,3 +1,189 @@
+calc_coal_impact = {
+	#energy 
+	set_temp_variable = {
+		energy_by_coal_factor = 1
+	}
+	add_to_temp_variable = {
+		energy_by_coal_factor = modifier@energy_gain_factor
+	}
+	#restore actual coal value
+	set_variable = {
+		industry_efficiency_by_coal = resource@coal
+	}
+	add_to_variable = {
+		industry_efficiency_by_coal = total_coal_by_all
+	}
+	#total coal setup
+	set_variable = {
+		total_coal_by^0 = 0
+	}
+	set_variable = {
+		total_coal_by^1 = 0
+	}
+	set_variable = {
+		total_coal_by^2 = 0
+	}
+	set_variable = {
+		total_coal_by^3 = 0
+	}
+	set_variable = {
+		total_coal_by_synthetic = 0
+	}
+	#iterate states
+	every_controlled_state = {
+		#local energy consumption factor
+		set_temp_variable = {
+			local_energy_consumption = 1
+		}
+		add_to_variable = {
+			local_energy_consumption = modifier@local_factory_energy_consumption
+		}
+		#local energy consumption factor (by infrastructure)
+		set_temp_variable = {
+			local_energy_per_infra = 1
+		}
+		add_to_temp_variable = {
+			local_energy_per_infra = modifier@local_factory_energy_consumption_per_infrastructure
+		}
+		multiply_temp_variable = {
+			local_energy_per_infra = non_damaged_building_level@infrastructure
+		}
+		#summarise local_energy
+		add_to_temp_variable = {
+			local_energy_consumption = local_energy_per_infra
+		}
+		clamp_temp_variable = {
+			var = local_energy_consumption
+			min = 0
+		}
+		#aluminium
+		set_temp_variable = {
+			state_plant_impact = local_energy_consumption
+		}
+		multiply_temp_variable = {
+			state_plant_impact = modifier@aluminium_plant_num
+		}
+		add_to_variable = {
+			PREV.total_coal_by^0 = state_plant_impact
+		}
+		#steel
+		set_temp_variable = {
+			state_plant_impact = local_energy_consumption
+		}
+		multiply_temp_variable = {
+			state_plant_impact = modifier@steel_plant_num
+		}
+		add_to_variable = {
+			PREV.total_coal_by^1 = state_plant_impact
+		}
+		#tungsten
+		set_temp_variable = {
+			state_plant_impact = local_energy_consumption
+		}
+		multiply_temp_variable = {
+			state_plant_impact = modifier@tungsten_plant_num
+		}
+		add_to_variable = {
+			PREV.total_coal_by^2 = state_plant_impact
+		}
+		#chromium
+		set_temp_variable = {
+			state_plant_impact = local_energy_consumption
+		}
+		multiply_temp_variable = {
+			state_plant_impact = modifier@chromium_plant_num
+		}
+		add_to_variable = {
+			PREV.total_coal_by^3 = state_plant_impact
+		}
+		#refinery
+		set_temp_variable = {
+			state_plant_impact = local_energy_consumption
+		}
+		multiply_temp_variable = {
+			state_plant_impact = modifier@synthetic_refinery_num
+		}
+		add_to_variable = {
+			PREV.total_coal_by_synthetic = state_plant_impact
+		}
+	}
+	#calc total consumption
+	#aluminium_plant
+	multiply_variable = {
+		total_coal_by^0 = plant_max_power^0
+	}
+	multiply_variable = {
+		total_coal_by^0 = modifier@aluminium_plant_coal_consumption
+	}
+	divide_variable = {
+		total_coal_by^0 = energy_by_coal_factor
+	}
+	#steel_plant
+	multiply_variable = {
+		total_coal_by^1 = plant_max_power^1
+	}
+	multiply_variable = {
+		total_coal_by^1 = modifier@steel_plant_coal_consumption
+	}
+	divide_variable = {
+		total_coal_by^1 = energy_by_coal_factor
+	}
+	#tungsten_plant
+	multiply_variable = {
+		total_coal_by^2 = plant_max_power^2
+	}
+	multiply_variable = {
+		total_coal_by^2 = modifier@tungsten_plant_coal_consumption
+	}
+	divide_variable = {
+		total_coal_by^2 = energy_by_coal_factor
+	}
+	#chromium_plant
+	multiply_variable = {
+		total_coal_by^3 = plant_max_power^3
+	}
+	multiply_variable = {
+		total_coal_by^3 = modifier@chromium_plant_coal_consumption
+	}
+	divide_variable = {
+		total_coal_by^3 = energy_by_coal_factor
+	}
+	#synthetic_refinery
+	multiply_variable = {
+		total_coal_by_synthetic = synthetic_refinery_max_power
+	}
+	multiply_variable = {
+		total_coal_by_synthetic = modifier@synthetic_refinery_coal_consumption
+	}
+	divide_variable = {
+		total_coal_by_synthetic = energy_by_coal_factor
+	}
+	#total consumtion
+	set_variable = {
+		total_coal_by_all = total_coal_by^0
+	}
+	add_to_variable = {
+		total_coal_by_all = total_coal_by^1
+	}
+	add_to_variable = {
+		total_coal_by_all = total_coal_by^2
+	}
+	add_to_variable = {
+		total_coal_by_all = total_coal_by^3
+	}
+	add_to_variable = {
+		total_coal_by_all = total_coal_by_synthetic
+	}
+	#calc industry efficiency (by coal)
+	divide_variable = {
+		industry_efficiency_by_coal = total_coal_by_all
+	}
+	clamp_variable = {
+		var = industry_efficiency_by_coal
+		min = modifier@industry_min_efficiency_by_coal
+		max = 1
+	}
+}
 calc_resource_aluminium = {
 	#restore resource value
 	set_variable = {
@@ -572,7 +758,8 @@ calc_thermonuclear_reactor = {
 
 
 calc_all_resources = {
-	#NOTE: in any order
+	#NOTE: order is important!
+	calc_coal_impact = yes
 	calc_resource_aluminium = yes
 	calc_resource_steel = yes
 	calc_resource_tungsten = yes
@@ -581,6 +768,7 @@ calc_all_resources = {
 }
 calc_all_nuclear_resources = {
 	#NOTE: order is important!
+	#NOTE: reactors produse some energy, they don`t need coal
 	calc_primary_reactor = yes
 	calc_secondary_reactor = yes
 	calc_thermonuclear_reactor = yes

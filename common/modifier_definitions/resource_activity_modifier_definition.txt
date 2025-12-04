@@ -1,3 +1,10 @@
+industry_min_efficiency_by_coal = {
+	color_type = good
+	value_type = percentage
+	precision = 2
+	category = country
+}
+
 aluminium_plant_num = {
 	color_type = good
 	value_type = number
@@ -20,6 +27,12 @@ aluminium_plant_aluminium_outcome = {
 aluminium_plant_penalty_reduction = {
 	color_type = good
 	value_type = percentage
+	precision = 2
+	category = country
+}
+aluminium_plant_coal_consumption = {
+	color_type = bad
+	value_type = number
 	precision = 2
 	category = country
 }
@@ -46,6 +59,12 @@ steel_plant_steel_outcome = {
 steel_plant_penalty_reduction = {
 	color_type = good
 	value_type = percentage
+	precision = 2
+	category = country
+}
+steel_plant_coal_consumption = {
+	color_type = bad
+	value_type = number
 	precision = 2
 	category = country
 }
@@ -77,6 +96,12 @@ tungsten_plant_penalty_reduction = {
 	precision = 2
 	category = country
 }
+tungsten_plant_coal_consumption = {
+	color_type = bad
+	value_type = number
+	precision = 2
+	category = country
+}
 
 chromium_plant_num = {
 	color_type = good
@@ -102,6 +127,12 @@ chromium_plant_chromium_outcome = {
 chromium_plant_penalty_reduction = {
 	color_type = good
 	value_type = percentage
+	precision = 2
+	category = country
+}
+chromium_plant_coal_consumption = {
+	color_type = bad
+	value_type = number
 	precision = 2
 	category = country
 }
@@ -137,6 +168,12 @@ synthetic_refinery_fuel_outcome = { #per hour
 synthetic_refinery_penalty_reduction = {
 	color_type = good
 	value_type = percentage
+	precision = 2
+	category = country
+}
+synthetic_refinery_coal_consumption = {
+	color_type = bad
+	value_type = number
 	precision = 2
 	category = country
 }

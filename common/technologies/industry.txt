@@ -3718,6 +3718,10 @@ technologies = {
 			resize_array = {
 				resource_outcome = 4
 			}
+			resize_array = {
+				total_coal_by = 4
+			}
+			calc_all_resources = yes
 			if = {
 				limit = {
 					country_without_sp = no #"no" because we want to forbid, not just check
@@ -5066,14 +5070,21 @@ technologies = {
 		allow = {
 			always = no
 		}
+		#consumption
 		aluminium_plant_bauxite_consumption = 5
 		steel_plant_iron_consumption = 5
 		tungsten_plant_scheelitis_consumption = 3
 		chromium_plant_chromite_consumption = 3
+		#raw materials outcome
 		aluminium_plant_aluminium_outcome = 1
 		steel_plant_steel_outcome = 4
 		tungsten_plant_tungsten_outcome = 1
 		chromium_plant_chromium_outcome = 1
+		#coal consumption
+		aluminium_plant_coal_consumption = 4
+		steel_plant_coal_consumption = 4
+		tungsten_plant_coal_consumption = 4
+		chromium_plant_coal_consumption = 4
 	}
 	init_synthetic_refineries = {
 		#EXISTS ONLY FOR HIDING MODIFIERS!
@@ -5083,6 +5094,8 @@ technologies = {
 		}
 		synthetic_refinery_oil_consumption = 1
 		synthetic_refinery_fuel_outcome = 2
+		#coal
+		synthetic_refinery_coal_consumption = 4
 	}
 	init_nuclear_cycle = {
 		research_cost = 1

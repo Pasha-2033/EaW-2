@@ -354,6 +354,9 @@ on_actions = {
 					resize_array = {
 						resource_outcome = 4
 					}
+					resize_array = {
+						total_coal_by = 4
+					}
 				}
 				if = {
 					limit = {
@@ -377,6 +380,22 @@ on_actions = {
 				#set economy modifiers
 				add_dynamic_modifier = {
 					modifier = resource_activity_modifier
+				}
+				#separated coal modifiers - better tooltips (same resource consumed) 
+				add_dynamic_modifier = {
+					modifier = aluminium_activity_coal
+				}
+				add_dynamic_modifier = {
+					modifier = steel_activity_coal
+				}
+				add_dynamic_modifier = {
+					modifier = tungsten_activity_coal
+				}
+				add_dynamic_modifier = {
+					modifier = chromium_activity_coal
+				}
+				add_dynamic_modifier = {
+					modifier = synthetic_activity_coal
 				}
 				add_dynamic_modifier = {
 					modifier = nuclear_resource_activity_modifier

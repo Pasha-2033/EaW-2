@@ -27,6 +27,37 @@ resource_activity_modifier = {
 	base_fuel_gain = fuel_outcome
 	country_resource_cost_oil = synthetic_refinery_consumption
 }
+#separated coal modifiers - better tooltips (same resource consumed) 
+aluminium_activity_coal = {
+	enable = { 
+		always = yes 
+	}
+	country_resource_cost_coal = total_coal_by_aluminium
+}
+steel_activity_coal = {
+	enable = { 
+		always = yes 
+	}
+	country_resource_cost_coal = total_coal_by_steel
+}
+tungsten_activity_coal = {
+	enable = { 
+		always = yes 
+	}
+	country_resource_cost_coal = total_coal_by_tungsten
+}
+chromium_activity_coal = {
+	enable = { 
+		always = yes 
+	}
+	country_resource_cost_coal = total_coal_by_chromium
+}
+synthetic_activity_coal = {
+	enable = { 
+		always = yes 
+	}
+	country_resource_cost_coal = total_coal_by_synthetic
+}
 nuclear_resource_activity_modifier = {
 	enable = { 
 		always = yes
