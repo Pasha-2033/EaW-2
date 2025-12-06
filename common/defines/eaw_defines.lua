@@ -91,6 +91,24 @@ NDefines.NAI.CAPITAL_TASKFORCE_MAX_CAPITAL_COUNT = 12 		-- optimum capital count
 NDefines.NAI.SCREEN_TASKFORCE_MAX_SHIP_COUNT = 5		-- optimum screen count for screen taskforces Vanilla is 12
 NDefines.NAI.SUB_TASKFORCE_MAX_SHIP_COUNT = 4 			-- optimum sub count for sub taskforces Vanilla is 16
 NDefines.NAI.DIPLOMACY_ACCEPT_VOLUNTEERS_BASE = 100
+NDefines.NAI.MIN_FACTORIES_TO_WANT_TO_IMPORT = {
+    5, --iron
+    5,--bauxite
+    5,--scheelitis
+    5,--chromite
+    0,--steel
+    0,--aluminium
+    0,--tungsten
+    0,--chromium
+    10,--oil
+    10,--rubber
+    10,--crystals
+    0,--food
+    15,--nuclear_fuel_primary
+    20,--nuclear_fuel_secondary
+    25,--thermonuclear_fuel
+    10--coal
+}
 
 NDefines.NOperatives.AGENCY_CREATION_FACTORIES = 3
 NDefines.NOperatives.AGENCY_UPGRADE_PER_OPERATIVE_SLOT = 4			-- Number of upgrade needed to unlock an additional operative slot

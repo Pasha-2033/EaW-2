@@ -1,3 +1,6 @@
+d_cci = {
+	calc_coal_impact = yes
+}
 calc_coal_impact = {
 	#energy 
 	set_temp_variable = {
@@ -40,9 +43,6 @@ calc_coal_impact = {
 		}
 		#local energy consumption factor (by infrastructure)
 		set_temp_variable = {
-			local_energy_per_infra = 1
-		}
-		add_to_temp_variable = {
 			local_energy_per_infra = modifier@local_factory_energy_consumption_per_infrastructure
 		}
 		multiply_temp_variable = {
@@ -61,7 +61,7 @@ calc_coal_impact = {
 			state_plant_impact = local_energy_consumption
 		}
 		multiply_temp_variable = {
-			state_plant_impact = modifier@aluminium_plant_num
+			state_plant_impact = non_damaged_building_level@aluminium_plant
 		}
 		add_to_variable = {
 			PREV.total_coal_by^0 = state_plant_impact
@@ -71,17 +71,17 @@ calc_coal_impact = {
 			state_plant_impact = local_energy_consumption
 		}
 		multiply_temp_variable = {
-			state_plant_impact = modifier@steel_plant_num
+			state_plant_impact = non_damaged_building_level@steel_plant
 		}
 		add_to_variable = {
-			PREV.total_coal_by^1 = state_plant_impact
+			ROOT.total_coal_by^1 = state_plant_impact
 		}
 		#tungsten
 		set_temp_variable = {
 			state_plant_impact = local_energy_consumption
 		}
 		multiply_temp_variable = {
-			state_plant_impact = modifier@tungsten_plant_num
+			state_plant_impact = non_damaged_building_level@tungsten_plant
 		}
 		add_to_variable = {
 			PREV.total_coal_by^2 = state_plant_impact
@@ -91,7 +91,7 @@ calc_coal_impact = {
 			state_plant_impact = local_energy_consumption
 		}
 		multiply_temp_variable = {
-			state_plant_impact = modifier@chromium_plant_num
+			state_plant_impact = non_damaged_building_level@chromium_plant
 		}
 		add_to_variable = {
 			PREV.total_coal_by^3 = state_plant_impact
@@ -101,7 +101,7 @@ calc_coal_impact = {
 			state_plant_impact = local_energy_consumption
 		}
 		multiply_temp_variable = {
-			state_plant_impact = modifier@synthetic_refinery_num
+			state_plant_impact = non_damaged_building_level@synthetic_refinery
 		}
 		add_to_variable = {
 			PREV.total_coal_by_synthetic = state_plant_impact
@@ -115,7 +115,7 @@ calc_coal_impact = {
 	multiply_variable = {
 		total_coal_by^0 = modifier@aluminium_plant_coal_consumption
 	}
-	divide_variable = {
+	multiply_variable = {
 		total_coal_by^0 = energy_by_coal_factor
 	}
 	#steel_plant
@@ -125,7 +125,7 @@ calc_coal_impact = {
 	multiply_variable = {
 		total_coal_by^1 = modifier@steel_plant_coal_consumption
 	}
-	divide_variable = {
+	multiply_variable = {
 		total_coal_by^1 = energy_by_coal_factor
 	}
 	#tungsten_plant
@@ -135,7 +135,7 @@ calc_coal_impact = {
 	multiply_variable = {
 		total_coal_by^2 = modifier@tungsten_plant_coal_consumption
 	}
-	divide_variable = {
+	multiply_variable = {
 		total_coal_by^2 = energy_by_coal_factor
 	}
 	#chromium_plant
@@ -145,7 +145,7 @@ calc_coal_impact = {
 	multiply_variable = {
 		total_coal_by^3 = modifier@chromium_plant_coal_consumption
 	}
-	divide_variable = {
+	multiply_variable = {
 		total_coal_by^3 = energy_by_coal_factor
 	}
 	#synthetic_refinery
@@ -155,7 +155,7 @@ calc_coal_impact = {
 	multiply_variable = {
 		total_coal_by_synthetic = modifier@synthetic_refinery_coal_consumption
 	}
-	divide_variable = {
+	multiply_variable = {
 		total_coal_by_synthetic = energy_by_coal_factor
 	}
 	#total consumtion

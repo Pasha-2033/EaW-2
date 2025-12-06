@@ -61,18 +61,29 @@ guiTypes = {
 				position = { x = 57 y = 24 }
 				font = "hoi_20b"
 				text = "synthetic_refinery_consumption_tt"
-				maxWidth = 46
+				maxWidth = 54
 				maxHeight = 20
 				fixedsize = yes
 				format = center
 				pdx_tooltip_delayed = "synthetic_refinery_consumption_desc"
 			}
 			instantTextBoxType = {
+				name = "synthetic_refinery_coal"
+				position = { x = 111 y = 24 }
+				font = "hoi_20b"
+				text = "synthetic_refinery_coal_tt"
+				maxWidth = 54
+				maxHeight = 20
+				fixedsize = yes
+				format = center
+				pdx_tooltip_delayed = "synthetic_refinery_coal_consumption_desc"
+			}
+			instantTextBoxType = {
 				name = "synthetic_refinery_rubber_outcome"
-				position = { x = 127 y = 24 }
+				position = { x = 195 y = 24 }
 				font = "hoi_20b"
 				text = "synthetic_refinery_rubber_outcome_tt"
-				maxWidth = 46
+				maxWidth = 48
 				maxHeight = 20
 				fixedsize = yes
 				format = center
@@ -80,69 +91,72 @@ guiTypes = {
 			}
 			instantTextBoxType = {
 				name = "synthetic_refinery_fuel_outcome"
-				position = { x = 177 y = 24 }
+				position = { x = 250 y = 24 }
 				font = "hoi_20b"
 				text = "synthetic_refinery_fuel_outcome_tt"
-				maxWidth = 46
+				maxWidth = 48
 				maxHeight = 20
 				fixedsize = yes
 				format = center
 				pdx_tooltip_delayed = "synthetic_refinery_fuel_outcome_desc"
 			}
-			buttonType = {
-				name = "synthetic_refinery_sub_10"
+			containerWindowType = {
+				name = "synthetic_refinery_effectiveness_container"
 				position = {
-					x = 226 
+					x = 310
 					y = 17
 				}
-				quadTextureSprite ="GFX_closebutton"
-				buttonFont = "hoi_16mbs"
-				clicksound = click_close
-				pdx_tooltip_delayed = "sub_10_tt"
-			}
-			buttonType = {
-				name = "synthetic_refinery_sub_5"
-				position = {
-					x = 257
-					y = 17
+				buttonType = {
+					name = "synthetic_refinery_sub_10"
+					quadTextureSprite ="GFX_closebutton"
+					buttonFont = "hoi_16mbs"
+					clicksound = click_close
+					pdx_tooltip_delayed = "sub_10_tt"
 				}
-				quadTextureSprite ="GFX_closebutton"
-				buttonFont = "hoi_16mbs"
-				clicksound = click_close
-				pdx_tooltip_delayed = "sub_5_tt"
-			}
-			instantTextBoxType = {
-				name = "synthetic_refinery_effectiveness"
-				position = { x = 290 y = 24 }
-				font = "hoi_20b"
-				text = "[?synthetic_refinery_max_power|%0]"
-				maxWidth = 51
-				maxHeight = 20
-				fixedsize = yes
-				format = center
-				pdx_tooltip_delayed = "effectiveness_tt"
-			}
-			buttonType = {
-				name = "synthetic_refinery_add_5"
-				position = {
-					x = 341
-					y = 17
+				buttonType = {
+					name = "synthetic_refinery_sub_5"
+					position = {
+						x = 31
+						y = 0
+					}
+					quadTextureSprite ="GFX_closebutton"
+					buttonFont = "hoi_16mbs"
+					clicksound = click_close
+					pdx_tooltip_delayed = "sub_5_tt"
 				}
-				quadTextureSprite ="GFX_closebutton"
-				buttonFont = "hoi_16mbs"
-				clicksound = click_close
-				pdx_tooltip_delayed = "add_5_tt"
-			}
-			buttonType = {
-				name = "synthetic_refinery_add_10"
-				position = {
-					x = 373
-					y = 17
+				instantTextBoxType = {
+					name = "synthetic_refinery_effectiveness"
+					position = { x = 64 y = 7 }
+					font = "hoi_20b"
+					text = "[?synthetic_refinery_max_power|%0]"
+					maxWidth = 51
+					maxHeight = 20
+					fixedsize = yes
+					format = center
+					pdx_tooltip_delayed = "effectiveness_tt"
 				}
-				quadTextureSprite ="GFX_closebutton"
-				buttonFont = "hoi_16mbs"
-				clicksound = click_close
-				pdx_tooltip_delayed = "add_10_tt"
+				buttonType = {
+					name = "synthetic_refinery_add_5"
+					position = {
+						x = 115
+						y = 0
+					}
+					quadTextureSprite ="GFX_closebutton"
+					buttonFont = "hoi_16mbs"
+					clicksound = click_close
+					pdx_tooltip_delayed = "add_5_tt"
+				}
+				buttonType = {
+					name = "synthetic_refinery_add_10"
+					position = {
+						x = 147
+						y = 0
+					}
+					quadTextureSprite ="GFX_closebutton"
+					buttonFont = "hoi_16mbs"
+					clicksound = click_close
+					pdx_tooltip_delayed = "add_10_tt"
+				}
 			}
 		}
 		buttonType = {
@@ -197,15 +211,26 @@ guiTypes = {
 			position = { x = 62 y = 24 }
 			font = "hoi_20b"
 			text = "[building_consumption_text]"
-			maxWidth = 98
+			maxWidth = 68
 			maxHeight = 20
 			fixedsize = yes
 			format = center
 			pdx_tooltip_delayed = "building_consumption_desc_tt"
 		}
 		instantTextBoxType = {
+			name = "building_coal"
+			position = { x = 130 y = 24 }
+			font = "hoi_20b"
+			text = "[building_coal_text]"
+			maxWidth = 68
+			maxHeight = 20
+			fixedsize = yes
+			format = center
+			pdx_tooltip_delayed = "building_coal_desc_tt"
+		}
+		instantTextBoxType = {
 			name = "building_outcome"
-			position = { x = 157 y = 24 }
+			position = { x = 230 y = 24 }
 			font = "hoi_20b"
 			text = "[building_outcome_text]"
 			maxWidth = 68
@@ -214,61 +239,63 @@ guiTypes = {
 			format = center
 			pdx_tooltip_delayed = "building_outcome_desc_tt"
 		}
-
-		buttonType = {
-			name = "sub_10"
+		containerWindowType = {
+			name = "effectiveness_container"
 			position = {
-				x = 226 
+				x = 310
 				y = 17
 			}
-			quadTextureSprite ="GFX_closebutton"
-			buttonFont = "hoi_16mbs"
-			clicksound = click_close
-			pdx_tooltip_delayed = "sub_10_tt"
-		}
-		buttonType = {
-			name = "sub_5"
-			position = {
-				x = 257
-				y = 17
+			buttonType = {
+				name = "sub_10"
+				quadTextureSprite ="GFX_closebutton"
+				buttonFont = "hoi_16mbs"
+				clicksound = click_close
+				pdx_tooltip_delayed = "sub_10_tt"
 			}
-			quadTextureSprite ="GFX_closebutton"
-			buttonFont = "hoi_16mbs"
-			clicksound = click_close
-			pdx_tooltip_delayed = "sub_5_tt"
-		}
-		instantTextBoxType = {
-			name = "effectiveness"
-			position = { x = 290 y = 24 }
-			font = "hoi_20b"
-			text = "[?plant_max_power^i|%0]"
-			maxWidth = 51
-			maxHeight = 20
-			fixedsize = yes
-			format = center
-			pdx_tooltip_delayed = "effectiveness_tt"
-		}
-		buttonType = {
-			name = "add_5"
-			position = {
-				x = 341
-				y = 17
+			buttonType = {
+				name = "sub_5"
+				position = {
+					x = 31
+					y = 0
+				}
+				quadTextureSprite ="GFX_closebutton"
+				buttonFont = "hoi_16mbs"
+				clicksound = click_close
+				pdx_tooltip_delayed = "sub_5_tt"
 			}
-			quadTextureSprite ="GFX_closebutton"
-			buttonFont = "hoi_16mbs"
-			clicksound = click_close
-			pdx_tooltip_delayed = "add_5_tt"
-		}
-		buttonType = {
-			name = "add_10"
-			position = {
-				x = 373
-				y = 17
+			instantTextBoxType = {
+				name = "effectiveness"
+				position = { x = 64 y = 7 }
+				font = "hoi_20b"
+				text = "[?plant_max_power^i|%0]"
+				maxWidth = 51
+				maxHeight = 20
+				fixedsize = yes
+				format = center
+				pdx_tooltip_delayed = "effectiveness_tt"
 			}
-			quadTextureSprite ="GFX_closebutton"
-			buttonFont = "hoi_16mbs"
-			clicksound = click_close
-			pdx_tooltip_delayed = "add_10_tt"
+			buttonType = {
+				name = "add_5"
+				position = {
+					x = 115
+					y = 0
+				}
+				quadTextureSprite ="GFX_closebutton"
+				buttonFont = "hoi_16mbs"
+				clicksound = click_close
+				pdx_tooltip_delayed = "add_5_tt"
+			}
+			buttonType = {
+				name = "add_10"
+				position = {
+					x = 147
+					y = 0
+				}
+				quadTextureSprite ="GFX_closebutton"
+				buttonFont = "hoi_16mbs"
+				clicksound = click_close
+				pdx_tooltip_delayed = "add_10_tt"
+			}
 		}
 	}
 	containerWindowType = {

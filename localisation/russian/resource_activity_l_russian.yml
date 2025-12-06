@@ -27,11 +27,17 @@ tungsten_plant_penalty_reduction: "Снижение штрафа за нехва
 chromium_plant_penalty_reduction: "Снижение штрафа за нехватку ресурса $PRODUCTION_MATERIALS_CHROMITE$"
 synthetic_refinery_penalty_reduction: "Снижение штрафа за нехватку ресурса $PRODUCTION_MATERIALS_OIL$"
 
-aluminium_plant_consumption_tt: "£resources_strip|16 [?modifier@aluminium_plant_coal_consumption] £resources_strip|2 [?modifier@aluminium_plant_bauxite_consumption]"
+aluminium_plant_consumption_tt: "£resources_strip|2 [?modifier@aluminium_plant_bauxite_consumption]"
 steel_plant_consumption_tt: "£resources_strip|1 [?modifier@steel_plant_iron_consumption]"
 tungsten_plant_consumption_tt: "£resources_strip|3 [?modifier@tungsten_plant_scheelitis_consumption]"
 chromium_plant_consumption_tt: "£resources_strip|4 [?modifier@chromium_plant_chromite_consumption]"
 synthetic_refinery_consumption_tt: "£resources_strip|9 [?modifier@synthetic_refinery_oil_consumption]"
+
+aluminium_plant_coal_tt: "£resources_strip|16 [?modifier@aluminium_plant_coal_consumption]"
+steel_plant_coal_tt: "£resources_strip|16 [?modifier@steel_plant_coal_consumption]"
+tungsten_plant_coal_tt: "£resources_strip|16 [?modifier@tungsten_plant_coal_consumption]"
+chromium_plant_coal_tt: "£resources_strip|16 [?modifier@chromium_plant_coal_consumption]"
+synthetic_refinery_coal_tt: "£resources_strip|16 [?modifier@synthetic_refinery_coal_consumption]"
 
 aluminium_plant_outcome_tt: "£resources_strip|6 [?modifier@aluminium_plant_aluminium_outcome]"
 steel_plant_outcome_tt: "£resources_strip|5 [?modifier@steel_plant_steel_outcome]"
@@ -48,6 +54,13 @@ tungsten_plant_consumption_desc_tt: "§Y$tungsten_plant$§!: потреблен�
 chromium_plant_consumption_desc_tt: "§Y$chromium_plant$§!: потребление хромистого железняка"
 
 synthetic_refinery_consumption_desc: "§YНефтеперерабатывающий завод§!: потребление нефти"
+
+building_coal_desc_tt: "[building_coal_desc]"
+aluminium_plant_coal_desc: "§Y$aluminium_plant$§!: потребление угля"
+steel_plant_coal_desc: "§Y$steel_plant$§!: потребление угля"
+tungsten_plant_coal_desc: "§Y$tungsten_plant$§!: потребление угля"
+chromium_plant_coal_desc: "§Y$chromium_plant$§!: потребление угля"
+synthetic_refinery_coal_consumption_desc: "§YНефтеперерабатывающий завод§!: потребление угля"
 
 building_outcome_desc_tt: "[building_outcome_desc]"
 aluminium_plant_outcome_desc_tt: "§Y$aluminium_plant$§!: производство алюминия"

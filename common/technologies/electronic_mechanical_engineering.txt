@@ -193,6 +193,14 @@ technologies = {
 			leads_to_tech = direct_current
 			research_cost_coeff = 1
 		}
+		enable_building = {
+			building = energy_infrastructure
+			level = 1
+		}
+		enable_building = {
+			building = industrial_infrastructure
+			level = 1
+		}
 		research_cost = 1
 		start_year = 980
 		folder = {
@@ -214,6 +222,14 @@ technologies = {
 		path = {
 			leads_to_tech = alternating_current
 			research_cost_coeff = 1
+		}
+		enable_building = {
+			building = energy_infrastructure
+			level = 2
+		}
+		enable_building = {
+			building = industrial_infrastructure
+			level = 2
 		}
 		research_cost = 1
 		start_year = 984
@@ -237,6 +253,14 @@ technologies = {
 			leads_to_tech = high_voltage_systems
 			research_cost_coeff = 1
 		}
+		enable_building = {
+			building = energy_infrastructure
+			level = 3
+		}
+		enable_building = {
+			building = industrial_infrastructure
+			level = 3
+		}
 		research_cost = 1
 		start_year = 987
 		folder = {
@@ -255,6 +279,18 @@ technologies = {
 		}
 	}
 	high_voltage_systems = {
+		path = {
+			leads_to_tech = high_voltage_conductors
+			research_cost_coeff = 1
+		}
+		enable_building = {
+			building = energy_infrastructure
+			level = 4
+		}
+		enable_building = {
+			building = industrial_infrastructure
+			level = 4
+		}
 		research_cost = 1
 		start_year = 990
 		folder = {
@@ -262,6 +298,32 @@ technologies = {
 			position = { 
 				x = 0 
 				y = 10 
+			}
+		}
+		categories = {
+			cat_special_tech
+			cat_st_energy
+		}
+		special_project_specialization = { 
+			specialization_nuclear
+		}
+	}
+	high_voltage_conductors = {
+		enable_building = {
+			building = energy_infrastructure
+			level = 5
+		}
+		enable_building = {
+			building = industrial_infrastructure
+			level = 5
+		}
+		research_cost = 1
+		start_year = 990
+		folder = {
+			name = electronics_folder
+			position = { 
+				x = 0 
+				y = 14
 			}
 		}
 		categories = {
