@@ -1,5 +1,7 @@
 d_cci = {
-	calc_coal_impact = yes
+	STG = {
+		calc_coal_impact = yes
+	}
 }
 calc_coal_impact = {
 	#energy 
@@ -38,7 +40,7 @@ calc_coal_impact = {
 		set_temp_variable = {
 			local_energy_consumption = 1
 		}
-		add_to_variable = {
+		add_to_temp_variable = {
 			local_energy_consumption = modifier@local_factory_energy_consumption
 		}
 		#local energy consumption factor (by infrastructure)
@@ -57,106 +59,101 @@ calc_coal_impact = {
 			min = 0
 		}
 		#aluminium
-		set_temp_variable = {
-			state_plant_impact = local_energy_consumption
+		set_variable = {
+			state_aluminium_plant_impact = local_energy_consumption
 		}
-		multiply_temp_variable = {
-			state_plant_impact = non_damaged_building_level@aluminium_plant
+		multiply_variable = {
+			state_aluminium_plant_impact = non_damaged_building_level@aluminium_plant
+		}
+		multiply_variable = {
+			state_aluminium_plant_impact = PREV.modifier@aluminium_plant_coal_consumption
+		}
+		multiply_variable = {
+			state_aluminium_plant_impact = PREV.plant_max_power^0
 		}
 		add_to_variable = {
-			PREV.total_coal_by^0 = state_plant_impact
+			PREV.total_coal_by^0 = state_aluminium_plant_impact
+		}
+		set_variable = {
+			#init total state consumption
+			state_coal_consumption = state_aluminium_plant_impact
 		}
 		#steel
-		set_temp_variable = {
-			state_plant_impact = local_energy_consumption
+		set_variable = {
+			state_steel_plant_impact = local_energy_consumption
 		}
-		multiply_temp_variable = {
-			state_plant_impact = non_damaged_building_level@steel_plant
+		multiply_variable = {
+			state_steel_plant_impact = non_damaged_building_level@steel_plant
+		}
+		multiply_variable = {
+			state_steel_plant_impact = PREV.modifier@steel_plant_coal_consumption
+		}
+		multiply_variable = {
+			state_steel_plant_impact = PREV.plant_max_power^1
 		}
 		add_to_variable = {
-			ROOT.total_coal_by^1 = state_plant_impact
+			PREV.total_coal_by^1 = state_steel_plant_impact
+		}
+		add_to_variable = {
+			state_coal_consumption = state_steel_plant_impact
 		}
 		#tungsten
-		set_temp_variable = {
-			state_plant_impact = local_energy_consumption
+		set_variable = {
+			state_tungsten_plant_impact = local_energy_consumption
 		}
-		multiply_temp_variable = {
-			state_plant_impact = non_damaged_building_level@tungsten_plant
+		multiply_variable = {
+			state_tungsten_plant_impact = non_damaged_building_level@tungsten_plant
+		}
+		multiply_variable = {
+			state_tungsten_plant_impact = PREV.modifier@tungsten_plant_coal_consumption
+		}
+		multiply_variable = {
+			state_tungsten_plant_impact = PREV.plant_max_power^2
 		}
 		add_to_variable = {
-			PREV.total_coal_by^2 = state_plant_impact
+			PREV.total_coal_by^2 = state_tungsten_plant_impact
+		}
+		add_to_variable = {
+			state_coal_consumption = state_tungsten_plant_impact
 		}
 		#chromium
-		set_temp_variable = {
-			state_plant_impact = local_energy_consumption
+		set_variable = {
+			state_chromium_plant_impact = local_energy_consumption
 		}
-		multiply_temp_variable = {
-			state_plant_impact = non_damaged_building_level@chromium_plant
+		multiply_variable = {
+			state_chromium_plant_impact = non_damaged_building_level@chromium_plant
+		}
+		multiply_variable = {
+			state_chromium_plant_impact = PREV.modifier@chromium_plant_coal_consumption
+		}
+		multiply_variable = {
+			state_chromium_plant_impact = PREV.plant_max_power^3
 		}
 		add_to_variable = {
-			PREV.total_coal_by^3 = state_plant_impact
+			PREV.total_coal_by^3 = state_chromium_plant_impact
+		}
+		add_to_variable = {
+			state_coal_consumption = state_chromium_plant_impact
 		}
 		#refinery
-		set_temp_variable = {
-			state_plant_impact = local_energy_consumption
+		set_variable = {
+			state_synthetic_refinery_impact = local_energy_consumption
 		}
-		multiply_temp_variable = {
-			state_plant_impact = non_damaged_building_level@synthetic_refinery
+		multiply_variable = {
+			state_synthetic_refinery_impact = non_damaged_building_level@synthetic_refinery
+		}
+		multiply_variable = {
+			state_synthetic_refinery_impact = PREV.modifier@synthetic_refinery_coal_consumption
+		}
+		multiply_variable = {
+			state_synthetic_refinery_impact = PREV.synthetic_refinery_max_power
 		}
 		add_to_variable = {
-			PREV.total_coal_by_synthetic = state_plant_impact
+			PREV.total_coal_by_synthetic = state_synthetic_refinery_impact
 		}
-	}
-	#calc total consumption
-	#aluminium_plant
-	multiply_variable = {
-		total_coal_by^0 = plant_max_power^0
-	}
-	multiply_variable = {
-		total_coal_by^0 = modifier@aluminium_plant_coal_consumption
-	}
-	multiply_variable = {
-		total_coal_by^0 = energy_by_coal_factor
-	}
-	#steel_plant
-	multiply_variable = {
-		total_coal_by^1 = plant_max_power^1
-	}
-	multiply_variable = {
-		total_coal_by^1 = modifier@steel_plant_coal_consumption
-	}
-	multiply_variable = {
-		total_coal_by^1 = energy_by_coal_factor
-	}
-	#tungsten_plant
-	multiply_variable = {
-		total_coal_by^2 = plant_max_power^2
-	}
-	multiply_variable = {
-		total_coal_by^2 = modifier@tungsten_plant_coal_consumption
-	}
-	multiply_variable = {
-		total_coal_by^2 = energy_by_coal_factor
-	}
-	#chromium_plant
-	multiply_variable = {
-		total_coal_by^3 = plant_max_power^3
-	}
-	multiply_variable = {
-		total_coal_by^3 = modifier@chromium_plant_coal_consumption
-	}
-	multiply_variable = {
-		total_coal_by^3 = energy_by_coal_factor
-	}
-	#synthetic_refinery
-	multiply_variable = {
-		total_coal_by_synthetic = synthetic_refinery_max_power
-	}
-	multiply_variable = {
-		total_coal_by_synthetic = modifier@synthetic_refinery_coal_consumption
-	}
-	multiply_variable = {
-		total_coal_by_synthetic = energy_by_coal_factor
+		add_to_variable = {
+			state_coal_consumption = state_synthetic_refinery_impact
+		}
 	}
 	#total consumtion
 	set_variable = {
@@ -178,9 +175,13 @@ calc_coal_impact = {
 	divide_variable = {
 		industry_efficiency_by_coal = total_coal_by_all
 	}
+	set_temp_variable = {
+		#clamp can`t accept modifier
+		min_value = modifier@industry_min_efficiency_by_coal
+	}
 	clamp_variable = {
 		var = industry_efficiency_by_coal
-		min = modifier@industry_min_efficiency_by_coal
+		min = min_value
 		max = 1
 	}
 }
