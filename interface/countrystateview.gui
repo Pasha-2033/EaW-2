@@ -401,11 +401,11 @@ guiTypes = {
 
 			gridBoxType = {
 				name = "strategic_locations_grid"
-				position = { x = -5 y = 30 }
+				position = { x = 695 y = 37 	}
 				size = { width = 0 height = 0 }
 				format = "LOWER_LEFT"
 				slotsize = { width = 33 height = 33 }
-				max_slots_vertical = 1
+				max_slots_horizontal = 1
 			}
 
 			containerWindowType = {
@@ -877,5 +877,16 @@ guiTypes = {
 			orientation = "UPPER_LEFT"
 		}
 	}
-
+	containerWindowType = {
+		name = "province_view_strategic_location_entry"
+		size = { width = 40 height = 47 }
+		position = { x = 4 y = 2 }
+		clipping = no
+		
+		iconType = {
+			name = "icon"
+			quadTextureSprite ="GFX_idea_unknown"
+			scale = 0.6
+		}
+	}
 }
