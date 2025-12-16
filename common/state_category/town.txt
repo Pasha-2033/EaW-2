@@ -13,6 +13,8 @@ state_categories={
 		state_production_speed_synthetic_refinery_factor = -0.1
 		state_production_speed_fuel_silo_factor = -0.1
 		state_production_speed_agrarian_complex_factor = 0.15
+		state_production_speed_energy_infrastructure_factor = -0.06
+		state_production_speed_industrial_infrastructure_factor = -0.06
 		state_repair_speed_infrastructure_factor = -0.02
 		state_repair_speed_aluminium_plant_factor = -0.02
 		state_repair_speed_steel_plant_factor = -0.02
@@ -44,5 +46,13 @@ state_categories={
 		state_repair_speed_nuclear_reactor_exploratory_factor = -0.02
 		state_repair_speed_thermonuclear_reactor_factor = -0.02
 		state_repair_speed_commercial_reactor_factor = -0.02
+		state_repair_speed_energy_infrastructure_factor = -0.02
+		state_repair_speed_industrial_infrastructure_factor = -0.02
+		state_repair_speed_naval_supply_hub_factor = -0.02
+		state_repair_speed_naval_headquarters_factor = -0.02
+
+		buildings_max_level = {
+			air_base = 7
+		}
 	}
 }

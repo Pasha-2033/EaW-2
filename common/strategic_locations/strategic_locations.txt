@@ -4,10 +4,28 @@ natural_harbor = {
 	naval_base = 2
 }
 frost_free_port = {
-	naval_base = 2
+	naval_base = 1
 }
 river_mouth = {
 	naval_base = 1
+}
+
+international_trade_port = {
+	naval_base = 2
+	coastal_bunker = 1
+	bunker = 1
+}
+
+volcano = {
+	bunker = -1
+	air_base = -3
+	construction_site = -2
+}
+coastal_volcano = {
+	coastal_bunker = -2
+	bunker = -2
+	air_base = 2
+	construction_site = -2
 }
 
 defensive_chokepoint = {

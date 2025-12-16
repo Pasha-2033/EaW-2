@@ -1,0 +1,76 @@
+#medium term
+faction_goal_form_central_equus_defence_district = {
+	name = faction_goal_form_central_equus_defence_district_name
+	description = faction_goal_form_central_equus_defence_district_desc
+	category = medium_term
+	group = resources_to_market_icon
+	visible = {
+
+	}
+	available = {
+		
+	}
+	completed = {
+		#some of them should agree
+		OR = {
+			is_in_faction_with = EPT
+			is_in_faction_with = PGT
+		}
+	}
+	complete_effect = {
+		add_faction_power_projection = 500
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = THE_FACTION_LEADER
+		add_faction_initiative = 1
+		custom_effect_tooltip = generic_skip_one_line_tt
+		every_faction_member = { 
+			tooltip = INFLUENCE_TOP_THREE
+			visible_when_empty = yes
+			limit = {
+				faction_influence_rank < 4
+			}
+			add_political_power = 100
+		}
+	}
+	ai_will_do = {
+		base = 1
+	}
+}
+#long term
+faction_goal_defeat_ICE = {
+	name = faction_goal_defeat_ICE_name
+	description = faction_goal_defeat_ICE_desc
+	category = long_term
+	group = resources_to_market_icon
+	visible = {
+
+	}
+	available = {
+		
+	}
+	completed = {
+		ICE = {
+			exists = no
+		}
+	
+
+	}
+	complete_effect = {
+		add_faction_power_projection = 500
+		custom_effect_tooltip = generic_skip_one_line_tt
+		custom_effect_tooltip = THE_FACTION_LEADER
+		add_faction_initiative = 1
+		custom_effect_tooltip = generic_skip_one_line_tt
+		every_faction_member = { 
+			tooltip = INFLUENCE_TOP_THREE
+			visible_when_empty = yes
+			limit = {
+				faction_influence_rank < 4
+			}
+			add_political_power = 100
+		}
+	}
+	ai_will_do = {
+		base = 1
+	}
+}
