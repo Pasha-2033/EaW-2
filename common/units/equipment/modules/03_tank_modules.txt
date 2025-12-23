@@ -352,14 +352,27 @@ equipment_modules = {
 		}
 
 	}
-
-	easy_maintenance = {
+	#easy_maintenance
+	easy_maintenance_0 = {
 		abbreviation = "easy"
-		category = tank_special_module
+		category = tank_easy_maintenance_module
 		sfx = sfx_ui_sd_module_turret
 
 		add_stats = {
 			reliability = 0.1
+		}
+		xp_cost = 10
+		multiply_stats = {
+			
+		}
+	}
+	easy_maintenance_1 = {
+		abbreviation = "easy"
+		category = tank_easy_maintenance_module
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			reliability = 0.15
+			build_cost_ic = -0.05
 		}
 		xp_cost = 10
 		multiply_stats = {

@@ -5,7 +5,197 @@
  #       #       ######  #    #  #         #    #    #  #####   #    #  # ## #  #       #####         #    ######  #  # #  #  #         # 
  #       #       #    #  #    #  #         #    #    #  #   #   #    #  ##  ##  #       #   #         #    #    #  #   ##  #   #   #    # 
  #       ######  #    #  #    #  ######    #    #    #  #    #   ####   #    #  ######  #    #        #    #    #  #    #  #    #   ####  
-                                                                                                                                          
+              
+sp_tank_gun_computer = {
+	specialization = specialization_land
+	#icon = GFX_sp_land_flamethrower_tank
+	project_tags = sp_tag_tank
+	allowed = {
+		country_without_sp = no #"no" because we want to forbid, not just check
+	}
+	available = {
+		FROM = {
+			has_tech = tankette
+			#TODO: computer tech
+		}
+	}
+	prototype_time = sp_time.prototype.short
+
+	complexity = sp_complexity.small
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+	project_output = {
+		country_effects = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+				add_equipment_bonus = {
+					bonus = {
+						light_tank_chassis = {
+							breakthrough = 0.025
+						}
+						light_magic_tank_chassis = {
+							breakthrough = 0.025
+						}
+						medium_tank_chassis = {
+							breakthrough = 0.05
+						}
+						medium_magic_tank_chassis = {
+							breakthrough = 0.05
+						}
+						heavy_magic_tank_chassis = {
+							breakthrough = 0.05
+						}
+						heavy_tank_chassis = {
+							breakthrough = 0.05
+						}
+						super_heavy_tank_chassis = {
+							breakthrough = 0.075
+						}
+						super_heavy_magic_tank_chassis = {
+							breakthrough = 0.075
+						}
+					}
+				}
+			}
+		}
+		enable_equipment_modules = {
+			limit = {
+				has_dlc = "No Step Back"
+			}
+			gun_computer_0
+		}
+
+	}
+}
+sp_easy_maintenance_scemes_0 = {
+	specialization = specialization_land
+	#icon = GFX_sp_land_flamethrower_tank
+	project_tags = sp_tag_tank
+	allowed = {
+		country_without_sp = no #"no" because we want to forbid, not just check
+	}
+	available = {
+		FROM = {
+			has_tech = tankette
+		}
+	}
+	prototype_time = sp_time.prototype.medium
+	complexity = sp_complexity.insane
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+	project_output = {
+		country_effects = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+				add_equipment_bonus = {
+					bonus = {
+						light_tank_chassis = {
+							reliability = 0.025
+						}
+						light_magic_tank_chassis = {
+							reliability = 0.025
+						}
+						medium_tank_chassis = {
+							reliability = 0.05
+						}
+						medium_magic_tank_chassis = {
+							reliability = 0.05
+						}
+						heavy_magic_tank_chassis = {
+							reliability = 0.05
+						}
+						heavy_tank_chassis = {
+							reliability = 0.05
+						}
+						super_heavy_tank_chassis = {
+							reliability = 0.075
+						}
+						super_heavy_magic_tank_chassis = {
+							reliability = 0.075
+						}
+					}
+				}
+			}
+		}
+		enable_equipment_modules = {
+			limit = {
+				has_dlc = "No Step Back"
+			}
+			easy_maintenance_0
+		}
+	}
+}
+sp_easy_maintenance_scemes_1 = {
+	specialization = specialization_land
+	#icon = GFX_sp_land_flamethrower_tank
+	project_tags = sp_tag_tank
+	allowed = {
+		country_without_sp = no #"no" because we want to forbid, not just check
+	}
+	special_project_parent = {
+		sp_easy_maintenance_scemes_0
+	}
+	prototype_time = sp_time.prototype.medium
+	complexity = sp_complexity.insane
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+	project_output = {
+		country_effects = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+				add_equipment_bonus = {
+					bonus = {
+						light_tank_chassis = {
+							reliability = 0.025
+						}
+						light_magic_tank_chassis = {
+							reliability = 0.025
+						}
+						medium_tank_chassis = {
+							reliability = 0.05
+						}
+						medium_magic_tank_chassis = {
+							reliability = 0.05
+						}
+						heavy_magic_tank_chassis = {
+							reliability = 0.05
+						}
+						heavy_tank_chassis = {
+							reliability = 0.05
+						}
+						super_heavy_tank_chassis = {
+							reliability = 0.075
+						}
+						super_heavy_magic_tank_chassis = {
+							reliability = 0.075
+						}
+					}
+				}
+			}
+		}
+		enable_equipment_modules = {
+			limit = {
+				has_dlc = "No Step Back"
+			}
+			easy_maintenance_1
+		}
+	}
+}
 
 
 sp_land_flamethrower_tank = {
