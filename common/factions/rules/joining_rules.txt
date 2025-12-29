@@ -1,0 +1,651 @@
+#rule_group_left_ideology
+joining_rule_no_socialism = {
+	type = joining_rules
+	visible = {
+		NOT = { 
+			has_government = socialism
+		}
+	}
+	trigger = {
+		NOT = {
+			has_government = socialism
+		}
+		if = {
+			limit = { 
+				NOT = { 
+					has_rule = can_join_opposite_factions 
+				} 
+			}
+			has_government = FROM
+		}
+	}
+}
+joining_rule_no_communism = {
+	type = joining_rules
+	visible = {
+		NOT = { 
+			has_government = communism 
+		}
+	}
+	trigger = {
+		NOT = {
+			has_government = communism
+		}
+		if = {
+			limit = { 
+				NOT = { 
+					has_rule = can_join_opposite_factions 
+				} 
+			}
+			has_government = FROM
+		}
+	}
+}
+joining_rule_no_left_ideology = {
+	type = joining_rules
+	visible = {
+		NOT = { 
+			has_government = socialism
+			has_government = communism 
+		}
+	}
+	trigger = {
+		NOT = {
+			has_government = socialism
+			has_government = communism
+		}
+		if = {
+			limit = { 
+				NOT = { 
+					has_rule = can_join_opposite_factions 
+				} 
+			}
+			has_government = FROM
+		}
+	}
+}
+#rule_group_ideology_right_ideology
+joining_rule_no_fascism = {
+	type = joining_rules
+	visible = {
+		NOT = { 
+			has_government = fascism
+		}
+	}
+	trigger = {
+		NOT = {
+			has_government = fascism
+		}
+		if = {
+			limit = { 
+				NOT = { 
+					has_rule = can_join_opposite_factions 
+				} 
+			}
+			has_government = FROM
+		}
+	}
+}
+joining_rule_no_militarism = {
+	type = joining_rules
+	visible = {
+		NOT = { 
+			has_government = militarism
+		}
+	}
+	trigger = {
+		NOT = {
+			has_government = militarism
+		}
+		if = {
+			limit = { 
+				NOT = { 
+					has_rule = can_join_opposite_factions 
+				} 
+			}
+			has_government = FROM
+		}
+	}
+}
+joining_rule_no_right_ideology = {
+	type = joining_rules
+	visible = {
+		NOT = { 
+			has_government = fascism
+			has_government = militarism
+		}
+	}
+	trigger = {
+		NOT = {
+			has_government = fascism
+			has_government = militarism
+		}
+		if = {
+			limit = { 
+				NOT = { 
+					has_rule = can_join_opposite_factions 
+				} 
+			}
+			has_government = FROM
+		}
+	}
+}
+#rule_group_ideology_non_aligned
+joining_rule_no_neutrality = {
+	type = joining_rules
+	visible = {
+		NOT = { 
+			has_government = neutrality 
+		}
+	}
+	trigger = {
+		NOT = {
+			has_government = neutrality 
+		}
+		if = {
+			limit = { 
+				NOT = { 
+					has_rule = can_join_opposite_factions 
+				} 
+			}
+			has_government = FROM
+		}
+	}
+}
+joining_rule_no_technocracy = {
+	type = joining_rules
+	visible = {
+		NOT = { 
+			has_government = technocracy 
+		}
+	}
+	trigger = {
+		NOT = {
+			has_government = technocracy 
+		}
+		if = {
+			limit = { 
+				NOT = { 
+					has_rule = can_join_opposite_factions 
+				} 
+			}
+			has_government = FROM
+		}
+	}
+}
+joining_rule_no_non_aligned = {
+	type = joining_rules
+	visible = {
+		NOT = { 
+			has_government = neutrality
+			has_government = technocracy 
+		}
+	}
+	trigger = {
+		NOT = {
+			has_government = neutrality
+			has_government = technocracy 
+		}
+		if = {
+			limit = { 
+				NOT = { 
+					has_rule = can_join_opposite_factions 
+				} 
+			}
+			has_government = FROM
+		}
+	}
+}
+#rule_group_ideology_radical_ideology
+joining_rule_no_anarchism = {
+	type = joining_rules
+	visible = {
+		NOT = { 
+			has_government = anarchism
+		}
+	}
+	trigger = {
+		NOT = {
+			has_government = anarchism
+		}
+		if = {
+			limit = { 
+				NOT = { 
+					has_rule = can_join_opposite_factions 
+				} 
+			}
+			has_government = FROM
+		}
+	}
+}
+joining_rule_no_radicalism = {
+	type = joining_rules
+	visible = {
+		NOT = { 
+			has_government = radicalism
+		}
+	}
+	trigger = {
+		NOT = {
+			has_government = radicalism
+		}
+		if = {
+			limit = { 
+				NOT = { 
+					has_rule = can_join_opposite_factions 
+				} 
+			}
+			has_government = FROM
+		}
+	}
+}
+joining_rule_no_radical_ideology = {
+	type = joining_rules
+	visible = {
+		NOT = { 
+			has_government = anarchism
+			has_government = radicalism
+		}
+	}
+	trigger = {
+		NOT = {
+			has_government = anarchism
+			has_government = radicalism
+		}
+		if = {
+			limit = { 
+				NOT = { 
+					has_rule = can_join_opposite_factions 
+				} 
+			}
+			has_government = FROM
+		}
+	}
+}
+#rule_group_ideology_faith
+joining_rule_no_unholy = {
+	type = joining_rules
+	visible = {
+		NOT = { 
+			has_government = unholy
+		}
+	}
+	trigger = {
+		NOT = {
+			has_government = unholy
+		}
+		if = {
+			limit = { 
+				NOT = { 
+					has_rule = can_join_opposite_factions 
+				} 
+			}
+			has_government = FROM
+		}
+	}
+}
+joining_rule_no_holy = {
+	type = joining_rules
+	visible = {
+		NOT = { 
+			has_government = holy
+		}
+	}
+	trigger = {
+		NOT = {
+			has_government = holy
+		}
+		if = {
+			limit = { 
+				NOT = { 
+					has_rule = can_join_opposite_factions 
+				} 
+			}
+			has_government = FROM
+		}
+	}
+}
+joining_rule_no_faith = {
+	type = joining_rules
+	visible = {
+		NOT = { 
+			has_government = unholy
+			has_government = holy
+		}
+	}
+	trigger = {
+		NOT = {
+			has_government = unholy
+			has_government = holy
+		}
+		if = {
+			limit = { 
+				NOT = { 
+					has_rule = can_join_opposite_factions 
+				} 
+			}
+			has_government = FROM
+		}
+	}
+}
+#rule_group_ideology_liberal
+joining_rule_no_democratic = {
+	type = joining_rules
+	visible = {
+		NOT = { 
+			has_government = democratic
+		}
+	}
+	trigger = {
+		NOT = {
+			has_government = democratic
+		}
+		if = {
+			limit = { 
+				NOT = { 
+					has_rule = can_join_opposite_factions 
+				} 
+			}
+			has_government = FROM
+		}
+	}
+}
+joining_rule_no_harmony = {
+	type = joining_rules
+	visible = {
+		NOT = { 
+			has_government = harmony
+		}
+	}
+	trigger = {
+		NOT = {
+			has_government = harmony
+		}
+		if = {
+			limit = { 
+				NOT = { 
+					has_rule = can_join_opposite_factions 
+				} 
+			}
+			has_government = FROM
+		}
+	}
+}
+joining_rule_no_liberal = {
+	type = joining_rules
+	visible = {
+		NOT = { 
+			has_government = democratic
+			has_government = harmony
+		}
+	}
+	trigger = {
+		NOT = {
+			has_government = democratic
+			has_government = harmony
+		}
+		if = {
+			limit = { 
+				NOT = { 
+					has_rule = can_join_opposite_factions 
+				} 
+			}
+			has_government = FROM
+		}
+	}
+}
+#rule_group_leader_state
+joining_rule_support_percentage = {
+	type = joining_rules
+	ai_will_do = {
+		base = 0
+	}
+	visible = {
+
+	}
+	trigger = {
+		compare_ideology_with_faction = {
+			value > 0.3
+			leader = FROM
+		}
+		IF = {
+			limit = { NOT = { has_rule = can_join_opposite_factions } }
+			has_government = FROM
+		}
+	}
+}
+joining_rule_puppets_only = {
+	type = joining_rules
+	can_remove = {
+		faction_manifest_fulfillment > 0.95
+	}
+	trigger = {
+		ROOT = { is_subject_of = FROM }
+		IF = {
+			limit = { NOT = { has_rule = can_join_opposite_factions } }
+			has_government = FROM
+		}
+	}
+	modifier= {
+		subjects_autonomy_gain = -0.05
+	}
+}
+#rule_group_race
+joining_rule_same_race = {
+	type = joining_rules
+	trigger = {
+		custom_override_tooltip = {
+			tooltip = "joining_rule_same_race_trigger_tt"
+			FROM = {
+				is_same_race_as_PREV = yes
+			}
+		}
+	}
+}
+joining_rule_compatible_race = {
+	type = joining_rules
+	trigger = {
+		FROM = {
+			is_incompatible_races_as_PREV = no
+		}
+	}
+}
+joining_rule_changeling_only = {
+	type = joining_rules
+	visible = {
+		has_idea = changeling_race
+	}
+	trigger = {
+		has_idea = changeling_race
+	}
+}
+joining_rule_pony_only = {
+	type = joining_rules
+	visible = {
+		has_idea = pony_race
+	}
+	trigger = {
+		has_idea = pony_race
+	}
+}
+joining_rule_deer_only = {
+	type = joining_rules
+	visible = {
+		has_idea = deer_race
+	}
+	trigger = {
+		has_idea = deer_race
+	}
+}
+joining_rule_griffon_only = {
+	type = joining_rules
+	visible = {
+		has_idea = griffon_race
+	}
+	trigger = {
+		has_idea = griffon_race
+	}
+}
+joining_rule_diamond_dog_only = {
+	type = joining_rules
+	visible = {
+		has_idea = diamond_dog_race
+	}
+	trigger = {
+		has_idea = diamond_dog_race
+	}
+}
+joining_rule_dragon_only = {
+	type = joining_rules
+	visible = {
+		has_idea = dragon_race
+	}
+	trigger = {
+		has_idea = dragon_race
+	}
+}
+joining_rule_hippogriff_only = {
+	type = joining_rules
+	visible = {
+		has_idea = hippogriff_race
+	}
+	trigger = {
+		has_idea = hippogriff_race
+	}
+}
+joining_rule_minotaur_only = {
+	type = joining_rules
+	visible = {
+		has_idea = minotaur_race
+	}
+	trigger = {
+		has_idea = minotaur_race
+	}
+}
+joining_rule_bear_only = {
+	type = joining_rules
+	visible = {
+		has_idea = bear_race
+	}
+	trigger = {
+		has_idea = bear_race
+	}
+}
+joining_rule_yak_only = {
+	type = joining_rules
+	visible = {
+		has_idea = yak_race
+	}
+	trigger = {
+		has_idea = yak_race
+	}
+}
+joining_rule_undead_only = {
+	type = joining_rules
+	visible = {
+		has_idea = undead_race
+	}
+	trigger = {
+		has_idea = undead_race
+	}
+}
+
+#######################################################
+
+#   #  ##  ###      ###  ### #    ##  ### ###  ##  #  #     
+#   # #  # #  #     #  # #   #   #  #  #   #  #  # ## #     
+# # # #### ###      ###  ##  #   ####  #   #  #  # # ##     
+# # # #  # #  #     #  # #   #   #  #  #   #  #  # #  #     
+ # #  #  # #  #     #  # ### ### #  #  #  ###  ##  #  #
+
+ ######################################################     
+
+
+joining_rule_has_no_war = {
+	type = joining_rules
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 3
+			has_government = neutrality
+			has_war = no 
+		}
+	}
+	trigger = {
+		has_war = no
+	}
+	modifier = {
+		improve_relations_maintain_cost_factor = -0.1
+	}
+}
+
+joining_rule_has_no_offensive_war = {
+	type = joining_rules
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 2
+			NOT = { tag = ENG }
+			NOT = { tag = USA }
+			OR = {
+				has_government = democratic
+				has_government = neutrality
+			}
+		}
+	}
+	trigger = {
+		has_offensive_war = no
+	}
+	modifier = {
+		defensive_war_stability_factor = 0.15
+	}
+}
+
+########################################################
+
+ ##  ###  ##   ##  ###   ##  ###  #  # ###  ##   ##  #   
+#    #   #  # #    #  # #  # #  # #  #  #  #  # #  # #   
+# ## ##  #  # # ## ###  #### ###  ####  #  #    #### #   
+#  # #   #  # #  # #  # #  # #    #  #  #  #  # #  # #   
+ ##  ###  ##   ##  #  # #  # #    #  # ###  ##  #  # ###
+
+######################################################## 
+
+joining_rule_neighbors_only = {
+	type = joining_rules
+	ai_will_do = {
+		base = 0
+		modifier = {
+			add = 1
+			has_government = neutrality
+			has_war = no 
+		}
+	}
+	
+	trigger = {
+		any_neighbor_country = {
+			is_in_faction_with = FROM
+		}
+	}
+	modifier = {
+		enemy_justify_war_goal_time = 0.2
+	}
+}
+
+joining_rule_same_continent_only = {
+	type = joining_rules
+	ai_will_do = {
+		base = 0
+	}
+	can_remove = {
+		faction_manifest_fulfillment > 0.75
+	}
+	trigger = {
+		ROOT = { is_on_same_continent_as = FROM }
+	}
+	modifier = {
+		enemy_justify_war_goal_time = 0.1
+	}
+}
+
+

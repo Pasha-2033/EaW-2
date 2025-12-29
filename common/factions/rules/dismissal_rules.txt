@@ -1,0 +1,276 @@
+
+ ##   ##  ### ###  ##  #  #  ## 
+#  # #  #  #   #  #  # ## # #   
+#### #     #   #  #  # # ##  #  
+#  # #  #  #   #  #  # #  #   # 
+#  #  ##   #  ###  ##  #  # ##  
+
+
+dismissal_rule_world_tension = {
+	type = dismissal_rules
+	ai_will_do = {
+		base = 0
+		modifier = {  
+			add = 1
+			has_government = democratic
+			is_faction_leader = yes 
+		}
+	}
+	dismiss_member_trigger = {
+		has_added_tension_amount > 0.1
+	}
+}
+
+dismissal_rule_offensive_war = {
+	type = dismissal_rules
+	ai_will_do = {
+		base = 0
+		modifier = {  
+			add = 1
+			has_government = neutrality
+			is_faction_leader = yes 
+		}
+	}
+	dismiss_member_trigger = {
+		has_offensive_war_without_friend = FROM
+	}
+	ai_will_do = {
+		base = 0
+	}
+}
+
+
+### ###  ###  ##  #    ##   ##  #   # 
+ #  #  # #   #  # #   #  # #     # #  
+ #  #  # ##  #  # #   #  # # ##   #   
+ #  #  # #   #  # #   #  # #  #   #   
+### ###  ###  ##  ###  ##   ##    #   
+#ideology
+#rule_group_dismissal_ideology_left
+dismissal_rule_ideology_no_communism_allowed = {
+	type = dismissal_rules
+	visible = {
+		NOT = {
+			has_government = communism
+		}
+	}
+	dismiss_member_trigger = {
+		has_government = communism
+	}
+}
+dismissal_rule_ideology_no_socialism_allowed = {
+	type = dismissal_rules
+	visible = {
+		NOT = {
+			has_government = socialism
+		}
+	}
+	dismiss_member_trigger = {
+		has_government = socialism
+	}
+}
+dismissal_rule_ideology_no_left_ideology_allowed = {
+	type = dismissal_rules
+	visible = {
+		NOT = {
+			has_government = communism
+			has_government = socialism
+		}
+	}
+	dismiss_member_trigger = {
+		OR = {
+			has_government = communism
+			has_government = socialism
+		}
+	}
+}
+#rule_group_dismissal_ideology_right
+dismissal_rule_ideology_no_fascism_allowed = {
+	type = dismissal_rules
+	visible = {
+		NOT = {
+			has_government = fascism
+		}
+	}
+	dismiss_member_trigger = {
+		has_government = fascism
+	}
+}
+dismissal_rule_ideology_no_militarism_allowed = {
+	type = dismissal_rules
+	visible = {
+		NOT = {
+			has_government = militarism
+		}
+	}
+	dismiss_member_trigger = {
+		has_government = militarism
+	}
+}
+dismissal_rule_ideology_no_right_ideology_allowed = {
+	type = dismissal_rules
+	visible = {
+		NOT = {
+			has_government = fascism
+			has_government = militarism
+		}
+	}
+	dismiss_member_trigger = {
+		OR = {
+			has_government = fascism
+			has_government = militarism
+		}
+	}
+}
+#rule_group_dismissal_ideology_radical
+dismissal_rule_ideology_no_anarchism_allowed = {
+	type = dismissal_rules
+	visible = {
+		NOT = {
+			has_government = anarchism
+		}
+	}
+	dismiss_member_trigger = {
+		has_government = anarchism
+	}
+}
+dismissal_rule_ideology_no_radicalism_allowed = {
+	type = dismissal_rules
+	visible = {
+		NOT = {
+			has_government = radicalism
+		}
+	}
+	dismiss_member_trigger = {
+		has_government = radicalism
+	}
+}
+dismissal_rule_ideology_no_radical_ideology_allowed = {
+	type = dismissal_rules
+	visible = {
+		NOT = {
+			has_government = anarchism
+			has_government = radicalism
+		}
+	}
+	dismiss_member_trigger = {
+		OR = {
+			has_government = anarchism
+			has_government = radicalism
+		}
+	}
+}
+#rule_group_dismissal_ideology_non_aligned
+dismissal_rule_ideology_no_neutrality_allowed = {
+	type = dismissal_rules
+	visible = {
+		NOT = {
+			has_government = neutrality
+		}
+	}
+	dismiss_member_trigger = {
+		has_government = neutrality
+	}
+}
+dismissal_rule_ideology_no_technocracy_allowed = {
+	type = dismissal_rules
+	visible = {
+		NOT = {
+			has_government = technocracy
+		}
+	}
+	dismiss_member_trigger = {
+		has_government = technocracy
+	}
+}
+dismissal_rule_ideology_no_non_aligned_ideology_allowed = {
+	type = dismissal_rules
+	visible = {
+		NOT = {
+			has_government = neutrality
+			has_government = technocracy
+		}
+	}
+	dismiss_member_trigger = {
+		OR = {
+			has_government = neutrality
+			has_government = technocracy
+		}
+	}
+}
+#rule_group_dismissal_ideology_faith
+dismissal_rule_ideology_no_unholy_allowed = {
+	type = dismissal_rules
+	visible = {
+		NOT = {
+			has_government = unholy
+		}
+	}
+	dismiss_member_trigger = {
+		has_government = unholy
+	}
+}
+dismissal_rule_ideology_no_holy_allowed = {
+	type = dismissal_rules
+	visible = {
+		NOT = {
+			has_government = holy
+		}
+	}
+	dismiss_member_trigger = {
+		has_government = holy
+	}
+}
+dismissal_rule_ideology_no_faith_ideology_allowed = {
+	type = dismissal_rules
+	visible = {
+		NOT = {
+			has_government = unholy
+			has_government = holy
+		}
+	}
+	dismiss_member_trigger = {
+		OR = {
+			has_government = unholy
+			has_government = holy
+		}
+	}
+}
+#rule_group_dismissal_ideology_liberal
+dismissal_rule_ideology_no_democratic_allowed = {
+	type = dismissal_rules
+	visible = {
+		NOT = {
+			has_government = democratic
+		}
+	}
+	dismiss_member_trigger = {
+		has_government = democratic
+	}
+}
+dismissal_rule_ideology_no_harmony_allowed = {
+	type = dismissal_rules
+	visible = {
+		NOT = {
+			has_government = harmony
+		}
+	}
+	dismiss_member_trigger = {
+		has_government = harmony
+	}
+}
+dismissal_rule_ideology_no_liberal_ideology_allowed = {
+	type = dismissal_rules
+	visible = {
+		NOT = {
+			has_government = democratic
+			has_government = harmony
+		}
+	}
+	dismiss_member_trigger = {
+		OR = {
+			has_government = democratic
+			has_government = harmony
+		}
+	}
+}

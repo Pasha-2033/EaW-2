@@ -49,12 +49,6 @@ is_same_race_as_PREV = {
 				}
 			}
 			AND = {
-				has_idea = deer_race
-				PREV = {
-					has_idea = deer_race
-				}
-			}
-			AND = {
 				has_idea = dragon_race
 				PREV = {
 					has_idea = dragon_race
@@ -112,7 +106,7 @@ is_not_same_race_as_PREV = {
 		is_same_race_as_PREV = no
 	}
 }
-is_incompatible_races = {
+is_incompatible_races_as_PREV = {
 	OR = {
 		AND = {
 			has_idea = undead_race
@@ -150,69 +144,6 @@ is_incompatible_races = {
 		}
 	}
 }
-is_compatible_races = {
-	OR = {
-		AND = {
-			OR = {
-				has_government = harmony
-				has_government = socialism
-				has_government = communism
-			}
-			AND = {
-				NOT = {
-					has_idea = multi_race
-					has_idea = generic_race
-					has_idea = undead_race
-				}
-			}
-			PREV = {
-				has_idea = changeling_race
-				OR = {
-					has_government = harmony
-					has_government = socialism
-					has_government = communism
-					AND = {
-						OR = {
-							has_completed_focus = ves_focus_equus_technounion
-							has_country_flag = kind_evil_mind
-						}
-						has_government = technocracy
-					}
-				}
-			}
-		}
-		AND = {
-			has_idea = changeling_race
-			OR = {
-				has_government = harmony
-				has_government = socialism
-				has_government = communism
-				AND = {
-					OR = {
-						has_completed_focus = ves_focus_equus_technounion
-						has_country_flag = kind_evil_mind
-					}
-					has_government = technocracy
-				}
-			}
-			PREV = {
-				OR = {
-					has_government = harmony
-					has_government = socialism
-					has_government = communism
-				}
-				AND = {
-					NOT = {
-						has_idea = multi_race
-						has_idea = generic_race
-						has_idea = undead_race
-					}
-				}
-			}
-		}
-	}
-}
-
 
 
 

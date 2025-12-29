@@ -774,6 +774,166 @@ calc_all_nuclear_resources = {
 	calc_secondary_reactor = yes
 	calc_thermonuclear_reactor = yes
 }
+#country scope (made for faction)
+set_resource_industry_power = {
+	#aluminium
+	set_variable = {
+		resource_industry_influence = modifier@aluminium_plant_num
+	}
+	multiply_variable = {
+		resource_industry_influence = 0.9
+	}
+	#steel
+	set_temp_variable = {
+		steel_plant_influence = modifier@steel_plant_num
+	}
+	multiply_temp_variable = {
+		steel_plant_influence = 0.9
+	}
+	add_to_variable = {
+		resource_industry_influence = steel_plant_influence
+	}
+	#tungsten
+	set_temp_variable = {
+		tungsten_plant_influence = modifier@tungsten_plant_num
+	}
+	multiply_temp_variable = {
+		tungsten_plant_influence = 0.9
+	}
+	add_to_variable = {
+		resource_industry_influence = tungsten_plant_influence
+	}
+	#chromium
+	set_temp_variable = {
+		chromium_plant_influence = modifier@chromium_plant_num
+	}
+	multiply_temp_variable = {
+		chromium_plant_influence = 0.9
+	}
+	add_to_variable = {
+		resource_industry_influence = chromium_plant_influence
+	}
+	#rubber & oil
+	set_temp_variable = {
+		synthetic_refinery_influence = modifier@synthetic_refinery_num
+	}
+	multiply_temp_variable = {
+		synthetic_refinery_influence = 0.9
+	}
+	add_to_variable = {
+		resource_industry_influence = synthetic_refinery_influence
+	}
+}
+#country scope (made for faction)
+set_resource_base_power = {
+	#bauxite
+	set_variable = {
+		resource_influence = resource_exported@bauxite
+	}
+	multiply_variable = {
+		resource_influence = 0.9
+	}
+	#iron
+	set_temp_variable = {
+		iron_influence = resource_exported@iron
+	}
+	multiply_temp_variable = {
+		iron_influence = 0.9
+	}
+	add_to_variable = {
+		resource_influence = iron_influence
+	}
+	#scheelitis
+	set_temp_variable = {
+		scheelitis_influence = resource_exported@scheelitis
+	}
+	multiply_temp_variable = {
+		scheelitis_influence = 0.9
+	}
+	add_to_variable = {
+		resource_influence = scheelitis_influence
+	}
+	#chromite
+	set_temp_variable = {
+		chromite_influence = resource_exported@chromite
+	}
+	multiply_temp_variable = {
+		chromite_influence = 0.9
+	}
+	add_to_variable = {
+		resource_influence = chromite_influence
+	}
+	#oil
+	set_temp_variable = {
+		oil_influence = resource_exported@oil
+	}
+	multiply_temp_variable = {
+		oil_influence = 0.9
+	}
+	add_to_variable = {
+		resource_influence = oil_influence
+	}
+	#crystals
+	set_temp_variable = {
+		crystals_influence = resource_exported@crystals
+	}
+	multiply_temp_variable = {
+		crystals_influence = 0.9
+	}
+	add_to_variable = {
+		resource_influence = crystals_influence
+	}
+	#food
+	set_temp_variable = {
+		food_influence = resource_exported@food
+	}
+	multiply_temp_variable = {
+		food_influence = 0.9
+	}
+	add_to_variable = {
+		resource_influence = food_influence
+	}
+	#nuclear_fuel_primary
+	set_temp_variable = {
+		nuclear_fuel_primary_influence = resource_exported@nuclear_fuel_primary
+	}
+	multiply_temp_variable = {
+		nuclear_fuel_primary_influence = 0.9
+	}
+	add_to_variable = {
+		resource_influence = nuclear_fuel_primary_influence
+	}
+	#nuclear_fuel_secondary
+	set_temp_variable = {
+		nuclear_fuel_secondary_influence = resource_exported@nuclear_fuel_secondary
+	}
+	multiply_temp_variable = {
+		nuclear_fuel_secondary_influence = 0.9
+	}
+	add_to_variable = {
+		resource_influence = nuclear_fuel_secondary_influence
+	}
+	#thermonuclear_fuel
+	set_temp_variable = {
+		thermonuclear_fuel_influence = resource_exported@thermonuclear_fuel
+	}
+	multiply_temp_variable = {
+		thermonuclear_fuel_influence = 0.9
+	}
+	add_to_variable = {
+		resource_influence = thermonuclear_fuel_influence
+	}
+	#coal
+	set_temp_variable = {
+		coal_influence = resource_exported@coal
+	}
+	multiply_temp_variable = {
+		coal_influence = 0.9
+	}
+	add_to_variable = {
+		resource_influence = coal_influence
+	}
+}
 
 #ceil(x / 5 + 1) * 5, for example: 62% efficiency / 5 = 12.4; ceil(12.4 + 1) = 14; 14 * 5 = 70% target (and it will try to grow
 #IS THIS FORMULA REALLY GOOD?!
