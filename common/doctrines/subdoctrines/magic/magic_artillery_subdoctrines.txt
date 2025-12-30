@@ -1,0 +1,86 @@
+#superiority
+subdoctrine_magic_artillery_main_force = {
+    track = magic_artillery
+    name = SUBDOCTRINE_MAGIC_ARTILLERY_MAIN_FORCE
+    description = SUBDOCTRINE_MAGIC_ARTILLERY_MAIN_FORCE_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+		custom_override_tooltip = {
+            tooltip = "subdoctrine_main_force_not_selected_tt"
+            check_variable = {
+                modifier@track_magic_support_superiority_selected < 1
+            }
+            check_variable = {
+                modifier@track_magic_infantry_superiority_selected < 1
+            }
+            check_variable = {
+                modifier@track_magic_armor_superiority_selected < 1
+            }
+            check_variable = {
+                modifier@track_magic_air_superiority_selected < 1
+            }
+            check_variable = {
+                modifier@track_magic_operations_superiority_selected < 1
+            }
+        }
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+	track_magic_artillery_superiority_selected = 1
+
+    rewards = {
+        
+    }
+}
+#integrations
+#override
+subdoctrine_magic_light_naval_artillery = {
+	track = magic_artillery
+    name = SUBDOCTRINE_MAGIC_HEAVY_NAVAL_ARTILLERY
+    description = SUBDOCTRINE_MAGIC_HEAVY_NAVAL_ARTILLERY_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = navy
+
+    available = {
+		
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+    rewards = {
+        
+    }
+}
+subdoctrine_magic_heavy_naval_artillery = {
+	track = magic_artillery
+    name = SUBDOCTRINE_MAGIC_HEAVY_NAVAL_ARTILLERY
+    description = SUBDOCTRINE_MAGIC_HEAVY_NAVAL_ARTILLERY_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = navy
+
+    available = {
+		
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+    rewards = {
+        
+    }
+}
+#special forces

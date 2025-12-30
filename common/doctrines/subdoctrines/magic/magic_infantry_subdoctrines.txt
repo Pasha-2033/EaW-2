@@ -1,0 +1,575 @@
+#superiority
+subdoctrine_magic_infantry_main_force = {
+    #main force
+    track = magic_infantry
+    name = SUBDOCTRINE_MAGIC_INFANTRY_MAIN_FORCE
+    description = SUBDOCTRINE_MAGIC_INFANTRY_MAIN_FORCE_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_superiority
+    }
+    available = {
+        custom_override_tooltip = {
+            tooltip = "subdoctrine_main_force_not_selected_tt"
+            check_variable = {
+                modifier@track_magic_support_superiority_selected < 1
+            }
+            check_variable = {
+                modifier@track_magic_artillery_superiority_selected < 1
+            }
+            check_variable = {
+                modifier@track_magic_armor_superiority_selected < 1
+            }
+            check_variable = {
+                modifier@track_magic_air_superiority_selected < 1
+            }
+            check_variable = {
+                modifier@track_magic_operations_superiority_selected < 1
+            }
+        }
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+    # EFFECTS
+
+    track_magic_infantry_superiority_selected = 1
+	modifier_army_sub_unit_magical_infantry_attack_factor = 0.05
+
+    rewards = {
+        
+    }
+}
+subdoctrine_magic_motorized_main_force = {
+    #main force
+    track = magic_infantry
+    name = SUBDOCTRINE_MAGIC_MOTORIZED_MAIN_FORCE
+    description = SUBDOCTRINE_MAGIC_MOTORIZED_MAIN_FORCE_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_superiority
+    }
+    available = {
+        custom_override_tooltip = {
+            tooltip = "subdoctrine_main_force_not_selected_tt"
+            check_variable = {
+                modifier@track_magic_support_superiority_selected < 1
+            }
+            check_variable = {
+                modifier@track_magic_artillery_superiority_selected < 1
+            }
+            check_variable = {
+                modifier@track_magic_armor_superiority_selected < 1
+            }
+            check_variable = {
+                modifier@track_magic_air_superiority_selected < 1
+            }
+            check_variable = {
+                modifier@track_magic_operations_superiority_selected < 1
+            }
+        }
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+    # EFFECTS
+    track_magic_infantry_superiority_selected = 1
+	modifier_army_sub_unit_magical_motorized_attack_factor = 0.05
+
+    rewards = {
+        
+    }
+}
+subdoctrine_magic_mechanized_main_force = {
+    #main force
+    track = magic_infantry
+    name = SUBDOCTRINE_MAGIC_MECHANIZED_MAIN_FORCE
+    description = SUBDOCTRINE_MAGIC_MECHANIZED_MAIN_FORCE_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_superiority
+    }
+    available = {
+        custom_override_tooltip = {
+            tooltip = "subdoctrine_main_force_not_selected_tt"
+            check_variable = {
+                modifier@track_magic_support_superiority_selected < 1
+            }
+            check_variable = {
+                modifier@track_magic_artillery_superiority_selected < 1
+            }
+            check_variable = {
+                modifier@track_magic_armor_superiority_selected < 1
+            }
+            check_variable = {
+                modifier@track_magic_air_superiority_selected < 1
+            }
+            check_variable = {
+                modifier@track_magic_operations_superiority_selected < 1
+            }
+        }
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+    # EFFECTS
+    track_magic_infantry_superiority_selected = 1
+	modifier_army_sub_unit_magical_mechanized_attack_factor = 0.05
+
+    rewards = {
+        
+    }
+}
+subdoctrine_magic_infantry_predominant_force = {
+    #secondary force
+    track = magic_infantry
+    name = SUBDOCTRINE_MAGIC_INFANTRY_PREDOMINANT_FORCE
+    description = SUBDOCTRINE_MAGIC_INFANTRY_PREDOMINANT_FORCE_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_superiority
+    }
+    available = {
+        #always yes
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+    # EFFECTS
+	modifier_army_sub_unit_magical_infantry_attack_factor = 0.05
+    modifier_army_sub_unit_magical_motorized_attack_factor = 0.05
+
+    rewards = {
+        
+    }
+}
+subdoctrine_magic_motorized_predominant_force = {
+    #secondary force
+    track = magic_infantry
+    name = SUBDOCTRINE_MAGIC_MOTORIZED_PREDOMINANT_FORCE
+    description = SUBDOCTRINE_MAGIC_MOTORIZED_PREDOMINANT_FORCE_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_superiority
+    }
+    available = {
+        #always yes
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+	modifier_army_sub_unit_magical_infantry_attack_factor = 0.05
+    modifier_army_sub_unit_magical_motorized_attack_factor = 0.05
+
+    rewards = {
+        
+    }
+}
+subdoctrine_magic_mechanized_predominant_force = {
+    #secondary force
+    track = magic_infantry
+    name = SUBDOCTRINE_MAGIC_MECHANIZED_PREDOMINANT_FORCE
+    description = SUBDOCTRINE_MAGIC_MECHANIZED_PREDOMINANT_FORCE_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_superiority
+    }
+    available = {
+        #always yes
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+    # EFFECTS
+
+	modifier_army_sub_unit_magical_infantry_attack_factor = 0.05
+    modifier_army_sub_unit_magical_motorized_attack_factor = 0.05
+
+    rewards = {
+        
+    }
+}
+#integrations
+subdoctrine_magic_infantry_artillery_integration = {
+    track = magic_infantry
+    name = SUBDOCTRINE_MAGIC_INFANTRY_ARTILLERY_INTEGRATION
+    description = SUBDOCTRINE_MAGIC_INFANTRY_ARTILLERY_INTEGRATION_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_integrations
+    }
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+    # EFFECTS
+	modifier_army_sub_unit_magical_infantry_attack_factor = 0.05
+    modifier_army_sub_unit_magical_motorized_attack_factor = 0.05
+
+    rewards = {
+        
+    }
+}
+subdoctrine_magic_infantry_anti_air_integration = {
+    track = magic_infantry
+    name = SUBDOCTRINE_MAGIC_INFANTRY_ANTI_AIR_INTEGRATION
+    description = SUBDOCTRINE_MAGIC_INFANTRY_ANTI_AIR_INTEGRATION_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_integrations
+    }
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+    # EFFECTS
+	modifier_army_sub_unit_magical_infantry_attack_factor = 0.05
+    modifier_army_sub_unit_magical_motorized_attack_factor = 0.05
+
+    rewards = {
+        
+    }
+}
+subdoctrine_magic_infantry_anti_tank_integration = {
+    track = magic_infantry
+    name = SUBDOCTRINE_MAGIC_INFANTRY_ANTI_TANK_INTEGRATION
+    description = SUBDOCTRINE_MAGIC_INFANTRY_ANTI_TANK_INTEGRATION_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_integrations
+    }
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+    # EFFECTS
+	modifier_army_sub_unit_magical_infantry_attack_factor = 0.05
+    modifier_army_sub_unit_magical_motorized_attack_factor = 0.05
+
+    rewards = {
+        
+    }
+}
+subdoctrine_magic_infantry_mobile_guns_integration = {
+    track = magic_infantry
+    name = SUBDOCTRINE_MAGIC_INFANTRY_MOBILE_GUNS_INTEGRATION
+    description = SUBDOCTRINE_MAGIC_INFANTRY_MOBILE_GUNS_INTEGRATION_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_integrations
+    }
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+    # EFFECTS
+	modifier_army_sub_unit_magical_infantry_attack_factor = 0.05
+    modifier_army_sub_unit_magical_motorized_attack_factor = 0.05
+
+    rewards = {
+        
+    }
+}
+#override
+subdoctrine_magic_override = {
+    track = magic_infantry
+    name = SUBDOCTRINE_MAGIC_INFANTRY_OVERRIDE
+    description = SUBDOCTRINE_MAGIC_INFANTRY_OVERRIDE_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_override
+    }
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+    # EFFECTS
+	modifier_army_sub_unit_magical_infantry_attack_factor = 0.05
+    modifier_army_sub_unit_magical_motorized_attack_factor = 0.05
+
+    rewards = {
+        
+    }
+}
+subdoctrine_magic_overload = {
+    track = magic_infantry
+    name = SUBDOCTRINE_MAGIC_INFANTRY_OVERRIDE
+    description = SUBDOCTRINE_MAGIC_INFANTRY_OVERRIDE_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_override
+    }
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+    # EFFECTS
+	modifier_army_sub_unit_magical_infantry_attack_factor = 0.05
+    modifier_army_sub_unit_magical_motorized_attack_factor = 0.05
+
+    rewards = {
+        
+    }
+}
+subdoctrine_magic_discharge = {
+    track = magic_infantry
+    name = SUBDOCTRINE_MAGIC_INFANTRY_OVERRIDE
+    description = SUBDOCTRINE_MAGIC_INFANTRY_OVERRIDE_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_override
+    }
+    available = {
+        always = yes
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+    # EFFECTS
+	modifier_army_sub_unit_magical_infantry_attack_factor = 0.05
+    modifier_army_sub_unit_magical_motorized_attack_factor = 0.05
+
+    rewards = {
+        
+    }
+}
+#special forces
+subdoctrine_common_special_forces_superiority = {
+    #magic race related forces
+    track = magic_infantry
+    name = SUBDOCTRINE_COMMON_SPECIAL_FORCES_SUPERIORITY
+    description = SUBDOCTRINE_COMMON_SPECIAL_FORCES_SUPERIORITY_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_special_forces
+    }
+
+    rewards = {
+        
+    }
+}
+subdoctrine_pegasi_superiority = {
+    #magic race related forces
+    track = magic_infantry
+    name = SUBDOCTRINE_PEGASI_SUPERIORITY
+    description = SUBDOCTRINE_PEGASI_SUPERIORITY_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_special_forces
+        is_pony_mylti = yes
+    }
+
+    rewards = {
+        
+    }
+}
+subdoctrine_jager_superiority = {
+    #magic race related forces
+    track = magic_infantry
+    name = SUBDOCTRINE_JAGER_SUPERIORITY
+    description = SUBDOCTRINE_JAGER_SUPERIORITY_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_special_forces
+        is_changeling_mylti = yes
+    }
+
+    rewards = {
+        
+    }
+}
+subdoctrine_royal_guard_superiority = {
+    #magic race related forces
+    track = magic_infantry
+    name = SUBDOCTRINE_ROYAL_GUARD_SUPERIORITY
+    description = SUBDOCTRINE_ROYAL_GUARD_SUPERIORITY_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_special_forces
+        is_changeling_mylti = yes
+    }
+
+    rewards = {
+        
+    }
+}
+subdoctrine_knights_superiority = {
+    #magic race related forces
+    track = magic_infantry
+    name = SUBDOCTRINE_KNIGHTS_SUPERIORITY
+    description = SUBDOCTRINE_KNIGHTS_SUPERIORITY_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_special_forces
+        is_griffon_mylti = yes
+    }
+
+    rewards = {
+        
+    }
+}
+subdoctrine_ironpaws_superiority = {
+    #magic race related forces
+    track = magic_infantry
+    name = SUBDOCTRINE_IRONPAWS_SUPERIORITY
+    description = SUBDOCTRINE_IRONPAWS_SUPERIORITY_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_special_forces
+        is_dog_mylti = yes
+    }
+
+    rewards = {
+        
+    }
+}
+subdoctrine_light_dragons_superiority = {
+    #magic race related forces
+    track = magic_infantry
+    name = SUBDOCTRINE_LIGHT_DRAGONS_SUPERIORITY
+    description = SUBDOCTRINE_LIGHT_DRAGONS_SUPERIORITY_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_special_forces
+        is_dragon_mylti = yes
+    }
+
+    rewards = {
+        
+    }
+}
+subdoctrine_heavy_dragons_superiority = {
+    #magic race related forces
+    track = magic_infantry
+    name = SUBDOCTRINE_HEAVY_DRAGONS_SUPERIORITY
+    description = SUBDOCTRINE_HEAVY_DRAGONS_SUPERIORITY_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_special_forces
+        is_dragon_mylti = yes
+    }
+
+    rewards = {
+        
+    }
+}
+subdoctrine_windigo_horrors_superiority = {
+    #magic race related forces (exlusive forr ICE)
+    track = magic_infantry
+    name = SUBDOCTRINE_MAGIC_INFANTRY_SUPERIORITY
+    description = SUBDOCTRINE_MAGIC_INFANTRY_SUPERIORITY_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_special_forces
+        has_country_leader = ICE_windigo
+    }
+
+    rewards = {
+        
+    }
+}

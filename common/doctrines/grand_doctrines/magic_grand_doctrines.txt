@@ -1,0 +1,288 @@
+magic_superiority = {
+	folder = magic
+
+	name = GRAND_DOCTRINE_MAGIC_SUPERIORITY
+	description = GRAND_DOCTRINE_MAGIC_SUPERIORITY_DESC
+	icon = GFX_doctrine_fleet_in_being_medium #TODO
+	available = {
+		always = yes
+	}
+
+	xp_cost = 100
+	xp_type = army
+
+	ai_will_do = {
+		base = 1
+	}
+
+	tracks = {
+		magic_infantry
+		magic_support
+		magic_artillery
+		magic_armor
+		magic_air
+		magic_operations
+	}
+
+	# EFFECTS
+	magical_infantry = {
+		soft_attack = 0.05
+	}
+	
+	milestones = {
+		{
+			#Magic infantry
+			
+			effect = {
+			
+			}
+		}
+		{
+			#Magic support
+			navy_capital_ship_attack_factor = 0.1
+
+			effect = {
+				
+			}
+		}
+		{
+			#Magic artillery
+			navy_anti_air_attack_factor = 0.10
+
+			effect = {
+				
+			}
+		}
+		{
+			#Magic armor
+			naval_torpedo_reveal_chance_factor = -0.05
+			strike_force_movement_org_loss = -0.2
+
+			effect = {
+				
+			}
+		}
+		{
+			#Magic air
+			naval_torpedo_reveal_chance_factor = -0.05
+			strike_force_movement_org_loss = -0.2
+
+			effect = {
+				
+			}
+		}
+		{
+			#Magic operations
+			naval_torpedo_reveal_chance_factor = -0.05
+			strike_force_movement_org_loss = -0.2
+
+			effect = {
+				
+			}
+		}
+	}
+}
+magic_integrations = {
+	folder = magic
+
+	name = GRAND_DOCTRINE_MAGIC_INTEGRATIONS
+	description = GRAND_DOCTRINE_MAGIC_INTEGRATIONS_DESC
+	icon = GFX_doctrine_fleet_in_being_medium #TODO
+	available = {
+		always = yes
+	}
+
+	xp_cost = 100
+	xp_type = navy
+
+	ai_will_do = {
+		base = 1
+	}
+
+	tracks = {
+		magic_infantry
+		magic_support
+		magic_artillery
+		magic_armor
+		magic_air
+		magic_operations
+	}
+
+	# EFFECTS
+	battleship = {
+		max_organisation = 15			
+	}
+	navy_capital_ship_defence_factor = 0.1
+	
+	milestones = {
+		{
+			#Capital Ships
+			mines_planting_by_fleets_factor = 0.2
+			convoy_escort_efficiency = 0.15
+			effect = {
+				
+			}
+		}
+		{
+			#Carriers
+			navy_capital_ship_attack_factor = 0.1
+
+			effect = {
+				
+			}
+		}
+		{
+			#Screens
+			navy_anti_air_attack_factor = 0.10
+
+			effect = {
+				
+			}
+		}
+		{
+			#Submarines
+			naval_torpedo_reveal_chance_factor = -0.05
+			strike_force_movement_org_loss = -0.2
+
+			effect = {
+				
+			}
+		}
+	}
+}
+magic_override = {
+	folder = magic
+
+	name = GRAND_DOCTRINE_MAGIC_OVERRIDE
+	description = GRAND_DOCTRINE_MAGIC_OVERRIDE_DESC
+	icon = GFX_doctrine_fleet_in_being_medium #TODO
+	available = {
+		always = yes
+	}
+
+	xp_cost = 100
+	xp_type = navy
+
+	ai_will_do = {
+		base = 1
+	}
+
+	tracks = {
+		magic_infantry
+		magic_support
+		magic_artillery
+		magic_armor
+		magic_air
+		magic_operations
+	}
+
+	# EFFECTS
+	battleship = {
+		max_organisation = 15			
+	}
+	navy_capital_ship_defence_factor = 0.1
+	
+	milestones = {
+		{
+			#Capital Ships
+			mines_planting_by_fleets_factor = 0.2
+			convoy_escort_efficiency = 0.15
+			effect = {
+				
+			}
+		}
+		{
+			#Carriers
+			navy_capital_ship_attack_factor = 0.1
+
+			effect = {
+				
+			}
+		}
+		{
+			#Screens
+			navy_anti_air_attack_factor = 0.10
+
+			effect = {
+				
+			}
+		}
+		{
+			#Submarines
+			naval_torpedo_reveal_chance_factor = -0.05
+			strike_force_movement_org_loss = -0.2
+
+			effect = {
+				
+			}
+		}
+	}
+}
+magic_special_forces = {
+	folder = magic
+
+	name = GRAND_DOCTRINE_MAGIC_SPECIAL_FORCES
+	description = GRAND_DOCTRINE_MAGIC_SPECIAL_FORCES_DESC
+	icon = GFX_doctrine_fleet_in_being_medium #TODO
+	available = {
+		
+	}
+
+	xp_cost = 100
+	xp_type = navy
+
+	ai_will_do = {
+		base = 1
+	}
+
+	tracks = {
+		magic_infantry
+		magic_support
+		magic_artillery
+		magic_armor
+		magic_air
+		magic_operations
+	}
+
+	# EFFECTS
+	battleship = {
+		max_organisation = 15			
+	}
+	navy_capital_ship_defence_factor = 0.1
+	
+	milestones = {
+		{
+			#Capital Ships
+			mines_planting_by_fleets_factor = 0.2
+			convoy_escort_efficiency = 0.15
+			effect = {
+				
+			}
+		}
+		{
+			#Carriers
+			navy_capital_ship_attack_factor = 0.1
+
+			effect = {
+				
+			}
+		}
+		{
+			#Screens
+			navy_anti_air_attack_factor = 0.10
+
+			effect = {
+				
+			}
+		}
+		{
+			#Submarines
+			naval_torpedo_reveal_chance_factor = -0.05
+			strike_force_movement_org_loss = -0.2
+
+			effect = {
+				
+			}
+		}
+	}
+}

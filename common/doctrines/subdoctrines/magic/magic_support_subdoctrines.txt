@@ -1,0 +1,180 @@
+#superiority
+subdoctrine_magic_support_main_force = {
+    track = magic_support
+    name = SUBDOCTRINE_MAGIC_SUPPORT_MAIN_FORCE
+    description = SUBDOCTRINE_MAGIC_SUPPORT_MAIN_FORCE_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        custom_override_tooltip = {
+            tooltip = "subdoctrine_main_force_not_selected_tt"
+            custom_override_tooltip = {
+                tooltip = "subdoctrine_main_force_not_selected_tt"
+                check_variable = {
+                    modifier@track_magic_infantry_superiority_selected < 1
+                }
+                check_variable = {
+                    modifier@track_magic_artillery_superiority_selected < 1
+                }
+                check_variable = {
+                    modifier@track_magic_armor_superiority_selected < 1
+                }
+                check_variable = {
+                    modifier@track_magic_air_superiority_selected < 1
+                }
+                check_variable = {
+                    modifier@track_magic_operations_superiority_selected < 1
+                }
+            }
+        }
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    track_magic_support_superiority_selected = 1
+
+    rewards = {
+        
+    }
+}
+subdoctrine_magic_support_predominant_force = {
+    track = magic_support
+    name = SUBDOCTRINE_MAGIC_SUPPORT_PREDOMINANT_FORCE
+    description = SUBDOCTRINE_MAGIC_SUPPORT_PREDOMINANT_FORCE_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {
+        
+    }
+}
+subdoctrine_magic_support_subversive_operations = {
+    track = magic_support
+    name = SUBDOCTRINE_MAGIC_SUPPORT_SUBVERSIVE_OPERATIONS
+    description = SUBDOCTRINE_MAGIC_SUPPORT_SUBVERSIVE_OPERATIONS_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {
+        
+    }
+}
+#integrations
+subdoctrine_magic_support_logistics = {
+    track = magic_support
+    name = SUBDOCTRINE_MAGIC_SUPPORT_LOGISTICS
+    description = SUBDOCTRINE_MAGIC_SUPPORT_LOGISTICS_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {
+        
+    }
+}
+subdoctrine_magic_support_live_tank = {
+    track = magic_support
+    name = SUBDOCTRINE_MAGIC_SUPPORT_LIVE_TANK
+    description = SUBDOCTRINE_MAGIC_SUPPORT_LIVE_TANK_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {
+        
+    }
+}
+#override
+subdoctrine_magic_support_hidden_phoenix = {
+    track = magic_support
+    name = SUBDOCTRINE_MAGIC_SUPPORT_HIDDEN_PHOENIX
+    description = SUBDOCTRINE_MAGIC_SUPPORT_HIDDEN_PHOENIX_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {
+        
+    }
+}
+subdoctrine_magic_support_firewall = {
+    track = magic_support
+    name = SUBDOCTRINE_MAGIC_SUPPORT_FIREWALL
+    description = SUBDOCTRINE_MAGIC_SUPPORT_FIREWALL_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {
+        
+    }
+}
+#special forces
