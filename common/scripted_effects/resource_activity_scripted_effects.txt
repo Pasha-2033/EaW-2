@@ -217,6 +217,9 @@ calc_resource_aluminium = {
 		add_to_variable = {
 			resource_plant_efficiency^0 = modifier@aluminium_plant_penalty_reduction
 		}
+		multiply_variable = {
+			resource_plant_efficiency^0 = industry_efficiency_by_coal
+		}
 		clamp_variable = {
 			var = resource_plant_efficiency^0
 			min = 0
@@ -273,6 +276,9 @@ calc_resource_steel = {
 		}
 		add_to_variable = {
 			resource_plant_efficiency^1 = modifier@steel_plant_penalty_reduction
+		}
+		multiply_variable = {
+			resource_plant_efficiency^1 = industry_efficiency_by_coal
 		}
 		clamp_variable = {
 			var = resource_plant_efficiency^1
@@ -331,6 +337,9 @@ calc_resource_tungsten = {
 		add_to_variable = {
 			resource_plant_efficiency^2 = modifier@tungsten_plant_penalty_reduction
 		}
+		multiply_variable = {
+			resource_plant_efficiency^2 = industry_efficiency_by_coal
+		}
 		clamp_variable = {
 			var = resource_plant_efficiency^2
 			min = 0
@@ -388,6 +397,9 @@ calc_resource_chromium = {
 		add_to_variable = {
 			resource_plant_efficiency^3 = modifier@chromium_plant_penalty_reduction
 		}
+		multiply_variable = {
+			resource_plant_efficiency^3 = industry_efficiency_by_coal
+		}
 		clamp_variable = {
 			var = resource_plant_efficiency^3
 			min = 0
@@ -443,6 +455,9 @@ calc_resource_synthetic = {
 		#effeciency
 		divide_variable = {
 			synthetic_refinery_efficiency = synthetic_refinery_consumption
+		}
+		multiply_variable = {
+			synthetic_refinery_efficiency = industry_efficiency_by_coal
 		}
 		add_to_variable = {
 			synthetic_refinery_efficiency = modifier@synthetic_refinery_penalty_reduction
