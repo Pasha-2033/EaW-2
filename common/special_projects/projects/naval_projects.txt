@@ -1180,3 +1180,65 @@ antitorpedo_bulkhead = {
 		sp_naval_generic_reward_test_failure_3			
 	}	
 }
+sp_naval_support_ships = {
+	specialization = specialization_naval
+
+	project_tags = sp_tag_surface_ship
+
+	ai_will_do = {
+		base = 1
+	}
+
+	allowed = {
+		country_without_sp = no #"no" because we want to forbid, not just check
+		#has_dlc = "No Compromise, No Surrender"
+	}
+
+	available = {
+
+	}
+
+	resource_cost = {
+		resources = { 
+			steel = 6
+		}
+	}
+
+	breakthrough_cost = {
+		specialization_naval = 1
+	}
+	
+	complexity = sp_complexity.medium
+	prototype_time = sp_time.prototype.medium 
+	project_output = {
+		country_effects = {
+		}
+
+		enable_equipments = {
+			support_ship_0
+			repair_ship_0
+		}
+
+		enable_equipment_modules = {
+			 
+		}
+
+		enable_subunits = { 
+			
+		}
+	}
+	generic_prototype_rewards = {
+		sp_naval_generic_reward_scientist_xp_1
+		sp_naval_generic_reward_scientist_xp_2
+		sp_naval_generic_reward_scientist_xp_3
+		sp_naval_generic_reward_navy_xp_1
+		sp_naval_generic_reward_navy_xp_2
+		sp_naval_generic_reward_navy_xp_3
+		sp_naval_generic_reward_major_progress_1
+		sp_naval_generic_reward_major_progress_2
+		sp_naval_generic_reward_major_progress_3
+		sp_naval_generic_reward_test_failure_1
+		sp_naval_generic_reward_test_failure_2
+		sp_naval_generic_reward_test_failure_3			
+	}
+}

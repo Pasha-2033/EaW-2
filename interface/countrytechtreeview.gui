@@ -2120,7 +2120,7 @@ guiTypes = {
 			}
 			gridboxtype = {
 				name = "bombard_tree"
-				position = { x = 1500 y = 172 }
+				position = { x = 1900 y = 172 }
 				size = { width = 80% height = 80% }
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
@@ -2878,7 +2878,7 @@ guiTypes = {
 				name = "tiled_window_transparent_transparent"
 				position = { x= 0 y= 0 }
 				size = { 
-					width=5000 height=2500 
+					width=5000 height=2800 
 					min = { width=100%% height=100%% }
 				}
 				clipping = no
@@ -3037,42 +3037,42 @@ guiTypes = {
 			}
 			gridboxtype = {
 				name = "mtg_convoy_0_tree"
-				position = { x = 220 y = 1480 }
+				position = { x = 220 y = 2280 }
 				size = { width = 100 height = 140 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 			gridboxtype = {
 				name = "cabin_expansion_0_tree"
-				position = { x = 220 y = 1725 }
+				position = { x = 220 y = 1825 }
 				size = { width = 100 height = 140 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 			gridboxtype = {
 				name = "smoke_generator_0_tree"
-				position = { x = 220 y = 1830 }
+				position = { x = 220 y = 1720 }
 				size = { width = 100 height = 140 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 			gridboxtype = {
 				name = "damage_control_0_tree"
-				position = { x = 220 y = 1935 }
+				position = { x = 220 y = 1615 }
 				size = { width = 100 height = 140 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 			gridboxtype = {
 				name = "fire_control_methods_0_tree"
-				position = { x = 640 y = 2040 }
+				position = { x = 640 y = 1930 }
 				size = { width = 100 height = 140 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
 			}
 			gridboxtype = {
 				name = "naval_mine_0_tree"
-				position = { x = 640 y = 2145 }
+				position = { x = 640 y = 2035 }
 				size = { width = 100 height = 140 }
 				slotsize = { width = 70 height = 70 }
 				format = "LEFT"
@@ -8401,6 +8401,67 @@ guiTypes = {
 				spriteType = "GFX_subtech_heavy_battleship"
 				alwaystransparent = yes
 			}
+		}
+		iconType = {
+			name = "can_assign_design_team_icon"
+			position = {
+				x = 0
+				y = 42
+			}
+			spriteType = "GFX_design_team_icon"
+		}
+	}
+	containerWindowType = {
+		name = "techtree_mtgnavalsupportfolder_item"
+		position = { x=-131 y=1 }
+		size = { width = 204 height = 72 }
+		clipping = no
+
+		background = {
+			name = "Background"
+			quadTextureSprite ="GFX_technology_unavailable_item_bg"
+		}
+		gridboxtype = {
+			# contains special_project_specialization
+			name = "special_project_specialization_list"
+		}
+
+		iconType = {
+			name = "Icon"
+			position = { x=167 y=34 }
+			spriteType = "GFX_technology_medium"
+			centerposition = yes
+			alwaystransparent = yes
+		}
+
+		instantTextBoxType = {
+			name = "Name"
+			position = { x = 3 y = -1 }
+			textureFile = ""
+			font = "hoi_20bs"
+			borderSize = {x = 4 y = 4}
+			text = "lol boat"
+			maxWidth = 270
+			maxHeight = 20
+			fixedsize = yes
+			format = left
+		}
+		iconType = {
+			name = "bonus_icon"
+			position = { x=257 y=-18 }
+			spriteType = "GFX_tech_bonus"
+		}
+		
+		instantTextBoxType = {
+			name = "bonus"
+			position = { x = 257 y = -19 }
+			textureFile = ""
+			font = "hoi_16mbs"
+			borderSize = {x = 4 y = 4}
+			text = "lol boat"
+			maxWidth = 80
+			maxHeight = 20
+			format = center
 		}
 		iconType = {
 			name = "can_assign_design_team_icon"

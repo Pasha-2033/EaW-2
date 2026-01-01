@@ -53,19 +53,6 @@ technologies = {
 			supply_consumption_factor = 0.15
 		}
 	}
-	JER_magical_artillery_tech = {
-		research_cost = 1
-		allow = {
-			always = no
-		}
-		enable_equipments = {
-			magical_artillery_equipment_1
-		}
-		enable_subunits = {
-			magical_artillery
-		}
-		#Insert unlocking Magical Artillery here - Cyrus
-	}
 	
 	### Armoured Development Path ###
 	
@@ -86,61 +73,7 @@ technologies = {
 			fuel_consumption_factor = -0.10
 		}
 	}
-	JER_AA_MG_proliferation_tech = {
-		research_cost = 1
-		allow = {
-			always = no
-		}
-		light_armor = {
-		    air_attack = 999
-		}
-		medium_armor = {
-		    air_attack = 999
-		}
-		heavy_armor = {
-		    air_attack = 999
-		}
-		super_heavy_armor = {
-		    air_attack = 999
-		}
-		modern_armor = {
-		    air_attack = 999
-		}
-		amphibious_armor = {
-			air_attack = 999
-		}
-	}
-	JER_widespread_HEAT_shells_tech = {
-		research_cost = 1
-		allow = {
-			always = no
-		}
-		light_sp_artillery_brigade = {
-		    hard_attack = 0.2
-			breakthrough = 0.2
-			ap_attack = 0.2
-		}
-		medium_sp_artillery_brigade = {
-		    hard_attack = 0.2
-			breakthrough = 0.2
-			ap_attack = 0.2
-		}
-		heavy_sp_artillery_brigade = {
-		    hard_attack = 0.2
-			breakthrough = 0.2
-			ap_attack = 0.2
-		}
-		super_heavy_sp_artillery_brigade = {
-		    hard_attack = 0.2
-			breakthrough = 0.2
-			ap_attack = 0.2
-		}
-		modern_sp_artillery_brigade = {
-		    hard_attack = 0.2
-			breakthrough = 0.2
-			ap_attack = 0.2
-		}
-	}
+
 	JER_magical_tanks_tech = {
 		research_cost = 1
 		allow = {

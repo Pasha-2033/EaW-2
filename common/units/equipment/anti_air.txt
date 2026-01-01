@@ -1,4 +1,4 @@
-#####---------------------------------------------------------------------> Mod by Sig "GreatExperiment" Altre
+
 
 equipments = {
 
@@ -40,11 +40,19 @@ equipments = {
 
 
 	}
+	anti_air_equipment_0 = {
+		year = 1007
 
+		archetype = anti_air_equipment
+		priority = 80
+		visual_level = 0
+		is_convertable = yes
+	}
 	anti_air_equipment_1 = {
 		year = 1007
 
 		archetype = anti_air_equipment
+		parent = anti_air_equipment_0
 		priority = 80
 		visual_level = 0
 		is_convertable = yes
@@ -98,56 +106,4 @@ equipments = {
 		is_convertable = yes
 	}
 
-	###------> New Anti-Air <><> <><> <><> <><> <><>
-
-	anti_air_equipment_x = {
-		year = 1020
-
-		archetype = anti_air_equipment
-		parent = anti_air_equipment_3
-		priority = 80
-		visual_level = 3
-
-		can_convert_from = {
-			anti_air_equipment_3
-		}
-
-		soft_attack = 4.5
-		hard_attack = 19
-		ap_attack = 125
-		air_attack = 40
-
-		build_cost_ic = 7
-		resources = {
-			steel = 4
-		}
-	}
-
-	anti_air_equipment_x_2 = {
-		year = 1026
-
-		archetype = anti_air_equipment
-		parent = anti_air_equipment_x
-		priority = 80
-		visual_level = 3
-
-		can_convert_from = {
-			anti_air_equipment_x
-		}
-
-		soft_attack = 5
-		hard_attack = 23
-		ap_attack = 170
-		air_attack = 49
-
-		build_cost_ic = 8
-		resources = {
-			steel = 5
-		}
-	}
-
-	###------> X <><> <><> <><> <><> <><>
-
 }
-
-#####---------------------------------------------------------------------> End

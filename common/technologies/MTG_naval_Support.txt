@@ -2898,6 +2898,10 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		path = {
+			leads_to_tech = support_ship_0
+			research_cost_coeff = 1
+		}
+		path = {
 			leads_to_tech = replenishment_0
 			research_cost_coeff = 1
 		}
@@ -3077,20 +3081,61 @@ technologies = {
 		folder = {
 			name = mtgnavalsupportfolder
 			position = { 
-				x = 2 
+				x = 4 
 				y = 14 
 			}
 		}
-		#folder if has no mtg, but has wuw (to do)
-		#folder = {
-		#	name = naval_folder
-		#	position = { x = 1 y = 17 }
-		#}	
 		force_use_small_tech_layout = yes
 		is_special_project_tech = yes
 		categories = {
 			cat_naval_tech
 			cat_naval_transport
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	#invasion support (starts with _1 because of special project)
+	support_ship_0 = {
+		enable_equipments = {
+			support_ship_1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = 2
+				y = 18 
+			}
+		}
+		is_special_project_tech = yes
+		research_cost = 2.0
+		start_year = 990
+		categories = {
+			cat_naval_tech
+			cat_support_ship_tech
+		}
+		special_project_specialization = { 
+			specialization_naval 
+		}
+	}
+	#repair ships (starts with _1 because of special project)
+	repair_ship_0 = {
+		enable_equipments = {
+			repair_ship_1
+		}
+		folder = {
+			name = mtgnavalsupportfolder
+			position = { 
+				x = -2
+				y = 24 
+			}
+		}
+		is_special_project_tech = yes
+		research_cost = 2.0
+		start_year = 990
+		categories = {
+			cat_naval_tech
+			cat_support_ship_tech
 		}
 		special_project_specialization = { 
 			specialization_naval 
@@ -3444,6 +3489,10 @@ technologies = {
 		}
 		path = {
 			leads_to_tech = damage_control_4
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = repair_ship_0
 			research_cost_coeff = 1
 		}
 		ai_will_do = {

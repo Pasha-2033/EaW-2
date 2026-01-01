@@ -2,6 +2,13 @@
 
 technologies = {
 	bombard = {
+		enable_subunits = {
+			artillery
+			artillery_brigade
+		}
+		enable_equipments = {
+			artillery_equipment_0
+		}
 		start_year = 800
 		research_cost = 0.5
 		folder = {
@@ -17,6 +24,9 @@ technologies = {
 		}
 	}
 	barrel_artillery = {
+		enable_equipments = {
+			artillery_equipment_1
+		}
 		start_year = 800
 		research_cost = 0.5
 		folder = {
@@ -43,8 +53,11 @@ technologies = {
 			specialization_land 
 		}
 	}
-	#howitzer
+	#howitzer (starts with _2 because of bombard & barrel artillery_
 	howitzer_0 = {
+		enable_equipments = {
+			artillery_equipment_2
+		}
 		enable_equipment_modules = {
 			tank_medium_howitzer_0
 		}
@@ -67,6 +80,9 @@ technologies = {
 		}
 	}
 	howitzer_1 = {
+		enable_equipments = {
+			artillery_equipment_3
+		}
 		enable_equipment_modules = {
 			tank_medium_howitzer_1
 		}
@@ -74,7 +90,7 @@ technologies = {
 		research_cost = 0.5
 		folder = {
 			name = artillery_folder
-			position = { x = -1 y = 6 }
+			position = { x = -2 y = 6 }
 		}
 		path = {
 			leads_to_tech = common_howitzer_0
@@ -86,6 +102,12 @@ technologies = {
 	}
 	#magic howitzer
 	magic_howitzer_0 = {
+		enable_subunits = {
+			magic_artillery
+		}
+		enable_equipments = {
+			magic_artillery_equipment_0
+		}
 		enable_equipment_modules = {
 			tank_magic_medium_howitzer_0
 		}
@@ -93,7 +115,7 @@ technologies = {
 		research_cost = 0.5
 		folder = {
 			name = artillery_folder
-			position = { x = 1 y = 6 }
+			position = { x = 2 y = 6 }
 		}
 		path = {
 			leads_to_tech = common_howitzer_0
@@ -141,6 +163,9 @@ technologies = {
 
 	#mortar
 	mortar_0 = {
+		enable_equipments = {
+			mortar_equipment_0
+		}
 		enable_equipment_modules = {
 			tank_small_mortar_0
 		}
@@ -148,7 +173,7 @@ technologies = {
 		research_cost = 0.5
 		folder = {
 			name = artillery_folder
-			position = { x = 4 y = 4 }
+			position = { x = 7 y = 4 }
 		}
 		path = {
 			leads_to_tech = mortar_1
@@ -163,45 +188,11 @@ technologies = {
 		}
 	}
 	mortar_1 = {
+		enable_equipments = {
+			mortar_equipment_1
+		}
 		enable_equipment_modules = {
 			tank_small_mortar_1
-		}
-		start_year = 800
-		research_cost = 0.5
-		folder = {
-			name = artillery_folder
-			position = { x = 3 y = 6 }
-		}
-		path = {
-			leads_to_tech = common_mortar_0
-			research_cost_coeff = 1
-		}
-		special_project_specialization = { 
-			specialization_land 
-		}
-	}
-	mortar_2 = {
-		enable_equipment_modules = {
-			tank_small_mortar_2
-		}
-		start_year = 800
-		research_cost = 0.5
-		folder = {
-			name = artillery_folder
-			position = { x = 3 y = 10 }
-		}
-		path = {
-			leads_to_tech = common_mortar_1
-			research_cost_coeff = 1
-		}
-		special_project_specialization = { 
-			specialization_land 
-		}
-	}
-	#magic mortar
-	magic_mortar_0 = {
-		enable_equipment_modules = {
-			tank_magic_small_mortar_0
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -217,9 +208,12 @@ technologies = {
 			specialization_land 
 		}
 	}
-	magic_mortar_1 = {
+	mortar_2 = {
+		enable_equipments = {
+			mortar_equipment_2
+		}
 		enable_equipment_modules = {
-			tank_magic_small_mortar_1
+			tank_small_mortar_2
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -235,13 +229,56 @@ technologies = {
 			specialization_land 
 		}
 	}
+	#magic mortar
+	magic_mortar_0 = {
+		enable_equipments = {
+			magic_mortar_equipment_0
+		}
+		enable_equipment_modules = {
+			tank_magic_small_mortar_0
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 9 y = 6 }
+		}
+		path = {
+			leads_to_tech = common_mortar_0
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	magic_mortar_1 = {
+		enable_equipments = {
+			magic_mortar_equipment_1
+		}
+		enable_equipment_modules = {
+			tank_magic_small_mortar_1
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 9 y = 10 }
+		}
+		path = {
+			leads_to_tech = common_mortar_1
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
 	#common mortar
 	common_mortar_0 = {
 		start_year = 800
 		research_cost = 0.5
 		folder = {
 			name = artillery_folder
-			position = { x = 4 y = 8 }
+			position = { x = 7 y = 8 }
 		}
 		path = {
 			leads_to_tech = heavy_shells
@@ -264,7 +301,7 @@ technologies = {
 		research_cost = 0.5
 		folder = {
 			name = artillery_folder
-			position = { x = 4 y = 12 }
+			position = { x = 7 y = 12 }
 		}
 		special_project_specialization = { 
 			specialization_land 
@@ -278,7 +315,7 @@ technologies = {
 		research_cost = 0.5
 		folder = {
 			name = artillery_folder
-			position = { x = 2 y = 8 }
+			position = { x = 4 y = 8 }
 		}
 		special_project_specialization = { 
 			specialization_land 
@@ -288,6 +325,13 @@ technologies = {
 
 	#AA
 	antiair_0 = {
+		enable_subunits = {
+			anti_air
+			anti_air_brigade
+		}
+		enable_equipments = {
+			anti_air_equipment_0
+		}
 		enable_equipment_modules = {
 			tank_anti_air_cannon_0
 		}
@@ -295,7 +339,7 @@ technologies = {
 		research_cost = 0.5
 		folder = {
 			name = artillery_folder
-			position = { x = -8 y = 4 }
+			position = { x = -14 y = 4 }
 		}
 		path = {
 			leads_to_tech = antiair_1
@@ -310,6 +354,9 @@ technologies = {
 		}
 	}
 	antiair_1 = {
+		enable_equipments = {
+			anti_air_equipment_1
+		}
 		enable_equipment_modules = {
 			tank_anti_air_cannon_1
 		}
@@ -321,7 +368,7 @@ technologies = {
 		research_cost = 0.5
 		folder = {
 			name = artillery_folder
-			position = { x = -7 y = 6 }
+			position = { x = -12 y = 6 }
 		}
 		special_project_specialization = { 
 			specialization_land 
@@ -329,6 +376,9 @@ technologies = {
 	}
 	#magic AA
 	magic_antiair_0 = {
+		enable_equipments = {
+			magic_anti_air_equipment_0
+		}
 		enable_equipment_modules = {
 			tank_magic_anti_air_cannon_0
 		}
@@ -340,7 +390,7 @@ technologies = {
 		research_cost = 0.5
 		folder = {
 			name = artillery_folder
-			position = { x = -9 y = 6 }
+			position = { x = -16 y = 6 }
 		}
 		special_project_specialization = { 
 			specialization_land 
@@ -352,7 +402,7 @@ technologies = {
 		research_cost = 0.5
 		folder = {
 			name = artillery_folder
-			position = { x = -8 y = 8 }
+			position = { x = -14 y = 8 }
 		}
 		special_project_specialization = { 
 			specialization_land 
@@ -360,6 +410,13 @@ technologies = {
 	}
 	#AT
 	antitank_0 = {
+		enable_subunits = {
+			anti_tank
+			anti_tank_brigade
+		}
+		enable_equipments = {
+			anti_tank_equipment_0
+		}
 		enable_equipment_modules = {
 			#weapons
 			tank_small_cannon_0
@@ -370,7 +427,7 @@ technologies = {
 		research_cost = 0.5
 		folder = {
 			name = artillery_folder
-			position = { x = 8 y = 6 }
+			position = { x = 14 y = 6 }
 		}
 		path = {
 			leads_to_tech = magic_antitank_0
@@ -385,6 +442,9 @@ technologies = {
 		}
 	}
 	antitank_1 = {
+		enable_equipments = {
+			anti_tank_equipment_1
+		}
 		enable_equipment_modules = {
 			tank_small_cannon_1
 		}
@@ -392,7 +452,7 @@ technologies = {
 		research_cost = 0.5
 		folder = {
 			name = artillery_folder
-			position = { x = 7 y = 8 }
+			position = { x = 12 y = 8 }
 		}
 		special_project_specialization = { 
 			specialization_land 
@@ -400,6 +460,9 @@ technologies = {
 	}
 	#magic AT
 	magic_antitank_0 = {
+		enable_equipments = {
+			magic_anti_tank_equipment_0
+		}
 		enable_equipment_modules = {
 			tank_magic_small_cannon_0
 		}
@@ -407,7 +470,7 @@ technologies = {
 		research_cost = 0.5
 		folder = {
 			name = artillery_folder
-			position = { x = 9 y = 8 }
+			position = { x = 16 y = 8 }
 		}
 		special_project_specialization = { 
 			specialization_land 
@@ -415,6 +478,13 @@ technologies = {
 	}
 	#rocket artillery
 	rocket_artillery_0 = {
+		enable_subunits = {
+			rocket_artillery
+			rocket_artillery_brigade
+		}
+		enable_equipments = {
+			rocket_artillery_equipment_0
+		}
 		enable_equipment_modules = {
 			tank_rocket_launcher_0
 		}
@@ -430,15 +500,36 @@ technologies = {
 		research_cost = 0.5
 		folder = {
 			name = artillery_folder
-			position = { x = -4 y = 10 }
+			position = { x = -7 y = 10 }
 		}
 		special_project_specialization = { 
 			specialization_land 
 		}
 	}
 	rocket_artillery_1 = {
+		enable_equipments = {
+			rocket_artillery_equipment_1
+		}
 		enable_equipment_modules = {
 			tank_rocket_launcher_1
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -9 y = 12 }
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	#magic rocket artillery
+	magic_rocket_artillery_0 = {
+		enable_equipments = {
+			magic_rocket_artillery_equipment_0
+		}
+		enable_equipment_modules = {
+			tank_magic_rocket_launcher_0
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -450,21 +541,17 @@ technologies = {
 			specialization_land 
 		}
 	}
-	#magic rocket artillery
-	magic_rocket_artillery_0 = {
-		enable_equipment_modules = {
-			tank_magic_rocket_launcher_0
-		}
-		start_year = 800
-		research_cost = 0.5
-		folder = {
-			name = artillery_folder
-			position = { x = -3 y = 12 }
-		}
-		special_project_specialization = { 
-			specialization_land 
-		}
-	}
+
+
+
+
+
+
+
+
+
+
+
 
 
 	pre_gw_artillery = {
