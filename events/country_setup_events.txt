@@ -14,3 +14,12 @@ country_event = {
 		}
 	}
 }
+country_event = {
+	#economy setup
+	id = country_setup_event.2
+	is_triggered_only = yes
+	hidden = yes
+	option = {
+		calc_coal_impact = yes
+	}
+}
