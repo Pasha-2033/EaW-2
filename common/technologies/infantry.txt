@@ -576,6 +576,9 @@ technologies = {
 		}
 	}
 	infantry_weapons_4 = {
+		allow = {
+			has_tech = infantry_weapons_3
+		}
 		enable_equipments = {
 			infantry_equipment_4
 		}
@@ -762,6 +765,9 @@ technologies = {
 		}
 	}
 	infantry_weapons_5 = {
+		allow = {
+			has_tech = infantry_weapons_4
+		}
 		enable_equipments = {
 			infantry_equipment_5
 		}
@@ -913,6 +919,9 @@ technologies = {
 		}
 	}
 	infantry_weapons_6 = {
+		allow = {
+			has_tech = infantry_weapons_5
+		}
 		enable_equipments = {
 			infantry_equipment_6
 		}
@@ -1673,7 +1682,7 @@ technologies = {
 			}
 		}
 		sub_technologies = {
-			motorized_rocket_unit
+			fuel_company_0
 		}
 		categories = {
 			motorized_equipment
@@ -1686,26 +1695,20 @@ technologies = {
 			factor = 1
 		}
 	}
-	motorized_rocket_unit = {
+	fuel_company_0 = {
 		enable_subunits = {
-			motorized_rocket_brigade
+			fuel_company
 		}
 		enable_equipments = {
-			motorized_rocket_equipment_1
-		}
-		dependencies = {
-			infantry_weapons_0 = 1
+			gasoline_tanker_equipment_0
 		}
 		research_cost = 1.5
 		start_year = 1010 #to do
-		ai_will_do = {
-			factor = 2
-		}
-		categories = {
-			mot_rockets
-		}
 		special_project_specialization = { 
 			specialization_land
+		}
+		ai_will_do = {
+			factor = 1
 		}
 	}
 	motorised_infantry_2 = {
@@ -2177,7 +2180,7 @@ technologies = {
 	}
 	mechanized_rocket_unit = {
 		enable_equipments = {
-			motorized_rocket_equipment_2
+			motorized_rocket_equipment_1
 		}
 		research_cost = 1.5
 		start_year = 1019 #to do

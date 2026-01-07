@@ -494,6 +494,9 @@ technologies = {
 		enable_equipment_modules = {
 			tank_rocket_launcher_1
 		}
+		sub_technologies = {
+			motorized_rocket_artillery_0
+		}
 		start_year = 800
 		research_cost = 0.5
 		folder = {
@@ -504,6 +507,29 @@ technologies = {
 			specialization_land 
 		}
 	}
+	motorized_rocket_artillery_0 = {
+		enable_subunits = {
+			motorized_rocket_brigade
+		}
+		enable_equipments = {
+			motorized_rocket_equipment_0
+		}
+		allow = {
+			has_tech = motorised_infantry_1
+		}
+		research_cost = 1.5
+		start_year = 1010 #to do
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			mot_rockets
+		}
+		special_project_specialization = { 
+			specialization_land
+			specialization_magic
+		}
+	}
 	#magic rocket artillery
 	magic_rocket_artillery_0 = {
 		enable_equipments = {
@@ -512,6 +538,9 @@ technologies = {
 		enable_equipment_modules = {
 			tank_magic_rocket_launcher_0
 		}
+		sub_technologies = {
+			motorized_magic_rocket_artillery_0
+		}
 		start_year = 800
 		research_cost = 0.5
 		folder = {
@@ -519,7 +548,31 @@ technologies = {
 			position = { x = -5 y = 12 }
 		}
 		special_project_specialization = { 
-			specialization_land 
+			specialization_land
+			specialization_magic
+		}
+	}
+	motorized_magic_rocket_artillery_0 = {
+		enable_subunits = {
+			motorized_magic_rocket_brigade
+		}
+		enable_equipments = {
+			motorized_magic_rocket_equipment_0
+		}
+		allow = {
+			has_tech = motorised_infantry_1
+		}
+		research_cost = 1.5
+		start_year = 1010 #to do
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			mot_rockets
+		}
+		special_project_specialization = { 
+			specialization_land
+			specialization_magic
 		}
 	}
 
