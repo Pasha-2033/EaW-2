@@ -1,7 +1,7 @@
 sub_units = {
 	super_heavy_tank = {
 		abbreviation = "LT"
-		sprite = light_armor
+		sprite = heavy_armor
 		map_icon_category = armored
 		priority = 0
 		ai_priority = 0
@@ -38,20 +38,14 @@ sub_units = {
 
 		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
 
-		essential = {
-			support_equipment
-			motorized_equipment
-		}
-
 		need = {
-			support_equipment = 20
-			motorized_equipment = 10
+			super_heavy_tank_chassis = 10
 		}
 
 	}
 	super_heavy_aa_tank = {
 		abbreviation = "LT"
-		sprite = light_armor
+		sprite = heavy_armor
 		map_icon_category = armored
 		priority = 0
 		ai_priority = 0
@@ -88,20 +82,14 @@ sub_units = {
 
 		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
 
-		essential = {
-			support_equipment
-			motorized_equipment
-		}
-
 		need = {
-			support_equipment = 20
-			motorized_equipment = 10
+			super_heavy_aa_tank_chassis = 10
 		}
 
 	}
 	super_heavy_at_tank = {
 		abbreviation = "LT"
-		sprite = light_armor
+		sprite = heavy_armor
 		map_icon_category = armored
 		priority = 0
 		ai_priority = 0
@@ -138,20 +126,15 @@ sub_units = {
 
 		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
 
-		essential = {
-			support_equipment
-			motorized_equipment
-		}
 
 		need = {
-			support_equipment = 20
-			motorized_equipment = 10
+			super_heavy_at_tank_chassis = 10
 		}
 
 	}
 	super_heavy_artillery_tank = {
 		abbreviation = "LT"
-		sprite = light_armor
+		sprite = heavy_armor
 		map_icon_category = armored
 		priority = 0
 		ai_priority = 0
@@ -188,20 +171,15 @@ sub_units = {
 
 		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
 
-		essential = {
-			support_equipment
-			motorized_equipment
-		}
 
 		need = {
-			support_equipment = 20
-			motorized_equipment = 10
+			super_heavy_artillery_tank_chassis = 10
 		}
 
 	}
 	super_heavy_flame_tank = {
 		abbreviation = "LT"
-		sprite = light_armor
+		sprite = heavy_armor
 		map_icon_category = armored
 		priority = 0
 		ai_priority = 0
@@ -240,20 +218,15 @@ sub_units = {
 
 		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
 
-		essential = {
-			support_equipment
-			motorized_equipment
-		}
 
 		need = {
-			support_equipment = 20
-			motorized_equipment = 10
+			super_heavy_flame_tank_chassis = 10
 		}
 
 	}
 	super_heavy_magic_tank = {
 		abbreviation = "MLT"
-		sprite = light_armor
+		sprite = heavy_armor
 		map_icon_category = armored
 		priority = 0
 		ai_priority = 0
@@ -290,20 +263,15 @@ sub_units = {
 
 		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
 
-		essential = {
-			support_equipment
-			motorized_equipment
-		}
 
 		need = {
-			support_equipment = 20
-			motorized_equipment = 10
+			super_heavy_magic_tank_chassis = 10
 		}
 
 	}
 	super_heavy_magic_aa_tank = {
 		abbreviation = "MLT"
-		sprite = light_armor
+		sprite = heavy_armor
 		map_icon_category = armored
 		priority = 0
 		ai_priority = 0
@@ -340,20 +308,15 @@ sub_units = {
 
 		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
 
-		essential = {
-			support_equipment
-			motorized_equipment
-		}
 
 		need = {
-			support_equipment = 20
-			motorized_equipment = 10
+			super_heavy_magic_aa_tank_chassis = 10
 		}
 
 	}
 	super_heavy_magic_at_tank = {
 		abbreviation = "MLT"
-		sprite = light_armor
+		sprite = heavy_armor
 		map_icon_category = armored
 		priority = 0
 		ai_priority = 0
@@ -390,20 +353,15 @@ sub_units = {
 
 		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
 
-		essential = {
-			support_equipment
-			motorized_equipment
-		}
 
 		need = {
-			support_equipment = 20
-			motorized_equipment = 10
+			super_heavy_magic_at_tank_chassis = 10
 		}
 
 	}
 	super_heavy_magic_artillery_tank = {
 		abbreviation = "LT"
-		sprite = light_armor
+		sprite = heavy_armor
 		map_icon_category = armored
 		priority = 0
 		ai_priority = 0
@@ -440,20 +398,15 @@ sub_units = {
 
 		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
 
-		essential = {
-			support_equipment
-			motorized_equipment
-		}
 
 		need = {
-			support_equipment = 20
-			motorized_equipment = 10
+			super_heavy_magic_artillery_tank_chassis = 10
 		}
 
 	}
 	super_heavy_magic_flame_tank = {
 		abbreviation = "LT"
-		sprite = light_armor
+		sprite = heavy_armor
 		map_icon_category = armored
 		priority = 0
 		ai_priority = 0
@@ -492,14 +445,9 @@ sub_units = {
 
 		own_equipment_fuel_consumption_mult = 0.0 # no fuel use
 
-		essential = {
-			support_equipment
-			motorized_equipment
-		}
 
 		need = {
-			support_equipment = 20
-			motorized_equipment = 10
+			super_heavy_magic_flame_tank_chassis = 10
 		}
 
 	}

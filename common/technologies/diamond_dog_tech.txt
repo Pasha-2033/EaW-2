@@ -43,18 +43,7 @@ technologies = {
 		}
 
 		on_research_complete = {
-			if = {
-				limit = {
-					is_dog_mylti = yes
-					NOT = {
-						has_template_containing_unit = ironpaws
-					}
-				}
-				custom_override_tooltip = {
-					tooltip = UNLOCK_DIVISION_TEMPLATE
-					load_oob = "unlock_ironpaws"
-				}
-			}
+
 		}
 
 		path = {

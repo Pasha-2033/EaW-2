@@ -459,27 +459,7 @@ technologies = {
 			magical_infantry
 		}
 		on_research_complete = {
-			if = {
-				limit = {
-					NOT = {
-						has_template_containing_unit = magical_infantry
-					}
-				}
-				custom_override_tooltip = {
-					tooltip = UNLOCK_DIVISION_TEMPLATE
-					if = {
-						limit = {
-							original_tag = EQS
-						}
-						load_oob = "unlock_magical_infantry_eqs"
 
-					}
-					else = {
-						load_oob = "unlock_magical_infantry"
-					}
-				}
-			}
-			custom_effect_tooltip = ME_POLICE_TOOLTIP
 		}
 		path = {
 			leads_to_tech = improved_infantry_weapons_1
@@ -1631,24 +1611,7 @@ technologies = {
 			motorized_equipment_0
 		}
 		on_research_complete = {
-			custom_override_tooltip = {
-				tooltip = UNLOCK_DIVISION_TEMPLATE
-				if = {
-					limit = {
-						NOT = {
-							has_template_containing_unit = motorized
-						}
-					}
-					load_oob = "unlock_motorized"
-				}
-				if = {
-					limit = {
-						has_tech = gwtank
-					}
 
-					load_oob = "unlock_tanks_mot"
-				}
-			}
 		}
 		path = {
 			leads_to_tech = motorised_infantry_1
@@ -2264,16 +2227,7 @@ technologies = {
 			specialization_land
 		}
 		on_research_complete = {
-			if = {
-				limit = {
-					is_ai = yes
-					has_tech = amphibious_tank
-				}
-				hidden_effect = {
-					army_experience = -30
-					load_oob = "unlock_amtrac"
-				}
-			}
+
 		}
 		ai_will_do = {
 			factor = 0
@@ -2438,17 +2392,7 @@ technologies = {
 			}
 		}
 		on_research_complete = {
-			if = {
-				limit = {
-					NOT = {
-						has_template_containing_unit = paratrooper
-					}
-				}
-				custom_override_tooltip = {
-					tooltip = UNLOCK_DIVISION_TEMPLATE
-					load_oob = "unlock_paratroopers"
-				}
-			}
+
 		}
 		categories = {
 			para_tech
@@ -2623,17 +2567,7 @@ technologies = {
 			marine
 		}
 		on_research_complete = {
-			if = {
-				limit = {
-					NOT = {
-						has_template_containing_unit = marine
-					}
-				}
-				custom_override_tooltip = {
-					tooltip = UNLOCK_DIVISION_TEMPLATE
-					load_oob = "unlock_marines"
-				}
-			}
+
 		}
 		path = {
 			leads_to_tech = tech_marines_1
@@ -2805,17 +2739,7 @@ technologies = {
 			mountaineers
 		}
 		on_research_complete = {
-			if = {
-				limit = {
-					NOT = {
-						has_template_containing_unit = mountaineers
-					}
-				}
-				custom_override_tooltip = {
-					tooltip = UNLOCK_DIVISION_TEMPLATE
-					load_oob = "unlock_mountineers"
-				}
-			}
+
 
 		}
 		path = {

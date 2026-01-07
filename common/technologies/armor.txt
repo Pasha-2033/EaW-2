@@ -21,27 +21,7 @@ technologies = {
 			NOT = {	has_template_containing_unit = medium_armor }
 		}
 		on_research_complete = {
-			custom_override_tooltip = {
-				tooltip = UNLOCK_DIVISION_TEMPLATE
-				if = {
-					limit = {
-						has_tech = motorised_infantry_0
-					}
 
-					load_oob = "unlock_tanks_mot"
-				}
-				if = {
-					limit = {
-						NOT = { has_tech = motorised_infantry_0 }
-					}
-
-					load_oob = "unlock_tanks"
-				}
-				if = {
-					limit = { is_ai = yes }
-					army_experience = 75
-				}
-			}
 		}
 
 		path = {
@@ -106,23 +86,7 @@ technologies = {
 			NOT = {	has_template_containing_unit = medium_armor }
 		}
 		on_research_complete = {
-			custom_override_tooltip = {
-				tooltip = UNLOCK_DIVISION_TEMPLATE
-				if = {
-					limit = {
-						has_tech = motorised_infantry_0
-					}
 
-					load_oob = "unlock_tanks_mot"
-				}
-				if = {
-					limit = {
-						NOT = { has_tech = motorised_infantry_0 }
-					}
-
-					load_oob = "unlock_tanks"
-				}
-			}
 		}
 
 		path = {
@@ -465,10 +429,7 @@ technologies = {
 			has_tech = amphibious_mechanized_infantry_0
 		}
 		on_research_complete = {
-			hidden_effect = {
-				army_experience = -30
-				load_oob = "unlock_amtrac"
-			}
+
 		}
 		
 		research_cost = 2
@@ -693,10 +654,7 @@ technologies = {
 			is_ai = yes
 		}
 		on_research_complete = {
-			hidden_effect = {
-				army_experience = -30
-				load_oob = "unlock_med_tanks_mot"
-			}
+
 		}
 
 		research_cost = 2
@@ -1266,16 +1224,7 @@ technologies = {
 			is_ai = yes
 		}
 		on_research_complete = {
-			hidden_effect = {
-				army_experience = -30
-				if = {
-					limit = { has_tech = mechanised_infantry_0 }
-					load_oob = "unlock_modern_tanks_mech"
-					else = {
-						load_oob = "unlock_modern_tanks_mot"
-					}
-				}
-			}
+
 		}
 
 		ai_will_do = {
@@ -1359,9 +1308,7 @@ technologies = {
 			modern_tank_artillery_equipment_1
 		}
 
-		enable_subunits = {
-			modern_sp_artillery_brigade
-		}
+
 
 		research_cost = 0.5
 		start_year = 1016
@@ -1431,34 +1378,7 @@ technologies = {
 		}
 
 		on_research_complete = {
-			hidden_effect = {
-				if = {
-					limit = {
-						NOT = {	has_template_containing_unit = light_armor }
-						NOT = {	has_template_containing_unit = heavy_armor }
-						NOT = {	has_template_containing_unit = medium_armor }
-					}
-					if = {
-						limit = {
-							has_tech = motorised_infantry_0
-						}
 
-						load_oob = "unlock_tanks_mot"
-					}
-					if = {
-						limit = {
-							NOT = { has_tech = motorised_infantry_0 }
-						}
-
-						load_oob = "unlock_tanks"
-					}
-				}
-				else_if = {
-					limit = { is_ai = yes }
-					army_experience = -30
-					load_oob = "unlock_heavy_tanks"
-				}
-			}
 		}
 
 		path = {

@@ -29,17 +29,7 @@ technologies = {
 			jager
 		}
 		on_research_complete = {
-			if = {
-				limit = {
-					NOT = {
-						has_template_containing_unit = jager
-					}
-				}
-				custom_override_tooltip = {
-					tooltip = UNLOCK_DIVISION_TEMPLATE
-					load_oob = "unlock_jager"
-				}
-			}
+
 		}
 		path = {
 			leads_to_tech = tech_jager2

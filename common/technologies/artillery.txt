@@ -2,10 +2,6 @@
 
 technologies = {
 	bombard = {
-		enable_subunits = {
-			artillery
-			artillery_brigade
-		}
 		enable_equipments = {
 			artillery_equipment_0
 		}
@@ -102,9 +98,6 @@ technologies = {
 	}
 	#magic howitzer
 	magic_howitzer_0 = {
-		enable_subunits = {
-			magic_artillery
-		}
 		enable_equipments = {
 			magic_artillery_equipment_0
 		}
@@ -325,10 +318,6 @@ technologies = {
 
 	#AA
 	antiair_0 = {
-		enable_subunits = {
-			anti_air
-			anti_air_brigade
-		}
 		enable_equipments = {
 			anti_air_equipment_0
 		}
@@ -410,10 +399,6 @@ technologies = {
 	}
 	#AT
 	antitank_0 = {
-		enable_subunits = {
-			anti_tank
-			anti_tank_brigade
-		}
 		enable_equipments = {
 			anti_tank_equipment_0
 		}
@@ -478,10 +463,6 @@ technologies = {
 	}
 	#rocket artillery
 	rocket_artillery_0 = {
-		enable_subunits = {
-			rocket_artillery
-			rocket_artillery_brigade
-		}
 		enable_equipments = {
 			rocket_artillery_equipment_0
 		}
@@ -671,9 +652,7 @@ technologies = {
 		super_heavy_sp_artillery_brigade = {
 			soft_attack = 0.15
 		}
-		modern_sp_artillery_brigade= {
-			soft_attack = 0.15
-		}
+
 
 		enable_equipment_modules = {
 			tank_small_cannon_2
@@ -792,9 +771,7 @@ technologies = {
 		super_heavy_sp_artillery_brigade = {
 			soft_attack = 0.1
 		}
-		modern_sp_artillery_brigade= {
-			soft_attack = 0.1
-		}
+
 
 		path = {
 			leads_to_tech = artillery3
@@ -860,9 +837,6 @@ technologies = {
 			soft_attack = 0.05
 		}
 		super_heavy_sp_artillery_brigade = {
-			soft_attack = 0.05
-		}
-		modern_sp_artillery_brigade= {
 			soft_attack = 0.05
 		}
 		enable_equipment_modules = {
@@ -974,9 +948,6 @@ technologies = {
 		super_heavy_sp_artillery_brigade = {
 			soft_attack = 0.05
 		}
-		modern_sp_artillery_brigade= {
-			soft_attack = 0.05
-		}
 		path = {
 			leads_to_tech = artillery_a
 			research_cost_coeff = 1
@@ -1051,14 +1022,9 @@ technologies = {
 	}
 
 	rocket_artillery = {
-
 		enable_equipments = {
 			rocket_artillery_equipment_1
 		}
-#		enable_subunits = {
-#			rocket_artillery_brigade
-#		}
-
 		enable_equipment_modules = {
 			tank_rocket_launcher
 		}
@@ -2331,9 +2297,6 @@ technologies = {
 		super_heavy_sp_artillery_brigade = {
 			soft_attack = 0.05
 		}
-		modern_sp_artillery_brigade= {
-			soft_attack = 0.05
-		}
 		path = {
 			leads_to_tech = artillery_b
 			research_cost_coeff = 1
@@ -2411,9 +2374,6 @@ technologies = {
 		super_heavy_sp_artillery_brigade = {
 			soft_attack = 0.05
 		}
-		modern_sp_artillery_brigade= {
-			soft_attack = 0.05
-		}
 		path = {
 			leads_to_tech = artillery_d
 			research_cost_coeff = 1
@@ -2462,9 +2422,6 @@ technologies = {
 			soft_attack = 0.05
 		}
 		super_heavy_sp_artillery_brigade = {
-			soft_attack = 0.05
-		}
-		modern_sp_artillery_brigade= {
 			soft_attack = 0.05
 		}
 		path = {
@@ -2543,9 +2500,6 @@ technologies = {
 			soft_attack = 0.05
 		}
 		super_heavy_sp_artillery_brigade = {
-			soft_attack = 0.05
-		}
-		modern_sp_artillery_brigade= {
 			soft_attack = 0.05
 		}
 		research_cost = 1
