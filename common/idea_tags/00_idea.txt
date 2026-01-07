@@ -41,7 +41,7 @@ idea_categories = {
 		character_slot = army_chief 
 		character_slot = navy_chief 
 		character_slot = air_chief
-		character_slot = magic_chief
+		character_slot = high_command
 		character_slot = high_command
 		character_slot = high_command	
 		ledger = invalid # must be overridden
@@ -140,20 +140,11 @@ idea_categories = {
 		ledger = hidden
 		slot = air_force_command_spirit
 	}
-	magic_force_academy_spirit = {
-		type = air_spirit
-		cost = 50
-		removal_cost = -1	
-		politics_tab = no		
-		ledger = hidden
-		slot = magic_force_academy_spirit
-	}
 }
 slot_ledgers = {
 	army_chief = army
 	navy_chief = navy
 	air_chief = air
-	magic_chief = invalid
 	tank_manufacturer = army
 	naval_manufacturer = navy
 	aircraft_manufacturer = air
