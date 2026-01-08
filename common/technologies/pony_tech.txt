@@ -34,9 +34,7 @@ technologies = {
 	#Earth pony farming
 	tech_pony_misc = {
 
-		dependencies = {
-			pony_race = 1
-		}
+		
 
 		monthly_population = 0.15
 		supply_consumption_factor = -0.075
@@ -277,9 +275,7 @@ technologies = {
 	#Military Weather Application
 	tech_pony_misc_c = {
 
-		dependencies = {
-			tech_pegasi = 1
-		}
+		
 
 		enemy_army_bonus_air_superiority_factor = -0.1
 		air_cas_present_factor = 0.1
@@ -361,10 +357,7 @@ technologies = {
 
 	tech_pegasi = {
 
-		dependencies = {
-			pony_race = 1
-			tech_support = 1
-		}
+		
 
 		enable_subunits = {
 			pegasi
@@ -593,10 +586,7 @@ technologies = {
 
 	tech_unicorn = {
 
-		dependencies = {
-			pony_race = 1
-			tech_support = 1
-		}
+		
 
 		enable_subunits = {
 			unicorn_company
@@ -1155,9 +1145,7 @@ technologies = {
 
 	tech_pony_magical_infantry = {
 
-		dependencies = {
-			pony_race = 1
-		}
+		
 
 		xor = { tech_pony_unicorns }
 
@@ -1384,9 +1372,7 @@ technologies = {
 
 	tech_pony_unicorns = {
 
-		dependencies = {
-			pony_race = 1
-		}
+		
 
 		xor = { tech_pony_magical_infantry }
 

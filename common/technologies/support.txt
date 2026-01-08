@@ -26,9 +26,7 @@ technologies = {
 
 	tech_support = {
 
-		dependencies = {
-			melee_weapons_1 = 1
-		}
+		
 
 		enable_equipments = {
 			support_equipment_1
@@ -972,9 +970,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		dependencies = {
-			motorised_infantry_0 = 1
-		}
+		
 		allow_branch = { 
 			NOT = { 
 				has_tech = undead_race
@@ -1161,9 +1157,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		dependencies = {
-			motorised_infantry_0 = 1
-		}
+		
 
 		research_cost = 2
 		start_year = 1007
@@ -1357,10 +1351,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		dependencies = {
-			radio_0 = 1
-			motorised_infantry_0 = 1
-		}
+		
 
 		research_cost = 2
 		start_year = 1007
@@ -2379,10 +2370,7 @@ technologies = {
 				transport_helicopter_equipment = 10
 			}
 		}
-		dependencies = {
-			tech_logistics_company = 1
-			tech_field_hospital = 1
-		}
+		
 		on_research_complete = {
 			custom_effect_tooltip = HELICOPTER_HOSPITAL_LOGISTICS_TOOLTIP
 		}
@@ -2465,20 +2453,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1
-		}
-	}
-	fuel_company = {
-		enable_equipments = {
-			gasoline_tanker_equipment_0
-		}
-		enable_subunits = {
-			fuel_company
-		}
-		research_cost = 1.5
-		start_year = 981
-		folder = {
-			name = support_folder
-			position = { x = 18 y = @989 }
 		}
 	}
 

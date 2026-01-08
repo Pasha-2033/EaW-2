@@ -46,10 +46,7 @@ technologies = {
 			}
 		}
 
-		dependencies = {
-			griffon_race = 1
-			tech_support = 1
-		}
+
 
 		enable_subunits = {
 			knights
@@ -124,9 +121,7 @@ technologies = {
 		knights = {
 			max_organisation = 5
 		}
-		dependencies = {
-			magical_weapons_0 = 1
-		}
+
 		on_research_complete = {
 			custom_override_tooltip = {
 				tooltip = ME_KNIGHTS_TOOLTIP
@@ -275,9 +270,7 @@ technologies = {
 			max_organisation = 5
 			breakthrough = 0.05
 		}
-		dependencies = {
-			infantry_weapons_0 = 1
-		}
+
 		path = {
 			leads_to_tech = tech_knights_a
 			research_cost_coeff = 1
@@ -407,9 +400,7 @@ technologies = {
 	#Enchanted tools
 	tech_griffon_misc = {
 
-		dependencies = {
-			griffon_race = 1
-		}
+
 
 		production_speed_buildings_factor = 0.1
 		industry_repair_factor = 0.1
@@ -456,9 +447,7 @@ technologies = {
 			leads_to_tech = tech_griffon_misc3
 			research_cost_coeff = 1
 		}
-		dependencies = {
-			infantry_weapons_0 = 1
-		}
+
 		research_cost = 1.5
 		start_year = 1007
 		folder = {
@@ -636,10 +625,6 @@ technologies = {
 
 	#We can fly!
 	tech_griffon_army = {
-
-		dependencies = {
-			griffon_race = 1
-		}
 		on_research_complete = { custom_effect_tooltip = ME_WE_CAN_FLY_TOOLTIP }
 		category_light_infantry = {
 			hills = {
@@ -748,9 +733,7 @@ technologies = {
 		on_research_complete = {
 			custom_effect_tooltip = percentage_increase_notice
 		}
-		dependencies = {
-			infantry_weapons_0 = 1
-		}
+
 		path = {
 			leads_to_tech = tech_griffon_army_def_a
 			research_cost_coeff = 1
@@ -988,9 +971,7 @@ technologies = {
 		category_recon = {
 			recon = 1
 		}
-		dependencies = {
-			infantry_weapons_0 = 1
-		}
+
 		path = {
 			leads_to_tech = tech_griffon_army_atk_a
 			research_cost_coeff = 1
@@ -1127,10 +1108,7 @@ technologies = {
 	#Machine nests
 	tech_griffon_airnavy = {
 
-		dependencies = {
-			griffon_race = 1
-			infantry_weapons_0 = 1
-		}
+
 		production_speed_air_base_factor = 0.15
 		production_speed_naval_base_factor = 0.15
 

@@ -1,41 +1,9 @@
 technologies = {
 
-	barrad_asinti_alive = {
 
-		research_cost = 1
 
-		allow = {
-			always = no
-		}
 
-	}
-	barrad_leopold_alive = {
 
-		research_cost = 1
-
-		allow = {
-			always = no
-		}
-
-	}
-	barrad_silver_star_alive = {
-
-		research_cost = 1
-
-		allow = {
-			always = no
-		}
-
-	}
-	barrad_viira_alive = {
-
-		research_cost = 1
-
-		allow = {
-			always = no
-		}
-
-	}
 	tech_bar_ancient_knowledge = {
 
 		research_cost = 1
@@ -73,9 +41,7 @@ technologies = {
 	
 	tech_bar_asinti = { #zebra alchemy
 		
-		dependencies = {
-			barrad_asinti_alive = 1
-		}
+
 		
 		on_research_complete = {
 			custom_effect_tooltip = percentage_increase_notice
@@ -106,9 +72,7 @@ technologies = {
 	}
 	tech_bar_barrad_alchemy = {
 		
-		dependencies = {
-			barrad_asinti_alive = 1
-		}
+
 			
 		on_research_complete = {
 		}
@@ -144,9 +108,7 @@ technologies = {
 	}
 	tech_bar_barrad_drugs_concentration = {
 		
-		dependencies = {
-			barrad_asinti_alive = 1
-		}
+
 			
 		on_research_complete = {
 		}
@@ -180,9 +142,7 @@ technologies = {
 	}
 	tech_bar_barrad_drugs_cat_vision = {
 		
-		dependencies = {
-			barrad_asinti_alive = 1
-		}
+
 				
 		on_research_complete = {
 		}
@@ -212,10 +172,7 @@ technologies = {
 		}
 	}
 	tech_bar_barrad_drugs_health = {
-		
-		dependencies = {
-			barrad_asinti_alive = 1
-		}
+
 			
 		on_research_complete = {
 			custom_effect_tooltip = percentage_increase_notice
@@ -247,10 +204,7 @@ technologies = {
 		}
 	}
 	tech_bar_barrad_drugs_sleep_block = {
-		
-		dependencies = {
-			barrad_asinti_alive = 1
-		}
+
 			
 		on_research_complete = {
 		}
@@ -276,10 +230,7 @@ technologies = {
 		}
 	}
 	tech_bar_barrad_potion_concentration = {
-		
-		dependencies = {
-			barrad_asinti_alive = 1
-		}
+
 			
 		on_research_complete = {
 		}
@@ -310,10 +261,7 @@ technologies = {
 		}
 	}
 	tech_bar_barrad_potion_cat_vision = {
-		
-		dependencies = {
-			barrad_asinti_alive = 1
-		}
+
 		
 		on_research_complete = {
 		}
@@ -340,10 +288,7 @@ technologies = {
 		}
 	}
 	tech_bar_barrad_potion_health = {
-		
-		dependencies = {
-			barrad_asinti_alive = 1
-		}
+
 			
 		on_research_complete = {
 			custom_effect_tooltip = percentage_increase_notice
@@ -373,10 +318,7 @@ technologies = {
 		}
 	}
 	tech_bar_barrad_potion_sleep_block = {
-		
-		dependencies = {
-			barrad_asinti_alive = 1
-		}
+
 			
 		on_research_complete = {
 		}
@@ -402,9 +344,7 @@ technologies = {
 	}
 	tech_bar_silver = { #armchair general
 		
-		dependencies = {
-			barrad_silver_star_alive = 1
-		}
+
 			
 		on_research_complete = {
 		}
@@ -431,10 +371,7 @@ technologies = {
 		}
 	}
 	tech_bar_everything_in_its_place = {
-		
-		dependencies = {
-			barrad_silver_star_alive = 1
-		}
+
 		
 		on_research_complete = {
 		}
@@ -467,10 +404,7 @@ technologies = {
 		}
 	}
 	tech_bar_perfect_defense = {
-		
-		dependencies = {
-			barrad_silver_star_alive = 1
-		}
+
 			
 		on_research_complete = {
 			custom_effect_tooltip = percentage_increase_notice
@@ -502,9 +436,7 @@ technologies = {
 	}
 	tech_bar_blacks_go_second = {
 		
-		dependencies = {
-			barrad_silver_star_alive = 1
-		}
+
 		
 		on_research_complete = {
 		}
@@ -530,9 +462,7 @@ technologies = {
 	}
 	tech_bar_weakening_strike = {
 		
-		dependencies = {
-			barrad_silver_star_alive = 1
-		}
+
 		
 		on_research_complete = {
 			custom_effect_tooltip = percentage_increase_notice
@@ -564,9 +494,7 @@ technologies = {
 	}
 	tech_bar_second_wave = {
 		
-		dependencies = {
-			barrad_silver_star_alive = 1
-		}
+
 			
 		on_research_complete = {
 		}
@@ -596,10 +524,6 @@ technologies = {
 	}
 	tech_bar_final_blow = {
 		
-		dependencies = {
-			barrad_silver_star_alive = 1
-		}
-		
 		on_research_complete = {
 		}
 
@@ -624,9 +548,7 @@ technologies = {
 	}
 	tech_bar_matarial_science = { #material
 		
-		dependencies = {
-			barrad_leopold_alive = 1
-		}
+
 		
 		on_research_complete = {
 		}
@@ -664,9 +586,7 @@ technologies = {
 	}
 	tech_bar_leopold_metal_denser_than_platinium = {
 		
-		dependencies = {
-			barrad_leopold_alive = 1
-		}
+
 			
 		on_research_complete = {
 		}
@@ -756,9 +676,7 @@ technologies = {
 	}
 	tech_bar_leopold_ligher_than_feathers = {
 		
-		dependencies = {
-			barrad_leopold_alive = 1
-		}
+
 		
 		on_research_complete = {
 		}
@@ -788,9 +706,7 @@ technologies = {
 	}
 	tech_bar_leopold_transparent_metal = {
 		
-		dependencies = {
-			barrad_leopold_alive = 1
-		}
+
 		
 		on_research_complete = {
 		}
@@ -822,9 +738,7 @@ technologies = {
 	}
 	tech_bar_leopold_crystalic_metal = {
 		
-		dependencies = {
-			barrad_leopold_alive = 1
-		}
+
 		
 		on_research_complete = {
 			custom_effect_tooltip = percentage_increase_notice
@@ -865,9 +779,7 @@ technologies = {
 	}
 	tech_bar_leopold_new_steel = {
 		
-		dependencies = {
-			barrad_leopold_alive = 1
-		}
+
 		
 		on_research_complete = {
 		}
@@ -909,9 +821,7 @@ technologies = {
 	}
 	tech_bar_leopold_magnetic_glass = {
 		
-		dependencies = {
-			barrad_leopold_alive = 1
-		}
+
 			
 		on_research_complete = {
 		}
@@ -940,10 +850,7 @@ technologies = {
 		}
 	}
 	tech_bar_leopold_metal_lighter_than_air = {
-		
-		dependencies = {
-			barrad_leopold_alive = 1
-		}
+
 		
 		on_research_complete = {
 		}
@@ -973,9 +880,7 @@ technologies = {
 	}
 	tech_bar_viira = { #seer knowledge
 		
-		dependencies = {
-			barrad_viira_alive = 1
-		}
+
 		
 		on_research_complete = {
 		}
@@ -1017,9 +922,7 @@ technologies = {
 	}
 	tech_bar_viira_in = {
 		
-		dependencies = {
-			barrad_viira_alive = 1
-		}
+
 		
 		on_research_complete = {
 		}
@@ -1044,9 +947,7 @@ technologies = {
 	}
 	tech_bar_viira_res = {
 		
-		dependencies = {
-			barrad_viira_alive = 1
-		}
+
 		
 		on_research_complete = {
 		}
@@ -1068,9 +969,7 @@ technologies = {
 	}
 	tech_bar_viira_rek = {
 		
-		dependencies = {
-			barrad_viira_alive = 1
-		}
+
 		
 		on_research_complete = {
 		}
@@ -1094,9 +993,7 @@ technologies = {
 	}
 	tech_bar_viira_research = {
 		
-		dependencies = {
-			barrad_viira_alive = 1
-		}
+
 		research_speed_factor = 0.05
 		on_research_complete = {
 		}
@@ -1118,9 +1015,7 @@ technologies = {
 	}
 	tech_bar_viira_att = {
 		
-		dependencies = {
-			barrad_viira_alive = 1
-		}
+
 		
 		on_research_complete = {
 		}

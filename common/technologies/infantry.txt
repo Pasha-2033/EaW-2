@@ -233,8 +233,8 @@ technologies = {
 		enable_equipments = {
 			infantry_equipment_0
 		}
-		dependencies = {
-			melee_weapons_2 = 1
+		allow = {
+			has_tech = melee_weapons_2
 		}
 		path = {
 			leads_to_tech = cartridge
@@ -311,8 +311,8 @@ technologies = {
 			leads_to_tech = machine_gun_prototype
 			research_cost_coeff = 1
 		}
-		dependencies = {
-			trinitrophenol = 1
+		allow = {
+			has_tech = trinitrophenol
 		}
 		research_cost = 1.5
 		start_year = 986
@@ -578,6 +578,7 @@ technologies = {
 	infantry_weapons_4 = {
 		allow = {
 			has_tech = infantry_weapons_3
+			has_tech = nitroglycerine
 		}
 		enable_equipments = {
 			infantry_equipment_4
@@ -585,9 +586,6 @@ technologies = {
 		path = {
 			leads_to_tech = improved_infantry_weapons_2
 			research_cost_coeff = 1
-		}
-		dependencies = {
-			nitroglycerine = 1
 		}
 		research_cost = 1.5
 		start_year = 998
@@ -611,6 +609,7 @@ technologies = {
 	magical_weapons_1 = {
 		allow = {
 			has_tech = magical_weapons_0
+			has_tech = nitroglycerine
 		}
 		enable_equipments = {
 			magical_equipment_1
@@ -630,9 +629,6 @@ technologies = {
 				x = 1 
 				y = 18 
 			}
-		}
-		dependencies = {
-			nitroglycerine = 1
 		}
 		categories = {
 			infantry_weapons
@@ -921,6 +917,7 @@ technologies = {
 	infantry_weapons_6 = {
 		allow = {
 			has_tech = infantry_weapons_5
+			has_tech = trotyl
 		}
 		enable_equipments = {
 			infantry_equipment_6
@@ -938,9 +935,6 @@ technologies = {
 				y = 30 
 			}
 		}
-		dependencies = {
-			trotyl = 1
-		}
 		categories = {
 			infantry_weapons
 		}
@@ -954,6 +948,7 @@ technologies = {
 	magical_weapons_3 = {
 		allow = {
 			has_tech = magical_weapons_2
+			has_tech = trotyl
 		}
 		enable_equipments = {
 			magical_equipment_3
@@ -976,9 +971,6 @@ technologies = {
 		}
 		ai_research_weights = {
 			magical_tech = 1.0
-		}
-		dependencies = {
-			trotyl = 1
 		}
 		categories = {
 			infantry_weapons
@@ -1172,6 +1164,9 @@ technologies = {
 		}
 	}
 	support_weapons_3 = {
+		allow = {
+			has_tech = nitroglycerine
+		}
 		category_all_infantry = {
 			defense = 0.03
 			breakthrough = 0.03
@@ -1192,9 +1187,6 @@ technologies = {
 				x = -3 
 				y = 18 
 			}
-		}
-		dependencies = {
-			nitroglycerine = 1
 		}
 		categories = {
 			infantry_weapons
@@ -1239,6 +1231,9 @@ technologies = {
 		}
 	}
 	support_weapons_5 = {
+		allow = {
+			tech = trotyl
+		}
 		category_all_infantry = {
 			defense = 0.03
 			breakthrough = 0.03
@@ -1259,9 +1254,6 @@ technologies = {
 				x = -3 
 				y = 30 
 			}
-		}
-		dependencies = {
-			trotyl = 1
 		}
 		categories = {
 			infantry_weapons
@@ -2374,9 +2366,9 @@ technologies = {
 	}
 	#paratroopers
 	tech_paratroopers_0 = {
-		dependencies = {
-			infantry_weapons_0 = 1
-			tech_support = 1
+		allow = {
+			has_tech = infantry_weapons_0
+			has_tech = tech_support
 		}
 		enable_subunits = {
 			paratrooper
@@ -2562,9 +2554,9 @@ technologies = {
 	}
 	#marines
 	tech_marines_0 = {
-		dependencies = {
-			melee_weapons_1 = 1
-			tech_support = 1
+		allow = {
+			has_tech = melee_weapons_1
+			has_tech = tech_support
 		}
 		enable_subunits = {
 			marine
@@ -2734,9 +2726,9 @@ technologies = {
 	}
 	#mountaineers
 	tech_mountaineers_0 = {
-		dependencies = {
-			melee_weapons_1 = 1
-			tech_support = 1
+		allow = {
+			has_tech = melee_weapons_1
+			has_tech = tech_support
 		}
 		enable_subunits = {
 			mountaineers

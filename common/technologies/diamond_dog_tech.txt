@@ -34,9 +34,7 @@ technologies = {
 
 	tech_ironpaws = {
 
-		dependencies = {
-			tech_support = 1
-		}
+
 
 		enable_subunits = {
 			ironpaws
@@ -109,9 +107,7 @@ technologies = {
 			max_organisation = 5
 			defense = 0.05
 		}
-		dependencies = {
-			infantry_weapons_0 = 1
-		}
+
 		path = {
 			leads_to_tech = tech_ironpaws_a
 			research_cost_coeff = 1
@@ -566,9 +562,7 @@ technologies = {
 		army_defence_factor = 0.1
 		cas_damage_reduction = 0.2
 		enemy_army_bonus_air_superiority_factor = -0.2
-		dependencies = {
-			infantry_weapons_0 = 1
-		}
+
 		xor = { tech_diamond_dog_army_atk3 }
 		path = {
 			leads_to_tech = tech_diamond_dog_army4
