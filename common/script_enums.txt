@@ -27,11 +27,36 @@ script_enum_equipment_bonus_type = {
 	large_plane_airframe
 	large_plane_maritime_patrol_plane_airframe
 	
-
+	#Internal types
+	flame
+	missile_launcher
+	amphibious
+	anti_air
+	anti_tank
+	rocket
+	mechanized
+	motorized
+	support
+	infantry
+	support_ship
 	fighter
 	cas
 	tactical_bomber
 	scout_plane
+	maritime_patrol_plane
+	naval_bomber
+	interceptor
+	strategic_bomber
+	heavy_fighter
+	air_transport
+	missile
+	suicide
+	train
+	floating_harbor
+	railway_gun
+
+	# Building ammo
+	emplacement_gun_ammo
 
 	# Land
 	infantry_equipment 
@@ -46,7 +71,628 @@ script_enum_equipment_bonus_type = {
 	infantry_equipment_5
 	infantry_equipment_6
 
+	#Land (tanks)
+	tankette
+	light_tank_chassis
+	light_tank_chassis_0
+	light_tank_chassis_1
+	light_tank_chassis_2
+	light_tank_chassis_3
+	light_tank_chassis_4
+	light_tank_chassis_5
+	light_tank_chassis_6
+	light_tank_chassis_7
+	light_tank_chassis_8
+	light_tank_chassis_9
+	light_tank_chassis_10
+	light_aa_tank_chassis
+	light_aa_tank_chassis_0
+	light_aa_tank_chassis_1
+	light_aa_tank_chassis_2
+	light_aa_tank_chassis_3
+	light_aa_tank_chassis_4
+	light_aa_tank_chassis_5
+	light_aa_tank_chassis_6
+	light_aa_tank_chassis_7
+	light_aa_tank_chassis_8
+	light_aa_tank_chassis_9
+	light_aa_tank_chassis_10
+	light_at_tank_chassis
+	light_at_tank_chassis_0
+	light_at_tank_chassis_1
+	light_at_tank_chassis_2
+	light_at_tank_chassis_3
+	light_at_tank_chassis_4
+	light_at_tank_chassis_5
+	light_at_tank_chassis_6
+	light_at_tank_chassis_7
+	light_at_tank_chassis_8
+	light_at_tank_chassis_9
+	light_at_tank_chassis_10
+	light_artillery_tank_chassis
+	light_artillery_tank_chassis_0
+	light_artillery_tank_chassis_1
+	light_artillery_tank_chassis_2
+	light_artillery_tank_chassis_3
+	light_artillery_tank_chassis_4
+	light_artillery_tank_chassis_5
+	light_artillery_tank_chassis_6
+	light_artillery_tank_chassis_7
+	light_artillery_tank_chassis_8
+	light_artillery_tank_chassis_9
+	light_artillery_tank_chassis_10
+	light_amphibious_tank_chassis
+	light_amphibious_tank_chassis_0
+	light_amphibious_tank_chassis_1
+	light_amphibious_tank_chassis_2
+	light_amphibious_tank_chassis_3
+	light_amphibious_tank_chassis_4
+	light_amphibious_tank_chassis_5
+	light_amphibious_tank_chassis_6
+	light_amphibious_tank_chassis_7
+	light_amphibious_tank_chassis_8
+	light_amphibious_tank_chassis_9
+	light_amphibious_tank_chassis_10
+	light_flame_tank_chassis
+	light_flame_tank_chassis_0
+	light_flame_tank_chassis_1
+	light_flame_tank_chassis_2
+	light_flame_tank_chassis_3
+	light_flame_tank_chassis_4
+	light_flame_tank_chassis_5
+	light_flame_tank_chassis_6
+	light_flame_tank_chassis_7
+	light_flame_tank_chassis_8
+	light_flame_tank_chassis_9
+	light_flame_tank_chassis_10
+	light_rocket_tank_chassis
+	light_rocket_tank_chassis_0
+	light_rocket_tank_chassis_1
+	light_rocket_tank_chassis_2
+	light_rocket_tank_chassis_3
+	light_rocket_tank_chassis_4
+	light_rocket_tank_chassis_5
+	light_rocket_tank_chassis_6
+	light_rocket_tank_chassis_7
+	light_rocket_tank_chassis_8
+	light_rocket_tank_chassis_9
+	light_rocket_tank_chassis_10
+	light_magic_tank_chassis
+	light_magic_tank_chassis_0
+	light_magic_tank_chassis_1
+	light_magic_tank_chassis_2
+	light_magic_tank_chassis_3
+	light_magic_tank_chassis_4
+	light_magic_tank_chassis_5
+	light_magic_tank_chassis_6
+	light_magic_tank_chassis_7
+	light_magic_tank_chassis_8
+	light_magic_tank_chassis_9
+	light_magic_tank_chassis_10
+	light_magic_aa_tank_chassis
+	light_magic_aa_tank_chassis_0
+	light_magic_aa_tank_chassis_1
+	light_magic_aa_tank_chassis_2
+	light_magic_aa_tank_chassis_3
+	light_magic_aa_tank_chassis_4
+	light_magic_aa_tank_chassis_5
+	light_magic_aa_tank_chassis_6
+	light_magic_aa_tank_chassis_7
+	light_magic_aa_tank_chassis_8
+	light_magic_aa_tank_chassis_9
+	light_magic_aa_tank_chassis_10
+	light_magic_at_tank_chassis
+	light_magic_at_tank_chassis_0
+	light_magic_at_tank_chassis_1
+	light_magic_at_tank_chassis_2
+	light_magic_at_tank_chassis_3
+	light_magic_at_tank_chassis_4
+	light_magic_at_tank_chassis_5
+	light_magic_at_tank_chassis_6
+	light_magic_at_tank_chassis_7
+	light_magic_at_tank_chassis_8
+	light_magic_at_tank_chassis_9
+	light_magic_at_tank_chassis_10
+	light_magic_artillery_tank_chassis
+	light_magic_artillery_tank_chassis_0
+	light_magic_artillery_tank_chassis_1
+	light_magic_artillery_tank_chassis_2
+	light_magic_artillery_tank_chassis_3
+	light_magic_artillery_tank_chassis_4
+	light_magic_artillery_tank_chassis_5
+	light_magic_artillery_tank_chassis_6
+	light_magic_artillery_tank_chassis_7
+	light_magic_artillery_tank_chassis_8
+	light_magic_artillery_tank_chassis_9
+	light_magic_artillery_tank_chassis_10
+	light_magic_amphibious_tank_chassis
+	light_magic_amphibious_tank_chassis_0
+	light_magic_amphibious_tank_chassis_1
+	light_magic_amphibious_tank_chassis_2
+	light_magic_amphibious_tank_chassis_3
+	light_magic_amphibious_tank_chassis_4
+	light_magic_amphibious_tank_chassis_5
+	light_magic_amphibious_tank_chassis_6
+	light_magic_amphibious_tank_chassis_7
+	light_magic_amphibious_tank_chassis_8
+	light_magic_amphibious_tank_chassis_9
+	light_magic_amphibious_tank_chassis_10
+	light_magic_flame_tank_chassis
+	light_magic_flame_tank_chassis_0
+	light_magic_flame_tank_chassis_1
+	light_magic_flame_tank_chassis_2
+	light_magic_flame_tank_chassis_3
+	light_magic_flame_tank_chassis_4
+	light_magic_flame_tank_chassis_5
+	light_magic_flame_tank_chassis_6
+	light_magic_flame_tank_chassis_7
+	light_magic_flame_tank_chassis_8
+	light_magic_flame_tank_chassis_9
+	light_magic_flame_tank_chassis_10
+	light_magic_rocket_tank_chassis
+	light_magic_rocket_tank_chassis_0
+	light_magic_rocket_tank_chassis_1
+	light_magic_rocket_tank_chassis_2
+	light_magic_rocket_tank_chassis_3
+	light_magic_rocket_tank_chassis_4
+	light_magic_rocket_tank_chassis_5
+	light_magic_rocket_tank_chassis_6
+	light_magic_rocket_tank_chassis_7
+	light_magic_rocket_tank_chassis_8
+	light_magic_rocket_tank_chassis_9
+	light_magic_rocket_tank_chassis_10
+	medium_tank_chassis
+	medium_tank_chassis_0
+	medium_tank_chassis_1
+	medium_tank_chassis_2
+	medium_tank_chassis_3
+	medium_tank_chassis_4
+	medium_tank_chassis_5
+	medium_tank_chassis_6
+	medium_tank_chassis_7
+	medium_tank_chassis_8
+	medium_tank_chassis_9
+	medium_tank_chassis_10
+	medium_aa_tank_chassis
+	medium_aa_tank_chassis_0
+	medium_aa_tank_chassis_1
+	medium_aa_tank_chassis_2
+	medium_aa_tank_chassis_3
+	medium_aa_tank_chassis_4
+	medium_aa_tank_chassis_5
+	medium_aa_tank_chassis_6
+	medium_aa_tank_chassis_7
+	medium_aa_tank_chassis_8
+	medium_aa_tank_chassis_9
+	medium_aa_tank_chassis_10
+	medium_at_tank_chassis
+	medium_at_tank_chassis_0
+	medium_at_tank_chassis_1
+	medium_at_tank_chassis_2
+	medium_at_tank_chassis_3
+	medium_at_tank_chassis_4
+	medium_at_tank_chassis_5
+	medium_at_tank_chassis_6
+	medium_at_tank_chassis_7
+	medium_at_tank_chassis_8
+	medium_at_tank_chassis_9
+	medium_at_tank_chassis_10
+	medium_artillery_tank_chassis
+	medium_artillery_tank_chassis_0
+	medium_artillery_tank_chassis_1
+	medium_artillery_tank_chassis_2
+	medium_artillery_tank_chassis_3
+	medium_artillery_tank_chassis_4
+	medium_artillery_tank_chassis_5
+	medium_artillery_tank_chassis_6
+	medium_artillery_tank_chassis_7
+	medium_artillery_tank_chassis_8
+	medium_artillery_tank_chassis_9
+	medium_artillery_tank_chassis_10
+	medium_amphibious_tank_chassis
+	medium_amphibious_tank_chassis_0
+	medium_amphibious_tank_chassis_1
+	medium_amphibious_tank_chassis_2
+	medium_amphibious_tank_chassis_3
+	medium_amphibious_tank_chassis_4
+	medium_amphibious_tank_chassis_5
+	medium_amphibious_tank_chassis_6
+	medium_amphibious_tank_chassis_7
+	medium_amphibious_tank_chassis_8
+	medium_amphibious_tank_chassis_9
+	medium_amphibious_tank_chassis_10
+	medium_flame_tank_chassis
+	medium_flame_tank_chassis_0
+	medium_flame_tank_chassis_1
+	medium_flame_tank_chassis_2
+	medium_flame_tank_chassis_3
+	medium_flame_tank_chassis_4
+	medium_flame_tank_chassis_5
+	medium_flame_tank_chassis_6
+	medium_flame_tank_chassis_7
+	medium_flame_tank_chassis_8
+	medium_flame_tank_chassis_9
+	medium_flame_tank_chassis_10
+	medium_rocket_tank_chassis
+	medium_rocket_tank_chassis_0
+	medium_rocket_tank_chassis_1
+	medium_rocket_tank_chassis_2
+	medium_rocket_tank_chassis_3
+	medium_rocket_tank_chassis_4
+	medium_rocket_tank_chassis_5
+	medium_rocket_tank_chassis_6
+	medium_rocket_tank_chassis_7
+	medium_rocket_tank_chassis_8
+	medium_rocket_tank_chassis_9
+	medium_rocket_tank_chassis_10
+	medium_magic_tank_chassis
+	medium_magic_tank_chassis_0
+	medium_magic_tank_chassis_1
+	medium_magic_tank_chassis_2
+	medium_magic_tank_chassis_3
+	medium_magic_tank_chassis_4
+	medium_magic_tank_chassis_5
+	medium_magic_tank_chassis_6
+	medium_magic_tank_chassis_7
+	medium_magic_tank_chassis_8
+	medium_magic_tank_chassis_9
+	medium_magic_tank_chassis_10
+	medium_magic_aa_tank_chassis
+	medium_magic_aa_tank_chassis_0
+	medium_magic_aa_tank_chassis_1
+	medium_magic_aa_tank_chassis_2
+	medium_magic_aa_tank_chassis_3
+	medium_magic_aa_tank_chassis_4
+	medium_magic_aa_tank_chassis_5
+	medium_magic_aa_tank_chassis_6
+	medium_magic_aa_tank_chassis_7
+	medium_magic_aa_tank_chassis_8
+	medium_magic_aa_tank_chassis_9
+	medium_magic_aa_tank_chassis_10
+	medium_magic_at_tank_chassis
+	medium_magic_at_tank_chassis_0
+	medium_magic_at_tank_chassis_1
+	medium_magic_at_tank_chassis_2
+	medium_magic_at_tank_chassis_3
+	medium_magic_at_tank_chassis_4
+	medium_magic_at_tank_chassis_5
+	medium_magic_at_tank_chassis_6
+	medium_magic_at_tank_chassis_7
+	medium_magic_at_tank_chassis_8
+	medium_magic_at_tank_chassis_9
+	medium_magic_at_tank_chassis_10
+	medium_magic_artillery_tank_chassis
+	medium_magic_artillery_tank_chassis_0
+	medium_magic_artillery_tank_chassis_1
+	medium_magic_artillery_tank_chassis_2
+	medium_magic_artillery_tank_chassis_3
+	medium_magic_artillery_tank_chassis_4
+	medium_magic_artillery_tank_chassis_5
+	medium_magic_artillery_tank_chassis_6
+	medium_magic_artillery_tank_chassis_7
+	medium_magic_artillery_tank_chassis_8
+	medium_magic_artillery_tank_chassis_9
+	medium_magic_artillery_tank_chassis_10
+	medium_magic_amphibious_tank_chassis
+	medium_magic_amphibious_tank_chassis_0
+	medium_magic_amphibious_tank_chassis_1
+	medium_magic_amphibious_tank_chassis_2
+	medium_magic_amphibious_tank_chassis_3
+	medium_magic_amphibious_tank_chassis_4
+	medium_magic_amphibious_tank_chassis_5
+	medium_magic_amphibious_tank_chassis_6
+	medium_magic_amphibious_tank_chassis_7
+	medium_magic_amphibious_tank_chassis_8
+	medium_magic_amphibious_tank_chassis_9
+	medium_magic_amphibious_tank_chassis_10
+	medium_magic_flame_tank_chassis
+	medium_magic_flame_tank_chassis_0
+	medium_magic_flame_tank_chassis_1
+	medium_magic_flame_tank_chassis_2
+	medium_magic_flame_tank_chassis_3
+	medium_magic_flame_tank_chassis_4
+	medium_magic_flame_tank_chassis_5
+	medium_magic_flame_tank_chassis_6
+	medium_magic_flame_tank_chassis_7
+	medium_magic_flame_tank_chassis_8
+	medium_magic_flame_tank_chassis_9
+	medium_magic_flame_tank_chassis_10
+	medium_magic_rocket_tank_chassis
+	medium_magic_rocket_tank_chassis_0
+	medium_magic_rocket_tank_chassis_1
+	medium_magic_rocket_tank_chassis_2
+	medium_magic_rocket_tank_chassis_3
+	medium_magic_rocket_tank_chassis_4
+	medium_magic_rocket_tank_chassis_5
+	medium_magic_rocket_tank_chassis_6
+	medium_magic_rocket_tank_chassis_7
+	medium_magic_rocket_tank_chassis_8
+	medium_magic_rocket_tank_chassis_9
+	medium_magic_rocket_tank_chassis_10
+	heavy_tank_chassis
+	heavy_tank_chassis_0
+	heavy_tank_chassis_1
+	heavy_tank_chassis_2
+	heavy_tank_chassis_3
+	heavy_tank_chassis_4
+	heavy_tank_chassis_5
+	heavy_tank_chassis_6
+	heavy_tank_chassis_7
+	heavy_tank_chassis_8
+	heavy_aa_tank_chassis
+	heavy_aa_tank_chassis_0
+	heavy_aa_tank_chassis_1
+	heavy_aa_tank_chassis_2
+	heavy_aa_tank_chassis_3
+	heavy_aa_tank_chassis_4
+	heavy_aa_tank_chassis_5
+	heavy_aa_tank_chassis_6
+	heavy_aa_tank_chassis_7
+	heavy_aa_tank_chassis_8
+	heavy_at_tank_chassis
+	heavy_at_tank_chassis_0
+	heavy_at_tank_chassis_1
+	heavy_at_tank_chassis_2
+	heavy_at_tank_chassis_3
+	heavy_at_tank_chassis_4
+	heavy_at_tank_chassis_5
+	heavy_at_tank_chassis_6
+	heavy_at_tank_chassis_7
+	heavy_at_tank_chassis_8
+	heavy_artillery_tank_chassis
+	heavy_artillery_tank_chassis_0
+	heavy_artillery_tank_chassis_1
+	heavy_artillery_tank_chassis_2
+	heavy_artillery_tank_chassis_3
+	heavy_artillery_tank_chassis_4
+	heavy_artillery_tank_chassis_5
+	heavy_artillery_tank_chassis_6
+	heavy_artillery_tank_chassis_7
+	heavy_artillery_tank_chassis_8
+	heavy_amphibious_tank_chassis
+	heavy_amphibious_tank_chassis_0
+	heavy_amphibious_tank_chassis_1
+	heavy_amphibious_tank_chassis_2
+	heavy_amphibious_tank_chassis_3
+	heavy_amphibious_tank_chassis_4
+	heavy_amphibious_tank_chassis_5
+	heavy_amphibious_tank_chassis_6
+	heavy_amphibious_tank_chassis_7
+	heavy_amphibious_tank_chassis_8
+	heavy_flame_tank_chassis
+	heavy_flame_tank_chassis_0
+	heavy_flame_tank_chassis_1
+	heavy_flame_tank_chassis_2
+	heavy_flame_tank_chassis_3
+	heavy_flame_tank_chassis_4
+	heavy_flame_tank_chassis_5
+	heavy_flame_tank_chassis_6
+	heavy_flame_tank_chassis_7
+	heavy_flame_tank_chassis_8
+	heavy_rocket_tank_chassis
+	heavy_rocket_tank_chassis_0
+	heavy_rocket_tank_chassis_1
+	heavy_rocket_tank_chassis_2
+	heavy_rocket_tank_chassis_3
+	heavy_rocket_tank_chassis_4
+	heavy_rocket_tank_chassis_5
+	heavy_rocket_tank_chassis_6
+	heavy_rocket_tank_chassis_7
+	heavy_rocket_tank_chassis_8
+
+	light_magic_tank_chassis
+
+	medium_magic_tank_chassis
+
+	heavy_magic_tank_chassis
+	heavy_magic_tank_chassis_0
+	heavy_magic_tank_chassis_1
+	heavy_magic_tank_chassis_2
+	heavy_magic_tank_chassis_3
+	heavy_magic_tank_chassis_4
+	heavy_magic_tank_chassis_5
+	heavy_magic_tank_chassis_6
+	heavy_magic_tank_chassis_7
+	heavy_magic_tank_chassis_8
+	heavy_magic_aa_tank_chassis
+	heavy_magic_aa_tank_chassis_0
+	heavy_magic_aa_tank_chassis_1
+	heavy_magic_aa_tank_chassis_2
+	heavy_magic_aa_tank_chassis_3
+	heavy_magic_aa_tank_chassis_4
+	heavy_magic_aa_tank_chassis_5
+	heavy_magic_aa_tank_chassis_6
+	heavy_magic_aa_tank_chassis_7
+	heavy_magic_aa_tank_chassis_8
+	heavy_magic_at_tank_chassis
+	heavy_magic_at_tank_chassis_0
+	heavy_magic_at_tank_chassis_1
+	heavy_magic_at_tank_chassis_2
+	heavy_magic_at_tank_chassis_3
+	heavy_magic_at_tank_chassis_4
+	heavy_magic_at_tank_chassis_5
+	heavy_magic_at_tank_chassis_6
+	heavy_magic_at_tank_chassis_7
+	heavy_magic_at_tank_chassis_8
+	heavy_magic_artillery_tank_chassis
+	heavy_magic_artillery_tank_chassis_0
+	heavy_magic_artillery_tank_chassis_1
+	heavy_magic_artillery_tank_chassis_2
+	heavy_magic_artillery_tank_chassis_3
+	heavy_magic_artillery_tank_chassis_4
+	heavy_magic_artillery_tank_chassis_5
+	heavy_magic_artillery_tank_chassis_6
+	heavy_magic_artillery_tank_chassis_7
+	heavy_magic_artillery_tank_chassis_8
+	heavy_magic_amphibious_tank_chassis
+	heavy_magic_amphibious_tank_chassis_0
+	heavy_magic_amphibious_tank_chassis_1
+	heavy_magic_amphibious_tank_chassis_2
+	heavy_magic_amphibious_tank_chassis_3
+	heavy_magic_amphibious_tank_chassis_4
+	heavy_magic_amphibious_tank_chassis_5
+	heavy_magic_amphibious_tank_chassis_6
+	heavy_magic_amphibious_tank_chassis_7
+	heavy_magic_amphibious_tank_chassis_8
+	heavy_magic_flame_tank_chassis
+	heavy_magic_flame_tank_chassis_0
+	heavy_magic_flame_tank_chassis_1
+	heavy_magic_flame_tank_chassis_2
+	heavy_magic_flame_tank_chassis_3
+	heavy_magic_flame_tank_chassis_4
+	heavy_magic_flame_tank_chassis_5
+	heavy_magic_flame_tank_chassis_6
+	heavy_magic_flame_tank_chassis_7
+	heavy_magic_flame_tank_chassis_8
+	heavy_magic_rocket_tank_chassis
+	heavy_magic_rocket_tank_chassis_0
+	heavy_magic_rocket_tank_chassis_1
+	heavy_magic_rocket_tank_chassis_2
+	heavy_magic_rocket_tank_chassis_3
+	heavy_magic_rocket_tank_chassis_4
+	heavy_magic_rocket_tank_chassis_5
+	heavy_magic_rocket_tank_chassis_6
+	heavy_magic_rocket_tank_chassis_7
+	heavy_magic_rocket_tank_chassis_8
+	super_heavy_tank_chassis
+	super_heavy_tank_chassis_0
+	super_heavy_tank_chassis_1
+	super_heavy_tank_chassis_2
+	super_heavy_tank_chassis_3
+	super_heavy_tank_chassis_4
+	super_heavy_tank_chassis_5
+	super_heavy_aa_tank_chassis
+	super_heavy_aa_tank_chassis_0
+	super_heavy_aa_tank_chassis_1
+	super_heavy_aa_tank_chassis_2
+	super_heavy_aa_tank_chassis_3
+	super_heavy_aa_tank_chassis_4
+	super_heavy_aa_tank_chassis_5
+	super_heavy_at_tank_chassis
+	super_heavy_at_tank_chassis_0
+	super_heavy_at_tank_chassis_1
+	super_heavy_at_tank_chassis_2
+	super_heavy_at_tank_chassis_3
+	super_heavy_at_tank_chassis_4
+	super_heavy_at_tank_chassis_5
+	super_heavy_artillery_tank_chassis
+	super_heavy_artillery_tank_chassis_0
+	super_heavy_artillery_tank_chassis_1
+	super_heavy_artillery_tank_chassis_2
+	super_heavy_artillery_tank_chassis_3
+	super_heavy_artillery_tank_chassis_4
+	super_heavy_artillery_tank_chassis_5
+	super_heavy_flame_tank_chassis
+	super_heavy_flame_tank_chassis_0
+	super_heavy_flame_tank_chassis_1
+	super_heavy_flame_tank_chassis_2
+	super_heavy_flame_tank_chassis_3
+	super_heavy_flame_tank_chassis_4
+	super_heavy_flame_tank_chassis_5
+	super_heavy_magic_tank_chassis
+	super_heavy_magic_tank_chassis_0
+	super_heavy_magic_tank_chassis_1
+	super_heavy_magic_tank_chassis_2
+	super_heavy_magic_tank_chassis_3
+	super_heavy_magic_tank_chassis_4
+	super_heavy_magic_tank_chassis_5
+	super_heavy_magic_aa_tank_chassis
+	super_heavy_magic_aa_tank_chassis_0
+	super_heavy_magic_aa_tank_chassis_1
+	super_heavy_magic_aa_tank_chassis_2
+	super_heavy_magic_aa_tank_chassis_3
+	super_heavy_magic_aa_tank_chassis_4
+	super_heavy_magic_aa_tank_chassis_5
+	super_heavy_magic_at_tank_chassis
+	super_heavy_magic_at_tank_chassis_0
+	super_heavy_magic_at_tank_chassis_1
+	super_heavy_magic_at_tank_chassis_2
+	super_heavy_magic_at_tank_chassis_3
+	super_heavy_magic_at_tank_chassis_4
+	super_heavy_magic_at_tank_chassis_5
+	super_heavy_magic_artillery_tank_chassis
+	super_heavy_magic_artillery_tank_chassis_0
+	super_heavy_magic_artillery_tank_chassis_1
+	super_heavy_magic_artillery_tank_chassis_2
+	super_heavy_magic_artillery_tank_chassis_3
+	super_heavy_magic_artillery_tank_chassis_4
+	super_heavy_magic_artillery_tank_chassis_5
+	super_heavy_magic_flame_tank_chassis
+	super_heavy_magic_flame_tank_chassis_0
+	super_heavy_magic_flame_tank_chassis_1
+	super_heavy_magic_flame_tank_chassis_2
+	super_heavy_magic_flame_tank_chassis_3
+	super_heavy_magic_flame_tank_chassis_4
+	super_heavy_magic_flame_tank_chassis_5
+
+	land_cruiser_chassis
+	land_cruiser_chassis_0
+	land_cruiser_chassis_1
+
+	#Land (special equipmen)
+	windigo_equipmen
+	windigo_equipmen_0
+
+	#Land (artillery)
+	anti_air_equipment
+	anti_air_equipment_0
+	anti_air_equipment_1
+	anti_air_equipment_2
+	anti_air_equipment_3
+	anti_tank_equipment
+	anti_tank_equipment_0
+	anti_tank_equipment_1
+	anti_tank_equipment_2
+	anti_tank_equipment_3
+	artillery_equipment
+	artillery_equipment_0
+	artillery_equipment_1
+	artillery_equipment_2
+	artillery_equipment_3
+	magic_anti_air_equipment
+	magic_anti_air_equipment_0
+	magic_anti_air_equipment_1
+	magic_anti_tank_equipment
+	magic_anti_tank_equipment_0
+	magic_anti_tank_equipment_1
+	motorized_rocket_equipment
+	motorized_rocket_equipment_0
+	motorized_rocket_equipment_1
+	motorized_magic_rocket_equipment
+	motorized_magic_rocket_equipment_0
+	motorized_magic_rocket_equipment_1
+	magic_anti_tank_equipment
+	magic_anti_tank_equipment_0
+	magic_anti_tank_equipment_1
+	mortar_equipment
+	mortar_equipment_0
+	mortar_equipment_1
+	mortar_equipment_2
+	magic_mortar_equipment
+	magic_mortar_equipment_0
+	magic_mortar_equipment_1
+	magic_mortar_equipment_2
+	magic_rocket_artillery_equipment
+	magic_rocket_artillery_equipment_0
+	magic_rocket_artillery_equipment_1
+	magic_rocket_artillery_equipment_2
+
+	#Land (support)
+	gasoline_tanker_equipment
+	gasoline_tanker_equipment_0
+	railway_gun_equipment
+	railway_gun_equipment_0
+	railway_gun_equipment_1
+
 	#Naval (mtg)
+	ship_hull_light
+	ship_hull_light_0
+	ship_hull_light_1
+	ship_hull_light_2
+	ship_hull_light_3
+	ship_hull_light_4
+	ship_hull_light_5
+	ship_hull_light_6
 	ship_hull_carrier
 	ship_hull_carrier_conversion_linear_ship
 	ship_hull_carrier_conversion_cruiser
@@ -160,6 +806,8 @@ script_enum_equipment_bonus_type = {
 	nuclear_submarine_0
 	rocket_submarine_0
 	nuclear_missile_submarine_0
+	#convoys
+	convoy_1
 
 	#Air (bba)
 	small_plane_airframe
@@ -358,13 +1006,26 @@ script_enum_equipment_bonus_type = {
 	strat_bomber_intercontinental_equipment
 	strat_bomber_intercontinental_equipment_1
 
+	#Missile
+	ballistic_missile_equipment
+	ballistic_missile_equipment_0
+	ballistic_missile_equipment_1
+	guided_missile_equipment
+	guided_missile_equipment_0
+	guided_missile_equipment_1
+	guided_missile_equipment_2
+	guided_missile_equipment_3
+	guided_missile_equipment_4
+	guided_missile_equipment_5
+
+	nuclear_missile
+	sam_missile
 
 
 	support_equipment
 	artillery_equipment
 	rocket_artillery_equipment
 	anti_tank_equipment
-	anti_air_equipment
 	artillery
 
 	amphibious_mechanized_equipment
@@ -373,13 +1034,8 @@ script_enum_equipment_bonus_type = {
 	motorized_equipment
 	motorized_rocket_equipment
 	train_equipment
-	railway_gun_equipment
 
 	armor
-	light_tank_chassis
-	medium_tank_chassis
-	heavy_tank_chassis
-	super_heavy_tank_chassis
 	modern_tank_chassis
 	amphibious_tank_chassis
 
@@ -392,7 +1048,6 @@ script_enum_equipment_bonus_type = {
 	heavy_tank_destroyer_chassis
 
 	# Sea
-	ship_hull_light
 	ship_hull_cruiser
 	ship_hull_heavy
 	ship_hull_super_heavy_0
@@ -442,6 +1097,13 @@ script_enum_equipment_category = {
 	anti_tank
 	rocket
 	flame
+	land_cruiser
+	emplacement_gun_ammo
+	ballistic_missile
+	nuclear_missile
+	sam_missile
+	support_ship
+	missile_launcher
 }
 
 script_enum_operative_mission_type = {
@@ -535,6 +1197,15 @@ script_enum_equipment_stat = {
 	night_penalty				#Cannot be used with MIOS
 	build_cost_ic
 	naval_weather_penalty_factor
+	recovery
+	additional_collateral_damage
+	carrier_sub_detection
+	carrier_surface_detection
+	railway_gun_annex_ratio
+	railway_gun_hours_between_redistribution
+	submarine_carrier_size
+	railway_gun_attack_range_index_in_define
+	railway_gun_attack_range
 }
 
 script_enum_production_stat = {

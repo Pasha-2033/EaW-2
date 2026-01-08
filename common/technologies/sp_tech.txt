@@ -84,6 +84,17 @@ technologies = {
 		}
 		chromium_plant_chromium_outcome = 2
 	}
+	#stronghold network
+	sp_tech_stronghold_network = {
+		research_cost = 1
+		allow = {
+			always = no
+		}
+		enable_building = {
+			building = stronghold_network
+			level = 1
+		}
+	}
 	#reactor init tech
 	allow_nuclear_reactor = {
 		research_cost = 1
