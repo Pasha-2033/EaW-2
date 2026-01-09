@@ -3,10 +3,21 @@ NDefines.NGame.END_DATE = "1060.1.1"
 NDefines.NGame.HANDS_OFF_START_TAG = "ELN"
 
 NDefines.NDiplomacy.TENSION_TIME_SCALE_START_DATE = "982.1.1"
-NDefines.NDiplomacy.VOLUNTEERS_DIVISIONS_REQUIRED = 10
-NDefines.NDiplomacy.MAX_OPINION_VALUE = 200							-- Max opinion value cap.
-NDefines.NDiplomacy.MIN_OPINION_VALUE = -200						-- Min opinion value cap.
-NDefines.NDiplomacy.VOLUNTEERS_DIVISIONS_REQUIRED = 1               -- min division amount to be able send volunteers (we want realism - if we have any - we can send them)
+NDefines.NDiplomacy.VOLUNTEERS_DIVISIONS_REQUIRED = 1           -- min division amount to be able send volunteers (we want realism - if we have any - we can send them)
+NDefines.NDiplomacy.BASE_NEGATIVE_OPINION_AFTER_BEING_KICKED = -200
+NDefines.NDiplomacy.MAX_TRUST_VALUE = 1000
+NDefines.NDiplomacy.MIN_TRUST_VALUE = -1000
+NDefines.NDiplomacy.MAX_OPINION_VALUE = 1000					-- Max opinion value cap.
+NDefines.NDiplomacy.MIN_OPINION_VALUE = -1000					-- Min opinion value cap.
+NDefines.NDiplomacy.VERY_GOOD_OPINION = 750                     -- Threshold for a country that has a very good opinion of you.
+NDefines.NDiplomacy.VERY_BAD_OPINION = -250                     -- Threshold for a country that has a very bad opinion of you.
+NDefines.NDiplomacy.DECAY_RATE_OF_NEGATIVE_OPINION_AFTER_BEING_KICKED = 4
+NDefines.NDiplomacy.MAX_OPINION_FOR_LEASED_IC = 250
+NDefines.NDiplomacy.OPINION_PER_VOLUNTEER = 8
+NDefines.NDiplomacy.MAX_OPINION_FROM_VOLUNTEERS = 400
+NDefines.NDiplomacy.OPINION_FOR_DEMO_FROM_WT_GENERATION = -4
+NDefines.NDiplomacy.OPINION_CUTOFF_FOR_IMPROVE_RELATIONS = 800
+
 
 NDefines.NCountry.POPULATION_YEARLY_GROWTH_BASE = 0.03			-- (vanilla is 0.015) basic population growth per year, used for monthly manpower gain
 NDefines.NCountry.SPECIAL_FORCES_CAP_BASE = 0.1					-- Max ammount of special forces battalions is total number of non-special forces battalions multiplied by this and modified by a country modifier
