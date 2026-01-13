@@ -458,9 +458,6 @@ technologies = {
 		enable_subunits = {
 			magical_infantry
 		}
-		on_research_complete = {
-
-		}
 		path = {
 			leads_to_tech = improved_infantry_weapons_1
 			research_cost_coeff = 1
@@ -1611,9 +1608,6 @@ technologies = {
 		enable_equipments = {
 			motorized_equipment_0
 		}
-		on_research_complete = {
-
-		}
 		path = {
 			leads_to_tech = motorised_infantry_1
 			research_cost_coeff = 1
@@ -2146,9 +2140,6 @@ technologies = {
 				attack = 0.3
 			}
 		}
-        on_research_complete = {
-            custom_effect_tooltip = MECHANIZED_INFANTRY_C_TOOLTIP
-        }
 		research_cost = 3
 		start_year = 1025 #to do
 		folder = {
@@ -2220,9 +2211,6 @@ technologies = {
 		}
 		special_project_specialization = { 
 			specialization_land
-		}
-		on_research_complete = {
-
 		}
 		ai_will_do = {
 			factor = 0
@@ -2372,6 +2360,7 @@ technologies = {
 		}
 		enable_subunits = {
 			paratrooper
+			magic_paratrooper
 		}
 		path = {
 			leads_to_tech = tech_paratroopers_1
@@ -2386,9 +2375,7 @@ technologies = {
 				y = 0
 			}
 		}
-		on_research_complete = {
 
-		}
 		categories = {
 			para_tech
 			special_forces_tech
@@ -2403,6 +2390,10 @@ technologies = {
 	}
 	tech_paratroopers_1 = {
 		paratrooper = {
+			max_organisation = 5
+			soft_attack = 0.05
+		}
+		magic_paratrooper = {
 			max_organisation = 5
 			soft_attack = 0.05
 		}
@@ -2435,6 +2426,9 @@ technologies = {
 		paratrooper = {
 			max_organisation = 5
 		}
+		magic_paratrooper = {
+			max_organisation = 5
+		}
 		path = {
 			leads_to_tech = tech_paratroopers_3
 			research_cost_coeff = 1
@@ -2461,7 +2455,9 @@ technologies = {
 		paratrooper = {
 			max_organisation = 5
 		}
-
+		magic_paratrooper = {
+			max_organisation = 5
+		}
 		path = {
 			leads_to_tech = tech_paratroopers_4
 			research_cost_coeff = 1
@@ -2493,7 +2489,9 @@ technologies = {
 		paratrooper = {
 			max_organisation = 5
 		}
-
+		magic_paratrooper = {
+			max_organisation = 5
+		}
 		path = {
 			leads_to_tech = tech_paratroopers_5
 			research_cost_coeff = 1
@@ -2506,9 +2504,7 @@ technologies = {
 			position = { x = 0 y = 26 }
 		}
 
-		on_research_complete = {
-
-		}
+	
 
 		categories = {
 			para_tech
@@ -2528,7 +2524,9 @@ technologies = {
 		paratrooper = {
 			max_organisation = 5
 		}
-
+		magic_paratrooper = {
+			max_organisation = 5
+		}
 		research_cost = 2.0
 		start_year = 1024
 		folder = {
@@ -2536,9 +2534,7 @@ technologies = {
 			position = { x = 0 y = 34 }
 		}
 
-		on_research_complete = {
 
-		}
 
 		categories = {
 			para_tech
@@ -2552,6 +2548,91 @@ technologies = {
 			}
 		}
 	}
+	#rangers
+	tech_rangers_0 = {
+		enable_subunits = {
+			ranger_battalion
+			magic_ranger_battalion
+		}
+
+		path = {
+			leads_to_tech = tech_rangers_1
+			research_cost_coeff = 1
+		}
+
+		research_cost = 2
+		start_year = 1936
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = 0 }
+		}
+		
+		categories = {
+
+		}
+		
+		ai_will_do = {
+			base = 1
+			
+		}
+	}
+
+	tech_rangers_1 = {
+
+		ranger_battalion = {
+			max_organisation = 5
+			soft_attack = 0.05
+		}
+		magic_ranger_battalion = {
+			max_organisation = 5
+			soft_attack = 0.05
+		}
+		path = {
+			leads_to_tech = tech_rangers_2
+			research_cost_coeff = 1
+		}
+
+		research_cost = 1.5
+		start_year = 1939
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = 6 }
+		}
+		
+		categories = {
+
+		}
+		
+		ai_will_do = {
+			base = 1
+		}
+	}
+
+	tech_rangers_2 = {
+
+		ranger_battalion = {
+			max_organisation = 5
+		}
+		magic_ranger_battalion = {
+			max_organisation = 5
+		}
+		research_cost = 1.5
+		start_year = 1943
+		folder = {
+			name = infantry_folder
+			position = { x = 0 y = 12 }
+		}
+		
+		categories = {
+			infantry_tech
+			rangers_tech_cat
+			cat_special_forces_generic
+		}
+		
+		ai_will_do = {
+			factor = 0.7
+		}
+	}
 	#marines
 	tech_marines_0 = {
 		allow = {
@@ -2560,9 +2641,7 @@ technologies = {
 		}
 		enable_subunits = {
 			marine
-		}
-		on_research_complete = {
-
+			magic_marine
 		}
 		path = {
 			leads_to_tech = tech_marines_1
@@ -2587,6 +2666,10 @@ technologies = {
 	}
 	tech_marines_1 = {
 		marine = {
+			max_organisation = 5
+			soft_attack = 0.05
+		}
+		magic_marine = {
 			max_organisation = 5
 			soft_attack = 0.05
 		}
@@ -2616,6 +2699,9 @@ technologies = {
 		marine = {
 			max_organisation = 5
 		}
+		magic_marine = {
+			max_organisation = 5
+		}
 		path = {
 			leads_to_tech = tech_marines_3
 			research_cost_coeff = 1
@@ -2639,15 +2725,15 @@ technologies = {
 		marine = {
 			max_organisation = 5
 		}
-
+		magic_marine = {
+			max_organisation = 5
+		}
 		path = {
 			leads_to_tech = tech_marines_4
 			research_cost_coeff = 1
 		}
 
-		on_research_complete = {
 
-		}
 
 		research_cost = 2.0
 		start_year = 1016
@@ -2671,15 +2757,15 @@ technologies = {
 		marine = {
 			max_organisation = 5
 		}
-
+		magic_marine = {
+			max_organisation = 5
+		}
 		path = {
 			leads_to_tech = tech_marines_5
 			research_cost_coeff = 1
 		}
 
-		on_research_complete = {
 
-		}
 
 		research_cost = 2.0
 		start_year = 1020
@@ -2703,7 +2789,9 @@ technologies = {
 		marine = {
 			max_organisation = 5
 		}
-
+		magic_marine = {
+			max_organisation = 5
+		}
 		research_cost = 2.0
 		start_year = 1024
 		folder = {
@@ -2711,9 +2799,7 @@ technologies = {
 			position = { x = 0 y = 30 }
 		}
 
-		on_research_complete = {
 
-		}
 
 		categories = {
 			marine_tech
@@ -2732,10 +2818,7 @@ technologies = {
 		}
 		enable_subunits = {
 			mountaineers
-		}
-		on_research_complete = {
-
-
+			magic_mountaineers
 		}
 		path = {
 			leads_to_tech = tech_mountaineers_1
@@ -2758,6 +2841,10 @@ technologies = {
 	}
 	tech_mountaineers_1 = {
 		mountaineers = {
+			max_organisation = 5
+			soft_attack = 0.05
+		}
+		magic_mountaineers = {
 			max_organisation = 5
 			soft_attack = 0.05
 		}
@@ -2784,6 +2871,9 @@ technologies = {
 		mountaineers = {
 			max_organisation = 5
 		}
+		magic_mountaineers = {
+			max_organisation = 5
+		}
 		path = {
 			leads_to_tech = tech_mountaineers_3
 			research_cost_coeff = 1
@@ -2808,16 +2898,16 @@ technologies = {
 		mountaineers = {
 			max_organisation = 5
 		}
-
+		magic_mountaineers = {
+			max_organisation = 5
+		}
 		path = {
 
 			leads_to_tech = tech_mountaineers_4
 			research_cost_coeff = 1
 		}
 
-		on_research_complete = {
 
-		}
 
 		research_cost = 2.0
 		start_year = 1016
@@ -2842,15 +2932,15 @@ technologies = {
 		mountaineers = {
 			max_organisation = 5
 		}
-
+		magic_mountaineers = {
+			max_organisation = 5
+		}
 		path = {
 			leads_to_tech = tech_mountaineers_5
 			research_cost_coeff = 1
 		}
 
-		on_research_complete = {
 
-		}
 
 		research_cost = 2.0
 		start_year = 1020
@@ -2875,7 +2965,9 @@ technologies = {
 		mountaineers = {
 			max_organisation = 5
 		}
-
+		magic_mountaineers = {
+			max_organisation = 5
+		}
 		research_cost = 2.0
 		start_year = 1024
 		folder = {
@@ -2883,9 +2975,7 @@ technologies = {
 			position = { x = 0 y = 30 }
 		}
 
-		on_research_complete = {
 
-		}
 
 		categories = {
 			infantry_tech
@@ -3134,9 +3224,6 @@ technologies = {
 		xor={
 			wilderness_specialization
 		}
-        on_research_complete = {
-            custom_effect_tooltip = URBAN_SPECIALIZATION_TOOLTIP
-        }
         start_year = 1018
         folder = {
             name = infantry_folder
@@ -3175,9 +3262,6 @@ technologies = {
 		xor={
 			urban_specialization
 		}
-        on_research_complete = {
-        	custom_effect_tooltip = WILDERNESS_SPECIALIZATION_TOOLTIP
-        }
         research_cost = 2
 
         start_year = 1018
@@ -3459,9 +3543,6 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			surface_to_air_missiles
-		}
-		on_research_complete = {
-			custom_effect_tooltip = percentage_increase_notice	
 		}
 
 

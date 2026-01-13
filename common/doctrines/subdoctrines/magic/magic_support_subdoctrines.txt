@@ -7,7 +7,9 @@ subdoctrine_magic_support_main_force = {
 
     xp_cost = 100
     xp_type = army
-
+    visible = {
+        has_doctrine = magic_superiority
+    }
     available = {
         custom_override_tooltip = {
             tooltip = "subdoctrine_main_force_not_selected_tt"
@@ -55,7 +57,9 @@ subdoctrine_magic_support_predominant_force = {
     available = {
         
     }
-
+    visible = {
+        has_doctrine = magic_superiority
+    }
     ai_will_do = { 
         base = 1
     }
@@ -77,7 +81,9 @@ subdoctrine_magic_support_subversive_operations = {
     available = {
         
     }
-
+    visible = {
+        has_doctrine = magic_superiority
+    }
     ai_will_do = { 
         base = 1
     }
@@ -96,7 +102,9 @@ subdoctrine_magic_support_logistics = {
 
     xp_cost = 100
     xp_type = army
-
+    visible = {
+        has_doctrine = magic_integrations
+    }
     available = {
         
     }
@@ -118,7 +126,33 @@ subdoctrine_magic_support_live_tank = {
 
     xp_cost = 100
     xp_type = army
+    visible = {
+        has_doctrine = magic_integrations
+    }
+    available = {
+        
+    }
 
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {
+        
+    }
+}
+subdoctrine_magic_red_cross = {
+    track = magic_support
+    name = SUBDOCTRINE_MAGIC_RED_CROSS
+    description = SUBDOCTRINE_MAGIC_RED_CROSS_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_integrations
+    }
     available = {
         
     }
@@ -141,7 +175,9 @@ subdoctrine_magic_support_hidden_phoenix = {
 
     xp_cost = 100
     xp_type = army
-
+    visible = {
+        has_doctrine = magic_override
+    }
     available = {
         
     }
@@ -167,7 +203,9 @@ subdoctrine_magic_support_firewall = {
     available = {
         
     }
-
+    visible = {
+        has_doctrine = magic_override
+    }
     ai_will_do = { 
         base = 1
     }
@@ -178,3 +216,51 @@ subdoctrine_magic_support_firewall = {
     }
 }
 #special forces
+subdoctrine_magic_military_police = {
+    track = magic_support
+    name = SUBDOCTRINE_MAGIC_MILITARY_POLICE
+    description = SUBDOCTRINE_MAGIC_MILITARY_POLICE_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        
+    }
+    visible = {
+        has_doctrine = magic_special_forces
+    }
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {
+        
+    }
+}
+subdoctrine_new_magic_order = {
+    track = magic_support
+    name = SUBDOCTRINE_NEW_MAGIC_ORDER
+    description = SUBDOCTRINE_NEW_MAGIC_ORDER_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+
+    available = {
+        
+    }
+    visible = {
+        has_doctrine = magic_special_forces
+    }
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {
+        
+    }
+}

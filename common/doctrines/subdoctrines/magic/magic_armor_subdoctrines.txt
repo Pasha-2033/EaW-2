@@ -7,7 +7,9 @@ subdoctrine_magic_armor_main_force = {
 
     xp_cost = 100
     xp_type = army
-
+    visible = {
+        has_doctrine = magic_superiority
+    }
     available = {
 		custom_override_tooltip = {
             tooltip = "subdoctrine_main_force_not_selected_tt"
@@ -38,6 +40,246 @@ subdoctrine_magic_armor_main_force = {
        
     }
 }
+subdoctrine_magic_armor_predominant_force = {
+    track = magic_armor
+    name = SUBDOCTRINE_MAGIC_ARMOR_PREDOMINANT_FORCE
+    description = SUBDOCTRINE_MAGIC_ARMOR_PREDOMINANT_FORCE_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_superiority
+    }
+    available = {
+
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {
+       
+    }
+}
+subdoctrine_magic_armored_cars_support = {
+    track = magic_armor
+    name = SUBDOCTRINE_MAGIC_ARMOR_PREDOMINANT_FORCE
+    description = SUBDOCTRINE_MAGIC_ARMOR_PREDOMINANT_FORCE_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_superiority
+    }
+    available = {
+
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {
+       
+    }
+}
 #integrations
-#override
+subdoctrine_general_magical_armor_support = {
+    track = magic_armor
+    name = SUBDOCTRINE_GENERAL_MAGICAL_ARMOR_SUPPORT
+    description = SUBDOCTRINE_GENERAL_MAGICAL_ARMOR_SUPPORT_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_integrations
+    }
+    available = {
+
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {
+       
+    }
+}
+subdoctrine_armored_heavy_magic_gun_support = {
+    track = magic_armor
+    name = SUBDOCTRINE_ARMORED_HEAVY_MAGIC_GUN_SUPPORT
+    description = SUBDOCTRINE_ARMORED_HEAVY_MAGIC_GUN_SUPPORT_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_integrations
+    }
+    available = {
+
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {
+       
+    }
+}
+subdoctrine_armored_recon_support = {
+    track = magic_armor
+    name = SUBDOCTRINE_ARMORED_RECON_SUPPORT
+    description = SUBDOCTRINE_ARMORED_RECON_SUPPORT_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_integrations
+    }
+    available = {
+
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {
+       
+    }
+}
+#override (navy + armor)
+subdoctrine_equipment_conversion = {
+    track = magic_armor
+    name = SUBDOCTRINE_EQUIPMENT_CONVERSION
+    description = SUBDOCTRINE_EQUIPMENT_CONVERSION_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_override
+    }
+    available = {
+
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {
+       
+    }
+}
+subdoctrine_magic_rearmament = {
+    track = magic_armor
+    name = SUBDOCTRINE_MAGIC_REARMAMENT
+    description = SUBDOCTRINE_MAGIC_REARMAMENT_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_override
+    }
+    available = {
+
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {
+       
+    }
+}
+subdoctrine_basics_of_magic_armor = {
+    track = magic_armor
+    name = SUBDOCTRINE_BASICS_OF_MAGIC_ARMOR
+    description = SUBDOCTRINE_EQUIPMENT_CONVERSION_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_override
+    }
+    available = {
+
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {
+       
+    }
+}
 #special forces
+subdoctrine_magic_landcruisers = {
+    track = magic_armor
+    name = SUBDOCTRINE_MAGIC_LANDCRUISERS
+    description = SUBDOCTRINE_MAGIC_LANDCRUISERS_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_special_forces
+    }
+    available = {
+
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {
+       
+    }
+}
+subdoctrine_magic_mobile_fortress = {
+    track = magic_armor
+    name = SUBDOCTRINE_MAGIC_MOBILE_FORTRESS
+    description = SUBDOCTRINE_MAGIC_MOBILE_FORTRESS_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_special_forces
+    }
+    available = {
+
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {
+       
+    }
+}

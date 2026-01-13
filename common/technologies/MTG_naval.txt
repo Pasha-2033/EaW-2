@@ -749,9 +749,6 @@ technologies = {
 		enable_equipment_modules = {
 			ship_depth_charge_7 
 		}
-		on_research_complete = {
-			custom_effect_tooltip = heli_hanger_advice_tt
-		}
 		xp_research_type = navy
 		xp_boost_cost = 50
 		xp_research_bonus = 1.5
@@ -1054,15 +1051,13 @@ technologies = {
 			ship_armor_cruiser_0
 			cruiser_ship_engine_0
 		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_naval_torpedo_cruiser
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_torpedo_cruiser
 			}
 		}
 		allow = {
@@ -1752,15 +1747,13 @@ technologies = {
 			leads_to_tech = heavy_hull_2
 			research_cost_coeff = 1
 		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_naval_super_heavy_battleship
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_super_heavy_battleship
 			}
 		}
 		research_cost = 1.5
@@ -2372,15 +2365,13 @@ technologies = {
 		enable_equipment_modules = { 
 			carrier_ship_engine_5
 		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_naval_modern_carrier
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_modern_carrier
 			}
 		}
 		research_cost = 1.5
@@ -2547,15 +2538,13 @@ technologies = {
 			leads_to_tech = submarine_hull_1
 			research_cost_coeff = 1
 		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_naval_anechoic_tiles
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_anechoic_tiles
 			}
 		}
 		research_cost = 1.5
@@ -2595,15 +2584,13 @@ technologies = {
 			leads_to_tech = submarine_hull_2
 			research_cost_coeff = 1
 		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_naval_aip_engine
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_aip_engine
 			}
 		}
 		research_cost = 1.5
@@ -2643,15 +2630,13 @@ technologies = {
 			leads_to_tech = submarine_snorkel_0
 			research_cost_coeff = 1
 		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_naval_midget_submarine
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_midget_submarine
 			}
 		}
 		research_cost = 2
@@ -2689,15 +2674,13 @@ technologies = {
 			leads_to_tech = submarine_hull_4
 			research_cost_coeff = 1
 		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_naval_cruiser_submarine
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_cruiser_submarine
 			}
 		}
 		folder = {

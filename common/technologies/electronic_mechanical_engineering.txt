@@ -71,15 +71,13 @@ technologies = {
 		}
 		research_cost = 1
 		start_year = 985
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_air_helicopter
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_air_helicopter
 			}
 		}
 		folder = {
@@ -461,30 +459,28 @@ technologies = {
 			ship_fire_control_system_0
 			ship_torpedo_data_computer_0
 		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_air_radar
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT_WITH_EXTRA_TECH
-					TECH = {
-						localization_key = SP_UNLOCK_OR_TECH
-						TECH_0 = {
-							localization_key = SP_UNLOCK_ONE_TECH
-							TECH = frigate_hull_0
-						}
-						TECH_1 = {
-							localization_key = SP_UNLOCK_ONE_TECH
-							TECH = cruiser_hull_0
-						}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_air_radar
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT_WITH_EXTRA_TECH
+				TECH = {
+					localization_key = SP_UNLOCK_OR_TECH
+					TECH_0 = {
+						localization_key = SP_UNLOCK_ONE_TECH
+						TECH = frigate_hull_0
 					}
-					PROJECT = sp_sonar_prototyping
+					TECH_1 = {
+						localization_key = SP_UNLOCK_ONE_TECH
+						TECH = cruiser_hull_0
+					}
 				}
+				PROJECT = sp_sonar_prototyping
 			}
 		}
 		research_cost = 1
@@ -2251,27 +2247,25 @@ technologies = {
 			building = rocket_site
 			level = 2
 		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_rockets_flying_bomb
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_rockets_short_range_ballistic_missile
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_rockets_ground_to_air_missile
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_rocket_interceptor
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_rockets_flying_bomb
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_rockets_short_range_ballistic_missile
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_rockets_ground_to_air_missile
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_rocket_interceptor
 			}
 		}
 		path = {
@@ -3037,15 +3031,13 @@ technologies = {
 				y = 4
 			}
 		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_air_axial_jet_engine
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_air_axial_jet_engine
 			}
 		}
 		start_year = 1015
@@ -3091,15 +3083,13 @@ technologies = {
 		}
 		start_year = 1015
 		research_cost = 2
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_air_axial_jet_engine
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_air_axial_jet_engine
 			}
 		}
 		enable_equipment_modules = {
@@ -3144,15 +3134,13 @@ technologies = {
 		enable_equipment_modules = {
 			tank_gas_turbine_engine_1
 		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_air_axial_jet_engine
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_air_axial_jet_engine
 			}
 		}
 		enable_equipment_modules = {
@@ -3252,19 +3240,17 @@ technologies = {
 		categories = {
 			cat_nuclear
 		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_nuclear_reactor_exploratory
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_anti_nuke_bunker
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_nuclear_reactor_exploratory
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_anti_nuke_bunker
 			}
 		}
 		special_project_specialization = { 

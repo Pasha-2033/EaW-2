@@ -3857,15 +3857,13 @@ technologies = {
 	steel_plant_upgrade_4 = {
 		steel_plant_iron_consumption = 1
 		steel_plant_steel_outcome = 1
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_converter_production
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_converter_production
 			}
 		}
 		path = {
@@ -3899,15 +3897,13 @@ technologies = {
 			level = 5
 		}
 		production_cost_steel_plant_factor = -0.1
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_reduction_with_hydrogen
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_reduction_with_hydrogen
 			}
 		}
 		research_cost = 2
@@ -4031,15 +4027,13 @@ technologies = {
 		special_project_specialization = { 
 			specialization_industry
 		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_aluminum_refining
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_aluminum_refining
 			}
 		}
 	}
@@ -4221,15 +4215,13 @@ technologies = {
 		special_project_specialization = { 
 			specialization_industry
 		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_tungsten_sintering
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_tungsten_sintering
 			}
 		}
 	}
@@ -4418,15 +4410,13 @@ technologies = {
 		special_project_specialization = { 
 			specialization_industry
 		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_chromium_coking
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_chromium_coking
 			}
 		}
 	}

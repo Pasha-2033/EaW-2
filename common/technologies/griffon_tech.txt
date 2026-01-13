@@ -52,9 +52,7 @@ technologies = {
 			knights
 		}
 
-		on_research_complete = {
 
-		}
 
 		path = {
 			leads_to_tech = tech_knights2
@@ -102,8 +100,7 @@ technologies = {
 			position = { x = 2 y = @1010 }
 		}
 
-		on_research_complete = {
-		}
+
 
 		categories = {
 
@@ -122,15 +119,7 @@ technologies = {
 			max_organisation = 5
 		}
 
-		on_research_complete = {
-			custom_override_tooltip = {
-				tooltip = ME_KNIGHTS_TOOLTIP
-				if = {
-					limit = { is_ai = yes }
-					country_event = eaw_debug.2
-				}
-			}
-		}
+
 		xor = { tech_knights_regular }
 		research_cost = 1
 		start_year = 1007
@@ -182,8 +171,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		on_research_complete = {
-		}
+
 
 		categories = {
 			knights_tech
@@ -217,8 +205,7 @@ technologies = {
 			special_forces_tech
 		}
 
-		on_research_complete = {
-		}
+	
 
 		ai_will_do = {
 			factor = 6
@@ -255,9 +242,6 @@ technologies = {
 			special_forces_tech
 		}
 
-		on_research_complete = {
-			custom_effect_tooltip = percentage_increase_notice
-		}
 
 		ai_will_do = {
 			factor = 5
@@ -283,8 +267,7 @@ technologies = {
 			position = { x = 2 y = @1016 }
 		}
 
-		on_research_complete = {
-		}
+
 
 		categories = {
 
@@ -318,8 +301,7 @@ technologies = {
 			position = { x = 2 y = @1019 }
 		}
 
-		on_research_complete = {
-		}
+
 
 		categories = {
 
@@ -350,9 +332,6 @@ technologies = {
 		folder = {
 			name = griffon_folder
 			position = { x = 2 y = @1021 }
-		}
-
-		on_research_complete = {
 		}
 
 		categories = {
@@ -388,9 +367,7 @@ technologies = {
 			special_forces_tech
 		}
 
-		on_research_complete = {
-		}
-
+	
 		ai_will_do = {
 			factor = 3
 		}
@@ -625,7 +602,6 @@ technologies = {
 
 	#We can fly!
 	tech_griffon_army = {
-		on_research_complete = { custom_effect_tooltip = ME_WE_CAN_FLY_TOOLTIP }
 		category_light_infantry = {
 			hills = {
 				attack = 0.05
@@ -730,9 +706,7 @@ technologies = {
 		knights = {
 			armor_value = 5000
 		}
-		on_research_complete = {
-			custom_effect_tooltip = percentage_increase_notice
-		}
+
 
 		path = {
 			leads_to_tech = tech_griffon_army_def_a

@@ -7,7 +7,9 @@ subdoctrine_null_magic_main_force = {
 
     xp_cost = 100
     xp_type = army
-
+    visible = {
+        has_doctrine = magic_superiority
+    }
     available = {
 		custom_override_tooltip = {
             tooltip = "subdoctrine_main_force_not_selected_tt"
@@ -80,6 +82,208 @@ subdoctrine_null_magic_main_force = {
         }
     }
 }
+
+subdoctrine_null_magic_predominant_force = {
+    track = magic_operations
+    name = SUBDOCTRINE_NULL_MAGIC_PREDOMINANT_FORCE
+    description = SUBDOCTRINE_NULL_MAGIC_PREDOMINANT_FORCE_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_superiority
+    }
+    available = {
+		
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+	track_magic_operations_superiority_selected = 1
+    rewards = {
+        
+    }
+}
+subdoctrine_magic_battle_planing = {
+    track = magic_operations
+    name = SUBDOCTRINE_MAGIC_BATTLE_PLANING
+    description = SUBDOCTRINE_MAGIC_BATTLE_PLANING_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_superiority
+    }
+    available = {
+
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {}
+}
 #integrations
+subdoctrine_magic_infiltration = {
+    track = magic_operations
+    name = SUBDOCTRINE_MAGIC_INFILTRATION
+    description = SUBDOCTRINE_MAGIC_INFILTRATION_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_integrations
+    }
+    available = {
+
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {}
+}
+subdoctrine_magic_communications = {
+    track = magic_operations
+    name = SUBDOCTRINE_MAGIC_COMMUNICATIONS
+    description = SUBDOCTRINE_MAGIC_COMMUNICATIONS_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_integrations
+    }
+    available = {
+
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {}
+}
+subdoctrine_magic_heli_operations = {
+    track = magic_operations
+    name = SUBDOCTRINE_MAGIC_HELI_OPERATIONS
+    description = SUBDOCTRINE_MAGIC_HELI_OPERATIONS_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_integrations
+    }
+    available = {
+
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {}
+}
 #override
+subdoctrine_negative_magic = {
+    track = magic_operations
+    name = SUBDOCTRINE_NEGATIVE_MAGIC
+    description = SUBDOCTRINE_NEGATIVE_MAGIC_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_override
+    }
+    available = {
+
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {}
+}
+subdoctrine_disharmoney_magic_as_weapon = {
+    track = magic_operations
+    name = SUBDOCTRINE_DISHARMONEY_MAGIC_AS_WEAPON
+    description = SUBDOCTRINE_DISHARMONEY_MAGIC_AS_WEAPON_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_override
+    }
+    available = {
+
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {}
+}
 #special forces
+subdoctrine_magic_elite_forces = {
+    track = magic_operations
+    name = SUBDOCTRINE_MAGIC_ELITE_FORCES
+    description = SUBDOCTRINE_MAGIC_ELITE_FORCES_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_special_forces
+    }
+    available = {
+
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {}
+}
+subdoctrine_magic_guerrilla_coordination = {
+    track = magic_operations
+    name = SUBDOCTRINE_MAGIC_GUERRILLA_COORDINATION
+    description = SUBDOCTRINE_MAGIC_GUERRILLA_COORDINATION_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_special_forces
+    }
+    available = {
+
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {}
+}

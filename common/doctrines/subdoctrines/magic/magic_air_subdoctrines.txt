@@ -6,8 +6,10 @@ subdoctrine_magic_air_main_force = {
     icon = GFX_doctrine_grand_battlefleet_medium #TODO
 
     xp_cost = 100
-    xp_type = army
-
+    xp_type = air
+    visible = {
+        has_doctrine = magic_superiority
+    }
     available = {
 		custom_override_tooltip = {
             tooltip = "subdoctrine_main_force_not_selected_tt"
@@ -39,17 +41,130 @@ subdoctrine_magic_air_main_force = {
         
     }
 }
+subdoctrine_magic_air_predominant_force = {
+    track = magic_air
+    name = SUBDOCTRINE_MAGIC_AIR_PREDOMINANT_FORCE
+    description = SUBDOCTRINE_MAGIC_PREDOMINANT_FORCE_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = air
+    visible = {
+        has_doctrine = magic_superiority
+    }
+    available = {
+
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+    rewards = {
+        
+    }
+}
+subdoctrine_magic_transport_planes = {
+    track = magic_air
+    name = SUBDOCTRINE_MAGIC_TRANSPORT_PLANES
+    description = SUBDOCTRINE_MAGIC_TRANSPORT_PLANES_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = air
+    visible = {
+        has_doctrine = magic_superiority
+    }
+    available = {
+
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+    rewards = {
+        
+    }
+}
 #integrations
+subdoctrine_magic_scout_planes = {
+    track = magic_air
+    name = SUBDOCTRINE_MAGIC_SCOUT_PLANES
+    description = SUBDOCTRINE_MAGIC_SCOUT_PLANES_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = air
+    visible = {
+        has_doctrine = magic_integrations
+    }
+    available = {
+
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+    rewards = {
+        
+    }
+}
+subdoctrine_magic_ground_air_attacks = {
+    track = magic_air
+    name = SUBDOCTRINE_MAGIC_GROUND_AIR_ATTACKS
+    description = SUBDOCTRINE_MAGIC_GROUND_AIR_ATTACKS_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = air
+    visible = {
+        has_doctrine = magic_integrations
+    }
+    available = {
+
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+    rewards = {
+        
+    }
+}
 #override
 subdoctrine_magic_naval_airforces = {
-	track = magic_artillery
+	track = magic_air
     name = SUBDOCTRINE_MAGIC_NAVAL_AIRFORCES
     description = SUBDOCTRINE_MAGIC_NAVAL_AIRFORCES_DESC
     icon = GFX_doctrine_grand_battlefleet_medium #TODO
 
     xp_cost = 100
     xp_type = air
+    visible = {
+        has_doctrine = magic_override
+    }
+    available = {
+		
+    }
 
+    ai_will_do = { 
+        base = 1
+    }
+
+    rewards = {
+        
+    }
+}
+subdoctrine_magic_strategic_destruction = {
+	track = magic_air
+    name = SUBDOCTRINE_MAGIC_STRATEGIC_DESTRUCTION
+    description = SUBDOCTRINE_MAGIC_STRATEGIC_DESTRUCTION_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = air
+    visible = {
+        has_doctrine = magic_override
+    }
     available = {
 		
     }
@@ -63,3 +178,47 @@ subdoctrine_magic_naval_airforces = {
     }
 }
 #special forces
+subdoctrine_magic_paratroopers = {
+    track = magic_air
+    name = SUBDOCTRINE_MAGIC_PARATROOPERS
+    description = SUBDOCTRINE_MAGIC_PARATROOPERS_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = air
+    visible = {
+        has_doctrine = magic_special_forces
+    }
+    available = {
+
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+    rewards = {
+        
+    }
+}
+subdoctrine_magic_mothership = {
+    track = magic_air
+    name = SUBDOCTRINE_MAGIC_MOTHERSHIP
+    description = SUBDOCTRINE_MAGIC_MOTHERSHIP_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = air
+    visible = {
+        has_doctrine = magic_special_forces
+    }
+    available = {
+
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+    rewards = {
+        
+    }
+}

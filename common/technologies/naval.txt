@@ -572,15 +572,13 @@ technologies = {
 			leads_to_tech = ship_light_cruiser_1
 			research_cost_coeff = 1
 		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_naval_torpedo_cruiser
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_torpedo_cruiser
 			}
 		}
 		research_cost = 1.5
@@ -1196,15 +1194,13 @@ technologies = {
 
 		research_cost = 2
 		start_year = 1007
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_naval_super_heavy_battleship
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_super_heavy_battleship
 			}
 		}
 		folder = {
@@ -1890,15 +1886,13 @@ technologies = {
 			factor = 1
 
 		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_naval_modern_carrier
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_modern_carrier
 			}
 		}
 		categories = {
@@ -1925,15 +1919,13 @@ technologies = {
 			leads_to_tech = ship_submarine_1
 			research_cost_coeff = 1
 		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_naval_anechoic_tiles
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_anechoic_tiles
 			}
 		}
 		research_cost = 1.5
@@ -1969,15 +1961,13 @@ technologies = {
 			leads_to_tech = ship_submarine_2
 			research_cost_coeff = 1
 		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_naval_aip_engine
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_aip_engine
 			}
 		}
 		research_cost = 2
@@ -2012,15 +2002,13 @@ technologies = {
 			leads_to_tech = ship_submarine_3
 			research_cost_coeff = 1
 		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_naval_midget_submarine
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_midget_submarine
 			}
 		}
 		research_cost = 2
@@ -2065,19 +2053,17 @@ technologies = {
 			name = naval_folder
 			position = { x = 0 y = 18 }
 		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_naval_cruiser_submarine
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_naval_fleet_submarine
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_cruiser_submarine
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_fleet_submarine
 			}
 		}
 		ai_will_do = {

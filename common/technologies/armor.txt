@@ -13,14 +13,7 @@ technologies = {
 
 
 
-		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = light_armor }
-			NOT = {	has_template_containing_unit = heavy_armor }
-			NOT = {	has_template_containing_unit = medium_armor }
-		}
-		on_research_complete = {
 
-		}
 
 		path = {
 			leads_to_tech = basic_light_tank
@@ -78,14 +71,7 @@ technologies = {
 			light_armor
 		}
 
-		on_research_complete_limit = {
-			NOT = {	has_template_containing_unit = light_armor }
-			NOT = {	has_template_containing_unit = heavy_armor }
-			NOT = {	has_template_containing_unit = medium_armor }
-		}
-		on_research_complete = {
 
-		}
 
 		path = {
 			leads_to_tech = improved_light_tank
@@ -422,13 +408,7 @@ technologies = {
 			has_dlc = "Man the Guns"
 		}
 
-		on_research_complete_limit = {
-			is_ai = yes
-			has_tech = amphibious_mechanized_infantry_0
-		}
-		on_research_complete = {
 
-		}
 		
 		research_cost = 2
 		start_year = 1011
@@ -648,12 +628,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 
-		on_research_complete_limit = {
-			is_ai = yes
-		}
-		on_research_complete = {
 
-		}
 
 		research_cost = 2
 		start_year = 1010
@@ -1218,12 +1193,7 @@ technologies = {
 			modern_spaa
 		}
 
-		on_research_complete_limit = {
-			is_ai = yes
-		}
-		on_research_complete = {
 
-		}
 
 		ai_will_do = {
 			factor = 2
@@ -1373,10 +1343,6 @@ technologies = {
 
 		enable_subunits = {
 			heavy_armor
-		}
-
-		on_research_complete = {
-
 		}
 
 		path = {

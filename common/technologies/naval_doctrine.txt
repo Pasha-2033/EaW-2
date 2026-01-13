@@ -5,16 +5,13 @@ technologies = {
 		#Fleet in being is mainly focused on Battleships (and Battlecrusiers/Heavy cruisers) and ASW with carriers and submarines being used to a lesser extent. The fleet may not have to do anything at all to be useful - simply having a powerful fleet in a protected port forces your enemies to keep a fleet of their own nearby in order you fight you if you emerge
 		#Bonus org for BB/BC/CA
 		
-		
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_naval_underway_replenishment
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_underway_replenishment
 			}
 		}
 		# EFFECT #############
@@ -1729,15 +1726,13 @@ technologies = {
 			leads_to_tech = carrier_primacy 
 			research_cost_coeff = 1
 		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
 		on_research_complete = {
-			if = {
-				limit = {
-					country_without_sp = no #"no" because we want to forbid, not just check
-				}
-				custom_effect_tooltip = {
-					localization_key = SP_UNLOCK_PROJECT
-					PROJECT = sp_naval_underway_replenishment
-				}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_naval_underway_replenishment
 			}
 		}
 		path = {

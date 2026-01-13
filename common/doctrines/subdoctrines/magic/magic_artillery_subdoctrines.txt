@@ -7,7 +7,9 @@ subdoctrine_magic_artillery_main_force = {
 
     xp_cost = 100
     xp_type = army
-
+    visible = {
+        has_doctrine = magic_superiority
+    }
     available = {
 		custom_override_tooltip = {
             tooltip = "subdoctrine_main_force_not_selected_tt"
@@ -39,17 +41,180 @@ subdoctrine_magic_artillery_main_force = {
         
     }
 }
+subdoctrine_magic_artillery_predominant_force = {
+    track = magic_artillery
+    name = SUBDOCTRINE_MAGIC_ARTILLERY_PREDOMINANT_FORCE
+    description = SUBDOCTRINE_MAGIC_ARTILLERY_PREDOMINANT_FORCE_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_superiority
+    }
+    available = {
+
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+
+    rewards = {
+        
+    }
+}
+subdoctrine_magic_rocket_artillery_main_force = {
+    track = magic_artillery
+    name = SUBDOCTRINE_MAGIC_ROCKET_ARTILLERY_MAIN_FORCE
+    description = SUBDOCTRINE_MAGIC_ROCKET_ARTILLERY_MAIN_FORCE_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_superiority
+    }
+    available = {
+		custom_override_tooltip = {
+            tooltip = "subdoctrine_main_force_not_selected_tt"
+            check_variable = {
+                modifier@track_magic_support_superiority_selected < 1
+            }
+            check_variable = {
+                modifier@track_magic_infantry_superiority_selected < 1
+            }
+            check_variable = {
+                modifier@track_magic_armor_superiority_selected < 1
+            }
+            check_variable = {
+                modifier@track_magic_air_superiority_selected < 1
+            }
+            check_variable = {
+                modifier@track_magic_operations_superiority_selected < 1
+            }
+        }
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+	track_magic_artillery_superiority_selected = 1
+
+    rewards = {
+        
+    }
+}
+subdoctrine_magic_rocket_artillery_predominant_force = {
+    track = magic_artillery
+    name = SUBDOCTRINE_MAGIC_ROCKET_ARTILLERY_PREDOMINANT_FORCE
+    description = SUBDOCTRINE_MAGIC_ROCKET_ARTILLERY_MAIN_PREDOMINANT_FORCE
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_superiority
+    }
+    available = {
+		
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+    rewards = {
+        
+    }
+}
 #integrations
-#override
+subdoctrine_magic_railway_gun = {
+    track = magic_artillery
+    name = SUBDOCTRINE_MAGIC_RAILWAY_GUN
+    description = SUBDOCTRINE_MAGIC_RAILWAY_GUN_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_integrations
+    }
+    available = {
+		
+    }
+    rewards = {
+        
+    }
+}
+subdoctrine_magic_hand_artillery = {
+    track = magic_artillery
+    name = SUBDOCTRINE_MAGIC_HAND_ARTILLERY
+    description = SUBDOCTRINE_MAGIC_HAND_ARTILLERY_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_integrations
+    }
+    available = {
+		
+    }
+    rewards = {
+        
+    }
+}
+subdoctrine_anti_tank_magic = {
+    track = magic_artillery
+    name = SUBDOCTRINE_ANTI_TANK_MAGIC
+    description = SUBDOCTRINE_ANTI_TANK_MAGIC_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_integrations
+    }
+    available = {
+		
+    }
+    rewards = {
+        
+    }
+}
+subdoctrine_anti_air_magic = {
+    track = magic_artillery
+    name = SUBDOCTRINE_ANTI_AIR_MAGIC
+    description = SUBDOCTRINE_ANTI_AIR_MAGIC_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_integrations
+    }
+    available = {
+		
+    }
+    rewards = {
+        
+    }
+}
+#override (navy)
 subdoctrine_magic_light_naval_artillery = {
 	track = magic_artillery
-    name = SUBDOCTRINE_MAGIC_HEAVY_NAVAL_ARTILLERY
-    description = SUBDOCTRINE_MAGIC_HEAVY_NAVAL_ARTILLERY_DESC
+    name = SUBDOCTRINE_MAGIC_LIGHT_NAVAL_ARTILLERY
+    description = SUBDOCTRINE_MAGIC_LIGHT_NAVAL_ARTILLERY_DESC
     icon = GFX_doctrine_grand_battlefleet_medium #TODO
 
     xp_cost = 100
     xp_type = navy
-
+    visible = {
+        has_doctrine = magic_override
+    }
     available = {
 		
     }
@@ -70,7 +235,9 @@ subdoctrine_magic_heavy_naval_artillery = {
 
     xp_cost = 100
     xp_type = navy
-
+    visible = {
+        has_doctrine = magic_override
+    }
     available = {
 		
     }
@@ -84,3 +251,49 @@ subdoctrine_magic_heavy_naval_artillery = {
     }
 }
 #special forces
+subdoctrine_reusable_magic_ammunition = {
+	track = magic_artillery
+    name = SUBDOCTRINE_REUSABLE_MAGIC_AMMUNITION
+    description = SUBDOCTRINE_REUSABLE_MAGIC_AMMUNITION_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_special_forces
+    }
+    available = {
+		
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+    rewards = {
+        
+    }
+}
+subdoctrine_hexenkraft = {
+	track = magic_artillery
+    name = SUBDOCTRINE_HEXENKRAFT
+    description = SUBDOCTRINE_HEXENKRAFT_DESC
+    icon = GFX_doctrine_grand_battlefleet_medium #TODO
+
+    xp_cost = 100
+    xp_type = army
+    visible = {
+        has_doctrine = magic_special_forces
+    }
+    available = {
+		
+    }
+
+    ai_will_do = { 
+        base = 1
+    }
+
+    rewards = {
+        
+    }
+}
