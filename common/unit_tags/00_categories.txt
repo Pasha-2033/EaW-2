@@ -9,23 +9,26 @@ sub_unit_categories = {
 	category_all_aa
 	category_all_flame
 	category_all_artillery
+	category_all_rocket_units
 	category_all_marine	#inclides amphibios
 }
-#infantry (todo)
+#infantry
 sub_unit_categories = {
 	category_all_infantry
 	
 	category_light_infantry
 	category_magical_infantry
-	category_motorized_infantry
-	category_mechanized_infantry
 	category_motmech_infantry
 
 	category_special_forces
+	category_magical_special_forces
+
+	category_race_infantry
 
 	category_marines
 	category_mountaineers
 	category_paratroopers
+	category_rangers
 }
 #support (todo)
 sub_unit_categories = {
@@ -33,13 +36,19 @@ sub_unit_categories = {
 
 	category_recon
 	category_engineer
-}
-#artillery (todo)
-sub_unit_categories = {
-	category_all_artillery
 
+	category_helicopter_support
+}
+#artillery
+sub_unit_categories = {
 	category_line_artillery
 	category_magic_artillery
+	category_mobile_artillery
+
+	category_barrel_artillery
+	category_rocket_artillery
+
+	category_super_heavy_artillery
 }
 #armor
 sub_unit_categories = {

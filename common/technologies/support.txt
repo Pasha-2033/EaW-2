@@ -26,7 +26,19 @@ technologies = {
 
 	tech_support = {
 
-		
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check	
+		}
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT_WITH_EXTRA_TECH
+				TECH = {
+					localization_key = SP_UNLOCK_ONE_TECH
+					TECH = internal_combustion_engine
+				}
+				PROJECT = sp_air_helicopter
+			}
+		}
 
 		enable_equipments = {
 			support_equipment_1
@@ -96,21 +108,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 2
-
-			modifier = {
-				factor = 3
-				date > "1008.1.1"
-			}
-
-			modifier = {
-				factor = 10
-				date > "1009.1.1"
-			}
-
-			modifier = {
-				factor = 10
-				date > "1010.1.1"
-			}
 		}
 	}
 
@@ -391,7 +388,7 @@ technologies = {
 			mot_recon
 			armored_car_recon
 			light_tank_recon
-			scout_helicopter_recon
+			helicopter_recon #todo subtech (sp dependency)
 		}
 
 		path = {
@@ -2300,9 +2297,7 @@ technologies = {
 	###------> Helicopters! <><> <><> <><> <><> <><>	
 	scout_helicopter1 = {
 
-		enable_equipments = {
-			scout_helicopter_equipment_1
-		}
+	
 
 		path = {
 			leads_to_tech = scout_helicopter2
@@ -2328,9 +2323,7 @@ technologies = {
 	
 	scout_helicopter2 = {
 
-		enable_equipments = {
-			scout_helicopter_equipment_2
-		}
+
 
 		research_cost = 2
 		start_year = 1025
@@ -2427,12 +2420,6 @@ technologies = {
 		}
 	}
 	attack_helicopter1 = {
-		enable_equipments = {
-			attack_helicopter_equipment_1
-		}
-		enable_subunits = {
-			attack_helicopter_company
-		}
 
 		research_cost = 2
 		start_year = 1025

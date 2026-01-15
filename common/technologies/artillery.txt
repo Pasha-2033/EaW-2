@@ -76,6 +76,9 @@ technologies = {
 		}
 	}
 	howitzer_1 = {
+		allow = {
+			has_tech = trinitrophenol
+		}
 		enable_equipments = {
 			artillery_equipment_3
 		}
@@ -98,6 +101,10 @@ technologies = {
 	}
 	#magic howitzer
 	magic_howitzer_0 = {
+		allow = {
+			has_tech = trinitrophenol
+			has_tech = magic_induction_phenomenon
+		}
 		enable_equipments = {
 			magic_artillery_equipment_0
 		}
@@ -116,6 +123,7 @@ technologies = {
 		}
 		special_project_specialization = { 
 			specialization_land 
+			specialization_magic
 		}
 	}
 	#common howitzer
@@ -181,6 +189,9 @@ technologies = {
 		}
 	}
 	mortar_1 = {
+		allow = {
+			has_tech = trinitrophenol
+		}
 		enable_equipments = {
 			mortar_equipment_1
 		}
@@ -202,6 +213,9 @@ technologies = {
 		}
 	}
 	mortar_2 = {
+		allow = {
+			has_tech = mortar_1
+		}
 		enable_equipments = {
 			mortar_equipment_2
 		}
@@ -224,6 +238,10 @@ technologies = {
 	}
 	#magic mortar
 	magic_mortar_0 = {
+		allow = {
+			has_tech = trinitrophenol
+			has_tech = magic_induction_phenomenon
+		}
 		enable_equipments = {
 			magic_mortar_equipment_0
 		}
@@ -242,9 +260,13 @@ technologies = {
 		}
 		special_project_specialization = { 
 			specialization_land 
+			specialization_magic
 		}
 	}
 	magic_mortar_1 = {
+		allow = {
+			has_tech = magic_mortar_0
+		}
 		enable_equipments = {
 			magic_mortar_equipment_1
 		}
@@ -263,6 +285,7 @@ technologies = {
 		}
 		special_project_specialization = { 
 			specialization_land 
+			specialization_magic
 		}
 	}
 	#common mortar
@@ -318,6 +341,9 @@ technologies = {
 
 	#AA
 	antiair_0 = {
+		allow = {
+			has_tech = trinitrophenol
+		}
 		enable_equipments = {
 			anti_air_equipment_0
 		}
@@ -357,7 +383,7 @@ technologies = {
 		research_cost = 0.5
 		folder = {
 			name = artillery_folder
-			position = { x = -12 y = 6 }
+			position = { x = -16 y = 6 }
 		}
 		special_project_specialization = { 
 			specialization_land 
@@ -365,6 +391,9 @@ technologies = {
 	}
 	#magic AA
 	magic_antiair_0 = {
+		allow = {
+			has_tech = magic_induction_phenomenon
+		}
 		enable_equipments = {
 			magic_anti_air_equipment_0
 		}
@@ -379,10 +408,11 @@ technologies = {
 		research_cost = 0.5
 		folder = {
 			name = artillery_folder
-			position = { x = -16 y = 6 }
+			position = { x = -12 y = 6 }
 		}
 		special_project_specialization = { 
 			specialization_land 
+			specialization_magic
 		}
 	}
 	#common AA
@@ -399,6 +429,9 @@ technologies = {
 	}
 	#AT
 	antitank_0 = {
+		allow = {
+			has_tech = trinitrophenol
+		}
 		enable_equipments = {
 			anti_tank_equipment_0
 		}
@@ -445,6 +478,9 @@ technologies = {
 	}
 	#magic AT
 	magic_antitank_0 = {
+		allow = {
+			has_tech = magic_induction_phenomenon
+		}
 		enable_equipments = {
 			magic_anti_tank_equipment_0
 		}
@@ -459,6 +495,7 @@ technologies = {
 		}
 		special_project_specialization = { 
 			specialization_land 
+			specialization_magic
 		}
 	}
 	#rocket artillery
@@ -532,6 +569,9 @@ technologies = {
 	}
 	#magic rocket artillery
 	magic_rocket_artillery_0 = {
+		allow = {
+			has_tech = magic_induction_phenomenon
+		}
 		enable_equipments = {
 			magic_rocket_artillery_equipment_0
 		}

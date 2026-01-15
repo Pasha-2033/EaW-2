@@ -76,7 +76,11 @@ technologies = {
 		}
 		on_research_complete = {
 			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_PROJECT
+				localization_key = SP_UNLOCK_PROJECT_WITH_EXTRA_TECH
+				TECH = {
+					localization_key = SP_UNLOCK_ONE_TECH
+					TECH = support_tech
+				}
 				PROJECT = sp_air_helicopter
 			}
 		}

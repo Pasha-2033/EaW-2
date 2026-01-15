@@ -10,6 +10,7 @@ technologies = {
 		}
 		enable_subunits = {
 			infantry
+			militia
 		}
 		path = {
 			leads_to_tech = shields
@@ -453,10 +454,11 @@ technologies = {
 			magical_equipment_0
 		}
 		enable_equipment_modules = {
-			tank_magic_auto_cannon
+			tank_magic_auto_cannon_0
 		}
 		enable_subunits = {
 			magical_infantry
+			magic_militia
 		}
 		path = {
 			leads_to_tech = improved_infantry_weapons_1
@@ -612,7 +614,7 @@ technologies = {
 			magical_equipment_1
 		}
 		enable_equipment_modules = {
-			tank_magic_auto_cannon_2
+			tank_magic_auto_cannon_1
 		}
 		path = {
 			leads_to_tech = improved_infantry_weapons_2
@@ -795,7 +797,7 @@ technologies = {
 			magical_equipment_2
 		}
 		enable_equipment_modules = {
-			tank_magic_auto_cannon_3
+			tank_magic_auto_cannon_2
 		}
 		path = {
 			leads_to_tech = improved_infantry_weapons_3
@@ -951,7 +953,7 @@ technologies = {
 			magical_equipment_3
 		}
 		enable_equipment_modules = {
-			tank_magic_auto_cannon_4
+			tank_magic_auto_cannon_3
 		}
 		path = {
 			leads_to_tech = improved_infantry_weapons_4
@@ -1229,7 +1231,7 @@ technologies = {
 	}
 	support_weapons_5 = {
 		allow = {
-			tech = trotyl
+			has_tech = trotyl
 		}
 		category_all_infantry = {
 			defense = 0.03
@@ -1640,9 +1642,6 @@ technologies = {
 		}
 	}
 	motorised_infantry_1 = {
-		enable_equipment_modules = {
-			tank_wheeled_suspension
-		}
 		enable_equipments = {
 			motorized_equipment_1
 		}
@@ -1949,9 +1948,6 @@ technologies = {
 	mechanised_infantry_0 = {
 		enable_equipments = {
 			mechanized_equipment_1
-		}
-		enable_equipment_modules = {
-			tank_half_track_suspension
 		}
 		enable_subunits = {
 			mechanized
@@ -2625,7 +2621,6 @@ technologies = {
 		
 		categories = {
 			infantry_tech
-			rangers_tech_cat
 			cat_special_forces_generic
 		}
 		
@@ -3499,50 +3494,11 @@ technologies = {
 	}
 
 
-	###------> Old Night Vision <><> <><> <><> <><> <><>
-
-	
-
-
-	###------> X <><> <><> <><> <><> <><>
-
-	
-
-	
-
-	###------> New Infantry Equipment <><> <><> <><> <><> <><>
-
-
-
-
-
-
-
-
-
-
-
-
-	###------> New Infantry Anti-Tank   <><> <><> <><> <><> <><>
-
-	
-
-	
-
 
 	infantry_aa = {
 
 		category_all_infantry = {
 			air_attack = 500
-		}
-		light_dragons = {
-			air_attack = -499
-		}
-		heavy_dragons = {
-			air_attack = -499
-		}
-		enable_equipment_modules = {
-			surface_to_air_missiles
 		}
 
 
@@ -3562,44 +3518,5 @@ technologies = {
 		}
 	}
 
-	###------> X   <><> <><> <><> <><> <><>
 
-	###------> New Paratroopers <><> <><> <><> <><> <><>
-
-	
-
-	###------> X <><> <><> <><> <><> <><>
-
-	###------> New Marines <><> <><> <><> <><> <><>
-
-	
-
-	###------> X <><> <><> <><> <><> <><>
-
-	###------> New Mountaineers <><> <><> <><> <><> <><>
-
-	
-
-
-	
-	###------> New Armored Cars <><> <><> <><> <><> <><>
-
-	
-
-	###------> X <><> <><> <><> <><> <><>
-
-	######### FROM SOVIET FOCUS ##########
-	penal_infantry = {
-		
-		allow = {
-			always = no
-		}
-		research_cost = 1
-		start_year = 1936
-		enable_subunits = {
-			penal_battalion
-		}
-	}
 }
-
-#####-----------------------------------------------------------> End

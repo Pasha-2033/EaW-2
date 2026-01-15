@@ -330,7 +330,7 @@ sub_units = {
 		}
 		same_support_type = recon # blocks adding other recon types to template
 	}
-	scout_helicopter_recon = { #scout helis
+	helicopter_recon = { #scout helis
 		sprite = infantry
 		map_icon_category = infantry
 		priority = 0
@@ -370,12 +370,10 @@ sub_units = {
 		# Support nerfs to combat abilities
 		# NOTE: These are baked into the equipment and are not necessary
 		
-		essential = {
-			scout_helicopter_equipment
-		}
+
 
 		need = {
-			scout_helicopter_equipment = 24
+			helicopter_equipment = 24
 		}
 
 		forest = {
