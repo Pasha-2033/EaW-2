@@ -5,6 +5,10 @@ sub_units = {
 		priority = 2
 		active = yes
 		type = { screen_ship }
+		categories = {
+			category_all_ships
+			category_light_ships
+		}
 		need = { ship_hull_frigate = 1 }
 
 		max_organisation = 40

@@ -2,7 +2,10 @@ sp_nuclear_reactor_exploratory = {
 	specialization = specialization_nuclear	
 	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
 	complexity = sp_complexity.large
-	project_tags = sp_tag_nuclear_power
+	project_tags = {
+		sp_tag_nuclear_power
+		sp_tag_nuclear
+	}
 	allowed = {
 		country_without_sp = no #"no" because we want to forbid, not just check
 	}
@@ -81,7 +84,10 @@ sp_nuclear_reactor = {
 	specialization = specialization_nuclear	
 	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
 	complexity = sp_complexity.large
-	project_tags = sp_tag_nuclear_power
+	project_tags = {
+		sp_tag_nuclear_power
+		sp_tag_nuclear
+	}
 	special_project_parent = {
 		sp_nuclear_reactor_exploratory
 	}
@@ -156,7 +162,10 @@ sp_nuclear_reactor_heavy_water = {
 	specialization = specialization_nuclear	
 	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
 	complexity = sp_complexity.large
-	project_tags = sp_tag_nuclear_power
+	project_tags = {
+		sp_tag_nuclear_power
+		sp_tag_nuclear
+	}
 	special_project_parent = {
 		sp_nuclear_reactor_exploratory
 	}
@@ -231,7 +240,10 @@ sp_thermonuclear_reactor = {
 	specialization = specialization_nuclear	
 	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
 	complexity = sp_complexity.large
-	project_tags = sp_tag_nuclear_power
+	project_tags = {
+		sp_tag_nuclear_power
+		sp_tag_nuclear
+	}
 	allowed = {
 		country_without_sp = no #"no" because we want to forbid, not just check
 	}
@@ -301,7 +313,10 @@ sp_commercial_reactor = {
 	specialization = specialization_nuclear	
 	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
 	complexity = sp_complexity.large
-	project_tags = sp_tag_nuclear_power
+	project_tags = {
+		sp_tag_nuclear_power
+		sp_tag_nuclear
+	}
 	allowed = {
 		country_without_sp = no #"no" because we want to forbid, not just check
 	}
@@ -376,7 +391,10 @@ sp_anti_nuke_bunker = {
 	specialization = specialization_nuclear	
 	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
 	complexity = sp_complexity.large
-	project_tags = sp_tag_nuclear_power
+	project_tags = {
+		sp_tag_nuclear_power
+		sp_tag_nuclear
+	}
 	allowed = {
 		country_without_sp = no #"no" because we want to forbid, not just check
 	}
@@ -445,7 +463,10 @@ sp_nuclear_engines_primary = {
 	specialization = specialization_nuclear	
 	#icon = GFX_sp_nuclear_engines #TODO (works, but other picture required)
 
-	project_tags = sp_tag_nuclear_power
+	project_tags = {
+		sp_tag_nuclear_power
+		sp_tag_nuclear
+	}
 	
 	prototype_time = sp_time.prototype.long	 
 	complexity = sp_complexity.medium
@@ -512,7 +533,10 @@ sp_nuclear_engines_primary = {
 sp_nuclear_engines_secondary = {
 	specialization = specialization_nuclear	
 	#icon = GFX_sp_nuclear_engines #TODO (works, but other picture required)
-	project_tags = sp_tag_nuclear_power
+	project_tags = {
+		sp_tag_nuclear_power
+		sp_tag_nuclear
+	}
 	prototype_time = sp_time.prototype.long	 
 	complexity = sp_complexity.medium
 	resource_cost = {
@@ -572,7 +596,10 @@ sp_nuclear_engines_secondary = {
 sp_nuclear_bomb = {
 	specialization = specialization_nuclear	
 	icon = GFX_sp_nuclear_bomb
-	project_tags = sp_tag_nuclear_warfare
+	project_tags = {
+		sp_tag_nuclear_warfare
+		sp_tag_nuclear
+	}
 	prototype_time = sp_time.prototype.long	
 	complexity = sp_complexity.large
 	resource_cost = {
@@ -745,7 +772,10 @@ sp_nuclear_bomb = {
 sp_thermo_nuclear_bomb = {
 	specialization = specialization_nuclear	
 	icon = GFX_sp_thermo_nuclear_bomb
-	project_tags = sp_tag_nuclear_warfare
+	project_tags = {
+		sp_tag_nuclear_warfare
+		sp_tag_nuclear
+	}
 	prototype_time = sp_time.prototype.long 
 	complexity = sp_complexity.insane
 	resource_cost = {
@@ -846,7 +876,10 @@ sp_thermo_nuclear_bomb = {
 sp_nuclear_warheads = {
 	specialization = specialization_nuclear	
 	icon = GFX_sp_nuclear_warheads
-	project_tags = sp_tag_nuclear_warfare
+	project_tags = {
+		sp_tag_nuclear
+		sp_tag_nuclear_warfare
+	}
 	prototype_time = sp_time.prototype.long	 
 	complexity = sp_complexity.large
 	resource_cost = {

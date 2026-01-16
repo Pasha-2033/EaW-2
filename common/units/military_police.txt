@@ -4,7 +4,7 @@ sub_units = {
 		map_icon_category = infantry
 		priority = 0
 		ai_priority = 0
-		active = no
+		active = yes
 		affects_speed = no
 
 		type = {
@@ -17,6 +17,7 @@ sub_units = {
 		categories = {
 			category_support_battalions
 			category_army
+			category_military_police
 		}
 
 
@@ -36,11 +37,6 @@ sub_units = {
 
 		# Important Ability
 		suppression_factor = 0.20
-
-		essential = {
-			infantry_equipment
-			support_equipment
-		}
 
 		need = {
 			support_equipment = 10
@@ -66,6 +62,7 @@ sub_units = {
 		categories = {
 			category_support_battalions
 			category_army
+			category_military_police
 		}
 		
 		battalion_mult = {

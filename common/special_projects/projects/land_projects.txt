@@ -9,7 +9,10 @@
 sp_tank_gun_computer = {
 	specialization = specialization_land
 	#icon = GFX_sp_land_flamethrower_tank
-	project_tags = sp_tag_tank
+	project_tags = {
+		sp_tag_tank
+		sp_tag_land
+	}
 	allowed = {
 		country_without_sp = no #"no" because we want to forbid, not just check
 	}
@@ -75,7 +78,10 @@ sp_tank_gun_computer = {
 sp_easy_maintenance_scemes_0 = {
 	specialization = specialization_land
 	#icon = GFX_sp_land_flamethrower_tank
-	project_tags = sp_tag_tank
+	project_tags = {
+		sp_tag_tank
+		sp_tag_land
+	}
 	allowed = {
 		country_without_sp = no #"no" because we want to forbid, not just check
 	}
@@ -138,7 +144,9 @@ sp_easy_maintenance_scemes_0 = {
 sp_easy_maintenance_scemes_1 = {
 	specialization = specialization_land
 	#icon = GFX_sp_land_flamethrower_tank
-	project_tags = sp_tag_tank
+	project_tags = {
+		sp_tag_tank
+	}
 	allowed = {
 		country_without_sp = no #"no" because we want to forbid, not just check
 	}
@@ -202,7 +210,10 @@ sp_land_flamethrower_tank = {
 	specialization = specialization_land
 	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
 
-	project_tags = sp_tag_tank
+	project_tags = {
+		sp_tag_land
+		sp_tag_tank
+	}
 
 	ai_will_do = {
 		base = 1
@@ -312,7 +323,10 @@ sp_land_flamethrower_tank = {
 sp_land_military_engineering_vehicles = {
 	specialization = specialization_land
 
-	project_tags = sp_tag_tank
+	project_tags = {
+		sp_tag_tank
+		sp_tag_land
+	}
 	allowed = {
 		country_without_sp = no #"no" because we want to forbid, not just check
 	}
@@ -404,7 +418,10 @@ sp_land_military_engineering_vehicles = {
 sp_land_land_cruiser = {
 	specialization = specialization_land
 
-	project_tags = sp_tag_tank
+	project_tags = {
+		sp_tag_tank
+		sp_tag_land
+	}
 
 	allowed = {
 		country_without_sp = no #"no" because we want to forbid, not just check
@@ -1119,7 +1136,10 @@ sp_land_land_cruiser = {
 sp_land_super_heavy_howitzer = {
 	specialization = specialization_land
 
-	project_tags = sp_tag_artillery
+	project_tags = {
+		sp_tag_artillery
+		sp_tag_land
+	}
 
 	allowed = {
 		has_dlc = "Gotterdammerung"
@@ -1255,7 +1275,10 @@ sp_land_super_heavy_howitzer = {
 sp_land_self_propelled_super_heavy_howitzer = {
 	specialization = specialization_land
 
-	project_tags = sp_tag_artillery
+	project_tags = {
+		sp_tag_artillery
+		sp_tag_land
+	}
 
 
 	allowed = {
@@ -1385,7 +1408,10 @@ sp_land_self_propelled_super_heavy_howitzer = {
 sp_land_super_heavy_railway_gun = {
 	specialization = specialization_land
 
-	project_tags = sp_tag_artillery
+	project_tags = {
+		sp_tag_artillery
+		sp_tag_land
+	}
 
 	allowed = {
 		has_dlc = "No Step Back"
@@ -1475,7 +1501,10 @@ sp_land_super_heavy_railway_gun = {
 sp_land_multi_charge_large_caliber_gun = {
 	specialization = specialization_land
 
-	project_tags = sp_tag_artillery
+	project_tags = {
+		sp_tag_artillery
+		sp_tag_land
+	}
 
 	allowed = {
 		has_dlc = "Gotterdammerung"
@@ -1720,7 +1749,10 @@ sp_land_multi_charge_large_caliber_gun = {
 sp_land_stronghold_network = {
 	specialization = specialization_land
 
-	project_tags = sp_tag_artillery
+	project_tags = {
+		sp_tag_artillery
+		sp_tag_land
+	}
 
 	allowed = {
 		has_dlc = "Gotterdammerung"

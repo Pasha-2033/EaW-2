@@ -11,6 +11,10 @@ sub_unit_categories = {
 	category_all_artillery
 	category_all_rocket_units
 	category_all_marine	#inclides amphibios
+	category_all_helicopter
+	category_all_mobile
+
+	category_race_batalions
 }
 #infantry
 sub_unit_categories = {
@@ -23,8 +27,6 @@ sub_unit_categories = {
 	category_special_forces
 	category_magical_special_forces
 
-	category_race_infantry
-
 	category_marines
 	category_mountaineers
 	category_paratroopers
@@ -36,6 +38,12 @@ sub_unit_categories = {
 
 	category_recon
 	category_engineer
+	category_hospital
+	category_logistics
+	category_maintenance
+	category_military_police
+
+	category_trains
 
 	category_helicopter_support
 }
@@ -62,6 +70,15 @@ sub_unit_categories = {
 	class_medium_tank
 	class_heavy_tank
 	class_super_heavy_tank
+}
+#ships
+sub_unit_categories = {
+	category_all_ships
+
+	category_light_ships
+	category_heavy_ships
+
+	category_support_ships
 }
 #planes
 sub_unit_categories = {
