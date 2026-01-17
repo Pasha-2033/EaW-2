@@ -1,12 +1,4 @@
-                                                                                                                                          
- ######  #         ##    #    #  ######  #####  #    #  #####    ####   #    #  ######  #####       #####    ##    #    #  #    #   ####  
- #       #        #  #   ##  ##  #         #    #    #  #    #  #    #  #    #  #       #    #        #     #  #   ##   #  #   #   #      
- #####   #       #    #  # ## #  #####     #    ######  #    #  #    #  #    #  #####   #    #        #    #    #  # #  #  ####     ####  
- #       #       ######  #    #  #         #    #    #  #####   #    #  # ## #  #       #####         #    ######  #  # #  #  #         # 
- #       #       #    #  #    #  #         #    #    #  #   #   #    #  ##  ##  #       #   #         #    #    #  #   ##  #   #   #    # 
- #       ######  #    #  #    #  ######    #    #    #  #    #   ####   #    #  ######  #    #        #    #    #  #    #  #    #   ####  
-              
-sp_tank_gun_computer = {
+sp_tank_gun_computer_0 = {
 	specialization = specialization_land
 	#icon = GFX_sp_land_flamethrower_tank
 	project_tags = {
@@ -19,7 +11,7 @@ sp_tank_gun_computer = {
 	available = {
 		FROM = {
 			has_tech = tankette
-			#TODO: computer tech
+			has_tech = computer_0
 		}
 	}
 	prototype_time = sp_time.prototype.short
@@ -36,32 +28,11 @@ sp_tank_gun_computer = {
 						has_dlc = "No Step Back"
 					}
 				}
-				add_equipment_bonus = {
-					bonus = {
-						light_tank_chassis = {
-							breakthrough = 0.025
-						}
-						light_magic_tank_chassis = {
-							breakthrough = 0.025
-						}
-						medium_tank_chassis = {
-							breakthrough = 0.05
-						}
-						medium_magic_tank_chassis = {
-							breakthrough = 0.05
-						}
-						heavy_magic_tank_chassis = {
-							breakthrough = 0.05
-						}
-						heavy_tank_chassis = {
-							breakthrough = 0.05
-						}
-						super_heavy_tank_chassis = {
-							breakthrough = 0.075
-						}
-						super_heavy_magic_tank_chassis = {
-							breakthrough = 0.075
-						}
+				custom_override_tooltip = {
+					tooltip = tech_effect|sp_tech_tank_gun_computer_0
+					set_technology = {
+						sp_tech_tank_gun_computer_0 = 1
+						popup = no
 					}
 				}
 			}
@@ -72,7 +43,50 @@ sp_tank_gun_computer = {
 			}
 			gun_computer_0
 		}
+	}
+}
+sp_tank_gun_computer_1 = {
+	specialization = specialization_land
+	#icon = GFX_sp_land_flamethrower_tank
+	project_tags = {
+		sp_tag_tank
+		sp_tag_land
+	}
+	allowed = {
+		country_without_sp = no #"no" because we want to forbid, not just check
+	}
+	special_project_parent = {
+		sp_tank_gun_computer_0
+	}
+	prototype_time = sp_time.prototype.short
 
+	complexity = sp_complexity.small
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+	project_output = {
+		country_effects = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+				custom_override_tooltip = {
+					tooltip = tech_effect|sp_tech_tank_gun_computer_1
+					set_technology = {
+						sp_tech_tank_gun_computer_1 = 1
+						popup = no
+					}
+				}
+			}
+		}
+		enable_equipment_modules = {
+			limit = {
+				has_dlc = "No Step Back"
+			}
+			gun_computer_1
+		}
 	}
 }
 sp_easy_maintenance_scemes_0 = {
@@ -103,32 +117,11 @@ sp_easy_maintenance_scemes_0 = {
 						has_dlc = "No Step Back"
 					}
 				}
-				add_equipment_bonus = {
-					bonus = {
-						light_tank_chassis = {
-							reliability = 0.025
-						}
-						light_magic_tank_chassis = {
-							reliability = 0.025
-						}
-						medium_tank_chassis = {
-							reliability = 0.05
-						}
-						medium_magic_tank_chassis = {
-							reliability = 0.05
-						}
-						heavy_magic_tank_chassis = {
-							reliability = 0.05
-						}
-						heavy_tank_chassis = {
-							reliability = 0.05
-						}
-						super_heavy_tank_chassis = {
-							reliability = 0.075
-						}
-						super_heavy_magic_tank_chassis = {
-							reliability = 0.075
-						}
+				custom_override_tooltip = {
+					tooltip = tech_effect|sp_tech_easy_maintenance_scemes_0
+					set_technology = {
+						sp_tech_easy_maintenance_scemes_0 = 1
+						popup = no
 					}
 				}
 			}
@@ -146,6 +139,7 @@ sp_easy_maintenance_scemes_1 = {
 	#icon = GFX_sp_land_flamethrower_tank
 	project_tags = {
 		sp_tag_tank
+		sp_tag_land
 	}
 	allowed = {
 		country_without_sp = no #"no" because we want to forbid, not just check
@@ -166,32 +160,11 @@ sp_easy_maintenance_scemes_1 = {
 						has_dlc = "No Step Back"
 					}
 				}
-				add_equipment_bonus = {
-					bonus = {
-						light_tank_chassis = {
-							reliability = 0.025
-						}
-						light_magic_tank_chassis = {
-							reliability = 0.025
-						}
-						medium_tank_chassis = {
-							reliability = 0.05
-						}
-						medium_magic_tank_chassis = {
-							reliability = 0.05
-						}
-						heavy_magic_tank_chassis = {
-							reliability = 0.05
-						}
-						heavy_tank_chassis = {
-							reliability = 0.05
-						}
-						super_heavy_tank_chassis = {
-							reliability = 0.075
-						}
-						super_heavy_magic_tank_chassis = {
-							reliability = 0.075
-						}
+				custom_override_tooltip = {
+					tooltip = tech_effect|sp_tech_easy_maintenance_scemes_1
+					set_technology = {
+						sp_tech_easy_maintenance_scemes_1 = 1
+						popup = no
 					}
 				}
 			}
@@ -204,6 +177,281 @@ sp_easy_maintenance_scemes_1 = {
 		}
 	}
 }
+sp_super_heavy_howitzer = {
+	specialization = specialization_land
+
+	project_tags = {
+		sp_tag_artillery
+		sp_tag_land
+	}
+
+	allowed = {
+		country_without_sp = no #"no" because we want to forbid, not just check
+	}
+	
+	available = {
+
+	}
+	
+	prototype_time = sp_time.prototype.short
+
+	complexity = sp_complexity.medium
+
+	breakthrough_cost = {
+		specialization_land = 2
+	}
+
+	resource_cost = {
+		resources = { 
+			steel = 8
+			tungsten = 4
+		}
+	}
+	project_output = {
+		country_effects = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+				custom_override_tooltip = {
+					tooltip = tech_effect|sp_tech_super_heavy_howitzer
+					set_technology = {
+						sp_tech_super_heavy_howitzer = 1
+						popup = no
+					}
+				}
+			}
+		}
+		enable_subunits = {
+			super_heavy_artillery
+		}
+		enable_equipments = {
+			super_heavy_artillery_equipment_0
+		}
+		enable_equipment_modules = {
+			limit = {
+				has_dlc = "No Step Back"
+			}
+			tank_super_heavy_howitzer_0
+		}
+	}
+}
+sp_self_propelled_super_heavy_howitzer = {
+	specialization = specialization_land
+	project_tags = {
+		sp_tag_artillery
+		sp_tag_land
+	}
+	special_project_parent = {
+		sp_super_heavy_howitzer
+	}
+	allowed = {
+		country_without_sp = no #"no" because we want to forbid, not just check
+	}
+	
+	prototype_time = sp_time.prototype.short
+
+	complexity = sp_complexity.medium
+
+	breakthrough_cost = {
+		specialization_land = 2
+	}
+
+	resource_cost = {
+		resources = { 
+			steel = 8
+			tungsten = 4
+		}
+	}
+	project_output = {
+		country_effects = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+				custom_override_tooltip = {
+					tooltip = tech_effect|sp_tech_self_propelled_super_heavy_howitzer
+					set_technology = {
+						sp_tech_self_propelled_super_heavy_howitzer = 1
+						popup = no
+					}
+				}
+			}
+		}
+		enable_subunits = {
+			self_propelled_super_heavy_artillery
+		}
+		enable_equipments = {
+			self_propelled_super_heavy_artillery_equipment_0
+		}
+		enable_equipment_modules = {
+			limit = {
+				has_dlc = "No Step Back"
+			}
+			tank_super_heavy_howitzer_1
+		}
+	}
+}
+sp_super_heavy_cannon_0 = {
+	specialization = specialization_land
+	project_tags = {
+		sp_tag_tank
+		sp_tag_land
+	}
+	allowed = {
+		country_without_sp = no #"no" because we want to forbid, not just check
+	}
+	
+	prototype_time = sp_time.prototype.short
+
+	complexity = sp_complexity.medium
+
+	breakthrough_cost = {
+		specialization_land = 2
+	}
+
+	resource_cost = {
+		resources = { 
+			steel = 8
+			tungsten = 4
+		}
+	}
+	project_output = {
+		country_effects = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+				custom_override_tooltip = {
+					tooltip = tech_effect|sp_tech_super_heavy_cannon_0
+					set_technology = {
+						sp_tech_super_heavy_cannon_0 = 1
+						popup = no
+					}
+				}
+			}
+		}
+		enable_equipment_modules = {
+			limit = {
+				has_dlc = "No Step Back"
+			}
+			tank_super_heavy_cannon_0
+		}
+	}
+}
+sp_super_heavy_cannon_1 = {
+	specialization = specialization_land
+	project_tags = {
+		sp_tag_tank
+		sp_tag_land
+	}
+	allowed = {
+		country_without_sp = no #"no" because we want to forbid, not just check
+	}
+	special_project_parent = {
+		sp_super_heavy_cannon_0
+	}
+	prototype_time = sp_time.prototype.short
+
+	complexity = sp_complexity.medium
+
+	breakthrough_cost = {
+		specialization_land = 2
+	}
+
+	resource_cost = {
+		resources = { 
+			steel = 8
+			tungsten = 4
+		}
+	}
+	project_output = {
+		country_effects = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+				custom_override_tooltip = {
+					tooltip = tech_effect|sp_tech_super_heavy_cannon_1
+					set_technology = {
+						sp_tech_super_heavy_cannon_1 = 1
+						popup = no
+					}
+				}
+			}
+		}
+		enable_equipment_modules = {
+			limit = {
+				has_dlc = "No Step Back"
+			}
+			tank_super_heavy_cannon_1
+		}
+	}
+}
+sp_super_heavy_cannon_2 = {
+	specialization = specialization_land
+	project_tags = {
+		sp_tag_tank
+		sp_tag_land
+	}
+	allowed = {
+		country_without_sp = no #"no" because we want to forbid, not just check
+	}
+	special_project_parent = {
+		sp_super_heavy_cannon_1
+	}
+	prototype_time = sp_time.prototype.short
+
+	complexity = sp_complexity.medium
+
+	breakthrough_cost = {
+		specialization_land = 2
+	}
+
+	resource_cost = {
+		resources = { 
+			steel = 8
+			tungsten = 4
+		}
+	}
+	project_output = {
+		country_effects = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+				custom_override_tooltip = {
+					tooltip = tech_effect|sp_tech_super_heavy_cannon_2
+					set_technology = {
+						sp_tech_super_heavy_cannon_2 = 1
+						popup = no
+					}
+				}
+			}
+		}
+		enable_equipment_modules = {
+			limit = {
+				has_dlc = "No Step Back"
+			}
+			tank_super_heavy_cannon_2
+		}
+	}
+}
+
+
+
+
+
 
 
 sp_land_flamethrower_tank = {
@@ -1133,278 +1381,6 @@ sp_land_land_cruiser = {
  #    #  #####     ##    #    #  #    #   ####   ######  #####       #    #  #    #    #    #  ######  ######  ######  #    #    #        #       #    #   ####    ####   ######   ####     #     ####  
                                                                                                                                                                                                
 
-sp_land_super_heavy_howitzer = {
-	specialization = specialization_land
-
-	project_tags = {
-		sp_tag_artillery
-		sp_tag_land
-	}
-
-	allowed = {
-		has_dlc = "Gotterdammerung"
-		country_without_sp = no #"no" because we want to forbid, not just check
-	}
-	
-	available = {
-		FROM = {
-			has_tech = gw_artillery
-		}
-	}
-	
-	prototype_time = sp_time.prototype.short
-
-	complexity = sp_complexity.medium
-
-	breakthrough_cost = {
-		specialization_land = 2
-	}
-
-	resource_cost = {
-		resources = { 
-			steel = 8
-			tungsten = 4
-		}
-	}
-	
-	project_output = {
-		enable_subunits = {
-			super_heavy_artillery
-		}
-
-		enable_equipments = {
-			super_heavy_artillery_equipment_1
-		}
-
-		country_effects = {
-			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_TECH_WITH_EXTRA_TECH
-				TECH = sp_artillery_rocket_assisted_projectiles_tech
-				EXTRA_TECH = experimental_rockets
-			}
-		}
-	}
-
-	generic_prototype_rewards = {
-		sp_land_generic_reward_scientist_xp_1
-		sp_land_generic_reward_scientist_xp_2
-		sp_land_generic_reward_scientist_xp_3
-		sp_land_generic_reward_army_xp_1
-		sp_land_generic_reward_army_xp_2
-		sp_land_generic_reward_army_xp_3
-		sp_land_generic_reward_major_progress_1
-		sp_land_generic_reward_major_progress_2
-		sp_land_generic_reward_major_progress_3
-		sp_land_generic_reward_test_failure_1
-		sp_land_generic_reward_test_failure_2
-		sp_land_generic_reward_test_failure_3
-		sp_land_generic_reward_artillery_tech_1
-		sp_land_generic_reward_artillery_tech_2
-		sp_land_generic_reward_artillery_tech_3
-		sp_land_generic_reward_artillery_bonus_1
-		sp_land_generic_reward_artillery_bonus_2
-		sp_land_generic_reward_artillery_bonus_3
-		sp_land_generic_reward_resource_scarcity
-		sp_land_generic_reward_critical_failure
-	}
-
-	unique_prototype_rewards = {
-
-		sp_land_reward_super_heavy_howitzer_focus_preference = {
-			fire_only_once = yes
-
-			threshold = { 
-				min = 30
-				max = 100
-			}
-
-			weight = {
-				base = 50
-			}
-
-			option = {
-				token = sp_land_reward_option_super_heavy_howitzer_focus_preference_balance
-				
-				iteration_output = {
-					country_effects = {
-						custom_effect_tooltip = {
-							localization_key = generic_no_effects_to_equipment_tt
-							EQUIPMENT = super_heavy_artillery_equipment_1
-						}
-					}
-				}
-			}
-
-			option = {
-				token = sp_land_reward_option_super_heavy_howitzer_focus_preference_firepower
-				
-				iteration_output = {
-					equipment_bonus = {
-						super_heavy_artillery_equipment_1 = {
-							build_cost_ic = 0.1
-							soft_attack = 0.05
-							additional_collateral_damage = 0.1
-						}
-					}
-					
-					country_effects = {
-					}
-				}
-			}
-
-			option = {
-				token = sp_land_reward_option_super_heavy_howitzer_focus_preference_production
-				
-				iteration_output = {
-					equipment_bonus = {
-						super_heavy_artillery_equipment_1 = {
-							build_cost_ic = -0.15
-							soft_attack = -0.05
-							additional_collateral_damage = -0.1
-						}
-					}
-					
-					country_effects = {
-					}
-				}
-			}
-		}
-	}
-}
-
-sp_land_self_propelled_super_heavy_howitzer = {
-	specialization = specialization_land
-
-	project_tags = {
-		sp_tag_artillery
-		sp_tag_land
-	}
-
-
-	allowed = {
-		has_dlc = "Gotterdammerung"
-		country_without_sp = no #"no" because we want to forbid, not just check
-	}
-
-	special_project_parent = {
-		sp_land_military_engineering_vehicles
-		sp_land_super_heavy_howitzer
-	}
-	
-	prototype_time = sp_time.prototype.medium
-
-	complexity = sp_complexity.medium
-
-	breakthrough_cost = {
-		specialization_land = 2
-	}
-
-	resource_cost = {
-		resources = { 
-			steel = 8
-			tungsten = 6
-			chromium = 2
-		}
-	}
-	
-	project_output = {
-		country_effects = {
-			custom_effect_tooltip = {
-				localization_key = SP_UNLOCK_TECH
-				TECH = sp_artillery_purpose_built_gun_motor_carriages_tech
-			}
-		}
-		
-		enable_subunits = {
-			self_propelled_super_heavy_artillery
-		}
-
-		enable_equipments = {
-			self_propelled_super_heavy_artillery_equipment_1
-		}
-	}
-
-	generic_prototype_rewards = {
-		sp_land_generic_reward_scientist_xp_1
-		sp_land_generic_reward_scientist_xp_2
-		sp_land_generic_reward_scientist_xp_3
-		sp_land_generic_reward_army_xp_1
-		sp_land_generic_reward_army_xp_2
-		sp_land_generic_reward_army_xp_3
-		sp_land_generic_reward_major_progress_1
-		sp_land_generic_reward_major_progress_2
-		sp_land_generic_reward_major_progress_3
-		sp_land_generic_reward_test_failure_1
-		sp_land_generic_reward_test_failure_2
-		sp_land_generic_reward_test_failure_3
-		sp_land_generic_reward_artillery_tech_1
-		sp_land_generic_reward_artillery_tech_2
-		sp_land_generic_reward_artillery_tech_3
-		sp_land_generic_reward_artillery_bonus_1
-		sp_land_generic_reward_artillery_bonus_2
-		sp_land_generic_reward_artillery_bonus_3
-		sp_land_generic_reward_resource_scarcity
-		sp_land_generic_reward_critical_failure
-	}
-
-	unique_prototype_rewards = {
-
-		sp_land_reward_self_propelled_super_heavy_howitzer_focus_preference = {
-			fire_only_once = yes
-
-			threshold = { 
-				min = 30
-				max = 100
-			}
-
-			weight = {
-				base = 50
-			}
-
-			option = {
-				token = sp_land_reward_option_self_propelled_super_heavy_howitzer_focus_preference_balance
-				
-				iteration_output = {
-					country_effects = {
-						custom_effect_tooltip = {
-							localization_key = generic_no_effects_to_equipment_tt
-							EQUIPMENT = self_propelled_super_heavy_artillery_equipment_1
-						}
-					}
-				}
-			}
-
-			option = {
-				token = sp_land_reward_option_self_propelled_super_heavy_howitzer_focus_preference_firepower
-				
-				iteration_output = {
-					equipment_bonus = {
-						self_propelled_super_heavy_artillery_equipment_1 = {
-							build_cost_ic = 0.1
-							soft_attack = 0.05
-							additional_collateral_damage = 0.1
-						}
-					}
-				}
-			}
-
-			option = {
-				token = sp_land_reward_option_self_propelled_super_heavy_howitzer_focus_preference_production
-				
-				iteration_output = {
-					equipment_bonus = {
-						self_propelled_super_heavy_artillery_equipment_1 = {
-							build_cost_ic = -0.15
-							soft_attack = -0.05
-							additional_collateral_damage = -0.1
-						}
-					}
-				}
-			}
-		}
-	}
-}
-
 sp_land_super_heavy_railway_gun = {
 	specialization = specialization_land
 
@@ -1512,7 +1488,7 @@ sp_land_multi_charge_large_caliber_gun = {
 	}
 
 	special_project_parent = {
-		sp_land_super_heavy_howitzer
+		sp_super_heavy_howitzer
 	}
 		
 	prototype_time = sp_time.prototype.medium
@@ -1538,7 +1514,7 @@ sp_land_multi_charge_large_caliber_gun = {
 					localization_key = SP_UNLOCK_BUILDING_ICON_DESC
 					BUILDING = mega_gun_emplacement
 					BUILDING_DESCRIPTION = mega_gun_emplacement_desc
-					ICON_FRAME = 24
+					ICON_FRAME = 33
 				}
 				#hidden_effect = { #TODO_Manu: Uncomment this if we get code support for implementing small scale of V-3
 				#	if = {

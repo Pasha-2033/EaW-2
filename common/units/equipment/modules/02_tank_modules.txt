@@ -2376,7 +2376,6 @@ equipment_modules = {
 		}
 	}
 	#super heavy howitzer (as artillery)
-	#TODO (sp)
 	tank_super_heavy_howitzer_0 = {
 		abbreviation = "shh1"
 		category = tank_super_heavy_main_armament
@@ -2433,7 +2432,6 @@ equipment_modules = {
 		}
 	}
 	#super heavy magic howitzer (as artillery)
-	#TODO (sp)
 	tank_magic_super_heavy_howitzer_0 = {
 		abbreviation = "shh1"
 		category = magic_tank_super_heavy_main_armament
@@ -2490,7 +2488,6 @@ equipment_modules = {
 		}
 	}
 	#super heavy cannon
-	#TODO (sp)
 	tank_super_heavy_cannon_0 = {
 		abbreviation = "sh1"
 		category = tank_super_heavy_main_armament
@@ -2554,7 +2551,6 @@ equipment_modules = {
 		}
 	}
 	#super heavy magic cannon
-	#TODO (sp)
 	tank_magic_super_heavy_cannon_0 = {
 		abbreviation = "sh1"
 		category = magic_tank_super_heavy_main_armament
@@ -2580,6 +2576,27 @@ equipment_modules = {
 		category = magic_tank_super_heavy_main_armament
 		sfx = sfx_ui_sd_module_turret
 		parent = tank_magic_super_heavy_cannon_0
+		allow_equipment_type = anti_tank
+
+		add_stats = {
+			soft_attack = 45
+			hard_attack = 55
+			ap_attack = 350
+			build_cost_ic = 15
+			maximum_speed = -0.6
+			reliability = -0.35
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 6
+			chromium = 3
+		}
+	}
+	tank_magic_super_heavy_cannon_2 = {
+		abbreviation = "sh2"
+		category = magic_tank_super_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		parent = tank_magic_super_heavy_cannon_1
 		allow_equipment_type = anti_tank
 
 		add_stats = {
