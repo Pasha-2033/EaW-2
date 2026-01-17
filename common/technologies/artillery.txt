@@ -84,6 +84,8 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			tank_medium_howitzer_1
+			tank_heavy_howitzer_0
+			tank_high_velocity_cannon_0
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -93,6 +95,110 @@ technologies = {
 		}
 		path = {
 			leads_to_tech = common_howitzer_0
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	howitzer_2 = {
+		allow = {
+			has_tech = howitzer_1
+		}
+		enable_equipments = {
+			artillery_equipment_4
+		}
+		enable_equipment_modules = {
+			tank_medium_howitzer_2
+			tank_heavy_howitzer_1
+			tank_high_velocity_cannon_1
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -2 y = 12 }
+		}
+		path = {
+			leads_to_tech = common_howitzer_2
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	howitzer_3 = {
+		allow = {
+			has_tech = howitzer_2
+		}
+		enable_equipments = {
+			artillery_equipment_5
+		}
+		enable_equipment_modules = {
+			tank_medium_howitzer_3
+			tank_heavy_howitzer_2
+			tank_high_velocity_cannon_2
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -2 y = 16 }
+		}
+		path = {
+			leads_to_tech = common_howitzer_3
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	howitzer_4 = {
+		allow = {
+			has_tech = howitzer_3
+		}
+		enable_equipments = {
+			artillery_equipment_6
+		}
+		enable_equipment_modules = {
+			tank_medium_howitzer_4
+			tank_heavy_howitzer_3
+			tank_high_velocity_cannon_3
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -2 y = 20 }
+		}
+		path = {
+			leads_to_tech = howitzer_5
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	howitzer_5 = {
+		allow = {
+			has_tech = howitzer_4
+		}
+		enable_equipments = {
+			artillery_equipment_7
+		}
+		enable_equipment_modules = {
+			tank_medium_howitzer_5
+			tank_heavy_howitzer_4
+			tank_high_velocity_cannon_4
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -2 y = 22 }
+		}
+		path = {
+			leads_to_tech = common_howitzer_4
 			research_cost_coeff = 1
 		}
 		special_project_specialization = { 
@@ -110,6 +216,8 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			tank_magic_medium_howitzer_0
+			tank_magic_heavy_howitzer_0
+			tank_magic_high_velocity_cannon_0
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -119,6 +227,114 @@ technologies = {
 		}
 		path = {
 			leads_to_tech = common_howitzer_0
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+			specialization_magic
+		}
+	}
+	magic_howitzer_1 = {
+		allow = {
+			has_tech = magic_howitzer_0
+		}
+		enable_equipments = {
+			magic_artillery_equipment_1
+		}
+		enable_equipment_modules = {
+			tank_magic_medium_howitzer_1
+			tank_magic_heavy_howitzer_1
+			tank_magic_high_velocity_cannon_1
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 2 y = 12 }
+		}
+		path = {
+			leads_to_tech = common_howitzer_2
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+			specialization_magic
+		}
+	}
+	magic_howitzer_2 = {
+		allow = {
+			has_tech = magic_howitzer_1
+		}
+		enable_equipments = {
+			magic_artillery_equipment_2
+		}
+		enable_equipment_modules = {
+			tank_magic_medium_howitzer_2
+			tank_magic_heavy_howitzer_2
+			tank_magic_high_velocity_cannon_2
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 2 y = 16 }
+		}
+		path = {
+			leads_to_tech = common_howitzer_3
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+			specialization_magic
+		}
+	}
+	magic_howitzer_3 = {
+		allow = {
+			has_tech = magic_howitzer_2
+		}
+		enable_equipments = {
+			magic_artillery_equipment_3
+		}
+		enable_equipment_modules = {
+			tank_magic_medium_howitzer_3
+			tank_magic_heavy_howitzer_3
+			tank_magic_high_velocity_cannon_3
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 2 y = 20 }
+		}
+		path = {
+			leads_to_tech = magic_howitzer_4
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+			specialization_magic
+		}
+	}
+	magic_howitzer_4 = {
+		allow = {
+			has_tech = magic_howitzer_3
+		}
+		enable_equipments = {
+			magic_artillery_equipment_4
+		}
+		enable_equipment_modules = {
+			tank_magic_medium_howitzer_4
+			tank_magic_heavy_howitzer_4
+			tank_magic_high_velocity_cannon_4
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 2 y = 22 }
+		}
+		path = {
+			leads_to_tech = common_howitzer_4
 			research_cost_coeff = 1
 		}
 		special_project_specialization = { 
@@ -157,11 +373,79 @@ technologies = {
 			leads_to_tech = rocket_artillery_0
 			research_cost_coeff = 1
 		}
+		path = {
+			leads_to_tech = howitzer_2
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = magic_howitzer_1
+			research_cost_coeff = 1
+		}
 		special_project_specialization = { 
 			specialization_land 
 		}
 	}
-
+	common_howitzer_2 = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 14 }
+		}
+		path = {
+			leads_to_tech = howitzer_3
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = magic_howitzer_2
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	common_howitzer_3 = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 18 }
+		}
+		path = {
+			leads_to_tech = howitzer_4
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = magic_howitzer_3
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	common_howitzer_4 = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 0 y = 24 }
+		}
+		path = {
+			leads_to_tech = howitzer_4
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = magic_howitzer_3
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = super_heavy_shells
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
 	#mortar
 	mortar_0 = {
 		enable_equipments = {
@@ -236,6 +520,78 @@ technologies = {
 			specialization_land 
 		}
 	}
+	mortar_3 = {
+		allow = {
+			has_tech = mortar_2
+		}
+		enable_equipments = {
+			mortar_equipment_3
+		}
+		enable_equipment_modules = {
+			tank_small_mortar_3
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 5 y = 14 }
+		}
+		path = {
+			leads_to_tech = common_mortar_2
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	mortar_4 = {
+		allow = {
+			has_tech = mortar_3
+		}
+		enable_equipments = {
+			mortar_equipment_4
+		}
+		enable_equipment_modules = {
+			tank_small_mortar_4
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 5 y = 18 }
+		}
+		path = {
+			leads_to_tech = mortar_5
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	mortar_5 = {
+		allow = {
+			has_tech = mortar_4
+		}
+		enable_equipments = {
+			mortar_equipment_5
+		}
+		enable_equipment_modules = {
+			tank_small_mortar_5
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 5 y = 20 }
+		}
+		path = {
+			leads_to_tech = common_mortar_3
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
 	#magic mortar
 	magic_mortar_0 = {
 		allow = {
@@ -288,6 +644,81 @@ technologies = {
 			specialization_magic
 		}
 	}
+	magic_mortar_2 = {
+		allow = {
+			has_tech = magic_mortar_1
+		}
+		enable_equipments = {
+			magic_mortar_equipment_2
+		}
+		enable_equipment_modules = {
+			tank_magic_small_mortar_2
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 9 y = 14 }
+		}
+		path = {
+			leads_to_tech = common_mortar_2
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+			specialization_magic
+		}
+	}
+	magic_mortar_3 = {
+		allow = {
+			has_tech = magic_mortar_2
+		}
+		enable_equipments = {
+			magic_mortar_equipment_3
+		}
+		enable_equipment_modules = {
+			tank_magic_small_mortar_3
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 9 y = 18 }
+		}
+		path = {
+			leads_to_tech = magic_mortar_4
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+			specialization_magic
+		}
+	}
+	magic_mortar_4 = {
+		allow = {
+			has_tech = magic_mortar_3
+		}
+		enable_equipments = {
+			magic_mortar_equipment_4
+		}
+		enable_equipment_modules = {
+			tank_magic_small_mortar_4
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 9 y = 20 }
+		}
+		path = {
+			leads_to_tech = common_mortar_3
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+			specialization_magic
+		}
+	}
 	#common mortar
 	common_mortar_0 = {
 		start_year = 800
@@ -319,22 +750,100 @@ technologies = {
 			name = artillery_folder
 			position = { x = 7 y = 12 }
 		}
+		path = {
+			leads_to_tech = mortar_3
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = magic_mortar_2
+			research_cost_coeff = 1
+		}
 		special_project_specialization = { 
 			specialization_land 
 		}
 	}
-
-
+	common_mortar_2 = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 7 y = 16 }
+		}
+		path = {
+			leads_to_tech = mortar_4
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = magic_mortar_3
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	common_mortar_3 = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 7 y = 22 }
+		}
+		path = {
+			leads_to_tech = common_mortar_4
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = concrete_breaking_shells
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	common_mortar_4 = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 7 y = 24 }
+		}
+		path = {
+			leads_to_tech = super_heavy_shells
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
 	#common artillery
 	heavy_shells = {
-		category_all_artillery = {
-			soft_attack = 0.05
-		}
 		start_year = 800
 		research_cost = 0.5
 		folder = {
 			name = artillery_folder
 			position = { x = 4 y = 8 }
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_shells = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 4 y = 24 }
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	concrete_breaking_shells = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 10 y = 22 }
 		}
 		special_project_specialization = { 
 			specialization_land 
@@ -352,6 +861,7 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			tank_anti_air_cannon_0
+			tank_heavy_cannon_0
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -377,6 +887,7 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			tank_anti_air_cannon_1
+			tank_heavy_cannon_1
 		}
 		path = {
 			leads_to_tech = common_antiair_0
@@ -392,6 +903,124 @@ technologies = {
 			specialization_land 
 		}
 	}
+	antiair_2 = {
+		allow = {
+			has_tech = antiair_1
+		}
+		enable_equipments = {
+			anti_air_equipment_2
+		}
+		enable_equipment_modules = {
+			tank_anti_air_cannon_2
+			tank_heavy_cannon_2
+		}
+		path = {
+			leads_to_tech = antiair_3
+			research_cost_coeff = 1
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -16 y = 10 }
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	antiair_3 = {
+		enable_equipments = {
+			anti_air_equipment_3
+		}
+		enable_equipment_modules = {
+			tank_anti_air_cannon_3
+			tank_heavy_cannon_3
+		}
+		path = {
+			leads_to_tech = common_antiair_1
+			research_cost_coeff = 1
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -16 y = 12 }
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	antiair_4 = {
+		allow = {
+			has_tech = antiair_3
+		}
+		enable_equipments = {
+			anti_air_equipment_4
+		}
+		enable_equipment_modules = {
+			tank_anti_air_cannon_4
+			tank_heavy_cannon_4
+		}
+		path = {
+			leads_to_tech = common_antiair_2
+			research_cost_coeff = 1
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -16 y = 16 }
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	antiair_5 = {
+		allow = {
+			has_tech = antiair_4
+		}
+		enable_equipments = {
+			anti_air_equipment_5
+		}
+		enable_equipment_modules = {
+			tank_anti_air_cannon_5
+			tank_heavy_cannon_5
+		}
+		path = {
+			leads_to_tech = common_antiair_3
+			research_cost_coeff = 1
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -16 y = 20 }
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	antiair_6 = {
+		allow = {
+			has_tech = antiair_5
+		}
+		enable_equipments = {
+			anti_air_equipment_6
+		}
+		enable_equipment_modules = {
+			tank_anti_air_cannon_6
+			tank_heavy_cannon_6
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -16 y = 24 }
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
 	#magic AA
 	magic_antiair_0 = {
 		allow = {
@@ -402,6 +1031,7 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			tank_magic_anti_air_cannon_0
+			tank_magic_heavy_cannon_0
 		}
 		path = {
 			leads_to_tech = common_antiair_0
@@ -418,6 +1048,129 @@ technologies = {
 			specialization_magic
 		}
 	}
+	magic_antiair_1 = {
+		allow = {
+			has_tech = magic_antiair_0
+		}
+		enable_equipments = {
+			magic_anti_air_equipment_1
+		}
+		enable_equipment_modules = {
+			tank_magic_anti_air_cannon_1
+			tank_magic_heavy_cannon_1
+		}
+		path = {
+			leads_to_tech = magic_antiair_2
+			research_cost_coeff = 1
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -12 y = 10 }
+		}
+		special_project_specialization = { 
+			specialization_land 
+			specialization_magic
+		}
+	}
+	magic_antiair_2 = {
+		enable_equipments = {
+			magic_anti_air_equipment_2
+		}
+		enable_equipment_modules = {
+			tank_magic_anti_air_cannon_2
+			tank_magic_heavy_cannon_2
+		}
+		path = {
+			leads_to_tech = common_antiair_1
+			research_cost_coeff = 1
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -12 y = 12 }
+		}
+		special_project_specialization = { 
+			specialization_land 
+			specialization_magic
+		}
+	}
+	magic_antiair_3 = {
+		allow = {
+			has_tech = magic_antiair_2
+		}
+		enable_equipments = {
+			magic_anti_air_equipment_3
+		}
+		enable_equipment_modules = {
+			tank_magic_anti_air_cannon_3
+			tank_magic_heavy_cannon_3
+		}
+		path = {
+			leads_to_tech = common_antiair_2
+			research_cost_coeff = 1
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -12 y = 16 }
+		}
+		special_project_specialization = { 
+			specialization_land 
+			specialization_magic
+		}
+	}
+	magic_antiair_4 = {
+		allow = {
+			has_tech = magic_antiair_3
+		}
+		enable_equipments = {
+			magic_anti_air_equipment_4
+		}
+		enable_equipment_modules = {
+			tank_magic_anti_air_cannon_4
+			tank_magic_heavy_cannon_4
+		}
+		path = {
+			leads_to_tech = common_antiair_3
+			research_cost_coeff = 1
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -12 y = 20 }
+		}
+		special_project_specialization = { 
+			specialization_land 
+			specialization_magic
+		}
+	}
+	magic_antiair_5 = {
+		allow = {
+			has_tech = magic_antiair_4
+		}
+		enable_equipments = {
+			magic_anti_air_equipment_5
+		}
+		enable_equipment_modules = {
+			tank_magic_anti_air_cannon_5
+			tank_magic_heavy_cannon_5
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -12 y = 24 }
+		}
+		special_project_specialization = { 
+			specialization_land 
+			specialization_magic
+		}
+	}
 	#common AA
 	common_antiair_0 = {
 		start_year = 800
@@ -425,6 +1178,71 @@ technologies = {
 		folder = {
 			name = artillery_folder
 			position = { x = -14 y = 8 }
+		}
+		path = {
+			leads_to_tech = magic_antiair_1
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = antiair_2
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	common_antiair_1 = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -14 y = 14 }
+		}
+		path = {
+			leads_to_tech = magic_antiair_3
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = antiair_4
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	common_antiair_2 = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -14 y = 18 }
+		}
+		path = {
+			leads_to_tech = magic_antiair_4
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = antiair_5
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	common_antiair_3 = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -14 y = 22 }
+		}
+		path = {
+			leads_to_tech = magic_antiair_5
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = antiair_6
+			research_cost_coeff = 1
 		}
 		special_project_specialization = { 
 			specialization_land 
@@ -441,6 +1259,7 @@ technologies = {
 		enable_equipment_modules = {
 			#weapons
 			tank_small_cannon_0
+			tank_medium_cannon_0
 			#secondary turret
 			secondary_turret_small_cannon
 		}
@@ -468,12 +1287,113 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			tank_small_cannon_1
+			tank_medium_cannon_1
 		}
 		start_year = 800
 		research_cost = 0.5
 		folder = {
 			name = artillery_folder
 			position = { x = 12 y = 8 }
+		}
+		path = {
+			leads_to_tech = common_at_0
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	antitank_2 = {
+		allow = {
+			has_tech = antitank_1
+		}
+		enable_equipments = {
+			anti_tank_equipment_2
+		}
+		enable_equipment_modules = {
+			tank_small_cannon_2
+			tank_medium_cannon_2
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 12 y = 12 }
+		}
+		path = {
+			leads_to_tech = common_at_1
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	antitank_3 = {
+		allow = {
+			has_tech = antitank_2
+		}
+		enable_equipments = {
+			anti_tank_equipment_3
+		}
+		enable_equipment_modules = {
+			tank_small_cannon_3
+			tank_medium_cannon_3
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 12 y = 16 }
+		}
+		path = {
+			leads_to_tech = antitank_4
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	antitank_4 = {
+		allow = {
+			has_tech = antitank_3
+		}
+		enable_equipments = {
+			anti_tank_equipment_4
+		}
+		enable_equipment_modules = {
+			tank_small_cannon_4
+			tank_medium_cannon_4
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 12 y = 18 }
+		}
+		path = {
+			leads_to_tech = common_at_2
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	antitank_5 = {
+		allow = {
+			has_tech = antitank_4
+		}
+		enable_equipments = {
+			anti_tank_equipment_5
+		}
+		enable_equipment_modules = {
+			tank_small_cannon_5
+			tank_medium_cannon_5
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 12 y = 24 }
 		}
 		special_project_specialization = { 
 			specialization_land 
@@ -489,6 +1409,7 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			tank_magic_small_cannon_0
+			tank_magic_medium_cannon_0
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -496,13 +1417,197 @@ technologies = {
 			name = artillery_folder
 			position = { x = 16 y = 8 }
 		}
+		path = {
+			leads_to_tech = common_at_0
+			research_cost_coeff = 1
+		}
 		special_project_specialization = { 
 			specialization_land 
 			specialization_magic
 		}
 	}
+	magic_antitank_1 = {
+		allow = {
+			has_tech = magic_antitank_0
+		}
+		enable_equipments = {
+			magic_anti_tank_equipment_1
+		}
+		enable_equipment_modules = {
+			tank_magic_small_cannon_1
+			tank_magic_medium_cannon_1
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 16 y = 12 }
+		}
+		path = {
+			leads_to_tech = common_at_1
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+			specialization_magic
+		}
+	}
+	magic_antitank_2 = {
+		allow = {
+			has_tech = magic_antitank_1
+		}
+		enable_equipments = {
+			magic_anti_tank_equipment_2
+		}
+		enable_equipment_modules = {
+			tank_magic_small_cannon_2
+			tank_magic_medium_cannon_2
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 16 y = 16 }
+		}
+		path = {
+			leads_to_tech = magic_antitank_3
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+			specialization_magic
+		}
+	}
+	magic_antitank_3 = {
+		allow = {
+			has_tech = magic_antitank_2
+		}
+		enable_equipments = {
+			magic_anti_tank_equipment_3
+		}
+		enable_equipment_modules = {
+			tank_magic_small_cannon_3
+			tank_magic_medium_cannon_3
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 16 y = 18 }
+		}
+		path = {
+			leads_to_tech = common_at_2
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+			specialization_magic
+		}
+	}
+	magic_antitank_4 = {
+		allow = {
+			has_tech = magic_antitank_3
+		}
+		enable_equipments = {
+			magic_anti_tank_equipment_4
+		}
+		enable_equipment_modules = {
+			tank_magic_small_cannon_4
+			tank_magic_medium_cannon_4
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 16 y = 24 }
+		}
+		special_project_specialization = { 
+			specialization_land 
+			specialization_magic
+		}
+	}
+	#common AT
+	common_at_0 = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 14 y = 10 }
+		}
+		path = {
+			leads_to_tech = antitank_2
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = magic_antitank_1
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	common_at_1 = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 14 y = 14 }
+		}
+		path = {
+			leads_to_tech = antitank_3
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = magic_antitank_2
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	common_at_2 = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 14 y = 20 }
+		}
+		path = {
+			leads_to_tech = common_at_3
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	common_at_3 = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = 14 y = 22 }
+		}
+		path = {
+			leads_to_tech = antitank_5
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = magic_antitank_4
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = concrete_breaking_shells
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
 	#rocket artillery
 	rocket_artillery_0 = {
+		allow = {
+			has_tech = nitroglycerine
+		}
 		enable_equipments = {
 			rocket_artillery_equipment_0
 		}
@@ -543,6 +1648,10 @@ technologies = {
 			name = artillery_folder
 			position = { x = -9 y = 12 }
 		}
+		path = {
+			leads_to_tech = common_rocket_artillery_0
+			research_cost_coeff = 1
+		}
 		special_project_specialization = { 
 			specialization_land 
 		}
@@ -570,6 +1679,131 @@ technologies = {
 			specialization_magic
 		}
 	}
+	rocket_artillery_2 = {
+		enable_equipments = {
+			rocket_artillery_equipment_2
+		}
+		enable_equipment_modules = {
+			tank_rocket_launcher_2
+		}
+		sub_technologies = {
+			motorized_rocket_artillery_1
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -9 y = 16 }
+		}
+		path = {
+			leads_to_tech = common_rocket_artillery_1
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	motorized_rocket_artillery_1 = {
+		enable_equipments = {
+			motorized_rocket_equipment_1
+		}
+		allow = {
+			has_tech = motorized_rocket_artillery_0
+		}
+		research_cost = 1.5
+		start_year = 1010 #to do
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			mot_rockets
+		}
+		special_project_specialization = { 
+			specialization_land
+		}
+	}
+	rocket_artillery_3 = {
+		enable_equipments = {
+			rocket_artillery_equipment_3
+		}
+		enable_equipment_modules = {
+			tank_rocket_launcher_3
+		}
+		sub_technologies = {
+			motorized_rocket_artillery_2
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -9 y = 20 }
+		}
+		path = {
+			leads_to_tech = common_rocket_artillery_2
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	motorized_rocket_artillery_2 = {
+		enable_equipments = {
+			motorized_rocket_equipment_2
+		}
+		allow = {
+			has_tech = motorized_rocket_artillery_1
+		}
+		research_cost = 1.5
+		start_year = 1010 #to do
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			mot_rockets
+		}
+		special_project_specialization = { 
+			specialization_land
+		}
+	}
+	rocket_artillery_4 = {
+		enable_equipments = {
+			rocket_artillery_equipment_4
+		}
+		enable_equipment_modules = {
+			tank_rocket_launcher_4
+		}
+		sub_technologies = {
+			motorized_rocket_artillery_3
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -9 y = 24 }
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	motorized_rocket_artillery_3 = {
+		enable_equipments = {
+			motorized_rocket_equipment_3
+		}
+		allow = {
+			has_tech = motorized_rocket_artillery_2
+		}
+		research_cost = 1.5
+		start_year = 1010 #to do
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			mot_rockets
+		}
+		special_project_specialization = { 
+			specialization_land
+		}
+	}
 	#magic rocket artillery
 	magic_rocket_artillery_0 = {
 		allow = {
@@ -589,6 +1823,10 @@ technologies = {
 		folder = {
 			name = artillery_folder
 			position = { x = -5 y = 12 }
+		}
+		path = {
+			leads_to_tech = common_rocket_artillery_0
+			research_cost_coeff = 1
 		}
 		special_project_specialization = { 
 			specialization_land
@@ -618,6 +1856,207 @@ technologies = {
 			specialization_magic
 		}
 	}
+	magic_rocket_artillery_1 = {
+		allow = {
+			has_tech = magic_rocket_artillery_0
+		}
+		enable_equipments = {
+			magic_rocket_artillery_equipment_1
+		}
+		enable_equipment_modules = {
+			tank_magic_rocket_launcher_1
+		}
+		sub_technologies = {
+			motorized_magic_rocket_artillery_1
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -5 y = 16 }
+		}
+		path = {
+			leads_to_tech = common_rocket_artillery_1
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land
+			specialization_magic
+		}
+	}
+	motorized_magic_rocket_artillery_1 = {
+		enable_equipments = {
+			motorized_magic_rocket_equipment_1
+		}
+		allow = {
+			has_tech = motorized_magic_rocket_artillery_0
+		}
+		research_cost = 1.5
+		start_year = 1010 #to do
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			mot_rockets
+		}
+		special_project_specialization = { 
+			specialization_land
+			specialization_magic
+		}
+	}
+	magic_rocket_artillery_2 = {
+		allow = {
+			has_tech = magic_rocket_artillery_1
+		}
+		enable_equipments = {
+			magic_rocket_artillery_equipment_2
+		}
+		enable_equipment_modules = {
+			tank_magic_rocket_launcher_2
+		}
+		sub_technologies = {
+			motorized_magic_rocket_artillery_2
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -5 y = 20 }
+		}
+		path = {
+			leads_to_tech = common_rocket_artillery_2
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land
+			specialization_magic
+		}
+	}
+	motorized_magic_rocket_artillery_2 = {
+		enable_equipments = {
+			motorized_magic_rocket_equipment_2
+		}
+		allow = {
+			has_tech = motorized_magic_rocket_artillery_1
+		}
+		research_cost = 1.5
+		start_year = 1010 #to do
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			mot_rockets
+		}
+		special_project_specialization = { 
+			specialization_land
+			specialization_magic
+		}
+	}
+	magic_rocket_artillery_3 = {
+		allow = {
+			has_tech = magic_rocket_artillery_2
+		}
+		enable_equipments = {
+			magic_rocket_artillery_equipment_3
+		}
+		enable_equipment_modules = {
+			tank_magic_rocket_launcher_3
+		}
+		sub_technologies = {
+			motorized_magic_rocket_artillery_3
+		}
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -5 y = 24 }
+		}
+		special_project_specialization = { 
+			specialization_land
+			specialization_magic
+		}
+	}
+	motorized_magic_rocket_artillery_3 = {
+		enable_equipments = {
+			motorized_magic_rocket_equipment_3
+		}
+		allow = {
+			has_tech = motorized_magic_rocket_artillery_2
+		}
+		research_cost = 1.5
+		start_year = 1010 #to do
+		ai_will_do = {
+			factor = 2
+		}
+		categories = {
+			mot_rockets
+		}
+		special_project_specialization = { 
+			specialization_land
+			specialization_magic
+		}
+	}
+	#common rocket artillery
+	common_rocket_artillery_0 = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -7 y = 14 }
+		}
+		path = {
+			leads_to_tech = rocket_artillery_2
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = magic_rocket_artillery_1
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land
+		}
+	}
+	common_rocket_artillery_1 = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -7 y = 18 }
+		}
+		path = {
+			leads_to_tech = rocket_artillery_3
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = magic_rocket_artillery_2
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land
+		}
+	}
+	common_rocket_artillery_2 = {
+		start_year = 800
+		research_cost = 0.5
+		folder = {
+			name = artillery_folder
+			position = { x = -7 y = 22 }
+		}
+		path = {
+			leads_to_tech = rocket_artillery_4
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = magic_rocket_artillery_3
+			research_cost_coeff = 1
+		}
+		special_project_specialization = { 
+			specialization_land
+		}
+	}
+
+
+
 
 
 
