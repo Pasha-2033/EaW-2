@@ -265,3 +265,370 @@ transfer_operative_by_ideology_sympathy = {
 #		transfer_operative_by_ideology_sympathy = yes
 #	}
 #}
+
+#scientist scope
+upgrade_scientist_trait_armored_specialist = {
+	random_list = {
+		10 = {
+			modifier = {
+				factor = trait_chance?1
+			}
+			modifier = {
+				has_trait = scientist_trait_land_specialist
+				factor = 1.5
+			}
+			modifier = {
+				has_trait = scientist_trait_armored_specialist
+				factor = 0
+			}
+			add_scientist_trait = scientist_trait_armored_specialist
+		}
+		90 = {
+			modifier = {
+				has_trait = scientist_trait_armored_specialist
+				factor = 0
+			}
+		}
+	}
+}
+upgrade_scientist_trait_artillery_specialist = {
+	random_list = {
+		10 = {
+			modifier = {
+				factor = trait_chance?1
+			}
+			modifier = {
+				has_trait = scientist_trait_land_specialist
+				factor = 1.5
+			}
+			modifier = {
+				has_trait = scientist_trait_artillery_specialist
+				factor = 0
+			}
+			add_scientist_trait = scientist_trait_artillery_specialist
+		}
+		90 = {
+			modifier = {
+				has_trait = scientist_trait_artillery_specialist
+				factor = 0
+			}
+		}
+	}
+}
+upgrade_scientist_trait_submarine_specialist = {
+	random_list = {
+		10 = {
+			modifier = {
+				factor = trait_chance?1
+			}
+			modifier = {
+				has_trait = scientist_trait_naval_specialist
+				factor = 1.5
+			}
+			modifier = {
+				has_trait = scientist_trait_submarine_specialist
+				factor = 0
+			}
+			add_scientist_trait = scientist_trait_submarine_specialist
+		}
+		90 = {
+			modifier = {
+				has_trait = scientist_trait_submarine_specialist
+				factor = 0
+			}
+		}
+	}
+}
+upgrade_scientist_trait_surface_ship_specialist = {
+	random_list = {
+		10 = {
+			modifier = {
+				factor = trait_chance?1
+			}
+			modifier = {
+				has_trait = scientist_trait_naval_specialist
+				factor = 1.5
+			}
+			modifier = {
+				has_trait = scientist_trait_surface_ship_specialist
+				factor = 0
+			}
+			add_scientist_trait = scientist_trait_surface_ship_specialist
+		}
+		90 = {
+			modifier = {
+				has_trait = scientist_trait_surface_ship_specialist
+				factor = 0
+			}
+		}
+	}
+}
+upgrade_scientist_trait_aircraft_specialist = {
+	random_list = {
+		10 = {
+			modifier = {
+				factor = trait_chance?1
+			}
+			modifier = {
+				has_trait = scientist_trait_air_specialist
+				factor = 1.5
+			}
+			modifier = {
+				has_trait = scientist_trait_aircraft_specialist
+				factor = 0
+			}
+			add_scientist_trait = scientist_trait_aircraft_specialist
+		}
+		90 = {
+			modifier = {
+				has_trait = scientist_trait_aircraft_specialist
+				factor = 0
+			}
+		}
+	}
+}
+upgrade_scientist_trait_rocketry_specialist = {
+	random_list = {
+		10 = {
+			modifier = {
+				factor = trait_chance?1
+			}
+			modifier = {
+				has_trait = scientist_trait_air_specialist
+				factor = 1.5
+			}
+			modifier = {
+				has_trait = scientist_trait_rocketry_specialist
+				factor = 0
+			}
+			add_scientist_trait = scientist_trait_rocketry_specialist
+		}
+		90 = {
+			modifier = {
+				has_trait = scientist_trait_rocketry_specialist
+				factor = 0
+			}
+		}
+	}
+}
+upgrade_scientist_trait_electronics_specialist = {
+	random_list = {
+		10 = {
+			modifier = {
+				factor = trait_chance?1
+			}
+			modifier = {
+				has_trait = scientist_trait_air_specialist
+				factor = 1.5
+			}
+			modifier = {
+				has_trait = scientist_trait_naval_specialist
+				factor = 1.5
+			}
+			modifier = {
+				has_trait = scientist_trait_electronics_specialist
+				factor = 0
+			}
+			add_scientist_trait = scientist_trait_electronics_specialist
+		}
+		90 = {
+			modifier = {
+				has_trait = scientist_trait_electronics_specialist
+				factor = 0
+			}
+		}
+	}
+}
+upgrade_scientist_trait_helicopter_expert = {
+	random_list = {
+		10 = {
+			modifier = {
+				factor = trait_chance?1
+			}
+			modifier = {
+				has_trait = scientist_trait_air_specialist
+				factor = 1.5
+			}
+			modifier = {
+				has_trait = scientist_trait_helicopter_expert
+				factor = 0
+			}
+			add_scientist_trait = scientist_trait_helicopter_expert
+		}
+		90 = {
+			modifier = {
+				has_trait = scientist_trait_helicopter_expert
+				factor = 0
+			}
+		}
+	}
+}
+upgrade_scientist_trait_jet_expert = {
+	random_list = {
+		10 = {
+			modifier = {
+				factor = trait_chance?1
+			}
+			modifier = {
+				has_trait = scientist_trait_air_specialist
+				factor = 1.5
+			}
+			modifier = {
+				has_trait = scientist_trait_jet_expert
+				factor = 0
+			}
+			add_scientist_trait = scientist_trait_jet_expert
+		}
+		90 = {
+			modifier = {
+				has_trait = scientist_trait_jet_expert
+				factor = 0
+			}
+		}
+	}
+}
+upgrade_scientist_trait_bombs_expert = {
+	#requires dlc Gotterdammerung
+	random_list = {
+		10 = {
+			modifier = {
+				factor = trait_chance?1
+			}
+			modifier = {
+				has_trait = scientist_trait_air_specialist
+				factor = 1.5
+			}
+			modifier = {
+				has_trait = scientist_trait_bombs_expert
+				factor = 0
+			}
+			add_scientist_trait = scientist_trait_bombs_expert
+		}
+		90 = {
+			modifier = {
+				has_trait = scientist_trait_bombs_expert
+				factor = 0
+			}
+		}
+	}
+}
+upgrade_scientist_trait_guidance_systems_expert = {
+	random_list = {
+		10 = {
+			modifier = {
+				factor = trait_chance?1
+			}
+			modifier = {
+				has_trait = scientist_trait_air_specialist
+				factor = 1.5
+			}
+			modifier = {
+				has_trait = scientist_trait_guidance_systems_expert
+				factor = 0
+			}
+			add_scientist_trait = scientist_trait_guidance_systems_expert
+		}
+		90 = {
+			modifier = {
+				has_trait = scientist_trait_guidance_systems_expert
+				factor = 0
+			}
+		}
+	}
+}
+upgrade_scientist_trait_nuclear_power_expert = {
+	random_list = {
+		10 = {
+			modifier = {
+				factor = trait_chance?1
+			}
+			modifier = {
+				has_trait = scientist_trait_nuclear_specialist
+				factor = 1.5
+			}
+			modifier = {
+				has_trait = scientist_trait_nuclear_power_expert
+				factor = 0
+			}
+			add_scientist_trait = scientist_trait_nuclear_power_expert
+		}
+		90 = {
+			modifier = {
+				has_trait = scientist_trait_nuclear_power_expert
+				factor = 0
+			}
+		}
+	}
+}
+upgrade_scientist_trait_nuclear_warfare_expert = {
+	random_list = {
+		10 = {
+			modifier = {
+				factor = trait_chance?1
+			}
+			modifier = {
+				has_trait = scientist_trait_nuclear_specialist
+				factor = 1.5
+			}
+			modifier = {
+				has_trait = scientist_trait_nuclear_warfare_expert
+				factor = 0
+			}
+			add_scientist_trait = scientist_trait_nuclear_warfare_expert
+		}
+		90 = {
+			modifier = {
+				has_trait = scientist_trait_nuclear_warfare_expert
+				factor = 0
+			}
+		}
+	}
+}
+upgrade_scientist_trait_tool_engeneer = {
+	random_list = {
+		10 = {
+			modifier = {
+				factor = trait_chance?1
+			}
+			modifier = {
+				has_trait = scientist_trait_industry_specialist
+				factor = 1.5
+			}
+			modifier = {
+				has_trait = scientist_trait_tool_engeneer
+				factor = 0
+			}
+			add_scientist_trait = scientist_trait_tool_engeneer
+		}
+		90 = {
+			modifier = {
+				has_trait = scientist_trait_tool_engeneer
+				factor = 0
+			}
+		}
+	}
+}
+upgrade_scientist_trait_talented_chemist = {
+	random_list = {
+		10 = {
+			modifier = {
+				factor = trait_chance?1
+			}
+			modifier = {
+				has_trait = scientist_trait_industry_specialist
+				factor = 1.5
+			}
+			modifier = {
+				has_trait = scientist_trait_talented_chemist
+				factor = 0
+			}
+			add_scientist_trait = scientist_trait_talented_chemist
+		}
+		90 = {
+			modifier = {
+				has_trait = scientist_trait_talented_chemist
+				factor = 0
+			}
+		}
+	}
+}

@@ -54,6 +54,9 @@ sp_rockets_flying_bomb = {
 	prototype_time = sp_time.prototype.medium
 
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_guidance_systems_expert = yes
+		}
 		country_effects = {
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_TECH
@@ -148,6 +151,9 @@ sp_rockets_short_range_ballistic_missile = {
 	prototype_time = sp_time.prototype.medium
 
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_rocketry_specialist = yes
+		}
 		country_effects = {
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_PROJECT
@@ -218,6 +224,9 @@ sp_rockets_medium_range_ballistic_missile = {
 	prototype_time = sp_time.prototype.medium	
 
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_rocketry_specialist = yes
+		}
 		country_effects = {
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_PROJECT_WITH_EXTRA_PROJECT
@@ -296,6 +305,9 @@ sp_rockets_long_range_ballistic_missile = {
 	prototype_time = sp_time.prototype.medium
 
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_rocketry_specialist = yes
+		}
 		enable_equipments = {
 			nuclear_missile_equipment_2
 		}
@@ -374,6 +386,9 @@ sp_rockets_ground_to_air_missile = {
 	prototype_time = sp_time.prototype.medium	 
 
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_guidance_systems_expert = yes
+		}
 		enable_equipments = {
 			sam_missile_equipment_1
 		}
@@ -439,6 +454,9 @@ sp_rocket_interceptor = {
 	prototype_time = sp_time.prototype.medium
 
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_rocketry_specialist = yes
+		}
 		enable_equipments = {
 			limit = {
 				NOT = { has_dlc = "By Blood Alone" }

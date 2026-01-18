@@ -3,7 +3,6 @@ sp_ore_preparation = {
 	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
 	project_tags = {
 		sp_tag_metallurgy
-		sp_tag_industrial
 	}
 	ai_will_do = {
 		base = 1
@@ -22,6 +21,9 @@ sp_ore_preparation = {
 	prototype_time = sp_time.prototype.short
 	complexity = sp_complexity.small
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_tool_engeneer = yes
+		}
 		country_effects = {
 			custom_override_tooltip = {
 				tooltip = tech_effect|sp_tech_ore_preparation
@@ -61,7 +63,6 @@ sp_rubber_processing = {
 	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
 	project_tags = {
 		sp_tag_synthetic
-		sp_tag_industrial
 	}
 	ai_will_do = {
 		base = 1
@@ -80,6 +81,9 @@ sp_rubber_processing = {
 	prototype_time = sp_time.prototype.short
 	complexity = sp_complexity.small
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_talented_chemist = yes
+		}
 		country_effects = {
 			custom_override_tooltip = {
 				tooltip = unlock_rubber_processing_tt
@@ -111,7 +115,6 @@ sp_saltpeter_for_plants = {
 	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
 	project_tags = {
 		sp_tag_food
-		sp_tag_industrial
 	}
 	ai_will_do = {
 		base = 1
@@ -125,6 +128,9 @@ sp_saltpeter_for_plants = {
 	prototype_time = sp_time.prototype.short
 	complexity = sp_complexity.small
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_talented_chemist = yes
+		}
 		country_effects = {
 			if = {
 				limit = {
@@ -203,7 +209,6 @@ sp_converter_production = {
 	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
 	project_tags = {
 		sp_tag_metallurgy
-		sp_tag_industrial
 	}
 	ai_will_do = {
 		base = 1
@@ -222,6 +227,9 @@ sp_converter_production = {
 	prototype_time = sp_time.prototype.short
 	complexity = sp_complexity.small
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_tool_engeneer = yes
+		}
 		country_effects = {
 			custom_override_tooltip = {
 				tooltip = tech_effect|sp_tech_converter_production
@@ -253,7 +261,6 @@ sp_reduction_with_hydrogen = {
 	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
 	project_tags = {
 		sp_tag_metallurgy
-		sp_tag_industrial
 	}
 	ai_will_do = {
 		base = 1
@@ -272,6 +279,9 @@ sp_reduction_with_hydrogen = {
 	prototype_time = sp_time.prototype.short
 	complexity = sp_complexity.small
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_tool_engeneer = yes
+		}
 		country_effects = {
 			custom_override_tooltip = {
 				tooltip = tech_effect|sp_tech_reduction_with_hydrogen
@@ -303,7 +313,6 @@ sp_oil_cracking = {
 	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
 	project_tags = {
 		sp_tag_synthetic
-		sp_tag_industrial
 	}
 	ai_will_do = {
 		base = 1
@@ -322,6 +331,9 @@ sp_oil_cracking = {
 	prototype_time = sp_time.prototype.short
 	complexity = sp_complexity.small
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_talented_chemist = yes
+		}
 		country_effects = {
 			custom_override_tooltip = {
 				tooltip = tech_effect|sp_tech_oil_cracking
@@ -353,7 +365,6 @@ sp_oil_aromatization = {
 	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
 	project_tags = {
 		sp_tag_synthetic
-		sp_tag_industrial
 	}
 	ai_will_do = {
 		base = 1
@@ -372,6 +383,9 @@ sp_oil_aromatization = {
 	prototype_time = sp_time.prototype.short
 	complexity = sp_complexity.small
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_talented_chemist = yes
+		}
 		country_effects = {
 			custom_override_tooltip = {
 				tooltip = tech_effect|sp_tech_oil_aromatization
@@ -403,7 +417,6 @@ sp_gas_liquefaction = {
 	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
 	project_tags = {
 		sp_tag_synthetic
-		sp_tag_industrial
 	}
 	ai_will_do = {
 		base = 1
@@ -422,6 +435,9 @@ sp_gas_liquefaction = {
 	prototype_time = sp_time.prototype.short
 	complexity = sp_complexity.small
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_talented_chemist = yes
+		}
 		country_effects = {
 			custom_override_tooltip = {
 				tooltip = tech_effect|sp_tech_gas_liquefaction
@@ -456,7 +472,6 @@ sp_aluminum_refining = {
 	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
 	project_tags = {
 		sp_tag_metallurgy
-		sp_tag_industrial
 	}
 	ai_will_do = {
 		base = 1
@@ -475,6 +490,9 @@ sp_aluminum_refining = {
 	prototype_time = sp_time.prototype.short
 	complexity = sp_complexity.small
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_tool_engeneer = yes
+		}
 		country_effects = {
 			custom_override_tooltip = {
 				tooltip = tech_effect|sp_tech_aluminum_refining
@@ -506,7 +524,6 @@ sp_tungsten_sintering = {
 	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
 	project_tags = {
 		sp_tag_metallurgy
-		sp_tag_industrial
 	}
 	ai_will_do = {
 		base = 1
@@ -525,6 +542,9 @@ sp_tungsten_sintering = {
 	prototype_time = sp_time.prototype.short
 	complexity = sp_complexity.small
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_tool_engeneer = yes
+		}
 		country_effects = {
 			custom_override_tooltip = {
 				tooltip = tech_effect|sp_tech_tungsten_sintering
@@ -556,7 +576,6 @@ sp_chromium_coking = {
 	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
 	project_tags = {
 		sp_tag_metallurgy
-		sp_tag_industrial
 	}
 	ai_will_do = {
 		base = 1
@@ -575,6 +594,9 @@ sp_chromium_coking = {
 	prototype_time = sp_time.prototype.short
 	complexity = sp_complexity.small
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_tool_engeneer = yes
+		}
 		country_effects = {
 			custom_override_tooltip = {
 				tooltip = tech_effect|sp_tech_chromium_coking

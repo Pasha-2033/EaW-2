@@ -1,0 +1,228 @@
+		##
+	##		##
+###  ATTENTION  ###
+	##		##
+		##
+
+# SCIENTIST TRAIT WILL ONLY APPLY TO SPECIAL PROJECTS. THEREFORE ONLY MODIFIERS APPLICABLE TO THOSE SHOULD BE USED.
+
+
+ #####   ######  #####    ####    ####   #    #    ##    #       #  #####  #   # 
+ #    #  #       #    #  #       #    #  ##   #   #  #   #       #    #     # #  
+ #    #  #####   #    #   ####   #    #  # #  #  #    #  #       #    #      #   
+ #####   #       #####        #  #    #  #  # #  ######  #       #    #      #   
+ #       #       #   #   #    #  #    #  #   ##  #    #  #       #    #      #   
+ #       ######  #    #   ####    ####   #    #  #    #  ######  #    #      #   
+
+
+scientist_trait_genius = {
+	# Optional
+	# Localization key used for the name of the trait
+	#name = name_loc_key
+	# if name provided, use it.
+	# else use loc key my_scientist_trait_token
+	
+	# Optional
+	# GFX key of the icon used to illustrate the Trait
+	icon = GFX_scientist_trait_genius
+	# if icon provided, use GFX_icon
+	# else use key GFX_my_scientist_trait_token
+
+	# Optional
+	# Modifiers that will apply to the special project the scientist with that trait is attached to
+
+	modifier = {
+		special_project_speed_factor = 0.1
+		scientist_breakthrough_bonus_factor = 0.05
+		scientist_research_bonus_factor = 0.05
+	}
+}
+
+scientist_trait_brilliant_theorist = {
+	modifier = {
+		special_project_speed_factor = 0.05
+		scientist_breakthrough_bonus_factor = 0.02
+	}
+}
+
+scientist_trait_gifted_engineer = {
+	modifier = {
+		special_project_speed_factor = 0.05
+		scientist_research_bonus_factor = 0.02
+	}
+}
+
+scientist_trait_bright = {
+	modifier = {
+		special_project_speed_factor = 0.05
+		scientist_xp_gain_factor = 0.05
+	}
+}
+
+scientist_trait_fast_learner = {
+	modifier = {
+		scientist_xp_gain_factor = 0.1
+	}
+}
+
+scientist_trait_resourceful = {
+	modifier = {
+		special_project_facility_supply_consumption_factor = -0.1
+	}
+}
+
+
+
+
+ #####   #####    ####        #  ######   ####   ##### 
+ #    #  #    #  #    #       #  #       #    #    #   
+ #    #  #    #  #    #       #  #####   #         #   
+ #####   #####   #    #       #  #       #         #   
+ #       #   #   #    #  #    #  #       #    #    #   
+ #       #    #   ####    ####   ######   ####     #   
+#Land
+scientist_trait_land_specialist = {
+	specialization = { specialization_land }
+	modifier = {
+		specialization_land_speed_factor = 0.05
+	}
+}
+scientist_trait_armored_specialist = {
+	specialization = { 
+		specialization_land 	#tanks
+		specialization_magic	#magic tanks
+	}
+	modifier = {
+		sp_tag_tank_speed_factor = 0.05
+	}
+}
+scientist_trait_artillery_specialist = {
+	specialization = { 
+		specialization_land 	#artillery
+		specialization_magic	#magic artillery
+	}
+	modifier = {
+		sp_tag_artillery_speed_factor = 0.05
+	}
+}
+#Naval
+scientist_trait_naval_specialist = {
+	specialization = { specialization_naval }
+	modifier = {
+		specialization_naval_speed_factor = 0.05
+	}
+}
+scientist_trait_submarine_specialist = {
+	specialization = { specialization_naval }
+	modifier = {
+		sp_tag_submarine_speed_factor = 0.05
+	}
+}
+scientist_trait_surface_ship_specialist = {
+	specialization = { specialization_naval }
+	modifier = {
+		sp_tag_surface_ship_speed_factor = 0.05
+	}
+}
+#Air
+scientist_trait_air_specialist = {
+	specialization = { specialization_air }
+	modifier = {
+		specialization_air_speed_factor = 0.05
+	}
+}
+scientist_trait_aircraft_specialist = {
+	specialization = { specialization_air }
+	modifier = {
+		sp_tag_aircraft_speed_factor = 0.05
+	}
+}
+scientist_trait_rocketry_specialist = {
+	specialization = { specialization_air }
+	modifier = {
+		sp_tag_rocket_speed_factor = 0.05
+	}
+}
+scientist_trait_electronics_specialist = {
+	specialization = { 
+		specialization_air #radar
+		specialization_naval #sonar
+	}
+	modifier = {
+		sp_tag_electronic_speed_factor = 0.05
+	}
+}
+scientist_trait_helicopter_expert = {
+	specialization = { specialization_air }
+	modifier = {
+		sp_tag_helicopter_speed_factor = 0.15
+	}
+}
+scientist_trait_jet_expert = {
+	specialization = { specialization_air }
+	modifier = {
+		sp_tag_jet_speed_factor = 0.1
+	}
+}
+scientist_trait_bombs_expert = {
+	specialization = { specialization_air }
+	available = { #Bombs are GOT
+		has_dlc = "Gotterdammerung"
+	}
+	modifier = {
+		sp_tag_bomb_speed_factor = 0.1
+	}
+}
+scientist_trait_guidance_systems_expert = {
+	specialization = { specialization_air }
+	modifier = {
+		sp_tag_guided_bomb_speed_factor = 0.1
+	}
+}
+#Nuclear
+scientist_trait_nuclear_specialist = {
+	specialization = { specialization_nuclear }
+	modifier = {
+		specialization_nuclear_speed_factor = 0.05
+	}
+}
+scientist_trait_nuclear_warfare_expert = {
+	specialization = { specialization_nuclear }
+	modifier = {
+		sp_tag_nuclear_warfare_speed_factor = 0.1
+	}
+}
+scientist_trait_nuclear_power_expert = {
+	specialization = { specialization_nuclear }
+	modifier = {
+		sp_tag_nuclear_power_speed_factor = 0.1
+	}
+}
+#Magical (only 1, because other traits are also has specialization_magic)
+scientist_trait_magic_specialist = {
+	specialization = { specialization_magic }
+	modifier = {
+		specialization_magic_speed_factor = 0.05
+	}
+}
+#Industrial
+scientist_trait_industry_specialist = {
+	specialization = { specialization_industry }
+	modifier = {
+		specialization_industry = 0.05
+	}
+}
+scientist_trait_tool_engeneer = {
+	specialization = { specialization_industry }
+	modifier = {
+		sp_tag_production_speed_factor = 0.05
+		sp_tag_metallurgy_speed_factor = 0.05
+	}
+}
+scientist_trait_talented_chemist = {
+	specialization = { specialization_industry }
+	modifier = {
+		sp_tag_food_speed_factor = 0.05
+		sp_tag_synthetic_speed_factor = 0.05
+	}
+}

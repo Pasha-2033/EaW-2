@@ -205,7 +205,6 @@ sp_super_heavy_magic_howitzer = {
 
 	project_tags = {
 		sp_tag_artillery
-		sp_tag_magic
 	}
 
 	allowed = {
@@ -231,6 +230,9 @@ sp_super_heavy_magic_howitzer = {
 		}
 	}
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_artillery_specialist = yes
+		}
 		country_effects = {
 			if = {
 				limit = {
@@ -266,7 +268,6 @@ sp_self_propelled_super_heavy_magic_howitzer = {
 
 	project_tags = {
 		sp_tag_artillery
-		sp_tag_magic
 	}
 	special_project_parent = {
 		sp_super_heavy_magic_howitzer
@@ -290,6 +291,9 @@ sp_self_propelled_super_heavy_magic_howitzer = {
 		}
 	}
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_artillery_specialist = yes
+		}
 		country_effects = {
 			if = {
 				limit = {
@@ -324,7 +328,6 @@ sp_super_heavy_magic_cannon_0 = {
 	specialization = specialization_magic
 	project_tags = {
 		sp_tag_tank
-		sp_tag_magic
 	}
 	allowed = {
 		country_without_sp = no #"no" because we want to forbid, not just check
@@ -345,6 +348,9 @@ sp_super_heavy_magic_cannon_0 = {
 		}
 	}
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_armored_specialist = yes
+		}
 		country_effects = {
 			if = {
 				limit = {
@@ -373,7 +379,6 @@ sp_super_heavy_magic_cannon_1 = {
 	specialization = specialization_magic
 	project_tags = {
 		sp_tag_tank
-		sp_tag_magic
 	}
 	allowed = {
 		country_without_sp = no #"no" because we want to forbid, not just check
@@ -396,6 +401,9 @@ sp_super_heavy_magic_cannon_1 = {
 		}
 	}
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_armored_specialist = yes
+		}
 		country_effects = {
 			if = {
 				limit = {
@@ -424,7 +432,6 @@ sp_super_heavy_magic_cannon_2 = {
 	specialization = specialization_magic
 	project_tags = {
 		sp_tag_tank
-		sp_tag_magic
 	}
 	allowed = {
 		country_without_sp = no #"no" because we want to forbid, not just check
@@ -447,6 +454,9 @@ sp_super_heavy_magic_cannon_2 = {
 		}
 	}
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_armored_specialist = yes
+		}
 		country_effects = {
 			if = {
 				limit = {

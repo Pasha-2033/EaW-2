@@ -13,7 +13,6 @@ sp_air_bouncing_bomb = {
 	project_tags = {
 		sp_tag_aircraft
 		sp_tag_bomb
-		sp_tag_air
 	}
 	allowed = {
 		country_without_sp = no #"no" because we want to forbid, not just check
@@ -51,6 +50,9 @@ sp_air_bouncing_bomb = {
 	complexity = sp_complexity.medium 
 
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_bombs_expert = yes
+		}
 		country_effects = {
 			custom_effect_tooltip = sp_air_bouncing_bomb_completion_tt
 		}		
@@ -77,7 +79,6 @@ sp_air_earthshaker_bomb = {
 	project_tags = {
 		sp_tag_aircraft
 		sp_tag_bomb
-		sp_tag_air
 	}
 
 	allowed = {
@@ -113,6 +114,9 @@ sp_air_earthshaker_bomb = {
 	complexity = sp_complexity.medium
 
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_bombs_expert = yes
+		}
 		country_effects = {
 			custom_effect_tooltip = sp_air_earthshaker_bomb_completion_tt
 		}
@@ -154,7 +158,6 @@ sp_air_intercontinental_bomber = {
 
 	project_tags = {
 		sp_tag_aircraft
-		sp_tag_air
 	}
 
 	allowed = {
@@ -191,6 +194,9 @@ sp_air_intercontinental_bomber = {
 	complexity = sp_complexity.large
 
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_aircraft_specialist = yes
+		}
 		enable_equipments = {
 			strat_bomber_intercontinental_equipment_1
 		}
@@ -217,7 +223,6 @@ sp_air_mothership_aircraft = {
 
 	project_tags = {
 		sp_tag_aircraft
-		sp_tag_air
 	}
 
 	complexity = sp_complexity.medium 
@@ -254,6 +259,9 @@ sp_air_mothership_aircraft = {
 	prototype_time = sp_time.prototype.long
 
 	project_output = {	
+		scientist_effects = {
+			upgrade_scientist_trait_aircraft_specialist = yes
+		}
 		enable_equipments = {
 			mothership_equipment_0
 		}
@@ -287,7 +295,6 @@ sp_air_jet_engine = {
 	icon = GFX_sp_air_jet_engine
 
 	project_tags = {
-		sp_tag_air
 		sp_tag_aircraft
 		sp_tag_jet
 	}
@@ -334,6 +341,9 @@ sp_air_jet_engine = {
 	complexity = sp_complexity.large
 
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_jet_expert = yes
+		}
 		country_effects = {
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_PROJECT
@@ -373,7 +383,6 @@ sp_air_axial_jet_engine = {
 	icon = GFX_sp_air_axial_jet_engine
 
 	project_tags = {
-		sp_tag_air
 		sp_tag_aircraft
 		sp_tag_jet
 	}
@@ -426,6 +435,9 @@ sp_air_axial_jet_engine = {
 	complexity = sp_complexity.large
 
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_jet_expert = yes
+		}
 		country_effects = {
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_PROJECT
@@ -467,7 +479,6 @@ sp_air_supersonic_jet = {
 	icon = GFX_sp_air_supersonic_jet
 
 	project_tags = {
-		sp_tag_air
 		sp_tag_aircraft
 		sp_tag_jet
 	}
@@ -509,6 +520,9 @@ sp_air_supersonic_jet = {
 	prototype_time = sp_time.prototype.long
 
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_jet_expert = yes
+		}
 		enable_equipments = {
 			limit = {
 				has_dlc = "By Blood Alone"
@@ -558,7 +572,6 @@ sp_air_helicopter = {
 	icon = GFX_sp_air_helicopter
 
 	project_tags = {
-		sp_tag_air
 		sp_tag_aircraft
 		sp_tag_helicopter
 	}
@@ -587,6 +600,9 @@ sp_air_helicopter = {
 	complexity = sp_complexity.medium
 
 	project_output = {	
+		scientist_effects = {
+			upgrade_scientist_trait_helicopter_expert = yes
+		}
 		enable_equipments = {
 			helicopter_equipment_0 
 		}

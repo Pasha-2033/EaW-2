@@ -1,7 +1,10 @@
 sp_air_radar = {
 	specialization = specialization_air
 	icon = GFX_sp_nuclear_radar
-	project_tags = sp_tag_radar
+	project_tags = {
+		sp_tag_electronic
+		sp_tag_radar
+	}
 
 	prototype_time = sp_time.prototype.medium
 
@@ -32,6 +35,9 @@ sp_air_radar = {
 
 	
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_electronics_specialist = yes
+		}
 		country_effects = {
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_PROJECT
@@ -79,11 +85,12 @@ sp_sonar_prototyping = {
 	specialization = specialization_naval
 	project_tags = {
 		sp_tag_electronic
+		sp_tag_sonar
 	}
 	prototype_time = sp_time.prototype.medium
 	complexity = sp_complexity.medium
 	breakthrough_cost = {
-		specialization_air = 1
+		specialization_naval = 1
 	}
 	allowed = {
 		has_dlc = "Man the Guns"
@@ -110,6 +117,9 @@ sp_sonar_prototyping = {
 		base = 1
 	}
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_electronics_specialist = yes
+		}
 		country_effects = {
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_TECH

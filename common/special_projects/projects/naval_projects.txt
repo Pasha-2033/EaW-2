@@ -16,7 +16,6 @@ sp_naval_cruiser_submarine = {
 
 	project_tags = {
 		sp_tag_submarine
-		sp_tag_naval
 	}
 	
 	complexity = sp_complexity.medium
@@ -50,6 +49,9 @@ sp_naval_cruiser_submarine = {
 	}
 	
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_submarine_specialist = yes
+		}
 		country_effects = {
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_PROJECT
@@ -99,7 +101,6 @@ sp_naval_fleet_submarine = {
 
 	project_tags = {
 		sp_tag_submarine
-		sp_tag_naval
 	}
 
 	allowed = {
@@ -123,6 +124,9 @@ sp_naval_fleet_submarine = {
 		specialization_naval = 1
 	}
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_submarine_specialist = yes
+		}
 		country_effects = {
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_PROJECT_WITH_EXTRA_PROJECT
@@ -175,7 +179,6 @@ sp_naval_nuclear_submarine = {
 	project_tags = {
 		sp_tag_nuclear_power
 		sp_tag_submarine
-		sp_tag_naval
 	}
 
 	complexity = sp_complexity.insane
@@ -216,6 +219,9 @@ sp_naval_nuclear_submarine = {
 	}
 
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_submarine_specialist = yes
+		}
 		enable_equipments = {
 			nuclear_submarine_0
 		}
@@ -247,7 +253,6 @@ sp_naval_rocket_launching_submarine = {
 	project_tags = {
 		sp_tag_rocket
 		sp_tag_submarine
-		sp_tag_naval
 	}
 	
 	resource_cost = {
@@ -273,6 +278,9 @@ sp_naval_rocket_launching_submarine = {
 		specialization_naval = 2
 	}
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_submarine_specialist = yes
+		}
 		country_effects = {
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_PROJECT_WITH_EXTRA_PROJECT
@@ -326,7 +334,6 @@ sp_naval_nuclear_missile_submarine = {
 	project_tags = {
 		sp_tag_nuclear_warfare
 		sp_tag_submarine
-		sp_tag_naval
 	}
 	
 	resource_cost = {
@@ -357,6 +364,9 @@ sp_naval_nuclear_missile_submarine = {
 	
 	
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_submarine_specialist = yes
+		}
 		enable_equipments = {
 			limit = {
 				NOT = { 
@@ -401,7 +411,6 @@ sp_naval_nuclear_torpedo = {
 	project_tags = {
 		sp_tag_submarine
 		sp_tag_nuclear_warfare
-		sp_tag_naval
 	}
 	
 	resource_cost = {
@@ -433,6 +442,9 @@ sp_naval_nuclear_torpedo = {
 	}
 
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_submarine_specialist = yes
+		}
 		country_effects = {
 			if = {
 				limit = {
@@ -482,7 +494,6 @@ sp_naval_midget_submarine = {
 
 	project_tags = {
 		sp_tag_submarine
-		sp_tag_naval
 	}
 
 	allowed = {
@@ -518,6 +529,9 @@ sp_naval_midget_submarine = {
 		specialization_naval = 1
 	}
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_submarine_specialist = yes
+		}
 		enable_equipments = {	
 			limit = {
 				has_dlc = "Man the Guns"
@@ -563,9 +577,7 @@ sp_naval_aip_engine = {
 	}
 
 	project_tags = {
-		sp_tag_surface_ship
 		sp_tag_submarine
-		sp_tag_naval
 	}
 
 	ai_will_do = {
@@ -598,7 +610,9 @@ sp_naval_aip_engine = {
 	prototype_time = sp_time.prototype.medium
 	
 	project_output = {
-
+		scientist_effects = {
+			upgrade_scientist_trait_submarine_specialist = yes
+		}
 
 		country_effects = {
 			if = {
@@ -655,7 +669,6 @@ sp_naval_anechoic_tiles = {
 
 	project_tags = {
 		sp_tag_submarine
-		sp_tag_naval
 	}
 
 	ai_will_do = {
@@ -717,6 +730,9 @@ sp_naval_anechoic_tiles = {
 			}		
 			ship_anechoic_tile	
 		}
+		scientist_effects = {
+			upgrade_scientist_trait_submarine_specialist = yes
+		}
 	}
 
 	generic_prototype_rewards = {
@@ -752,7 +768,6 @@ sp_naval_torpedo_cruiser = {
 	specialization = specialization_naval
 	project_tags = {
 		sp_tag_surface_ship
-		sp_tag_naval
 	}
 	ai_will_do = {
 		base = 1
@@ -790,14 +805,15 @@ sp_naval_torpedo_cruiser = {
 		specialization_naval = 1
 	}
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_surface_ship_specialist = yes
+		}
 		enable_equipments = {	
 			limit = {
 				has_dlc = "Man the Guns"
 			}
 			ship_hull_torpedo_cruiser
-		}	
-			
-
+		}
 		enable_equipments = {	
 			limit = {
 				NOT = {
@@ -842,7 +858,6 @@ sp_naval_super_heavy_battleship = {
 
 	project_tags = {
 		sp_tag_surface_ship
-		sp_tag_naval
 	}
 
 	ai_will_do = {
@@ -883,7 +898,9 @@ sp_naval_super_heavy_battleship = {
 		specialization_naval = 1
 	}
 	project_output = {
-
+		scientist_effects = {
+			upgrade_scientist_trait_surface_ship_specialist = yes
+		}
 
 		enable_equipments = {
 			limit = {
@@ -944,7 +961,6 @@ sp_naval_modern_carrier = {
 
 	project_tags = {
 		sp_tag_surface_ship
-		sp_tag_naval
 	}
 
 	ai_will_do = {
@@ -985,6 +1001,9 @@ sp_naval_modern_carrier = {
 	prototype_time = sp_time.prototype.long	
 	
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_surface_ship_specialist = yes
+		}
 		enable_equipments = {
 			limit = {
 				NOT = {
@@ -1035,7 +1054,6 @@ sp_naval_underway_replenishment = {
 
 	project_tags = {
 		sp_tag_surface_ship
-		sp_tag_naval
 	}
 
 	ai_will_do = {
@@ -1071,6 +1089,9 @@ sp_naval_underway_replenishment = {
 	prototype_time = sp_time.prototype.medium 
 	
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_surface_ship_specialist = yes
+		}
 		country_effects = {
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_TECH
@@ -1109,7 +1130,6 @@ sp_naval_proximity_fuze = {
 
 	project_tags = {
 		sp_tag_surface_ship
-		sp_tag_naval
 	}
 
 	ai_will_do = {
@@ -1139,6 +1159,9 @@ sp_naval_proximity_fuze = {
 	}
 
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_surface_ship_specialist = yes
+		}
 		country_effects = {
 			custom_override_tooltip = {
 				tooltip = tech_effect|sp_tech_naval_proximity_fuze_tech
@@ -1177,7 +1200,6 @@ antitorpedo_bulkhead = {
 	}
 	project_tags = {
 		sp_tag_surface_ship
-		sp_tag_naval
 	}
 	complexity = sp_complexity.small
 	prototype_time = sp_time.prototype.medium
@@ -1189,6 +1211,9 @@ antitorpedo_bulkhead = {
 		}
 	}
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_surface_ship_specialist = yes
+		}
 		country_effects = {
 			custom_override_tooltip = {
 				tooltip = tech_effect|sp_tech_antitorpedo_bulkhead
@@ -1219,7 +1244,6 @@ sp_naval_support_ships = {
 
 	project_tags = {
 		sp_tag_surface_ship
-		sp_tag_naval
 	}
 
 	ai_will_do = {
@@ -1248,20 +1272,15 @@ sp_naval_support_ships = {
 	complexity = sp_complexity.medium
 	prototype_time = sp_time.prototype.medium 
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_surface_ship_specialist = yes
+		}
 		country_effects = {
 		}
 
 		enable_equipments = {
 			support_ship_0
 			repair_ship_0
-		}
-
-		enable_equipment_modules = {
-			 
-		}
-
-		enable_subunits = { 
-			
 		}
 	}
 	generic_prototype_rewards = {

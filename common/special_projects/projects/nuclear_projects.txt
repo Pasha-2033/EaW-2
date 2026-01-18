@@ -4,7 +4,6 @@ sp_nuclear_reactor_exploratory = {
 	complexity = sp_complexity.large
 	project_tags = {
 		sp_tag_nuclear_power
-		sp_tag_nuclear
 	}
 	allowed = {
 		country_without_sp = no #"no" because we want to forbid, not just check
@@ -24,6 +23,9 @@ sp_nuclear_reactor_exploratory = {
 	}
 	prototype_time = sp_time.prototype.long
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_nuclear_power_expert = yes
+		}
 		country_effects = {
 			custom_override_tooltip = {
 				tooltip = {
@@ -86,7 +88,6 @@ sp_nuclear_reactor = {
 	complexity = sp_complexity.large
 	project_tags = {
 		sp_tag_nuclear_power
-		sp_tag_nuclear
 	}
 	special_project_parent = {
 		sp_nuclear_reactor_exploratory
@@ -104,6 +105,9 @@ sp_nuclear_reactor = {
 	}
 	prototype_time = sp_time.prototype.long
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_nuclear_power_expert = yes
+		}
 		country_effects = {
 			custom_override_tooltip = {
 				tooltip = {
@@ -164,7 +168,6 @@ sp_nuclear_reactor_heavy_water = {
 	complexity = sp_complexity.large
 	project_tags = {
 		sp_tag_nuclear_power
-		sp_tag_nuclear
 	}
 	special_project_parent = {
 		sp_nuclear_reactor_exploratory
@@ -182,6 +185,9 @@ sp_nuclear_reactor_heavy_water = {
 	}
 	prototype_time = sp_time.prototype.long
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_nuclear_power_expert = yes
+		}
 		country_effects = {
 			custom_override_tooltip = {
 				tooltip = {
@@ -242,7 +248,6 @@ sp_thermonuclear_reactor = {
 	complexity = sp_complexity.large
 	project_tags = {
 		sp_tag_nuclear_power
-		sp_tag_nuclear
 	}
 	allowed = {
 		country_without_sp = no #"no" because we want to forbid, not just check
@@ -265,6 +270,9 @@ sp_thermonuclear_reactor = {
 	}
 	prototype_time = sp_time.prototype.long
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_nuclear_power_expert = yes
+		}
 		country_effects = {
 			custom_override_tooltip = {
 				tooltip = {
@@ -315,7 +323,6 @@ sp_commercial_reactor = {
 	complexity = sp_complexity.large
 	project_tags = {
 		sp_tag_nuclear_power
-		sp_tag_nuclear
 	}
 	allowed = {
 		country_without_sp = no #"no" because we want to forbid, not just check
@@ -334,6 +341,9 @@ sp_commercial_reactor = {
 	}
 	prototype_time = sp_time.prototype.long
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_nuclear_power_expert = yes
+		}
 		country_effects = {
 			custom_override_tooltip = {
 				tooltip = {
@@ -393,7 +403,6 @@ sp_anti_nuke_bunker = {
 	complexity = sp_complexity.large
 	project_tags = {
 		sp_tag_nuclear_power
-		sp_tag_nuclear
 	}
 	allowed = {
 		country_without_sp = no #"no" because we want to forbid, not just check
@@ -413,6 +422,9 @@ sp_anti_nuke_bunker = {
 	}
 	prototype_time = sp_time.prototype.long
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_nuclear_warfare_expert = yes
+		}
 		country_effects = {
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_TECH
@@ -465,7 +477,6 @@ sp_nuclear_engines_primary = {
 
 	project_tags = {
 		sp_tag_nuclear_power
-		sp_tag_nuclear
 	}
 	
 	prototype_time = sp_time.prototype.long	 
@@ -489,6 +500,9 @@ sp_nuclear_engines_primary = {
 	}
 	
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_nuclear_power_expert = yes
+		}
 		country_effects = {
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_PROJECT
@@ -535,7 +549,6 @@ sp_nuclear_engines_secondary = {
 	#icon = GFX_sp_nuclear_engines #TODO (works, but other picture required)
 	project_tags = {
 		sp_tag_nuclear_power
-		sp_tag_nuclear
 	}
 	prototype_time = sp_time.prototype.long	 
 	complexity = sp_complexity.medium
@@ -554,6 +567,9 @@ sp_nuclear_engines_secondary = {
 		sp_commercial_reactor
 	}
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_nuclear_power_expert = yes
+		}
 		country_effects = {
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_PROJECT
@@ -598,7 +614,6 @@ sp_nuclear_bomb = {
 	icon = GFX_sp_nuclear_bomb
 	project_tags = {
 		sp_tag_nuclear_warfare
-		sp_tag_nuclear
 	}
 	prototype_time = sp_time.prototype.long	
 	complexity = sp_complexity.large
@@ -622,6 +637,9 @@ sp_nuclear_bomb = {
 		}
 	}
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_nuclear_warfare_expert = yes
+		}
 		country_effects = {
 			add_nuclear_bombs = 1
 			custom_override_tooltip = {
@@ -774,7 +792,6 @@ sp_thermo_nuclear_bomb = {
 	icon = GFX_sp_thermo_nuclear_bomb
 	project_tags = {
 		sp_tag_nuclear_warfare
-		sp_tag_nuclear
 	}
 	prototype_time = sp_time.prototype.long 
 	complexity = sp_complexity.insane
@@ -794,6 +811,9 @@ sp_thermo_nuclear_bomb = {
 		has_dlc = "Gotterdammerung"
 	}
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_nuclear_warfare_expert = yes
+		}
 		country_effects = {
 			custom_effect_tooltip = sp_thermo_nuclear_bomb_tt
 			hidden_effect = {
@@ -877,7 +897,6 @@ sp_nuclear_warheads = {
 	specialization = specialization_nuclear	
 	icon = GFX_sp_nuclear_warheads
 	project_tags = {
-		sp_tag_nuclear
 		sp_tag_nuclear_warfare
 	}
 	prototype_time = sp_time.prototype.long	 
@@ -899,6 +918,9 @@ sp_nuclear_warheads = {
 		has_dlc = "Gotterdammerung"
 	}
 	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_nuclear_warfare_expert = yes
+		}
 		country_effects = {
 			custom_effect_tooltip = {
 				localization_key = SP_UNLOCK_PROJECT_WITH_EXTRA_PROJECT
