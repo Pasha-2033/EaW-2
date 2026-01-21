@@ -515,7 +515,7 @@ buildings = {
 		level_cap = {
 			state_max = 5
 			shares_slots = yes
-			exclusive_with = mega_gun_emplacement
+			#exclusive_with = mega_gun_emplacement
 		}
 		base_cost = 6400
 		infrastructure_construction_effect = yes
@@ -523,7 +523,7 @@ buildings = {
 
 		rocket_launch_capacity = 1
 
-		spawn_point = rocket_site_spawn
+		#spawn_point = rocket_site_spawn
 
 		show_on_map = 1
 	}
@@ -540,11 +540,11 @@ buildings = {
 		disabled_in_dmz = yes
 		infrastructure_construction_effect = yes
 		gun_emplacement = yes
-		spawn_point = rocket_site_spawn
+		#spawn_point = rocket_site_spawn
 		level_cap = {
 			state_max = 1
 			shares_slots = yes
-			exclusive_with = rocket_site
+			#exclusive_with = rocket_site
 		}
 		#Building utilizes equipment "explosive_ammo_equipment" as ammunition for the air mission barrage
 	}
@@ -923,10 +923,10 @@ spawn_points = {
 		max = 1
 	}
 
-	rocket_site_spawn = {
-		type = state
-		max = 1
-	}
+	#rocket_site_spawn = {
+	#	type = state
+	#	max = 1
+	#}
 
 	naval_base_spawn = {
 		type = province
