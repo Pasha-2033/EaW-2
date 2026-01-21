@@ -22,10 +22,123 @@ sp_magic_basic_engine = {
 					}
 				}
 				custom_override_tooltip = {
-					tooltip = tech_effect|sp_tech_magic_basic_engine_nsb
-					set_technology = {
-						sp_tech_magic_basic_engine_nsb  = 1
-						popup = no
+					tooltip = sp_magic_engine_no_nsb_effect_tt
+					add_equipment_bonus = {
+						project = FROM
+						bonus = {
+							#light
+							light_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							light_aa_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							light_at_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							light_flame_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							light_artillery_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							light_amphibious_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							light_rocket_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							#medium
+							medium_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							medium_aa_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							medium_at_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							medium_flame_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							medium_artillery_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							medium_amphibious_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							medium_rocket_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							#heavy
+							heavy_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							heavy_aa_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							heavy_at_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							heavy_flame_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							heavy_artillery_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							heavy_amphibious_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							heavy_rocket_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							#super heavy
+							super_heavy_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							super_heavy_aa_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							super_heavy_at_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							super_heavy_flame_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							super_heavy_artillery_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							super_heavy_rocket_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+						}
 					}
 				}
 			}
@@ -36,10 +149,79 @@ sp_magic_basic_engine = {
 					}
 				}
 				custom_override_tooltip = {
-					tooltip = tech_effect|sp_tech_magic_basic_engine_bba
-					set_technology = {
-						sp_tech_magic_basic_engine_bba  = 1
-						popup = no
+					tooltip = sp_magic_engine_no_bba_effect_tt
+					add_equipment_bonus = {
+						project = FROM
+						bonus = {
+							#small
+							small_plane_airframe = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							cv_small_plane_airframe = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							small_plane_cas_airframe = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							cv_small_plane_cas_airframe = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							small_plane_naval_bomber_airframe = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							cv_small_plane_naval_bomber_airframe = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							small_plane_suicide_airframe = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							cv_small_plane_suicide_airframe = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							#medium
+							medium_plane_airframe = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							medium_plane_fighter_airframe = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							medium_plane_scout_plane_airframe = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							#large
+							large_plane_airframe = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							large_plane_maritime_patrol_plane_airframe = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							#other
+							transport_plane_equipment = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							mothership_equipment = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							strat_bomber_intercontinental_equipment = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+						}
 					}
 				}
 			}
@@ -50,10 +232,43 @@ sp_magic_basic_engine = {
 					}
 				}
 				custom_override_tooltip = {
-					tooltip = tech_effect|sp_tech_magic_basic_engine_mtg
-					set_technology = {
-						sp_tech_magic_basic_engine_mtg  = 1
-						popup = no
+					tooltip = sp_magic_engine_no_mtg_effect_tt
+					add_equipment_bonus = {
+						project = FROM
+						bonus = {
+							ship_hull_frigate = {
+								naval_speed = 0.05
+								instant = yes
+							}
+							ship_hull_submarine = {
+								naval_speed = 0.05
+								instant = yes
+							}
+							ship_hull_cruiser = {
+								naval_speed = 0.05
+								instant = yes
+							}
+							ship_hull_light = {
+								naval_speed = 0.05
+								instant = yes
+							}
+							ship_hull_heavy = {
+								naval_speed = 0.05
+								instant = yes
+							}
+							ship_hull_carrier = {
+								naval_speed = 0.05
+								instant = yes
+							}
+							repair_ship_hull = {
+								naval_speed = 0.05
+								instant = yes
+							}
+							support_ship_hull = {
+								naval_speed = 0.05
+								instant = yes
+							}
+						}
 					}
 				}
 			}
@@ -106,7 +321,7 @@ sp_magic_llm_engine = {
 		base = 1
 	}
 	special_project_parent = {
-		sp_magic_basic_engine
+		#sp_magic_basic_engine
 	}
 	allowed = {
 		original_tag = GWS
@@ -125,10 +340,79 @@ sp_magic_llm_engine = {
 					}
 				}
 				custom_override_tooltip = {
-					tooltip = tech_effect|sp_tech_magic_basic_engine_bba
-					set_technology = {
-						sp_tech_magic_basic_engine_bba  = 1
-						popup = no
+					tooltip = sp_magic_engine_no_bba_effect_tt
+					add_equipment_bonus = {
+						project = FROM
+						bonus = {
+							#small
+							small_plane_airframe = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							cv_small_plane_airframe = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							small_plane_cas_airframe = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							cv_small_plane_cas_airframe = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							small_plane_naval_bomber_airframe = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							cv_small_plane_naval_bomber_airframe = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							small_plane_suicide_airframe = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							cv_small_plane_suicide_airframe = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							#medium
+							medium_plane_airframe = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							medium_plane_fighter_airframe = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							medium_plane_scout_plane_airframe = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							#large
+							large_plane_airframe = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							large_plane_maritime_patrol_plane_airframe = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							#other
+							transport_plane_equipment = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							mothership_equipment = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							strat_bomber_intercontinental_equipment = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+						}
 					}
 				}
 			}
@@ -139,10 +423,123 @@ sp_magic_llm_engine = {
 					}
 				}
 				custom_override_tooltip = {
-					tooltip = tech_effect|sp_tech_magic_basic_engine_nsb
-					set_technology = {
-						sp_tech_magic_basic_engine_nsb = 1
-						popup = no
+					tooltip = sp_magic_engine_no_nsb_effect_tt
+					add_equipment_bonus = {
+						project = FROM
+						bonus = {
+							#light
+							light_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							light_aa_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							light_at_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							light_flame_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							light_artillery_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							light_amphibious_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							light_rocket_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							#medium
+							medium_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							medium_aa_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							medium_at_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							medium_flame_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							medium_artillery_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							medium_amphibious_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							medium_rocket_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							#heavy
+							heavy_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							heavy_aa_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							heavy_at_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							heavy_flame_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							heavy_artillery_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							heavy_amphibious_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							heavy_rocket_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							#super heavy
+							super_heavy_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							super_heavy_aa_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							super_heavy_at_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							super_heavy_flame_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							super_heavy_artillery_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+							super_heavy_rocket_tank_chassis = {
+								maximum_speed = 0.05
+								instant = yes
+							}
+						}
 					}
 				}
 			}
@@ -153,10 +550,43 @@ sp_magic_llm_engine = {
 					}
 				}
 				custom_override_tooltip = {
-					tooltip = tech_effect|sp_tech_magic_basic_engine_mtg
-					set_technology = {
-						sp_tech_magic_basic_engine_mtg  = 1
-						popup = no
+					tooltip = sp_magic_engine_no_mtg_effect_tt
+					add_equipment_bonus = {
+						project = FROM
+						bonus = {
+							ship_hull_frigate = {
+								naval_speed = 0.05
+								instant = yes
+							}
+							ship_hull_submarine = {
+								naval_speed = 0.05
+								instant = yes
+							}
+							ship_hull_cruiser = {
+								naval_speed = 0.05
+								instant = yes
+							}
+							ship_hull_light = {
+								naval_speed = 0.05
+								instant = yes
+							}
+							ship_hull_heavy = {
+								naval_speed = 0.05
+								instant = yes
+							}
+							ship_hull_carrier = {
+								naval_speed = 0.05
+								instant = yes
+							}
+							repair_ship_hull = {
+								naval_speed = 0.05
+								instant = yes
+							}
+							support_ship_hull = {
+								naval_speed = 0.05
+								instant = yes
+							}
+						}
 					}
 				}
 			}
@@ -240,11 +670,21 @@ sp_super_heavy_magic_howitzer = {
 						has_dlc = "No Step Back"
 					}
 				}
-				custom_override_tooltip = {
-					tooltip = tech_effect|sp_tech_super_heavy_magic_howitzer
-					set_technology = {
-						sp_tech_super_heavy_howitzer = 1
-						popup = no
+				add_equipment_bonus = {
+					project = FROM
+					bonus = {
+						light_magic_artillery_tank_chassis = {
+							soft_attack = 0.05
+						}
+						medium_magic_artillery_tank_chassis = {
+							soft_attack = 0.05
+						}
+						heavy_magic_artillery_tank_chassis = {
+							soft_attack = 0.05
+						}
+						super_magic_heavy_artillery_tank_chassis = {
+							soft_attack = 0.05
+						}
 					}
 				}
 			}
@@ -301,11 +741,43 @@ sp_self_propelled_super_heavy_magic_howitzer = {
 						has_dlc = "No Step Back"
 					}
 				}
-				custom_override_tooltip = {
-					tooltip = tech_effect|sp_tech_self_propelled_super_heavy_magic_howitzer
-					set_technology = {
-						sp_tech_self_propelled_super_heavy_magic_howitzer = 1
-						popup = no
+				add_equipment_bonus = {
+					project = FROM
+					bonus = {
+						#barrel artillery
+						magic_artillery_equipment = {
+							soft_attack = 0.05
+							instant = yes
+						}
+						magic_anti_tank_equipment = {
+							soft_attack = 0.05
+							instant = yes
+						}
+						magic_anti_air_equipment = {
+							soft_attack = 0.05
+							instant = yes
+						}
+						magic_mortar_equipment = {
+							soft_attack = 0.05
+							instant = yes
+						}
+						#tanks
+						light_magic_artillery_tank_chassis = {
+							soft_attack = 0.05
+							instant = yes
+						}
+						medium_magic_artillery_tank_chassis = {
+							soft_attack = 0.05
+							instant = yes
+						}
+						heavy_magic_artillery_tank_chassis = {
+							soft_attack = 0.05
+							instant = yes
+						}
+						super_heavy_magic_artillery_tank_chassis = {
+							soft_attack = 0.05
+							instant = yes
+						}
 					}
 				}
 			}
@@ -358,11 +830,27 @@ sp_super_heavy_magic_cannon_0 = {
 						has_dlc = "No Step Back"
 					}
 				}
-				custom_override_tooltip = {
-					tooltip = tech_effect|sp_tech_super_heavy_magic_cannon_0
-					set_technology = {
-						sp_tech_super_heavy_magic_cannon_0 = 1
-						popup = no
+				add_equipment_bonus = {
+					project = FROM
+					bonus = {
+						super_heavy_magic_at_tank_chassis = {
+							soft_attack = 0.075
+							hard_attack = 0.075
+							ap_attack = 0.075
+							instant = yes
+						}
+						heavy_magic_at_tank = {
+							soft_attack = 0.05
+							hard_attack = 0.05
+							ap_attack = 0.05
+							instant = yes
+						}
+						magic_anti_tank_equipment = {
+							soft_attack = 0.025
+							hard_attack = 0.025
+							ap_attack = 0.025
+							instant = yes
+						}
 					}
 				}
 			}
@@ -411,11 +899,27 @@ sp_super_heavy_magic_cannon_1 = {
 						has_dlc = "No Step Back"
 					}
 				}
-				custom_override_tooltip = {
-					tooltip = tech_effect|sp_tech_super_heavy_magic_cannon_1
-					set_technology = {
-						sp_tech_super_heavy_magic_cannon_1 = 1
-						popup = no
+				add_equipment_bonus = {
+					project = FROM
+					bonus = {
+						super_heavy_magic_at_tank = {
+							soft_attack = 0.075
+							hard_attack = 0.075
+							ap_attack = 0.075
+							instant = yes
+						}
+						heavy_magic_at_tank = {
+							soft_attack = 0.05
+							hard_attack = 0.05
+							ap_attack = 0.05
+							instant = yes
+						}
+						magic_anti_tank_equipment = {
+							soft_attack = 0.025
+							hard_attack = 0.025
+							ap_attack = 0.025
+							instant = yes
+						}
 					}
 				}
 			}
@@ -464,11 +968,27 @@ sp_super_heavy_magic_cannon_2 = {
 						has_dlc = "No Step Back"
 					}
 				}
-				custom_override_tooltip = {
-					tooltip = tech_effect|sp_tech_super_heavy_magic_cannon_2
-					set_technology = {
-						sp_tech_super_heavy_magic_cannon_2 = 1
-						popup = no
+				add_equipment_bonus = {
+					project = FROM
+					bonus = {
+						super_heavy_magic_at_tank = {
+							soft_attack = 0.075
+							hard_attack = 0.075
+							ap_attack = 0.075
+							instant = yes
+						}
+						heavy_magic_at_tank = {
+							soft_attack = 0.05
+							hard_attack = 0.05
+							ap_attack = 0.05
+							instant = yes
+						}
+						magic_anti_tank_equipment = {
+							soft_attack = 0.025
+							hard_attack = 0.025
+							ap_attack = 0.025
+							instant = yes
+						}
 					}
 				}
 			}

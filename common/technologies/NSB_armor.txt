@@ -1267,9 +1267,6 @@ technologies = {
 		}
 	}
 	nsb_armor_upgrade_2 = {
-		enable_equipment_modules = {
-			tank_magic_armor
-		}
 		research_cost = 2
 		start_year = 989
 		folder = {
@@ -1290,6 +1287,9 @@ technologies = {
 				}
 			}
 		}
+		sub_technologies = {
+			nsb_magic_armor
+		}
 		category_all_armor = {
 			armor_value = 0.01
 			hardness = 0.01
@@ -1298,6 +1298,18 @@ technologies = {
 		}
 		special_project_specialization = { 
 			specialization_land 
+		}
+	}
+	nsb_magic_armor = {
+		research_cost = 2
+		allow = {
+			has_tech = magic_induction_phenomenon
+		}
+		enable_equipment_modules = {
+			tank_magic_armor
+		}
+		special_project_specialization = { 
+			specialization_magic 
 		}
 	}
 	nsb_armor_upgrade_3 = {
