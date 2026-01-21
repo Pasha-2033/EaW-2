@@ -43,9 +43,6 @@ calc_coal_impact = {
 		add_to_temp_variable = {
 			local_energy_consumption = modifier@local_factory_energy_consumption
 		}
-		add_to_temp_variable = {
-			local_energy_consumption = PREV.modifier@factory_energy_consumption
-		}
 		#local energy consumption factor (by infrastructure)
 		set_temp_variable = {
 			local_energy_per_infra = modifier@local_factory_energy_consumption_per_infrastructure
@@ -56,6 +53,16 @@ calc_coal_impact = {
 		#summarise local_energy
 		add_to_temp_variable = {
 			local_energy_consumption = local_energy_per_infra
+		}
+		#apply economic law
+		set_temp_variable = {
+			mult_by_law = 1
+		}
+		add_to_temp_variable = {
+			mult_by_law = PREV.modifier@factory_energy_consumption
+		}
+		multiply_temp_variable = {
+			local_energy_consumption = mult_by_law
 		}
 		clamp_temp_variable = {
 			var = local_energy_consumption
