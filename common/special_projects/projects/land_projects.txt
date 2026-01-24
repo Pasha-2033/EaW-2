@@ -9,7 +9,7 @@ sp_tank_gun_computer_0 = {
 	}
 	available = {
 		FROM = {
-			has_tech = tankette
+			#TODO: armor tech (dlc)
 			has_tech = computer_0
 		}
 	}
@@ -340,7 +340,7 @@ sp_easy_maintenance_scemes_0 = {
 	}
 	available = {
 		FROM = {
-			has_tech = tankette
+			#TODO: armor tech (dlc)
 		}
 	}
 	prototype_time = sp_time.prototype.medium
@@ -1067,7 +1067,7 @@ sp_land_flamethrower_tank = {
 	}	
 	available = {
 		FROM = {
-			
+			has_tech = tankette
 		}
 	}
 	breakthrough_cost = {
@@ -1836,6 +1836,164 @@ sp_land_stronghold_network = {
 					popup = no
 				}
 			}
+		}
+	}
+
+	generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1
+		sp_land_generic_reward_scientist_xp_2
+		sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_army_xp_1
+		sp_land_generic_reward_army_xp_2
+		sp_land_generic_reward_army_xp_3
+		sp_land_generic_reward_major_progress_1
+		sp_land_generic_reward_major_progress_2
+		sp_land_generic_reward_major_progress_3
+		sp_land_generic_reward_test_failure_1
+		sp_land_generic_reward_test_failure_2
+		sp_land_generic_reward_test_failure_3
+		sp_land_generic_reward_critical_failure
+	}
+}
+sp_land_sloped_armor = {
+	specialization = specialization_land
+
+	project_tags = {
+		sp_tag_tank
+	}
+
+	allowed = {
+		country_without_sp = no #"no" because we want to forbid, not just check
+	}
+	
+	available = {
+		FROM = {
+			
+		}
+	}
+	
+	prototype_time = sp_time.prototype.medium
+
+	complexity = sp_complexity.large
+
+	breakthrough_cost = {
+		specialization_land = 2
+	}
+
+	resource_cost = {
+		resources = { 
+			steel = 4
+			chromium = 2
+			tungsten = 1
+		}
+	}
+	
+	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_armored_specialist = yes
+		}
+		country_effects = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+				add_equipment_bonus = {
+					project = FROM
+					bonus = {
+						armor = {
+							armor_value = 0.075
+							instant = yes
+						}
+					}
+				}
+			}
+		}
+		enable_equipment_modules = {
+			limit = {
+				has_dlc = "No Step Back"
+			}
+			sloped_armor
+		}
+	}
+
+	generic_prototype_rewards = {
+		sp_land_generic_reward_scientist_xp_1
+		sp_land_generic_reward_scientist_xp_2
+		sp_land_generic_reward_scientist_xp_3
+		sp_land_generic_reward_army_xp_1
+		sp_land_generic_reward_army_xp_2
+		sp_land_generic_reward_army_xp_3
+		sp_land_generic_reward_major_progress_1
+		sp_land_generic_reward_major_progress_2
+		sp_land_generic_reward_major_progress_3
+		sp_land_generic_reward_test_failure_1
+		sp_land_generic_reward_test_failure_2
+		sp_land_generic_reward_test_failure_3
+		sp_land_generic_reward_critical_failure
+	}
+}
+sp_land_stabilizer_0 = {
+	specialization = specialization_land
+
+	project_tags = {
+		sp_tag_tank
+	}
+
+	allowed = {
+		country_without_sp = no #"no" because we want to forbid, not just check
+	}
+	
+	available = {
+		FROM = {
+			has_tech = basic_fortification_tech
+		}
+	}
+	
+	prototype_time = sp_time.prototype.medium
+
+	complexity = sp_complexity.large
+
+	breakthrough_cost = {
+		specialization_land = 2
+	}
+
+	resource_cost = {
+		resources = { 
+			steel = 4
+			chromium = 2
+			tungsten = 1
+		}
+	}
+	
+	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_armored_specialist = yes
+		}
+		country_effects = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+				add_equipment_bonus = {
+					project = FROM
+					bonus = {
+						armor = {
+							breakthrough = 0.05
+							instant = yes
+						}
+					}
+				}
+			}
+		}
+		enable_equipment_modules = {
+			limit = {
+				has_dlc = "No Step Back"
+			}
+			stabilizer_0
 		}
 	}
 

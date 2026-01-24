@@ -679,7 +679,21 @@ buildings = {
 		show_on_map = 1
 	}
 
+	social_infrastructure = {
+		icon_frame = 46
+		level_cap = {
+			state_max = 3
+			shares_slots = yes
+		}
+		base_cost = 5000
+		infrastructure_construction_effect = yes
+		value = 3
 
+		show_on_map = 6
+		state_modifiers = {
+			social_infrastructure_num = 1
+		}
+	}
 
 
 	land_facility = {

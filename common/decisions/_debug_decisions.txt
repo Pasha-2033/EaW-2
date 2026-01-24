@@ -4,6 +4,9 @@ debug_society_idea_decisions = {
 		complete_effect = {
 			log = "[GetDateText]: [Root.GetName]: Debug-decision set_clockwerk_industry"
 			add_ideas = clockwerk_industry
+			251 = {
+				add_state_manpower = yes
+			}
 		}
 	}
 	set_modern_society = {

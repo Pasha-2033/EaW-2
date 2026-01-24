@@ -44,16 +44,6 @@ init_surplus_appropriation_modifier_steps = {
 	init_sa_army_mod_mobilization_value = yes
 	init_sa_army_mod_recruitable_value = yes
 }
-init_urbanization_modifiers_tag_list = {
-	add_to_array = { global.urbanization_modifiers_tokens = token:no_urbanization_to_urban			}
-	add_to_array = { global.urbanization_modifiers_tokens = token:low_urbanization_to_urban			}
-	add_to_array = { global.urbanization_modifiers_tokens = token:high_urbanization_to_urban		}
-	add_to_array = { global.urbanization_modifiers_tokens = token:very_high_urbanization_to_urban	}
-	add_to_array = { global.urbanization_modifiers_tokens = token:no_urbanization_to_rural			}
-	add_to_array = { global.urbanization_modifiers_tokens = token:low_urbanization_to_rural			}
-	add_to_array = { global.urbanization_modifiers_tokens = token:high_urbanization_to_rural		}
-	add_to_array = { global.urbanization_modifiers_tokens = token:very_high_urbanization_to_rural	}
-}
 init_ideas_tag_list = {
 	#init idea arrays
 	add_to_array = { global.mobilization_idea_tokens = token:disarmed_nation		}
@@ -116,9 +106,6 @@ init_ideas_tag_list = {
 	#token:multi_race isn`t real race
 	resize_array = {
 		global.power_concentration_idea_tokens = 6
-	}
-	resize_array = {
-		global.urbanization_idea_tokens = 5
 	}
 	resize_array = {
 		global.illiteracy_idea_tokens = 6
