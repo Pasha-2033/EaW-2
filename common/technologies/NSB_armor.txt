@@ -1301,8 +1301,9 @@ technologies = {
 	}
 	nsb_magic_armor = {
 		research_cost = 2
-		allow = {
-			has_tech = magic_induction_phenomenon
+		#allow doesn`t work in sub tech :(
+		dependencies = {
+			magic_induction_phenomenon = 1
 		}
 		enable_equipment_modules = {
 			tank_magic_armor

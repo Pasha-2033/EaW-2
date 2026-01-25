@@ -1188,6 +1188,13 @@ guiTypes = {
 				slotsize = { width = 70 height = 70 }
 				format = "UP"
 			}
+			gridboxtype = {
+				name = "tankette_equipment_tree"
+				position = { x = 1000 y = 172 }
+				size = { width = 80% height = 80% }
+				slotsize = { width = 70 height = 70 }
+				format = "UP"
+			}
 		}
 
 		containerWindowType = {
@@ -1619,29 +1626,7 @@ guiTypes = {
 			}	
 
 				
-			gridboxtype = {
-				name = "gwtank_chassis_tree"
-				position = { x = 10% y = 172 }
-				size = { width = 80% height = 80% }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
 
-			gridboxtype = {
-				name = "armor_tech_1_tree"
-				position = { x = 37% y = 172 }
-				size = { width = 80% height = 80% }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
-
-			gridboxtype = {
-				name = "engine_tech_1_tree"
-				position = { x = -22% y = 172 }
-				size = { width = 80% height = 80% }
-				slotsize = { width = 70 height = 70 }
-				format = "UP"
-			}
 			gridboxtype = {
 				name = "tankette_tree"
 				position = { x = 1900 y = 172 }
@@ -7592,7 +7577,7 @@ guiTypes = {
 		
 		containerWindowType = {
 			name = "sub_technology_slot_0"
-			position = { x=141 y=1 }
+			position = { x=180 y=1 }
 			size = { width = 35 height = 26 }
 			clipping = no
 			
@@ -7611,7 +7596,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "sub_technology_slot_1"
-			position = { x=141 y=28 }
+			position = { x=180 y=28 }
 			size = { width = 35 height = 26 }
 			clipping = no
 			
@@ -7630,7 +7615,7 @@ guiTypes = {
 
 		containerWindowType = {
 			name = "sub_technology_slot_2"
-			position = { x=141 y=55 }
+			position = { x=180 y=55 }
 			size = { width = 35 height = 26 }
 			clipping = no
 			
@@ -7645,7 +7630,43 @@ guiTypes = {
 				spriteType = "GFX_subtech_aa"
 				alwaystransparent = yes
 			}
-		}		
+		}
+		containerWindowType = {
+			name = "sub_technology_slot_3"
+			position = { x=218 y=1 }
+			size = { width = 35 height = 26 }
+			clipping = no
+			
+			background = {
+				name = "Background"
+				spriteType ="GFX_subtechnology_unavailable_item_bg"
+			}
+		
+			iconType = {
+				name = "picture"
+				position = { x=1 y=2 }
+				spriteType = "GFX_subtech_amphibious"
+				alwaystransparent = yes
+			}
+		}	
+		containerWindowType = {
+			name = "sub_technology_slot_4"
+			position = { x=218 y=28 }
+			size = { width = 35 height = 26 }
+			clipping = no
+			
+			background = {
+				name = "Background"
+				spriteType ="GFX_subtechnology_unavailable_item_bg"
+			}
+		
+			iconType = {
+				name = "picture"
+				position = { x=1 y=2 }
+				spriteType = "GFX_subtech_rocket"
+				alwaystransparent = yes
+			}
+		}	
 		iconType = {
 			name = "can_assign_design_team_icon"
 			position = {

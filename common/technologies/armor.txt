@@ -1,7 +1,160 @@
-#####-----------------------------------------------------------> Mod by Sig "Greatexperiment" Altre
-
+#!gfx:interface/hsa_technologies.gfx
 technologies = {
-	### GERMAN TANK NAMES IN COMMENTS SO YOU CAN FIND STUFF MORE EASILY
+	tankette_equipment = {
+		enable_equipments = {
+			tankette_equipment
+		}
+		sub_technologies = {
+			tankette_equipment_at
+			tankette_equipment_artillery
+			tankette_equipment_aa
+			tankette_equipment_amphibious
+			tankette_equipment_rocket
+		}
+		path = {
+			leads_to_tech = light_equipment_0
+			research_cost_coeff = 1
+		}
+		research_cost = 2
+		start_year = 995
+		folder = {
+			name = armour_folder
+			position = { x = 0 y = 0 }
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	tankette_equipment_at = {
+		enable_equipments = {
+			tankette_at_equipment
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	tankette_equipment_artillery = {
+		enable_equipments = {
+			tankette_artillery_equipment
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	tankette_equipment_aa = {
+		enable_equipments = {
+			tankette_aa_equipment
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	tankette_equipment_amphibious = {
+		enable_equipments = {
+			tankette_amphibious_equipment
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	tankette_equipment_rocket = {
+		enable_equipments = {
+			tankette_rocket_equipment
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_equipment_0 = {
+		enable_equipments = {
+			light_tank_equipment_0
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = -3 y = 2 }
+		}
+		sub_technologies = {
+			light_equipment_at_0
+			light_equipment_artillery_0
+			light_equipment_aa_0
+			light_equipment_amphibious_0
+			light_equipment_rocket_0
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_equipment_at_0 = {
+		enable_equipments = {
+			light_at_tank_equipment_0
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_equipment_artillery_0 = {
+		enable_equipments = {
+			light_artillery_tank_equipment_0
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_equipment_aa_0 = {
+		enable_equipments = {
+			light_aa_tank_equipment_0
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_equipment_amphibious_0 = {
+		enable_equipments = {
+			light_amphibious_tank_equipment_0
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_equipment_rocket_0 = {
+		enable_equipments = {
+			light_rocket_tank_equipment_0
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+
+
+
+
+
+
+
+
+
 	gwtank = { #Leichttraktor
 
 		enable_equipments = {

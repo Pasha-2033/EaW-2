@@ -132,6 +132,7 @@ NDefines.NSupply.CAPITAL_STARTING_PENALTY_PER_PROVINCE = 0.3 -- starting penalty
 NDefines.NSupply.CAPITAL_ADDED_PENALTY_PER_PROVINCE = 1.0 -- added penalty as we move away from origin (Default is 1.2)
 
 NDefines.NTechnology.MIN_RESEARCH_SPEED = 0.001 -- Defines research speed, can't go below this value (default is 0.1)
+NDefines.NTechnology.MAX_SUBTECHS = 6
 
 NDefines.NBuildings.MAX_SHARED_SLOTS = 50
 

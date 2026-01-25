@@ -959,7 +959,10 @@ technologies = {
 		enable_subunits = {
 			field_hospital
 		}
-
+		enable_building = {
+			building = social_infrastructure
+			level = 1
+		}
 		path = {
 			leads_to_tech = tech_field_hospital2
 			research_cost_coeff = 1
@@ -986,21 +989,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1.5
-
-			modifier = {
-				factor = 1.2
-				date > "1008.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1009.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1010.1.1"
-			}
 		}
 	}
 
@@ -1010,7 +998,10 @@ technologies = {
 			casualty_trickleback = 0.10
 			experience_loss_factor = -0.10
 		}
-
+		enable_building = {
+			building = social_infrastructure
+			level = 2
+		}
 		path = {
 			leads_to_tech = tech_field_hospital3
 			research_cost_coeff = 1
@@ -1031,20 +1022,6 @@ technologies = {
 
 		ai_will_do = {
 			factor = 1.5
-			modifier = {
-				factor = 1.2
-				date > "1011.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1012.1.1"
-			}
-
-			modifier = {
-				factor = 1.2
-				date > "1013.1.1"
-			}
 		}
 	}
 
@@ -1053,6 +1030,10 @@ technologies = {
 		field_hospital = {
 			casualty_trickleback = 0.1
 			experience_loss_factor = -0.10
+		}
+		enable_building = {
+			building = social_infrastructure
+			level = 3
 		}
 		path = {
 			leads_to_tech = tech_field_hospital4
@@ -2629,7 +2610,13 @@ technologies = {
 			factor = 1
 		}
 	}
+
+	#init_social_infrastruction = {
+	#	state_population_factor_by_social_infrastructure = 0.015
+	#	research_cost = 1
+	#	allow = {
+	#		always = no
+	#	}
+	#}
 	
 }
-
-#####-----------------------------------------------------------> End
