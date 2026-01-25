@@ -8,11 +8,15 @@ technologies = {
 			tankette_equipment_at
 			tankette_equipment_artillery
 			tankette_equipment_aa
-			tankette_equipment_amphibious
 			tankette_equipment_rocket
+			tankette_equipment_amphibious
 		}
 		path = {
-			leads_to_tech = light_equipment_0
+			leads_to_tech = light_tank_equipment_0
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = medium_tank_equipment_0
 			research_cost_coeff = 1
 		}
 		research_cost = 2
@@ -25,6 +29,7 @@ technologies = {
 			specialization_land 
 		}
 	}
+	#light chassis
 	tankette_equipment_at = {
 		enable_equipments = {
 			tankette_at_equipment
@@ -55,16 +60,6 @@ technologies = {
 			specialization_land 
 		}
 	}
-	tankette_equipment_amphibious = {
-		enable_equipments = {
-			tankette_amphibious_equipment
-		}
-		research_cost = 1
-		start_year = 995
-		special_project_specialization = { 
-			specialization_land 
-		}
-	}
 	tankette_equipment_rocket = {
 		enable_equipments = {
 			tankette_rocket_equipment
@@ -75,9 +70,20 @@ technologies = {
 			specialization_land 
 		}
 	}
-	light_equipment_0 = {
+	tankette_equipment_amphibious = {
+		enable_equipments = {
+			tankette_amphibious_equipment
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_0 = {
 		enable_equipments = {
 			light_tank_equipment_0
+			light_magic_tank_equipment_0
 		}
 		research_cost = 2
 		start_year = 989
@@ -85,20 +91,25 @@ technologies = {
 			name = armour_folder
 			position = { x = -3 y = 2 }
 		}
+		path = {
+			leads_to_tech = light_tank_equipment_1
+			research_cost_coeff = 1
+		}
 		sub_technologies = {
-			light_equipment_at_0
-			light_equipment_artillery_0
-			light_equipment_aa_0
-			light_equipment_amphibious_0
-			light_equipment_rocket_0
+			light_tank_equipment_at_0
+			light_tank_equipment_artillery_0
+			light_tank_equipment_aa_0
+			light_tank_equipment_rocket_0
+			light_tank_equipment_amphibious_0
 		}
 		special_project_specialization = { 
 			specialization_land 
 		}
 	}
-	light_equipment_at_0 = {
+	light_tank_equipment_at_0 = {
 		enable_equipments = {
 			light_at_tank_equipment_0
+			light_magic_at_tank_equipment_0
 		}
 		research_cost = 1
 		start_year = 995
@@ -106,9 +117,10 @@ technologies = {
 			specialization_land 
 		}
 	}
-	light_equipment_artillery_0 = {
+	light_tank_equipment_artillery_0 = {
 		enable_equipments = {
 			light_artillery_tank_equipment_0
+			light_magic_artillery_tank_equipment_0
 		}
 		research_cost = 1
 		start_year = 995
@@ -116,9 +128,10 @@ technologies = {
 			specialization_land 
 		}
 	}
-	light_equipment_aa_0 = {
+	light_tank_equipment_aa_0 = {
 		enable_equipments = {
 			light_aa_tank_equipment_0
+			light_magic_aa_tank_equipment_0
 		}
 		research_cost = 1
 		start_year = 995
@@ -126,19 +139,10 @@ technologies = {
 			specialization_land 
 		}
 	}
-	light_equipment_amphibious_0 = {
-		enable_equipments = {
-			light_amphibious_tank_equipment_0
-		}
-		research_cost = 1
-		start_year = 995
-		special_project_specialization = { 
-			specialization_land 
-		}
-	}
-	light_equipment_rocket_0 = {
+	light_tank_equipment_rocket_0 = {
 		enable_equipments = {
 			light_rocket_tank_equipment_0
+			light_magic_rocket_tank_equipment_0
 		}
 		research_cost = 1
 		start_year = 995
@@ -146,6 +150,2849 @@ technologies = {
 			specialization_land 
 		}
 	}
+	light_tank_equipment_amphibious_0 = {
+		enable_equipments = {
+			light_amphibious_tank_equipment_0
+			light_magic_amphibious_tank_equipment_0
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_1 = {
+		enable_equipments = {
+			light_tank_equipment_1
+			light_magic_tank_equipment_1
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = -3 y = 4 }
+		}
+		path = {
+			leads_to_tech = light_tank_equipment_2
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			light_tank_equipment_at_1
+			light_tank_equipment_artillery_1
+			light_tank_equipment_aa_1
+			light_tank_equipment_rocket_1
+			light_tank_equipment_amphibious_1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_at_1 = {
+		enable_equipments = {
+			light_at_tank_equipment_1
+			light_magic_at_tank_equipment_1
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_artillery_1 = {
+		enable_equipments = {
+			light_artillery_tank_equipment_1
+			light_magic_artillery_tank_equipment_1
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_aa_1 = {
+		enable_equipments = {
+			light_aa_tank_equipment_1
+			light_magic_aa_tank_equipment_1
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_rocket_1 = {
+		enable_equipments = {
+			light_rocket_tank_equipment_1
+			light_magic_rocket_tank_equipment_1
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_amphibious_1 = {
+		enable_equipments = {
+			light_amphibious_tank_equipment_1
+			light_magic_amphibious_tank_equipment_1
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_2 = {
+		enable_equipments = {
+			light_tank_equipment_2
+			light_magic_tank_equipment_2
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = -3 y = 6 }
+		}
+		path = {
+			leads_to_tech = light_tank_equipment_3
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			light_tank_equipment_at_2
+			light_tank_equipment_artillery_2
+			light_tank_equipment_aa_2
+			light_tank_equipment_rocket_2
+			light_tank_equipment_amphibious_2
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_at_2 = {
+		enable_equipments = {
+			light_at_tank_equipment_2
+			light_magic_at_tank_equipment_2
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_artillery_2 = {
+		enable_equipments = {
+			light_artillery_tank_equipment_2
+			light_magic_artillery_tank_equipment_2
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_aa_2 = {
+		enable_equipments = {
+			light_aa_tank_equipment_2
+			light_magic_aa_tank_equipment_2
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_rocket_2 = {
+		enable_equipments = {
+			light_rocket_tank_equipment_2
+			light_magic_rocket_tank_equipment_2
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_amphibious_2 = {
+		enable_equipments = {
+			light_amphibious_tank_equipment_2
+			light_magic_amphibious_tank_equipment_2
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_3 = {
+		enable_equipments = {
+			light_tank_equipment_3
+			light_magic_tank_equipment_3
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = -3 y = 8 }
+		}
+		path = {
+			leads_to_tech = light_tank_equipment_4
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			light_tank_equipment_at_3
+			light_tank_equipment_artillery_3
+			light_tank_equipment_aa_3
+			light_tank_equipment_rocket_3
+			light_tank_equipment_amphibious_3
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_at_3 = {
+		enable_equipments = {
+			light_at_tank_equipment_3
+			light_magic_at_tank_equipment_3
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_artillery_3 = {
+		enable_equipments = {
+			light_artillery_tank_equipment_3
+			light_magic_artillery_tank_equipment_3
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_aa_3 = {
+		enable_equipments = {
+			light_aa_tank_equipment_3
+			light_magic_aa_tank_equipment_3
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_rocket_3 = {
+		enable_equipments = {
+			light_rocket_tank_equipment_3
+			light_magic_rocket_tank_equipment_3
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_amphibious_3 = {
+		enable_equipments = {
+			light_amphibious_tank_equipment_3
+			light_magic_amphibious_tank_equipment_3
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_4 = {
+		enable_equipments = {
+			light_tank_equipment_4
+			light_magic_tank_equipment_4
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = -3 y = 10 }
+		}
+		path = {
+			leads_to_tech = light_tank_equipment_5
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			light_tank_equipment_at_4
+			light_tank_equipment_artillery_4
+			light_tank_equipment_aa_4
+			light_tank_equipment_rocket_4
+			light_tank_equipment_amphibious_4
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_at_4 = {
+		enable_equipments = {
+			light_at_tank_equipment_4
+			light_magic_at_tank_equipment_4
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_artillery_4 = {
+		enable_equipments = {
+			light_artillery_tank_equipment_4
+			light_magic_artillery_tank_equipment_4
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_aa_4 = {
+		enable_equipments = {
+			light_aa_tank_equipment_4
+			light_magic_aa_tank_equipment_4
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_rocket_4 = {
+		enable_equipments = {
+			light_rocket_tank_equipment_4
+			light_magic_rocket_tank_equipment_4
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_amphibious_4 = {
+		enable_equipments = {
+			light_amphibious_tank_equipment_4
+			light_magic_amphibious_tank_equipment_4
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_5 = {
+		enable_equipments = {
+			light_tank_equipment_5
+			light_magic_tank_equipment_5
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = -3 y = 12 }
+		}
+		path = {
+			leads_to_tech = light_tank_equipment_6
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			light_tank_equipment_at_5
+			light_tank_equipment_artillery_5
+			light_tank_equipment_aa_5
+			light_tank_equipment_rocket_5
+			light_tank_equipment_amphibious_5
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_at_5 = {
+		enable_equipments = {
+			light_at_tank_equipment_5
+			light_magic_at_tank_equipment_5
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_artillery_5 = {
+		enable_equipments = {
+			light_artillery_tank_equipment_5
+			light_magic_artillery_tank_equipment_5
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_aa_5 = {
+		enable_equipments = {
+			light_aa_tank_equipment_5
+			light_magic_aa_tank_equipment_5
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_rocket_5 = {
+		enable_equipments = {
+			light_rocket_tank_equipment_5
+			light_magic_rocket_tank_equipment_5
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_amphibious_5 = {
+		enable_equipments = {
+			light_amphibious_tank_equipment_5
+			light_magic_amphibious_tank_equipment_5
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_6 = {
+		enable_equipments = {
+			light_tank_equipment_6
+			light_magic_tank_equipment_6
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = -3 y = 14 }
+		}
+		path = {
+			leads_to_tech = light_tank_equipment_7
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			light_tank_equipment_at_6
+			light_tank_equipment_artillery_6
+			light_tank_equipment_aa_6
+			light_tank_equipment_rocket_6
+			light_tank_equipment_amphibious_6
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_at_6 = {
+		enable_equipments = {
+			light_at_tank_equipment_6
+			light_magic_at_tank_equipment_6
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_artillery_6 = {
+		enable_equipments = {
+			light_artillery_tank_equipment_6
+			light_magic_artillery_tank_equipment_6
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_aa_6 = {
+		enable_equipments = {
+			light_aa_tank_equipment_6
+			light_magic_aa_tank_equipment_6
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_rocket_6 = {
+		enable_equipments = {
+			light_rocket_tank_equipment_6
+			light_magic_rocket_tank_equipment_6
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_amphibious_6 = {
+		enable_equipments = {
+			light_amphibious_tank_equipment_6
+			light_magic_amphibious_tank_equipment_6
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_7 = {
+		enable_equipments = {
+			light_tank_equipment_7
+			light_magic_tank_equipment_7
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = -3 y = 16 }
+		}
+		path = {
+			leads_to_tech = light_tank_equipment_8
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			light_tank_equipment_at_7
+			light_tank_equipment_artillery_7
+			light_tank_equipment_aa_7
+			light_tank_equipment_rocket_7
+			light_tank_equipment_amphibious_7
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_at_7 = {
+		enable_equipments = {
+			light_at_tank_equipment_7
+			light_magic_at_tank_equipment_7
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_artillery_7 = {
+		enable_equipments = {
+			light_artillery_tank_equipment_7
+			light_magic_artillery_tank_equipment_7
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_aa_7 = {
+		enable_equipments = {
+			light_aa_tank_equipment_7
+			light_magic_aa_tank_equipment_7
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_rocket_7 = {
+		enable_equipments = {
+			light_rocket_tank_equipment_7
+			light_magic_rocket_tank_equipment_7
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_amphibious_7 = {
+		enable_equipments = {
+			light_amphibious_tank_equipment_7
+			light_magic_amphibious_tank_equipment_7
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_8 = {
+		enable_equipments = {
+			light_tank_equipment_8
+			light_magic_tank_equipment_8
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = -3 y = 18 }
+		}
+		path = {
+			leads_to_tech = light_tank_equipment_9
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			light_tank_equipment_at_8
+			light_tank_equipment_artillery_8
+			light_tank_equipment_aa_8
+			light_tank_equipment_rocket_8
+			light_tank_equipment_amphibious_8
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_at_8 = {
+		enable_equipments = {
+			light_at_tank_equipment_8
+			light_magic_at_tank_equipment_8
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_artillery_8 = {
+		enable_equipments = {
+			light_artillery_tank_equipment_8
+			light_magic_artillery_tank_equipment_8
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_aa_8 = {
+		enable_equipments = {
+			light_aa_tank_equipment_8
+			light_magic_aa_tank_equipment_8
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_rocket_8 = {
+		enable_equipments = {
+			light_rocket_tank_equipment_8
+			light_magic_rocket_tank_equipment_8
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_amphibious_8 = {
+		enable_equipments = {
+			light_amphibious_tank_equipment_8
+			light_magic_amphibious_tank_equipment_8
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_9 = {
+		enable_equipments = {
+			light_tank_equipment_9
+			light_magic_tank_equipment_9
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = -3 y = 20 }
+		}
+		path = {
+			leads_to_tech = light_tank_equipment_10
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			light_tank_equipment_at_9
+			light_tank_equipment_artillery_9
+			light_tank_equipment_aa_9
+			light_tank_equipment_rocket_9
+			light_tank_equipment_amphibious_9
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_at_9 = {
+		enable_equipments = {
+			light_at_tank_equipment_9
+			light_magic_at_tank_equipment_9
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_artillery_9 = {
+		enable_equipments = {
+			light_artillery_tank_equipment_9
+			light_magic_artillery_tank_equipment_9
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_aa_9 = {
+		enable_equipments = {
+			light_aa_tank_equipment_9
+			light_magic_aa_tank_equipment_9
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_rocket_9 = {
+		enable_equipments = {
+			light_rocket_tank_equipment_9
+			light_magic_rocket_tank_equipment_9
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_amphibious_9 = {
+		enable_equipments = {
+			light_amphibious_tank_equipment_9
+			light_magic_amphibious_tank_equipment_9
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_10 = {
+		enable_equipments = {
+			light_tank_equipment_10
+			light_magic_tank_equipment_10
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = -3 y = 22 }
+		}
+		sub_technologies = {
+			light_tank_equipment_at_10
+			light_tank_equipment_artillery_10
+			light_tank_equipment_aa_10
+			light_tank_equipment_rocket_10
+			light_tank_equipment_amphibious_10
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_at_10 = {
+		enable_equipments = {
+			light_at_tank_equipment_10
+			light_magic_at_tank_equipment_10
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_artillery_10 = {
+		enable_equipments = {
+			light_artillery_tank_equipment_10
+			light_magic_artillery_tank_equipment_10
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_aa_10 = {
+		enable_equipments = {
+			light_aa_tank_equipment_10
+			light_magic_aa_tank_equipment_10
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_rocket_10 = {
+		enable_equipments = {
+			light_rocket_tank_equipment_10
+			light_magic_rocket_tank_equipment_10
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	light_tank_equipment_amphibious_10 = {
+		enable_equipments = {
+			light_amphibious_tank_equipment_10
+			light_magic_amphibious_tank_equipment_10
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	#medium chassis
+	medium_tank_equipment_0 = {
+		enable_equipments = {
+			medium_tank_equipment_0
+			medium_magic_tank_equipment_0
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 2 y = 2 }
+		}
+		path = {
+			leads_to_tech = medium_tank_equipment_1
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			medium_tank_equipment_at_0
+			medium_tank_equipment_artillery_0
+			medium_tank_equipment_aa_0
+			medium_tank_equipment_rocket_0
+			medium_tank_equipment_amphibious_0
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_at_0 = {
+		enable_equipments = {
+			medium_at_tank_equipment_0
+			medium_magic_at_tank_equipment_0
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_artillery_0 = {
+		enable_equipments = {
+			medium_artillery_tank_equipment_0
+			medium_magic_artillery_tank_equipment_0
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_aa_0 = {
+		enable_equipments = {
+			medium_aa_tank_equipment_0
+			medium_magic_aa_tank_equipment_0
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_rocket_0 = {
+		enable_equipments = {
+			medium_rocket_tank_equipment_0
+			medium_magic_rocket_tank_equipment_0
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_amphibious_0 = {
+		enable_equipments = {
+			medium_amphibious_tank_equipment_0
+			medium_magic_amphibious_tank_equipment_0
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_1 = {
+		enable_equipments = {
+			medium_tank_equipment_1
+			medium_magic_tank_equipment_1
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 2 y = 4 }
+		}
+		path = {
+			leads_to_tech = medium_tank_equipment_2
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = heavy_tank_equipment_0
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			medium_tank_equipment_at_1
+			medium_tank_equipment_artillery_1
+			medium_tank_equipment_aa_1
+			medium_tank_equipment_rocket_1
+			medium_tank_equipment_amphibious_1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_at_1 = {
+		enable_equipments = {
+			medium_at_tank_equipment_1
+			medium_magic_at_tank_equipment_1
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_artillery_1 = {
+		enable_equipments = {
+			medium_artillery_tank_equipment_1
+			medium_magic_artillery_tank_equipment_1
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_aa_1 = {
+		enable_equipments = {
+			medium_aa_tank_equipment_1
+			medium_magic_aa_tank_equipment_1
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_rocket_1 = {
+		enable_equipments = {
+			medium_rocket_tank_equipment_1
+			medium_magic_rocket_tank_equipment_1
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_amphibious_1 = {
+		enable_equipments = {
+			medium_amphibious_tank_equipment_1
+			medium_magic_amphibious_tank_equipment_1
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_2 = {
+		enable_equipments = {
+			medium_tank_equipment_2
+			medium_magic_tank_equipment_2
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 2 y = 6 }
+		}
+		path = {
+			leads_to_tech = medium_tank_equipment_3
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			medium_tank_equipment_at_2
+			medium_tank_equipment_artillery_2
+			medium_tank_equipment_aa_2
+			medium_tank_equipment_rocket_2
+			medium_tank_equipment_amphibious_2
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_at_2 = {
+		enable_equipments = {
+			medium_at_tank_equipment_2
+			medium_magic_at_tank_equipment_2
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_artillery_2 = {
+		enable_equipments = {
+			medium_artillery_tank_equipment_2
+			medium_magic_artillery_tank_equipment_2
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_aa_2 = {
+		enable_equipments = {
+			medium_aa_tank_equipment_2
+			medium_magic_aa_tank_equipment_2
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_rocket_2 = {
+		enable_equipments = {
+			medium_rocket_tank_equipment_2
+			medium_magic_rocket_tank_equipment_2
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_amphibious_2 = {
+		enable_equipments = {
+			medium_amphibious_tank_equipment_2
+			medium_magic_amphibious_tank_equipment_2
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_3 = {
+		enable_equipments = {
+			medium_tank_equipment_3
+			medium_magic_tank_equipment_3
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 2 y = 8 }
+		}
+		path = {
+			leads_to_tech = medium_tank_equipment_4
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			medium_tank_equipment_at_3
+			medium_tank_equipment_artillery_3
+			medium_tank_equipment_aa_3
+			medium_tank_equipment_rocket_3
+			medium_tank_equipment_amphibious_3
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_at_3 = {
+		enable_equipments = {
+			medium_at_tank_equipment_3
+			medium_magic_at_tank_equipment_3
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_artillery_3 = {
+		enable_equipments = {
+			medium_artillery_tank_equipment_3
+			medium_magic_artillery_tank_equipment_3
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_aa_3 = {
+		enable_equipments = {
+			medium_aa_tank_equipment_3
+			medium_magic_aa_tank_equipment_3
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_rocket_3 = {
+		enable_equipments = {
+			medium_rocket_tank_equipment_3
+			medium_magic_rocket_tank_equipment_3
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_amphibious_3 = {
+		enable_equipments = {
+			medium_amphibious_tank_equipment_3
+			medium_magic_amphibious_tank_equipment_3
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_4 = {
+		enable_equipments = {
+			medium_tank_equipment_4
+			medium_magic_tank_equipment_4
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 2 y = 10 }
+		}
+		path = {
+			leads_to_tech = medium_tank_equipment_5
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			medium_tank_equipment_at_4
+			medium_tank_equipment_artillery_4
+			medium_tank_equipment_aa_4
+			medium_tank_equipment_rocket_4
+			medium_tank_equipment_amphibious_4
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_at_4 = {
+		enable_equipments = {
+			medium_at_tank_equipment_4
+			medium_magic_at_tank_equipment_4
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_artillery_4 = {
+		enable_equipments = {
+			medium_artillery_tank_equipment_4
+			medium_magic_artillery_tank_equipment_4
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_aa_4 = {
+		enable_equipments = {
+			medium_aa_tank_equipment_4
+			medium_magic_aa_tank_equipment_4
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_rocket_4 = {
+		enable_equipments = {
+			medium_rocket_tank_equipment_4
+			medium_magic_rocket_tank_equipment_4
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_amphibious_4 = {
+		enable_equipments = {
+			medium_amphibious_tank_equipment_4
+			medium_magic_amphibious_tank_equipment_4
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_5 = {
+		enable_equipments = {
+			medium_tank_equipment_5
+			medium_magic_tank_equipment_5
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 2 y = 12 }
+		}
+		path = {
+			leads_to_tech = medium_tank_equipment_6
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			medium_tank_equipment_at_5
+			medium_tank_equipment_artillery_5
+			medium_tank_equipment_aa_5
+			medium_tank_equipment_rocket_5
+			medium_tank_equipment_amphibious_5
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_at_5 = {
+		enable_equipments = {
+			medium_at_tank_equipment_5
+			medium_magic_at_tank_equipment_5
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_artillery_5 = {
+		enable_equipments = {
+			medium_artillery_tank_equipment_5
+			medium_magic_artillery_tank_equipment_5
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_aa_5 = {
+		enable_equipments = {
+			medium_aa_tank_equipment_5
+			medium_magic_aa_tank_equipment_5
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_rocket_5 = {
+		enable_equipments = {
+			medium_rocket_tank_equipment_5
+			medium_magic_rocket_tank_equipment_5
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_amphibious_5 = {
+		enable_equipments = {
+			medium_amphibious_tank_equipment_5
+			medium_magic_amphibious_tank_equipment_5
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_6 = {
+		enable_equipments = {
+			medium_tank_equipment_6
+			medium_magic_tank_equipment_6
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 2 y = 14 }
+		}
+		path = {
+			leads_to_tech = medium_tank_equipment_7
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			medium_tank_equipment_at_6
+			medium_tank_equipment_artillery_6
+			medium_tank_equipment_aa_6
+			medium_tank_equipment_rocket_6
+			medium_tank_equipment_amphibious_6
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_at_6 = {
+		enable_equipments = {
+			medium_at_tank_equipment_6
+			medium_magic_at_tank_equipment_6
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_artillery_6 = {
+		enable_equipments = {
+			medium_artillery_tank_equipment_6
+			medium_magic_artillery_tank_equipment_6
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_aa_6 = {
+		enable_equipments = {
+			medium_aa_tank_equipment_6
+			medium_magic_aa_tank_equipment_6
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_rocket_6 = {
+		enable_equipments = {
+			medium_rocket_tank_equipment_6
+			medium_magic_rocket_tank_equipment_6
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_amphibious_6 = {
+		enable_equipments = {
+			medium_amphibious_tank_equipment_6
+			medium_magic_amphibious_tank_equipment_6
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_7 = {
+		enable_equipments = {
+			medium_tank_equipment_7
+			medium_magic_tank_equipment_7
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 2 y = 16 }
+		}
+		path = {
+			leads_to_tech = medium_tank_equipment_8
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			medium_tank_equipment_at_7
+			medium_tank_equipment_artillery_7
+			medium_tank_equipment_aa_7
+			medium_tank_equipment_rocket_7
+			medium_tank_equipment_amphibious_7
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_at_7 = {
+		enable_equipments = {
+			medium_at_tank_equipment_7
+			medium_magic_at_tank_equipment_7
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_artillery_7 = {
+		enable_equipments = {
+			medium_artillery_tank_equipment_7
+			medium_magic_artillery_tank_equipment_7
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_aa_7 = {
+		enable_equipments = {
+			medium_aa_tank_equipment_7
+			medium_magic_aa_tank_equipment_7
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_rocket_7 = {
+		enable_equipments = {
+			medium_rocket_tank_equipment_7
+			medium_magic_rocket_tank_equipment_7
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_amphibious_7 = {
+		enable_equipments = {
+			medium_amphibious_tank_equipment_7
+			medium_magic_amphibious_tank_equipment_7
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_8 = {
+		enable_equipments = {
+			medium_tank_equipment_8
+			medium_magic_tank_equipment_8
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 2 y = 18 }
+		}
+		path = {
+			leads_to_tech = medium_tank_equipment_9
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			medium_tank_equipment_at_8
+			medium_tank_equipment_artillery_8
+			medium_tank_equipment_aa_8
+			medium_tank_equipment_rocket_8
+			medium_tank_equipment_amphibious_8
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_at_8 = {
+		enable_equipments = {
+			medium_at_tank_equipment_8
+			medium_magic_at_tank_equipment_8
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_artillery_8 = {
+		enable_equipments = {
+			medium_artillery_tank_equipment_8
+			medium_magic_artillery_tank_equipment_8
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_aa_8 = {
+		enable_equipments = {
+			medium_aa_tank_equipment_8
+			medium_magic_aa_tank_equipment_8
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_rocket_8 = {
+		enable_equipments = {
+			medium_rocket_tank_equipment_8
+			medium_magic_rocket_tank_equipment_8
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_amphibious_8 = {
+		enable_equipments = {
+			medium_amphibious_tank_equipment_8
+			medium_magic_amphibious_tank_equipment_8
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_9 = {
+		enable_equipments = {
+			medium_tank_equipment_9
+			medium_magic_tank_equipment_9
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 2 y = 20 }
+		}
+		path = {
+			leads_to_tech = medium_tank_equipment_10
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			medium_tank_equipment_at_9
+			medium_tank_equipment_artillery_9
+			medium_tank_equipment_aa_9
+			medium_tank_equipment_rocket_9
+			medium_tank_equipment_amphibious_9
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_at_9 = {
+		enable_equipments = {
+			medium_at_tank_equipment_9
+			medium_magic_at_tank_equipment_9
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_artillery_9 = {
+		enable_equipments = {
+			medium_artillery_tank_equipment_9
+			medium_magic_artillery_tank_equipment_9
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_aa_9 = {
+		enable_equipments = {
+			medium_aa_tank_equipment_9
+			medium_magic_aa_tank_equipment_9
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_rocket_9 = {
+		enable_equipments = {
+			medium_rocket_tank_equipment_9
+			medium_magic_rocket_tank_equipment_9
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_amphibious_9 = {
+		enable_equipments = {
+			medium_amphibious_tank_equipment_9
+			medium_magic_amphibious_tank_equipment_9
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_10 = {
+		enable_equipments = {
+			medium_tank_equipment_10
+			medium_magic_tank_equipment_10
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 2 y = 22 }
+		}
+		sub_technologies = {
+			medium_tank_equipment_at_10
+			medium_tank_equipment_artillery_10
+			medium_tank_equipment_aa_10
+			medium_tank_equipment_rocket_10
+			medium_tank_equipment_amphibious_10
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_at_10 = {
+		enable_equipments = {
+			medium_at_tank_equipment_10
+			medium_magic_at_tank_equipment_10
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_artillery_10 = {
+		enable_equipments = {
+			medium_artillery_tank_equipment_10
+			medium_magic_artillery_tank_equipment_10
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_aa_10 = {
+		enable_equipments = {
+			medium_aa_tank_equipment_10
+			medium_magic_aa_tank_equipment_10
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_rocket_10 = {
+		enable_equipments = {
+			medium_rocket_tank_equipment_10
+			medium_magic_rocket_tank_equipment_10
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	medium_tank_equipment_amphibious_10 = {
+		enable_equipments = {
+			medium_amphibious_tank_equipment_10
+			medium_magic_amphibious_tank_equipment_10
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	#heavy chassis
+	heavy_tank_equipment_0 = {
+		enable_equipments = {
+			heavy_tank_equipment_0
+			heavy_magic_tank_equipment_0
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 7 y = 6 }
+		}
+		path = {
+			leads_to_tech = heavy_tank_equipment_1
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			heavy_tank_equipment_at_0
+			heavy_tank_equipment_artillery_0
+			heavy_tank_equipment_aa_0
+			heavy_tank_equipment_rocket_0
+			heavy_tank_equipment_amphibious_0
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_at_0 = {
+		enable_equipments = {
+			heavy_at_tank_equipment_0
+			heavy_magic_at_tank_equipment_0
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_artillery_0 = {
+		enable_equipments = {
+			heavy_artillery_tank_equipment_0
+			heavy_magic_artillery_tank_equipment_0
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_aa_0 = {
+		enable_equipments = {
+			heavy_aa_tank_equipment_0
+			heavy_magic_aa_tank_equipment_0
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_rocket_0 = {
+		enable_equipments = {
+			heavy_rocket_tank_equipment_0
+			heavy_magic_rocket_tank_equipment_0
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_amphibious_0 = {
+		enable_equipments = {
+			heavy_amphibious_tank_equipment_0
+			heavy_magic_amphibious_tank_equipment_0
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_1 = {
+		enable_equipments = {
+			heavy_tank_equipment_1
+			heavy_magic_tank_equipment_1
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 7 y = 8 }
+		}
+		path = {
+			leads_to_tech = heavy_tank_equipment_2
+			research_cost_coeff = 1
+		}
+		path = {
+			leads_to_tech = super_heavy_tank_equipment_0
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			heavy_tank_equipment_at_1
+			heavy_tank_equipment_artillery_1
+			heavy_tank_equipment_aa_1
+			heavy_tank_equipment_rocket_1
+			heavy_tank_equipment_amphibious_1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_at_1 = {
+		enable_equipments = {
+			heavy_at_tank_equipment_1
+			heavy_magic_at_tank_equipment_1
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_artillery_1 = {
+		enable_equipments = {
+			heavy_artillery_tank_equipment_1
+			heavy_magic_artillery_tank_equipment_1
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_aa_1 = {
+		enable_equipments = {
+			heavy_aa_tank_equipment_1
+			heavy_magic_aa_tank_equipment_1
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_rocket_1 = {
+		enable_equipments = {
+			heavy_rocket_tank_equipment_1
+			heavy_magic_rocket_tank_equipment_1
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_amphibious_1 = {
+		enable_equipments = {
+			heavy_amphibious_tank_equipment_1
+			heavy_magic_amphibious_tank_equipment_1
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_2 = {
+		enable_equipments = {
+			heavy_tank_equipment_2
+			heavy_magic_tank_equipment_2
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 7 y = 10 }
+		}
+		path = {
+			leads_to_tech = heavy_tank_equipment_3
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			heavy_tank_equipment_at_2
+			heavy_tank_equipment_artillery_2
+			heavy_tank_equipment_aa_2
+			heavy_tank_equipment_rocket_2
+			heavy_tank_equipment_amphibious_2
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_at_2 = {
+		enable_equipments = {
+			heavy_at_tank_equipment_2
+			heavy_magic_at_tank_equipment_2
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_artillery_2 = {
+		enable_equipments = {
+			heavy_artillery_tank_equipment_2
+			heavy_magic_artillery_tank_equipment_2
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_aa_2 = {
+		enable_equipments = {
+			heavy_aa_tank_equipment_2
+			heavy_magic_aa_tank_equipment_2
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_rocket_2 = {
+		enable_equipments = {
+			heavy_rocket_tank_equipment_2
+			heavy_magic_rocket_tank_equipment_2
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_amphibious_2 = {
+		enable_equipments = {
+			heavy_amphibious_tank_equipment_2
+			heavy_magic_amphibious_tank_equipment_2
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_3 = {
+		enable_equipments = {
+			heavy_tank_equipment_3
+			heavy_magic_tank_equipment_3
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 7 y = 12 }
+		}
+		path = {
+			leads_to_tech = heavy_tank_equipment_4
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			heavy_tank_equipment_at_3
+			heavy_tank_equipment_artillery_3
+			heavy_tank_equipment_aa_3
+			heavy_tank_equipment_rocket_3
+			heavy_tank_equipment_amphibious_3
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_at_3 = {
+		enable_equipments = {
+			heavy_at_tank_equipment_3
+			heavy_magic_at_tank_equipment_3
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_artillery_3 = {
+		enable_equipments = {
+			heavy_artillery_tank_equipment_3
+			heavy_magic_artillery_tank_equipment_3
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_aa_3 = {
+		enable_equipments = {
+			heavy_aa_tank_equipment_3
+			heavy_magic_aa_tank_equipment_3
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_rocket_3 = {
+		enable_equipments = {
+			heavy_rocket_tank_equipment_3
+			heavy_magic_rocket_tank_equipment_3
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_amphibious_3 = {
+		enable_equipments = {
+			heavy_amphibious_tank_equipment_3
+			heavy_magic_amphibious_tank_equipment_3
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_4 = {
+		enable_equipments = {
+			heavy_tank_equipment_4
+			heavy_magic_tank_equipment_4
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 7 y = 14 }
+		}
+		path = {
+			leads_to_tech = heavy_tank_equipment_5
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			heavy_tank_equipment_at_4
+			heavy_tank_equipment_artillery_4
+			heavy_tank_equipment_aa_4
+			heavy_tank_equipment_rocket_4
+			heavy_tank_equipment_amphibious_4
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_at_4 = {
+		enable_equipments = {
+			heavy_at_tank_equipment_4
+			heavy_magic_at_tank_equipment_4
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_artillery_4 = {
+		enable_equipments = {
+			heavy_artillery_tank_equipment_4
+			heavy_magic_artillery_tank_equipment_4
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_aa_4 = {
+		enable_equipments = {
+			heavy_aa_tank_equipment_4
+			heavy_magic_aa_tank_equipment_4
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_rocket_4 = {
+		enable_equipments = {
+			heavy_rocket_tank_equipment_4
+			heavy_magic_rocket_tank_equipment_4
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_amphibious_4 = {
+		enable_equipments = {
+			heavy_amphibious_tank_equipment_4
+			heavy_magic_amphibious_tank_equipment_4
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_5 = {
+		enable_equipments = {
+			heavy_tank_equipment_5
+			heavy_magic_tank_equipment_5
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 7 y = 16 }
+		}
+		path = {
+			leads_to_tech = heavy_tank_equipment_6
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			heavy_tank_equipment_at_5
+			heavy_tank_equipment_artillery_5
+			heavy_tank_equipment_aa_5
+			heavy_tank_equipment_rocket_5
+			heavy_tank_equipment_amphibious_5
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_at_5 = {
+		enable_equipments = {
+			heavy_at_tank_equipment_5
+			heavy_magic_at_tank_equipment_5
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_artillery_5 = {
+		enable_equipments = {
+			heavy_artillery_tank_equipment_5
+			heavy_magic_artillery_tank_equipment_5
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_aa_5 = {
+		enable_equipments = {
+			heavy_aa_tank_equipment_5
+			heavy_magic_aa_tank_equipment_5
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_rocket_5 = {
+		enable_equipments = {
+			heavy_rocket_tank_equipment_5
+			heavy_magic_rocket_tank_equipment_5
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_amphibious_5 = {
+		enable_equipments = {
+			heavy_amphibious_tank_equipment_5
+			heavy_magic_amphibious_tank_equipment_5
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_6 = {
+		enable_equipments = {
+			heavy_tank_equipment_6
+			heavy_magic_tank_equipment_6
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 7 y = 18 }
+		}
+		path = {
+			leads_to_tech = heavy_tank_equipment_7
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			heavy_tank_equipment_at_6
+			heavy_tank_equipment_artillery_6
+			heavy_tank_equipment_aa_6
+			heavy_tank_equipment_rocket_6
+			heavy_tank_equipment_amphibious_6
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_at_6 = {
+		enable_equipments = {
+			heavy_at_tank_equipment_6
+			heavy_magic_at_tank_equipment_6
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_artillery_6 = {
+		enable_equipments = {
+			heavy_artillery_tank_equipment_6
+			heavy_magic_artillery_tank_equipment_6
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_aa_6 = {
+		enable_equipments = {
+			heavy_aa_tank_equipment_6
+			heavy_magic_aa_tank_equipment_6
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_rocket_6 = {
+		enable_equipments = {
+			heavy_rocket_tank_equipment_6
+			heavy_magic_rocket_tank_equipment_6
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_amphibious_6 = {
+		enable_equipments = {
+			heavy_amphibious_tank_equipment_6
+			heavy_magic_amphibious_tank_equipment_6
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_7 = {
+		enable_equipments = {
+			heavy_tank_equipment_7
+			heavy_magic_tank_equipment_7
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 7 y = 20 }
+		}
+		path = {
+			leads_to_tech = heavy_tank_equipment_8
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			heavy_tank_equipment_at_7
+			heavy_tank_equipment_artillery_7
+			heavy_tank_equipment_aa_7
+			heavy_tank_equipment_rocket_7
+			heavy_tank_equipment_amphibious_7
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_at_7 = {
+		enable_equipments = {
+			heavy_at_tank_equipment_7
+			heavy_magic_at_tank_equipment_7
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_artillery_7 = {
+		enable_equipments = {
+			heavy_artillery_tank_equipment_7
+			heavy_magic_artillery_tank_equipment_7
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_aa_7 = {
+		enable_equipments = {
+			heavy_aa_tank_equipment_7
+			heavy_magic_aa_tank_equipment_7
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_rocket_7 = {
+		enable_equipments = {
+			heavy_rocket_tank_equipment_7
+			heavy_magic_rocket_tank_equipment_7
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_amphibious_7 = {
+		enable_equipments = {
+			heavy_amphibious_tank_equipment_7
+			heavy_magic_amphibious_tank_equipment_7
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_8 = {
+		enable_equipments = {
+			heavy_tank_equipment_8
+			heavy_magic_tank_equipment_8
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 7 y = 22 }
+		}
+		sub_technologies = {
+			heavy_tank_equipment_at_8
+			heavy_tank_equipment_artillery_8
+			heavy_tank_equipment_aa_8
+			heavy_tank_equipment_rocket_8
+			heavy_tank_equipment_amphibious_8
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_at_8 = {
+		enable_equipments = {
+			heavy_at_tank_equipment_8
+			heavy_magic_at_tank_equipment_8
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_artillery_8 = {
+		enable_equipments = {
+			heavy_artillery_tank_equipment_8
+			heavy_magic_artillery_tank_equipment_8
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_aa_8 = {
+		enable_equipments = {
+			heavy_aa_tank_equipment_8
+			heavy_magic_aa_tank_equipment_8
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_rocket_8 = {
+		enable_equipments = {
+			heavy_rocket_tank_equipment_8
+			heavy_magic_rocket_tank_equipment_8
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	heavy_tank_equipment_amphibious_8 = {
+		enable_equipments = {
+			heavy_amphibious_tank_equipment_8
+			heavy_magic_amphibious_tank_equipment_8
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	    #heavy chassis
+	super_heavy_tank_equipment_0 = {
+		enable_equipments = {
+			super_heavy_tank_equipment_0
+			super_heavy_magic_tank_equipment_0
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 12 y = 10 }
+		}
+		path = {
+			leads_to_tech = super_heavy_tank_equipment_1
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			super_heavy_tank_equipment_at_0
+			super_heavy_tank_equipment_artillery_0
+			super_heavy_tank_equipment_aa_0
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_at_0 = {
+		enable_equipments = {
+			super_heavy_at_tank_equipment_0
+			super_heavy_magic_at_tank_equipment_0
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_artillery_0 = {
+		enable_equipments = {
+			super_heavy_artillery_tank_equipment_0
+			super_heavy_magic_artillery_tank_equipment_0
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_aa_0 = {
+		enable_equipments = {
+			super_heavy_aa_tank_equipment_0
+			super_heavy_magic_aa_tank_equipment_0
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_1 = {
+		enable_equipments = {
+			super_heavy_tank_equipment_1
+			super_heavy_magic_tank_equipment_1
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 12 y = 12 }
+		}
+		path = {
+			leads_to_tech = super_heavy_tank_equipment_2
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			super_heavy_tank_equipment_at_1
+			super_heavy_tank_equipment_artillery_1
+			super_heavy_tank_equipment_aa_1
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_at_1 = {
+		enable_equipments = {
+			super_heavy_at_tank_equipment_1
+			super_heavy_magic_at_tank_equipment_1
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_artillery_1 = {
+		enable_equipments = {
+			super_heavy_artillery_tank_equipment_1
+			super_heavy_magic_artillery_tank_equipment_1
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_aa_1 = {
+		enable_equipments = {
+			super_heavy_aa_tank_equipment_1
+			super_heavy_magic_aa_tank_equipment_1
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_2 = {
+		enable_equipments = {
+			super_heavy_tank_equipment_2
+			super_heavy_magic_tank_equipment_2
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 12 y = 14 }
+		}
+		path = {
+			leads_to_tech = super_heavy_tank_equipment_3
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			super_heavy_tank_equipment_at_2
+			super_heavy_tank_equipment_artillery_2
+			super_heavy_tank_equipment_aa_2
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_at_2 = {
+		enable_equipments = {
+			super_heavy_at_tank_equipment_2
+			super_heavy_magic_at_tank_equipment_2
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_artillery_2 = {
+		enable_equipments = {
+			super_heavy_artillery_tank_equipment_2
+			super_heavy_magic_artillery_tank_equipment_2
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_aa_2 = {
+		enable_equipments = {
+			super_heavy_aa_tank_equipment_2
+			super_heavy_magic_aa_tank_equipment_2
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_3 = {
+		enable_equipments = {
+			super_heavy_tank_equipment_3
+			super_heavy_magic_tank_equipment_3
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 12 y = 16 }
+		}
+		path = {
+			leads_to_tech = super_heavy_tank_equipment_4
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			super_heavy_tank_equipment_at_3
+			super_heavy_tank_equipment_artillery_3
+			super_heavy_tank_equipment_aa_3
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_at_3 = {
+		enable_equipments = {
+			super_heavy_at_tank_equipment_3
+			super_heavy_magic_at_tank_equipment_3
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_artillery_3 = {
+		enable_equipments = {
+			super_heavy_artillery_tank_equipment_3
+			super_heavy_magic_artillery_tank_equipment_3
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_aa_3 = {
+		enable_equipments = {
+			super_heavy_aa_tank_equipment_3
+			super_heavy_magic_aa_tank_equipment_3
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_4 = {
+		enable_equipments = {
+			super_heavy_tank_equipment_4
+			super_heavy_magic_tank_equipment_4
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 12 y = 18 }
+		}
+		path = {
+			leads_to_tech = super_heavy_tank_equipment_5
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			super_heavy_tank_equipment_at_4
+			super_heavy_tank_equipment_artillery_4
+			super_heavy_tank_equipment_aa_4
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_at_4 = {
+		enable_equipments = {
+			super_heavy_at_tank_equipment_4
+			super_heavy_magic_at_tank_equipment_4
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_artillery_4 = {
+		enable_equipments = {
+			super_heavy_artillery_tank_equipment_4
+			super_heavy_magic_artillery_tank_equipment_4
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_aa_4 = {
+		enable_equipments = {
+			super_heavy_aa_tank_equipment_4
+			super_heavy_magic_aa_tank_equipment_4
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_5 = {
+		enable_equipments = {
+			super_heavy_tank_equipment_5
+			super_heavy_magic_tank_equipment_5
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 12 y = 20 }
+		}
+		path = {
+			leads_to_tech = super_heavy_tank_equipment_6
+			research_cost_coeff = 1
+		}
+		sub_technologies = {
+			super_heavy_tank_equipment_at_5
+			super_heavy_tank_equipment_artillery_5
+			super_heavy_tank_equipment_aa_5
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_at_5 = {
+		enable_equipments = {
+			super_heavy_at_tank_equipment_5
+			super_heavy_magic_at_tank_equipment_5
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_artillery_5 = {
+		enable_equipments = {
+			super_heavy_artillery_tank_equipment_5
+			super_heavy_magic_artillery_tank_equipment_5
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_aa_5 = {
+		enable_equipments = {
+			super_heavy_aa_tank_equipment_5
+			super_heavy_magic_aa_tank_equipment_5
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_6 = {
+		enable_equipments = {
+			super_heavy_tank_equipment_6
+			super_heavy_magic_tank_equipment_6
+		}
+		research_cost = 2
+		start_year = 989
+		folder = {
+			name = armour_folder
+			position = { x = 12 y = 22 }
+		}
+		sub_technologies = {
+			super_heavy_tank_equipment_at_6
+			super_heavy_tank_equipment_artillery_6
+			super_heavy_tank_equipment_aa_6
+		}
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_at_6 = {
+		enable_equipments = {
+			super_heavy_at_tank_equipment_6
+			super_heavy_magic_at_tank_equipment_6
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_artillery_6 = {
+		enable_equipments = {
+			super_heavy_artillery_tank_equipment_6
+			super_heavy_magic_artillery_tank_equipment_6
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+	super_heavy_tank_equipment_aa_6 = {
+		enable_equipments = {
+			super_heavy_aa_tank_equipment_6
+			super_heavy_magic_aa_tank_equipment_6
+		}
+		research_cost = 1
+		start_year = 995
+		special_project_specialization = { 
+			specialization_land 
+		}
+	}
+
+
+
+
+
+
+
+
 
 
 

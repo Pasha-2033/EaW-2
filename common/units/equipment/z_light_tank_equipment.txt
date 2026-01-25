@@ -1,0 +1,4077 @@
+equipments = {
+	#light chassis
+	tankette_equipment = {
+		year = 985
+	
+		archetype = light_tank_chassis
+		priority = 5
+		visual_level = 0
+		
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_gun_upgrade
+		}
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 18
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4
+		ap_attack = 15
+		air_attack = 0.001
+
+		build_cost_ic = 7 #gw tanks are clunky
+		fuel_consumption = 1.0
+	}
+	light_tank_equipment_0 = {
+		year = 985
+	
+		archetype = light_tank_chassis
+		parent = tankette_equipment
+		priority = 5
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 18
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4
+		ap_attack = 15
+		air_attack = 0.001
+
+		build_cost_ic = 7 #gw tanks are clunky
+		fuel_consumption = 1.0
+	}
+	light_tank_equipment_1 = {
+		year = 985
+	
+		archetype = light_tank_chassis
+		parent = light_tank_equipment_0
+		priority = 5
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 18
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4
+		ap_attack = 15
+		air_attack = 0.001
+
+		build_cost_ic = 7 #gw tanks are clunky
+		fuel_consumption = 1.0
+	}
+	light_tank_equipment_2 = {
+		year = 985
+	
+		archetype = light_tank_chassis
+		parent = light_tank_equipment_1
+		priority = 5
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 18
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4
+		ap_attack = 15
+		air_attack = 0.001
+
+		build_cost_ic = 7 #gw tanks are clunky
+		fuel_consumption = 1.0
+	}
+	light_tank_equipment_3 = {
+		year = 985
+	
+		archetype = light_tank_chassis
+		parent = light_tank_equipment_2
+		priority = 5
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 18
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4
+		ap_attack = 15
+		air_attack = 0.001
+
+		build_cost_ic = 7 #gw tanks are clunky
+		fuel_consumption = 1.0
+	}
+	light_tank_equipment_4 = {
+		year = 985
+	
+		archetype = light_tank_chassis
+		parent = light_tank_equipment_3
+		priority = 5
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 18
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4
+		ap_attack = 15
+		air_attack = 0.001
+
+		build_cost_ic = 7 #gw tanks are clunky
+		fuel_consumption = 1.0
+	}
+	light_tank_equipment_5 = {
+		year = 985
+	
+		archetype = light_tank_chassis
+		parent = light_tank_equipment_4
+		priority = 5
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 18
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4
+		ap_attack = 15
+		air_attack = 0.001
+
+		build_cost_ic = 7 #gw tanks are clunky
+		fuel_consumption = 1.0
+	}
+	light_tank_equipment_6 = {
+		year = 985
+	
+		archetype = light_tank_chassis
+		parent = light_tank_equipment_5
+		priority = 5
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 18
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4
+		ap_attack = 15
+		air_attack = 0.001
+
+		build_cost_ic = 7 #gw tanks are clunky
+		fuel_consumption = 1.0
+	}
+	light_tank_equipment_7 = {
+		year = 985
+	
+		archetype = light_tank_chassis
+		parent = light_tank_equipment_6
+		priority = 5
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 18
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4
+		ap_attack = 15
+		air_attack = 0.001
+
+		build_cost_ic = 7 #gw tanks are clunky
+		fuel_consumption = 1.0
+	}
+	light_tank_equipment_8 = {
+		year = 985
+	
+		archetype = light_tank_chassis
+		parent = light_tank_equipment_7
+		priority = 5
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 18
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4
+		ap_attack = 15
+		air_attack = 0.001
+
+		build_cost_ic = 7 #gw tanks are clunky
+		fuel_consumption = 1.0
+	}
+	light_tank_equipment_9 = {
+		year = 985
+	
+		archetype = light_tank_chassis
+		parent = light_tank_equipment_8
+		priority = 5
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 18
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4
+		ap_attack = 15
+		air_attack = 0.001
+
+		build_cost_ic = 7 #gw tanks are clunky
+		fuel_consumption = 1.0
+	}
+	light_tank_equipment_10 = {
+		year = 985
+	
+		archetype = light_tank_chassis
+		parent = light_tank_equipment_9
+		priority = 5
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 18
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4
+		ap_attack = 15
+		air_attack = 0.001
+
+		build_cost_ic = 7 #gw tanks are clunky
+		fuel_consumption = 1.0
+	}
+	#light chassis (at)
+	tankette_at_equipment = {
+		archetype = light_at_tank_chassis
+		priority = 40
+		visual_level = 0
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_at_upgrade
+		}
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_at_tank_equipment_0 = {
+		archetype = light_at_tank_chassis
+		parent = tankette_at_equipment
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_at_tank_equipment_1 = {
+		archetype = light_at_tank_chassis
+		parent = light_at_tank_equipment_0
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_at_tank_equipment_2 = {
+		archetype = light_at_tank_chassis
+		parent = light_at_tank_equipment_1
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_at_tank_equipment_3 = {
+		archetype = light_at_tank_chassis
+		parent = light_at_tank_equipment_2
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_at_tank_equipment_4 = {
+		archetype = light_at_tank_chassis
+		parent = light_at_tank_equipment_3
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_at_tank_equipment_5 = {
+		archetype = light_at_tank_chassis
+		parent = light_at_tank_equipment_4
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_at_tank_equipment_6 = {
+		archetype = light_at_tank_chassis
+		parent = light_at_tank_equipment_5
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_at_tank_equipment_7 = {
+		archetype = light_at_tank_chassis
+		parent = light_at_tank_equipment_6
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_at_tank_equipment_8 = {
+		archetype = light_at_tank_chassis
+		parent = light_at_tank_equipment_7
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_at_tank_equipment_9 = {
+		archetype = light_at_tank_chassis
+		parent = light_at_tank_equipment_8
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_at_tank_equipment_10 = {
+		archetype = light_at_tank_chassis
+		parent = light_at_tank_equipment_9
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	#light chassis (artillery)
+	tankette_artillery_equipment = {
+		year = 1005
+		archetype = light_artillery_tank_chassis
+		priority = 20
+		visual_level = 0
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_art_upgrade
+		}
+
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 2
+		hardness = 0.5
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 0.5
+		ap_attack = 4
+		air_attack = 0		
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten= 1
+		}
+		fuel_consumption = 1.2
+	}
+	light_artillery_tank_equipment_0 = {
+		year = 1005
+		archetype = light_artillery_tank_chassis
+		parent = tankette_artillery_equipment
+		priority = 20
+		visual_level = 0
+
+
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 2
+		hardness = 0.5
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 0.5
+		ap_attack = 4
+		air_attack = 0		
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten= 1
+		}
+		fuel_consumption = 1.2
+	}
+	light_artillery_tank_equipment_1 = {
+		year = 1005
+		archetype = light_artillery_tank_chassis
+		parent = light_artillery_tank_equipment_0
+		priority = 20
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 2
+		hardness = 0.5
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 0.5
+		ap_attack = 4
+		air_attack = 0		
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten= 1
+		}
+		fuel_consumption = 1.2
+	}
+	light_artillery_tank_equipment_2 = {
+		year = 1005
+		archetype = light_artillery_tank_chassis
+		parent = light_artillery_tank_equipment_1
+		priority = 20
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 2
+		hardness = 0.5
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 0.5
+		ap_attack = 4
+		air_attack = 0		
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten= 1
+		}
+		fuel_consumption = 1.2
+	}
+	light_artillery_tank_equipment_3 = {
+		year = 1005
+		archetype = light_artillery_tank_chassis
+		parent = light_artillery_tank_equipment_2
+		priority = 20
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 2
+		hardness = 0.5
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 0.5
+		ap_attack = 4
+		air_attack = 0		
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten= 1
+		}
+		fuel_consumption = 1.2
+	}
+	light_artillery_tank_equipment_4 = {
+		year = 1005
+		archetype = light_artillery_tank_chassis
+		parent = light_artillery_tank_equipment_3
+		priority = 20
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 2
+		hardness = 0.5
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 0.5
+		ap_attack = 4
+		air_attack = 0		
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten= 1
+		}
+		fuel_consumption = 1.2
+	}
+	light_artillery_tank_equipment_5 = {
+		year = 1005
+		archetype = light_artillery_tank_chassis
+		parent = light_artillery_tank_equipment_4
+		priority = 20
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 2
+		hardness = 0.5
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 0.5
+		ap_attack = 4
+		air_attack = 0		
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten= 1
+		}
+		fuel_consumption = 1.2
+	}
+	light_artillery_tank_equipment_6 = {
+		year = 1005
+		archetype = light_artillery_tank_chassis
+		parent = light_artillery_tank_equipment_5
+		priority = 20
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 2
+		hardness = 0.5
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 0.5
+		ap_attack = 4
+		air_attack = 0		
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten= 1
+		}
+		fuel_consumption = 1.2
+	}
+	light_artillery_tank_equipment_7 = {
+		year = 1005
+		archetype = light_artillery_tank_chassis
+		parent = light_artillery_tank_equipment_6
+		priority = 20
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 2
+		hardness = 0.5
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 0.5
+		ap_attack = 4
+		air_attack = 0		
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten= 1
+		}
+		fuel_consumption = 1.2
+	}
+	light_artillery_tank_equipment_8 = {
+		year = 1005
+		archetype = light_artillery_tank_chassis
+		parent = light_artillery_tank_equipment_7
+		priority = 20
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 2
+		hardness = 0.5
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 0.5
+		ap_attack = 4
+		air_attack = 0		
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten= 1
+		}
+		fuel_consumption = 1.2
+	}
+	light_artillery_tank_equipment_9 = {
+		year = 1005
+		archetype = light_artillery_tank_chassis
+		parent = light_artillery_tank_equipment_8
+		priority = 20
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 2
+		hardness = 0.5
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 0.5
+		ap_attack = 4
+		air_attack = 0		
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten= 1
+		}
+		fuel_consumption = 1.2
+	}
+	light_artillery_tank_equipment_10 = {
+		year = 1005
+		archetype = light_artillery_tank_chassis
+		parent = light_artillery_tank_equipment_9
+		priority = 20
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 2
+		hardness = 0.5
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 0.5
+		ap_attack = 4
+		air_attack = 0		
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten= 1
+		}
+		fuel_consumption = 1.2
+	}
+	#light chassis (aa)
+	tankette_aa_equipment = {
+		archetype = light_aa_tank_chassis
+		priority = 40
+		visual_level = 0
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_at_upgrade
+		}
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_aa_tank_equipment_0 = {
+		archetype = light_aa_tank_chassis
+		parent = tankette_aa_equipment
+		priority = 40
+		visual_level = 0
+		
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_aa_tank_equipment_1 = {
+		archetype = light_aa_tank_chassis
+		parent = light_aa_tank_equipment_0
+		priority = 40
+		visual_level = 0
+		
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_aa_tank_equipment_2 = {
+		archetype = light_aa_tank_chassis
+		parent = light_aa_tank_equipment_1
+		priority = 40
+		visual_level = 0
+		
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_aa_tank_equipment_3 = {
+		archetype = light_aa_tank_chassis
+		parent = light_aa_tank_equipment_2
+		priority = 40
+		visual_level = 0
+		
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_aa_tank_equipment_4 = {
+		archetype = light_aa_tank_chassis
+		parent = light_aa_tank_equipment_3
+		priority = 40
+		visual_level = 0
+		
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_aa_tank_equipment_5 = {
+		archetype = light_aa_tank_chassis
+		parent = light_aa_tank_equipment_4
+		priority = 40
+		visual_level = 0
+		
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_aa_tank_equipment_6 = {
+		archetype = light_aa_tank_chassis
+		parent = light_aa_tank_equipment_5
+		priority = 40
+		visual_level = 0
+		
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_aa_tank_equipment_7 = {
+		archetype = light_aa_tank_chassis
+		parent = light_aa_tank_equipment_6
+		priority = 40
+		visual_level = 0
+		
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_aa_tank_equipment_8 = {
+		archetype = light_aa_tank_chassis
+		parent = light_aa_tank_equipment_7
+		priority = 40
+		visual_level = 0
+		
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_aa_tank_equipment_9 = {
+		archetype = light_aa_tank_chassis
+		parent = light_aa_tank_equipment_8
+		priority = 40
+		visual_level = 0
+		
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_aa_tank_equipment_10 = {
+		archetype = light_aa_tank_chassis
+		parent = light_aa_tank_equipment_9
+		priority = 40
+		visual_level = 0
+		
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	#light chassis (amphibious)
+	tankette_amphibious_equipment = {
+		archetype = light_amphibious_tank_chassis
+		priority = 40
+		visual_level = 0
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_at_upgrade
+		}
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_amphibious_tank_equipment_0 = {
+		archetype = light_amphibious_tank_chassis
+		parent = tankette_amphibious_equipment
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_amphibious_tank_equipment_1 = {
+		archetype = light_amphibious_tank_chassis
+		parent = light_amphibious_tank_equipment_0
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_amphibious_tank_equipment_2 = {
+		archetype = light_amphibious_tank_chassis
+		parent = light_amphibious_tank_equipment_1
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_amphibious_tank_equipment_3 = {
+		archetype = light_amphibious_tank_chassis
+		parent = light_amphibious_tank_equipment_2
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_amphibious_tank_equipment_4 = {
+		archetype = light_amphibious_tank_chassis
+		parent = light_amphibious_tank_equipment_3
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_amphibious_tank_equipment_5 = {
+		archetype = light_amphibious_tank_chassis
+		parent = light_amphibious_tank_equipment_4
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_amphibious_tank_equipment_6 = {
+		archetype = light_amphibious_tank_chassis
+		parent = light_amphibious_tank_equipment_5
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_amphibious_tank_equipment_7 = {
+		archetype = light_amphibious_tank_chassis
+		parent = light_amphibious_tank_equipment_6
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_amphibious_tank_equipment_8 = {
+		archetype = light_amphibious_tank_chassis
+		parent = light_amphibious_tank_equipment_7
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_amphibious_tank_equipment_9 = {
+		archetype = light_amphibious_tank_chassis
+		parent = light_amphibious_tank_equipment_8
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_amphibious_tank_equipment_10 = {
+		archetype = light_amphibious_tank_chassis
+		parent = light_amphibious_tank_equipment_9
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	#light chassis (rocket)
+	tankette_rocket_equipment = {
+		archetype = light_rocket_tank_chassis
+		priority = 40
+		visual_level = 0
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_at_upgrade
+		}
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_rocket_tank_equipment_0 = {
+		archetype = light_rocket_tank_chassis
+		parent = tankette_rocket_equipment
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_rocket_tank_equipment_1 = {
+		archetype = light_rocket_tank_chassis
+		parent = light_rocket_tank_equipment_0
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_rocket_tank_equipment_2 = {
+		archetype = light_rocket_tank_chassis
+		parent = light_rocket_tank_equipment_1
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_rocket_tank_equipment_3 = {
+		archetype = light_rocket_tank_chassis
+		parent = light_rocket_tank_equipment_2
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_rocket_tank_equipment_4 = {
+		archetype = light_rocket_tank_chassis
+		parent = light_rocket_tank_equipment_3
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_rocket_tank_equipment_5 = {
+		archetype = light_rocket_tank_chassis
+		parent = light_rocket_tank_equipment_4
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_rocket_tank_equipment_6 = {
+		archetype = light_rocket_tank_chassis
+		parent = light_rocket_tank_equipment_5
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_rocket_tank_equipment_7 = {
+		archetype = light_rocket_tank_chassis
+		parent = light_rocket_tank_equipment_6
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_rocket_tank_equipment_8 = {
+		archetype = light_rocket_tank_chassis
+		parent = light_rocket_tank_equipment_7
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_rocket_tank_equipment_9 = {
+		archetype = light_rocket_tank_chassis
+		parent = light_rocket_tank_equipment_8
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_rocket_tank_equipment_10 = {
+		archetype = light_rocket_tank_chassis
+		parent = light_rocket_tank_equipment_9
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	#light magic chassis
+	light_magic_tank_equipment_0 = {
+		year = 985
+	
+		archetype = light_magic_tank_chassis
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_gun_upgrade
+		}
+		priority = 5
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 18
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4
+		ap_attack = 15
+		air_attack = 0.001
+
+		build_cost_ic = 7 #gw tanks are clunky
+		fuel_consumption = 1.0
+	}
+	light_magic_tank_equipment_1 = {
+		year = 985
+	
+		archetype = light_magic_tank_chassis
+		parent = light_magic_tank_equipment_0
+		priority = 5
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 18
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4
+		ap_attack = 15
+		air_attack = 0.001
+
+		build_cost_ic = 7 #gw tanks are clunky
+		fuel_consumption = 1.0
+	}
+	light_magic_tank_equipment_2 = {
+		year = 985
+	
+		archetype = light_magic_tank_chassis
+		parent = light_magic_tank_equipment_1
+		priority = 5
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 18
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4
+		ap_attack = 15
+		air_attack = 0.001
+
+		build_cost_ic = 7 #gw tanks are clunky
+		fuel_consumption = 1.0
+	}
+	light_magic_tank_equipment_3 = {
+		year = 985
+	
+		archetype = light_magic_tank_chassis
+		parent = light_magic_tank_equipment_2
+		priority = 5
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 18
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4
+		ap_attack = 15
+		air_attack = 0.001
+
+		build_cost_ic = 7 #gw tanks are clunky
+		fuel_consumption = 1.0
+	}
+	light_magic_tank_equipment_4 = {
+		year = 985
+	
+		archetype = light_magic_tank_chassis
+		parent = light_magic_tank_equipment_3
+		priority = 5
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 18
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4
+		ap_attack = 15
+		air_attack = 0.001
+
+		build_cost_ic = 7 #gw tanks are clunky
+		fuel_consumption = 1.0
+	}
+	light_magic_tank_equipment_5 = {
+		year = 985
+	
+		archetype = light_magic_tank_chassis
+		parent = light_magic_tank_equipment_4
+		priority = 5
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 18
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4
+		ap_attack = 15
+		air_attack = 0.001
+
+		build_cost_ic = 7 #gw tanks are clunky
+		fuel_consumption = 1.0
+	}
+	light_magic_tank_equipment_6 = {
+		year = 985
+	
+		archetype = light_magic_tank_chassis
+		parent = light_magic_tank_equipment_5
+		priority = 5
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 18
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4
+		ap_attack = 15
+		air_attack = 0.001
+
+		build_cost_ic = 7 #gw tanks are clunky
+		fuel_consumption = 1.0
+	}
+	light_magic_tank_equipment_7 = {
+		year = 985
+	
+		archetype = light_magic_tank_chassis
+		parent = light_magic_tank_equipment_6
+		priority = 5
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 18
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4
+		ap_attack = 15
+		air_attack = 0.001
+
+		build_cost_ic = 7 #gw tanks are clunky
+		fuel_consumption = 1.0
+	}
+	light_magic_tank_equipment_8 = {
+		year = 985
+	
+		archetype = light_magic_tank_chassis
+		parent = light_magic_tank_equipment_7
+		priority = 5
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 18
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4
+		ap_attack = 15
+		air_attack = 0.001
+
+		build_cost_ic = 7 #gw tanks are clunky
+		fuel_consumption = 1.0
+	}
+	light_magic_tank_equipment_9 = {
+		year = 985
+	
+		archetype = light_magic_tank_chassis
+		parent = light_magic_tank_equipment_8
+		priority = 5
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 18
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4
+		ap_attack = 15
+		air_attack = 0.001
+
+		build_cost_ic = 7 #gw tanks are clunky
+		fuel_consumption = 1.0
+	}
+	light_magic_tank_equipment_10 = {
+		year = 985
+	
+		archetype = light_magic_tank_chassis
+		parent = light_magic_tank_equipment_9
+		priority = 5
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 18
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4
+		ap_attack = 15
+		air_attack = 0.001
+
+		build_cost_ic = 7 #gw tanks are clunky
+		fuel_consumption = 1.0
+	}
+	#light magic chassis (at)
+	light_magic_at_tank_equipment_0 = {
+		archetype = light_magic_at_tank_chassis
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_at_upgrade
+		}
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_at_tank_equipment_1 = {
+		archetype = light_magic_at_tank_chassis
+		parent = light_magic_at_tank_equipment_0
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_at_tank_equipment_2 = {
+		archetype = light_magic_at_tank_chassis
+		parent = light_magic_at_tank_equipment_1
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_at_tank_equipment_3 = {
+		archetype = light_magic_at_tank_chassis
+		parent = light_magic_at_tank_equipment_2
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_at_tank_equipment_4 = {
+		archetype = light_magic_at_tank_chassis
+		parent = light_magic_at_tank_equipment_3
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_at_tank_equipment_5 = {
+		archetype = light_magic_at_tank_chassis
+		parent = light_magic_at_tank_equipment_4
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_at_tank_equipment_6 = {
+		archetype = light_magic_at_tank_chassis
+		parent = light_magic_at_tank_equipment_5
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_at_tank_equipment_7 = {
+		archetype = light_magic_at_tank_chassis
+		parent = light_magic_at_tank_equipment_6
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_at_tank_equipment_8 = {
+		archetype = light_magic_at_tank_chassis
+		parent = light_magic_at_tank_equipment_7
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_at_tank_equipment_9 = {
+		archetype = light_magic_at_tank_chassis
+		parent = light_magic_at_tank_equipment_8
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_at_tank_equipment_10 = {
+		archetype = light_magic_at_tank_chassis
+		parent = light_magic_at_tank_equipment_9
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	#light magic chassis (artillery)
+	light_magic_artillery_tank_equipment_0 = {
+		year = 1005
+		archetype = light_magic_artillery_tank_chassis
+		priority = 20
+		visual_level = 0
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_art_upgrade
+		}
+
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 2
+		hardness = 0.5
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 0.5
+		ap_attack = 4
+		air_attack = 0		
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten= 1
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_artillery_tank_equipment_1 = {
+		year = 1005
+		archetype = light_magic_artillery_tank_chassis
+		parent = light_magic_artillery_tank_equipment_0
+		priority = 20
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 2
+		hardness = 0.5
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 0.5
+		ap_attack = 4
+		air_attack = 0		
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten= 1
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_artillery_tank_equipment_2 = {
+		year = 1005
+		archetype = light_magic_artillery_tank_chassis
+		parent = light_magic_artillery_tank_equipment_1
+		priority = 20
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 2
+		hardness = 0.5
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 0.5
+		ap_attack = 4
+		air_attack = 0		
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten= 1
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_artillery_tank_equipment_3 = {
+		year = 1005
+		archetype = light_magic_artillery_tank_chassis
+		parent = light_magic_artillery_tank_equipment_2
+		priority = 20
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 2
+		hardness = 0.5
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 0.5
+		ap_attack = 4
+		air_attack = 0		
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten= 1
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_artillery_tank_equipment_4 = {
+		year = 1005
+		archetype = light_magic_artillery_tank_chassis
+		parent = light_magic_artillery_tank_equipment_3
+		priority = 20
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 2
+		hardness = 0.5
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 0.5
+		ap_attack = 4
+		air_attack = 0		
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten= 1
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_artillery_tank_equipment_5 = {
+		year = 1005
+		archetype = light_magic_artillery_tank_chassis
+		parent = light_magic_artillery_tank_equipment_4
+		priority = 20
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 2
+		hardness = 0.5
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 0.5
+		ap_attack = 4
+		air_attack = 0		
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten= 1
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_artillery_tank_equipment_6 = {
+		year = 1005
+		archetype = light_magic_artillery_tank_chassis
+		parent = light_magic_artillery_tank_equipment_5
+		priority = 20
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 2
+		hardness = 0.5
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 0.5
+		ap_attack = 4
+		air_attack = 0		
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten= 1
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_artillery_tank_equipment_7 = {
+		year = 1005
+		archetype = light_magic_artillery_tank_chassis
+		parent = light_magic_artillery_tank_equipment_6
+		priority = 20
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 2
+		hardness = 0.5
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 0.5
+		ap_attack = 4
+		air_attack = 0		
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten= 1
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_artillery_tank_equipment_8 = {
+		year = 1005
+		archetype = light_magic_artillery_tank_chassis
+		parent = light_magic_artillery_tank_equipment_7
+		priority = 20
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 2
+		hardness = 0.5
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 0.5
+		ap_attack = 4
+		air_attack = 0		
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten= 1
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_artillery_tank_equipment_9 = {
+		year = 1005
+		archetype = light_magic_artillery_tank_chassis
+		parent = light_magic_artillery_tank_equipment_8
+		priority = 20
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 2
+		hardness = 0.5
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 0.5
+		ap_attack = 4
+		air_attack = 0		
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten= 1
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_artillery_tank_equipment_10 = {
+		year = 1005
+		archetype = light_magic_artillery_tank_chassis
+		parent = light_magic_artillery_tank_equipment_9
+		priority = 20
+		visual_level = 0
+
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 2
+		hardness = 0.5
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 34
+		hard_attack = 0.5
+		ap_attack = 4
+		air_attack = 0		
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten= 1
+		}
+		fuel_consumption = 1.2
+	}
+	#light magic chassis (aa)
+	light_magic_aa_tank_equipment_0 = {
+		archetype = light_magic_aa_tank_chassis
+		priority = 40
+		visual_level = 0
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_at_upgrade
+		}
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_aa_tank_equipment_1 = {
+		archetype = light_magic_aa_tank_chassis
+		parent = light_magic_aa_tank_equipment_0
+		priority = 40
+		visual_level = 0
+		
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_aa_tank_equipment_2 = {
+		archetype = light_magic_aa_tank_chassis
+		parent = light_magic_aa_tank_equipment_1
+		priority = 40
+		visual_level = 0
+		
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_aa_tank_equipment_3 = {
+		archetype = light_magic_aa_tank_chassis
+		parent = light_magic_aa_tank_equipment_2
+		priority = 40
+		visual_level = 0
+		
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_aa_tank_equipment_4 = {
+		archetype = light_magic_aa_tank_chassis
+		parent = light_magic_aa_tank_equipment_3
+		priority = 40
+		visual_level = 0
+		
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_aa_tank_equipment_5 = {
+		archetype = light_magic_aa_tank_chassis
+		parent = light_magic_aa_tank_equipment_4
+		priority = 40
+		visual_level = 0
+		
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_aa_tank_equipment_6 = {
+		archetype = light_magic_aa_tank_chassis
+		parent = light_magic_aa_tank_equipment_5
+		priority = 40
+		visual_level = 0
+		
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_aa_tank_equipment_7 = {
+		archetype = light_magic_aa_tank_chassis
+		parent = light_magic_aa_tank_equipment_6
+		priority = 40
+		visual_level = 0
+		
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_aa_tank_equipment_8 = {
+		archetype = light_magic_aa_tank_chassis
+		parent = light_magic_aa_tank_equipment_7
+		priority = 40
+		visual_level = 0
+		
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_aa_tank_equipment_9 = {
+		archetype = light_magic_aa_tank_chassis
+		parent = light_magic_aa_tank_equipment_8
+		priority = 40
+		visual_level = 0
+		
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_aa_tank_equipment_10 = {
+		archetype = light_magic_aa_tank_chassis
+		parent = light_magic_aa_tank_equipment_9
+		priority = 40
+		visual_level = 0
+		
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	#light magic chassis (amphibious)
+	light_magic_amphibious_tank_equipment_0 = {
+		archetype = light_magic_amphibious_tank_chassis
+		priority = 40
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_at_upgrade
+		}
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_amphibious_tank_equipment_1 = {
+		archetype = light_magic_amphibious_tank_chassis
+		parent = light_magic_amphibious_tank_equipment_0
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_amphibious_tank_equipment_2 = {
+		archetype = light_magic_amphibious_tank_chassis
+		parent = light_magic_amphibious_tank_equipment_1
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_amphibious_tank_equipment_3 = {
+		archetype = light_magic_amphibious_tank_chassis
+		parent = light_magic_amphibious_tank_equipment_2
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_amphibious_tank_equipment_4 = {
+		archetype = light_magic_amphibious_tank_chassis
+		parent = light_magic_amphibious_tank_equipment_3
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_amphibious_tank_equipment_5 = {
+		archetype = light_magic_amphibious_tank_chassis
+		parent = light_magic_amphibious_tank_equipment_4
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_amphibious_tank_equipment_6 = {
+		archetype = light_magic_amphibious_tank_chassis
+		parent = light_magic_amphibious_tank_equipment_5
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_amphibious_tank_equipment_7 = {
+		archetype = light_magic_amphibious_tank_chassis
+		parent = light_magic_amphibious_tank_equipment_6
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_amphibious_tank_equipment_8 = {
+		archetype = light_magic_amphibious_tank_chassis
+		parent = light_magic_amphibious_tank_equipment_7
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_amphibious_tank_equipment_9 = {
+		archetype = light_magic_amphibious_tank_chassis
+		parent = light_magic_amphibious_tank_equipment_8
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_amphibious_tank_equipment_10 = {
+		archetype = light_magic_amphibious_tank_chassis
+		parent = light_magic_amphibious_tank_equipment_9
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	#light magic chassis (rocket)
+	light_magic_rocket_tank_equipment_0 = {
+		archetype = light_rocket_tank_chassis
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_at_upgrade
+		}
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_rocket_tank_equipment_1 = {
+		archetype = light_rocket_tank_chassis
+		parent = light_rocket_tank_equipment_0
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_rocket_tank_equipment_2 = {
+		archetype = light_magic_rocket_tank_chassis
+		parent = light_magic_rocket_tank_equipment_1
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_rocket_tank_equipment_3 = {
+		archetype = light_magic_rocket_tank_chassis
+		parent = light_magic_rocket_tank_equipment_2
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_rocket_tank_equipment_4 = {
+		archetype = light_magic_rocket_tank_chassis
+		parent = light_magic_rocket_tank_equipment_3
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_rocket_tank_equipment_5 = {
+		archetype = light_magic_rocket_tank_chassis
+		parent = light_magic_rocket_tank_equipment_4
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_rocket_tank_equipment_6 = {
+		archetype = light_magic_rocket_tank_chassis
+		parent = light_magic_rocket_tank_equipment_5
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_rocket_tank_equipment_7 = {
+		archetype = light_magic_rocket_tank_chassis
+		parent = light_magic_rocket_tank_equipment_6
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_rocket_tank_equipment_8 = {
+		archetype = light_magic_rocket_tank_chassis
+		parent = light_magic_rocket_tank_equipment_7
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_rocket_tank_equipment_9 = {
+		archetype = light_magic_rocket_tank_chassis
+		parent = light_magic_rocket_tank_equipment_8
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+	light_magic_rocket_tank_equipment_10 = {
+		archetype = light_magic_rocket_tank_chassis
+		parent = light_magic_rocket_tank_equipment_9
+		priority = 40
+		visual_level = 0
+		#Misc Abilities
+		maximum_speed = 10
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 1
+		hardness = 0.8
+		armor_value = 10
+
+		#Offensive Abilities
+		soft_attack = 6
+		hard_attack = 10
+		ap_attack = 50
+		air_attack = 0
+		
+		build_cost_ic = 8
+		resources = {
+			#oil = 1
+			steel = 2
+			tungsten = 2
+		}
+		fuel_consumption = 1.2
+	}
+
+}
