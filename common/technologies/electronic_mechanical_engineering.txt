@@ -1171,6 +1171,16 @@ technologies = {
 			leads_to_tech = fire_control_system_0
 			research_cost_coeff = 1
 		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check
+		}
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT_WITH_EXTRA_TECH
+				TECH = computer_0
+				PROJECT = sp_sonar_prototyping
+			}
+		}
 		research_cost = 2.5
 		start_year = 992
 		folder = {
@@ -1232,6 +1242,16 @@ technologies = {
 		}
 		ai_will_do = {
 			factor = 6
+		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check
+		}
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT_WITH_EXTRA_PROJECT
+				EXTRA_PROJECT = sp_land_tank_gun_computer_1
+				PROJECT = sp_land_tank_gun_computer_0
+			}
 		}
 		categories = {
 			cat_electronics

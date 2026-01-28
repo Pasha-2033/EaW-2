@@ -46,6 +46,7 @@ technologies = {
 		}
 		allow = {
 			has_tech = internal_combustion_engine
+			has_tech = infantry_weapons_0
 		}
 		path = {
 			leads_to_tech = light_chassis_0
@@ -62,6 +63,28 @@ technologies = {
 		path = {
 			leads_to_tech = nsb_armor_upgrade_0
 			research_cost_coeff = 1
+		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check
+		}
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_land_flamethrower_tank
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_land_sloped_armor
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_land_easy_maintenance_scemes_0
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT_WITH_EXTRA_TECH
+				TECH = computer_0
+				PROJECT = sp_land_tank_gun_computer_0
+			}
 		}
 		special_project_specialization = { 
 			specialization_land 
@@ -735,6 +758,15 @@ technologies = {
 			leads_to_tech = super_heavy_chassis_1
 			research_cost_coeff = 1
 		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check
+		}
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_land_super_heavy_cannon_0
+			}
+		}
 		special_project_specialization = { 
 			specialization_land 
 		}
@@ -752,6 +784,20 @@ technologies = {
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 18 y = 12 }
+		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check
+		}
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_land_land_cruiser
+			}
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				EXTRA_PROJECT = sp_land_super_heavy_cannon_0
+				PROJECT = sp_land_super_heavy_cannon_1
+			}
 		}
 		path = {
 			leads_to_tech = land_cruiser_1
@@ -775,6 +821,16 @@ technologies = {
 		folder = {
 			name = nsb_armour_folder
 			position = { x = 18 y = 14 }
+		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check
+		}
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT_WITH_EXTRA_PROJECT
+				EXTRA_PROJECT = sp_land_super_heavy_cannon_1
+				PROJECT = sp_land_super_heavy_cannon_2
+			}
 		}
 		path = {
 			leads_to_tech = super_heavy_chassis_3

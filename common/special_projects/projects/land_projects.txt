@@ -1,4 +1,4 @@
-sp_tank_gun_computer_0 = {
+sp_land_tank_gun_computer_0 = {
 	specialization = specialization_land
 	#icon = GFX_sp_land_flamethrower_tank
 	project_tags = {
@@ -9,7 +9,17 @@ sp_tank_gun_computer_0 = {
 	}
 	available = {
 		FROM = {
-			#TODO: armor tech (dlc)
+			FROM = {
+				if = {
+					limit = {
+						has_dlc = "No Step Back"
+					}
+					has_tech = tankette
+				}
+				else = {
+					has_tech = tankette_equipment
+				}
+			}
 			has_tech = computer_0
 		}
 	}
@@ -32,7 +42,7 @@ sp_tank_gun_computer_0 = {
 				}
 				#tooltip - make it more readable
 				custom_override_tooltip = {
-					tooltip = sp_tank_gun_computer_0_no_nsb_effect_tt
+					tooltip = sp_tank_gun_computer_no_nsb_effect_tt
 					add_equipment_bonus = {
 						project = FROM
 						bonus = {
@@ -148,7 +158,115 @@ sp_tank_gun_computer_0 = {
 								soft_attack = 0.05
 								instant = yes
 							}
-							super_heavy_rocket_tank_chassis = {
+							#light magic
+							light_magic_tank_chassis = {
+								breakthrough = 0.05
+								instant = yes
+							}
+							light_magic_aa_tank_chassis = {
+								air_attack = 0.05
+								instant = yes
+							}
+							light_magic_at_tank_chassis = {
+								hard_attack = 0.05
+								ap_attack = 0.05
+								instant = yes
+							}
+							light_magic_flame_tank_chassis = {
+								soft_attack = 0.05
+								instant = yes
+							}
+							light_magic_artillery_tank_chassis = {
+								soft_attack = 0.05
+								instant = yes
+							}
+							light_magic_amphibious_tank_chassis = {
+								breakthrough = 0.05
+								instant = yes
+							}
+							light_magic_rocket_tank_chassis = {
+								soft_attack = 0.05
+								instant = yes
+							}
+							#medium magic
+							medium_magic_tank_chassis = {
+								breakthrough = 0.05
+								instant = yes
+							}
+							medium_magic_aa_tank_chassis = {
+								air_attack = 0.05
+								instant = yes
+							}
+							medium_magic_at_tank_chassis = {
+								hard_attack = 0.05
+								ap_attack = 0.05
+								instant = yes
+							}
+							medium_magic_flame_tank_chassis = {
+								soft_attack = 0.05
+								instant = yes
+							}
+							medium_magic_artillery_tank_chassis = {
+								soft_attack = 0.05
+								instant = yes
+							}
+							medium_magic_amphibious_tank_chassis = {
+								breakthrough = 0.05
+								instant = yes
+							}
+							medium_magic_rocket_tank_chassis = {
+								soft_attack = 0.05
+								instant = yes
+							}
+							#heavy magic
+							heavy_magic_tank_chassis = {
+								breakthrough = 0.05
+								instant = yes
+							}
+							heavy_magic_aa_tank_chassis = {
+								air_attack = 0.05
+								instant = yes
+							}
+							heavy_magic_at_tank_chassis = {
+								hard_attack = 0.05
+								ap_attack = 0.05
+								instant = yes
+							}
+							heavy_magic_flame_tank_chassis = {
+								soft_attack = 0.05
+								instant = yes
+							}
+							heavy_magic_artillery_tank_chassis = {
+								soft_attack = 0.05
+								instant = yes
+							}
+							heavy_magic_amphibious_tank_chassis = {
+								breakthrough = 0.05
+								instant = yes
+							}
+							heavy_magic_rocket_tank_chassis = {
+								soft_attack = 0.05
+								instant = yes
+							}
+							#super heavy magic
+							super_heavy_magic_tank_chassis = {
+								breakthrough = 0.05
+								instant = yes
+							}
+							super_heavy_magic_aa_tank_chassis = {
+								air_attack = 0.05
+								instant = yes
+							}
+							super_heavy_magic_at_tank_chassis = {
+								hard_attack = 0.05
+								ap_attack = 0.05
+								instant = yes
+							}
+							super_heavy_magic_flame_tank_chassis = {
+								soft_attack = 0.05
+								instant = yes
+							}
+							super_heavy_magic_artillery_tank_chassis = {
 								soft_attack = 0.05
 								instant = yes
 							}
@@ -165,7 +283,7 @@ sp_tank_gun_computer_0 = {
 		}
 	}
 }
-sp_tank_gun_computer_1 = {
+sp_land_tank_gun_computer_1 = {
 	specialization = specialization_land
 	#icon = GFX_sp_land_flamethrower_tank
 	project_tags = {
@@ -174,8 +292,13 @@ sp_tank_gun_computer_1 = {
 	allowed = {
 		country_without_sp = no #"no" because we want to forbid, not just check
 	}
+	available = {
+		FROM = {
+			has_tech = computer_1
+		}
+	}
 	special_project_parent = {
-		sp_tank_gun_computer_0
+		sp_land_tank_gun_computer_0
 	}
 	prototype_time = sp_time.prototype.short
 
@@ -196,124 +319,232 @@ sp_tank_gun_computer_1 = {
 				}
 				#tooltip - make it more readable
 				custom_override_tooltip = {
-					tooltip = sp_tank_gun_computer_1_no_nsb_effect_tt
+					tooltip = sp_tank_gun_computer_no_nsb_effect_tt
 					add_equipment_bonus = {
 						project = FROM
 						bonus = {
 							#light
 							light_tank_chassis = {
-								breakthrough = 0.075
+								breakthrough = 0.05
 								instant = yes
 							}
 							light_aa_tank_chassis = {
-								air_attack = 0.075
+								air_attack = 0.05
 								instant = yes
 							}
 							light_at_tank_chassis = {
-								hard_attack = 0.075
-								ap_attack = 0.075
+								hard_attack = 0.05
+								ap_attack = 0.05
 								instant = yes
 							}
 							light_flame_tank_chassis = {
-								soft_attack = 0.075
+								soft_attack = 0.05
 								instant = yes
 							}
 							light_artillery_tank_chassis = {
-								soft_attack = 0.075
+								soft_attack = 0.05
 								instant = yes
 							}
 							light_amphibious_tank_chassis = {
-								breakthrough = 0.075
+								breakthrough = 0.05
 								instant = yes
 							}
 							light_rocket_tank_chassis = {
-								soft_attack = 0.075
+								soft_attack = 0.05
 								instant = yes
 							}
 							#medium
 							medium_tank_chassis = {
-								breakthrough = 0.075
+								breakthrough = 0.05
 								instant = yes
 							}
 							medium_aa_tank_chassis = {
-								air_attack = 0.075
+								air_attack = 0.05
 								instant = yes
 							}
 							medium_at_tank_chassis = {
-								hard_attack = 0.075
-								ap_attack = 0.075
+								hard_attack = 0.05
+								ap_attack = 0.05
 								instant = yes
 							}
 							medium_flame_tank_chassis = {
-								soft_attack = 0.075
+								soft_attack = 0.05
 								instant = yes
 							}
 							medium_artillery_tank_chassis = {
-								soft_attack = 0.075
+								soft_attack = 0.05
 								instant = yes
 							}
 							medium_amphibious_tank_chassis = {
-								breakthrough = 0.075
+								breakthrough = 0.05
 								instant = yes
 							}
 							medium_rocket_tank_chassis = {
-								soft_attack = 0.075
+								soft_attack = 0.05
 								instant = yes
 							}
 							#heavy
 							heavy_tank_chassis = {
-								breakthrough = 0.075
+								breakthrough = 0.05
 								instant = yes
 							}
 							heavy_aa_tank_chassis = {
-								air_attack = 0.075
+								air_attack = 0.05
 								instant = yes
 							}
 							heavy_at_tank_chassis = {
-								hard_attack = 0.075
-								ap_attack = 0.075
+								hard_attack = 0.05
+								ap_attack = 0.05
 								instant = yes
 							}
 							heavy_flame_tank_chassis = {
-								soft_attack = 0.075
+								soft_attack = 0.05
 								instant = yes
 							}
 							heavy_artillery_tank_chassis = {
-								soft_attack = 0.075
+								soft_attack = 0.05
 								instant = yes
 							}
 							heavy_amphibious_tank_chassis = {
-								breakthrough = 0.075
+								breakthrough = 0.05
 								instant = yes
 							}
 							heavy_rocket_tank_chassis = {
-								soft_attack = 0.075
+								soft_attack = 0.05
 								instant = yes
 							}
 							#super heavy
 							super_heavy_tank_chassis = {
-								breakthrough = 0.075
+								breakthrough = 0.05
 								instant = yes
 							}
 							super_heavy_aa_tank_chassis = {
-								air_attack = 0.075
+								air_attack = 0.05
 								instant = yes
 							}
 							super_heavy_at_tank_chassis = {
-								hard_attack = 0.075
-								ap_attack = 0.075
+								hard_attack = 0.05
+								ap_attack = 0.05
 								instant = yes
 							}
 							super_heavy_flame_tank_chassis = {
-								soft_attack = 0.075
+								soft_attack = 0.05
 								instant = yes
 							}
 							super_heavy_artillery_tank_chassis = {
-								soft_attack = 0.075
+								soft_attack = 0.05
 								instant = yes
 							}
-							super_heavy_rocket_tank_chassis = {
-								soft_attack = 0.075
+							#light magic
+							light_magic_tank_chassis = {
+								breakthrough = 0.05
+								instant = yes
+							}
+							light_magic_aa_tank_chassis = {
+								air_attack = 0.05
+								instant = yes
+							}
+							light_magic_at_tank_chassis = {
+								hard_attack = 0.05
+								ap_attack = 0.05
+								instant = yes
+							}
+							light_magic_flame_tank_chassis = {
+								soft_attack = 0.05
+								instant = yes
+							}
+							light_magic_artillery_tank_chassis = {
+								soft_attack = 0.05
+								instant = yes
+							}
+							light_magic_amphibious_tank_chassis = {
+								breakthrough = 0.05
+								instant = yes
+							}
+							light_magic_rocket_tank_chassis = {
+								soft_attack = 0.05
+								instant = yes
+							}
+							#medium magic
+							medium_magic_tank_chassis = {
+								breakthrough = 0.05
+								instant = yes
+							}
+							medium_magic_aa_tank_chassis = {
+								air_attack = 0.05
+								instant = yes
+							}
+							medium_magic_at_tank_chassis = {
+								hard_attack = 0.05
+								ap_attack = 0.05
+								instant = yes
+							}
+							medium_magic_flame_tank_chassis = {
+								soft_attack = 0.05
+								instant = yes
+							}
+							medium_magic_artillery_tank_chassis = {
+								soft_attack = 0.05
+								instant = yes
+							}
+							medium_magic_amphibious_tank_chassis = {
+								breakthrough = 0.05
+								instant = yes
+							}
+							medium_magic_rocket_tank_chassis = {
+								soft_attack = 0.05
+								instant = yes
+							}
+							#heavy magic
+							heavy_magic_tank_chassis = {
+								breakthrough = 0.05
+								instant = yes
+							}
+							heavy_magic_aa_tank_chassis = {
+								air_attack = 0.05
+								instant = yes
+							}
+							heavy_magic_at_tank_chassis = {
+								hard_attack = 0.05
+								ap_attack = 0.05
+								instant = yes
+							}
+							heavy_magic_flame_tank_chassis = {
+								soft_attack = 0.05
+								instant = yes
+							}
+							heavy_magic_artillery_tank_chassis = {
+								soft_attack = 0.05
+								instant = yes
+							}
+							heavy_magic_amphibious_tank_chassis = {
+								breakthrough = 0.05
+								instant = yes
+							}
+							heavy_magic_rocket_tank_chassis = {
+								soft_attack = 0.05
+								instant = yes
+							}
+							#super heavy magic
+							super_heavy_magic_tank_chassis = {
+								breakthrough = 0.05
+								instant = yes
+							}
+							super_heavy_magic_aa_tank_chassis = {
+								air_attack = 0.05
+								instant = yes
+							}
+							super_heavy_magic_at_tank_chassis = {
+								hard_attack = 0.05
+								ap_attack = 0.05
+								instant = yes
+							}
+							super_heavy_magic_flame_tank_chassis = {
+								soft_attack = 0.05
+								instant = yes
+							}
+							super_heavy_magic_artillery_tank_chassis = {
+								soft_attack = 0.05
 								instant = yes
 							}
 						}
@@ -329,7 +560,7 @@ sp_tank_gun_computer_1 = {
 		}
 	}
 }
-sp_easy_maintenance_scemes_0 = {
+sp_land_easy_maintenance_scemes_0 = {
 	specialization = specialization_land
 	#icon = GFX_sp_land_flamethrower_tank
 	project_tags = {
@@ -340,7 +571,15 @@ sp_easy_maintenance_scemes_0 = {
 	}
 	available = {
 		FROM = {
-			#TODO: armor tech (dlc)
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				has_tech = tankette
+			}
+			else = {
+				has_tech = tankette_equipment
+			}
 		}
 	}
 	prototype_time = sp_time.prototype.medium
@@ -359,124 +598,12 @@ sp_easy_maintenance_scemes_0 = {
 						has_dlc = "No Step Back"
 					}
 				}
-				#tooltip - make it more readable
-				custom_override_tooltip = {
-					tooltip = sp_easy_maintenance_scemes_0_no_nsb_effect_tt
-					add_equipment_bonus = {
-						project = FROM
-						bonus = {
-							#light
-							light_tank_chassis = {
-								reliability = 0.025
-								instant = yes
-							}
-							light_aa_tank_chassis = {
-								reliability = 0.025
-								instant = yes
-							}
-							light_at_tank_chassis = {
-								reliability = 0.025
-								instant = yes
-							}
-							light_flame_tank_chassis = {
-								reliability = 0.025
-								instant = yes
-							}
-							light_artillery_tank_chassis = {
-								reliability = 0.025
-								instant = yes
-							}
-							light_amphibious_tank_chassis = {
-								reliability = 0.025
-								instant = yes
-							}
-							light_rocket_tank_chassis = {
-								reliability = 0.025
-								instant = yes
-							}
-							#medium
-							medium_tank_chassis = {
-								reliability = 0.025
-								instant = yes
-							}
-							medium_aa_tank_chassis = {
-								reliability = 0.025
-								instant = yes
-							}
-							medium_at_tank_chassis = {
-								reliability = 0.025
-								instant = yes
-							}
-							medium_flame_tank_chassis = {
-								reliability = 0.025
-								instant = yes
-							}
-							medium_artillery_tank_chassis = {
-								reliability = 0.025
-								instant = yes
-							}
-							medium_amphibious_tank_chassis = {
-								reliability = 0.025
-								instant = yes
-							}
-							medium_rocket_tank_chassis = {
-								reliability = 0.025
-								instant = yes
-							}
-							#heavy
-							heavy_tank_chassis = {
-								reliability = 0.025
-								instant = yes
-							}
-							heavy_aa_tank_chassis = {
-								reliability = 0.025
-								instant = yes
-							}
-							heavy_at_tank_chassis = {
-								reliability = 0.025
-								instant = yes
-							}
-							heavy_flame_tank_chassis = {
-								reliability = 0.025
-								instant = yes
-							}
-							heavy_artillery_tank_chassis = {
-								reliability = 0.025
-								instant = yes
-							}
-							heavy_amphibious_tank_chassis = {
-								reliability = 0.025
-								instant = yes
-							}
-							heavy_rocket_tank_chassis = {
-								reliability = 0.025
-								instant = yes
-							}
-							#super heavy
-							super_heavy_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							super_heavy_aa_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							super_heavy_at_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							super_heavy_flame_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							super_heavy_artillery_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							super_heavy_rocket_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
+				add_equipment_bonus = {
+					project = FROM
+					bonus = {
+						armor = {
+							reliability = 0.05
+							instant = yes
 						}
 					}
 				}
@@ -490,7 +617,7 @@ sp_easy_maintenance_scemes_0 = {
 		}
 	}
 }
-sp_easy_maintenance_scemes_1 = {
+sp_land_easy_maintenance_scemes_1 = {
 	specialization = specialization_land
 	#icon = GFX_sp_land_flamethrower_tank
 	project_tags = {
@@ -500,7 +627,12 @@ sp_easy_maintenance_scemes_1 = {
 		country_without_sp = no #"no" because we want to forbid, not just check
 	}
 	special_project_parent = {
-		sp_easy_maintenance_scemes_0
+		sp_land_easy_maintenance_scemes_0
+	}
+	available = {
+		FROM = {
+			#TODO: engineer tech
+		}
 	}
 	prototype_time = sp_time.prototype.medium
 	complexity = sp_complexity.insane
@@ -518,124 +650,12 @@ sp_easy_maintenance_scemes_1 = {
 						has_dlc = "No Step Back"
 					}
 				}
-				#tooltip - make it more readable
-				custom_override_tooltip = {
-					tooltip = sp_easy_maintenance_scemes_1_no_nsb_effect_tt
-					add_equipment_bonus = {
-						project = FROM
-						bonus = {
-							#light
-							light_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							light_aa_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							light_at_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							light_flame_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							light_artillery_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							light_amphibious_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							light_rocket_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							#medium
-							medium_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							medium_aa_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							medium_at_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							medium_flame_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							medium_artillery_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							medium_amphibious_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							medium_rocket_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							#heavy
-							heavy_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							heavy_aa_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							heavy_at_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							heavy_flame_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							heavy_artillery_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							heavy_amphibious_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							heavy_rocket_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							#super heavy
-							super_heavy_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							super_heavy_aa_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							super_heavy_at_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							super_heavy_flame_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							super_heavy_artillery_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
-							super_heavy_rocket_tank_chassis = {
-								reliability = 0.05
-								instant = yes
-							}
+				add_equipment_bonus = {
+					project = FROM
+					bonus = {
+						armor = {
+							reliability = 0.05
+							instant = yes
 						}
 					}
 				}
@@ -649,7 +669,7 @@ sp_easy_maintenance_scemes_1 = {
 		}
 	}
 }
-sp_super_heavy_howitzer = {
+sp_land_super_heavy_howitzer = {
 	specialization = specialization_land
 
 	project_tags = {
@@ -661,7 +681,9 @@ sp_super_heavy_howitzer = {
 	}
 	
 	available = {
-
+		FROM = {
+			has_tech = howitzer_1
+		}
 	}
 	
 	prototype_time = sp_time.prototype.short
@@ -692,23 +714,6 @@ sp_super_heavy_howitzer = {
 				add_equipment_bonus = {
 					project = FROM
 					bonus = {
-						#barrel artillery
-						artillery_equipment = {
-							soft_attack = 0.05
-							instant = yes
-						}
-						anti_tank_equipment = {
-							soft_attack = 0.05
-							instant = yes
-						}
-						anti_air_equipment = {
-							soft_attack = 0.05
-							instant = yes
-						}
-						mortar_equipment = {
-							soft_attack = 0.05
-							instant = yes
-						}
 						#tanks
 						light_artillery_tank_chassis = {
 							soft_attack = 0.05
@@ -723,6 +728,23 @@ sp_super_heavy_howitzer = {
 							instant = yes
 						}
 						super_heavy_artillery_tank_chassis = {
+							soft_attack = 0.05
+							instant = yes
+						}
+						#magic tanks
+						light_magic_artillery_tank_chassis = {
+							soft_attack = 0.05
+							instant = yes
+						}
+						medium_magic_artillery_tank_chassis = {
+							soft_attack = 0.05
+							instant = yes
+						}
+						heavy_magic_artillery_tank_chassis = {
+							soft_attack = 0.05
+							instant = yes
+						}
+						super_heavy_magic_artillery_tank_chassis = {
 							soft_attack = 0.05
 							instant = yes
 						}
@@ -744,18 +766,22 @@ sp_super_heavy_howitzer = {
 		}
 	}
 }
-sp_self_propelled_super_heavy_howitzer = {
+sp_land_self_propelled_super_heavy_howitzer = {
 	specialization = specialization_land
 	project_tags = {
 		sp_tag_artillery
 	}
 	special_project_parent = {
-		sp_super_heavy_howitzer
+		sp_land_super_heavy_howitzer
 	}
 	allowed = {
 		country_without_sp = no #"no" because we want to forbid, not just check
 	}
-	
+	available = {
+		FROM = {
+			has_tech = howitzer_1
+		}
+	}
 	prototype_time = sp_time.prototype.short
 
 	complexity = sp_complexity.medium
@@ -763,7 +789,7 @@ sp_self_propelled_super_heavy_howitzer = {
 	breakthrough_cost = {
 		specialization_land = 2
 	}
-
+	
 	resource_cost = {
 		resources = { 
 			steel = 8
@@ -784,23 +810,6 @@ sp_self_propelled_super_heavy_howitzer = {
 				add_equipment_bonus = {
 					project = FROM
 					bonus = {
-						#barrel artillery
-						artillery_equipment = {
-							soft_attack = 0.05
-							instant = yes
-						}
-						anti_tank_equipment = {
-							soft_attack = 0.05
-							instant = yes
-						}
-						anti_air_equipment = {
-							soft_attack = 0.05
-							instant = yes
-						}
-						mortar_equipment = {
-							soft_attack = 0.05
-							instant = yes
-						}
 						#tanks
 						light_artillery_tank_chassis = {
 							soft_attack = 0.05
@@ -815,6 +824,23 @@ sp_self_propelled_super_heavy_howitzer = {
 							instant = yes
 						}
 						super_heavy_artillery_tank_chassis = {
+							soft_attack = 0.05
+							instant = yes
+						}
+						#magic tanks
+						light_magic_artillery_tank_chassis = {
+							soft_attack = 0.05
+							instant = yes
+						}
+						medium_magic_artillery_tank_chassis = {
+							soft_attack = 0.05
+							instant = yes
+						}
+						heavy_magic_artillery_tank_chassis = {
+							soft_attack = 0.05
+							instant = yes
+						}
+						super_heavy_magic_artillery_tank_chassis = {
 							soft_attack = 0.05
 							instant = yes
 						}
@@ -836,13 +862,26 @@ sp_self_propelled_super_heavy_howitzer = {
 		}
 	}
 }
-sp_super_heavy_cannon_0 = {
+sp_land_super_heavy_cannon_0 = {
 	specialization = specialization_land
 	project_tags = {
 		sp_tag_tank
 	}
 	allowed = {
 		country_without_sp = no #"no" because we want to forbid, not just check
+	}
+	available = {
+		FROM = {
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				has_tech = super_heavy_chassis_0
+			}
+			else = {
+				has_tech = super_heavy_tank_equipment_0
+			}
+		}
 	}
 	
 	prototype_time = sp_time.prototype.short
@@ -870,19 +909,39 @@ sp_super_heavy_cannon_0 = {
 				add_equipment_bonus = {
 					project = FROM
 					bonus = {
-						super_heavy_at_tank = {
+						#common
+						super_heavy_at_tank_chassis = {
 							soft_attack = 0.075
 							hard_attack = 0.075
 							ap_attack = 0.075
 							instant = yes
 						}
-						heavy_at_tank = {
+						heavy_at_tank_chassis = {
 							soft_attack = 0.05
 							hard_attack = 0.05
 							ap_attack = 0.05
 							instant = yes
 						}
 						anti_tank_equipment = {
+							soft_attack = 0.025
+							hard_attack = 0.025
+							ap_attack = 0.025
+							instant = yes
+						}
+						#magic
+						super_heavy_magic_at_tank_chassis = {
+							soft_attack = 0.075
+							hard_attack = 0.075
+							ap_attack = 0.075
+							instant = yes
+						}
+						heavy_magic_at_tank_chassis = {
+							soft_attack = 0.05
+							hard_attack = 0.05
+							ap_attack = 0.05
+							instant = yes
+						}
+						magic_anti_tank_equipment = {
 							soft_attack = 0.025
 							hard_attack = 0.025
 							ap_attack = 0.025
@@ -906,7 +965,7 @@ sp_super_heavy_cannon_0 = {
 		}
 	}
 }
-sp_super_heavy_cannon_1 = {
+sp_land_super_heavy_cannon_1 = {
 	specialization = specialization_land
 	project_tags = {
 		sp_tag_tank
@@ -914,8 +973,21 @@ sp_super_heavy_cannon_1 = {
 	allowed = {
 		country_without_sp = no #"no" because we want to forbid, not just check
 	}
+	available = {
+		FROM = {
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				has_tech = super_heavy_chassis_1
+			}
+			else = {
+				has_tech = super_heavy_tank_equipment_1
+			}
+		}
+	}
 	special_project_parent = {
-		sp_super_heavy_cannon_0
+		sp_land_super_heavy_cannon_0
 	}
 	prototype_time = sp_time.prototype.short
 
@@ -945,19 +1017,39 @@ sp_super_heavy_cannon_1 = {
 				add_equipment_bonus = {
 					project = FROM
 					bonus = {
-						super_heavy_at_tank = {
+						#common
+						super_heavy_at_tank_chassis = {
 							soft_attack = 0.075
 							hard_attack = 0.075
 							ap_attack = 0.075
 							instant = yes
 						}
-						heavy_at_tank = {
+						heavy_at_tank_chassis = {
 							soft_attack = 0.05
 							hard_attack = 0.05
 							ap_attack = 0.05
 							instant = yes
 						}
 						anti_tank_equipment = {
+							soft_attack = 0.025
+							hard_attack = 0.025
+							ap_attack = 0.025
+							instant = yes
+						}
+						#magic
+						super_heavy_magic_at_tank_chassis = {
+							soft_attack = 0.075
+							hard_attack = 0.075
+							ap_attack = 0.075
+							instant = yes
+						}
+						heavy_magic_at_tank_chassis = {
+							soft_attack = 0.05
+							hard_attack = 0.05
+							ap_attack = 0.05
+							instant = yes
+						}
+						magic_anti_tank_equipment = {
 							soft_attack = 0.025
 							hard_attack = 0.025
 							ap_attack = 0.025
@@ -975,7 +1067,7 @@ sp_super_heavy_cannon_1 = {
 		}
 	}
 }
-sp_super_heavy_cannon_2 = {
+sp_land_super_heavy_cannon_2 = {
 	specialization = specialization_land
 	project_tags = {
 		sp_tag_tank
@@ -983,8 +1075,21 @@ sp_super_heavy_cannon_2 = {
 	allowed = {
 		country_without_sp = no #"no" because we want to forbid, not just check
 	}
+	available = {
+		FROM = {
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				has_tech = super_heavy_chassis_2
+			}
+			else = {
+				has_tech = super_heavy_tank_equipment_2
+			}
+		}
+	}
 	special_project_parent = {
-		sp_super_heavy_cannon_1
+		sp_land_super_heavy_cannon_1
 	}
 	prototype_time = sp_time.prototype.short
 
@@ -1011,6 +1116,7 @@ sp_super_heavy_cannon_2 = {
 				add_equipment_bonus = {
 					project = FROM
 					bonus = {
+						#common
 						super_heavy_at_tank = {
 							soft_attack = 0.075
 							hard_attack = 0.075
@@ -1024,6 +1130,25 @@ sp_super_heavy_cannon_2 = {
 							instant = yes
 						}
 						anti_tank_equipment = {
+							soft_attack = 0.025
+							hard_attack = 0.025
+							ap_attack = 0.025
+							instant = yes
+						}
+						#magic
+						super_heavy_magic_at_tank = {
+							soft_attack = 0.075
+							hard_attack = 0.075
+							ap_attack = 0.075
+							instant = yes
+						}
+						heavy_magic_at_tank = {
+							soft_attack = 0.05
+							hard_attack = 0.05
+							ap_attack = 0.05
+							instant = yes
+						}
+						magic_anti_tank_equipment = {
 							soft_attack = 0.025
 							hard_attack = 0.025
 							ap_attack = 0.025
@@ -1121,7 +1246,9 @@ sp_land_flamethrower_light_tank = {
 	}
 	
 	available = {
-
+		FROM = {
+			has_tech = tankette_equipment
+		}
 	}
 
 	breakthrough_cost = {
@@ -1193,7 +1320,9 @@ sp_land_flamethrower_medium_tank = {
 	}
 	
 	available = {
-		
+		FROM = {
+			has_tech = medium_tank_equipment_0
+		}
 	}
 
 	breakthrough_cost = {
@@ -1265,7 +1394,9 @@ sp_land_flamethrower_heavy_tank = {
 	}
 	
 	available = {
-		
+		FROM = {
+			has_tech = heavy_tank_equipment_0
+		}
 	}
 
 	breakthrough_cost = {
@@ -1337,7 +1468,9 @@ sp_land_flamethrower_super_heavy_tank = {
 	}
 	
 	available = {
-		
+		FROM = {
+			has_tech = super_heavy_tank_equipment_0
+		}
 	}
 
 	breakthrough_cost = {
@@ -1410,7 +1543,9 @@ sp_land_military_engineering_vehicles = {
 		country_without_sp = no #"no" because we want to forbid, not just check
 	}
 	available = {
-
+		FROM = {
+			#TODO: support equipment
+		}
 	}
 	
 	prototype_time = sp_time.prototype.short
@@ -1482,7 +1617,17 @@ sp_land_land_cruiser = {
 		country_without_sp = no #"no" because we want to forbid, not just check
 	}
 	available = {
-
+		FROM = {
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				has_tech = super_heavy_chassis_1
+			}
+			else = {
+				has_tech = super_heavy_tank_equipment_1
+			}
+		}
 	}
 	prototype_time = sp_time.prototype.medium
 	complexity = sp_complexity.insane
@@ -1618,7 +1763,9 @@ sp_land_super_heavy_railway_gun = {
 	}
 
 	available = {
-
+		FROM = {
+			#TODO
+		}
 	}
 
 	prototype_time = sp_time.prototype.long
@@ -1701,7 +1848,7 @@ sp_land_multi_charge_large_caliber_gun = {
 	}
 
 	special_project_parent = {
-		sp_super_heavy_howitzer
+		sp_land_super_heavy_howitzer
 	}
 		
 	prototype_time = sp_time.prototype.medium
@@ -1868,7 +2015,15 @@ sp_land_sloped_armor = {
 	
 	available = {
 		FROM = {
-			
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				has_tech = tankette
+			}
+			else = {
+				has_tech = tankette_equipment
+			}
 		}
 	}
 	
@@ -1936,7 +2091,6 @@ sp_land_sloped_armor = {
 }
 sp_land_stabilizer_0 = {
 	specialization = specialization_land
-
 	project_tags = {
 		sp_tag_tank
 	}

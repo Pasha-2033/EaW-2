@@ -57,6 +57,15 @@ technologies = {
 		enable_equipment_modules = {
 			tank_medium_howitzer_0
 		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check
+		}
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT
+				PROJECT = sp_land_super_heavy_howitzer
+			}
+		}
 		start_year = 800
 		research_cost = 0.5
 		folder = {
@@ -78,6 +87,16 @@ technologies = {
 	howitzer_1 = {
 		allow = {
 			has_tech = trinitrophenol
+		}
+		on_research_complete_limit = {
+			country_without_sp = no #"no" because we want to forbid, not just check
+		}
+		on_research_complete = {
+			custom_effect_tooltip = {
+				localization_key = SP_UNLOCK_PROJECT_WITH_EXTRA_PROJECT
+				EXTRA_PROJECT = sp_land_super_heavy_howitzer
+				PROJECT = sp_land_self_propelled_super_heavy_howitzer
+			}
 		}
 		enable_equipments = {
 			artillery_equipment_3
