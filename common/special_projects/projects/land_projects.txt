@@ -669,6 +669,117 @@ sp_land_easy_maintenance_scemes_1 = {
 		}
 	}
 }
+sp_land_auto_loader_0 = {
+	specialization = specialization_land
+	#icon = GFX_sp_land_flamethrower_tank
+	project_tags = {
+		sp_tag_tank
+	}
+	allowed = {
+		country_without_sp = no #"no" because we want to forbid, not just check
+	}
+	available = {
+		FROM = {
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				has_tech = tankette
+			}
+			else = {
+				has_tech = tankette_equipment
+			}
+		}
+	}
+	prototype_time = sp_time.prototype.medium
+	complexity = sp_complexity.insane
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_armored_specialist = yes
+		}
+		country_effects = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+				add_equipment_bonus = {
+					project = FROM
+					bonus = {
+						armor = {
+							defence = 0.05
+							breakthrough = 0.05
+							instant = yes
+						}
+					}
+				}
+			}
+		}
+		enable_equipment_modules = {
+			limit = {
+				has_dlc = "No Step Back"
+			}
+			auto_loader_0
+		}
+	}
+}
+sp_land_auto_loader_1 = {
+	specialization = specialization_land
+	#icon = GFX_sp_land_flamethrower_tank
+	project_tags = {
+		sp_tag_tank
+	}
+	allowed = {
+		country_without_sp = no #"no" because we want to forbid, not just check
+	}
+	special_project_parent = {
+		sp_land_auto_loader_0
+	}
+	available = {
+		FROM = {
+			#TODO: engineer tech
+		}
+	}
+	prototype_time = sp_time.prototype.medium
+	complexity = sp_complexity.insane
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_armored_specialist = yes
+		}
+		country_effects = {
+			if = {
+				limit = {
+					NOT = {
+						has_dlc = "No Step Back"
+					}
+				}
+				add_equipment_bonus = {
+					project = FROM
+					bonus = {
+						armor = {
+							defence = 0.05
+							breakthrough = 0.05
+							instant = yes
+						}
+					}
+				}
+			}
+		}
+		enable_equipment_modules = {
+			limit = {
+				has_dlc = "No Step Back"
+			}
+			auto_loader_1
+		}
+	}
+}
 sp_land_super_heavy_howitzer = {
 	specialization = specialization_land
 

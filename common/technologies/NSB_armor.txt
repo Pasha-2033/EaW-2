@@ -26,17 +26,9 @@ technologies = {
 			tank_welded_armor
 			#ammunition
 			tank_AP_ammunition
-
-			#temp (TODO)
-			tank_MAGIC_ammunition
-
-			#temp
-			auto_loader_0
-
-			oscillating_turret
-			smoke_launchers
-			stabilizer_0
-			tank_radio_0
+			#special modules
+			extra_ammo_storage
+			wet_ammo_storage
 		}
 		research_cost = 2
 		start_year = 989
@@ -376,6 +368,9 @@ technologies = {
 		}
 	}
 	medium_chassis_2 = {
+		enable_equipment_modules = {
+			tank_torsion_bar_suspension
+		}
 		enable_equipments = {
 			medium_tank_chassis_2
 			medium_magic_tank_chassis_2
@@ -1758,6 +1753,7 @@ technologies = {
 	#special modules (ammunition types)
 	API_ammunition = {
 		enable_equipment_modules = {
+			armor_skirts
 			tank_API_ammunition
 		}
 		research_cost = 2

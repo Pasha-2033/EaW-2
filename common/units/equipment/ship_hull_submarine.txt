@@ -458,6 +458,7 @@ equipments = {
 					ship_airplane_launcher
 					ship_extra_fuel_tank
 					ship_rocket
+					ship_nuclear_rocket
 				}
 			}
 		}
@@ -1168,11 +1169,15 @@ equipments = {
 		module_slots = {
 			fixed_ship_torpedo_slot = {
 				required = no
-				allowed_module_categories = { ship_torpedo_sub }
+				allowed_module_categories = { 
+					ship_torpedo_sub 
+				}
 			}
 			fixed_ship_engine_slot = {
 				required = no
-				allowed_module_categories = { sub_ship_nuclear_engine}
+				allowed_module_categories = { 
+					sub_ship_engine
+				}
 			}	
 			front_1_custom_slot = {
 				required = no
@@ -1209,7 +1214,7 @@ equipments = {
 		}
 		default_modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_2
-			fixed_ship_engine_slot = sub_ship_nuclear_engine_1
+			fixed_ship_engine_slot = sub_ship_engine_nuke_primary
 			front_1_custom_slot = ship_torpedo_sub_2
 			mid_1_custom_slot = ship_radar_1
 			rear_1_custom_slot = ship_airplane_launcher_2
@@ -1374,7 +1379,7 @@ equipments = {
 			}
 			fixed_ship_engine_slot = {
 				required = no
-				allowed_module_categories = { sub_ship_nuclear_engine}
+				allowed_module_categories = { sub_ship_engine }
 			}	
 			front_1_custom_slot = {
 				required = no
@@ -1411,7 +1416,7 @@ equipments = {
 		}
 		default_modules = {
 			fixed_ship_torpedo_slot = ship_torpedo_sub_2
-			fixed_ship_engine_slot = sub_ship_nuclear_engine_1
+			fixed_ship_engine_slot = sub_ship_engine_nuke_primary
 			front_1_custom_slot = ship_torpedo_sub_2
 			mid_1_custom_slot = ship_radar_1
 			rear_1_custom_slot = ship_airplane_launcher_2

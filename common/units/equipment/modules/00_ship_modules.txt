@@ -4137,7 +4137,7 @@ equipment_modules = {
 			convert_cost_ic = 1000
 		}
 	}
-	#extra fuel tank
+	#extra fuel tank (for fleet subs)
 	ship_extra_fuel_tank_0 = {
 		category = ship_extra_fuel_tank
 		add_stats = {
@@ -4147,21 +4147,6 @@ equipment_modules = {
 			build_cost_ic = 0.05
 		}
 		dismantle_cost_ic = 700
-	}
-	ship_extra_fuel_tank_1 = {
-		category = ship_extra_fuel_tank
-		parent = ship_extra_fuel_tank_0
-		add_stats = {
-			naval_range = 2000
-		}
-		multiply_stats = {
-			build_cost_ic = 0.1
-		}
-		can_convert_from = {
-			module_category = ship_extra_fuel_tank
-			convert_cost_ic = 300
-		}
-		dismantle_cost_ic = 1000
 	}
 	#sonar
 	ship_sonar_0 = {
