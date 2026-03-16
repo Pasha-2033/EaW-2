@@ -1,31 +1,32 @@
 capital = 252
-set_research_slots = 1
-set_technology = {
-	tech_jager = 1
-	tech_rg = 1
-	melee_weapons_0 = 1 #temp
-}
-set_politics = {
-	ruling_party = fascism
-	last_election = "953.11.9"
-	election_frequency = 36
-	elections_allowed = no
-}
-set_popularities = {
-	democratic = 6
-	fascism = 74
-	communism = 3
-	neutrality = 5
-	technocracy = 12
-}
-add_ideas = {
-	changeling_race
-	limited_exports
-}
 set_stability = 0.6
 if = { #982 scenario script - make plan unfinished
 	limit = {
 		has_first_scenario = yes
+	}
+	set_research_slots = 1
+	set_technology = {
+		tech_jager = 1
+		tech_rg = 1
+		melee_weapons_0 = 1
+		basics_of_metallurgy = 1
+	}
+	set_politics = {
+		ruling_party = fascism
+		last_election = "953.11.9"
+		election_frequency = 36
+		elections_allowed = no
+	}
+	set_popularities = {
+		democratic = 6
+		fascism = 74
+		communism = 3
+		neutrality = 5
+		technocracy = 12
+	}
+	add_ideas = {
+		changeling_race
+		limited_exports
 	}
 	#make DIS_lemenns_plan unfinished
 	set_variable = {
@@ -39,18 +40,17 @@ if = { #982 scenario script - make plan unfinished
 	}
 	else = { #other scenario script
 		#make DIS_lemenns_plan finished
-		
 	}
+	add_dynamic_modifier = {
+		modifier = DIS_lemenns_plan
+	}
+	recruit_character = DIS_queen_helvia
+	recruit_character = DIS_ellert
+	recruit_character = DIS_lemenn
+	recruit_character = DIS_krieger
+	recruit_character = DIS_shmidt
+	recruit_character = DIS_fisher
 }
-add_dynamic_modifier = {
-	modifier = DIS_lemenns_plan
-}
-recruit_character = DIS_queen_helvia
-recruit_character = DIS_ellert
-recruit_character = DIS_lemenn
-recruit_character = DIS_krieger
-recruit_character = DIS_shmidt
-recruit_character = DIS_fisher
 set_rule = {
 	can_generate_female_aces = yes
 }

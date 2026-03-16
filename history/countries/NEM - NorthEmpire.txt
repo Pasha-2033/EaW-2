@@ -1,18 +1,26 @@
 capital = 11
-add_ideas = {
-	bear_race
-	#to do multy
-}
-set_popularities = {
-	fascism = 2
-	anarchism = 37
-	neutrality = 61
-}
-set_politics = {
-	ruling_party = neutrality
-	last_election = "953.10.10"
-	election_frequency = 36
-	elections_allowed = no
+if = {
+	limit = {
+		has_first_scenario = yes
+	}
+	set_technology = {
+		basics_of_metallurgy = 1
+	}
+	add_ideas = {
+		bear_race
+		#to do multy
+	}
+	set_popularities = {
+		fascism = 2
+		anarchism = 37
+		neutrality = 61
+	}
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "953.10.10"
+		election_frequency = 36
+		elections_allowed = no
+	}
 }
 982.1.1 = {
 	set_country_flag = default_982_focus_tree

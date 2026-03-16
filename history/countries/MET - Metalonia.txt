@@ -1,28 +1,33 @@
 capital = 286
-add_ideas = {
-	multi_race
-	high_barter_focus
-	low_inflation
-	metalony
-	primitive_economy
-	poverty2
-	export_focus
-	MET_ore_producer
-}
-set_popularities = {
-	fascism = 9
-	radicalism = 3
-	neutrality = 74
-	socialism = 4
-	communism = 6
-	technocracy = 1
-	anarchism = 3
-}
-set_politics = {
-	ruling_party = neutrality
-	last_election = "953.10.10"
-	election_frequency = 36
-	elections_allowed = no
+if = { #982 scenario script
+	limit = {
+		has_first_scenario = yes
+	}
+	add_ideas = {
+		multi_race
+		high_barter_focus
+		low_inflation
+		metalony
+		primitive_economy
+		poverty2
+		export_focus
+		MET_ore_producer
+	}
+	set_popularities = {
+		fascism = 9
+		radicalism = 3
+		neutrality = 74
+		socialism = 4
+		communism = 6
+		technocracy = 1
+		anarchism = 3
+	}
+	set_politics = {
+		ruling_party = neutrality
+		last_election = "953.10.10"
+		election_frequency = 36
+		elections_allowed = no
+	}
 }
 982.1.1 = {
 	set_variable = {

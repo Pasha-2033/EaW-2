@@ -1,18 +1,27 @@
 capital = 301
-create_faction = olenian_baron_union
-add_to_faction = CB0
-add_to_faction = CB2
-set_popularities = {
-	militarism = 100
-}
-set_politics = {
-	ruling_party = militarism
-	last_election = "953.10.10"
-	election_frequency = 36
-	elections_allowed = no
-}
-add_ideas = {
-	deer_race
+if = {
+	limit = {
+		has_first_scenario = yes
+	}
+	set_technology = {
+		basics_of_metallurgy = 1
+	}
+
+	create_faction = olenian_baron_union
+	add_to_faction = CB0
+	add_to_faction = CB2
+	set_popularities = {
+		militarism = 100
+	}
+	set_politics = {
+		ruling_party = militarism
+		last_election = "953.10.10"
+		election_frequency = 36
+		elections_allowed = no
+	}
+	add_ideas = {
+		deer_race
+	}
 }
 982.1.1 = {
 	set_country_flag = default_982_focus_tree

@@ -1,54 +1,60 @@
 capital = 15
 set_convoys = 3
-set_politics = {
-	ruling_party = harmony
-	elections_allowed = no
+if = {
+	limit = {
+		has_first_scenario = yes
+	}
+	set_politics = {
+		ruling_party = harmony
+		elections_allowed = no
+	}
+	set_popularities = {
+		radicalism = 7
+		militarism = 19
+		democratic = 33
+		harmony = 41
+	}
+	set_technology = {
+		melee_weapons_0 = 1
+		tech_support = 1
+		tech_engineers_0 = 1
+		basics_of_metallurgy = 1
+	}
+	recruit_character = EPT_copperhoof
+	recruit_character = EPT_national_defence_council
+	recruit_character = EPT_applejack
+	recruit_character = EPT_pinkypie
+	add_ideas = {
+		partial_economic_mobilisation
+		agrarian_society4
+		low_power_concentration
+		pony_race
+		EPT_tribal_crisis
+		EPT_escaped_army
+		EPT_not_a_goverment
+	}
+	#set surplus appropriation
+	set_variable = {
+		food_storage_value = 820
+	}
+	set_variable = {
+		surplus_appropriation_weight_0 = 0.2
+	}
+	set_variable = {
+		surplus_appropriation_weight_1 = 0.6
+	}
+	set_variable = {
+		surplus_appropriation_weight_2 = 0.8
+	}
+	#harvest failure
+	set_variable = {
+		harvest_failure_food = -400
+	}
+	set_variable = {
+		harvest_failure_supply = -0.1
+	}
+	add_dynamic_modifier = {
+		modifier = harvest_failure_modifier
+	}
+	set_oob = "982_EPT"
 }
-set_popularities = {
-	radicalism = 7
-	militarism = 19
-	democratic = 33
-	harmony = 41
-}
-set_technology = {
-	melee_weapons_0 = 1
-	tech_support = 1
-	tech_engineers_0 = 1
-}
-recruit_character = EPT_copperhoof
-recruit_character = EPT_national_defence_council
-recruit_character = EPT_applejack
-recruit_character = EPT_pinkypie
-add_ideas = {
-	partial_economic_mobilisation
-	agrarian_society4
-	low_power_concentration
-	pony_race
-	EPT_tribal_crisis
-	EPT_escaped_army
-	EPT_not_a_goverment
-}
-#set surplus appropriation
-set_variable = {
-	food_storage_value = 820
-}
-set_variable = {
-	surplus_appropriation_weight_0 = 0.2
-}
-set_variable = {
-	surplus_appropriation_weight_1 = 0.6
-}
-set_variable = {
-	surplus_appropriation_weight_2 = 0.8
-}
-#harvest failure
-set_variable = {
-	harvest_failure_food = -400
-}
-set_variable = {
-	harvest_failure_supply = -0.1
-}
-add_dynamic_modifier = {
-	modifier = harvest_failure_modifier
-}
-set_oob = "982_EPT"

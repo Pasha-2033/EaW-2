@@ -1,40 +1,40 @@
 capital = 309
-
-set_country_flag = queens_tower_flag
-
-set_research_slots = 2
 starting_train_buffer = 2
+if = { #982 scenario script
+	limit = {
+		has_first_scenario = yes
+	}
+	set_research_slots = 1
+	set_technology = {
+		tech_jager = 1
+		tech_rg = 1
+		melee_weapons_0 = 1 #temp
+		basics_of_metallurgy = 1
+	}
 
-set_technology = {
-	tech_jager = 1
-	tech_rg = 1
-	melee_weapons_0 = 1 #temp
-}
+	set_politics = {
+		ruling_party = fascism
+		last_election = "953.11.9"
+		election_frequency = 36
+		elections_allowed = no
+	}
+	set_popularities = {
+		democratic = 6
+		fascism = 70
+		communism = 3
+		neutrality = 5
+		anarchism = 16
+	}
 
+	add_ideas = {
+		changeling_race
+		limited_exports
+	}
+	set_stability = 0.6
 
+	recruit_character = LIK_queen_aurantia
 
-set_politics = {
-	ruling_party = fascism
-	last_election = "953.11.9"
-	election_frequency = 36
-	elections_allowed = no
-}
-set_popularities = {
-	democratic = 6
-	fascism = 70
-	communism = 3
-	neutrality = 5
-	anarchism = 16
-}
-
-add_ideas = {
-	changeling_race
-	limited_exports
-}
-set_stability = 0.6
-
-recruit_character = LIK_queen_aurantia
-
-set_rule = {
-	can_generate_female_aces = yes
+	set_rule = {
+		can_generate_female_aces = yes
+	}
 }

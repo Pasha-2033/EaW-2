@@ -1,17 +1,29 @@
 capital = 57
-set_politics = {
-	ruling_party = socialism
-	last_election = "953.11.9"
-	election_frequency = 36
-	elections_allowed = no
-}
-set_popularities = {
-	communism = 12
-	socialism = 66
-	radicalism = 15
-	neutrality = 6
-	fascism = 1
-}
-add_ideas = {
-	pony_race
+if = { #982 scenario script
+	limit = {
+		has_first_scenario = yes
+	}
+	set_technology = {
+		melee_weapons_0 = 1
+		tech_support = 1
+		tech_engineers_0 = 1
+		tech_pegasi = 1
+		basics_of_metallurgy = 1
+	}
+	set_politics = {
+		ruling_party = socialism
+		last_election = "953.11.9"
+		election_frequency = 36
+		elections_allowed = no
+	}
+	set_popularities = {
+		communism = 12
+		socialism = 66
+		radicalism = 15
+		neutrality = 6
+		fascism = 1
+	}
+	add_ideas = {
+		pony_race
+	}
 }

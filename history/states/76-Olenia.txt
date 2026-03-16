@@ -2,18 +2,19 @@ state = {
 	id = 76 
 	name = "STATE_76" 
 	manpower = 2744900 
-	
 	state_category = large_city 
 	buildings_max_level_factor = 1 
-	
-	resources = { food = 90 } 
+	resources = { 
+		food = 90 
+		coal = 3
+	} 
 	history = { 
 		strategic_province_location = {
 			natural_harbor = 9086
 			international_trade_port = 9086
 		}
 		owner = OLE 
-		
+		add_core_of = OLE 	
 		victory_points = { 9086 30 }
 		
 		buildings = { 
@@ -22,19 +23,15 @@ state = {
 			arms_factory = 1 
 			dockyard = 1 
 			steel_plant = 1 
-			9086 = { naval_base = 1  landmark_hjordland_lighthouse = { 
- 	allowed = { has_dlc = "Gotterdammerung" }
- 	level = 1 
- }
+			9086 = { 
+				naval_base = 1  
+				landmark_hjordland_lighthouse = { 
+					level = 1 
+				}
 			}
-		}
-		
-		add_core_of = OLE 
-		
-		
+		}	
 		1002.1.1 = { 
 		}
-		
 		1050.1.1 = { 
 		}
 	}

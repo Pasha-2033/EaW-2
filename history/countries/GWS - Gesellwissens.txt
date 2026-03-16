@@ -1,45 +1,44 @@
 capital = 249
-set_research_slots = 1
-set_popularities = {
-	technocracy = 100
-}
-set_politics = {
-	ruling_party = technocracy
-	last_election = "953.10.10"
-	election_frequency = 36
-	elections_allowed = no
-}
-add_ideas = {
-	changeling_race
-	poor_science_base
-	limited_imports
-	tribal_society
-	disarmed_nation
-	lack_of_scientists
-	poverty
-	primitive_economy
-	race_based_valuta
-}
-#initial values for huge_contruction_site
-set_variable = {
-	gws_huge_contruction_cito = 5
-}
-set_variable = {
-	gws_huge_contruction_psbf = -0.02
-}
-set_variable = {
-	gws_huge_contruction_cgf = 0.05
-}
-set_variable = {
-	gws_huge_contruction_cf = -0.05
-}
-set_variable = {
-	gws_huge_contruction_rtcbpf = 1
-	tooltip = resource_trade_cost_bonus_per_factory_tt
-}
 if = { #982 scenario script
 	limit = {
 		has_first_scenario = yes
+	}
+	set_research_slots = 1
+	set_popularities = {
+		technocracy = 100
+	}
+	set_politics = {
+		ruling_party = technocracy
+		last_election = "953.10.10"
+		election_frequency = 36
+		elections_allowed = no
+	}
+	add_ideas = {
+		changeling_race
+		poor_science_base
+		limited_imports
+		tribal_society
+		disarmed_nation
+		lack_of_scientists
+		poverty
+		primitive_economy
+		race_based_valuta
+	}
+	#initial values for huge_contruction_site
+	set_variable = {
+		gws_huge_contruction_cito = 5
+	}
+	set_variable = {
+		gws_huge_contruction_psbf = -0.02
+	}
+	set_variable = {
+		gws_huge_contruction_cgf = 0.05
+	}
+	set_variable = {
+		gws_huge_contruction_cf = -0.05
+	}
+	set_variable = {
+		gws_huge_contruction_rtcbpf = 1
 	}
 	recruit_character = GWS_evil_mind
 	recruit_character = GWS_didi_blad
