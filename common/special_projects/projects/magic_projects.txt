@@ -702,6 +702,17 @@ sp_super_heavy_magic_howitzer = {
 			tank_magic_super_heavy_howitzer_0
 		}
 	}
+	generic_prototype_rewards = {
+		sp_magic_generic_reward_scientist_xp_1
+		sp_magic_generic_reward_scientist_xp_2
+		sp_magic_generic_reward_scientist_xp_3
+		sp_magic_generic_reward_major_progress_1
+		sp_magic_generic_reward_major_progress_2
+		sp_magic_generic_reward_major_progress_3
+		sp_magic_generic_reward_test_failure_1
+		sp_magic_generic_reward_test_failure_2
+		sp_magic_generic_reward_test_failure_3
+	}
 }
 sp_self_propelled_super_heavy_magic_howitzer = {
 	specialization = specialization_magic
@@ -795,7 +806,352 @@ sp_self_propelled_super_heavy_magic_howitzer = {
 			tank_magic_super_heavy_howitzer_1
 		}
 	}
+	generic_prototype_rewards = {
+		sp_magic_generic_reward_scientist_xp_1
+		sp_magic_generic_reward_scientist_xp_2
+		sp_magic_generic_reward_scientist_xp_3
+		sp_magic_generic_reward_major_progress_1
+		sp_magic_generic_reward_major_progress_2
+		sp_magic_generic_reward_major_progress_3
+		sp_magic_generic_reward_test_failure_1
+		sp_magic_generic_reward_test_failure_2
+		sp_magic_generic_reward_test_failure_3
+	}
 }
+sp_magic_flamethrower_tank = {
+	specialization = specialization_magic
+	project_tags = {
+		sp_tag_tank
+	}
+	allowed = {
+		country_without_sp = no #"no" because we want to forbid, not just check
+		has_dlc = "No Step Back"
+	}
+	
+	prototype_time = sp_time.prototype.medium
+
+	complexity = sp_complexity.large
+
+	breakthrough_cost = {
+		specialization_magic = 2
+	}
+
+	resource_cost = {
+		resources = { 
+			steel = 4
+			chromium = 2
+			tungsten = 1
+		}
+	}
+	
+	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_armored_specialist = yes
+		}
+		enable_equipment_modules = {
+			magic_flamethrower
+		}
+	}
+
+	generic_prototype_rewards = {
+		sp_magic_generic_reward_scientist_xp_1
+		sp_magic_generic_reward_scientist_xp_2
+		sp_magic_generic_reward_scientist_xp_3
+		sp_magic_generic_reward_major_progress_1
+		sp_magic_generic_reward_major_progress_2
+		sp_magic_generic_reward_major_progress_3
+		sp_magic_generic_reward_test_failure_1
+		sp_magic_generic_reward_test_failure_2
+		sp_magic_generic_reward_test_failure_3
+	}
+}
+#no NSB flame tanks
+sp_magic_flamethrower_light_tank = {
+	specialization = specialization_land
+	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
+
+	project_tags = {
+		sp_tag_tank
+	}
+
+	ai_will_do = {
+		base = 1
+	}
+
+	allowed = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+		country_without_sp = no #"no" because we want to forbid, not just check
+	}
+	
+	available = {
+		FROM = {
+			has_tech = tankette_equipment
+		}
+	}
+
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+	
+	prototype_time = sp_time.prototype.short
+
+	complexity = sp_complexity.small
+	
+	project_output = {
+		country_effects = {
+			sp:sp_magic_flamethrower_medium_tank = {
+				add_project_progress_ratio = 0.1
+			}
+			sp:sp_magic_flamethrower_heavy_tank = {
+				add_project_progress_ratio = 0.05
+			}
+			sp:sp_magic_flamethrower_super_heavy_tank = {
+				add_project_progress_ratio = 0.05
+			}
+		}
+		enable_equipments = {
+			light_magic_flamethrower_tank_equipment_0
+		}
+		enable_subunits = {
+			light_magic_flame_tank
+		}
+		scientist_effects = {
+			set_temp_variable = {
+				trait_chance = 0.5
+			}
+			upgrade_scientist_trait_armored_specialist = yes
+		}
+	}
+
+	generic_prototype_rewards = {
+		sp_magic_generic_reward_scientist_xp_1
+		sp_magic_generic_reward_scientist_xp_2
+		sp_magic_generic_reward_scientist_xp_3
+		sp_magic_generic_reward_major_progress_1
+		sp_magic_generic_reward_major_progress_2
+		sp_magic_generic_reward_major_progress_3
+		sp_magic_generic_reward_test_failure_1
+		sp_magic_generic_reward_test_failure_2
+		sp_magic_generic_reward_test_failure_3
+	}
+}
+sp_magic_flamethrower_medium_tank = {
+	specialization = specialization_land
+	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
+
+	project_tags = {
+		sp_tag_tank
+	}
+
+	ai_will_do = {
+		base = 1
+	}
+	allowed = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+		country_without_sp = no #"no" because we want to forbid, not just check
+	}
+	
+	available = {
+		FROM = {
+			has_tech = medium_tank_equipment_0
+		}
+	}
+
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+	
+	prototype_time = sp_time.prototype.short
+
+	complexity = sp_complexity.small
+	
+	project_output = {
+		country_effects = {
+			sp:sp_magic_flamethrower_light_tank = {
+				add_project_progress_ratio = 0.1
+			}
+			sp:sp_magic_flamethrower_heavy_tank = {
+				add_project_progress_ratio = 0.1
+			}
+			sp:sp_magic_flamethrower_super_heavy_tank = {
+				add_project_progress_ratio = 0.05
+			}
+		}
+		enable_equipments = {
+			medium_magic_flamethrower_tank_equipment_0
+		}
+		enable_subunits = {
+			medium_magic_flame_tank
+		}
+		scientist_effects = {
+			set_temp_variable = {
+				trait_chance = 0.5
+			}
+			upgrade_scientist_trait_armored_specialist = yes
+		}
+	}
+
+	generic_prototype_rewards = {
+		sp_magic_generic_reward_scientist_xp_1
+		sp_magic_generic_reward_scientist_xp_2
+		sp_magic_generic_reward_scientist_xp_3
+		sp_magic_generic_reward_major_progress_1
+		sp_magic_generic_reward_major_progress_2
+		sp_magic_generic_reward_major_progress_3
+		sp_magic_generic_reward_test_failure_1
+		sp_magic_generic_reward_test_failure_2
+		sp_magic_generic_reward_test_failure_3
+	}
+}
+sp_magic_flamethrower_heavy_tank = {
+	specialization = specialization_land
+	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
+
+	project_tags = {
+		sp_tag_tank
+	}
+
+	ai_will_do = {
+		base = 1
+	}
+	allowed = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+		country_without_sp = no #"no" because we want to forbid, not just check
+	}
+	
+	available = {
+		FROM = {
+			has_tech = heavy_tank_equipment_0
+		}
+	}
+
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+	
+	prototype_time = sp_time.prototype.short
+
+	complexity = sp_complexity.small
+	
+	project_output = {
+		country_effects = {
+			sp:sp_magic_flamethrower_light_tank = {
+				add_project_progress_ratio = 0.05
+			}
+			sp:sp_magic_flamethrower_medium_tank = {
+				add_project_progress_ratio = 0.1
+			}
+			sp:sp_magic_flamethrower_super_heavy_tank = {
+				add_project_progress_ratio = 0.1
+			}
+		}
+		enable_equipments = {
+			heavy_magic_flamethrower_tank_equipment_0
+		}
+		enable_subunits = {
+			heavy_magic_flame_tank
+		}
+		scientist_effects = {
+			set_temp_variable = {
+				trait_chance = 0.5
+			}
+			upgrade_scientist_trait_armored_specialist = yes
+		}
+	}
+
+	generic_prototype_rewards = {
+		sp_magic_generic_reward_scientist_xp_1
+		sp_magic_generic_reward_scientist_xp_2
+		sp_magic_generic_reward_scientist_xp_3
+		sp_magic_generic_reward_major_progress_1
+		sp_magic_generic_reward_major_progress_2
+		sp_magic_generic_reward_major_progress_3
+		sp_magic_generic_reward_test_failure_1
+		sp_magic_generic_reward_test_failure_2
+		sp_magic_generic_reward_test_failure_3
+	}
+}
+sp_magic_flamethrower_super_heavy_tank = {
+	specialization = specialization_land
+	#icon = GFX_sp_land_flamethrower_tank ### Automatically hooked-in since the GFX ID matches the project ID.
+
+	project_tags = {
+		sp_tag_tank
+	}
+
+	ai_will_do = {
+		base = 1
+	}
+	allowed = {
+		NOT = {
+			has_dlc = "No Step Back"
+		}
+		country_without_sp = no #"no" because we want to forbid, not just check
+	}
+	
+	available = {
+		FROM = {
+			has_tech = super_heavy_tank_equipment_0
+		}
+	}
+
+	breakthrough_cost = {
+		specialization_land = 1
+	}
+	
+	prototype_time = sp_time.prototype.short
+
+	complexity = sp_complexity.small
+	
+	project_output = {
+		country_effects = {
+			sp:sp_magic_flamethrower_light_tank = {
+				add_project_progress_ratio = 0.05
+			}
+			sp:sp_magic_flamethrower_medium_tank = {
+				add_project_progress_ratio = 0.05
+			}
+			sp:sp_magic_flamethrower_heavy_tank = {
+				add_project_progress_ratio = 0.1
+			}
+		}
+		enable_equipments = {
+			super_heavy_magic_flamethrower_tank_equipment_0
+		}
+		enable_subunits = {
+			super_heavy_magic_flame_tank
+		}
+		scientist_effects = {
+			set_temp_variable = {
+				trait_chance = 0.5
+			}
+			upgrade_scientist_trait_armored_specialist = yes
+		}
+	}
+
+	generic_prototype_rewards = {
+		sp_magic_generic_reward_scientist_xp_1
+		sp_magic_generic_reward_scientist_xp_2
+		sp_magic_generic_reward_scientist_xp_3
+		sp_magic_generic_reward_major_progress_1
+		sp_magic_generic_reward_major_progress_2
+		sp_magic_generic_reward_major_progress_3
+		sp_magic_generic_reward_test_failure_1
+		sp_magic_generic_reward_test_failure_2
+		sp_magic_generic_reward_test_failure_3
+	}
+}
+
+  #####           
+
+
+
 sp_super_heavy_magic_cannon_0 = {
 	specialization = specialization_magic
 	project_tags = {
@@ -861,6 +1217,17 @@ sp_super_heavy_magic_cannon_0 = {
 			}
 			tank_magic_super_heavy_cannon_0
 		}
+	}
+	generic_prototype_rewards = {
+		sp_magic_generic_reward_scientist_xp_1
+		sp_magic_generic_reward_scientist_xp_2
+		sp_magic_generic_reward_scientist_xp_3
+		sp_magic_generic_reward_major_progress_1
+		sp_magic_generic_reward_major_progress_2
+		sp_magic_generic_reward_major_progress_3
+		sp_magic_generic_reward_test_failure_1
+		sp_magic_generic_reward_test_failure_2
+		sp_magic_generic_reward_test_failure_3
 	}
 }
 sp_super_heavy_magic_cannon_1 = {
@@ -931,6 +1298,17 @@ sp_super_heavy_magic_cannon_1 = {
 			tank_magic_super_heavy_cannon_1
 		}
 	}
+	generic_prototype_rewards = {
+		sp_magic_generic_reward_scientist_xp_1
+		sp_magic_generic_reward_scientist_xp_2
+		sp_magic_generic_reward_scientist_xp_3
+		sp_magic_generic_reward_major_progress_1
+		sp_magic_generic_reward_major_progress_2
+		sp_magic_generic_reward_major_progress_3
+		sp_magic_generic_reward_test_failure_1
+		sp_magic_generic_reward_test_failure_2
+		sp_magic_generic_reward_test_failure_3
+	}
 }
 sp_super_heavy_magic_cannon_2 = {
 	specialization = specialization_magic
@@ -999,5 +1377,16 @@ sp_super_heavy_magic_cannon_2 = {
 			}
 			tank_magic_super_heavy_cannon_2
 		}
+	}
+	generic_prototype_rewards = {
+		sp_magic_generic_reward_scientist_xp_1
+		sp_magic_generic_reward_scientist_xp_2
+		sp_magic_generic_reward_scientist_xp_3
+		sp_magic_generic_reward_major_progress_1
+		sp_magic_generic_reward_major_progress_2
+		sp_magic_generic_reward_major_progress_3
+		sp_magic_generic_reward_test_failure_1
+		sp_magic_generic_reward_test_failure_2
+		sp_magic_generic_reward_test_failure_3
 	}
 }

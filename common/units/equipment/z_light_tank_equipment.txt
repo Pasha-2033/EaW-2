@@ -2124,6 +2124,39 @@ equipments = {
 		}
 		fuel_consumption = 1.2
 	}
+	#flamethrower tanks
+	light_flamethrower_tank_equipment_0 = {
+		year = 985
+	
+		archetype = light_flame_tank_chassis
+		priority = 5
+		visual_level = 0
+		
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_gun_upgrade
+		}
+
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 18
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4
+		ap_attack = 15
+		air_attack = 0.001
+
+		build_cost_ic = 7 #gw tanks are clunky
+		fuel_consumption = 1.0
+	}
 	#light magic chassis
 	light_magic_tank_equipment_0 = {
 		year = 985
@@ -4073,5 +4106,37 @@ equipments = {
 		}
 		fuel_consumption = 1.2
 	}
+	#magic flamethrower tanks
+	light_magic_flamethrower_tank_equipment_0 = {
+		year = 985
+	
+		archetype = light_magic_flame_tank_chassis
+		priority = 5
+		visual_level = 0
+		
+		upgrades = {
+			tank_reliability_upgrade
+			tank_engine_upgrade
+			tank_armor_upgrade
+			tank_gun_upgrade
+		}
 
+		#Misc Abilities
+		maximum_speed = 6
+		reliability = 0.8
+
+		#Defensive Abilities
+		defense = 4
+		breakthrough = 18
+		armor_value = 5
+
+		#Offensive Abilities
+		soft_attack = 8
+		hard_attack = 4
+		ap_attack = 15
+		air_attack = 0.001
+
+		build_cost_ic = 7 #gw tanks are clunky
+		fuel_consumption = 1.0
+	}
 }
