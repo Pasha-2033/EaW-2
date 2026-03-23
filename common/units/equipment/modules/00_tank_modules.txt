@@ -1,3 +1,8 @@
+@diff_suspension_conversion_cost = 4
+@same_suspension_conversion_cost = 2
+@armor_conversion_cost = 5
+@engine_conversion_cost = 3
+@ammunition_conversion_cost = 1
 equipment_modules = {
 	limit = {
 		has_dlc = "No Step Back" 
@@ -5,64 +10,303 @@ equipment_modules = {
 	#fixed 4 modules (standart for all tanks)
 	#suspension types (crawler)
 	tank_blocked_suspension = {
-		abbreviation = "tor"
+		abbreviation = "tbs"
 		category = tank_crawler_suspension
 		sfx = sfx_ui_sd_module_sonar
+		multiply_stats = {
+			build_cost_ic = -0.1
+			maximum_speed = -0.05
+			breakthrough = -0.05
+		}
+		add_stats = {
+			reliability = 0.1
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			module_category = tank_crawler_suspension
+			convert_cost_ic = @same_suspension_conversion_cost
+		}
+		can_convert_from = {
+			module_category = tank_wheel_suspension
+			convert_cost_ic = @diff_suspension_conversion_cost
+			convert_cost_resources = {
+				steel = 1
+			}
+		}
 	}
 	tank_candle_pendant = {
-		abbreviation = "tor"
+		abbreviation = "tcp"
 		category = tank_crawler_suspension
 		sfx = sfx_ui_sd_module_sonar
+		multiply_stats = {
+			build_cost_ic = -0.075
+			maximum_speed = -0.025
+			breakthrough = -0.025
+		}
+		add_stats = {
+			reliability = 0.05
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			module_category = tank_crawler_suspension
+			convert_cost_ic = @same_suspension_conversion_cost
+		}
+		can_convert_from = {
+			module_category = tank_wheel_suspension
+			convert_cost_ic = @diff_suspension_conversion_cost
+			convert_cost_resources = {
+				steel = 1
+			}
+		}
 	}
 	tank_torsion_bar_suspension = {
-		abbreviation = "tor"
+		abbreviation = "ttbs"
 		category = tank_crawler_suspension
 		sfx = sfx_ui_sd_module_sonar
+		multiply_stats = {
+			breakthrough = -0.025
+			soft_attack = 0.025
+			hard_attack = 0.025
+			maximum_speed = 0.025
+			build_cost_ic = 0.05
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			module_category = tank_crawler_suspension
+			convert_cost_ic = @same_suspension_conversion_cost
+		}
+		can_convert_from = {
+			module_category = tank_wheel_suspension
+			convert_cost_ic = @diff_suspension_conversion_cost
+			convert_cost_resources = {
+				steel = 1
+			}
+		}
 	}
 	tank_spring_suspension = {
-		abbreviation = "tor"
+		abbreviation = "tss"
 		category = tank_crawler_suspension
 		sfx = sfx_ui_sd_module_sonar
+		multiply_stats = {
+			build_cost_ic = -0.025
+			breakthrough = -0.025
+		}
+		add_stats = {
+			reliability = 0.1
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			module_category = tank_crawler_suspension
+			convert_cost_ic = @same_suspension_conversion_cost
+		}
+		can_convert_from = {
+			module_category = tank_wheel_suspension
+			convert_cost_ic = @diff_suspension_conversion_cost
+			convert_cost_resources = {
+				steel = 1
+			}
+		}
 	}
 	tank_leaf_spring_suspension = {
-		abbreviation = "tor"
+		abbreviation = "tlss"
 		category = tank_crawler_suspension
 		sfx = sfx_ui_sd_module_sonar
+		multiply_stats = {
+			maximum_speed = -0.05
+			breakthrough = 0.075
+			build_cost_ic = -0.025
+		}
+		add_stats = {
+			reliability = 0.1
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			module_category = tank_crawler_suspension
+			convert_cost_ic = @same_suspension_conversion_cost
+		}
+		can_convert_from = {
+			module_category = tank_wheel_suspension
+			convert_cost_ic = @diff_suspension_conversion_cost
+			convert_cost_resources = {
+				steel = 1
+			}
+		}
 	}
 	tank_balance_beam_suspension = {
-		abbreviation = "tor"
+		abbreviation = "tbbs"
 		category = tank_crawler_suspension
 		sfx = sfx_ui_sd_module_sonar
+		multiply_stats = {
+			maximum_speed = -0.075
+			breakthrough = -0.05
+		}
+		add_stats = {
+			reliability = 0.15
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			module_category = tank_crawler_suspension
+			convert_cost_ic = @same_suspension_conversion_cost
+		}
+		can_convert_from = {
+			module_category = tank_wheel_suspension
+			convert_cost_ic = @diff_suspension_conversion_cost
+			convert_cost_resources = {
+				steel = 1
+			}
+		}
 	}
 	tank_hydropneumatic_suspension = {
-		abbreviation = "tor"
+		abbreviation = "ths"
 		category = tank_crawler_suspension
 		sfx = sfx_ui_sd_module_sonar
+		multiply_stats = {
+			maximum_speed = 0.1
+			breakthrough = 0.075
+			soft_attack = 0.025
+			hard_attack = 0.025
+			build_cost_ic = 0.1
+		}
+		add_stats = {
+			reliability = -0.15
+		}
+		build_cost_resources = {
+			steel = 1
+			rubber = 1
+		}
+		can_convert_from = {
+			module_category = tank_crawler_suspension
+			convert_cost_ic = @same_suspension_conversion_cost
+			convert_cost_resources = {
+				rubber = 1
+			}
+		}
+		can_convert_from = {
+			module_category = tank_wheel_suspension
+			convert_cost_ic = @diff_suspension_conversion_cost
+			convert_cost_resources = {
+				steel = 1
+			}
+		}
 	}
 	tank_semi_rigid_suspension = {
-		abbreviation = "tor"
+		abbreviation = "tsrs"
 		category = tank_crawler_suspension
 		sfx = sfx_ui_sd_module_sonar
+		multiply_stats = {
+			maximum_speed = -0.05
+			breakthrough = -0.025
+			build_cost_ic = -0.05
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			module_category = tank_crawler_suspension
+			convert_cost_ic = @same_suspension_conversion_cost
+		}
+		can_convert_from = {
+			module_category = tank_wheel_suspension
+			convert_cost_ic = @diff_suspension_conversion_cost
+			convert_cost_resources = {
+				steel = 1
+			}
+		}
 	}
 	#suspension types (wheels)
 	tank_trailing_arm_suspension = {
-		abbreviation = "tor"
+		abbreviation = "ttas"
 		category = tank_wheel_suspension
 		sfx = sfx_ui_sd_module_sonar
+		multiply_stats = {
+			maximum_speed = 0.1
+			breakthrough = -0.05
+			build_cost_ic = 0.025
+		}
+		build_cost_resources = {
+			rubber = 1
+		}
+		can_convert_from = {
+			module_category = tank_crawler_suspension
+			convert_cost_ic = @diff_suspension_conversion_cost
+			convert_cost_resources = {
+				rubber = 1
+			}
+		}
+		can_convert_from = {
+			module_category = tank_wheel_suspension
+			convert_cost_ic = @same_suspension_conversion_cost
+		}
 	}
 	tank_multi_link_suspension = {
-		abbreviation = "tor"
+		abbreviation = "tmls"
 		category = tank_wheel_suspension
 		sfx = sfx_ui_sd_module_sonar
+		multiply_stats = {
+			maximum_speed = 0.125
+			breakthrough = -0.025
+			build_cost_ic = 0.05
+		}
+		add_stats = {
+			reliability = -0.05
+		}
+		build_cost_resources = {
+			rubber = 1
+			steel = 1
+		}
+		can_convert_from = {
+			module_category = tank_crawler_suspension
+			convert_cost_ic = @diff_suspension_conversion_cost
+			convert_cost_resources = {
+				rubber = 1
+			}
+		}
+		can_convert_from = {
+			module_category = tank_wheel_suspension
+			convert_cost_ic = @same_suspension_conversion_cost
+		}
 	}
 	tank_chrysler_type_suspension = {
-		abbreviation = "tor"
+		abbreviation = "tcts"
 		category = tank_wheel_suspension
 		sfx = sfx_ui_sd_module_sonar
+		multiply_stats = {
+			maximum_speed = 0.15
+			build_cost_ic = 0.075
+		}
+		add_stats = {
+			reliability = 0.05
+		}
+		build_cost_resources = {
+			rubber = 1
+		}
+		can_convert_from = {
+			module_category = tank_crawler_suspension
+			convert_cost_ic = @diff_suspension_conversion_cost
+			convert_cost_resources = {
+				rubber = 1
+			}
+		}
+		can_convert_from = {
+			module_category = tank_wheel_suspension
+			convert_cost_ic = @same_suspension_conversion_cost
+		}
 	}
-	#armor
+	#armor (do we need uranium armor?)
 	tank_riveted_armor = {
-		abbreviation = "riv"
+		abbreviation = "tra"
 		category = tank_armor_type
 		sfx = sfx_ui_sd_module_sonar
 		add_stats = {
@@ -72,10 +316,18 @@ equipment_modules = {
 		xp_cost = 8
 		multiply_stats = {
 			build_cost_ic = -0.2
+			maximum_speed = -0.05
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @armor_conversion_cost
+			module_category = tank_armor_type
 		}
 	}
 	tank_cast_armor = {
-		abbreviation = "cas"
+		abbreviation = "tca"
 		category = tank_armor_type
 		sfx = sfx_ui_sd_module_sonar
 		add_stats = {
@@ -86,10 +338,21 @@ equipment_modules = {
 		multiply_stats = {
 			build_cost_ic = 0.2
 			armor_value = 0.5
+			maximum_speed = -0.05
+		}
+		build_cost_resources = {
+			steel = 2
+		}
+		can_convert_from = {
+			convert_cost_ic = @armor_conversion_cost
+			module_category = tank_armor_type
+			convert_cost_resources = {
+				steel = 1
+			}
 		}
 	}
 	tank_welded_armor = {
-		abbreviation = "wel"
+		abbreviation = "twa"
 		category = tank_armor_type
 		sfx = sfx_ui_sd_module_sonar
 		xp_cost = 8
@@ -100,65 +363,179 @@ equipment_modules = {
 		multiply_stats = {
 			armor_value = 0.4
 		}
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @armor_conversion_cost
+			module_category = tank_armor_type
+		}
 	}
 	tank_composite_armor = {
-		abbreviation = "comp"
+		abbreviation = "tca"
 		category = tank_armor_type
 		sfx = sfx_ui_sd_module_sonar
 		xp_cost = 8
 		add_stats = {
-			defense = 6
+			defense = 10
 			breakthrough = 6
-			reliability = -0.1
 		}
 		multiply_stats = {
 			build_cost_ic = 0.4
 			armor_value = 0.7
-
 		}
 		build_cost_resources = {
 			chromium = 1
+			steel = 1
+			tungsten = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @armor_conversion_cost
+			module_category = tank_armor_type
+			convert_cost_resources = {
+				chromium = 1
+				tungsten = 1
+			}
+		}
+		#liquid armor is more expensive
+		can_convert_from = {
+			convert_cost_ic = @armor_conversion_cost
+			module = tank_liquid_armor
 		}
 	}
 	tank_active_protection_armor = {
-		abbreviation = "comp"
+		abbreviation = "tapa"
 		category = tank_armor_type
 		sfx = sfx_ui_sd_module_sonar
+		add_stats = {
+			defense = 25
+			breakthrough = 20
+		}
+		multiply_stats = {
+			build_cost_ic = 0.2
+			armor_value = 0.1
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @armor_conversion_cost
+			module_category = tank_armor_type
+		}
 	}
 	tank_magic_armor = {
-		abbreviation = "comp"
+		abbreviation = "tma"
 		category = tank_armor_type
 		sfx = sfx_ui_sd_module_sonar
+		add_stats = {
+			defense = 50
+			breakthrough = 5
+		}
+		multiply_stats = {
+			build_cost_ic = 0.75
+			armor_value = 0.1
+		}
 		build_cost_resources = {
-			crystals = 2
+			crystals = 3
+			steel = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @armor_conversion_cost
+			module_category = tank_armor_type
+			convert_cost_resources = {
+				crystals = 3
+			}
+		}
+		#energetic armor has some crystals
+		can_convert_from = {
+			convert_cost_ic = @armor_conversion_cost
+			module = tank_energetic_armor
+			convert_cost_resources = {
+				crystals = 2
+			}
 		}
 	}
 	tank_energetic_armor = {
-		abbreviation = "comp"
+		abbreviation = "tea"
 		category = tank_armor_type
 		sfx = sfx_ui_sd_module_sonar
+		add_stats = {
+			breakthrough = 10
+		}
+		multiply_stats = {
+			build_cost_ic = 0.5
+			armor_value = 0.25
+			defense = 0.1
+		}
+		build_cost_resources = {
+			crystals = 1
+			steel = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @armor_conversion_cost
+			module_category = tank_armor_type
+			convert_cost_resources = {
+				crystals = 1
+			}
+		}
+		#magic armor has some crystals
+		can_convert_from = {
+			convert_cost_ic = @armor_conversion_cost
+			module = tank_magic_armor
+		}
 	}
 	tank_liquid_armor = {
-		abbreviation = "comp"
+		abbreviation = "tla"
 		category = tank_armor_type
 		sfx = sfx_ui_sd_module_sonar
+		multiply_stats = {
+			build_cost_ic = 0.4
+			armor_value = 0.1
+			defense = 0.25
+		}
+		build_cost_resources = {
+			chromium = 2
+			tungsten = 2
+			steel = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @armor_conversion_cost
+			module_category = tank_armor_type
+			convert_cost_resources = {
+				chromium = 2
+				tungsten = 2
+			}
+		}
+		#composite armor has tungsten & chromium
+		can_convert_from = {
+			convert_cost_ic = @armor_conversion_cost
+			module = tank_composite_armor
+			convert_cost_resources = {
+				chromium = 1
+				tungsten = 1
+			}
+		}
 	}
 	#engines
 	tank_gasoline_engine = {
-		abbreviation = "gas"
+		abbreviation = "tge"
 		category = tank_engine_type
 		sfx = sfx_ui_sd_module_engine
 		add_stats = {
 			build_cost_ic = 1
-			fuel_consumption = 2
+			fuel_consumption = 4
 			maximum_speed = 0.5
 		}
 		multiply_stats = {
 			maximum_speed = 0.15
 		}
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module_category = tank_engine_type
+		}
 	}
 	tank_diesel_engine = {
-		abbreviation = "die"
+		abbreviation = "tde"
 		category = tank_engine_type
 		sfx = sfx_ui_sd_module_engine
 		add_stats = {
@@ -166,93 +543,361 @@ equipment_modules = {
 			fuel_consumption = 2
 			reliability = 0.25
 		}
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module_category = tank_engine_type
+		}
 	}
 	tank_petrol_electric_engine = {
-		abbreviation = "pel"
+		abbreviation = "tpee"
 		category = tank_engine_type
 		sfx = sfx_ui_sd_module_engine
 		add_stats = {
-			fuel_consumption = 2
-			build_cost_ic = 2
+			fuel_consumption = 3
 			reliability = -0.5
 			breakthrough = 2
-			defense = 2
 		}
 		multiply_stats = {
 			breakthrough = 0.15
-			defense = 0.15
-			build_cost_ic = 0.15
+			build_cost_ic = 0.1
+		}
+		build_cost_resources = {
+			chromium = 1
+		}
+		#tank_gasoline_engine & tank_diesel_engine
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module_category = tank_engine_type
+			convert_cost_resources = {
+				chromium = 1
+			}
+		}
+		#other engines
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_gas_turbine_engine_0
+		}
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_gas_turbine_engine_0
+		}
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_axial_gas_turbine_engine
+		}
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_magic_engine
+		}
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_llm_engine
 		}
 	}
 	tank_gas_turbine_engine_0 = {
-		abbreviation = "tur"
+		abbreviation = "tgte0"
 		category = tank_engine_type
 		sfx = sfx_ui_sd_module_engine
 		add_stats = {
-			build_cost_ic = 3
-			fuel_consumption = 4
-			reliability = -0.1
-			maximum_speed = 0.5
+			fuel_consumption = 5
+			reliability = -0.6
 		}
 		multiply_stats = {
-			maximum_speed = 0.25
+			breakthrough = 0.05
+			maximum_speed = 0.75
+			build_cost_ic = 0.15
+		}
+		build_cost_resources = {
+			chromium = 1
+			steel = 1
+		}
+		#tank_gasoline_engine & tank_diesel_engine
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module_category = tank_engine_type
+			convert_cost_resources = {
+				chromium = 1
+				steel = 1
+			}
+		}
+		#other engines
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_petrol_electric_engine
+			convert_cost_resources = {
+				steel = 1
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_gas_turbine_engine_1
+		}
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_axial_gas_turbine_engine
+		}
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_magic_engine
+			convert_cost_resources = {
+				chromium = 1
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_llm_engine
 		}
 	}
 	tank_gas_turbine_engine_1 = {
-		abbreviation = "tur"
+		abbreviation = "tgte1"
 		category = tank_engine_type
 		sfx = sfx_ui_sd_module_engine
 		parent = tank_gas_turbine_engine_0
 		add_stats = {
-			build_cost_ic = 3
-			fuel_consumption = 4
-			reliability = -0.1
-			maximum_speed = 0.5
+			fuel_consumption = 5
+			reliability = -0.75
 		}
 		multiply_stats = {
-			maximum_speed = 0.25
+			breakthrough = 0.1
+			maximum_speed = 1
+			build_cost_ic = 0.2
+		}
+		build_cost_resources = {
+			chromium = 2
+			steel = 1
+		}
+		#tank_gasoline_engine & tank_diesel_engine
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module_category = tank_engine_type
+			convert_cost_resources = {
+				chromium = 2
+				steel = 1
+			}
+		}
+		#other engines
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_petrol_electric_engine
+			convert_cost_resources = {
+				chromium = 1
+				steel = 1
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_gas_turbine_engine_0
+			convert_cost_resources = {
+				chromium = 1
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_axial_gas_turbine_engine
+		}
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_magic_engine
+		}
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_llm_engine
 		}
 	}
 	tank_axial_gas_turbine_engine = {
+		abbreviation = "tagte"
 		category = tank_engine_type
 		sfx = sfx_ui_sd_module_engine
 		parent = tank_gas_turbine_engine_1
 		add_stats = {
-			build_cost_ic = 3
 			fuel_consumption = 4
-			reliability = -0.1
-			maximum_speed = 0.8
+			reliability = -0.75
 		}
 		multiply_stats = {
-			maximum_speed = 0.5
+			breakthrough = 0.15
+			maximum_speed = 1.25
+			build_cost_ic = 0.25
+		}
+		build_cost_resources = {
+			chromium = 2
+			steel = 2
+		}
+		#tank_gasoline_engine & tank_diesel_engine
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module_category = tank_engine_type
+			convert_cost_resources = {
+				chromium = 2
+				steel = 2
+			}
+		}
+		#other engines
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_petrol_electric_engine
+			convert_cost_resources = {
+				chromium = 1
+				steel = 2
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_gas_turbine_engine_0
+			convert_cost_resources = {
+				chromium = 1
+				steel = 1
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_gas_turbine_engine_1
+			convert_cost_resources = {
+				steel = 1
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_magic_engine
+			convert_cost_resources = {
+				chromium = 2
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_llm_engine
+			convert_cost_resources = {
+				chromium = 1
+				steel = 1
+			}
 		}
 	}
 	tank_magic_engine = {
+		abbreviation = "tme"
 		category = tank_engine_type
 		sfx = sfx_ui_sd_module_engine
 		add_stats = {
-			build_cost_ic = 3
-			fuel_consumption = 4
-			reliability = -0.1
-			maximum_speed = 0.8
+			fuel_consumption = 2
+			reliability = -0.5
+			maximum_speed = 2
 		}
 		multiply_stats = {
-			maximum_speed = 0.5
+			breakthrough = 0.2
+			maximum_speed = 1.5
+			build_cost_ic = 0.25
+		}
+		build_cost_resources = {
+			crystals = 2
+			steel = 2
+		}
+		#tank_gasoline_engine & tank_diesel_engine & tank_petrol_electric_engine
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module_category = tank_engine_type 
+			convert_cost_resources = {
+				crystals = 2
+				steel = 2
+			}
+		}
+		#other engines
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_gas_turbine_engine_0
+			convert_cost_resources = {
+				crystals = 2
+				steel = 1
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_gas_turbine_engine_1
+			convert_cost_resources = {
+				crystals = 2
+				steel = 1
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_axial_gas_turbine_engine
+			convert_cost_resources = {
+				crystals = 2
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_llm_engine
+			convert_cost_resources = {
+				steel = 1
+			}
 		}
 	}
 	tank_llm_engine = {
 		#only for GWS
+		abbreviation = "tllme"
 		category = tank_engine_type
 		sfx = sfx_ui_sd_module_engine
 		parent = tank_magic_engine
 		add_stats = {
-			build_cost_ic = 3
-			fuel_consumption = 4
-			reliability = -0.1
-			maximum_speed = 0.8
+			fuel_consumption = 1
+			reliability = -0.75
+			maximum_speed = 5
 		}
 		multiply_stats = {
-			maximum_speed = 0.5
+			breakthrough = 0.25
+			maximum_speed = 2
+			build_cost_ic = 0.3
+		}
+		build_cost_resources = {
+			crystals = 3
+			steel = 1
+			chromium = 1
+		}
+		#tank_gasoline_engine & tank_diesel_engine
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module_category = tank_engine_type 
+			convert_cost_resources = {
+				crystals = 3
+				steel = 1
+				chromium = 1
+			}
+		}
+		#other engines
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_petrol_electric_engine
+			convert_cost_resources = {
+				crystals = 3
+				steel = 1
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_gas_turbine_engine_0
+			convert_cost_resources = {
+				crystals = 3
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_gas_turbine_engine_1
+			convert_cost_resources = {
+				crystals = 3
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_axial_gas_turbine_engine
+			convert_cost_resources = {
+				crystals = 3
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @engine_conversion_cost
+			module = tank_magic_engine
+			convert_cost_resources = {
+				crystals = 1
+				chromium = 1
+			}
 		}
 	}
 	#ammunition types
@@ -264,6 +909,28 @@ equipment_modules = {
 			hard_attack = 0.05
 			ap_attack = 0.05
 		}
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @ammunition_conversion_cost
+			module_category = tank_ammunition_type
+		}
+		#API & MAGIC
+		can_convert_from = {
+			convert_cost_ic = @ammunition_conversion_cost
+			module = tank_API_ammunition
+			convert_cost_resources = {
+				steel = 1
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @ammunition_conversion_cost
+			module = tank_MAGIC_ammunition
+			convert_cost_resources = {
+				steel = 1
+			}
+		}
 	}
 	tank_API_ammunition = {	#Armor-Piercing Incendiary
 		abbreviation = "htr"
@@ -272,6 +939,16 @@ equipment_modules = {
 		multiply_stats =  {
 			hard_attack = 0.15
 			build_cost_ic = 0.05
+		}
+		build_cost_resources = {
+			tungsten = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @ammunition_conversion_cost
+			module_category = tank_ammunition_type
+			convert_cost_resources = {
+				tungsten = 1
+			}
 		}
 	}
 	tank_HE_ammunition = {	#High-Explosive
@@ -282,6 +959,28 @@ equipment_modules = {
 			air_attack = 0.025
 			soft_attack = 0.05
 		}
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @ammunition_conversion_cost
+			module_category = tank_ammunition_type
+		}
+		#API & MAGIC
+		can_convert_from = {
+			convert_cost_ic = @ammunition_conversion_cost
+			module = tank_API_ammunition
+			convert_cost_resources = {
+				steel = 1
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @ammunition_conversion_cost
+			module = tank_MAGIC_ammunition
+			convert_cost_resources = {
+				steel = 1
+			}
+		}
 	}
 	tank_HE_AB_ammunition = {	#High-Explosive Airburst
 		abbreviation = "htr"
@@ -289,6 +988,28 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_sonar
 		multiply_stats =  {
 			air_attack = 0.1
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @ammunition_conversion_cost
+			module_category = tank_ammunition_type
+		}
+		#API & MAGIC
+		can_convert_from = {
+			convert_cost_ic = @ammunition_conversion_cost
+			module = tank_API_ammunition
+			convert_cost_resources = {
+				steel = 1
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @ammunition_conversion_cost
+			module = tank_MAGIC_ammunition
+			convert_cost_resources = {
+				steel = 1
+			}
 		}
 	}
 	tank_HEAT_ammunition = {	#High-Explosive Anti-Tank
@@ -299,6 +1020,28 @@ equipment_modules = {
 			ap_attack = 0.15
 			build_cost_ic = 0.05
 		}
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @ammunition_conversion_cost
+			module_category = tank_ammunition_type
+		}
+		#API & MAGIC
+		can_convert_from = {
+			convert_cost_ic = @ammunition_conversion_cost
+			module = tank_API_ammunition
+			convert_cost_resources = {
+				steel = 1
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @ammunition_conversion_cost
+			module = tank_MAGIC_ammunition
+			convert_cost_resources = {
+				steel = 1
+			}
+		}
 	}
 	tank_FRAG_ammunition = {	#Fragment
 		abbreviation = "htr"
@@ -307,6 +1050,28 @@ equipment_modules = {
 		multiply_stats = {
 			soft_attack = 0.15
 			build_cost_ic = 0.05
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @ammunition_conversion_cost
+			module_category = tank_ammunition_type
+		}
+		#API & MAGIC
+		can_convert_from = {
+			convert_cost_ic = @ammunition_conversion_cost
+			module = tank_API_ammunition
+			convert_cost_resources = {
+				steel = 1
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @ammunition_conversion_cost
+			module = tank_MAGIC_ammunition
+			convert_cost_resources = {
+				steel = 1
+			}
 		}
 	}
 	tank_MAGIC_ammunition = {
@@ -319,6 +1084,13 @@ equipment_modules = {
 		}
 		build_cost_resources = {
 			crystals = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @ammunition_conversion_cost
+			module_category = tank_ammunition_type
+			convert_cost_resources = {
+				crystals = 1
+			}
 		}
 	}
 }

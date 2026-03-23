@@ -121,6 +121,19 @@ equipments = {
 			count < 2
 			category = tank_easy_maintenance_module
 		}
+		#forbid magic modules
+		module_count_limit = {
+			count < 1
+			module = tank_magic_armor
+		}
+		module_count_limit = {
+			count < 1
+			module = tank_magic_engine
+		}
+		module_count_limit = {
+			count < 1
+			module = tank_llm_engine
+		}
 		#chassis related limit
 		module_count_limit = {
 			count < 3

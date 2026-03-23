@@ -99,6 +99,19 @@ equipments = {
 			count < 2
 			category = tank_easy_maintenance_module
 		}
+		#forbid magic modules
+		module_count_limit = {
+			count < 1
+			module = tank_magic_armor
+		}
+		module_count_limit = {
+			count < 1
+			module = tank_magic_engine
+		}
+		module_count_limit = {
+			count < 1
+			module = tank_llm_engine
+		}
 		#chassis related limit
 		module_count_limit = {
 			count < 2
@@ -130,7 +143,7 @@ equipments = {
 		}
 		default_modules = {
 			#custom
-			main_armament = tank_small_main_armament
+			main_armament = tank_heavy_machine_gun
 			turret_type = tank_light_fixed_superstructure_turret
 			#fixed
 			fixed_suspension_type = tank_blocked_suspension
@@ -221,7 +234,7 @@ equipments = {
 	}
 	light_tank_chassis_4 = {
 		abbreviation = "lt3"
-		derived_variant_name = light_tank_equipment_3
+		derived_variant_name = light_tank_equipment_4
 		visual_level = 2
 		year = 1942
 		archetype = light_tank_chassis
@@ -238,7 +251,7 @@ equipments = {
 	}
 	light_tank_chassis_5 = {
 		abbreviation = "lt3"
-		derived_variant_name = light_tank_equipment_3
+		derived_variant_name = light_tank_equipment_5
 		visual_level = 2
 		year = 1942
 		archetype = light_tank_chassis
@@ -278,7 +291,7 @@ equipments = {
 	}
 	light_tank_chassis_6 = {
 		abbreviation = "lt3"
-		derived_variant_name = light_tank_equipment_3
+		derived_variant_name = light_tank_equipment_6
 		visual_level = 2
 		year = 1942
 		archetype = light_tank_chassis
@@ -295,7 +308,7 @@ equipments = {
 	}
 	light_tank_chassis_7 = {
 		abbreviation = "lt3"
-		derived_variant_name = light_tank_equipment_3
+		derived_variant_name = light_tank_equipment_7
 		visual_level = 2
 		year = 1942
 		archetype = light_tank_chassis
@@ -312,7 +325,7 @@ equipments = {
 	}
 	light_tank_chassis_8 = {
 		abbreviation = "lt3"
-		derived_variant_name = light_tank_equipment_3
+		derived_variant_name = light_tank_equipment_8
 		visual_level = 2
 		year = 1942
 		archetype = light_tank_chassis
@@ -353,7 +366,7 @@ equipments = {
 	}
 	light_tank_chassis_9 = {
 		abbreviation = "lt3"
-		derived_variant_name = light_tank_equipment_3
+		derived_variant_name = light_tank_equipment_9
 		visual_level = 2
 		year = 1942
 		archetype = light_tank_chassis
@@ -370,7 +383,7 @@ equipments = {
 	}
 	light_tank_chassis_10 = {
 		abbreviation = "lt3"
-		derived_variant_name = light_tank_equipment_9
+		derived_variant_name = light_tank_equipment_10
 		visual_level = 2
 		year = 1942
 		archetype = light_tank_chassis

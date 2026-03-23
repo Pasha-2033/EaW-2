@@ -16,14 +16,14 @@ equipments = {
 				allowed_module_categories = {
 					tank_heavy_main_armament
 					tank_flamethrower
-					magic_tank_heavy_main_armament
-					magic_tank_flamethrower
+					#magic weapons are granted by turret
 				}
 			}
 			turret_type = {
 				required = yes
 				allowed_module_categories = {
 					tank_heavy_turret_type
+					magic_tank_heavy_turret_type
 				}
 			}
 			special_module_0 = {
@@ -76,7 +76,6 @@ equipments = {
 					tank_ammunition_type
 				}
 			}
-
 		}
 		module_count_limit = {
 			count < 2
@@ -120,14 +119,13 @@ equipments = {
 		}
 		module_count_limit = {
 			count < 2
-			module = easy_maintenance
+			category = tank_easy_maintenance_module
 		}
 		#chassis related limit
 		module_count_limit = {
 			count < 3
 			category = tank_secondary_turret
 		}
-		fuel_consumption = 0
 		maximum_speed = 3
 		build_cost_ic = 10
 		reliability = 0.75

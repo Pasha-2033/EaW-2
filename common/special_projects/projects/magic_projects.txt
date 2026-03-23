@@ -818,6 +818,78 @@ sp_self_propelled_super_heavy_magic_howitzer = {
 		sp_magic_generic_reward_test_failure_3
 	}
 }
+sp_magic_ammunition = {
+	specialization = specialization_magic
+	project_tags = {
+		sp_tag_tank
+	}
+	allowed = {
+		country_without_sp = no #"no" because we want to forbid, not just check
+	}
+	available = {
+		FROM = {
+			if = {
+				limit = {
+					has_dlc = "No Step Back"
+				}
+				has_tech = tankette
+			}
+			else = {
+				has_tech = tankette_equipment
+			}
+		}
+	}
+	prototype_time = sp_time.prototype.medium
+
+	complexity = sp_complexity.large
+
+	breakthrough_cost = {
+		specialization_magic = 2
+	}
+
+	resource_cost = {
+		resources = { 
+			steel = 4
+			chromium = 2
+			tungsten = 1
+		}
+	}
+	
+	project_output = {
+		scientist_effects = {
+			upgrade_scientist_trait_armored_specialist = yes
+		}
+		country_effects = {
+			add_equipment_bonus = {
+				bonus = {
+					armor = {
+						air_attack = 0.05
+						soft_attack = 0.05
+						hard_attack = 0.05
+					}
+				}
+			}
+		}
+		enable_equipment_modules = {
+			limit = {
+				has_dlc = "No Step Back"
+			}
+			tank_MAGIC_ammunition
+		}
+	}
+
+	generic_prototype_rewards = {
+		sp_magic_generic_reward_scientist_xp_1
+		sp_magic_generic_reward_scientist_xp_2
+		sp_magic_generic_reward_scientist_xp_3
+		sp_magic_generic_reward_major_progress_1
+		sp_magic_generic_reward_major_progress_2
+		sp_magic_generic_reward_major_progress_3
+		sp_magic_generic_reward_test_failure_1
+		sp_magic_generic_reward_test_failure_2
+		sp_magic_generic_reward_test_failure_3
+	}
+}
 sp_magic_flamethrower_tank = {
 	specialization = specialization_magic
 	project_tags = {
@@ -827,7 +899,11 @@ sp_magic_flamethrower_tank = {
 		country_without_sp = no #"no" because we want to forbid, not just check
 		has_dlc = "No Step Back"
 	}
-	
+	available = {
+		FROM = {
+			has_tech = tankette
+		}
+	}
 	prototype_time = sp_time.prototype.medium
 
 	complexity = sp_complexity.large

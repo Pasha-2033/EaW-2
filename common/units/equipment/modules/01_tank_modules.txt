@@ -1,46 +1,112 @@
+@same_turret_convert_cost = 2
+@diff_turret_convert_cost = 2
 equipment_modules = {
 	limit = {
 		has_dlc = "No Step Back" 
 	}
 	#turret type (light)
 	tank_light_uninhabited_tank_turret = {
-		abbreviation = "l1m"
-		category = tank_light_turret_type
-		sfx = sfx_ui_sd_module_turret
-	}
-	tank_light_one_man_tank_turret = {
-		abbreviation = "l1m"
+		abbreviation = "tlutt"
 		category = tank_light_turret_type
 		sfx = sfx_ui_sd_module_turret
 		add_stats = {
-			build_cost_ic = 0.5
-			breakthrough = 7
+			build_cost_ic = 3
+			breakthrough = 15
+			defense = 5
 		}
-		xp_cost = 2
+		multiply_stats = {
+			build_cost_ic = 0.05
+			hard_attack = -0.05
+			soft_attack = -0.05
+		}
+		xp_cost = 5
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = tank_light_turret_type
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module_category = magic_tank_light_turret_type
+		}
 	}
-	tank_light_two_man_tank_turret = {
-		abbreviation = "l2m"
+	tank_light_one_man_tank_turret = {
+		abbreviation = "tl1mtt"
 		category = tank_light_turret_type
 		sfx = sfx_ui_sd_module_turret
 		add_stats = {
 			build_cost_ic = 0.75
-			breakthrough = 10
+			breakthrough = 7
 		}
+		multiply_stats = {	
+			hard_attack = -0.25
+			soft_attack = -0.25
+		}
+		manpower = 1
 		xp_cost = 2
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = tank_light_turret_type
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module_category = magic_tank_light_turret_type
+		}
 	}
-	tank_light_three_man_tank_turret = {
-		abbreviation = "l3m"
+	tank_light_two_man_tank_turret = {
+		abbreviation = "tl2mtt"
 		category = tank_light_turret_type
 		sfx = sfx_ui_sd_module_turret
 		add_stats = {
-			build_cost_ic = 1
-			maximum_speed = -0.25
+			build_cost_ic = 1.5
+			breakthrough = 10
+		}
+		manpower = 2
+		xp_cost = 3
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = tank_light_turret_type
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module_category = magic_tank_light_turret_type
+		}
+	}
+	tank_light_three_man_tank_turret = {
+		abbreviation = "tl3mtt"
+		category = tank_light_turret_type
+		sfx = sfx_ui_sd_module_turret
+		add_stats = {
+			build_cost_ic = 2
 			breakthrough = 14
 		}
-		xp_cost = 2
+		multiply_stats = {
+			maximum_speed = -0.25
+		}
+		manpower = 3
+		xp_cost = 4
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = tank_light_turret_type
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module_category = magic_tank_light_turret_type
+		}
 	}
 	tank_light_fixed_superstructure_turret = {
-		abbreviation = "lfs"
+		abbreviation = "tlfst"
 		category = tank_light_turret_type
 		sfx = sfx_ui_sd_module_turret
 		forbid_equipment_type = anti_air
@@ -54,7 +120,7 @@ equipment_modules = {
 		#	tank_heavy_main_armament = armor
 		#	tank_super_heavy_main_armament = armor
 		#}
-		xp_cost = 2
+		xp_cost = 1
 		add_stats = {
 			build_cost_ic = 0.75
 			reliability = 0.2
@@ -63,16 +129,173 @@ equipment_modules = {
 		multiply_stats = {
 			breakthrough = -0.25
 		}
+		manpower = 2
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = tank_light_turret_type
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module_category = magic_tank_light_turret_type
+		}
+	}
+	#turret type (magic light)
+	magic_tank_light_uninhabited_tank_turret = {
+		abbreviation = "mtlutt"
+		category = magic_tank_light_turret_type
+		sfx = sfx_ui_sd_module_turret
+		allowed_module_categories = {
+			main_armament = {
+				magic_tank_small_main_armament
+				magic_tank_flamethrower
+			}
+		}
+		add_stats = {
+			build_cost_ic = 3.5
+			breakthrough = 18
+			defense = 8
+		}
+		multiply_stats = {
+			build_cost_ic = 0.05
+			hard_attack = -0.05
+			soft_attack = -0.05
+		}
+		xp_cost = 5
+		build_cost_resources = {
+			steel = 1
+			crystals = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = magic_tank_light_turret_type
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module_category = tank_light_turret_type
+			convert_cost_resources = {
+				crystals = 1
+			}
+		}
+	}
+	magic_tank_light_one_man_tank_turret = {
+		abbreviation = "mtl1mtt"
+		category = magic_tank_light_turret_type
+		sfx = sfx_ui_sd_module_turret
+		allowed_module_categories = {
+			main_armament = {
+				magic_tank_small_main_armament
+				magic_tank_flamethrower
+			}
+		}
+		add_stats = {
+			build_cost_ic = 1.25
+			breakthrough = 9
+		}
+		multiply_stats = {	
+			hard_attack = -0.25
+			soft_attack = -0.25
+		}
+		manpower = 1
+		xp_cost = 2
+		build_cost_resources = {
+			steel = 1
+			crystals = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = magic_tank_light_turret_type
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module_category = tank_light_turret_type
+			convert_cost_resources = {
+				crystals = 1
+			}
+		}
+	}
+	magic_tank_light_two_man_tank_turret = {
+		abbreviation = "mtl2mtt"
+		category = magic_tank_light_turret_type
+		sfx = sfx_ui_sd_module_turret
+		allowed_module_categories = {
+			main_armament = {
+				magic_tank_small_main_armament
+				magic_tank_flamethrower
+			}
+		}
+		manpower = 2
+		add_stats = {
+			build_cost_ic = 2
+			breakthrough = 13
+		}
+		xp_cost = 3
+		build_cost_resources = {
+			steel = 1
+			crystals = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = magic_tank_light_turret_type
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module_category = tank_light_turret_type
+			convert_cost_resources = {
+				crystals = 1
+			}
+		}
+	}
+	magic_tank_light_three_man_tank_turret = {
+		abbreviation = "mtl3mtt"
+		category = magic_tank_light_turret_type
+		sfx = sfx_ui_sd_module_turret
+		allowed_module_categories = {
+			main_armament = {
+				magic_tank_small_main_armament
+				magic_tank_flamethrower
+			}
+		}
+		manpower = 3
+		add_stats = {
+			build_cost_ic = 2.5
+			breakthrough = 18
+		}
+		multiply_stats = {
+			maximum_speed = -0.25
+		}
+		xp_cost = 4
+		build_cost_resources = {
+			steel = 1
+			crystals = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = magic_tank_light_turret_type
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module_category = tank_light_turret_type
+			convert_cost_resources = {
+				crystals = 1
+			}
+		}
 	}
 	magic_tank_light_fixed_superstructure_turret = {
-		abbreviation = "lfs"
+		abbreviation = "mtlfst"
 		category = magic_tank_light_turret_type
 		sfx = sfx_ui_sd_module_turret
 		forbid_equipment_type = anti_air
 		allowed_module_categories = {
 			main_armament = {
-				tank_medium_main_armament
+				tank_medium_main_armament #magic turret supports non magic weapons
+
 				magic_tank_medium_main_armament
+
+				magic_tank_small_main_armament
+				magic_tank_flamethrower
 			}
 		}
 		#forbid_equipment_type_exact_match_for_category = {
@@ -80,28 +303,65 @@ equipment_modules = {
 		#	tank_heavy_main_armament = armor
 		#	tank_super_heavy_main_armament = armor
 		#}
-		xp_cost = 2
+		manpower = 2
+		xp_cost = 1
 		add_stats = {
-			build_cost_ic = 0.75
-			reliability = 0.2
-			defense = 3
+			build_cost_ic = 1
+			reliability = 0.25
+			defense = 6
 		}
 		multiply_stats = {
-			breakthrough = -0.25
+			breakthrough = -0.2
+		}
+		build_cost_resources = {
+			steel = 1
+			crystals = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = magic_tank_light_turret_type
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module_category = tank_light_turret_type
+			convert_cost_resources = {
+				crystals = 1
+			}
 		}
 	}
 	#turret type (medium)
 	tank_medium_uninhabited_tank_turret = {
-		abbreviation = "l1m"
-		category = tank_medium_turret_type
-		sfx = sfx_ui_sd_module_turret
-	}
-	tank_medium_one_man_tank_turret = {
-		abbreviation = "m1m"
+		abbreviation = "tmutt"
 		category = tank_medium_turret_type
 		sfx = sfx_ui_sd_module_turret
 		add_stats = {
-			build_cost_ic = 1
+			build_cost_ic = 3
+			breakthrough = 18
+			defense = 8
+		}
+		multiply_stats = {
+			build_cost_ic = 0.075
+		}
+		xp_cost = 5
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = tank_medium_turret_type
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module_category = magic_tank_medium_main_armament
+		}
+	}
+	tank_medium_one_man_tank_turret = {
+		abbreviation = "tm1mtt"
+		category = tank_medium_turret_type
+		sfx = sfx_ui_sd_module_turret
+		manpower = 1
+		add_stats = {
+			build_cost_ic = 1.5
 			breakthrough = 10
 		}
 		xp_cost = 2
@@ -109,32 +369,69 @@ equipment_modules = {
 			hard_attack = -0.25
 			soft_attack = -0.25
 		}
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = tank_medium_turret_type
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module_category = magic_tank_medium_main_armament
+		}
 	}
 	tank_medium_two_man_tank_turret = {
-		abbreviation = "m2m"
+		abbreviation = "tm2mtt"
 		category = tank_medium_turret_type
 		sfx = sfx_ui_sd_module_turret
+		manpower = 2
 		add_stats = {
-			build_cost_ic = 1.5
+			build_cost_ic = 2
 			breakthrough = 16
 		}
-		xp_cost = 2
+		xp_cost = 3
 		multiply_stats = {
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = tank_medium_turret_type
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module_category = magic_tank_medium_main_armament
 		}
 	}
 	tank_medium_three_man_tank_turret = {
-		abbreviation = "m3m"
+		abbreviation = "tm3mtt"
 		category = tank_medium_turret_type
 		sfx = sfx_ui_sd_module_turret
 		add_stats = {
-			build_cost_ic = 2
-			maximum_speed = -0.25
+			build_cost_ic = 2.5
 			breakthrough = 20
 		}
-		xp_cost = 2
+		multiply_stats = {
+			maximum_speed = -0.25
+		}
+		manpower = 3
+		xp_cost = 4
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = tank_medium_turret_type
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module_category = magic_tank_medium_main_armament
+		}
 	}
 	tank_medium_fixed_superstructure_turret = {
-		abbreviation = "mfs"
+		abbreviation = "tmfst"
 		category = tank_medium_turret_type
 		sfx = sfx_ui_sd_module_turret
 		forbid_equipment_type = anti_air
@@ -147,24 +444,168 @@ equipment_modules = {
 		#	tank_heavy_main_armament = armor
 		#	tank_super_heavy_main_armament = armor
 		#}
-		xp_cost = 2
+		manpower = 2
+		xp_cost = 1
 		add_stats = {
-			build_cost_ic = 1.5
+			build_cost_ic = 1
 			reliability = 0.2
 			defense = 3
 		}
 		multiply_stats = {
-			breakthrough = -0.25
+			breakthrough = -0.1
+		}
+		build_cost_resources = {
+			steel = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = tank_medium_turret_type
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module_category = magic_tank_medium_main_armament
+		}
+	}
+	#turret type (magic medium)
+	magic_tank_medium_uninhabited_tank_turret = {
+		abbreviation = "mtmutt"
+		category = magic_tank_medium_turret_type
+		sfx = sfx_ui_sd_module_turret
+		allowed_module_categories = {
+			main_armament = {
+				magic_tank_medium_main_armament
+				magic_tank_flamethrower
+			}
+		}
+		add_stats = {
+			build_cost_ic = 3
+			breakthrough = 20
+			defense = 10
+		}
+		multiply_stats = {
+			build_cost_ic = 0.075
+		}
+		xp_cost = 5
+		build_cost_resources = {
+			steel = 1
+			crystals = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_suspension_conversion_cost
+			module_category = tank_medium_turret_type
+			convert_cost_resources = {
+				crystals = 1
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = magic_tank_medium_main_armament
+		}
+	}
+	magic_tank_medium_one_man_tank_turret = {
+		abbreviation = "mtm1mtt"
+		category = magic_tank_medium_turret_type
+		sfx = sfx_ui_sd_module_turret
+		allowed_module_categories = {
+			main_armament = {
+				magic_tank_medium_main_armament
+				magic_tank_flamethrower
+			}
+		}
+		add_stats = {
+			build_cost_ic = 1.5
+			breakthrough = 14
+		}
+		manpower = 1
+		xp_cost = 2
+		multiply_stats = {	
+			hard_attack = -0.25
+			soft_attack = -0.25
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_suspension_conversion_cost
+			module_category = tank_medium_turret_type
+			convert_cost_resources = {
+				crystals = 1
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = magic_tank_medium_main_armament
+		}
+	}
+	magic_tank_medium_two_man_tank_turret = {
+		abbreviation = "mtm2mtt"
+		category = magic_tank_medium_turret_type
+		sfx = sfx_ui_sd_module_turret
+		allowed_module_categories = {
+			main_armament = {
+				magic_tank_medium_main_armament
+				magic_tank_flamethrower
+			}
+		}
+		add_stats = {
+			build_cost_ic = 2
+			breakthrough = 18
+		}
+		manpower = 2
+		xp_cost = 3
+		multiply_stats = {
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_suspension_conversion_cost
+			module_category = tank_medium_turret_type
+			convert_cost_resources = {
+				crystals = 1
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = magic_tank_medium_main_armament
+		}
+	}
+	magic_tank_medium_three_man_tank_turret = {
+		abbreviation = "mtm3mtt"
+		category = magic_tank_medium_turret_type
+		sfx = sfx_ui_sd_module_turret
+		allowed_module_categories = {
+			main_armament = {
+				magic_tank_medium_main_armament
+				magic_tank_flamethrower
+			}
+		}
+		add_stats = {
+			build_cost_ic = 2.5
+			breakthrough = 22
+		}
+		multiply_stats = {
+			maximum_speed = -0.15
+		}
+		manpower = 3
+		xp_cost = 4
+		can_convert_from = {
+			convert_cost_ic = @diff_suspension_conversion_cost
+			module_category = tank_medium_turret_type
+			convert_cost_resources = {
+				crystals = 1
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = magic_tank_medium_main_armament
 		}
 	}
 	magic_tank_medium_fixed_superstructure_turret = {
-		abbreviation = "mfs"
-		category = tank_medium_turret_type
+		abbreviation = "mtmfst"
+		category = magic_tank_medium_turret_type
 		sfx = sfx_ui_sd_module_turret
 		forbid_equipment_type = anti_air
 		allowed_module_categories = {
 			main_armament = {
-				tank_heavy_main_armament
+				tank_heavy_main_armament #magic turret supports non magic weapons
+
+				magic_tank_medium_main_armament
+				magic_tank_flamethrower
 				magic_tank_heavy_main_armament
 			}
 		}
@@ -172,40 +613,78 @@ equipment_modules = {
 		#	tank_heavy_main_armament = armor
 		#	tank_super_heavy_main_armament = armor
 		#}
-		xp_cost = 2
+		xp_cost = 1
 		add_stats = {
-			build_cost_ic = 1.5
+			build_cost_ic = 1
 			reliability = 0.2
-			defense = 3
+			defense = 6
 		}
 		multiply_stats = {
-			breakthrough = -0.25
+			breakthrough = -0.075
+		}
+		manpower = 2
+		can_convert_from = {
+			convert_cost_ic = @diff_suspension_conversion_cost
+			module_category = tank_medium_turret_type
+			convert_cost_resources = {
+				crystals = 1
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = magic_tank_medium_main_armament
 		}
 	}
 	#turret type (heavy)
 	tank_heavy_two_man_tank_turret = {
-		abbreviation = "h2m"
+		abbreviation = "th2mtt"
 		category = tank_heavy_turret_type
 		sfx = sfx_ui_sd_module_turret
-		xp_cost = 2
+		xp_cost = 3
 		add_stats = {
-			build_cost_ic = 5
-			breakthrough = 18
+			build_cost_ic = 3.5
+			breakthrough = 23
+		}
+		manpower = 2
+		build_cost_resources = {
+			steel = 2
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = tank_heavy_turret_type
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module_category = magic_tank_heavy_turret_type
 		}
 	}
 	tank_heavy_three_man_tank_turret = {
-		abbreviation = "h3m"
+		abbreviation = "th3mtt"
 		category = tank_heavy_turret_type
 		sfx = sfx_ui_sd_module_turret
-		xp_cost = 2
+		xp_cost = 4
 		add_stats = {
-			build_cost_ic = 5.5
+			build_cost_ic = 5
+			breakthrough = 28
+		}
+		multiply_stats = {
 			maximum_speed = -0.25
-			breakthrough = 22
+		}
+		manpower = 3
+		build_cost_resources = {
+			steel = 2
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = tank_heavy_turret_type
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module_category = magic_tank_heavy_turret_type
 		}
 	}
 	tank_heavy_fixed_superstructure_turret = {
-		abbreviation = "hfs"
+		abbreviation = "thfst"
 		category = tank_heavy_turret_type
 		sfx = sfx_ui_sd_module_turret
 		forbid_equipment_type = anti_air
@@ -217,102 +696,455 @@ equipment_modules = {
 		#forbid_equipment_type_exact_match_for_category = {
 		#	tank_super_heavy_main_armament = armor
 		#}
+		manpower = 2
 		xp_cost = 2
 		add_stats = {
-			build_cost_ic = 5
+			build_cost_ic = 2.5
 			reliability = 0.2
-			defense = 3
+			defense = 10
 		}
 		multiply_stats = {
 			breakthrough = -0.25
+		}
+		build_cost_resources = {
+			steel = 2
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = tank_heavy_turret_type
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module_category = magic_tank_heavy_turret_type
+		}
+	}
+	#turret type (magic heavy)
+	magic_tank_heavy_two_man_tank_turret = {
+		abbreviation = "mth2mtt"
+		category = magic_tank_heavy_turret_type
+		sfx = sfx_ui_sd_module_turret
+		allowed_module_categories = {
+			main_armament = {
+				magic_tank_heavy_main_armament
+				magic_tank_flamethrower
+			}
+		}
+		manpower = 2
+		xp_cost = 2
+		add_stats = {
+			build_cost_ic = 3.5
+			breakthrough = 27
+		}
+		build_cost_resources = {
+			steel = 2
+			crystals = 2
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = magic_tank_heavy_turret_type
+		}
+		#magic_tank_heavy_fixed_superstructure_turret is cheaper
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module = magic_tank_heavy_fixed_superstructure_turret
+			convert_cost_resources = {
+				crystals = 1
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module_category = tank_heavy_turret_type
+			convert_cost_resources = {
+				crystals = 2
+			}
+		}
+	}
+	magic_tank_heavy_three_man_tank_turret = {
+		abbreviation = "mth3mtt"
+		category = magic_tank_heavy_turret_type
+		sfx = sfx_ui_sd_module_turret
+		allowed_module_categories = {
+			main_armament = {
+				magic_tank_heavy_main_armament
+				magic_tank_flamethrower
+			}
+		}
+		manpower = 3
+		xp_cost = 3
+		add_stats = {
+			build_cost_ic = 5
+			breakthrough = 33
+		}
+		multiply_stats = {
+			maximum_speed = -0.15
+		}
+		build_cost_resources = {
+			steel = 2
+			crystals = 2
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = magic_tank_heavy_turret_type
+		}
+		#magic_tank_heavy_fixed_superstructure_turret is cheaper
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module = magic_tank_heavy_fixed_superstructure_turret
+			convert_cost_resources = {
+				crystals = 1
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module_category = tank_heavy_turret_type
+			convert_cost_resources = {
+				crystals = 2
+			}
 		}
 	}
 	magic_tank_heavy_fixed_superstructure_turret = {
-		abbreviation = "hfs"
-		category = tank_heavy_turret_type
+		abbreviation = "mthfst"
+		category = magic_tank_heavy_turret_type
 		sfx = sfx_ui_sd_module_turret
 		forbid_equipment_type = anti_air
 		allowed_module_categories = {
 			main_armament = {
-				tank_super_heavy_main_armament
+				tank_super_heavy_main_armament #magic turret supports non magic weapons
+
+				magic_tank_flamethrower
+				magic_tank_heavy_main_armament
 				magic_tank_super_heavy_main_armament
 			}
 		}
+		manpower = 2
 		#forbid_equipment_type_exact_match_for_category = {
 		#	tank_super_heavy_main_armament = armor
 		#}
-		xp_cost = 2
+		xp_cost = 1
 		add_stats = {
-			build_cost_ic = 5
+			build_cost_ic = 2.5
 			reliability = 0.2
-			defense = 3
+			defense = 17
 		}
 		multiply_stats = {
-			breakthrough = -0.25
+			breakthrough = -0.15
+		}
+		build_cost_resources = {
+			steel = 2
+			crystals = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = magic_tank_heavy_turret_type
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module_category = tank_heavy_turret_type
+			convert_cost_resources = {
+				crystals = 1
+			}
 		}
 	}
 	#turret type (super heavy)
 	tank_super_heavy_three_man_tank_turret = {
-		abbreviation = "s3m"
+		abbreviation = "tsh3mtt"
 		category = tank_super_heavy_turret_type
 		sfx = sfx_ui_sd_module_turret
 		add_stats = {
 			build_cost_ic = 10
-			reliability = -0.1
-			maximum_speed = -0.2
-			breakthrough = 24
+			breakthrough = 35
+			defense = 35
 		}
-		xp_cost = 2
 		multiply_stats = {
-			hard_attack = -0.1
+			maximum_speed = -0.1
+		}
+		manpower = 3
+		xp_cost = 2
+		build_cost_resources = {
+			steel = 3
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module = tank_super_heavy_four_man_tank_turret
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module = tank_super_heavy_fixed_superstructure_turret
+			convert_cost_resources = {
+				steel = 1
+			}
+		}
+		#magical
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module = magic_tank_super_heavy_three_man_tank_turret
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module = magic_tank_super_heavy_four_man_tank_turret
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module = magic_tank_super_heavy_fixed_superstructure_turret
+			convert_cost_resources = {
+				steel = 1
+			}
 		}
 	}
 	tank_super_heavy_four_man_tank_turret = {
-		abbreviation = "s4m"
+		abbreviation = "tsh4mtt"
 		category = tank_super_heavy_turret_type
 		sfx = sfx_ui_sd_module_turret
 		add_stats = {
-			build_cost_ic = 12
-			reliability = -0.25
-			maximum_speed = -0.5
-			breakthrough = 35
+			build_cost_ic = 13
+			breakthrough = 42
+			defense = 40
 		}
-		xp_cost = 2
+		multiply_stats = {
+			maximum_speed = -0.15
+		}
+		manpower = 4
+		xp_cost = 3
+		build_cost_resources = {
+			steel = 3
+			tungsten = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module = tank_super_heavy_three_man_tank_turret
+			convert_cost_resources = {
+				tungsten = 1
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module = tank_super_heavy_fixed_superstructure_turret
+			convert_cost_resources = {
+				steel = 1
+				tungsten = 1
+			}
+		}
+		#magical
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module = magic_tank_super_heavy_three_man_tank_turret
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module = magic_tank_super_heavy_four_man_tank_turret
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module = magic_tank_super_heavy_fixed_superstructure_turret
+			convert_cost_resources = {
+				steel = 1
+			}
+		}
 	}
 	tank_super_heavy_fixed_superstructure_turret = {
-		abbreviation = "hfs"
+		abbreviation = "tshfst"
 		category = tank_super_heavy_turret_type
 		sfx = sfx_ui_sd_module_turret
 		forbid_equipment_type = anti_air
 		#forbid_equipment_type_exact_match_for_category = {
 		#	tank_super_heavy_main_armament = armor
 		#}
-		xp_cost = 2
+		xp_cost = 1
 		add_stats = {
-			build_cost_ic = 5
+			build_cost_ic = 7
 			reliability = 0.2
-			defense = 3
+			defense = 50
+			armor_value = 0.05
 		}
 		multiply_stats = {
-			breakthrough = -0.25
+			breakthrough = -0.2
+		}
+		manpower = 2
+		build_cost_resources = {
+			steel = 2
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module = tank_super_heavy_three_man_tank_turret
+			convert_cost_resources = {
+				tungsten = 1
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module = tank_super_heavy_four_man_tank_turret
+		}
+		#magical
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module_category = magic_tank_super_heavy_turret_type
+		}
+	}
+	#turret type (magic super heavy)
+	magic_tank_super_heavy_three_man_tank_turret = {
+		abbreviation = "mtsh3mtt"
+		category = magic_tank_super_heavy_turret_type
+		sfx = sfx_ui_sd_module_turret
+		allowed_module_categories = {
+			main_armament = {
+				magic_tank_super_heavy_main_armament
+				magic_tank_flamethrower
+			}
+		}
+		add_stats = {
+			build_cost_ic = 10
+			breakthrough = 40
+			defense = 40
+		}
+		multiply_stats = {
+			maximum_speed = -0.05
+		}
+		manpower = 3
+		xp_cost = 2
+		build_cost_resources = {
+			steel = 3
+			crystals = 2
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module = tank_super_heavy_three_man_tank_turret
+			convert_cost_resources = {
+				crystals = 2
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module = tank_super_heavy_four_man_tank_turret
+			convert_cost_resources = {
+				crystals = 2
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module = tank_super_heavy_fixed_superstructure_turret
+			convert_cost_resources = {
+				steel = 1
+				crystals = 2
+			}
+		}
+		#magical
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module = magic_tank_super_heavy_four_man_tank_turret
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module = magic_tank_super_heavy_fixed_superstructure_turret
+			convert_cost_resources = {
+				steel = 1
+			}
+		}
+	}
+	magic_tank_super_heavy_four_man_tank_turret = {
+		abbreviation = "mtsh4mtt"
+		category = magic_tank_super_heavy_turret_type
+		sfx = sfx_ui_sd_module_turret
+		allowed_module_categories = {
+			main_armament = {
+				magic_tank_super_heavy_main_armament
+				magic_tank_flamethrower
+			}
+		}
+		add_stats = {
+			build_cost_ic = 16
+			breakthrough = 45
+			defense = 45
+		}
+		multiply_stats = {
+			maximum_speed = -0.1
+		}
+		manpower = 4
+		xp_cost = 3
+		build_cost_resources = {
+			steel = 3
+			crystals = 2
+			tungsten = 1
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module = tank_super_heavy_three_man_tank_turret
+			convert_cost_resources = {
+				crystals = 2
+				tungsten = 1
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module = tank_super_heavy_four_man_tank_turret
+			convert_cost_resources = {
+				crystals = 2
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module = tank_super_heavy_fixed_superstructure_turret
+			convert_cost_resources = {
+				steel = 1
+				crystals = 2
+				tungsten = 1
+			}
+		}
+		#magical
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module = magic_tank_super_heavy_three_man_tank_turret
+			convert_cost_resources = {
+				tungsten = 1
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module = magic_tank_super_heavy_fixed_superstructure_turret
+			convert_cost_resources = {
+				steel = 1
+				tungsten = 1
+			}
 		}
 	}
 	magic_tank_super_heavy_fixed_superstructure_turret = {
-		abbreviation = "hfs"
-		category = tank_super_heavy_turret_type
+		abbreviation = "mtshfst"
+		category = magic_tank_super_heavy_turret_type
 		sfx = sfx_ui_sd_module_turret
 		forbid_equipment_type = anti_air
+		allowed_module_categories = {
+			main_armament = {
+				magic_tank_super_heavy_main_armament
+				magic_tank_flamethrower
+			}
+		}
 		#forbid_equipment_type_exact_match_for_category = {
 		#	tank_super_heavy_main_armament = armor
 		#}
-		xp_cost = 2
+		xp_cost = 1
 		add_stats = {
-			build_cost_ic = 5
+			build_cost_ic = 7
 			reliability = 0.2
-			defense = 3
+			defense = 50
+			armor_value = 0.1
 		}
 		multiply_stats = {
-			breakthrough = -0.25
+			breakthrough = -0.2
+		}
+		manpower = 2
+		build_cost_resources = {
+			steel = 2
+			crystals = 2
+		}
+		can_convert_from = {
+			convert_cost_ic = @diff_turret_convert_cost
+			module_category = tank_super_heavy_turret_type
+			convert_cost_resources = {
+				crystals = 2
+			}
+		}
+		can_convert_from = {
+			convert_cost_ic = @same_turret_convert_cost
+			module_category = magic_tank_super_heavy_turret_type
 		}
 	}
 }

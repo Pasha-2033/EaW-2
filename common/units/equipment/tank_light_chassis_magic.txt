@@ -15,13 +15,13 @@ equipments = {
 				allowed_module_categories = {
 					tank_small_main_armament
 					tank_flamethrower
-					magic_tank_small_main_armament
-					magic_tank_flamethrower
+					#magic weapons are granted by turret
 				}
 			}
 			turret_type = {
 				required = yes
 				allowed_module_categories = {
+					tank_light_turret_type
 					magic_tank_light_turret_type
 				}
 			}
@@ -130,7 +130,7 @@ equipments = {
 		}
 		default_modules = {
 			#custom
-			main_armament = tank_small_main_armament
+			main_armament = tank_heavy_machine_gun
 			turret_type = tank_light_fixed_superstructure_turret
 			#fixed
 			fixed_suspension_type = tank_blocked_suspension

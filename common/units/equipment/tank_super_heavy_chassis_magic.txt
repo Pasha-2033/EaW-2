@@ -16,14 +16,14 @@ equipments = {
 				allowed_module_categories = {
 					tank_super_heavy_main_armament
 					tank_flamethrower
-					magic_tank_super_heavy_main_armament
-					magic_tank_flamethrower
+					#magic weapons are granted by turret
 				}
 			}
 			turret_type = {
 				required = yes
 				allowed_module_categories = {
 					tank_super_heavy_turret_type
+					magic_tank_super_heavy_turret_type
 				}
 			}
 			special_module_0 = {
