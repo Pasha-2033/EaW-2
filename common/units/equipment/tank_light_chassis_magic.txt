@@ -13,7 +13,12 @@ equipments = {
 			main_armament = {
 				required = yes
 				allowed_module_categories = {
-					tank_small_main_armament
+					tank_small_main_common_armament
+					tank_small_main_aa_armament
+					tank_small_main_artillery_armament
+					tank_small_main_at_armament
+					tank_small_main_rocket_armament
+
 					tank_flamethrower
 					#magic weapons are granted by turret
 				}

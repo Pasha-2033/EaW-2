@@ -109,7 +109,10 @@ equipment_modules = {
 		abbreviation = "tlfst"
 		category = tank_light_turret_type
 		sfx = sfx_ui_sd_module_turret
-		forbid_equipment_type = anti_air
+		forbid_equipment_type = {
+			anti_air
+			rocket
+		}
 		allowed_module_categories = {
 			main_armament = {
 				tank_medium_main_armament
@@ -149,7 +152,12 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		allowed_module_categories = {
 			main_armament = {
-				magic_tank_small_main_armament
+				magic_tank_small_main_common_armament
+				magic_tank_small_main_aa_armament
+				magic_tank_small_main_artillery_armament
+				magic_tank_small_main_at_armament
+				magic_tank_small_main_rocket_armament
+
 				magic_tank_flamethrower
 			}
 		}
@@ -186,7 +194,12 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		allowed_module_categories = {
 			main_armament = {
-				magic_tank_small_main_armament
+				magic_tank_small_main_common_armament
+				magic_tank_small_main_aa_armament
+				magic_tank_small_main_artillery_armament
+				magic_tank_small_main_at_armament
+				magic_tank_small_main_rocket_armament
+
 				magic_tank_flamethrower
 			}
 		}
@@ -222,7 +235,12 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		allowed_module_categories = {
 			main_armament = {
-				magic_tank_small_main_armament
+				magic_tank_small_main_common_armament
+				magic_tank_small_main_aa_armament
+				magic_tank_small_main_artillery_armament
+				magic_tank_small_main_at_armament
+				magic_tank_small_main_rocket_armament
+
 				magic_tank_flamethrower
 			}
 		}
@@ -254,7 +272,12 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		allowed_module_categories = {
 			main_armament = {
-				magic_tank_small_main_armament
+				magic_tank_small_main_common_armament
+				magic_tank_small_main_aa_armament
+				magic_tank_small_main_artillery_armament
+				magic_tank_small_main_at_armament
+				magic_tank_small_main_rocket_armament
+
 				magic_tank_flamethrower
 			}
 		}
@@ -287,14 +310,22 @@ equipment_modules = {
 		abbreviation = "mtlfst"
 		category = magic_tank_light_turret_type
 		sfx = sfx_ui_sd_module_turret
-		forbid_equipment_type = anti_air
+		forbid_equipment_type = {
+			anti_air
+			rocket
+		}
 		allowed_module_categories = {
 			main_armament = {
 				tank_medium_main_armament #magic turret supports non magic weapons
 
 				magic_tank_medium_main_armament
 
-				magic_tank_small_main_armament
+				magic_tank_small_main_common_armament
+				magic_tank_small_main_aa_armament
+				magic_tank_small_main_artillery_armament
+				magic_tank_small_main_at_armament
+				magic_tank_small_main_rocket_armament
+
 				magic_tank_flamethrower
 			}
 		}
@@ -391,8 +422,6 @@ equipment_modules = {
 			breakthrough = 16
 		}
 		xp_cost = 3
-		multiply_stats = {
-		}
 		build_cost_resources = {
 			steel = 1
 		}
@@ -434,7 +463,10 @@ equipment_modules = {
 		abbreviation = "tmfst"
 		category = tank_medium_turret_type
 		sfx = sfx_ui_sd_module_turret
-		forbid_equipment_type = anti_air
+		forbid_equipment_type = {
+			anti_air
+			rocket
+		}
 		allowed_module_categories = {
 			main_armament = {
 				tank_heavy_main_armament
@@ -550,8 +582,6 @@ equipment_modules = {
 		}
 		manpower = 2
 		xp_cost = 3
-		multiply_stats = {
-		}
 		can_convert_from = {
 			convert_cost_ic = @diff_suspension_conversion_cost
 			module_category = tank_medium_turret_type
@@ -599,7 +629,10 @@ equipment_modules = {
 		abbreviation = "mtmfst"
 		category = magic_tank_medium_turret_type
 		sfx = sfx_ui_sd_module_turret
-		forbid_equipment_type = anti_air
+		forbid_equipment_type = {
+			anti_air
+			rocket
+		}
 		allowed_module_categories = {
 			main_armament = {
 				tank_heavy_main_armament #magic turret supports non magic weapons
@@ -687,7 +720,10 @@ equipment_modules = {
 		abbreviation = "thfst"
 		category = tank_heavy_turret_type
 		sfx = sfx_ui_sd_module_turret
-		forbid_equipment_type = anti_air
+		forbid_equipment_type = {
+			anti_air
+			rocket
+		}
 		allowed_module_categories = {
 			main_armament = {
 				tank_super_heavy_main_armament
@@ -806,7 +842,10 @@ equipment_modules = {
 		abbreviation = "mthfst"
 		category = magic_tank_heavy_turret_type
 		sfx = sfx_ui_sd_module_turret
-		forbid_equipment_type = anti_air
+		forbid_equipment_type = {
+			anti_air
+			rocket
+		}
 		allowed_module_categories = {
 			main_armament = {
 				tank_super_heavy_main_armament #magic turret supports non magic weapons
@@ -945,7 +984,10 @@ equipment_modules = {
 		abbreviation = "tshfst"
 		category = tank_super_heavy_turret_type
 		sfx = sfx_ui_sd_module_turret
-		forbid_equipment_type = anti_air
+		forbid_equipment_type = {
+			anti_air
+			rocket
+		}
 		#forbid_equipment_type_exact_match_for_category = {
 		#	tank_super_heavy_main_armament = armor
 		#}
@@ -1110,7 +1152,10 @@ equipment_modules = {
 		abbreviation = "mtshfst"
 		category = magic_tank_super_heavy_turret_type
 		sfx = sfx_ui_sd_module_turret
-		forbid_equipment_type = anti_air
+		forbid_equipment_type = {
+			anti_air
+			rocket
+		}
 		allowed_module_categories = {
 			main_armament = {
 				magic_tank_super_heavy_main_armament

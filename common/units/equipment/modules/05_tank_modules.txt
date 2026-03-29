@@ -1,0 +1,599 @@
+#heavy tank weapons
+equipment_modules = {
+	limit = {
+		has_dlc = "No Step Back" 
+	}
+	#heavy cannon
+	tank_heavy_cannon_0 = {
+		abbreviation = "hc1"
+		category = tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = anti_tank
+
+		add_stats = {
+			soft_attack = 20
+			hard_attack = 20
+			ap_attack = 90
+			build_cost_ic = 6
+			maximum_speed = -0.3
+			reliability = -0.25
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 2
+			chromium = 1
+		}
+		can_convert_from = {
+			module_category = tank_heavy_main_armament
+			convert_cost_ic = 7.5
+		}
+	}
+	tank_heavy_cannon_1 = {
+		abbreviation = "hc2"
+		category = tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = anti_tank
+		parent = tank_heavy_cannon_0
+		add_stats = {
+			soft_attack = 25
+			hard_attack = 35
+			ap_attack = 125
+			build_cost_ic = 7
+			maximum_speed = -0.4
+			reliability = -0.25
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 2
+			chromium = 1
+		}
+		can_convert_from = {
+			module_category = tank_heavy_main_armament
+			convert_cost_ic = 9
+		}
+	}
+	tank_heavy_cannon_2 = {
+		abbreviation = "hc3"
+		category = tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = anti_tank
+		parent = tank_heavy_cannon_1
+		add_stats = {
+			soft_attack = 30
+			hard_attack = 40
+			ap_attack = 170
+			build_cost_ic = 8
+			maximum_speed = -0.5
+			reliability = -0.3
+		}
+		build_cost_resources = {
+			tungsten = 1
+			steel = 2
+			chromium = 1
+		}
+		xp_cost = 1
+		can_convert_from = {
+			module_category = tank_heavy_main_armament
+			convert_cost_ic = 11
+		}
+	}
+	tank_heavy_cannon_3 = {
+		abbreviation = "hc4"
+		category = tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = anti_tank
+		parent = tank_heavy_cannon_2
+		add_stats = {
+			soft_attack = 35
+			hard_attack = 45
+			ap_attack = 215
+			build_cost_ic = 9
+			maximum_speed = -0.6
+			reliability = -0.35
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 2
+			chromium = 1
+		}
+		can_convert_from = {
+			module_category = tank_heavy_main_armament
+			convert_cost_ic = 13
+		}
+	}
+	tank_heavy_cannon_4 = {
+		abbreviation = "hc5"
+		category = tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = anti_tank
+		parent = tank_heavy_cannon_3
+		add_stats = {
+			soft_attack = 40
+			hard_attack = 50
+			ap_attack = 260
+			build_cost_ic = 10
+			maximum_speed = -0.6
+			reliability = -0.35
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 2
+			chromium = 1
+		}
+		can_convert_from = {
+			module_category = tank_heavy_main_armament
+			convert_cost_ic = 13
+		}
+	}
+	tank_heavy_cannon_5 = {
+		abbreviation = "hc5"
+		category = tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = anti_tank
+		parent = tank_heavy_cannon_4
+		add_stats = {
+			soft_attack = 40
+			hard_attack = 50
+			ap_attack = 260
+			build_cost_ic = 10
+			maximum_speed = -0.6
+			reliability = -0.35
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 2
+			chromium = 1
+		}
+		can_convert_from = {
+			module_category = tank_heavy_main_armament
+			convert_cost_ic = 13
+		}
+	}
+	tank_heavy_cannon_6 = {
+		abbreviation = "hc5"
+		category = tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = anti_tank
+		parent = tank_heavy_cannon_5
+		add_stats = {
+			soft_attack = 40
+			hard_attack = 50
+			ap_attack = 260
+			build_cost_ic = 10
+			maximum_speed = -0.6
+			reliability = -0.35
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 2
+			chromium = 1
+		}
+		can_convert_from = {
+			module_category = tank_heavy_main_armament
+			convert_cost_ic = 13
+		}
+	}
+	#magic heavy cannon
+	tank_magic_heavy_cannon_0 = {
+		abbreviation = "hc1"
+		category = magic_tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = anti_tank
+		add_stats = {
+			soft_attack = 20
+			hard_attack = 20
+			ap_attack = 90
+			build_cost_ic = 6
+			maximum_speed = -0.3
+			reliability = -0.25
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 2
+			crystals = 2
+		}
+		can_convert_from = {
+			module_category = tank_heavy_main_armament
+			convert_cost_ic = 7.5
+		}
+	}
+	tank_magic_heavy_cannon_1 = {
+		abbreviation = "hc2"
+		category = magic_tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = anti_tank
+		parent = tank_magic_heavy_cannon_0
+		add_stats = {
+			soft_attack = 25
+			hard_attack = 35
+			ap_attack = 125
+			build_cost_ic = 7
+			maximum_speed = -0.4
+			reliability = -0.25
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 2
+			crystals = 2
+		}
+		can_convert_from = {
+			module_category = tank_heavy_main_armament
+			convert_cost_ic = 9
+		}
+	}
+	tank_magic_heavy_cannon_2 = {
+		abbreviation = "hc2"
+		category = magic_tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = anti_tank
+		parent = tank_magic_heavy_cannon_1
+		add_stats = {
+			soft_attack = 25
+			hard_attack = 35
+			ap_attack = 125
+			build_cost_ic = 7
+			maximum_speed = -0.4
+			reliability = -0.25
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 2
+			crystals = 2
+		}
+		can_convert_from = {
+			module_category = tank_heavy_main_armament
+			convert_cost_ic = 9
+		}
+	}
+	tank_magic_heavy_cannon_3 = {
+		abbreviation = "hc2"
+		category = magic_tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = anti_tank
+		parent = tank_magic_heavy_cannon_2
+		add_stats = {
+			soft_attack = 25
+			hard_attack = 35
+			ap_attack = 125
+			build_cost_ic = 7
+			maximum_speed = -0.4
+			reliability = -0.25
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 2
+			crystals = 2
+		}
+		can_convert_from = {
+			module_category = tank_heavy_main_armament
+			convert_cost_ic = 9
+		}
+	}
+	tank_magic_heavy_cannon_4 = {
+		abbreviation = "hc2"
+		category = magic_tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = anti_tank
+		parent = tank_magic_heavy_cannon_3
+		add_stats = {
+			soft_attack = 25
+			hard_attack = 35
+			ap_attack = 125
+			build_cost_ic = 7
+			maximum_speed = -0.4
+			reliability = -0.25
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 2
+			crystals = 2
+		}
+		can_convert_from = {
+			module_category = tank_heavy_main_armament
+			convert_cost_ic = 9
+		}
+	}
+	tank_magic_heavy_cannon_5 = {
+		abbreviation = "hc2"
+		category = magic_tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = anti_tank
+		parent = tank_magic_heavy_cannon_4
+		add_stats = {
+			soft_attack = 25
+			hard_attack = 35
+			ap_attack = 125
+			build_cost_ic = 7
+			maximum_speed = -0.4
+			reliability = -0.25
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 2
+			crystals = 2
+		}
+		can_convert_from = {
+			module_category = tank_heavy_main_armament
+			convert_cost_ic = 9
+		}
+	}
+	#heavy howitzer (as artillery)
+	tank_heavy_howitzer_0 = {
+		abbreviation = "hh1"
+		category = tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = artillery
+		add_stats = {
+			soft_attack = 55
+			hard_attack = 2
+			ap_attack = 60
+			build_cost_ic = 7
+			maximum_speed = -0.5
+			reliability = -0.3
+			breakthrough = -4
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 3
+		}
+		can_convert_from = {
+			module_category = tank_heavy_main_armament
+			convert_cost_ic = 8
+		}
+	}
+	tank_heavy_howitzer_1 = {
+		abbreviation = "hh2"
+		category = tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = artillery
+		parent = tank_heavy_howitzer_0
+
+		add_stats = {
+			soft_attack = 65
+			hard_attack = 3
+			ap_attack = 70
+			build_cost_ic = 8
+			maximum_speed = -0.6
+			reliability = -0.3
+			breakthrough = -4
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 3
+		}
+		can_convert_from = {
+			module_category = tank_heavy_main_armament
+			convert_cost_ic = 9
+		}
+	}
+	tank_heavy_howitzer_2 = {
+		abbreviation = "hh3"
+		category = tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = artillery
+		parent = tank_heavy_howitzer_1
+
+
+		add_stats = {
+			soft_attack = 75
+			hard_attack = 3
+			ap_attack = 80
+			build_cost_ic = 9
+			maximum_speed = -0.6
+			reliability = -0.3
+			breakthrough = -4
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 3
+		}
+		can_convert_from = {
+			module_category = tank_heavy_main_armament
+			convert_cost_ic = 11
+		}
+	}
+	tank_heavy_howitzer_3 = {
+		abbreviation = "hh3"
+		category = tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = artillery
+		parent = tank_heavy_howitzer_2
+
+
+		add_stats = {
+			soft_attack = 75
+			hard_attack = 3
+			ap_attack = 80
+			build_cost_ic = 9
+			maximum_speed = -0.6
+			reliability = -0.3
+			breakthrough = -4
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 3
+		}
+		can_convert_from = {
+			module_category = tank_heavy_main_armament
+			convert_cost_ic = 11
+		}
+	}
+	tank_heavy_howitzer_4 = {
+		abbreviation = "hh3"
+		category = tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = artillery
+		parent = tank_heavy_howitzer_3
+
+
+		add_stats = {
+			soft_attack = 75
+			hard_attack = 3
+			ap_attack = 80
+			build_cost_ic = 9
+			maximum_speed = -0.6
+			reliability = -0.3
+			breakthrough = -4
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 3
+		}
+		can_convert_from = {
+			module_category = tank_heavy_main_armament
+			convert_cost_ic = 11
+		}
+	}
+	#magic heavy howitzer (as artillery)
+	tank_magic_heavy_howitzer_0 = {
+		abbreviation = "hh1"
+		category = magic_tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = artillery
+
+		add_stats = {
+			soft_attack = 55
+			hard_attack = 2
+			ap_attack = 60
+			build_cost_ic = 7
+			maximum_speed = -0.5
+			reliability = -0.3
+			breakthrough = -4
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 3
+			crystals = 2
+		}
+		can_convert_from = {
+			module_category = tank_heavy_main_armament
+			convert_cost_ic = 8
+		}
+	}
+	tank_magic_heavy_howitzer_1 = {
+		abbreviation = "hh2"
+		category = magic_tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = artillery
+		parent = tank_magic_heavy_howitzer_0
+
+		add_stats = {
+			soft_attack = 65
+			hard_attack = 3
+			ap_attack = 70
+			build_cost_ic = 8
+			maximum_speed = -0.6
+			reliability = -0.3
+			breakthrough = -4
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 3
+			crystals = 2
+		}
+		can_convert_from = {
+			module_category = tank_heavy_main_armament
+			convert_cost_ic = 9
+		}
+	}
+	tank_magic_heavy_howitzer_2 = {
+		abbreviation = "hh2"
+		category = magic_tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = artillery
+		parent = tank_magic_heavy_howitzer_1
+
+		add_stats = {
+			soft_attack = 65
+			hard_attack = 3
+			ap_attack = 70
+			build_cost_ic = 8
+			maximum_speed = -0.6
+			reliability = -0.3
+			breakthrough = -4
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 3
+			crystals = 2
+		}
+		can_convert_from = {
+			module_category = tank_heavy_main_armament
+			convert_cost_ic = 9
+		}
+	}
+	tank_magic_heavy_howitzer_3 = {
+		abbreviation = "hh2"
+		category = magic_tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = artillery
+		parent = tank_magic_heavy_howitzer_2
+
+		add_stats = {
+			soft_attack = 65
+			hard_attack = 3
+			ap_attack = 70
+			build_cost_ic = 8
+			maximum_speed = -0.6
+			reliability = -0.3
+			breakthrough = -4
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 3
+			crystals = 2
+		}
+		can_convert_from = {
+			module_category = tank_heavy_main_armament
+			convert_cost_ic = 9
+		}
+	}
+	tank_magic_heavy_howitzer_4 = {
+		abbreviation = "hh2"
+		category = magic_tank_heavy_main_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = artillery
+		parent = tank_magic_heavy_howitzer_3
+
+		add_stats = {
+			soft_attack = 65
+			hard_attack = 3
+			ap_attack = 70
+			build_cost_ic = 8
+			maximum_speed = -0.6
+			reliability = -0.3
+			breakthrough = -4
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 3
+			crystals = 2
+		}
+		can_convert_from = {
+			module_category = tank_heavy_main_armament
+			convert_cost_ic = 9
+		}
+	}
+}
