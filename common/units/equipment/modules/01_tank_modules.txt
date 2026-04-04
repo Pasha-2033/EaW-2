@@ -115,7 +115,13 @@ equipment_modules = {
 		}
 		allowed_module_categories = {
 			main_armament = {
-				tank_medium_main_armament
+				tank_medium_main_common_armament
+				tank_medium_main_artillery_armament
+				tank_medium_main_aa_armament
+				tank_medium_main_rocket_armament
+				tank_medium_main_at_armament
+
+				tank_flamethrower
 			}
 		}
 		#forbid_equipment_type_exact_match_for_category = {
@@ -316,9 +322,18 @@ equipment_modules = {
 		}
 		allowed_module_categories = {
 			main_armament = {
-				tank_medium_main_armament #magic turret supports non magic weapons
+				#magic turret supports non magic weapons
+				tank_medium_main_common_armament
+				tank_medium_main_artillery_armament
+				tank_medium_main_aa_armament
+				tank_medium_main_rocket_armament
+				tank_medium_main_at_armament
 
-				magic_tank_medium_main_armament
+				magic_tank_medium_main_common_armament
+				magic_tank_medium_main_artillery_armament
+				magic_tank_medium_main_aa_armament
+				magic_tank_medium_main_rocket_armament
+				magic_tank_medium_main_at_armament
 
 				magic_tank_small_main_common_armament
 				magic_tank_small_main_aa_armament
@@ -383,7 +398,7 @@ equipment_modules = {
 		}
 		can_convert_from = {
 			convert_cost_ic = @diff_turret_convert_cost
-			module_category = magic_tank_medium_main_armament
+			module_category = magic_tank_medium_turret_type
 		}
 	}
 	tank_medium_one_man_tank_turret = {
@@ -409,7 +424,7 @@ equipment_modules = {
 		}
 		can_convert_from = {
 			convert_cost_ic = @diff_turret_convert_cost
-			module_category = magic_tank_medium_main_armament
+			module_category = magic_tank_medium_turret_type
 		}
 	}
 	tank_medium_two_man_tank_turret = {
@@ -431,7 +446,7 @@ equipment_modules = {
 		}
 		can_convert_from = {
 			convert_cost_ic = @diff_turret_convert_cost
-			module_category = magic_tank_medium_main_armament
+			module_category = magic_tank_medium_turret_type
 		}
 	}
 	tank_medium_three_man_tank_turret = {
@@ -456,7 +471,7 @@ equipment_modules = {
 		}
 		can_convert_from = {
 			convert_cost_ic = @diff_turret_convert_cost
-			module_category = magic_tank_medium_main_armament
+			module_category = magic_tank_medium_turret_type
 		}
 	}
 	tank_medium_fixed_superstructure_turret = {
@@ -469,7 +484,11 @@ equipment_modules = {
 		}
 		allowed_module_categories = {
 			main_armament = {
-				tank_heavy_main_armament
+				tank_heavy_main_common_armament
+				tank_heavy_main_artillery_armament
+				tank_heavy_main_aa_armament
+				tank_heavy_main_at_armament
+				tank_heavy_main_rocket_armament	
 			}
 		}
 		#forbid_equipment_type_exact_match_for_category = {
@@ -495,7 +514,7 @@ equipment_modules = {
 		}
 		can_convert_from = {
 			convert_cost_ic = @diff_turret_convert_cost
-			module_category = magic_tank_medium_main_armament
+			module_category = magic_tank_medium_turret_type
 		}
 	}
 	#turret type (magic medium)
@@ -505,7 +524,12 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		allowed_module_categories = {
 			main_armament = {
-				magic_tank_medium_main_armament
+				magic_tank_medium_main_common_armament
+				magic_tank_medium_main_artillery_armament
+				magic_tank_medium_main_aa_armament
+				magic_tank_medium_main_rocket_armament
+				magic_tank_medium_main_at_armament
+
 				magic_tank_flamethrower
 			}
 		}
@@ -531,7 +555,7 @@ equipment_modules = {
 		}
 		can_convert_from = {
 			convert_cost_ic = @same_turret_convert_cost
-			module_category = magic_tank_medium_main_armament
+			module_category = magic_tank_medium_turret_type
 		}
 	}
 	magic_tank_medium_one_man_tank_turret = {
@@ -540,7 +564,12 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		allowed_module_categories = {
 			main_armament = {
-				magic_tank_medium_main_armament
+				magic_tank_medium_main_common_armament
+				magic_tank_medium_main_artillery_armament
+				magic_tank_medium_main_aa_armament
+				magic_tank_medium_main_rocket_armament
+				magic_tank_medium_main_at_armament
+
 				magic_tank_flamethrower
 			}
 		}
@@ -563,7 +592,7 @@ equipment_modules = {
 		}
 		can_convert_from = {
 			convert_cost_ic = @same_turret_convert_cost
-			module_category = magic_tank_medium_main_armament
+			module_category = magic_tank_medium_turret_type
 		}
 	}
 	magic_tank_medium_two_man_tank_turret = {
@@ -572,7 +601,12 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		allowed_module_categories = {
 			main_armament = {
-				magic_tank_medium_main_armament
+				magic_tank_medium_main_common_armament
+				magic_tank_medium_main_artillery_armament
+				magic_tank_medium_main_aa_armament
+				magic_tank_medium_main_rocket_armament
+				magic_tank_medium_main_at_armament
+
 				magic_tank_flamethrower
 			}
 		}
@@ -591,7 +625,7 @@ equipment_modules = {
 		}
 		can_convert_from = {
 			convert_cost_ic = @same_turret_convert_cost
-			module_category = magic_tank_medium_main_armament
+			module_category = magic_tank_medium_turret_type
 		}
 	}
 	magic_tank_medium_three_man_tank_turret = {
@@ -600,7 +634,12 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		allowed_module_categories = {
 			main_armament = {
-				magic_tank_medium_main_armament
+				magic_tank_medium_main_common_armament
+				magic_tank_medium_main_artillery_armament
+				magic_tank_medium_main_aa_armament
+				magic_tank_medium_main_rocket_armament
+				magic_tank_medium_main_at_armament
+
 				magic_tank_flamethrower
 			}
 		}
@@ -622,7 +661,7 @@ equipment_modules = {
 		}
 		can_convert_from = {
 			convert_cost_ic = @same_turret_convert_cost
-			module_category = magic_tank_medium_main_armament
+			module_category = magic_tank_medium_turret_type
 		}
 	}
 	magic_tank_medium_fixed_superstructure_turret = {
@@ -635,11 +674,26 @@ equipment_modules = {
 		}
 		allowed_module_categories = {
 			main_armament = {
-				tank_heavy_main_armament #magic turret supports non magic weapons
+				#magic turret supports non magic weapons
+				tank_heavy_main_common_armament
+				tank_heavy_main_artillery_armament
+				tank_heavy_main_aa_armament
+				tank_heavy_main_at_armament
+				tank_heavy_main_rocket_armament	
 
-				magic_tank_medium_main_armament
+				magic_tank_heavy_main_common_armament
+				magic_tank_heavy_main_artillery_armament
+				magic_tank_heavy_main_aa_armament
+				magic_tank_heavy_main_at_armament
+				magic_tank_heavy_main_rocket_armament	
+
+				magic_tank_medium_main_common_armament
+				magic_tank_medium_main_artillery_armament
+				magic_tank_medium_main_aa_armament
+				magic_tank_medium_main_rocket_armament
+				magic_tank_medium_main_at_armament
+
 				magic_tank_flamethrower
-				magic_tank_heavy_main_armament
 			}
 		}
 		#forbid_equipment_type_exact_match_for_category = {
@@ -665,7 +719,7 @@ equipment_modules = {
 		}
 		can_convert_from = {
 			convert_cost_ic = @same_turret_convert_cost
-			module_category = magic_tank_medium_main_armament
+			module_category = magic_tank_medium_turret_type
 		}
 	}
 	#turret type (heavy)
@@ -726,7 +780,10 @@ equipment_modules = {
 		}
 		allowed_module_categories = {
 			main_armament = {
-				tank_super_heavy_main_armament
+				tank_super_heavy_main_common_armament
+				tank_super_heavy_main_artillery_armament
+				tank_super_heavy_main_aa_armament
+				tank_super_heavy_main_at_armament
 			}
 		}
 		#forbid_equipment_type_exact_match_for_category = {
@@ -761,8 +818,12 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		allowed_module_categories = {
 			main_armament = {
-				magic_tank_heavy_main_armament
-				magic_tank_flamethrower
+				magic_tank_heavy_main_common_armament
+				magic_tank_heavy_main_artillery_armament
+				magic_tank_heavy_main_aa_armament
+				magic_tank_heavy_main_at_armament
+				magic_tank_heavy_main_rocket_armament	
+				magic_tank_flamethrower		
 			}
 		}
 		manpower = 2
@@ -801,8 +862,12 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		allowed_module_categories = {
 			main_armament = {
-				magic_tank_heavy_main_armament
-				magic_tank_flamethrower
+				magic_tank_heavy_main_common_armament
+				magic_tank_heavy_main_artillery_armament
+				magic_tank_heavy_main_aa_armament
+				magic_tank_heavy_main_at_armament
+				magic_tank_heavy_main_rocket_armament	
+				magic_tank_flamethrower		
 			}
 		}
 		manpower = 3
@@ -848,11 +913,23 @@ equipment_modules = {
 		}
 		allowed_module_categories = {
 			main_armament = {
-				tank_super_heavy_main_armament #magic turret supports non magic weapons
+				#magic turret supports non magic weapons
+				tank_super_heavy_main_common_armament
+				tank_super_heavy_main_artillery_armament
+				tank_super_heavy_main_aa_armament
+				tank_super_heavy_main_at_armament
 
-				magic_tank_flamethrower
-				magic_tank_heavy_main_armament
-				magic_tank_super_heavy_main_armament
+				magic_tank_super_heavy_main_common_armament
+				magic_tank_super_heavy_main_artillery_armament
+				magic_tank_super_heavy_main_aa_armament
+				magic_tank_super_heavy_main_at_armament
+
+				magic_tank_heavy_main_common_armament
+				magic_tank_heavy_main_artillery_armament
+				magic_tank_heavy_main_aa_armament
+				magic_tank_heavy_main_at_armament
+				magic_tank_heavy_main_rocket_armament	
+				magic_tank_flamethrower		
 			}
 		}
 		manpower = 2
@@ -1029,7 +1106,11 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		allowed_module_categories = {
 			main_armament = {
-				magic_tank_super_heavy_main_armament
+				magic_tank_super_heavy_main_common_armament
+				magic_tank_super_heavy_main_artillery_armament
+				magic_tank_super_heavy_main_aa_armament
+				magic_tank_super_heavy_main_at_armament
+
 				magic_tank_flamethrower
 			}
 		}
@@ -1088,7 +1169,11 @@ equipment_modules = {
 		sfx = sfx_ui_sd_module_turret
 		allowed_module_categories = {
 			main_armament = {
-				magic_tank_super_heavy_main_armament
+				magic_tank_super_heavy_main_common_armament
+				magic_tank_super_heavy_main_artillery_armament
+				magic_tank_super_heavy_main_aa_armament
+				magic_tank_super_heavy_main_at_armament
+
 				magic_tank_flamethrower
 			}
 		}
@@ -1158,7 +1243,11 @@ equipment_modules = {
 		}
 		allowed_module_categories = {
 			main_armament = {
-				magic_tank_super_heavy_main_armament
+				magic_tank_super_heavy_main_common_armament
+				magic_tank_super_heavy_main_artillery_armament
+				magic_tank_super_heavy_main_aa_armament
+				magic_tank_super_heavy_main_at_armament
+
 				magic_tank_flamethrower
 			}
 		}

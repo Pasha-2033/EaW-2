@@ -40,8 +40,10 @@ equipments = {
 			crystals = 2
 		}
 		can_be_produced = {
-            NOT = {
-				original_tag = WIT
+			#suka blyat`! scripted triggers crashes game!
+			OR = {
+				has_idea = dragon_race
+				has_idea = multi_race
 			}
 		}
 	}
@@ -54,5 +56,3 @@ equipments = {
 		is_convertable = no
 	}
 }
-
-#####---------------------------------------------------------------------End

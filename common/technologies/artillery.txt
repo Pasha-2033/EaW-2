@@ -55,7 +55,9 @@ technologies = {
 			artillery_equipment_2
 		}
 		enable_equipment_modules = {
+			tank_light_howitzer_0
 			tank_medium_howitzer_0
+			tank_heavy_howitzer_0
 		}
 		on_research_complete_limit = {
 			country_without_sp = no #"no" because we want to forbid, not just check
@@ -102,9 +104,9 @@ technologies = {
 			artillery_equipment_3
 		}
 		enable_equipment_modules = {
+			tank_light_howitzer_1
 			tank_medium_howitzer_1
-			tank_heavy_howitzer_0
-			tank_high_velocity_cannon_0
+			tank_heavy_howitzer_1
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -128,9 +130,9 @@ technologies = {
 			artillery_equipment_4
 		}
 		enable_equipment_modules = {
+			tank_light_howitzer_2
 			tank_medium_howitzer_2
-			tank_heavy_howitzer_1
-			tank_high_velocity_cannon_1
+			tank_heavy_howitzer_2
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -154,9 +156,9 @@ technologies = {
 			artillery_equipment_5
 		}
 		enable_equipment_modules = {
+			tank_light_howitzer_3
 			tank_medium_howitzer_3
-			tank_heavy_howitzer_2
-			tank_high_velocity_cannon_2
+			tank_heavy_howitzer_3
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -180,9 +182,9 @@ technologies = {
 			artillery_equipment_6
 		}
 		enable_equipment_modules = {
+			tank_light_howitzer_4
 			tank_medium_howitzer_4
-			tank_heavy_howitzer_3
-			tank_high_velocity_cannon_3
+			tank_heavy_howitzer_4
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -206,9 +208,9 @@ technologies = {
 			artillery_equipment_7
 		}
 		enable_equipment_modules = {
+			tank_light_howitzer_5
 			tank_medium_howitzer_5
-			tank_heavy_howitzer_4
-			tank_high_velocity_cannon_4
+			tank_heavy_howitzer_5
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -234,9 +236,9 @@ technologies = {
 			magic_artillery_equipment_0
 		}
 		enable_equipment_modules = {
+			tank_magic_light_howitzer_0
 			tank_magic_medium_howitzer_0
 			tank_magic_heavy_howitzer_0
-			tank_magic_high_velocity_cannon_0
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -261,9 +263,9 @@ technologies = {
 			magic_artillery_equipment_1
 		}
 		enable_equipment_modules = {
+			tank_magic_light_howitzer_1
 			tank_magic_medium_howitzer_1
 			tank_magic_heavy_howitzer_1
-			tank_magic_high_velocity_cannon_1
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -288,9 +290,9 @@ technologies = {
 			magic_artillery_equipment_2
 		}
 		enable_equipment_modules = {
+			tank_magic_light_howitzer_2
 			tank_magic_medium_howitzer_2
 			tank_magic_heavy_howitzer_2
-			tank_magic_high_velocity_cannon_2
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -315,9 +317,9 @@ technologies = {
 			magic_artillery_equipment_3
 		}
 		enable_equipment_modules = {
+			tank_magic_light_howitzer_3
 			tank_magic_medium_howitzer_3
 			tank_magic_heavy_howitzer_3
-			tank_magic_high_velocity_cannon_3
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -342,9 +344,9 @@ technologies = {
 			magic_artillery_equipment_4
 		}
 		enable_equipment_modules = {
+			tank_magic_light_howitzer_4
 			tank_magic_medium_howitzer_4
 			tank_magic_heavy_howitzer_4
-			tank_magic_high_velocity_cannon_4
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -880,7 +882,8 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			tank_anti_air_cannon_0
-			tank_heavy_cannon_0
+			tank_medium_anti_air_cannon_0
+			tank_heavy_anti_air_cannon_0
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -906,7 +909,8 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			tank_anti_air_cannon_1
-			tank_heavy_cannon_1
+			tank_medium_anti_air_cannon_1
+			tank_heavy_anti_air_cannon_1
 		}
 		path = {
 			leads_to_tech = common_antiair_0
@@ -931,7 +935,8 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			tank_anti_air_cannon_2
-			tank_heavy_cannon_2
+			tank_medium_anti_air_cannon_2
+			tank_heavy_anti_air_cannon_2
 		}
 		path = {
 			leads_to_tech = antiair_3
@@ -953,7 +958,8 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			tank_anti_air_cannon_3
-			tank_heavy_cannon_3
+			tank_medium_anti_air_cannon_3
+			tank_heavy_anti_air_cannon_3
 		}
 		path = {
 			leads_to_tech = common_antiair_1
@@ -978,7 +984,8 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			tank_anti_air_cannon_4
-			tank_heavy_cannon_4
+			tank_medium_anti_air_cannon_4
+			tank_heavy_anti_air_cannon_4
 		}
 		path = {
 			leads_to_tech = common_antiair_2
@@ -1003,7 +1010,8 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			tank_anti_air_cannon_5
-			tank_heavy_cannon_5
+			tank_medium_anti_air_cannon_5
+			tank_heavy_anti_air_cannon_5
 		}
 		path = {
 			leads_to_tech = common_antiair_3
@@ -1028,7 +1036,8 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			tank_anti_air_cannon_6
-			tank_heavy_cannon_6
+			tank_medium_anti_air_cannon_6
+			tank_heavy_anti_air_cannon_6
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -1050,7 +1059,8 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			tank_magic_anti_air_cannon_0
-			tank_magic_heavy_cannon_0
+			tank_medium_magic_anti_air_cannon_0
+			tank_magic_heavy_anti_air_cannon_0
 		}
 		path = {
 			leads_to_tech = common_antiair_0
@@ -1076,7 +1086,8 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			tank_magic_anti_air_cannon_1
-			tank_magic_heavy_cannon_1
+			tank_medium_magic_anti_air_cannon_1
+			tank_magic_heavy_anti_air_cannon_1
 		}
 		path = {
 			leads_to_tech = magic_antiair_2
@@ -1099,7 +1110,8 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			tank_magic_anti_air_cannon_2
-			tank_magic_heavy_cannon_2
+			tank_medium_magic_anti_air_cannon_2
+			tank_magic_heavy_anti_air_cannon_2
 		}
 		path = {
 			leads_to_tech = common_antiair_1
@@ -1125,7 +1137,8 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			tank_magic_anti_air_cannon_3
-			tank_magic_heavy_cannon_3
+			tank_medium_magic_anti_air_cannon_3
+			tank_magic_heavy_anti_air_cannon_3
 		}
 		path = {
 			leads_to_tech = common_antiair_2
@@ -1151,7 +1164,8 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			tank_magic_anti_air_cannon_4
-			tank_magic_heavy_cannon_4
+			tank_medium_magic_anti_air_cannon_4
+			tank_magic_heavy_anti_air_cannon_4
 		}
 		path = {
 			leads_to_tech = common_antiair_3
@@ -1177,7 +1191,8 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			tank_magic_anti_air_cannon_5
-			tank_magic_heavy_cannon_5
+			tank_medium_magic_anti_air_cannon_5
+			tank_magic_heavy_anti_air_cannon_5
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -1277,8 +1292,9 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			#weapons
-			tank_small_cannon_0
-			tank_medium_cannon_0
+			tank_high_velocity_cannon_0
+			tank_medium_high_velocity_cannon_0
+			tank_heavy_high_velocity_cannon_0
 			#secondary turret
 			secondary_turret_small_cannon
 		}
@@ -1305,8 +1321,9 @@ technologies = {
 			anti_tank_equipment_1
 		}
 		enable_equipment_modules = {
-			tank_small_cannon_1
-			tank_medium_cannon_1
+			tank_high_velocity_cannon_1
+			tank_medium_high_velocity_cannon_1
+			tank_heavy_high_velocity_cannon_1
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -1330,8 +1347,9 @@ technologies = {
 			anti_tank_equipment_2
 		}
 		enable_equipment_modules = {
-			tank_small_cannon_2
-			tank_medium_cannon_2
+			tank_high_velocity_cannon_2
+			tank_medium_high_velocity_cannon_2
+			tank_heavy_high_velocity_cannon_2
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -1355,8 +1373,9 @@ technologies = {
 			anti_tank_equipment_3
 		}
 		enable_equipment_modules = {
-			tank_small_cannon_3
-			tank_medium_cannon_3
+			tank_high_velocity_cannon_3
+			tank_medium_high_velocity_cannon_3
+			tank_heavy_high_velocity_cannon_3
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -1380,8 +1399,9 @@ technologies = {
 			anti_tank_equipment_4
 		}
 		enable_equipment_modules = {
-			tank_small_cannon_4
-			tank_medium_cannon_4
+			tank_high_velocity_cannon_4
+			tank_medium_high_velocity_cannon_4
+			tank_heavy_high_velocity_cannon_4
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -1405,8 +1425,9 @@ technologies = {
 			anti_tank_equipment_5
 		}
 		enable_equipment_modules = {
-			tank_small_cannon_5
-			tank_medium_cannon_5
+			tank_high_velocity_cannon_5
+			tank_medium_high_velocity_cannon_5
+			tank_heavy_high_velocity_cannon_5
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -1427,8 +1448,9 @@ technologies = {
 			magic_anti_tank_equipment_0
 		}
 		enable_equipment_modules = {
-			tank_magic_small_cannon_0
-			tank_magic_medium_cannon_0
+			tank_magic_high_velocity_cannon_0
+			tank_medium_magic_high_velocity_cannon_0
+			tank_heavy_magic_high_velocity_cannon_0
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -1453,8 +1475,9 @@ technologies = {
 			magic_anti_tank_equipment_1
 		}
 		enable_equipment_modules = {
-			tank_magic_small_cannon_1
-			tank_magic_medium_cannon_1
+			tank_magic_high_velocity_cannon_1
+			tank_medium_magic_high_velocity_cannon_1
+			tank_heavy_magic_high_velocity_cannon_1
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -1479,8 +1502,9 @@ technologies = {
 			magic_anti_tank_equipment_2
 		}
 		enable_equipment_modules = {
-			tank_magic_small_cannon_2
-			tank_magic_medium_cannon_2
+			tank_magic_high_velocity_cannon_2
+			tank_medium_magic_high_velocity_cannon_2
+			tank_heavy_magic_high_velocity_cannon_2
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -1505,8 +1529,9 @@ technologies = {
 			magic_anti_tank_equipment_3
 		}
 		enable_equipment_modules = {
-			tank_magic_small_cannon_3
-			tank_magic_medium_cannon_3
+			tank_magic_high_velocity_cannon_3
+			tank_medium_magic_high_velocity_cannon_3
+			tank_heavy_magic_high_velocity_cannon_3
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -1531,8 +1556,9 @@ technologies = {
 			magic_anti_tank_equipment_4
 		}
 		enable_equipment_modules = {
-			tank_magic_small_cannon_4
-			tank_magic_medium_cannon_4
+			tank_magic_high_velocity_cannon_4
+			tank_medium_magic_high_velocity_cannon_4
+			tank_heavy_magic_high_velocity_cannon_4
 		}
 		start_year = 800
 		research_cost = 0.5
@@ -1633,6 +1659,7 @@ technologies = {
 		enable_equipment_modules = {
 			tank_small_rocket_armament_0
 			tank_rocket_launcher_0
+			tank_heavy_rocket_launcher_0
 		}
 		path = {
 			leads_to_tech = rocket_artillery_1
@@ -1659,6 +1686,7 @@ technologies = {
 		enable_equipment_modules = {
 			tank_small_rocket_armament_1
 			tank_rocket_launcher_1
+			tank_heavy_rocket_launcher_1
 		}
 		sub_technologies = {
 			motorized_rocket_artillery_0
@@ -1708,6 +1736,7 @@ technologies = {
 		enable_equipment_modules = {
 			tank_small_rocket_armament_2
 			tank_rocket_launcher_2
+			tank_heavy_rocket_launcher_2
 		}
 		sub_technologies = {
 			motorized_rocket_artillery_1
@@ -1753,6 +1782,7 @@ technologies = {
 		enable_equipment_modules = {
 			tank_small_rocket_armament_3
 			tank_rocket_launcher_3
+			tank_heavy_rocket_launcher_3
 		}
 		sub_technologies = {
 			motorized_rocket_artillery_2
@@ -1798,6 +1828,7 @@ technologies = {
 		enable_equipment_modules = {
 			tank_small_rocket_armament_4
 			tank_rocket_launcher_4
+			tank_heavy_rocket_launcher_4
 		}
 		sub_technologies = {
 			motorized_rocket_artillery_3
@@ -1843,6 +1874,7 @@ technologies = {
 		enable_equipment_modules = {
 			tank_magic_rocket_launcher_0
 			tank_magic_small_rocket_armament_0
+			tank_heavy_magic_rocket_launcher_0
 		}
 		sub_technologies = {
 			motorized_magic_rocket_artillery_0
@@ -1896,6 +1928,7 @@ technologies = {
 		enable_equipment_modules = {
 			tank_magic_rocket_launcher_1
 			tank_magic_small_rocket_armament_1
+			tank_heavy_magic_rocket_launcher_1
 		}
 		sub_technologies = {
 			motorized_magic_rocket_artillery_1
@@ -1946,6 +1979,7 @@ technologies = {
 		enable_equipment_modules = {
 			tank_magic_rocket_launcher_2
 			tank_magic_small_rocket_armament_2
+			tank_heavy_magic_rocket_launcher_2
 		}
 		sub_technologies = {
 			motorized_magic_rocket_artillery_2
@@ -1996,6 +2030,7 @@ technologies = {
 		enable_equipment_modules = {
 			tank_magic_rocket_launcher_3
 			tank_magic_small_rocket_armament_3
+			tank_heavy_magic_rocket_launcher_3
 		}
 		sub_technologies = {
 			motorized_magic_rocket_artillery_3
@@ -2221,7 +2256,6 @@ technologies = {
 
 
 		enable_equipment_modules = {
-			tank_small_cannon_2
 			tank_close_support_gun
 			secondary_turret_close_support_gun
 		}
@@ -2447,7 +2481,6 @@ technologies = {
 			artillery_equipment_3
 		}
 		enable_equipment_modules = {
-			tank_medium_cannon_2
 		}
 
 		path = {
@@ -2519,9 +2552,7 @@ technologies = {
 			research_cost_coeff = 1
 		}
 		enable_equipment_modules = {
-			tank_heavy_howitzer
-			tank_super_heavy_howitzer
-			auto_loader
+
 		}
 
 		research_cost = 1
@@ -2760,9 +2791,6 @@ technologies = {
 
 		enable_equipment_modules = {
 			ship_anti_air_2
-			tank_auto_cannon
-			tank_anti_air_cannon
-			tank_heavy_cannon
 		}
 
 		enable_building = {
@@ -2905,7 +2933,7 @@ technologies = {
 			air_attack = 0.1
 		}
 		enable_equipment_modules = {
-			tank_heavy_cannon_2
+
 		}
 
 		tech_air_damage_factor = -0.02
@@ -2993,7 +3021,6 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			ship_anti_air_4
-			tank_heavy_cannon_3
 			tank_anti_air_cannon_3
 			auto_loader
 		}
@@ -3025,8 +3052,6 @@ technologies = {
 			anti_tank_equipment_1
 		}
 		enable_equipment_modules = {
-			tank_high_velocity_cannon
-			tank_heavy_cannon
 			tank_buster_0
 		}
 		path = {
@@ -3173,7 +3198,6 @@ technologies = {
 			anti_tank_equipment_2
 		}
 		enable_equipment_modules = {
-			tank_heavy_cannon_2
 			tank_buster_1
 		}		
 		path = {
@@ -3228,7 +3252,6 @@ technologies = {
 
 	antitank3 = {
 		enable_equipment_modules = {
-			tank_medium_cannon_2
 		}
 		anti_tank = {
 			hard_attack = 0.1
@@ -3404,9 +3427,7 @@ technologies = {
 			anti_tank_equipment_3
 		}	
 		enable_equipment_modules = {
-			tank_medium_cannon_3
 			tank_high_velocity_cannon_3
-			tank_heavy_cannon_3
 			auto_loader
 		}
 		
@@ -3609,7 +3630,6 @@ technologies = {
 
 		enable_equipment_modules = {
 			tank_high_velocity_cannon_4
-			tank_heavy_cannon_4
 		}
 
 		path = {
@@ -3795,7 +3815,6 @@ technologies = {
 
 		enable_equipment_modules = {
 			tank_high_velocity_cannon_5
-			tank_heavy_cannon_5
 			anti_tank_guided_missiles
 		}
 
@@ -3838,8 +3857,6 @@ technologies = {
 
 
 		enable_equipment_modules = {
-			tank_small_cannon_3
-			tank_medium_cannon_3
 		}
 		artillery = {
 			soft_attack = 0.1
@@ -3893,8 +3910,6 @@ technologies = {
 		}
 
 		enable_equipment_modules = {
-			tank_heavy_howitzer_2
-			tank_super_heavy_howitzer_2
 		}
 
 		path = {
@@ -3965,7 +3980,6 @@ technologies = {
 
 	artillery_d = {
 		enable_equipment_modules = {
-			tank_small_cannon_4
 		}
 
 		artillery = {
@@ -4019,8 +4033,7 @@ technologies = {
 			artillery_equipment_x_2
 		}
 		enable_equipment_modules = {
-			tank_heavy_howitzer_3
-			tank_super_heavy_howitzer_3
+
 		}
 		research_cost = 1
 
@@ -4407,7 +4420,7 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			ship_anti_air_5
-			tank_heavy_cannon_4
+
 			tank_anti_air_cannon_4
 		}
 
@@ -4524,7 +4537,7 @@ technologies = {
 		}
 		enable_equipment_modules = {
 			ship_anti_air_6
-			tank_heavy_cannon_5
+
 			tank_anti_air_cannon_5
 		}
 

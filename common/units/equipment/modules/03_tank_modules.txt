@@ -790,6 +790,16 @@ equipment_modules = {
 			crystals = 1
 		}
 	}
+	tank_magic_small_cannon_5 = {
+		abbreviation = "sc2"
+		category = magic_tank_small_main_common_armament
+		sfx = sfx_ui_sd_module_turret
+		parent = tank_magic_small_cannon_4
+		build_cost_resources = {
+			steel = 1
+			crystals = 1
+		}
+	}
 	#small mortars (as artillery)
 	tank_small_mortar_0 = {
 		abbreviation = "cs"
@@ -905,6 +915,242 @@ equipment_modules = {
 			crystals = 1
 		}
 	}
+	#howitzer (as artillery)
+	tank_light_howitzer_0 = {
+		abbreviation = "mh1"
+		category = tank_small_main_artillery_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = artillery
+		add_stats = {
+			soft_attack = 35
+			hard_attack = 1
+			ap_attack = 20
+			build_cost_ic = 4
+			maximum_speed = -0.3
+			reliability = -0.2
+			breakthrough = -2
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 2
+		}
+	}
+	tank_light_howitzer_1 = {
+		abbreviation = "mh2"
+		category = tank_small_main_artillery_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = artillery
+		parent = tank_light_howitzer_0
+		add_stats = {
+			soft_attack = 45
+			hard_attack = 2
+			ap_attack = 30
+			build_cost_ic = 5.5
+			maximum_speed = -0.4
+			reliability = -0.2
+			breakthrough = -2
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 2
+		}
+	}
+	tank_light_howitzer_2 = {
+		abbreviation = "mh2"
+		category = tank_small_main_artillery_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = artillery
+		parent = tank_light_howitzer_1
+		add_stats = {
+			soft_attack = 45
+			hard_attack = 2
+			ap_attack = 30
+			build_cost_ic = 5.5
+			maximum_speed = -0.4
+			reliability = -0.2
+			breakthrough = -2
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 2
+		}
+	}
+	tank_light_howitzer_3 = {
+		abbreviation = "mh2"
+		category = tank_small_main_artillery_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = artillery
+		parent = tank_light_howitzer_2
+		add_stats = {
+			soft_attack = 45
+			hard_attack = 2
+			ap_attack = 30
+			build_cost_ic = 5.5
+			maximum_speed = -0.4
+			reliability = -0.2
+			breakthrough = -2
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 2
+		}
+	}
+	tank_light_howitzer_4 = {
+		abbreviation = "mh2"
+		category = tank_small_main_artillery_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = artillery
+		parent = tank_light_howitzer_3
+		add_stats = {
+			soft_attack = 45
+			hard_attack = 2
+			ap_attack = 30
+			build_cost_ic = 5.5
+			maximum_speed = -0.4
+			reliability = -0.2
+			breakthrough = -2
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 2
+		}
+	}
+	tank_light_howitzer_5 = {
+		abbreviation = "mh2"
+		category = tank_small_main_artillery_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = artillery
+		parent = tank_light_howitzer_4
+		add_stats = {
+			soft_attack = 45
+			hard_attack = 2
+			ap_attack = 30
+			build_cost_ic = 5.5
+			maximum_speed = -0.4
+			reliability = -0.2
+			breakthrough = -2
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 2
+		}
+	}
+	#magic howitzer (as artillery)
+	tank_magic_light_howitzer_0 = {
+		abbreviation = "mh1"
+		category = magic_tank_small_main_artillery_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = artillery
+		add_stats = {
+			soft_attack = 35
+			hard_attack = 1
+			ap_attack = 20
+			build_cost_ic = 4
+			maximum_speed = -0.3
+			reliability = -0.2
+			breakthrough = -2
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 2
+			crystals = 1
+		}
+	}
+	tank_magic_light_howitzer_1 = {
+		abbreviation = "mh2"
+		category = magic_tank_small_main_artillery_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = artillery
+		parent = tank_light_howitzer_0
+		add_stats = {
+			soft_attack = 45
+			hard_attack = 2
+			ap_attack = 30
+			build_cost_ic = 5.5
+			maximum_speed = -0.4
+			reliability = -0.2
+			breakthrough = -2
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 2
+			crystals = 1
+		}
+	}
+	tank_magic_light_howitzer_2 = {
+		abbreviation = "mh2"
+		category = magic_tank_small_main_artillery_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = artillery
+		parent = tank_light_howitzer_1
+		add_stats = {
+			soft_attack = 45
+			hard_attack = 2
+			ap_attack = 30
+			build_cost_ic = 5.5
+			maximum_speed = -0.4
+			reliability = -0.2
+			breakthrough = -2
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 2
+			crystals = 1
+		}
+	}
+	tank_magic_light_howitzer_3 = {
+		abbreviation = "mh2"
+		category = magic_tank_small_main_artillery_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = artillery
+		parent = tank_light_howitzer_2
+		add_stats = {
+			soft_attack = 45
+			hard_attack = 2
+			ap_attack = 30
+			build_cost_ic = 5.5
+			maximum_speed = -0.4
+			reliability = -0.2
+			breakthrough = -2
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 2
+			crystals = 1
+		}
+	}
+	tank_magic_light_howitzer_4 = {
+		abbreviation = "mh2"
+		category = magic_tank_small_main_artillery_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = artillery
+		parent = tank_light_howitzer_3
+		add_stats = {
+			soft_attack = 45
+			hard_attack = 2
+			ap_attack = 30
+			build_cost_ic = 5.5
+			maximum_speed = -0.4
+			reliability = -0.2
+			breakthrough = -2
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 2
+			crystals = 1
+		}
+	}
 	#high velocity cannon (as at)
 	tank_high_velocity_cannon_0 = {
 		abbreviation = "hv1"
@@ -994,6 +1240,27 @@ equipment_modules = {
 		category = tank_small_main_at_armament
 		sfx = sfx_ui_sd_module_turret
 		parent = tank_high_velocity_cannon_3
+		allow_equipment_type = anti_tank
+
+		add_stats = {
+			soft_attack = 35
+			hard_attack = 55
+			ap_attack = 350
+			build_cost_ic = 9
+			maximum_speed = -0.6
+			reliability = -0.25
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 1
+		}
+	}
+	tank_high_velocity_cannon_5 = {
+		abbreviation = "hv5"
+		category = tank_small_main_at_armament
+		sfx = sfx_ui_sd_module_turret
+		parent = tank_high_velocity_cannon_4
 		allow_equipment_type = anti_tank
 
 		add_stats = {

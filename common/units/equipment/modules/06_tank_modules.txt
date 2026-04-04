@@ -1,12 +1,12 @@
-#heavy tank weapons
+#super heavy tank weapons
 equipment_modules = {
 	limit = {
 		has_dlc = "No Step Back" 
 	}
-	#super heavy howitzer (as artillery) (super heavy tank)
+	#super heavy howitzer (as artillery)
 	tank_super_heavy_howitzer_0 = {
 		abbreviation = "shh1"
-		category = tank_super_heavy_main_armament
+		category = tank_super_heavy_main_artillery_armament
 		sfx = sfx_ui_sd_module_turret
 		allow_equipment_type = artillery
 
@@ -25,18 +25,10 @@ equipment_modules = {
 			steel = 2
 			chromium = 2
 		}
-		can_convert_from = {
-			module_category = tank_super_heavy_main_armament
-			convert_cost_ic = 7
-		}
-		can_convert_from = {
-			convert_cost_ic = 2
-			module_category = tank_heavy_main_armament
-		}
 	}
 	tank_super_heavy_howitzer_1 = {
 		abbreviation = "shh2"
-		category = tank_super_heavy_main_armament
+		category = tank_super_heavy_main_artillery_armament
 		sfx = sfx_ui_sd_module_turret
 		parent = tank_super_heavy_howitzer_0
 		allow_equipment_type = artillery
@@ -56,15 +48,11 @@ equipment_modules = {
 			steel = 2
 			chromium = 2
 		}
-		can_convert_from = {
-			module_category = tank_super_heavy_main_armament
-			convert_cost_ic = 9
-		}
 	}
-	#super heavy magic howitzer (as artillery) (super heavy tank)
+	#super heavy magic howitzer (as artillery)
 	tank_magic_super_heavy_howitzer_0 = {
 		abbreviation = "shh1"
-		category = magic_tank_super_heavy_main_armament
+		category = magic_tank_super_heavy_main_artillery_armament
 		sfx = sfx_ui_sd_module_turret
 		allow_equipment_type = artillery
 
@@ -84,14 +72,10 @@ equipment_modules = {
 			chromium = 1
 			crystals = 3
 		}
-		can_convert_from = {
-			module_category = tank_super_heavy_main_armament
-			convert_cost_ic = 7
-		}
 	}
 	tank_magic_super_heavy_howitzer_1 = {
 		abbreviation = "shh2"
-		category = magic_tank_super_heavy_main_armament
+		category = magic_tank_super_heavy_main_artillery_armament
 		sfx = sfx_ui_sd_module_turret
 		parent = tank_magic_super_heavy_howitzer_0
 		allow_equipment_type = artillery
@@ -112,17 +96,12 @@ equipment_modules = {
 			chromium = 1
 			crystals = 3
 		}
-		can_convert_from = {
-			module_category = tank_super_heavy_main_armament
-			convert_cost_ic = 9
-		}
 	}
-	#super heavy cannon (super heavy tank)
+	#super heavy cannon (common)
 	tank_super_heavy_cannon_0 = {
 		abbreviation = "sh1"
-		category = tank_super_heavy_main_armament
+		category = tank_super_heavy_main_common_armament
 		sfx = sfx_ui_sd_module_turret
-		allow_equipment_type = anti_tank
 
 		add_stats = {
 			soft_attack = 35
@@ -140,10 +119,9 @@ equipment_modules = {
 	}
 	tank_super_heavy_cannon_1 = {
 		abbreviation = "sh2"
-		category = tank_super_heavy_main_armament
+		category = tank_super_heavy_main_common_armament
 		sfx = sfx_ui_sd_module_turret
 		parent = tank_super_heavy_cannon_0
-		allow_equipment_type = anti_tank
 
 		add_stats = {
 			soft_attack = 45
@@ -161,10 +139,9 @@ equipment_modules = {
 	}
 	tank_super_heavy_cannon_2 = {
 		abbreviation = "sh3"
-		category = tank_super_heavy_main_armament
+		category = tank_super_heavy_main_common_armament
 		sfx = sfx_ui_sd_module_turret
 		parent = tank_super_heavy_cannon_1
-		allow_equipment_type = anti_tank
 
 		add_stats = {
 			soft_attack = 55
@@ -180,12 +157,31 @@ equipment_modules = {
 			steel = 4
 		}
 	}
-	#super heavy magic cannon (super heavy tank)
+	tank_super_heavy_cannon_3 = {
+		abbreviation = "sh3"
+		category = tank_super_heavy_main_common_armament
+		sfx = sfx_ui_sd_module_turret
+		parent = tank_super_heavy_cannon_2
+
+		add_stats = {
+			soft_attack = 55
+			hard_attack = 65
+			ap_attack = 425
+			build_cost_ic = 17.5
+			maximum_speed = -0.6
+			reliability = -0.35
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 4
+		}
+	}
+	#super heavy magic cannon (common)
 	tank_magic_super_heavy_cannon_0 = {
 		abbreviation = "sh1"
-		category = magic_tank_super_heavy_main_armament
+		category = magic_tank_super_heavy_main_common_armament
 		sfx = sfx_ui_sd_module_turret
-		allow_equipment_type = anti_tank
 
 		add_stats = {
 			soft_attack = 35
@@ -204,10 +200,9 @@ equipment_modules = {
 	}
 	tank_magic_super_heavy_cannon_1 = {
 		abbreviation = "sh2"
-		category = magic_tank_super_heavy_main_armament
+		category = magic_tank_super_heavy_main_common_armament
 		sfx = sfx_ui_sd_module_turret
 		parent = tank_magic_super_heavy_cannon_0
-		allow_equipment_type = anti_tank
 
 		add_stats = {
 			soft_attack = 45
@@ -226,10 +221,9 @@ equipment_modules = {
 	}
 	tank_magic_super_heavy_cannon_2 = {
 		abbreviation = "sh2"
-		category = magic_tank_super_heavy_main_armament
+		category = magic_tank_super_heavy_main_common_armament
 		sfx = sfx_ui_sd_module_turret
 		parent = tank_magic_super_heavy_cannon_1
-		allow_equipment_type = anti_tank
 
 		add_stats = {
 			soft_attack = 45
@@ -245,5 +239,370 @@ equipment_modules = {
 			steel = 4
 			crystals = 2
 		}
+	}
+	tank_magic_super_heavy_cannon_3 = {
+		abbreviation = "sh2"
+		category = magic_tank_super_heavy_main_common_armament
+		sfx = sfx_ui_sd_module_turret
+		parent = tank_magic_super_heavy_cannon_2
+
+		add_stats = {
+			soft_attack = 45
+			hard_attack = 55
+			ap_attack = 350
+			build_cost_ic = 15
+			maximum_speed = -0.6
+			reliability = -0.35
+		}
+		xp_cost = 1
+		build_cost_resources = {
+			tungsten = 1
+			steel = 4
+			crystals = 2
+		}
+	}
+	#anti air (as aa)
+	tank_super_heavy_anti_air_cannon_0 = {
+		abbreviation = "aa1"
+		category = tank_super_heavy_main_aa_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = anti_air
+		forbid_equipment_type_exact_match = armor
+		add_stats = {
+			soft_attack = 6
+			hard_attack = 2
+			ap_attack = 10
+			air_attack = 16
+			build_cost_ic = 2
+			reliability = -0.1
+		}
+		build_cost_resources = {
+			steel = 1
+			tungsten = 1
+			crystals = 1
+		}
+		xp_cost = 1
+	}
+	tank_super_heavy_anti_air_cannon_1 = {
+		abbreviation = "aa1"
+		category = tank_super_heavy_main_aa_armament
+		sfx = sfx_ui_sd_module_turret
+		parent = tank_super_heavy_anti_air_cannon_0
+		allow_equipment_type = anti_air
+		forbid_equipment_type_exact_match = armor
+		add_stats = {
+			soft_attack = 6
+			hard_attack = 2
+			ap_attack = 10
+			air_attack = 16
+			build_cost_ic = 2
+			reliability = -0.1
+		}
+		build_cost_resources = {
+			steel = 1
+			tungsten = 1
+			crystals = 1
+		}
+		xp_cost = 1
+	}
+	tank_super_heavy_anti_air_cannon_2 = {
+		abbreviation = "aa1"
+		category = tank_super_heavy_main_aa_armament
+		sfx = sfx_ui_sd_module_turret
+		parent = tank_super_heavy_anti_air_cannon_1
+		allow_equipment_type = anti_air
+		forbid_equipment_type_exact_match = armor
+		add_stats = {
+			soft_attack = 6
+			hard_attack = 2
+			ap_attack = 10
+			air_attack = 16
+			build_cost_ic = 2
+			reliability = -0.1
+		}
+		build_cost_resources = {
+			steel = 1
+			tungsten = 1
+			crystals = 1
+		}
+		xp_cost = 1
+	}
+	tank_super_heavy_anti_air_cannon_3 = {
+		abbreviation = "aa1"
+		category = tank_super_heavy_main_aa_armament
+		sfx = sfx_ui_sd_module_turret
+		parent = tank_super_heavy_anti_air_cannon_2
+		allow_equipment_type = anti_air
+		forbid_equipment_type_exact_match = armor
+		add_stats = {
+			soft_attack = 6
+			hard_attack = 2
+			ap_attack = 10
+			air_attack = 16
+			build_cost_ic = 2
+			reliability = -0.1
+		}
+		build_cost_resources = {
+			steel = 1
+			tungsten = 1
+			crystals = 1
+		}
+		xp_cost = 1
+	}
+	#magic anti air (as aa)
+	tank_magic_super_heavy_anti_air_cannon_0 = {
+		abbreviation = "aa1"
+		category = magic_tank_super_heavy_main_aa_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = anti_air
+		forbid_equipment_type_exact_match = armor
+		add_stats = {
+			soft_attack = 6
+			hard_attack = 2
+			ap_attack = 10
+			air_attack = 16
+			build_cost_ic = 2
+			reliability = -0.1
+		}
+		build_cost_resources = {
+			steel = 1
+			tungsten = 1
+			crystals = 1
+		}
+		xp_cost = 1
+	}
+	tank_magic_super_heavy_anti_air_cannon_1 = {
+		abbreviation = "aa1"
+		category = magic_tank_super_heavy_main_aa_armament
+		sfx = sfx_ui_sd_module_turret
+		parent = tank_magic_heavy_anti_air_cannon_0
+		allow_equipment_type = anti_air
+		forbid_equipment_type_exact_match = armor
+		add_stats = {
+			soft_attack = 6
+			hard_attack = 2
+			ap_attack = 10
+			air_attack = 16
+			build_cost_ic = 2
+			reliability = -0.1
+		}
+		build_cost_resources = {
+			steel = 1
+			tungsten = 1
+			crystals = 1
+		}
+		xp_cost = 1
+	}
+	tank_magic_super_heavy_anti_air_cannon_2 = {
+		abbreviation = "aa1"
+		category = magic_tank_super_heavy_main_aa_armament
+		sfx = sfx_ui_sd_module_turret
+		parent = tank_magic_heavy_anti_air_cannon_1
+		allow_equipment_type = anti_air
+		forbid_equipment_type_exact_match = armor
+		add_stats = {
+			soft_attack = 6
+			hard_attack = 2
+			ap_attack = 10
+			air_attack = 16
+			build_cost_ic = 2
+			reliability = -0.1
+		}
+		build_cost_resources = {
+			steel = 1
+			tungsten = 1
+			crystals = 1
+		}
+		xp_cost = 1
+	}
+	tank_magic_super_heavy_anti_air_cannon_3 = {
+		abbreviation = "aa1"
+		category = magic_tank_super_heavy_main_aa_armament
+		sfx = sfx_ui_sd_module_turret
+		parent = tank_magic_heavy_anti_air_cannon_2
+		allow_equipment_type = anti_air
+		forbid_equipment_type_exact_match = armor
+		add_stats = {
+			soft_attack = 6
+			hard_attack = 2
+			ap_attack = 10
+			air_attack = 16
+			build_cost_ic = 2
+			reliability = -0.1
+		}
+		build_cost_resources = {
+			steel = 1
+			tungsten = 1
+			crystals = 1
+		}
+		xp_cost = 1
+	}
+	#high velocity cannon (as at)
+	tank_super_heavy_high_velocity_cannon_0 = {
+		abbreviation = "hv1"
+		category = tank_super_heavy_main_at_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = anti_tank
+
+		add_stats = {
+			soft_attack = 10
+			hard_attack = 26
+			ap_attack = 85
+			build_cost_ic = 3
+			maximum_speed = -0.1
+			reliability = -0.05
+		}
+		build_cost_resources = {
+			tungsten = 1
+			steel = 1
+		}
+		xp_cost = 1
+	}
+	tank_super_heavy_high_velocity_cannon_1 = {
+		abbreviation = "hv1"
+		category = tank_super_heavy_main_at_armament
+		sfx = sfx_ui_sd_module_turret
+		parent = tank_super_heavy_high_velocity_cannon_0
+		allow_equipment_type = anti_tank
+
+		add_stats = {
+			soft_attack = 10
+			hard_attack = 26
+			ap_attack = 85
+			build_cost_ic = 3
+			maximum_speed = -0.1
+			reliability = -0.05
+		}
+		build_cost_resources = {
+			tungsten = 1
+			steel = 1
+		}
+		xp_cost = 1
+	}
+	tank_super_heavy_high_velocity_cannon_2 = {
+		abbreviation = "hv1"
+		category = tank_super_heavy_main_at_armament
+		sfx = sfx_ui_sd_module_turret
+		parent = tank_super_heavy_high_velocity_cannon_1
+		allow_equipment_type = anti_tank
+
+		add_stats = {
+			soft_attack = 10
+			hard_attack = 26
+			ap_attack = 85
+			build_cost_ic = 3
+			maximum_speed = -0.1
+			reliability = -0.05
+		}
+		build_cost_resources = {
+			tungsten = 1
+			steel = 1
+		}
+		xp_cost = 1
+	}
+	tank_super_heavy_high_velocity_cannon_3 = {
+		abbreviation = "hv1"
+		category = tank_super_heavy_main_at_armament
+		sfx = sfx_ui_sd_module_turret
+		parent = tank_super_heavy_high_velocity_cannon_2
+		allow_equipment_type = anti_tank
+
+		add_stats = {
+			soft_attack = 10
+			hard_attack = 26
+			ap_attack = 85
+			build_cost_ic = 3
+			maximum_speed = -0.1
+			reliability = -0.05
+		}
+		build_cost_resources = {
+			tungsten = 1
+			steel = 1
+		}
+		xp_cost = 1
+	}
+	#magic high velocity cannon (as at)
+	tank_super_heavy_magic_high_velocity_cannon_0 = {
+		abbreviation = "hv1"
+		category = magic_tank_super_heavy_main_at_armament
+		sfx = sfx_ui_sd_module_turret
+		allow_equipment_type = anti_tank
+
+		add_stats = {
+			soft_attack = 10
+			hard_attack = 26
+			ap_attack = 85
+			build_cost_ic = 3
+			maximum_speed = -0.1
+			reliability = -0.05
+		}
+		build_cost_resources = {
+			tungsten = 1
+			steel = 1
+		}
+		xp_cost = 1
+	}
+	tank_super_heavy_magic_high_velocity_cannon_1 = {
+		abbreviation = "hv1"
+		category = magic_tank_super_heavy_main_at_armament
+		sfx = sfx_ui_sd_module_turret
+		parent = tank_super_heavy_magic_high_velocity_cannon_0
+		allow_equipment_type = anti_tank
+
+		add_stats = {
+			soft_attack = 10
+			hard_attack = 26
+			ap_attack = 85
+			build_cost_ic = 3
+			maximum_speed = -0.1
+			reliability = -0.05
+		}
+		build_cost_resources = {
+			tungsten = 1
+			steel = 1
+		}
+		xp_cost = 1
+	}
+	tank_super_heavy_magic_high_velocity_cannon_2 = {
+		abbreviation = "hv1"
+		category = magic_tank_super_heavy_main_at_armament
+		sfx = sfx_ui_sd_module_turret
+		parent = tank_super_heavy_magic_high_velocity_cannon_1
+		allow_equipment_type = anti_tank
+
+		add_stats = {
+			soft_attack = 10
+			hard_attack = 26
+			ap_attack = 85
+			build_cost_ic = 3
+			maximum_speed = -0.1
+			reliability = -0.05
+		}
+		build_cost_resources = {
+			tungsten = 1
+			steel = 1
+		}
+		xp_cost = 1
+	}
+	tank_super_heavy_magic_high_velocity_cannon_3 = {
+		abbreviation = "hv1"
+		category = magic_tank_super_heavy_main_at_armament
+		sfx = sfx_ui_sd_module_turret
+		parent = tank_super_heavy_magic_high_velocity_cannon_2
+		allow_equipment_type = anti_tank
+
+		add_stats = {
+			soft_attack = 10
+			hard_attack = 26
+			ap_attack = 85
+			build_cost_ic = 3
+			maximum_speed = -0.1
+			reliability = -0.05
+		}
+		build_cost_resources = {
+			tungsten = 1
+			steel = 1
+		}
+		xp_cost = 1
 	}
 }
