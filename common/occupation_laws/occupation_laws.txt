@@ -69,10 +69,7 @@ no_garrison = {
 	sound_effect = "Martial_Law_Interface_No_Garrison"
 	
 	visible = {
-		NOT = {
-			original_tag = DED
-			hidden_trigger = { original_tag = EWI }
-		}
+
 	}
 
 	state_modifier = {
@@ -118,10 +115,6 @@ autonomous_occupation = {
 	sound_effect = "Martial_Law_Interface_Autonomous_Occupation_Unique_DEM"
 	
 	visible = {
-		NOT = {
-			original_tag = DED
-			hidden_trigger = { original_tag = EWI }
-		}
 		OR = {
 			has_government = democratic #? on design
 			has_government = neutrality
@@ -129,18 +122,7 @@ autonomous_occupation = {
 	}
 
 	available = {
-		NOT = {
-			original_tag = DED
-			hidden_trigger = { original_tag = EWI }
-		}
-		NOT = {
-			FROM = {
-				OR = {
-					original_tag = DED
-					hidden_trigger = { original_tag = EWI }
-				}
-			}
-		}
+
 	}
 	
 	state_modifier = {
@@ -169,25 +151,11 @@ foreign_civilian_oversight = {
 	sound_effect = "Martial_Law_Interface_Foreign_Cvilian_Oversight"
 	
 	visible = {
-		NOT = {
-			original_tag = DED
-			hidden_trigger = { original_tag = EWI }
-		}
+
 	}
 
 	available = {
-		NOT = {
-			original_tag = DED
-			hidden_trigger = { original_tag = EWI }
-		}
-		NOT = {
-			FROM = {
-				OR = {
-					original_tag = DED
-					hidden_trigger = { original_tag = EWI }
-				}
-			}
-		}
+
 	}
 
 	state_modifier = {
@@ -215,25 +183,11 @@ local_police_force_garrison = {
 	sound_effect = "Martial_Law_Interface_Local_Police_Force_Garrison"
 		
 	visible = {
-		NOT = {
-			original_tag = DED
-			hidden_trigger = { original_tag = EWI }
-		}
+
 	}
 
 	available = {
-		NOT = {
-			original_tag = DED
-			hidden_trigger = { original_tag = EWI }
-		}
-		NOT = {
-			FROM = {
-				OR = {
-					original_tag = DED
-					hidden_trigger = { original_tag = EWI }
-				}
-			}
-		}
+
 	}
 
 	state_modifier = {
@@ -266,11 +220,6 @@ local_police_force_garrison = {
 			
 			add = 350
 		}
-		
-		modifier = {
-			FROM = { original_tag = FRN }
-			add = 150
-		}
 	}
 }
 
@@ -279,25 +228,11 @@ secret_police_oversight = {
 	sound_effect = "Martial_Law_Interface_Secret_Police_Oversight"
 	
 	visible = {
-		NOT = {
-			original_tag = DED
-			hidden_trigger = { original_tag = EWI }
-		}
+
 	}
 
 	available = {
-		NOT = {
-			original_tag = DED
-			hidden_trigger = { original_tag = EWI }
-		}
-		NOT = {
-			FROM = {
-				OR = {
-					original_tag = DED
-					hidden_trigger = { original_tag = EWI }
-				}
-			}
-		}
+
 	}
 
 	state_modifier = {
@@ -318,26 +253,11 @@ liberate_workers_occupation = {
 	sound_effect = "Martial_Law_Interface_Liberate_Workers_Occupation_Unique_COM"
 	
 	visible = {
-		NOT = {
-			original_tag = DED
-			hidden_trigger = { original_tag = EWI }
-		}
 		has_government = communism
 	}
 
 	available = {
-		NOT = {
-			original_tag = DED
-			hidden_trigger = { original_tag = EWI }
-		}
-		NOT = {
-			FROM = {
-				OR = {
-					original_tag = DED
-					hidden_trigger = { original_tag = EWI }
-				}
-			}
-		}
+
 	}
 	
 	state_modifier = {
@@ -359,25 +279,11 @@ military_governor_occupation = {
 	sound_effect = "Martial_Law_Interface_Military_Governor_Occupation"
 	
 	visible = {
-		NOT = {
-			original_tag = DED
-			hidden_trigger = { original_tag = EWI }
-		}
+
 	}
 
 	available = {
-		NOT = {
-			original_tag = DED
-			hidden_trigger = { original_tag = EWI }
-		}
-		NOT = {
-			FROM = {
-				OR = {
-					original_tag = DED
-					hidden_trigger = { original_tag = EWI }
-				}
-			}
-		}
+
 	}
 
 	state_modifier = {
@@ -415,25 +321,11 @@ martial_law_occupation = {
 	sound_effect = "Martial_Law_Interface_Martial_Law_Occupation_Default"
 	
 	visible = {
-		NOT = {
-			original_tag = DED
-			hidden_trigger = { original_tag = EWI }
-		}
+
 	}
 
 	available = {
-		NOT = {
-			original_tag = DED
-			hidden_trigger = { original_tag = EWI }
-		}
-		NOT = {
-			FROM = {
-				OR = {
-					original_tag = DED
-					hidden_trigger = { original_tag = EWI }
-				}
-			}
-		}
+
 	}
 
 	state_modifier = {
@@ -473,24 +365,11 @@ forced_labor_occupation = {
 	visible = {
 		NOT = {
 			has_government = democratic
-			original_tag = DED
-			hidden_trigger = { original_tag = EWI }
 		}
 	}
 
 	available = {
-		NOT = {
-			original_tag = DED
-			hidden_trigger = { original_tag = EWI }
-		}
-		NOT = {
-			FROM = {
-				OR = {
-					original_tag = DED
-					hidden_trigger = { original_tag = EWI }
-				}
-			}
-		}
+
 	}
 
 	state_modifier = {
@@ -583,24 +462,11 @@ harsh_quotas_occupation = {
 	visible = {
 		NOT = {
 			has_government = democratic
-			original_tag = DED
-			hidden_trigger = { original_tag = EWI }
 		}
 	}
 
 	available = {
-		NOT = {
-			original_tag = DED
-			hidden_trigger = { original_tag = EWI }
-		}
-		NOT = {
-			FROM = {
-				OR = {
-					original_tag = DED
-					hidden_trigger = { original_tag = EWI }
-				}
-			}
-		}
+
 	}
 
 	state_modifier = {
@@ -642,29 +508,11 @@ brutally_oppressive_occupation = {
 	sound_effect = "Martial_Law_Interface_Brutally_Oppressive_Occupation_Unique_FAS"
 	
 	visible = {
-		NOT = {
-			original_tag = DED
-			hidden_trigger = { original_tag = EWI }
-		}
-		OR = {
-			has_government = fascism
-			has_country_flag = is_maresoc
-		}
+		has_government = fascism
 	}
 
 	available = {
-		NOT = {
-			original_tag = DED
-			hidden_trigger = { original_tag = EWI }
-		}
-		NOT = {
-			FROM = {
-				OR = {
-					original_tag = DED
-					hidden_trigger = { original_tag = EWI }
-				}
-			}
-		}
+
 	}
 	
 	state_modifier = {		

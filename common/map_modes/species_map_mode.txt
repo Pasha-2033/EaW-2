@@ -138,17 +138,6 @@ scripted_map_modes = {
 				else_if = {
 					limit = {
 						FROM = {
-							is_state_main_culture_northerner = yes
-						}
-					}
-					set_temp_variable = { red = 0.341 }
-					set_temp_variable = { green = 0.643 }
-					set_temp_variable = { blue = 0.443 }
-					set_temp_variable = { alpha = 0.7 }
-				}
-				else_if = {
-					limit = {
-						FROM = {
 							check_variable = {
 								state_race = token:penguin_race
 							}
