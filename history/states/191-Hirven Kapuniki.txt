@@ -7,10 +7,7 @@ state = {
 	buildings_max_level_factor = 1 
 	
 	resources = { food = 35 } 
-	history = {
-		strategic_province_location = {
-			natural_harbor = 6846
-		}
+	history = { 
 		owner = BR0 
 		
 		victory_points = { 6846 20 }
@@ -22,6 +19,7 @@ state = {
 			6846 = { naval_base = 1 }
 		}
 		
+		strategic_province_location = { natural_harbor = 6846 }
 		add_core_of = BR0 
 		
 		
@@ -32,5 +30,5 @@ state = {
 			remove_core_of = BR0 
 		}
 	}
-	provinces = { 865 873 1506 5416 6846 7466 9931 }
+	provinces = { 865 873 1043 1506 5416 6846 7466 }
 }

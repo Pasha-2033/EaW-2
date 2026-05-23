@@ -6,10 +6,6 @@ state = {
 	state_category = large_city 
 	buildings_max_level_factor = 1 
 	history = { 
-		strategic_province_location = {
-			natural_harbor = 950
-			international_trade_port = 950
-		}
 		owner = EQS 
 		
 		victory_points = { 950 30 }
@@ -23,6 +19,10 @@ state = {
 			950 = { naval_base = 1 }
 		}
 		
+		strategic_province_location = { 
+			natural_harbor = 950 
+			international_trade_port = 950 
+		}
 		add_core_of = EQS 
 		add_claim_by = ICE 
 		
@@ -35,5 +35,5 @@ state = {
 		1050.1.1 = { 
 		}
 	}
-	provinces = { 440 623 950 1178 1192 4006 4065 4244 6832 6896 9828 9891 }
+	provinces = { 440 623 950 1178 1192 1484 4006 4065 4244 6832 6896 9828 }
 }

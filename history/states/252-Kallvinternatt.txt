@@ -7,11 +7,7 @@ state = {
 	buildings_max_level_factor = 1.9 
 	
 	resources = { food = 35 } 
-	history = {
-		strategic_province_location = {
-			frost_free_port = 2983
-			natural_harbor = 2983
-		}
+	history = { 
 		owner = DIS 
 		
 		victory_points = { 2983 30 }
@@ -25,6 +21,10 @@ state = {
 			2983 = { naval_base = 1 }
 		}
 		
+		strategic_province_location = { 
+			frost_free_port = 2983 
+			natural_harbor = 2983 
+		}
 		add_core_of = DIS 
 		
 		

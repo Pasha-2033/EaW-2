@@ -11,9 +11,6 @@ state = {
 		crystals = 3 
 	} 
 	history = { 
-		strategic_province_location = {
-			volcano = 8682
-		}
 		owner = DRG 
 		
 		victory_points = { 8682 15 }
@@ -21,13 +18,11 @@ state = {
 		buildings = { 
 			industrial_complex = 1 
 			steel_plant = 1 
-			4199 = {  
-				landmark_ozarsky_geyser = {
- 					level = 1 
-				}
+			4199 = {  landmark_ozarsky_geyser = { level = 1 }
 			}
 		}
 		
+		strategic_province_location = { volcano = 8682 }
 		add_core_of = DRG 
 		
 		
@@ -37,5 +32,5 @@ state = {
 		1050.1.1 = { 
 		}
 	}
-	provinces = { 4199 8682 10013 }
+	provinces = { 41 4199 8682 }
 }

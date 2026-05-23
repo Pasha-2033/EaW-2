@@ -11,9 +11,6 @@ state = {
 		crystals = 3 
 	} 
 	history = { 
-		strategic_province_location = {
-			defensive_chokepoint = 179
-		}
 		owner = EQS 
 		
 		victory_points = { 179 40 }
@@ -25,14 +22,11 @@ state = {
 			steel_plant = 1 
 			tungsten_plant = 1 
 			recruiting_station = 1 
-			179 = { 
-				bunker = 1  
-				landmark_camelot = { 
-					level = 1 
-				}
+			179 = { bunker = 1  landmark_camelot = { level = 1 }
 			}
 		}
 		
+		strategic_province_location = { defensive_chokepoint = 179 }
 		add_core_of = EQS 
 		add_claim_by = ICE 
 		
