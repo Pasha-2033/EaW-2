@@ -19,28 +19,30 @@ calculate_all_states_building_slots = {
 }
 calculate_state_building_slots = {
 	set_variable = {
-		common_builded_slots = arms_factory_level
-	}
-	add_to_variable = {
-		common_builded_slots = industrial_complex_level
-	}
-	add_to_variable = {
-		common_builded_slots = building_level@dockyard
-	}
-	add_to_variable = {
-		common_builded_slots = building_level@synthetic_refinery
-	}
-	add_to_variable = {
-		common_builded_slots = building_level@fuel_silo
-	}
-	add_to_variable = {
-		common_builded_slots = building_level@rocket_site
-	}
-	add_to_variable = {
-		common_builded_slots = building_level@nuclear_reactor
-	}
-	add_to_variable = {
-		common_builded_slots = building_level@agrarian_complex
+		common_builded_slots = {
+			value = building_level@aluminium_plant
+			add = building_level@steel_plant
+			add = building_level@tungsten_plant
+			add = building_level@chromium_plant
+			add = building_level@ore_preparation
+			add = building_level@recruiting_station
+			add = building_level@labor_camp
+			add = building_level@arms_factory
+			add = building_level@industrial_complex
+			add = building_level@agrarian_complex
+			add = building_level@stronghold_network
+			add = building_level@dockyard
+			add = building_level@synthetic_refinery
+			add = building_level@fuel_silo
+			add = building_level@rocket_site
+			add = building_level@mega_gun_emplacement
+			add = building_level@nuclear_reactor
+			add = building_level@nuclear_reactor_heavy_water
+			add = building_level@nuclear_reactor_exploratory
+			add = building_level@thermonuclear_reactor
+			add = building_level@commercial_reactor
+			add = building_level@social_infrastructure
+		}
 	}
 	for_loop_effect = {
 		start = 1

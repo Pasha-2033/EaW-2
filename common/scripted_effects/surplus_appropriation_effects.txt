@@ -359,7 +359,7 @@ harvest_failure_update = {
 		}
 		clamp_temp_variable = {
 			var = delta_harvest_failure_supply
-			min = harvest_failure_supply
+			max = harvest_failure_supply
 		}
 		if = {
 			limit = {
@@ -394,7 +394,7 @@ harvest_failure_update = {
 			subtract_from_variable = {
 				harvest_failure_food = delta_harvest_failure_food
 			}
-			subtract_from_variable = {
+			add_to_variable = {
 				harvest_failure_supply = delta_harvest_failure_supply
 			}
 			multiply_temp_variable = {

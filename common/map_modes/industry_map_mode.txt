@@ -13,149 +13,88 @@ scripted_map_modes = {
 							}
 						}
 					}
-					#aluminium plant
-					set_temp_variable = {
-						red = 0.957
-					}
-					set_temp_variable = {
-						green = 0.4
-					}
-					set_temp_variable = {
-						blue = 0.258
-					}
-					multiply_temp_variable = {
-						red = FROM.building_level@aluminium_plant
-					}
-					multiply_temp_variable = {
-						green = FROM.building_level@aluminium_plant
-					}
-					multiply_temp_variable = {
-						blue = FROM.building_level@aluminium_plant
-					}
-					set_temp_variable = {
-						count = FROM.building_level@aluminium_plant
-					}
-					#steel plant
-					set_temp_variable = {
-						t_red = 0.258
-					}
-					set_temp_variable = {
-						t_green = 0.957
-					}
-					set_temp_variable = {
-						t_blue = 0.41
-					}
-					multiply_temp_variable = {
-						t_red = FROM.building_level@steel_plant
-					}
-					multiply_temp_variable = {
-						t_green = FROM.building_level@steel_plant
-					}
-					multiply_temp_variable = {
-						t_blue = FROM.building_level@steel_plant
-					}
-					add_to_temp_variable = {
-						red = t_red
-					}
-					add_to_temp_variable = {
-						green = t_green
-					}
-					add_to_temp_variable = {
-						blue = t_blue
-					}
-					add_to_temp_variable = {
-						count = FROM.building_level@steel_plant
-					}
-					#tungsten_plant plant
-					set_temp_variable = {
-						t_red = 0.851
-					}
-					set_temp_variable = {
-						t_green = 0.258
-					}
-					set_temp_variable = {
-						t_blue = 0.957
-					}
-					multiply_temp_variable = {
-						t_red = FROM.building_level@tungsten_plant
-					}
-					multiply_temp_variable = {
-						t_green = FROM.building_level@tungsten_plant
-					}
-					multiply_temp_variable = {
-						t_blue = FROM.building_level@tungsten_plant
-					}
-					add_to_temp_variable = {
-						red = t_red
-					}
-					add_to_temp_variable = {
-						green = t_green
-					}
-					add_to_temp_variable = {
-						blue = t_blue
-					}
-					add_to_temp_variable = {
-						count = FROM.building_level@tungsten_plant
-					}
-					#chromium plant
-					set_temp_variable = {
-						t_red = 0
-					}
-					set_temp_variable = {
-						t_green = 0.113
-					}
-					set_temp_variable = {
-						t_blue = 0.758
-					}
-					multiply_temp_variable = {
-						t_red = FROM.building_level@chromium_plant
-					}
-					multiply_temp_variable = {
-						t_green = FROM.building_level@chromium_plant
-					}
-					multiply_temp_variable = {
-						t_blue = FROM.building_level@chromium_plant
-					}
-					add_to_temp_variable = {
-						red = t_red
-					}
-					add_to_temp_variable = {
-						green = t_green
-					}
-					add_to_temp_variable = {
-						blue = t_blue
-					}
-					add_to_temp_variable = {
-						count = FROM.building_level@chromium_plant
-					}
-					#results
-					if = {
-						limit = {
-							check_variable = {
-								count = 0
+					FROM = {
+						set_temp_variable = {
+							count = {
+								value = building_level@aluminium_plant
+								add = building_level@steel_plant
+								add = building_level@tungsten_plant
+								add = building_level@chromium_plant
 							}
 						}
-						set_temp_variable = { alpha = 0 }
-					}
-					else = {
-						divide_temp_variable = {
-							red = count
+						#results
+						if = {
+							limit = {
+								check_variable = {
+									count = 0
+								}
+							}
+							set_temp_variable = { alpha = 0 }
 						}
-						divide_temp_variable = {
-							green = count
+						else = {
+							set_temp_variable = {
+								red = {
+									value = 0.957
+									multiply = building_level@aluminium_plant
+									add = {
+										value = 0.258
+										multiply = building_level@steel_plant
+									}
+									add = {
+										value = 0.851
+										multiply = building_level@tungsten_plant
+									}
+									divide = count
+								}
+							}
+							set_temp_variable = {
+								green = {
+									value = 0.4
+									multiply = building_level@aluminium_plant
+									add = {
+										value = 0.957
+										multiply = building_level@steel_plant
+									}
+									add = {
+										value = 0.258
+										multiply = building_level@tungsten_plant
+									}
+									add = {
+										value = 0.113
+										multiply = building_level@chromium_plant
+									}
+									divide = count
+								}
+							}
+							set_temp_variable = {
+								blue = {
+									value = 0.258
+									multiply = building_level@aluminium_plant
+									add = {
+										value = 0.41
+										multiply = building_level@steel_plant
+									}
+									add = {
+										value = 0.957
+										multiply = building_level@tungsten_plant
+									}
+									add = {
+										value = 0.758
+										multiply = building_level@chromium_plant
+									}
+									divide = count
+								}
+							}
+							set_temp_variable = { alpha = 1 }
 						}
-						divide_temp_variable = {
-							blue = count
-						}
-						set_temp_variable = { alpha = 1 }
 					}
 				}
 				else = {
 					set_temp_variable = { alpha = 0 }
 				}
 				set_temp_variable = { thickness = 0.8 }
-                set_temp_variable = { highlighted = 0 }
-            }
+				set_temp_variable = { highlighted = 0 }
+			}
         }
 		bottom = {
 			type = none

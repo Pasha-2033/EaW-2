@@ -6,51 +6,45 @@ scripted_map_modes = {
 		bottom = {
             type = country
 			color = {
-				if = {
-					limit = {
-						FROM = {
-							has_country_flag = no_sa_impact
-						}
-					}
-					set_temp_variable = { red = 0.1 }
-					set_temp_variable = { green = 0.1 }
-					set_temp_variable = { blue = 0.1 }
-					set_temp_variable = { alpha = 1 }
-				}
-				else = {
-					set_temp_variable = {
-						temp = FROM.surplus_appropriation_mod_values^0
-					}
-					add_to_temp_variable = {
-						temp = FROM.surplus_appropriation_mod_values^1
-					}
-					add_to_temp_variable = {
-						temp = FROM.surplus_appropriation_mod_values^2
-					}
-					divide_temp_variable = {
-						temp = 15
-					}
-					subtract_from_temp_variable = {
-						temp = 1
-					}
+				FROM = {
 					if = {
 						limit = {
-							check_variable = {
-								temp < 0
-							}
+							has_country_flag = no_sa_impact
 						}
-						multiply_temp_variable = {
-							temp = -1
-						}
-						set_temp_variable = { red = 1 }
-						set_temp_variable = { green = 0 }
+						set_temp_variable = { red = 0.1 }
+						set_temp_variable = { green = 0.1 }
+						set_temp_variable = { blue = 0.1 }
+						set_temp_variable = { alpha = 1 }
 					}
 					else = {
-						set_temp_variable = { red = 0 }
-						set_temp_variable = { green = 1 }
+						set_temp_variable = {
+							temp = {
+								value = surplus_appropriation_mod_values^0
+								add = surplus_appropriation_mod_values^1
+								add = surplus_appropriation_mod_values^0
+								divide = 15 #because medium = 5, and we sum all of them
+								subtract = 1 #<0 - below medium, >0 - above
+							}
+						}
+						if = {
+							limit = {
+								check_variable = {
+									temp < 0
+								}
+							}
+							multiply_temp_variable = {
+								temp = -1
+							}
+							set_temp_variable = { red = 1 }
+							set_temp_variable = { green = 0 }
+						}
+						else = {
+							set_temp_variable = { red = 0 }
+							set_temp_variable = { green = 1 }
+						}
+						set_temp_variable = { blue = 0 }
+						set_temp_variable = { alpha = temp }
 					}
-					set_temp_variable = { blue = 0 }
-					set_temp_variable = { alpha = temp }
 				}
 			}
 		}

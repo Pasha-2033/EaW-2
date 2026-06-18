@@ -7,23 +7,30 @@ bookmarks = {
 		picture = "GFX_select_date_1936"
 		default_country = "EQS"
 		default = no
+		filters = { continent }
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }
 		}
 		"EQS" = {
+			assume_not_played_if_missing_data = yes
+			version = base_game
 			history = "EQS_GATHERING_STORM_DESC"
 			ideology = harmony
 			ideas = {}
 			focuses = {}
 		}
 		"STG" = {
+			assume_not_played_if_missing_data = yes
+			version = base_game
 			history = "STG_GATHERING_STORM_DESC"
 			ideology = communism
 			ideas = {}
 			focuses = {}
 		}
 		"VES" = {
+			assume_not_played_if_missing_data = yes
+			version = base_game
 			history = "VES_GATHERING_STORM_DESC"
 			ideology = fascism
 			ideas = {}

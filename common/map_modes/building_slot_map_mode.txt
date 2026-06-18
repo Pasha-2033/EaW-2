@@ -4,107 +4,40 @@ scripted_map_modes = {
             type = state
             color = {
 				FROM = {
-					set_temp_variable = {
-						slots = common_all_slots
-					}
 					if = {
 						limit = {
 							check_variable = {
-								slots > 0
+								common_all_slots > 0
 							}
-						}
-						divide_temp_variable = {
-							slots = 50
-						}
-						#sqrt from x/y, where x < y
-						set_temp_variable = { temp = slots }
-						divide_temp_variable = { temp = 2 }
-						set_temp_variable = { r = temp }
-						#cycle 1
-						if = {
-							limit = {
-								check_variable = {
-									r > 0
-								}
-							}
-							set_temp_variable = { temp = slots }
-							divide_temp_variable = { temp = r }
-							add_to_temp_variable = { r = temp }
-							divide_temp_variable = { r = 2 }
-						}
-						#cycle 2
-						if = {
-							limit = {
-								check_variable = {
-									r > 0
-								}
-							}
-							set_temp_variable = { temp = slots }
-							divide_temp_variable = { temp = r }
-							add_to_temp_variable = { r = temp }
-							divide_temp_variable = { r = 2 }
-						}
-						#cycle 3
-						if = {
-							limit = {
-								check_variable = {
-									r > 0
-								}
-							}
-							set_temp_variable = { temp = slots }
-							divide_temp_variable = { temp = r }
-							add_to_temp_variable = { r = temp }
-							divide_temp_variable = { r = 2 }
-						}
-						#cycle 4
-						if = {
-							limit = {
-								check_variable = {
-									r > 0
-								}
-							}
-							set_temp_variable = { temp = slots }
-							divide_temp_variable = { temp = r }
-							add_to_temp_variable = { r = temp }
-							divide_temp_variable = { r = 2 }
-						}
-						set_temp_variable = { slots = r }
-						#calculate color
-						set_temp_variable = {
-							temp_red = 0.655
-						}
-						multiply_temp_variable = {
-							temp_red = slots
 						}
 						set_temp_variable = {
-							temp_green = 0.96
-						}
-						multiply_temp_variable = {
-							temp_green = slots
-						}
-						set_temp_variable = {
-							temp_blue = 0.6
-						}
-						multiply_temp_variable = {
-							temp_blue = slots
-						}
-						add_to_temp_variable = {
-							temp_blue = 0.4
+							slot_coefficient = {
+								value = common_all_slots
+								divide = 50
+								root = 2
+							}
 						}
 						set_temp_variable = {
-							temp_alpha = 0.3
+							red = {
+								value = 0.655
+								multiply = slot_coefficient
+							}
 						}
-						multiply_temp_variable = {
-							temp_alpha = slots
+						set_temp_variable = {
+							green = {
+								value = 0.96
+								multiply = slot_coefficient
+							}
 						}
-						add_to_temp_variable = {
-							temp_alpha = 0.7
+						set_temp_variable = {
+							blue = {
+								value = 0.6
+								multiply = slot_coefficient
+							}
 						}
-						#set color
-						set_temp_variable = { red = temp_red }
-						set_temp_variable = { green = temp_green }
-						set_temp_variable = { blue = temp_blue }
-						set_temp_variable = { alpha = temp_alpha }
+						set_temp_variable = {
+							alpha = 1
+						}
 					}
 					else = {
 						set_temp_variable = { red = 0 }

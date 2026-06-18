@@ -7,11 +7,17 @@ bookmarks = {
 		picture = "GFX_select_date_1936"
 		default_country = "VES"
 		default = yes
+		filters = { label continent }
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }
 		}
 		"VES" = {
+			assume_not_played_if_missing_data = yes
+			version = base_game
+			label = {
+				changeling_race
+			}
 			history = "VES_EVIL_MIND_DESC"
 			ideology = fascism
 			ideas = {
@@ -26,6 +32,11 @@ bookmarks = {
 			}
 		}
 		"EQS" = {
+			assume_not_played_if_missing_data = yes
+			version = base_game
+			label = {
+				pony_race
+			}
 			history = "EQS_EVIL_MIND_DESC"
 			ideology = fascism
 			ideas = {
@@ -39,6 +50,8 @@ bookmarks = {
 			}
 		}
 		"ICE" = {
+			assume_not_played_if_missing_data = yes
+			version = base_game
 			history = "ICE_EVIL_MIND_DESC"
 			ideology = fascism
 			ideas = {
@@ -50,12 +63,16 @@ bookmarks = {
 			focuses = {}
 		}
 		"NEM" = {
+			assume_not_played_if_missing_data = yes
+			version = base_game
 			history = "NEM_EVIL_MIND_DESC"
 			ideology = fascism
 			ideas = {}
 			focuses = {}
 		}
 		"OLE" = {
+			assume_not_played_if_missing_data = yes
+			version = base_game
 			history = "OLE_EVIL_MIND_DESC"
 			ideology = fascism
 			ideas = {
@@ -67,6 +84,8 @@ bookmarks = {
 			focuses = {}
 		}
 		"GRE" = {
+			assume_not_played_if_missing_data = yes
+			version = base_game
 			history = "GRE_EVIL_MIND_DESC"
 			ideology = neutrality
 			ideas = {
@@ -75,6 +94,8 @@ bookmarks = {
 			focuses = {}
 		}
 		"MET" = {
+			assume_not_played_if_missing_data = yes
+			version = base_game
 			history = "MET_EVIL_MIND_DESC"
 			ideology = neutrality
 			ideas = {}
@@ -83,8 +104,12 @@ bookmarks = {
 		"---" = {
 			history = "OTHER_EVIL_MIND_DESC"
 		}
-
 		"DIS" = {
+			assume_not_played_if_missing_data = yes
+			version = base_game
+			label = {
+				changeling_race
+			}
 			minor = yes
 			history = "DIS_EVIL_MIND_DESC"
 			ideology = fascism
@@ -94,6 +119,11 @@ bookmarks = {
 			focuses = {}
 		}
 		"LIK" = {
+			assume_not_played_if_missing_data = yes
+			version = base_game
+			label = {
+				changeling_race
+			}
 			minor = yes
 			history = "LIK_EVIL_MIND_DESC"
 			ideology = fascism
@@ -103,6 +133,11 @@ bookmarks = {
 			focuses = {}
 		}
 		"SOR" = {
+			assume_not_played_if_missing_data = yes
+			version = base_game
+			label = {
+				changeling_race
+			}
 			minor = yes
 			history = "SOR_EVIL_MIND_DESC"
 			ideology = fascism
@@ -112,6 +147,11 @@ bookmarks = {
 			focuses = {}
 		}
 		"VRA" = {
+			assume_not_played_if_missing_data = yes
+			version = base_game
+			label = {
+				changeling_race
+			}
 			minor = yes
 			history = "VRA_EVIL_MIND_DESC"
 			ideology = fascism
@@ -123,6 +163,11 @@ bookmarks = {
 
 
 		"PGT" = {
+			assume_not_played_if_missing_data = yes
+			version = base_game
+			label = {
+				pony_race
+			}
 			minor = yes
 			history = "PGT_EVIL_MIND_DESC"
 			ideology = militarism
@@ -133,6 +178,11 @@ bookmarks = {
 			focuses = {}
 		}
 		"EPT" = {
+			assume_not_played_if_missing_data = yes
+			version = base_game
+			label = {
+				pony_race
+			}
 			minor = yes
 			history = "EPT_EVIL_MIND_DESC"
 			ideology = harmony
@@ -147,6 +197,8 @@ bookmarks = {
 			}
 		}
 		"DRG" = {
+			assume_not_played_if_missing_data = yes
+			version = base_game
 			minor = yes
 			history = "DRG_EVIL_MIND_DESC"
 			ideology = neutrality
@@ -157,6 +209,8 @@ bookmarks = {
 			focuses = {}
 		}
 		"OLR" = {
+			assume_not_played_if_missing_data = yes
+			version = base_game
 			minor = yes
 			history = "OLR_EVIL_MIND_DESC"
 			ideology = anarchism
@@ -166,6 +220,8 @@ bookmarks = {
 			focuses = {}
 		}
 		"STG" = {
+			assume_not_played_if_missing_data = yes
+			version = base_game
 			minor = yes
 			history = "STG_EVIL_MIND_DESC"
 			ideology = communism
