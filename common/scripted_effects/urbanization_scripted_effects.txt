@@ -1,20 +1,13 @@
 #THIS SCRIPTS WORKS ONLY IN STATE SCOPE!!!
 add_state_manpower = {
 	set_temp_variable = {
-		state_pop_to_add = modifier@social_infrastructure_num
-	}
-	multiply_temp_variable = {
-		state_pop_to_add = owner:modifier@state_population_factor_by_social_infrastructure
-	}
-	clamp_temp_variable = {
-		var = state_pop_to_add
-		min = 0
-	}
-	add_to_temp_variable = {
-		state_pop_to_add = owner:modifier@state_population_factor
-	}
-	multiply_temp_variable = {
-		state_pop_to_add = state_population
+		state_pop_to_add = {
+			value = modifier@social_infrastructure_num
+			multiply = owner:modifier@state_population_factor_by_social_infrastructure
+			clamp = { min = 0 max = 1000 } #max must be in clamp (crash otherwise, so 1000 is "reasonable" maximum)
+			add = owner:modifier@state_population_factor
+			multiply = state_population
+		}
 	}
 	add_manpower = state_pop_to_add
 }

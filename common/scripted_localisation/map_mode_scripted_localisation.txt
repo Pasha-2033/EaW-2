@@ -555,16 +555,12 @@ defined_text = {
 				}
 			}
 			set_temp_variable = {
-				plants_in_state = FROM.building_level@aluminium_plant
-			}
-			add_to_temp_variable = {
-				plants_in_state = FROM.building_level@steel_plant
-			}
-			add_to_temp_variable = {
-				plants_in_state = FROM.building_level@tungsten_plant
-			}
-			add_to_temp_variable = {
-				plants_in_state = FROM.building_level@chromium_plant
+				plants_in_state = {
+					value = FROM.building_level@aluminium_plant
+					add = FROM.building_level@steel_plant
+					add = FROM.building_level@tungsten_plant
+					add = FROM.building_level@chromium_plant
+				}
 			}
 		}
 		localization_key = "industry_value_tt"

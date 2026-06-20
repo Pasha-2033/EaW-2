@@ -1,22 +1,10 @@
-d_cci = {
-	STG = {
-		calc_coal_impact = yes
-	}
-}
 calc_coal_impact = {
-	#energy 
-	set_temp_variable = {
-		energy_by_coal_factor = 1
-	}
-	add_to_temp_variable = {
-		energy_by_coal_factor = modifier@energy_gain_factor
-	}
 	#restore actual coal value
 	set_variable = {
-		industry_efficiency_by_coal = resource@coal
-	}
-	add_to_variable = {
-		industry_efficiency_by_coal = total_coal_by_all
+		industry_efficiency_by_coal = {
+			value = resource@coal
+			add = total_coal_by_all
+		}
 	}
 	#total coal setup
 	set_variable = {
@@ -38,148 +26,103 @@ calc_coal_impact = {
 	every_controlled_state = {
 		#local energy consumption factor
 		set_temp_variable = {
-			local_energy_consumption = 1
-		}
-		add_to_temp_variable = {
-			local_energy_consumption = modifier@local_factory_energy_consumption
-		}
-		#local energy consumption factor (by infrastructure)
-		set_temp_variable = {
-			local_energy_per_infra = modifier@local_factory_energy_consumption_per_infrastructure
-		}
-		multiply_temp_variable = {
-			local_energy_per_infra = non_damaged_building_level@infrastructure
-		}
-		#summarise local_energy
-		add_to_temp_variable = {
-			local_energy_consumption = local_energy_per_infra
-		}
-		#apply economic law
-		set_temp_variable = {
-			mult_by_law = 1
-		}
-		add_to_temp_variable = {
-			mult_by_law = PREV.modifier@factory_energy_consumption
-		}
-		multiply_temp_variable = {
-			local_energy_consumption = mult_by_law
-		}
-		clamp_temp_variable = {
-			var = local_energy_consumption
-			min = 0
+			local_energy_consumption = {
+				value = 1
+				add = modifier@local_factory_energy_consumption
+				add = {
+					#local energy consumption factor (by infrastructure)
+					value = modifier@local_factory_energy_consumption_per_infrastructure
+					multiply = non_damaged_building_level@infrastructure
+				}
+				multiply = {
+					#apply economic law
+					value = 1
+					add = PREV.modifier@factory_energy_consumption
+				}
+				clamp = { min = 0 max = 1000 } #max must be in clamp (crash otherwise, so 1000 is "reasonable" maximum)
+			}
 		}
 		#aluminium
 		set_variable = {
-			state_aluminium_plant_impact = local_energy_consumption
-		}
-		multiply_variable = {
-			state_aluminium_plant_impact = non_damaged_building_level@aluminium_plant
-		}
-		multiply_variable = {
-			state_aluminium_plant_impact = PREV.modifier@aluminium_plant_coal_consumption
-		}
-		multiply_variable = {
-			state_aluminium_plant_impact = PREV.plant_max_power^0
+			state_aluminium_plant_impact = {
+				value = local_energy_consumption
+				multiply = non_damaged_building_level@aluminium_plant
+				multiply = PREV.modifier@aluminium_plant_coal_consumption
+				multiply = PREV.plant_max_power^0
+			}
 		}
 		add_to_variable = {
 			PREV.total_coal_by^0 = state_aluminium_plant_impact
 		}
-		set_variable = {
-			#init total state consumption
-			state_coal_consumption = state_aluminium_plant_impact
-		}
 		#steel
 		set_variable = {
-			state_steel_plant_impact = local_energy_consumption
-		}
-		multiply_variable = {
-			state_steel_plant_impact = non_damaged_building_level@steel_plant
-		}
-		multiply_variable = {
-			state_steel_plant_impact = PREV.modifier@steel_plant_coal_consumption
-		}
-		multiply_variable = {
-			state_steel_plant_impact = PREV.plant_max_power^1
+			state_steel_plant_impact = {
+				value = local_energy_consumption
+				multiply = non_damaged_building_level@steel_plant
+				multiply = PREV.modifier@steel_plant_coal_consumption
+				multiply = PREV.plant_max_power^1
+			}
 		}
 		add_to_variable = {
 			PREV.total_coal_by^1 = state_steel_plant_impact
 		}
-		add_to_variable = {
-			state_coal_consumption = state_steel_plant_impact
-		}
 		#tungsten
 		set_variable = {
-			state_tungsten_plant_impact = local_energy_consumption
-		}
-		multiply_variable = {
-			state_tungsten_plant_impact = non_damaged_building_level@tungsten_plant
-		}
-		multiply_variable = {
-			state_tungsten_plant_impact = PREV.modifier@tungsten_plant_coal_consumption
-		}
-		multiply_variable = {
-			state_tungsten_plant_impact = PREV.plant_max_power^2
+			state_tungsten_plant_impact = {
+				value = local_energy_consumption
+				multiply = non_damaged_building_level@tungsten_plant
+				multiply = PREV.modifier@tungsten_plant_coal_consumption
+				multiply = PREV.plant_max_power^2
+			}
 		}
 		add_to_variable = {
 			PREV.total_coal_by^2 = state_tungsten_plant_impact
 		}
-		add_to_variable = {
-			state_coal_consumption = state_tungsten_plant_impact
-		}
 		#chromium
 		set_variable = {
-			state_chromium_plant_impact = local_energy_consumption
-		}
-		multiply_variable = {
-			state_chromium_plant_impact = non_damaged_building_level@chromium_plant
-		}
-		multiply_variable = {
-			state_chromium_plant_impact = PREV.modifier@chromium_plant_coal_consumption
-		}
-		multiply_variable = {
-			state_chromium_plant_impact = PREV.plant_max_power^3
+			state_chromium_plant_impact = {
+				value = local_energy_consumption
+				multiply = non_damaged_building_level@chromium_plant
+				multiply = PREV.modifier@chromium_plant_coal_consumption
+				multiply = PREV.plant_max_power^3
+			}
 		}
 		add_to_variable = {
 			PREV.total_coal_by^3 = state_chromium_plant_impact
 		}
-		add_to_variable = {
-			state_coal_consumption = state_chromium_plant_impact
-		}
 		#refinery
 		set_variable = {
-			state_synthetic_refinery_impact = local_energy_consumption
-		}
-		multiply_variable = {
-			state_synthetic_refinery_impact = non_damaged_building_level@synthetic_refinery
-		}
-		multiply_variable = {
-			state_synthetic_refinery_impact = PREV.modifier@synthetic_refinery_coal_consumption
-		}
-		multiply_variable = {
-			state_synthetic_refinery_impact = PREV.synthetic_refinery_max_power
+			state_synthetic_refinery_impact = {
+				value = local_energy_consumption
+				multiply = non_damaged_building_level@synthetic_refinery
+				multiply = PREV.modifier@synthetic_refinery_coal_consumption
+				multiply = PREV.synthetic_refinery_max_power
+			}
 		}
 		add_to_variable = {
 			PREV.total_coal_by_synthetic = state_synthetic_refinery_impact
 		}
-		add_to_variable = {
-			state_coal_consumption = state_synthetic_refinery_impact
+		#total state consumption
+		set_variable = {
+			#init total state consumption
+			state_coal_consumption = {
+				value = state_aluminium_plant_impact
+				add = state_steel_plant_impact
+				add = state_tungsten_plant_impact
+				add = state_chromium_plant_impact
+				add = state_synthetic_refinery_impact
+			}
 		}
 	}
 	#total consumtion
 	set_variable = {
-		total_coal_by_all = total_coal_by^0
-	}
-	add_to_variable = {
-		total_coal_by_all = total_coal_by^1
-	}
-	add_to_variable = {
-		total_coal_by_all = total_coal_by^2
-	}
-	add_to_variable = {
-		total_coal_by_all = total_coal_by^3
-	}
-	add_to_variable = {
-		total_coal_by_all = total_coal_by_synthetic
+		total_coal_by_all = {
+			value = total_coal_by^0
+			add = total_coal_by^1
+			add = total_coal_by^2
+			add = total_coal_by^3
+			add = total_coal_by_synthetic
+		}
 	}
 	#calc industry efficiency (by coal)
 	divide_variable = {
@@ -198,10 +141,10 @@ calc_coal_impact = {
 calc_resource_aluminium = {
 	#restore resource value
 	set_variable = {
-		resource_plant_efficiency^0 = resource@bauxite
-	}
-	add_to_variable = {
-		resource_plant_efficiency^0 = resource_consumption^0
+		resource_plant_efficiency^0 = {
+			value = resource@bauxite
+			add = resource_consumption^0
+		}
 	}
 	#impact (important to call before mtth!)
 	set_variable = {
@@ -237,13 +180,11 @@ calc_resource_aluminium = {
 		}
 		#outcome
 		set_variable = {
-			resource_outcome^0 = mtth:aluminium_plant_total_aluminium_outcome
-		}
-		multiply_variable = {
-			resource_outcome^0 = resource_plant_efficiency^0
-		}
-		multiply_variable = {
-			resource_outcome^0 = -1
+			resource_outcome^0 = {
+				value = mtth:aluminium_plant_total_aluminium_outcome
+				multiply = resource_plant_efficiency^0
+				multiply = -1
+			}
 		}
 	}
 	else = {
@@ -258,10 +199,10 @@ calc_resource_aluminium = {
 calc_resource_steel = {
 	#restore resource value
 	set_variable = {
-		resource_plant_efficiency^1 = resource@iron
-	}
-	add_to_variable = {
-		resource_plant_efficiency^1 = resource_consumption^1
+		resource_plant_efficiency^1 = {
+			value = resource@iron
+			add = resource_consumption^1
+		}
 	}
 	#impact (important to call before mtth!)
 	set_variable = {
@@ -297,13 +238,11 @@ calc_resource_steel = {
 		}
 		#outcome
 		set_variable = {
-			resource_outcome^1 = mtth:steel_plant_total_steel_outcome
-		}
-		multiply_variable = {
-			resource_outcome^1 = resource_plant_efficiency^1
-		}
-		multiply_variable = {
-			resource_outcome^1 = -1
+			resource_outcome^1 = {
+				value = mtth:steel_plant_total_steel_outcome
+				multiply = resource_plant_efficiency^1
+				multiply = -1
+			}
 		}
 	}
 	else = {
@@ -318,10 +257,10 @@ calc_resource_steel = {
 calc_resource_tungsten = {
 	#restore resource value
 	set_variable = {
-		resource_plant_efficiency^2 = resource@scheelitis
-	}
-	add_to_variable = {
-		resource_plant_efficiency^2 = resource_consumption^2
+		resource_plant_efficiency^2 = {
+			value = resource@scheelitis
+			add = resource_consumption^2
+		}
 	}
 	#impact (important to call before mtth!)
 	set_variable = {
@@ -357,13 +296,11 @@ calc_resource_tungsten = {
 		}
 		#outcome
 		set_variable = {
-			resource_outcome^2 = mtth:tungsten_plant_total_tungsten_outcome
-		}
-		multiply_variable = {
-			resource_outcome^2 = resource_plant_efficiency^2
-		}
-		multiply_variable = {
-			resource_outcome^2 = -1
+			resource_outcome^2 = {
+				value = mtth:tungsten_plant_total_tungsten_outcome
+				multiply = resource_plant_efficiency^2
+				multiply = -1
+			}
 		}
 	}
 	else = {
@@ -378,10 +315,10 @@ calc_resource_tungsten = {
 calc_resource_chromium = {
 	#restore resource value
 	set_variable = {
-		resource_plant_efficiency^3 = resource@chromite
-	}
-	add_to_variable = {
-		resource_plant_efficiency^3 = resource_consumption^3
+		resource_plant_efficiency^3 = {
+			value = resource@chromite
+			add = resource_consumption^3
+		}
 	}
 	#impact (important to call before mtth!)
 	set_variable = {
@@ -417,13 +354,11 @@ calc_resource_chromium = {
 		}
 		#outcome
 		set_variable = {
-			resource_outcome^3 = mtth:chromium_plant_total_chromium_outcome
-		}
-		multiply_variable = {
-			resource_outcome^3 = resource_plant_efficiency^3
-		}
-		multiply_variable = {
-			resource_outcome^3 = -1
+			resource_outcome^3 = {
+				value = mtth:chromium_plant_total_chromium_outcome
+				multiply = resource_plant_efficiency^3
+				multiply = -1
+			}
 		}
 	}
 	else = {
@@ -440,17 +375,17 @@ calc_resource_chromium = {
 calc_resource_synthetic = {
 	#restore resource value
 	set_variable = {
-		synthetic_refinery_efficiency = resource@oil
-	}
-	add_to_variable = {
-		synthetic_refinery_efficiency = synthetic_refinery_consumption
+		synthetic_refinery_efficiency = {
+			value = resource@oil
+			add = synthetic_refinery_consumption
+		}
 	}
 	#impact (important to call before mtth!)
 	set_variable = {
-		synthetic_refinery_total_impact = modifier@synthetic_refinery_num
-	}
-	multiply_variable = {
-		synthetic_refinery_total_impact = synthetic_refinery_max_power
+		synthetic_refinery_total_impact = {
+			value = modifier@synthetic_refinery_num
+			multiply = synthetic_refinery_max_power
+		}
 	}
 	#consumtion
 	set_variable = {
@@ -479,19 +414,17 @@ calc_resource_synthetic = {
 		}
 		#outcome
 		set_variable = {
-			fuel_outcome = mtth:synthetic_refinery_total_fuel_outcome
+			fuel_outcome = {
+				value = mtth:synthetic_refinery_total_fuel_outcome
+				multiply = synthetic_refinery_efficiency
+			}
 		}
 		set_variable = {
-			rubber_outcome = mtth:synthetic_refinery_total_rubber_outcome
-		}
-		multiply_variable = {
-			fuel_outcome = synthetic_refinery_efficiency
-		}
-		multiply_variable = {
-			rubber_outcome = synthetic_refinery_efficiency
-		}
-		multiply_variable = {
-			rubber_outcome = -1
+			rubber_outcome = {
+				value = mtth:synthetic_refinery_total_rubber_outcome
+				multiply = synthetic_refinery_efficiency
+				multiply = -1
+			}
 		}
 	}
 	else = {
@@ -511,30 +444,24 @@ calc_resource_synthetic = {
 calc_primary_reactor = {
 	#restore resource value
 	set_variable = {
-		reactor_primary_efficiency = resource@nuclear_fuel_primary
-	}
-	add_to_variable = {
-		reactor_primary_efficiency = primary_fuel_reactor_consumption
+		reactor_primary_efficiency = {
+			value = resource@nuclear_fuel_primary
+			add = primary_fuel_reactor_consumption
+		}
 	}
 	#impact (important to call before mtth!)
 	set_variable = {
-		reactor_common_total_impact = modifier@nuclear_reactor_num
+		reactor_common_total_impact = {
+			value = modifier@nuclear_reactor_num
+			#multiply = reactor_common_max_power
+		}
 	}
-	#multiply_variable = {
-	#	reactor_common_total_impact = reactor_common_max_power
-	#}
-	set_variable = {
-		reactor_exploratory_total_impact = modifier@nuclear_reactor_exploratory_num
-	}
-	#multiply_variable = {
-	#	reactor_exploratory_total_impact = reactor_exploratory_max_power
-	#}
 	#consumtion
 	set_variable = {
-		primary_fuel_reactor_consumption = mtth:reactor_common_total_consumtion
-	}
-	add_to_variable = {
-		primary_fuel_reactor_consumption = mtth:reactor_exploratory_total_consumtion
+		primary_fuel_reactor_consumption = {
+			value = mtth:reactor_common_total_consumtion
+			add = mtth:reactor_exploratory_total_consumtion
+		}
 	}
 	if = {
 		limit = {
@@ -548,13 +475,13 @@ calc_primary_reactor = {
 		}
 		set_variable = {
 			#for own penalty reduction
-			reactor_exploratory_primary_efficiency = reactor_primary_efficiency
+			reactor_exploratory_primary_efficiency = {
+				value = reactor_primary_efficiency
+				add = modifier@nuclear_reactor_exploratory_penalty_reduction
+			}
 		}
 		add_to_variable = {
 			reactor_primary_efficiency = modifier@nuclear_reactor_penalty_reduction
-		}
-		add_to_variable = {
-			reactor_exploratory_primary_efficiency = modifier@nuclear_reactor_exploratory_penalty_reduction
 		}
 		clamp_variable = {
 			var = reactor_primary_efficiency
@@ -572,43 +499,37 @@ calc_primary_reactor = {
 			nuclear_fuel_primary_reactor = primary_fuel_reactor_consumption
 		}
 		set_variable = {
-			nuclear_fuel_secondary_reactor = mtth:nuclear_reactor_total_fuel_secondary_outcome
+			nuclear_fuel_secondary_reactor = {
+				value = mtth:nuclear_reactor_total_fuel_secondary_outcome
+				multiply = reactor_primary_efficiency
+				multiply = -1
+			}
 		}
 		set_variable = {
-			common_thermonuclear_fuel_reactor = mtth:nuclear_reactor_total_fuel_thermonuclear_outcome
+			common_thermonuclear_fuel_reactor = {
+				value = mtth:nuclear_reactor_total_fuel_thermonuclear_outcome
+				multiply = reactor_primary_efficiency
+			}
 		}
 		set_variable = {
-			thermonuclear_fuel_reactor = mtth:nuclear_reactor_exploratory_total_fuel_thermonuclear_outcome
+			thermonuclear_fuel_reactor = {
+				value = mtth:nuclear_reactor_exploratory_total_fuel_thermonuclear_outcome
+				multiply = reactor_exploratory_primary_efficiency
+				add = common_thermonuclear_fuel_reactor
+				multiply = -1
+			}
 		}
 		set_variable = {
-			nuclear_production_factor_outcome = mtth:nuclear_reactor_total_nuke_outcome
+			nuclear_production_factor_outcome = {
+				value = mtth:nuclear_reactor_total_nuke_outcome
+				multiply = reactor_primary_efficiency
+			}
 		}
 		set_variable = {
-			thermonuclear_production_factor_outcome = mtth:nuclear_reactor_total_thermonuke_outcome
-		}
-		multiply_variable = {
-			common_thermonuclear_fuel_reactor = reactor_primary_efficiency
-		}
-		multiply_variable = {
-			nuclear_fuel_secondary_reactor = reactor_primary_efficiency
-		}
-		multiply_variable = {
-			thermonuclear_fuel_reactor = reactor_exploratory_primary_efficiency
-		}
-		multiply_variable = {
-			nuclear_production_factor_outcome = reactor_primary_efficiency
-		}
-		multiply_variable = {
-			thermonuclear_production_factor_outcome = reactor_primary_efficiency
-		}
-		add_to_variable = {
-			thermonuclear_fuel_reactor = common_thermonuclear_fuel_reactor
-		}
-		multiply_variable = {
-			nuclear_fuel_secondary_reactor = -1
-		}
-		multiply_variable = {
-			thermonuclear_fuel_reactor = -1
+			thermonuclear_production_factor_outcome = {
+				value = mtth:nuclear_reactor_total_thermonuke_outcome
+				multiply = reactor_primary_efficiency
+			}
 		}
 	}
 	else = {
@@ -637,18 +558,18 @@ calc_primary_reactor = {
 calc_secondary_reactor = {
 	#restore resource value
 	set_variable = {
-		reactor_heavy_water_efficiency = resource@nuclear_fuel_secondary
-	}
-	add_to_variable = {
-		reactor_heavy_water_efficiency = secondary_fuel_reactor_consumption
+		reactor_heavy_water_efficiency = {
+			value = resource@nuclear_fuel_secondary
+			add = secondary_fuel_reactor_consumption
+		}
 	}
 	#impact (important to call before mtth!)
 	set_variable = {
-		reactor_heavy_water_total_impact = modifier@nuclear_reactor_heavy_water_num
+		reactor_heavy_water_total_impact = {
+			value = modifier@nuclear_reactor_heavy_water_num
+			#multiply = reactor_heavy_water_total_impact
+		}
 	}
-	#multiply_variable = {
-	#	reactor_heavy_water_total_impact = reactor_heavy_water_max_power
-	#}
 	#consumtion
 	set_variable = {
 		secondary_fuel_reactor_consumption = mtth:secondary_fuel_reactor_total_consumption
@@ -677,28 +598,28 @@ calc_secondary_reactor = {
 			nuclear_fuel_secondary_reactor = secondary_fuel_reactor_consumption
 		}
 		set_variable = {
-			secondary_nuke = mtth:secondary_total_nuke
+			secondary_nuke = {
+				value = mtth:secondary_total_nuke
+				multiply = reactor_heavy_water_efficiency
+			}
 		}
 		set_variable = {
-			secondary_thermonuke = mtth:secondary_total_thermonuke
+			secondary_thermonuke = {
+				value = mtth:secondary_total_thermonuke
+				multiply = reactor_heavy_water_efficiency
+			}
 		}
 		set_variable = {
-			primary_fuel = mtth:total_primary_fuel
+			primary_fuel = {
+				value = mtth:total_primary_fuel
+				multiply = reactor_heavy_water_efficiency
+			}
 		}
 		set_variable = {
-			heavy_water_fuel_thermonuclear_outcome = mtth:heavy_water_fuel_thermonuclear_total_outcome
-		}
-		multiply_variable = {
-			heavy_water_fuel_thermonuclear_outcome = reactor_heavy_water_efficiency
-		}
-		multiply_variable = {
-			secondary_nuke = reactor_heavy_water_efficiency
-		}
-		multiply_variable = {
-			secondary_thermonuke = reactor_heavy_water_efficiency
-		}
-		multiply_variable = {
-			primary_fuel = reactor_heavy_water_efficiency
+			heavy_water_fuel_thermonuclear_outcome = {
+				value = mtth:heavy_water_fuel_thermonuclear_total_outcome
+				multiply = reactor_heavy_water_efficiency
+			}
 		}
 		add_to_variable = {
 			nuclear_production_factor_outcome = secondary_nuke
@@ -726,18 +647,18 @@ calc_secondary_reactor = {
 calc_thermonuclear_reactor = {
 	#restore resource value
 	set_variable = {
-		thermonuclear_reactor_efficiency = resource@thermonuclear_fuel
-	}
-	add_to_variable = {
-		thermonuclear_reactor_efficiency = thermonuclear_fuel_reactor_consumption
+		thermonuclear_reactor_efficiency = {
+			value = resource@thermonuclear_fuel
+			add = thermonuclear_fuel_reactor_consumption
+		}
 	}
 	#impact (important to call before mtth!)
 	set_variable = {
-		thermonuclear_reactor_total_impact = modifier@thermonuclear_reactor_num
+		thermonuclear_reactor_total_impact = {
+			value = modifier@thermonuclear_reactor_num
+			#multiply = thermonuclear_reactor_max_power
+		}
 	}
-	#multiply_variable = {
-	#	thermonuclear_reactor_total_impact = thermonuclear_reactor_max_power
-	#}
 	#consumtion
 	set_variable = {
 		thermonuclear_fuel_reactor_consumption = mtth:thermonuclear_reactor_total_fuel_consumption
@@ -766,10 +687,10 @@ calc_thermonuclear_reactor = {
 			thermonuclear_fuel_reactor = thermonuclear_fuel_reactor_consumption
 		}
 		set_variable = {
-			thermonuclear_thermonuke = mtth:thermonuclear_reactor_total_thermonuke_outcome
-		}
-		multiply_variable = {
-			thermonuclear_thermonuke = thermonuclear_reactor_efficiency
+			thermonuclear_thermonuke = {
+				value = mtth:thermonuclear_reactor_total_thermonuke_outcome
+				multiply = thermonuclear_reactor_efficiency
+			}
 		}
 		add_to_variable = {
 			thermonuclear_production_factor_outcome = thermonuclear_thermonuke
@@ -801,162 +722,80 @@ calc_all_nuclear_resources = {
 }
 #country scope (made for faction)
 set_resource_industry_power = {
-	#aluminium
 	set_variable = {
-		resource_industry_influence = modifier@aluminium_plant_num
-	}
-	multiply_variable = {
-		resource_industry_influence = 0.9
-	}
-	#steel
-	set_temp_variable = {
-		steel_plant_influence = modifier@steel_plant_num
-	}
-	multiply_temp_variable = {
-		steel_plant_influence = 0.9
-	}
-	add_to_variable = {
-		resource_industry_influence = steel_plant_influence
-	}
-	#tungsten
-	set_temp_variable = {
-		tungsten_plant_influence = modifier@tungsten_plant_num
-	}
-	multiply_temp_variable = {
-		tungsten_plant_influence = 0.9
-	}
-	add_to_variable = {
-		resource_industry_influence = tungsten_plant_influence
-	}
-	#chromium
-	set_temp_variable = {
-		chromium_plant_influence = modifier@chromium_plant_num
-	}
-	multiply_temp_variable = {
-		chromium_plant_influence = 0.9
-	}
-	add_to_variable = {
-		resource_industry_influence = chromium_plant_influence
-	}
-	#rubber & oil
-	set_temp_variable = {
-		synthetic_refinery_influence = modifier@synthetic_refinery_num
-	}
-	multiply_temp_variable = {
-		synthetic_refinery_influence = 0.9
-	}
-	add_to_variable = {
-		resource_industry_influence = synthetic_refinery_influence
+		resource_industry_influence = {
+			value = modifier@aluminium_plant_num
+			multiply = 0.9
+			add = {
+				value = modifier@steel_plant_num
+				multiply = 0.9
+			}
+			add = {
+				value = modifier@tungsten_plant_num
+				multiply = 0.9
+			}
+			add = {
+				value = modifier@chromium_plant_num
+				multiply = 0.9
+			}
+			add = {
+				value = modifier@synthetic_refinery_num
+				multiply = 0.9
+			}
+		}
 	}
 }
 #country scope (made for faction)
 set_resource_base_power = {
-	#bauxite
 	set_variable = {
-		resource_influence = resource_exported@bauxite
-	}
-	multiply_variable = {
-		resource_influence = 0.9
-	}
-	#iron
-	set_temp_variable = {
-		iron_influence = resource_exported@iron
-	}
-	multiply_temp_variable = {
-		iron_influence = 0.9
-	}
-	add_to_variable = {
-		resource_influence = iron_influence
-	}
-	#scheelitis
-	set_temp_variable = {
-		scheelitis_influence = resource_exported@scheelitis
-	}
-	multiply_temp_variable = {
-		scheelitis_influence = 0.9
-	}
-	add_to_variable = {
-		resource_influence = scheelitis_influence
-	}
-	#chromite
-	set_temp_variable = {
-		chromite_influence = resource_exported@chromite
-	}
-	multiply_temp_variable = {
-		chromite_influence = 0.9
-	}
-	add_to_variable = {
-		resource_influence = chromite_influence
-	}
-	#oil
-	set_temp_variable = {
-		oil_influence = resource_exported@oil
-	}
-	multiply_temp_variable = {
-		oil_influence = 0.9
-	}
-	add_to_variable = {
-		resource_influence = oil_influence
-	}
-	#crystals
-	set_temp_variable = {
-		crystals_influence = resource_exported@crystals
-	}
-	multiply_temp_variable = {
-		crystals_influence = 0.9
-	}
-	add_to_variable = {
-		resource_influence = crystals_influence
-	}
-	#food
-	set_temp_variable = {
-		food_influence = resource_exported@food
-	}
-	multiply_temp_variable = {
-		food_influence = 0.9
-	}
-	add_to_variable = {
-		resource_influence = food_influence
-	}
-	#nuclear_fuel_primary
-	set_temp_variable = {
-		nuclear_fuel_primary_influence = resource_exported@nuclear_fuel_primary
-	}
-	multiply_temp_variable = {
-		nuclear_fuel_primary_influence = 0.9
-	}
-	add_to_variable = {
-		resource_influence = nuclear_fuel_primary_influence
-	}
-	#nuclear_fuel_secondary
-	set_temp_variable = {
-		nuclear_fuel_secondary_influence = resource_exported@nuclear_fuel_secondary
-	}
-	multiply_temp_variable = {
-		nuclear_fuel_secondary_influence = 0.9
-	}
-	add_to_variable = {
-		resource_influence = nuclear_fuel_secondary_influence
-	}
-	#thermonuclear_fuel
-	set_temp_variable = {
-		thermonuclear_fuel_influence = resource_exported@thermonuclear_fuel
-	}
-	multiply_temp_variable = {
-		thermonuclear_fuel_influence = 0.9
-	}
-	add_to_variable = {
-		resource_influence = thermonuclear_fuel_influence
-	}
-	#coal
-	set_temp_variable = {
-		coal_influence = resource_exported@coal
-	}
-	multiply_temp_variable = {
-		coal_influence = 0.9
-	}
-	add_to_variable = {
-		resource_influence = coal_influence
+		resource_influence = {
+			value = resource_exported@bauxite
+			multiply = 0.9
+			add = {
+				value = resource_exported@iron
+				multiply = 0.9
+			}
+			add = {
+				value = resource_exported@chromite
+				multiply = 0.9
+			}
+			add = {
+				value = resource_exported@scheelitis
+				multiply = 0.9
+			}
+			add = {
+				value = resource_exported@oil
+				multiply = 0.9
+			}
+			add = {
+				value = resource_exported@crystals
+				multiply = 0.9
+			}
+			add = {
+				value = resource_exported@food
+				multiply = 0.9
+			}
+			add = {
+				value = resource_exported@nuclear_fuel_primary
+				multiply = 0.9
+			}
+			add = {
+				value = resource_exported@nuclear_fuel_secondary
+				multiply = 0.9
+			}
+			add = {
+				value = resource_exported@thermonuclear_fuel
+				multiply = 0.9
+			}
+			add = {
+				value = resource_exported@coal
+				multiply = 0.9
+			}
+			add = {
+				value = resource_exported@food
+				multiply = 0.9
+			}
+		}
 	}
 }
 

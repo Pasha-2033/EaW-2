@@ -59,6 +59,6 @@ tags={
 	"Events"
 	"Map"
 }
-supported_version="1.17.*"
+supported_version="1.19.*"
 picture="thumbnail.png"
 path="mod/EaW-2/"

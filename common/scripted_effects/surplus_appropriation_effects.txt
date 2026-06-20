@@ -16,31 +16,26 @@ calc_surplus_appropriation_real_values = {
 	#calc army consumtion (to do more complicated and precise)
 	#calc consumers
 	set_variable = {
-		raw_consumers^0 = max_manpower_k
+		raw_consumers^0 = {
+			value = max_manpower_k
+			multiply = 0.004
+		}
 	}
 	set_variable = {
-		raw_consumers^1 = num_of_controlled_factories
-	}
-	add_to_variable = {
-		raw_consumers^1 = modifier@steel_plant_num
-	}
-	add_to_variable = {
-		raw_consumers^1 = modifier@aluminium_plant_num
-	}
-	add_to_variable = {
-		raw_consumers^1 = modifier@tungsten_plant_num
-	}
-	add_to_variable = {
-		raw_consumers^1 = modifier@chromium_plant_num
+		raw_consumers^1 = {
+			value = num_of_controlled_factories
+			add = modifier@steel_plant_num
+			add = modifier@aluminium_plant_num
+			add = modifier@tungsten_plant_num
+			add = modifier@chromium_plant_num
+			add = modifier@synthetic_refinery_num
+		}
 	}
 	set_variable = {
-		raw_consumers^2 = max_available_manpower_k
-	}
-	multiply_variable = {
-		raw_consumers^0 = 0.004
-	}
-	multiply_variable = {
-		raw_consumers^2 = 0.008
+		raw_consumers^2 = {
+			value = max_available_manpower_k
+			multiply = 0.008
+		}
 	}
 	set_variable = {
 		sa_consumtion_sum = 0
@@ -63,7 +58,7 @@ calc_surplus_appropriation_real_values = {
 			min = 0
 		}
 	}
-	#applying modifiers#
+	#applying modifiers
 	multiply_variable = {
 		consumers^0 = mtth:civil_consumption_factor
 	}
@@ -129,13 +124,11 @@ calc_surplus_appropriation_real_values = {
 				}
 			}
 			set_temp_variable = {
-				food_vs_consumtion = modifier@food_gain
-			}
-			add_to_temp_variable = {
-				food_vs_consumtion = food_storage_value
-			}
-			divide_temp_variable = {
-				food_vs_consumtion = negative_food_storage_change
+				food_vs_consumtion = {
+					value = modifier@food_gain
+					add = food_storage_value
+					divide = negative_food_storage_change
+				}
 			}
 			for_each_loop = {
 				array = consumers
@@ -378,17 +371,10 @@ harvest_failure_update = {
 		}
 		else_if = {
 			limit = {
-				OR = {
-					check_variable = {
-						var = delta_harvest_failure_food
-						value = 0
-						compare = not_equals
-					}
-					check_variable = {
-						var = delta_harvest_failure_supply
-						value = 0
-						compare = not_equals
-					}
+				check_expr = {
+					value = delta_harvest_failure_food
+					add = delta_harvest_failure_supply
+					not_equals = 0
 				}
 			}
 			subtract_from_variable = {

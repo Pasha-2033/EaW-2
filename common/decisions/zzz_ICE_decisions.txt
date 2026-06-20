@@ -28,16 +28,11 @@ ice_equipment_manpower_collecting = {
 		days_re_enable = 14
 		target_trigger = {
 			FROM = {
-				OR = {
-					check_variable = {
-						arms_factory_level > 0
-					}
-					check_variable = {
-						industrial_complex_level > 0
-					}
-					check_variable = {
-						building_level@agrarian_complex > 0
-					}
+				check_expr = {
+					value = arms_factory_level
+					add = industrial_complex_level
+					add = building_level@agrarian_complex
+					greater_than = 0
 				}
 			}
 		}
@@ -45,32 +40,22 @@ ice_equipment_manpower_collecting = {
 		cost = 10 #destroy_buildings_cost
 		complete_effect = {
 			set_temp_variable = {
-				mil_eq_factor = FROM.arms_factory_level
-			}
-			set_temp_variable = {
-				agr_eq_factor = FROM.building_level@agrarian_complex
-			}
-			set_temp_variable = {
-				civ_eq_factor = FROM.industrial_complex_level
-			}
-			multiply_temp_variable = {
-				mil_eq_factor = 250
-			}
-			multiply_temp_variable = {
-				agr_eq_factor = 50
-			}
-			multiply_temp_variable = {
-				civ_eq_factor = 100
-			}
-			add_to_temp_variable = {
-				mil_eq_factor = agr_eq_factor
-			}
-			add_to_temp_variable = {
-				mil_eq_factor = civ_eq_factor
+				eq_num = {
+					value = FROM.arms_factory_level
+					multiply = 250
+					add = {
+						value = FROM.building_level@agrarian_complex
+						multiply = 50
+					}
+					add = {
+						value = FROM.industrial_complex_level
+						multiply = 100
+					}
+				}
 			}
 			add_equipment_to_stockpile = {
 				type = windigo_equipment
-				amount = mil_eq_factor
+				amount = eq_num
 			}
 			FROM = {
 				#"if" isn`t good, but for tooltip - we should leave them (remove text like "remove 0 building")
@@ -118,18 +103,14 @@ ice_equipment_manpower_collecting = {
         cost = resurrect_fallen_cost
 		complete_effect = {
 			set_temp_variable = {
-				temp = casualties_k
+				mp = {
+					value = casualties_k
+					subtract = resurrect_fallen_prev_casualties_k
+					multiply = resurrect_fallen_efficiency
+					multiply = 1000
+				}
 			}
-			subtract_from_temp_variable = {
-				temp = resurrect_fallen_prev_casualties_k
-			}
-			multiply_temp_variable = {
-				temp = resurrect_fallen_efficiency
-			}
-			multiply_temp_variable = {
-				temp = 1000
-			}
-			add_manpower = temp
+			add_manpower = mp
 			set_variable = {
 				resurrect_fallen_prev_casualties_k = casualties_k
 			}
