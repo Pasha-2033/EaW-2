@@ -171,14 +171,10 @@ stop_planes_production_that_will_be_shot_down = {
 		check_variable = {
 			num_deployed_planes > 0 #prevent from fighter_ratio / num_deployed_planes, where num_deployed_planes = 0
 		}
-		set_temp_variable = {
-			fighter_ratio = num_deployed_planes_with_type@fighter
-		}
-		divide_temp_variable = {
-			fighter_ratio = num_deployed_planes
-		}
-		check_variable = {
-			fighter_ratio < 0.2
+		check_expr = {
+			value = num_deployed_planes_with_type@fighter
+			divide = num_deployed_planes
+			less_than = 0.2
 		}
 	}
 	abort_when_not_enabled = yes
@@ -236,14 +232,10 @@ increase_armor_thickness = {
 		num_of_military_factories > 19
 		any_enemy_country = {
 			num_divisions > 0 #prevent from ap_ratio / num_divisions, where num_divisions = 0
-			set_temp_variable = {
-				ap_ratio = num_battalions_with_type@anti_tank_brigade
-			}
-			divide_temp_variable = {
-				ap_ratio = num_divisions
-			}
-			check_variable = {
-				ap_ratio > 0.2
+			check_expr = {
+				value = num_battalions_with_type@anti_tank_brigade
+				divide = num_divisions
+				greater_than = 0.2
 			}
 		}
 	}

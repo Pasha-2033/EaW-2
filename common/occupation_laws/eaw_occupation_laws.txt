@@ -208,37 +208,57 @@ extractive_regime = {
 		base = 100
 		modifier = {
 			# if we are desiring a resource produced here
-			set_temp_variable = { releveant_resources = 0 }
-			
-			set_temp_variable = { t = resource@oil }
-			multiply_temp_variable = { t = ai_desire_oil }
-			add_to_temp_variable = { releveant_resources = t }
-			
-			set_temp_variable = { t = resource@aluminium }
-			multiply_temp_variable = { t = ai_desire_aluminium }
-			add_to_temp_variable = { releveant_resources = t }
-			
-			set_temp_variable = { t = resource@rubber }
-			multiply_temp_variable = { t = ai_desire_rubber }
-			add_to_temp_variable = { releveant_resources = t }
-			
-			set_temp_variable = { t = resource@tungsten }
-			multiply_temp_variable = { t = ai_desire_tungsten }
-			add_to_temp_variable = { releveant_resources = t }
-			
-			set_temp_variable = { t = resource@steel }
-			multiply_temp_variable = { t = ai_desire_steel }
-			add_to_temp_variable = { releveant_resources = t }
-			
-			set_temp_variable = { t = resource@chromium }
-			multiply_temp_variable = { t = ai_desire_chromium }
-			add_to_temp_variable = { releveant_resources = t }
-			
-			check_variable = { releveant_resources > 0 }
-			clamp_temp_variable = { var = releveant_resources max = 40 }
-			divide_temp_variable = { releveant_resources = 40 }
-			multiply_temp_variable = { releveant_resources = 200 }
-			add_to_temp_variable = { releveant_resources = 100 }
+			set_temp_variable = {
+				releveant_resources = {
+					value = resource@oil
+					multiply = ai_desire_oil
+					add = {
+						value = resource@iron
+						multiply = ai_desire_iron
+					}
+					add = {
+						value = resource@bauxite
+						multiply = ai_desire_bauxite
+					}
+					add = {
+						value = resource@scheelitis
+						multiply = ai_desire_scheelitis
+					}
+					add = {
+						value = resource@chromite
+						multiply = ai_desire_chromite
+					}
+					add = {
+						value = resource@rubber
+						multiply = ai_desire_rubber
+					}
+					add = {
+						value = resource@crystals
+						multiply = ai_desire_crystals
+					}
+					add = {
+						value = resource@food
+						multiply = ai_desire_food
+					}
+					add = {
+						value = resource@nuclear_fuel_primary
+						multiply = ai_desire_nuclear_fuel_primary
+					}
+				}
+			}
+			check_variable = { 
+				releveant_resources > 0 
+			}
+			clamp_temp_variable = { 
+				var = releveant_resources 
+				max = 40 
+			}
+			multiply_temp_variable = { 
+				releveant_resources = 5 
+			}
+			add_to_temp_variable = { 
+				releveant_resources = 100 
+			}
 			add = releveant_resources
 		}
 	}
@@ -252,10 +272,6 @@ integration_occupation = {
 		OR = {
 			check_variable = { potential_cores^num > 0 }
 			check_variable = { potential_original_cores^num > 0 }
-		}
-		NOT = {
-			original_tag = DED
-			hidden_trigger = { original_tag = EWI }
 		}
 	}
 

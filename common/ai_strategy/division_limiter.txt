@@ -8,14 +8,10 @@ max_ammount_division_limiter = {
 	}
 	enable = {
 		#rewrite trigger: dependence - state count
-		set_temp_variable = {
-			max_divisions = global.max_division_counter
-		}
-		multiply_temp_variable = {
-			max_divisions = max_division_index
-		}
-		check_variable = {
-			num_divisions > max_divisions
+		check_expr = {
+			value = global.max_division_counter
+			multiply = max_division_index
+			less_than = num_divisions
 		}
 	}
 	abort_when_not_enabled = yes

@@ -130,10 +130,24 @@ guiTypes = {
 		
 		iconType = {
 			name = "leader_icon"
-			position = {x=8 y=-5}	
+			position = {x=8 y=-5}
 			quadTextureSprite ="GFX_leader_unknown"
 			alwaystransparent = yes
 			scale = 0.39
+		}
+
+		iconType = {
+			name = "pending_leader_icon"
+			position = {x=8 y=-5}
+			quadTextureSprite ="GFX_leader_unknown"
+			scale = 0.15
+		}
+		
+		iconType = {
+			name = "leader_coming"
+			spriteType = "GFX_opinion_arrow_right"
+			position = {x=21 y=-5}
+			alwaystransparent = yes
 		}
 
 		iconType = {
@@ -368,7 +382,13 @@ guiTypes = {
 		# Applied to "leader_enroute" while "hq_badge" is shown so the icons stack vertically
 		positionType = {
 			name = "hq_badge_shown_enroute_offset"
-			position = { x=0 y=27 }
+			position = { x=0 y=24 }
+		}
+
+		# Applied to "hq_badge" and/or "leader_enroute" while "pending_leader_icon" is shown so the icons stack vertically
+		positionType = {
+			name = "pending_leader_shown_offset"
+			position = { x=0 y=31 }
 		}
 	}
 

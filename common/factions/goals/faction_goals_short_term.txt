@@ -26,45 +26,35 @@ faction_goal_unlock_research = {
 	category = short_term
 	group = FOCUS_FILTER_INTERNAL_AFFAIRS
 	available = {
-		FROM = { num_faction_members > 2 }
+		FROM = { num_faction_members > 1 }
 	}
 	visible = {
 		FROM = { has_faction_research_unlocked = no }
 	}
 	select_effect = {
-		set_temp_variable = { total_techs = 0 }
-		every_collection_element = {
-			input = {
-				input = game:scope
-				operators =  {
-					faction_members
+		scope:faction = {
+			set_variable = { 
+				unlock_military_techs_researched_target = {
+					value = 0
+					every_collection = {
+						named_collection = faction_members
+						add = num_researched_technologies
+					}
+					multiply = 1.2
 				}
 			}
-			add_to_temp_variable = { total_techs = num_researched_technologies }
-		}
-		
-		multiply_temp_variable = {
-			var = total_techs
-			value = 1.20
-		}
-		scope:faction = {
-			set_variable = { unlock_military_techs_researched_target = total_techs }
 		}
 	}
 	completed = {
 		scope:faction = {
-			hidden_trigger = {
-				tooltip_evaluation = eval
-				set_temp_variable = { unlock_military_techs_researched_compare = 0 }			
-				all_collection_elements = {
-					collection = {
-						input = game:scope
-						operators =  { faction_members }
+			set_temp_variable = {
+				unlock_military_techs_researched_compare = {
+					value = 0
+					every_collection = {
+						named_collection = faction_members
+						add = num_researched_technologies
 					}
-					add_to_temp_variable = { unlock_military_techs_researched_compare = num_researched_technologies }
 				}
-				set_temp_variable = { unlock_military_techs_researched_compare_temp_target = unlock_military_techs_researched_compare }
-				multiply_temp_variable = { unlock_military_techs_researched_compare_temp_target = 1.20 }
 			}
 			if = {
 				limit = {
@@ -78,6 +68,12 @@ faction_goal_unlock_research = {
 				}
 			}
 			else = {
+				set_temp_variable = { 
+					unlock_military_techs_researched_compare_temp_target = {
+						value = unlock_military_techs_researched_compare
+						multiply = 1.2
+					}
+				}
 				check_variable = {
 					var = unlock_military_techs_researched_compare
 					value = unlock_military_techs_researched_compare_temp_target
@@ -102,26 +98,25 @@ faction_goal_unlock_military = {
 	category = short_term
 	group = FOCUS_FILTER_RESEARCH
 	available = {
-		FROM = { num_faction_members > 1 }
+		FROM = { 
+			num_faction_members > 1 
+		}
 	}
 	visible = {
-		FROM = { has_faction_military_unlocked = no }
+		FROM = { 
+			has_faction_military_unlocked = no 
+		}
 	}
 	select_effect = {
-		set_temp_variable = { total_divs = 0 }
-		every_collection_element = {
-			input = {
-				input = game:scope
-				operators =  {
-					faction_members
+		set_temp_variable = { 
+			total_divs = {
+				value = 0
+				every_collection = {
+					named_collection = faction_members
+					add = num_armies
 				}
+				multiply = 1.2
 			}
-			add_to_temp_variable = { total_divs = num_armies }
-		}
-		
-		multiply_temp_variable = {
-			var = total_divs
-			value = 1.20
 		}
 		scope:faction = {
 			set_variable = { unlock_target = total_divs }
@@ -129,17 +124,15 @@ faction_goal_unlock_military = {
 	}
 	completed = {
 		scope:faction = {
-			hidden_trigger = {
-				tooltip_evaluation = eval
-				set_temp_variable = { unlock_compare = 0 }			
-				all_collection_elements = {
-					collection = {
-						input = game:scope
-						operators =  { faction_members }
+			set_temp_variable = {
+				unlock_compare = {
+					total_divs = {
+						value = 0
+						every_collection = {
+							named_collection = faction_members
+							add = num_armies
+						}
 					}
-					add_to_temp_variable = { unlock_compare = num_armies }
-					set_temp_variable = { unlock_military_techs_researched_compare_temp_target = unlock_compare }
-					multiply_temp_variable = { unlock_military_techs_researched_compare_temp_target = 1.20 }
 				}
 			}
 			if = {
@@ -154,6 +147,12 @@ faction_goal_unlock_military = {
 				}
 			}
 			else = {
+				set_temp_variable = {
+					unlock_military_techs_researched_compare_temp_target = {
+						value = unlock_compare
+						multiply = 1.2
+					}
+				}
 				check_variable = {
 					var = unlock_compare
 					value = unlock_military_techs_researched_compare_temp_target

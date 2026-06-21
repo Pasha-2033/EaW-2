@@ -30,12 +30,9 @@ ability = {
 				FROM = {
 					has_war_support > 0.4
 				}
-
 				check_variable = { num_units_defensive_combats > 6 }
-
-				set_temp_variable = { temp = avg_defensive_combat_status }
-				check_variable = { temp < 0.40 }
-				check_variable = { ai_random > temp }
+				check_variable = { avg_defensive_combat_status < 0.40 }
+				check_variable = { ai_random > avg_defensive_combat_status }
 
 				add = 2
 			}
@@ -64,10 +61,8 @@ ability = {
 					command_power > 1.5
 				}
 				check_variable = { num_units_offensive_combats > 6 }
-
-				set_temp_variable = { temp = avg_offensive_combat_status }
-				check_variable = { temp > 0.45 }
-				check_variable = { ai_random > temp }
+				check_variable = { avg_offensive_combat_status > 0.45 }
+				check_variable = { ai_random > avg_offensive_combat_status }
 
 				add = 2
 			}

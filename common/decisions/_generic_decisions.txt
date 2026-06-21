@@ -170,11 +170,11 @@ economy_decisions = {
 		}
 		complete_effect = {
 			set_variable = {
-				node_goal = num_of_supply_nodes
+				node_goal = {
+					value = num_of_supply_nodes
+					add = 3 #maximum 3 additional nodes
+				}
 			}
-			add_to_variable = {
-				node_goal = 3
-			} #maximum 3 additional nodes
 		}
 		cancel_trigger = {
 			check_variable = {
