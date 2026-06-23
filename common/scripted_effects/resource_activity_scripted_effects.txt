@@ -39,7 +39,7 @@ calc_coal_impact = {
 					value = 1
 					add = PREV.modifier@factory_energy_consumption
 				}
-				clamp = { min = 0 max = 1000 } #max must be in clamp (crash otherwise, so 1000 is "reasonable" maximum)
+				max = 0
 			}
 		}
 		#aluminium
@@ -129,13 +129,13 @@ calc_coal_impact = {
 		industry_efficiency_by_coal = total_coal_by_all
 	}
 	set_temp_variable = {
-		#clamp can`t accept modifier
-		min_value = modifier@industry_min_efficiency_by_coal
-	}
-	clamp_variable = {
-		var = industry_efficiency_by_coal
-		min = min_value
-		max = 1
+		min_value = {
+			value = modifier@industry_min_efficiency_by_coal
+			clamp = {
+				min = min_value
+				max = 1
+			}
+		}
 	}
 }
 calc_resource_aluminium = {

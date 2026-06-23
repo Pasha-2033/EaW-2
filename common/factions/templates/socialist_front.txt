@@ -1,0 +1,16 @@
+socialist_front = {
+	manifest = faction_manifest_strength_in_unity
+	can_leader_join_other_factions = yes
+	default_rules = {
+		joining_rule_no_right_ideology
+		joining_rule_no_non_aligned
+		joining_rule_no_radical_ideology
+		joining_rule_no_faith
+		joining_rule_no_liberal
+		joining_rule_compatible_race
+		joining_rule_has_no_offensive_war
+	}
+	goals = {
+		faction_goal_metal_industry_0
+	}
+}

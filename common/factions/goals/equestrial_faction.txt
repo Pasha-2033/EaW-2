@@ -1,20 +1,35 @@
-#medium term
+#category = short_term medium_term or long_term
+# ROOT is faction leader, FROM is faction member who opens UI and views goals, completed/cancel/complete_effect do not have FROM scopes
 faction_goal_form_central_equus_defence_district = {
 	name = faction_goal_form_central_equus_defence_district_name
 	description = faction_goal_form_central_equus_defence_district_desc
 	category = medium_term
 	group = resources_to_market_icon
-	visible = {
-
+	allowed = {
+		OR = {
+			original_tag = EQS
+			original_tag = EPT
+			original_tag = PGT
+		}
 	}
-	available = {
-		
+	visible = {
+		FROM = {
+			has_war_with = ICE
+		}
 	}
 	completed = {
-		#some of them should agree
-		OR = {
+		EQS = {
 			is_in_faction_with = EPT
 			is_in_faction_with = PGT
+		}
+	}
+	cancel = {
+		EQS = {
+			has_completed_focus = eqs_focus_central_equus_defence_district
+			OR = {
+				has_war_with = EPT
+				has_war_with = PGT
+			}
 		}
 	}
 	complete_effect = {
@@ -36,24 +51,20 @@ faction_goal_form_central_equus_defence_district = {
 		base = 1
 	}
 }
-#long term
 faction_goal_defeat_ICE = {
 	name = faction_goal_defeat_ICE_name
 	description = faction_goal_defeat_ICE_desc
 	category = long_term
 	group = resources_to_market_icon
 	visible = {
-
-	}
-	available = {
-		
+		FROM = {
+			has_war_with = ICE
+		}
 	}
 	completed = {
 		ICE = {
 			exists = no
 		}
-	
-
 	}
 	complete_effect = {
 		add_faction_power_projection = 500

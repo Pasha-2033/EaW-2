@@ -4,8 +4,8 @@ add_state_manpower = {
 		state_pop_to_add = {
 			value = modifier@social_infrastructure_num
 			multiply = owner:modifier@state_population_factor_by_social_infrastructure
-			clamp = { min = 0 max = 1000 } #max must be in clamp (crash otherwise, so 1000 is "reasonable" maximum)
 			add = owner:modifier@state_population_factor
+			max = 0
 			multiply = state_population
 		}
 	}
