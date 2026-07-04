@@ -1,337 +1,125 @@
-#THIS SCRIPTS WORKS ONLY IN STATE SCOPE!!!
-blocked_nuclear_damage = {
-	#restore state buildings
+#THIS SCRIPTS WORKS ONLY IN victim_effects (raid)!!!
+damage_units_by_strike = {
 	set_temp_variable = {
-		building_level = infrastructure_level
-	}
-	remove_building = {
-		type = infrastructure
-		level = building_level
-	}
-	set_building_level = {
-		type = infrastructure
-		level = building_level
-		instant_build = yes
+		damage_to_units_ratio = {
+			value = 1
+			subtract = var:target_state:modifier@nuke_defence_factor
+			multiply = damage_multiplier?1
+		}
 	}
 	set_temp_variable = {
-		building_level = building_level@aluminium_plant
-	}
-	remove_building = {
-		type = aluminium_plant
-		level = building_level
-	}
-	set_building_level = {
-		type = aluminium_plant
-		level = building_level
-		instant_build = yes
+		org_damage_to_units = {
+			value = 0.5
+			add = var:actor_country:modifier@nuke_charge_power_factor
+			multiply = damage_to_units_ratio
+			multiply = damage_multiplier?1
+		}
 	}
 	set_temp_variable = {
-		building_level = building_level@steel_plant
+		str_damage_to_units = {
+			value = org_damage_to_units
+			divide = 4
+		}
 	}
-	remove_building = {
-		type = steel_plant
-		level = building_level
+	#damage to enemy
+	damage_units = {
+		state = var:target_state
+		org_damage = org_damage_to_units
+		str_damage = str_damage_to_units
+		limit = {
+			has_war_with = var:actor_country
+		}
+		ratio = yes
+		army = yes
+		navy = yes
 	}
-	set_building_level = {
-		type = steel_plant
-		level = building_level
-		instant_build = yes
+	divide_temp_variable = {
+		str_damage_to_units = 2
 	}
-	set_temp_variable = {
-		building_level = building_level@tungsten_plant
+	#damage to neutral/allies/yourself
+	damage_units = {
+		state = var:target_state
+		org_damage = org_damage_to_units
+		str_damage = str_damage_to_units
+		limit = {
+			NOT = {
+				has_war_with = var:actor_country
+			}
+		}
+		ratio = yes
+		army = yes
+		navy = yes
 	}
-	remove_building = {
-		type = tungsten_plant
-		level = building_level
-	}
-	set_building_level = {
-		type = tungsten_plant
-		level = building_level
-		instant_build = yes
-	}
-	set_temp_variable = {
-		building_level = building_level@chromium_plant
-	}
-	remove_building = {
-		type = chromium_plant
-		level = building_level
-	}
-	set_building_level = {
-		type = chromium_plant
-		level = building_level
-		instant_build = yes
-	}
-	set_temp_variable = {
-		building_level = building_level@recruiting_station
-	}
-	remove_building = {
-		type = recruiting_station
-		level = building_level
-	}
-	set_building_level = {
-		type = recruiting_station
-		level = building_level
-		instant_build = yes
+}
+nuke_population = {
+	set_temp_variable_to_random = {
+		var = state_nuked_population_k
+		min = -0.25
+		max = -0.05
 	}
 	set_temp_variable = {
-		building_level = building_level@labor_camp
+		state_nuked_population_k = {
+			value = state_nuked_population_k
+			multiply = var:target_state:state_population_k
+			multiply = {
+				value = 1
+				subtract = var:target_state:modifier@nuke_defence_factor
+				add = var:actor_country:modifier@nuke_charge_power_factor
+			}
+			multiply = damage_multiplier?1
+		}
 	}
-	remove_building = {
-		type = labor_camp
-		level = building_level
-	}
-	set_building_level = {
-		type = labor_camp
-		level = building_level
-		instant_build = yes
-	}
-	set_temp_variable = {
-		building_level = building_level@ore_preparation
-	}
-	remove_building = {
-		type = ore_preparation
-		level = building_level
-	}
-	set_building_level = {
-		type = ore_preparation
-		level = building_level
-		instant_build = yes
-	}
-	set_temp_variable = {
-		building_level = arms_factory_level
-	}
-	remove_building = {
-		type = arms_factory
-		level = building_level
-	}
-	set_building_level = {
-		type = arms_factory
-		level = building_level
-		instant_build = yes
-	}
-	set_temp_variable = {
-		building_level = industrial_complex_level
-	}
-	remove_building = {
-		type = industrial_complex
-		level = building_level
-	}
-	set_building_level = {
-		type = industrial_complex
-		level = building_level
-		instant_build = yes
-	}
-	set_temp_variable = {
-		building_level = building_level@agrarian_complex
-	}
-	remove_building = {
-		type = agrarian_complex
-		level = building_level
-	}
-	set_building_level = {
-		type = agrarian_complex
-		level = building_level
-		instant_build = yes
-	}
-	set_temp_variable = {
-		building_level = building_level@air_base
-	}
-	remove_building = {
-		type = air_base
-		level = building_level
-	}
-	set_building_level = {
-		type = air_base
-		level = building_level
-		instant_build = yes
-	}
-	set_temp_variable = {
-		building_level = building_level@stronghold_network
-	}
-	remove_building = {
-		type = stronghold_network
-		level = building_level
-	}
-	set_building_level = {
-		type = stronghold_network
-		level = building_level
-		instant_build = yes
-	}
-	set_temp_variable = {
-		building_level = building_level@dockyard
-	}
-	remove_building = {
-		type = dockyard
-		level = building_level
-	}
-	set_building_level = {
-		type = dockyard
-		level = building_level
-		instant_build = yes
-	}
-	set_temp_variable = {
-		building_level = building_level@anti_air_building
-	}
-	remove_building = {
-		type = anti_air_building
-		level = building_level
-	}
-	set_building_level = {
-		type = anti_air_building
-		level = building_level
-		instant_build = yes
-	}
-	set_temp_variable = {
-		building_level = building_level@synthetic_refinery
-	}
-	remove_building = {
-		type = synthetic_refinery
-		level = building_level
-	}
-	set_building_level = {
-		type = synthetic_refinery
-		level = building_level
-		instant_build = yes
-	}
-	set_temp_variable = {
-		building_level = building_level@fuel_silo
-	}
-	remove_building = {
-		type = fuel_silo
-		level = building_level
-	}
-	set_building_level = {
-		type = fuel_silo
-		level = building_level
-		instant_build = yes
-	}
-	set_temp_variable = {
-		building_level = building_level@radar_station
-	}
-	remove_building = {
-		type = radar_station
-		level = building_level
-	}
-	set_building_level = {
-		type = radar_station
-		level = building_level
-		instant_build = yes
-	}
-	set_temp_variable = {
-		building_level = building_level@rocket_site
-	}
-	remove_building = {
-		type = rocket_site
-		level = building_level
-	}
-	set_building_level = {
-		type = rocket_site
-		level = building_level
-		instant_build = yes
-	}
-	set_temp_variable = {
-		building_level = building_level@mega_gun_emplacement
-	}
-	remove_building = {
-		type = mega_gun_emplacement
-		level = building_level
-	}
-	set_building_level = {
-		type = mega_gun_emplacement
-		level = building_level
-		instant_build = yes
-	}
-	set_temp_variable = {
-		building_level = building_level@nuclear_reactor
-	}
-	remove_building = {
-		type = nuclear_reactor
-		level = building_level
-	}
-	set_building_level = {
-		type = nuclear_reactor
-		level = building_level
-		instant_build = yes
-	}
-	set_temp_variable = {
-		building_level = building_level@nuclear_reactor_heavy_water
-	}
-	remove_building = {
-		type = nuclear_reactor_heavy_water
-		level = building_level
-	}
-	set_building_level = {
-		type = nuclear_reactor_heavy_water
-		level = building_level
-		instant_build = yes
-	}
-	set_temp_variable = {
-		building_level = building_level@nuclear_reactor_exploratory
-	}
-	remove_building = {
-		type = nuclear_reactor_exploratory
-		level = building_level
-	}
-	set_building_level = {
-		type = nuclear_reactor_exploratory
-		level = building_level
-		instant_build = yes
-	}
-	set_temp_variable = {
-		building_level = building_level@thermonuclear_reactor
-	}
-	remove_building = {
-		type = thermonuclear_reactor
-		level = building_level
-	}
-	set_building_level = {
-		type = thermonuclear_reactor
-		level = building_level
-		instant_build = yes
-	}
-	set_temp_variable = {
-		building_level = building_level@commercial_reactor
-	}
-	remove_building = {
-		type = commercial_reactor
-		level = building_level
-	}
-	set_building_level = {
-		type = commercial_reactor
-		level = building_level
-		instant_build = yes
+	var:target_state = {
+		#PDX isn`t currently supports mul & div for 64x (it will overflow)
+		for_loop_effect = {
+			end = 1000
+			add_manpower = state_nuked_population_k
+		}
 	}
 }
 #anti_nuke_bunker destructions (PREV should be country that dropped nuke)
 nuke_anb = {
 	set_temp_variable = {
-		anb_level = building_level@anti_nuke_bunker
+		anb_level = {
+			value = var:target_state:building_level@anti_nuke_bunker
+			subtract = {
+				value = random
+				multiply = {
+					value = var:actor_country:modifier@nuke_charge_power_factor
+					add = 1
+				}
+				multiply = damage_multiplier?1
+				max = 1
+			}
+			round = yes
+		}
 	}
-	set_temp_variable = {
-		max_destruction = PREV.modifier@nuke_charge_power_factor
+	var:target_state = {
+		remove_building = {
+			type = anti_nuke_bunker
+			level = building_level@anti_nuke_bunker
+		}
+		set_building_level = {
+			type = anti_nuke_bunker
+			level = anb_level
+			instant_build = yes
+		}
 	}
-	add_to_temp_variable = {
-		max_destruction = 1
-	}
-	multiply_temp_variable = {
-		max_destruction = 2
-	}
-	set_temp_variable_to_random = {
-		var = delta_anb_level
-		min = 1
-		max = max_destruction
-	}
-	subtract_from_temp_variable = {
-		anb_level = delta_anb_level
-	}
-	round_temp_variable = anb_level
-	remove_building = {
-		type = anti_nuke_bunker
-		level = building_level@anti_nuke_bunker
-	}
-	set_building_level = {
-		type = anti_nuke_bunker
-		level = anb_level
-		instant_build = yes
+}
+#construction sites are not really buildings - they ignore damage
+restore_construction_site = {
+	var:target_state = {
+		set_temp_variable = {
+			building_level = building_level@construction_site
+		}
+		remove_building = {
+			type = construction_site
+			level = building_level
+		}
+		set_building_level = {
+			type = construction_site
+			level = building_level
+			instant_build = yes
+		}
 	}
 }

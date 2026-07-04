@@ -20,11 +20,23 @@ nuke_anb_destruction_factor = {
 	category = air
 	category = aggressive
 }
-anb_desperate_repeair_destruction_chance = {
+#for modifier tooltip only
+radiation_value_tt = {
 	color_type = bad
+	value_type = number
+	precision = 0
+	category = state
+}
+#for modifier tooltip only
+radiation_decrease_tt = {
+	color_type = bad
+	value_type = number
+	precision = 0
+	category = state
+}
+radiation_cleanup = {
+	color_type = good
 	value_type = percentage
 	precision = 0
-	category = army
-	category = air
-	category = aggressive
+	category = state
 }

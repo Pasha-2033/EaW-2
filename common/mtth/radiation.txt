@@ -1,0 +1,183 @@
+radiation_delta = {
+	base = 0
+	modifier = {
+		set_temp_variable = {
+			radiation_reduction = {
+				value = radiation_value
+				root = 3
+				multiply = {
+					value = 1
+					add = modifier@radiation_cleanup
+				}
+				multiply = -1
+			}
+		}
+		add = radiation_reduction
+	}
+}
+state_population_delta_by_radiation = {
+	base = 0
+	modifier = {
+		set_temp_variable = {
+			delta_by_radiation = {
+				value = radiation_value
+				subtract = 20
+				divide = constant:radiation.impact.state_population
+				root = 3
+				multiply = {
+					value = 1
+					subtract = modifier@nuke_defence_factor
+					#we don`t need max, because nuke_defence_factor can`t be > 0.8
+				}
+				max = 0
+				multiply = -1
+			}
+		}
+		add = delta_by_radiation
+	}
+}
+local_factories_by_radiation = {
+	base = 0
+	modifier = {
+		set_temp_variable = {
+			delta_by_radiation = {
+				value = radiation_value
+				subtract = 20
+				divide = constant:radiation.impact.local_factories
+				root = 5
+				multiply = {
+					value = 1
+					subtract = modifier@nuke_defence_factor
+					#we don`t need max, because nuke_defence_factor can`t be > 0.8
+				}
+				#max = 0
+				multiply = -1
+			}
+		}
+		add = delta_by_radiation
+	}
+}
+recruitable_population_factor_by_radiation = {
+	base = 0
+	modifier = {
+		set_temp_variable = {
+			delta_by_radiation = {
+				value = radiation_value
+				subtract = 20
+				divide = constant:radiation.impact.recruitable_population
+				root = 3
+				multiply = {
+					value = 1
+					subtract = modifier@nuke_defence_factor
+					#we don`t need max, because nuke_defence_factor can`t be > 0.8
+				}
+				max = 0
+				multiply = -1
+			}
+		}
+		add = delta_by_radiation
+	}
+}
+state_resources_factor_by_radiation = {
+	base = 0
+	modifier = {
+		set_temp_variable = {
+			delta_by_radiation = {
+				value = radiation_value
+				subtract = 20
+				divide = constant:radiation.impact.state_resources
+				root = 5
+				multiply = {
+					value = 1
+					subtract = modifier@nuke_defence_factor
+					#we don`t need max, because nuke_defence_factor can`t be > 0.8
+				}
+				max = 0
+				multiply = -1
+			}
+		}
+		add = delta_by_radiation
+	}
+}
+attrition_for_controller_by_radiation = {
+	base = 0
+	modifier = {
+		set_temp_variable = {
+			delta_by_radiation = {
+				value = radiation_value
+				subtract = 20
+				divide = constant:radiation.impact.attrition
+				root = 9
+				multiply = {
+					value = 1
+					subtract = modifier@nuke_defence_factor
+					#we don`t need max, because nuke_defence_factor can`t be > 0.8
+				}
+				max = 0
+			}
+		}
+		add = delta_by_radiation
+	}
+}
+state_production_speed_by_radiation = {
+	base = 0
+	modifier = {
+		set_temp_variable = {
+			delta_by_radiation = {
+				value = radiation_value
+				subtract = 20
+				divide = constant:radiation.impact.production_speed_buildings
+				root = 3
+				multiply = {
+					value = 1
+					subtract = modifier@nuke_defence_factor
+					#we don`t need max, because nuke_defence_factor can`t be > 0.8
+				}
+				max = 0
+				multiply = -1
+			}
+		}
+		add = delta_by_radiation
+	}
+}
+supply_factor_by_radiation = {
+	base = 0
+	modifier = {
+		set_temp_variable = {
+			delta_by_radiation = {
+				value = radiation_value
+				subtract = 20
+				divide = constant:radiation.impact.supply
+				root = 7
+				multiply = {
+					value = 1
+					subtract = modifier@nuke_defence_factor
+					#we don`t need max, because nuke_defence_factor can`t be > 0.8
+				}
+				max = 0
+				multiply = -1
+			}
+		}
+		add = delta_by_radiation
+	}
+}
+truck_attrition_factor_by_radiation = {
+	base = 0
+	modifier = {
+		set_temp_variable = {
+			delta_by_radiation = {
+				value = radiation_value
+				subtract = 20
+				divide = constant:radiation.impact.truck_attrition
+				root = 9
+				multiply = {
+					value = 1
+					subtract = modifier@nuke_defence_factor
+					#we don`t need max, because nuke_defence_factor can`t be > 0.8
+				}
+				max = 0
+			}
+		}
+		add = delta_by_radiation
+	}
+}

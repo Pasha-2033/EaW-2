@@ -11,6 +11,10 @@ MAPMODE_ECONOMY_INDEX_MAP_MODE_NAME: "Экономика"
 MAPMODE_ECONOMY_INDEX_MAP_MODE: "Режим карты: §Hэкономический индекс§!"
 MAPMODE_ECONOMY_INDEX_MAP_MODE_DESCRIPTION: "Показывает экономический потенциал страны."
 
+MAPMODE_RADIATION_MAP_MODE_NAME: "Радиация"
+MAPMODE_RADIATION_MAP_MODE: "Режим карты: §HРадиация§!"
+MAPMODE_RADIATION_MAP_MODE_DESCRIPTION: "Показывает радиоактивное заражение местности."
+
 MAPMODE_SCIENCE_INDEX_MAP_MODE_NAME: "Наука"
 MAPMODE_SCIENCE_INDEX_MAP_MODE: "Режим карты: §Hнаучный индекс§!"
 MAPMODE_SCIENCE_INDEX_MAP_MODE_DESCRIPTION: "Показывает научный потенциал страны."
@@ -33,6 +37,8 @@ economy_index_map_mode_tooltip: "Экономический индекс: [?FROM
 
 science_index_map_mode_tooltip: "Научный индекс: [?FROM.controller:modifier@science_index|3Y]"
 
+radiation_map_mode_tooltip: "[radiation_lvl]"
+radiation_map_mode_tooltip_delayed: "Вы слышите потрескивание счетчика Гейгера..."
 
 species_map_mode_tooltip: "Раса: [FROM.get_state_race]"
 species_map_mode_tooltip_delayed: "[FROM.get_state_race_desc]"
@@ -41,6 +47,12 @@ surplus_appropriation_map_mode_tooltip_delayed: "Армейский достат
 industry_map_mode_tooltip: "[get_industry_value]"
 industry_map_mode_tooltip_delayed: "[get_industry_desc]"
 #map specific tooltips
+#radiation
+normal_radiation: "Радиационный фон в норме (примерно 20мкР/ч)"
+low_radiation: "Повышенный радиационный фон: [?FROM.radiation_value|Y0] мкР/ч"
+medium_radiation: "Серьезный радиационный фон: [?FROM.radiation_value|Y0] мкР/ч"
+high_radiation: "Высокий радиационный фон: [?FROM.radiation_value|R0] мкР/ч"
+deadly_radiation: "Летальный радиационный фон: [?FROM.radiation_value|R0] мкР/ч"
 #surplus appropriation
 blue_sa_average_value: "[?FROM.controller:sa_average_value|%0B]"
 green_sa_average_value: "[?FROM.controller:sa_average_value|%0G]"

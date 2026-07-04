@@ -479,3 +479,71 @@ d_add_rs = {
 d_afp = {
 	add_faction_initiative = 10
 }
+d_add_nuke = {
+	add_nuclear_bombs = 100
+}
+d_set_rad = {
+	251 = {
+		set_variable = {
+			radiation_value = 1000
+		}
+		add_dynamic_modifier = {
+			modifier = radiation_poisoning
+		}
+	}
+	252 = {
+		set_variable = {
+			radiation_value = 1000000
+		}
+		add_dynamic_modifier = {
+			modifier = radiation_poisoning
+		}
+	}
+	261 = {
+		set_variable = {
+			radiation_value = 100
+		}
+		add_dynamic_modifier = {
+			modifier = radiation_poisoning
+		}
+	}
+	311 = {
+		set_variable = {
+			radiation_value = 10000
+		}
+		add_dynamic_modifier = {
+			modifier = radiation_poisoning
+		}
+	}
+	310 = {
+		set_variable = {
+			radiation_value = 5000
+		}
+		add_dynamic_modifier = {
+			modifier = radiation_poisoning
+		}
+	}
+	305 = {
+		set_variable = {
+			radiation_value = 100000000
+		}
+		add_dynamic_modifier = {
+			modifier = radiation_poisoning
+		}
+	}
+	312 = {
+		set_variable = {
+			radiation_value = 9000000
+		}
+		add_dynamic_modifier = {
+			modifier = radiation_poisoning
+		}
+	}
+}
+d_brigade = {
+	EQS = {
+		add_dynamic_modifier = {
+			modifier = unlock_all_brigades
+		}
+	}
+}

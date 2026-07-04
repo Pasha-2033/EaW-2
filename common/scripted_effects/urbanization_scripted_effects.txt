@@ -3,9 +3,12 @@ add_state_manpower = {
 	set_temp_variable = {
 		state_pop_to_add = {
 			value = modifier@social_infrastructure_num
-			multiply = owner:modifier@state_population_factor_by_social_infrastructure
-			add = owner:modifier@state_population_factor
-			max = 0
+			multiply = {
+				value = 1
+				add = owner:modifier@state_population_factor_by_social_infrastructure
+			}
+			add = modifier@state_population_factor
+			min = 0
 			multiply = state_population
 		}
 	}

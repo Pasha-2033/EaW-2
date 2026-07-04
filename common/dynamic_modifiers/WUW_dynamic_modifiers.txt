@@ -117,6 +117,30 @@ eben_emael_raided_limited_success_modifier = {
 
 
 ##### Nuclear Fallout ####
+radiation_poisoning = {
+	icon = GFX_modifiers_radiation
+	enable = { always = yes }
+	remove_trigger = {
+		check_variable = {
+			var = radiation_value
+			value = constant:radiation.lvl.normal
+			compare = less_than_or_equals
+		}
+	}
+	radiation_value_tt = radiation_value
+	radiation_decrease_tt = mtth:radiation_delta
+
+	state_population_factor = mtth:state_population_delta_by_radiation
+
+	local_factories = mtth:local_factories_by_radiation
+	recruitable_population_factor = mtth:recruitable_population_factor_by_radiation
+	state_resources_factor = mtth:state_resources_factor_by_radiation
+	attrition_for_controller = mtth:attrition_for_controller_by_radiation
+	state_production_speed_buildings_factor = mtth:state_production_speed_by_radiation
+	supply_factor = mtth:supply_factor_by_radiation
+	truck_attrition_factor = mtth:truck_attrition_factor_by_radiation
+}
+
 
 fallout_atomic = {
 	enable = { always = yes }

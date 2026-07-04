@@ -1,0 +1,40 @@
+defined_text = {
+	name = "radiation_lvl"
+	text = {
+		trigger = {
+			check_variable = {
+				var = FROM.radiation_value 
+				value = constant:radiation.lvl.normal
+				compare = less_than_or_equals
+			}
+		}
+		localization_key = "normal_radiation"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				FROM.radiation_value > constant:radiation.lvl.deadly
+			}
+		}
+		localization_key = "deadly_radiation"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				FROM.radiation_value > constant:radiation.lvl.high
+			}
+		}
+		localization_key = "high_radiation"
+	}
+	text = {
+		trigger = {
+			check_variable = {
+				FROM.radiation_value > constant:radiation.lvl.medium
+			}
+		}
+		localization_key = "medium_radiation"
+	}
+	text = {
+		localization_key = "low_radiation"
+	}
+}

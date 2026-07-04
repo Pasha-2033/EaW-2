@@ -1,0 +1,28 @@
+radiation = {
+	schema = {
+        any_key = yes
+        data = {
+            {
+                any_key = yes
+                data = fixed_point
+            }
+        }
+    }
+    lvl = {
+        normal = 20
+        low = 100
+        medium = 1000
+        high = 100000
+		deadly = 10000000
+    }
+	impact = {
+		state_population = 50000
+		local_factories = 90000
+		recruitable_population = 3000
+		state_resources = 10000
+		attrition = 15000
+		production_speed_buildings = 100000
+		supply = 70000
+		truck_attrition = 25000
+	}
+}

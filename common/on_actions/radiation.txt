@@ -1,0 +1,11 @@
+on_actions = {
+	on_daily_VES = {
+		effect = {
+			every_state = {
+				add_to_variable = {
+					radiation_value = mtth:radiation_delta
+				}
+			}
+		}
+	}
+}
